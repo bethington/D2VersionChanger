@@ -11,6 +11,23 @@ With this tool you are able to switch easily between all patch versions of Diabl
 ## Usage
 Run the VersionChanger.bat and select a number/character in square brackets at the beginning of a line.
 
+## Reports
+The `reports` folder contains a viewer for exploring version data:
+
+- **d2_report_viewer.html** - Interactive viewer showing all patch versions with file hashes, sizes, and PE version info. Works offline (just open in a browser).
+- **d2_data.js** - Consolidated data file used by the viewer
+
+To regenerate the data after adding new versions:
+```
+python tools/gen_viewer_data.py
+```
+
+## Tools
+Python scripts for analyzing and managing version files:
+
+- **d2_hash_tool.py** - Core library for hashing files, extracting PE versions, and scanning version folders
+- **gen_viewer_data.py** - Generates the consolidated `d2_data.js` for the HTML viewer
+
 ## Contact
 For questions or suggestions please create an issue at [Github](https://github.com/ChaosMarc/D2VersionChanger) or email me: chaosmarc@gmx.de
 
