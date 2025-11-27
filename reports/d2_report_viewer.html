@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo II Installation Analysis</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --bg-hover: #30363d;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-red: #f85149;
+            --accent-cyan: #39c5cf;
+            --diablo-red: #8b0000;
+            --diablo-gold: #c7a629;
+            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--diablo-red) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-inner {
+            padding: 0.4rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--diablo-gold);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .header h1::before {
+            content: "🔥";
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+        }
+
+        .header-search {
+            margin-left: auto;
+        }
+
+        .header-search input {
+            padding: 0.3rem 0.6rem;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            width: 280px;
+            font-family: var(--font-mono);
+        }
+
+        .header-search input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .header-search input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        /* Main container */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem 1rem;
+            overflow: hidden;
+            min-height: 0;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Two-panel layout */
+        .main-layout {
+            display: flex;
+            gap: 0.75rem;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        /* Shared panel styles */
+        .panel {
+            flex: 1;
+            min-width: 0;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .panel-header {
+            background-color: var(--bg-tertiary);
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .panel-header h2,
+        .panel-header h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--diablo-gold);
+            margin: 0;
+        }
+
+        .panel-content {
+            flex: 1;
+            overflow-y: auto;
+            min-height: 0;
+        }
+
+        .panel-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Table styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .data-table th {
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .data-table th:hover {
+            background-color: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .data-table th .sort-indicator {
+            margin-left: 0.25rem;
+            opacity: 0.5;
+        }
+
+        .data-table th.sorted .sort-indicator {
+            opacity: 1;
+            color: var(--accent-blue);
+        }
+
+        .data-table tbody tr {
+            cursor: pointer;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: var(--bg-hover);
+        }
+
+        /* Table cell styles */
+        .cell-name {
+            color: var(--accent-blue);
+            font-weight: 500;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .cell-size {
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .cell-version {
+            color: var(--accent-cyan);
+        }
+
+        .cell-hash {
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .hash-text {
+            cursor: help;
+        }
+
+        .hash-text:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .badge-classic {
+            background-color: rgba(139, 0, 0, 0.3);
+            color: #ff6b6b;
+        }
+
+        .badge-lod {
+            background-color: rgba(199, 166, 41, 0.3);
+            color: var(--diablo-gold);
+        }
+
+        .badge-info {
+            background-color: rgba(88, 166, 255, 0.2);
+            color: var(--accent-blue);
+        }
+
+        /* Buttons */
+        .btn-icon {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.125rem;
+            font-size: 0.75rem;
+            border-radius: 3px;
+            line-height: 1;
+        }
+
+        .btn-icon:hover {
+            color: var(--accent-blue);
+            background-color: var(--bg-hover);
+        }
+
+        /* Row states */
+        .clickable-row {
+            cursor: pointer;
+        }
+
+        .clickable-row.selected {
+            background-color: var(--bg-tertiary);
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .hash-highlight {
+            background-color: rgba(88, 166, 255, 0.3) !important;
+            animation: pulse-highlight 1s ease-in-out 2;
+        }
+
+        @keyframes pulse-highlight {
+
+            0%,
+            100% {
+                background-color: rgba(88, 166, 255, 0.3);
+            }
+
+            50% {
+                background-color: rgba(88, 166, 255, 0.5);
+            }
+        }
+
+        /* Search input */
+        .search-input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-left: none;
+            border-right: none;
+            color: var(--text-primary);
+            font-size: 0.75rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: flex-end;
+            align-items: stretch;
+            z-index: 2000;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal {
+            background-color: var(--bg-secondary);
+            border-left: 1px solid var(--border-color);
+            width: 400px;
+            max-width: 90%;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            background-color: var(--bg-tertiary);
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .modal-header h3 {
+            color: var(--diablo-gold);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-red);
+        }
+
+        .modal-content {
+            padding: 1.25rem;
+        }
+
+        .variation-group {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--bg-tertiary);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .variation-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .variation-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .variation-hash {
+            font-family: var(--font-mono);
+            font-size: 0.6875rem;
+            color: var(--text-muted);
+            word-break: break-all;
+        }
+
+        .variation-folders {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .variation-folder {
+            background-color: var(--bg-hover);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--accent-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 0.4rem;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .panel {
+                flex: 1 1 50%;
+                max-height: 50%;
+            }
+
+            .header p {
+                display: none;
+            }
+
+            .header-search input {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-inner {
+                padding: 0.3rem 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            .header h1 {
+                font-size: 0.8rem;
+            }
+
+            .header-search {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 0.25rem;
+            }
+
+            .header-search input {
+                width: 100%;
+            }
+
+            .container {
+                padding: 0.25rem;
+            }
+
+            .main-layout {
+                gap: 0.25rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 0.35rem 0.5rem;
+                font-size: 0.65rem;
+            }
+
+            .data-table th {
+                font-size: 0.55rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-inner">
+            <h1>Diablo II Installation Analysis</h1>
+            <p>Comprehensive hash verification and comparison dashboard</p>
+            <div class="header-search">
+                <input type="text" id="hashSearch" placeholder="Search by SHA256 hash (full or partial)..." onkeydown="if(event.key==='Enter') searchByHash()">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="loadingSection" style="padding: 1rem; text-align: center;">
+            <p>⏳ Loading data...</p>
+        </div>
+
+        <div id="errorSection" style="display: none; padding: 1rem; text-align: center;">
+            <p>❌ Error loading data. Make sure the JSON files exist in the parent directory.</p>
+        </div>
+
+        <div class="main-layout">
+            <div class="panel" id="leftPanel">
+                <div class="panel-header">
+                    <h2>📊 Versions</h2>
+                </div>
+                <div class="panel-content" id="leftPanelContent">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortVersionsTable('folder_name')" data-col="folder_name">Folder <span class="sort-indicator">⇅</span></th>
+                                <th onclick="sortVersionsTable('game_type')" data-col="game_type">Type <span class="sort-indicator">⇅</span></th>
+                                <th onclick="sortVersionsTable('version')" data-col="version" class="sorted">Version <span class="sort-indicator">▲</span></th>
+                                <th onclick="sortVersionsTable('file_count')" data-col="file_count">Files <span class="sort-indicator">⇅</span></th>
+                                <th onclick="sortVersionsTable('total_size')" data-col="total_size">Size <span class="sort-indicator">⇅</span></th>
+                                <th onclick="sortVersionsTable('nocd_status')" data-col="nocd_status">No CD <span class="sort-indicator">⇅</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="overviewTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel" id="rightPanel">
+                <div class="panel-header">
+                    <h3 id="versionFilesTitle">📁 Version Files Viewer</h3>
+                </div>
+                <input type="text" class="search-input" id="fileSearch" placeholder="Search files..." style="display: none;">
+                <div class="panel-content" id="rightPanelContent">
+                    <div class="panel-placeholder">
+                        👈 Select a folder from the table
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">File Versions</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Diablo II Hash Verification Tool | Generated with 🔥</p>
+    </div>
+
+    <script src="d2_data.js"></script>
+    <script>
+        // Data loaded from d2_data.js: VERSIONS_DATA (array) and FOLDERS_DATA (object)
+        let currentSelectedFolder = null;
+
+        // Sorting state
+        let versionsSortColumn = 'version';
+        let versionsSortAsc = true;
+        let filesSortColumn = 'filename';
+        let filesSortAsc = true;
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loadingSection').style.display = 'none';
+            if (typeof VERSIONS_DATA !== 'undefined' && typeof FOLDERS_DATA !== 'undefined') {
+                updateDisplay();
+            } else {
+                document.getElementById('errorSection').style.display = 'block';
+            }
+        });
+
+        // Version comparison function for sorting (numeric version order)
+        function compareVersions(a, b, ignoreGameType = false) {
+            // Sort by game type (Classic before LoD) only if not ignoring
+            if (!ignoreGameType && a.game_type !== b.game_type) {
+                if (a.game_type === 'Classic') return -1;
+                if (b.game_type === 'Classic') return 1;
+            }
+
+            // Parse version strings like "1.00", "1.09b", "1.10", "1.10 Beta 1"
+            function parseVersion(versionStr) {
+                if (!versionStr) return { major: 0, minor: 0, patch: '', beta: 0 };
+
+                // Handle beta versions like "1.10 Beta 1"
+                const betaMatch = versionStr.match(/^(\d+)\.(\d+)\s*Beta\s*(\d+)$/i);
+                if (betaMatch) {
+                    return {
+                        major: parseInt(betaMatch[1]),
+                        minor: parseInt(betaMatch[2]),
+                        patch: '',
+                        beta: parseInt(betaMatch[3])
+                    };
+                }
+
+                // Handle regular versions like "1.09b", "1.10", "1.14d"
+                const match = versionStr.match(/^(\d+)\.(\d+)([a-z])?$/i);
+                if (match) {
+                    return {
+                        major: parseInt(match[1]),
+                        minor: parseInt(match[2]),
+                        patch: match[3] || '',
+                        beta: 999 // Non-beta versions come after beta versions
+                    };
+                }
+
+                return { major: 0, minor: 0, patch: versionStr, beta: 999 };
+            }
+
+            const vA = parseVersion(a.version || a.folder_name);
+            const vB = parseVersion(b.version || b.folder_name);
+
+            // Compare major version
+            if (vA.major !== vB.major) return vA.major - vB.major;
+            // Compare minor version
+            if (vA.minor !== vB.minor) return vA.minor - vB.minor;
+            // Compare beta (beta versions come before release)
+            if (vA.beta !== vB.beta) return vA.beta - vB.beta;
+            // Compare patch letter (a < b < c < d)
+            return vA.patch.localeCompare(vB.patch);
+        }
+
+        function sortVersionsTable(column) {
+            if (versionsSortColumn === column) {
+                versionsSortAsc = !versionsSortAsc;
+            } else {
+                versionsSortColumn = column;
+                versionsSortAsc = true;
+            }
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            if (typeof VERSIONS_DATA === 'undefined') return;
+
+            // Sort versions by selected column
+            const sortedVersions = [...VERSIONS_DATA].sort((a, b) => {
+                let result = 0;
+                switch (versionsSortColumn) {
+                    case 'folder_name':
+                        result = a.folder_name.localeCompare(b.folder_name);
+                        break;
+                    case 'game_type':
+                        // When sorting by game type, use version as secondary sort
+                        result = a.game_type.localeCompare(b.game_type);
+                        if (result === 0) result = compareVersions(a, b, true);
+                        break;
+                    case 'version':
+                        // Sort purely by version, ignoring game type
+                        result = compareVersions(a, b, true);
+                        break;
+                    case 'file_count':
+                        result = a.file_count - b.file_count;
+                        break;
+                    case 'total_size':
+                        result = parseSizeToBytes(a.total_size_readable) - parseSizeToBytes(b.total_size_readable);
+                        break;
+                    case 'nocd_status':
+                        const order = { 'official_nocd': 0, 'nocd': 1, 'original': 2 };
+                        result = (order[a.nocd_status] ?? 3) - (order[b.nocd_status] ?? 3);
+                        break;
+                    default:
+                        result = compareVersions(a, b, true);
+                }
+                return versionsSortAsc ? result : -result;
+            });
+
+            // Update header indicators
+            document.querySelectorAll('#leftPanel th').forEach(th => {
+                th.classList.remove('sorted');
+                const indicator = th.querySelector('.sort-indicator');
+                if (indicator) indicator.textContent = '⇅';
+            });
+            const activeHeader = document.querySelector(`#leftPanel th[data-col="${versionsSortColumn}"]`);
+            if (activeHeader) {
+                activeHeader.classList.add('sorted');
+                const indicator = activeHeader.querySelector('.sort-indicator');
+                if (indicator) indicator.textContent = versionsSortAsc ? '▲' : '▼';
+            }
+
+            const tbody = document.getElementById('overviewTable');
+            tbody.innerHTML = '';
+
+            sortedVersions.forEach(ver => {
+                const typeBadge = ver.is_lod === true
+                    ? '<span class="badge badge-lod">LoD</span>'
+                    : ver.is_lod === false
+                        ? '<span class="badge badge-classic">Classic</span>'
+                        : '<span class="badge badge-info">Custom</span>';
+
+                const cdStatusBadge = ver.nocd_status === 'official_nocd'
+                    ? '<span style="color: var(--accent-green);" title="Official No-CD (1.12+)">✓</span>'
+                    : ver.nocd_status === 'original'
+                        ? '<span style="color: var(--accent-red);" title="CD Required">✗</span>'
+                        : ver.nocd_status === 'nocd'
+                            ? '<span style="color: var(--accent-blue);" title="No-CD Patched">✓</span>'
+                            : '<span style="color: var(--text-muted);" title="Unknown">-</span>';
+
+                const row = document.createElement('tr');
+                row.className = 'clickable-row';
+                row.dataset.folder = ver.folder_name;
+                row.onclick = () => selectFolder(ver.folder_name);
+                row.innerHTML = `
+                    <td><strong>${ver.folder_name}</strong></td>
+                    <td>${typeBadge}</td>
+                    <td class="cell-version" title="${ver.raw_pe_version || ''}">${ver.version || '-'}</td>
+                    <td>${ver.file_count}</td>
+                    <td class="cell-size">${ver.total_size_readable}</td>
+                    <td>${cdStatusBadge}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function selectFolder(folderName) {
+            document.querySelectorAll('.clickable-row').forEach(row => {
+                row.classList.toggle('selected', row.dataset.folder === folderName);
+            });
+
+            currentSelectedFolder = folderName;
+            const folder = FOLDERS_DATA?.[folderName];
+
+            if (!folder) {
+                document.getElementById('rightPanelContent').innerHTML = '<div class="panel-placeholder">No file data available</div>';
+                return;
+            }
+
+            document.getElementById('versionFilesTitle').textContent = `📁 ${folderName}`;
+            document.getElementById('fileSearch').style.display = 'block';
+            document.getElementById('fileSearch').value = '';
+            renderFilesTable(folder);
+        }
+
+        function sortFilesTable(column) {
+            if (filesSortColumn === column) {
+                filesSortAsc = !filesSortAsc;
+            } else {
+                filesSortColumn = column;
+                filesSortAsc = true;
+            }
+            if (currentSelectedFolder && FOLDERS_DATA?.[currentSelectedFolder]) {
+                const filter = document.getElementById('fileSearch').value || '';
+                renderFilesTable(FOLDERS_DATA[currentSelectedFolder], filter);
+            }
+        }
+
+        function parseSizeToBytes(sizeStr) {
+            if (!sizeStr) return 0;
+            const match = sizeStr.match(/([\d.]+)\s*(B|KB|MB|GB)/i);
+            if (!match) return 0;
+            const value = parseFloat(match[1]);
+            const unit = match[2].toUpperCase();
+            switch (unit) {
+                case 'B': return value;
+                case 'KB': return value * 1024;
+                case 'MB': return value * 1024 * 1024;
+                case 'GB': return value * 1024 * 1024 * 1024;
+                default: return value;
+            }
+        }
+
+        function renderFilesTable(folder, filter = '') {
+            let files = Object.entries(folder.files);
+            const filteredFiles = filter
+                ? files.filter(([name]) => name.toLowerCase().includes(filter.toLowerCase()))
+                : files;
+
+            if (filteredFiles.length === 0) {
+                document.getElementById('rightPanelContent').innerHTML = '<div class="panel-placeholder">No files match the search</div>';
+                return;
+            }
+
+            // Sort files
+            const sortedFiles = [...filteredFiles].sort((a, b) => {
+                const [nameA, fileA] = a;
+                const [nameB, fileB] = b;
+                let result = 0;
+                switch (filesSortColumn) {
+                    case 'filename':
+                        result = nameA.localeCompare(nameB);
+                        break;
+                    case 'size':
+                        result = (fileA.size_bytes || 0) - (fileB.size_bytes || 0);
+                        break;
+                    case 'version':
+                        result = (fileA.pe_version || '').localeCompare(fileB.pe_version || '');
+                        break;
+                    case 'hash':
+                        result = (fileA.sha256 || '').localeCompare(fileB.sha256 || '');
+                        break;
+                    default:
+                        result = nameA.localeCompare(nameB);
+                }
+                return filesSortAsc ? result : -result;
+            });
+
+            let html = `<table class="data-table" id="filesTable"><thead><tr>
+                <th onclick="sortFilesTable('filename')" data-col="filename" class="sorted">Filename <span class="sort-indicator">▲</span></th>
+                <th onclick="sortFilesTable('size')" data-col="size">Size <span class="sort-indicator">⇅</span></th>
+                <th onclick="sortFilesTable('version')" data-col="version">Version <span class="sort-indicator">⇅</span></th>
+                <th onclick="sortFilesTable('hash')" data-col="hash">SHA256 <span class="sort-indicator">⇅</span></th>
+            </tr></thead><tbody>`;
+
+            sortedFiles.forEach(([filename, file]) => {
+                const hash = file.sha256 || '';
+                const hashShort = hash ? '...' + hash.slice(-8) : '-';
+                const matchingFolders = file.matching_folders || [];
+                const matchTooltip = matchingFolders.length > 0
+                    ? `Found in ${matchingFolders.length} version(s):\n${matchingFolders.join('\n')}`
+                    : 'No matches found';
+
+                html += `<tr onclick="openComparison('${filename.replace(/'/g, "\\'")})" title="${matchTooltip}">
+                    <td class="cell-name" title="${filename}">${filename}</td>
+                    <td class="cell-size">${file.size_readable || '-'}</td>
+                    <td class="cell-version" title="${file.pe_version_raw || ''}">${file.pe_version || '-'}</td>
+                    <td class="cell-hash">
+                        <span class="hash-text" title="${hash}">${hashShort}</span>
+                        ${hash ? `<button class="btn-icon" onclick="event.stopPropagation(); copyHash('${hash}')" title="Copy full hash">📋</button>` : ''}
+                    </td>
+                </tr>`;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('rightPanelContent').innerHTML = html;
+
+            // Update header indicators
+            document.querySelectorAll('#filesTable th').forEach(th => {
+                th.classList.remove('sorted');
+                const indicator = th.querySelector('.sort-indicator');
+                if (indicator) indicator.textContent = '⇅';
+            });
+            const activeHeader = document.querySelector(`#filesTable th[data-col="${filesSortColumn}"]`);
+            if (activeHeader) {
+                activeHeader.classList.add('sorted');
+                const indicator = activeHeader.querySelector('.sort-indicator');
+                if (indicator) indicator.textContent = filesSortAsc ? '▲' : '▼';
+            }
+        }
+
+        function copyHash(hash) {
+            navigator.clipboard.writeText(hash);
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function searchByHash() {
+            const searchHash = document.getElementById('hashSearch').value.trim().toLowerCase();
+            if (!searchHash || searchHash.length < 4) {
+                alert('Please enter at least 4 characters of the hash to search.');
+                return;
+            }
+
+            if (typeof FOLDERS_DATA === 'undefined') {
+                alert('No folder data loaded.');
+                return;
+            }
+
+            for (const [folderName, folder] of Object.entries(FOLDERS_DATA)) {
+                for (const [filename, file] of Object.entries(folder.files)) {
+                    const fileHash = (file.sha256 || '').toLowerCase();
+                    if (fileHash && fileHash.includes(searchHash)) {
+                        selectFolder(folderName);
+                        setTimeout(() => highlightFileByHash(fileHash), 100);
+                        return;
+                    }
+                }
+            }
+            alert('No files found with matching hash.');
+        }
+
+        function highlightFileByHash(hash) {
+            const rows = document.querySelectorAll('#rightPanelContent .data-table tbody tr');
+            for (const row of rows) {
+                const hashCell = row.querySelector('.hash-text');
+                if (hashCell && hashCell.title.toLowerCase() === hash.toLowerCase()) {
+                    document.querySelectorAll('.hash-highlight').forEach(el => el.classList.remove('hash-highlight'));
+                    row.classList.add('hash-highlight');
+                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    break;
+                }
+            }
+        }
+
+        function openComparison(filename) {
+            const folder = FOLDERS_DATA?.[currentSelectedFolder];
+            const file = folder?.files?.[filename];
+
+            if (!file) {
+                alert('No file data available.');
+                return;
+            }
+
+            document.getElementById('modalTitle').textContent = filename;
+
+            const matchingFolders = file.matching_folders || [];
+            let html = `<div class="variation-group">
+                <div class="variation-meta"><span>📦 Size: ${file.size_readable || 'N/A'}</span></div>
+                <div class="variation-hash">SHA256: ${file.sha256 || 'N/A'}</div>
+                <div class="variation-folders">
+                    <span class="variation-folder" style="background: var(--accent-blue);">${currentSelectedFolder} (current)</span>
+                    ${matchingFolders.map(f => `<span class="variation-folder">${f}</span>`).join('')}
+                </div>
+            </div>`;
+
+            if (matchingFolders.length === 0) {
+                html += '<p style="color: var(--text-muted); margin-top: 1rem;">This file hash is unique to this version.</p>';
+            }
+
+            document.getElementById('modalContent').innerHTML = html;
+            document.getElementById('modalOverlay').classList.add('show');
+        }
+
+        function closeModal(event) {
+            if (!event || event.target === document.getElementById('modalOverlay')) {
+                document.getElementById('modalOverlay').classList.remove('show');
+            }
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        document.getElementById('fileSearch').addEventListener('input', function (e) {
+            if (currentSelectedFolder && FOLDERS_DATA?.[currentSelectedFolder]) {
+                renderFilesTable(FOLDERS_DATA[currentSelectedFolder], e.target.value);
+            }
+        });
+    </script>
+</body>
+
+</html>
