@@ -1,0 +1,377 @@
+--------------------------------------------------------------------------
+  Diablo II Version History
+--------------------------------------------------------------------------
+- Patch 1.04c
+--------------------------------------------------------------------------
+
+      Major bugs
+
+- Fixed more problems with accessing the Play CD at startup on some
+  CD and DVD drives. Only use this version if 1.04b does not work on
+  your system.
+
+--------------------------------------------------------------------------
+- Patch 1.04b
+--------------------------------------------------------------------------
+
+      Major bugs
+
+- Fixed problems with accessing the Play CD at startup on some
+  CD and DVD drives.
+- Fixed a crash problem with the Video Tester in Windows NT and
+  Windows 2000
+
+--------------------------------------------------------------------------
+- Patch 1.04
+--------------------------------------------------------------------------
+
+      Major bugs
+
+- The Prismatic amulet, Coral ring, and other Horadric Cube recipe items 
+  no longer change into other items upon starting a new game.
+- Lances, Holy Water Sprinklers, Grim Helms, War Clubs, and Stilettos can 
+  now be dropped by monsters and chests.
+- Using the Paladin Charge skill as a monster dies cannot generate a 
+  "zero hit-point" monster.
+- Fixed an assertion when a high-level character kills a monster.
+- Barbarian's Whirlwind and Leap Attack and Paladin's Charge no longer 
+  keep all inventory items red and unusable after attack ends.
+- A "dead, but alive" bug has been fixed.
+- Equipping a barbarian with a two-handed sword or with a shield while 
+  holding two two-handed swords will no longer cause disconnection from 
+  the Realm.
+- Fixed an assertion that could happen when unequipping one item while 
+  wearing another gemmed item that enhances a character stat.
+- Fixed a bug that prevented damage-enhancing magic properties from 
+  working properly on bows.
+- Closed a loophole that could allow a player to declare hostility on 
+  anyone regardless of where the declarer is.
+- Closed a loophole that could allow a player to run around too fast.
+- Closed a loophole that allowed a player to equip and use an item that 
+  was beyond the character's ability.
+- Improved compatibility with Delta CD-ROM drives.
+- When loading a saved character holding bad items, all the bad items 
+  are deleted, allowing the character to be played.
+
+      Minor bugs
+
+- Charged Bolts are no longer invisible for a radius (based on the 
+  caster's light radius).
+- "Bonefarming" eliminated in Single Player and Open games.
+- Fixed the "Moon-walking" bug that occasionally appeared when knocked 
+  back by a monster.
+- French and German Create Queue status messages no longer overlap.
+- Fixed attack speed bonuses and descriptions to be accurate for 
+  Griswold's Edge, Goreshovel, The Diggler, Witherstring, and Twitchtroe.
+- Fixed cast rate descriptions for the unique and set items: Arcanna's 
+  Tricks, Maelstromwrath, Ume's Lament, The Iron Jang Bong, Wall of the 
+  Eyeless, and Magefist.
+- Long emotes in chat combined with a 15 character-long name no longer 
+  assert.
+- The inventory sounds of the Sallet, Heavy Bracers, Battle Gauntlets, 
+  War Gauntlets, Mesh Boots, Battle Boots, War Boots, and Demonhide Sash 
+  are now the same as the unexceptional versions of these items.
+- Removed "invisible islands" from the River of Flame, Tal Rasha's Tomb, 
+  Spider Forest, and Tower Cellar, preventing Barbarians/Sorceresses from 
+  leaping/teleporting onto them.
+- Changed the Amazon's Jab skill description to multiple attacks.
+- Fixed a number of typos ("ordinateur" (in French version), "Eats and 
+  Spits Corpses", "Stiletto", "Explore Tal Rasha's Chamber") and 
+  capitalization mistakes ("extra gold from monsters", "better chance of 
+  getting magic item", "Hit Causes Monster To Flee", "bonus to Attack 
+  Rating", "Slows target by", and "Hit blinds target").
+- When a Realm character tries to join a game at a higher difficulty level 
+  than earned, the correct error message is used.
+- The difficulty setting of the last Realm game created or joined will no 
+  longer carry over to the next Single Player game.
+- Fixed an error displaying the Chance to be Hit by a monster when having 
+  activated a second Armor Shrine before the first one wears off. The 
+  chance actually never goes below 5%.
+- Fixed a bug where an open quest log was not updated to reflect the 
+  saving of Cain.
+- Fixed a bug that gave the wrong name to a Waypoint highlighted by a 
+  player standing in a different "room" in the game environment.
+- Two-handed items are now equipped properly (doing proper damage) at the 
+  beginning of a game.
+- Clicking on one's corpse (while equipped with nothing) properly 
+  re-equips all the items from the corpse.
+- Closing the Waypoint list by pressing Ctrl+Alt no longer disables pop-up 
+  text on NPC's and inventory items.
+- Attempting to trade a Tome or Scroll to a player without enough room to 
+  accept them, no longer causes a phantom Spell to appear in that player's 
+  spellbook.
+- The gauntlet cursor can no longer be erroneously turned into a 
+  trade/repair arrow/hammer.
+- Fixed a bug with the mini-experience bar above level 75.
+- Fixed a bug in the display of the Chance to be Hit.
+- Fixed a bug in the count of the number of Scrolls remaining in Tomes of 
+  Town Portal and Identify.
+- The ranges of the Scythe and Grim Scythe have been increased to the 
+  intended values.
+- A miscalculation of the distance ranges of some skills has been fixed.
+- The Iron Maiden skill now heals a Blood Golem based on the amount of 
+  damage done to it rather than the maximum life of the monster attacking 
+  it.
+- Fixed a bug with experience accumulation and its display in the Realm 
+  Ladders above level 93.
+- Guided Arrow skill properly increases damage with additional skill points.
+
+      Improvements
+
+- The Realms handle character data more quickly now.
+- Added a Battle.net gateway selection to the main menu.
+- Added a Change Password feature.
+- Battle.net messaging has been upgraded to use character names, not just 
+  account names. The new message addressing formats are: 
+  /msg CharacterName, /msg CharacterName@RealmName (where RealmName is 
+  USWest, USEast, Asia, or Europe), and /msg *accountname. The old 
+  addressing format was: /msg accountname.
+- Duriel's graphics are pre-loaded before entering his lair. This 
+  minimizes the chance of getting killed by him before loading is complete.
+- Added a CONTRAST video option to allow users who preferred the original 
+  Glide settings to the 1.03 version to change the setting back or 
+  somewhere in between.
+- Slightly increased the effectiveness of Corpse Explosion by making every 
+  point (not every other one) add to the radius of the damage.
+- Health and mana reductions are no longer smoothed. Now, if you take a 
+  big hit, you immediately see a big drop.
+- Grim Shield base blocking was changed from 0 to 10.
+- Added low quantity warning for Balanced Axe and Hurlbat.
+- Added chances for Blades and Stiletto to be generated as treasure.
+- An equipped belt can now be traded, if it is empty of all items.
+- If player 1 has a chat window open and player 2 clicks on player 1, 
+  nothing will happen now. This prevents trading requests from 
+  interrupting someone who is trying to chat.
+- Messages sent by a player in trade are only sent to the other person 
+  with whom the player is currently trading. Also, messages from players 
+  outside the trade are squelched and will not appear in the message log.
+- Color codes sent by other users in chat are filtered out, preventing 
+  malicious masquerading.
+- Chat colors have been adjusted to help players identify the source of 
+  the text. The new chat colors are Name = Gold, Whisper = Green, 
+  Alert = Red, Message = White, Emote = Gray, Enter/Exit = Gray, and 
+  Blizzard Representative = Blue.
+- Removed the chat cheats "scrollhack1" and "scrollhack2".
+- Added some new error messages to Battle.net and clarified a few others.
+- Changed the Battle.net chat history scroll bar to Windows-style 
+  "page up/down" instead of "scroll to this spot".
+- Changed the "i" and "l" (lower-case "L") in the Battle.net chat font 
+  to look different. The small "5" and "6" in the Character screen are 
+  now more distinguishable, too.
+- Maximum number of characters increased to 8 Battle.net characters/realm.
+
+******Game Hint/Spoiler******
+
+- Quest items will no longer be destroyed when transmuting quest items in 
+  the Horadric Cube already containing another complete recipe.
+- Fixed a bug that occasionally prevented the Golden Bird and Gidbinn 
+  quests from giving their rewards.
+- Cain no longer gives out extra Mephisto Soulstones.
+- Removed the pesky "thief" ability from Lord De Seis. 
+  (That oughta' fix him!)
+- Fixed a bug that erroneously gave credit for the Act 4 Soulstone 
+  quest to a party member who was not in Act 4.
+- The resistances of certain Super-unique monsters have been reduced. Now, 
+  Andariel correctly takes extra damage from fire, while the Smith and 
+  Hephasto take extra damage from poison.
+
+----------------------------------------------------------------
+- Patch 1.03
+----------------------------------------------------------------
+
+      Major bugs
+
+- Fixed a rare bug that would mark a character as "Unable to join, 
+  Bad item." A typical cause of this bug was high lag conditions 
+  while two characters simultaneously attempted to use the same 
+  item lying on the ground - for example, a Necromancer casting 
+  Iron Golem on a sword while another tried to pick it up.
+- Fixed a bug where Diablo II would crash when using 64MB video cards.
+
+      Minor bugs
+
+- Fixed a loophole that allowed either the Necromancer wearing the 
+  complete set of Infernal Tools or the Paladin with the Milabrega 
+  set to temporarily boost his skills to very high levels.
+- Fixed a bug that caused Amazons wielding a javelin in the right 
+  side inventory box and a shield in the left to do no damage with 
+  javelin-throwing skills assigned to the right mouse button.
+- Fixed a bug in Open games that dropped players with slower machines 
+  from the game when they talked to Act III NPCs.
+- Fixed 3 rare lock-up bugs with Lord De Seis: 1) killing him as any 
+  character, 2) leaping away from him as a Barbarian, and 3) being 
+  killed by him while simultaneously drinking a potion.
+- If a player tries to create a game when a Realm server is fully 
+  occupied, the player is prompted to join a game instead. It no longer 
+  reports "Server Down" in this case.
+- The "Toggle Belt" hotkey is no longer active when the in-game chat 
+  overlay is displayed.
+- Magic Mauls with the Enhanced Damage Property have been fixed.
+- Unique Boots Treads of Cthon and Tearhaunch now give players the 
+  proper increased walking speed 
+- Static Field (Sorceress) Fixed Spell Description 
+- Leap Attack (Barbarian) Fixed Spell Description 
+- War Gauntlets are now spelled correctly 
+- Corpse Explosion (Necromancer) Reduced the explosion damage so 
+  that it is not scaled up for each additional player in the game. 
+
+      Improvements
+
+- Game creation queue added. Client now informed of game creation 
+  position.
+- Reduced the average bandwidth required for each player/client. 
+  Effects: reduction in lag and a slight modification to the updating 
+  of the Life Orb. There may be a period of adjustment for some players 
+  and we encourage you to pay closer attention to your Life Orb until 
+  you are used to this change.
+- Added support for future server performance improvements. 
+  Effect: Future reduction in lag and future increase in the number 
+  of games per server.
+- When a server goes down, the clients will no longer be left in 
+  "limbo" for up to 20 seconds, but will exit immediately to 
+  Battle.net chat.
+- Messages from Battle.net are now yellow.
+- Critical Strike (Amazon) now works on all weapons. 
+- The "Z" Key will now toggle between views of Minions only, No 
+  Minions or Party Members, and Your Minions and Party Members. 
+- Items sold by Vendors under the Misc Tab no longer sell out. 
+- Settings are kept when creating games on Battle.net.
+- ATI's recent driver update has solved incompatibilies with Rage 
+  128 video cards and RAVE/OpenGL. To use RAVE or OpenGL with a you will 
+  need to download and install the new drivers, and then choose 
+  "Rescan Monitors" from the video configuration screen. If you can 
+  already select RAVE or OpenGL mode, you do not need to download this 
+  update. The drivers can be downloaded from: 
+  http://blizzard.com/support/diablo2/problems/macsoft.shtml (Mac only)
+- Minor changes for Japanese and Korean support. 
+- Fixed a bug that could cause crashes when playing in RAVE or OpenGL. 
+  (Mac only) 
+- Fixed a rare bug that could cause the game to lock up in low memory 
+  situations. (Mac only) 
+
+      Balance Changes 
+
+- Players that have not completed the last quest in Act III can no longer 
+  use the Portal to Act IV until they have properly completed that quest. 
+- Corpse Explosion (Necromancer) Reduced the extra radius gained per 
+  level of the skill from 1 to 1/2. 
+- Revive (Necromancer) Removed the hit point boost for extra levels 
+  gained in this skill.
+- Conversion (Paladin) Lowered the formula calculating the chance to 
+  convert for extra levels gained in this skill.
+- Whirlwind (Barbarian) Decreased the number of attack attempts made 
+  when using this skill.
+- Pierce (Amazon) Magical arrow effects such as Immolation will apply 
+  to every target hit.
+
+----------------------------------------------------------------
+- patch 1.02
+----------------------------------------------------------------
+
+      Major bugs
+
+- Fixed a bug that deleted your single player or open character if 
+  you deleted a Realm character with the same name.
+- Fixed several bugs to improve memory usage--those bugs could cause 
+  the game to slow down after playing for a while.
+- Fixed a bug associated with ejecting the Play CD.
+
+      Minor Bugs
+
+- More consistent closing of dialog boxes and pop-up screens when 
+  hitting Esc key.
+- Fixed a bug to allow faster drawing of the auto-map.
+
+      Improvements
+
+- Will auto-close some NPC menus when necessary.
+- The automap can be toggled when a waypoint is active.
+- Game log file names follow the format D2YearMonthDay.txt.
+
+******Game Hint/Spoiler******
+
+- Fixed a bug that caused the portal to the Valley of the Magi to 
+  disappear if a player had completed the Arcane Sanctuary quest (by 
+  killing the Summoner) but exited the game without taking the portal 
+  and establishing the waypoint in the Valley of the Magi. (Act II).
+
+----------------------------------------------------------------
+- patch 1.01
+----------------------------------------------------------------
+
+      Major bugs
+
+- Fixed a bug that prevented you from getting credit for killing a
+  quest boss, if you died before it did -- perhaps, by killing it
+  with a poisoned weapon.
+- Fixed a bug that could crash the game during the countdown after
+  completing the final quest in Act IV, if the player used
+  Waypoints to return to the earlier Acts.
+- Fixed a hang bug that could occur if picking up gold while
+  fleeing from a Gargantuan Beast (Act I).
+- Fixed a crash bug that very rarely occurred when a Sorceress
+  cast the Meteor spell.
+- Fixed the "black screen" crash that could occur if one pressed
+  'Alt-tab' during a cinematic.
+- A Multiplayer Install running DirectDraw will no longer crash
+  when one cancels the Cinematic selection menu.
+- Fixed a bug that prevented two quest rewards from scaling up
+  properly for Nightmare and Hell difficulty.
+- Sand Leaper corpses no longer prevent players from moving through
+  a tight pass in the Act II desert.
+- Wounded Act II spiders no longer greatly reduce the frame rate.
+- Lower-titled characters may now join Open games created by
+  higher-titled characters (those who have completed the game in
+  Normal, Nightmare, or Hell difficulty).
+- Fixed a bug that prevented some complete Item Sets from having
+  their full bonus.
+- Fixed a bug in Open battle.net games that allowed a second player
+  to create another game with the same name as an already existing
+  game. No one could join the second one.
+- Fixed a bug in TCP/IP games when a Town Portal was smothered in
+  piles of gold, it could cause a player entering from the other
+  end of the Portal to be disconnected from the Host.
+- Fixed a bug that prevented interacting with the Stash, NPCs, or
+  Waypoints if the player clicked on the Stash, then pressed 'H'
+  before arriving at the Stash, and finally pressed 'H' again
+  after arriving at the Stash.
+
+      Minor bugs
+
+- Removed an unused gossip from Ormus (Act III).
+- Fixed a bug where if the 'Space bar' were assigned to another
+  function, it would erroneously continue to close the Message Log,
+  Quest Log, and Waypoint menu.
+- Fixed a bug that occasionally allowed some monsters to enter the
+  Act II town of Lut Gholein.
+
+      Improvements
+
+- Improved the stability of the servers and the behavior of clients
+  when a server malfunctions.
+- Changed the amount of gold dropped by a player who is killed by
+  another player (PKed) to equal the amount that would normally be
+  lost "to the void" as a death penalty when killed by a monster.
+- Updated the ReadMe.htm to document the PK gold-drop penalty.
+- Changed the text color for Blizzard Representatives in Diablo II
+  chat rooms to yellow.
+- Australian users connect to the USWest Realm instead of the Asia
+  Realm.
+
+******Game Hints/Spoilers******
+
+- Fixed a crash bug that occurred upon entering the red Portal to
+  the Canyon of the Magi, if a player had completed the Arcane
+  Sanctuary quest, then saved and started a new game, before
+  completing the Seven Tombs quest (Act II).
+- Fixed a multiplayer bug that prevented a character from completing
+  the final quest in Act II (and advancing to Act III), when joining
+  a game started by a character who had already defeated the final
+  boss, but who had not yet visited Meshif for the reward.
+- Fixed the following 3 bugs that could occasionally crash the game:
+  - Killing Lord De Seis (Act IV).
+  - In Perspective mode Glide entering a Tomb in the Canyon
+    of the Magi (Act II).
+  - A multiplayer party fighting in the Kurast Bazaar (Act III).
+- Fixed a bug that caused a quest item being held in the cursor to
+  disappear when pressing the Horadric Cube's transmute button.

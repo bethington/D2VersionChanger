@@ -1,0 +1,113 @@
+----------------------------------------------------------------
+  Diablo II Version History
+----------------------------------------------------------------
+- patch 1.02
+----------------------------------------------------------------
+
+      Major bugs
+
+- Fixed a bug that deleted your single player or open character if 
+  you deleted a Realm character with the same name.
+- Fixed several bugs to improve memory usage--those bugs could cause 
+  the game to slow down after playing for a while.
+- Fixed a bug associated with ejecting the Play CD.
+
+      Minor Bugs
+
+- More consistent closing of dialog boxes and pop-up screens when 
+  hitting Esc key.
+- Fixed a bug to allow faster drawing of the auto-map.
+
+      Improvements
+
+- Will auto-close some NPC menus when necessary.
+- The automap can be toggled when a waypoint is active.
+- Game log file names follow the format D2YearMonthDay.txt.
+
+******Game Hint/Spoiler******
+
+- Fixed a bug that caused the portal to the Valley of the Magi to 
+  disappear if a player had completed the Arcane Sanctuary quest (by 
+  killing the Summoner) but exited the game without taking the portal 
+  and establishing the waypoint in the Valley of the Magi. (Act II).
+
+----------------------------------------------------------------
+- patch 1.01
+----------------------------------------------------------------
+
+      Major bugs
+
+- Fixed a bug that prevented you from getting credit for killing a
+  quest boss, if you died before it did -- perhaps, by killing it
+  with a poisoned weapon.
+- Fixed a bug that could crash the game during the countdown after
+  completing the final quest in Act IV, if the player used
+  Waypoints to return to the earlier Acts.
+- Fixed a hang bug that could occur if picking up gold while
+  fleeing from a Gargantuan Beast (Act I).
+- Fixed a crash bug that very rarely occurred when a Sorceress
+  cast the Meteor spell.
+- Fixed the "black screen" crash that could occur if one pressed
+  'Alt-tab' during a cinematic.
+- A Multiplayer Install running DirectDraw will no longer crash
+  when one cancels the Cinematic selection menu.
+- Fixed a bug that prevented two quest rewards from scaling up
+  properly for Nightmare and Hell difficulty.
+- Sand Leaper corpses no longer prevent players from moving through
+  a tight pass in the Act II desert.
+- Wounded Act II spiders no longer greatly reduce the frame rate.
+- Lower-titled characters may now join Open games created by
+  higher-titled characters (those who have completed the game in
+  Normal, Nightmare, or Hell difficulty).
+- Fixed a bug that prevented some complete Item Sets from having
+  their full bonus.
+- Fixed a bug in Open battle.net games that allowed a second player
+  to create another game with the same name as an already existing
+  game. No one could join the second one.
+- Fixed a bug in TCP/IP games when a Town Portal was smothered in
+  piles of gold, it could cause a player entering from the other
+  end of the Portal to be disconnected from the Host.
+- Fixed a bug that prevented interacting with the Stash, NPCs, or
+  Waypoints if the player clicked on the Stash, then pressed 'H'
+  before arriving at the Stash, and finally pressed 'H' again
+  after arriving at the Stash.
+
+      Minor bugs
+
+- Removed an unused gossip from Ormus (Act III).
+- Fixed a bug where if the 'Space bar' were assigned to another
+  function, it would erroneously continue to close the Message Log,
+  Quest Log, and Waypoint menu.
+- Fixed a bug that occasionally allowed some monsters to enter the
+  Act II town of Lut Gholein.
+
+      Improvements
+
+- Improved the stability of the servers and the behavior of clients
+  when a server malfunctions.
+- Changed the amount of gold dropped by a player who is killed by
+  another player (PKed) to equal the amount that would normally be
+  lost "to the void" as a death penalty when killed by a monster.
+- Updated the ReadMe.htm to document the PK gold-drop penalty.
+- Changed the text color for Blizzard Representatives in Diablo II
+  chat rooms to yellow.
+- Australian users connect to the USWest Realm instead of the Asia
+  Realm.
+
+******Game Hints/Spoilers******
+
+- Fixed a crash bug that occurred upon entering the red Portal to
+  the Canyon of the Magi, if a player had completed the Arcane
+  Sanctuary quest, then saved and started a new game, before
+  completing the Seven Tombs quest (Act II).
+- Fixed a multiplayer bug that prevented a character from completing
+  the final quest in Act II (and advancing to Act III), when joining
+  a game started by a character who had already defeated the final
+  boss, but who had not yet visited Meshif for the reward.
+- Fixed the following 3 bugs that could occasionally crash the game:
+  - Killing Lord De Seis (Act IV).
+  - In Perspective mode Glide entering a Tomb in the Canyon
+    of the Magi (Act II).
+  - A multiplayer party fighting in the Kurast Bazaar (Act III).
+- Fixed a bug that caused a quest item being held in the cursor to
+  disappear when pressing the Horadric Cube's transmute button.

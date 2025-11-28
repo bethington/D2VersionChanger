@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python tools/gen_viewer_data.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
