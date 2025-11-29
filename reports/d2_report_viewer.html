@@ -298,11 +298,6 @@
             flex-wrap: wrap;
         }
 
-        .files-count {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-        }
-
         .category-filters {
             display: flex;
             gap: 0.2rem;
@@ -873,7 +868,6 @@
                 <input type="text" class="files-filter" id="filesFilter" placeholder="Filter..." oninput="filterFiles()" style="display: none;">
             </div>
             <div class="files-toolbar" id="filesToolbar" style="display: none; position: relative;">
-                <span class="files-count" id="filesCount">0 files</span>
                 <div class="category-filters" id="categoryFilters"></div>
                 <button class="group-btn" id="groupBtn" onclick="toggleGrouping()">
                     <span class="full-text">Group</span>
@@ -1139,8 +1133,8 @@
                 return categoryFilters[category];
             });
 
-            // Update count
-            document.getElementById('filesCount').textContent = `${files.length} files`;
+            // Store file count for header
+            const fileCount = files.length;
 
             if (files.length === 0) {
                 container.innerHTML = '<div class="details-empty">No files match the filter</div>';
@@ -1189,7 +1183,7 @@
                 const tableHeader = `
                     <div class="table-header">
                         <span></span>
-                        <span>File</span>
+                        <span>${fileCount} Files</span>
                         <span>Size</span>
                         <span>Version</span>
                     </div>
