@@ -4,24 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diablo II Installation Analysis</title>
+    <title>Diablo II Version Archive</title>
     <style>
         :root {
-            --bg-primary: #0d1117;
-            --bg-secondary: #161b22;
-            --bg-tertiary: #21262d;
-            --bg-hover: #30363d;
-            --border-color: #30363d;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
-            --text-muted: #6e7681;
-            --accent-blue: #58a6ff;
-            --accent-green: #3fb950;
-            --accent-red: #f85149;
-            --accent-cyan: #39c5cf;
-            --diablo-red: #8b0000;
-            --diablo-gold: #c7a629;
-            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            /* Dark theme base - inspired by D2's dark UI */
+            --bg-darkest: #0a0a0c;
+            --bg-dark: #111114;
+            --bg-medium: #1a1a1f;
+            --bg-light: #222228;
+            --bg-hover: #2a2a32;
+            --border-dark: #2d2d35;
+            --border-light: #3d3d45;
+
+            /* D2 Item Rarity Colors */
+            --color-normal: #c0c0c0;
+            --color-magic: #6969FF;
+            --color-rare: #FFFF00;
+            --color-unique: #C7B377;
+            --color-set: #00FF00;
+            --color-crafted: #FF6600;
+            --color-runeword: #BDA461;
+
+            /* Semantic colors */
+            --text-primary: #d4d4d4;
+            --text-secondary: #8b8b8b;
+            --text-muted: #5a5a5a;
+            --accent-gold: #C7B377;
+            --accent-red: #8b2020;
+            --accent-red-light: #c93030;
+
+            /* Fonts */
+            --font-main: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
         }
 
         * {
@@ -31,10 +45,9 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-            background-color: var(--bg-primary);
+            font-family: var(--font-main);
+            background-color: var(--bg-darkest);
             color: var(--text-primary);
-            line-height: 1.5;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -43,51 +56,46 @@
 
         /* Header */
         .header {
-            background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--diablo-red) 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .header-inner {
-            padding: 0.4rem 1rem;
+            background: linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid var(--accent-red);
+            padding: 0.6rem 1rem;
             display: flex;
             align-items: center;
             gap: 1rem;
-            max-width: 1600px;
-            margin: 0 auto;
-            width: 100%;
+            flex-shrink: 0;
         }
 
         .header h1 {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            color: var(--diablo-gold);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .header h1::before {
-            content: "🔥";
-        }
-
-        .header p {
-            color: var(--text-secondary);
-            font-size: 0.7rem;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
         }
 
         .header-search {
             margin-left: auto;
+            position: relative;
         }
 
         .header-search input {
-            padding: 0.3rem 0.6rem;
-            background-color: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem 0.4rem 2rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
             border-radius: 4px;
             color: var(--text-primary);
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             width: 280px;
             font-family: var(--font-mono);
+        }
+
+        .header-search::before {
+            content: "⌕";
+            position: absolute;
+            left: 0.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .header-search input::placeholder {
@@ -96,888 +104,1279 @@
 
         .header-search input:focus {
             outline: none;
-            border-color: var(--accent-blue);
+            border-color: var(--accent-gold);
         }
 
-        /* Main container */
-        .container {
+        /* Main three-panel layout */
+        .main-container {
             flex: 1;
             display: flex;
-            flex-direction: column;
-            padding: 0.5rem 1rem;
             overflow: hidden;
-            min-height: 0;
-            max-width: 1600px;
-            margin: 0 auto;
-            width: 100%;
+            gap: 1px;
+            background-color: var(--border-dark);
         }
 
-        /* Two-panel layout */
-        .main-layout {
-            display: flex;
-            gap: 0.75rem;
-            flex: 1;
-            min-height: 0;
-            overflow: hidden;
-        }
-
-        /* Shared panel styles */
+        /* Panel base styles */
         .panel {
-            flex: 1;
-            min-width: 0;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
+            background-color: var(--bg-dark);
             display: flex;
             flex-direction: column;
-            min-height: 0;
+            overflow: hidden;
         }
 
         .panel-header {
-            background-color: var(--bg-tertiary);
-            padding: 0.5rem 0.75rem;
-            border-bottom: 1px solid var(--border-color);
+            padding: 0.6rem 0.8rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+            border-bottom: 1px solid var(--border-dark);
             flex-shrink: 0;
         }
 
-        .panel-header h2,
-        .panel-header h3 {
-            font-size: 0.85rem;
+        .panel-header h2 {
+            font-size: 0.75rem;
             font-weight: 600;
-            color: var(--diablo-gold);
-            margin: 0;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .panel-content {
             flex: 1;
             overflow-y: auto;
-            min-height: 0;
+            overflow-x: hidden;
         }
 
-        .panel-placeholder {
+        /* Panel 1: Version Navigator */
+        .panel-versions {
+            width: 140px;
+            flex-shrink: 0;
+        }
+
+        .version-filters {
             display: flex;
+            gap: 0.25rem;
+            padding: 0.35rem;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 0.25rem 0.3rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-transform: uppercase;
+        }
+
+        .filter-btn.classic {
+            background: linear-gradient(180deg, #2a1a1a 0%, #1a0a0a 100%);
+            color: #ff6666;
+        }
+
+        .filter-btn.lod {
+            background: linear-gradient(180deg, #2a2a1a 0%, #1a1a0a 100%);
+            color: var(--accent-gold);
+        }
+
+        .filter-btn.active {
+            border-color: currentColor;
+            box-shadow: 0 0 4px currentColor;
+        }
+
+        .filter-btn:not(.active) {
+            opacity: 0.4;
+        }
+
+        .version-list {
+            padding: 0.25rem 0;
+        }
+
+        .version-item {
+            display: flex;
+            align-items: center;
+            padding: 0.3rem 0.4rem;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            gap: 0.3rem;
+        }
+
+        .version-item:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .version-item.selected {
+            background-color: var(--bg-light);
+            border-left: 2px solid var(--accent-gold);
+            padding-left: calc(0.4rem - 2px);
+        }
+
+        .version-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .version-badge.classic {
+            color: #ff6666;
+        }
+
+        .version-badge.lod {
+            color: var(--accent-gold);
+        }
+
+        .version-type {
+            font-size: 0.6rem;
+            font-weight: 700;
+            width: 14px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        .version-type.classic {
+            color: #ff6666;
+        }
+
+        .version-type.lod {
+            color: var(--accent-gold);
+        }
+
+        .change-count {
+            font-size: 0.65rem;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            min-width: 20px;
+            text-align: right;
+        }
+
+        .change-count.has-changes {
+            color: var(--color-set);
+        }
+
+        /* Panel 2: Files */
+        .panel-files {
+            flex: 1;
+            min-width: 380px;
+        }
+
+        .files-toolbar {
+            display: flex;
+            align-items: center;
+            padding: 0.4rem 0.6rem;
+            background-color: var(--bg-medium);
+            border-bottom: 1px solid var(--border-dark);
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .files-count {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        .files-filter {
+            padding: 0.25rem 0.5rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            width: 120px;
+        }
+
+        .files-filter:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 0.2rem;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .category-btn {
+            padding: 0.2rem 0.4rem;
+            font-size: 0.6rem;
+            font-weight: 600;
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.15s;
+            background-color: var(--bg-dark);
+            white-space: nowrap;
+        }
+
+        .category-btn .full-text {
+            display: inline;
+        }
+
+        .category-btn .short-text {
+            display: none;
+        }
+
+        /* Switch to short text on narrower screens */
+        @media (max-width: 1200px) {
+            .category-btn .full-text {
+                display: none;
+            }
+            .category-btn .short-text {
+                display: inline;
+            }
+        }
+
+        .category-btn.active {
+            border-color: currentColor;
+            box-shadow: 0 0 3px currentColor;
+        }
+
+        .category-btn:not(.active) {
+            opacity: 0.35;
+        }
+
+        .group-btn {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.15s;
+            background-color: var(--bg-dark);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .group-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .group-btn.active {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            background-color: rgba(199, 179, 119, 0.1);
+        }
+
+        .files-table {
+            width: 100%;
+            position: relative;
+        }
+
+        .category-header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-medium);
+            padding: 0.35rem 0.6rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            z-index: 10;
+        }
+
+        .category-header .category-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .category-header .category-name {
+            flex: 1;
+        }
+
+        .category-header .category-count {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .file-row {
+            display: flex;
+            align-items: center;
+            padding: 0.4rem 0.6rem;
+            border-bottom: 1px solid var(--border-dark);
+            cursor: pointer;
+            transition: background-color 0.1s;
+            gap: 0.6rem;
+        }
+
+        .file-row:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .file-row.selected {
+            background-color: var(--bg-light);
+            border-left: 2px solid var(--color-magic);
+            padding-left: calc(0.6rem - 2px);
+        }
+
+        .file-row .category-indicator {
+            width: 3px;
+            height: 24px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .file-row .filename {
+            flex: 1;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .file-row .size {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            min-width: 70px;
+            text-align: right;
+        }
+
+        .file-row .version-id {
+            font-size: 0.7rem;
+            color: var(--color-magic);
+            font-family: var(--font-mono);
+            min-width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .file-row .version-id.pe-version {
+            color: var(--color-unique);
+        }
+
+        .file-row .version-id.static {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Panel 3: File Details */
+        .panel-details {
+            width: 360px;
+            flex-shrink: 0;
+        }
+
+        .details-empty {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100%;
             color: var(--text-muted);
-            font-size: 0.8rem;
+            text-align: center;
+            padding: 2rem;
         }
 
-        /* Table styles */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.75rem;
-        }
-
-        .data-table th,
-        .data-table td {
-            padding: 0.5rem 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-            vertical-align: middle;
-        }
-
-        .data-table th {
-            background-color: var(--bg-tertiary);
-            color: var(--text-secondary);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.5px;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            cursor: pointer;
-            user-select: none;
-            white-space: nowrap;
-        }
-
-        .data-table th:hover {
-            background-color: var(--bg-hover);
-            color: var(--text-primary);
-        }
-
-        .data-table th .sort-indicator {
-            margin-left: 0.25rem;
+        .details-empty-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
             opacity: 0.5;
         }
 
-        .data-table th.sorted .sort-indicator {
-            opacity: 1;
-            color: var(--accent-blue);
+        .details-empty-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
-        .data-table tbody tr {
-            cursor: pointer;
+        .file-stats {
+            padding: 0.8rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+            border-bottom: 1px solid var(--border-dark);
         }
 
-        .data-table tbody tr:hover {
-            background-color: var(--bg-hover);
+        .file-stats-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        /* Table cell styles */
-        .cell-name {
-            color: var(--accent-blue);
+        .file-stats-title .category-tag {
+            font-size: 0.65rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
             font-weight: 500;
-            max-width: 120px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
         }
 
-        .cell-size {
-            color: var(--text-secondary);
-            white-space: nowrap;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
         }
 
-        .cell-version {
-            color: var(--accent-cyan);
+        .stat-item {
+            background-color: var(--bg-dark);
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-dark);
         }
 
-        .cell-hash {
-            font-family: var(--font-mono);
+        .stat-label {
+            font-size: 0.6rem;
             color: var(--text-muted);
-            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .stat-value.variants {
+            color: var(--color-rare);
+        }
+
+        .stat-value.stable {
+            color: var(--color-set);
+        }
+
+        .stat-value.unstable {
+            color: var(--color-crafted);
+        }
+
+        .hash-display {
+            padding: 0.6rem 0.8rem;
+            background-color: var(--bg-darkest);
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .hash-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .hash-value {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            word-break: break-all;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
         }
 
         .hash-text {
-            cursor: help;
+            flex: 1;
+            cursor: pointer;
         }
 
         .hash-text:hover {
-            color: var(--accent-blue);
+            color: var(--color-magic);
         }
 
-        /* Badges */
-        .badge {
-            display: inline-block;
-            padding: 0.125rem 0.5rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            line-height: 1.2;
-        }
-
-        .badge-classic {
-            background-color: rgba(139, 0, 0, 0.3);
-            color: #ff6b6b;
-        }
-
-        .badge-lod {
-            background-color: rgba(199, 166, 41, 0.3);
-            color: var(--diablo-gold);
-        }
-
-        .badge-info {
-            background-color: rgba(88, 166, 255, 0.2);
-            color: var(--accent-blue);
-        }
-
-        /* Buttons */
-        .btn-icon {
+        .copy-btn {
             background: none;
-            border: none;
+            border: 1px solid var(--border-dark);
             color: var(--text-muted);
-            cursor: pointer;
-            padding: 0.125rem;
-            font-size: 0.75rem;
+            padding: 0.2rem 0.4rem;
             border-radius: 3px;
-            line-height: 1;
-        }
-
-        .btn-icon:hover {
-            color: var(--accent-blue);
-            background-color: var(--bg-hover);
-        }
-
-        /* Row states */
-        .clickable-row {
             cursor: pointer;
+            font-size: 0.65rem;
+            flex-shrink: 0;
         }
 
-        .clickable-row.selected {
-            background-color: var(--bg-tertiary);
-            border-left: 3px solid var(--accent-blue);
+        .copy-btn:hover {
+            border-color: var(--color-magic);
+            color: var(--color-magic);
         }
 
-        .hash-highlight {
-            background-color: rgba(88, 166, 255, 0.3) !important;
-            animation: pulse-highlight 1s ease-in-out 2;
+        .evolution-section {
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid var(--border-dark);
         }
 
-        @keyframes pulse-highlight {
-
-            0%,
-            100% {
-                background-color: rgba(88, 166, 255, 0.3);
-            }
-
-            50% {
-                background-color: rgba(88, 166, 255, 0.5);
-            }
+        .evolution-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
         }
 
-        /* Search input */
-        .search-input {
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            background-color: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            border-left: none;
-            border-right: none;
-            color: var(--text-primary);
-            font-size: 0.75rem;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-        }
-
-        /* Modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;
-            justify-content: flex-end;
-            align-items: stretch;
-            z-index: 2000;
-        }
-
-        .modal-overlay.show {
+        .evolution-timeline {
             display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
         }
 
-        .modal {
-            background-color: var(--bg-secondary);
-            border-left: 1px solid var(--border-color);
-            width: 400px;
-            max-width: 90%;
-            height: 100%;
-            overflow-y: auto;
-            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-header {
-            background-color: var(--bg-tertiary);
-            padding: 1rem 1.25rem;
-            border-bottom: 1px solid var(--border-color);
+        .timeline-item {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-
-        .modal-header h3 {
-            color: var(--diablo-gold);
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.5rem;
-            cursor: pointer;
-            line-height: 1;
-        }
-
-        .modal-close:hover {
-            color: var(--accent-red);
-        }
-
-        .modal-content {
-            padding: 1.25rem;
-        }
-
-        .variation-group {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background-color: var(--bg-tertiary);
-            border-radius: 6px;
-            border-left: 3px solid var(--accent-blue);
-        }
-
-        .variation-group:last-child {
-            margin-bottom: 0;
-        }
-
-        .variation-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-        }
-
-        .variation-hash {
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            color: var(--text-muted);
-            word-break: break-all;
-        }
-
-        .variation-folders {
-            display: flex;
-            flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 0.75rem;
-        }
-
-        .variation-folder {
-            background-color: var(--bg-hover);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            padding: 0.25rem 0;
             font-size: 0.75rem;
-            color: var(--text-primary);
         }
 
-        /* Toast notification */
+        .timeline-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--color-magic);
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .timeline-dot.current {
+            background-color: var(--color-set);
+            box-shadow: 0 0 6px var(--color-set);
+        }
+
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            width: 1px;
+            height: 8px;
+            background-color: var(--border-light);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item:first-child .timeline-dot::before {
+            display: none;
+        }
+
+        .timeline-versions {
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .timeline-versions .range {
+            color: var(--text-secondary);
+            font-size: 0.65rem;
+        }
+
+        .timeline-hash {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .variants-section {
+            padding: 0.6rem 0.8rem;
+        }
+
+        .variants-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .variant-row {
+            display: flex;
+            align-items: center;
+            padding: 0.4rem;
+            background-color: var(--bg-darkest);
+            border-radius: 4px;
+            margin-bottom: 0.3rem;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .variant-row:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .variant-row.current {
+            border: 1px solid var(--color-set);
+            background-color: rgba(0, 255, 0, 0.05);
+        }
+
+        .variant-id {
+            color: var(--color-magic);
+            font-family: var(--font-mono);
+            min-width: 100px;
+        }
+
+        .variant-versions {
+            flex: 1;
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+        }
+
+        .variant-size {
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+        }
+
+        /* Toast */
         .toast {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: var(--accent-green);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background-color: var(--color-set);
+            color: var(--bg-darkest);
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
             opacity: 0;
-            transition: opacity 0.3s;
+            transform: translateY(10px);
+            transition: all 0.2s;
             z-index: 1000;
         }
 
         .toast.show {
             opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scrollbar styling */
+        .panel-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .panel-content::-webkit-scrollbar-track {
+            background: var(--bg-darkest);
+        }
+
+        .panel-content::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        .panel-content::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
         }
 
         /* Footer */
         .footer {
-            text-align: center;
-            padding: 0.4rem;
-            color: var(--text-muted);
+            padding: 0.4rem 1rem;
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-dark);
             font-size: 0.7rem;
-            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             flex-shrink: 0;
         }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .main-layout {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .panel {
-                flex: 1 1 50%;
-                max-height: 50%;
-            }
-
-            .header p {
-                display: none;
-            }
-
-            .header-search input {
-                width: 200px;
-            }
+        .footer-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
         }
 
-        @media (max-width: 480px) {
-            .header-inner {
-                padding: 0.3rem 0.5rem;
-                flex-wrap: wrap;
-            }
-
-            .header h1 {
-                font-size: 0.8rem;
-            }
-
-            .header-search {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 0.25rem;
-            }
-
-            .header-search input {
-                width: 100%;
-            }
-
-            .container {
-                padding: 0.25rem;
-            }
-
-            .main-layout {
-                gap: 0.25rem;
-            }
-
-            .data-table th,
-            .data-table td {
-                padding: 0.35rem 0.5rem;
-                font-size: 0.65rem;
-            }
-
-            .data-table th {
-                font-size: 0.55rem;
-            }
+        .footer-stat .value {
+            color: var(--accent-gold);
+            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <div class="header-inner">
-            <h1>Diablo II Installation Analysis</h1>
-            <p>Comprehensive hash verification and comparison dashboard</p>
-            <div class="header-search">
-                <input type="text" id="hashSearch" placeholder="Search by SHA256 hash (full or partial)..." onkeydown="if(event.key==='Enter') searchByHash()">
-            </div>
+        <h1>Diablo II Version Archive</h1>
+        <div class="header-search">
+            <input type="text" id="hashSearch" placeholder="Search by hash..."
+                   onkeydown="if(event.key==='Enter') searchByHash()">
         </div>
     </div>
 
-    <div class="container">
-        <div id="loadingSection" style="padding: 1rem; text-align: center;">
-            <p>⏳ Loading data...</p>
+    <div class="main-container">
+        <!-- Panel 1: Version Navigator -->
+        <div class="panel panel-versions">
+            <div class="panel-header">
+                <h2>Versions</h2>
+            </div>
+            <div class="version-filters">
+                <button class="filter-btn classic" onclick="toggleFilter('Classic')">C</button>
+                <button class="filter-btn lod" onclick="toggleFilter('LoD')">L</button>
+            </div>
+            <div class="panel-content">
+                <div class="version-list" id="versionList"></div>
+            </div>
         </div>
 
-        <div id="errorSection" style="display: none; padding: 1rem; text-align: center;">
-            <p>❌ Error loading data. Make sure the JSON files exist in the parent directory.</p>
-        </div>
-
-        <div class="main-layout">
-            <div class="panel" id="leftPanel">
-                <div class="panel-header">
-                    <h2>📊 Versions</h2>
-                </div>
-                <div class="panel-content" id="leftPanelContent">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th onclick="sortVersionsTable('folder_name')" data-col="folder_name">Folder <span class="sort-indicator">⇅</span></th>
-                                <th onclick="sortVersionsTable('game_type')" data-col="game_type">Type <span class="sort-indicator">⇅</span></th>
-                                <th onclick="sortVersionsTable('version')" data-col="version" class="sorted">Version <span class="sort-indicator">▲</span></th>
-                                <th onclick="sortVersionsTable('file_count')" data-col="file_count">Files <span class="sort-indicator">⇅</span></th>
-                                <th onclick="sortVersionsTable('total_size')" data-col="total_size">Size <span class="sort-indicator">⇅</span></th>
-                                <th onclick="sortVersionsTable('nocd_status')" data-col="nocd_status">No CD <span class="sort-indicator">⇅</span></th>
-                            </tr>
-                        </thead>
-                        <tbody id="overviewTable">
-                        </tbody>
-                    </table>
+        <!-- Panel 2: Files -->
+        <div class="panel panel-files">
+            <div class="panel-header">
+                <h2 id="filesTitle">Select a Version</h2>
+            </div>
+            <div class="files-toolbar" id="filesToolbar" style="display: none;">
+                <span class="files-count" id="filesCount">0 files</span>
+                <div class="category-filters" id="categoryFilters"></div>
+                <button class="group-btn" id="groupBtn" onclick="toggleGrouping()">Group</button>
+                <input type="text" class="files-filter" id="filesFilter" placeholder="Filter..." oninput="filterFiles()">
+            </div>
+            <div class="panel-content">
+                <div class="files-table" id="filesTable">
+                    <div class="details-empty">
+                        <div class="details-empty-icon">📂</div>
+                        <div class="details-empty-text">Select a version from the left panel to browse its files</div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="panel" id="rightPanel">
-                <div class="panel-header">
-                    <h3 id="versionFilesTitle">📁 Version Files Viewer</h3>
-                </div>
-                <input type="text" class="search-input" id="fileSearch" placeholder="Search files..." style="display: none;">
-                <div class="panel-content" id="rightPanelContent">
-                    <div class="panel-placeholder">
-                        👈 Select a folder from the table
+        <!-- Panel 3: File Details -->
+        <div class="panel panel-details">
+            <div class="panel-header">
+                <h2>File Details</h2>
+            </div>
+            <div class="panel-content" id="detailsContent">
+                <div class="details-empty">
+                    <div class="details-empty-icon">🔍</div>
+                    <div class="details-empty-text">
+                        Select a file to view its evolution across versions<br><br>
+                        Or search for a hash above to identify a file
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="toast" id="toast">Copied to clipboard!</div>
-
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-        <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h3 id="modalTitle">File Versions</h3>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-            </div>
-            <div class="modal-content" id="modalContent"></div>
+    <div class="footer">
+        <div class="footer-stat">
+            <span class="value" id="statVersions">0</span> versions
+        </div>
+        <div class="footer-stat">
+            <span class="value" id="statFiles">0</span> unique files
+        </div>
+        <div class="footer-stat">
+            <span class="value" id="statHashes">0</span> file variants
         </div>
     </div>
 
-    <div class="footer">
-        <p>Diablo II Hash Verification Tool | Generated with 🔥</p>
-    </div>
+    <div class="toast" id="toast">Copied to clipboard</div>
 
     <script src="d2_data.js"></script>
     <script>
-        // Data loaded from d2_data.js: VERSIONS_DATA (array) and FOLDERS_DATA (object)
-        let currentSelectedFolder = null;
+        // State
+        let selectedVersion = null;
+        let selectedFile = null;
+        let showClassic = true;
+        let showLoD = true;
+        let isGrouped = false;
 
-        // Sorting state
-        let versionsSortColumn = 'version';
-        let versionsSortAsc = true;
-        let filesSortColumn = 'filename';
-        let filesSortAsc = true;
+        // Category definitions with colors and short codes
+        const CATEGORIES = {
+            'Game Logic': { color: '#00FF00', short: 'GL' },
+            'Graphics': { color: '#6969FF', short: 'GR' },
+            'Audio': { color: '#A59263', short: 'AU' },
+            'Network': { color: '#FF6600', short: 'NW' },
+            'Launcher': { color: '#FFFF00', short: 'LA' },
+            'Data': { color: '#C7B377', short: 'DA' },
+            'Media': { color: '#8080FF', short: 'ME' },
+            'Utility': { color: '#808080', short: 'UT' },
+            'Other': { color: '#FFFFFF', short: 'OT' }
+        };
 
-        // Load data when page loads
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('loadingSection').style.display = 'none';
-            if (typeof VERSIONS_DATA !== 'undefined' && typeof FOLDERS_DATA !== 'undefined') {
-                updateDisplay();
-            } else {
-                document.getElementById('errorSection').style.display = 'block';
+        // Category filter state - all enabled by default
+        let categoryFilters = {};
+        Object.keys(CATEGORIES).forEach(cat => categoryFilters[cat] = true);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof VERSIONS_DATA === 'undefined') {
+                console.error('Data not loaded');
+                return;
             }
+
+            // Update footer stats
+            document.getElementById('statVersions').textContent = VERSIONS_DATA.length;
+            document.getElementById('statFiles').textContent = Object.keys(FILE_HISTORY_DATA || {}).length;
+
+            // Count total variants
+            let totalVariants = 0;
+            Object.values(FILE_HISTORY_DATA || {}).forEach(f => {
+                totalVariants += f.variant_count || 0;
+            });
+            document.getElementById('statHashes').textContent = totalVariants;
+
+            updateFilterButtons();
+            renderVersionList();
         });
 
-        // Version comparison function for sorting (numeric version order)
-        function compareVersions(a, b, ignoreGameType = false) {
-            // Sort by game type (Classic before LoD) only if not ignoring
-            if (!ignoreGameType && a.game_type !== b.game_type) {
-                if (a.game_type === 'Classic') return -1;
-                if (b.game_type === 'Classic') return 1;
+        function toggleFilter(filter) {
+            if (filter === 'Classic') {
+                showClassic = !showClassic;
+                // If both would be off, turn the other one on
+                if (!showClassic && !showLoD) {
+                    showLoD = true;
+                }
+            } else if (filter === 'LoD') {
+                showLoD = !showLoD;
+                // If both would be off, turn the other one on
+                if (!showClassic && !showLoD) {
+                    showClassic = true;
+                }
             }
 
-            // Parse version strings like "1.00", "1.09b", "1.10", "1.10 Beta 1"
-            function parseVersion(versionStr) {
-                if (!versionStr) return { major: 0, minor: 0, patch: '', beta: 0 };
-
-                // Handle beta versions like "1.10 Beta 1"
-                const betaMatch = versionStr.match(/^(\d+)\.(\d+)\s*Beta\s*(\d+)$/i);
-                if (betaMatch) {
-                    return {
-                        major: parseInt(betaMatch[1]),
-                        minor: parseInt(betaMatch[2]),
-                        patch: '',
-                        beta: parseInt(betaMatch[3])
-                    };
-                }
-
-                // Handle regular versions like "1.09b", "1.10", "1.14d"
-                const match = versionStr.match(/^(\d+)\.(\d+)([a-z])?$/i);
-                if (match) {
-                    return {
-                        major: parseInt(match[1]),
-                        minor: parseInt(match[2]),
-                        patch: match[3] || '',
-                        beta: 999 // Non-beta versions come after beta versions
-                    };
-                }
-
-                return { major: 0, minor: 0, patch: versionStr, beta: 999 };
-            }
-
-            const vA = parseVersion(a.version || a.folder_name);
-            const vB = parseVersion(b.version || b.folder_name);
-
-            // Compare major version
-            if (vA.major !== vB.major) return vA.major - vB.major;
-            // Compare minor version
-            if (vA.minor !== vB.minor) return vA.minor - vB.minor;
-            // Compare beta (beta versions come before release)
-            if (vA.beta !== vB.beta) return vA.beta - vB.beta;
-            // Compare patch letter (a < b < c < d)
-            return vA.patch.localeCompare(vB.patch);
+            updateFilterButtons();
+            renderVersionList();
         }
 
-        function sortVersionsTable(column) {
-            if (versionsSortColumn === column) {
-                versionsSortAsc = !versionsSortAsc;
-            } else {
-                versionsSortColumn = column;
-                versionsSortAsc = true;
-            }
-            updateDisplay();
+        function updateFilterButtons() {
+            const classicBtn = document.querySelector('.filter-btn.classic');
+            const lodBtn = document.querySelector('.filter-btn.lod');
+
+            classicBtn.classList.toggle('active', showClassic);
+            lodBtn.classList.toggle('active', showLoD);
         }
 
-        function updateDisplay() {
-            if (typeof VERSIONS_DATA === 'undefined') return;
+        function renderCategoryFilters() {
+            const container = document.getElementById('categoryFilters');
+            if (!container) return;
 
-            // Sort versions by selected column
-            const sortedVersions = [...VERSIONS_DATA].sort((a, b) => {
-                let result = 0;
-                switch (versionsSortColumn) {
-                    case 'folder_name':
-                        result = a.folder_name.localeCompare(b.folder_name);
-                        break;
-                    case 'game_type':
-                        // When sorting by game type, use version as secondary sort
-                        result = a.game_type.localeCompare(b.game_type);
-                        if (result === 0) result = compareVersions(a, b, true);
-                        break;
-                    case 'version':
-                        // Sort purely by version, ignoring game type
-                        result = compareVersions(a, b, true);
-                        break;
-                    case 'file_count':
-                        result = a.file_count - b.file_count;
-                        break;
-                    case 'total_size':
-                        result = parseSizeToBytes(a.total_size_readable) - parseSizeToBytes(b.total_size_readable);
-                        break;
-                    case 'nocd_status':
-                        const order = { 'official_nocd': 0, 'nocd': 1, 'original': 2 };
-                        result = (order[a.nocd_status] ?? 3) - (order[b.nocd_status] ?? 3);
-                        break;
-                    default:
-                        result = compareVersions(a, b, true);
-                }
-                return versionsSortAsc ? result : -result;
-            });
+            container.innerHTML = Object.entries(CATEGORIES).map(([name, info]) => `
+                <button class="category-btn ${categoryFilters[name] ? 'active' : ''}"
+                        style="color: ${info.color}"
+                        onclick="toggleCategoryFilter('${name}')"
+                        title="${name}">
+                    <span class="full-text">${name}</span>
+                    <span class="short-text">${info.short}</span>
+                </button>
+            `).join('');
+        }
 
-            // Update header indicators
-            document.querySelectorAll('#leftPanel th').forEach(th => {
-                th.classList.remove('sorted');
-                const indicator = th.querySelector('.sort-indicator');
-                if (indicator) indicator.textContent = '⇅';
-            });
-            const activeHeader = document.querySelector(`#leftPanel th[data-col="${versionsSortColumn}"]`);
-            if (activeHeader) {
-                activeHeader.classList.add('sorted');
-                const indicator = activeHeader.querySelector('.sort-indicator');
-                if (indicator) indicator.textContent = versionsSortAsc ? '▲' : '▼';
+        function toggleCategoryFilter(category) {
+            categoryFilters[category] = !categoryFilters[category];
+
+            // Ensure at least one category is active
+            const anyActive = Object.values(categoryFilters).some(v => v);
+            if (!anyActive) {
+                categoryFilters[category] = true;
             }
 
-            const tbody = document.getElementById('overviewTable');
-            tbody.innerHTML = '';
+            renderCategoryFilters();
+            if (selectedVersion && FOLDERS_DATA[selectedVersion]) {
+                renderFilesTable(FOLDERS_DATA[selectedVersion]);
+            }
+        }
 
-            sortedVersions.forEach(ver => {
-                const typeBadge = ver.is_lod === true
-                    ? '<span class="badge badge-lod">LoD</span>'
-                    : ver.is_lod === false
-                        ? '<span class="badge badge-classic">Classic</span>'
-                        : '<span class="badge badge-info">Custom</span>';
+        function toggleGrouping() {
+            isGrouped = !isGrouped;
+            document.getElementById('groupBtn').classList.toggle('active', isGrouped);
+            if (selectedVersion && FOLDERS_DATA[selectedVersion]) {
+                renderFilesTable(FOLDERS_DATA[selectedVersion]);
+            }
+        }
 
-                const cdStatusBadge = ver.nocd_status === 'official_nocd'
-                    ? '<span style="color: var(--accent-green);" title="Official No-CD (1.12+)">✓</span>'
-                    : ver.nocd_status === 'original'
-                        ? '<span style="color: var(--accent-red);" title="CD Required">✗</span>'
-                        : ver.nocd_status === 'nocd'
-                            ? '<span style="color: var(--accent-blue);" title="No-CD Patched">✓</span>'
-                            : '<span style="color: var(--text-muted);" title="Unknown">-</span>';
+        function renderVersionList() {
+            const container = document.getElementById('versionList');
 
-                const row = document.createElement('tr');
-                row.className = 'clickable-row';
-                row.dataset.folder = ver.folder_name;
-                row.onclick = () => selectFolder(ver.folder_name);
-                row.innerHTML = `
-                    <td><strong>${ver.folder_name}</strong></td>
-                    <td>${typeBadge}</td>
-                    <td class="cell-version" title="${ver.raw_pe_version || ''}">${ver.version || '-'}</td>
-                    <td>${ver.file_count}</td>
-                    <td class="cell-size">${ver.total_size_readable}</td>
-                    <td>${cdStatusBadge}</td>
+            // Filter based on toggle buttons
+            let versions = VERSIONS_DATA.filter(v => {
+                if (v.game_type === 'Classic' && showClassic) return true;
+                if (v.game_type === 'LoD' && showLoD) return true;
+                return false;
+            });
+
+            // Sort by version number
+            versions.sort((a, b) => {
+                const parseVer = (v) => {
+                    const match = v.version.match(/^(\d+)\.(\d+)([a-z])?(?:\s*Beta\s*(\d+))?$/i);
+                    if (!match) return [0, 0, '', 999];
+                    return [
+                        parseInt(match[1]),
+                        parseInt(match[2]),
+                        match[3] || '',
+                        match[4] ? parseInt(match[4]) : 999
+                    ];
+                };
+                const [aMaj, aMin, aLet, aBeta] = parseVer(a);
+                const [bMaj, bMin, bLet, bBeta] = parseVer(b);
+
+                if (aMaj !== bMaj) return aMaj - bMaj;
+                if (aMin !== bMin) return aMin - bMin;
+                if (aBeta !== bBeta) return aBeta - bBeta;
+                return aLet.localeCompare(bLet);
+            });
+
+            container.innerHTML = versions.map(v => {
+                const isClassic = v.game_type === 'Classic';
+                const typeClass = isClassic ? 'classic' : 'lod';
+                const changeCount = v.change_count || 0;
+                const isSelected = selectedVersion === v.folder_name;
+
+                return `
+                    <div class="version-item ${isSelected ? 'selected' : ''}"
+                         onclick="selectVersion('${v.folder_name}')"
+                         title="${v.game_type} ${v.version} - ${changeCount} files changed">
+                        <span class="version-type ${typeClass}">${isClassic ? 'C' : 'L'}</span>
+                        <span class="version-badge ${typeClass}">${v.version}</span>
+                        <span class="change-count ${changeCount > 0 ? 'has-changes' : ''}">${changeCount > 0 ? changeCount : ''}</span>
+                    </div>
                 `;
-                tbody.appendChild(row);
-            });
+            }).join('');
         }
 
-        function selectFolder(folderName) {
-            document.querySelectorAll('.clickable-row').forEach(row => {
-                row.classList.toggle('selected', row.dataset.folder === folderName);
+        function selectVersion(folderName) {
+            selectedVersion = folderName;
+            selectedFile = null;
+
+            // Update version list selection
+            document.querySelectorAll('.version-item').forEach(el => {
+                el.classList.toggle('selected', el.getAttribute('onclick').includes(folderName));
             });
 
-            currentSelectedFolder = folderName;
-            const folder = FOLDERS_DATA?.[folderName];
+            // Update files panel
+            const folder = FOLDERS_DATA[folderName];
+            const diff = DIFFS_DATA[folderName];
 
             if (!folder) {
-                document.getElementById('rightPanelContent').innerHTML = '<div class="panel-placeholder">No file data available</div>';
+                document.getElementById('filesTitle').textContent = 'No Data';
+                document.getElementById('filesTable').innerHTML = '<div class="details-empty">No file data available</div>';
                 return;
             }
 
-            document.getElementById('versionFilesTitle').textContent = `📁 ${folderName}`;
-            document.getElementById('fileSearch').style.display = 'block';
-            document.getElementById('fileSearch').value = '';
+            // Update title
+            const versionInfo = VERSIONS_DATA.find(v => v.folder_name === folderName);
+            document.getElementById('filesTitle').textContent = `${versionInfo?.game_type || ''} ${versionInfo?.version || folderName}`;
+
+            // Show toolbar
+            document.getElementById('filesToolbar').style.display = 'flex';
+            document.getElementById('filesFilter').value = '';
+
+            // Render category filters
+            renderCategoryFilters();
+            document.getElementById('groupBtn').classList.toggle('active', isGrouped);
+
+            // Render files
             renderFilesTable(folder);
+
+            // Clear details panel
+            renderEmptyDetails();
         }
 
-        function sortFilesTable(column) {
-            if (filesSortColumn === column) {
-                filesSortAsc = !filesSortAsc;
-            } else {
-                filesSortColumn = column;
-                filesSortAsc = true;
-            }
-            if (currentSelectedFolder && FOLDERS_DATA?.[currentSelectedFolder]) {
-                const filter = document.getElementById('fileSearch').value || '';
-                renderFilesTable(FOLDERS_DATA[currentSelectedFolder], filter);
-            }
-        }
+        function renderFilesTable(folder) {
+            const container = document.getElementById('filesTable');
+            const filterText = document.getElementById('filesFilter').value.toLowerCase();
 
-        function parseSizeToBytes(sizeStr) {
-            if (!sizeStr) return 0;
-            const match = sizeStr.match(/([\d.]+)\s*(B|KB|MB|GB)/i);
-            if (!match) return 0;
-            const value = parseFloat(match[1]);
-            const unit = match[2].toUpperCase();
-            switch (unit) {
-                case 'B': return value;
-                case 'KB': return value * 1024;
-                case 'MB': return value * 1024 * 1024;
-                case 'GB': return value * 1024 * 1024 * 1024;
-                default: return value;
-            }
-        }
-
-        function renderFilesTable(folder, filter = '') {
             let files = Object.entries(folder.files);
-            const filteredFiles = filter
-                ? files.filter(([name]) => name.toLowerCase().includes(filter.toLowerCase()))
-                : files;
 
-            if (filteredFiles.length === 0) {
-                document.getElementById('rightPanelContent').innerHTML = '<div class="panel-placeholder">No files match the search</div>';
+            // Filter by text
+            if (filterText) {
+                files = files.filter(([name]) => name.toLowerCase().includes(filterText));
+            }
+
+            // Filter by category
+            files = files.filter(([name, file]) => {
+                const category = file.category || 'Other';
+                return categoryFilters[category];
+            });
+
+            // Update count
+            document.getElementById('filesCount').textContent = `${files.length} files`;
+
+            if (files.length === 0) {
+                container.innerHTML = '<div class="details-empty">No files match the filter</div>';
                 return;
             }
 
-            // Sort files
-            const sortedFiles = [...filteredFiles].sort((a, b) => {
-                const [nameA, fileA] = a;
-                const [nameB, fileB] = b;
-                let result = 0;
-                switch (filesSortColumn) {
-                    case 'filename':
-                        result = nameA.localeCompare(nameB);
-                        break;
-                    case 'size':
-                        result = (fileA.size_bytes || 0) - (fileB.size_bytes || 0);
-                        break;
-                    case 'version':
-                        result = (fileA.pe_version || '').localeCompare(fileB.pe_version || '');
-                        break;
-                    case 'hash':
-                        result = (fileA.sha256 || '').localeCompare(fileB.sha256 || '');
-                        break;
-                    default:
-                        result = nameA.localeCompare(nameB);
-                }
-                return filesSortAsc ? result : -result;
-            });
+            if (isGrouped) {
+                // Group by category
+                const grouped = {};
+                files.forEach(([filename, file]) => {
+                    const category = file.category || 'Other';
+                    if (!grouped[category]) {
+                        grouped[category] = [];
+                    }
+                    grouped[category].push([filename, file]);
+                });
 
-            let html = `<table class="data-table" id="filesTable"><thead><tr>
-                <th onclick="sortFilesTable('filename')" data-col="filename" class="sorted">Filename <span class="sort-indicator">▲</span></th>
-                <th onclick="sortFilesTable('size')" data-col="size">Size <span class="sort-indicator">⇅</span></th>
-                <th onclick="sortFilesTable('version')" data-col="version">Version <span class="sort-indicator">⇅</span></th>
-                <th onclick="sortFilesTable('hash')" data-col="hash">SHA256 <span class="sort-indicator">⇅</span></th>
-            </tr></thead><tbody>`;
+                // Sort categories by defined order, sort files within each category
+                const categoryOrder = Object.keys(CATEGORIES);
+                const sortedCategories = Object.keys(grouped).sort((a, b) => {
+                    return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
+                });
 
-            sortedFiles.forEach(([filename, file]) => {
-                const hash = file.sha256 || '';
-                const hashShort = hash ? '...' + hash.slice(-8) : '-';
-                const matchingFolders = file.matching_folders || [];
-                const matchTooltip = matchingFolders.length > 0
-                    ? `Found in ${matchingFolders.length} version(s):\n${matchingFolders.join('\n')}`
-                    : 'No matches found';
+                let html = '';
+                sortedCategories.forEach(category => {
+                    const categoryFiles = grouped[category].sort((a, b) => a[0].localeCompare(b[0]));
+                    const categoryInfo = CATEGORIES[category] || { color: '#FFFFFF', short: '??' };
 
-                html += `<tr onclick="openComparison('${filename.replace(/'/g, "\\'")})" title="${matchTooltip}">
-                    <td class="cell-name" title="${filename}">${filename}</td>
-                    <td class="cell-size">${file.size_readable || '-'}</td>
-                    <td class="cell-version" title="${file.pe_version_raw || ''}">${file.pe_version || '-'}</td>
-                    <td class="cell-hash">
-                        <span class="hash-text" title="${hash}">${hashShort}</span>
-                        ${hash ? `<button class="btn-icon" onclick="event.stopPropagation(); copyHash('${hash}')" title="Copy full hash">📋</button>` : ''}
-                    </td>
-                </tr>`;
-            });
+                    // Sticky category header
+                    html += `
+                        <div class="category-header">
+                            <span class="category-dot" style="background-color: ${categoryInfo.color}"></span>
+                            <span class="category-name">${category}</span>
+                            <span class="category-count">${categoryFiles.length} files</span>
+                        </div>
+                    `;
 
-            html += '</tbody></table>';
-            document.getElementById('rightPanelContent').innerHTML = html;
+                    // Files in this category
+                    html += categoryFiles.map(([filename, file]) => renderFileRow(filename, file)).join('');
+                });
 
-            // Update header indicators
-            document.querySelectorAll('#filesTable th').forEach(th => {
-                th.classList.remove('sorted');
-                const indicator = th.querySelector('.sort-indicator');
-                if (indicator) indicator.textContent = '⇅';
-            });
-            const activeHeader = document.querySelector(`#filesTable th[data-col="${filesSortColumn}"]`);
-            if (activeHeader) {
-                activeHeader.classList.add('sorted');
-                const indicator = activeHeader.querySelector('.sort-indicator');
-                if (indicator) indicator.textContent = filesSortAsc ? '▲' : '▼';
+                container.innerHTML = html;
+            } else {
+                // Sort alphabetically
+                files.sort((a, b) => a[0].localeCompare(b[0]));
+                container.innerHTML = files.map(([filename, file]) => renderFileRow(filename, file)).join('');
             }
+        }
+
+        function renderFileRow(filename, file) {
+            const categoryColor = file.category_color || getCategoryColor(file.category);
+            const versionId = file.pe_version
+                ? `${file.pe_version} (PE)`
+                : file.community_id || '—';
+            const versionClass = file.pe_version ? 'pe-version' : (file.community_id ? '' : 'static');
+            const isSelected = selectedFile === filename;
+
+            return `
+                <div class="file-row ${isSelected ? 'selected' : ''}"
+                     onclick="selectFile('${filename.replace(/'/g, "\\'")}')">
+                    <div class="category-indicator" style="background-color: ${categoryColor}"></div>
+                    <span class="filename" title="${filename}">${filename}</span>
+                    <span class="size">${file.size_readable}</span>
+                    <span class="version-id ${versionClass}" title="${versionId}">${versionId}</span>
+                </div>
+            `;
+        }
+
+        function filterFiles() {
+            if (selectedVersion && FOLDERS_DATA[selectedVersion]) {
+                renderFilesTable(FOLDERS_DATA[selectedVersion]);
+            }
+        }
+
+        function selectFileByName(filename) {
+            selectFile(filename);
+
+            // Also highlight in file list
+            document.querySelectorAll('.file-row').forEach(el => {
+                if (el.querySelector('.filename').textContent === filename) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        }
+
+        function selectFile(filename) {
+            selectedFile = filename;
+
+            // Update file list selection
+            document.querySelectorAll('.file-row').forEach(el => {
+                const elFilename = el.querySelector('.filename').textContent;
+                el.classList.toggle('selected', elFilename === filename);
+            });
+
+            // Get file info from current version
+            const folder = FOLDERS_DATA[selectedVersion];
+            const fileInfo = folder?.files?.[filename];
+
+            // Get file history
+            const baseName = filename.split(' (')[0];
+            const history = FILE_HISTORY_DATA[baseName];
+
+            renderFileDetails(filename, fileInfo, history);
+        }
+
+        function renderFileDetails(filename, fileInfo, history) {
+            const container = document.getElementById('detailsContent');
+
+            if (!fileInfo && !history) {
+                renderEmptyDetails();
+                return;
+            }
+
+            const category = fileInfo?.category || history?.category || 'Other';
+            const categoryColor = fileInfo?.category_color || history?.category_color || '#808080';
+            const variantCount = history?.variant_count || 1;
+            const stabilityPct = history?.stability_pct || 0;
+            const hash = fileInfo?.sha256 || '';
+
+            // Find current variant in history
+            let currentVariant = null;
+            if (history && hash) {
+                currentVariant = history.variants.find(v => v.hash === hash);
+            }
+
+            let html = `
+                <div class="file-stats">
+                    <div class="file-stats-title">
+                        ${filename}
+                        <span class="category-tag" style="background-color: ${categoryColor}20; color: ${categoryColor}">${category}</span>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">Variants</div>
+                            <div class="stat-value variants">${variantCount}</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Stability</div>
+                            <div class="stat-value ${stabilityPct >= 70 ? 'stable' : 'unstable'}">${stabilityPct}%</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Size</div>
+                            <div class="stat-value">${fileInfo?.size_readable || '—'}</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Version ID</div>
+                            <div class="stat-value" style="font-size: 0.75rem; color: var(--color-magic)">${currentVariant?.community_id || fileInfo?.pe_version || '—'}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Hash display
+            if (hash) {
+                html += `
+                    <div class="hash-display">
+                        <div class="hash-label">SHA-256 Hash</div>
+                        <div class="hash-value">
+                            <span class="hash-text" onclick="copyHash('${hash}')" title="Click to copy">${hash}</span>
+                            <button class="copy-btn" onclick="copyHash('${hash}')">Copy</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Evolution timeline
+            if (history && history.variants.length > 0) {
+                html += `
+                    <div class="evolution-section">
+                        <div class="evolution-title">Evolution Timeline</div>
+                        <div class="evolution-timeline">
+                            ${history.variants.map((v, i) => {
+                                const isCurrent = v.hash === hash;
+                                const versionRange = v.versions.length > 1
+                                    ? `${v.versions[0].split('/').pop()} — ${v.versions[v.versions.length-1].split('/').pop()}`
+                                    : v.versions[0]?.split('/').pop() || '';
+                                const shortHash = v.hash.slice(-8);
+
+                                return `
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot ${isCurrent ? 'current' : ''}"></div>
+                                        <span class="timeline-versions">
+                                            ${v.versions[0]?.split('/').pop() || ''}
+                                            ${v.versions.length > 1 ? `<span class="range">(${v.versions.length} versions)</span>` : ''}
+                                        </span>
+                                        <span class="timeline-hash">...${shortHash}</span>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+
+                // All variants
+                html += `
+                    <div class="variants-section">
+                        <div class="variants-title">All Variants (${history.variants.length})</div>
+                        ${history.variants.map(v => {
+                            const isCurrent = v.hash === hash;
+                            const versionList = v.versions.slice(0, 3).map(ver => ver.split('/').pop()).join(', ');
+                            const moreCount = v.versions.length > 3 ? ` +${v.versions.length - 3}` : '';
+
+                            return `
+                                <div class="variant-row ${isCurrent ? 'current' : ''}"
+                                     onclick="copyHash('${v.hash}')"
+                                     title="Click to copy hash">
+                                    <span class="variant-id">${v.community_id}</span>
+                                    <span class="variant-versions">${versionList}${moreCount}</span>
+                                    <span class="variant-size">${v.size_readable}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderEmptyDetails() {
+            document.getElementById('detailsContent').innerHTML = `
+                <div class="details-empty">
+                    <div class="details-empty-icon">🔍</div>
+                    <div class="details-empty-text">
+                        Select a file to view its evolution across versions<br><br>
+                        Or search for a hash above to identify a file
+                    </div>
+                </div>
+            `;
+        }
+
+        function getCategoryColor(category) {
+            const colors = {
+                'Game Logic': '#00FF00',
+                'Graphics': '#6969FF',
+                'Audio': '#A59263',
+                'Network': '#FF6600',
+                'Launcher': '#FFFF00',
+                'Data': '#C7B377',
+                'Media': '#8080FF',
+                'Utility': '#808080',
+                'Other': '#FFFFFF'
+            };
+            return colors[category] || '#FFFFFF';
+        }
+
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 B';
+            const sign = bytes < 0 ? '-' : '';
+            bytes = Math.abs(bytes);
+            if (bytes < 1024) return `${sign}${bytes} B`;
+            if (bytes < 1024 * 1024) return `${sign}${(bytes / 1024).toFixed(1)} KB`;
+            return `${sign}${(bytes / (1024 * 1024)).toFixed(2)} MB`;
         }
 
         function copyHash(hash) {
             navigator.clipboard.writeText(hash);
+            showToast('Hash copied to clipboard');
+        }
+
+        function showToast(message) {
             const toast = document.getElementById('toast');
+            toast.textContent = message;
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2000);
         }
 
         function searchByHash() {
             const searchHash = document.getElementById('hashSearch').value.trim().toLowerCase();
+
             if (!searchHash || searchHash.length < 4) {
-                alert('Please enter at least 4 characters of the hash to search.');
+                showToast('Enter at least 4 characters');
                 return;
             }
 
-            if (typeof FOLDERS_DATA === 'undefined') {
-                alert('No folder data loaded.');
-                return;
-            }
-
+            // Search through all versions
             for (const [folderName, folder] of Object.entries(FOLDERS_DATA)) {
                 for (const [filename, file] of Object.entries(folder.files)) {
-                    const fileHash = (file.sha256 || '').toLowerCase();
-                    if (fileHash && fileHash.includes(searchHash)) {
-                        selectFolder(folderName);
-                        setTimeout(() => highlightFileByHash(fileHash), 100);
+                    if (file.sha256 && file.sha256.toLowerCase().includes(searchHash)) {
+                        // Found it - select the version and file
+                        selectVersion(folderName);
+                        setTimeout(() => {
+                            selectFile(filename);
+                            showToast(`Found in ${folderName}`);
+                        }, 100);
                         return;
                     }
                 }
             }
-            alert('No files found with matching hash.');
+
+            showToast('Hash not found');
         }
-
-        function highlightFileByHash(hash) {
-            const rows = document.querySelectorAll('#rightPanelContent .data-table tbody tr');
-            for (const row of rows) {
-                const hashCell = row.querySelector('.hash-text');
-                if (hashCell && hashCell.title.toLowerCase() === hash.toLowerCase()) {
-                    document.querySelectorAll('.hash-highlight').forEach(el => el.classList.remove('hash-highlight'));
-                    row.classList.add('hash-highlight');
-                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    break;
-                }
-            }
-        }
-
-        function openComparison(filename) {
-            const folder = FOLDERS_DATA?.[currentSelectedFolder];
-            const file = folder?.files?.[filename];
-
-            if (!file) {
-                alert('No file data available.');
-                return;
-            }
-
-            document.getElementById('modalTitle').textContent = filename;
-
-            const matchingFolders = file.matching_folders || [];
-            let html = `<div class="variation-group">
-                <div class="variation-meta"><span>📦 Size: ${file.size_readable || 'N/A'}</span></div>
-                <div class="variation-hash">SHA256: ${file.sha256 || 'N/A'}</div>
-                <div class="variation-folders">
-                    <span class="variation-folder" style="background: var(--accent-blue);">${currentSelectedFolder} (current)</span>
-                    ${matchingFolders.map(f => `<span class="variation-folder">${f}</span>`).join('')}
-                </div>
-            </div>`;
-
-            if (matchingFolders.length === 0) {
-                html += '<p style="color: var(--text-muted); margin-top: 1rem;">This file hash is unique to this version.</p>';
-            }
-
-            document.getElementById('modalContent').innerHTML = html;
-            document.getElementById('modalOverlay').classList.add('show');
-        }
-
-        function closeModal(event) {
-            if (!event || event.target === document.getElementById('modalOverlay')) {
-                document.getElementById('modalOverlay').classList.remove('show');
-            }
-        }
-
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-        document.getElementById('fileSearch').addEventListener('input', function (e) {
-            if (currentSelectedFolder && FOLDERS_DATA?.[currentSelectedFolder]) {
-                renderFilesTable(FOLDERS_DATA[currentSelectedFolder], e.target.value);
-            }
-        });
     </script>
 </body>
 

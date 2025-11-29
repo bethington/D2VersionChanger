@@ -2,17 +2,19 @@
 """
 Generate consolidated data for the D2 Report Viewer.
 
-This creates TWO optimized data structures:
-1. VERSIONS_DATA - Lightweight array for the main versions table
-2. FOLDERS_DATA - Detailed file data with pre-computed hash matching
-
-This replaces the 6 separate JSON files with 2 focused datasets.
+This creates optimized data structures for the three-panel viewer:
+1. VERSIONS_DATA - Lightweight array for version navigation (Panel 1)
+2. FOLDERS_DATA - Detailed file data per version (Panel 2)
+3. FILE_HISTORY_DATA - File evolution across versions (Panel 3)
+4. DIFFS_DATA - Version-to-version changes
+5. FILE_CATEGORIES - File category mappings
 """
 import json
+import re
 from pathlib import Path
 from datetime import datetime
-from collections import defaultdict
-from typing import Dict, List, Any
+from collections import defaultdict, OrderedDict
+from typing import Dict, List, Any, Tuple
 
 # Import from the main hash tool
 import sys
@@ -23,6 +25,52 @@ from d2_hash_tool import (
     find_version_folders,
     scan_folder,
 )
+
+# File categories for grouping and display
+FILE_CATEGORIES = {
+    "Game Logic": {
+        "color": "#00FF00",  # Set green
+        "files": ["D2Game.dll", "D2Common.dll", "D2Client.dll", "D2Lang.dll"]
+    },
+    "Graphics": {
+        "color": "#6969FF",  # Magic blue
+        "files": ["D2gfx.dll", "D2DDraw.dll", "D2Direct3D.dll", "D2Glide.dll", "D2Gdi.dll"]
+    },
+    "Audio": {
+        "color": "#A59263",  # Muted gold
+        "files": ["D2sound.dll", "binkw32.dll", "SmackW32.dll"]
+    },
+    "Network": {
+        "color": "#FF6600",  # Crafted orange
+        "files": ["D2Net.dll", "D2MCPClient.dll", "D2Multi.dll", "Bnclient.dll"]
+    },
+    "Launcher": {
+        "color": "#FFFF00",  # Rare yellow
+        "files": ["D2Launch.dll", "D2Win.dll", "Game.exe", "Diablo II.exe", "D2VidTst.exe"]
+    },
+    "Data": {
+        "color": "#C7B377",  # Unique gold
+        "files": ["Patch_D2.mpq", "d2exp.mpq", "d2data.mpq", "d2char.mpq"]
+    },
+    "Media": {
+        "color": "#8080FF",  # Light blue
+        "files": ["d2video.mpq", "d2speech.mpq", "d2sfx.mpq", "d2music.mpq",
+                  "D2xVideo.mpq", "D2xMusic.mpq", "d2xtalk.mpq"]
+    },
+    "Utility": {
+        "color": "#808080",  # Normal gray
+        "files": ["Fog.dll", "Storm.dll", "ijl11.dll", "D2CMP.dll", "D2.LNG"]
+    }
+}
+
+
+def get_file_category(filename: str) -> Tuple[str, str]:
+    """Get category name and color for a file."""
+    base_name = filename.split(' (')[0]  # Handle "Game.exe (NoCD)" format
+    for category, info in FILE_CATEGORIES.items():
+        if base_name in info["files"]:
+            return category, info["color"]
+    return "Other", "#FFFFFF"
 
 
 def detect_nocd_status(folder_info: Dict) -> str:
@@ -134,11 +182,11 @@ def format_size(size_bytes: int) -> str:
         return f"{size_bytes / (1024 * 1024 * 1024):.2f} GB"
 
 
-def build_folders_data(all_scans: List[Dict]) -> Dict[str, Any]:
+def build_folders_data(all_scans: List[Dict], hash_to_community_id: Dict[str, str]) -> Dict[str, Any]:
     """
     Build folder file data with pre-computed hash matching.
     Merges files from same version/type together (e.g., original + NoCD).
-    
+
     Returns dict keyed by canonical key (game_type/version) containing merged files.
     """
     # Group scans by canonical key
@@ -148,32 +196,32 @@ def build_folders_data(all_scans: List[Dict]) -> Dict[str, Any]:
         folder_name = scan.get('folder_name', '')
         key = get_canonical_key(info, folder_name)
         grouped[key].append(scan)
-    
+
     # First pass: build hash-to-canonical-keys map for comparison
     # Uses canonical keys instead of raw folder names
     hash_map = defaultdict(lambda: defaultdict(set))  # filename -> sha256 -> {canonical_keys}
-    
+
     for key, scans in grouped.items():
         for scan in scans:
             for filename, file_info in scan.get('files', {}).items():
                 sha256 = file_info.get('sha256', '')
                 if sha256:
                     hash_map[filename][sha256].add(key)
-    
+
     # Second pass: build folders data with merged files
     folders_data = {}
-    
+
     for key, scans in grouped.items():
         # Merge files from all scans with the same canonical key
         merged_files = {}
-        
+
         for scan in scans:
             folder_name = scan.get('folder_name', '')
             is_nocd = scan.get('folder_info', {}).get('is_nocd', False)
-            
+
             for filename, file_info in scan.get('files', {}).items():
                 sha256 = file_info.get('sha256', '')
-                
+
                 # Create a unique key for files that might differ (original vs nocd)
                 # If same filename with different hash exists, prefix with source
                 file_key = filename
@@ -188,12 +236,18 @@ def build_folders_data(all_scans: List[Dict]) -> Dict[str, Any]:
                             old_file = merged_files.pop(filename)
                             old_source = 'NoCD' if old_file.get('is_nocd') else 'Original'
                             merged_files[f"{filename} ({old_source})"] = old_file
-                
+
                 # Get matching canonical keys (excluding self)
                 matching = []
                 if sha256 and filename in hash_map:
                     matching = sorted([k for k in hash_map[filename].get(sha256, set()) if k != key])
-                
+
+                # Get category
+                category, category_color = get_file_category(file_key)
+
+                # Get community ID
+                community_id = hash_to_community_id.get(sha256, '')
+
                 merged_files[file_key] = {
                     'filename': file_key,
                     'size_readable': file_info.get('size_readable', ''),
@@ -204,67 +258,339 @@ def build_folders_data(all_scans: List[Dict]) -> Dict[str, Any]:
                     'matching_folders': matching,
                     'is_nocd': is_nocd,
                     'source_folder': folder_name,
+                    'category': category,
+                    'category_color': category_color,
+                    'community_id': community_id,
                 }
-        
+
         folders_data[key] = {
             'folder_name': key,
             'files': merged_files,
         }
-    
+
     return folders_data
 
 
+def parse_version_for_sort(version_str: str) -> Tuple[int, int, str, int]:
+    """Parse version string for sorting. Returns (major, minor, letter, beta)."""
+    # Handle beta versions like "1.10 Beta 1"
+    beta_match = re.match(r'^(\d+)\.(\d+)\s*Beta\s*(\d+)$', version_str, re.I)
+    if beta_match:
+        return (int(beta_match.group(1)), int(beta_match.group(2)), '', int(beta_match.group(3)))
+
+    # Handle regular versions like "1.09b", "1.10", "1.14d"
+    match = re.match(r'^(\d+)\.(\d+)([a-z])?$', version_str, re.I)
+    if match:
+        return (int(match.group(1)), int(match.group(2)), match.group(3) or '', 999)
+
+    return (0, 0, version_str, 999)
+
+
+def get_sorted_version_keys(grouped: Dict) -> List[str]:
+    """Get version keys sorted by version number."""
+    def sort_key(key):
+        # key is like "Classic/1.09b" or "LoD/1.10"
+        parts = key.split('/')
+        game_type = parts[0] if len(parts) > 1 else 'Unknown'
+        version = parts[-1]
+
+        # Sort by game type (Classic first), then by version
+        game_order = 0 if game_type == 'Classic' else 1
+        version_tuple = parse_version_for_sort(version)
+        return (version_tuple[0], version_tuple[1], version_tuple[3], version_tuple[2], game_order)
+
+    return sorted(grouped.keys(), key=sort_key)
+
+
+def build_file_history_data(all_scans: List[Dict]) -> Tuple[Dict[str, Any], Dict[str, str]]:
+    """
+    Build file evolution history data and community version IDs.
+
+    Returns:
+        - FILE_HISTORY_DATA: Per-file evolution across versions
+        - hash_to_community_id: Mapping from hash to community version ID
+    """
+    # Group scans by canonical key
+    grouped = defaultdict(list)
+    for scan in all_scans:
+        info = scan.get('folder_info', {})
+        folder_name = scan.get('folder_name', '')
+        key = get_canonical_key(info, folder_name)
+        grouped[key].append(scan)
+
+    # Get sorted version order
+    sorted_keys = get_sorted_version_keys(grouped)
+
+    # Build file -> hash -> versions mapping
+    # filename -> {hash -> [versions in order]}
+    file_hashes = defaultdict(lambda: defaultdict(list))
+    file_info_cache = {}  # hash -> file info (size, pe_version, etc.)
+
+    for key in sorted_keys:
+        scans = grouped[key]
+        for scan in scans:
+            for filename, file_info in scan.get('files', {}).items():
+                sha256 = file_info.get('sha256', '')
+                if not sha256:
+                    continue
+
+                base_name = filename.split(' (')[0]  # Normalize filename
+
+                if key not in file_hashes[base_name][sha256]:
+                    file_hashes[base_name][sha256].append(key)
+
+                # Cache file info
+                if sha256 not in file_info_cache:
+                    file_info_cache[sha256] = {
+                        'size_bytes': file_info.get('size_bytes', 0),
+                        'size_readable': file_info.get('size_readable', ''),
+                        'pe_version': file_info.get('pe_version'),
+                        'pe_version_raw': file_info.get('pe_version_raw'),
+                    }
+
+    # Build community version IDs and file history
+    hash_to_community_id = {}
+    file_history = {}
+
+    for filename, hash_versions in file_hashes.items():
+        # Sort hashes by first appearance
+        sorted_hashes = sorted(
+            hash_versions.items(),
+            key=lambda x: sorted_keys.index(x[1][0]) if x[1] and x[1][0] in sorted_keys else 999
+        )
+
+        variants = []
+        revision = 1
+        total_versions = len(sorted_keys)
+        versions_with_file = set()
+
+        for sha256, versions in sorted_hashes:
+            first_version = versions[0].split('/')[-1] if versions else 'unknown'
+
+            # Create community ID
+            community_id = f"{filename.split('.')[0]}-v{first_version}"
+            if revision > 1:
+                community_id = f"{filename.split('.')[0]}-v{first_version}"
+
+            hash_to_community_id[sha256] = community_id
+
+            # Get cached file info
+            info = file_info_cache.get(sha256, {})
+
+            variants.append({
+                'hash': sha256,
+                'community_id': community_id,
+                'first_seen': versions[0] if versions else '',
+                'last_seen': versions[-1] if versions else '',
+                'versions': versions,
+                'version_count': len(versions),
+                'size_bytes': info.get('size_bytes', 0),
+                'size_readable': info.get('size_readable', ''),
+                'pe_version': info.get('pe_version'),
+            })
+
+            versions_with_file.update(versions)
+            revision += 1
+
+        # Calculate stability score
+        stability = len(sorted_keys) - len(variants) + 1
+        stability_pct = round((stability / len(sorted_keys)) * 100) if sorted_keys else 0
+
+        category, category_color = get_file_category(filename)
+
+        file_history[filename] = {
+            'filename': filename,
+            'category': category,
+            'category_color': category_color,
+            'variant_count': len(variants),
+            'stability_pct': stability_pct,
+            'variants': variants,
+        }
+
+    return file_history, hash_to_community_id
+
+
+def build_diffs_data(all_scans: List[Dict]) -> Dict[str, Any]:
+    """
+    Build version-to-version diff data.
+
+    Returns dict with changes between adjacent versions.
+    """
+    # Group scans by canonical key
+    grouped = defaultdict(list)
+    for scan in all_scans:
+        info = scan.get('folder_info', {})
+        folder_name = scan.get('folder_name', '')
+        key = get_canonical_key(info, folder_name)
+        grouped[key].append(scan)
+
+    # Get sorted version order - separate Classic and LoD
+    classic_keys = [k for k in grouped.keys() if k.startswith('Classic/')]
+    lod_keys = [k for k in grouped.keys() if k.startswith('LoD/')]
+
+    classic_sorted = get_sorted_version_keys({k: grouped[k] for k in classic_keys})
+    lod_sorted = get_sorted_version_keys({k: grouped[k] for k in lod_keys})
+
+    diffs = {}
+
+    def compute_diff(prev_key: str, curr_key: str) -> Dict:
+        """Compute diff between two versions."""
+        prev_files = {}
+        curr_files = {}
+
+        for scan in grouped[prev_key]:
+            for filename, info in scan.get('files', {}).items():
+                base_name = filename.split(' (')[0]
+                if base_name not in prev_files:
+                    prev_files[base_name] = info
+
+        for scan in grouped[curr_key]:
+            for filename, info in scan.get('files', {}).items():
+                base_name = filename.split(' (')[0]
+                if base_name not in curr_files:
+                    curr_files[base_name] = info
+
+        added = []
+        removed = []
+        modified = []
+        unchanged = []
+
+        all_files = set(prev_files.keys()) | set(curr_files.keys())
+
+        for filename in all_files:
+            prev_info = prev_files.get(filename)
+            curr_info = curr_files.get(filename)
+
+            if prev_info is None:
+                category, color = get_file_category(filename)
+                added.append({
+                    'filename': filename,
+                    'size_bytes': curr_info.get('size_bytes', 0),
+                    'size_readable': curr_info.get('size_readable', ''),
+                    'category': category,
+                })
+            elif curr_info is None:
+                category, color = get_file_category(filename)
+                removed.append({
+                    'filename': filename,
+                    'category': category,
+                })
+            elif prev_info.get('sha256') != curr_info.get('sha256'):
+                category, color = get_file_category(filename)
+                prev_size = prev_info.get('size_bytes', 0)
+                curr_size = curr_info.get('size_bytes', 0)
+                modified.append({
+                    'filename': filename,
+                    'prev_size': prev_size,
+                    'curr_size': curr_size,
+                    'size_delta': curr_size - prev_size,
+                    'category': category,
+                })
+            else:
+                unchanged.append(filename)
+
+        return {
+            'from': prev_key,
+            'to': curr_key,
+            'added': added,
+            'removed': removed,
+            'modified': modified,
+            'unchanged_count': len(unchanged),
+            'change_count': len(added) + len(removed) + len(modified),
+        }
+
+    # Compute diffs for Classic versions
+    for i in range(1, len(classic_sorted)):
+        prev_key = classic_sorted[i - 1]
+        curr_key = classic_sorted[i]
+        diffs[curr_key] = compute_diff(prev_key, curr_key)
+
+    # Compute diffs for LoD versions
+    for i in range(1, len(lod_sorted)):
+        prev_key = lod_sorted[i - 1]
+        curr_key = lod_sorted[i]
+        diffs[curr_key] = compute_diff(prev_key, curr_key)
+
+    return diffs
+
+
 def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dict[str, Path]:
-    """Generate consolidated viewer data."""
+    """Generate consolidated viewer data for three-panel viewer."""
     if base_path is None:
         base_path = get_project_root()
-    
+
     if output_dir is None:
         output_dir = base_path / 'reports'
-    
+
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     print("Generating consolidated viewer data...")
     print(f"Project root: {base_path}")
-    
+
     # Find and scan all version folders
     version_folders = find_version_folders(base_path)
     print(f"Found {len(version_folders)} version folders")
-    
+
     all_scans = []
     for folder, folder_info in version_folders:
         print(f"  Scanning: {folder_info['folder_name']}...")
         scan = scan_folder(folder, include_subdirs=False, folder_info=folder_info)
         all_scans.append(scan)
-    
+
+    # Build file history first (needed for community IDs)
+    print("Building FILE_HISTORY_DATA...")
+    file_history_data, hash_to_community_id = build_file_history_data(all_scans)
+
     # Build consolidated data
     print("Building VERSIONS_DATA...")
     versions_data = build_versions_data(all_scans)
-    
+
     print("Building FOLDERS_DATA...")
-    folders_data = build_folders_data(all_scans)
-    
+    folders_data = build_folders_data(all_scans, hash_to_community_id)
+
+    print("Building DIFFS_DATA...")
+    diffs_data = build_diffs_data(all_scans)
+
+    # Add change counts to versions_data
+    for version in versions_data:
+        key = version['folder_name']
+        if key in diffs_data:
+            version['change_count'] = diffs_data[key]['change_count']
+        else:
+            version['change_count'] = 0
+
     # Generate JavaScript file
     js_content = f"""// Auto-generated by gen_viewer_data.py
 // Generated: {datetime.now().isoformat()}
-// Consolidated data for D2 Report Viewer
+// Three-panel viewer data for D2 Version Archive
 
-// Lightweight version summaries for the main table
+// File categories with D2 item rarity colors
+const FILE_CATEGORIES = {json.dumps(FILE_CATEGORIES, separators=(',', ':'))};
+
+// Lightweight version summaries for Panel 1
 const VERSIONS_DATA = {json.dumps(versions_data, separators=(',', ':'))};
 
-// Detailed folder/file data with pre-computed hash matching
+// Detailed folder/file data for Panel 2
 const FOLDERS_DATA = {json.dumps(folders_data, separators=(',', ':'))};
+
+// File evolution history for Panel 3
+const FILE_HISTORY_DATA = {json.dumps(file_history_data, separators=(',', ':'))};
+
+// Version-to-version diffs
+const DIFFS_DATA = {json.dumps(diffs_data, separators=(',', ':'))};
 """
-    
+
     js_path = output_dir / 'd2_data.js'
     with open(js_path, 'w', encoding='utf-8') as f:
         f.write(js_content)
-    
-    print(f"\n✓ Generated {js_path}")
+
+    print(f"\nGenerated {js_path}")
     print(f"  VERSIONS_DATA: {len(versions_data)} versions")
     print(f"  FOLDERS_DATA: {len(folders_data)} folders")
-    
+    print(f"  FILE_HISTORY_DATA: {len(file_history_data)} files tracked")
+    print(f"  DIFFS_DATA: {len(diffs_data)} version diffs")
+
     return {'js': js_path}
 
 
