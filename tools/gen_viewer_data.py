@@ -48,14 +48,9 @@ FILE_CATEGORIES = {
         "color": "#FFFF00",  # Rare yellow
         "files": ["D2Launch.dll", "D2Win.dll", "Game.exe", "Diablo II.exe", "D2VidTst.exe"]
     },
-    "Data": {
+    "MPQ": {
         "color": "#C7B377",  # Unique gold
-        "files": ["Patch_D2.mpq", "d2exp.mpq", "d2data.mpq", "d2char.mpq"]
-    },
-    "Media": {
-        "color": "#8080FF",  # Light blue
-        "files": ["d2video.mpq", "d2speech.mpq", "d2sfx.mpq", "d2music.mpq",
-                  "D2xVideo.mpq", "D2xMusic.mpq", "d2xtalk.mpq"]
+        "files": []  # Will match by extension instead
     },
     "Utility": {
         "color": "#808080",  # Normal gray
@@ -67,6 +62,12 @@ FILE_CATEGORIES = {
 def get_file_category(filename: str) -> Tuple[str, str]:
     """Get category name and color for a file."""
     base_name = filename.split(' (')[0]  # Handle "Game.exe (NoCD)" format
+
+    # Check for MPQ files by extension
+    if base_name.lower().endswith('.mpq'):
+        return "MPQ", FILE_CATEGORIES["MPQ"]["color"]
+
+    # Check other categories by filename
     for category, info in FILE_CATEGORIES.items():
         if base_name in info["files"]:
             return category, info["color"]
@@ -359,38 +360,79 @@ def build_file_history_data(all_scans: List[Dict]) -> Tuple[Dict[str, Any], Dict
             key=lambda x: sorted_keys.index(x[1][0]) if x[1] and x[1][0] in sorted_keys else 999
         )
 
+        # First pass: count how many variants per base version
+        base_version_counts = defaultdict(int)
+        for sha256, versions in sorted_hashes:
+            first_version = versions[0].split('/')[-1] if versions else 'unknown'
+            base_version_counts[first_version] += 1
+
+        # Second pass: assign revision numbers only when needed
+        base_version_current = defaultdict(int)
+
         variants = []
-        revision = 1
         total_versions = len(sorted_keys)
         versions_with_file = set()
+        prev_size = None
 
         for sha256, versions in sorted_hashes:
             first_version = versions[0].split('/')[-1] if versions else 'unknown'
+            last_version = versions[-1].split('/')[-1] if versions else ''
 
-            # Create community ID
-            community_id = f"{filename.split('.')[0]}-v{first_version}"
-            if revision > 1:
-                community_id = f"{filename.split('.')[0]}-v{first_version}"
+            # Create version range for display
+            if len(versions) == 1:
+                version_range = first_version
+            elif first_version == last_version:
+                version_range = first_version
+            else:
+                version_range = f"{first_version}-{last_version}"
+
+            # Option C: Game Version as Base, Dot Revision (only if multiple variants for same base)
+            # Format: {first_seen_version} or {first_seen_version}.{N} if multiple variants
+            base_version_current[first_version] += 1
+            if base_version_counts[first_version] > 1:
+                # Multiple variants for this base version - add revision number
+                community_id = f"{first_version}.{base_version_current[first_version]}"
+            else:
+                # Only one variant for this base version - no revision needed
+                community_id = first_version
+
+            community_id_full = community_id
+            origin_tag = version_range
 
             hash_to_community_id[sha256] = community_id
 
             # Get cached file info
             info = file_info_cache.get(sha256, {})
+            curr_size = info.get('size_bytes', 0)
+
+            # Calculate size delta from previous variant
+            size_delta = None
+            size_delta_readable = None
+            if prev_size is not None and curr_size > 0:
+                size_delta = curr_size - prev_size
+                if size_delta >= 0:
+                    size_delta_readable = f"+{format_size(abs(size_delta))}"
+                else:
+                    size_delta_readable = f"-{format_size(abs(size_delta))}"
 
             variants.append({
                 'hash': sha256,
                 'community_id': community_id,
+                'community_id_full': community_id_full,
+                'origin_tag': origin_tag,
                 'first_seen': versions[0] if versions else '',
                 'last_seen': versions[-1] if versions else '',
                 'versions': versions,
                 'version_count': len(versions),
-                'size_bytes': info.get('size_bytes', 0),
+                'size_bytes': curr_size,
                 'size_readable': info.get('size_readable', ''),
+                'size_delta': size_delta,
+                'size_delta_readable': size_delta_readable,
                 'pe_version': info.get('pe_version'),
             })
 
             versions_with_file.update(versions)
-            revision += 1
+            prev_size = curr_size
 
         # Calculate stability score
         stability = len(sorted_keys) - len(variants) + 1
