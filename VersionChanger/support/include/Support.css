@@ -1,0 +1,40 @@
+body			{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-size: 10pt; }
+p			{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-size: 10pt; }
+span			{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-size: 10pt; }
+pre			{ color: #45acf6; font-size: 10pt; }
+blockquote		{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-size: 10pt; }
+cite			{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: bold; font-style: normal; font-size: 10pt; }
+em			{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: bold; font-style: normal; font-size: 10pt; }
+b			{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: bold; font-style: normal; font-size: 10pt; }
+small			{ font-family: Arial,Helvetica,Sans-Serif; font-size: 8pt; font-weight: normal; font-style: normal; }
+li			{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-size: 10pt; }
+
+a:link		{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-weight: bold; font-size: 10pt; }
+a:visited 		{ font-family: Arial,Helvetica,Sans-Serif; color: #aaaaaa; font-weight: bold; font-size: 10pt; }
+a:hover		{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: bold; font-size: 10pt; }
+a:active 		{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: bold; font-size: 10pt; }
+
+
+a.tiny:link		{ font-family: Arial,Helvetica,Sans-Serif; color: #45acf6; font-weight: normal; font-size: 8pt; }
+a.tiny:visited	{ font-family: Arial,Helvetica,Sans-Serif; color: #aaaaaa; font-weight: normal; font-size: 8pt; }
+a.tiny:hover	{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: normal; font-size: 8pt; }
+a.tiny:active	{ font-family: Arial,Helvetica,Sans-Serif; color: #ffffff; font-weight: normal; font-size: 8pt; }
+		
+#menu1 {position:absolute;visibility:hidden;top:31;left:144;z-Index:100}
+#menu2 {position:absolute;visibility:hidden;top:31;left:223;z-Index:100}
+#menu3 {position:absolute;visibility:hidden;top:31;left:378;z-Index:100}
+#menu4 {position:absolute;visibility:hidden;top:31;left:511;z-Index:100}
+	
+#mdrop1 {position:absolute;visibility:hidden;top:53;left:144;z-Index:200}
+#mdrop2 {position:absolute;visibility:hidden;top:53;left:223;z-Index:200}
+#mdrop3 {position:absolute;visibility:hidden;top:53;left:378;z-Index:200}
+#mdrop4 {position:absolute;visibility:hidden;top:53;left:511;z-Index:200}
+	
+#mitems1 {position:absolute;visibility:hidden;top:53;left:144;z-Index:300}
+#mitems2 {position:absolute;visibility:hidden;top:53;left:223;z-Index:300}
+#mitems3 {position:absolute;visibility:hidden;top:53;left:378;z-Index:300}
+#mitems4 {position:absolute;visibility:hidden;top:53;left:511;z-Index:300}
+
+
+
+	
