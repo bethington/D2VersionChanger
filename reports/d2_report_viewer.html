@@ -257,7 +257,6 @@
         /* Panel 2: Files */
         .panel-files {
             flex: 1;
-            min-width: 380px;
         }
 
         .files-toolbar {
@@ -273,21 +272,6 @@
         .files-count {
             font-size: 0.7rem;
             color: var(--text-secondary);
-        }
-
-        .files-filter {
-            padding: 0.25rem 0.5rem;
-            background-color: var(--bg-dark);
-            border: 1px solid var(--border-dark);
-            border-radius: 3px;
-            color: var(--text-primary);
-            font-size: 0.7rem;
-            width: 120px;
-        }
-
-        .files-filter:focus {
-            outline: none;
-            border-color: var(--accent-gold);
         }
 
         .category-filters {
@@ -350,6 +334,23 @@
             white-space: nowrap;
         }
 
+        .group-btn .full-text {
+            display: inline;
+        }
+
+        .group-btn .short-text {
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            .group-btn .full-text {
+                display: none;
+            }
+            .group-btn .short-text {
+                display: inline;
+            }
+        }
+
         .group-btn:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
@@ -359,6 +360,97 @@
             border-color: var(--accent-gold);
             color: var(--accent-gold);
             background-color: rgba(199, 179, 119, 0.1);
+        }
+
+        /* Filter button and expandable input */
+        .filter-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-btn-toggle {
+            display: none;
+            padding: 0.2rem 0.4rem;
+            font-size: 0.7rem;
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: var(--bg-dark);
+            color: var(--text-secondary);
+        }
+
+        .filter-btn-toggle:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .filter-btn-toggle.has-filter {
+            border-color: var(--color-magic);
+            color: var(--color-magic);
+        }
+
+        .files-filter {
+            padding: 0.25rem 0.5rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            width: 120px;
+        }
+
+        .files-filter:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        /* Filter overlay for narrow screens */
+        .filter-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: var(--bg-medium);
+            padding: 0.4rem;
+            z-index: 100;
+            align-items: center;
+            gap: 0.4rem;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .filter-overlay.visible {
+            display: flex;
+        }
+
+        .filter-overlay .files-filter {
+            flex: 1;
+            width: auto;
+        }
+
+        .filter-overlay .filter-close {
+            padding: 0.2rem 0.4rem;
+            font-size: 0.75rem;
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: var(--bg-dark);
+            color: var(--text-secondary);
+        }
+
+        .filter-overlay .filter-close:hover {
+            border-color: var(--accent-red-light);
+            color: var(--accent-red-light);
+        }
+
+        @media (max-width: 1200px) {
+            .filter-container .files-filter {
+                display: none;
+            }
+            .filter-btn-toggle {
+                display: block;
+            }
         }
 
         .files-table {
@@ -438,18 +530,16 @@
             font-size: 0.7rem;
             color: var(--text-secondary);
             font-family: var(--font-mono);
-            min-width: 70px;
             text-align: right;
+            flex-shrink: 0;
         }
 
         .file-row .version-id {
             font-size: 0.7rem;
             color: var(--color-magic);
             font-family: var(--font-mono);
-            min-width: 120px;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            flex-shrink: 0;
         }
 
         .file-row .version-id.pe-version {
@@ -724,6 +814,21 @@
             font-size: 0.7rem;
         }
 
+        .variant-delta {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            min-width: 55px;
+            text-align: right;
+        }
+
+        .variant-delta.size-increase {
+            color: var(--color-crafted);
+        }
+
+        .variant-delta.size-decrease {
+            color: var(--color-set);
+        }
+
         /* Toast */
         .toast {
             position: fixed;
@@ -819,11 +924,22 @@
             <div class="panel-header">
                 <h2 id="filesTitle">Select a Version</h2>
             </div>
-            <div class="files-toolbar" id="filesToolbar" style="display: none;">
+            <div class="files-toolbar" id="filesToolbar" style="display: none; position: relative;">
                 <span class="files-count" id="filesCount">0 files</span>
                 <div class="category-filters" id="categoryFilters"></div>
-                <button class="group-btn" id="groupBtn" onclick="toggleGrouping()">Group</button>
-                <input type="text" class="files-filter" id="filesFilter" placeholder="Filter..." oninput="filterFiles()">
+                <button class="group-btn" id="groupBtn" onclick="toggleGrouping()">
+                    <span class="full-text">Group</span>
+                    <span class="short-text">▤</span>
+                </button>
+                <div class="filter-container">
+                    <input type="text" class="files-filter" id="filesFilter" placeholder="Filter..." oninput="filterFiles()">
+                    <button class="filter-btn-toggle" id="filterBtnToggle" onclick="toggleFilterOverlay()">🔍</button>
+                </div>
+                <!-- Filter overlay for narrow screens -->
+                <div class="filter-overlay" id="filterOverlay">
+                    <input type="text" class="files-filter" id="filesFilterOverlay" placeholder="Filter files..." oninput="filterFilesFromOverlay()">
+                    <button class="filter-close" onclick="closeFilterOverlay()">✕</button>
+                </div>
             </div>
             <div class="panel-content">
                 <div class="files-table" id="filesTable">
@@ -873,7 +989,7 @@
         let selectedFile = null;
         let showClassic = true;
         let showLoD = true;
-        let isGrouped = false;
+        let isGrouped = true;
 
         // Category definitions with colors and short codes
         const CATEGORIES = {
@@ -882,8 +998,7 @@
             'Audio': { color: '#A59263', short: 'AU' },
             'Network': { color: '#FF6600', short: 'NW' },
             'Launcher': { color: '#FFFF00', short: 'LA' },
-            'Data': { color: '#C7B377', short: 'DA' },
-            'Media': { color: '#8080FF', short: 'ME' },
+            'MPQ': { color: '#C7B377', short: 'MPQ' },
             'Utility': { color: '#808080', short: 'UT' },
             'Other': { color: '#FFFFFF', short: 'OT' }
         };
@@ -977,6 +1092,36 @@
             if (selectedVersion && FOLDERS_DATA[selectedVersion]) {
                 renderFilesTable(FOLDERS_DATA[selectedVersion]);
             }
+        }
+
+        function toggleFilterOverlay() {
+            const overlay = document.getElementById('filterOverlay');
+            const overlayInput = document.getElementById('filesFilterOverlay');
+            const mainInput = document.getElementById('filesFilter');
+
+            overlay.classList.add('visible');
+            overlayInput.value = mainInput.value;
+            overlayInput.focus();
+        }
+
+        function closeFilterOverlay() {
+            const overlay = document.getElementById('filterOverlay');
+            overlay.classList.remove('visible');
+        }
+
+        function filterFilesFromOverlay() {
+            const overlayInput = document.getElementById('filesFilterOverlay');
+            const mainInput = document.getElementById('filesFilter');
+            const toggleBtn = document.getElementById('filterBtnToggle');
+
+            // Sync the value to main input
+            mainInput.value = overlayInput.value;
+
+            // Update toggle button to show filter is active
+            toggleBtn.classList.toggle('has-filter', overlayInput.value.length > 0);
+
+            // Apply filter
+            filterFiles();
         }
 
         function renderVersionList() {
@@ -1136,9 +1281,7 @@
 
         function renderFileRow(filename, file) {
             const categoryColor = file.category_color || getCategoryColor(file.category);
-            const versionId = file.pe_version
-                ? `${file.pe_version} (PE)`
-                : file.community_id || '—';
+            const versionId = file.pe_version || file.community_id || '—';
             const versionClass = file.pe_version ? 'pe-version' : (file.community_id ? '' : 'static');
             const isSelected = selectedFile === filename;
 
@@ -1154,6 +1297,14 @@
         }
 
         function filterFiles() {
+            const mainInput = document.getElementById('filesFilter');
+            const toggleBtn = document.getElementById('filterBtnToggle');
+
+            // Update toggle button to show filter is active
+            if (toggleBtn) {
+                toggleBtn.classList.toggle('has-filter', mainInput.value.length > 0);
+            }
+
             if (selectedVersion && FOLDERS_DATA[selectedVersion]) {
                 renderFilesTable(FOLDERS_DATA[selectedVersion]);
             }
@@ -1230,8 +1381,8 @@
                             <div class="stat-value">${fileInfo?.size_readable || '—'}</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label">Version ID</div>
-                            <div class="stat-value" style="font-size: 0.75rem; color: var(--color-magic)">${currentVariant?.community_id || fileInfo?.pe_version || '—'}</div>
+                            <div class="stat-label">Variant</div>
+                            <div class="stat-value" style="font-size: 0.75rem; color: var(--color-magic)">${currentVariant?.community_id_full || currentVariant?.community_id || fileInfo?.pe_version || '—'}</div>
                         </div>
                     </div>
                 </div>
@@ -1258,17 +1409,14 @@
                         <div class="evolution-timeline">
                             ${history.variants.map((v, i) => {
                                 const isCurrent = v.hash === hash;
-                                const versionRange = v.versions.length > 1
-                                    ? `${v.versions[0].split('/').pop()} — ${v.versions[v.versions.length-1].split('/').pop()}`
-                                    : v.versions[0]?.split('/').pop() || '';
                                 const shortHash = v.hash.slice(-8);
 
                                 return `
                                     <div class="timeline-item">
                                         <div class="timeline-dot ${isCurrent ? 'current' : ''}"></div>
                                         <span class="timeline-versions">
-                                            ${v.versions[0]?.split('/').pop() || ''}
-                                            ${v.versions.length > 1 ? `<span class="range">(${v.versions.length} versions)</span>` : ''}
+                                            ${v.community_id || ''}
+                                            ${v.origin_tag && v.origin_tag.includes('-') ? `<span class="range">(${v.origin_tag})</span>` : ''}
                                         </span>
                                         <span class="timeline-hash">...${shortHash}</span>
                                     </div>
@@ -1284,16 +1432,16 @@
                         <div class="variants-title">All Variants (${history.variants.length})</div>
                         ${history.variants.map(v => {
                             const isCurrent = v.hash === hash;
-                            const versionList = v.versions.slice(0, 3).map(ver => ver.split('/').pop()).join(', ');
-                            const moreCount = v.versions.length > 3 ? ` +${v.versions.length - 3}` : '';
+                            const sizeDelta = v.size_delta_readable || '';
+                            const deltaClass = v.size_delta > 0 ? 'size-increase' : (v.size_delta < 0 ? 'size-decrease' : '');
 
                             return `
                                 <div class="variant-row ${isCurrent ? 'current' : ''}"
                                      onclick="copyHash('${v.hash}')"
                                      title="Click to copy hash">
-                                    <span class="variant-id">${v.community_id}</span>
-                                    <span class="variant-versions">${versionList}${moreCount}</span>
+                                    <span class="variant-id">${v.community_id || ''}</span>
                                     <span class="variant-size">${v.size_readable}</span>
+                                    ${sizeDelta ? `<span class="variant-delta ${deltaClass}">${sizeDelta}</span>` : ''}
                                 </div>
                             `;
                         }).join('')}
@@ -1323,8 +1471,7 @@
                 'Audio': '#A59263',
                 'Network': '#FF6600',
                 'Launcher': '#FFFF00',
-                'Data': '#C7B377',
-                'Media': '#8080FF',
+                'MPQ': '#C7B377',
                 'Utility': '#808080',
                 'Other': '#FFFFFF'
             };
