@@ -271,16 +271,26 @@
             color: var(--accent-gold);
         }
 
-        .change-count {
+        .file-counts {
             font-size: 0.65rem;
             font-family: var(--font-mono);
             color: var(--text-muted);
-            min-width: 20px;
+            min-width: 36px;
             text-align: right;
+            white-space: nowrap;
         }
 
-        .change-count.has-changes {
+        .file-counts .changed {
             color: var(--color-set);
+        }
+
+        .file-counts .separator {
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .file-counts .total {
+            color: var(--text-muted);
         }
 
         /* Panel 2: Files */
@@ -1063,15 +1073,20 @@
                 const isClassic = v.game_type === 'Classic';
                 const typeClass = isClassic ? 'classic' : 'lod';
                 const changeCount = v.change_count || 0;
+                const totalFiles = v.file_count || 0;
                 const isSelected = selectedVersion === v.folder_name;
+
+                // Format: "changed / total" or "— / total" if no changes tracked
+                const changedDisplay = changeCount > 0 ? `<span class="changed">${changeCount}</span>` : '<span>—</span>';
+                const countsHtml = `${changedDisplay}<span class="separator"> / </span><span class="total">${totalFiles}</span>`;
 
                 return `
                     <div class="version-item ${isSelected ? 'selected' : ''}"
                          onclick="selectVersion('${v.folder_name}')"
-                         title="${v.game_type} ${v.version} - ${changeCount} files changed">
+                         title="${v.game_type} ${v.version} - ${changeCount} of ${totalFiles} files changed">
                         <span class="version-type ${typeClass}">${isClassic ? 'C' : 'L'}</span>
                         <span class="version-badge ${typeClass}">${v.version}</span>
-                        <span class="change-count ${changeCount > 0 ? 'has-changes' : ''}">${changeCount > 0 ? changeCount : ''}</span>
+                        <span class="file-counts">${countsHtml}</span>
                     </div>
                 `;
             }).join('');
