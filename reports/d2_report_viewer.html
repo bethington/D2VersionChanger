@@ -1155,13 +1155,53 @@
     <div class="toast" id="toast">Copied to clipboard</div>
 
     <script src="d2_data.js"></script>
+    <script src="functions/_index.js"></script>
     <script>
+        // Debug: Check if FUNCTION_INDEX loaded
+        console.log('FUNCTION_INDEX loaded:', typeof FUNCTION_INDEX !== 'undefined');
+        if (typeof FUNCTION_INDEX !== 'undefined') {
+            console.log('FUNCTION_INDEX files:', Object.keys(FUNCTION_INDEX.files || {}));
+        }
+
         // State
         let selectedVersion = null;
         let selectedFile = null;
         let showClassic = true;
         let showLoD = true;
         let isGrouped = true;
+
+        // Function data cache (loaded on demand)
+        const loadedFunctionData = {};
+
+        // Load function data for a specific file
+        function loadFunctionData(filename) {
+            return new Promise((resolve, reject) => {
+                if (loadedFunctionData[filename]) {
+                    resolve(loadedFunctionData[filename]);
+                    return;
+                }
+
+                const script = document.createElement('script');
+                script.src = 'functions/' + filename + '.js';
+                script.onload = () => {
+                    const varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase();
+                    console.log('Script loaded for', filename, '- looking for variable:', varName);
+                    if (window[varName]) {
+                        loadedFunctionData[filename] = window[varName];
+                        resolve(window[varName]);
+                    } else {
+                        console.error('Variable not found:', varName);
+                        reject(new Error('Function data not found: ' + varName));
+                    }
+                };
+                script.onerror = (e) => {
+                    console.error('Failed to load script:', script.src);
+                    reject(new Error('Failed to load function data script'));
+                };
+                document.head.appendChild(script);
+            });
+        }
+
 
         // Category definitions with colors and short codes
         const CATEGORIES = {
@@ -1545,6 +1585,27 @@
         }
 
         function renderPEExportsView(container, baseName, filename, fileInfo, history) {
+            // Check if we have function data (all detected functions, not just exports)
+            const functionIndex = typeof FUNCTION_INDEX !== 'undefined' ? FUNCTION_INDEX : null;
+            console.log('renderPEExportsView:', baseName, 'functionIndex:', !!functionIndex, 'hasFile:', functionIndex?.files?.[baseName]);
+
+            if (functionIndex && functionIndex.files && functionIndex.files[baseName]) {
+                container.innerHTML = '<div style="padding:20px;color:#888;">Loading function data...</div>';
+                loadFunctionData(baseName).then(funcData => {
+                    console.log('Function data loaded:', baseName, 'count:', Object.keys(funcData.functions || {}).length);
+                    renderFunctionsTable(container, baseName, funcData, filename, fileInfo);
+                }).catch(err => {
+                    console.error('Failed to load function data:', err);
+                    renderExportsTable(container, baseName, filename, fileInfo);
+                });
+                return;
+            }
+
+            // Fall back to exports data
+            renderExportsTable(container, baseName, filename, fileInfo);
+        }
+
+        function renderExportsTable(container, baseName, filename, fileInfo) {
             const exportsData = typeof EXPORTS_DATA !== 'undefined' ? EXPORTS_DATA[baseName] : null;
 
             if (!exportsData || Object.keys(exportsData.exports).length === 0) {
@@ -1673,6 +1734,126 @@
                 const headerCells = table.querySelectorAll('thead th');
                 if (headerCells[selectedGroupIndex + 1]) {
                     // Calculate scroll position (account for sticky column)
+                    const targetCell = headerCells[selectedGroupIndex + 1];
+                    const stickyColWidth = headerCells[0].offsetWidth;
+                    wrapper.scrollLeft = targetCell.offsetLeft - stickyColWidth - 10;
+                }
+            }
+        }
+
+
+        // Render function table (all detected functions, not just exports)
+        function renderFunctionsTable(container, baseName, funcData, filename, fileInfo) {
+            const ordinals = Object.keys(funcData.functions).sort((a, b) => parseInt(a) - parseInt(b));
+            const allVersions = funcData.versions;
+
+            // Group consecutive versions where ALL functions have the same addresses
+            const versionGroups = [];
+            let currentGroup = null;
+
+            for (let i = 0; i < allVersions.length; i++) {
+                const version = allVersions[i];
+                const shortVer = version.split('/')[1] || version;
+
+                if (!currentGroup) {
+                    currentGroup = {
+                        versions: [version],
+                        startVer: shortVer,
+                        endVer: shortVer
+                    };
+                } else {
+                    const prevVersion = allVersions[i - 1];
+                    let allSame = true;
+
+                    // Sample check (first 100 functions) for performance
+                    const sampleOrdinals = ordinals.slice(0, 100);
+                    for (const ord of sampleOrdinals) {
+                        const func = funcData.functions[ord];
+                        const prevAddr = func.addresses[prevVersion];
+                        const currAddr = func.addresses[version];
+                        if (prevAddr !== currAddr) {
+                            allSame = false;
+                            break;
+                        }
+                    }
+
+                    if (allSame) {
+                        currentGroup.versions.push(version);
+                        currentGroup.endVer = shortVer;
+                    } else {
+                        versionGroups.push(currentGroup);
+                        currentGroup = {
+                            versions: [version],
+                            startVer: shortVer,
+                            endVer: shortVer
+                        };
+                    }
+                }
+            }
+            if (currentGroup) {
+                versionGroups.push(currentGroup);
+            }
+
+            // Find which group contains the selected version
+            let selectedGroupIndex = -1;
+            for (let i = 0; i < versionGroups.length; i++) {
+                if (versionGroups[i].versions.includes(selectedVersion)) {
+                    selectedGroupIndex = i;
+                    break;
+                }
+            }
+
+            let html = `
+                <div class="exports-container">
+                    <div class="exports-header">
+                        <div class="exports-header-title">${baseName} - Detected Functions</div>
+                        <div class="exports-header-info">${ordinals.length} functions across ${versionGroups.length} variant${versionGroups.length !== 1 ? 's' : ''}</div>
+                    </div>
+                    <div class="exports-table-wrapper" id="exportsTableWrapper">
+                        <table class="exports-table">
+                            <thead>
+                                <tr>
+                                    <th class="fn-name-cell">Function</th>
+                                    ${versionGroups.map((group, idx) => {
+                                        const isSelected = idx === selectedGroupIndex;
+                                        const label = group.startVer === group.endVer
+                                            ? group.startVer
+                                            : group.startVer + ' - ' + group.endVer;
+                                        const tooltip = group.versions.join(', ');
+                                        return '<th class="' + (isSelected ? 'selected-version' : '') + '" title="' + tooltip + '">' + label + '</th>';
+                                    }).join('')}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${ordinals.map(ord => {
+                                    const func = funcData.functions[ord];
+                                    const displayName = func.name;
+
+                                    let prevAddr = null;
+                                    const addrCells = versionGroups.map(group => {
+                                        const addr = func.addresses[group.versions[0]];
+                                        const isChanged = prevAddr !== null && addr !== prevAddr && addr;
+                                        const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
+                                        prevAddr = addr || prevAddr;
+                                        return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
+                                    }).join('');
+
+                                    return '<tr><td class="fn-name-cell" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            // Scroll to selected version group column
+            if (selectedGroupIndex > 0) {
+                const wrapper = document.getElementById('exportsTableWrapper');
+                const table = wrapper.querySelector('table');
+                const headerCells = table.querySelectorAll('thead th');
+                if (headerCells[selectedGroupIndex + 1]) {
                     const targetCell = headerCells[selectedGroupIndex + 1];
                     const stickyColWidth = headerCells[0].offsetWidth;
                     wrapper.scrollLeft = targetCell.offsetLeft - stickyColWidth - 10;

@@ -83,26 +83,36 @@ KNOWN_GAME_EXE_SIZES = {
 }
 
 # Core game files that should be consistent within a version
+# Includes all DLLs and EXEs found in version folders
 CORE_VERSION_FILES = [
+    # Executables
     "Game.exe",
     "Diablo II.exe",
+    "D2VidTst.exe",
+    # Core game DLLs
     "D2Client.dll",
     "D2Common.dll",
     "D2Game.dll",
-    "D2gfx.dll",
+    "D2Gfx.dll",
     "D2Lang.dll",
     "D2Launch.dll",
     "D2Net.dll",
-    "D2sound.dll",
+    "D2Sound.dll",
     "D2Win.dll",
-    "Fog.dll",
-    "Storm.dll",
     "D2CMP.dll",
     "D2Multi.dll",
     "D2MCPClient.dll",
+    # Video renderer DLLs
+    "D2DDraw.dll",
+    "D2Direct3D.dll",
+    "D2Gdi.dll",
+    "D2Glide.dll",
+    # Support DLLs
+    "Fog.dll",
+    "Storm.dll",
     "Bnclient.dll",
-    "ijl11.dll",
-    "binkw32.dll",
+    "Ijl11.dll",
+    "Binkw32.dll",
     "SmackW32.dll",
 ]
 
