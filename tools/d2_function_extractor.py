@@ -264,6 +264,60 @@ class PEParser:
 
         return (self.data[start:start+size], va, self.image_base)
 
+    def get_data_sections(self) -> List[Tuple[bytes, int]]:
+        """
+        Get data from readable non-executable sections (.data, .rdata, etc).
+
+        Returns:
+            List of (section_data, section_va) tuples
+        """
+        result = []
+        for sec in self.sections:
+            chars = sec['characteristics']
+            # Skip executable sections
+            if chars & 0x20000000:  # IMAGE_SCN_MEM_EXECUTE
+                continue
+            # Must be readable
+            if not (chars & 0x40000000):  # IMAGE_SCN_MEM_READ
+                continue
+            # Skip uninitialized data (.bss)
+            if chars & 0x80:  # IMAGE_SCN_CNT_UNINITIALIZED_DATA
+                continue
+
+            start = sec['raw_ptr']
+            size = sec['raw_size']
+            va = self.image_base + sec['virtual_addr']
+
+            if start > 0 and size > 0 and start + size <= len(self.data):
+                result.append((self.data[start:start+size], va))
+
+        return result
+
+    def get_executable_sections(self) -> List[Tuple[bytes, int, str]]:
+        """
+        Get ALL executable sections from the PE file.
+
+        Some binaries (like Game.exe) have multiple code sections
+        (.text, .cms_t, etc). This returns all of them.
+
+        Returns:
+            List of (section_data, section_va, section_name) tuples
+        """
+        result = []
+        for sec in self.sections:
+            chars = sec['characteristics']
+            # Check IMAGE_SCN_MEM_EXECUTE (0x20000000) or IMAGE_SCN_CNT_CODE (0x20)
+            if chars & 0x20000020:
+                start = sec['raw_ptr']
+                size = sec['raw_size']
+                va = self.image_base + sec['virtual_addr']
+                name = sec['name']
+
+                if start >= 0 and size > 0 and start + size <= len(self.data):
+                    result.append((self.data[start:start+size], va, name))
+
+        return result
+
 
 def detect_jump_table(data: bytes, start_va: int) -> Tuple[List[int], List[int]]:
     """
@@ -304,7 +358,85 @@ def detect_jump_table(data: bytes, start_va: int) -> Tuple[List[int], List[int]]
     return thunk_addresses, target_addresses
 
 
-def find_function_starts(data: bytes, start_va: int, image_base: int) -> List[Dict[str, Any]]:
+def find_internal_jump_targets(data: bytes, start_va: int) -> Set[int]:
+    """
+    Find addresses that are targets of LOCAL forward jump instructions.
+
+    These are likely mid-function code paths (after early returns, error handling, etc.)
+    rather than separate functions. By detecting these, we can filter out false positives
+    from after_ret detection.
+
+    Only tracks forward jumps within a reasonable distance (8KB) to avoid catching
+    cross-function jumps.
+
+    Args:
+        data: Section bytes
+        start_va: Virtual address of section start
+
+    Returns:
+        Set of addresses that are jump targets (likely mid-function)
+    """
+    forward_jump_targets = set()
+    MAX_LOCAL_DISTANCE = 0x2000  # 8KB - jumps beyond this are likely cross-function
+
+    pos = 0
+    while pos < len(data):
+        byte = data[pos]
+
+        # Jcc rel8 (70-7F): conditional jumps with 8-bit displacement
+        if 0x70 <= byte <= 0x7F:
+            if pos + 1 < len(data):
+                rel8 = data[pos + 1]
+                if rel8 & 0x80:  # Negative (backward jump)
+                    pass
+                else:  # Forward jump
+                    target_offset = pos + 2 + rel8
+                    if target_offset < len(data) and rel8 < MAX_LOCAL_DISTANCE:
+                        forward_jump_targets.add(start_va + target_offset)
+            pos += 2
+            continue
+
+        # JMP rel8 (EB): unconditional short jump
+        if byte == 0xEB:
+            if pos + 1 < len(data):
+                rel8 = data[pos + 1]
+                if rel8 & 0x80:  # Negative
+                    pass
+                else:  # Forward jump
+                    target_offset = pos + 2 + rel8
+                    if target_offset < len(data) and rel8 < MAX_LOCAL_DISTANCE:
+                        forward_jump_targets.add(start_va + target_offset)
+            pos += 2
+            continue
+
+        # 0F 8x xx xx xx xx: Jcc rel32 (conditional jumps with 32-bit displacement)
+        if byte == 0x0F and pos + 5 < len(data):
+            next_byte = data[pos + 1]
+            if 0x80 <= next_byte <= 0x8F:
+                rel32 = int.from_bytes(data[pos+2:pos+6], 'little', signed=True)
+                if rel32 > 0 and rel32 < MAX_LOCAL_DISTANCE:  # Forward jump within range
+                    target_offset = pos + 6 + rel32
+                    if target_offset < len(data):
+                        forward_jump_targets.add(start_va + target_offset)
+                pos += 6
+                continue
+
+        # JMP rel32 (E9): unconditional near jump
+        if byte == 0xE9 and pos + 4 < len(data):
+            rel32 = int.from_bytes(data[pos+1:pos+5], 'little', signed=True)
+            if rel32 > 0 and rel32 < MAX_LOCAL_DISTANCE:  # Forward jump within range
+                target_offset = pos + 5 + rel32
+                if target_offset < len(data):
+                    forward_jump_targets.add(start_va + target_offset)
+            pos += 5
+            continue
+
+        pos += 1
+
+    return forward_jump_targets
+
+
+def find_function_starts(data: bytes, start_va: int, image_base: int, jump_targets: Set[int] = None) -> List[Dict[str, Any]]:
     """
     Find function start addresses using heuristic detection.
 
@@ -317,12 +449,17 @@ def find_function_starts(data: bytes, start_va: int, image_base: int) -> List[Di
         data: .text section bytes
         start_va: Virtual address of section start
         image_base: PE image base address
+        jump_targets: Set of addresses that are jump targets (to filter out mid-function code)
 
     Returns:
         List of detected function entries
     """
     functions = []
     seen_addresses = set()
+
+    # Default to empty set if not provided
+    if jump_targets is None:
+        jump_targets = set()
 
     pos = 0
     in_padding = False
@@ -368,7 +505,10 @@ def find_function_starts(data: bytes, start_va: int, image_base: int) -> List[Di
             # Check for function prologue
             if next_pos < len(data) and is_function_prologue(data, next_pos):
                 addr = start_va + next_pos
-                if addr not in seen_addresses:
+                # Skip if this is a jump target (likely mid-function code path)
+                if addr in jump_targets:
+                    pass  # Skip - mid-function code after early return
+                elif addr not in seen_addresses:
                     seen_addresses.add(addr)
                     functions.append({
                         'address': addr,
@@ -384,7 +524,10 @@ def find_function_starts(data: bytes, start_va: int, image_base: int) -> List[Di
                     next_pos += 1
                 if next_pos < len(data) and is_function_prologue(data, next_pos):
                     addr = start_va + next_pos
-                    if addr not in seen_addresses:
+                    # Skip if this is a jump target (likely mid-function code path)
+                    if addr in jump_targets:
+                        pass  # Skip - mid-function code after early return
+                    elif addr not in seen_addresses:
                         seen_addresses.add(addr)
                         functions.append({
                             'address': addr,
@@ -445,32 +588,52 @@ def extract_functions_from_pe(filepath: Path) -> Optional[Dict[str, Any]]:
             'rva': exp['rva'],
         })
 
-    # Get .text section info
-    text_data = pe.get_text_data()
-    if text_data:
-        data, va, image_base = text_data
-        result['text_section'] = {
-            'virtual_address': va,
-            'virtual_address_hex': f"0x{va:08X}",
-            'size': len(data),
+    # Get ALL executable sections (not just .text)
+    exec_sections = pe.get_executable_sections()
+    detected = []
+    detected_addr_set = set()
+
+    # Store info about executable sections
+    result['executable_sections'] = []
+
+    for sec_data, sec_va, sec_name in exec_sections:
+        sec_info = {
+            'name': sec_name,
+            'virtual_address': sec_va,
+            'virtual_address_hex': f"0x{sec_va:08X}",
+            'size': len(sec_data),
         }
+        result['executable_sections'].append(sec_info)
+
+        # For backward compatibility, keep text_section pointing to first section
+        if result['text_section'] is None:
+            result['text_section'] = sec_info
 
         # Detect jump table at start (returns thunk addresses and their targets)
-        thunk_addresses, jump_targets = detect_jump_table(data, va)
+        thunk_addresses, thunk_targets = detect_jump_table(sec_data, sec_va)
 
-        # Find function starts using heuristics
-        detected = find_function_starts(data, va, image_base)
-        result['detected_functions'] = detected
+        # Find internal jump targets to filter out mid-function code paths
+        jump_targets = find_internal_jump_targets(sec_data, sec_va)
+
+        # Find function starts using heuristics (pass jump_targets to filter false positives)
+        section_detected = find_function_starts(sec_data, sec_va, pe.image_base, jump_targets)
+
+        # Add functions from this section
+        for func in section_detected:
+            if func['address'] not in detected_addr_set:
+                detected_addr_set.add(func['address'])
+                func['section'] = sec_name  # Track which section
+                detected.append(func)
 
         # Add thunk addresses as functions (they are valid entry points)
-        thunk_addr_set = set(thunk_addresses)
-        detected_addr_set = {f['address'] for f in detected}
         for thunk_addr in thunk_addresses:
             if thunk_addr not in detected_addr_set:
+                detected_addr_set.add(thunk_addr)
                 detected.append({
                     'address': thunk_addr,
-                    'rva': thunk_addr - image_base,
+                    'rva': thunk_addr - pe.image_base,
                     'detection': 'thunk',
+                    'section': sec_name,
                 })
 
         # Also check for first real function after jump table
@@ -479,24 +642,28 @@ def extract_functions_from_pe(filepath: Path) -> Optional[Dict[str, Any]]:
             last_thunk_pos = 0
             pos = 0
             # Skip initial padding
-            while pos < len(data) and data[pos] in PADDING_BYTES:
+            while pos < len(sec_data) and sec_data[pos] in PADDING_BYTES:
                 pos += 1
-            while pos + 5 <= len(data) and data[pos] == 0xE9:
+            while pos + 5 <= len(sec_data) and sec_data[pos] == 0xE9:
                 last_thunk_pos = pos + 5
                 pos += 5
 
             # Skip padding after jump table
-            while last_thunk_pos < len(data) and data[last_thunk_pos] in PADDING_BYTES:
+            while last_thunk_pos < len(sec_data) and sec_data[last_thunk_pos] in PADDING_BYTES:
                 last_thunk_pos += 1
 
-            if last_thunk_pos < len(data):
-                first_real_addr = va + last_thunk_pos
-                if first_real_addr not in {f['address'] for f in detected}:
+            if last_thunk_pos < len(sec_data):
+                first_real_addr = sec_va + last_thunk_pos
+                if first_real_addr not in detected_addr_set:
+                    detected_addr_set.add(first_real_addr)
                     detected.insert(0, {
                         'address': first_real_addr,
-                        'rva': first_real_addr - image_base,
+                        'rva': first_real_addr - pe.image_base,
                         'detection': 'after_jump_table',
+                        'section': sec_name,
                     })
+
+    result['detected_functions'] = detected
 
     # Combine exports and detected functions
     all_addrs = set()
