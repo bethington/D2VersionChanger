@@ -39,6 +39,8 @@ from d2_hash_tool import (
 # Common function prologue bytes
 FUNCTION_PROLOGUES = [
     bytes([0x55]),              # PUSH EBP (most common)
+    bytes([0x51]),              # PUSH ECX (fastcall)
+    bytes([0x52]),              # PUSH EDX (fastcall)
     bytes([0x53]),              # PUSH EBX
     bytes([0x56]),              # PUSH ESI
     bytes([0x57]),              # PUSH EDI
@@ -48,8 +50,41 @@ FUNCTION_PROLOGUES = [
     bytes([0x83, 0xEC]),        # SUB ESP, imm8
     bytes([0x64, 0xA1]),        # MOV EAX, FS:[...] (SEH setup)
     bytes([0x8B, 0xFF]),        # MOV EDI, EDI (hot-patchable)
+    bytes([0x8B, 0x44, 0x24]),  # MOV EAX, [ESP+disp8] (stack param access)
+    bytes([0x8B, 0x4C, 0x24]),  # MOV ECX, [ESP+disp8] (stack param access)
+    bytes([0x8B, 0x54, 0x24]),  # MOV EDX, [ESP+disp8] (stack param access)
     bytes([0x33, 0xC0]),        # XOR EAX, EAX (return 0 stub)
     bytes([0xB8]),              # MOV EAX, imm32
+    bytes([0xE9]),              # JMP rel32 (thunk functions)
+    bytes([0xEB]),              # JMP rel8 (short thunk)
+    bytes([0xA1]),              # MOV EAX, [imm32] (global access)
+    bytes([0x8A, 0x41]),        # MOV AL, [ECX+disp8]
+    bytes([0x8A, 0x51]),        # MOV DL, [ECX+disp8]
+    bytes([0x8A, 0x49]),        # MOV CL, [ECX+disp8]
+    bytes([0x8B, 0x41]),        # MOV EAX, [ECX+disp8]
+    bytes([0x8B, 0x49]),        # MOV ECX, [ECX+disp8]
+    bytes([0x8B, 0x51]),        # MOV EDX, [ECX+disp8]
+    bytes([0x8B, 0x0D]),        # MOV ECX, [imm32] (global load)
+    bytes([0x8B, 0x15]),        # MOV EDX, [imm32] (global load)
+    bytes([0x8B, 0x35]),        # MOV ESI, [imm32] (global load)
+    bytes([0x8B, 0x3D]),        # MOV EDI, [imm32] (global load)
+    bytes([0x83, 0x39]),        # CMP dword ptr [ECX], imm8
+    bytes([0x83, 0x3D]),        # CMP dword ptr [imm32], imm8
+    bytes([0x3B]),              # CMP reg, r/m32
+    bytes([0x85]),              # TEST r/m32, reg
+    bytes([0x39]),              # CMP r/m32, reg
+    bytes([0xC3]),              # RET (stub functions)
+    bytes([0x8B, 0xC1]),        # MOV EAX, ECX
+    bytes([0x8B, 0xC2]),        # MOV EAX, EDX
+    bytes([0x8B, 0xC6]),        # MOV EAX, ESI
+    bytes([0x8B, 0xC7]),        # MOV EAX, EDI
+    bytes([0x8B, 0xD1]),        # MOV EDX, ECX
+    bytes([0x8B, 0xD9]),        # MOV EBX, ECX
+    bytes([0x8B, 0xF1]),        # MOV ESI, ECX
+    bytes([0x8B, 0xF9]),        # MOV EDI, ECX
+    bytes([0x8B, 0xE9]),        # MOV EBP, ECX
+    bytes([0x89, 0x4C, 0x24]),  # MOV [ESP+disp8], ECX (store param)
+    bytes([0x89, 0x54, 0x24]),  # MOV [ESP+disp8], EDX (store param)
 ]
 
 # Bytes that indicate padding between functions
@@ -230,26 +265,34 @@ class PEParser:
         return (self.data[start:start+size], va, self.image_base)
 
 
-def detect_jump_table(data: bytes, start_va: int) -> List[int]:
+def detect_jump_table(data: bytes, start_va: int) -> Tuple[List[int], List[int]]:
     """
     Detect jump table (thunk) at start of .text section.
 
     Older D2 versions (1.00-1.06) have E9 xx xx xx xx (JMP rel32) sequences
     at the beginning of .text for exports.
 
-    Returns list of addresses where the jump table ends and real code begins.
+    Returns tuple of:
+        - thunk_addresses: addresses of the JMP instructions (thunk entry points)
+        - target_addresses: addresses the JMPs point to (real function targets)
     """
-    addresses = []
+    thunk_addresses = []
+    target_addresses = []
     pos = 0
+
+    # Skip initial padding
+    while pos < len(data) and data[pos] in PADDING_BYTES:
+        pos += 1
 
     # Look for consecutive E9 (JMP rel32) instructions
     while pos + 5 <= len(data):
         if data[pos] == 0xE9:
             # JMP rel32 - 5 bytes
-            # This is a thunk entry, record the target
+            thunk_addr = start_va + pos
             rel32 = struct.unpack('<i', data[pos+1:pos+5])[0]
             target = start_va + pos + 5 + rel32  # Next instruction + offset
-            addresses.append(target)
+            thunk_addresses.append(thunk_addr)
+            target_addresses.append(target)
             pos += 5
         elif data[pos] in PADDING_BYTES:
             # Padding between thunks or end of thunk table
@@ -258,7 +301,7 @@ def detect_jump_table(data: bytes, start_va: int) -> List[int]:
             # End of jump table
             break
 
-    return addresses
+    return thunk_addresses, target_addresses
 
 
 def find_function_starts(data: bytes, start_va: int, image_base: int) -> List[Dict[str, Any]]:
@@ -412,18 +455,32 @@ def extract_functions_from_pe(filepath: Path) -> Optional[Dict[str, Any]]:
             'size': len(data),
         }
 
-        # Detect jump table at start
-        jump_targets = detect_jump_table(data, va)
+        # Detect jump table at start (returns thunk addresses and their targets)
+        thunk_addresses, jump_targets = detect_jump_table(data, va)
 
         # Find function starts using heuristics
         detected = find_function_starts(data, va, image_base)
         result['detected_functions'] = detected
 
+        # Add thunk addresses as functions (they are valid entry points)
+        thunk_addr_set = set(thunk_addresses)
+        detected_addr_set = {f['address'] for f in detected}
+        for thunk_addr in thunk_addresses:
+            if thunk_addr not in detected_addr_set:
+                detected.append({
+                    'address': thunk_addr,
+                    'rva': thunk_addr - image_base,
+                    'detection': 'thunk',
+                })
+
         # Also check for first real function after jump table
-        if jump_targets:
+        if thunk_addresses:
             # Find where the jump table ends
             last_thunk_pos = 0
             pos = 0
+            # Skip initial padding
+            while pos < len(data) and data[pos] in PADDING_BYTES:
+                pos += 1
             while pos + 5 <= len(data) and data[pos] == 0xE9:
                 last_thunk_pos = pos + 5
                 pos += 5
