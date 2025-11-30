@@ -1173,6 +1173,19 @@
         // Function data cache (loaded on demand)
         const loadedFunctionData = {};
 
+        // Case-insensitive lookup helper for FUNCTION_INDEX
+        function findFunctionIndexFile(filename) {
+            if (typeof FUNCTION_INDEX === 'undefined' || !FUNCTION_INDEX.files) return null;
+            // Direct match first
+            if (FUNCTION_INDEX.files[filename]) return filename;
+            // Case-insensitive search
+            const lowerName = filename.toLowerCase();
+            for (const key of Object.keys(FUNCTION_INDEX.files)) {
+                if (key.toLowerCase() === lowerName) return key;
+            }
+            return null;
+        }
+
         // Load function data for a specific file
         function loadFunctionData(filename) {
             return new Promise((resolve, reject) => {
@@ -1586,12 +1599,13 @@
 
         function renderPEExportsView(container, baseName, filename, fileInfo, history) {
             // Check if we have function data (all detected functions, not just exports)
-            const functionIndex = typeof FUNCTION_INDEX !== 'undefined' ? FUNCTION_INDEX : null;
-            console.log('renderPEExportsView:', baseName, 'functionIndex:', !!functionIndex, 'hasFile:', functionIndex?.files?.[baseName]);
+            // Use case-insensitive lookup to handle D2Sound.dll vs D2sound.dll etc.
+            const indexKey = findFunctionIndexFile(baseName);
+            console.log('renderPEExportsView:', baseName, 'indexKey:', indexKey);
 
-            if (functionIndex && functionIndex.files && functionIndex.files[baseName]) {
+            if (indexKey) {
                 container.innerHTML = '<div style="padding:20px;color:#888;">Loading function data...</div>';
-                loadFunctionData(baseName).then(funcData => {
+                loadFunctionData(indexKey).then(funcData => {
                     console.log('Function data loaded:', baseName, 'count:', Object.keys(funcData.functions || {}).length);
                     renderFunctionsTable(container, baseName, funcData, filename, fileInfo);
                 }).catch(err => {

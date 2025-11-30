@@ -26,7 +26,8 @@
       "Bash(cat:*)",
       "Bash(git checkout:*)",
       "Bash(find:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(md5sum:*)"
     ],
     "deny": [],
     "ask": []
