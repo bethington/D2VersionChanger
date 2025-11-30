@@ -935,18 +935,79 @@
         /* Text file view */
         .text-view-container {
             height: 100%;
-            overflow: auto;
-            padding: 0.8rem;
+            display: flex;
+            flex-direction: column;
             background-color: var(--bg-darkest);
         }
 
+        .text-view-header {
+            padding: 0.8rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+            border-bottom: 1px solid var(--border-dark);
+            flex-shrink: 0;
+        }
+
+        .text-view-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .text-view-filename {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .text-view-badge {
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .text-view-meta {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .text-view-separator {
+            color: var(--border-light);
+        }
+
         .text-view-content {
+            flex: 1;
+            overflow: auto;
+            padding: 0.8rem;
             font-family: var(--font-mono);
             font-size: 0.75rem;
             color: var(--text-primary);
             white-space: pre-wrap;
             word-break: break-word;
             line-height: 1.5;
+        }
+
+        .text-view-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .text-view-content::-webkit-scrollbar-track {
+            background: var(--bg-darkest);
+        }
+
+        .text-view-content::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        .text-view-content::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
         }
 
         /* HTML file view */
@@ -1589,6 +1650,8 @@
                     renderMPQPlaceholder(container, filename, fileInfo);
                     break;
                 case 'text':
+                    renderTextFileView(container, filename, fileInfo, history);
+                    break;
                 case 'html':
                 case 'other':
                 default:
@@ -1887,6 +1950,104 @@
                     </div>
                 </div>
             `;
+        }
+
+        function renderTextFileView(container, filename, fileInfo, history) {
+            const baseName = filename.split(' (')[0];
+            const category = fileInfo?.category || 'Other';
+            const categoryColor = fileInfo?.category_color || '#FFFFFF';
+
+            // Check if we have text content data
+            const textData = typeof TEXT_CONTENT_DATA !== 'undefined' ? TEXT_CONTENT_DATA : {};
+            const fileTextData = textData[baseName];
+
+            if (!fileTextData) {
+                // No text content available - show placeholder
+                container.innerHTML = `
+                    <div class="mpq-placeholder">
+                        <div class="mpq-placeholder-icon">📄</div>
+                        <div class="mpq-placeholder-text">
+                            <strong>${filename}</strong><br><br>
+                            ${fileInfo?.size_readable || 'Unknown size'}<br><br>
+                            <em>Text content not available in viewer data</em>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Get content for selected version
+            let content = null;
+            let contentVersion = null;
+
+            // First try exact match for selected version
+            if (selectedVersion && fileTextData.versions) {
+                const versionData = fileTextData.versions[selectedVersion];
+                if (versionData) {
+                    content = versionData.content;
+                    contentVersion = selectedVersion;
+                }
+            }
+
+            // If no exact match, find by hash
+            if (!content && fileInfo?.sha256 && fileTextData.by_hash) {
+                const hashContent = fileTextData.by_hash[fileInfo.sha256];
+                if (hashContent) {
+                    content = hashContent.content;
+                    contentVersion = hashContent.first_version || 'unknown';
+                }
+            }
+
+            // Fallback to first available version
+            if (!content && fileTextData.versions) {
+                const firstVersion = Object.keys(fileTextData.versions)[0];
+                if (firstVersion) {
+                    content = fileTextData.versions[firstVersion].content;
+                    contentVersion = firstVersion;
+                }
+            }
+
+            if (!content) {
+                container.innerHTML = `
+                    <div class="mpq-placeholder">
+                        <div class="mpq-placeholder-icon">📄</div>
+                        <div class="mpq-placeholder-text">
+                            <strong>${filename}</strong><br><br>
+                            <em>No content found for this version</em>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Count variants
+            const variantCount = fileTextData.by_hash ? Object.keys(fileTextData.by_hash).length : 1;
+
+            // Render text content with header
+            container.innerHTML = `
+                <div class="text-view-container">
+                    <div class="text-view-header">
+                        <div class="text-view-title">
+                            <span class="text-view-filename">${filename}</span>
+                            <span class="text-view-badge" style="background-color: ${categoryColor}20; color: ${categoryColor}">${category}</span>
+                        </div>
+                        <div class="text-view-meta">
+                            <span>${fileInfo?.size_readable || 'Unknown size'}</span>
+                            <span class="text-view-separator">•</span>
+                            <span>${variantCount} variant${variantCount !== 1 ? 's' : ''}</span>
+                            <span class="text-view-separator">•</span>
+                            <span>Showing: ${contentVersion.split('/').pop()}</span>
+                        </div>
+                    </div>
+                    <div class="text-view-content">${escapeHtml(content)}</div>
+                </div>
+            `;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
 
         function renderGenericPlaceholder(container, filename, fileInfo, fileType) {

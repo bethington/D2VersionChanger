@@ -559,6 +559,119 @@ def build_diffs_data(all_scans: List[Dict]) -> Dict[str, Any]:
     return diffs
 
 
+def build_text_content_data(version_folders: List[Tuple[Path, Dict]], sorted_version_keys: List[str]) -> Dict[str, Any]:
+    """
+    Build text file content data for text files (.txt, .ini, .cfg, .lng).
+
+    Returns:
+        Dictionary mapping filename to text content data:
+        {
+            "D2.LNG": {
+                "versions": {
+                    "Classic/1.00": {"content": "...", "hash": "abc123..."},
+                    ...
+                },
+                "by_hash": {
+                    "abc123...": {"content": "...", "first_version": "Classic/1.00"}
+                }
+            }
+        }
+    """
+    TEXT_EXTENSIONS = {'.txt', '.ini', '.cfg', '.lng'}
+    MAX_TEXT_SIZE = 50 * 1024  # 50KB max per file to keep data reasonable
+
+    # Group folders by canonical key
+    grouped = defaultdict(list)
+    for folder, folder_info in version_folders:
+        game_type = folder_info.get('game_type', 'Unknown')
+        version = folder_info.get('version', folder.name)
+        key = f"{game_type}/{version}"
+        grouped[key].append((folder, folder_info))
+
+    text_data = {}
+
+    # Collect all text files
+    text_files = set()
+    for key in sorted_version_keys:
+        if key not in grouped:
+            continue
+        for folder, folder_info in grouped[key]:
+            for item in folder.iterdir():
+                if item.is_file() and item.suffix.lower() in TEXT_EXTENSIONS:
+                    text_files.add(item.name)
+
+    print(f"  Found {len(text_files)} text files to extract content")
+
+    # For each text file, collect content across versions
+    for text_filename in sorted(text_files):
+        file_content_data = {
+            'versions': {},
+            'by_hash': {}
+        }
+
+        for key in sorted_version_keys:
+            if key not in grouped:
+                continue
+
+            for folder, folder_info in grouped[key]:
+                # Find the file (case-insensitive)
+                text_path = None
+                for item in folder.iterdir():
+                    if item.is_file() and item.name.lower() == text_filename.lower():
+                        text_path = item
+                        break
+
+                if not text_path or not text_path.exists():
+                    continue
+
+                # Skip if too large
+                if text_path.stat().st_size > MAX_TEXT_SIZE:
+                    continue
+
+                try:
+                    # Try to read as text with various encodings
+                    content = None
+                    for encoding in ['utf-8', 'latin-1', 'cp1252']:
+                        try:
+                            content = text_path.read_text(encoding=encoding)
+                            break
+                        except UnicodeDecodeError:
+                            continue
+
+                    if content is None:
+                        continue
+
+                    # Calculate hash for deduplication
+                    import hashlib
+                    content_hash = hashlib.sha256(content.encode('utf-8')).hexdigest()
+
+                    # Store by version
+                    file_content_data['versions'][key] = {
+                        'content': content,
+                        'hash': content_hash
+                    }
+
+                    # Store by hash (for deduplication and lookup)
+                    if content_hash not in file_content_data['by_hash']:
+                        file_content_data['by_hash'][content_hash] = {
+                            'content': content,
+                            'first_version': key
+                        }
+
+                except Exception as e:
+                    print(f"    Warning: Could not read {text_path}: {e}")
+                    continue
+
+        # Only include files that have content
+        if file_content_data['versions']:
+            text_data[text_filename] = file_content_data
+            variant_count = len(file_content_data['by_hash'])
+            version_count = len(file_content_data['versions'])
+            print(f"    {text_filename}: {variant_count} variant{'s' if variant_count != 1 else ''} across {version_count} versions")
+
+    return text_data
+
+
 def build_exports_data(version_folders: List[Tuple[Path, Dict]], sorted_version_keys: List[str]) -> Dict[str, Any]:
     """
     Build export table data for DLLs/EXEs across all versions.
@@ -698,13 +811,17 @@ def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dic
     print("Building DIFFS_DATA...")
     diffs_data = build_diffs_data(all_scans)
 
-    # Build sorted version keys for exports
+    # Build sorted version keys for exports and text content
     print("Building EXPORTS_DATA...")
     # Get sorted version keys from versions_data
     sorted_version_keys = []
     for v in versions_data:
         sorted_version_keys.append(v['folder_name'])
     exports_data = build_exports_data(version_folders, sorted_version_keys)
+
+    # Build text content data
+    print("Building TEXT_CONTENT_DATA...")
+    text_content_data = build_text_content_data(version_folders, sorted_version_keys)
 
     # Add change counts to versions_data
     for version in versions_data:
@@ -736,6 +853,9 @@ const DIFFS_DATA = {json.dumps(diffs_data, separators=(',', ':'))};
 
 // PE Export tables for DLLs/EXEs (ordinal -> address per version)
 const EXPORTS_DATA = {json.dumps(exports_data, separators=(',', ':'))};
+
+// Text file content data (.txt, .ini, .cfg, .lng files)
+const TEXT_CONTENT_DATA = {json.dumps(text_content_data, separators=(',', ':'))};
 """
 
     js_path = output_dir / 'd2_data.js'
@@ -748,6 +868,7 @@ const EXPORTS_DATA = {json.dumps(exports_data, separators=(',', ':'))};
     print(f"  FILE_HISTORY_DATA: {len(file_history_data)} files tracked")
     print(f"  DIFFS_DATA: {len(diffs_data)} version diffs")
     print(f"  EXPORTS_DATA: {len(exports_data)} PE files with exports")
+    print(f"  TEXT_CONTENT_DATA: {len(text_content_data)} text files with content")
 
     return {'js': js_path}
 
