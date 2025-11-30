@@ -24,6 +24,7 @@ from d2_hash_tool import (
     get_project_root,
     find_version_folders,
     scan_folder,
+    extract_pe_exports,
 )
 
 # File categories for grouping and display
@@ -558,6 +559,107 @@ def build_diffs_data(all_scans: List[Dict]) -> Dict[str, Any]:
     return diffs
 
 
+def build_exports_data(version_folders: List[Tuple[Path, Dict]], sorted_version_keys: List[str]) -> Dict[str, Any]:
+    """
+    Build export table data for DLLs/EXEs across all versions.
+
+    Returns:
+        Dictionary mapping filename to export data:
+        {
+            "D2Client.dll": {
+                "versions": ["Classic/1.00", "Classic/1.01", ...],
+                "exports": {
+                    "10001": {  # ordinal as string key
+                        "name": "FunctionName" or null,
+                        "addresses": {
+                            "Classic/1.00": "0x00001234",
+                            "Classic/1.01": "0x00001234",
+                            ...
+                        }
+                    },
+                    ...
+                }
+            }
+        }
+    """
+    # Group folders by canonical key
+    grouped = defaultdict(list)
+    for folder, folder_info in version_folders:
+        game_type = folder_info.get('game_type', 'Unknown')
+        version = folder_info.get('version', folder.name)
+        key = f"{game_type}/{version}"
+        grouped[key].append((folder, folder_info))
+
+    exports_data = {}
+
+    # Collect all PE files across versions
+    pe_files = set()
+    for key in sorted_version_keys:
+        if key not in grouped:
+            continue
+        for folder, folder_info in grouped[key]:
+            for item in folder.iterdir():
+                if item.is_file() and item.suffix.lower() in ['.dll', '.exe']:
+                    pe_files.add(item.name)
+
+    print(f"  Found {len(pe_files)} PE files to analyze for exports")
+
+    # For each PE file, collect exports across all versions
+    for pe_filename in sorted(pe_files):
+        file_exports = {
+            'versions': [],
+            'exports': {}
+        }
+
+        for key in sorted_version_keys:
+            if key not in grouped:
+                continue
+
+            for folder, folder_info in grouped[key]:
+                pe_path = folder / pe_filename
+                if not pe_path.exists():
+                    # Try case-insensitive match
+                    for item in folder.iterdir():
+                        if item.is_file() and item.name.lower() == pe_filename.lower():
+                            pe_path = item
+                            break
+
+                if not pe_path.exists():
+                    continue
+
+                exports = extract_pe_exports(pe_path)
+                if not exports:
+                    continue
+
+                # Record this version has the file
+                if key not in file_exports['versions']:
+                    file_exports['versions'].append(key)
+
+                # Record each export's address for this version
+                for exp in exports:
+                    ordinal_key = str(exp['ordinal'])
+
+                    if ordinal_key not in file_exports['exports']:
+                        file_exports['exports'][ordinal_key] = {
+                            'ordinal': exp['ordinal'],
+                            'name': exp.get('name'),
+                            'addresses': {}
+                        }
+
+                    # Update name if we find one (some versions may have names, others not)
+                    if exp.get('name') and not file_exports['exports'][ordinal_key]['name']:
+                        file_exports['exports'][ordinal_key]['name'] = exp['name']
+
+                    file_exports['exports'][ordinal_key]['addresses'][key] = exp['address']
+
+        # Only include files that have exports
+        if file_exports['exports']:
+            exports_data[pe_filename] = file_exports
+            print(f"    {pe_filename}: {len(file_exports['exports'])} exports across {len(file_exports['versions'])} versions")
+
+    return exports_data
+
+
 def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dict[str, Path]:
     """Generate consolidated viewer data for three-panel viewer."""
     if base_path is None:
@@ -596,6 +698,14 @@ def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dic
     print("Building DIFFS_DATA...")
     diffs_data = build_diffs_data(all_scans)
 
+    # Build sorted version keys for exports
+    print("Building EXPORTS_DATA...")
+    # Get sorted version keys from versions_data
+    sorted_version_keys = []
+    for v in versions_data:
+        sorted_version_keys.append(v['folder_name'])
+    exports_data = build_exports_data(version_folders, sorted_version_keys)
+
     # Add change counts to versions_data
     for version in versions_data:
         key = version['folder_name']
@@ -623,6 +733,9 @@ const FILE_HISTORY_DATA = {json.dumps(file_history_data, separators=(',', ':'))}
 
 // Version-to-version diffs
 const DIFFS_DATA = {json.dumps(diffs_data, separators=(',', ':'))};
+
+// PE Export tables for DLLs/EXEs (ordinal -> address per version)
+const EXPORTS_DATA = {json.dumps(exports_data, separators=(',', ':'))};
 """
 
     js_path = output_dir / 'd2_data.js'
@@ -634,6 +747,7 @@ const DIFFS_DATA = {json.dumps(diffs_data, separators=(',', ':'))};
     print(f"  FOLDERS_DATA: {len(folders_data)} folders")
     print(f"  FILE_HISTORY_DATA: {len(file_history_data)} files tracked")
     print(f"  DIFFS_DATA: {len(diffs_data)} version diffs")
+    print(f"  EXPORTS_DATA: {len(exports_data)} PE files with exports")
 
     return {'js': js_path}
 
