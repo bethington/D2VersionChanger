@@ -477,14 +477,6 @@
             white-space: nowrap;
         }
 
-        .file-row .size {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            font-family: var(--font-mono);
-            text-align: right;
-            flex-shrink: 0;
-        }
-
         .file-row .version-id {
             font-size: 0.7rem;
             color: var(--color-magic);
@@ -512,6 +504,35 @@
 
         .file-row .variants.many {
             color: var(--color-rare);
+        }
+
+        .file-row .hash-cell {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .file-row .hash-short {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            cursor: default;
+        }
+
+        .file-row .hash-copy-btn {
+            background: none;
+            border: 1px solid var(--border-dark);
+            color: var(--text-muted);
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.6rem;
+            line-height: 1;
+        }
+
+        .file-row .hash-copy-btn:hover {
+            border-color: var(--color-magic);
+            color: var(--color-magic);
         }
 
         /* Panel 3: File Details */
@@ -1190,14 +1211,14 @@
                     const categoryFiles = grouped[category].sort((a, b) => a[0].localeCompare(b[0]));
                     const categoryInfo = CATEGORIES[category] || { color: '#FFFFFF', short: '??' };
 
-                    // Category header with column headers for Vars, Size, and Version
+                    // Category header with column headers for Vars, Version, and Hash
                     html += `
                         <div class="category-header">
                             <span class="category-dot" style="background-color: ${categoryInfo.color}"></span>
                             <span class="category-name">${category}</span>
                             <span class="column-header vars">Vars</span>
-                            <span class="column-header size">Size</span>
                             <span class="column-header version">Version</span>
+                            <span class="column-header hash">Hash</span>
                         </div>
                     `;
 
@@ -1213,8 +1234,8 @@
                         <span></span>
                         <span>${fileCount} Files</span>
                         <span>Vars</span>
-                        <span>Size</span>
                         <span>Version</span>
+                        <span>Hash</span>
                     </div>
                 `;
                 // Sort alphabetically
@@ -1235,14 +1256,21 @@
             const variantCount = history?.variant_count || 1;
             const variantClass = variantCount > 3 ? 'many' : '';
 
+            // Hash display - last 4 characters with copy button
+            const fullHash = file.sha256 || '';
+            const shortHash = fullHash ? fullHash.slice(-4) : '—';
+            const hashCell = fullHash
+                ? `<span class="hash-short" title="${fullHash}">${shortHash}</span><button class="hash-copy-btn" onclick="event.stopPropagation(); copyHash('${fullHash}')" title="Copy full hash">⧉</button>`
+                : `<span class="hash-short">—</span>`;
+
             return `
                 <div class="file-row ${isSelected ? 'selected' : ''}"
                      onclick="selectFile('${filename.replace(/'/g, "\\'")}')">
                     <div class="category-indicator" style="background-color: ${categoryColor}"></div>
                     <span class="filename" title="${filename}">${filename}</span>
                     <span class="variants ${variantClass}" title="${variantCount} variant${variantCount !== 1 ? 's' : ''}">${variantCount}</span>
-                    <span class="size">${file.size_readable}</span>
                     <span class="version-id ${versionClass}" title="${versionId}">${versionId}</span>
+                    <div class="hash-cell">${hashCell}</div>
                 </div>
             `;
         }
