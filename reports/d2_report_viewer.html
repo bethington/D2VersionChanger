@@ -862,7 +862,7 @@
         .exports-table {
             border-collapse: separate;
             border-spacing: 0;
-            min-width: 100%;
+            width: auto;
         }
 
         .exports-table th,
@@ -1555,28 +1555,84 @@
 
             // Get sorted ordinals
             const ordinals = Object.keys(exportsData.exports).sort((a, b) => parseInt(a) - parseInt(b));
+            const allVersions = exportsData.versions;
 
-            // Only show versions where this file actually exists (has exports)
-            const versions = exportsData.versions;
+            // Group consecutive versions where ALL exports have the same addresses
+            // This creates version ranges like "1.00-1.03" when addresses don't change
+            const versionGroups = [];
+            let currentGroup = null;
 
-            // Find current version index for scrolling
-            const currentVersionIndex = versions.indexOf(selectedVersion);
+            for (let i = 0; i < allVersions.length; i++) {
+                const version = allVersions[i];
+                const shortVer = version.split('/')[1] || version;
+
+                if (!currentGroup) {
+                    currentGroup = {
+                        versions: [version],
+                        startVer: shortVer,
+                        endVer: shortVer
+                    };
+                } else {
+                    // Check if all exports have same address as previous version
+                    const prevVersion = allVersions[i - 1];
+                    let allSame = true;
+
+                    for (const ord of ordinals) {
+                        const exp = exportsData.exports[ord];
+                        const prevAddr = exp.addresses[prevVersion];
+                        const currAddr = exp.addresses[version];
+                        if (prevAddr !== currAddr) {
+                            allSame = false;
+                            break;
+                        }
+                    }
+
+                    if (allSame) {
+                        // Extend current group
+                        currentGroup.versions.push(version);
+                        currentGroup.endVer = shortVer;
+                    } else {
+                        // Start new group
+                        versionGroups.push(currentGroup);
+                        currentGroup = {
+                            versions: [version],
+                            startVer: shortVer,
+                            endVer: shortVer
+                        };
+                    }
+                }
+            }
+            if (currentGroup) {
+                versionGroups.push(currentGroup);
+            }
+
+            // Find which group contains the selected version
+            let selectedGroupIndex = -1;
+            for (let i = 0; i < versionGroups.length; i++) {
+                if (versionGroups[i].versions.includes(selectedVersion)) {
+                    selectedGroupIndex = i;
+                    break;
+                }
+            }
 
             let html = `
                 <div class="exports-container">
                     <div class="exports-header">
                         <div class="exports-header-title">${baseName} - Export Table</div>
-                        <div class="exports-header-info">${ordinals.length} exports across ${versions.length} versions</div>
+                        <div class="exports-header-info">${ordinals.length} exports across ${versionGroups.length} variant${versionGroups.length !== 1 ? 's' : ''}</div>
                     </div>
                     <div class="exports-table-wrapper" id="exportsTableWrapper">
                         <table class="exports-table">
                             <thead>
                                 <tr>
                                     <th class="fn-name-cell">Function</th>
-                                    ${versions.map(v => {
-                                        const isSelected = v === selectedVersion;
-                                        const shortVer = v.split('/')[1] || v;
-                                        return `<th class="${isSelected ? 'selected-version' : ''}" title="${v}">${shortVer}</th>`;
+                                    ${versionGroups.map((group, idx) => {
+                                        const isSelected = idx === selectedGroupIndex;
+                                        const label = group.startVer === group.endVer
+                                            ? group.startVer
+                                            : `${group.startVer} - ${group.endVer}`;
+                                        const tooltip = group.versions.join(', ');
+                                        return `<th class="${isSelected ? 'selected-version' : ''}" title="${tooltip}">${label}</th>`;
                                     }).join('')}
                                 </tr>
                             </thead>
@@ -1585,10 +1641,10 @@
                                     const exp = exportsData.exports[ord];
                                     const displayName = exp.name || `#${exp.ordinal}`;
 
-                                    // Build address cells, track changes
+                                    // Build address cells for each group (use first version in group)
                                     let prevAddr = null;
-                                    const addrCells = versions.map(v => {
-                                        const addr = exp.addresses[v];
+                                    const addrCells = versionGroups.map(group => {
+                                        const addr = exp.addresses[group.versions[0]];
                                         const isChanged = prevAddr !== null && addr !== prevAddr && addr;
                                         const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
                                         prevAddr = addr || prevAddr;
@@ -1610,14 +1666,14 @@
 
             container.innerHTML = html;
 
-            // Scroll to selected version column
-            if (currentVersionIndex > 0) {
+            // Scroll to selected version group column
+            if (selectedGroupIndex > 0) {
                 const wrapper = document.getElementById('exportsTableWrapper');
                 const table = wrapper.querySelector('table');
                 const headerCells = table.querySelectorAll('thead th');
-                if (headerCells[currentVersionIndex + 1]) {
+                if (headerCells[selectedGroupIndex + 1]) {
                     // Calculate scroll position (account for sticky column)
-                    const targetCell = headerCells[currentVersionIndex + 1];
+                    const targetCell = headerCells[selectedGroupIndex + 1];
                     const stickyColWidth = headerCells[0].offsetWidth;
                     wrapper.scrollLeft = targetCell.offsetLeft - stickyColWidth - 10;
                 }
