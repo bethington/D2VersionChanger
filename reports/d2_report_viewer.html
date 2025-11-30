@@ -118,9 +118,12 @@
 
         .panels-wrapper {
             display: flex;
+            flex: 1;
             gap: 1px;
             background-color: var(--border-dark);
             height: 100%;
+            min-width: 0;
+            overflow: hidden;
         }
 
         /* Panel base styles */
@@ -129,6 +132,7 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            min-width: 0;
         }
 
         .panel-header {
@@ -172,6 +176,11 @@
             flex: 1;
             overflow-y: auto;
             overflow-x: hidden;
+            min-height: 0;
+        }
+
+        .panel-details .panel-content {
+            overflow: hidden;
         }
 
         /* Panel 1: Version Navigator */
@@ -537,8 +546,10 @@
 
         /* Panel 3: File Details */
         .panel-details {
-            width: 360px;
-            flex-shrink: 0;
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .details-empty {
@@ -813,6 +824,167 @@
             color: var(--color-set);
         }
 
+        /* Exports Table (for DLLs) */
+        .exports-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .exports-header {
+            padding: 0.6rem 0.8rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+            border-bottom: 1px solid var(--border-dark);
+            flex-shrink: 0;
+        }
+
+        .exports-header-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .exports-header-info {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .exports-table-wrapper {
+            flex: 1;
+            overflow: auto;
+            position: relative;
+            min-height: 0;
+        }
+
+        .exports-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 100%;
+        }
+
+        .exports-table th,
+        .exports-table td {
+            padding: 0.3rem 0.5rem;
+            border-bottom: 1px solid var(--border-dark);
+            border-right: 1px solid var(--border-dark);
+            font-size: 0.7rem;
+            white-space: nowrap;
+        }
+
+        .exports-table thead th {
+            background-color: var(--bg-medium);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .exports-table thead th.selected-version {
+            background-color: var(--accent-gold);
+            color: var(--bg-darkest);
+        }
+
+        .exports-table tbody tr:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .exports-table .fn-name-cell {
+            position: sticky;
+            left: 0;
+            background-color: var(--bg-dark);
+            z-index: 10;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            min-width: 150px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .exports-table thead th.fn-name-cell {
+            z-index: 30;
+            background-color: var(--bg-medium);
+        }
+
+        .exports-table tbody tr:hover .fn-name-cell {
+            background-color: var(--bg-hover);
+        }
+
+        .exports-table .addr-cell {
+            font-family: var(--font-mono);
+            color: var(--color-magic);
+            text-align: center;
+        }
+
+        .exports-table .addr-cell.changed {
+            color: var(--color-crafted);
+            font-weight: 600;
+        }
+
+        .exports-table .addr-cell.missing {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Text file view */
+        .text-view-container {
+            height: 100%;
+            overflow: auto;
+            padding: 0.8rem;
+            background-color: var(--bg-darkest);
+        }
+
+        .text-view-content {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-primary);
+            white-space: pre-wrap;
+            word-break: break-word;
+            line-height: 1.5;
+        }
+
+        /* HTML file view */
+        .html-view-container {
+            height: 100%;
+            overflow: auto;
+            background-color: #fff;
+        }
+
+        .html-view-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* MPQ placeholder */
+        .mpq-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .mpq-placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .mpq-placeholder-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
         /* Toast */
         .toast {
             position: fixed;
@@ -851,6 +1023,29 @@
 
         .panel-content::-webkit-scrollbar-thumb:hover {
             background: var(--text-muted);
+        }
+
+        /* Exports table scrollbar */
+        .exports-table-wrapper::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .exports-table-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-darkest);
+        }
+
+        .exports-table-wrapper::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        .exports-table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        .exports-table-wrapper::-webkit-scrollbar-corner {
+            background: var(--bg-darkest);
         }
 
         /* Footer */
@@ -1312,6 +1507,15 @@
             renderFileDetails(filename, fileInfo, history);
         }
 
+        function getFileType(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            if (['dll', 'exe'].includes(ext)) return 'pe';
+            if (['txt', 'ini', 'cfg', 'lng'].includes(ext)) return 'text';
+            if (['html', 'htm'].includes(ext)) return 'html';
+            if (['mpq'].includes(ext)) return 'mpq';
+            return 'other';
+        }
+
         function renderFileDetails(filename, fileInfo, history) {
             const container = document.getElementById('detailsContent');
 
@@ -1320,107 +1524,144 @@
                 return;
             }
 
-            const category = fileInfo?.category || history?.category || 'Other';
-            const categoryColor = fileInfo?.category_color || history?.category_color || '#808080';
-            const variantCount = history?.variant_count || 1;
-            const stabilityPct = history?.stability_pct || 0;
-            const hash = fileInfo?.sha256 || '';
+            const fileType = getFileType(filename);
+            const baseName = filename.split(' (')[0];
 
-            // Find current variant in history
-            let currentVariant = null;
-            if (history && hash) {
-                currentVariant = history.variants.find(v => v.hash === hash);
+            // Render based on file type
+            switch (fileType) {
+                case 'pe':
+                    renderPEExportsView(container, baseName, filename, fileInfo, history);
+                    break;
+                case 'mpq':
+                    renderMPQPlaceholder(container, filename, fileInfo);
+                    break;
+                case 'text':
+                case 'html':
+                case 'other':
+                default:
+                    renderGenericPlaceholder(container, filename, fileInfo, fileType);
+                    break;
+            }
+        }
+
+        function renderPEExportsView(container, baseName, filename, fileInfo, history) {
+            const exportsData = typeof EXPORTS_DATA !== 'undefined' ? EXPORTS_DATA[baseName] : null;
+
+            if (!exportsData || Object.keys(exportsData.exports).length === 0) {
+                // No exports, show basic info
+                renderGenericPlaceholder(container, filename, fileInfo, 'pe-no-exports');
+                return;
             }
 
+            // Get sorted ordinals
+            const ordinals = Object.keys(exportsData.exports).sort((a, b) => parseInt(a) - parseInt(b));
+
+            // Only show versions where this file actually exists (has exports)
+            const versions = exportsData.versions;
+
+            // Find current version index for scrolling
+            const currentVersionIndex = versions.indexOf(selectedVersion);
+
             let html = `
-                <div class="file-stats">
-                    <div class="file-stats-title">
-                        ${filename}
-                        <span class="category-tag" style="background-color: ${categoryColor}20; color: ${categoryColor}">${category}</span>
+                <div class="exports-container">
+                    <div class="exports-header">
+                        <div class="exports-header-title">${baseName} - Export Table</div>
+                        <div class="exports-header-info">${ordinals.length} exports across ${versions.length} versions</div>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-label">Variants</div>
-                            <div class="stat-value variants">${variantCount}</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-label">Stability</div>
-                            <div class="stat-value ${stabilityPct >= 70 ? 'stable' : 'unstable'}">${stabilityPct}%</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-label">Size</div>
-                            <div class="stat-value">${fileInfo?.size_readable || '—'}</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-label">Variant</div>
-                            <div class="stat-value" style="font-size: 0.75rem; color: var(--color-magic)">${currentVariant?.community_id_full || currentVariant?.community_id || fileInfo?.pe_version || '—'}</div>
-                        </div>
+                    <div class="exports-table-wrapper" id="exportsTableWrapper">
+                        <table class="exports-table">
+                            <thead>
+                                <tr>
+                                    <th class="fn-name-cell">Function</th>
+                                    ${versions.map(v => {
+                                        const isSelected = v === selectedVersion;
+                                        const shortVer = v.split('/')[1] || v;
+                                        return `<th class="${isSelected ? 'selected-version' : ''}" title="${v}">${shortVer}</th>`;
+                                    }).join('')}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${ordinals.map(ord => {
+                                    const exp = exportsData.exports[ord];
+                                    const displayName = exp.name || `#${exp.ordinal}`;
+
+                                    // Build address cells, track changes
+                                    let prevAddr = null;
+                                    const addrCells = versions.map(v => {
+                                        const addr = exp.addresses[v];
+                                        const isChanged = prevAddr !== null && addr !== prevAddr && addr;
+                                        const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
+                                        prevAddr = addr || prevAddr;
+                                        return `<td class="addr-cell ${cellClass}">${addr || '—'}</td>`;
+                                    }).join('');
+
+                                    return `
+                                        <tr>
+                                            <td class="fn-name-cell" title="${displayName}">${displayName}</td>
+                                            ${addrCells}
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             `;
 
-            // Hash display
-            if (hash) {
-                html += `
-                    <div class="hash-display">
-                        <div class="hash-label">SHA-256 Hash</div>
-                        <div class="hash-value">
-                            <span class="hash-text" onclick="copyHash('${hash}')" title="Click to copy">${hash}</span>
-                            <button class="copy-btn" onclick="copyHash('${hash}')">Copy</button>
-                        </div>
-                    </div>
-                `;
-            }
-
-            // Evolution timeline
-            if (history && history.variants.length > 0) {
-                html += `
-                    <div class="evolution-section">
-                        <div class="evolution-title">Evolution Timeline</div>
-                        <div class="evolution-timeline">
-                            ${history.variants.map((v, i) => {
-                                const isCurrent = v.hash === hash;
-                                const shortHash = v.hash.slice(-8);
-
-                                return `
-                                    <div class="timeline-item">
-                                        <div class="timeline-dot ${isCurrent ? 'current' : ''}"></div>
-                                        <span class="timeline-versions">
-                                            ${v.community_id || ''}
-                                            ${v.origin_tag && v.origin_tag.includes('-') ? `<span class="range">(${v.origin_tag})</span>` : ''}
-                                        </span>
-                                        <span class="timeline-hash">...${shortHash}</span>
-                                    </div>
-                                `;
-                            }).join('')}
-                        </div>
-                    </div>
-                `;
-
-                // All variants
-                html += `
-                    <div class="variants-section">
-                        <div class="variants-title">All Variants (${history.variants.length})</div>
-                        ${history.variants.map(v => {
-                            const isCurrent = v.hash === hash;
-                            const sizeDelta = v.size_delta_readable || '';
-                            const deltaClass = v.size_delta > 0 ? 'size-increase' : (v.size_delta < 0 ? 'size-decrease' : '');
-
-                            return `
-                                <div class="variant-row ${isCurrent ? 'current' : ''}"
-                                     onclick="copyHash('${v.hash}')"
-                                     title="Click to copy hash">
-                                    <span class="variant-id">${v.community_id || ''}</span>
-                                    <span class="variant-size">${v.size_readable}</span>
-                                    ${sizeDelta ? `<span class="variant-delta ${deltaClass}">${sizeDelta}</span>` : ''}
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                `;
-            }
-
             container.innerHTML = html;
+
+            // Scroll to selected version column
+            if (currentVersionIndex > 0) {
+                const wrapper = document.getElementById('exportsTableWrapper');
+                const table = wrapper.querySelector('table');
+                const headerCells = table.querySelectorAll('thead th');
+                if (headerCells[currentVersionIndex + 1]) {
+                    // Calculate scroll position (account for sticky column)
+                    const targetCell = headerCells[currentVersionIndex + 1];
+                    const stickyColWidth = headerCells[0].offsetWidth;
+                    wrapper.scrollLeft = targetCell.offsetLeft - stickyColWidth - 10;
+                }
+            }
+        }
+
+        function renderMPQPlaceholder(container, filename, fileInfo) {
+            container.innerHTML = `
+                <div class="mpq-placeholder">
+                    <div class="mpq-placeholder-icon">📦</div>
+                    <div class="mpq-placeholder-text">
+                        <strong>${filename}</strong><br><br>
+                        MPQ Archive<br>
+                        ${fileInfo?.size_readable || 'Unknown size'}<br><br>
+                        <em>MPQ viewer coming soon</em>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderGenericPlaceholder(container, filename, fileInfo, fileType) {
+            const icons = {
+                'pe-no-exports': '⚙️',
+                'text': '📄',
+                'html': '🌐',
+                'other': '📁'
+            };
+            const descriptions = {
+                'pe-no-exports': 'This PE file has no exported functions',
+                'text': 'Text file viewer coming soon',
+                'html': 'HTML file viewer coming soon',
+                'other': 'Preview not available for this file type'
+            };
+
+            container.innerHTML = `
+                <div class="mpq-placeholder">
+                    <div class="mpq-placeholder-icon">${icons[fileType] || '📁'}</div>
+                    <div class="mpq-placeholder-text">
+                        <strong>${filename}</strong><br><br>
+                        ${fileInfo?.size_readable || 'Unknown size'}<br><br>
+                        <em>${descriptions[fileType] || 'Preview not available'}</em>
+                    </div>
+                </div>
+            `;
         }
 
         function renderEmptyDetails() {

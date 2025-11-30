@@ -437,7 +437,204 @@ def extract_pe_version(filepath: Path) -> Optional[Dict[str, Any]]:
                 "file_version_ms": file_version_ms,
                 "file_version_ls": file_version_ls,
             }
-            
+
+    except Exception as e:
+        return None
+
+
+def extract_pe_exports(filepath: Path) -> Optional[List[Dict[str, Any]]]:
+    """
+    Extract export table information from a Windows PE executable (DLL/EXE).
+
+    Reads the PE export directory to get exported function names, ordinals,
+    and their addresses (RVAs).
+
+    Args:
+        filepath: Path to the .exe or .dll file
+
+    Returns:
+        List of export entries or None if extraction fails:
+        [
+            {
+                "ordinal": 1,
+                "name": "FunctionName",  # None if exported by ordinal only
+                "rva": 0x12345,          # Relative Virtual Address
+                "address": "0x00012345"  # Formatted address string
+            },
+            ...
+        ]
+    """
+    try:
+        with open(filepath, 'rb') as f:
+            # Check DOS header magic
+            if f.read(2) != b'MZ':
+                return None
+
+            # Get PE header offset
+            f.seek(0x3C)
+            pe_offset = struct.unpack('<I', f.read(4))[0]
+
+            # Check PE signature
+            f.seek(pe_offset)
+            if f.read(4) != b'PE\x00\x00':
+                return None
+
+            # Read COFF header
+            machine = struct.unpack('<H', f.read(2))[0]
+            num_sections = struct.unpack('<H', f.read(2))[0]
+            f.read(12)  # Skip timestamp, symbol table ptr, symbol count
+            optional_header_size = struct.unpack('<H', f.read(2))[0]
+            f.read(2)  # Skip characteristics
+
+            if optional_header_size == 0:
+                return None
+
+            # Read optional header
+            optional_header_start = f.tell()
+            magic = struct.unpack('<H', f.read(2))[0]
+
+            # Determine if PE32 or PE32+
+            if magic == 0x10b:  # PE32
+                data_dir_offset = optional_header_start + 96
+            elif magic == 0x20b:  # PE32+
+                data_dir_offset = optional_header_start + 112
+            else:
+                return None
+
+            # Get export directory RVA (index 0 in data directories)
+            f.seek(data_dir_offset)
+            export_rva = struct.unpack('<I', f.read(4))[0]
+            export_size = struct.unpack('<I', f.read(4))[0]
+
+            if export_rva == 0:
+                return None  # No exports
+
+            # Read section headers to find export section
+            section_header_offset = optional_header_start + optional_header_size
+            f.seek(section_header_offset)
+
+            # Build section map for RVA to file offset conversion
+            sections = []
+            for _ in range(num_sections):
+                name = f.read(8).rstrip(b'\x00').decode('ascii', errors='ignore')
+                virtual_size = struct.unpack('<I', f.read(4))[0]
+                virtual_addr = struct.unpack('<I', f.read(4))[0]
+                raw_size = struct.unpack('<I', f.read(4))[0]
+                raw_ptr = struct.unpack('<I', f.read(4))[0]
+                f.read(16)  # Skip rest of section header
+                sections.append({
+                    'name': name,
+                    'virtual_addr': virtual_addr,
+                    'virtual_size': virtual_size,
+                    'raw_ptr': raw_ptr,
+                    'raw_size': raw_size
+                })
+
+            def rva_to_offset(rva):
+                """Convert RVA to file offset."""
+                for sec in sections:
+                    if sec['virtual_addr'] <= rva < sec['virtual_addr'] + max(sec['virtual_size'], sec['raw_size']):
+                        return sec['raw_ptr'] + (rva - sec['virtual_addr'])
+                return None
+
+            # Read export directory
+            export_offset = rva_to_offset(export_rva)
+            if export_offset is None:
+                return None
+
+            f.seek(export_offset)
+            f.read(4)  # Characteristics
+            f.read(4)  # TimeDateStamp
+            f.read(2)  # MajorVersion
+            f.read(2)  # MinorVersion
+            name_rva = struct.unpack('<I', f.read(4))[0]
+            ordinal_base = struct.unpack('<I', f.read(4))[0]
+            num_functions = struct.unpack('<I', f.read(4))[0]
+            num_names = struct.unpack('<I', f.read(4))[0]
+            addr_table_rva = struct.unpack('<I', f.read(4))[0]
+            name_ptr_rva = struct.unpack('<I', f.read(4))[0]
+            ordinal_table_rva = struct.unpack('<I', f.read(4))[0]
+
+            # Read address table (function RVAs)
+            addr_table_offset = rva_to_offset(addr_table_rva)
+            if addr_table_offset is None:
+                return None
+            f.seek(addr_table_offset)
+            addresses = [struct.unpack('<I', f.read(4))[0] for _ in range(num_functions)]
+
+            # Read name pointer table
+            name_ptr_offset = rva_to_offset(name_ptr_rva)
+            if name_ptr_offset is None:
+                return None
+            f.seek(name_ptr_offset)
+            name_rvas = [struct.unpack('<I', f.read(4))[0] for _ in range(num_names)]
+
+            # Read ordinal table
+            ordinal_offset = rva_to_offset(ordinal_table_rva)
+            if ordinal_offset is None:
+                return None
+            f.seek(ordinal_offset)
+            ordinals = [struct.unpack('<H', f.read(2))[0] for _ in range(num_names)]
+
+            # Read function names
+            names = []
+            for name_rva in name_rvas:
+                name_offset = rva_to_offset(name_rva)
+                if name_offset:
+                    f.seek(name_offset)
+                    name_bytes = b''
+                    while True:
+                        byte = f.read(1)
+                        if byte == b'\x00' or byte == b'':
+                            break
+                        name_bytes += byte
+                    names.append(name_bytes.decode('ascii', errors='replace'))
+                else:
+                    names.append(None)
+
+            # Build ordinal-to-name mapping
+            ordinal_to_name = {}
+            for i, ordinal in enumerate(ordinals):
+                if i < len(names):
+                    ordinal_to_name[ordinal] = names[i]
+
+            # Build export list
+            exports = []
+            for i, addr in enumerate(addresses):
+                if addr == 0:
+                    continue  # Empty slot
+
+                # Check if this is a forwarder (RVA points within export section)
+                is_forwarder = export_rva <= addr < export_rva + export_size
+
+                export_entry = {
+                    'ordinal': ordinal_base + i,
+                    'name': ordinal_to_name.get(i),
+                    'rva': addr,
+                    'address': f"{addr:08X}",
+                    'is_forwarder': is_forwarder
+                }
+
+                # If forwarder, try to read the forwarded name
+                if is_forwarder:
+                    fwd_offset = rva_to_offset(addr)
+                    if fwd_offset:
+                        f.seek(fwd_offset)
+                        fwd_bytes = b''
+                        while len(fwd_bytes) < 256:
+                            byte = f.read(1)
+                            if byte == b'\x00' or byte == b'':
+                                break
+                            fwd_bytes += byte
+                        export_entry['forwarder'] = fwd_bytes.decode('ascii', errors='replace')
+
+                exports.append(export_entry)
+
+            # Sort by ordinal
+            exports.sort(key=lambda x: x['ordinal'])
+
+            return exports
+
     except Exception as e:
         return None
 

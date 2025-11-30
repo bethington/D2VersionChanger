@@ -1,22 +1,43 @@
-# Task: Show changed/total file count in version panel
+# Task: Rework Right Panel with File-Type Specific Views
 
 ## Goal
-Display file counts as "changed / total" in the leftmost version panel to show the scope of changes relative to total files.
+Create different views for different file types in the right panel:
+1. **DLLs/EXEs**: Show export table with function ordinals/names and addresses across versions
+2. **TXT files**: Show read-only text content
+3. **HTML files**: Render HTML content
+4. **MPQ files**: Placeholder for now
+5. **Other files**: Generic placeholder
 
-## Analysis
-- Current: Only shows `change_count` (files changed from previous version)
-- Data available: `file_count` already exists in `VERSIONS_DATA` (total files per version)
-- Format: "5 / 12" meaning 5 changed out of 12 total files
+## DLL Export Table View Design
+- Sticky first column (Function Name/Ordinal)
+- Sticky header row (Version numbers: 1.00, 1.01, etc.)
+- Horizontal scrolling for versions
+- Vertical scrolling for functions
+- Auto-scroll to selected version column
+- Columns: Function Name | 1.00 | 1.01 | ... | 1.14d (addresses in each)
 
 ## Plan
-- [x] Update `renderVersionList()` in HTML to display "change_count / file_count"
-- [x] Test the display
 
-## Files modified
-- `reports/d2_report_viewer.html`
-  - Lines 274-294: New `.file-counts` CSS class with styling for changed/separator/total
-  - Lines 1072-1092: Updated `renderVersionList()` to show "changed / total" format
+### Phase 1: Extract Export Data
+- [x] Add `extract_pe_exports()` function to d2_hash_tool.py
+- [ ] Update gen_viewer_data.py to collect exports across all versions
+- [ ] Create EXPORTS_DATA structure: { filename: { function_name: { version: address } } }
 
-## Review
-Simple change that adds total file count next to the change count in the version panel. Format is `5 / 12` where green number is files changed and gray number is total files. First versions (no prior version to compare) show `— / 12`. Tooltip also updated to show "X of Y files changed".
+### Phase 2: Build UI
+- [ ] Redesign right panel HTML structure for file-type views
+- [ ] Add CSS for sticky headers (both row and column)
+- [ ] Add DLL export table view
+- [ ] Add TXT file view
+- [ ] Add HTML file view
+- [ ] Add MPQ placeholder
+- [ ] Add generic placeholder
 
+### Phase 3: Wire Up
+- [ ] Detect file type when file selected
+- [ ] Render appropriate view
+- [ ] Auto-scroll to selected version column
+
+## Files to modify
+- `tools/d2_hash_tool.py` - Add export extraction
+- `tools/gen_viewer_data.py` - Generate EXPORTS_DATA
+- `reports/d2_report_viewer.html` - New right panel views
