@@ -62,15 +62,17 @@ FILE_CATEGORIES = {
 def get_file_category(filename: str) -> Tuple[str, str]:
     """Get category name and color for a file."""
     base_name = filename.split(' (')[0]  # Handle "Game.exe (NoCD)" format
+    base_name_lower = base_name.lower()
 
     # Check for MPQ files by extension
-    if base_name.lower().endswith('.mpq'):
+    if base_name_lower.endswith('.mpq'):
         return "MPQ", FILE_CATEGORIES["MPQ"]["color"]
 
-    # Check other categories by filename
+    # Check other categories by filename (case-insensitive)
     for category, info in FILE_CATEGORIES.items():
-        if base_name in info["files"]:
-            return category, info["color"]
+        for cat_file in info["files"]:
+            if base_name_lower == cat_file.lower():
+                return category, info["color"]
     return "Other", "#FFFFFF"
 
 
