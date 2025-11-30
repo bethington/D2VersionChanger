@@ -379,7 +379,7 @@
 
         .files-table {
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: auto auto auto auto auto;
             position: relative;
         }
 
@@ -500,6 +500,18 @@
         .file-row .version-id.static {
             color: var(--text-muted);
             font-style: italic;
+        }
+
+        .file-row .variants {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            text-align: center;
+            min-width: 20px;
+        }
+
+        .file-row .variants.many {
+            color: var(--color-rare);
         }
 
         /* Panel 3: File Details */
@@ -1178,11 +1190,12 @@
                     const categoryFiles = grouped[category].sort((a, b) => a[0].localeCompare(b[0]));
                     const categoryInfo = CATEGORIES[category] || { color: '#FFFFFF', short: '??' };
 
-                    // Category header with column headers for Size and Version
+                    // Category header with column headers for Vars, Size, and Version
                     html += `
                         <div class="category-header">
                             <span class="category-dot" style="background-color: ${categoryInfo.color}"></span>
                             <span class="category-name">${category}</span>
+                            <span class="column-header vars">Vars</span>
                             <span class="column-header size">Size</span>
                             <span class="column-header version">Version</span>
                         </div>
@@ -1199,6 +1212,7 @@
                     <div class="table-header">
                         <span></span>
                         <span>${fileCount} Files</span>
+                        <span>Vars</span>
                         <span>Size</span>
                         <span>Version</span>
                     </div>
@@ -1215,11 +1229,18 @@
             const versionClass = file.pe_version ? 'pe-version' : (file.community_id ? '' : 'static');
             const isSelected = selectedFile === filename;
 
+            // Get variant count from file history
+            const baseName = filename.split(' (')[0];
+            const history = FILE_HISTORY_DATA[baseName];
+            const variantCount = history?.variant_count || 1;
+            const variantClass = variantCount > 3 ? 'many' : '';
+
             return `
                 <div class="file-row ${isSelected ? 'selected' : ''}"
                      onclick="selectFile('${filename.replace(/'/g, "\\'")}')">
                     <div class="category-indicator" style="background-color: ${categoryColor}"></div>
                     <span class="filename" title="${filename}">${filename}</span>
+                    <span class="variants ${variantClass}" title="${variantCount} variant${variantCount !== 1 ? 's' : ''}">${variantCount}</span>
                     <span class="size">${file.size_readable}</span>
                     <span class="version-id ${versionClass}" title="${versionId}">${versionId}</span>
                 </div>
