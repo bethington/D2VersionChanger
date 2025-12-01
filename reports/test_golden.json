@@ -1,0 +1,2216 @@
+{
+  "metadata": {
+    "generated": "2025-11-30T21:20:18.767181",
+    "generator": "export_golden_reference.py",
+    "dll_name": "Unknown",
+    "version": "1.13c",
+    "image_base": "0x6FAB0000",
+    "function_count": 50,
+    "export_count": 5,
+    "total_functions_in_ghidra": 52800
+  },
+  "exports": {
+    "6fab45f6": "entry",
+    "6fac08c0": "InitializeAndCleanupResource",
+    "6fafbe70": "QueryInterface",
+    "6fb12de0": "GetDifficultySettings",
+    "6fb12e20": "GetSecurityValidationFlag"
+  },
+  "name_to_address": {
+    "DeleteObjectMemory": "6fab1000",
+    "EmptyStubFunction": "6fab1020",
+    "CleanupExceptionLinkedStructure": "6fab1030",
+    "InsertNodeIntoOffsetLinkedList": "6fab10b0",
+    "ProcessDualLinkedListCleanup": "6fab1150",
+    "ProcessLinkedListCleanupIterator": "6fab11f0",
+    "GetMonsterTxt": "6fab1230",
+    "GetPlayerDataByInstanceId": "6fab1260",
+    "GetLevelTableEntryByIndex": "6fab12b0",
+    "ExecuteFunctionArrayWithStride": "6fab12e0",
+    "GetSkillDataEntry": "6fab1300",
+    "GenerateRandomNumberWithBounds": "6fab1330",
+    "GenerateRandomValueInRangeWithBounds": "6fab1380",
+    "SetEntityFlags": "6fab13d0",
+    "FindTargetEntityAtCoordinatesWithCollisionDetection": "6fab1400",
+    "CalculateScaledProduct": "6fab14a0",
+    "CheckEntitySkillBitFlag": "6fab1510",
+    "GetStatTableEntryByIndex": "6fab1580",
+    "GetEventTableEntryByIndex": "6fab15b0",
+    "GetEventParameterByIndex": "6fab15e0",
+    "GetUnitX": "6fab1630",
+    "GetUnitY": "6fab1660",
+    "GetMonsterDataTableCount": "6fab1690",
+    "ClearPlayerSkillData": "6fab16a0",
+    "GetArmorClassValue": "6fab16e0",
+    "GetArmorClassFromSkill": "6fab1700",
+    "ValidateSkillIndex": "6fab1740",
+    "CheckSkillBitMask": "6fab1760",
+    "GetEventDurationOrDefault": "6fab17b0",
+    "GetEventPrefabReference": "6fab17f0",
+    "GetComponentTableEntryByIndex": "6fab1870",
+    "GetEntityTableEntryByIndex": "6fab18a0",
+    "GenerateRandomValueInRangeWithSeed": "6fab18d0",
+    "RC4CipherProcess": "6fab1920",
+    "FreeDynamicModules": "6fab19a0",
+    "ClearStructBuffer": "6fab19b0",
+    "CleanupDynamicLibraries": "6fab1a00",
+    "WardenClientDelete": "6fab1a40",
+    "GetByteFromArray": "6fab1a60",
+    "GetValidSelectedUnit": "6fab1a80",
+    "GetDefaultEngineFlags": "6fab1af0",
+    "GetEngineMode": "6fab1b50",
+    "GetScreenMetric": "6fab1bc0",
+    "CheckEntityCollisionFlag": "6fab1c10",
+    "ObjectDestructor": "6fab1c80",
+    "UnicodeArrayInitializer_1cb0": "6fab1cb0",
+    "ObjectDestructor2_1d80": "6fab1d80",
+    "ObjectDestructor3_1db0": "6fab1db0",
+    "ObjectDestructor4_1de0": "6fab1de0",
+    "GetDataTableEntry": "6fab1e10"
+  },
+  "functions": {
+    "6fab1000": {
+      "name": "DeleteObjectMemory",
+      "address": "6fab1000",
+      "rva": "00001000",
+      "signature": "void __cdecl DeleteObjectMemory(void * objectPtr)",
+      "calling_convention": "__cdecl",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "objectPtr",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "GlobalDeleteOperator"
+      ],
+      "callers": [
+        "Unwind@6fb7d55e",
+        "Unwind@6fb7d593",
+        "Unwind@6fb7d5c2",
+        "Unwind@6fb7d636",
+        "Unwind@6fb7d64b",
+        "Unwind@6fb7d696",
+        "Unwind@6fb7d6ae",
+        "Unwind@6fb7d6bc",
+        "Unwind@6fb7d6ca",
+        "Unwind@6fb7d6d8",
+        "`scalar_deleting_destructor'"
+      ],
+      "xref_count": 13,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1020": {
+      "name": "EmptyStubFunction",
+      "address": "6fab1020",
+      "rva": "00001020",
+      "signature": "void __stdcall EmptyStubFunction(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [],
+      "locals": [],
+      "callees": [],
+      "callers": [],
+      "xref_count": 8,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1030": {
+      "name": "CleanupExceptionLinkedStructure",
+      "address": "6fab1030",
+      "rva": "00001030",
+      "signature": "void __stdcall CleanupExceptionLinkedStructure(ExceptionCleanupContext * cleanupContext)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "cleanupContext",
+          "type": "ExceptionCleanupContext *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "sehStateFlag",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "sehHandlerAddress",
+          "type": "int",
+          "storage": "Stack[-0x8]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "previousSehHandler",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "targetNodePointer",
+          "type": "int",
+          "storage": "HASH:5ff35e172e:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "offsetValue",
+          "type": "undefined4",
+          "storage": "HASH:5f8f9ebff1:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "contextBasePointer",
+          "type": "int",
+          "storage": "HASH:419c7b285d:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "ProcessLinkedListCleanupIterator"
+      ],
+      "callers": [
+        "GenerateMemoryDiagnosticReportWithHeapAnalysisAndAllocationTracking",
+        "Unwind@6fb7d5fa"
+      ],
+      "xref_count": 2,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab10b0": {
+      "name": "InsertNodeIntoOffsetLinkedList",
+      "address": "6fab10b0",
+      "rva": "000010B0",
+      "signature": "void __thiscall InsertNodeIntoOffsetLinkedList(void * this, void * thisContext, HybridMemoryPoolManager * poolManager, OffsetLinkedListNode * newNode, OffsetLinkedListNode * targetNode, int insertPosition)",
+      "calling_convention": "__thiscall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "this",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4 (auto)"
+        },
+        {
+          "name": "thisContext",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "poolManager",
+          "type": "HybridMemoryPoolManager *",
+          "ordinal": 2,
+          "storage": "Stack[0x8]:4"
+        },
+        {
+          "name": "newNode",
+          "type": "OffsetLinkedListNode *",
+          "ordinal": 3,
+          "storage": "Stack[0xc]:4"
+        },
+        {
+          "name": "targetNode",
+          "type": "OffsetLinkedListNode *",
+          "ordinal": 4,
+          "storage": "Stack[0x10]:4"
+        },
+        {
+          "name": "insertPosition",
+          "type": "int",
+          "ordinal": 5,
+          "storage": "Stack[0x14]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "contextBase",
+          "type": "int",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "activePoolManager",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "currentNode",
+          "type": "int",
+          "storage": "ESI:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "existingHead",
+          "type": "undefined4",
+          "storage": "ESI:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "offsetValue",
+          "type": "undefined4",
+          "storage": "HASH:5fa8114e7d:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "GenerateMemoryDiagnosticReportWithHeapAnalysisAndAllocationTracking"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1150": {
+      "name": "ProcessDualLinkedListCleanup",
+      "address": "6fab1150",
+      "rva": "00001150",
+      "signature": "void __stdcall ProcessDualLinkedListCleanup(int * linkStructure)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "linkStructure",
+          "type": "int *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "local_4",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        },
+        {
+          "name": "local_c",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        },
+        {
+          "name": "linkTargetPointer",
+          "type": "undefined4",
+          "storage": "HASH:5f8da2dfb9:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "Unwind@6fb7d617"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab11f0": {
+      "name": "ProcessLinkedListCleanupIterator",
+      "address": "6fab11f0",
+      "rva": "000011F0",
+      "signature": "void __stdcall ProcessLinkedListCleanupIterator(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [],
+      "locals": [
+        {
+          "name": "cleanupContext",
+          "type": "undefined4",
+          "storage": "EBX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "linkNode",
+          "type": "undefined4",
+          "storage": "HASH:5f075ab7d2:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CleanupExceptionLinkedStructure"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1230": {
+      "name": "GetMonsterTxt",
+      "address": "6fab1230",
+      "rva": "00001230",
+      "signature": "void * __stdcall GetMonsterTxt(DWORD monno)",
+      "calling_convention": "__stdcall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "monno",
+          "type": "DWORD",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "MonsterIndex",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "Attack",
+        "CreateMonsterEntityWithValidation",
+        "ExecutePlayerSkillWithTeleportValidationAndItemStateManagement",
+        "GetEntityUITextElementOrMonsterData",
+        "PrintPartyString",
+        "ProcessComplexSkillCastingWithMultipleValidationPaths",
+        "ProcessEntityType1",
+        "ProcessEntityUIRenderingBasedOnType",
+        "ProcessPlayerSkillActionByModeAndType",
+        "ProcessSkillSummonEntityWithHealthAndAnimationConfiguration",
+        "ProcessUnitSoundEffectWithValidation",
+        "SetEntityOffsetValueWithValidation",
+        "SetSelectedUnit_I"
+      ],
+      "xref_count": 19,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1260": {
+      "name": "GetPlayerDataByInstanceId",
+      "address": "6fab1260",
+      "rva": "00001260",
+      "signature": "void * __stdcall GetPlayerDataByInstanceId(int primaryIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "primaryIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "dataTablesBase",
+          "type": "undefined4",
+          "storage": "HASH:5facdaa29f:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CreateMultipleProjectilesWithRandomOffsetsAndPermissionValidation",
+        "CreatePlayerClassSpecificProjectileWithTargetValidation",
+        "FindClientSideUnit",
+        "GetSkillTableByClassAndPermission",
+        "ProcessEntitySkillValidationWithLevelCheckingAndPermissionVerification",
+        "ProcessPlayerCreationWithBitStreamDataValidationAndStatisticsApplication",
+        "ProcessPlayerLevelAndSetManaValues",
+        "ProcessPlayerStateTransitionWithValidation",
+        "ProcessSkillCastingAndCreateProjectiles",
+        "SetEntityOffsetValueWithValidation",
+        "SetSelectedUnit_I",
+        "SetUnitLocationAndProperties",
+        "ValidateEntityCollisionAndBoundaries",
+        "ValidatePlayerSkillPermissionMask"
+      ],
+      "xref_count": 28,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab12b0": {
+      "name": "GetLevelTableEntryByIndex",
+      "address": "6fab12b0",
+      "rva": "000012B0",
+      "signature": "void * __stdcall GetLevelTableEntryByIndex(int levelIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "levelIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ProcessSkillEffectUIRenderingWithScreenBounds"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab12e0": {
+      "name": "ExecuteFunctionArrayWithStride",
+      "address": "6fab12e0",
+      "rva": "000012E0",
+      "signature": "void __stdcall ExecuteFunctionArrayWithStride(int count, void * functionPointer, int stride)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "count",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "functionPointer",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x8]:4"
+        },
+        {
+          "name": "stride",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0xc]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ExecuteFunctionArrayWithThirtyTwoIterations",
+        "ProcessSkillValidationAndRenderUIElements",
+        "execute_array_batch_processor"
+      ],
+      "xref_count": 3,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1300": {
+      "name": "GetSkillDataEntry",
+      "address": "6fab1300",
+      "rva": "00001300",
+      "signature": "void * __stdcall GetSkillDataEntry(int skillIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "skillIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ExecutePlayerSkillWithTeleportValidationAndItemStateManagement",
+        "ProcessSkillSummonEntityWithHealthAndAnimationConfiguration"
+      ],
+      "xref_count": 6,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1330": {
+      "name": "GenerateRandomNumberWithBounds",
+      "address": "6fab1330",
+      "rva": "00001330",
+      "signature": "uint __fastcall GenerateRandomNumberWithBounds(ulonglong * randomState, uint maxRange)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "randomState",
+          "type": "ulonglong *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "maxRange",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "scaledSeed",
+          "type": "undefined8",
+          "storage": "HASH:41fac70eeee:8",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CreateMultipleProjectilesWithRandomOffsetsAndPermissionValidation",
+        "InitializeSnowflakeParticleWithRandomParameters",
+        "ProcessAdvancedCombatBehaviorWithTargeting",
+        "ProcessEntityCombatBehaviorWithRangeCheck",
+        "ProcessEntityCombatWithDistanceLogic",
+        "ProcessEntityType1",
+        "ProcessSkillEffectWithRandomCoordinateGenerationAndAdvancedSpellCasting",
+        "ProcessSkillEffectWithRandomProjectileCreationAndManaManagement",
+        "RenderAnimatedSkyBackgroundLayers",
+        "ValidateItemForRandomSelection"
+      ],
+      "xref_count": 57,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1380": {
+      "name": "GenerateRandomValueInRangeWithBounds",
+      "address": "6fab1380",
+      "rva": "00001380",
+      "signature": "uint __fastcall GenerateRandomValueInRangeWithBounds(ulonglong * randomState, uint maxRange)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "randomState",
+          "type": "ulonglong *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "maxRange",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "newSeed",
+          "type": "undefined8",
+          "storage": "HASH:27f6b12f23e:8",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CreateAreaProjectilesWithRandomPositionTargetValidationHealValueConfiguration",
+        "ExecuteSkillAction",
+        "ProcessGameLoopAndSystemStates",
+        "ProcessInventorySkillWithRandomization",
+        "ProcessMultipleProjectilesWithRandomizedOffsetsAndCoordinateCalculation",
+        "ProcessOrbFrameCounterWithRandomization",
+        "ProcessPlayerModeTransitionWithHealthValidation",
+        "ProcessSkillActivationWithResourceManagement",
+        "ProcessSkillEffectWithMultipleExecutionsAndValidation",
+        "ProcessSkillEffectWithResourceManagementAndStateUpdate",
+        "ProcessTimedProjectileSpawnerWithRandomTargetPositionAndDirectionalOffset",
+        "SetUnitLocationAndProperties"
+      ],
+      "xref_count": 35,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab13d0": {
+      "name": "SetEntityFlags",
+      "address": "6fab13d0",
+      "rva": "000013D0",
+      "signature": "void __fastcall SetEntityFlags(void * entityPtr, uint flagMask, int enableFlag)",
+      "calling_convention": "__fastcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "entityPtr",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "flagMask",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        },
+        {
+          "name": "enableFlag",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ProcessUnitAnimations",
+        "SetEntityOffsetValueWithValidation"
+      ],
+      "xref_count": 4,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1400": {
+      "name": "FindTargetEntityAtCoordinatesWithCollisionDetection",
+      "address": "6fab1400",
+      "rva": "00001400",
+      "signature": "int __stdcall FindTargetEntityAtCoordinatesWithCollisionDetection(void * parentEntity, int posX, int posY)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "parentEntity",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "posX",
+          "type": "int",
+          "ordinal": 1,
+          "storage": "Stack[0x8]:4"
+        },
+        {
+          "name": "posY",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0xc]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "entityList",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "entityCount",
+          "type": "undefined4",
+          "storage": "Stack[-0x8]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "childEntity",
+          "type": "undefined4",
+          "storage": "HASH:5f37972e75:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetEntityTable"
+      ],
+      "callers": [
+        "ApplySkillToTargetEntityAtPlayerLocation",
+        "CalculateLineOfSightVisibilityForTileMapGrid",
+        "CreateCircularAreaProjectilesWithRandomizationAndTargetValidation",
+        "CreateEntityWithPositionValidation",
+        "CreateProjectilesInCircularPattern",
+        "ExecuteSkillAction0x16",
+        "ExecuteSkillWithTargetPathfindingAndManaValidation",
+        "ExecuteTeleportSpellWithProjectileTargetAndAnimationManagement",
+        "ProcessEntityStateTransitionWithValidationAndUpdate",
+        "ProcessEntityType3",
+        "ProcessSkillActivationAndEntityPlacement",
+        "ProcessSkillEffectWithMultipleProjectileCreationAndTargeting",
+        "ProcessSkillEffectWithRangeCalculationAndTargetValidation",
+        "SpawnRandomEntitiesAtPosition",
+        "ValidateAndClearEntityPathsForTargetMatchingWithSecurity",
+        "ValidateSkillTargetWithPermissionAndCoordinateChecks",
+        "ValidateSkillTargetingWithPermissionMaskAndCollisionDetection"
+      ],
+      "xref_count": 29,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab14a0": {
+      "name": "CalculateScaledProduct",
+      "address": "6fab14a0",
+      "rva": "000014A0",
+      "signature": "int __fastcall CalculateScaledProduct(uint divisor, int multiplicandA, int multiplicandB)",
+      "calling_convention": "__fastcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "divisor",
+          "type": "uint",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "multiplicandA",
+          "type": "int",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        },
+        {
+          "name": "multiplicandB",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "divisionResult",
+          "type": "undefined8",
+          "storage": "EDX:4,EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "__alldiv"
+      ],
+      "callers": [
+        "ApplyHealthBasedDamageBoostWithValidation",
+        "ApplyType1EntityDamageBoostWithValidation",
+        "CalculateComplexDamageWithSkillBonusAndTooltipCreation",
+        "CalculateElementalSkillDamageWithHealthScaling",
+        "CalculateEnhancedWeaponDamage",
+        "CalculateScaledWeaponDamageWithFormattedTooltip",
+        "CalculateSkillDamageWithEntitySwapping",
+        "CalculateWeaponDamageWithPlayerStats",
+        "CancelTrade"
+      ],
+      "xref_count": 43,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1510": {
+      "name": "CheckEntitySkillBitFlag",
+      "address": "6fab1510",
+      "rva": "00001510",
+      "signature": "uint __fastcall CheckEntitySkillBitFlag(int skillIndex, uint bitIndex)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "skillIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "bitIndex",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "characterIndex",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "ExecuteSkillAction",
+        "GetSkillSoundEffectIds",
+        "GetValidatedInventoryItemWithSkillAndEntityChecks",
+        "InitializeUIRenderData",
+        "PrintPartyMessage",
+        "ProcessEntitySkillFlagsAndSetBit2",
+        "ProcessEntityType1",
+        "ValidateEntityPermissionsAndState",
+        "ValidateEntitySkillFlag",
+        "ValidateEntityTypeAndSkillRequirements"
+      ],
+      "xref_count": 14,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1580": {
+      "name": "GetStatTableEntryByIndex",
+      "address": "6fab1580",
+      "rva": "00001580",
+      "signature": "int __stdcall GetStatTableEntryByIndex(int statIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "statIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "CreateMultipleProjectilesWithRandomOffsetsAndPermissionValidation",
+        "CreateProjectileFromData",
+        "ExecuteSkillProjectileWithMonsterIndexAndDifficultyOffset",
+        "ExecuteSkillProjectileWithMonsterIndexAndPlayerLevelOffset",
+        "ExecuteSkillProjectileWithSourceValidationAndStatLookup",
+        "ProcessEntitySkillValidationWithLevelCheckingAndPermissionVerification",
+        "ProcessItemDataElement",
+        "ProcessProjectileCreationWithSkillValidationAndPositioning",
+        "ProcessSkillEffectWithProjectileCreationAndEventHandling"
+      ],
+      "xref_count": 15,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab15b0": {
+      "name": "GetEventTableEntryByIndex",
+      "address": "6fab15b0",
+      "rva": "000015B0",
+      "signature": "int __stdcall GetEventTableEntryByIndex(int eventIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "eventIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ExecuteSkillAction0x0D",
+        "HandleNetworkUnitSoundEvents",
+        "ProcessAdvancedUISkillInteractionWithNetworkValidationAndSecurity",
+        "ProcessGameEventWithTypeDispatch",
+        "ProcessRandomLocationProjectileSpawnerWithLineOfSightValidationAndDualProjectileCreation",
+        "ProcessSkillEffectWithProjectileCreationAndEventHandling",
+        "ProcessViewportModeTransitionWithSecurityValidation"
+      ],
+      "xref_count": 16,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab15e0": {
+      "name": "GetEventParameterByIndex",
+      "address": "6fab15e0",
+      "rva": "000015E0",
+      "signature": "int __fastcall GetEventParameterByIndex(int eventIndex, int parameterIndex)",
+      "calling_convention": "__fastcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "eventIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "parameterIndex",
+          "type": "int",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "eventEntry",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CalculateSkillDamageWithBonuses"
+      ],
+      "xref_count": 2,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1630": {
+      "name": "GetUnitX",
+      "address": "6fab1630",
+      "rva": "00001630",
+      "signature": "int __fastcall GetUnitX(void * unit)",
+      "calling_convention": "__fastcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "unit",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "x",
+          "type": "int",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "type",
+          "type": "int",
+          "storage": "HASH:5fdcbbb326:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetPathX"
+      ],
+      "callers": [
+        "CalculateWaypointPathfindingGridWithLineOfSightAndInterpolation",
+        "CastCrossPatternSpellAtPosition",
+        "CreateCrossPatternProjectilesAroundUnit",
+        "CreateMultipleProjectilesWithOffsetPattern",
+        "CreateProjectileLineWithDirectionalSpacing",
+        "CreateProjectileWithSkillInstanceAndCoordinateOffsetCalculation",
+        "CreateProjectileWithSkillValidationAndPlayerPermissionChecks",
+        "CreateRandomizedProjectileWithSkillParameters",
+        "CreateSkillProjectileWithTargetValidationAndNetworkSync",
+        "ExecuteCircularProjectileSkillWithTargeting",
+        "ExecuteEntityCallbackWithHandler",
+        "ExecuteInventoryBasedProjectileSkill",
+        "ExecuteInventoryTargetedProjectileSkill",
+        "ExecutePlayerSkillWithTeleport",
+        "ExecuteSkillAction0x0D",
+        "ExecuteTeleportSpellWithProjectileTargetAndAnimationManagement",
+        "GameShowAttack",
+        "PlayAudioEffectOnSpecialEntityState",
+        "PlayEntityAudioEffectsAtUnitPosition",
+        "ProcessAdvancedSkillExecutionWithEntityInteractionAndSystemValidation",
+        "ProcessComplexProjectileSpawnerWithTargetTrackingAndDirectionalMovement",
+        "ProcessComplexSkillExecutionWithEntityManagementAndProjectileCreation",
+        "ProcessDirectionalProjectileWithSkillParameters",
+        "ProcessDualProjectileSkillWithSecondaryEffect",
+        "ProcessEntityRenderingWithGridPositionAndUICoordinateMapping",
+        "ProcessEntitySelectionAndInteractionLogic",
+        "ProcessEntitySpawnAndActionHandling",
+        "ProcessInventoryProjectileCreationWithCoordinateOverrideAndLevelPercent",
+        "ProcessMovementWithCollisionDetectionAndInventoryHandling",
+        "ProcessMultiProjectileBarrage",
+        "ProcessMultiStageProjectileSpawnerWithRandomScatterAndRedrawEvent",
+        "ProcessPlayerActionWithPositionValidation",
+        "ProcessProjectileShakeEffectWithRandomization",
+        "ProcessProjectileSkillCastingWithPositionCalculation",
+        "ProcessProjectileSkillExecution",
+        "ProcessProjectileWithDirectionalTargeting",
+        "ProcessRandomizedProjectileSpawnerWithDamageOverrideAndScreenCoordinates",
+        "ProcessSkillDispatcherWithModeBasedHandlingAndGlobalStateManagement",
+        "ProcessSkillEffectWithActiveProjectileCreationAndHealConfiguration",
+        "ProcessSkillEffectWithManaCostAndProjectileTargeting",
+        "ProcessSkillEffectWithMultipleProjectileCreationAndCallback",
+        "ProcessSkillEffectWithMultipleProjectileCreationAndTargeting",
+        "ProcessSkillEffectWithProjectileCreationAndEventHandling",
+        "ProcessSkillEffectWithRandomCoordinateGenerationAndAdvancedSpellCasting",
+        "ProcessSkillExecutionWithEntityValidationAndTelekinesisHandling",
+        "ProcessSkillInventoryItemValidationWithCoordinateExtraction",
+        "ProcessSkillOrbWithUnitValidationAndCoordinateCalculation",
+        "ProcessSkillTargetingWithValidation",
+        "ProcessTargetedProjectileCreationWithDualOffsetsAndDirectionCalculation",
+        "ProcessTargetedSkillWithPositionCalculation",
+        "ProcessTimedProjectileSpawnerWithAnimationThresholdAndPositionOverrides",
+        "ProcessTimedProjectileSpawnerWithCallbackAndMemoryValidation",
+        "ProcessTimedProjectileSpawnerWithFixedOffsetPatternAndFrameValidation",
+        "ProcessTimedProjectileSpawnerWithRandomTargetPositionAndDirectionalOffset",
+        "SetEntityOffsetValueWithValidation",
+        "UpdateSkillUnitCoordinatesFromInventoryItemWithValidation",
+        "ValidatePlayerDirectionalInteractionWithEntity",
+        "caseD_1",
+        "load_sound_resource"
+      ],
+      "xref_count": 182,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1660": {
+      "name": "GetUnitY",
+      "address": "6fab1660",
+      "rva": "00001660",
+      "signature": "int __fastcall GetUnitY(void * unit)",
+      "calling_convention": "__fastcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "unit",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "type",
+          "type": "undefined4",
+          "storage": "HASH:5f05429b2e:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetPathY"
+      ],
+      "callers": [
+        "Attack",
+        "CalculateWaypointPathfindingGridWithLineOfSightAndInterpolation",
+        "CastCrossPatternSpellAtPosition",
+        "CreateCrossPatternProjectilesAroundUnit",
+        "CreateMultipleProjectilesWithOffsetPattern",
+        "CreateOrbAtUnitPosition",
+        "CreateOrbWithAdditionalParam",
+        "CreateProjectileLineWithDirectionalSpacing",
+        "CreateProjectileWithSkillInstanceAndCoordinateOffsetCalculation",
+        "CreateProjectileWithSkillValidationAndPlayerPermissionChecks",
+        "CreateRandomizedProjectileWithSkillParameters",
+        "CreateSkillProjectileWithTargetValidationAndNetworkSync",
+        "ExecuteCircularProjectileSkillWithTargeting",
+        "ExecuteEntityCallbackWithHandler",
+        "ExecuteInventoryBasedProjectileSkill",
+        "ExecuteInventoryTargetedProjectileSkill",
+        "ExecutePlayerSkillWithTeleport",
+        "ExecuteSkillAction0x0D",
+        "ExecuteTeleportSpellWithProjectileTargetAndAnimationManagement",
+        "GameShowAttack",
+        "PlayAudioEffectOnSpecialEntityState",
+        "PlayEntityAudioEffectsAtUnitPosition",
+        "PlayPositionalAudioAndAttachToUnit",
+        "ProcessComplexProjectileSpawnerWithTargetTrackingAndDirectionalMovement",
+        "ProcessComplexSkillCalculation",
+        "ProcessConditionalSkillExecutionWithInventoryAndProjectileManagement",
+        "ProcessDirectionalProjectileWithSkillParameters",
+        "ProcessDualProjectileSkillWithSecondaryEffect",
+        "ProcessEnhancedSkillExecutionWithEntityStateManagementAndCoordinateValidation",
+        "ProcessEntityPositionUpdateWithGameModeValidation",
+        "ProcessEntityPositionUpdateWithValidation",
+        "ProcessEntityRenderingWithGridPositionAndUICoordinateMapping",
+        "ProcessEntitySelectionAndInteractionLogic",
+        "ProcessEntitySkillCastingWithProjectileCreationAndCoordinateValidation",
+        "ProcessEntitySpawnAndActionHandling",
+        "ProcessEntityType1",
+        "ProcessInventoryProjectileCreationWithCoordinateOverrideAndLevelPercent",
+        "ProcessItemTransactionWithValidationAndCleanup",
+        "ProcessMouseClickAndRenderEntityWithAutomapValidation",
+        "ProcessMovementWithCollisionDetectionAndInventoryHandling",
+        "ProcessMultiProjectileBarrage",
+        "ProcessMultiStageProjectileSpawnerWithRandomScatterAndRedrawEvent",
+        "ProcessPlayerActionWithPositionValidation",
+        "ProcessPlayerSkillActionsBySkillId",
+        "ProcessProjectileShakeEffectWithRandomization",
+        "ProcessProjectileSkillCastingWithPositionCalculation",
+        "ProcessProjectileSkillExecution",
+        "ProcessProjectileWithDirectionalTargeting",
+        "ProcessRandomizedProjectileSpawnerWithDamageOverrideAndScreenCoordinates",
+        "ProcessSkillActivationWithStateValidation",
+        "ProcessSkillAmazonWeaponToss",
+        "ProcessSkillDispatcherWithModeBasedHandlingAndGlobalStateManagement",
+        "ProcessSkillEffectWithActiveProjectileCreationAndHealConfiguration",
+        "ProcessSkillEffectWithManaCostAndProjectileTargeting",
+        "ProcessSkillEffectWithMultipleProjectileCreationAndCallback",
+        "ProcessSkillEffectWithMultipleProjectileCreationAndTargeting",
+        "ProcessSkillEffectWithPositionValidationAndAudioEvents",
+        "ProcessSkillEffectWithProjectileCreationAndEventHandling",
+        "ProcessSkillEffectWithRandomCoordinateGenerationAndAdvancedSpellCasting",
+        "ProcessSkillInventoryItemValidationWithCoordinateExtraction",
+        "ProcessSkillOrbWithUnitValidationAndCoordinateCalculation",
+        "ProcessSkillProjectileAndUnitPlacement",
+        "ProcessSkillTargetingWithValidation",
+        "ProcessSpellEffectsWithProjectileCreation",
+        "ProcessTargetedProjectileCreationWithDualOffsetsAndDirectionCalculation",
+        "ProcessTargetedSkillWithPositionCalculation",
+        "ProcessTimedProjectileSpawnerWithAnimationThresholdAndPositionOverrides",
+        "ProcessTimedProjectileSpawnerWithCallbackAndMemoryValidation",
+        "ProcessTimedProjectileSpawnerWithFixedOffsetPatternAndFrameValidation",
+        "ProcessTimedProjectileSpawnerWithRandomTargetPositionAndDirectionalOffset",
+        "ProcessUnitSkillInteraction",
+        "SetEntityOffsetValueWithValidation",
+        "TriggerTeleportEffect",
+        "UpdateSkillUnitCoordinatesFromInventoryItemWithValidation",
+        "UpdateUnitAnimation",
+        "ValidatePlayerDirectionalInteractionWithEntity",
+        "caseD_1"
+      ],
+      "xref_count": 171,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1690": {
+      "name": "GetMonsterDataTableCount",
+      "address": "6fab1690",
+      "rva": "00001690",
+      "signature": "uint __stdcall GetMonsterDataTableCount(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "uint",
+      "parameters": [],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "CreateMonsterEntityWithValidation"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab16a0": {
+      "name": "ClearPlayerSkillData",
+      "address": "6fab16a0",
+      "rva": "000016A0",
+      "signature": "void __stdcall ClearPlayerSkillData(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ExecutePlayerSkillFromStoredData",
+        "ProcessPlayerActionWithInventoryHandling",
+        "ProcessSpellCastingWithClassValidationAndAudio"
+      ],
+      "xref_count": 3,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab16e0": {
+      "name": "GetArmorClassValue",
+      "address": "6fab16e0",
+      "rva": "000016E0",
+      "signature": "uint __stdcall GetArmorClassValue(int * itemData)",
+      "calling_convention": "__stdcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "itemData",
+          "type": "int *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "GetEntityUITextElementOrMonsterData"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1700": {
+      "name": "GetArmorClassFromSkill",
+      "address": "6fab1700",
+      "rva": "00001700",
+      "signature": "int __stdcall GetArmorClassFromSkill(int * itemData)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "itemData",
+          "type": "int *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "skillIndex",
+          "type": "undefined4",
+          "storage": "HASH:5f79c194a4:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "ProcessPlayerSkillActionByModeAndType",
+        "ProcessUnitSoundByState",
+        "SetEntityOffsetValueWithValidation",
+        "SetUnitLocationAndProperties",
+        "ValidateArmorEquipmentEligibility"
+      ],
+      "xref_count": 6,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1740": {
+      "name": "ValidateSkillIndex",
+      "address": "6fab1740",
+      "rva": "00001740",
+      "signature": "int __stdcall ValidateSkillIndex(int skillIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "skillIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1760": {
+      "name": "CheckSkillBitMask",
+      "address": "6fab1760",
+      "rva": "00001760",
+      "signature": "uint __fastcall CheckSkillBitMask(int skillIndex, uint bitIndex)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "skillIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "bitIndex",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "skillEntry",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "DetermineAutomapEntityColorByTypeAndState",
+        "ExecuteEntityCallbackWithHandler",
+        "ProcessAutomapEntityRenderingWithSkillValidation",
+        "ProcessEntitySkillByClass",
+        "ProcessSkillDataCreationAndValidation"
+      ],
+      "xref_count": 6,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab17b0": {
+      "name": "GetEventDurationOrDefault",
+      "address": "6fab17b0",
+      "rva": "000017B0",
+      "signature": "int __stdcall GetEventDurationOrDefault(int eventIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "eventIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "eventDuration",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "ExecuteComplexSkillWithValidationAndEffectProcessing",
+        "ProcessViewportModeTransitionWithSecurityValidation"
+      ],
+      "xref_count": 6,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab17f0": {
+      "name": "GetEventPrefabReference",
+      "address": "6fab17f0",
+      "rva": "000017F0",
+      "signature": "int __stdcall GetEventPrefabReference(int eventIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "eventIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "basePointer",
+          "type": "undefined4",
+          "storage": "HASH:5f4b16ec77:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "CalculateAlternatePlayerCombatDamageWithValidation",
+        "CalculateComplexSkillDamageWithScaling",
+        "CalculateDualDamageTypesAndCreateTooltip",
+        "CalculatePlayerCombatDamageWithEventValidation",
+        "CalculateSkillModifiedDamage",
+        "CalculateWeaponDamageWithSkillBoostAndEventPrefabProcessing",
+        "CreateUITextElementFromEventPrefabWidth",
+        "ExecuteSkillCalculationWithValidation",
+        "GetEventPrefabValue",
+        "ProcessAdvancedUISkillInteractionWithNetworkValidationAndSecurity",
+        "ProcessItemDataElement",
+        "ProcessSkillDamageWithEventPrefab",
+        "ProcessSkillIconRenderingWithTooltipAndBoundsValidation",
+        "ProcessSkillWithParameters",
+        "ProcessSpellBarEventWithBounds",
+        "ProcessViewportModeTransitionWithSecurityValidation",
+        "ShakeScreen",
+        "ValidateAndCalculateSkillDamage"
+      ],
+      "xref_count": 24,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1870": {
+      "name": "GetComponentTableEntryByIndex",
+      "address": "6fab1870",
+      "rva": "00001870",
+      "signature": "int __stdcall GetComponentTableEntryByIndex(int componentIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "componentIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ProcessEntityResourceManagementWithLifecycleValidationAndCleanup"
+      ],
+      "xref_count": 4,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab18a0": {
+      "name": "GetEntityTableEntryByIndex",
+      "address": "6fab18a0",
+      "rva": "000018A0",
+      "signature": "int __stdcall GetEntityTableEntryByIndex(int entityIndex)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "entityIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "ProcessEntityResourceManagementWithLifecycleValidationAndCleanup"
+      ],
+      "xref_count": 2,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab18d0": {
+      "name": "GenerateRandomValueInRangeWithSeed",
+      "address": "6fab18d0",
+      "rva": "000018D0",
+      "signature": "int __fastcall GenerateRandomValueInRangeWithSeed(ulonglong * randomState, uint rangeSize, int baseValue)",
+      "calling_convention": "__fastcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "randomState",
+          "type": "ulonglong *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "rangeSize",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        },
+        {
+          "name": "baseValue",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "CalculateShake",
+        "InitializeRenderElementWithParametersAndRandomOffset",
+        "InitializeRenderElementWithRandomParametersAndSecurityValidation",
+        "InitializeSpriteElementWithRandomParametersAndSecurityValidation",
+        "ProcessAdvancedColorCalculationWithStateValidationAndRandomGeneration",
+        "ProcessGameStateWithSecurityValidationAndSystemControl",
+        "ProcessMainRenderLoopWithProjectileSystemAndSecurityValidation",
+        "ProcessRenderElementsWithSystemParameterUpdateAndProjectileManagement"
+      ],
+      "xref_count": 14,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1920": {
+      "name": "RC4CipherProcess",
+      "address": "6fab1920",
+      "rva": "00001920",
+      "signature": "void __stdcall RC4CipherProcess(void * rc4State, int dataBuffer, uint dataLength)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "rc4State",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "dataBuffer",
+          "type": "int",
+          "ordinal": 1,
+          "storage": "Stack[0x8]:4"
+        },
+        {
+          "name": "dataLength",
+          "type": "uint",
+          "ordinal": 2,
+          "storage": "Stack[0xc]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "sboxPointerI",
+          "type": "undefined4",
+          "storage": "HASH:41edf5086f:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "InitializeWardenClientWithRC4CryptographyAndValidation"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab19a0": {
+      "name": "FreeDynamicModules",
+      "address": "6fab19a0",
+      "rva": "000019A0",
+      "signature": "undefined __stdcall FreeDynamicModules(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "undefined",
+      "parameters": [],
+      "locals": [],
+      "callees": [],
+      "callers": [],
+      "xref_count": 14,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab19b0": {
+      "name": "ClearStructBuffer",
+      "address": "6fab19b0",
+      "rva": "000019B0",
+      "signature": "void __stdcall ClearStructBuffer(uint * structBuffer)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "structBuffer",
+          "type": "uint *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "local_4",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        },
+        {
+          "name": "local_c",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "InitializeWardenClientWithRC4CryptographyAndValidation"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1a00": {
+      "name": "CleanupDynamicLibraries",
+      "address": "6fab1a00",
+      "rva": "00001A00",
+      "signature": "void __stdcall CleanupDynamicLibraries(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [],
+      "locals": [
+        {
+          "name": "local_4",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "local_c",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "FreeDynamicModules"
+      ],
+      "callers": [
+        "CleanupWardenClientSystemWithDynamicLibraryManagement",
+        "CompleteWardenSystemShutdownWithGlobalStateReset",
+        "ProcessWardenClientSwapWithDynamicModuleExecutionAndStateUpdate"
+      ],
+      "xref_count": 3,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1a40": {
+      "name": "WardenClientDelete",
+      "address": "6fab1a40",
+      "rva": "00001A40",
+      "signature": "void __stdcall WardenClientDelete(void * wardenObject)",
+      "calling_convention": "__stdcall",
+      "return_type": "void",
+      "parameters": [
+        {
+          "name": "wardenObject",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "GlobalDeleteOperator"
+      ],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1a60": {
+      "name": "GetByteFromArray",
+      "address": "6fab1a60",
+      "rva": "00001A60",
+      "signature": "uint __fastcall GetByteFromArray(void * arrayContext, byte index)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "arrayContext",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "index",
+          "type": "byte",
+          "ordinal": 1,
+          "storage": "DL:1"
+        }
+      ],
+      "locals": [],
+      "callees": [],
+      "callers": [
+        "InitializeUIRenderData"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1a80": {
+      "name": "GetValidSelectedUnit",
+      "address": "6fab1a80",
+      "rva": "00001A80",
+      "signature": "void * __stdcall GetValidSelectedUnit(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "void *",
+      "parameters": [],
+      "locals": [
+        {
+          "name": "engineMode",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineFlags",
+          "type": "undefined4",
+          "storage": "Stack[-0x8]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineState",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetUnitMode",
+        "LogUnitDebugInfo"
+      ],
+      "callers": [
+        "ProcessEntityHashTableLookupWithSecurityValidationAndChainTraversal",
+        "RenderEntityWithPerspectiveTransformAndAnimationSequence"
+      ],
+      "xref_count": 5,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1af0": {
+      "name": "GetDefaultEngineFlags",
+      "address": "6fab1af0",
+      "rva": "00001AF0",
+      "signature": "uint __stdcall GetDefaultEngineFlags(void * engineContext)",
+      "calling_convention": "__stdcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "engineContext",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "engineState",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineMode",
+          "type": "undefined4",
+          "storage": "Stack[-0x8]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineFlags",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetUnitMode",
+        "LogUnitDebugInfo"
+      ],
+      "callers": [
+        "GetPacketSize",
+        "ProcessEntityRenderingWithClippingAndTransforms",
+        "RenderEntityNameWithPerspectiveTransformAndValidation",
+        "UpdateEntityTimestamp"
+      ],
+      "xref_count": 9,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1b50": {
+      "name": "GetEngineMode",
+      "address": "6fab1b50",
+      "rva": "00001B50",
+      "signature": "uint __stdcall GetEngineMode(void * engineContext)",
+      "calling_convention": "__stdcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "engineContext",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "engineState",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineFlags",
+          "type": "undefined4",
+          "storage": "Stack[-0x8]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "engineMode",
+          "type": "undefined4",
+          "storage": "Stack[-0xc]:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [
+        "GetUnitMode",
+        "LogUnitDebugInfo"
+      ],
+      "callers": [
+        "ProcessEntitySkillPermissionMaskValidationWithAnimationStates"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1bc0": {
+      "name": "GetScreenMetric",
+      "address": "6fab1bc0",
+      "rva": "00001BC0",
+      "signature": "int __stdcall GetScreenMetric(void * contextData, int * successFlag)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [
+        {
+          "name": "contextData",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "successFlag",
+          "type": "int *",
+          "ordinal": 1,
+          "storage": "Stack[0x8]:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "ordinalResult",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        },
+        {
+          "name": "local_4",
+          "type": "undefined4",
+          "storage": "Stack[-0x4]:4",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        }
+      ],
+      "callees": [
+        "GetSkillInstanceByEntityHandleWithValidationAndContext",
+        "GetUnitType"
+      ],
+      "callers": [
+        "InitializeUIRenderData"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1c10": {
+      "name": "CheckEntityCollisionFlag",
+      "address": "6fab1c10",
+      "rva": "00001C10",
+      "signature": "uint __fastcall CheckEntityCollisionFlag(int entityIndex, uint flagIndex)",
+      "calling_convention": "__fastcall",
+      "return_type": "uint",
+      "parameters": [
+        {
+          "name": "entityIndex",
+          "type": "int",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        },
+        {
+          "name": "flagIndex",
+          "type": "uint",
+          "ordinal": 1,
+          "storage": "EDX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "collisionTableIndex",
+          "type": "undefined4",
+          "storage": "EAX:4",
+          "is_phantom": false,
+          "in_decompiled_code": true
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "ProcessEntityInteractionWithDistance",
+        "ProcessPlayerStateTransitionWithSkillValidation",
+        "ProcessRandomSkillExecutionBehavior",
+        "ProcessUnitSelectionWithAudioAndStateValidation",
+        "SetEntityOffsetValueWithValidation",
+        "SetUnitLocationAndProperties"
+      ],
+      "xref_count": 6,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1c80": {
+      "name": "ObjectDestructor",
+      "address": "6fab1c80",
+      "rva": "00001C80",
+      "signature": "void * __thiscall ObjectDestructor(void * this, void * objectInstance, byte destructorFlags)",
+      "calling_convention": "__thiscall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "this",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4 (auto)"
+        },
+        {
+          "name": "objectInstance",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "destructorFlags",
+          "type": "byte",
+          "ordinal": 2,
+          "storage": "Stack[0x8]:1"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "GlobalDeleteOperator",
+        "InitializeVirtualTable"
+      ],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1cb0": {
+      "name": "UnicodeArrayInitializer_1cb0",
+      "address": "6fab1cb0",
+      "rva": "00001CB0",
+      "signature": "undefined4 __fastcall UnicodeArrayInitializer_1cb0(undefined4 param_1)",
+      "calling_convention": "__fastcall",
+      "return_type": "undefined4",
+      "parameters": [
+        {
+          "name": "param_1",
+          "type": "undefined4",
+          "ordinal": 0,
+          "storage": "ECX:4"
+        }
+      ],
+      "locals": [
+        {
+          "name": "local_c",
+          "type": "undefined",
+          "storage": "Stack[-0xc]:1",
+          "is_phantom": true,
+          "in_decompiled_code": false
+        }
+      ],
+      "callees": [],
+      "callers": [
+        "InitializeObjectWithStringArrays"
+      ],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1d80": {
+      "name": "ObjectDestructor2_1d80",
+      "address": "6fab1d80",
+      "rva": "00001D80",
+      "signature": "void * __thiscall ObjectDestructor2_1d80(void * this, void * pObject, int bFreeMemory)",
+      "calling_convention": "__thiscall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "this",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4 (auto)"
+        },
+        {
+          "name": "pObject",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "bFreeMemory",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x8]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "DestructObjectWithExceptionHandling",
+        "GlobalDeleteOperator"
+      ],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1db0": {
+      "name": "ObjectDestructor3_1db0",
+      "address": "6fab1db0",
+      "rva": "00001DB0",
+      "signature": "void * __thiscall ObjectDestructor3_1db0(void * this, void * pObject, int bFreeMemory)",
+      "calling_convention": "__thiscall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "this",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4 (auto)"
+        },
+        {
+          "name": "pObject",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "bFreeMemory",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x8]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "GlobalDeleteOperator",
+        "InitializeObjectVTableWithExceptionHandling"
+      ],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1de0": {
+      "name": "ObjectDestructor4_1de0",
+      "address": "6fab1de0",
+      "rva": "00001DE0",
+      "signature": "void * __thiscall ObjectDestructor4_1de0(void * this, void * pObject, int bFreeMemory)",
+      "calling_convention": "__thiscall",
+      "return_type": "void *",
+      "parameters": [
+        {
+          "name": "this",
+          "type": "void *",
+          "ordinal": 0,
+          "storage": "ECX:4 (auto)"
+        },
+        {
+          "name": "pObject",
+          "type": "void *",
+          "ordinal": 1,
+          "storage": "Stack[0x4]:4"
+        },
+        {
+          "name": "bFreeMemory",
+          "type": "int",
+          "ordinal": 2,
+          "storage": "Stack[0x8]:4"
+        }
+      ],
+      "locals": [],
+      "callees": [
+        "DestructObjectWithExceptionHandlingAndVTableCleanup",
+        "GlobalDeleteOperator"
+      ],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    },
+    "6fab1e10": {
+      "name": "GetDataTableEntry",
+      "address": "6fab1e10",
+      "rva": "00001E10",
+      "signature": "int __stdcall GetDataTableEntry(void)",
+      "calling_convention": "__stdcall",
+      "return_type": "int",
+      "parameters": [],
+      "locals": [],
+      "callees": [],
+      "callers": [],
+      "xref_count": 1,
+      "is_export": false,
+      "export_ordinal": null,
+      "export_name": null
+    }
+  },
+  "call_graph": {
+    "DeleteObjectMemory": [
+      "GlobalDeleteOperator"
+    ],
+    "CleanupExceptionLinkedStructure": [
+      "ProcessLinkedListCleanupIterator"
+    ],
+    "FindTargetEntityAtCoordinatesWithCollisionDetection": [
+      "GetEntityTable"
+    ],
+    "CalculateScaledProduct": [
+      "__alldiv"
+    ],
+    "GetUnitX": [
+      "GetPathX"
+    ],
+    "GetUnitY": [
+      "GetPathY"
+    ],
+    "CleanupDynamicLibraries": [
+      "FreeDynamicModules"
+    ],
+    "WardenClientDelete": [
+      "GlobalDeleteOperator"
+    ],
+    "GetValidSelectedUnit": [
+      "GetUnitMode",
+      "LogUnitDebugInfo"
+    ],
+    "GetDefaultEngineFlags": [
+      "GetUnitMode",
+      "LogUnitDebugInfo"
+    ],
+    "GetEngineMode": [
+      "GetUnitMode",
+      "LogUnitDebugInfo"
+    ],
+    "GetScreenMetric": [
+      "GetSkillInstanceByEntityHandleWithValidationAndContext",
+      "GetUnitType"
+    ],
+    "ObjectDestructor": [
+      "GlobalDeleteOperator",
+      "InitializeVirtualTable"
+    ],
+    "ObjectDestructor2_1d80": [
+      "DestructObjectWithExceptionHandling",
+      "GlobalDeleteOperator"
+    ],
+    "ObjectDestructor3_1db0": [
+      "GlobalDeleteOperator",
+      "InitializeObjectVTableWithExceptionHandling"
+    ],
+    "ObjectDestructor4_1de0": [
+      "DestructObjectWithExceptionHandlingAndVTableCleanup",
+      "GlobalDeleteOperator"
+    ]
+  }
+}

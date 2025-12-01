@@ -27,7 +27,15 @@
       "Bash(git checkout:*)",
       "Bash(find:*)",
       "Bash(xargs:*)",
-      "Bash(md5sum:*)"
+      "Bash(md5sum:*)",
+      "mcp__ghidra__run_script",
+      "mcp__ghidra__list_scripts",
+      "mcp__ghidra__save_ghidra_script",
+      "mcp__ghidra__run_ghidra_script",
+      "mcp__ghidra__check_connection",
+      "mcp__ghidra__analyze_function_complete",
+      "mcp__ghidra__get_plate_comment",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
