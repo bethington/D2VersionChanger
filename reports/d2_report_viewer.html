@@ -196,23 +196,37 @@
             border-bottom: 1px solid var(--border-dark);
         }
 
+        .filter-buttons {
+            display: flex;
+            gap: 0.2rem;
+        }
+
         .filter-btn {
             flex: 1;
-            padding: 0.25rem 0.3rem;
-            font-size: 0.65rem;
+            padding: 0.25rem 0.2rem;
+            font-size: 0.55rem;
             font-weight: 600;
             border: 1px solid var(--border-dark);
             border-radius: 3px;
             cursor: pointer;
             transition: all 0.15s;
-            text-transform: uppercase;
+            white-space: nowrap;
+            min-width: 0;
         }
 
-        .filter-btn.classic {
+        /* Pre-Refactor Classic (1.00-1.03) - old codebase */
+        .filter-btn.pre-refactor {
+            background: linear-gradient(180deg, #2a1010 0%, #150505 100%);
+            color: #cc4444;
+        }
+
+        /* Post-Refactor Classic (1.04+) - modern codebase */
+        .filter-btn.post-refactor {
             background: linear-gradient(180deg, #2a1a1a 0%, #1a0a0a 100%);
             color: #ff6666;
         }
 
+        /* LoD - all LoD versions */
         .filter-btn.lod {
             background: linear-gradient(180deg, #2a2a1a 0%, #1a1a0a 100%);
             color: var(--accent-gold);
@@ -225,6 +239,10 @@
 
         .filter-btn:not(.active) {
             opacity: 0.4;
+        }
+
+        .filter-btn:hover {
+            opacity: 1;
         }
 
         .version-list {
@@ -1018,6 +1036,68 @@
             font-weight: 600;
         }
 
+        /* Match tier indicators */
+        .tier-indicator {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 0.6rem;
+            font-weight: 700;
+            line-height: 18px;
+            margin-right: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .tier-1 {
+            background-color: rgba(199, 179, 119, 0.3);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .tier-2 {
+            background-color: rgba(0, 255, 0, 0.2);
+            color: var(--color-set);
+            border: 1px solid var(--color-set);
+        }
+
+        .tier-3 {
+            background-color: rgba(105, 105, 255, 0.2);
+            color: var(--color-magic);
+            border: 1px solid var(--color-magic);
+        }
+
+        .tier-4 {
+            background-color: rgba(255, 102, 0, 0.2);
+            color: var(--color-crafted);
+            border: 1px solid var(--color-crafted);
+        }
+
+        .tier-legend {
+            display: flex;
+            gap: 0.8rem;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            padding: 0.3rem 0;
+        }
+
+        .tier-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .exports-table .fn-name-cell {
+            display: flex;
+            align-items: center;
+        }
+
+        .fn-name-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         /* Text file view */
         .text-view-container {
             height: 100%;
@@ -1238,8 +1318,11 @@
                     <h2>Versions</h2>
                 </div>
                 <div class="version-filters">
-                    <button class="filter-btn classic" onclick="toggleFilter('Classic')">C</button>
-                    <button class="filter-btn lod" onclick="toggleFilter('LoD')">L</button>
+                    <div class="filter-buttons">
+                        <button class="filter-btn pre-refactor active" onclick="toggleVersionFilter('preRefactor')" title="Classic 1.00-1.03 (Pre-refactor codebase)">Pre-Refactor</button>
+                        <button class="filter-btn post-refactor active" onclick="toggleVersionFilter('postRefactor')" title="Classic 1.04+ (Post-refactor codebase)">Post-Refactor</button>
+                        <button class="filter-btn lod active" onclick="toggleVersionFilter('lod')" title="Lord of Destruction (All versions)">LoD</button>
+                    </div>
                 </div>
                 <div class="panel-content">
                     <div class="version-list" id="versionList"></div>
@@ -1322,9 +1405,25 @@
         // State
         let selectedVersion = null;
         let selectedFile = null;
+        let isGrouped = true;
+
+        // Version filters: Pre-Refactor (1.00-1.03), Post-Refactor (1.04+), LoD (all)
+        const versionFilters = {
+            preRefactor: true,    // Classic 1.00-1.03 (old codebase)
+            postRefactor: true,   // Classic 1.04+ (refactored codebase)
+            lod: true             // All LoD versions
+        };
+
+        // Version group definitions
+        const VERSION_GROUPS = {
+            preRefactor: ['Classic/1.00', 'Classic/1.01', 'Classic/1.02', 'Classic/1.03'],
+            postRefactor: ['Classic/1.04b', 'Classic/1.04c', 'Classic/1.05', 'Classic/1.05b', 'Classic/1.06', 'Classic/1.06b', 'Classic/1.08', 'Classic/1.09', 'Classic/1.09b', 'Classic/1.09d', 'Classic/1.10', 'Classic/1.11', 'Classic/1.11b', 'Classic/1.12a', 'Classic/1.13c', 'Classic/1.13d', 'Classic/1.14a', 'Classic/1.14b', 'Classic/1.14c', 'Classic/1.14d'],
+            lod: ['LoD/1.07', 'LoD/1.08', 'LoD/1.09', 'LoD/1.09b', 'LoD/1.09d', 'LoD/1.10', 'LoD/1.11', 'LoD/1.11b', 'LoD/1.12a', 'LoD/1.13c', 'LoD/1.13d', 'LoD/1.14a', 'LoD/1.14b', 'LoD/1.14c', 'LoD/1.14d']
+        };
+
+        // Legacy compatibility
         let showClassic = true;
         let showLoD = true;
-        let isGrouped = true;
 
         // Function table filter state
         let funcSearchFilter = '';
@@ -1332,7 +1431,7 @@
         let currentFuncData = null;
         let currentFuncBaseName = null;
 
-        // Function data cache (loaded on demand)
+        // Function data cache (loaded on demand) - keyed by "filename.group"
         const loadedFunctionData = {};
 
         // Case-insensitive lookup helper for FUNCTION_INDEX
@@ -1348,21 +1447,59 @@
             return null;
         }
 
-        // Load function data for a specific file
-        function loadFunctionData(filename) {
+        // Get the active version group based on filter state
+        // Priority: If only one filter is active, use that. Otherwise prefer the most relevant.
+        function getActiveVersionGroup() {
+            const activeCount = Object.values(versionFilters).filter(v => v).length;
+
+            // If only one is active, use that one
+            if (activeCount === 1) {
+                if (versionFilters.preRefactor) return 'pre';
+                if (versionFilters.postRefactor) return 'post';
+                if (versionFilters.lod) return 'lod';
+            }
+
+            // If multiple are active, pick based on priority (lod > post > pre for most data)
+            if (versionFilters.lod) return 'lod';
+            if (versionFilters.postRefactor) return 'post';
+            if (versionFilters.preRefactor) return 'pre';
+
+            return 'post'; // Default fallback
+        }
+
+        // Load function data for a specific file and version group
+        function loadFunctionData(filename, forceGroup = null) {
+            const group = forceGroup || getActiveVersionGroup();
+            const cacheKey = `${filename}.${group}`;
+
             return new Promise((resolve, reject) => {
-                if (loadedFunctionData[filename]) {
-                    resolve(loadedFunctionData[filename]);
+                if (loadedFunctionData[cacheKey]) {
+                    resolve(loadedFunctionData[cacheKey]);
                     return;
                 }
 
+                // Check if this file uses split format
+                const indexFile = findFunctionIndexFile(filename);
+                const fileInfo = indexFile ? FUNCTION_INDEX.files[indexFile] : null;
+                const isSplit = fileInfo && fileInfo.split;
+
+                let scriptPath, varName;
+                if (isSplit) {
+                    // Split format: filename.group.js
+                    scriptPath = 'functions/' + filename + '.' + group + '.js';
+                    varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase() + '_' + group.toUpperCase();
+                } else {
+                    // Legacy single-file format
+                    scriptPath = 'functions/' + filename + '.js';
+                    varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase();
+                }
+
                 const script = document.createElement('script');
-                script.src = 'functions/' + filename + '.js';
+                script.src = scriptPath;
                 script.onload = () => {
-                    const varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase();
-                    console.log('Script loaded for', filename, '- looking for variable:', varName);
+                    console.log('Script loaded:', scriptPath, '- looking for variable:', varName);
                     if (window[varName]) {
-                        loadedFunctionData[filename] = window[varName];
+                        loadedFunctionData[cacheKey] = window[varName];
                         resolve(window[varName]);
                     } else {
                         console.error('Variable not found:', varName);
@@ -1370,8 +1507,8 @@
                     }
                 };
                 script.onerror = (e) => {
-                    console.error('Failed to load script:', script.src);
-                    reject(new Error('Failed to load function data script'));
+                    console.error('Failed to load script:', scriptPath);
+                    reject(new Error('Failed to load function data script: ' + scriptPath));
                 };
                 document.head.appendChild(script);
             });
@@ -1416,31 +1553,65 @@
             renderVersionList();
         });
 
-        function toggleFilter(filter) {
-            if (filter === 'Classic') {
-                showClassic = !showClassic;
-                // If both would be off, turn the other one on
-                if (!showClassic && !showLoD) {
-                    showLoD = true;
-                }
-            } else if (filter === 'LoD') {
-                showLoD = !showLoD;
-                // If both would be off, turn the other one on
-                if (!showClassic && !showLoD) {
-                    showClassic = true;
-                }
+        function toggleVersionFilter(filterKey) {
+            // Toggle the specific filter
+            versionFilters[filterKey] = !versionFilters[filterKey];
+
+            // Ensure at least one filter is active
+            const anyActive = Object.values(versionFilters).some(v => v);
+            if (!anyActive) {
+                versionFilters[filterKey] = true;
             }
+
+            // Update legacy flags for compatibility
+            showClassic = versionFilters.preRefactor || versionFilters.postRefactor;
+            showLoD = versionFilters.lod;
 
             updateFilterButtons();
             renderVersionList();
+
+            // Refresh file details panel - reload function data for new group
+            if (selectedFile) {
+                const folder = FOLDERS_DATA[selectedVersion];
+                const fileInfo = folder?.files?.[selectedFile];
+                const baseName = selectedFile.split(' (')[0];
+                const history = FILE_HISTORY_DATA[baseName];
+
+                // Clear cached function data for this file to force reload with new group
+                currentFuncData = null;
+
+                renderFileDetails(selectedFile, fileInfo, history);
+            }
+        }
+
+        // Helper to filter versions by filter state
+        function filterVersionsByType(versions) {
+            return versions.filter(v => {
+                // Check each group
+                for (const [groupKey, groupVersions] of Object.entries(VERSION_GROUPS)) {
+                    if (groupVersions.includes(v)) {
+                        return versionFilters[groupKey];
+                    }
+                }
+                // If version not in any group, show it if any filter is active
+                return true;
+            });
+        }
+
+        // Get active filter names for display
+        function getActiveFilterNames() {
+            const names = [];
+            if (versionFilters.preRefactor) names.push('Pre');
+            if (versionFilters.postRefactor) names.push('Post');
+            if (versionFilters.lod) names.push('LoD');
+            return names;
         }
 
         function updateFilterButtons() {
-            const classicBtn = document.querySelector('.filter-btn.classic');
-            const lodBtn = document.querySelector('.filter-btn.lod');
-
-            classicBtn.classList.toggle('active', showClassic);
-            lodBtn.classList.toggle('active', showLoD);
+            // Update each button's active state
+            document.querySelector('.filter-btn.pre-refactor')?.classList.toggle('active', versionFilters.preRefactor);
+            document.querySelector('.filter-btn.post-refactor')?.classList.toggle('active', versionFilters.postRefactor);
+            document.querySelector('.filter-btn.lod')?.classList.toggle('active', versionFilters.lod);
         }
 
         function renderCategoryFilters() {
@@ -1484,11 +1655,10 @@
         function renderVersionList() {
             const container = document.getElementById('versionList');
 
-            // Filter based on toggle buttons
+            // Filter based on granular toggle buttons
             let versions = VERSIONS_DATA.filter(v => {
-                if (v.game_type === 'Classic' && showClassic) return true;
-                if (v.game_type === 'LoD' && showLoD) return true;
-                return false;
+                const fullVersion = v.folder_name; // e.g., "Classic/1.00" or "LoD/1.07"
+                return filterVersionsByType([fullVersion]).length > 0;
             });
 
             // Sort by version number
@@ -1949,6 +2119,17 @@
         }
 
 
+        // Get tier title for tooltip
+        function getTierTitle(tier) {
+            const titles = {
+                1: 'Tier 1: Export Name Match',
+                2: 'Tier 2: Exact Bytes Match',
+                3: 'Tier 3: Prologue + Size Match',
+                4: 'Tier 4: Call Graph Match'
+            };
+            return titles[tier] || 'Unknown tier';
+        }
+
         // Check if a function has a "real" name (not auto-generated)
         function isNamedFunction(func, key) {
             const name = func.name || '';
@@ -1991,19 +2172,26 @@
             const funcData = currentFuncData;
             const history = FILE_HISTORY_DATA[currentFuncBaseName];
 
-            // Build version groups (same logic as full render)
+            // Build version groups (same logic as full render, with Classic/LoD filter)
             const allVersions = funcData.versions;
             const versionGroups = [];
 
             if (history && history.variants) {
                 for (const variant of history.variants) {
-                    const versionsWithFuncs = variant.versions.filter(v => allVersions.includes(v));
+                    // Apply Classic/LoD filter
+                    const versionsWithFuncs = variant.versions.filter(v => {
+                        if (!allVersions.includes(v)) return false;
+                        return filterVersionsByType([v]).length > 0;
+                    });
                     if (versionsWithFuncs.length > 0) {
                         versionGroups.push({ versions: versionsWithFuncs });
                     }
                 }
             } else if (allVersions.length > 0) {
-                versionGroups.push({ versions: allVersions });
+                const filteredVersions = filterVersionsByType(allVersions);
+                if (filteredVersions.length > 0) {
+                    versionGroups.push({ versions: filteredVersions });
+                }
             }
 
             // Filter and sort function keys
@@ -2049,6 +2237,9 @@
                 const displayName = func.name || key;
                 const isNamed = isNamedFunction(func, key);
                 const nameClass = isNamed ? 'named-func' : '';
+                const tier = func.tier || 0;
+                const tierClass = tier > 0 ? 'tier-' + tier : '';
+                const tierTitle = getTierTitle(tier);
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {
@@ -2059,7 +2250,8 @@
                     return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
                 }).join('');
 
-                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
+                const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + tierIndicator + '<span class="fn-name-text">' + displayName + '</span></td>' + addrCells + '</tr>';
             }).join('');
         }
 
@@ -2101,8 +2293,12 @@
             if (history && history.variants) {
                 // Use the pre-computed variant groupings from FILE_HISTORY_DATA
                 for (const variant of history.variants) {
-                    // Filter to only versions that have function data
-                    const versionsWithFuncs = variant.versions.filter(v => allVersions.includes(v));
+                    // Filter to only versions that have function data AND match Classic/LoD filter
+                    const versionsWithFuncs = variant.versions.filter(v => {
+                        if (!allVersions.includes(v)) return false;
+                        // Apply Classic/LoD filter
+                        return filterVersionsByType([v]).length > 0;
+                    });
                     if (versionsWithFuncs.length > 0) {
                         const startVer = versionsWithFuncs[0].split('/')[1] || versionsWithFuncs[0];
                         const endVer = versionsWithFuncs[versionsWithFuncs.length - 1].split('/')[1] || versionsWithFuncs[versionsWithFuncs.length - 1];
@@ -2115,11 +2311,12 @@
                 }
             } else {
                 // Fallback: group all versions together if no history data
-                if (allVersions.length > 0) {
-                    const startVer = allVersions[0].split('/')[1] || allVersions[0];
-                    const endVer = allVersions[allVersions.length - 1].split('/')[1] || allVersions[allVersions.length - 1];
+                const filteredVersions = filterVersionsByType(allVersions);
+                if (filteredVersions.length > 0) {
+                    const startVer = filteredVersions[0].split('/')[1] || filteredVersions[0];
+                    const endVer = filteredVersions[filteredVersions.length - 1].split('/')[1] || filteredVersions[filteredVersions.length - 1];
                     versionGroups.push({
-                        versions: allVersions,
+                        versions: filteredVersions,
                         startVer: startVer,
                         endVer: endVer
                     });
@@ -2135,11 +2332,18 @@
                 }
             }
 
+            // Build filter indicator showing which version groups are active
+            const allFiltersActive = Object.values(versionFilters).every(v => v);
+            const activeNames = getActiveFilterNames();
+            const filterIndicator = !allFiltersActive
+                ? ` <span style="color: var(--accent-gold); font-size: 0.7rem;">[${activeNames.join('+')}]</span>`
+                : '';
+
             let html = `
                 <div class="exports-container">
                     <div class="exports-header">
-                        <div class="exports-header-title">${baseName} - Functions</div>
-                        <div class="exports-header-info">${funcKeys.length} functions across ${variantCount} variant${variantCount !== 1 ? 's' : ''}</div>
+                        <div class="exports-header-title">${baseName} - Functions${filterIndicator}</div>
+                        <div class="exports-header-info">${funcKeys.length} functions across ${versionGroups.length} variant${versionGroups.length !== 1 ? 's' : ''}</div>
                     </div>
                     <div class="exports-toolbar">
                         <input type="text" class="exports-search" id="funcSearchInput"
@@ -2152,6 +2356,12 @@
                         <span class="exports-stats" id="funcFilterStats">
                             Showing ${funcKeys.length} of ${funcKeys.length} (<span class="named-count">${namedCount} named</span>)
                         </span>
+                        <div class="tier-legend">
+                            <span class="tier-legend-item"><span class="tier-indicator tier-1">1</span>Export</span>
+                            <span class="tier-legend-item"><span class="tier-indicator tier-2">2</span>Exact</span>
+                            <span class="tier-legend-item"><span class="tier-indicator tier-3">3</span>Prologue</span>
+                            <span class="tier-legend-item"><span class="tier-indicator tier-4">4</span>CallGraph</span>
+                        </div>
                     </div>
                     <div class="exports-table-wrapper" id="exportsTableWrapper">
                         <table class="exports-table">
@@ -2174,6 +2384,9 @@
                 const displayName = func.name || key;
                 const isNamed = isNamedFunction(func, key);
                 const nameClass = isNamed ? 'named-func' : '';
+                const tier = func.tier || 0;
+                const tierClass = tier > 0 ? 'tier-' + tier : '';
+                const tierTitle = getTierTitle(tier);
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {
@@ -2184,7 +2397,8 @@
                     return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
                 }).join('');
 
-                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
+                const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + tierIndicator + '<span class="fn-name-text">' + displayName + '</span></td>' + addrCells + '</tr>';
             }).join('')}
                             </tbody>
                         </table>

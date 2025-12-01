@@ -100,26 +100,125 @@
 
 ### Phase 1: Complete Pipeline for All DLLs
 - [x] 1.1 D2Client.dll matching tested and working
-- [ ] 1.2 Run pipeline on remaining DLLs (D2Common, D2Game, D2Launch, etc.)
-- [ ] 1.3 Propagate Ghidra names for each DLL
-- [ ] 1.4 Regenerate all `reports/functions/*.js` files
+- [x] 1.2 Run pipeline on remaining DLLs (D2Common, D2Game, D2Launch, etc.) ✓ Session 2025-12-01
+- [x] 1.3 Propagate Ghidra names for each DLL ✓ Session 2025-12-01
+- [x] 1.4 Regenerate all `reports/functions/*.js` files ✓ Session 2025-12-01
 
 ### Phase 2: Improve Matching Coverage
-- [ ] 2.1 Analyze unmatched functions (the ~5-40% gap)
+- [x] 2.1 Analyze unmatched functions (the ~5-40% gap) ✓ Session 2025-12-01
+  - Created tools/analyze_unmatched.py
+  - See detailed findings below in "Unmatched Functions Analysis"
 - [ ] 2.2 Add fallback matching for image base transitions (1.03→1.04)
 - [ ] 2.3 Consider Tier 5: Function similarity matching (optional)
+
+---
+
+## Unmatched Functions Analysis
+
+### Summary by Version Group (D2Client.dll)
+
+| Version Group | Versions | Avg Unmatched | Cause |
+|--------------|----------|---------------|-------|
+| Early Classic (1.00-1.03) | 4 | ~1,200/version | Version-specific code removed in 1.04 |
+| Mid Classic (1.04-1.05b) | 4 | ~42/version | Excellent matching |
+| Classic 1.06.x | 2 | ~1,060/version | Transitional version with unique code |
+| Classic 1.08+ | 10 | ~51/version | Excellent matching |
+| LoD 1.07 | 1 | 2,250 | First LoD version, major restructuring |
+| LoD 1.08+ | 10 | ~51/version | Excellent matching |
+
+### Root Causes
+
+**1. Early Classic (1.00-1.03) - ~1,200 unmatched per version**
+- These versions used image base `0x10000000`
+- Many functions were completely rewritten or removed in version 1.04
+- Only 59 functions successfully match across the 1.03→1.04 transition
+- This is NOT primarily an image base issue - it's actual code removal/rewrite
+
+**2. LoD 1.07 - 2,250 unmatched (highest)**
+- First Lord of Destruction version
+- Massive code restructuring from Classic
+- Many functions exist only in this version and were rewritten in 1.08
+- Likely contains debug code or beta features that were removed
+
+**3. Classic 1.06.x - ~1,000 unmatched per version**
+- Transitional version between early and modern code
+- Contains unique implementations not present in other versions
+- Mix of old (1.00-1.05) and new (1.08+) code patterns
+
+**4. Modern Versions (1.08+) - Only 32-74 unmatched each**
+- Highly stable codebase with minimal changes between versions
+- 95%+ matching success rate
+- Unmatched functions are likely small helper functions with insufficient context
+
+### Image Base Transition Details
+
+```
+Classic 1.00-1.03: Image base 0x10000000
+Classic 1.04+:     Image base 0x6FB60000 (rebased DLL)
+```
+
+The image base change from 1.03 to 1.04 is NOT the primary cause of unmatched functions:
+- Our matching uses relative offsets and byte patterns, not absolute addresses
+- The real issue is that Blizzard rewrote/removed ~1,200 functions in the 1.04 release
+- This was likely a major refactoring or optimization pass
+
+### Implications
+
+1. **The unmatched functions are mostly legitimate** - they represent version-specific code that doesn't exist in other versions
+2. **Improving matching won't help much** - these functions genuinely have no counterpart to match against
+3. **For research purposes**, early Classic and LoD 1.07 should be analyzed separately as they contain unique implementations
+
+### Deep Analysis Results (Session 2)
+
+**Function Size Analysis:**
+| Version | Matched Avg | Unmatched Avg | Unmatched Tiny (<16b) |
+|---------|-------------|---------------|----------------------|
+| Classic/1.00 | 327 bytes | 221 bytes | 0.4% |
+| Classic/1.04b | 271 bytes | 19 bytes | 2.4% |
+| LoD/1.07 | 302 bytes | 290 bytes | 0.1% |
+| LoD/1.13c | 236 bytes | 12 bytes | 41.5% |
+
+**Key Insight**: In modern versions (1.13c), 41.5% of unmatched functions are tiny (<16 bytes) - these are likely compiler-generated stubs or thunks that lack sufficient context to match.
+
+**Version Group Overlap Matrix** (functions shared between groups):
+```
+                Early Classic  Mid Classic  Late Classic  LoD 1.07  LoD 1.08+
+Early Classic          2180          492           29       401        29
+Mid Classic             492         2227           93       347        93
+Late Classic             29           93         6668       158      6668
+LoD 1.07                401          347          158       570       158
+LoD 1.08+                29           93         6668       158      6668
+```
+
+**Critical Finding**:
+- LoD/1.07 shares **401 functions with Early Classic** but only **158 with Late versions**
+- This means LoD/1.07 is architecturally closer to the OLD codebase
+- Late Classic and LoD 1.08+ are **identical** (6668 shared functions)
+
+**LoD/1.07 Breakdown** (of 570 matched functions):
+- Only in LoD/1.07: 40 functions (unique to this version)
+- Shared with Early Classic only: 372 functions (OLD code path)
+- Shared with Late versions: 158 functions (NEW code path)
+
+**Conclusion**: LoD/1.07 represents a **hybrid codebase** - it contains old Classic code that was later rewritten in 1.08. The 2,250 unmatched functions are real - they existed only in this transitional version and were removed/replaced.
 
 ### Phase 3: Morphology Visualization in Viewer
 - [x] 3.1 Add function name search/filter in viewer
 - [x] 3.2 Add "show only named functions" toggle
 - [x] 3.3 Color-code named functions (green highlight)
-- [ ] 3.4 Show match tier in function details
+- [x] 3.4 Show match tier in function details ✓ Session 2025-12-01
+  - Added tier indicators (1-4) with color coding
+  - Added tier legend in toolbar
 - [ ] 3.5 Add function signature display (from Ghidra data)
 
 ### Phase 4: Export & Documentation
-- [ ] 4.1 Generate function_registry.json with complete morphology
-- [ ] 4.2 Add CSV export for external tools
-- [ ] 4.3 Update documentation with final workflow
+- [x] 4.1 Generate function_registry.json with complete morphology ✓ Session 2025-12-01
+  - Created tools/generate_registry.py
+  - Output: reports/function_registry.json (18 MB, 50743 functions)
+- [x] 4.2 Add CSV export for external tools ✓ Session 2025-12-01
+  - Created tools/export_csv.py
+  - Supports --dll, --all, --summary modes
+- [x] 4.3 Update documentation with final workflow ✓ Session 2025-12-01
 
 ---
 
@@ -160,7 +259,84 @@ python -m tools.optimized_matching.pipeline_runner viewer-export --dll D2Client.
 - This is because Ghidra names come from the reference version (LoD/1.13c)
 - Many matches span only old versions (Classic/1.00-1.03) where 1.13c doesn't have equivalent
 
-### Next Immediate Steps
-1. Run the full pipeline on other major DLLs (D2Common.dll, D2Game.dll)
-2. Consider adding viewer features (search, filter by named)
-3. Document the complete workflow for end users
+### Remaining Work
+1. Phase 2.2-2.3: Optional matching improvements
+2. Phase 3.5: Function signature display in viewer
+
+### Session 2 Completed (2025-12-01)
+- [x] Deep analysis of unmatched functions - documented root causes in detail
+- [x] Added Classic/LoD filter to file details view columns
+  - Toggling C/L buttons now filters version columns in function table
+  - Shows filter indicator in header when filtering is active
+- [x] Added version filter buttons based on major refactor discovery:
+  - **Pre-Refactor** (Classic 1.00-1.03): Old codebase before major refactor
+  - **Post-Refactor** (Classic 1.04+): Refactored modern codebase
+  - **LoD** (All LoD versions): Lord of Destruction
+  - Each button toggles independently
+  - Filter indicator shows active filters in function table header (e.g., `[Pre+LoD]`)
+
+---
+
+## Complete Workflow Documentation
+
+### For Users: How to Use the Function Data
+
+**Viewer (reports/d2_report_viewer.html)**
+- Browse any DLL to see function morphology across versions
+- Use search to find functions by name
+- Toggle "Named Only" to filter to documented functions
+- Tier indicators show match confidence (1=Export, 2=Exact, 3=Prologue, 4=CallGraph)
+
+**JSON Registry (reports/function_registry.json)**
+- Complete function data for all 23 DLLs
+- 50,743 matched functions, 5,101 with names
+- Use for external tools or custom analysis
+
+**CSV Export**
+```bash
+# Export single DLL
+python tools/export_csv.py --dll D2Client.dll
+
+# Export all DLLs
+python tools/export_csv.py --all
+
+# Export summary
+python tools/export_csv.py --summary
+```
+
+### For Developers: Adding New Analysis
+
+**Re-run matching for a DLL:**
+```bash
+python -m tools.optimized_matching.pipeline_runner full --dll D2Client.dll
+```
+
+**Propagate Ghidra names:**
+```bash
+python -m tools.optimized_matching.name_propagator \
+    --ghidra data/ghidra_names/D2Client.dll.json \
+    --state cache/matches/D2Client.dll_state.json \
+    --version LoD/1.13c
+```
+
+**Update viewer JS files:**
+```bash
+python -m tools.optimized_matching.pipeline_runner viewer-export --dll D2Client.dll
+```
+
+**Regenerate complete registry:**
+```bash
+python tools/generate_registry.py
+```
+
+### Statistics Summary (2025-12-01)
+
+| Metric | Value |
+|--------|-------|
+| Total DLLs | 23 |
+| Total Functions | 50,743 |
+| Named Functions | 5,101 (10%) |
+| Tier 1 (Export) | 2,847 (5.6%) |
+| Tier 2 (Exact) | 22,915 (45.2%) |
+| Tier 3 (Prologue) | 22,958 (45.2%) |
+| Tier 4 (CallGraph) | 2,023 (4.0%) |
