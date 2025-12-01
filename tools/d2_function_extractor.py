@@ -35,6 +35,12 @@ from d2_hash_tool import (
     CORE_VERSION_FILES,
 )
 
+from d2_function_matcher import (
+    FunctionFingerprint,
+    FunctionRegistry,
+    compute_fingerprints_for_functions,
+)
+
 
 # Common function prologue bytes
 FUNCTION_PROLOGUES = [
@@ -576,6 +582,8 @@ def extract_functions_from_pe(filepath: Path) -> Optional[Dict[str, Any]]:
         'exports': [],
         'detected_functions': [],
         'all_functions': [],
+        'section_data': None,  # For fingerprint computation
+        'section_va': None,
     }
 
     # Get exported functions
@@ -664,6 +672,12 @@ def extract_functions_from_pe(filepath: Path) -> Optional[Dict[str, Any]]:
                     })
 
     result['detected_functions'] = detected
+
+    # Store first executable section data for fingerprinting
+    if exec_sections:
+        first_sec_data, first_sec_va, _ = exec_sections[0]
+        result['section_data'] = first_sec_data
+        result['section_va'] = first_sec_va
 
     # Combine exports and detected functions
     all_addrs = set()
@@ -755,13 +769,10 @@ def build_function_index(all_extractions: List[Dict]) -> Tuple[Dict[str, Any], D
     """
     Build a function index with sequential naming and cross-version linkage.
 
-    Uses optimized format:
-    - Global version list (indexed by position)
-    - Per-file: addresses stored as sparse arrays indexed by version number
-
-    For now, linkage is by position (first function in version A links to
-    first function in version B). This will be replaced with signature
-    matching in a future update.
+    Uses signature-based matching to track functions across versions:
+    1. Process versions in chronological order (Classic first, then LoD)
+    2. Match functions using byte fingerprints and prologues
+    3. Assign stable IDs that persist across versions
 
     Args:
         all_extractions: List of folder extraction results
@@ -777,14 +788,11 @@ def build_function_index(all_extractions: List[Dict]) -> Tuple[Dict[str, Any], D
         key = get_canonical_key(extraction, extraction['folder_name'])
         grouped[key].append(extraction)
 
-    # Sort version keys
+    # Sort version keys - Classic first, then LoD, then by version string
     sorted_keys = sorted(grouped.keys(), key=lambda k: (
         0 if k.startswith('Classic/') else 1,
         k.split('/')[-1]
     ))
-
-    # Create version index map
-    version_to_idx = {v: i for i, v in enumerate(sorted_keys)}
 
     # Get list of all files across versions
     all_files = set()
@@ -792,65 +800,69 @@ def build_function_index(all_extractions: List[Dict]) -> Tuple[Dict[str, Any], D
         for extraction in grouped[key]:
             all_files.update(extraction['files'].keys())
 
-    # Build per-file data with optimized format
+    # Build per-file data using signature matching
     per_file_data = {}
     file_summaries = {}
 
     for filename in sorted(all_files):
-        # Track functions across versions by position
-        max_functions = 0
-        version_functions = {}  # version_key -> list of addresses
-        file_versions = []  # versions that have this file
+        print(f"    Matching functions for {filename}...")
 
-        for key in sorted_keys:
-            for extraction in grouped[key]:
-                if filename not in extraction['files']:
-                    continue
+        # Build FunctionRegistry for this file
+        registry = FunctionRegistry()
+        prev_version = None
+        prev_fingerprints = None
 
-                file_data = extraction['files'][filename]
-                addrs = [f['address'] for f in file_data['all_functions']]
+        for version_key in sorted_keys:
+            # Find file data for this version
+            file_data = None
+            for extraction in grouped[version_key]:
+                if filename in extraction['files']:
+                    file_data = extraction['files'][filename]
+                    break
 
-                if key not in version_functions:
-                    version_functions[key] = []
-                version_functions[key].extend(addrs)
+            if file_data is None:
+                continue
 
-                if key not in file_versions:
-                    file_versions.append(key)
+            # Need section data for fingerprinting
+            section_data = file_data.get('section_data')
+            section_va = file_data.get('section_va')
+            image_base = file_data.get('image_base')
 
-                max_functions = max(max_functions, len(addrs))
+            if section_data is None or section_va is None:
+                # Fallback: can't compute fingerprints, skip matching for this version
+                print(f"      Warning: No section data for {filename} in {version_key}")
+                continue
 
-        # Build functions dict in EXPORTS_DATA-compatible format
-        # Format: {"1": {"ordinal": 1, "name": "function_0001", "addresses": {"version": "addr"}}, ...}
-        functions_dict = {}
+            # Compute fingerprints for all functions in this version
+            functions = file_data.get('all_functions', [])
+            fingerprints = compute_fingerprints_for_functions(
+                section_data, section_va, image_base, functions
+            )
 
-        for i in range(max_functions):
-            func_name = f"function_{i+1:04d}"
-            ordinal = i + 1
+            if prev_version is None:
+                # First version - baseline
+                registry.add_baseline_version(version_key, fingerprints)
+            else:
+                # Match against previous version
+                registry.add_version_with_matches(
+                    version_key, fingerprints, prev_version, prev_fingerprints
+                )
 
-            # Build addresses dict {version_string: hex_addr}
-            addresses = {}
-            for key in file_versions:
-                if key in version_functions:
-                    addrs = version_functions[key]
-                    if i < len(addrs):
-                        addresses[key] = f"{addrs[i]:08X}"
+            prev_version = version_key
+            prev_fingerprints = fingerprints
 
-            functions_dict[str(ordinal)] = {
-                'ordinal': ordinal,
-                'name': func_name,
-                'addresses': addresses
-            }
+        # Convert registry to viewer format
+        viewer_data = registry.to_viewer_format()
+        per_file_data[filename] = viewer_data
 
-        # Store per-file data in EXPORTS_DATA-compatible format
-        per_file_data[filename] = {
-            'versions': file_versions,
-            'functions': functions_dict
-        }
+        # Get stats for summary
+        stats = registry.get_stats()
+        print(f"      {stats['total_functions']} functions tracked across {stats['total_versions']} versions")
 
         # Summary for index
         file_summaries[filename] = {
-            'function_count': max_functions,
-            'version_count': len(file_versions),
+            'function_count': stats['total_functions'],
+            'version_count': stats['total_versions'],
         }
 
     # Index metadata (small file)
