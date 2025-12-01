@@ -1,0 +1,1782 @@
+{
+  "program_name": "D2Glide.dll",
+  "image_base": "0x6F850000",
+  "language": "x86:LE:32:default",
+  "compiler": "windows",
+  "total_functions": 307,
+  "named_functions": 177,
+  "functions_with_comments": 117,
+  "functions_with_params": 81,
+  "functions": {
+    "0x6F851000": {
+      "name": "__onexit_lk",
+      "rva": "0x1000",
+      "return_type": "undefined",
+      "signature": "undefined __onexit_lk(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __onexit_lk\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851080": {
+      "name": "___onexitinit",
+      "rva": "0x1080",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___onexitinit(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___onexitinit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8510A8": {
+      "name": "__onexit",
+      "rva": "0x10A8",
+      "return_type": "_onexit_t",
+      "signature": "_onexit_t __onexit(_onexit_t _Func)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Func", "type": "_onexit_t", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __onexit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8510E0": {
+      "name": "_atexit",
+      "rva": "0x10E0",
+      "return_type": "int",
+      "signature": "int _atexit(_func_4879 * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "_func_4879 *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _atexit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8510F2": {
+      "name": "___crtExitProcess",
+      "rva": "0x10F2",
+      "return_type": "void",
+      "signature": "void ___crtExitProcess(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtExitProcess\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851134": {
+      "name": "__initterm",
+      "rva": "0x1134",
+      "return_type": "undefined",
+      "signature": "undefined __initterm(undefined4 * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4 *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __initterm\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85114C": {
+      "name": "__cinit",
+      "rva": "0x114C",
+      "return_type": "int",
+      "signature": "int __cinit(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __cinit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8511B6": {
+      "name": "doexit",
+      "rva": "0x11B6",
+      "return_type": "undefined",
+      "signature": "undefined doexit(UINT param_1, int param_2, int param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "UINT", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _doexit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851279": {
+      "name": "_exit",
+      "rva": "0x1279",
+      "return_type": "void",
+      "signature": "void _exit(int _Code)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Code", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _exit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85128A": {
+      "name": "__exit",
+      "rva": "0x128A",
+      "return_type": "undefined",
+      "signature": "undefined __exit(undefined4 param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85129B": {
+      "name": "__cexit",
+      "rva": "0x129B",
+      "return_type": "void",
+      "signature": "void __cexit(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __cexit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8512B0": {
+      "name": "_memmove",
+      "rva": "0x12B0",
+      "return_type": "void *",
+      "signature": "void * _memmove(void * _Dst, void * _Src, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Dst", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Src", "type": "void *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _memmove\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F8515ED": {
+      "name": "__CRT_INIT@12",
+      "rva": "0x15ED",
+      "return_type": "undefined4",
+      "signature": "undefined4 __CRT_INIT@12(undefined4 param_1, int param_2)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "undefined4", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __CRT_INIT@12\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851852": {
+      "name": "__amsg_exit",
+      "rva": "0x1852",
+      "return_type": "void",
+      "signature": "void __amsg_exit(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851A37": {
+      "name": "__msize",
+      "rva": "0x1A37",
+      "return_type": "size_t",
+      "signature": "size_t __msize(void * _Memory)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Memory", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __msize\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851AAD": {
+      "name": "__heap_alloc",
+      "rva": "0x1AAD",
+      "return_type": "void *",
+      "signature": "void * __heap_alloc(size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __heap_alloc\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851B28": {
+      "name": "__nh_malloc",
+      "rva": "0x1B28",
+      "return_type": "void *",
+      "signature": "void * __nh_malloc(size_t _Size, int _NhFlag)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_NhFlag", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851B54": {
+      "name": "_malloc",
+      "rva": "0x1B54",
+      "return_type": "void *",
+      "signature": "void * _malloc(size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851B68": {
+      "name": "__SEH_prolog",
+      "rva": "0x1B68",
+      "return_type": "undefined",
+      "signature": "undefined __SEH_prolog(undefined4 param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __SEH_prolog\n\nLibrary: Visual Studio"
+    },
+    "0x6F851BA3": {
+      "name": "__SEH_epilog",
+      "rva": "0x1BA3",
+      "return_type": "undefined",
+      "signature": "undefined __SEH_epilog(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __SEH_epilog\n\nLibrary: Visual Studio"
+    },
+    "0x6F851CBD": {
+      "name": "__mtinitlocks",
+      "rva": "0x1CBD",
+      "return_type": "int",
+      "signature": "int __mtinitlocks(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __mtinitlocks\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851D06": {
+      "name": "__mtdeletelocks",
+      "rva": "0x1D06",
+      "return_type": "void",
+      "signature": "void __mtdeletelocks(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __mtdeletelocks\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851D70": {
+      "name": "__mtinitlocknum",
+      "rva": "0x1D70",
+      "return_type": "int",
+      "signature": "int __mtinitlocknum(int _LockNum)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_LockNum", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __mtinitlocknum\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851E10": {
+      "name": "__lock",
+      "rva": "0x1E10",
+      "return_type": "void",
+      "signature": "void __lock(int _File)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_File", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __lock\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851E41": {
+      "name": "__RTC_Initialize",
+      "rva": "0x1E41",
+      "return_type": "undefined",
+      "signature": "undefined __RTC_Initialize(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __RTC_Initialize\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851ED2": {
+      "name": "__mtterm",
+      "rva": "0x1ED2",
+      "return_type": "void",
+      "signature": "void __mtterm(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __mtterm\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851EEF": {
+      "name": "__initptd",
+      "rva": "0x1EEF",
+      "return_type": "void",
+      "signature": "void __initptd(_ptiddata _Ptd, pthreadlocinfo _Locale)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Ptd", "type": "_ptiddata", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Locale", "type": "pthreadlocinfo", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __initptd\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851F02": {
+      "name": "__getptd",
+      "rva": "0x1F02",
+      "return_type": "_ptiddata",
+      "signature": "_ptiddata __getptd(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __getptd\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F851F73": {
+      "name": "__freefls@4",
+      "rva": "0x1F73",
+      "return_type": "undefined",
+      "signature": "undefined __freefls@4(void * param_1)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __freefls@4\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8520BA": {
+      "name": "__freeptd",
+      "rva": "0x20BA",
+      "return_type": "void",
+      "signature": "void __freeptd(_ptiddata _Ptd)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Ptd", "type": "_ptiddata", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __freeptd\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8520E9": {
+      "name": "__mtinit",
+      "rva": "0x20E9",
+      "return_type": "int",
+      "signature": "int __mtinit(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __mtinit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8521D8": {
+      "name": "_free",
+      "rva": "0x21D8",
+      "return_type": "void",
+      "signature": "void _free(void * _Memory)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Memory", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _free\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852320": {
+      "name": "__ioinit",
+      "rva": "0x2320",
+      "return_type": "int",
+      "signature": "int __ioinit(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ioinit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85251E": {
+      "name": "__ioterm",
+      "rva": "0x251E",
+      "return_type": "void",
+      "signature": "void __ioterm(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ioterm\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85256A": {
+      "name": "__setenvp",
+      "rva": "0x256A",
+      "return_type": "int",
+      "signature": "int __setenvp(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __setenvp\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852631": {
+      "name": "parse_cmdline",
+      "rva": "0x2631",
+      "return_type": "undefined",
+      "signature": "undefined parse_cmdline(undefined4 * param_1, int * param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4 *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _parse_cmdline\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85279D": {
+      "name": "__setargv",
+      "rva": "0x279D",
+      "return_type": "int",
+      "signature": "int __setargv(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __setargv\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85283F": {
+      "name": "___crtGetEnvironmentStringsA",
+      "rva": "0x283F",
+      "return_type": "LPVOID",
+      "signature": "LPVOID ___crtGetEnvironmentStringsA(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtGetEnvironmentStringsA\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852961": {
+      "name": "___heap_select",
+      "rva": "0x2961",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___heap_select(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___heap_select\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85297B": {
+      "name": "__heap_init",
+      "rva": "0x297B",
+      "return_type": "int",
+      "signature": "int __heap_init(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __heap_init\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8529CC": {
+      "name": "__heap_term",
+      "rva": "0x29CC",
+      "return_type": "void",
+      "signature": "void __heap_term(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __heap_term\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852A50": {
+      "name": "__chkstk",
+      "rva": "0x2A50",
+      "return_type": "undefined",
+      "signature": "undefined __chkstk(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __chkstk\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F852A8D": {
+      "name": "__XcptFilter",
+      "rva": "0x2A8D",
+      "return_type": "int",
+      "signature": "int __XcptFilter(ulong _ExceptionNum, _EXCEPTION_POINTERS * _ExceptionPtr)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_ExceptionNum", "type": "ulong", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_ExceptionPtr", "type": "_EXCEPTION_POINTERS *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __XcptFilter\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852D84": {
+      "name": "__FF_MSGBANNER",
+      "rva": "0x2D84",
+      "return_type": "void",
+      "signature": "void __FF_MSGBANNER(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __FF_MSGBANNER\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852DBD": {
+      "name": "__callnewh",
+      "rva": "0x2DBD",
+      "return_type": "int",
+      "signature": "int __callnewh(size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __callnewh\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852DD8": {
+      "name": "___sbh_heap_init",
+      "rva": "0x2DD8",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___sbh_heap_init(undefined4 param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852E20": {
+      "name": "___sbh_find_block",
+      "rva": "0x2E20",
+      "return_type": "uint",
+      "signature": "uint ___sbh_find_block(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_find_block\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F852E4B": {
+      "name": "___sbh_free_block",
+      "rva": "0x2E4B",
+      "return_type": "undefined",
+      "signature": "undefined ___sbh_free_block(uint * param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_free_block\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853163": {
+      "name": "___sbh_alloc_new_region",
+      "rva": "0x3163",
+      "return_type": "undefined4 *",
+      "signature": "undefined4 * ___sbh_alloc_new_region(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85321A": {
+      "name": "___sbh_alloc_new_group",
+      "rva": "0x321A",
+      "return_type": "int",
+      "signature": "int ___sbh_alloc_new_group(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_alloc_new_group\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853320": {
+      "name": "___sbh_resize_block",
+      "rva": "0x3320",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___sbh_resize_block(uint * param_1, int param_2, int param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_resize_block\n\nLibraries: Visual Studio 2003 Release, Visual Studio 2005 Release"
+    },
+    "0x6F8535FF": {
+      "name": "___sbh_alloc_block",
+      "rva": "0x35FF",
+      "return_type": "int *",
+      "signature": "int * ___sbh_alloc_block(uint * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___sbh_alloc_block\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853900": {
+      "name": "_memcpy",
+      "rva": "0x3900",
+      "return_type": "void *",
+      "signature": "void * _memcpy(void * _Dst, void * _Src, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Dst", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Src", "type": "void *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F853C40": {
+      "name": "__global_unwind2",
+      "rva": "0x3C40",
+      "return_type": "undefined",
+      "signature": "undefined __global_unwind2(PVOID param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "PVOID", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio"
+    },
+    "0x6F853C82": {
+      "name": "__local_unwind2",
+      "rva": "0x3C82",
+      "return_type": "undefined",
+      "signature": "undefined __local_unwind2(int param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __local_unwind2\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853D2E": {
+      "name": "__ValidateEH3RN",
+      "rva": "0x3D2E",
+      "return_type": "undefined4",
+      "signature": "undefined4 __ValidateEH3RN(uint * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ValidateEH3RN\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853F57": {
+      "name": "___crtInitCritSecNoSpinCount@8",
+      "rva": "0x3F57",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___crtInitCritSecNoSpinCount@8(LPCRITICAL_SECTION param_1)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "LPCRITICAL_SECTION", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtInitCritSecNoSpinCount@8\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853F67": {
+      "name": "___crtInitCritSecAndSpinCount",
+      "rva": "0x3F67",
+      "return_type": "undefined",
+      "signature": "undefined ___crtInitCritSecAndSpinCount(undefined4 param_1, undefined4 param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtInitCritSecAndSpinCount\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F853FFB": {
+      "name": "___freetlocinfo",
+      "rva": "0x3FFB",
+      "return_type": "undefined",
+      "signature": "undefined ___freetlocinfo(void * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___freetlocinfo\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8540CB": {
+      "name": "___updatetlocinfo_lk",
+      "rva": "0x40CB",
+      "return_type": "int",
+      "signature": "int ___updatetlocinfo_lk(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___updatetlocinfo_lk\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85418C": {
+      "name": "___updatetlocinfo",
+      "rva": "0x418C",
+      "return_type": "pthreadlocinfo",
+      "signature": "pthreadlocinfo ___updatetlocinfo(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___updatetlocinfo\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8541F6": {
+      "name": "setSBCS",
+      "rva": "0x41F6",
+      "return_type": "undefined",
+      "signature": "undefined setSBCS(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _setSBCS\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85454E": {
+      "name": "__setmbcp",
+      "rva": "0x454E",
+      "return_type": "int",
+      "signature": "int __setmbcp(int _CodePage)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_CodePage", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __setmbcp\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85469E": {
+      "name": "___initmbctable",
+      "rva": "0x469E",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___initmbctable(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8546C0": {
+      "name": "_memset",
+      "rva": "0x46C0",
+      "return_type": "void *",
+      "signature": "void * _memset(void * _Dst, int _Val, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Dst", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Val", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_Size", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release, Visual Studio 2019 Release"
+    },
+    "0x6F854820": {
+      "name": "_strlen",
+      "rva": "0x4820",
+      "return_type": "size_t",
+      "signature": "size_t _strlen(char * _Str)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _strlen\n\nLibrary: Visual Studio"
+    },
+    "0x6F8548AB": {
+      "name": "___crtMessageBoxA",
+      "rva": "0x48AB",
+      "return_type": "int",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_LpText", "type": "LPCSTR", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_LpCaption", "type": "LPCSTR", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_UType", "type": "UINT", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F8549B0": {
+      "name": "_strncpy",
+      "rva": "0x49B0",
+      "return_type": "char *",
+      "signature": "char * _strncpy(char * _Dest, char * _Source, size_t _Count)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Dest", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Source", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_Count", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _strncpy\n\nLibrary: Visual Studio"
+    },
+    "0x6F854AD4": {
+      "name": "report_failure",
+      "rva": "0x4AD4",
+      "return_type": "undefined",
+      "signature": "undefined report_failure(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _report_failure\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F854B13": {
+      "name": "___free_lc_time",
+      "rva": "0x4B13",
+      "return_type": "undefined",
+      "signature": "undefined ___free_lc_time(undefined4 * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4 *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___free_lc_time\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F854CA3": {
+      "name": "___free_lconv_num",
+      "rva": "0x4CA3",
+      "return_type": "undefined",
+      "signature": "undefined ___free_lconv_num(undefined4 * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined4 *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___free_lconv_num\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F854D02": {
+      "name": "___free_lconv_mon",
+      "rva": "0x4D02",
+      "return_type": "undefined",
+      "signature": "undefined ___free_lconv_mon(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___free_lconv_mon\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F854DE0": {
+      "name": "_strcspn",
+      "rva": "0x4DE0",
+      "return_type": "size_t",
+      "signature": "size_t _strcspn(char * _Str, char * _Control)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Control", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _strcspn\n\nLibrary: Visual Studio"
+    },
+    "0x6F854F78": {
+      "name": "___crtGetStringTypeA",
+      "rva": "0x4F78",
+      "return_type": "BOOL",
+      "signature": "BOOL ___crtGetStringTypeA(_locale_t _Plocinfo, DWORD _DWInfoType, LPCSTR _LpSrcStr, int _CchSrc, LPWORD _LpCharType, int _Code_page, BOOL _BError)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Plocinfo", "type": "_locale_t", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_DWInfoType", "type": "DWORD", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_LpSrcStr", "type": "LPCSTR", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "_CchSrc", "type": "int", "size": 4, "storage": "Stack[0x10]:4"}, {"name": "_LpCharType", "type": "LPWORD", "size": 4, "storage": "Stack[0x14]:4"}, {"name": "_Code_page", "type": "int", "size": 4, "storage": "Stack[0x18]:4"}, {"name": "_BError", "type": "BOOL", "size": 4, "storage": "Stack[0x1c]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___crtGetStringTypeA\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855140": {
+      "name": "_strncmp",
+      "rva": "0x5140",
+      "return_type": "int",
+      "signature": "int _strncmp(char * _Str1, char * _Str2, size_t _MaxCount)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str1", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_MaxCount", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _strncmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F855180": {
+      "name": "_strpbrk",
+      "rva": "0x5180",
+      "return_type": "char *",
+      "signature": "char * _strpbrk(char * _Str, char * _Control)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Control", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _strpbrk\n\nLibrary: Visual Studio"
+    },
+    "0x6F855596": {
+      "name": "___security_init_cookie",
+      "rva": "0x5596",
+      "return_type": "void",
+      "signature": "void ___security_init_cookie(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___security_init_cookie\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855750": {
+      "name": "___ascii_stricmp",
+      "rva": "0x5750",
+      "return_type": "int",
+      "signature": "int ___ascii_stricmp(char * _Str1, char * _Str2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str1", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___ascii_stricmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F85579E": {
+      "name": "__resetstkoflw",
+      "rva": "0x579E",
+      "return_type": "int",
+      "signature": "int __resetstkoflw(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __resetstkoflw\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855881": {
+      "name": "_atol",
+      "rva": "0x5881",
+      "return_type": "long",
+      "signature": "long _atol(char * _Str)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _atol\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855B2A": {
+      "name": "_isdigit",
+      "rva": "0x5B2A",
+      "return_type": "int",
+      "signature": "int _isdigit(int _C)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_C", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _isdigit\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855B64": {
+      "name": "___tolower_mt",
+      "rva": "0x5B64",
+      "return_type": "uint",
+      "signature": "uint ___tolower_mt(void * this, int param_1, uint param_2)",
+      "calling_convention": "__thiscall",
+      "parameters": [{"name": "this", "type": "void *", "size": 4, "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___tolower_mt\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855C2C": {
+      "name": "_tolower",
+      "rva": "0x5C2C",
+      "return_type": "int",
+      "signature": "int _tolower(int _C)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_C", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n _tolower\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855C4E": {
+      "name": "___isctype_mt",
+      "rva": "0x5C4E",
+      "return_type": "uint",
+      "signature": "uint ___isctype_mt(void * this, int param_1, int param_2, uint param_3)",
+      "calling_convention": "__thiscall",
+      "parameters": [{"name": "this", "type": "void *", "size": 4, "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___isctype_mt\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F855D10": {
+      "name": "___ascii_strnicmp",
+      "rva": "0x5D10",
+      "return_type": "int",
+      "signature": "int ___ascii_strnicmp(char * _Str1, char * _Str2, size_t _MaxCount)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Str1", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_MaxCount", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___ascii_strnicmp\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F855EEE": {
+      "name": "RtlUnwind",
+      "rva": "0x5EEE",
+      "return_type": "void",
+      "signature": "void RtlUnwind(PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "TargetFrame", "type": "PVOID", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "TargetIp", "type": "PVOID", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "ExceptionRecord", "type": "PEXCEPTION_RECORD", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "ReturnValue", "type": "PVOID", "size": 4, "storage": "Stack[0x10]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855EF4": {
+      "name": "Ordinal_401",
+      "rva": "0x5EF4",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_401(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855EFA": {
+      "name": "Ordinal_403",
+      "rva": "0x5EFA",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_403(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F00": {
+      "name": "Ordinal_268",
+      "rva": "0x5F00",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_268(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F06": {
+      "name": "Ordinal_321",
+      "rva": "0x5F06",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_321(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F0C": {
+      "name": "Ordinal_281",
+      "rva": "0x5F0C",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_281(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F12": {
+      "name": "Ordinal_10198",
+      "rva": "0x5F12",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10198(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F18": {
+      "name": "Ordinal_10042",
+      "rva": "0x5F18",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10042(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F1E": {
+      "name": "Ordinal_10024",
+      "rva": "0x5F1E",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10024(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F24": {
+      "name": "Ordinal_10043",
+      "rva": "0x5F24",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10043(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F2A": {
+      "name": "Ordinal_10029",
+      "rva": "0x5F2A",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10029(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F30": {
+      "name": "Ordinal_10265",
+      "rva": "0x5F30",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10265(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F36": {
+      "name": "Ordinal_10117",
+      "rva": "0x5F36",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10117(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F3C": {
+      "name": "Ordinal_10061",
+      "rva": "0x5F3C",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10061(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F42": {
+      "name": "Ordinal_10087",
+      "rva": "0x5F42",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10087(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F48": {
+      "name": "Ordinal_10002",
+      "rva": "0x5F48",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10002(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F4E": {
+      "name": "Ordinal_10098",
+      "rva": "0x5F4E",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10098(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F54": {
+      "name": "Ordinal_10005",
+      "rva": "0x5F54",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10005(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F5A": {
+      "name": "Ordinal_10060",
+      "rva": "0x5F5A",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10060(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F60": {
+      "name": "Ordinal_10069",
+      "rva": "0x5F60",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10069(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F66": {
+      "name": "Ordinal_10067",
+      "rva": "0x5F66",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10067(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F6C": {
+      "name": "Ordinal_10015",
+      "rva": "0x5F6C",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10015(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F72": {
+      "name": "Ordinal_10000",
+      "rva": "0x5F72",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10000(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F78": {
+      "name": "Ordinal_10106",
+      "rva": "0x5F78",
+      "return_type": "undefined",
+      "signature": "undefined Ordinal_10106(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F7E": {
+      "name": "grSstWinClose",
+      "rva": "0x5F7E",
+      "return_type": "undefined",
+      "signature": "undefined grSstWinClose(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F84": {
+      "name": "grVertexLayout",
+      "rva": "0x5F84",
+      "return_type": "undefined",
+      "signature": "undefined grVertexLayout(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F8A": {
+      "name": "grBufferSwap",
+      "rva": "0x5F8A",
+      "return_type": "undefined",
+      "signature": "undefined grBufferSwap(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F90": {
+      "name": "grChromakeyMode",
+      "rva": "0x5F90",
+      "return_type": "undefined",
+      "signature": "undefined grChromakeyMode(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F96": {
+      "name": "grBufferClear",
+      "rva": "0x5F96",
+      "return_type": "undefined",
+      "signature": "undefined grBufferClear(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855F9C": {
+      "name": "grTexMaxAddress",
+      "rva": "0x5F9C",
+      "return_type": "undefined",
+      "signature": "undefined grTexMaxAddress(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FA2": {
+      "name": "grTexDownloadTable",
+      "rva": "0x5FA2",
+      "return_type": "undefined",
+      "signature": "undefined grTexDownloadTable(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FA8": {
+      "name": "grSstSelect",
+      "rva": "0x5FA8",
+      "return_type": "undefined",
+      "signature": "undefined grSstSelect(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FAE": {
+      "name": "grCoordinateSpace",
+      "rva": "0x5FAE",
+      "return_type": "undefined",
+      "signature": "undefined grCoordinateSpace(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FB4": {
+      "name": "grChromakeyValue",
+      "rva": "0x5FB4",
+      "return_type": "undefined",
+      "signature": "undefined grChromakeyValue(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FBA": {
+      "name": "grColorMask",
+      "rva": "0x5FBA",
+      "return_type": "undefined",
+      "signature": "undefined grColorMask(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FC0": {
+      "name": "grColorCombine",
+      "rva": "0x5FC0",
+      "return_type": "undefined",
+      "signature": "undefined grColorCombine(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FC6": {
+      "name": "grTexMinAddress",
+      "rva": "0x5FC6",
+      "return_type": "undefined",
+      "signature": "undefined grTexMinAddress(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FCC": {
+      "name": "grGet",
+      "rva": "0x5FCC",
+      "return_type": "undefined",
+      "signature": "undefined grGet(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FD2": {
+      "name": "grFinish",
+      "rva": "0x5FD2",
+      "return_type": "undefined",
+      "signature": "undefined grFinish(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FD8": {
+      "name": "grGlideInit",
+      "rva": "0x5FD8",
+      "return_type": "undefined",
+      "signature": "undefined grGlideInit(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FDE": {
+      "name": "grTexFilterMode",
+      "rva": "0x5FDE",
+      "return_type": "undefined",
+      "signature": "undefined grTexFilterMode(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FE4": {
+      "name": "grSstWinOpen",
+      "rva": "0x5FE4",
+      "return_type": "undefined",
+      "signature": "undefined grSstWinOpen(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FEA": {
+      "name": "grAlphaCombine",
+      "rva": "0x5FEA",
+      "return_type": "undefined",
+      "signature": "undefined grAlphaCombine(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FF0": {
+      "name": "grLoadGammaTable",
+      "rva": "0x5FF0",
+      "return_type": "undefined",
+      "signature": "undefined grLoadGammaTable(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FF6": {
+      "name": "grLfbLock",
+      "rva": "0x5FF6",
+      "return_type": "undefined",
+      "signature": "undefined grLfbLock(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F855FFC": {
+      "name": "grLfbUnlock",
+      "rva": "0x5FFC",
+      "return_type": "undefined",
+      "signature": "undefined grLfbUnlock(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856002": {
+      "name": "grTexCombine",
+      "rva": "0x6002",
+      "return_type": "undefined",
+      "signature": "undefined grTexCombine(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856008": {
+      "name": "grAlphaBlendFunction",
+      "rva": "0x6008",
+      "return_type": "undefined",
+      "signature": "undefined grAlphaBlendFunction(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85600E": {
+      "name": "guGammaCorrectionRGB",
+      "rva": "0x600E",
+      "return_type": "undefined",
+      "signature": "undefined guGammaCorrectionRGB(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856014": {
+      "name": "grGlideShutdown",
+      "rva": "0x6014",
+      "return_type": "undefined",
+      "signature": "undefined grGlideShutdown(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85601A": {
+      "name": "grDepthMask",
+      "rva": "0x601A",
+      "return_type": "undefined",
+      "signature": "undefined grDepthMask(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856020": {
+      "name": "grConstantColorValue",
+      "rva": "0x6020",
+      "return_type": "undefined",
+      "signature": "undefined grConstantColorValue(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856026": {
+      "name": "grDrawVertexArray",
+      "rva": "0x6026",
+      "return_type": "undefined",
+      "signature": "undefined grDrawVertexArray(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85602C": {
+      "name": "grTexSource",
+      "rva": "0x602C",
+      "return_type": "undefined",
+      "signature": "undefined grTexSource(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856032": {
+      "name": "grDrawVertexArrayContiguous",
+      "rva": "0x6032",
+      "return_type": "undefined",
+      "signature": "undefined grDrawVertexArrayContiguous(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856038": {
+      "name": "grTexDownloadMipMap",
+      "rva": "0x6038",
+      "return_type": "undefined",
+      "signature": "undefined grTexDownloadMipMap(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85603E": {
+      "name": "grDitherMode",
+      "rva": "0x603E",
+      "return_type": "undefined",
+      "signature": "undefined grDitherMode(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F856044": {
+      "name": "grDrawPoint",
+      "rva": "0x6044",
+      "return_type": "undefined",
+      "signature": "undefined grDrawPoint(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85604A": {
+      "name": "grDrawLine",
+      "rva": "0x604A",
+      "return_type": "undefined",
+      "signature": "undefined grDrawLine(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F8592D0": {
+      "name": "Ordinal_10000",
+      "rva": "0x92D0",
+      "return_type": "undefined * *",
+      "signature": "undefined * * Ordinal_10000(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6F85E05B": {
+      "name": "__fpmath",
+      "rva": "0xE05B",
+      "return_type": "void",
+      "signature": "void __fpmath(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __fpmath\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85E6B6": {
+      "name": "__fdivp_sti_st",
+      "rva": "0xE6B6",
+      "return_type": "undefined",
+      "signature": "undefined __fdivp_sti_st(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __fdivp_sti_st\n\nLibrary: Visual Studio"
+    },
+    "0x6F85E6C9": {
+      "name": "__fdivrp_sti_st",
+      "rva": "0xE6C9",
+      "return_type": "undefined",
+      "signature": "undefined __fdivrp_sti_st(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __fdivrp_sti_st\n\nLibrary: Visual Studio"
+    },
+    "0x6F85E7A8": {
+      "name": "__adj_fdiv_m32i",
+      "rva": "0xE7A8",
+      "return_type": "undefined4",
+      "signature": "undefined4 __adj_fdiv_m32i(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __adj_fdiv_m32i\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F85E7DC": {
+      "name": "__adj_fdivr_m32",
+      "rva": "0xE7DC",
+      "return_type": "undefined4",
+      "signature": "undefined4 __adj_fdivr_m32(uint param_1)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __adj_fdivr_m32\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release"
+    },
+    "0x6F85EF2C": {
+      "name": "__fassign",
+      "rva": "0xEF2C",
+      "return_type": "void",
+      "signature": "void __fassign(int flag, char * argument, char * number)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "flag", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "argument", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "number", "type": "char *", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __fassign\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85EF6A": {
+      "name": "__shift",
+      "rva": "0xEF6A",
+      "return_type": "undefined",
+      "signature": "undefined __shift(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __shift\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85EF87": {
+      "name": "__cftoe2",
+      "rva": "0xEF87",
+      "return_type": "undefined",
+      "signature": "undefined __cftoe2(int param_1, int param_2, char param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "char", "size": 1, "storage": "Stack[0xc]:1"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __cftoe2\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F0A5": {
+      "name": "__cftof2",
+      "rva": "0xF0A5",
+      "return_type": "undefined1 *",
+      "signature": "undefined1 * __cftof2(undefined1 * param_1, size_t param_2, char param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "undefined1 *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "size_t", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "char", "size": 1, "storage": "Stack[0xc]:1"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __cftof2\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F247": {
+      "name": "__cfltcvt",
+      "rva": "0xF247",
+      "return_type": "errno_t",
+      "signature": "errno_t __cfltcvt(double * arg, char * buffer, size_t sizeInBytes, int format, int precision, int caps)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "arg", "type": "double *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "buffer", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "sizeInBytes", "type": "size_t", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "format", "type": "int", "size": 4, "storage": "Stack[0x10]:4"}, {"name": "precision", "type": "int", "size": 4, "storage": "Stack[0x14]:4"}, {"name": "caps", "type": "int", "size": 4, "storage": "Stack[0x18]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __cfltcvt\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F298": {
+      "name": "__setdefaultprecision",
+      "rva": "0xF298",
+      "return_type": "undefined",
+      "signature": "undefined __setdefaultprecision(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __setdefaultprecision\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F2AA": {
+      "name": "__ms_p5_test_fdiv",
+      "rva": "0xF2AA",
+      "return_type": "undefined4",
+      "signature": "undefined4 __ms_p5_test_fdiv(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ms_p5_test_fdiv\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F2EA": {
+      "name": "__ms_p5_mp_test_fdiv",
+      "rva": "0xF2EA",
+      "return_type": "undefined",
+      "signature": "undefined __ms_p5_mp_test_fdiv(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ms_p5_mp_test_fdiv\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F313": {
+      "name": "__ZeroTail",
+      "rva": "0xF313",
+      "return_type": "undefined4",
+      "signature": "undefined4 __ZeroTail(int param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ZeroTail\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F345": {
+      "name": "__IncMan",
+      "rva": "0xF345",
+      "return_type": "undefined",
+      "signature": "undefined __IncMan(int param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __IncMan\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F392": {
+      "name": "__RoundMan",
+      "rva": "0xF392",
+      "return_type": "undefined4",
+      "signature": "undefined4 __RoundMan(int param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __RoundMan\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F404": {
+      "name": "__CopyMan",
+      "rva": "0xF404",
+      "return_type": "undefined",
+      "signature": "undefined __CopyMan(int param_1, undefined4 * param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4 *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __CopyMan\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F41F": {
+      "name": "__IsZeroMan",
+      "rva": "0xF41F",
+      "return_type": "undefined4",
+      "signature": "undefined4 __IsZeroMan(int param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __IsZeroMan\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F438": {
+      "name": "__ShrMan",
+      "rva": "0xF438",
+      "return_type": "undefined",
+      "signature": "undefined __ShrMan(int param_1, int param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "int", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ShrMan\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F4B3": {
+      "name": "__ld12cvt",
+      "rva": "0xF4B3",
+      "return_type": "undefined4",
+      "signature": "undefined4 __ld12cvt(ushort * param_1, uint * param_2, int * param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "ushort *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int *", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __ld12cvt\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F60B": {
+      "name": "FID_conflict:__ld12tod",
+      "rva": "0xF60B",
+      "return_type": "INTRNCVT_STATUS",
+      "signature": "INTRNCVT_STATUS FID_conflict:__ld12tod(_LDBL12 * _Ifp, _CRT_DOUBLE * _D)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Ifp", "type": "_LDBL12 *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_D", "type": "_CRT_DOUBLE *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Multiple Matches With Different Base Names\n __ld12tod\n __ld12tof\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F621": {
+      "name": "FID_conflict:__ld12tod",
+      "rva": "0xF621",
+      "return_type": "INTRNCVT_STATUS",
+      "signature": "INTRNCVT_STATUS FID_conflict:__ld12tod(_LDBL12 * _Ifp, _CRT_DOUBLE * _D)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Ifp", "type": "_LDBL12 *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_D", "type": "_CRT_DOUBLE *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Multiple Matches With Different Base Names\n __ld12tod\n __ld12tof\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F6C1": {
+      "name": "__fptostr",
+      "rva": "0xF6C1",
+      "return_type": "errno_t",
+      "signature": "errno_t __fptostr(char * _Buf, size_t _SizeInBytes, int _Digits, STRFLT _PtFlt)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Buf", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_SizeInBytes", "type": "size_t", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "_Digits", "type": "int", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "_PtFlt", "type": "STRFLT", "size": 4, "storage": "Stack[0x10]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __fptostr\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F738": {
+      "name": "___dtold",
+      "rva": "0xF738",
+      "return_type": "undefined",
+      "signature": "undefined ___dtold(uint * param_1, uint * param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___dtold\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F873": {
+      "name": "__abstract_cw",
+      "rva": "0xF873",
+      "return_type": "uint",
+      "signature": "uint __abstract_cw(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __abstract_cw\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F905": {
+      "name": "__hw_cw",
+      "rva": "0xF905",
+      "return_type": "uint",
+      "signature": "uint __hw_cw(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __hw_cw\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F993": {
+      "name": "__control87",
+      "rva": "0xF993",
+      "return_type": "uint",
+      "signature": "uint __control87(uint _NewValue, uint _Mask)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_NewValue", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Mask", "type": "uint", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __control87\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F9C5": {
+      "name": "__controlfp",
+      "rva": "0xF9C5",
+      "return_type": "uint",
+      "signature": "uint __controlfp(uint _NewValue, uint _Mask)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_NewValue", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Mask", "type": "uint", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __controlfp\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F9DB": {
+      "name": "___addl",
+      "rva": "0xF9DB",
+      "return_type": "undefined4",
+      "signature": "undefined4 ___addl(uint param_1, uint param_2, uint * param_3)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint *", "size": 4, "storage": "Stack[0xc]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___addl\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85F9FC": {
+      "name": "___add_12",
+      "rva": "0xF9FC",
+      "return_type": "undefined",
+      "signature": "undefined ___add_12(uint * param_1, uint * param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___add_12\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85FA5A": {
+      "name": "___shl_12",
+      "rva": "0xFA5A",
+      "return_type": "undefined",
+      "signature": "undefined ___shl_12(uint * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___shl_12\n\nLibrary: Visual Studio 2003 Release"
+    },
+    "0x6F85FA88": {
+      "name": "___shr_12",
+      "rva": "0xFA88",
+      "return_type": "undefined",
+      "signature": "undefined ___shr_12(uint * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n ___shr_12\n\nLibraries: Visual Studio 2003 Release, Visual Studio 2005 Release"
+    }
+  }
+}

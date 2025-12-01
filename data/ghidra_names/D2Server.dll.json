@@ -1,0 +1,182 @@
+{
+  "program_name": "D2Server.dll",
+  "image_base": "0x68000000",
+  "language": "x86:LE:32:default",
+  "compiler": "windows",
+  "total_functions": 227,
+  "named_functions": 17,
+  "functions_with_comments": 2,
+  "functions_with_params": 7,
+  "functions": {
+    "0x68001A80": {
+      "name": "QueryInterface",
+      "rva": "0x1A80",
+      "return_type": "undefined *",
+      "signature": "undefined * QueryInterface(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009A6E": {
+      "name": "sprintf",
+      "rva": "0x9A6E",
+      "return_type": "int",
+      "signature": "int sprintf(char * _Dest, char * _Format, ...)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Dest", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_Format", "type": "char *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009A80": {
+      "name": "__alldiv",
+      "rva": "0x9A80",
+      "return_type": "undefined8",
+      "signature": "undefined8 __alldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "size": 4, "storage": "Stack[0x10]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __alldiv\n\nLibrary: Visual Studio"
+    },
+    "0x68009B30": {
+      "name": "__allmul",
+      "rva": "0x9B30",
+      "return_type": "longlong",
+      "signature": "longlong __allmul(uint param_1, int param_2, uint param_3, int param_4)",
+      "calling_convention": "__stdcall",
+      "parameters": [{"name": "param_1", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "size": 4, "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "size": 4, "storage": "Stack[0x10]:4"}],
+      "locals": [],
+      "comment": "Library Function - Single Match\n __allmul\n\nLibrary: Visual Studio"
+    },
+    "0x68009BD8": {
+      "name": "_access",
+      "rva": "0x9BD8",
+      "return_type": "int",
+      "signature": "int _access(char * _Filename, int _AccessMode)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "_Filename", "type": "char *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "_AccessMode", "type": "int", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009D32": {
+      "name": "operator_new",
+      "rva": "0x9D32",
+      "return_type": "void *",
+      "signature": "void * operator_new(uint param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "uint", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009D76": {
+      "name": "operator_delete",
+      "rva": "0x9D76",
+      "return_type": "void",
+      "signature": "void operator_delete(void * param_1)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "void *", "size": 4, "storage": "Stack[0x4]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009F10": {
+      "name": "initterm",
+      "rva": "0x9F10",
+      "return_type": "undefined",
+      "signature": "undefined initterm(void)",
+      "calling_convention": "__cdecl",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009F36": {
+      "name": "__dllonexit",
+      "rva": "0x9F36",
+      "return_type": "undefined",
+      "signature": "undefined __dllonexit(void)",
+      "calling_convention": "unknown",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009F56": {
+      "name": "getline",
+      "rva": "0x9F56",
+      "return_type": "basic_istream<char,struct_std::char_traits<char>_> *",
+      "signature": "basic_istream<char,struct_std::char_traits<char>_> * getline(basic_istream<char,struct_std::char_traits<char>_> * param_1, basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_> * param_2)",
+      "calling_convention": "__cdecl",
+      "parameters": [{"name": "param_1", "type": "basic_istream<char,struct_std::char_traits<char>_> *", "size": 4, "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_> *", "size": 4, "storage": "Stack[0x8]:4"}],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009FF0": {
+      "name": "Unwind@68009ff0",
+      "rva": "0x9FF0",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@68009ff0(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x68009FF9": {
+      "name": "Unwind@68009ff9",
+      "rva": "0x9FF9",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@68009ff9(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6800A010": {
+      "name": "Unwind@6800a010",
+      "rva": "0xA010",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@6800a010(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6800A021": {
+      "name": "Unwind@6800a021",
+      "rva": "0xA021",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@6800a021(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6800A040": {
+      "name": "Unwind@6800a040",
+      "rva": "0xA040",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@6800a040(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6800A04B": {
+      "name": "Unwind@6800a04b",
+      "rva": "0xA04B",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@6800a04b(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    },
+    "0x6800A060": {
+      "name": "Unwind@6800a060",
+      "rva": "0xA060",
+      "return_type": "undefined",
+      "signature": "undefined Unwind@6800a060(void)",
+      "calling_convention": "__stdcall",
+      "parameters": [],
+      "locals": [],
+      "comment": ""
+    }
+  }
+}

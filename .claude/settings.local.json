@@ -37,7 +37,15 @@
       "mcp__ghidra__get_plate_comment",
       "Bash(curl:*)",
       "Bash(tasklist:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(tree:*)",
+      "Bash(for dll in Fog.dll Storm.dll D2Launch.dll D2Win.dll D2gfx.dll D2Multi.dll D2Net.dll D2sound.dll D2Lang.dll D2CMP.dll)",
+      "Bash(do)",
+      "Bash(echo:*)",
+      "Bash(if [ -f \"data/ghidra_names/$dll.json\" ])",
+      "Bash(then)",
+      "Bash(fi)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

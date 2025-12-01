@@ -852,6 +852,87 @@
             color: var(--text-muted);
         }
 
+        .exports-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background-color: var(--bg-medium);
+            border-bottom: 1px solid var(--border-dark);
+            flex-shrink: 0;
+        }
+
+        .exports-search {
+            flex: 1;
+            max-width: 200px;
+            padding: 0.3rem 0.5rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            color: var(--text-primary);
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+        }
+
+        .exports-search:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .exports-search::placeholder {
+            color: var(--text-muted);
+        }
+
+        .exports-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            transition: all 0.15s;
+        }
+
+        .exports-toggle:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .exports-toggle.active {
+            border-color: var(--color-set);
+            color: var(--color-set);
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        .exports-toggle-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            border: 1px solid currentColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+        }
+
+        .exports-toggle.active .exports-toggle-indicator::after {
+            content: "✓";
+        }
+
+        .exports-stats {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        .exports-stats .named-count {
+            color: var(--color-set);
+        }
+
         .exports-table-wrapper {
             flex: 1;
             overflow: auto;
@@ -930,6 +1011,11 @@
         .exports-table .addr-cell.missing {
             color: var(--text-muted);
             font-style: italic;
+        }
+
+        .exports-table .fn-name-cell.named-func {
+            color: var(--color-set);
+            font-weight: 600;
         }
 
         /* Text file view */
@@ -1239,6 +1325,12 @@
         let showClassic = true;
         let showLoD = true;
         let isGrouped = true;
+
+        // Function table filter state
+        let funcSearchFilter = '';
+        let showOnlyNamed = false;
+        let currentFuncData = null;
+        let currentFuncBaseName = null;
 
         // Function data cache (loaded on demand)
         const loadedFunctionData = {};
@@ -1857,8 +1949,130 @@
         }
 
 
+        // Check if a function has a "real" name (not auto-generated)
+        function isNamedFunction(func, key) {
+            const name = func.name || '';
+            // Consider it "named" if it has a name that's not just the key itself
+            // and doesn't look like a generic auto-generated name
+            if (!name || name === key) return false;
+            // Check for common auto-generated patterns
+            if (name.startsWith('FUN_')) return false;
+            if (name.startsWith('Ordinal_')) return false;
+            if (name.match(/^sub_[0-9a-fA-F]+$/)) return false;
+            return true;
+        }
+
+        // Handler for function search input
+        function onFuncSearchInput(value) {
+            funcSearchFilter = value.toLowerCase();
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Handler for "Named Only" toggle
+        function toggleNamedOnly() {
+            showOnlyNamed = !showOnlyNamed;
+            const btn = document.getElementById('namedOnlyToggle');
+            if (btn) {
+                btn.classList.toggle('active', showOnlyNamed);
+            }
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Update just the table body (for filtering without full re-render)
+        function updateFunctionsTableBody() {
+            const tbody = document.getElementById('funcTableBody');
+            const statsEl = document.getElementById('funcFilterStats');
+            if (!tbody || !currentFuncData) return;
+
+            const funcData = currentFuncData;
+            const history = FILE_HISTORY_DATA[currentFuncBaseName];
+
+            // Build version groups (same logic as full render)
+            const allVersions = funcData.versions;
+            const versionGroups = [];
+
+            if (history && history.variants) {
+                for (const variant of history.variants) {
+                    const versionsWithFuncs = variant.versions.filter(v => allVersions.includes(v));
+                    if (versionsWithFuncs.length > 0) {
+                        versionGroups.push({ versions: versionsWithFuncs });
+                    }
+                }
+            } else if (allVersions.length > 0) {
+                versionGroups.push({ versions: allVersions });
+            }
+
+            // Filter and sort function keys
+            let funcKeys = Object.keys(funcData.functions);
+            let namedCount = 0;
+
+            // Count named functions
+            funcKeys.forEach(key => {
+                if (isNamedFunction(funcData.functions[key], key)) namedCount++;
+            });
+
+            // Apply filters
+            funcKeys = funcKeys.filter(key => {
+                const func = funcData.functions[key];
+                const name = func.name || key;
+
+                // Named only filter
+                if (showOnlyNamed && !isNamedFunction(func, key)) return false;
+
+                // Search filter
+                if (funcSearchFilter && !name.toLowerCase().includes(funcSearchFilter)) return false;
+
+                return true;
+            });
+
+            // Sort
+            funcKeys.sort((a, b) => {
+                if (a.startsWith('0x') && b.startsWith('0x')) {
+                    return parseInt(a, 16) - parseInt(b, 16);
+                }
+                return parseInt(a) - parseInt(b);
+            });
+
+            // Update stats
+            if (statsEl) {
+                const totalCount = Object.keys(funcData.functions).length;
+                statsEl.innerHTML = `Showing ${funcKeys.length} of ${totalCount} (<span class="named-count">${namedCount} named</span>)`;
+            }
+
+            // Render rows
+            tbody.innerHTML = funcKeys.map(key => {
+                const func = funcData.functions[key];
+                const displayName = func.name || key;
+                const isNamed = isNamedFunction(func, key);
+                const nameClass = isNamed ? 'named-func' : '';
+
+                let prevAddr = null;
+                const addrCells = versionGroups.map(group => {
+                    const addr = func.addresses[group.versions[0]];
+                    const isChanged = prevAddr !== null && addr !== prevAddr && addr;
+                    const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
+                    prevAddr = addr || prevAddr;
+                    return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
+                }).join('');
+
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
+            }).join('');
+        }
+
         // Render function table (all detected functions, not just exports)
         function renderFunctionsTable(container, baseName, funcData, filename, fileInfo) {
+            // Store for filtering
+            currentFuncData = funcData;
+            currentFuncBaseName = baseName;
+
+            // Reset filters when switching files
+            funcSearchFilter = '';
+            showOnlyNamed = false;
+
             // Get variant count from FILE_HISTORY_DATA for consistency with center panel
             const history = FILE_HISTORY_DATA[baseName];
             const variantCount = history?.variant_count || 1;
@@ -1873,6 +2087,12 @@
                 return parseInt(a) - parseInt(b);
             });
             const allVersions = funcData.versions;
+
+            // Count named functions
+            let namedCount = 0;
+            funcKeys.forEach(key => {
+                if (isNamedFunction(funcData.functions[key], key)) namedCount++;
+            });
 
             // Group versions by file hash variants from FILE_HISTORY_DATA
             // This ensures column groupings match the variant count shown in the header
@@ -1921,6 +2141,18 @@
                         <div class="exports-header-title">${baseName} - Functions</div>
                         <div class="exports-header-info">${funcKeys.length} functions across ${variantCount} variant${variantCount !== 1 ? 's' : ''}</div>
                     </div>
+                    <div class="exports-toolbar">
+                        <input type="text" class="exports-search" id="funcSearchInput"
+                               placeholder="Search functions..."
+                               oninput="onFuncSearchInput(this.value)">
+                        <button class="exports-toggle" id="namedOnlyToggle" onclick="toggleNamedOnly()">
+                            <span class="exports-toggle-indicator"></span>
+                            <span>Named Only</span>
+                        </button>
+                        <span class="exports-stats" id="funcFilterStats">
+                            Showing ${funcKeys.length} of ${funcKeys.length} (<span class="named-count">${namedCount} named</span>)
+                        </span>
+                    </div>
                     <div class="exports-table-wrapper" id="exportsTableWrapper">
                         <table class="exports-table">
                             <thead>
@@ -1936,10 +2168,12 @@
             }).join('')}
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="funcTableBody">
                                 ${funcKeys.map(key => {
                 const func = funcData.functions[key];
                 const displayName = func.name || key;
+                const isNamed = isNamedFunction(func, key);
+                const nameClass = isNamed ? 'named-func' : '';
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {
@@ -1950,7 +2184,7 @@
                     return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
                 }).join('');
 
-                return '<tr><td class="fn-name-cell" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + displayName + '</td>' + addrCells + '</tr>';
             }).join('')}
                             </tbody>
                         </table>
