@@ -1,6 +1,7 @@
 //Export comprehensive function index data for cross-version matching
 //@category D2VersionChanger
 //@menupath Tools.Export Function Index
+//@keybinding ctrl shift E
 
 import ghidra.app.script.GhidraScript;
 import ghidra.program.model.listing.*;
