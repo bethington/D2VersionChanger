@@ -125,13 +125,14 @@ public class ExportFunctionIndex extends GhidraScript {
         
         // Get all external references
         SymbolIterator extSymbols = symTable.getExternalSymbols();
+        ReferenceManager refMgr = currentProgram.getReferenceManager();
         while (extSymbols.hasNext()) {
             Symbol sym = extSymbols.next();
             if (sym.getSymbolType() == SymbolType.FUNCTION) {
-                // Get the thunk address that calls this external
-                Address[] refs = sym.getReferences();
-                for (Address ref : refs) {
-                    importMap.put(ref, sym.getName());
+                // Get references TO this external symbol
+                Reference[] refs = refMgr.getReferencesTo(sym.getAddress());
+                for (Reference ref : refs) {
+                    importMap.put(ref.getFromAddress(), sym.getName());
                 }
             }
         }
