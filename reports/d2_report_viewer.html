@@ -1224,7 +1224,7 @@
     <script src="data/exports.js"></script>
     <script src="data/text_content.js"></script>
 
-    <!-- Function data -->
+    <!-- Function data from d2_function_extractor.py -->
     <script src="functions/_index.js"></script>
     <script>
         // Debug: Check if FUNCTION_INDEX loaded
@@ -1712,7 +1712,7 @@
         }
 
         function renderPEExportsView(container, baseName, filename, fileInfo, history) {
-            // Check if we have function data (all detected functions, not just exports)
+            // Check FUNCTION_INDEX (function data from d2_function_extractor.py)
             // Use case-insensitive lookup to handle D2Sound.dll vs D2sound.dll etc.
             const indexKey = findFunctionIndexFile(baseName);
             console.log('renderPEExportsView:', baseName, 'indexKey:', indexKey);
@@ -1729,7 +1729,7 @@
                 return;
             }
 
-            // Fall back to exports data
+            // Fall back to exports data only
             renderExportsTable(container, baseName, filename, fileInfo);
         }
 
@@ -1863,7 +1863,15 @@
             const history = FILE_HISTORY_DATA[baseName];
             const variantCount = history?.variant_count || 1;
 
-            const ordinals = Object.keys(funcData.functions).sort((a, b) => parseInt(a) - parseInt(b));
+            // Sort function keys - handle both address format (0x...) and ordinal format
+            const funcKeys = Object.keys(funcData.functions).sort((a, b) => {
+                // Handle hex addresses
+                if (a.startsWith('0x') && b.startsWith('0x')) {
+                    return parseInt(a, 16) - parseInt(b, 16);
+                }
+                // Handle ordinals
+                return parseInt(a) - parseInt(b);
+            });
             const allVersions = funcData.versions;
 
             // Group versions by file hash variants from FILE_HISTORY_DATA
@@ -1910,8 +1918,8 @@
             let html = `
                 <div class="exports-container">
                     <div class="exports-header">
-                        <div class="exports-header-title">${baseName} - Detected Functions</div>
-                        <div class="exports-header-info">${ordinals.length} functions across ${variantCount} variant${variantCount !== 1 ? 's' : ''}</div>
+                        <div class="exports-header-title">${baseName} - Functions</div>
+                        <div class="exports-header-info">${funcKeys.length} functions across ${variantCount} variant${variantCount !== 1 ? 's' : ''}</div>
                     </div>
                     <div class="exports-table-wrapper" id="exportsTableWrapper">
                         <table class="exports-table">
@@ -1929,9 +1937,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                ${ordinals.map(ord => {
-                const func = funcData.functions[ord];
-                const displayName = func.name;
+                                ${funcKeys.map(key => {
+                const func = funcData.functions[key];
+                const displayName = func.name || key;
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {

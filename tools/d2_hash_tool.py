@@ -93,6 +93,7 @@ CORE_VERSION_FILES = [
     "D2Client.dll",
     "D2Common.dll",
     "D2Game.dll",
+    "D2Server.dll",
     "D2Gfx.dll",
     "D2Lang.dll",
     "D2Launch.dll",

@@ -31,7 +31,7 @@ from d2_hash_tool import (
 FILE_CATEGORIES = {
     "Game Logic": {
         "color": "#00FF00",  # Set green
-        "files": ["D2Game.dll", "D2Common.dll", "D2Client.dll", "D2Lang.dll"]
+        "files": ["D2Game.dll", "D2Common.dll", "D2Client.dll", "D2Lang.dll", "D2Server.dll"]
     },
     "Graphics": {
         "color": "#6969FF",  # Magic blue
@@ -773,6 +773,247 @@ def build_exports_data(version_folders: List[Tuple[Path, Dict]], sorted_version_
     return exports_data
 
 
+def extract_pe_functions(pe_path: Path) -> List[Dict]:
+    """
+    Extract all functions from a PE file using Capstone disassembly.
+
+    Identifies functions by detecting common x86 function prologues:
+    - push ebp; mov ebp, esp (55 8B EC)
+    - push ebx (53) at aligned addresses
+    - sub esp, X patterns
+
+    Returns:
+        List of function info dicts with address, size estimate, and prologue type
+    """
+    try:
+        import pefile
+        from capstone import Cs, CS_ARCH_X86, CS_MODE_32
+    except ImportError as e:
+        print(f"    Warning: Missing dependency for function extraction: {e}")
+        return []
+
+    try:
+        pe = pefile.PE(str(pe_path))
+    except Exception as e:
+        return []
+
+    functions = []
+    image_base = pe.OPTIONAL_HEADER.ImageBase
+
+    # Find .text section
+    text_section = None
+    for section in pe.sections:
+        if b'.text' in section.Name:
+            text_section = section
+            break
+
+    if not text_section:
+        pe.close()
+        return []
+
+    text_data = text_section.get_data()
+    text_va = text_section.VirtualAddress
+    text_size = min(len(text_data), text_section.Misc_VirtualSize)
+
+    # Initialize Capstone for x86 32-bit
+    md = Cs(CS_ARCH_X86, CS_MODE_32)
+
+    # Strategy: Find function prologues and validate with disassembly
+    # Common prologues:
+    # 1. push ebp; mov ebp, esp (55 8B EC) - most common
+    # 2. push ebp; mov ebp, esp; sub esp, X (55 8B EC 83 EC XX or 55 8B EC 81 EC XX XX XX XX)
+    # 3. push ebx; push esi; push edi patterns
+
+    found_addrs = set()
+
+    # Pattern 1: push ebp; mov ebp, esp (55 8B EC)
+    pattern1 = b'\x55\x8b\xec'
+    pos = 0
+    while True:
+        pos = text_data.find(pattern1, pos)
+        if pos == -1:
+            break
+        func_rva = text_va + pos
+        found_addrs.add(func_rva)
+        pos += 1
+
+    # Pattern 2: push -1; push addr (for SEH) - common in D2 (6A FF 68)
+    pattern2 = b'\x6a\xff\x68'
+    pos = 0
+    while True:
+        pos = text_data.find(pattern2, pos)
+        if pos == -1:
+            break
+        func_rva = text_va + pos
+        found_addrs.add(func_rva)
+        pos += 1
+
+    # Pattern 3: mov eax, fs:[0] (SEH setup) - 64 A1 00 00 00 00
+    pattern3 = b'\x64\xa1\x00\x00\x00\x00'
+    pos = 0
+    while True:
+        pos = text_data.find(pattern3, pos)
+        if pos == -1:
+            break
+        # Check if preceded by push ebp or push -1
+        if pos >= 1:
+            prev_byte = text_data[pos-1:pos]
+            if prev_byte == b'\x55' or (pos >= 2 and text_data[pos-2:pos] == b'\x6a\xff'):
+                func_rva = text_va + pos - (2 if text_data[pos-2:pos] == b'\x6a\xff' else 1)
+                found_addrs.add(func_rva)
+        pos += 1
+
+    # Pattern 4: sub esp, imm32 at start (83 EC XX or 81 EC XX XX XX XX)
+    # Only if at reasonable alignment
+    for pos in range(0, len(text_data) - 3, 4):  # Check 4-byte aligned
+        if text_data[pos:pos+2] == b'\x83\xec':  # sub esp, imm8
+            func_rva = text_va + pos
+            # Validate: should have valid instructions following
+            found_addrs.add(func_rva)
+        elif text_data[pos:pos+2] == b'\x81\xec':  # sub esp, imm32
+            func_rva = text_va + pos
+            found_addrs.add(func_rva)
+
+    # Sort addresses and estimate function sizes
+    sorted_addrs = sorted(found_addrs)
+
+    for i, func_rva in enumerate(sorted_addrs):
+        # Estimate size as distance to next function or end of section
+        if i + 1 < len(sorted_addrs):
+            size_estimate = sorted_addrs[i + 1] - func_rva
+        else:
+            size_estimate = (text_va + text_size) - func_rva
+
+        # Skip tiny "functions" (likely false positives)
+        if size_estimate < 4:
+            continue
+
+        # Cap size estimate at reasonable max
+        size_estimate = min(size_estimate, 0x10000)
+
+        functions.append({
+            'address': f"0x{func_rva:08x}",
+            'rva': func_rva,
+            'size_estimate': size_estimate,
+        })
+
+    pe.close()
+    return functions
+
+
+def build_functions_data(version_folders: List[Tuple[Path, Dict]], sorted_version_keys: List[str]) -> Dict[str, Any]:
+    """
+    Build function data for DLLs/EXEs across all versions using Capstone disassembly.
+
+    Unlike exports (which only show exported functions), this extracts ALL functions
+    including internal/private ones by detecting function prologues.
+
+    Returns:
+        Dictionary mapping filename to function data:
+        {
+            "D2Server.dll": {
+                "versions": ["Classic/1.00", ...],
+                "functions": {
+                    "0x00001000": {  # RVA as key
+                        "addresses": {
+                            "Classic/1.00": "0x00001000",
+                            ...
+                        },
+                        "size_estimates": {
+                            "Classic/1.00": 256,
+                            ...
+                        }
+                    },
+                    ...
+                }
+            }
+        }
+    """
+    # Group folders by canonical key
+    grouped = defaultdict(list)
+    for folder, folder_info in version_folders:
+        game_type = folder_info.get('game_type', 'Unknown')
+        version = folder_info.get('version', folder.name)
+        key = f"{game_type}/{version}"
+        grouped[key].append((folder, folder_info))
+
+    functions_data = {}
+
+    # Collect all PE files across versions
+    pe_files = set()
+    for key in sorted_version_keys:
+        if key not in grouped:
+            continue
+        for folder, folder_info in grouped[key]:
+            for item in folder.iterdir():
+                if item.is_file() and item.suffix.lower() in ['.dll', '.exe']:
+                    pe_files.add(item.name)
+
+    print(f"  Found {len(pe_files)} PE files to analyze for functions")
+
+    # For each PE file, collect functions across all versions
+    for pe_filename in sorted(pe_files):
+        file_functions = {
+            'versions': [],
+            'functions': {},
+            'function_counts': {}  # Track count per version
+        }
+
+        for key in sorted_version_keys:
+            if key not in grouped:
+                continue
+
+            for folder, folder_info in grouped[key]:
+                pe_path = folder / pe_filename
+                if not pe_path.exists():
+                    # Try case-insensitive match
+                    for item in folder.iterdir():
+                        if item.is_file() and item.name.lower() == pe_filename.lower():
+                            pe_path = item
+                            break
+
+                if not pe_path.exists():
+                    continue
+
+                functions = extract_pe_functions(pe_path)
+                if not functions:
+                    continue
+
+                # Record this version has the file
+                if key not in file_functions['versions']:
+                    file_functions['versions'].append(key)
+
+                file_functions['function_counts'][key] = len(functions)
+
+                # Record each function's address for this version
+                for func in functions:
+                    addr_key = func['address']
+
+                    if addr_key not in file_functions['functions']:
+                        file_functions['functions'][addr_key] = {
+                            'addresses': {},
+                            'size_estimates': {}
+                        }
+
+                    file_functions['functions'][addr_key]['addresses'][key] = func['address']
+                    file_functions['functions'][addr_key]['size_estimates'][key] = func['size_estimate']
+
+        # Only include files that have functions
+        if file_functions['functions']:
+            functions_data[pe_filename] = file_functions
+            # Show range of function counts across versions
+            counts = list(file_functions['function_counts'].values())
+            min_count = min(counts) if counts else 0
+            max_count = max(counts) if counts else 0
+            if min_count == max_count:
+                count_str = str(min_count)
+            else:
+                count_str = f"{min_count}-{max_count}"
+            print(f"    {pe_filename}: {count_str} functions across {len(file_functions['versions'])} versions")
+
+    return functions_data
+
+
 def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dict[str, Path]:
     """Generate consolidated viewer data for three-panel viewer."""
     if base_path is None:
@@ -819,6 +1060,10 @@ def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dic
         sorted_version_keys.append(v['folder_name'])
     exports_data = build_exports_data(version_folders, sorted_version_keys)
 
+    # Note: Full function extraction is done by d2_function_extractor.py
+    # which generates reports/functions/*.js files with superior detection
+    # (padding-based, jump tables, multiple prologues, etc.)
+
     # Build text content data
     print("Building TEXT_CONTENT_DATA...")
     text_content_data = build_text_content_data(version_folders, sorted_version_keys)
@@ -839,6 +1084,7 @@ def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dic
     timestamp = datetime.now().isoformat()
 
     # Generate individual JavaScript files for each data object
+    # Note: FUNCTIONS_DATA is generated separately by d2_function_extractor.py -> reports/functions/*.js
     data_objects = [
         ('file_categories', 'FILE_CATEGORIES', FILE_CATEGORIES, 'File categories with D2 item rarity colors'),
         ('versions', 'VERSIONS_DATA', versions_data, 'Lightweight version summaries for Panel 1'),
