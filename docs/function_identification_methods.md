@@ -530,6 +530,116 @@ Tier 6:   CFG structure (fallback)
 
 ---
 
+## Implemented System: Method-Prefixed Canonical Index
+
+### Overview
+
+The D2VersionChanger project uses a **method-prefixed canonical index** system for cross-version function matching. Each function receives a canonical ID based on its most reliable identifying characteristic.
+
+### Index Format
+
+```
+<METHOD>:<HASH>
+
+Examples:
+  EXP:10042           → Export ordinal 10042
+  STR:a3f2e8c1b4d5... → Unique string reference hash
+  API:c7e8d9f0a1b2... → API call sequence hash
+  MNE:d1a2b3c4e5f6... → Mnemonic sequence + size hash
+  CFG:e5f6a7b8c9d0... → Control flow graph hash
+  PRO:f9a0b1c2d3e4... → Prologue bytes + size hash
+```
+
+### Method Selection Priority
+
+| Priority | Method | Prefix | Reliability | When Used |
+|----------|--------|--------|-------------|-----------|
+| 1 | Export Ordinal | `EXP:` | 100% | Function is DLL export |
+| 2 | Unique Strings | `STR:` | 99% | Has string refs unique to this function |
+| 3 | API Sequence | `API:` | 95% | Calls ≥2 imported APIs |
+| 4 | Mnemonic+Size | `MNE:` | 85% | Default (always available) |
+| 5 | CFG Structure | `CFG:` | 80% | Has ≥2 basic blocks |
+| 6 | Prologue+Size | `PRO:` | 70% | Fallback for tiny functions |
+
+### Multi-Index Storage
+
+Each function stores ALL available indexes, allowing fallback matching:
+
+```json
+{
+  "index": "STR:a3f2e8c1b4d5...",
+  "index_method": "STR",
+  "indexes": {
+    "EXP": null,
+    "STR": "a3f2e8c1b4d5...",
+    "API": "c7e8d9f0a1b2...",
+    "MNE": "d1a2b3c4e5f6...",
+    "CFG": "e5f6a7b8c9d0...",
+    "PRO": "f9a0b1c2d3e4..."
+  }
+}
+```
+
+### Matching Algorithm
+
+1. Try to match using `index` (best method selected during export)
+2. If no match, try each alternate index in priority order
+3. First match found determines the canonical ID
+4. If no match at any tier, function is unique to this version
+
+### Naming Rules
+
+1. **Named functions:** Use human-assigned name from Ghidra
+2. **Unnamed functions:** Use `{METHOD}_{HASH_PREFIX}` as display name
+3. **Conflict resolution:** Earliest game version's name wins
+
+### Workflow
+
+1. **Export from Ghidra:**
+   ```
+   Run ExportFunctionIndex.java for each binary
+   Output: data/function_index/{Classic,LoD}/{version}/{dll}.json
+   ```
+
+2. **Merge all versions:**
+   ```bash
+   python tools/merge_function_index.py
+   Output: reports/function_registry_v2.json
+   ```
+
+3. **View in HTML:**
+   ```
+   Open reports/d2_report_viewer.html
+   Functions are grouped by canonical ID across all versions
+   ```
+
+### Handling Unique Functions
+
+Functions that exist in only one or few versions are handled gracefully:
+
+- They receive a canonical ID based on their best available index
+- `version_count` field indicates how many versions contain this function
+- Viewer can filter to show "unique to early versions" or "LoD-only" functions
+
+### File Structure
+
+```
+data/function_index/
+├── Classic/
+│   ├── 1.00/
+│   │   ├── D2Client.dll.json
+│   │   ├── D2Common.dll.json
+│   │   └── ...
+│   ├── 1.01/
+│   └── ...
+└── LoD/
+    ├── 1.07/
+    ├── 1.08/
+    └── ...
+```
+
+---
+
 ## References
 
 - BinDiff: https://www.zynamics.com/bindiff.html
