@@ -130,8 +130,9 @@ public class ExportFunctionIndex extends GhidraScript {
             Symbol sym = extSymbols.next();
             if (sym.getSymbolType() == SymbolType.FUNCTION) {
                 // Get references TO this external symbol
-                Reference[] refs = refMgr.getReferencesTo(sym.getAddress());
-                for (Reference ref : refs) {
+                ReferenceIterator refIter = refMgr.getReferencesTo(sym.getAddress());
+                while (refIter.hasNext()) {
+                    Reference ref = refIter.next();
                     importMap.put(ref.getFromAddress(), sym.getName());
                 }
             }
