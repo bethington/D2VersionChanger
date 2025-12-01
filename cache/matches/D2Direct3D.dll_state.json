@@ -1,0 +1,6227 @@
+{
+  "matched": {
+    "func_00001": {
+      "match_id": "func_00001",
+      "addresses": {
+        "Classic/1.00": "0x10001028",
+        "Classic/1.01": "0x10001028",
+        "Classic/1.02": "0x10001028",
+        "Classic/1.03": "0x10001028",
+        "Classic/1.04b": "0x6f941000",
+        "Classic/1.04c": "0x6f941000",
+        "Classic/1.05": "0x6f941000",
+        "Classic/1.05b": "0x6f941000",
+        "Classic/1.06": "0x6f941000",
+        "Classic/1.06b": "0x6f941000",
+        "Classic/1.08": "0x6f8a1000",
+        "Classic/1.09": "0x6f841000",
+        "Classic/1.09b": "0x6f841000",
+        "Classic/1.09d": "0x6f841000",
+        "Classic/1.10": "0x6f841000",
+        "Classic/1.11": "0x6f88a310",
+        "Classic/1.11b": "0x6f88a650",
+        "Classic/1.12a": "0x6f885fc0",
+        "Classic/1.13c": "0x6f88caf0",
+        "Classic/1.13d": "0x6f88c500",
+        "LoD/1.07": "0x6f8a1000",
+        "LoD/1.08": "0x6f8a1000",
+        "LoD/1.09": "0x6f841000",
+        "LoD/1.09b": "0x6f841000",
+        "LoD/1.09d": "0x6f841000",
+        "LoD/1.10": "0x6f841000",
+        "LoD/1.11": "0x6f88a310",
+        "LoD/1.11b": "0x6f88a650",
+        "LoD/1.12a": "0x6f885fc0",
+        "LoD/1.13c": "0x6f88caf0",
+        "LoD/1.13d": "0x6f88c500"
+      },
+      "confidence": 0.99,
+      "match_tier": 1,
+      "match_method": "export_name",
+      "evidence": {
+        "export_name": "Ordinal_10000"
+      },
+      "ghidra_name": "Ordinal_10000",
+      "export_name": "Ordinal_10000",
+      "ghidra_signature": "undefined * * Ordinal_10000(void)"
+    },
+    "func_01384": {
+      "match_id": "func_01384",
+      "addresses": {
+        "Classic/1.00": "0x10004200",
+        "Classic/1.01": "0x10004200",
+        "Classic/1.02": "0x10004200",
+        "Classic/1.03": "0x10004200"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f0eaba8ebce0ed49193d8995c46c5ec4"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01385": {
+      "match_id": "func_01385",
+      "addresses": {
+        "Classic/1.00": "0x1000b600",
+        "Classic/1.01": "0x1000b5b0",
+        "Classic/1.02": "0x1000b5b0",
+        "Classic/1.03": "0x1000b5e0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "65d081558e4467edce29ecf62e060d21"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01386": {
+      "match_id": "func_01386",
+      "addresses": {
+        "Classic/1.00": "0x1000fc0e",
+        "Classic/1.01": "0x1000fbbe",
+        "Classic/1.02": "0x1000fbbe",
+        "Classic/1.03": "0x1000fbee"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "545154b7355109f7851aa80461179af0"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01387": {
+      "match_id": "func_01387",
+      "addresses": {
+        "Classic/1.00": "0x10006e10",
+        "Classic/1.01": "0x10006e10",
+        "Classic/1.02": "0x10006e10",
+        "Classic/1.03": "0x10006e10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "dece5ace27bf9a2003391d29079b6226"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01388": {
+      "match_id": "func_01388",
+      "addresses": {
+        "Classic/1.00": "0x10004220",
+        "Classic/1.01": "0x10004220",
+        "Classic/1.02": "0x10004220",
+        "Classic/1.03": "0x10004220"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "eca3e191a644d174d0bde46f276042e4"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01389": {
+      "match_id": "func_01389",
+      "addresses": {
+        "Classic/1.00": "0x1000e42c",
+        "Classic/1.01": "0x1000e3dc",
+        "Classic/1.02": "0x1000e3dc",
+        "Classic/1.03": "0x1000e40c"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "bf4ca957ab92fec337a4749361631587"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01390": {
+      "match_id": "func_01390",
+      "addresses": {
+        "Classic/1.00": "0x10004a30",
+        "Classic/1.01": "0x10004a30",
+        "Classic/1.02": "0x10004a30",
+        "Classic/1.03": "0x10004a30"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "cf6b6e2c16e0438a8aaba4b238701bea"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01391": {
+      "match_id": "func_01391",
+      "addresses": {
+        "Classic/1.00": "0x10006e30",
+        "Classic/1.01": "0x10006e30",
+        "Classic/1.02": "0x10006e30",
+        "Classic/1.03": "0x10006e30"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e1a29d8d6a7ddf3045d226365c14acd9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01392": {
+      "match_id": "func_01392",
+      "addresses": {
+        "Classic/1.00": "0x1000fc3c",
+        "Classic/1.01": "0x1000fbec",
+        "Classic/1.02": "0x1000fbec",
+        "Classic/1.03": "0x1000fc1c"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "de3d12a54bc78df37bb24bcd428f2f81"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01393": {
+      "match_id": "func_01393",
+      "addresses": {
+        "Classic/1.00": "0x10001e40",
+        "Classic/1.03": "0x10001e40"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "353f34093b58a939d1d02cd01c41e06a"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01394": {
+      "match_id": "func_01394",
+      "addresses": {
+        "Classic/1.00": "0x1000c440",
+        "Classic/1.01": "0x1000c3f0",
+        "Classic/1.02": "0x1000c3f0",
+        "Classic/1.03": "0x1000c420"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ac7ca58ea8be056d76a28c04b6724404"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01395": {
+      "match_id": "func_01395",
+      "addresses": {
+        "Classic/1.00": "0x10004a70",
+        "Classic/1.01": "0x10004a70",
+        "Classic/1.02": "0x10004a70",
+        "Classic/1.03": "0x10004a70"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e4f46c10ebde0474619516381af1488b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01396": {
+      "match_id": "func_01396",
+      "addresses": {
+        "Classic/1.00": "0x10006e50",
+        "Classic/1.01": "0x10006e50",
+        "Classic/1.02": "0x10006e50",
+        "Classic/1.03": "0x10006e50"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3a7aa3688f5a50f81291f5c92ea1c726"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01397": {
+      "match_id": "func_01397",
+      "addresses": {
+        "Classic/1.00": "0x10008450",
+        "Classic/1.01": "0x10008450",
+        "Classic/1.02": "0x10008450",
+        "Classic/1.03": "0x10008450",
+        "Classic/1.08": "0x6f8a6690",
+        "Classic/1.09": "0x6f846690",
+        "Classic/1.09b": "0x6f846690",
+        "Classic/1.09d": "0x6f846690",
+        "Classic/1.10": "0x6f849420",
+        "LoD/1.07": "0x6f8a9420",
+        "LoD/1.08": "0x6f8a6690",
+        "LoD/1.09": "0x6f846690",
+        "LoD/1.09b": "0x6f846690",
+        "LoD/1.09d": "0x6f846690",
+        "LoD/1.10": "0x6f849420"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b4f2d373700fd2d6060e3be5b1b97560"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01398": {
+      "match_id": "func_01398",
+      "addresses": {
+        "Classic/1.00": "0x10008850",
+        "Classic/1.01": "0x10008850",
+        "Classic/1.02": "0x10008850",
+        "Classic/1.03": "0x10008850"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2d923c67e5a598369a2dc80e0619ee1a"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01399": {
+      "match_id": "func_01399",
+      "addresses": {
+        "Classic/1.00": "0x10003e60",
+        "Classic/1.01": "0x10003e60",
+        "Classic/1.02": "0x10003e60",
+        "Classic/1.03": "0x10003e60"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "169fdd96f9ab969b8b2614ca978943b3"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01400": {
+      "match_id": "func_01400",
+      "addresses": {
+        "Classic/1.00": "0x10001470",
+        "Classic/1.01": "0x10001470",
+        "Classic/1.02": "0x10001470",
+        "Classic/1.03": "0x10001470"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2ca2df8def6b444d844f6f1875e8e5dd"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01401": {
+      "match_id": "func_01401",
+      "addresses": {
+        "Classic/1.00": "0x10008870",
+        "Classic/1.01": "0x10008870",
+        "Classic/1.02": "0x10008870",
+        "Classic/1.03": "0x10008870"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "4f4b5e86abcec2d3aa2d3e5c97f173d1"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01402": {
+      "match_id": "func_01402",
+      "addresses": {
+        "Classic/1.00": "0x1001607d",
+        "Classic/1.01": "0x1001602d",
+        "Classic/1.02": "0x1001602d",
+        "Classic/1.03": "0x1001605d"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "516d970130247f16275c06f997ed3e8e"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01403": {
+      "match_id": "func_01403",
+      "addresses": {
+        "Classic/1.00": "0x10003c80",
+        "Classic/1.01": "0x10003c80",
+        "Classic/1.02": "0x10003c80",
+        "Classic/1.03": "0x10003c80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "540986b1f9ed8d9d27b319842a650b08"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01404": {
+      "match_id": "func_01404",
+      "addresses": {
+        "Classic/1.00": "0x1000ce80",
+        "Classic/1.03": "0x1000ce60"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3ac17f544ef57efbc9e5ee526efd1728"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01405": {
+      "match_id": "func_01405",
+      "addresses": {
+        "Classic/1.00": "0x10001490",
+        "Classic/1.01": "0x10001490",
+        "Classic/1.02": "0x10001490",
+        "Classic/1.03": "0x10001490"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "8adf1de55901caedb2d4b36587559ca0"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01406": {
+      "match_id": "func_01406",
+      "addresses": {
+        "Classic/1.00": "0x10002690",
+        "Classic/1.03": "0x10002690"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fac0b97962521332bbb1e37186c56753"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01407": {
+      "match_id": "func_01407",
+      "addresses": {
+        "Classic/1.00": "0x10003e90",
+        "Classic/1.03": "0x10003e90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "0f110cfd369048d0cdb509d1ecd65ded"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01408": {
+      "match_id": "func_01408",
+      "addresses": {
+        "Classic/1.00": "0x10008890",
+        "Classic/1.01": "0x10008890",
+        "Classic/1.02": "0x10008890",
+        "Classic/1.03": "0x10008890"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c07011e80a5be1ab2e49aa5565c428cb"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01409": {
+      "match_id": "func_01409",
+      "addresses": {
+        "Classic/1.00": "0x1000bca0",
+        "Classic/1.01": "0x1000bc50",
+        "Classic/1.02": "0x1000bc50",
+        "Classic/1.03": "0x1000bc80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d6ed4ef8f53bfad27e13084f0d1266ec"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01410": {
+      "match_id": "func_01410",
+      "addresses": {
+        "Classic/1.00": "0x100040b0",
+        "Classic/1.01": "0x100040b0",
+        "Classic/1.02": "0x100040b0",
+        "Classic/1.03": "0x100040b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9c71e21103008410935682997ac34409"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01411": {
+      "match_id": "func_01411",
+      "addresses": {
+        "Classic/1.00": "0x100088b0",
+        "Classic/1.01": "0x100088b0",
+        "Classic/1.02": "0x100088b0",
+        "Classic/1.03": "0x100088b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "976e242b2da865dc8e8b37a48d232693"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01412": {
+      "match_id": "func_01412",
+      "addresses": {
+        "Classic/1.00": "0x1000ff50",
+        "Classic/1.03": "0x1000ff30",
+        "Classic/1.05": "0x6f94e8e0",
+        "LoD/1.07": "0x6f8aeb90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "35b03a6a65779f2ea9dad984f43aa557"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01413": {
+      "match_id": "func_01413",
+      "addresses": {
+        "Classic/1.00": "0x1000e2c6",
+        "Classic/1.01": "0x1000e276",
+        "Classic/1.02": "0x1000e276",
+        "Classic/1.03": "0x1000e2a6"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "22e49e7178ec7152fc36a8bb0c99ba84"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01414": {
+      "match_id": "func_01414",
+      "addresses": {
+        "Classic/1.00": "0x100088d0",
+        "Classic/1.01": "0x100088d0",
+        "Classic/1.02": "0x100088d0",
+        "Classic/1.03": "0x100088d0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "da31eed215111f022e3f790500832295"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01415": {
+      "match_id": "func_01415",
+      "addresses": {
+        "Classic/1.00": "0x10008ed0",
+        "Classic/1.01": "0x10008e80",
+        "Classic/1.02": "0x10008e80",
+        "Classic/1.03": "0x10008e80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1f4a1b7c701e050130c50861bb1f269b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01416": {
+      "match_id": "func_01416",
+      "addresses": {
+        "Classic/1.00": "0x100164db",
+        "Classic/1.01": "0x1001648b",
+        "Classic/1.02": "0x1001648b",
+        "Classic/1.03": "0x100164bb"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "78604ada77426d42f517888ab9787542"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01417": {
+      "match_id": "func_01417",
+      "addresses": {
+        "Classic/1.00": "0x10004ce0",
+        "Classic/1.03": "0x10004ce0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e9eed9eb57d120392f48a5a8bad1900e"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01418": {
+      "match_id": "func_01418",
+      "addresses": {
+        "Classic/1.00": "0x10007ce0",
+        "Classic/1.01": "0x10007ce0",
+        "Classic/1.02": "0x10007ce0",
+        "Classic/1.03": "0x10007ce0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ec68ab96a8261d94f05a5871f9bbf763"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01419": {
+      "match_id": "func_01419",
+      "addresses": {
+        "Classic/1.00": "0x100076f0",
+        "Classic/1.03": "0x100076f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c56734b878336bc30dbea678803d3cfd"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01420": {
+      "match_id": "func_01420",
+      "addresses": {
+        "Classic/1.00": "0x100086f0",
+        "Classic/1.01": "0x100086f0",
+        "Classic/1.02": "0x100086f0",
+        "Classic/1.03": "0x100086f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "56695d78bbb8ecb1fb89c83c2c981071"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01421": {
+      "match_id": "func_01421",
+      "addresses": {
+        "Classic/1.00": "0x10015ef8",
+        "Classic/1.01": "0x10015ea8",
+        "Classic/1.02": "0x10015ea8",
+        "Classic/1.03": "0x10015ed8"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e5a435ee44d686861fb25dcb09dc9c99"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01422": {
+      "match_id": "func_01422",
+      "addresses": {
+        "Classic/1.00": "0x10008900",
+        "Classic/1.01": "0x10008900",
+        "Classic/1.02": "0x10008900",
+        "Classic/1.03": "0x10008900"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c87348f1d8c994469ea25be004b89acb"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01423": {
+      "match_id": "func_01423",
+      "addresses": {
+        "Classic/1.00": "0x10001510",
+        "Classic/1.03": "0x10001510"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "29d3ff6c76e64f2281d5232876ab553e"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01424": {
+      "match_id": "func_01424",
+      "addresses": {
+        "Classic/1.00": "0x10003710",
+        "Classic/1.01": "0x10003710",
+        "Classic/1.02": "0x10003710",
+        "Classic/1.03": "0x10003710"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b994aa1306a5b78dd080c131e88e0483"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01425": {
+      "match_id": "func_01425",
+      "addresses": {
+        "Classic/1.00": "0x10001950",
+        "Classic/1.03": "0x10001950"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a07887a10ae1439b7cee2bcb7579ba90"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01426": {
+      "match_id": "func_01426",
+      "addresses": {
+        "Classic/1.00": "0x10002760",
+        "Classic/1.03": "0x10002760"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f4365fa5cc6698104bb681f3cde6e648"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01427": {
+      "match_id": "func_01427",
+      "addresses": {
+        "Classic/1.00": "0x10008160",
+        "Classic/1.03": "0x10008160"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "26b9f73e22085b52990ea0783e44650c"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01428": {
+      "match_id": "func_01428",
+      "addresses": {
+        "Classic/1.00": "0x1000d960",
+        "Classic/1.03": "0x1000d940"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "cb3cfd229a79b92ada417857aadc745c"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01429": {
+      "match_id": "func_01429",
+      "addresses": {
+        "Classic/1.00": "0x10003d70",
+        "Classic/1.01": "0x10003d70",
+        "Classic/1.02": "0x10003d70",
+        "Classic/1.03": "0x10003d70"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ca335cdee025860bc5b8dc8fd61ad311"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01430": {
+      "match_id": "func_01430",
+      "addresses": {
+        "Classic/1.00": "0x1000cf70",
+        "Classic/1.03": "0x1000cf50"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e80e834d93e52b8c34a163f209ef0e50"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01431": {
+      "match_id": "func_01431",
+      "addresses": {
+        "Classic/1.00": "0x100075b0",
+        "Classic/1.03": "0x100075b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e2fd7ad86cbfc68b8ad2e7f1309666ab"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01432": {
+      "match_id": "func_01432",
+      "addresses": {
+        "Classic/1.00": "0x100085b0",
+        "Classic/1.03": "0x100085b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c15cf1c9e243103222a14610582fdbd9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01433": {
+      "match_id": "func_01433",
+      "addresses": {
+        "Classic/1.00": "0x100089c0",
+        "Classic/1.01": "0x100089c0",
+        "Classic/1.02": "0x100089c0",
+        "Classic/1.03": "0x100089c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c0d45a492bd1f116a7a1b1668eae87d6"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01434": {
+      "match_id": "func_01434",
+      "addresses": {
+        "Classic/1.00": "0x100131c6",
+        "Classic/1.01": "0x10013176",
+        "Classic/1.02": "0x10013176",
+        "Classic/1.03": "0x100131a6"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d7179f40fe43958c5e3749097647077b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01435": {
+      "match_id": "func_01435",
+      "addresses": {
+        "Classic/1.00": "0x10015fc6",
+        "Classic/1.01": "0x10015f76",
+        "Classic/1.02": "0x10015f76",
+        "Classic/1.03": "0x10015fa6"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5eadf00d5b3e4fbf2a6e8a4ba1a83edc"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01436": {
+      "match_id": "func_01436",
+      "addresses": {
+        "Classic/1.00": "0x10014bdb",
+        "Classic/1.01": "0x10014b8b",
+        "Classic/1.02": "0x10014b8b",
+        "Classic/1.03": "0x10014bbb"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ba92637e2c655887fca2044c41509e2c"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01437": {
+      "match_id": "func_01437",
+      "addresses": {
+        "Classic/1.00": "0x1000fbe1",
+        "Classic/1.01": "0x1000fb91",
+        "Classic/1.02": "0x1000fb91",
+        "Classic/1.03": "0x1000fbc1"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "bcbadd924e4466e2d75ed47e550362f9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01438": {
+      "match_id": "func_01438",
+      "addresses": {
+        "Classic/1.00": "0x100089f0",
+        "Classic/1.01": "0x100089f0",
+        "Classic/1.02": "0x100089f0",
+        "Classic/1.03": "0x100089f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "16e5a2887aeb405bc4cf7542beb026c7"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01439": {
+      "match_id": "func_01439",
+      "addresses": {
+        "Classic/1.01": "0x10001005",
+        "Classic/1.02": "0x10001005"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "32c8f8a40c97b906099b190a7e6846cd"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01440": {
+      "match_id": "func_01440",
+      "addresses": {
+        "Classic/1.01": "0x100014ba",
+        "Classic/1.02": "0x100014ba"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1a2bb5c1fb493a85119f2b54f450d55f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01441": {
+      "match_id": "func_01441",
+      "addresses": {
+        "Classic/1.01": "0x100014e6",
+        "Classic/1.02": "0x100014e6"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "10ff07d1c0ee1a021b6ce386d6cf7260"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01442": {
+      "match_id": "func_01442",
+      "addresses": {
+        "Classic/1.04b": "0x6f946a80",
+        "Classic/1.04c": "0x6f946a80",
+        "Classic/1.05": "0x6f946a80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b414164dd3e49175e0369b5ecfb3d4f5"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01443": {
+      "match_id": "func_01443",
+      "addresses": {
+        "Classic/1.04b": "0x6f943380",
+        "Classic/1.04c": "0x6f943380",
+        "Classic/1.05": "0x6f943380"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "93a37da2ff44ed1c9b782f02de520cb8"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01444": {
+      "match_id": "func_01444",
+      "addresses": {
+        "Classic/1.04b": "0x6f94cd8b",
+        "Classic/1.04c": "0x6f94cd8b"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "980fa2a799933345a93bea444c9004bf"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01445": {
+      "match_id": "func_01445",
+      "addresses": {
+        "Classic/1.04b": "0x6f94b016",
+        "Classic/1.04c": "0x6f94b016"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "22e320db5f009bb1d54c333ed851ba33"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01446": {
+      "match_id": "func_01446",
+      "addresses": {
+        "Classic/1.04b": "0x6f943920",
+        "Classic/1.04c": "0x6f943920",
+        "Classic/1.05": "0x6f943920",
+        "Classic/1.05b": "0x6f943920",
+        "Classic/1.06": "0x6f943920"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "53c841d008cad8e87ee2b104cecedd9d"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01447": {
+      "match_id": "func_01447",
+      "addresses": {
+        "Classic/1.04b": "0x6f950520",
+        "Classic/1.04c": "0x6f950520",
+        "Classic/1.05": "0x6f950710",
+        "Classic/1.05b": "0x6f950800",
+        "Classic/1.06": "0x6f950800",
+        "Classic/1.06b": "0x6f950800",
+        "Classic/1.08": "0x6f8b0a90",
+        "Classic/1.09": "0x6f850a90",
+        "Classic/1.09b": "0x6f850a90",
+        "Classic/1.09d": "0x6f850a90",
+        "Classic/1.10": "0x6f8509a0",
+        "LoD/1.07": "0x6f8b09c0",
+        "LoD/1.08": "0x6f8b0a90",
+        "LoD/1.09": "0x6f850a90",
+        "LoD/1.09b": "0x6f850a90",
+        "LoD/1.09d": "0x6f850a90",
+        "LoD/1.10": "0x6f8509a0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "83680b3111da0aa74d06eb1bd761a5f1"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01448": {
+      "match_id": "func_01448",
+      "addresses": {
+        "Classic/1.04b": "0x6f947430",
+        "Classic/1.04c": "0x6f947430"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "585e22499b2d7d99552059122d374f97"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01449": {
+      "match_id": "func_01449",
+      "addresses": {
+        "Classic/1.04b": "0x6f9430b0",
+        "Classic/1.04c": "0x6f9430b0",
+        "Classic/1.05": "0x6f9430b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b946b7dbad9da2d3e128a6afce610510"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01450": {
+      "match_id": "func_01450",
+      "addresses": {
+        "Classic/1.04b": "0x6f9497b0",
+        "Classic/1.04c": "0x6f9497b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b09b88c51df008de250bd69166370866"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01451": {
+      "match_id": "func_01451",
+      "addresses": {
+        "Classic/1.04b": "0x6f94cdb8",
+        "Classic/1.04c": "0x6f94cdb8"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1978efc39058eb79daa851184097d2cc"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01452": {
+      "match_id": "func_01452",
+      "addresses": {
+        "Classic/1.04b": "0x6f9460e0",
+        "Classic/1.04c": "0x6f9460e0",
+        "Classic/1.05": "0x6f9460e0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "59421232c0bc58cff80ebb29f2bf8607"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01453": {
+      "match_id": "func_01453",
+      "addresses": {
+        "Classic/1.04b": "0x6f945560",
+        "Classic/1.04c": "0x6f945560",
+        "Classic/1.05": "0x6f945560"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "0f1cfae35d40631a655cd6496b390378"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01454": {
+      "match_id": "func_01454",
+      "addresses": {
+        "Classic/1.04b": "0x6f94b164",
+        "Classic/1.04c": "0x6f94b164",
+        "Classic/1.05": "0x6f94b37c",
+        "Classic/1.05b": "0x6f94b46c",
+        "Classic/1.06": "0x6f94b46c",
+        "Classic/1.06b": "0x6f94b46c",
+        "Classic/1.08": "0x6f8ab6fc",
+        "Classic/1.09": "0x6f84b6fc",
+        "Classic/1.09b": "0x6f84b6fc",
+        "Classic/1.09d": "0x6f84b6fc",
+        "LoD/1.07": "0x6f8ab62c",
+        "LoD/1.08": "0x6f8ab6fc",
+        "LoD/1.09": "0x6f84b6fc",
+        "LoD/1.09b": "0x6f84b6fc",
+        "LoD/1.09d": "0x6f84b6fc"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "23cbf99a3944a3775b44beaf60a68616"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01455": {
+      "match_id": "func_01455",
+      "addresses": {
+        "Classic/1.04b": "0x6f946ef0",
+        "Classic/1.04c": "0x6f946ef0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "304ee90b94c5669fa9d90e1636243cc6"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01456": {
+      "match_id": "func_01456",
+      "addresses": {
+        "Classic/1.04b": "0x6f9469f0",
+        "Classic/1.04c": "0x6f9469f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2da73a04542edcdbce81c4a0678d5538"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01457": {
+      "match_id": "func_01457",
+      "addresses": {
+        "Classic/1.05": "0x6f948810",
+        "Classic/1.06b": "0x6f948900"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "727bcaa9ef34fa309d37a8b19b34dfe2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01458": {
+      "match_id": "func_01458",
+      "addresses": {
+        "Classic/1.05": "0x6f947630",
+        "Classic/1.06b": "0x6f9476e0",
+        "LoD/1.07": "0x6f8a73f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "159e3a046e2faf5e19b6e6432009e158"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01459": {
+      "match_id": "func_01459",
+      "addresses": {
+        "Classic/1.05": "0x6f947250",
+        "LoD/1.07": "0x6f8a7010"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "62ea9f40c29ed04a09cabf869cc6cc3f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01460": {
+      "match_id": "func_01460",
+      "addresses": {
+        "Classic/1.05": "0x6f94f690",
+        "Classic/1.06b": "0x6f94f780",
+        "LoD/1.07": "0x6f8af940"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2f621d2861e8bc8a9e3b47c8b0b68d23"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01461": {
+      "match_id": "func_01461",
+      "addresses": {
+        "Classic/1.05": "0x6f947930",
+        "Classic/1.06b": "0x6f947a00",
+        "LoD/1.07": "0x6f8a7770"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "53b5f2983b285e2ef142968f9cd54438"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01462": {
+      "match_id": "func_01462",
+      "addresses": {
+        "Classic/1.05": "0x6f94af30",
+        "Classic/1.05b": "0x6f94b020",
+        "Classic/1.06": "0x6f94b020",
+        "Classic/1.06b": "0x6f94b020"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "7ba08a5697d854f40f352afa1959e9ae"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01463": {
+      "match_id": "func_01463",
+      "addresses": {
+        "Classic/1.05": "0x6f947360",
+        "Classic/1.05b": "0x6f947410",
+        "Classic/1.06": "0x6f947410",
+        "Classic/1.06b": "0x6f947410"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e704aca9d888aaafa84bbaec8eb0238b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01464": {
+      "match_id": "func_01464",
+      "addresses": {
+        "Classic/1.05": "0x6f947380",
+        "Classic/1.06b": "0x6f947430",
+        "LoD/1.07": "0x6f8a7140"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "23c8e1d00a48a9336775fc5ecf93969c"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01465": {
+      "match_id": "func_01465",
+      "addresses": {
+        "Classic/1.05": "0x6f94cfa3",
+        "Classic/1.05b": "0x6f94d093",
+        "Classic/1.06": "0x6f94d093",
+        "Classic/1.06b": "0x6f94d093",
+        "Classic/1.08": "0x6f8ad323",
+        "Classic/1.09": "0x6f84d323",
+        "Classic/1.09b": "0x6f84d323",
+        "Classic/1.09d": "0x6f84d323",
+        "LoD/1.07": "0x6f8ad253",
+        "LoD/1.08": "0x6f8ad323",
+        "LoD/1.09": "0x6f84d323",
+        "LoD/1.09b": "0x6f84d323",
+        "LoD/1.09d": "0x6f84d323"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "97df0dc46746a01a8c09f6758a6eec6b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01466": {
+      "match_id": "func_01466",
+      "addresses": {
+        "Classic/1.05": "0x6f94bdc5",
+        "Classic/1.06b": "0x6f94beb5",
+        "LoD/1.07": "0x6f8ac075"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6b91971811e91e769f2aaec2d61729bc"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01467": {
+      "match_id": "func_01467",
+      "addresses": {
+        "Classic/1.05": "0x6f94cfd0",
+        "Classic/1.05b": "0x6f94d0c0",
+        "Classic/1.06": "0x6f94d0c0",
+        "Classic/1.06b": "0x6f94d0c0",
+        "Classic/1.08": "0x6f8ad350",
+        "Classic/1.09": "0x6f84d350",
+        "Classic/1.09b": "0x6f84d350",
+        "Classic/1.09d": "0x6f84d350",
+        "LoD/1.07": "0x6f8ad280",
+        "LoD/1.08": "0x6f8ad350",
+        "LoD/1.09": "0x6f84d350",
+        "LoD/1.09b": "0x6f84d350",
+        "LoD/1.09d": "0x6f84d350"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fd607635bc03586ad97f226aa632f594"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01468": {
+      "match_id": "func_01468",
+      "addresses": {
+        "Classic/1.05b": "0x6f946a80",
+        "Classic/1.06": "0x6f946a80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9b4be6c8af92907620410950c867f8f3"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01469": {
+      "match_id": "func_01469",
+      "addresses": {
+        "Classic/1.05b": "0x6f943380",
+        "Classic/1.06": "0x6f943380"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "94590d74aab0aaea8d913329f1c997a5"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01470": {
+      "match_id": "func_01470",
+      "addresses": {
+        "Classic/1.05b": "0x6f946f80",
+        "Classic/1.06": "0x6f946f80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b229777f30b8313159e8332eb890bfa1"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01471": {
+      "match_id": "func_01471",
+      "addresses": {
+        "Classic/1.05b": "0x6f94b31e",
+        "Classic/1.06": "0x6f94b31e"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3f6cb09342c38006f16631311befaae4"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01472": {
+      "match_id": "func_01472",
+      "addresses": {
+        "Classic/1.05b": "0x6f9430b0",
+        "Classic/1.06": "0x6f9430b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "58a9953e45506790eb07c6b2debe9ce2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01473": {
+      "match_id": "func_01473",
+      "addresses": {
+        "Classic/1.05b": "0x6f9460e0",
+        "Classic/1.06": "0x6f9460e0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "cf074a96125741935f283891d0eabf16"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01474": {
+      "match_id": "func_01474",
+      "addresses": {
+        "Classic/1.05b": "0x6f945560",
+        "Classic/1.06": "0x6f945560"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "00456823096cbdd775fd79fcf5f96ed9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01475": {
+      "match_id": "func_01475",
+      "addresses": {
+        "Classic/1.05b": "0x6f949a70",
+        "Classic/1.06": "0x6f949a70"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9ccdb7aa49999489327edd6125f3abdd"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01476": {
+      "match_id": "func_01476",
+      "addresses": {
+        "Classic/1.05b": "0x6f9469f0",
+        "Classic/1.06": "0x6f9469f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "0cdc603147df54e8d37b322bad68765c"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01477": {
+      "match_id": "func_01477",
+      "addresses": {
+        "Classic/1.06b": "0x6f943160",
+        "LoD/1.07": "0x6f8a3150"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "4b65c29174555b9f6b288ff1d33cae62"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01478": {
+      "match_id": "func_01478",
+      "addresses": {
+        "Classic/1.06b": "0x6f945990",
+        "LoD/1.07": "0x6f8a5980"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "332ed276cdc830ab92aa3963fa1d7c10"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01479": {
+      "match_id": "func_01479",
+      "addresses": {
+        "Classic/1.06b": "0x6f9433a0",
+        "LoD/1.07": "0x6f8a3390"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "34aa0fdfb0458dc00435acbe259de3d1"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01480": {
+      "match_id": "func_01480",
+      "addresses": {
+        "Classic/1.08": "0x6f8a2b10",
+        "LoD/1.08": "0x6f8a2b10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "cfcf2ba9cc0f7c03e94743aff0b51e63"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01481": {
+      "match_id": "func_01481",
+      "addresses": {
+        "Classic/1.08": "0x6f8a3910",
+        "LoD/1.08": "0x6f8a3910"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "836cccfa55f92d172e0436b0e869f16e"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01482": {
+      "match_id": "func_01482",
+      "addresses": {
+        "Classic/1.08": "0x6f8a9d10",
+        "LoD/1.08": "0x6f8a9d10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "eeddefe71960b0119a876fd766d2479b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01483": {
+      "match_id": "func_01483",
+      "addresses": {
+        "Classic/1.08": "0x6f8a30a0",
+        "LoD/1.08": "0x6f8a30a0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f294be892345e9da071f3137b2b11e6e"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01484": {
+      "match_id": "func_01484",
+      "addresses": {
+        "Classic/1.08": "0x6f8ab5ae",
+        "LoD/1.08": "0x6f8ab5ae"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "df120b1d176e6af4524371864a680778"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01485": {
+      "match_id": "func_01485",
+      "addresses": {
+        "Classic/1.08": "0x6f8a60c0",
+        "LoD/1.08": "0x6f8a60c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2a9919d7f998039e701dff946e9a2724"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01486": {
+      "match_id": "func_01486",
+      "addresses": {
+        "Classic/1.08": "0x6f8a6d40",
+        "LoD/1.08": "0x6f8a6d40"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3f536b75438f8dc4e53fcd02586fdb17"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01487": {
+      "match_id": "func_01487",
+      "addresses": {
+        "Classic/1.08": "0x6f8a69c0",
+        "LoD/1.08": "0x6f8a69c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "63236e58254308d531f6d9d56c9c93d0"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01488": {
+      "match_id": "func_01488",
+      "addresses": {
+        "Classic/1.08": "0x6f8a5550",
+        "LoD/1.08": "0x6f8a5550"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6294100d4068adc8a38af7b5c0459010"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01489": {
+      "match_id": "func_01489",
+      "addresses": {
+        "Classic/1.08": "0x6f8a71d0",
+        "LoD/1.08": "0x6f8a71d0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "8af300272eeaf234263bb862af607a7f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01490": {
+      "match_id": "func_01490",
+      "addresses": {
+        "Classic/1.08": "0x6f8a3370",
+        "LoD/1.08": "0x6f8a3370"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fdce2b3c7c7da319434118e9033ea229"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01491": {
+      "match_id": "func_01491",
+      "addresses": {
+        "Classic/1.09": "0x6f842b10",
+        "Classic/1.09b": "0x6f842b10",
+        "LoD/1.09": "0x6f842b10",
+        "LoD/1.09b": "0x6f842b10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "40cfb791cb7b93b29a6efab0980ae80a"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01492": {
+      "match_id": "func_01492",
+      "addresses": {
+        "Classic/1.09": "0x6f843910",
+        "Classic/1.09b": "0x6f843910",
+        "LoD/1.09": "0x6f843910",
+        "LoD/1.09b": "0x6f843910"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "daed98ff1c852c822dc2ae27a62bd8dd"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01493": {
+      "match_id": "func_01493",
+      "addresses": {
+        "Classic/1.09": "0x6f849d10",
+        "Classic/1.09b": "0x6f849d10",
+        "LoD/1.09": "0x6f849d10",
+        "LoD/1.09b": "0x6f849d10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f38dd6353ad791fb0c08013257b18421"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01494": {
+      "match_id": "func_01494",
+      "addresses": {
+        "Classic/1.09": "0x6f8430a0",
+        "Classic/1.09b": "0x6f8430a0",
+        "LoD/1.09": "0x6f8430a0",
+        "LoD/1.09b": "0x6f8430a0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a5e514c461dc8b715c81537b07fd76cb"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01495": {
+      "match_id": "func_01495",
+      "addresses": {
+        "Classic/1.09": "0x6f84b5ae",
+        "Classic/1.09b": "0x6f84b5ae",
+        "LoD/1.09": "0x6f84b5ae",
+        "LoD/1.09b": "0x6f84b5ae"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "7634f9b04f7fe31d04ab33acb0067dda"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01496": {
+      "match_id": "func_01496",
+      "addresses": {
+        "Classic/1.09": "0x6f8460c0",
+        "Classic/1.09b": "0x6f8460c0",
+        "LoD/1.09": "0x6f8460c0",
+        "LoD/1.09b": "0x6f8460c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c989c4898e7893cb2b44828d5eb0bb33"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01497": {
+      "match_id": "func_01497",
+      "addresses": {
+        "Classic/1.09": "0x6f846d40",
+        "Classic/1.09b": "0x6f846d40",
+        "LoD/1.09": "0x6f846d40",
+        "LoD/1.09b": "0x6f846d40"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "652ffde7c47f7fdb61ca1aea7b5f35ad"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01498": {
+      "match_id": "func_01498",
+      "addresses": {
+        "Classic/1.09": "0x6f8469c0",
+        "Classic/1.09b": "0x6f8469c0",
+        "LoD/1.09": "0x6f8469c0",
+        "LoD/1.09b": "0x6f8469c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fa34f636c862213e74d08392504fb5b2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01499": {
+      "match_id": "func_01499",
+      "addresses": {
+        "Classic/1.09": "0x6f845550",
+        "Classic/1.09b": "0x6f845550",
+        "LoD/1.09": "0x6f845550",
+        "LoD/1.09b": "0x6f845550"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "79f53734a2d3ff4bea20b5f8a594db66"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01500": {
+      "match_id": "func_01500",
+      "addresses": {
+        "Classic/1.09": "0x6f8471d0",
+        "Classic/1.09b": "0x6f8471d0",
+        "Classic/1.09d": "0x6f8471d0",
+        "LoD/1.09": "0x6f8471d0",
+        "LoD/1.09b": "0x6f8471d0",
+        "LoD/1.09d": "0x6f8471d0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5d5a77411f79cf48b239fa7771b00da9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01501": {
+      "match_id": "func_01501",
+      "addresses": {
+        "Classic/1.09": "0x6f843370",
+        "Classic/1.09b": "0x6f843370",
+        "LoD/1.09": "0x6f843370",
+        "LoD/1.09b": "0x6f843370"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9a1f0b30810921d886a6027226af0743"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01502": {
+      "match_id": "func_01502",
+      "addresses": {
+        "Classic/1.09d": "0x6f842b10",
+        "LoD/1.09d": "0x6f842b10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e617a60745101d4ce82f8934fc0aedfc"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01503": {
+      "match_id": "func_01503",
+      "addresses": {
+        "Classic/1.09d": "0x6f843910",
+        "LoD/1.09d": "0x6f843910"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5406da68f3cc97adcb6c7f1f528c492a"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01504": {
+      "match_id": "func_01504",
+      "addresses": {
+        "Classic/1.09d": "0x6f849d10",
+        "LoD/1.09d": "0x6f849d10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b6565c501b3d428cb4a9bf76bff3f8b3"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01505": {
+      "match_id": "func_01505",
+      "addresses": {
+        "Classic/1.09d": "0x6f8430a0",
+        "LoD/1.09d": "0x6f8430a0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3f4e7bc7abf55611438988c6ca223579"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01506": {
+      "match_id": "func_01506",
+      "addresses": {
+        "Classic/1.09d": "0x6f84b5ae",
+        "LoD/1.09d": "0x6f84b5ae"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2701290fb17c5af31f9dec7fd81a3892"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01507": {
+      "match_id": "func_01507",
+      "addresses": {
+        "Classic/1.09d": "0x6f8460c0",
+        "LoD/1.09d": "0x6f8460c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "53fc7d610baf41b4191913d37cbe7cd5"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01508": {
+      "match_id": "func_01508",
+      "addresses": {
+        "Classic/1.09d": "0x6f846d40",
+        "LoD/1.09d": "0x6f846d40"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "8f68c0fe1b910eb2c97b2c5421b8cf94"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01509": {
+      "match_id": "func_01509",
+      "addresses": {
+        "Classic/1.09d": "0x6f8469c0",
+        "LoD/1.09d": "0x6f8469c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e2825914d297b578af09382b7b134622"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01510": {
+      "match_id": "func_01510",
+      "addresses": {
+        "Classic/1.09d": "0x6f845550",
+        "LoD/1.09d": "0x6f845550"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9f1a0e8a3085323ebafbf6abd2896da7"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01511": {
+      "match_id": "func_01511",
+      "addresses": {
+        "Classic/1.09d": "0x6f843370",
+        "LoD/1.09d": "0x6f843370"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "145189d691f7091fea5399c811cf7685"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01512": {
+      "match_id": "func_01512",
+      "addresses": {
+        "Classic/1.10": "0x6f843300",
+        "LoD/1.10": "0x6f843300"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d2025829f2a345db459cb483bf040f5d"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01513": {
+      "match_id": "func_01513",
+      "addresses": {
+        "Classic/1.10": "0x6f84e99c",
+        "LoD/1.10": "0x6f84e99c"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1c74416619980212398d867001855b6f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01514": {
+      "match_id": "func_01514",
+      "addresses": {
+        "Classic/1.10": "0x6f849c20",
+        "LoD/1.10": "0x6f849c20"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "0327acf027fcec06af8b10c818aa1cc4"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01515": {
+      "match_id": "func_01515",
+      "addresses": {
+        "Classic/1.10": "0x6f843030",
+        "LoD/1.10": "0x6f843030"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6c61caeed3abb81d036f4dbcac7fa143"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01516": {
+      "match_id": "func_01516",
+      "addresses": {
+        "Classic/1.10": "0x6f842ab0",
+        "LoD/1.10": "0x6f842ab0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fb1faa18517624919054da32d5ae64f3"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01517": {
+      "match_id": "func_01517",
+      "addresses": {
+        "Classic/1.10": "0x6f845fc0",
+        "LoD/1.10": "0x6f845fc0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6185bc3c5b703e1b2ac4976448a9ee74"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01518": {
+      "match_id": "func_01518",
+      "addresses": {
+        "Classic/1.10": "0x6f846c50",
+        "LoD/1.10": "0x6f846c50"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3226b0d8434a174d776dc7d08498617d"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01519": {
+      "match_id": "func_01519",
+      "addresses": {
+        "Classic/1.10": "0x6f8468d0",
+        "LoD/1.10": "0x6f8468d0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "75b1bd4c2915a7750f37d6b3474e81ac"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01520": {
+      "match_id": "func_01520",
+      "addresses": {
+        "Classic/1.10": "0x6f8470e0",
+        "LoD/1.10": "0x6f8470e0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c711e9182058f12aad5d586266ae4bd8"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01521": {
+      "match_id": "func_01521",
+      "addresses": {
+        "Classic/1.10": "0x6f84bb63",
+        "LoD/1.10": "0x6f84bb63"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ef2114f2ac7ae1ceb286ef0952d59df4"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01522": {
+      "match_id": "func_01522",
+      "addresses": {
+        "Classic/1.10": "0x6f84e96f",
+        "LoD/1.10": "0x6f84e96f"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e81139863b8adadcaac79c1e4709de2b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01523": {
+      "match_id": "func_01523",
+      "addresses": {
+        "Classic/1.10": "0x6f843870",
+        "LoD/1.10": "0x6f843870"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "bea74c4e908af319b708d283b6a844a1"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01524": {
+      "match_id": "func_01524",
+      "addresses": {
+        "Classic/1.11": "0x6f88cd00",
+        "Classic/1.11b": "0x6f88bd40",
+        "Classic/1.12a": "0x6f886a40",
+        "Classic/1.13c": "0x6f88f7b0",
+        "Classic/1.13d": "0x6f886a20",
+        "LoD/1.11": "0x6f88cd00",
+        "LoD/1.11b": "0x6f88bd40",
+        "LoD/1.12a": "0x6f886a40",
+        "LoD/1.13c": "0x6f88f7b0",
+        "LoD/1.13d": "0x6f886a20"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a5450eceb541cb01c172a115b1f45eec"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01525": {
+      "match_id": "func_01525",
+      "addresses": {
+        "Classic/1.11": "0x6f886310",
+        "Classic/1.11b": "0x6f88f170",
+        "Classic/1.12a": "0x6f8874b0",
+        "Classic/1.13c": "0x6f88f210",
+        "Classic/1.13d": "0x6f889260",
+        "LoD/1.11": "0x6f886310",
+        "LoD/1.11b": "0x6f88f170",
+        "LoD/1.12a": "0x6f8874b0",
+        "LoD/1.13c": "0x6f88f210",
+        "LoD/1.13d": "0x6f889260"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d0b538df095e47d1212a9796afe63beb"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01526": {
+      "match_id": "func_01526",
+      "addresses": {
+        "Classic/1.11": "0x6f885fc0",
+        "Classic/1.11b": "0x6f88f760",
+        "Classic/1.12a": "0x6f887160",
+        "Classic/1.13c": "0x6f88f1f0",
+        "Classic/1.13d": "0x6f88db10",
+        "LoD/1.11": "0x6f885fc0",
+        "LoD/1.11b": "0x6f88f760",
+        "LoD/1.12a": "0x6f887160",
+        "LoD/1.13c": "0x6f88f1f0",
+        "LoD/1.13d": "0x6f88db10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "2fe637ec54e4f29f9a12a930d33ec9d2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01527": {
+      "match_id": "func_01527",
+      "addresses": {
+        "Classic/1.11": "0x6f88a320",
+        "LoD/1.11": "0x6f88a320"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a83ad4514dd2aba99ad4b49ead6723a7"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01528": {
+      "match_id": "func_01528",
+      "addresses": {
+        "Classic/1.11": "0x6f88cd30",
+        "Classic/1.11b": "0x6f88bd70",
+        "Classic/1.12a": "0x6f886a70",
+        "Classic/1.13c": "0x6f88f7e0",
+        "Classic/1.13d": "0x6f886a50",
+        "LoD/1.11": "0x6f88cd30",
+        "LoD/1.11b": "0x6f88bd70",
+        "LoD/1.12a": "0x6f886a70",
+        "LoD/1.13c": "0x6f88f7e0",
+        "LoD/1.13d": "0x6f886a50"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5f93ebf58a5cddc376387a987c0a7c2b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01529": {
+      "match_id": "func_01529",
+      "addresses": {
+        "Classic/1.11": "0x6f886040",
+        "Classic/1.11b": "0x6f88f230",
+        "Classic/1.12a": "0x6f88c6c0",
+        "Classic/1.13c": "0x6f88f2d0",
+        "Classic/1.13d": "0x6f888f90",
+        "LoD/1.11": "0x6f886040",
+        "LoD/1.11b": "0x6f88f230",
+        "LoD/1.12a": "0x6f88c6c0",
+        "LoD/1.13c": "0x6f88f2d0",
+        "LoD/1.13d": "0x6f888f90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1071ba9f167b5c6bc8e31bd20df38c80"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01530": {
+      "match_id": "func_01530",
+      "addresses": {
+        "Classic/1.11": "0x6f88d640",
+        "Classic/1.11b": "0x6f88f480",
+        "Classic/1.12a": "0x6f887430",
+        "Classic/1.13c": "0x6f88f520",
+        "Classic/1.13d": "0x6f88de40",
+        "LoD/1.11": "0x6f88d640",
+        "LoD/1.11b": "0x6f88f480",
+        "LoD/1.12a": "0x6f887430",
+        "LoD/1.13c": "0x6f88f520",
+        "LoD/1.13d": "0x6f88de40"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "aa563ad00b94a820ff7c2763e2c4fc36"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01531": {
+      "match_id": "func_01531",
+      "addresses": {
+        "Classic/1.11": "0x6f88d290",
+        "Classic/1.11b": "0x6f88f6e0",
+        "Classic/1.12a": "0x6f8870e0",
+        "Classic/1.13c": "0x6f88f170",
+        "Classic/1.13d": "0x6f88da90",
+        "LoD/1.11": "0x6f88d290",
+        "LoD/1.11b": "0x6f88f6e0",
+        "LoD/1.12a": "0x6f8870e0",
+        "LoD/1.13c": "0x6f88f170",
+        "LoD/1.13d": "0x6f88da90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b1a0d01491df982751afc69b7e2a984f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01532": {
+      "match_id": "func_01532",
+      "addresses": {
+        "Classic/1.11": "0x6f888540",
+        "LoD/1.11": "0x6f888540"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9da3f32f9ae8364929d0afc2e6964eb7"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01533": {
+      "match_id": "func_01533",
+      "addresses": {
+        "Classic/1.11": "0x6f88cd50",
+        "Classic/1.11b": "0x6f88bd90",
+        "Classic/1.12a": "0x6f886a90",
+        "Classic/1.13c": "0x6f88f800",
+        "Classic/1.13d": "0x6f886a70",
+        "LoD/1.11": "0x6f88cd50",
+        "LoD/1.11b": "0x6f88bd90",
+        "LoD/1.12a": "0x6f886a90",
+        "LoD/1.13c": "0x6f88f800",
+        "LoD/1.13d": "0x6f886a70"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "16e6ad159879333aeee9220279a9b924"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01534": {
+      "match_id": "func_01534",
+      "addresses": {
+        "Classic/1.11": "0x6f88f150",
+        "LoD/1.11": "0x6f88f150"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d522ed74653c766404f9ee338ba93399"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01535": {
+      "match_id": "func_01535",
+      "addresses": {
+        "Classic/1.11": "0x6f88d2c0",
+        "Classic/1.11b": "0x6f88f710",
+        "Classic/1.12a": "0x6f88c5f0",
+        "Classic/1.13c": "0x6f88f1a0",
+        "Classic/1.13d": "0x6f88dac0",
+        "LoD/1.11": "0x6f88d2c0",
+        "LoD/1.11b": "0x6f88f710",
+        "LoD/1.12a": "0x6f88c5f0",
+        "LoD/1.13c": "0x6f88f1a0",
+        "LoD/1.13d": "0x6f88dac0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "fa03e2112ac8211680ffbe7f74a6ab10"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01536": {
+      "match_id": "func_01536",
+      "addresses": {
+        "Classic/1.11": "0x6f88a280",
+        "LoD/1.11": "0x6f88a280"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "901e7b7ee84dcb9d75b7e9fc8dd77ae6"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01537": {
+      "match_id": "func_01537",
+      "addresses": {
+        "Classic/1.11": "0x6f8918c6",
+        "Classic/1.11b": "0x6f8918c6",
+        "Classic/1.13d": "0x6f8918c6",
+        "LoD/1.11": "0x6f8918c6",
+        "LoD/1.11b": "0x6f8918c6",
+        "LoD/1.13d": "0x6f8918c6"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "dc867a2513520dca9789f46b4f78c254"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01538": {
+      "match_id": "func_01538",
+      "addresses": {
+        "Classic/1.11": "0x6f888c90",
+        "LoD/1.11": "0x6f888c90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a5db47ee650ca13414ee2abd5afc68c8"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01539": {
+      "match_id": "func_01539",
+      "addresses": {
+        "Classic/1.11": "0x6f88d2f0",
+        "Classic/1.11b": "0x6f88f740",
+        "Classic/1.12a": "0x6f887140",
+        "Classic/1.13c": "0x6f88f1d0",
+        "Classic/1.13d": "0x6f88daf0",
+        "LoD/1.11": "0x6f88d2f0",
+        "LoD/1.11b": "0x6f88f740",
+        "LoD/1.12a": "0x6f887140",
+        "LoD/1.13c": "0x6f88f1d0",
+        "LoD/1.13d": "0x6f88daf0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f6b08f2a961516583174e7f4b88e60cc"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01540": {
+      "match_id": "func_01540",
+      "addresses": {
+        "Classic/1.11": "0x6f88fba0",
+        "LoD/1.11": "0x6f88fba0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f387b68e3daf5f37e71b3ec3485677ea"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01541": {
+      "match_id": "func_01541",
+      "addresses": {
+        "Classic/1.11": "0x6f88ecb0",
+        "Classic/1.11b": "0x6f88bcb0",
+        "Classic/1.12a": "0x6f889bd0",
+        "Classic/1.13c": "0x6f88f110",
+        "Classic/1.13d": "0x6f88d920",
+        "LoD/1.11": "0x6f88ecb0",
+        "LoD/1.11b": "0x6f88bcb0",
+        "LoD/1.12a": "0x6f889bd0",
+        "LoD/1.13c": "0x6f88f110",
+        "LoD/1.13d": "0x6f88d920"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "f23b2628bbd25ad1eeedfa01441c32a9"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01542": {
+      "match_id": "func_01542",
+      "addresses": {
+        "Classic/1.11": "0x6f887bb0",
+        "Classic/1.11b": "0x6f8881a0",
+        "Classic/1.13d": "0x6f88ab00",
+        "LoD/1.11": "0x6f887bb0",
+        "LoD/1.11b": "0x6f8881a0",
+        "LoD/1.13d": "0x6f88ab00"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c7af0a4b4c80f9123ae0bc415d175622"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01543": {
+      "match_id": "func_01543",
+      "addresses": {
+        "Classic/1.11": "0x6f8880c0",
+        "LoD/1.11": "0x6f8880c0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d364ed8dcaf2b4b634a1f18d5e9b2fba"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01544": {
+      "match_id": "func_01544",
+      "addresses": {
+        "Classic/1.11": "0x6f88f0c0",
+        "Classic/1.11b": "0x6f889f40",
+        "Classic/1.12a": "0x6f88bb60",
+        "Classic/1.13c": "0x6f88c3e0",
+        "Classic/1.13d": "0x6f885f90",
+        "LoD/1.11": "0x6f88f0c0",
+        "LoD/1.11b": "0x6f889f40",
+        "LoD/1.12a": "0x6f88bb60",
+        "LoD/1.13c": "0x6f88c3e0",
+        "LoD/1.13d": "0x6f885f90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "430bc4612c7594d6b8c4f752f4453c2d"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01545": {
+      "match_id": "func_01545",
+      "addresses": {
+        "Classic/1.11": "0x6f88ccd0",
+        "Classic/1.11b": "0x6f88bd10",
+        "Classic/1.12a": "0x6f886a10",
+        "Classic/1.13c": "0x6f88f780",
+        "Classic/1.13d": "0x6f8869f0",
+        "LoD/1.11": "0x6f88ccd0",
+        "LoD/1.11b": "0x6f88bd10",
+        "LoD/1.12a": "0x6f886a10",
+        "LoD/1.13c": "0x6f88f780",
+        "LoD/1.13d": "0x6f8869f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "290b6f9930da9b4a2f1cb86c3f6c2fdb"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01546": {
+      "match_id": "func_01546",
+      "addresses": {
+        "Classic/1.11": "0x6f88ece0",
+        "Classic/1.11b": "0x6f88bce0",
+        "Classic/1.12a": "0x6f889c00",
+        "Classic/1.13c": "0x6f88f140",
+        "Classic/1.13d": "0x6f88d950",
+        "LoD/1.11": "0x6f88ece0",
+        "LoD/1.11b": "0x6f88bce0",
+        "LoD/1.12a": "0x6f889c00",
+        "LoD/1.13c": "0x6f88f140",
+        "LoD/1.13d": "0x6f88d950"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "455e8ae85573a22184524e6ade45fb66"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01547": {
+      "match_id": "func_01547",
+      "addresses": {
+        "Classic/1.11": "0x6f8826f0",
+        "Classic/1.11b": "0x6f8826f0",
+        "Classic/1.12a": "0x6f882710",
+        "Classic/1.13c": "0x6f882710",
+        "Classic/1.13d": "0x6f8826f0",
+        "LoD/1.11": "0x6f8826f0",
+        "LoD/1.11b": "0x6f8826f0",
+        "LoD/1.12a": "0x6f882710",
+        "LoD/1.13c": "0x6f882710",
+        "LoD/1.13d": "0x6f8826f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5afba19d873a93fac87209b525ab8ab0"
+      },
+      "ghidra_name": "__chkstk",
+      "export_name": null,
+      "ghidra_signature": "undefined __chkstk(void)"
+    },
+    "func_01548": {
+      "match_id": "func_01548",
+      "addresses": {
+        "Classic/1.11b": "0x6f88e600",
+        "LoD/1.11b": "0x6f88e600"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "7dcfb76ad5b06316007c7b93f733f12f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01549": {
+      "match_id": "func_01549",
+      "addresses": {
+        "Classic/1.11b": "0x6f88a820",
+        "LoD/1.11b": "0x6f88a820"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a3a3eea7a91bb790ebe9fd978fb18edf"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01550": {
+      "match_id": "func_01550",
+      "addresses": {
+        "Classic/1.11b": "0x6f888b30",
+        "LoD/1.11b": "0x6f888b30"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "40540eda4d9c921ccf18c7c74961dc87"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01551": {
+      "match_id": "func_01551",
+      "addresses": {
+        "Classic/1.11b": "0x6f889280",
+        "LoD/1.11b": "0x6f889280"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "b70217c3c2b39abe490f70969e94e666"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01552": {
+      "match_id": "func_01552",
+      "addresses": {
+        "Classic/1.11b": "0x6f88e590",
+        "LoD/1.11b": "0x6f88e590"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "e8c48614781c419a9ce0e7b23f809095"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01553": {
+      "match_id": "func_01553",
+      "addresses": {
+        "Classic/1.11b": "0x6f8886b0",
+        "LoD/1.11b": "0x6f8886b0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "c52bde1cec49b3bdb5f2742eae6e5075"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01554": {
+      "match_id": "func_01554",
+      "addresses": {
+        "Classic/1.11b": "0x6f889fd0",
+        "LoD/1.11b": "0x6f889fd0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9c947e1781688cd9fe37a29ae9aef935"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01555": {
+      "match_id": "func_01555",
+      "addresses": {
+        "Classic/1.12a": "0x6f887d10",
+        "LoD/1.12a": "0x6f887d10"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "0f53cf5a56717f4f1718190f419cc98f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01556": {
+      "match_id": "func_01556",
+      "addresses": {
+        "Classic/1.12a": "0x6f88f820",
+        "LoD/1.12a": "0x6f88f820"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "aeb4dde1a8c12407d29d402b573fa88f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01557": {
+      "match_id": "func_01557",
+      "addresses": {
+        "Classic/1.12a": "0x6f887070",
+        "LoD/1.12a": "0x6f887070"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6e15f68e8d8492d54ba3996bcecffa6b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01558": {
+      "match_id": "func_01558",
+      "addresses": {
+        "Classic/1.12a": "0x6f88e970",
+        "LoD/1.12a": "0x6f88e970"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "97cb787587b2a4c08c3617b33a4457d6"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01559": {
+      "match_id": "func_01559",
+      "addresses": {
+        "Classic/1.12a": "0x6f88ee80",
+        "LoD/1.12a": "0x6f88ee80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3da8bb0b194ed185c55c5567b5fd5fa2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01560": {
+      "match_id": "func_01560",
+      "addresses": {
+        "Classic/1.12a": "0x6f88cd90",
+        "LoD/1.12a": "0x6f88cd90"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "32d8cdc9af3411de912cc446d11dd29a"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01561": {
+      "match_id": "func_01561",
+      "addresses": {
+        "Classic/1.12a": "0x6f88bbf0",
+        "LoD/1.12a": "0x6f88bbf0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "3a4bf42646a6b0a0bc44585109dfc6c5"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01562": {
+      "match_id": "func_01562",
+      "addresses": {
+        "Classic/1.13c": "0x6f888b30",
+        "LoD/1.13c": "0x6f888b30"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "833d54d88989c4a9b9430955da83d51f"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01563": {
+      "match_id": "func_01563",
+      "addresses": {
+        "Classic/1.13c": "0x6f88a640",
+        "LoD/1.13c": "0x6f88a640"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "d5905579dbd0515cb50f2cf8c1d84e41"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01564": {
+      "match_id": "func_01564",
+      "addresses": {
+        "Classic/1.13c": "0x6f88ab50",
+        "LoD/1.13c": "0x6f88ab50"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ad8301b12285da4c19179491f6c97d5b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01565": {
+      "match_id": "func_01565",
+      "addresses": {
+        "Classic/1.13c": "0x6f88c470",
+        "LoD/1.13c": "0x6f88c470"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "efbf6e0ca21bd7dc68b5aae67d787ff2"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01566": {
+      "match_id": "func_01566",
+      "addresses": {
+        "Classic/1.13c": "0x6f886170",
+        "LoD/1.13c": "0x6f886170"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "30be96cd0fca871ca1eeae1c0642ae72"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01567": {
+      "match_id": "func_01567",
+      "addresses": {
+        "Classic/1.13c": "0x6f888ac0",
+        "LoD/1.13c": "0x6f888ac0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "a317a3a0b65e4dbb2c5136170186c0f6"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01568": {
+      "match_id": "func_01568",
+      "addresses": {
+        "Classic/1.13c": "0x6f88afd0",
+        "LoD/1.13c": "0x6f88afd0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "ad2a7fe8aeabaaa6d4a90da7888ecfb0"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01569": {
+      "match_id": "func_01569",
+      "addresses": {
+        "Classic/1.13c": "0x6f88b4f0",
+        "LoD/1.13c": "0x6f88b4f0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "6d3acd7c11a888147f53998c7343ed74"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01570": {
+      "match_id": "func_01570",
+      "addresses": {
+        "Classic/1.13d": "0x6f88b010",
+        "LoD/1.13d": "0x6f88b010"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "269c80468148187db4d4cddf99f0e076"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01571": {
+      "match_id": "func_01571",
+      "addresses": {
+        "Classic/1.13d": "0x6f886020",
+        "LoD/1.13d": "0x6f886020"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "5998de224fc670724fe19b9e91fc0a25"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01572": {
+      "match_id": "func_01572",
+      "addresses": {
+        "Classic/1.13d": "0x6f88da20",
+        "LoD/1.13d": "0x6f88da20"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1280da2d3376fa8143af4d2d04c5b5d5"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01573": {
+      "match_id": "func_01573",
+      "addresses": {
+        "Classic/1.13d": "0x6f88f840",
+        "LoD/1.13d": "0x6f88f840"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "9b2dd8f090d5ce27ae4c4a8970396020"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01574": {
+      "match_id": "func_01574",
+      "addresses": {
+        "Classic/1.13d": "0x6f88ed80",
+        "LoD/1.13d": "0x6f88ed80"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "38c06b61082238f22110aa4d5e2ab0b3"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01575": {
+      "match_id": "func_01575",
+      "addresses": {
+        "Classic/1.13d": "0x6f88b490",
+        "LoD/1.13d": "0x6f88b490"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "1d318df2a93c5af1a0e31627d8799646"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01576": {
+      "match_id": "func_01576",
+      "addresses": {
+        "Classic/1.13d": "0x6f88bbe0",
+        "LoD/1.13d": "0x6f88bbe0"
+      },
+      "confidence": 0.9,
+      "match_tier": 2,
+      "match_method": "exact_32_byte",
+      "evidence": {
+        "bytes_md5_32": "71486fabeacdf1db1a54a6831417ee5b"
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01577": {
+      "match_id": "func_01577",
+      "addresses": {
+        "Classic/1.00": "0x10001005",
+        "Classic/1.03": "0x10001005"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "e9562e0000e9912c",
+        "base_size": 35
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01578": {
+      "match_id": "func_01578",
+      "addresses": {
+        "Classic/1.00": "0x1001360c",
+        "Classic/1.01": "0x100135bc",
+        "Classic/1.02": "0x100135bc",
+        "Classic/1.03": "0x100135ec",
+        "Classic/1.04b": "0x6f94eae8",
+        "Classic/1.04c": "0x6f94eae8",
+        "Classic/1.05": "0x6f94ed08",
+        "Classic/1.05b": "0x6f94edf8",
+        "Classic/1.06": "0x6f94edf8",
+        "Classic/1.06b": "0x6f94edf8",
+        "Classic/1.08": "0x6f8af088",
+        "Classic/1.09": "0x6f84f088",
+        "Classic/1.09b": "0x6f84f088",
+        "Classic/1.09d": "0x6f84f088",
+        "Classic/1.10": "0x6f84e1e8",
+        "LoD/1.07": "0x6f8aefb8",
+        "LoD/1.08": "0x6f8af088",
+        "LoD/1.09": "0x6f84f088",
+        "LoD/1.09b": "0x6f84f088",
+        "LoD/1.09d": "0x6f84f088",
+        "LoD/1.10": "0x6f84e1e8"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "5643323058433030",
+        "base_size": 8
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01579": {
+      "match_id": "func_01579",
+      "addresses": {
+        "Classic/1.00": "0x1000aa30",
+        "Classic/1.03": "0x1000aa10"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec0c5355568bf1",
+        "base_size": 784
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01580": {
+      "match_id": "func_01580",
+      "addresses": {
+        "Classic/1.00": "0x1000f431",
+        "Classic/1.01": "0x1000f3e1",
+        "Classic/1.02": "0x1000f3e1",
+        "Classic/1.03": "0x1000f411"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec519bdd7dfc",
+        "base_size": 19
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01581": {
+      "match_id": "func_01581",
+      "addresses": {
+        "Classic/1.00": "0x10016e42",
+        "Classic/1.03": "0x10016e22"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6820d7011068",
+        "base_size": 677
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01582": {
+      "match_id": "func_01582",
+      "addresses": {
+        "Classic/1.00": "0x1000f444",
+        "Classic/1.01": "0x1000f3f4",
+        "Classic/1.02": "0x1000f3f4",
+        "Classic/1.03": "0x1000f424"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec51dd7dfcdb",
+        "base_size": 20
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01583": {
+      "match_id": "func_01583",
+      "addresses": {
+        "Classic/1.00": "0x10004a50",
+        "Classic/1.01": "0x10004a50",
+        "Classic/1.02": "0x10004a50",
+        "Classic/1.03": "0x10004a50"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "33c0c39090909090",
+        "base_size": 32
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01584": {
+      "match_id": "func_01584",
+      "addresses": {
+        "Classic/1.00": "0x10001a60",
+        "Classic/1.03": "0x10001a60",
+        "Classic/1.05": "0x6f941450",
+        "Classic/1.06b": "0x6f941450",
+        "LoD/1.07": "0x6f8a1450"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81eca00000005356",
+        "base_size": 992
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01585": {
+      "match_id": "func_01585",
+      "addresses": {
+        "Classic/1.00": "0x10007880",
+        "Classic/1.03": "0x10007880"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8bc156578bfa8b08",
+        "base_size": 144
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01586": {
+      "match_id": "func_01586",
+      "addresses": {
+        "Classic/1.00": "0x10003ca0",
+        "Classic/1.03": "0x10003ca0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1746d021085c074",
+        "base_size": 208
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01587": {
+      "match_id": "func_01587",
+      "addresses": {
+        "Classic/1.00": "0x10016aaf",
+        "Classic/1.03": "0x10016a8f"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6810d7011068",
+        "base_size": 289
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01588": {
+      "match_id": "func_01588",
+      "addresses": {
+        "Classic/1.00": "0x100014b0",
+        "Classic/1.01": "0x100014b0",
+        "Classic/1.02": "0x100014b0",
+        "Classic/1.03": "0x100014b0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b44240485c0740f",
+        "base_size": 10
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01589": {
+      "match_id": "func_01589",
+      "addresses": {
+        "Classic/1.00": "0x100014ba",
+        "Classic/1.03": "0x100014ba"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6898fc011050",
+        "base_size": 38
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01590": {
+      "match_id": "func_01590",
+      "addresses": {
+        "Classic/1.00": "0x100112c0",
+        "Classic/1.03": "0x100112a0",
+        "Classic/1.05": "0x6f94d2e0",
+        "LoD/1.07": "0x6f8ad590"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec57568b750c",
+        "base_size": 962
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01591": {
+      "match_id": "func_01591",
+      "addresses": {
+        "Classic/1.00": "0x100082d0",
+        "Classic/1.03": "0x100082d0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec0855578bf933",
+        "base_size": 384
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01592": {
+      "match_id": "func_01592",
+      "addresses": {
+        "Classic/1.00": "0x1000b4e0",
+        "Classic/1.03": "0x1000b4c0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec30568bf1578b",
+        "base_size": 288
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01593": {
+      "match_id": "func_01593",
+      "addresses": {
+        "Classic/1.00": "0x100014e6",
+        "Classic/1.03": "0x100014e6"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff68a0fc011050",
+        "base_size": 42
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01594": {
+      "match_id": "func_01594",
+      "addresses": {
+        "Classic/1.00": "0x100022f0",
+        "Classic/1.03": "0x100022f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ec2c040000a13c",
+        "base_size": 928
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01595": {
+      "match_id": "func_01595",
+      "addresses": {
+        "Classic/1.00": "0x10012908",
+        "Classic/1.03": "0x100128e8"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff68b0ce011068",
+        "base_size": 806
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01596": {
+      "match_id": "func_01596",
+      "addresses": {
+        "Classic/1.00": "0x10003b10",
+        "Classic/1.03": "0x10003b10"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ec880000008954",
+        "base_size": 368
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01597": {
+      "match_id": "func_01597",
+      "addresses": {
+        "Classic/1.00": "0x1001351c",
+        "Classic/1.03": "0x100134fc",
+        "Classic/1.05": "0x6f94ec18",
+        "LoD/1.07": "0x6f8aeec8"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec535657556a",
+        "base_size": 240
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01598": {
+      "match_id": "func_01598",
+      "addresses": {
+        "Classic/1.00": "0x1000af20",
+        "Classic/1.03": "0x1000af00",
+        "Classic/1.05": "0x6f948990",
+        "LoD/1.07": "0x6f8a88e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec3c5556578b7c",
+        "base_size": 560
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01599": {
+      "match_id": "func_01599",
+      "addresses": {
+        "Classic/1.00": "0x10015d36",
+        "Classic/1.03": "0x10015d16"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff68a0d6011068",
+        "base_size": 450
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01600": {
+      "match_id": "func_01600",
+      "addresses": {
+        "Classic/1.00": "0x10003540",
+        "Classic/1.03": "0x10003540"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1346d02105633f6",
+        "base_size": 464
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01601": {
+      "match_id": "func_01601",
+      "addresses": {
+        "Classic/1.00": "0x10012146",
+        "Classic/1.03": "0x10012126"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6848ce011068",
+        "base_size": 326
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01602": {
+      "match_id": "func_01602",
+      "addresses": {
+        "Classic/1.00": "0x10002970",
+        "Classic/1.03": "0x10002970",
+        "Classic/1.05": "0x6f942040",
+        "Classic/1.06b": "0x6f942040",
+        "LoD/1.07": "0x6f8a2040"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83e4f881ec",
+        "base_size": 3024
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01603": {
+      "match_id": "func_01603",
+      "addresses": {
+        "Classic/1.00": "0x10003790",
+        "Classic/1.03": "0x10003790"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1786d021081ec80",
+        "base_size": 448
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01604": {
+      "match_id": "func_01604",
+      "addresses": {
+        "Classic/1.00": "0x1001699c",
+        "Classic/1.03": "0x1001697c"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6800d7011068",
+        "base_size": 272
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01605": {
+      "match_id": "func_01605",
+      "addresses": {
+        "Classic/1.03": "0x1000a0f0",
+        "Classic/1.05": "0x6f947e80",
+        "Classic/1.06b": "0x6f947f50"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ec8c0000005355",
+        "base_size": 1808
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01606": {
+      "match_id": "func_01606",
+      "addresses": {
+        "Classic/1.04b": "0x6f943900",
+        "Classic/1.04c": "0x6f943900",
+        "Classic/1.05": "0x6f943900"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b8a8a5956fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01607": {
+      "match_id": "func_01607",
+      "addresses": {
+        "Classic/1.04b": "0x6f941010",
+        "Classic/1.04c": "0x6f941010",
+        "Classic/1.05": "0x6f941010",
+        "Classic/1.05b": "0x6f941010",
+        "Classic/1.06": "0x6f941010",
+        "Classic/1.06b": "0x6f941010",
+        "Classic/1.08": "0x6f8a1010",
+        "Classic/1.09": "0x6f841010",
+        "Classic/1.09b": "0x6f841010",
+        "Classic/1.09d": "0x6f841010",
+        "Classic/1.10": "0x6f841010",
+        "Classic/1.11": "0x6f88a300",
+        "Classic/1.11b": "0x6f88a640",
+        "Classic/1.12a": "0x6f885fb0",
+        "Classic/1.13c": "0x6f88cae0",
+        "Classic/1.13d": "0x6f88c4f0",
+        "LoD/1.07": "0x6f8a1010",
+        "LoD/1.08": "0x6f8a1010",
+        "LoD/1.09": "0x6f841010",
+        "LoD/1.09b": "0x6f841010",
+        "LoD/1.09d": "0x6f841010",
+        "LoD/1.10": "0x6f841010",
+        "LoD/1.11": "0x6f88a300",
+        "LoD/1.11b": "0x6f88a640",
+        "LoD/1.12a": "0x6f885fb0",
+        "LoD/1.13c": "0x6f88cae0",
+        "LoD/1.13d": "0x6f88c4f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b801000000c20c00",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01608": {
+      "match_id": "func_01608",
+      "addresses": {
+        "Classic/1.04b": "0x6f943010",
+        "Classic/1.04c": "0x6f943010",
+        "Classic/1.05": "0x6f943010"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d7499956fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01609": {
+      "match_id": "func_01609",
+      "addresses": {
+        "Classic/1.04b": "0x6f946aa0",
+        "Classic/1.04c": "0x6f946aa0",
+        "Classic/1.05": "0x6f946aa0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d40f1956f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01610": {
+      "match_id": "func_01610",
+      "addresses": {
+        "Classic/1.04b": "0x6f946e30",
+        "Classic/1.04c": "0x6f946e30",
+        "Classic/1.05": "0x6f946e30"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c70560b1966f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01611": {
+      "match_id": "func_01611",
+      "addresses": {
+        "Classic/1.04b": "0x6f948d30",
+        "Classic/1.04c": "0x6f948d30",
+        "Classic/1.05": "0x6f948f00",
+        "Classic/1.05b": "0x6f948ff0",
+        "Classic/1.06": "0x6f948ff0",
+        "Classic/1.06b": "0x6f948ff0",
+        "Classic/1.08": "0x6f8a9290",
+        "Classic/1.09": "0x6f849290",
+        "Classic/1.09b": "0x6f849290",
+        "Classic/1.09d": "0x6f849290",
+        "Classic/1.10": "0x6f8491c0",
+        "LoD/1.07": "0x6f8a91c0",
+        "LoD/1.08": "0x6f8a9290",
+        "LoD/1.09": "0x6f849290",
+        "LoD/1.09b": "0x6f849290",
+        "LoD/1.09d": "0x6f849290",
+        "LoD/1.10": "0x6f8491c0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c390909090909090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01612": {
+      "match_id": "func_01612",
+      "addresses": {
+        "Classic/1.04b": "0x6f945540",
+        "Classic/1.04c": "0x6f945540",
+        "Classic/1.05": "0x6f945540",
+        "Classic/1.05b": "0x6f945540",
+        "Classic/1.06": "0x6f945540",
+        "Classic/1.06b": "0x6f945540",
+        "Classic/1.08": "0x6f8a5530",
+        "Classic/1.09": "0x6f845530",
+        "Classic/1.09b": "0x6f845530",
+        "Classic/1.09d": "0x6f845530",
+        "Classic/1.10": "0x6f845480",
+        "LoD/1.07": "0x6f8a5530",
+        "LoD/1.08": "0x6f8a5530",
+        "LoD/1.09": "0x6f845530",
+        "LoD/1.09b": "0x6f845530",
+        "LoD/1.09d": "0x6f845530",
+        "LoD/1.10": "0x6f845480"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c208009090909090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01613": {
+      "match_id": "func_01613",
+      "addresses": {
+        "Classic/1.04b": "0x6f945550",
+        "Classic/1.04c": "0x6f945550",
+        "Classic/1.05": "0x6f945550"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1789f956f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01614": {
+      "match_id": "func_01614",
+      "addresses": {
+        "Classic/1.04b": "0x6f942f60",
+        "Classic/1.04c": "0x6f942f60",
+        "Classic/1.05": "0x6f942f60"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a14caa956fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01615": {
+      "match_id": "func_01615",
+      "addresses": {
+        "Classic/1.05": "0x6f949a00",
+        "Classic/1.06b": "0x6f949af0",
+        "LoD/1.07": "0x6f8a9cc0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "53568bf2578bf98b",
+        "base_size": 96
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01616": {
+      "match_id": "func_01616",
+      "addresses": {
+        "Classic/1.05": "0x6f94ba14",
+        "Classic/1.06b": "0x6f94bb04"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff685013956f68",
+        "base_size": 297
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01617": {
+      "match_id": "func_01617",
+      "addresses": {
+        "Classic/1.05": "0x6f94c816",
+        "Classic/1.06b": "0x6f94c906"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff68a016956f68",
+        "base_size": 230
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01618": {
+      "match_id": "func_01618",
+      "addresses": {
+        "Classic/1.05": "0x6f941020",
+        "Classic/1.06b": "0x6f941020",
+        "LoD/1.07": "0x6f8a1020"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81eca40000005355",
+        "base_size": 864
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01619": {
+      "match_id": "func_01619",
+      "addresses": {
+        "Classic/1.05": "0x6f94b22e",
+        "Classic/1.06b": "0x6f94b31e",
+        "LoD/1.07": "0x6f8ab4de"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec8b4508ff34",
+        "base_size": 39
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01620": {
+      "match_id": "func_01620",
+      "addresses": {
+        "Classic/1.05": "0x6f945c30",
+        "Classic/1.06b": "0x6f945c30",
+        "LoD/1.07": "0x6f8a5c20"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "5153558954240856",
+        "base_size": 320
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01621": {
+      "match_id": "func_01621",
+      "addresses": {
+        "Classic/1.05": "0x6f949830",
+        "Classic/1.06b": "0x6f949920",
+        "LoD/1.07": "0x6f8a9af0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b41045783f8010f",
+        "base_size": 336
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01622": {
+      "match_id": "func_01622",
+      "addresses": {
+        "Classic/1.05": "0x6f949270",
+        "Classic/1.06b": "0x6f949360",
+        "LoD/1.07": "0x6f8a9530"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b41045783f8010f",
+        "base_size": 448
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01623": {
+      "match_id": "func_01623",
+      "addresses": {
+        "Classic/1.05": "0x6f9467d0",
+        "Classic/1.06b": "0x6f9467d0",
+        "LoD/1.07": "0x6f8a67a0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b41045783f8010f",
+        "base_size": 448
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01624": {
+      "match_id": "func_01624",
+      "addresses": {
+        "Classic/1.05": "0x6f946e40",
+        "Classic/1.06b": "0x6f946e40",
+        "LoD/1.07": "0x6f8a6c00"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "5783c8ff6a006a38",
+        "base_size": 64
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01625": {
+      "match_id": "func_01625",
+      "addresses": {
+        "Classic/1.05": "0x6f947061",
+        "Classic/1.06b": "0x6f9470f1",
+        "LoD/1.07": "0x6f8a6e21"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff6800e00f0053",
+        "base_size": 495
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01626": {
+      "match_id": "func_01626",
+      "addresses": {
+        "Classic/1.05": "0x6f94f861",
+        "Classic/1.06b": "0x6f94f951"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff681817956f68",
+        "base_size": 326
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01627": {
+      "match_id": "func_01627",
+      "addresses": {
+        "Classic/1.05": "0x6f94b068",
+        "Classic/1.06b": "0x6f94b158",
+        "LoD/1.07": "0x6f8ab318"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec538b5d0856",
+        "base_size": 357
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01628": {
+      "match_id": "func_01628",
+      "addresses": {
+        "Classic/1.05": "0x6f946470",
+        "Classic/1.06b": "0x6f949000"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "518b442408895424",
+        "base_size": 288
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01629": {
+      "match_id": "func_01629",
+      "addresses": {
+        "Classic/1.05": "0x6f94c08e",
+        "Classic/1.06b": "0x6f94c17e",
+        "LoD/1.07": "0x6f8ac33e"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec51515333db",
+        "base_size": 153
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01630": {
+      "match_id": "func_01630",
+      "addresses": {
+        "Classic/1.05": "0x6f94c6c0",
+        "Classic/1.06b": "0x6f94c7b0",
+        "LoD/1.07": "0x6f8ac970"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec81eca40100",
+        "base_size": 339
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01631": {
+      "match_id": "func_01631",
+      "addresses": {
+        "Classic/1.05": "0x6f950ac0",
+        "Classic/1.06b": "0x6f950bb0",
+        "LoD/1.07": "0x6f8b0d70"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec5756538b4d",
+        "base_size": 272
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01632": {
+      "match_id": "func_01632",
+      "addresses": {
+        "Classic/1.05": "0x6f946f20",
+        "Classic/1.06b": "0x6f946fb0",
+        "LoD/1.07": "0x6f8a6ce0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "565733ff33f68b86",
+        "base_size": 112
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01633": {
+      "match_id": "func_01633",
+      "addresses": {
+        "Classic/1.05": "0x6f94ef25",
+        "Classic/1.06b": "0x6f94f015",
+        "LoD/1.07": "0x6f8af1d5"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83ec185356",
+        "base_size": 595
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01634": {
+      "match_id": "func_01634",
+      "addresses": {
+        "Classic/1.05": "0x6f94f330",
+        "Classic/1.06b": "0x6f94f420",
+        "LoD/1.07": "0x6f8af5e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83ec0c5383",
+        "base_size": 528
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01635": {
+      "match_id": "func_01635",
+      "addresses": {
+        "Classic/1.05": "0x6f94bb40",
+        "Classic/1.06b": "0x6f94bc30"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff686813956f68",
+        "base_size": 645
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01636": {
+      "match_id": "func_01636",
+      "addresses": {
+        "Classic/1.05": "0x6f941770",
+        "Classic/1.06b": "0x6f941770",
+        "LoD/1.07": "0x6f8a1770"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ec88000000668b",
+        "base_size": 576
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01637": {
+      "match_id": "func_01637",
+      "addresses": {
+        "Classic/1.05": "0x6f94f178",
+        "Classic/1.06b": "0x6f94f268",
+        "LoD/1.07": "0x6f8af428"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec81ec140500",
+        "base_size": 440
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01638": {
+      "match_id": "func_01638",
+      "addresses": {
+        "Classic/1.05": "0x6f94a180",
+        "LoD/1.07": "0x6f8aa4d0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "51535633db578bf1",
+        "base_size": 192
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01639": {
+      "match_id": "func_01639",
+      "addresses": {
+        "Classic/1.05": "0x6f946990",
+        "Classic/1.06b": "0x6f946990"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "dd053812956fd9fe",
+        "base_size": 96
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01640": {
+      "match_id": "func_01640",
+      "addresses": {
+        "Classic/1.05": "0x6f94f9aa",
+        "Classic/1.06b": "0x6f94fa9a"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "6aff682817956f68",
+        "base_size": 806
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01641": {
+      "match_id": "func_01641",
+      "addresses": {
+        "Classic/1.05": "0x6f9419b0",
+        "Classic/1.06b": "0x6f9419b0",
+        "LoD/1.07": "0x6f8a19b0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "53568bf1668b4642",
+        "base_size": 96
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01642": {
+      "match_id": "func_01642",
+      "addresses": {
+        "Classic/1.05": "0x6f94b1cd",
+        "Classic/1.06b": "0x6f94b2bd",
+        "LoD/1.07": "0x6f8ab47d"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec8b45085683",
+        "base_size": 97
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01643": {
+      "match_id": "func_01643",
+      "addresses": {
+        "Classic/1.05": "0x6f9509f0",
+        "Classic/1.06b": "0x6f950ae0",
+        "LoD/1.07": "0x6f8b0ca0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec5756538b75",
+        "base_size": 208
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01644": {
+      "match_id": "func_01644",
+      "addresses": {
+        "Classic/1.05b": "0x6f943900",
+        "Classic/1.06": "0x6f943900"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b878a6956fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01645": {
+      "match_id": "func_01645",
+      "addresses": {
+        "Classic/1.05b": "0x6f943010",
+        "Classic/1.06": "0x6f943010"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d449a956fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01646": {
+      "match_id": "func_01646",
+      "addresses": {
+        "Classic/1.05b": "0x6f946aa0",
+        "Classic/1.06": "0x6f946aa0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d10f2956f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01647": {
+      "match_id": "func_01647",
+      "addresses": {
+        "Classic/1.05b": "0x6f946e30",
+        "Classic/1.06": "0x6f946e30"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c70530b2966f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01648": {
+      "match_id": "func_01648",
+      "addresses": {
+        "Classic/1.05b": "0x6f945550",
+        "Classic/1.06": "0x6f945550"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a148a0956f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01649": {
+      "match_id": "func_01649",
+      "addresses": {
+        "Classic/1.05b": "0x6f942f60",
+        "Classic/1.06": "0x6f942f60"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a11cab956fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01650": {
+      "match_id": "func_01650",
+      "addresses": {
+        "Classic/1.06b": "0x6f943810",
+        "LoD/1.07": "0x6f8a3800"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec7c53558bea56",
+        "base_size": 240
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01651": {
+      "match_id": "func_01651",
+      "addresses": {
+        "Classic/1.06b": "0x6f945010",
+        "LoD/1.07": "0x6f8a5000"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ecac0000005355",
+        "base_size": 864
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01652": {
+      "match_id": "func_01652",
+      "addresses": {
+        "Classic/1.06b": "0x6f950a5a",
+        "LoD/1.07": "0x6f8b0c1a"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83ec0c53bb",
+        "base_size": 134
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01653": {
+      "match_id": "func_01653",
+      "addresses": {
+        "Classic/1.06b": "0x6f94e475",
+        "LoD/1.07": "0x6f8ae635"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec5153568b35",
+        "base_size": 350
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01654": {
+      "match_id": "func_01654",
+      "addresses": {
+        "Classic/1.06b": "0x6f943920",
+        "LoD/1.07": "0x6f8a3910"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83f90b740333c0c3",
+        "base_size": 32
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01655": {
+      "match_id": "func_01655",
+      "addresses": {
+        "Classic/1.06b": "0x6f94db30",
+        "LoD/1.07": "0x6f8adcf0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83ec14a198",
+        "base_size": 954
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01656": {
+      "match_id": "func_01656",
+      "addresses": {
+        "Classic/1.06b": "0x6f943740",
+        "LoD/1.07": "0x6f8a3730"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "83ec7c5355568bd9",
+        "base_size": 208
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01657": {
+      "match_id": "func_01657",
+      "addresses": {
+        "Classic/1.06b": "0x6f943940",
+        "LoD/1.07": "0x6f8a3930"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "81ec80000000538b",
+        "base_size": 176
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01658": {
+      "match_id": "func_01658",
+      "addresses": {
+        "Classic/1.06b": "0x6f94cb52",
+        "LoD/1.07": "0x6f8acd12"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec518b45088d",
+        "base_size": 228
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01659": {
+      "match_id": "func_01659",
+      "addresses": {
+        "Classic/1.06b": "0x6f943380",
+        "LoD/1.07": "0x6f8a3370"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "568bf157b9480000",
+        "base_size": 32
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01660": {
+      "match_id": "func_01660",
+      "addresses": {
+        "Classic/1.06b": "0x6f94e5d3",
+        "LoD/1.07": "0x6f8ae793"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec515153568b",
+        "base_size": 520
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01661": {
+      "match_id": "func_01661",
+      "addresses": {
+        "Classic/1.08": "0x6f8a3000",
+        "LoD/1.08": "0x6f8a3000"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d64aa8b6fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01662": {
+      "match_id": "func_01662",
+      "addresses": {
+        "Classic/1.08": "0x6f8a5540",
+        "LoD/1.08": "0x6f8a5540"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a168b08b6f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01663": {
+      "match_id": "func_01663",
+      "addresses": {
+        "Classic/1.08": "0x6f8a2f50",
+        "LoD/1.08": "0x6f8a2f50"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a13cbb8b6fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01664": {
+      "match_id": "func_01664",
+      "addresses": {
+        "Classic/1.08": "0x6f8a69e0",
+        "LoD/1.08": "0x6f8a69e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d0cc18b6f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01665": {
+      "match_id": "func_01665",
+      "addresses": {
+        "Classic/1.08": "0x6f8a38f0",
+        "LoD/1.08": "0x6f8a38f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b898b68b6fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01666": {
+      "match_id": "func_01666",
+      "addresses": {
+        "Classic/1.08": "0x6f8a6bf0",
+        "LoD/1.08": "0x6f8a6bf0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c70514418c6f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01667": {
+      "match_id": "func_01667",
+      "addresses": {
+        "Classic/1.09": "0x6f843000",
+        "Classic/1.09b": "0x6f843000",
+        "LoD/1.09": "0x6f843000",
+        "LoD/1.09b": "0x6f843000"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d64aa856fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01668": {
+      "match_id": "func_01668",
+      "addresses": {
+        "Classic/1.09": "0x6f845540",
+        "Classic/1.09b": "0x6f845540",
+        "LoD/1.09": "0x6f845540",
+        "LoD/1.09b": "0x6f845540"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a168b0856f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01669": {
+      "match_id": "func_01669",
+      "addresses": {
+        "Classic/1.09": "0x6f842f50",
+        "Classic/1.09b": "0x6f842f50",
+        "LoD/1.09": "0x6f842f50",
+        "LoD/1.09b": "0x6f842f50"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a13cbb856fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01670": {
+      "match_id": "func_01670",
+      "addresses": {
+        "Classic/1.09": "0x6f8469e0",
+        "Classic/1.09b": "0x6f8469e0",
+        "LoD/1.09": "0x6f8469e0",
+        "LoD/1.09b": "0x6f8469e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d0cc1856f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01671": {
+      "match_id": "func_01671",
+      "addresses": {
+        "Classic/1.09": "0x6f8438f0",
+        "Classic/1.09b": "0x6f8438f0",
+        "LoD/1.09": "0x6f8438f0",
+        "LoD/1.09b": "0x6f8438f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b898b6856fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01672": {
+      "match_id": "func_01672",
+      "addresses": {
+        "Classic/1.09": "0x6f846bf0",
+        "Classic/1.09b": "0x6f846bf0",
+        "LoD/1.09": "0x6f846bf0",
+        "LoD/1.09b": "0x6f846bf0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c7051441866f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01673": {
+      "match_id": "func_01673",
+      "addresses": {
+        "Classic/1.09d": "0x6f843000",
+        "LoD/1.09d": "0x6f843000"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d44aa856fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01674": {
+      "match_id": "func_01674",
+      "addresses": {
+        "Classic/1.09d": "0x6f845540",
+        "LoD/1.09d": "0x6f845540"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a148b0856f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01675": {
+      "match_id": "func_01675",
+      "addresses": {
+        "Classic/1.09d": "0x6f842f50",
+        "LoD/1.09d": "0x6f842f50"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a11cbb856fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01676": {
+      "match_id": "func_01676",
+      "addresses": {
+        "Classic/1.09d": "0x6f8469e0",
+        "LoD/1.09d": "0x6f8469e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890decc0856f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01677": {
+      "match_id": "func_01677",
+      "addresses": {
+        "Classic/1.09d": "0x6f8438f0",
+        "LoD/1.09d": "0x6f8438f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b878b6856fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01678": {
+      "match_id": "func_01678",
+      "addresses": {
+        "Classic/1.09d": "0x6f846bf0",
+        "LoD/1.09d": "0x6f846bf0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c705f440866f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01679": {
+      "match_id": "func_01679",
+      "addresses": {
+        "Classic/1.10": "0x6f846b00",
+        "LoD/1.10": "0x6f846b00"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c705a02d866f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01680": {
+      "match_id": "func_01680",
+      "addresses": {
+        "Classic/1.10": "0x6f845490",
+        "LoD/1.10": "0x6f845490"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1e8a0856f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01681": {
+      "match_id": "func_01681",
+      "addresses": {
+        "Classic/1.10": "0x6f842f90",
+        "LoD/1.10": "0x6f842f90"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890de49a856fc390",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01682": {
+      "match_id": "func_01682",
+      "addresses": {
+        "Classic/1.10": "0x6f843850",
+        "LoD/1.10": "0x6f843850"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b820a7856fc39090",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01683": {
+      "match_id": "func_01683",
+      "addresses": {
+        "Classic/1.10": "0x6f8468f0",
+        "LoD/1.10": "0x6f8468f0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d98ad856f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01684": {
+      "match_id": "func_01684",
+      "addresses": {
+        "Classic/1.11": "0x6f888410",
+        "LoD/1.11": "0x6f888410"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a168318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01685": {
+      "match_id": "func_01685",
+      "addresses": {
+        "Classic/1.11": "0x6f88d310",
+        "Classic/1.11b": "0x6f88f150",
+        "Classic/1.12a": "0x6f88c640",
+        "Classic/1.13c": "0x6f888490",
+        "Classic/1.13d": "0x6f888f10",
+        "LoD/1.11": "0x6f88d310",
+        "LoD/1.11b": "0x6f88f150",
+        "LoD/1.12a": "0x6f88c640",
+        "LoD/1.13c": "0x6f888490",
+        "LoD/1.13d": "0x6f888f10"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b500885d2750789",
+        "base_size": 32
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01686": {
+      "match_id": "func_01686",
+      "addresses": {
+        "Classic/1.11": "0x6f885f40",
+        "Classic/1.11b": "0x6f88f0d0",
+        "Classic/1.12a": "0x6f88c5c0",
+        "Classic/1.13c": "0x6f888410",
+        "Classic/1.13d": "0x6f888e90",
+        "LoD/1.11": "0x6f885f40",
+        "LoD/1.11b": "0x6f88f0d0",
+        "LoD/1.12a": "0x6f88c5c0",
+        "LoD/1.13c": "0x6f888410",
+        "LoD/1.13d": "0x6f888e90"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b42105633f63bc6",
+        "base_size": 48
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01687": {
+      "match_id": "func_01687",
+      "addresses": {
+        "Classic/1.11": "0x6f889850",
+        "LoD/1.11": "0x6f889850"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1842a8b6f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01688": {
+      "match_id": "func_01688",
+      "addresses": {
+        "Classic/1.11": "0x6f886550",
+        "Classic/1.12a": "0x6f8876f0",
+        "Classic/1.13c": "0x6f88fd40",
+        "LoD/1.11": "0x6f886550",
+        "LoD/1.12a": "0x6f8876f0",
+        "LoD/1.13c": "0x6f88fd40"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c20800cccccccccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01689": {
+      "match_id": "func_01689",
+      "addresses": {
+        "Classic/1.11": "0x6f888d50",
+        "Classic/1.11b": "0x6f889340",
+        "Classic/1.12a": "0x6f88f8e0",
+        "Classic/1.13c": "0x6f88b5b0",
+        "Classic/1.13d": "0x6f88bca0",
+        "LoD/1.11": "0x6f888d50",
+        "LoD/1.11b": "0x6f889340",
+        "LoD/1.12a": "0x6f88f8e0",
+        "LoD/1.13c": "0x6f88b5b0",
+        "LoD/1.13d": "0x6f88bca0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "e95bffffffcccccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01690": {
+      "match_id": "func_01690",
+      "addresses": {
+        "Classic/1.11": "0x6f88a270",
+        "LoD/1.11": "0x6f88a270"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890dd09f8a6f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01691": {
+      "match_id": "func_01691",
+      "addresses": {
+        "Classic/1.11": "0x6f885f70",
+        "Classic/1.11b": "0x6f88f100",
+        "Classic/1.12a": "0x6f887110",
+        "Classic/1.13c": "0x6f888440",
+        "Classic/1.13d": "0x6f888ec0",
+        "LoD/1.11": "0x6f885f70",
+        "LoD/1.11b": "0x6f88f100",
+        "LoD/1.12a": "0x6f887110",
+        "LoD/1.13c": "0x6f888440",
+        "LoD/1.13d": "0x6f888ec0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b42085633f63bc6",
+        "base_size": 48
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01692": {
+      "match_id": "func_01692",
+      "addresses": {
+        "Classic/1.11": "0x6f886b70",
+        "LoD/1.11": "0x6f886b70"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a3a8318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01693": {
+      "match_id": "func_01693",
+      "addresses": {
+        "Classic/1.11": "0x6f886b80",
+        "LoD/1.11": "0x6f886b80"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a1a8318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01694": {
+      "match_id": "func_01694",
+      "addresses": {
+        "Classic/1.11": "0x6f891889",
+        "Classic/1.11b": "0x6f891889",
+        "Classic/1.13d": "0x6f891889",
+        "LoD/1.11": "0x6f891889",
+        "LoD/1.11b": "0x6f891889",
+        "LoD/1.13d": "0x6f891889"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "558bec83ec14a1c0",
+        "base_size": 61
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01695": {
+      "match_id": "func_01695",
+      "addresses": {
+        "Classic/1.11": "0x6f885fa0",
+        "Classic/1.11b": "0x6f88f130",
+        "Classic/1.12a": "0x6f88c620",
+        "Classic/1.13c": "0x6f888470",
+        "Classic/1.13d": "0x6f888ef0",
+        "LoD/1.11": "0x6f885fa0",
+        "LoD/1.11b": "0x6f88f130",
+        "LoD/1.12a": "0x6f88c620",
+        "LoD/1.13c": "0x6f888470",
+        "LoD/1.13d": "0x6f888ef0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b501085d2750789",
+        "base_size": 32
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01696": {
+      "match_id": "func_01696",
+      "addresses": {
+        "Classic/1.11": "0x6f88a0c0",
+        "LoD/1.11": "0x6f88a0c0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c705dc1f8b6f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01697": {
+      "match_id": "func_01697",
+      "addresses": {
+        "Classic/1.11": "0x6f887bd0",
+        "Classic/1.11b": "0x6f8881c0",
+        "Classic/1.12a": "0x6f88e990",
+        "Classic/1.13c": "0x6f88a660",
+        "Classic/1.13d": "0x6f88ab20",
+        "LoD/1.11": "0x6f887bd0",
+        "LoD/1.11b": "0x6f8881c0",
+        "LoD/1.12a": "0x6f88e990",
+        "LoD/1.13c": "0x6f88a660",
+        "LoD/1.13d": "0x6f88ab20"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "33c0c3cccccccccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01698": {
+      "match_id": "func_01698",
+      "addresses": {
+        "Classic/1.11": "0x6f8880e0",
+        "LoD/1.11": "0x6f8880e0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b0485882a8b6fc3",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01699": {
+      "match_id": "func_01699",
+      "addresses": {
+        "Classic/1.11": "0x6f887be0",
+        "LoD/1.11": "0x6f887be0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b8882e8b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01700": {
+      "match_id": "func_01700",
+      "addresses": {
+        "Classic/1.11": "0x6f88adf0",
+        "Classic/1.11b": "0x6f88c2d0",
+        "Classic/1.12a": "0x6f889c30",
+        "Classic/1.13c": "0x6f886530",
+        "Classic/1.13d": "0x6f886fb0",
+        "LoD/1.11": "0x6f88adf0",
+        "LoD/1.11b": "0x6f88c2d0",
+        "LoD/1.12a": "0x6f889c30",
+        "LoD/1.13c": "0x6f886530",
+        "LoD/1.13d": "0x6f886fb0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c3cccccccccccccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01701": {
+      "match_id": "func_01701",
+      "addresses": {
+        "Classic/1.11b": "0x6f888a00",
+        "LoD/1.11b": "0x6f888a00"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a150348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01702": {
+      "match_id": "func_01702",
+      "addresses": {
+        "Classic/1.11b": "0x6f88a810",
+        "LoD/1.11b": "0x6f88a810"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d408d8a6f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01703": {
+      "match_id": "func_01703",
+      "addresses": {
+        "Classic/1.11b": "0x6f886640",
+        "LoD/1.11b": "0x6f886640"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a174288b6f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01704": {
+      "match_id": "func_01704",
+      "addresses": {
+        "Classic/1.11b": "0x6f88a660",
+        "LoD/1.11b": "0x6f88a660"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c7054c0d8b6f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01705": {
+      "match_id": "func_01705",
+      "addresses": {
+        "Classic/1.11b": "0x6f887160",
+        "LoD/1.11b": "0x6f887160"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a390348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01706": {
+      "match_id": "func_01706",
+      "addresses": {
+        "Classic/1.11b": "0x6f887170",
+        "LoD/1.11b": "0x6f887170"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a190348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01707": {
+      "match_id": "func_01707",
+      "addresses": {
+        "Classic/1.11b": "0x6f8886d0",
+        "LoD/1.11b": "0x6f8886d0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b048578288b6fc3",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01708": {
+      "match_id": "func_01708",
+      "addresses": {
+        "Classic/1.11b": "0x6f8881d0",
+        "LoD/1.11b": "0x6f8881d0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b8782c8b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01709": {
+      "match_id": "func_01709",
+      "addresses": {
+        "Classic/1.12a": "0x6f88ce10",
+        "LoD/1.12a": "0x6f88ce10"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a18492896f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01710": {
+      "match_id": "func_01710",
+      "addresses": {
+        "Classic/1.12a": "0x6f88d930",
+        "LoD/1.12a": "0x6f88d930"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a340318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01711": {
+      "match_id": "func_01711",
+      "addresses": {
+        "Classic/1.12a": "0x6f88d940",
+        "LoD/1.12a": "0x6f88d940"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a140318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01712": {
+      "match_id": "func_01712",
+      "addresses": {
+        "Classic/1.12a": "0x6f88cd80",
+        "LoD/1.12a": "0x6f88cd80"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890dfc96896f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01713": {
+      "match_id": "func_01713",
+      "addresses": {
+        "Classic/1.12a": "0x6f88eea0",
+        "LoD/1.12a": "0x6f88eea0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b04858892896fc3",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01714": {
+      "match_id": "func_01714",
+      "addresses": {
+        "Classic/1.12a": "0x6f88e9a0",
+        "LoD/1.12a": "0x6f88e9a0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b88896896fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01715": {
+      "match_id": "func_01715",
+      "addresses": {
+        "Classic/1.12a": "0x6f88f1d0",
+        "LoD/1.12a": "0x6f88f1d0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a100318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01716": {
+      "match_id": "func_01716",
+      "addresses": {
+        "Classic/1.13c": "0x6f889600",
+        "LoD/1.13c": "0x6f889600"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a378348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01717": {
+      "match_id": "func_01717",
+      "addresses": {
+        "Classic/1.13c": "0x6f889610",
+        "LoD/1.13c": "0x6f889610"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a178348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01718": {
+      "match_id": "func_01718",
+      "addresses": {
+        "Classic/1.13c": "0x6f886160",
+        "LoD/1.13c": "0x6f886160"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890de0b08a6f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01719": {
+      "match_id": "func_01719",
+      "addresses": {
+        "Classic/1.13c": "0x6f88a670",
+        "LoD/1.13c": "0x6f88a670"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b868af896fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01720": {
+      "match_id": "func_01720",
+      "addresses": {
+        "Classic/1.13c": "0x6f88ab70",
+        "LoD/1.13c": "0x6f88ab70"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b048568ab896fc3",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01721": {
+      "match_id": "func_01721",
+      "addresses": {
+        "Classic/1.13c": "0x6f88aea0",
+        "LoD/1.13c": "0x6f88aea0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a138348b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01722": {
+      "match_id": "func_01722",
+      "addresses": {
+        "Classic/1.13c": "0x6f885fb0",
+        "LoD/1.13c": "0x6f885fb0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c705ec308b6f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01723": {
+      "match_id": "func_01723",
+      "addresses": {
+        "Classic/1.13c": "0x6f88cdb0",
+        "LoD/1.13c": "0x6f88cdb0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a164ab896f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01724": {
+      "match_id": "func_01724",
+      "addresses": {
+        "Classic/1.13d": "0x6f88b030",
+        "LoD/1.13d": "0x6f88b030"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "8b048590298b6fc3",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01725": {
+      "match_id": "func_01725",
+      "addresses": {
+        "Classic/1.13d": "0x6f88ab30",
+        "LoD/1.13d": "0x6f88ab30"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "b8902d8b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01726": {
+      "match_id": "func_01726",
+      "addresses": {
+        "Classic/1.13d": "0x6f88e350",
+        "LoD/1.13d": "0x6f88e350"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a18c298b6f8b4014",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01727": {
+      "match_id": "func_01727",
+      "addresses": {
+        "Classic/1.13d": "0x6f88b360",
+        "LoD/1.13d": "0x6f88b360"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a134318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01728": {
+      "match_id": "func_01728",
+      "addresses": {
+        "Classic/1.13d": "0x6f88ed70",
+        "LoD/1.13d": "0x6f88ed70"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "890d708c896f8915",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01729": {
+      "match_id": "func_01729",
+      "addresses": {
+        "Classic/1.13d": "0x6f889ac0",
+        "LoD/1.13d": "0x6f889ac0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a374318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01730": {
+      "match_id": "func_01730",
+      "addresses": {
+        "Classic/1.13d": "0x6f88ebc0",
+        "LoD/1.13d": "0x6f88ebc0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "c7057c0c8a6f0001",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01731": {
+      "match_id": "func_01731",
+      "addresses": {
+        "Classic/1.13d": "0x6f889ad0",
+        "LoD/1.13d": "0x6f889ad0"
+      },
+      "confidence": 0.75,
+      "match_tier": 3,
+      "match_method": "prologue_size",
+      "evidence": {
+        "prologue": "a174318b6fc3cccc",
+        "base_size": 16
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01732": {
+      "match_id": "func_01732",
+      "addresses": {
+        "Classic/1.05": "0x6f947970",
+        "Classic/1.06b": "0x6f947a40"
+      },
+      "confidence": 0.7,
+      "match_tier": 4,
+      "match_method": "call_graph_signature",
+      "evidence": {
+        "shared_callees": 2
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01733": {
+      "match_id": "func_01733",
+      "addresses": {
+        "Classic/1.05": "0x6f94edeb",
+        "LoD/1.07": "0x6f8aaf30"
+      },
+      "confidence": 0.7,
+      "match_tier": 4,
+      "match_method": "call_graph_signature",
+      "evidence": {
+        "shared_callees": 2
+      },
+      "ghidra_name": null,
+      "export_name": null
+    },
+    "func_01734": {
+      "match_id": "func_01734",
+      "addresses": {
+        "Classic/1.06b": "0x6f946e80",
+        "LoD/1.07": "0x6f8a6c40"
+      },
+      "confidence": 0.7,
+      "match_tier": 4,
+      "match_method": "call_graph_signature",
+      "evidence": {
+        "shared_callees": 2
+      },
+      "ghidra_name": null,
+      "export_name": null
+    }
+  },
+  "unmatched": {
+    "Classic/1.00": [
+      "0x10008a10",
+      "0x10007a20",
+      "0x100014e0",
+      "0x10008f40",
+      "0x10002190"
+    ],
+    "Classic/1.01": [
+      "0x100014e0"
+    ],
+    "Classic/1.02": [
+      "0x100014e0"
+    ],
+    "Classic/1.03": [
+      "0x10009820",
+      "0x10009a90",
+      "0x10008ea0",
+      "0x100014e0",
+      "0x10003950",
+      "0x10008f80",
+      "0x10002190",
+      "0x100099a0"
+    ],
+    "Classic/1.04b": [
+      "0x6f943910"
+    ],
+    "Classic/1.04c": [
+      "0x6f943910"
+    ],
+    "Classic/1.05": [
+      "0x6f941e00",
+      "0x6f941a10",
+      "0x6f943910",
+      "0x6f943020",
+      "0x6f948e20",
+      "0x6f94aa20",
+      "0x6f941b20",
+      "0x6f949030",
+      "0x6f94a240",
+      "0x6f94da40",
+      "0x6f942b40",
+      "0x6f94cb46",
+      "0x6f949550",
+      "0x6f949a60",
+      "0x6f942f70",
+      "0x6f945d70",
+      "0x6f950573",
+      "0x6f946e80",
+      "0x6f941380",
+      "0x6f942b80",
+      "0x6f947780",
+      "0x6f949980",
+      "0x6f946590",
+      "0x6f946f90",
+      "0x6f941ea0",
+      "0x6f9485a0",
+      "0x6f9499a0",
+      "0x6f945eb0",
+      "0x6f9478b0",
+      "0x6f9430d0",
+      "0x6f94b6e5",
+      "0x6f946ef0",
+      "0x6f9469f0"
+    ],
+    "Classic/1.05b": [
+      "0x6f943910"
+    ],
+    "Classic/1.06": [
+      "0x6f943910"
+    ],
+    "Classic/1.06b": [
+      "0x6f941e00",
+      "0x6f943400",
+      "0x6f941a10",
+      "0x6f943010",
+      "0x6f946a10",
+      "0x6f943020",
+      "0x6f947020",
+      "0x6f946e30",
+      "0x6f94cc36",
+      "0x6f948c40",
+      "0x6f949640",
+      "0x6f945e50",
+      "0x6f946c50",
+      "0x6f947850",
+      "0x6f950663",
+      "0x6f943270",
+      "0x6f946470",
+      "0x6f949a70",
+      "0x6f946a80",
+      "0x6f948690",
+      "0x6f949a90",
+      "0x6f941ea0",
+      "0x6f946aa0",
+      "0x6f9430b0",
+      "0x6f945eb0",
+      "0x6f946ab0",
+      "0x6f9436c0",
+      "0x6f9430d0",
+      "0x6f942ce0",
+      "0x6f9460e0",
+      "0x6f9472f0",
+      "0x6f943900",
+      "0x6f943510",
+      "0x6f943910",
+      "0x6f948f10",
+      "0x6f941b20",
+      "0x6f949120",
+      "0x6f949520",
+      "0x6f941f40",
+      "0x6f942b40",
+      "0x6f945550",
+      "0x6f949b50",
+      "0x6f942f60",
+      "0x6f945560",
+      "0x6f942f70",
+      "0x6f945370",
+      "0x6f945d70",
+      "0x6f941380",
+      "0x6f942b80",
+      "0x6f945780",
+      "0x6f947980",
+      "0x6f946f80",
+      "0x6f946590",
+      "0x6f9435b0",
+      "0x6f9413f0",
+      "0x6f9469f0"
+    ],
+    "Classic/1.08": [
+      "0x6f8a3900"
+    ],
+    "Classic/1.09": [
+      "0x6f843900"
+    ],
+    "Classic/1.09b": [
+      "0x6f843900"
+    ],
+    "Classic/1.09d": [
+      "0x6f843900"
+    ],
+    "Classic/1.10": [
+      "0x6f84b4be",
+      "0x6f843860"
+    ],
+    "Classic/1.11": [],
+    "Classic/1.11b": [],
+    "Classic/1.12a": [],
+    "Classic/1.13c": [],
+    "Classic/1.13d": [],
+    "LoD/1.07": [
+      "0x6f8a1e00",
+      "0x6f8a3000",
+      "0x6f8a1a10",
+      "0x6f8a3010",
+      "0x6f8b0823",
+      "0x6f8aa030",
+      "0x6f8a5e40",
+      "0x6f8a9c40",
+      "0x6f8afc5a",
+      "0x6f8a3260",
+      "0x6f8a9c60",
+      "0x6f8a8490",
+      "0x6f8af09b",
+      "0x6f8a1ea0",
+      "0x6f8a30a0",
+      "0x6f8a5ea0",
+      "0x6f8a8aa0",
+      "0x6f8a36b0",
+      "0x6f8a6cb0",
+      "0x6f8a30c0",
+      "0x6f8a60c0",
+      "0x6f8abcc4",
+      "0x6f8acac6",
+      "0x6f8a2cd0",
+      "0x6f8a6ad0",
+      "0x6f8ac6ea",
+      "0x6f8a38f0",
+      "0x6f8a82f0",
+      "0x6f8a96f0",
+      "0x6f8a3500",
+      "0x6f8a3900",
+      "0x6f8ab505",
+      "0x6f8a2b10",
+      "0x6f8afb11",
+      "0x6f8a1b20",
+      "0x6f8a7120",
+      "0x6f8a9d20",
+      "0x6f8aad20",
+      "0x6f8a2b30",
+      "0x6f8a1f40",
+      "0x6f8a5540",
+      "0x6f8a7540",
+      "0x6f8a2f50",
+      "0x6f8a5550",
+      "0x6f8a6d50",
+      "0x6f8a9950",
+      "0x6f8a7d60",
+      "0x6f8a2f60",
+      "0x6f8a5360",
+      "0x6f8a5d60",
+      "0x6f8a6560",
+      "0x6f8a6960",
+      "0x6f8a2b70",
+      "0x6f8a5770",
+      "0x6f8b0f70",
+      "0x6f8a8d90",
+      "0x6f8aa590",
+      "0x6f8ab995",
+      "0x6f8a35a0",
+      "0x6f8a77b0",
+      "0x6f8a29c0",
+      "0x6f8a69c0",
+      "0x6f8a5dd0",
+      "0x6f8a91d0",
+      "0x6f8a69e0",
+      "0x6f8aa5e2",
+      "0x6f8a13f0",
+      "0x6f8a33f0",
+      "0x6f8a69f0",
+      "0x6f8a6bf0",
+      "0x6f8abdf0",
+      "0x6f8acdf6"
+    ],
+    "LoD/1.08": [
+      "0x6f8a3900"
+    ],
+    "LoD/1.09": [
+      "0x6f843900"
+    ],
+    "LoD/1.09b": [
+      "0x6f843900"
+    ],
+    "LoD/1.09d": [
+      "0x6f843900"
+    ],
+    "LoD/1.10": [
+      "0x6f84b4be",
+      "0x6f843860"
+    ],
+    "LoD/1.11": [],
+    "LoD/1.11b": [],
+    "LoD/1.12a": [],
+    "LoD/1.13c": [],
+    "LoD/1.13d": []
+  },
+  "next_match_id": 1735
+}
