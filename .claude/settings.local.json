@@ -35,7 +35,9 @@
       "mcp__ghidra__check_connection",
       "mcp__ghidra__analyze_function_complete",
       "mcp__ghidra__get_plate_comment",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
