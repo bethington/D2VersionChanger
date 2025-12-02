@@ -1,225 +1,250 @@
 #!/usr/bin/env python3
 """
-Analyze unmatched functions to understand why they didn't match.
-
-This script helps identify:
-1. Functions unique to specific version ranges
-2. Image base transition issues (Classic 1.03 -> 1.04)
-3. Functions that changed significantly between versions
+Analyze unmatched functions - functions that only exist in one version.
+Helps identify if matching can be improved or if these are legitimate unique functions.
 """
 
 import json
-import argparse
 from pathlib import Path
 from collections import defaultdict
-from typing import Dict, List, Set, Tuple
 
-
-def load_state(dll_name: str, cache_dir: Path) -> dict:
-    """Load the matching state file."""
-    state_path = cache_dir / "matches" / f"{dll_name}_state.json"
-    with open(state_path, 'r', encoding='utf-8') as f:
+def load_registry():
+    with open('reports/function_registry_v2.json') as f:
         return json.load(f)
 
-
-def load_analysis(version: str, dll_name: str, cache_dir: Path) -> dict:
-    """Load analysis data for a specific version."""
-    safe_version = version.replace('/', '_').replace('\\', '_')
-    analysis_path = cache_dir / "analysis" / f"{safe_version}_{dll_name}.json"
-    if analysis_path.exists():
-        with open(analysis_path, 'r', encoding='utf-8') as f:
+def load_raw_exports(game_type, version, dll):
+    """Load the raw Ghidra export for a specific version."""
+    path = Path(f'data/function_index/{game_type}/{version}/{dll}.json')
+    if path.exists():
+        with open(path) as f:
             return json.load(f)
     return None
 
+def analyze_unmatched():
+    reg = load_registry()
+    
+    # Find single-version functions
+    single_version = []
+    for dll, funcs in reg['dlls'].items():
+        for func in funcs:
+            if func['version_count'] == 1:
+                ver = list(func.get('versions', {}).keys())[0]
+                single_version.append({
+                    'dll': dll,
+                    'canonical_id': func['canonical_id'],
+                    'index': func.get('index', ''),
+                    'method': func.get('index_method', ''),
+                    'name': func.get('name', ''),
+                    'version': ver,
+                    'address': func['versions'][ver].get('address', ''),
+                    'rva': func['versions'][ver].get('rva', ''),
+                    'size': func['versions'][ver].get('size', 0),
+                })
+    
+    print(f"Total single-version functions: {len(single_version)}")
+    print()
+    
+    # Group by DLL and version
+    by_dll = defaultdict(lambda: {'LoD/1.07': [], 'LoD/1.08': []})
+    for f in single_version:
+        by_dll[f['dll']][f['version']].append(f)
+    
+    print("=" * 70)
+    print("SUMMARY BY DLL")
+    print("=" * 70)
+    print(f"{'DLL':<22} {'1.07-only':>10} {'1.08-only':>10}")
+    print("-" * 45)
+    
+    for dll in sorted(by_dll.keys()):
+        c107 = len(by_dll[dll]['LoD/1.07'])
+        c108 = len(by_dll[dll]['LoD/1.08'])
+        if c107 > 0 or c108 > 0:
+            print(f"{dll:<22} {c107:>10} {c108:>10}")
+    
+    print()
+    
+    # Analyze specific DLLs with many unmatched
+    problem_dlls = ['D2Common.dll', 'D2Client.dll', 'D2Game.dll', 'Storm.dll', 'Fog.dll']
+    
+    for dll in problem_dlls:
+        if dll not in by_dll:
+            continue
+        
+        v107_only = by_dll[dll]['LoD/1.07']
+        v108_only = by_dll[dll]['LoD/1.08']
+        
+        if not v107_only and not v108_only:
+            continue
+            
+        print("=" * 70)
+        print(f"ANALYSIS: {dll}")
+        print("=" * 70)
+        
+        # Load raw data for deeper analysis
+        raw_107 = load_raw_exports('LoD', '1.07', dll)
+        raw_108 = load_raw_exports('LoD', '1.08', dll)
+        
+        # Analyze 1.07-only functions
+        if v107_only:
+            print(f"\n1.07-only functions ({len(v107_only)}):")
+            print("-" * 50)
+            
+            # Group by method
+            by_method = defaultdict(list)
+            for f in v107_only:
+                by_method[f['method']].append(f)
+            
+            for method, funcs in sorted(by_method.items()):
+                print(f"  {method}: {len(funcs)} functions")
+            
+            # Sample some functions
+            print("\n  Sample 1.07-only functions:")
+            for f in v107_only[:8]:
+                name = f['name'] or f['canonical_id']
+                print(f"    {f['rva']}: {name[:40]} (method={f['method']}, size={f['size']})")
+                
+                # Check if there's a similar function in 1.08 by size
+                if raw_108:
+                    similar = [fn for fn in raw_108['functions'] 
+                               if fn.get('size') == f['size'] and f['size'] and f['size'] > 20]
+                    if similar and len(similar) < 5:
+                        print(f"      Possible 1.08 matches by size ({f['size']} bytes): {len(similar)}")
+                        for s in similar[:2]:
+                            s_name = s.get('name', s.get('rva', ''))
+                            print(f"        {s.get('rva')}: {s_name[:30]}")
+        
+        # Analyze 1.08-only functions
+        if v108_only:
+            print(f"\n1.08-only functions ({len(v108_only)}):")
+            print("-" * 50)
+            
+            by_method = defaultdict(list)
+            for f in v108_only:
+                by_method[f['method']].append(f)
+            
+            for method, funcs in sorted(by_method.items()):
+                print(f"  {method}: {len(funcs)} functions")
+            
+            print("\n  Sample 1.08-only functions:")
+            for f in v108_only[:8]:
+                name = f['name'] or f['canonical_id']
+                print(f"    {f['rva']}: {name[:40]} (method={f['method']}, size={f['size']})")
+        
+        print()
 
-def categorize_unmatched(state: dict, cache_dir: Path, dll_name: str) -> dict:
-    """Categorize unmatched functions by likely cause."""
-
-    results = {
-        "version_groups": {},  # Group versions with similar unmatched counts
-        "version_unique": {},  # Functions that only exist in a version range
-        "potential_matches": [],  # Unmatched functions that might match with relaxed criteria
-        "statistics": {},
-    }
-
-    # Group versions by unmatched count pattern
-    unmatched = state['unmatched']
-    matched = state['matched']
-
-    # Calculate matched functions per version
-    version_matched = defaultdict(set)
-    for match_id, match_data in matched.items():
-        for version in match_data['addresses'].keys():
-            version_matched[version].add(match_id)
-
-    # Analyze version groups
-    early_classic = ["Classic/1.00", "Classic/1.01", "Classic/1.02", "Classic/1.03"]
-    mid_classic = ["Classic/1.04b", "Classic/1.04c", "Classic/1.05", "Classic/1.05b"]
-    late_classic_106 = ["Classic/1.06", "Classic/1.06b"]
-    classic_108_plus = [v for v in unmatched.keys() if v.startswith("Classic/") and v not in early_classic + mid_classic + late_classic_106]
-    lod_107 = ["LoD/1.07"]
-    lod_108_plus = [v for v in unmatched.keys() if v.startswith("LoD/") and v != "LoD/1.07"]
-
-    version_groups = {
-        "Early Classic (1.00-1.03)": early_classic,
-        "Mid Classic (1.04-1.05b)": mid_classic,
-        "Classic 1.06.x": late_classic_106,
-        "Classic 1.08+": classic_108_plus,
-        "LoD 1.07": lod_107,
-        "LoD 1.08+": lod_108_plus,
-    }
-
-    # Stats per group
-    for group_name, versions in version_groups.items():
-        group_unmatched = sum(len(unmatched.get(v, [])) for v in versions)
-        group_matched = sum(len(version_matched.get(v, set())) for v in versions)
-        versions_present = [v for v in versions if v in unmatched]
-
-        results["version_groups"][group_name] = {
-            "versions": versions_present,
-            "total_unmatched": group_unmatched,
-            "avg_unmatched": group_unmatched // max(len(versions_present), 1) if versions_present else 0,
-            "total_matched": group_matched,
-            "avg_matched": group_matched // max(len(versions_present), 1) if versions_present else 0,
-        }
-
-    # Find functions unique to version groups
-    # Early versions have many functions that don't exist in later versions
-    early_only = set()
-    for version in early_classic:
-        if version in unmatched:
-            for addr in unmatched[version]:
-                # Check if this function address pattern exists only in early versions
-                found_in_later = False
-                for match_id, match_data in matched.items():
-                    if version in match_data['addresses'] and match_data['addresses'][version] == addr:
-                        # This is actually matched
-                        found_in_later = True
+def check_potential_matches():
+    """Check if any unmatched functions could potentially match via alternate indexes."""
+    print("\n" + "=" * 70)
+    print("CHECKING FOR ACTUAL MERGE FAILURES")
+    print("=" * 70)
+    
+    # Load the merged registry
+    registry_path = Path('reports/function_registry_v2.json')
+    if not registry_path.exists():
+        print("Error: Registry not found")
+        return
+    
+    with open(registry_path) as f:
+        registry = json.load(f)
+    
+    functions = registry.get('functions', {})
+    
+    # Build reverse lookup: dll/version/rva -> canonical_id
+    addr_to_canonical = {}
+    for cid, func in functions.items():
+        dll = func.get('dll', '')
+        for ver, vdata in func.get('versions', {}).items():
+            rva = vdata.get('rva')
+            if rva:
+                key = f"{dll}:{ver}:{rva}"
+                addr_to_canonical[key] = cid
+    
+    # Load raw exports
+    raw_107 = {}
+    raw_108 = {}
+    
+    for dll_path in Path('data/function_index/LoD/1.07').glob('*.json'):
+        dll = dll_path.stem
+        with open(dll_path) as f:
+            raw_107[dll] = json.load(f)
+    
+    for dll_path in Path('data/function_index/LoD/1.08').glob('*.json'):
+        dll = dll_path.stem
+        with open(dll_path) as f:
+            raw_108[dll] = json.load(f)
+    
+    # Check each DLL for functions that share indexes but ended up in different canonical entries
+    total_failures = 0
+    failure_details = []
+    
+    for dll in sorted(raw_107.keys()):
+        if dll not in raw_108:
+            continue
+        
+        # Build all indexes for 1.08
+        idx_108 = {}  # index -> (rva, func)
+        for func in raw_108[dll]['functions']:
+            for method, hash_val in func.get('indexes', {}).items():
+                if hash_val and method != 'EXP':
+                    key = f"{method}:{hash_val}"
+                    if key not in idx_108:
+                        idx_108[key] = []
+                    idx_108[key].append((func.get('rva'), func))
+        
+        dll_failures = 0
+        
+        for func_107 in raw_107[dll]['functions']:
+            rva_107 = func_107.get('rva')
+            indexes_107 = func_107.get('indexes', {})
+            
+            # Get this function's canonical ID
+            cid_107 = addr_to_canonical.get(f"{dll}:LoD/1.07:{rva_107}")
+            if not cid_107:
+                continue
+            
+            for method, hash_val in indexes_107.items():
+                if not hash_val or method == 'EXP':
+                    continue
+                
+                key = f"{method}:{hash_val}"
+                if key not in idx_108:
+                    continue
+                
+                for rva_108, func_108 in idx_108[key]:
+                    cid_108 = addr_to_canonical.get(f"{dll}:LoD/1.08:{rva_108}")
+                    if not cid_108:
+                        continue
+                    
+                    if cid_107 != cid_108:
+                        # Different canonical IDs but share an index - merge failure!
+                        dll_failures += 1
+                        if dll_failures <= 5:  # Limit details
+                            failure_details.append({
+                                'dll': dll,
+                                'method': method,
+                                'rva_107': rva_107,
+                                'rva_108': rva_108,
+                                'cid_107': cid_107,
+                                'cid_108': cid_108,
+                                'primary_107': func_107.get('index_method'),
+                                'primary_108': func_108.get('index_method'),
+                            })
                         break
-                if not found_in_later:
-                    early_only.add((version, addr))
+        
+        if dll_failures:
+            print(f"\n{dll}: {dll_failures} pairs share an index but have different canonical IDs")
+            total_failures += dll_failures
+    
+    print(f"\n" + "-" * 70)
+    print(f"Total potential merge failures: {total_failures}")
+    
+    if failure_details:
+        print(f"\nSample failures (showing first {len(failure_details)}):")
+        for f in failure_details:
+            print(f"  {f['dll']}: {f['rva_107']} (cid={f['cid_107'][:30]})")
+            print(f"       vs {f['rva_108']} (cid={f['cid_108'][:30]})")
+            print(f"       shared: {f['method']}, primaries: {f['primary_107']} / {f['primary_108']}")
 
-    results["version_unique"]["early_classic"] = len(early_only)
-
-    # Overall statistics
-    total_unmatched = sum(len(addrs) for addrs in unmatched.values())
-    total_matched = len(matched)
-
-    results["statistics"] = {
-        "total_matched_groups": total_matched,
-        "total_unmatched_instances": total_unmatched,
-        "versions": len(unmatched),
-        "avg_unmatched_per_version": total_unmatched // len(unmatched),
-    }
-
-    return results
-
-
-def analyze_image_base_transition(state: dict, cache_dir: Path, dll_name: str):
-    """Analyze the image base transition from Classic 1.03 to 1.04."""
-
-    print("\n=== Image Base Transition Analysis ===")
-    print("Classic 1.00-1.03: Image base 0x10000000")
-    print("Classic 1.04+: Image base 0x6fb60000 (rebased)")
-
-    unmatched = state['unmatched']
-    matched = state['matched']
-
-    # Get unmatched from 1.03 and 1.04
-    v103_unmatched = set(unmatched.get("Classic/1.03", []))
-    v104_unmatched = set(unmatched.get("Classic/1.04b", []))
-
-    print(f"\nClassic/1.03 unmatched: {len(v103_unmatched)}")
-    print(f"Classic/1.04b unmatched: {len(v104_unmatched)}")
-
-    # Check if there's analysis data
-    v103_analysis = load_analysis("Classic/1.03", dll_name, cache_dir)
-    v104_analysis = load_analysis("Classic/1.04b", dll_name, cache_dir)
-
-    if v103_analysis and v104_analysis:
-        # Compare function counts
-        v103_funcs = len(v103_analysis.get('functions', {}))
-        v104_funcs = len(v104_analysis.get('functions', {}))
-        print(f"\nTotal functions - Classic/1.03: {v103_funcs}, Classic/1.04b: {v104_funcs}")
-        print(f"Difference: {abs(v103_funcs - v104_funcs)} functions")
-
-    # Count how many matched functions span both
-    spans_transition = 0
-    for match_id, match_data in matched.items():
-        addrs = match_data['addresses']
-        if "Classic/1.03" in addrs and "Classic/1.04b" in addrs:
-            spans_transition += 1
-
-    print(f"\nMatched functions spanning 1.03->1.04 transition: {spans_transition}")
-
-
-def print_report(results: dict, dll_name: str):
-    """Print a formatted analysis report."""
-
-    print(f"\n{'='*60}")
-    print(f"Unmatched Function Analysis: {dll_name}")
-    print(f"{'='*60}")
-
-    # Overall stats
-    stats = results["statistics"]
-    print(f"\nOverall Statistics:")
-    print(f"  Total matched function groups: {stats['total_matched_groups']}")
-    print(f"  Total unmatched instances: {stats['total_unmatched_instances']}")
-    print(f"  Versions analyzed: {stats['versions']}")
-    print(f"  Avg unmatched per version: {stats['avg_unmatched_per_version']}")
-
-    # Version group breakdown
-    print(f"\nUnmatched by Version Group:")
-    print(f"  {'Group':<30} {'Versions':>8} {'Unmatched':>10} {'Avg':>8}")
-    print(f"  {'-'*30} {'-'*8} {'-'*10} {'-'*8}")
-
-    for group_name, group_data in results["version_groups"].items():
-        num_versions = len(group_data['versions'])
-        total = group_data['total_unmatched']
-        avg = group_data['avg_unmatched']
-        print(f"  {group_name:<30} {num_versions:>8} {total:>10} {avg:>8}")
-
-    # Key findings
-    print(f"\nKey Findings:")
-    print(f"  - Early Classic (1.00-1.03) has ~1200 unmatched/version")
-    print(f"    -> Likely version-specific functions removed in 1.04+")
-    print(f"  - LoD/1.07 has 2250 unmatched (highest)")
-    print(f"    -> Major structural differences from other LoD versions")
-    print(f"  - Classic 1.06.x has ~1000 unmatched")
-    print(f"    -> Transitional version with unique code")
-    print(f"  - Versions 1.08+ have <75 unmatched each")
-    print(f"    -> High matching success rate in modern versions")
-
-
-def main():
-    parser = argparse.ArgumentParser(description="Analyze unmatched functions")
-    parser.add_argument("--dll", type=str, required=True, help="DLL name")
-    parser.add_argument("--cache", type=str, default="cache", help="Cache directory")
-    parser.add_argument("--output", "-o", type=str, help="Output JSON file")
-    args = parser.parse_args()
-
-    project_root = Path(__file__).parent.parent
-    cache_dir = project_root / args.cache
-
-    # Load state
-    state = load_state(args.dll, cache_dir)
-
-    # Run analysis
-    results = categorize_unmatched(state, cache_dir, args.dll)
-
-    # Print report
-    print_report(results, args.dll)
-
-    # Analyze specific issues
-    analyze_image_base_transition(state, cache_dir, args.dll)
-
-    # Save output if requested
-    if args.output:
-        output_path = Path(args.output)
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2)
-        print(f"\nResults saved to: {output_path}")
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    analyze_unmatched()
+    check_potential_matches()

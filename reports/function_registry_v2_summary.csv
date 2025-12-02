@@ -1,0 +1,26 @@
+DLL,Total Functions,Named,Naming %
+Binkw32.dll,309,220,71.2%
+Bnclient.dll,606,408,67.3%
+D2CMP.dll,733,301,41.1%
+D2Client.dll,3538,269,7.6%
+D2Common.dll,2527,1166,46.1%
+D2DDraw.dll,294,136,46.3%
+D2Direct3D.dll,385,138,35.8%
+D2Game.dll,4339,291,6.7%
+D2Gdi.dll,207,102,49.3%
+D2Gfx.dll,380,209,55.0%
+D2Glide.dll,378,140,37.0%
+D2Lang.dll,369,237,64.2%
+D2Launch.dll,473,157,33.2%
+D2MCPClient.dll,209,127,60.8%
+D2Multi.dll,387,137,35.4%
+D2Net.dll,211,124,58.8%
+D2Sound.dll,384,212,55.2%
+D2VidTst.exe,445,213,47.9%
+D2Win.dll,605,331,54.7%
+Diablo II.exe,60,10,16.7%
+Fog.dll,928,486,52.4%
+Game.exe,9382,660,7.0%
+Ijl11.dll,323,27,8.4%
+SmackW32.dll,179,81,45.3%
+Storm.dll,1276,608,47.6%

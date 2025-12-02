@@ -1319,8 +1319,8 @@
                 </div>
                 <div class="version-filters">
                     <div class="filter-buttons">
-                        <button class="filter-btn pre-refactor active" onclick="toggleVersionFilter('preRefactor')" title="Classic 1.00-1.03 (Pre-refactor codebase)">Pre</button>
-                        <button class="filter-btn post-refactor active" onclick="toggleVersionFilter('postRefactor')" title="Classic 1.04+ (Post-refactor codebase)">Post</button>
+                        <button class="filter-btn pre-refactor" onclick="toggleVersionFilter('preRefactor')" title="Classic 1.00-1.03 (Pre-refactor codebase)">Pre</button>
+                        <button class="filter-btn post-refactor" onclick="toggleVersionFilter('postRefactor')" title="Classic 1.04+ (Post-refactor codebase)">Post</button>
                         <button class="filter-btn lod active" onclick="toggleVersionFilter('lod')" title="Lord of Destruction (All versions)">LoD</button>
                     </div>
                 </div>
@@ -1393,14 +1393,32 @@
     <script src="data/exports.js"></script>
     <script src="data/text_content.js"></script>
 
-    <!-- Function data from d2_function_extractor.py -->
-    <script src="functions/_index.js"></script>
+    <!-- Function data from function_registry_v2.json (new index system) -->
+    <script src="functions_v2/_index.js"></script>
     <script>
-        // Debug: Check if FUNCTION_INDEX loaded
-        console.log('FUNCTION_INDEX loaded:', typeof FUNCTION_INDEX !== 'undefined');
-        if (typeof FUNCTION_INDEX !== 'undefined') {
-            console.log('FUNCTION_INDEX files:', Object.keys(FUNCTION_INDEX.files || {}));
+        // Debug: Check if FUNCTION_INDEX_V2 loaded
+        console.log('FUNCTION_INDEX_V2 loaded:', typeof FUNCTION_INDEX_V2 !== 'undefined');
+        if (typeof FUNCTION_INDEX_V2 !== 'undefined') {
+            console.log('FUNCTION_INDEX_V2 files:', Object.keys(FUNCTION_INDEX_V2.files || {}));
         }
+
+        // Compatibility: Create FUNCTION_INDEX from V2 data
+        var FUNCTION_INDEX = {
+            generated: FUNCTION_INDEX_V2 ? FUNCTION_INDEX_V2.generated : null,
+            split_format: false,
+            files: {}
+        };
+        if (typeof FUNCTION_INDEX_V2 !== 'undefined' && FUNCTION_INDEX_V2.files) {
+            for (const [name, info] of Object.entries(FUNCTION_INDEX_V2.files)) {
+                FUNCTION_INDEX.files[name] = {
+                    split: false,
+                    count: info.count,
+                    named: info.named,
+                    versions: info.versions
+                };
+            }
+        }
+        console.log('FUNCTION_INDEX (compat) files:', Object.keys(FUNCTION_INDEX.files || {}));
 
         // State
         let selectedVersion = null;
@@ -1409,8 +1427,8 @@
 
         // Version filters: Pre-Refactor (1.00-1.03), Post-Refactor (1.04+), LoD (all)
         const versionFilters = {
-            preRefactor: true,    // Classic 1.00-1.03 (old codebase)
-            postRefactor: true,   // Classic 1.04+ (refactored codebase)
+            preRefactor: false,   // Classic 1.00-1.03 (old codebase)
+            postRefactor: false,  // Classic 1.04+ (refactored codebase)
             lod: true             // All LoD versions
         };
 
@@ -1428,6 +1446,7 @@
         // Function table filter state
         let funcSearchFilter = '';
         let showOnlyNamed = false;
+        let showRVA = false;  // false = full address (default), true = RVA
         let currentFuncData = null;
         let currentFuncBaseName = null;
 
@@ -1469,8 +1488,7 @@
 
         // Load function data for a specific file and version group
         function loadFunctionData(filename, forceGroup = null) {
-            const group = forceGroup || getActiveVersionGroup();
-            const cacheKey = `${filename}.${group}`;
+            const cacheKey = filename; // No more group-based caching with v2 format
 
             return new Promise((resolve, reject) => {
                 if (loadedFunctionData[cacheKey]) {
@@ -1478,21 +1496,16 @@
                     return;
                 }
 
-                // Check if this file uses split format
+                // Check if this file exists in the index
                 const indexFile = findFunctionIndexFile(filename);
-                const fileInfo = indexFile ? FUNCTION_INDEX.files[indexFile] : null;
-                const isSplit = fileInfo && fileInfo.split;
-
-                let scriptPath, varName;
-                if (isSplit) {
-                    // Split format: filename.group.js
-                    scriptPath = 'functions/' + filename + '.' + group + '.js';
-                    varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase() + '_' + group.toUpperCase();
-                } else {
-                    // Legacy single-file format
-                    scriptPath = 'functions/' + filename + '.js';
-                    varName = 'FUNCTIONS_' + filename.replace(/\./g, '_').replace(/ /g, '_').toUpperCase();
+                if (!indexFile) {
+                    reject(new Error('File not in function index: ' + filename));
+                    return;
                 }
+
+                // Use v2 format - single file per DLL in functions_v2/
+                const scriptPath = 'functions_v2/' + indexFile + '.js';
+                const varName = 'FUNCTIONS_' + indexFile.replace(/\./g, '_').replace(/ /g, '_').replace(/-/g, '_');
 
                 const script = document.createElement('script');
                 script.src = scriptPath;
@@ -2163,6 +2176,26 @@
             }
         }
 
+        // Handler for "Show RVA" toggle
+        function toggleRVA() {
+            showRVA = !showRVA;
+            const btn = document.getElementById('rvaToggle');
+            if (btn) {
+                btn.classList.toggle('active', showRVA);
+            }
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Get the appropriate address based on RVA toggle
+        function getDisplayAddress(func, version) {
+            if (showRVA && func.rvas && func.rvas[version]) {
+                return func.rvas[version];
+            }
+            return func.addresses ? func.addresses[version] : null;
+        }
+
         // Update just the table body (for filtering without full re-render)
         function updateFunctionsTableBody() {
             const tbody = document.getElementById('funcTableBody');
@@ -2243,7 +2276,7 @@
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {
-                    const addr = func.addresses[group.versions[0]];
+                    const addr = getDisplayAddress(func, group.versions[0]);
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
                     const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
                     prevAddr = addr || prevAddr;
@@ -2353,6 +2386,10 @@
                             <span class="exports-toggle-indicator"></span>
                             <span>Named Only</span>
                         </button>
+                        <button class="exports-toggle" id="rvaToggle" onclick="toggleRVA()">
+                            <span class="exports-toggle-indicator"></span>
+                            <span>Show RVA</span>
+                        </button>
                         <span class="exports-stats" id="funcFilterStats">
                             Showing ${funcKeys.length} of ${funcKeys.length} (<span class="named-count">${namedCount} named</span>)
                         </span>
@@ -2390,7 +2427,7 @@
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map(group => {
-                    const addr = func.addresses[group.versions[0]];
+                    const addr = getDisplayAddress(func, group.versions[0]);
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
                     const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
                     prevAddr = addr || prevAddr;

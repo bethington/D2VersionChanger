@@ -8,6 +8,12 @@ This tool:
 3. Resolves naming conflicts using earliest version priority
 4. Generates a unified function registry with canonical IDs
 
+Configuration: config/function_index.json
+  - enabled_game_types: Enable/disable Classic or LoD processing
+  - enabled_versions: Fine-grained version control
+  - index_priority: Method priority order for matching
+  - output: Output file settings
+
 Index Matching Priority:
   EXP: Export ordinal (100% reliable)
   STR: Unique string references (99% reliable)
@@ -26,6 +32,18 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Set, Tuple
 import hashlib
+
+# Default config if no config file exists
+DEFAULT_CONFIG = {
+    "enabled_game_types": {"LoD": True, "Classic": True},
+    "enabled_versions": {},
+    "index_priority": ["EXP", "STR", "API", "MNE", "CFG", "PRO"],
+    "output": {
+        "registry_file": "reports/function_registry_v2.json",
+        "include_unmatched": True,
+        "min_versions_for_match": 1
+    }
+}
 
 # Version ordering for conflict resolution (earliest first)
 VERSION_ORDER = [
@@ -91,6 +109,10 @@ class FunctionMerger:
         self.base_path = Path(base_path)
         self.index_path = self.base_path / "data" / "function_index"
         self.output_path = self.base_path / "reports"
+        self.config_path = self.base_path / "config" / "function_index.json"
+        
+        # Load configuration
+        self.config = self.load_config()
         
         # Master index: canonical_index -> canonical_id
         self.index_to_canonical: Dict[str, str] = {}
@@ -103,6 +125,35 @@ class FunctionMerger:
         
         # Statistics
         self.stats = defaultdict(int)
+    
+    def load_config(self) -> dict:
+        """Load configuration from JSON file."""
+        if self.config_path.exists():
+            try:
+                with open(self.config_path, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+                print(f"Loaded config from: {self.config_path}")
+                return config
+            except Exception as e:
+                print(f"Warning: Failed to load config: {e}")
+        
+        print("Using default configuration")
+        return DEFAULT_CONFIG
+    
+    def is_version_enabled(self, game_type: str, version: str) -> bool:
+        """Check if a specific version is enabled in config."""
+        # First check game type
+        if not self.config.get('enabled_game_types', {}).get(game_type, True):
+            return False
+        
+        # Then check specific version
+        version_config = self.config.get('enabled_versions', {}).get(game_type, {})
+        if not version_config:
+            # No version-specific config, game type enabled = all versions enabled
+            return True
+        
+        # Check specific version, default to True if not specified
+        return version_config.get(version, True)
     
     def version_key(self, game_type: str, version: str) -> int:
         """Get sort order for a version (lower = earlier)."""
@@ -120,6 +171,11 @@ class FunctionMerger:
             return exports
         
         for game_type in ["Classic", "LoD"]:
+            # Check if game type is enabled
+            if not self.config.get('enabled_game_types', {}).get(game_type, True):
+                print(f"  Skipping {game_type} (disabled in config)")
+                continue
+            
             game_path = self.index_path / game_type
             if not game_path.exists():
                 continue
@@ -128,6 +184,11 @@ class FunctionMerger:
                 if not version_dir.is_dir():
                     continue
                 version = version_dir.name
+                
+                # Check if specific version is enabled
+                if not self.is_version_enabled(game_type, version):
+                    print(f"  Skipping {game_type}/{version} (disabled in config)")
+                    continue
                 
                 for json_file in version_dir.glob("*.json"):
                     dll_name = json_file.stem  # Remove .json
@@ -160,30 +221,38 @@ class FunctionMerger:
         if not index:
             return None
         
-        # Check if this exact index already exists
+        # Get enabled methods from config (exclude disabled ones)
+        disabled_methods = set(self.config.get('disabled_methods', []))
+        index_priority = self.config.get('index_priority', ['STR', 'API', 'MNE', 'CFG', 'PRO'])
+        enabled_methods = [m for m in index_priority if m not in disabled_methods]
+        
+        # Check if this exact index already exists (only if method is enabled)
+        index_method = func_data.get('index_method', '')
         full_key = f"{dll_name}:{index}"
-        if full_key in self.index_to_canonical:
+        if index_method not in disabled_methods and full_key in self.index_to_canonical:
             return self.index_to_canonical[full_key]
         
-        # Try alternate indexes in priority order
+        # Try alternate indexes in priority order (skip disabled methods)
         indexes = func_data.get('indexes', {})
-        for method in ['EXP', 'STR', 'API', 'MNE', 'CFG', 'PRO']:
+        for method in enabled_methods:
             idx_value = indexes.get(method)
             if idx_value:
                 alt_key = f"{dll_name}:{method}:{idx_value}"
                 if alt_key in self.index_to_canonical:
                     # Found match via alternate index
                     canonical_id = self.index_to_canonical[alt_key]
-                    # Also register the primary index
-                    self.index_to_canonical[full_key] = canonical_id
+                    # Also register the primary index (if method is enabled)
+                    if index_method not in disabled_methods:
+                        self.index_to_canonical[full_key] = canonical_id
                     return canonical_id
         
         # No match found - create new canonical ID
         canonical_id = self.generate_canonical_id(dll_name, func_data)
         
-        # Register all available indexes
-        self.index_to_canonical[full_key] = canonical_id
-        for method in ['EXP', 'STR', 'API', 'MNE', 'CFG', 'PRO']:
+        # Register all available indexes (skip disabled methods)
+        if index_method not in disabled_methods:
+            self.index_to_canonical[full_key] = canonical_id
+        for method in enabled_methods:
             idx_value = indexes.get(method)
             if idx_value:
                 alt_key = f"{dll_name}:{method}:{idx_value}"

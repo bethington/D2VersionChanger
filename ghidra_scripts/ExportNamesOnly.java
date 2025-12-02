@@ -1,6 +1,8 @@
 //Export only named functions (human annotations) to JSON
 //@category D2VersionChanger
 //@menupath Tools.Export Names Only
+//@keybinding ctrl shift N
+//@description Exports human-named functions (not FUN_*) with signatures, parameters, comments. Output: data/ghidra_names/{program}.json
 
 import ghidra.app.script.GhidraScript;
 import ghidra.program.model.listing.*;

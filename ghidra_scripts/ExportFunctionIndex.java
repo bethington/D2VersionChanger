@@ -2,6 +2,7 @@
 //@category D2VersionChanger
 //@menupath Tools.Export Function Index
 //@keybinding ctrl shift E
+//@description Exports ALL functions with multi-method matching indexes (EXP/STR/API/MNE/CFG/PRO) for cross-version function identification. Output: data/function_index/{GameType}/{Version}/{dll}.json
 
 import ghidra.app.script.GhidraScript;
 import ghidra.program.model.listing.*;
