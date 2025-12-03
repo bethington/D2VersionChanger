@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for D2Direct3D.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -7868,7 +7868,17 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0x4F60"
       },
       "method": "STR",
-      "index": "STR:f450d703bd9b673ce4f77fefa1c56cdd"
+      "index": "STR:f450d703bd9b673ce4f77fefa1c56cdd",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F886800",
+          "rva": "0x6800",
+          "confidence": 0.95,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_STR_f4a08de3770c": {
       "addresses": {

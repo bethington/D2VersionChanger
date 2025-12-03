@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for D2MCPClient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -582,7 +582,17 @@ var FUNCTIONS_D2MCPClient_dll = {
       "signature": "undefined Ordinal_10035(byte param_1, undefined2 param_2)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10035"
+      "index": "EXP:10035",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F9F2950",
+          "rva": "0x2950",
+          "confidence": 0.742,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2MCPClient_EXP_10036": {
       "addresses": {

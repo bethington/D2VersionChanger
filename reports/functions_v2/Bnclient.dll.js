@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for Bnclient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -396,7 +396,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xCB00"
       },
       "method": "API",
-      "index": "API:371349f30914e339f2e4ca9123ae028e"
+      "index": "API:371349f30914e339f2e4ca9123ae028e",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF071C0",
+          "rva": "0x71C0",
+          "confidence": 0.846,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_API_39593535e860": {
       "addresses": {
@@ -828,7 +838,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xE2F0"
       },
       "method": "API",
-      "index": "API:6e7fa7cb7ea15693876bef87cf9df9cb"
+      "index": "API:6e7fa7cb7ea15693876bef87cf9df9cb",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF260D0",
+          "rva": "0x60D0",
+          "confidence": 0.672,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "Bnclient_API_6fc9ed070965": {
       "addresses": {
@@ -1484,7 +1504,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x12DF0"
       },
       "method": "API",
-      "index": "API:f0a06a107d789a5ba4b1502d9b91f5b4"
+      "index": "API:f0a06a107d789a5ba4b1502d9b91f5b4",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6FF2C220",
+          "rva": "0xC220",
+          "confidence": 0.773,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.13d"
+        }
+      }
     },
     "Bnclient_API_f227016f3ca0": {
       "addresses": {
@@ -3500,7 +3530,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x70E0"
       },
       "method": "MNE",
-      "index": "MNE:38e59a2462325983f58d187793af5f85"
+      "index": "MNE:38e59a2462325983f58d187793af5f85",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF24C90",
+          "rva": "0x4C90",
+          "confidence": 0.831,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "Bnclient_MNE_3946237a610d": {
       "addresses": {

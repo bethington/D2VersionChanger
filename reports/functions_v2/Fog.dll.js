@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for Fog.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -783,7 +783,17 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x11AD0"
       },
       "method": "API",
-      "index": "API:d6b6099a6a762ca4bc0f474cc0703649"
+      "index": "API:d6b6099a6a762ca4bc0f474cc0703649",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FF60CA0",
+          "rva": "0x10CA0",
+          "confidence": 0.776,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Fog_API_db88001669d5": {
       "addresses": {
@@ -4665,7 +4675,17 @@ var FUNCTIONS_Fog_dll = {
       "signature": "uint Ordinal_10161(int param_1, uint param_2)",
       "name_source": "LoD/1.10",
       "method": "EXP",
-      "index": "EXP:10161"
+      "index": "EXP:10161",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FF54AF0",
+          "rva": "0x4AF0",
+          "confidence": 1.0,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Fog_EXP_10162": {
       "addresses": {

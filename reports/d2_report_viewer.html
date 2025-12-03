@@ -1074,6 +1074,277 @@
             border: 1px solid var(--color-crafted);
         }
 
+        /* Candidate match styles - yellow/orange for unconfirmed matches */
+        .exports-table .addr-cell.candidate {
+            color: var(--color-rare);
+            font-style: italic;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .exports-table .addr-cell.candidate:hover {
+            background-color: rgba(255, 255, 0, 0.1);
+        }
+
+        .exports-table .addr-cell.candidate::before {
+            content: "?";
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            font-size: 0.5rem;
+            color: var(--color-rare);
+            opacity: 0.7;
+        }
+
+        .exports-table .addr-cell.candidate-high {
+            color: var(--color-set);
+        }
+
+        .exports-table .addr-cell.candidate-low {
+            color: var(--color-crafted);
+        }
+
+        .exports-table .addr-cell.confirmed {
+            color: var(--color-set);
+            font-weight: 600;
+        }
+
+        .exports-table .addr-cell.rejected {
+            color: var(--accent-red-light);
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* Comparison Modal */
+        .comparison-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comparison-modal.hidden {
+            display: none;
+        }
+
+        .comparison-dialog {
+            background: var(--bg-dark);
+            border: 1px solid var(--accent-gold);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .comparison-header {
+            padding: 1rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comparison-title {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .comparison-close {
+            background: none;
+            border: 1px solid var(--border-dark);
+            color: var(--text-secondary);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .comparison-close:hover {
+            border-color: var(--accent-red-light);
+            color: var(--accent-red-light);
+        }
+
+        .comparison-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .comparison-side {
+            background: var(--bg-medium);
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            padding: 1rem;
+        }
+
+        .comparison-side-header {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-side-header .version-tag {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            background: var(--bg-dark);
+            border-radius: 3px;
+            color: var(--color-magic);
+        }
+
+        .comparison-section {
+            margin-bottom: 0.8rem;
+        }
+
+        .comparison-section-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .comparison-section-content {
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            padding: 0.5rem;
+            border-radius: 3px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .comparison-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .comparison-list li {
+            padding: 0.2rem 0;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .comparison-list li:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-list li.match {
+            color: var(--color-set);
+        }
+
+        .comparison-list li.diff {
+            color: var(--color-crafted);
+        }
+
+        .comparison-confidence {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: var(--bg-dark);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .confidence-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--bg-medium);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .confidence-fill.high {
+            background: var(--color-set);
+        }
+
+        .confidence-fill.medium {
+            background: var(--color-rare);
+        }
+
+        .confidence-fill.low {
+            background: var(--color-crafted);
+        }
+
+        .confidence-value {
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        .comparison-actions {
+            padding: 1rem;
+            border-top: 1px solid var(--border-dark);
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        .comparison-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--border-dark);
+            transition: all 0.15s;
+        }
+
+        .comparison-btn.confirm {
+            background: rgba(0, 255, 0, 0.1);
+            color: var(--color-set);
+            border-color: var(--color-set);
+        }
+
+        .comparison-btn.confirm:hover {
+            background: rgba(0, 255, 0, 0.2);
+        }
+
+        .comparison-btn.reject {
+            background: rgba(255, 0, 0, 0.1);
+            color: var(--accent-red-light);
+            border-color: var(--accent-red-light);
+        }
+
+        .comparison-btn.reject:hover {
+            background: rgba(255, 0, 0, 0.2);
+        }
+
+        .comparison-btn.close {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+        }
+
+        .comparison-btn.close:hover {
+            color: var(--text-primary);
+        }
+
         .tier-legend {
             display: flex;
             gap: 0.8rem;
@@ -2274,13 +2545,58 @@
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
 
+                // Find the first confirmed version to use as source for comparisons
+                let sourceVersion = null;
+                for (const group of versionGroups) {
+                    const ver = group.versions[0];
+                    if (func.addresses && func.addresses[ver]) {
+                        sourceVersion = ver;
+                        break;
+                    }
+                }
+
                 let prevAddr = null;
-                const addrCells = versionGroups.map(group => {
-                    const addr = getDisplayAddress(func, group.versions[0]);
+                const addrCells = versionGroups.map((group, idx) => {
+                    const version = group.versions[0];
+                    const addr = getDisplayAddress(func, version);
+
+                    // For source version tracking: use previous confirmed or first confirmed
+                    const cellSourceVersion = sourceVersion || version;
+
+                    // Check for candidate if no confirmed address
+                    if (!addr && func.candidates && func.candidates[version]) {
+                        const candidate = func.candidates[version];
+                        const status = getMatchStatus(key, version, candidate.address);
+                        const candAddr = showRVA && candidate.rva ? candidate.rva : candidate.address;
+                        const confidence = candidate.confidence || 0;
+
+                        let cellClass = 'addr-cell candidate';
+                        if (status === 'confirmed') {
+                            cellClass = 'addr-cell confirmed';
+                        } else if (status === 'rejected') {
+                            cellClass = 'addr-cell rejected';
+                        } else if (confidence >= 0.8) {
+                            cellClass += ' candidate-high';
+                        } else if (confidence < 0.6) {
+                            cellClass += ' candidate-low';
+                        }
+
+                        const confidenceTitle = `${status === 'confirmed' ? 'Confirmed' : status === 'rejected' ? 'Rejected' : 'Candidate'} (${(confidence * 100).toFixed(0)}% conf, ${candidate.method})`;
+                        const srcVer = candidate.source || cellSourceVersion;
+
+                        prevAddr = candAddr;
+                        return `<td class="${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${srcVer}', true)" title="${confidenceTitle}">${candAddr}</td>`;
+                    }
+
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
                     const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
                     prevAddr = addr || prevAddr;
-                    return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
+
+                    if (addr) {
+                        // Clickable confirmed address
+                        return `<td class="addr-cell ${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${cellSourceVersion}', false)" style="cursor:pointer" title="Click to compare">${addr}</td>`;
+                    }
+                    return '<td class="addr-cell ' + cellClass + '">—</td>';
                 }).join('');
 
                 const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
@@ -2425,13 +2741,55 @@
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
 
+                // Find the first confirmed version to use as source for comparisons
+                let sourceVersion = null;
+                for (const group of versionGroups) {
+                    const ver = group.versions[0];
+                    if (func.addresses && func.addresses[ver]) {
+                        sourceVersion = ver;
+                        break;
+                    }
+                }
+
                 let prevAddr = null;
-                const addrCells = versionGroups.map(group => {
-                    const addr = getDisplayAddress(func, group.versions[0]);
+                const addrCells = versionGroups.map((group, idx) => {
+                    const version = group.versions[0];
+                    const addr = getDisplayAddress(func, version);
+                    const cellSourceVersion = sourceVersion || version;
+
+                    // Check for candidate if no confirmed address
+                    if (!addr && func.candidates && func.candidates[version]) {
+                        const candidate = func.candidates[version];
+                        const status = getMatchStatus(key, version, candidate.address);
+                        const candAddr = showRVA && candidate.rva ? candidate.rva : candidate.address;
+                        const confidence = candidate.confidence || 0;
+
+                        let cellClass = 'addr-cell candidate';
+                        if (status === 'confirmed') {
+                            cellClass = 'addr-cell confirmed';
+                        } else if (status === 'rejected') {
+                            cellClass = 'addr-cell rejected';
+                        } else if (confidence >= 0.8) {
+                            cellClass += ' candidate-high';
+                        } else if (confidence < 0.6) {
+                            cellClass += ' candidate-low';
+                        }
+
+                        const confidenceTitle = status === 'confirmed' ? 'Confirmed' : status === 'rejected' ? 'Rejected' : 'Candidate (' + (confidence * 100).toFixed(0) + '% conf, ' + candidate.method + ')';
+                        const srcVer = candidate.source || cellSourceVersion;
+
+                        prevAddr = candAddr;
+                        return '<td class="' + cellClass + '" onclick="openComparisonModal(\'' + key + '\', \'' + version + '\', \'' + srcVer + '\', true)" title="' + confidenceTitle + '">' + candAddr + '</td>';
+                    }
+
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
                     const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
                     prevAddr = addr || prevAddr;
-                    return '<td class="addr-cell ' + cellClass + '">' + (addr || '—') + '</td>';
+
+                    if (addr) {
+                        return '<td class="addr-cell ' + cellClass + '" onclick="openComparisonModal(\'' + key + '\', \'' + version + '\', \'' + cellSourceVersion + '\', false)" style="cursor:pointer" title="Click to compare">' + addr + '</td>';
+                    }
+                    return '<td class="addr-cell ' + cellClass + '">—</td>';
                 }).join('');
 
                 const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
@@ -2668,7 +3026,300 @@
 
             showToast('Hash not found');
         }
+
+        // ===========================================
+        // Candidate Matching & Comparison System
+        // ===========================================
+
+        // LocalStorage keys
+        const CONFIRMED_MATCHES_KEY = 'D2VersionChanger_confirmedMatches';
+        const REJECTED_MATCHES_KEY = 'D2VersionChanger_rejectedMatches';
+
+        // Load confirmed/rejected matches from localStorage
+        function loadMatchDecisions() {
+            try {
+                const confirmed = localStorage.getItem(CONFIRMED_MATCHES_KEY);
+                const rejected = localStorage.getItem(REJECTED_MATCHES_KEY);
+                return {
+                    confirmed: confirmed ? JSON.parse(confirmed) : {},
+                    rejected: rejected ? JSON.parse(rejected) : {}
+                };
+            } catch (e) {
+                console.error('Error loading match decisions:', e);
+                return { confirmed: {}, rejected: {} };
+            }
+        }
+
+        // Save match decision
+        function saveMatchDecision(canonicalId, version, address, isConfirmed) {
+            const decisions = loadMatchDecisions();
+            const key = `${canonicalId}:${version}`;
+
+            if (isConfirmed) {
+                decisions.confirmed[key] = { address, timestamp: Date.now() };
+                delete decisions.rejected[key];
+            } else {
+                decisions.rejected[key] = decisions.rejected[key] || [];
+                decisions.rejected[key].push({ address, timestamp: Date.now() });
+                delete decisions.confirmed[key];
+            }
+
+            localStorage.setItem(CONFIRMED_MATCHES_KEY, JSON.stringify(decisions.confirmed));
+            localStorage.setItem(REJECTED_MATCHES_KEY, JSON.stringify(decisions.rejected));
+        }
+
+        // Get match status for a candidate
+        function getMatchStatus(canonicalId, version, address) {
+            const decisions = loadMatchDecisions();
+            const key = `${canonicalId}:${version}`;
+
+            if (decisions.confirmed[key] && decisions.confirmed[key].address === address) {
+                return 'confirmed';
+            }
+
+            const rejectedList = decisions.rejected[key] || [];
+            if (rejectedList.some(r => r.address === address)) {
+                return 'rejected';
+            }
+
+            return 'pending';
+        }
+
+        // Current comparison state
+        let currentComparisonData = null;
+
+        // Open comparison modal
+        function openComparisonModal(canonicalId, version, sourceVersion, isCandidate) {
+            const modal = document.getElementById('comparisonModal');
+            if (!modal) return;
+
+            // Get function data
+            const funcData = currentFuncData?.functions?.[canonicalId];
+            if (!funcData) {
+                showToast('Function data not available');
+                return;
+            }
+
+            // Store current comparison data
+            currentComparisonData = {
+                canonicalId,
+                targetVersion: version,
+                sourceVersion: sourceVersion,
+                isCandidate
+            };
+
+            // Get addresses
+            const sourceAddr = funcData.addresses?.[sourceVersion] || '—';
+            let targetAddr = funcData.addresses?.[version];
+            let candidate = null;
+
+            if (!targetAddr && funcData.candidates?.[version]) {
+                candidate = funcData.candidates[version];
+                targetAddr = candidate.address;
+            }
+
+            // Update modal content
+            const title = document.getElementById('comparisonTitle');
+            title.textContent = `Compare: ${funcData.name || canonicalId}`;
+
+            // Confidence section (only for candidates)
+            const confidenceSection = document.getElementById('confidenceSection');
+            if (candidate) {
+                confidenceSection.style.display = 'block';
+                const confidence = candidate.confidence || 0;
+                const confidenceFill = document.getElementById('confidenceFill');
+                const confidenceValue = document.getElementById('confidenceValue');
+
+                confidenceFill.style.width = `${confidence * 100}%`;
+                confidenceFill.className = 'confidence-fill ' +
+                    (confidence >= 0.8 ? 'high' : confidence >= 0.6 ? 'medium' : 'low');
+                confidenceValue.textContent = `${(confidence * 100).toFixed(1)}%`;
+                confidenceValue.style.color = confidence >= 0.8 ? 'var(--color-set)' :
+                    confidence >= 0.6 ? 'var(--color-rare)' : 'var(--color-crafted)';
+
+                document.getElementById('matchMethod').textContent =
+                    `Method: ${candidate.method || 'unknown'} | Direction: ${candidate.direction || 'forward'}`;
+            } else {
+                confidenceSection.style.display = 'none';
+            }
+
+            // Update side headers
+            document.getElementById('sourceSideHeader').innerHTML = `
+                Source <span class="version-tag">${sourceVersion}</span>
+                <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${sourceAddr}</span>
+            `;
+            document.getElementById('targetSideHeader').innerHTML = `
+                ${candidate ? 'Candidate' : 'Target'} <span class="version-tag">${version}</span>
+                <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${targetAddr || '—'}</span>
+            `;
+
+            // Populate comparison details (placeholder - would need actual function data)
+            document.getElementById('sourceDetails').innerHTML = `
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Size</div>
+                    <div class="comparison-section-content">${funcData.size || '—'} bytes</div>
+                </div>
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Signature</div>
+                    <div class="comparison-section-content">${funcData.signature || '—'}</div>
+                </div>
+            `;
+
+            document.getElementById('targetDetails').innerHTML = `
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Size</div>
+                    <div class="comparison-section-content">${candidate?.size || funcData.size || '—'} bytes</div>
+                </div>
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Signature</div>
+                    <div class="comparison-section-content">${funcData.signature || '—'}</div>
+                </div>
+            `;
+
+            // Show/hide action buttons based on whether it's a candidate
+            const confirmBtn = document.getElementById('confirmMatchBtn');
+            const rejectBtn = document.getElementById('rejectMatchBtn');
+
+            if (candidate) {
+                const status = getMatchStatus(canonicalId, version, targetAddr);
+                confirmBtn.style.display = status !== 'confirmed' ? 'block' : 'none';
+                rejectBtn.style.display = status !== 'rejected' ? 'block' : 'none';
+            } else {
+                confirmBtn.style.display = 'none';
+                rejectBtn.style.display = 'none';
+            }
+
+            // Show modal
+            modal.classList.remove('hidden');
+        }
+
+        // Close comparison modal
+        function closeComparisonModal() {
+            const modal = document.getElementById('comparisonModal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+            currentComparisonData = null;
+        }
+
+        // Confirm match
+        function confirmMatch() {
+            if (!currentComparisonData) return;
+
+            const { canonicalId, targetVersion } = currentComparisonData;
+            const funcData = currentFuncData?.functions?.[canonicalId];
+            const candidate = funcData?.candidates?.[targetVersion];
+
+            if (candidate) {
+                saveMatchDecision(canonicalId, targetVersion, candidate.address, true);
+                showToast('Match confirmed! This will be treated as confirmed in the viewer.');
+                closeComparisonModal();
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Reject match
+        function rejectMatch() {
+            if (!currentComparisonData) return;
+
+            const { canonicalId, targetVersion } = currentComparisonData;
+            const funcData = currentFuncData?.functions?.[canonicalId];
+            const candidate = funcData?.candidates?.[targetVersion];
+
+            if (candidate) {
+                saveMatchDecision(canonicalId, targetVersion, candidate.address, false);
+                showToast('Match rejected. Looking for next best match...');
+                closeComparisonModal();
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Get candidate for cell, considering rejected matches
+        function getCandidateForCell(func, version) {
+            const candidate = func.candidates?.[version];
+            if (!candidate) return null;
+
+            const status = getMatchStatus(func.name || '', version, candidate.address);
+            return {
+                ...candidate,
+                status
+            };
+        }
+
+        // Format cell content with click handler
+        function formatAddressCell(func, canonicalId, version, sourceVersion) {
+            const addr = func.addresses?.[version];
+            const rva = showRVA && func.rvas?.[version] ? func.rvas[version] : null;
+            const displayAddr = rva || addr;
+
+            if (displayAddr) {
+                // Confirmed address - clickable for comparison
+                return `<td class="addr-cell" onclick="openComparisonModal('${canonicalId}', '${version}', '${sourceVersion}', false)" style="cursor:pointer;" title="Click to compare">${displayAddr}</td>`;
+            }
+
+            // Check for candidate
+            const candidate = func.candidates?.[version];
+            if (candidate) {
+                const status = getMatchStatus(canonicalId, version, candidate.address);
+                const candAddr = showRVA && candidate.rva ? candidate.rva : candidate.address;
+                const confidence = candidate.confidence || 0;
+
+                let cellClass = 'addr-cell candidate';
+                if (status === 'confirmed') {
+                    cellClass = 'addr-cell confirmed';
+                } else if (status === 'rejected') {
+                    cellClass = 'addr-cell rejected';
+                } else if (confidence >= 0.8) {
+                    cellClass = 'addr-cell candidate candidate-high';
+                } else if (confidence < 0.6) {
+                    cellClass = 'addr-cell candidate candidate-low';
+                }
+
+                const confidenceTitle = `Candidate (${(confidence * 100).toFixed(0)}% confidence, ${candidate.method})`;
+
+                return `<td class="${cellClass}" onclick="openComparisonModal('${canonicalId}', '${version}', '${candidate.source}', true)" title="${confidenceTitle}">${candAddr}</td>`;
+            }
+
+            // Empty cell
+            return '<td class="addr-cell missing">—</td>';
+        }
     </script>
+
+    <!-- Comparison Modal -->
+    <div id="comparisonModal" class="comparison-modal hidden">
+        <div class="comparison-dialog">
+            <div class="comparison-header">
+                <div id="comparisonTitle" class="comparison-title">Compare Functions</div>
+                <button class="comparison-close" onclick="closeComparisonModal()">✕ Close</button>
+            </div>
+
+            <div id="confidenceSection" class="comparison-confidence" style="margin: 1rem;">
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">Confidence:</span>
+                <div class="confidence-bar">
+                    <div id="confidenceFill" class="confidence-fill" style="width: 0%"></div>
+                </div>
+                <span id="confidenceValue" class="confidence-value">0%</span>
+                <span id="matchMethod" style="font-size: 0.7rem; color: var(--text-muted); margin-left: 1rem;"></span>
+            </div>
+
+            <div class="comparison-content">
+                <div class="comparison-side">
+                    <div id="sourceSideHeader" class="comparison-side-header">Source</div>
+                    <div id="sourceDetails"></div>
+                </div>
+                <div class="comparison-side">
+                    <div id="targetSideHeader" class="comparison-side-header">Target</div>
+                    <div id="targetDetails"></div>
+                </div>
+            </div>
+
+            <div class="comparison-actions">
+                <button id="confirmMatchBtn" class="comparison-btn confirm" onclick="confirmMatch()">✓ Confirm Match</button>
+                <button id="rejectMatchBtn" class="comparison-btn reject" onclick="rejectMatch()">✗ Reject Match</button>
+                <button class="comparison-btn close" onclick="closeComparisonModal()">Close</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

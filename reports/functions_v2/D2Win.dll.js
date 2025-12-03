@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for D2Win.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -2592,7 +2592,17 @@ var FUNCTIONS_D2Win_dll = {
       "signature": "undefined Ordinal_10061(int * param_1, char * param_2, int param_3)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10061"
+      "index": "EXP:10061",
+      "candidates": {
+        "LoD/1.13d": {
+          "address": "0x6F8EC810",
+          "rva": "0xC810",
+          "confidence": 0.793,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        }
+      }
     },
     "D2Win_EXP_10063": {
       "addresses": {
@@ -3094,7 +3104,17 @@ var FUNCTIONS_D2Win_dll = {
       "signature": "undefined4 Ordinal_10088(int * param_1)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10088"
+      "index": "EXP:10088",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6F8F1390",
+          "rva": "0x11390",
+          "confidence": 0.793,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2Win_EXP_10089": {
       "addresses": {
@@ -3434,7 +3454,17 @@ var FUNCTIONS_D2Win_dll = {
       "signature": "undefined4 Ordinal_10105(int * param_1, int param_2)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10105"
+      "index": "EXP:10105",
+      "candidates": {
+        "LoD/1.13d": {
+          "address": "0x6F8EA370",
+          "rva": "0xA370",
+          "confidence": 0.796,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        }
+      }
     },
     "D2Win_EXP_10106": {
       "addresses": {

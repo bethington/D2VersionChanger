@@ -4,7 +4,8 @@ Refresh all data for the report viewer.
 
 This script runs all necessary steps to regenerate viewer data:
 1. merge_function_index.py - Merge Ghidra exports into unified registry
-2. generate_function_js.py - Generate JS files for the function viewer
+2. candidate_matcher.py - Generate best-match candidates for empty cells
+3. generate_function_js.py - Generate JS files for the function viewer
 
 Usage:
     python tools/refresh_viewer.py
@@ -21,6 +22,7 @@ def main():
     
     scripts = [
         ("Merging function indexes...", tools_dir / "merge_function_index.py"),
+        ("Generating candidates for empty cells...", tools_dir / "candidate_matcher.py"),
         ("Generating viewer JS files...", tools_dir / "generate_function_js.py"),
     ]
     

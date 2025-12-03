@@ -9,6 +9,7 @@ Output format matches the existing viewer's expectations:
 - functions keyed by canonical_id (or RVA for compatibility)
 - versions array with version strings
 - Each function has: name, signature, comment, addresses per version
+- Candidates for empty cells with confidence levels
 """
 
 import json
@@ -143,6 +144,23 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["method"] = func['index_method']
         if func.get('index'):
             entry["index"] = func['index']
+        
+        # Add candidates for empty cells
+        if func.get('candidates'):
+            candidates_by_version = {}
+            for cand in func['candidates']:
+                ver = cand.get('version')
+                if ver:
+                    candidates_by_version[ver] = {
+                        'address': cand.get('address'),
+                        'rva': cand.get('rva'),
+                        'confidence': cand.get('confidence', 0),
+                        'method': cand.get('method', ''),
+                        'direction': cand.get('direction', 'forward'),
+                        'source': cand.get('source_version', '')
+                    }
+            if candidates_by_version:
+                entry["candidates"] = candidates_by_version
         
         func_dict[canonical_id] = entry
     

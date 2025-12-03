@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for D2Sound.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -1057,7 +1057,17 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10037(void)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10037"
+      "index": "EXP:10037",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6F9B8100",
+          "rva": "0x8100",
+          "confidence": 0.656,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2Sound_EXP_10038": {
       "addresses": {
@@ -8018,7 +8028,17 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10023(void * this, float param_1)",
       "name_source": "LoD/1.11b",
       "method": "MNE",
-      "index": "MNE:fad3eac2df5559e93c2297970ed0004b"
+      "index": "MNE:fad3eac2df5559e93c2297970ed0004b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B65D0",
+          "rva": "0x65D0",
+          "confidence": 0.717,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_MNE_fd5b33dc54aa": {
       "addresses": {

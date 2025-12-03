@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T14:42:04.471088
+// Generated: 2025-12-03T17:42:37.484961
 // Functions for D2CMP.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -197,7 +197,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x12DE0"
       },
       "method": "API",
-      "index": "API:3168a85667416d26829e875a7544c949"
+      "index": "API:3168a85667416d26829e875a7544c949",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE1E110",
+          "rva": "0xE110",
+          "confidence": 0.773,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_API_32dd9138fb3f": {
       "addresses": {
@@ -5690,7 +5700,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x1C10"
       },
       "method": "MNE",
-      "index": "MNE:4571d693b8a3530617b89c58fba1e0fe"
+      "index": "MNE:4571d693b8a3530617b89c58fba1e0fe",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF2A60",
+          "rva": "0x2A60",
+          "confidence": 0.743,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_457ecf3d8055": {
       "addresses": {
