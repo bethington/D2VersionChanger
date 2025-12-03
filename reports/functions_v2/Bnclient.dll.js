@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for Bnclient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -81,30 +81,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "method": "API",
       "index": "API:05a76bf6a4ea8a1c9b7c5902052c64b7"
-    },
-    "Bnclient_API_08676b1b7f60": {
-      "addresses": {
-        "LoD/1.07": "0x6FF267E0",
-        "LoD/1.08": "0x6FF26800",
-        "LoD/1.09": "0x6FF13450",
-        "LoD/1.09b": "0x6FF13450",
-        "LoD/1.09d": "0x6FF13770",
-        "LoD/1.10": "0x6FF13D70"
-      },
-      "rvas": {
-        "LoD/1.07": "0x67E0",
-        "LoD/1.08": "0x6800",
-        "LoD/1.09": "0x13450",
-        "LoD/1.09b": "0x13450",
-        "LoD/1.09d": "0x13770",
-        "LoD/1.10": "0x13D70"
-      },
-      "name": "BuildPathAndSendNetworkRequest",
-      "signature": "bool BuildPathAndSendNetworkRequest(char * lpszFirstPath, char * lpszSecondPath)",
-      "comment": "Concatenates two path strings and sends the result via network packet validation.\n\nAlgorithm:\n1. Call GetGlobalStateValue() to retrieve system state\n2. Call SendNetworkPacketWithValidation() for initial validation\n3. Initialize 256-byte buffer (0x100) with zero fill using STOSD.REP\n4. Set first byte of buffer from global variable g_lpszDefaultDestPath\n5. Copy first path string to buffer using Ordinal_501 with 0x80 byte limit\n6. Calculate string length of first path using SCASB.REPNE (strlen pattern)\n7. Append second path string to end of first path using Ordinal_501\n8. Perform multiple string length calculations:\n   - Calculate total concatenated string length\n   - Calculate individual component lengths for validation\n9. Call SendNetworkPacketWithValidation() with final concatenated path\n10. Return success status based on network validation result\n\nParameters:\nlpszFirstPath (char *) - First path component to concatenate\nlpszSecondPath (char *) - Second path component to append\nIMPLICIT: Uses __fastcall convention (ECX=lpszFirstPath, EDX=lpszSecondPath)\n\nReturns:\nbool - true if network packet validation succeeds, false otherwise\n\nSpecial Cases:\n- Buffer size limited to 256 bytes (0x100) total\n- Each path component limited to 128 bytes (0x80) in Ordinal_501 calls\n- Global g_lpszDefaultDestPath provides path separator or prefix byte\n- Multiple strlen calculations suggest path length validation or formatting\n\nMagic Numbers:\n0x100 - Total buffer size (256 bytes)\n0x80 - Individual path component size limit (128 bytes)\n0x3f - Buffer initialization loop count (63 DWORDs = 252 bytes)\n0xffffffff - strlen counter initialization value",
-      "name_source": "LoD/1.07",
-      "method": "API",
-      "index": "API:08676b1b7f60087d63eb6cacd30b2a48"
     },
     "Bnclient_API_0ed301c8b3b0": {
       "addresses": {
@@ -195,7 +171,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF058B0",
         "LoD/1.09b": "0x6FF058B0",
         "LoD/1.09d": "0x6FF05B20",
-        "LoD/1.10": "0x6FF05A90"
+        "LoD/1.10": "0x6FF05A90",
+        "LoD/1.11": "0x6FF343E0",
+        "LoD/1.11b": "0x6FF31110",
+        "LoD/1.12a": "0x6FF2F750",
+        "LoD/1.13c": "0x6FF373A0",
+        "LoD/1.13d": "0x6FF36650"
       },
       "rvas": {
         "LoD/1.07": "0x4F30",
@@ -203,7 +184,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x58B0",
         "LoD/1.09b": "0x58B0",
         "LoD/1.09d": "0x5B20",
-        "LoD/1.10": "0x5A90"
+        "LoD/1.10": "0x5A90",
+        "LoD/1.11": "0x143E0",
+        "LoD/1.11b": "0x11110",
+        "LoD/1.12a": "0xF750",
+        "LoD/1.13c": "0x173A0",
+        "LoD/1.13d": "0x16650"
       },
       "name": "WriteDefaultGatewayList",
       "signature": "void WriteDefaultGatewayList(BNGatewayAccess * this)",
@@ -800,22 +786,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "API",
       "index": "API:6a597000ad36dbe90196b5b0189ab75f"
     },
-    "Bnclient_API_6a9bec315da5": {
-      "addresses": {
-        "LoD/1.09": "0x6FF15010",
-        "LoD/1.09b": "0x6FF15010",
-        "LoD/1.09d": "0x6FF15330",
-        "LoD/1.10": "0x6FF158C0"
-      },
-      "rvas": {
-        "LoD/1.09": "0x15010",
-        "LoD/1.09b": "0x15010",
-        "LoD/1.09d": "0x15330",
-        "LoD/1.10": "0x158C0"
-      },
-      "method": "API",
-      "index": "API:6a9bec315da5efad3cccad4a7d83398f"
-    },
     "Bnclient_API_6d36d2683446": {
       "addresses": {
         "LoD/1.11": "0x6FF35F20",
@@ -934,14 +904,16 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF28630",
         "LoD/1.09": "0x6FF09240",
         "LoD/1.09b": "0x6FF09240",
-        "LoD/1.09d": "0x6FF094A0"
+        "LoD/1.09d": "0x6FF094A0",
+        "LoD/1.10": "0x6FF09DA0"
       },
       "rvas": {
         "LoD/1.07": "0x8610",
         "LoD/1.08": "0x8630",
         "LoD/1.09": "0x9240",
         "LoD/1.09b": "0x9240",
-        "LoD/1.09d": "0x94A0"
+        "LoD/1.09d": "0x94A0",
+        "LoD/1.10": "0x9DA0"
       },
       "name": "WriteCacheEntryWithTimestamp",
       "signature": "bool WriteCacheEntryWithTimestamp(char * lpszFilePath, byte * * ppDataBuffer, char * lpszDataLength, _FILETIME * pftTimestamps, byte byStartTick, byte byEndTick)",
@@ -949,16 +921,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:76853cc34d93dc688b28820d12f9d501"
-    },
-    "Bnclient_API_8096c5b7fe7b": {
-      "addresses": {
-        "LoD/1.10": "0x6FF09DA0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x9DA0"
-      },
-      "method": "API",
-      "index": "API:8096c5b7fe7b7e3b44edb304214f8108"
     },
     "Bnclient_API_83311ac54b24": {
       "addresses": {
@@ -1035,22 +997,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "method": "API",
       "index": "API:8a6e4f8594c00b4cb9efa909dc55bb3e"
-    },
-    "Bnclient_API_8d0b608de6c6": {
-      "addresses": {
-        "LoD/1.09": "0x6FF150B0",
-        "LoD/1.09b": "0x6FF150B0",
-        "LoD/1.09d": "0x6FF153D0",
-        "LoD/1.10": "0x6FF15960"
-      },
-      "rvas": {
-        "LoD/1.09": "0x150B0",
-        "LoD/1.09b": "0x150B0",
-        "LoD/1.09d": "0x153D0",
-        "LoD/1.10": "0x15960"
-      },
-      "method": "API",
-      "index": "API:8d0b608de6c6badf6eafa37eeff3b2dd"
     },
     "Bnclient_API_9899166e0e53": {
       "addresses": {
@@ -1325,7 +1271,9 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF05570",
         "LoD/1.09b": "0x6FF05570",
         "LoD/1.09d": "0x6FF057E0",
-        "LoD/1.10": "0x6FF05740"
+        "LoD/1.10": "0x6FF05740",
+        "LoD/1.11": "0x6FF363D0",
+        "LoD/1.11b": "0x6FF30690"
       },
       "rvas": {
         "LoD/1.07": "0x4BF0",
@@ -1333,7 +1281,9 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x5570",
         "LoD/1.09b": "0x5570",
         "LoD/1.09d": "0x57E0",
-        "LoD/1.10": "0x5740"
+        "LoD/1.10": "0x5740",
+        "LoD/1.11": "0x163D0",
+        "LoD/1.11b": "0x10690"
       },
       "name": "GMT",
       "signature": "int GMT(byte * pThis, int nStringCount)",
@@ -1685,36 +1635,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "method": "API",
       "index": "API:f6065b5919516f6116f7f60d4631d3e6"
-    },
-    "Bnclient_API_f82bf03da4f2": {
-      "addresses": {
-        "LoD/1.07": "0x6FF24C70",
-        "LoD/1.08": "0x6FF24C90",
-        "LoD/1.09": "0x6FF12EB0",
-        "LoD/1.09b": "0x6FF12EB0",
-        "LoD/1.09d": "0x6FF131D0",
-        "LoD/1.10": "0x6FF137D0",
-        "LoD/1.12a": "0x6FF32AA0",
-        "LoD/1.13c": "0x6FF303B0",
-        "LoD/1.13d": "0x6FF306B0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x4C70",
-        "LoD/1.08": "0x4C90",
-        "LoD/1.09": "0x12EB0",
-        "LoD/1.09b": "0x12EB0",
-        "LoD/1.09d": "0x131D0",
-        "LoD/1.10": "0x137D0",
-        "LoD/1.12a": "0x12AA0",
-        "LoD/1.13c": "0x103B0",
-        "LoD/1.13d": "0x106B0"
-      },
-      "name": "GetStringByIndex",
-      "signature": "char * GetStringByIndex(StringArrayDescriptor * pStringArray, int nIndex)",
-      "comment": "Retrieves a null-terminated string from a string array at the specified index position.\n\nAlgorithm:\n1. Validate input parameters: string array pointer and index bounds\n2. Check if string array pointer is valid and index is within range\n3. Calculate target string position by iterating through previous strings\n4. For each string from index 0 to target: calculate length and advance pointer\n5. Perform buffer bounds checking to prevent overflow during iteration\n6. Skip strings by advancing pointer by (string_length + 1) for null terminator\n7. If bounds exceeded or target index invalid, return input pointer as fallback\n8. Check if current string position contains valid null-terminated string\n9. If string found, advance past first null-terminated string to get target\n10. Return pointer to the target string or current position if no second string\n\nParameters:\npStringArray - Pointer to StringArrayDescriptor structure containing string data\nnIndex - Zero-based index of string to retrieve from the array\n\nReturns:\nPointer to null-terminated string at specified index\nInput pointer if index is invalid or out of bounds  \nCurrent string position if string array validation fails\n\nSpecial Cases:\nIndex 0 returns first string in buffer\nIndex beyond array bounds returns input pointer as fallback\nEmpty strings are counted as valid entries in the array\nBuffer overflow protection prevents reading beyond allocated space\n\nStructure Layout:\nOffset | Size | Field Name    | Type      | Description\n-------|------|---------------|-----------|----------------------------------\n0x00   | 4    | reserved1     | dword     | Reserved field (unused)\n0x04   | 4    | reserved2     | dword     | Reserved field (unused)  \n0x08   | 4    | nStringCount  | dword     | Number of strings in array\n0x0C   | 4    | reserved3     | dword     | Reserved field (unused)\n0x10   | 4    | pStringData   | char *    | Pointer to string buffer start\n0x14   | 4    | nBufferSize   | dword     | Size of string buffer in bytes\n\nMagic Numbers Reference:\n0x08 - Offset to string count field in structure\n0x10 - Offset to string data pointer in structure  \n0x14 - Offset to buffer size field in structure\n0x03 - Multiplier for index calculation (index * 3)\n0x01 - Null terminator size added to each string length",
-      "name_source": "LoD/1.07",
-      "method": "API",
-      "index": "API:f82bf03da4f227ba5bc0fddfb28386d7"
     },
     "Bnclient_API_f9b74334df81": {
       "addresses": {
@@ -2512,18 +2432,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:17d5e4a2ea8eca0808e1116fecc65876"
     },
-    "Bnclient_MNE_189e702334d1": {
-      "addresses": {
-        "LoD/1.09": "0x6FF07820",
-        "LoD/1.09b": "0x6FF07820"
-      },
-      "rvas": {
-        "LoD/1.09": "0x7820",
-        "LoD/1.09b": "0x7820"
-      },
-      "method": "MNE",
-      "index": "MNE:189e702334d147f1bf2fd38b8bbeccac"
-    },
     "Bnclient_MNE_18c434a84227": {
       "addresses": {
         "LoD/1.07": "0x6FF228D0",
@@ -2787,7 +2695,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF054B0",
         "LoD/1.09b": "0x6FF054B0",
         "LoD/1.09d": "0x6FF05720",
-        "LoD/1.10": "0x6FF05680"
+        "LoD/1.10": "0x6FF05680",
+        "LoD/1.11": "0x6FF33930",
+        "LoD/1.11b": "0x6FF2E800",
+        "LoD/1.12a": "0x6FF2EC90",
+        "LoD/1.13c": "0x6FF34CC0",
+        "LoD/1.13d": "0x6FF36430"
       },
       "rvas": {
         "LoD/1.07": "0x4B30",
@@ -2795,7 +2708,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x54B0",
         "LoD/1.09b": "0x54B0",
         "LoD/1.09d": "0x5720",
-        "LoD/1.10": "0x5680"
+        "LoD/1.10": "0x5680",
+        "LoD/1.11": "0x13930",
+        "LoD/1.11b": "0xE800",
+        "LoD/1.12a": "0xEC90",
+        "LoD/1.13c": "0x14CC0",
+        "LoD/1.13d": "0x16430"
       },
       "name": "Nth",
       "signature": "char * Nth(BNGatewayAccess * this, int nIndex)",
@@ -4311,16 +4229,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:4af6f4d1378e3b27617b296b4a2b16cc"
     },
-    "Bnclient_MNE_4ba7ae8d106d": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF07A50"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x7A50"
-      },
-      "method": "MNE",
-      "index": "MNE:4ba7ae8d106dde75a889d8718e7d43a4"
-    },
     "Bnclient_MNE_4beef3b29c3b": {
       "addresses": {
         "LoD/1.07": "0x6FF2FF00",
@@ -4800,7 +4708,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF027B0",
         "LoD/1.09b": "0x6FF027B0",
         "LoD/1.09d": "0x6FF02770",
-        "LoD/1.10": "0x6FF02740"
+        "LoD/1.10": "0x6FF02740",
+        "LoD/1.11": "0x6FF32730",
+        "LoD/1.11b": "0x6FF2F380",
+        "LoD/1.12a": "0x6FF34DA0",
+        "LoD/1.13c": "0x6FF308F0",
+        "LoD/1.13d": "0x6FF2C170"
       },
       "rvas": {
         "LoD/1.07": "0x26D0",
@@ -4808,7 +4721,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x27B0",
         "LoD/1.09b": "0x27B0",
         "LoD/1.09d": "0x2770",
-        "LoD/1.10": "0x2740"
+        "LoD/1.10": "0x2740",
+        "LoD/1.11": "0x12730",
+        "LoD/1.11b": "0xF380",
+        "LoD/1.12a": "0x14DA0",
+        "LoD/1.13c": "0x108F0",
+        "LoD/1.13d": "0xC170"
       },
       "name": "ProcessCommand",
       "signature": "uint ProcessCommand(uint * pCommandData)",
@@ -4983,18 +4901,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:5ba7875cbad7a3d5fce31ff25fd40455"
     },
-    "Bnclient_MNE_5c1f85f34f4a": {
-      "addresses": {
-        "LoD/1.11": "0x6FF363D0",
-        "LoD/1.11b": "0x6FF30690"
-      },
-      "rvas": {
-        "LoD/1.11": "0x163D0",
-        "LoD/1.11b": "0x10690"
-      },
-      "method": "MNE",
-      "index": "MNE:5c1f85f34f4a7c38d5dbc767da4da3c9"
-    },
     "Bnclient_MNE_5c73446e6da2": {
       "addresses": {
         "LoD/1.07": "0x6FF221F0",
@@ -5142,28 +5048,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5df976bd114bce6fa59a1da83f460955"
-    },
-    "Bnclient_MNE_5e1fb6529d10": {
-      "addresses": {
-        "LoD/1.07": "0x6FF24750",
-        "LoD/1.08": "0x6FF24770",
-        "LoD/1.09": "0x6FF050D0",
-        "LoD/1.09b": "0x6FF050D0",
-        "LoD/1.09d": "0x6FF05350"
-      },
-      "rvas": {
-        "LoD/1.07": "0x4750",
-        "LoD/1.08": "0x4770",
-        "LoD/1.09": "0x50D0",
-        "LoD/1.09b": "0x50D0",
-        "LoD/1.09d": "0x5350"
-      },
-      "name": "GetSystemTimeZone",
-      "signature": "int GetSystemTimeZone(BNGatewayAccess * this)",
-      "comment": "Retrieves the system timezone bias offset in minutes for German locale or default timezone.\n\nAlgorithm:\n1. Clear TIME_ZONE_INFORMATION structure using Ordinal_494 (memset equivalent)\n2. Populate timezone info by calling GetTimeZoneInformation\n3. Get current user's default language identifier using GetUserDefaultLangID\n4. Check if language is German (primary language 0x09) and German-Standard sublanguage (0x0C)\n5. If German-Standard detected, return hardcoded bias of 480 minutes (0x1E0 = GMT+8 offset)\n6. Otherwise, return actual timezone bias from TIME_ZONE_INFORMATION structure\n\nParameters:\nthis: BNGatewayAccess instance pointer (passed implicitly via ECX register)\n\nReturns:\nTimezone bias offset in minutes:\n- 480 (0x1E0) for German-Standard locale (hardcoded UTC+8 equivalent)\n- TIME_ZONE_INFORMATION.Bias value for all other locales\n- Negative values indicate time zones ahead of UTC\n- Positive values indicate time zones behind UTC\n\nMagic Numbers Reference:\n0x3FF (1023) - Primary language mask (bits 0-9 of LANGID)\n0x09 (9) - German primary language code (LANG_GERMAN)\n0xFC00 (64512) - Sublanguage mask (bits 10-15 of LANGID)  \n0x0C00 (3072) - German-Standard sublanguage code (SUBLANG_GERMAN << 10)\n0x1E0 (480) - Hardcoded bias for German locale (8 hours in minutes)\n0xAC (172) - Size of TIME_ZONE_INFORMATION structure",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:5e1fb6529d102e8804cf3851880f0fb1"
     },
     "Bnclient_MNE_5ee5e91686b8": {
       "addresses": {
@@ -5833,16 +5717,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831"
     },
-    "Bnclient_MNE_76f1286013d9": {
-      "addresses": {
-        "LoD/1.10": "0x6FF13C20"
-      },
-      "rvas": {
-        "LoD/1.10": "0x13C20"
-      },
-      "method": "MNE",
-      "index": "MNE:76f1286013d934d48455862ac88c6cdf"
-    },
     "Bnclient_MNE_772d22c2541e": {
       "addresses": {
         "LoD/1.11": "0x6FF366D7",
@@ -6408,7 +6282,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF03310",
         "LoD/1.09b": "0x6FF03310",
         "LoD/1.09d": "0x6FF03320",
-        "LoD/1.10": "0x6FF03370"
+        "LoD/1.10": "0x6FF03370",
+        "LoD/1.11": "0x6FF2DB10",
+        "LoD/1.11b": "0x6FF2BAB0",
+        "LoD/1.12a": "0x6FF2DF30",
+        "LoD/1.13c": "0x6FF2F050",
+        "LoD/1.13d": "0x6FF2D390"
       },
       "rvas": {
         "LoD/1.07": "0x2990",
@@ -6416,7 +6295,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x3310",
         "LoD/1.09b": "0x3310",
         "LoD/1.09d": "0x3320",
-        "LoD/1.10": "0x3370"
+        "LoD/1.10": "0x3370",
+        "LoD/1.11": "0xDB10",
+        "LoD/1.11b": "0xBAB0",
+        "LoD/1.12a": "0xDF30",
+        "LoD/1.13c": "0xF050",
+        "LoD/1.13d": "0xD390"
       },
       "name": "PrepareAndSendNetworkPacket",
       "signature": "BOOL PrepareAndSendNetworkPacket(DWORD dwDataValue)",
@@ -7647,15 +7531,25 @@ var FUNCTIONS_Bnclient_dll = {
     },
     "Bnclient_MNE_9d9b1aee8517": {
       "addresses": {
+        "LoD/1.07": "0x6FF22940",
+        "LoD/1.08": "0x6FF22960",
         "LoD/1.09": "0x6FF032B0",
         "LoD/1.09b": "0x6FF032B0",
-        "LoD/1.09d": "0x6FF032C0"
+        "LoD/1.09d": "0x6FF032C0",
+        "LoD/1.10": "0x6FF03310"
       },
       "rvas": {
+        "LoD/1.07": "0x2940",
+        "LoD/1.08": "0x2960",
         "LoD/1.09": "0x32B0",
         "LoD/1.09b": "0x32B0",
-        "LoD/1.09d": "0x32C0"
+        "LoD/1.09d": "0x32C0",
+        "LoD/1.10": "0x3310"
       },
+      "name": "ProcessPacketSynchronized",
+      "signature": "bool ProcessPacketSynchronized(int nPacketType, int nPacketData)",
+      "comment": "Thread-safe wrapper for packet processing ordinal function\n\nAlgorithm:\n1. Enter critical section using packet handler critical section (offset 0xad)\n2. Call ordinal function Ordinal_491 with packet type and data parameters\n3. Leave critical section to release synchronization lock\n4. Return success status (always returns true)\n\nParameters:\n- dwPacketType (int): Packet type identifier passed to ordinal handler\n- dwPacketData (int): Packet data content passed to ordinal handler\n\nReturns:\n- bool: Always returns true indicating successful processing\n\nSpecial Cases:\n- Critical section at g_apfnPacketHandlers + 0xad provides thread synchronization\n- Ordinal_491 is the actual packet processing function at 0x6ff398f0\n- Function acts as synchronized wrapper ensuring atomic packet processing\n\nError Handling:\n- No explicit error handling - relies on critical section and ordinal function\n- Always returns true regardless of ordinal function behavior",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9d9b1aee8517e59520d7a0058383a02e"
     },
@@ -9823,6 +9717,10 @@ var FUNCTIONS_Bnclient_dll = {
     },
     "Bnclient_MNE_cf8a4cc2c524": {
       "addresses": {
+        "LoD/1.07": "0x6FF295E0",
+        "LoD/1.08": "0x6FF29600",
+        "LoD/1.09": "0x6FF0A210",
+        "LoD/1.09b": "0x6FF0A210",
         "LoD/1.09d": "0x6FF0A470",
         "LoD/1.10": "0x6FF0ACD0",
         "LoD/1.11": "0x6FF34460",
@@ -9832,6 +9730,10 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x6FF34C80"
       },
       "rvas": {
+        "LoD/1.07": "0x95E0",
+        "LoD/1.08": "0x9600",
+        "LoD/1.09": "0xA210",
+        "LoD/1.09b": "0xA210",
         "LoD/1.09d": "0xA470",
         "LoD/1.10": "0xACD0",
         "LoD/1.11": "0x14460",
@@ -9840,26 +9742,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": "0x17420",
         "LoD/1.13d": "0x14C80"
       },
+      "name": "LogFormattedMessageThreadSafe",
+      "signature": "void LogFormattedMessageThreadSafe(byte * pbFormatString, ...)",
+      "comment": "Thread-safe logging function that formats and logs messages to global string buffer.\n\nAlgorithm:\n1. Enter critical section for thread-safe access to global string buffer\n2. Format input string with variable arguments using SnprintfWithOverflowHandling\n3. Set null terminator at end of formatted buffer to ensure proper string termination\n4. Call Ordinal_548 to write formatted message to global string buffer target location\n5. Exit critical section to allow other threads access\n\nParameters:\npbFormatString (byte *): Format string with printf-style format specifiers\n... (variadic): Variable arguments matching format specifiers in pbFormatString\n\nReturns:\nvoid: Function does not return a value\n\nSpecial Cases:\nBuffer size limited to 0x200 (512) bytes for formatted output\nThread synchronization handled via critical section at g_abGlobalStringBuffer+0x1c8\nOrdinal_548 handles actual logging output to global buffer at offset 0x480\n\nMagic Numbers Reference:\n0x200 (512): Maximum buffer size for formatted string output\n0x1c8 (456): Offset to critical section structure in global string buffer\n0x480 (1152): Offset to target location in global string buffer for log output",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cf8a4cc2c52417ab360d8bb963189e36"
-    },
-    "Bnclient_MNE_cf9ef390e3e7": {
-      "addresses": {
-        "LoD/1.11": "0x6FF32730",
-        "LoD/1.11b": "0x6FF2F380",
-        "LoD/1.12a": "0x6FF34DA0",
-        "LoD/1.13c": "0x6FF308F0",
-        "LoD/1.13d": "0x6FF2C170"
-      },
-      "rvas": {
-        "LoD/1.11": "0x12730",
-        "LoD/1.11b": "0xF380",
-        "LoD/1.12a": "0x14DA0",
-        "LoD/1.13c": "0x108F0",
-        "LoD/1.13d": "0xC170"
-      },
-      "method": "MNE",
-      "index": "MNE:cf9ef390e3e7fb572f9c0ac563129cdd"
     },
     "Bnclient_MNE_d016b68ecb5d": {
       "addresses": {
@@ -10075,6 +9963,11 @@ var FUNCTIONS_Bnclient_dll = {
     },
     "Bnclient_MNE_d53aa8167129": {
       "addresses": {
+        "LoD/1.07": "0x6FF24750",
+        "LoD/1.08": "0x6FF24770",
+        "LoD/1.09": "0x6FF050D0",
+        "LoD/1.09b": "0x6FF050D0",
+        "LoD/1.09d": "0x6FF05350",
         "LoD/1.10": "0x6FF052D0",
         "LoD/1.11": "0x6FF32310",
         "LoD/1.11b": "0x6FF2B0B0",
@@ -10083,6 +9976,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x6FF34F00"
       },
       "rvas": {
+        "LoD/1.07": "0x4750",
+        "LoD/1.08": "0x4770",
+        "LoD/1.09": "0x50D0",
+        "LoD/1.09b": "0x50D0",
+        "LoD/1.09d": "0x5350",
         "LoD/1.10": "0x52D0",
         "LoD/1.11": "0x12310",
         "LoD/1.11b": "0xB0B0",
@@ -11034,26 +10932,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:ea32b2bea659c127eea399072d552154"
     },
-    "Bnclient_MNE_eb139531398b": {
-      "addresses": {
-        "LoD/1.07": "0x6FF295E0",
-        "LoD/1.08": "0x6FF29600",
-        "LoD/1.09": "0x6FF0A210",
-        "LoD/1.09b": "0x6FF0A210"
-      },
-      "rvas": {
-        "LoD/1.07": "0x95E0",
-        "LoD/1.08": "0x9600",
-        "LoD/1.09": "0xA210",
-        "LoD/1.09b": "0xA210"
-      },
-      "name": "LogFormattedMessageThreadSafe",
-      "signature": "void LogFormattedMessageThreadSafe(byte * pbFormatString, ...)",
-      "comment": "Thread-safe logging function that formats and logs messages to global string buffer.\n\nAlgorithm:\n1. Enter critical section for thread-safe access to global string buffer\n2. Format input string with variable arguments using SnprintfWithOverflowHandling\n3. Set null terminator at end of formatted buffer to ensure proper string termination\n4. Call Ordinal_548 to write formatted message to global string buffer target location\n5. Exit critical section to allow other threads access\n\nParameters:\npbFormatString (byte *): Format string with printf-style format specifiers\n... (variadic): Variable arguments matching format specifiers in pbFormatString\n\nReturns:\nvoid: Function does not return a value\n\nSpecial Cases:\nBuffer size limited to 0x200 (512) bytes for formatted output\nThread synchronization handled via critical section at g_abGlobalStringBuffer+0x1c8\nOrdinal_548 handles actual logging output to global buffer at offset 0x480\n\nMagic Numbers Reference:\n0x200 (512): Maximum buffer size for formatted string output\n0x1c8 (456): Offset to critical section structure in global string buffer\n0x480 (1152): Offset to target location in global string buffer for log output",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:eb139531398b6ecbb54188d2f9165fd7"
-    },
     "Bnclient_MNE_eb17d7abe573": {
       "addresses": {
         "LoD/1.07": "0x6FF2B2CD",
@@ -11109,28 +10987,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eb7ebe8853ab4246d611f1ee5af2c48e"
-    },
-    "Bnclient_MNE_ebf57e86077a": {
-      "addresses": {
-        "LoD/1.11": "0x6FF33930",
-        "LoD/1.11b": "0x6FF2E800",
-        "LoD/1.12a": "0x6FF2EC90",
-        "LoD/1.13c": "0x6FF34CC0",
-        "LoD/1.13d": "0x6FF36430"
-      },
-      "rvas": {
-        "LoD/1.11": "0x13930",
-        "LoD/1.11b": "0xE800",
-        "LoD/1.12a": "0xEC90",
-        "LoD/1.13c": "0x14CC0",
-        "LoD/1.13d": "0x16430"
-      },
-      "name": "Nth",
-      "signature": "char * Nth(BNGatewayAccess * this, int param_1)",
-      "comment": "private: char * __thiscall BNGatewayAccess::Nth(int)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:ebf57e86077a1f04f4e82905616b6154"
     },
     "Bnclient_MNE_ec2f8cff08d7": {
       "addresses": {
@@ -11878,16 +11734,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:fadc9de9620623c31db1c093b660c79b"
     },
-    "Bnclient_MNE_fbd2efc867f9": {
-      "addresses": {
-        "LoD/1.10": "0x6FF03310"
-      },
-      "rvas": {
-        "LoD/1.10": "0x3310"
-      },
-      "method": "MNE",
-      "index": "MNE:fbd2efc867f96da09100f0c13ae8864a"
-    },
     "Bnclient_MNE_fc29d055fc26": {
       "addresses": {
         "LoD/1.11": "0x6FF2B830",
@@ -11939,22 +11785,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fc8a902d2e36e029ea7bd281e3fc44d4"
-    },
-    "Bnclient_MNE_fd74f8977750": {
-      "addresses": {
-        "LoD/1.07": "0x6FF22940",
-        "LoD/1.08": "0x6FF22960"
-      },
-      "rvas": {
-        "LoD/1.07": "0x2940",
-        "LoD/1.08": "0x2960"
-      },
-      "name": "ProcessPacketSynchronized",
-      "signature": "bool ProcessPacketSynchronized(int nPacketType, int nPacketData)",
-      "comment": "Thread-safe wrapper for packet processing ordinal function\n\nAlgorithm:\n1. Enter critical section using packet handler critical section (offset 0xad)\n2. Call ordinal function Ordinal_491 with packet type and data parameters\n3. Leave critical section to release synchronization lock\n4. Return success status (always returns true)\n\nParameters:\n- dwPacketType (int): Packet type identifier passed to ordinal handler\n- dwPacketData (int): Packet data content passed to ordinal handler\n\nReturns:\n- bool: Always returns true indicating successful processing\n\nSpecial Cases:\n- Critical section at g_apfnPacketHandlers + 0xad provides thread synchronization\n- Ordinal_491 is the actual packet processing function at 0x6ff398f0\n- Function acts as synchronized wrapper ensuring atomic packet processing\n\nError Handling:\n- No explicit error handling - relies on critical section and ordinal function\n- Always returns true regardless of ordinal function behavior",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:fd74f897775020820feb28c772a351a7"
     },
     "Bnclient_MNE_fd78a1cdcfba": {
       "addresses": {
@@ -12198,7 +12028,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF11D30",
         "LoD/1.09b": "0x6FF11D30",
         "LoD/1.09d": "0x6FF12020",
-        "LoD/1.10": "0x6FF12570"
+        "LoD/1.10": "0x6FF12570",
+        "LoD/1.11": "0x6FF27395",
+        "LoD/1.11b": "0x6FF2739D",
+        "LoD/1.12a": "0x6FF27426",
+        "LoD/1.13c": "0x6FF27415",
+        "LoD/1.13d": "0x6FF273FF"
       },
       "rvas": {
         "LoD/1.07": "0x110F0",
@@ -12206,7 +12041,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x11D30",
         "LoD/1.09b": "0x11D30",
         "LoD/1.09d": "0x12020",
-        "LoD/1.10": "0x12570"
+        "LoD/1.10": "0x12570",
+        "LoD/1.11": "0x7395",
+        "LoD/1.11b": "0x739D",
+        "LoD/1.12a": "0x7426",
+        "LoD/1.13c": "0x7415",
+        "LoD/1.13d": "0x73FF"
       },
       "name": "DisplayMessageBoxWithParent",
       "signature": "int DisplayMessageBoxWithParent(char * lpszText, char * lpszCaption, int nType)",
@@ -12214,24 +12054,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1d436b74681e11a9bd214b6331c37f94"
-    },
-    "Bnclient_STR_212b00dae078": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2DEF0",
-        "LoD/1.11b": "0x6FF2BE90",
-        "LoD/1.12a": "0x6FF2E310",
-        "LoD/1.13c": "0x6FF2F430",
-        "LoD/1.13d": "0x6FF2D900"
-      },
-      "rvas": {
-        "LoD/1.11": "0xDEF0",
-        "LoD/1.11b": "0xBE90",
-        "LoD/1.12a": "0xE310",
-        "LoD/1.13c": "0xF430",
-        "LoD/1.13d": "0xD900"
-      },
-      "method": "STR",
-      "index": "STR:212b00dae07822991ea8cfe9a5c7f3df"
     },
     "Bnclient_STR_304d598e6d0a": {
       "addresses": {
@@ -12254,24 +12076,6 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e"
-    },
-    "Bnclient_STR_3221754ec6ff": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2F8F0",
-        "LoD/1.11b": "0x6FF36180",
-        "LoD/1.12a": "0x6FF321D0",
-        "LoD/1.13c": "0x6FF362B0",
-        "LoD/1.13d": "0x6FF35D10"
-      },
-      "rvas": {
-        "LoD/1.11": "0xF8F0",
-        "LoD/1.11b": "0x16180",
-        "LoD/1.12a": "0x121D0",
-        "LoD/1.13c": "0x162B0",
-        "LoD/1.13d": "0x15D10"
-      },
-      "method": "STR",
-      "index": "STR:3221754ec6ff2ee6de38406c7a8a825f"
     },
     "Bnclient_STR_331b50f891fc": {
       "addresses": {
@@ -12380,7 +12184,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF01080",
         "LoD/1.09b": "0x6FF01080",
         "LoD/1.09d": "0x6FF01060",
-        "LoD/1.10": "0x6FF01080"
+        "LoD/1.10": "0x6FF01080",
+        "LoD/1.11": "0x6FF2DEF0",
+        "LoD/1.11b": "0x6FF2BE90",
+        "LoD/1.12a": "0x6FF2E310",
+        "LoD/1.13c": "0x6FF2F430",
+        "LoD/1.13d": "0x6FF2D900"
       },
       "rvas": {
         "LoD/1.07": "0x1060",
@@ -12388,7 +12197,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x1080",
         "LoD/1.09b": "0x1080",
         "LoD/1.09d": "0x1060",
-        "LoD/1.10": "0x1080"
+        "LoD/1.10": "0x1080",
+        "LoD/1.11": "0xDEF0",
+        "LoD/1.11b": "0xBE90",
+        "LoD/1.12a": "0xE310",
+        "LoD/1.13c": "0xF430",
+        "LoD/1.13d": "0xD900"
       },
       "name": "FindAndConnectToGameServer",
       "signature": "DWORD FindAndConnectToGameServer(void)",
@@ -12402,13 +12216,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.07": "0x6FF237B0",
         "LoD/1.08": "0x6FF237D0",
         "LoD/1.09": "0x6FF04120",
-        "LoD/1.09b": "0x6FF04120"
+        "LoD/1.09b": "0x6FF04120",
+        "LoD/1.09d": "0x6FF044D0",
+        "LoD/1.10": "0x6FF04480"
       },
       "rvas": {
         "LoD/1.07": "0x37B0",
         "LoD/1.08": "0x37D0",
         "LoD/1.09": "0x4120",
-        "LoD/1.09b": "0x4120"
+        "LoD/1.09b": "0x4120",
+        "LoD/1.09d": "0x44D0",
+        "LoD/1.10": "0x4480"
       },
       "name": "ValidateClientRevision",
       "signature": "int ValidateClientRevision(undefined4 * pdwVersionOut, undefined4 * pdwCheckSumOut, undefined1 * pbHashOut)",
@@ -12552,7 +12370,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0F182",
         "LoD/1.09b": "0x6FF0F182",
         "LoD/1.09d": "0x6FF0F467",
-        "LoD/1.10": "0x6FF0FA55"
+        "LoD/1.10": "0x6FF0FA55",
+        "LoD/1.11": "0x6FF2479D",
+        "LoD/1.11b": "0x6FF2478D",
+        "LoD/1.12a": "0x6FF247FD",
+        "LoD/1.13c": "0x6FF247FD",
+        "LoD/1.13d": "0x6FF247FD"
       },
       "rvas": {
         "LoD/1.07": "0xE537",
@@ -12560,7 +12383,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xF182",
         "LoD/1.09b": "0xF182",
         "LoD/1.09d": "0xF467",
-        "LoD/1.10": "0xFA55"
+        "LoD/1.10": "0xFA55",
+        "LoD/1.11": "0x479D",
+        "LoD/1.11b": "0x478D",
+        "LoD/1.12a": "0x47FD",
+        "LoD/1.13c": "0x47FD",
+        "LoD/1.13d": "0x47FD"
       },
       "name": "DisplayRuntimeError",
       "signature": "void DisplayRuntimeError(uint dwErrorCode)",
@@ -12712,7 +12540,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0A5A0",
         "LoD/1.09b": "0x6FF0A5A0",
         "LoD/1.09d": "0x6FF0A7F0",
-        "LoD/1.10": "0x6FF0B050"
+        "LoD/1.10": "0x6FF0B050",
+        "LoD/1.11": "0x6FF2F8F0",
+        "LoD/1.11b": "0x6FF36180",
+        "LoD/1.12a": "0x6FF321D0",
+        "LoD/1.13c": "0x6FF362B0",
+        "LoD/1.13d": "0x6FF35D10"
       },
       "rvas": {
         "LoD/1.07": "0x9970",
@@ -12720,7 +12553,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xA5A0",
         "LoD/1.09b": "0xA5A0",
         "LoD/1.09d": "0xA7F0",
-        "LoD/1.10": "0xB050"
+        "LoD/1.10": "0xB050",
+        "LoD/1.11": "0xF8F0",
+        "LoD/1.11b": "0x16180",
+        "LoD/1.12a": "0x121D0",
+        "LoD/1.13c": "0x162B0",
+        "LoD/1.13d": "0x15D10"
       },
       "name": "GenerateAuthenticationCredentials",
       "signature": "void GenerateAuthenticationCredentials(void)",
@@ -12778,7 +12616,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF04560",
         "LoD/1.09b": "0x6FF04560",
         "LoD/1.09d": "0x6FF047E0",
-        "LoD/1.10": "0x6FF04780"
+        "LoD/1.10": "0x6FF04780",
+        "LoD/1.11": "0x6FF34DF0",
+        "LoD/1.11b": "0x6FF2CE90",
+        "LoD/1.12a": "0x6FF2C4F0",
+        "LoD/1.13c": "0x6FF2D610",
+        "LoD/1.13d": "0x6FF31330"
       },
       "rvas": {
         "LoD/1.07": "0x3BE0",
@@ -12786,7 +12629,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x4560",
         "LoD/1.09b": "0x4560",
         "LoD/1.09d": "0x47E0",
-        "LoD/1.10": "0x4780"
+        "LoD/1.10": "0x4780",
+        "LoD/1.11": "0x14DF0",
+        "LoD/1.11b": "0xCE90",
+        "LoD/1.12a": "0xC4F0",
+        "LoD/1.13c": "0xD610",
+        "LoD/1.13d": "0x11330"
       },
       "name": "ProcessBatchFileCommands",
       "signature": "uint ProcessBatchFileCommands(uint * pnStatusOut)",
@@ -12887,18 +12735,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "STR",
       "index": "STR:b30fdbac17cba3dc936a0a6deae65420"
     },
-    "Bnclient_STR_b75eb2fb7d21": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF044D0",
-        "LoD/1.10": "0x6FF04480"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x44D0",
-        "LoD/1.10": "0x4480"
-      },
-      "method": "STR",
-      "index": "STR:b75eb2fb7d2126b7876dbd481afe015d"
-    },
     "Bnclient_STR_b7a52aed3655": {
       "addresses": {
         "LoD/1.07": "0x6FF2D14C",
@@ -12906,7 +12742,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0DD6C",
         "LoD/1.09b": "0x6FF0DD6C",
         "LoD/1.09d": "0x6FF0E07C",
-        "LoD/1.10": "0x6FF0E5E4"
+        "LoD/1.10": "0x6FF0E5E4",
+        "LoD/1.11": "0x6FF22E15",
+        "LoD/1.11b": "0x6FF223A6",
+        "LoD/1.12a": "0x6FF2347C",
+        "LoD/1.13c": "0x6FF22854",
+        "LoD/1.13d": "0x6FF2241B"
       },
       "rvas": {
         "LoD/1.07": "0xD14C",
@@ -12914,7 +12755,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xDD6C",
         "LoD/1.09b": "0xDD6C",
         "LoD/1.09d": "0xE07C",
-        "LoD/1.10": "0xE5E4"
+        "LoD/1.10": "0xE5E4",
+        "LoD/1.11": "0x2E15",
+        "LoD/1.11b": "0x23A6",
+        "LoD/1.12a": "0x347C",
+        "LoD/1.13c": "0x2854",
+        "LoD/1.13d": "0x241B"
       },
       "name": "FormatStringProcessor",
       "signature": "int FormatStringProcessor(int * pOutputHandler, byte * pbFormatString, uint * ppnArgsPtr)",
@@ -12923,62 +12769,22 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "STR",
       "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
-    "Bnclient_STR_c004c7748bfc": {
-      "addresses": {
-        "LoD/1.11": "0x6FF22E15",
-        "LoD/1.11b": "0x6FF223A6",
-        "LoD/1.12a": "0x6FF2347C",
-        "LoD/1.13c": "0x6FF22854",
-        "LoD/1.13d": "0x6FF2241B"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2E15",
-        "LoD/1.11b": "0x23A6",
-        "LoD/1.12a": "0x347C",
-        "LoD/1.13c": "0x2854",
-        "LoD/1.13d": "0x241B"
-      },
-      "name": "__output",
-      "signature": "undefined __output(undefined4 param_1, byte * param_2, wchar_t * param_3)",
-      "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
-    },
-    "Bnclient_STR_c5e792f6fac5": {
-      "addresses": {
-        "LoD/1.10": "0x6FF083D0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x83D0"
-      },
-      "method": "STR",
-      "index": "STR:c5e792f6fac5beaea5ffc9341ceb59da"
-    },
-    "Bnclient_STR_cc4dfa42f642": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF03560",
-        "LoD/1.10": "0x6FF035B0"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x3560",
-        "LoD/1.10": "0x35B0"
-      },
-      "method": "STR",
-      "index": "STR:cc4dfa42f6422c4fadca3f7215b81521"
-    },
     "Bnclient_STR_cde503e814e1": {
       "addresses": {
         "LoD/1.07": "0x6FF22BD0",
         "LoD/1.08": "0x6FF22BF0",
         "LoD/1.09": "0x6FF03550",
-        "LoD/1.09b": "0x6FF03550"
+        "LoD/1.09b": "0x6FF03550",
+        "LoD/1.09d": "0x6FF03560",
+        "LoD/1.10": "0x6FF035B0"
       },
       "rvas": {
         "LoD/1.07": "0x2BD0",
         "LoD/1.08": "0x2BF0",
         "LoD/1.09": "0x3550",
-        "LoD/1.09b": "0x3550"
+        "LoD/1.09b": "0x3550",
+        "LoD/1.09d": "0x3560",
+        "LoD/1.10": "0x35B0"
       },
       "name": "ProcessBattleNetGatewayOperation",
       "signature": "void ProcessBattleNetGatewayOperation(void * this, uint dwParam1, uint dwParam2, uint dwParam3, byte * pbDataBuffer, char * lpszTextBuffer, uint * pdwAdditionalData, uint dwDataSize)",
@@ -12987,26 +12793,9 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "STR",
       "index": "STR:cde503e814e11cd8212d64ad2654e732"
     },
-    "Bnclient_STR_d11530a9f5e2": {
-      "addresses": {
-        "LoD/1.11": "0x6FF34DF0",
-        "LoD/1.11b": "0x6FF2CE90",
-        "LoD/1.12a": "0x6FF2C4F0",
-        "LoD/1.13c": "0x6FF2D610",
-        "LoD/1.13d": "0x6FF31330"
-      },
-      "rvas": {
-        "LoD/1.11": "0x14DF0",
-        "LoD/1.11b": "0xCE90",
-        "LoD/1.12a": "0xC4F0",
-        "LoD/1.13c": "0xD610",
-        "LoD/1.13d": "0x11330"
-      },
-      "method": "STR",
-      "index": "STR:d11530a9f5e2b822ed5bd507e63b84c1"
-    },
     "Bnclient_STR_d49da70a5db4": {
       "addresses": {
+        "LoD/1.10": "0x6FF083D0",
         "LoD/1.11": "0x6FF2FEE0",
         "LoD/1.11b": "0x6FF32990",
         "LoD/1.12a": "0x6FF35EC0",
@@ -13014,6 +12803,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x6FF2E150"
       },
       "rvas": {
+        "LoD/1.10": "0x83D0",
         "LoD/1.11": "0xFEE0",
         "LoD/1.11b": "0x12990",
         "LoD/1.12a": "0x15EC0",
@@ -13022,28 +12812,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "method": "STR",
       "index": "STR:d49da70a5db4ffd4daaa6480d0f1b634"
-    },
-    "Bnclient_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6FF27395",
-        "LoD/1.11b": "0x6FF2739D",
-        "LoD/1.12a": "0x6FF27426",
-        "LoD/1.13c": "0x6FF27415",
-        "LoD/1.13d": "0x6FF273FF"
-      },
-      "rvas": {
-        "LoD/1.11": "0x7395",
-        "LoD/1.11b": "0x739D",
-        "LoD/1.12a": "0x7426",
-        "LoD/1.13c": "0x7415",
-        "LoD/1.13d": "0x73FF"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
     },
     "Bnclient_STR_d937d0c590ae": {
       "addresses": {
@@ -13152,68 +12920,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "method": "STR",
       "index": "STR:f01efdc17c15540c477f1a7e8ccf113d"
-    },
-    "Bnclient_STR_f0c3ac766c27": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2DB10",
-        "LoD/1.11b": "0x6FF2BAB0",
-        "LoD/1.12a": "0x6FF2DF30",
-        "LoD/1.13c": "0x6FF2F050",
-        "LoD/1.13d": "0x6FF2D390"
-      },
-      "rvas": {
-        "LoD/1.11": "0xDB10",
-        "LoD/1.11b": "0xBAB0",
-        "LoD/1.12a": "0xDF30",
-        "LoD/1.13c": "0xF050",
-        "LoD/1.13d": "0xD390"
-      },
-      "method": "STR",
-      "index": "STR:f0c3ac766c2775ce4f49763e229ff4fe"
-    },
-    "Bnclient_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2479D",
-        "LoD/1.11b": "0x6FF2478D",
-        "LoD/1.12a": "0x6FF247FD",
-        "LoD/1.13c": "0x6FF247FD",
-        "LoD/1.13d": "0x6FF247FD"
-      },
-      "rvas": {
-        "LoD/1.11": "0x479D",
-        "LoD/1.11b": "0x478D",
-        "LoD/1.12a": "0x47FD",
-        "LoD/1.13c": "0x47FD",
-        "LoD/1.13d": "0x47FD"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "Bnclient_STR_fde45e437d66": {
-      "addresses": {
-        "LoD/1.11": "0x6FF343E0",
-        "LoD/1.11b": "0x6FF31110",
-        "LoD/1.12a": "0x6FF2F750",
-        "LoD/1.13c": "0x6FF373A0",
-        "LoD/1.13d": "0x6FF36650"
-      },
-      "rvas": {
-        "LoD/1.11": "0x143E0",
-        "LoD/1.11b": "0x11110",
-        "LoD/1.12a": "0xF750",
-        "LoD/1.13c": "0x173A0",
-        "LoD/1.13d": "0x16650"
-      },
-      "name": "WriteDefaultGatewayList",
-      "signature": "void WriteDefaultGatewayList(BNGatewayAccess * this)",
-      "comment": "private: void __thiscall BNGatewayAccess::WriteDefaultGatewayList(void)",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:fde45e437d6619bacfe6475d146a29a7"
     }
   }
 };

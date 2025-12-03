@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Net.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -233,29 +233,6 @@ var FUNCTIONS_D2Net_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10003"
-    },
-    "D2Net_EXP_10004": {
-      "addresses": {
-        "LoD/1.07": "0x6FC321E0",
-        "LoD/1.08": "0x6FC321E0",
-        "LoD/1.09": "0x6FC021E0",
-        "LoD/1.09b": "0x6FC021E0",
-        "LoD/1.09d": "0x6FC021E0",
-        "LoD/1.10": "0x6FC02220"
-      },
-      "rvas": {
-        "LoD/1.07": "0x21E0",
-        "LoD/1.08": "0x21E0",
-        "LoD/1.09": "0x21E0",
-        "LoD/1.09b": "0x21E0",
-        "LoD/1.09d": "0x21E0",
-        "LoD/1.10": "0x2220"
-      },
-      "name": "Ordinal_10004",
-      "signature": "undefined Ordinal_10004(void)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10004"
     },
     "D2Net_EXP_10005": {
       "addresses": {
@@ -4739,8 +4716,14 @@ var FUNCTIONS_D2Net_dll = {
       "method": "STR",
       "index": "STR:c170bd72c7a30c3be9e6aa15fb836e49"
     },
-    "D2Net_STR_d73f4455ba8d": {
+    "D2Net_STR_f59c01a33eca": {
       "addresses": {
+        "LoD/1.07": "0x6FC357E4",
+        "LoD/1.08": "0x6FC357E4",
+        "LoD/1.09": "0x6FC057E4",
+        "LoD/1.09b": "0x6FC057E4",
+        "LoD/1.09d": "0x6FC057E4",
+        "LoD/1.10": "0x6FC05884",
         "LoD/1.11": "0x6FBF487D",
         "LoD/1.11b": "0x6FBF487D",
         "LoD/1.12a": "0x6FBF48AD",
@@ -4748,6 +4731,12 @@ var FUNCTIONS_D2Net_dll = {
         "LoD/1.13d": "0x6FBF487D"
       },
       "rvas": {
+        "LoD/1.07": "0x57E4",
+        "LoD/1.08": "0x57E4",
+        "LoD/1.09": "0x57E4",
+        "LoD/1.09b": "0x57E4",
+        "LoD/1.09d": "0x57E4",
+        "LoD/1.10": "0x5884",
         "LoD/1.11": "0x487D",
         "LoD/1.11b": "0x487D",
         "LoD/1.12a": "0x48AD",
@@ -4759,30 +4748,16 @@ var FUNCTIONS_D2Net_dll = {
       "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
-    },
-    "D2Net_STR_f59c01a33eca": {
-      "addresses": {
-        "LoD/1.07": "0x6FC357E4",
-        "LoD/1.08": "0x6FC357E4",
-        "LoD/1.09": "0x6FC057E4",
-        "LoD/1.09b": "0x6FC057E4",
-        "LoD/1.09d": "0x6FC057E4",
-        "LoD/1.10": "0x6FC05884"
-      },
-      "rvas": {
-        "LoD/1.07": "0x57E4",
-        "LoD/1.08": "0x57E4",
-        "LoD/1.09": "0x57E4",
-        "LoD/1.09b": "0x57E4",
-        "LoD/1.09d": "0x57E4",
-        "LoD/1.10": "0x5884"
-      },
-      "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
-    "D2Net_STR_f8f89093f5c5": {
+    "D2Net_STR_ff7880d11813": {
       "addresses": {
+        "LoD/1.07": "0x6FC33830",
+        "LoD/1.08": "0x6FC33830",
+        "LoD/1.09": "0x6FC03830",
+        "LoD/1.09b": "0x6FC03830",
+        "LoD/1.09d": "0x6FC03830",
+        "LoD/1.10": "0x6FC038D0",
         "LoD/1.11": "0x6FBF290C",
         "LoD/1.11b": "0x6FBF290C",
         "LoD/1.12a": "0x6FBF292C",
@@ -4790,6 +4765,12 @@ var FUNCTIONS_D2Net_dll = {
         "LoD/1.13d": "0x6FBF290C"
       },
       "rvas": {
+        "LoD/1.07": "0x3830",
+        "LoD/1.08": "0x3830",
+        "LoD/1.09": "0x3830",
+        "LoD/1.09b": "0x3830",
+        "LoD/1.09d": "0x3830",
+        "LoD/1.10": "0x38D0",
         "LoD/1.11": "0x290C",
         "LoD/1.11b": "0x290C",
         "LoD/1.12a": "0x292C",
@@ -4800,26 +4781,6 @@ var FUNCTIONS_D2Net_dll = {
       "signature": "void __NMSG_WRITE(int param_1)",
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "D2Net_STR_ff7880d11813": {
-      "addresses": {
-        "LoD/1.07": "0x6FC33830",
-        "LoD/1.08": "0x6FC33830",
-        "LoD/1.09": "0x6FC03830",
-        "LoD/1.09b": "0x6FC03830",
-        "LoD/1.09d": "0x6FC03830",
-        "LoD/1.10": "0x6FC038D0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3830",
-        "LoD/1.08": "0x3830",
-        "LoD/1.09": "0x3830",
-        "LoD/1.09b": "0x3830",
-        "LoD/1.09d": "0x3830",
-        "LoD/1.10": "0x38D0"
-      },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

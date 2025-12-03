@@ -33,6 +33,13 @@ from collections import defaultdict
 from typing import Dict, List, Optional, Set, Tuple
 import hashlib
 
+# Import fuzzy matcher
+try:
+    from fuzzy_matcher import FuzzyMatcher, HAS_DATASKETCH
+except ImportError:
+    FuzzyMatcher = None
+    HAS_DATASKETCH = False
+
 # Default config if no config file exists
 DEFAULT_CONFIG = {
     "enabled_game_types": {"LoD": True, "Classic": True},
@@ -125,6 +132,14 @@ class FunctionMerger:
         
         # Statistics
         self.stats = defaultdict(int)
+        
+        # Initialize fuzzy matcher if available
+        self.fuzzy_matcher = None
+        if FuzzyMatcher:
+            fuzzy_config = self.config.get('fuzzy_matching', {'enabled': True})
+            if fuzzy_config.get('enabled', True):
+                self.fuzzy_matcher = FuzzyMatcher(self.config)
+                print(f"Fuzzy matching: enabled (datasketch: {HAS_DATASKETCH})")
     
     def load_config(self) -> dict:
         """Load configuration from JSON file."""
@@ -216,24 +231,32 @@ class FunctionMerger:
         Find or create canonical ID for a function.
         
         Returns canonical_id if matched/created.
+        
+        Matching strategy:
+        1. Try primary index if method is enabled
+        2. Try alternate indexes in priority order
+        3. For EXP (if in verified_methods), try EXP + verify with secondary index
         """
         index = func_data.get('index', '')
         if not index:
             return None
         
-        # Get enabled methods from config (exclude disabled ones)
+        # Get config settings
         disabled_methods = set(self.config.get('disabled_methods', []))
+        verified_methods = set(self.config.get('verified_methods', []))  # Methods that need secondary verification
         index_priority = self.config.get('index_priority', ['STR', 'API', 'MNE', 'CFG', 'PRO'])
         enabled_methods = [m for m in index_priority if m not in disabled_methods]
         
-        # Check if this exact index already exists (only if method is enabled)
         index_method = func_data.get('index_method', '')
+        indexes = func_data.get('indexes', {})
         full_key = f"{dll_name}:{index}"
-        if index_method not in disabled_methods and full_key in self.index_to_canonical:
-            return self.index_to_canonical[full_key]
+        
+        # Check if this exact index already exists (only if method is enabled)
+        if index_method not in disabled_methods and index_method not in verified_methods:
+            if full_key in self.index_to_canonical:
+                return self.index_to_canonical[full_key]
         
         # Try alternate indexes in priority order (skip disabled methods)
-        indexes = func_data.get('indexes', {})
         for method in enabled_methods:
             idx_value = indexes.get(method)
             if idx_value:
@@ -241,15 +264,32 @@ class FunctionMerger:
                 if alt_key in self.index_to_canonical:
                     # Found match via alternate index
                     canonical_id = self.index_to_canonical[alt_key]
-                    # Also register the primary index (if method is enabled)
-                    if index_method not in disabled_methods:
+                    # Also register the primary index (if method is enabled and not verified-only)
+                    if index_method not in disabled_methods and index_method not in verified_methods:
                         self.index_to_canonical[full_key] = canonical_id
                     return canonical_id
+        
+        # Try verified methods (like EXP) - match only if secondary index also matches
+        for method in verified_methods:
+            if method in disabled_methods:
+                continue
+            idx_value = indexes.get(method)
+            if idx_value:
+                exp_key = f"{dll_name}:{method}:{idx_value}"
+                if exp_key in self.index_to_canonical:
+                    canonical_id = self.index_to_canonical[exp_key]
+                    # Verify with a secondary index
+                    existing_func = self.functions.get(canonical_id)
+                    if existing_func and self._verify_match(func_data, existing_func):
+                        self.stats['verified_matches'] += 1
+                        return canonical_id
+                    else:
+                        self.stats['rejected_exp_matches'] += 1
         
         # No match found - create new canonical ID
         canonical_id = self.generate_canonical_id(dll_name, func_data)
         
-        # Register all available indexes (skip disabled methods)
+        # Register all available indexes (skip disabled methods, include verified)
         if index_method not in disabled_methods:
             self.index_to_canonical[full_key] = canonical_id
         for method in enabled_methods:
@@ -257,8 +297,35 @@ class FunctionMerger:
             if idx_value:
                 alt_key = f"{dll_name}:{method}:{idx_value}"
                 self.index_to_canonical[alt_key] = canonical_id
+        # Also register verified method indexes for lookup
+        for method in verified_methods:
+            if method not in disabled_methods:
+                idx_value = indexes.get(method)
+                if idx_value:
+                    alt_key = f"{dll_name}:{method}:{idx_value}"
+                    self.index_to_canonical[alt_key] = canonical_id
         
         return canonical_id
+    
+    def _verify_match(self, func_data: dict, existing_func: dict) -> bool:
+        """
+        Verify that two functions are the same by checking secondary indexes.
+        
+        Returns True if at least one secondary index matches.
+        """
+        indexes_new = func_data.get('indexes', {})
+        indexes_existing = existing_func.get('indexes', {})
+        
+        # Check each verification method
+        for method in ['API', 'MNE', 'CFG', 'STR']:
+            val_new = indexes_new.get(method)
+            val_existing = indexes_existing.get(method)
+            if val_new and val_existing:
+                if val_new == val_existing:
+                    return True  # Found matching secondary index
+        
+        # No matching secondary index - could be different functions with same ordinal
+        return False
     
     def generate_canonical_id(self, dll_name: str, func_data: dict) -> str:
         """Generate a unique canonical ID for a function."""
@@ -352,17 +419,82 @@ class FunctionMerger:
         )
         
         dll_stats = defaultdict(int)
+        version_func_map = {}  # version_key -> {address: (func, canonical_id)}
         
+        # Pass 1: Exact matching
         for (game_type, version), data in sorted_versions:
             functions = data.get('functions', [])
+            version_key = f"{game_type}/{version}"
+            version_func_map[version_key] = {}
+            
+            # Build fuzzy index for this version
+            if self.fuzzy_matcher:
+                self.fuzzy_matcher.build_indexes(dll_name, functions, version_key)
             
             for func in functions:
                 canonical_id = self.match_function(func, dll_name)
                 if canonical_id:
                     self.merge_function_data(canonical_id, func, game_type, version, dll_name)
+                    version_func_map[version_key][func.get('address')] = (func, canonical_id)
                     dll_stats['matched'] += 1
-                else:
-                    dll_stats['unmatched'] += 1
+        
+        # Pass 2: Fuzzy matching to merge single-version functions
+        if self.fuzzy_matcher:
+            fuzzy_merged = 0
+            version_keys = list(version_func_map.keys())
+            
+            for i in range(len(version_keys) - 1):
+                src_version = version_keys[i]
+                tgt_version = version_keys[i + 1]
+                
+                # Find functions that appear in only src_version (not in tgt_version)
+                src_funcs = version_func_map[src_version]
+                tgt_funcs = version_func_map[tgt_version]
+                
+                # Get canonical IDs that exist in src but not tgt
+                src_canonical_ids = {cid for _, (_, cid) in src_funcs.items()}
+                tgt_canonical_ids = {cid for _, (_, cid) in tgt_funcs.items()}
+                
+                # Functions in src not matched to tgt
+                unmatched_src_cids = src_canonical_ids - tgt_canonical_ids
+                
+                for addr, (func, canonical_id) in src_funcs.items():
+                    if canonical_id not in unmatched_src_cids:
+                        continue
+                    
+                    # This function didn't match to next version, try fuzzy
+                    result = self.fuzzy_matcher.find_fuzzy_match(
+                        func, dll_name, tgt_version
+                    )
+                    
+                    if result:
+                        matched_func, score, method = result
+                        matched_addr = matched_func.get('address')
+                        
+                        if matched_addr in tgt_funcs:
+                            tgt_func, tgt_canonical_id = tgt_funcs[matched_addr]
+                            
+                            # Check if target has fewer versions (merge into larger)
+                            src_entry = self.functions.get(canonical_id)
+                            tgt_entry = self.functions.get(tgt_canonical_id)
+                            
+                            if src_entry and tgt_entry:
+                                src_versions = len(src_entry.get('versions', {}))
+                                tgt_versions = len(tgt_entry.get('versions', {}))
+                                
+                                if tgt_versions <= src_versions:
+                                    # Merge target into source
+                                    self._merge_canonical_entries(canonical_id, tgt_canonical_id)
+                                    fuzzy_merged += 1
+                                    self.stats[f'fuzzy_{method}'] += 1
+                                else:
+                                    # Merge source into target
+                                    self._merge_canonical_entries(tgt_canonical_id, canonical_id)
+                                    fuzzy_merged += 1
+                                    self.stats[f'fuzzy_{method}'] += 1
+            
+            if fuzzy_merged > 0:
+                dll_stats['fuzzy_merged'] = fuzzy_merged
         
         # Count functions for this DLL
         dll_functions = [f for f in self.functions.values() if f['dll'] == dll_name]
@@ -370,9 +502,48 @@ class FunctionMerger:
         
         print(f"  {dll_name}: {len(dll_functions)} canonical functions, {named} named")
         print(f"    Matched: {dll_stats['matched']}, Unmatched: {dll_stats['unmatched']}")
+        if dll_stats.get('fuzzy_merged', 0) > 0:
+            print(f"    Fuzzy merged: {dll_stats['fuzzy_merged']}")
         
         self.stats[f'{dll_name}_functions'] = len(dll_functions)
         self.stats[f'{dll_name}_named'] = named
+    
+    def _merge_canonical_entries(self, keep_id: str, merge_id: str):
+        """Merge one canonical entry into another."""
+        if keep_id == merge_id:
+            return
+        
+        keep_entry = self.functions.get(keep_id)
+        merge_entry = self.functions.get(merge_id)
+        
+        if not keep_entry or not merge_entry:
+            return
+        
+        # Merge versions
+        for version_key, version_data in merge_entry.get('versions', {}).items():
+            if version_key not in keep_entry['versions']:
+                keep_entry['versions'][version_key] = version_data
+        keep_entry['version_count'] = len(keep_entry['versions'])
+        
+        # Merge name if keep_entry has no name
+        if not keep_entry.get('name') and merge_entry.get('name'):
+            keep_entry['name'] = merge_entry['name']
+            keep_entry['display_name'] = merge_entry['display_name']
+            keep_entry['name_source'] = merge_entry['name_source']
+            keep_entry['signature'] = merge_entry.get('signature')
+            keep_entry['comment'] = merge_entry.get('comment')
+            keep_entry['parameters'] = merge_entry.get('parameters', [])
+        
+        # Update index mappings
+        merge_indexes = merge_entry.get('indexes', {})
+        dll_name = merge_entry['dll']
+        for method, value in merge_indexes.items():
+            if value:
+                key = f"{dll_name}:{method}:{value}"
+                self.index_to_canonical[key] = keep_id
+        
+        # Remove merged entry
+        del self.functions[merge_id]
     
     def generate_registry(self):
         """Generate the unified function registry."""
@@ -423,6 +594,19 @@ class FunctionMerger:
         print(f"\nWrote registry to: {output_file}")
         print(f"  Total canonical functions: {len(self.functions)}")
         print(f"  Total named: {self.stats['named_functions']}")
+        if self.stats.get('verified_matches', 0) > 0:
+            print(f"  Verified EXP matches: {self.stats['verified_matches']}")
+        if self.stats.get('rejected_exp_matches', 0) > 0:
+            print(f"  Rejected EXP matches (different functions): {self.stats['rejected_exp_matches']}")
+        
+        # Print fuzzy matching stats
+        fuzzy_total = sum(v for k, v in self.stats.items() if k.startswith('fuzzy_'))
+        if fuzzy_total > 0:
+            print(f"  Fuzzy matches: {fuzzy_total}")
+            for k, v in sorted(self.stats.items()):
+                if k.startswith('fuzzy_') and v > 0:
+                    method = k.replace('fuzzy_', '')
+                    print(f"    - {method}: {v}")
     
     def write_summary(self):
         """Write a summary CSV."""

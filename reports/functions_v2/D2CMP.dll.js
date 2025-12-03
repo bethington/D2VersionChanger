@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2CMP.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -35,41 +35,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "API",
       "index": "API:04ceb1dddb4c36fd8c73db04c29808c3"
-    },
-    "D2CMP_API_088c1739c19c": {
-      "addresses": {
-        "LoD/1.07": "0x6FE20070",
-        "LoD/1.08": "0x6FE20070",
-        "LoD/1.09": "0x6FDFFE60",
-        "LoD/1.09b": "0x6FDFFE60",
-        "LoD/1.09d": "0x6FDFFE60",
-        "LoD/1.10": "0x6FDFF950"
-      },
-      "rvas": {
-        "LoD/1.07": "0x10070",
-        "LoD/1.08": "0x10070",
-        "LoD/1.09": "0xFE60",
-        "LoD/1.09b": "0xFE60",
-        "LoD/1.09d": "0xFE60",
-        "LoD/1.10": "0xF950"
-      },
-      "name": "Ordinal_10074",
-      "signature": "undefined Ordinal_10074(int param_1, undefined * param_2)",
-      "name_source": "LoD/1.07",
-      "method": "API",
-      "index": "API:088c1739c19ccd3110d53726cb64ac5c"
-    },
-    "D2CMP_API_0b9a7bce108f": {
-      "addresses": {
-        "LoD/1.11": "0x6FE1D310",
-        "LoD/1.11b": "0x6FE24640"
-      },
-      "rvas": {
-        "LoD/1.11": "0xD310",
-        "LoD/1.11b": "0x14640"
-      },
-      "method": "API",
-      "index": "API:0b9a7bce108f3d3c44a5ebb73b6fde04"
     },
     "D2CMP_API_0c36e9bddb38": {
       "addresses": {
@@ -222,10 +187,12 @@ var FUNCTIONS_D2CMP_dll = {
     },
     "D2CMP_API_3168a8566741": {
       "addresses": {
+        "LoD/1.12a": "0x6FE23360",
         "LoD/1.13c": "0x6FE1E090",
         "LoD/1.13d": "0x6FE22DE0"
       },
       "rvas": {
+        "LoD/1.12a": "0x13360",
         "LoD/1.13c": "0xE090",
         "LoD/1.13d": "0x12DE0"
       },
@@ -249,6 +216,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1094E",
         "LoD/1.10": "0xE870"
       },
+      "name": "InitializeResourceAndLock",
+      "signature": "dword InitializeResourceAndLock(dword dwUnknown, dword dwResourceId, dword * pResultHandle, int nIgnoreError)",
+      "comment": "Initialize resource and acquire critical section lock\n\nAlgorithm:\n1. Call LeaveCriticalSection (Ordinal_10102) to exit critical section\n2. Test if result is non-zero (lock released successfully)\n3. If lock released (result != 0), return 1 (success)\n4. If lock failed (result == 0):\n   a. Get error code via GetLastError()\n   b. Check condition: param_4 == 0 OR dwLastError == 2 (FILE_NOT_FOUND)\n   c. If either condition true, log error via Ordinal_10026(3, dwResourceId, \"Archive.cpp\", 0x3b)\n   d. Call FUN_6fe21293(0xffffffff) to terminate/exit (no return)\n   e. Return 0 only reachable if neither condition met (but FUN_6fe21293 doesn't return)\n5. Return 1 if lock succeeded, 0 if error conditions met\n\nParameters:\n- dwUnknown (dword, ECX): Unknown purpose (typically 0 in callers)\n- dwResourceId (dword, EDX): Resource identifier to initialize\n- pResultHandle (dword*, Stack[0x4]): Pointer to result handle storage\n- nIgnoreError (int, Stack[0x8]): Error handling flag (0=error fatal, !0=error recoverable)\n\nReturns:\n- 1 if resource initialized successfully (critical section released)\n- 0 if resource not found or error conditions (usually terminates via FUN_6fe21293)\n\nSpecial Cases:\n- Function typically returns via FUN_6fe21293() which terminates execution\n- Return value 0 reached only if dwLastError != 2 AND param_4 != 0\n- Magic number 0x3b (59 decimal) is a debug/log parameter\n- Calls LeaveCriticalSection but names suggests initialization (inverse logic)\n- String reference: Archive.cpp line location marker",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:32dd9138fb3f9dcf1748c4e8304f6493"
     },
@@ -309,6 +280,30 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "API",
       "index": "API:3d0b22bf5555ca9918293022dbaf9334"
     },
+    "D2CMP_API_3e1ec135e3c9": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1C230",
+        "LoD/1.08": "0x6FE1C230",
+        "LoD/1.09": "0x6FDFBFF0",
+        "LoD/1.09b": "0x6FDFBFF0",
+        "LoD/1.09d": "0x6FDFBFF0",
+        "LoD/1.10": "0x6FDFBBF0"
+      },
+      "rvas": {
+        "LoD/1.07": "0xC230",
+        "LoD/1.08": "0xC230",
+        "LoD/1.09": "0xBFF0",
+        "LoD/1.09b": "0xBFF0",
+        "LoD/1.09d": "0xBFF0",
+        "LoD/1.10": "0xBBF0"
+      },
+      "name": "InitializeAndCleanupQueues",
+      "signature": "void InitializeAndCleanupQueues(bool fCleanup)",
+      "comment": "Initialize and cleanup queue management structures for sprite rendering system.\n\nAlgorithm:\n1. If fCleanup flag is set, perform full cleanup sequence:\n   - Call FUN_6fe1e1f0 in loop while g_dwQueueItemCount is non-zero to process and clear all queued items\n   - If g_fDebugQueueLogsEnabled flag is set, call FogDebugMessage with error code 0x80b, then clear flag\n   - If g_pQueueCriticalSection is allocated, delete it, call Ordinal_10043 (debug logging), clear pointer\n2. Clear g_aQueueBuffer (60 bytes = 15 dwords) by zeroing from address g_aQueueBuffer\n3. If fCleanup flag set, call ProcessAndClearQueueItems to cleanup secondary queue at g_aSecondaryQueueBuffer\n4. Clear g_aSecondaryQueueBuffer (52 bytes = 13 dwords) by zeroing from address g_aSecondaryQueueBuffer\n5. Call CleanupSpriteDecompressionLock to finalize sprite system cleanup\n\nParameters:\n- fCleanup (bool): If true, perform full cleanup including queue processing and critical section deletion; if false, skip cleanup steps\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- Function performs partial cleanup if fCleanup=false (only clears buffers, skips queue processing)\n- REP STOSD instructions used for efficient bulk zeroing of queue buffers\n- Magic constant 0x80b used for debug logging message ID\n- Magic constant 0x81d used for secondary debug logging\n- Note: Function uses register-allocated temporaries (nCount in ECX, EDI for pointer operations) optimized by compiler\n\nMagic Numbers:\n- 0xf (15 dwords) - size of g_aQueueBuffer in 32-bit units\n- 0xd (13 dwords) - size of g_aSecondaryQueueBuffer in 32-bit units\n- 0x80b - FogDebugMessage ID for queue cleanup debug log\n- 0x81d - Ordinal_10043 debug message ID",
+      "name_source": "LoD/1.07",
+      "method": "API",
+      "index": "API:3e1ec135e3c9e4cae2e85d1a250487d6"
+    },
     "D2CMP_API_5ad65126844e": {
       "addresses": {
         "LoD/1.07": "0x6FE20BCC",
@@ -326,6 +321,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x109BC",
         "LoD/1.10": "0x1047A"
       },
+      "name": "ValidateGameObjectData",
+      "signature": "void ValidateGameObjectData(dword hObject, int nParam, dword dwUnknown1, dword dwUnknown2, dword dwUnknown3)",
+      "comment": "Validates game object data and initializes state for a given object slot\nLoads object data into a local buffer and performs error checking. Fails assertion if nParam is zero.\nQueries object data using an unknown ordinal; if query fails (returns -1), logs error and terminates.\n\nAlgorithm:\n1. Assert nParam != 0 (fail with FogAssertFail and FUN_6fe21293 if zero)\n2. Call Ordinal_10106 (unknown ordinal, likely D2Common) with dwUnknown2 and dwUnknown3 parameters -> returns result in EAX\n3. Compare EAX to -1; if equal (error), proceed to error path\n4. Error path: Copy object data into abBuffer via Ordinal_276 (unknown ordinal) with nParam and 0x104 size\n5. Log error info to console via Ordinal_10026 (unknown ordinal, likely Fog.dll logging) with log level 3, abBuffer, source file path, line 0x79\n6. Terminate execution via FUN_6fe21293(0xffffffff) on error\n7. Return silently if Ordinal_10106 succeeded\n\nParameters:\nhObject (dword, ECX register) - Handle or ID of the game object\nnParam (int, EDX register) - Object instance reference, validated against zero (related to Ordinal_276)\ndwUnknown1 (dword, Stack[0x4]) - First parameter passed to Ordinal_10106 (context/type unknown)\ndwUnknown2 (dword, Stack[0x8]) - Second parameter passed to Ordinal_10106 (context/type unknown)\ndwUnknown3 (dword, Stack[0xc]) - Third parameter passed to Ordinal_10106 (context/type unknown)\n\nReturns:\nvoid - Function does not return normally; either succeeds silently or calls FUN_6fe21293 which terminates\n\nSpecial Cases:\n- If nParam == 0: Assertion failure triggers FUN_6fe21293 (fatal error handler)\n- If Ordinal_10106 returns -1: Error logged and execution terminated via FUN_6fe21293\n- Magic number 0x104 = 260 decimal = size of abBuffer\n- Magic number 0x70 = 112 decimal = source file line number (assertion failure)\n- Magic number 0x79 = 121 decimal = source file line number (error logging call)\n- Magic number 0x3 = log level 3 for Ordinal_10026 error logging call\n\nNote: Function uses one stack-allocated buffer of 260 bytes (abBuffer[260]) for error reporting",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:5ad65126844ee4a2308da6c83afa4957"
     },
@@ -346,18 +345,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "API",
       "index": "API:65d73b9d57aef84863c74e64ba0cad8e"
-    },
-    "D2CMP_API_674c1313f988": {
-      "addresses": {
-        "LoD/1.13c": "0x6FE1D9F0",
-        "LoD/1.13d": "0x6FE22740"
-      },
-      "rvas": {
-        "LoD/1.13c": "0xD9F0",
-        "LoD/1.13d": "0x12740"
-      },
-      "method": "API",
-      "index": "API:674c1313f98843112842829cea43f3e2"
     },
     "D2CMP_API_6d8a47fede9b": {
       "addresses": {
@@ -404,6 +391,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0xC0B0",
         "LoD/1.13d": "0x10E00"
       },
+      "name": "InitializeGraphicsViewport",
+      "signature": "void InitializeGraphicsViewport(dword * pViewport, dword dwWidth, dword dwHeight, dword dwUnknown)",
+      "comment": "Initialize graphics viewport and linked-list memory pool for rendering surfaces.\n\nAlgorithm:\n1. Store width, height, and unknown parameter into viewport structure\n2. Allocate 0x23000 bytes (143360 bytes) for memory buffer via Ordinal_10045\n3. Initialize buffer to zero using REP STOSD\n4. Build circular linked-list for memory pool (0x1c-byte nodes):\n   - Node layout: [next_ptr (0x14), prev_ptr (0x18), data (0x0-0x13)]\n   - Each node points forward to next node + 0x1c offset\n   - Each node points backward to previous node - 0x1c offset\n   - Boundary nodes point to adjacent nodes with wrapping offsets\n5. Set viewport field [0x24] to buffer start, [0x28] to buffer end (start + 0x22fe4)\n6. Clear viewport fields [0xc, 0xd, 0xe, 0x14, 0x18, 0x1c, 0x20]\n7. If field [0x30] is NULL, allocate critical section via Ordinal_10042\n8. Initialize critical section with InitializeCriticalSection\n\nParameters:\n- pViewport (dword *): Pointer to viewport structure (size 0x3c+ bytes)\n- dwWidth (dword): Viewport width in pixels\n- dwHeight (dword): Viewport height in pixels\n- dwUnknown (dword): Unknown parameter, stored at viewport[0x2c]\n\nReturns:\n- void (critical section created/initialized as side effect)\n\nSpecial Cases:\n- If viewport[0x30] already allocated (non-NULL), critical section skipped\n- Memory pool uses fixed 0x1c-byte node size regardless of viewport dimensions\n- Total pool size fixed at 0x23000 bytes, allocating approximately 4080 nodes\n\nMagic Numbers Reference:\n- 0x7c6 (1990): Memory allocation size in bytes\n- 0x23000 (143360): Total buffer size in bytes\n- 0x22fe4 (147940): Buffer end offset (last valid data boundary)\n- 0x8c00 (35840): DWords to zero-initialize (0x23000 / 4)\n- 0x1c (28): Linked-list node size\n- 0x7ee (2030): Critical section allocation size\n\nStructure Layout (Viewport):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | dwWidth    | uint | Viewport width\n0x04   | 4    | field_04   | uint | Unused\n0x08   | 4    | field_08   | uint | Unused\n0x0c   | 4    | field_0c   | uint | Pool state flag\n0x10   | 4    | pBuffer    | ptr  | Pointer to memory buffer\n0x14   | 4    | field_14   | uint | Unused\n0x18   | 4    | field_18   | uint | Unused\n0x1c   | 4    | field_1c   | uint | Unused\n0x20   | 4    | field_20   | uint | Unused\n0x24   | 4    | pPoolStart | ptr  | Buffer start address\n0x28   | 4    | pPoolEnd   | ptr  | Buffer end address (start + 0x22fe4)\n0x2c   | 4    | dwUnknown  | uint | Unknown parameter\n0x30   | 4    | pCritSect  | ptr  | Critical section pointer\n0x34   | 4    | field_34   | uint | Unused\n0x38   | 4    | field_38   | uint | Unused",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:774132a9d929b7eedf567e92771d4edf"
     },
@@ -434,6 +425,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x12D30",
         "LoD/1.13d": "0xFF80"
       },
+      "name": "ClearHashTableBuckets",
+      "signature": "void ClearHashTableBuckets(int * * ppHashBuckets)",
+      "comment": "Iterates through hash table buckets and clears all entries\n\nAlgorithm:\n1. Return immediately if ppHashBuckets is NULL\n2. Initialize bucket counter to 0x80 (128 buckets) and iterator to ppHashBuckets\n3. For each bucket (loop 128 times):\n   - Load bucket pointer from current array element\n   - While bucket pointer is non-NULL:\n     - Load left child (offset 0xC) and right child (offset 0x10) pointers\n     - Traverse left child chain: follow offset 0x4 links until NULL, calling Ordinal_10043(0x4C, 0) for each\n     - Clear left child pointer to 0\n     - Call Ordinal_10043(0x50, 0) for this bucket node\n     - Move to right child as next bucket\n   - Clear current bucket array element to 0\n   - Advance to next bucket array element\n4. Call Ordinal_10043(0x57, 0) after all buckets cleared\n\nParameters:\nppHashBuckets (int * *) - Pointer to array of 128 hash table bucket pointers\n\nReturns:\nvoid - Function has no return value\n\nSpecial Cases:\n- NULL ppHashBuckets parameter causes immediate return without action\n- Traverses linked list structures in left/right child pattern (binary tree nodes)\n- Calls appear to be ordinal-based memory management functions (allocation/deallocation markers)\n\nMagic Numbers:\n0x80 (128) - Number of hash table buckets\n0x0C (12) - Offset to left child pointer within node\n0x10 (16) - Offset to right child pointer within node\n0x04 (4) - Offset for node chain link traversal\n0x4C (76) - Ordinal parameter for child processing\n0x50 (80) - Ordinal parameter for bucket node processing\n0x57 (87) - Ordinal parameter for completion marker",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:789c042465cf1df9b7532c3fb0287146"
     },
@@ -454,8 +449,46 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8A80",
         "LoD/1.10": "0x8780"
       },
+      "name": "SearchHashTableByString",
+      "signature": "int SearchHashTableByString(void * pHashTable, char * szKey)",
+      "comment": "Search hash table for string key and return pointer to entry node.\n\nAlgorithm:\n  1. Validate szKey non-null (abort if NULL)\n  2. Compute hash value from szKey using Ordinal_502 (Storm.dll hash function)\n  3. Extract hash table bucket using hash & mask operations to index [pHashTable + 0x800]\n  4. Traverse bucket linked list (nodes connected via offset 0x2c)\n  5. For each node: compare szKey against key at [node + 0x4] byte-by-byte\n  6. Return node pointer on match (nCmpResult == 0), continue traversal if no match\n  7. Return 0 if bucket empty or all nodes exhausted\n\nParameters:\n  pHashTable (void*) - Pointer to hash table structure\n  szKey (char*) - Null-terminated search key string\n\nReturns:\n  int - Pointer to matched hash table entry node, 0 if not found\n\nSpecial Cases:\n  - NULL input key triggers assert via Ordinal_10023 (illegal call)\n  - Single and double-byte character comparisons (aligned for performance)\n  - Hash bucket indexed via extracted low 9 bits after XOR mixing\n\nHash Table Structure:\n  Offset | Size | Field Name | Type | Description\n  0x800  | var  | buckets    | int* | Hash bucket array (variable size)\n\nNode Structure:\n  +0x00  | 4    | (unknown)  | int  | Node metadata\n  +0x04  | var  | szKey      | char*| Null-terminated key string\n  +0x2c  | 4    | pNext      | int* | Pointer to next node in bucket (0 if last)",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:798f621225e68c0212b857c145c6981d"
+    },
+    "D2CMP_API_7eb6bda79aab": {
+      "addresses": {
+        "LoD/1.07": "0x6FE11EA0",
+        "LoD/1.08": "0x6FE11EA0",
+        "LoD/1.09": "0x6FDF1EA0",
+        "LoD/1.09b": "0x6FDF1EA0",
+        "LoD/1.09d": "0x6FDF1EA0",
+        "LoD/1.10": "0x6FDF1D30",
+        "LoD/1.11": "0x6FE268D0",
+        "LoD/1.11b": "0x6FE26D50",
+        "LoD/1.12a": "0x6FE26830",
+        "LoD/1.13c": "0x6FE21B90",
+        "LoD/1.13d": "0x6FE23C20"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1EA0",
+        "LoD/1.08": "0x1EA0",
+        "LoD/1.09": "0x1EA0",
+        "LoD/1.09b": "0x1EA0",
+        "LoD/1.09d": "0x1EA0",
+        "LoD/1.10": "0x1D30",
+        "LoD/1.11": "0x168D0",
+        "LoD/1.11b": "0x16D50",
+        "LoD/1.12a": "0x16830",
+        "LoD/1.13c": "0x11B90",
+        "LoD/1.13d": "0x13C20"
+      },
+      "name": "Fog_DebugLog",
+      "signature": "uint Fog_DebugLog(uint * pSrcData, uint * * ppAllocBuffer, uint * pOutSize)",
+      "comment": "Serializes 2D matrix of data items into packed debug buffer\n\nAlgorithm:\n1. Calculate item count from source dimensions at [4] and [5]\n2. Compute total buffer size: base 0x18 + (itemCount * 4) + per-item header/data sizes\n3. Iterate source items, accumulating size from offsets 0x1c (header) and 0x14 (data)\n4. Allocate buffer via Ordinal_10042(0x333, 0) - memory pool ID 0x333\n5. Copy 7-dword header block from source to allocated buffer\n6. Set flags field [1]: clear 0x02, set 0x01 (enable serialization)\n7. For each item (0 to itemCount-1):\n   - Compute item header size from [item + 0x1c] + 0x23 padding\n   - Store relative offset in output buffer at [6 + itemIdx]\n   - Copy item header using dword-aligned loop + byte remainder\n   - Check if item has extra data pointer at [item + 0x18]:\n     a) If non-null and [item + 0x18][0x28] exists, copy extra data\n     b) If itemIdx==0, save extra data pointer for later processing\n   - Advance write pointer by item data size from [item + 0x14]\n8. If extra data found in first item, call Ordinal_10043(0x363, 0) - trigger processing\n9. Write allocated buffer pointer to *ppAllocBuffer and total size to *pOutSize\n10. Return 1\n\nParameters:\n- pSrcData (uint *): Pointer to source 2D matrix structure\n  Layout: [0-3] metadata, [4] height, [5] width, [6+] items\n- ppAllocBuffer (uint **): Output pointer to receive allocated buffer\n- pOutSize (uint *): Output pointer to receive total buffer size in bytes\n\nReturns:\n- uint: 1 = success, allocation and serialization completed\n\nSpecial Cases:\n- itemCount == 0: skips loop, allocates minimal buffer (0x18 bytes)\n- extra data == NULL: skips data copy, continues without Ordinal_10043 call\n- Multi-byte copy uses REP.MOVSD for dwords + REP.MOVSB for trailing bytes\n\nMagic Numbers:\n- 0x333: Memory pool ID for allocation\n- 0x363: Processing pool/trigger ID for Ordinal_10043\n- 0x1c: Offset to item header size field\n- 0x14: Offset to item data size field\n- 0x18: Offset to item extra data pointer\n- 0x28: Offset within extra data structure\n- 0x23: Header padding constant (35 bytes)\n- 0x02, 0x01: Flag bits for serialization mode (bit 1=serialize, bit 0=packed)\n\nRelated Functions:\n- Ordinal_10042(0x333, 0): Allocates buffer from memory pool\n- Ordinal_10043(0x363, 0): Triggers post-serialization processing",
+      "name_source": "LoD/1.07",
+      "method": "API",
+      "index": "API:7eb6bda79aabb7cbbbad18910d989667"
     },
     "D2CMP_API_80ddee081310": {
       "addresses": {
@@ -474,6 +507,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x169E2",
         "LoD/1.10": "0x15AF4"
       },
+      "name": "UnlinkListElement",
+      "signature": "void UnlinkListElement(dword dwContext, int nBaseAddr, int * pElement)",
+      "comment": "Unlink a list element from its doubly-linked list position.\n\nAlgorithm:\n1. Validate pElement pointer (non-null check, abort if NULL with error log)\n2. If previous link exists (pElement[10]): update previous's next pointer (pElement[10]+0x2c) to point to current's next (pElement[0xb])\n3. If next link exists (pElement[0xb]): update next's previous pointer (pElement[0xb]+0x28) to point to current's previous (pElement[10])\n4. Calculate slot pointer from base array: pSlotPtr = nBaseAddr + 0x800 + pElement[0]*4\n5. If slot points to current element: update slot to point to pElement's next (pElement[0xb])\n6. Log operation to C++ message system with severity 0x37\n\nParameters:\n- dwContext (dword): Unused context/handle parameter\n- nBaseAddr (int): Base address of element array/table (offset to 0x800)\n- pElement (int *): Doubly-linked list element to unlink\n  - pElement[0x28]: Previous element pointer (stored at offset 0x28, read offset at +0x10)\n  - pElement[0x2c]: Next element pointer (stored at offset 0x2c, read offset at +0xb)\n\nReturns:\n- void: No explicit return value\n\nSpecial Cases:\n- NULL pElement: Fatal error, triggers debug assert and process exit (0xffffffff)\n- Element at list head: Slot pointer updated instead of previous element\n- Orphaned element links: Only updates if next/previous pointers are non-NULL\n\nMagic Numbers:\n- 0x800: Offset to element slot array from base address\n- 0x28: Offset to previous element pointer within element structure\n- 0x2c: Offset to next element pointer within element structure\n- 0xa9: Error line number for NULL element assertion\n- 0x37: Debug message severity level for unlink operation",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:80ddee08131083ffd4d719c45225149f"
     },
@@ -494,8 +531,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xED60",
         "LoD/1.10": "0xE8D0"
       },
-      "name": "Ordinal_10065",
-      "signature": "undefined Ordinal_10065(undefined4 param_1, undefined4 param_2)",
+      "name": "AllocateAndClearBuffer",
+      "signature": "undefined4 * AllocateAndClearBuffer(void)",
+      "comment": "Allocate and zero-initialize a 512-byte (0x200) buffer for hash table storage.\n\nAlgorithm:\n1. Call Ordinal_10042 with type 0x2a and flags 0 to allocate 512 bytes\n2. Verify allocation succeeded; if NULL, assert with ptHash error string and exit\n3. Clear all 512 bytes (0x80 dwords) using REP STOSD\n4. Return allocated buffer pointer\n\nParameters:\nNone\n\nReturns:\nPointer to newly allocated 512-byte buffer; filled with zeros\nNever returns NULL (asserts and exits on allocation failure)\n\nSpecial Cases:\n- Calls Ordinal_10042 (likely Storm memory allocation)\n- FogAssertFail terminates on allocation failure (no return)\n- Clears exactly 0x200 (512) bytes via REP STOSD loop",
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:83311ac54b246d6943903bb686f0e640"
@@ -572,6 +610,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3FF0",
         "LoD/1.09d": "0x3FF0"
       },
+      "name": "AllocateAndInitializeFileBuffer",
+      "signature": "dword * AllocateAndInitializeFileBuffer(uint dwIndex, int nConfigBase, dword dwFileSize, char * szFileName)",
+      "comment": "Allocates a buffer from a memory pool, initializes it with file data, and links it into a hash table structure.\n\nAlgorithm:\n1. Allocate buffer from memory pool using Ordinal_10045 with standard allocation size (0x30 = 48 bytes)\n2. Store file size in buffer offset +0x24 (dwFileSize field)\n3. Validate that filename is not empty; if empty, log error and exit with Ordinal_10023/FUN_6fe21293\n4. Hash the filename using Ordinal_502 (CRC/hash function) with algorithm parameters (1, 0)\n5. Extract hash index from full hash using XOR-shift operations with masks (0x1ff0000, 0x1ff00, 0x1ff)\n6. Load current chain head from hash table [pConfigBase + 0x800 + hashIndex*4]\n7. Store hash index in buffer offset +0x0\n8. Link buffer into chain: if chain head exists, set its backward link (+0x28) to this buffer\n9. Store chain head in buffer offset +0x2c (next pointer)\n10. Calculate string length using REP SCASB instruction (counts until null terminator)\n11. Copy filename string into buffer starting at offset +0x4 using DWORD and BYTE copies for efficiency\n12. Update hash table [pConfigBase + 0x800 + hashIndex*4] to point to newly allocated buffer\n13. Return pointer to allocated buffer\n\nParameters:\nnIndex (uint, ECX): IMPLICIT - Hash table index or category selector\npConfigBase (int, EDX): IMPLICIT - Base address of configuration structure containing hash table at offset 0x800\ndwFileSize (dword): Size in bytes of the file to be loaded into this buffer\npszFileName (char *): Null-terminated filename string to store and hash\n\nReturns:\nPointer to allocated and initialized buffer (dword *) on success\nDoes not return on filename validation failure\n\nSpecial Cases:\n- Empty filename causes immediate error log and program termination\n- Hash extraction uses multi-stage XOR-shift (3 rotations with 0x8 bit shifts) to distribute values across 512 buckets\n- String length calculation subtracts 1 from inverted count to account for null terminator\n- REP MOVSD processes bulk of string in dword chunks, REP MOVSB handles remaining bytes\n- Chain linking works bidirectionally: buffer links forward to previous head, head links back to buffer",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8a9d5463b1cfb2520df4d3d70e95d649"
     },
@@ -581,15 +623,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE18E30",
         "LoD/1.09": "0x6FDF8BF0",
         "LoD/1.09b": "0x6FDF8BF0",
-        "LoD/1.09d": "0x6FDF8BF0"
+        "LoD/1.09d": "0x6FDF8BF0",
+        "LoD/1.10": "0x6FDF88F0"
       },
       "rvas": {
         "LoD/1.07": "0x8E30",
         "LoD/1.08": "0x8E30",
         "LoD/1.09": "0x8BF0",
         "LoD/1.09b": "0x8BF0",
-        "LoD/1.09d": "0x8BF0"
+        "LoD/1.09d": "0x8BF0",
+        "LoD/1.10": "0x88F0"
       },
+      "name": "RemoveElementFromList",
+      "signature": "void RemoveElementFromList(dword dwUnused, dword dwBaseAddr, dword * pElement)",
+      "comment": "Remove element from doubly-linked list with cleanup callback\n\nAlgorithm:\n1. Validate pElement pointer is non-NULL (assert if null)\n2. Update forward/backward chain pointers to unlink element\n3. Check if element is list head in base array, update if needed\n4. Load element state at offset +0xb0, validate non-zero\n5. If element has data handler (+0x28), obtain cleanup function and data buffer\n6. Iterate through data buffer cells by calculated stride\n7. For each cell with non-null handler pointer, invoke cleanup callback\n8. Clear handler pointer after cleanup (set to 0)\n9. Advance to next cell: offset += 0x23 + [cell+0x1c] + [cell+0x14]\n10. Log if data buffer has residual data (size != 0)\n11. Invoke finalization hook (Ordinal_10097)\n12. Log function exit\n\nParameters:\ndwUnused: Unused parameter (passed in ECX register)\ndwBaseAddr: Base address for list head array lookup (param_2 + 0x8000)\npElement: Pointer to element structure to remove\n\nReturns:\nvoid - Function always succeeds or asserts\n\nSpecial Cases:\n- NULL element triggers assertion and fatal error\n- Assertion failures prevent execution continuation\n- Data buffer iteration uses byte dimensions at +0x21 and +0x24\n- Handler function pointer may be NULL, skip invocation if null\n\nMagic Numbers Reference:\n0x8000 - Offset into base array for head pointers\n0x28 - Field offset for data buffer validity flag\n0x2c - Field offset for next pointer in chain\n0xb0 - Field offset for state/validity flag\n0xb - Field index for backward pointer\n0x10 - Field index for forward pointer\n0x18 - Field offset for data buffer base\n0x21 - Field offset for height (byte)\n0x24 - Field offset for width (byte)\n0x1c - Field offset for stride component 1\n0x14 - Field offset for stride component 2\n0x23 - Base stride constant\n0x8a - Log line number for data buffer warning\n0x95 - Log line number for function exit\n0x148 - Line 0x148 assertion (NULL element)\n0x58 - Line 0x58 assertion (invalid state)\n0x5f - Line 0x5f assertion (NULL data buffer)",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8acbb9b4faf873dc1552a89dafdc7d34"
     },
@@ -610,6 +658,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10996",
         "LoD/1.10": "0x10454"
       },
+      "name": "ValidateNonZeroParameter",
+      "signature": "void ValidateNonZeroParameter(void * pResourceBuffer, int nBufferSize)",
+      "comment": "Validates that a numeric parameter is non-zero; triggers assertion failure if validation fails.\n\nAlgorithm:\n1. Test nBufferSize parameter for zero (TEST ECX, ECX - __fastcall param)\n2. If value is non-zero, skip to cleanup step 6 (JNZ 0x6fe20bc7)\n3. If value is zero, prepare assertion failure (PUSH 0x49)\n4. Push source filename and file handle to stack (PUSH 0x6fe30b28, PUSH 0x6fe2e2a0)\n5. Call FogAssertFail() to display assertion error and break execution\n6. Push exit code 0xffffffff (-1) to indicate fatal cleanup (PUSH -0x1)\n7. Call FUN_6fe21293() - cleanup/termination handler with exit code\n8. Call Ordinal_10103() - final resource finalization/cache flush\n\nParameters:\n- pResourceBuffer (void *) - IMPLICIT ECX register (__fastcall) - resource or buffer pointer context\n- nBufferSize (int) - IMPLICIT EDX register (__fastcall) - buffer size or value to validate (must be non-zero)\n\nReturns:\n- void - function returns normally only if nBufferSize != 0\n- Does not return if nBufferSize == 0 (assertion failure causes program termination)",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:947f419ef69a8a10cfa9f4941c5defcc"
     },
@@ -641,16 +693,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "API",
       "index": "API:9900b75e3018a6644d24231f544609a4"
     },
-    "D2CMP_API_99919ca23e25": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE23360"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x13360"
-      },
-      "method": "API",
-      "index": "API:99919ca23e254135a085960c0e66ce96"
-    },
     "D2CMP_API_9cd8ad967958": {
       "addresses": {
         "LoD/1.11": "0x6FE1CA70",
@@ -668,28 +710,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "API",
       "index": "API:9cd8ad9679587815c56764bc194473e4"
-    },
-    "D2CMP_API_9fe3f0a26684": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF88F0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x88F0"
-      },
-      "method": "API",
-      "index": "API:9fe3f0a26684f84f4180cd0773eb814b"
-    },
-    "D2CMP_API_a4e08031b74f": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1E020",
-        "LoD/1.08": "0x6FE1E020"
-      },
-      "rvas": {
-        "LoD/1.07": "0xE020",
-        "LoD/1.08": "0xE020"
-      },
-      "method": "API",
-      "index": "API:a4e08031b74f1f7d105230ba9f0194f2"
     },
     "D2CMP_API_aee3ba00bf85": {
       "addresses": {
@@ -736,6 +756,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x1840",
         "LoD/1.13d": "0x1840"
       },
+      "name": "DestroyHashTableManager",
+      "signature": "void DestroyHashTableManager(void * pManager)",
+      "comment": "Destructor that destroys hash table manager and all linked lists\n\nAlgorithm:\n1. Initialize Windows SEH exception handler via FS:[0] for guaranteed cleanup\n2. Delete critical section lock at offset +0x50\n3. Clear vfptr to phase 1 (0x6fe2c90c), set exception state to 0x2\n4. Iterate 0x10 list: call FUN_6fe138f0 on each item, delete via Ordinal_403\n5. Iterate 0xc list: call FUN_6fe12f30 on each item, delete via Ordinal_403\n6. Clear stage to 0x3, set iterator for 0x38 list, iterate deleting nodes\n7. If 0x3c list not empty, get last node, move list head, clear pointers\n8. Clear stage to 0x4, set iterator for 0x28 list, iterate deleting nodes\n9. If 0x2c list not empty, get last node, move list head, clear pointers\n10. Update vfptr to phase 2 (0x6fe2c8fc), clear count to 0\n11. Initialize 0x4 list for destruction via FUN_6fe13870\n12. Iterate array at 0x1c: for each element, check item count, destroy via FUN_6fe13850\n13. Update exception state to 0x5, destroy 0x14 list via FUN_6fe134c0\n14. Update exception state to 0x7, final cleanup of 0x4 list\n15. Clear exception state to 0xffffffff, destroy 0x8 list node\n16. Restore exception handler and return\n\nParameters:\nvoid * pManager (ECX) - Hash table manager structure pointer\n  Field offsets: 0x0=vfptr, 0x4=list head, 0x8=list node, 0xc/0x10=pair1 size/root\n  0x14=critical section, 0x18=count, 0x1c=data array, 0x28/0x2c=pair2\n  0x30/0x38=pair3, 0x40=pair4 size, 0x50=lock\n\nReturns:\nvoid - Destructor with no return value, all cleanup guaranteed via SEH\n\nSpecial Cases:\nWindows SEH ensures cleanup on early exit or exception\nMultiple phases track destruction state: 1,2,3,4,5,6,7\nArray iteration uses 12-byte stride per element\nList operations are doubly-linked with delete-in-place semantics",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b224d7889c5087907e18d1e1ec5c86f7"
     },
@@ -754,6 +778,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xD4F0",
         "LoD/1.09d": "0xD4F0"
       },
+      "name": "CalculateSpriteFrameOffset",
+      "signature": "int CalculateSpriteFrameOffset(int * pSpritePtr, int * pGfxBlockPtr)",
+      "comment": "Calculate sprite animation frame offset within gfx block data\n\nAlgorithm:\n1. Validate pGfxBlockPtr is not NULL and contains valid async data (offset 0xb0)\n2. Call Ordinal_10094 to get initial frame offset from async data; return 0 if not available\n3. Copy sprite orientation byte from pGfxBlockPtr[0x24] to sprite field [0x14]\n4. Determine base palette index based on sprite type (field offset 0x20):\n   - Type 6 with flag 0x02 set: use sprite base color from [0xc], palette from [0x23]\n   - Type 2: use palette 0\n   - Type 4: use sprite base color from [0xc], default palette from [0x23]\n   - Default: use sprite base color from [0xc], palette from [0x23]\n5. Call Ordinal_10018 to convert (base_color, palette-1) to adjusted palette index\n6. Get frame data pointer from gfxblock frame table: [pGfxBlockPtr+0x2c + palette*4]\n7. Loop sprite frame count times ([pSpritePtr+0x8] + 1):\n   - Add frame offset to accumulated offset\n   - Add frame size components from [frame+0x1c] and [frame+0x14]\n   - Advance to next frame\n8. Return final accumulated offset\n\nParameters:\n- pSpritePtr (int *): Sprite structure pointer containing type, frame count, base color\n- pGfxBlockPtr (int *): Graphics block containing frame data, palette tables, async data\n\nReturns:\n- int: Accumulated byte offset to target sprite frame (0 if frame data unavailable)\n\nSpecial Cases:\n- Returns 0 immediately if Ordinal_10094 returns 0 (no frame data available)\n- Sprite type determines palette calculation method\n- Palette index adjusted by -1 for Ordinal_10018 call",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:bcee22a33e2b4540cc1e3478580d216c"
     },
@@ -793,6 +821,40 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "API",
       "index": "API:ce94623516c160b51b8f984428404128"
     },
+    "D2CMP_API_cfc6a8a0bce8": {
+      "addresses": {
+        "LoD/1.07": "0x6FE11950",
+        "LoD/1.08": "0x6FE11950",
+        "LoD/1.09": "0x6FDF1950",
+        "LoD/1.09b": "0x6FDF1950",
+        "LoD/1.09d": "0x6FDF1950",
+        "LoD/1.10": "0x6FDF17E0",
+        "LoD/1.11": "0x6FE210F0",
+        "LoD/1.11b": "0x6FE1EDF0",
+        "LoD/1.12a": "0x6FE1A660",
+        "LoD/1.13c": "0x6FE22670",
+        "LoD/1.13d": "0x6FE24700"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1950",
+        "LoD/1.08": "0x1950",
+        "LoD/1.09": "0x1950",
+        "LoD/1.09b": "0x1950",
+        "LoD/1.09d": "0x1950",
+        "LoD/1.10": "0x17E0",
+        "LoD/1.11": "0x110F0",
+        "LoD/1.11b": "0xEDF0",
+        "LoD/1.12a": "0xA660",
+        "LoD/1.13c": "0x12670",
+        "LoD/1.13d": "0x14700"
+      },
+      "name": "DestroyDataItem",
+      "signature": "void DestroyDataItem(uint dwItemIndex)",
+      "comment": "Removes and destroys a data item from internal container, cleaning up linked list nodes and calling cleanup callbacks.\n\nAlgorithm:\n1. Enter critical section for thread-safe access to global container\n2. Search for data item with index dwItemIndex in container at g_CelContainer via FUN_6fe137f0\n3. If not found, leave critical section and return failure code (0)\n4. If found, iterate through linked list at offset +0x30 (0xd * 4 = 0x34 bytes for field [0xd])\n5. For each node with count > 0, call Ordinal_10043 validation (0x23a = constant check)\n6. Process cleanup queue at offset +0x34 ([0xd] field) until exhausted\n7. For each item in queue, call FUN_6fe13280 and remove with Ordinal_403 callback\n8. Check if offset +0x8 [0x2] is non-zero (has dependent data)\n9. If has dependent data, reassign pointers at offsets +0x4 and +0x8 using FUN_6fe13b10\n10. Call FUN_6fe136a0 on structure at offset +0xc [0x3] to finalize\n11. Invoke destructor callback through function pointer at g_CelContainer\n12. If search succeeded (nResult != 0), leave critical section\n\nParameters:\ndwItemIndex (uint): Zero-based item index to destroy in container\n\nReturns:\nvoid (success/failure handled by exception handling, not explicit return value)\n\nSpecial Cases:\n- Critical sections protect against concurrent access during destruction\n- Linked list node traversal assumes valid chain structure\n- Magic number 0x23a passed to validation routine (validation context identifier)\n- Empty or invalid item index returns early after unlocking\n- Destructor callback invoked regardless of cleanup success\n- Function uses 3 stack-allocated temporaries optimized away by compiler\n\nMagic Numbers:\n0x23a - Validation/check context identifier passed to Ordinal_10043\n0x34, 0xd - Field offsets into data structure (+0xd is index field)\n0x4, 0x8, 0xc - Relative field offsets for dependent data management\n\nRelated Functions:\n- FUN_6fe137f0() - Search container for item by index\n- FUN_6fe13280() - Process cleanup on item\n- FUN_6fe13b10() - Allocate/reassign node pointers\n- FUN_6fe136a0() - Finalize cleanup list\n- Ordinal_10043 (GetSkillData) - Validation check\n- Ordinal_403 (SMemFree) - Free item memory",
+      "name_source": "LoD/1.07",
+      "method": "API",
+      "index": "API:cfc6a8a0bce81dd3e6935e6bdd3e15d3"
+    },
     "D2CMP_API_e2845550ca6b": {
       "addresses": {
         "LoD/1.11": "0x6FE24600",
@@ -815,18 +877,23 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE1CC70",
         "LoD/1.11b": "0x6FE23FA0",
-        "LoD/1.12a": "0x6FE22CC0"
+        "LoD/1.12a": "0x6FE22CC0",
+        "LoD/1.13c": "0x6FE1D9F0",
+        "LoD/1.13d": "0x6FE22740"
       },
       "rvas": {
         "LoD/1.11": "0xCC70",
         "LoD/1.11b": "0x13FA0",
-        "LoD/1.12a": "0x12CC0"
+        "LoD/1.12a": "0x12CC0",
+        "LoD/1.13c": "0xD9F0",
+        "LoD/1.13d": "0x12740"
       },
       "method": "API",
       "index": "API:e7ba3cead50dcd33f204caf161e34d61"
     },
     "D2CMP_API_eb10ff843512": {
       "addresses": {
+        "LoD/1.10": "0x6FDFB5C0",
         "LoD/1.11": "0x6FE274E0",
         "LoD/1.11b": "0x6FE26EC0",
         "LoD/1.12a": "0x6FE26AA0",
@@ -834,6 +901,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE275C0"
       },
       "rvas": {
+        "LoD/1.10": "0xB5C0",
         "LoD/1.11": "0x174E0",
         "LoD/1.11b": "0x16EC0",
         "LoD/1.12a": "0x16AA0",
@@ -873,6 +941,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x25B0",
         "LoD/1.13d": "0x25B0"
       },
+      "name": "ResizeNodeContainer",
+      "signature": "void ResizeNodeContainer(void * this, void * pContainer, dword nNewSize)",
+      "comment": "Resizes a node container to the specified capacity, reallocating and moving nodes as needed.\n\nAlgorithm:\n1. Check if resize needed (current capacity < requested size OR current size < requested size)\n2. If capacity needs expansion, calculate power-of-2 aligned size for growth efficiency\n3. Reallocate memory block using Ordinal_405 (new allocation) or Ordinal_401 (fallback)\n4. If allocation failed, call Ordinal_403 to deallocate old block\n5. For new allocated capacity, initialize new nodes via FUN_6fe13f10 for each added element\n6. If capacity shrinkage needed, cleanup removed nodes via UnlinkAndCloseNode and FUN_6fe13ee0\n7. Update container size field to match requested size\n\nParameters:\n  this (void *): Pointer to container structure\n    - Offset 0x0: current_size (uint, elements in use)\n    - Offset 0x4: current_capacity (uint, allocated capacity)\n    - Offset 0x8: node_array (void *, pointer to array of nodes)\n    - Offset 0xc: growth_factor (uint, power-of-2 alignment hint, 0 for auto)\n  nNewSize (dword): Requested new size in number of nodes\n\nReturns:\n  void: Container modified in-place. On allocation failure, container preserved unchanged.\n\nStructure Layout:\n  Offset | Size | Field Name      | Type     | Description\n  0x0    | 4    | current_size    | uint     | Number of active nodes\n  0x4    | 4    | current_capacity| uint     | Allocated capacity\n  0x8    | 4    | node_array      | void *   | Pointer to node array (12 bytes per node)\n  0xc    | 4    | growth_factor   | uint     | Alignment power-of-2 (0x15 max)\n\nMagic Numbers:\n  0x15 (21 decimal): Max growth factor cap for power-of-2 calculation\n  0xc (12 decimal): Size of individual node element in array\n  0xfffffffe: Allocation flags (-2) passed to memory routines\n  0x10: CppAlloc allocation flag value\n\nRelated Functions:\n  - DestroyNodeWithCleanup: Cleanup single node\n  - UnlinkAndCloseNode: Remove node from structure\n  - FUN_6fe13f10: Initialize new node with copy\n  - FUN_6fe13ee0: Initialize new empty node\n  - Ordinal_405: Vector reallocation routine\n  - Ordinal_401: Fallback memory allocation\n  - Ordinal_403: Memory deallocation routine",
+      "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f5b5b42d2d1fed227d4fa043a66edba4"
     },
@@ -894,62 +966,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "API",
       "index": "API:ffd71962a730f0f58a3a0b1d15120bd8"
     },
-    "D2CMP_EXP_10000": {
-      "addresses": {
-        "LoD/1.07": "0x6FE19640",
-        "LoD/1.08": "0x6FE19640",
-        "LoD/1.09": "0x6FDF9400",
-        "LoD/1.09b": "0x6FDF9400",
-        "LoD/1.09d": "0x6FDF9400",
-        "LoD/1.10": "0x6FDF90E0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x9640",
-        "LoD/1.08": "0x9640",
-        "LoD/1.09": "0x9400",
-        "LoD/1.09b": "0x9400",
-        "LoD/1.09d": "0x9400",
-        "LoD/1.10": "0x90E0"
-      },
-      "name": "Ordinal_10000",
-      "signature": "byte * Ordinal_10000(void)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10000"
-    },
-    "D2CMP_EXP_10001": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1B0F0",
-        "LoD/1.08": "0x6FE1B0F0",
-        "LoD/1.09": "0x6FDFAEB0",
-        "LoD/1.09b": "0x6FDFAEB0",
-        "LoD/1.09d": "0x6FDFAEB0",
-        "LoD/1.10": "0x6FDFAAF0",
-        "LoD/1.11": "0x6FE24110",
-        "LoD/1.11b": "0x6FE1CE40",
-        "LoD/1.12a": "0x6FE1CAD0",
-        "LoD/1.13c": "0x6FE1BA00",
-        "LoD/1.13d": "0x6FE27540"
-      },
-      "rvas": {
-        "LoD/1.07": "0xB0F0",
-        "LoD/1.08": "0xB0F0",
-        "LoD/1.09": "0xAEB0",
-        "LoD/1.09b": "0xAEB0",
-        "LoD/1.09d": "0xAEB0",
-        "LoD/1.10": "0xAAF0",
-        "LoD/1.11": "0x14110",
-        "LoD/1.11b": "0xCE40",
-        "LoD/1.12a": "0xCAD0",
-        "LoD/1.13c": "0xBA00",
-        "LoD/1.13d": "0x17540"
-      },
-      "name": "Ordinal_10001",
-      "signature": "undefined Ordinal_10001(undefined4 param_1, undefined4 * param_2)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10001"
-    },
     "D2CMP_EXP_10002": {
       "addresses": {
         "LoD/1.07": "0x6FE1B110",
@@ -968,7 +984,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xAB10"
       },
       "name": "Ordinal_10002",
-      "signature": "undefined Ordinal_10002(LPVOID param_1)",
+      "signature": "undefined Ordinal_10002(LPVOID pMemory)",
+      "comment": "Conditional memory deallocation wrapper for VirtualFree.\n\nAlgorithm:\n1. Check if pMemory is non-NULL\n2. If pMemory is not NULL, call FUN_6fe20acc (VirtualFree wrapper) with pMemory and flags 0x8000 (MEM_RELEASE)\n3. Return to caller\n\nParameters:\npMemory (void*) - Memory block to deallocate. If NULL, function returns without deallocating.\n\nReturns:\nvoid - Always returns successfully\n\nSpecial Cases:\n- NULL pointer is valid input; function returns without error\n- Calls VirtualFree with MEM_RELEASE (0x8000) flag\n- Does not validate memory region validity before deallocation",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10002"
@@ -991,42 +1008,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xFDD0"
       },
       "name": "Ordinal_10003",
-      "signature": "undefined Ordinal_10003(int param_1)",
+      "signature": "void Ordinal_10003(int nUnused)",
+      "comment": "D2Gfx Ordinal 10003 - Wrapper for GetWindowMode to determine windowed vs fullscreen state\n\nAlgorithm:\n  1. Receive nUnused parameter from caller (passed through but not used)\n  2. Call FUN_6fe194c0 to execute actual GetWindowMode implementation\n  3. Return to caller with result\n\nParameters:\n  nUnused (int) - Unused parameter, passed through to implementation function\n\nReturns:\n  void - Actual return value handled by FUN_6fe194c0 implementation\n\nSpecial Cases:\n  This is a simple wrapper function that delegates to the actual implementation.\n  The parameter name suggests it's unused in this ordinal wrapper context.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10003"
     },
-    "D2CMP_EXP_10004": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1B120",
-        "LoD/1.08": "0x6FE1B120",
-        "LoD/1.09": "0x6FDFAEE0",
-        "LoD/1.09b": "0x6FDFAEE0",
-        "LoD/1.09d": "0x6FDFAEE0",
-        "LoD/1.10": "0x6FDFAB20"
-      },
-      "rvas": {
-        "LoD/1.07": "0xB120",
-        "LoD/1.08": "0xB120",
-        "LoD/1.09": "0xAEE0",
-        "LoD/1.09b": "0xAEE0",
-        "LoD/1.09d": "0xAEE0",
-        "LoD/1.10": "0xAB20"
-      },
-      "name": "Ordinal_10004",
-      "signature": "uint Ordinal_10004(int param_1, uint param_2, int param_3, int param_4, int param_5)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10004"
-    },
     "D2CMP_EXP_10005": {
       "addresses": {
-        "LoD/1.07": "0x6FE1B1A0",
-        "LoD/1.08": "0x6FE1B1A0",
-        "LoD/1.09": "0x6FDFAF60",
-        "LoD/1.09b": "0x6FDFAF60",
-        "LoD/1.09d": "0x6FDFAF60",
-        "LoD/1.10": "0x6FDFABA0",
         "LoD/1.11": "0x6FE22080",
         "LoD/1.11b": "0x6FE22300",
         "LoD/1.12a": "0x6FE27180",
@@ -1034,12 +1023,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE1A1A0"
       },
       "rvas": {
-        "LoD/1.07": "0xB1A0",
-        "LoD/1.08": "0xB1A0",
-        "LoD/1.09": "0xAF60",
-        "LoD/1.09b": "0xAF60",
-        "LoD/1.09d": "0xAF60",
-        "LoD/1.10": "0xABA0",
         "LoD/1.11": "0x12080",
         "LoD/1.11b": "0x12300",
         "LoD/1.12a": "0x17180",
@@ -1047,8 +1030,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xA1A0"
       },
       "name": "Ordinal_10005",
-      "signature": "uint Ordinal_10005(int param_1, uint param_2, int param_3, int param_4, int param_5)",
-      "name_source": "LoD/1.07",
+      "signature": "undefined Ordinal_10005(void * param_1)",
+      "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10005"
     },
@@ -1101,18 +1084,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x15550"
       },
       "name": "Ordinal_10007",
-      "signature": "undefined4 Ordinal_10007(byte param_1, byte param_2, uint param_3)",
+      "signature": "undefined4 Ordinal_10007(byte byRedComponent, byte byGreenComponent, uint dwBlueComponent)",
+      "comment": "Find closest palette color match using RGB distance calculation.\n\nAlgorithm:\n1. Validate palette range: return 0 if end_index < start_index\n2. Initialize minimum distance to 0x7fffffff, best index to 0\n3. Iterate through palette entries from start_index to end_index:\n   a. Check if palette validation disabled (g_dwPaletteValidFlag == 0) OR palette entry used\n   b. Skip if game state active (g_dwGameStateFlag != 0) AND RGB already matches g_dwByteSwapResult\n   c. Calculate distance = abs(param_1 - entry[1]) + abs(param_3 - entry[-1]) + abs(param_2 - entry[0])\n   d. If distance < current minimum, update minimum and best_index\n4. Return best_index in AL, end_index in upper bytes\n\nParameters:\n   byRedComponent (byte): Red component value (0-255)\n   byGreenComponent (byte): Green component value (0-255)\n   dwBlueComponent (uint): Blue component value (0-255) in lower byte\n\nReturns:\n   AL: Best matching palette index (0-255)\n   Upper bytes: Palette end index (typically 0x0000XX00 format)\n\nSpecial Cases:\n   - Returns 0 if palette range invalid\n   - Skips palette entries if validation flag disabled OR entry marked as used\n   - Short-circuits if exact match found in cached g_dwByteSwapResult\n\nStructure Layout (Palette Entry - 4 bytes):\n   Offset | Size | Field | Type | Description\n   0      | 1    | [0]   | byte | G component\n   -1     | 1    | [-1]  | byte | R component\n   1      | 1    | [1]   | byte | B component\n   2      | 1    | [2]   | byte | Reserved/Padding\n\nMagic Numbers:\n   0x7fffffff: Initial minimum distance (max int32)\n   0xff: Component mask for extracting low byte\n   0x8: Parameter stack offset adjustment\n\nRelated Functions:\n   - g_dwPaletteValidFlag: Controls palette validation logic\n   - g_adDistanceLookupTable: Precomputed distance lookup",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10007"
     },
     "D2CMP_EXP_10008": {
       "addresses": {
-        "LoD/1.07": "0x6FE1B6C0",
-        "LoD/1.08": "0x6FE1B6C0",
-        "LoD/1.09": "0x6FDFB480",
-        "LoD/1.09b": "0x6FDFB480",
-        "LoD/1.09d": "0x6FDFB480",
         "LoD/1.10": "0x6FDFB0D0",
         "LoD/1.11": "0x6FE275C0",
         "LoD/1.11b": "0x6FE21FC0",
@@ -1121,11 +1100,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE234F0"
       },
       "rvas": {
-        "LoD/1.07": "0xB6C0",
-        "LoD/1.08": "0xB6C0",
-        "LoD/1.09": "0xB480",
-        "LoD/1.09b": "0xB480",
-        "LoD/1.09d": "0xB480",
         "LoD/1.10": "0xB0D0",
         "LoD/1.11": "0x175C0",
         "LoD/1.11b": "0x11FC0",
@@ -1135,7 +1109,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10008",
       "signature": "undefined4 Ordinal_10008(byte * param_1, undefined1 * param_2, int param_3, undefined * param_4)",
-      "name_source": "LoD/1.07",
+      "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10008"
     },
@@ -1167,7 +1141,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x15870"
       },
       "name": "Ordinal_10009",
-      "signature": "undefined Ordinal_10009(undefined8 param_1)",
+      "signature": "void Ordinal_10009(uint dwValue)",
+      "comment": "Convert 32-bit value from little-endian to big-endian (byte swap).\n\nAlgorithm:\n1. Extract low byte of dwValue using AND with 0xff\n2. Shift left by 8 bits\n3. Extract high byte from offset +1 using AND with 0xff\n4. Shift left by 8 bits\n5. Extract third byte from offset +2 using AND with 0xff\n6. Shift left by 8 bits\n7. Extract fourth byte from offset +3 using AND with 0xff\n8. Store result in global g_dwByteSwapResult\n\nParameters:\n  dwValue (uint) - 32-bit value to convert (passed as 64-bit parameter)\n\nReturns:\n  void - Result stored in g_dwByteSwapResult global variable\n\nMagic Numbers:\n  0xff - Byte mask to extract individual bytes\n  0x8 - Bit shift count to move bytes to proper position",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10009"
@@ -1195,12 +1170,6 @@ var FUNCTIONS_D2CMP_dll = {
     },
     "D2CMP_EXP_10012": {
       "addresses": {
-        "LoD/1.07": "0x6FE1B770",
-        "LoD/1.08": "0x6FE1B770",
-        "LoD/1.09": "0x6FDFB530",
-        "LoD/1.09b": "0x6FDFB530",
-        "LoD/1.09d": "0x6FDFB530",
-        "LoD/1.10": "0x6FDFB180",
         "LoD/1.11": "0x6FE1ACF0",
         "LoD/1.11b": "0x6FE1CEB0",
         "LoD/1.12a": "0x6FE26B70",
@@ -1208,12 +1177,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE19790"
       },
       "rvas": {
-        "LoD/1.07": "0xB770",
-        "LoD/1.08": "0xB770",
-        "LoD/1.09": "0xB530",
-        "LoD/1.09b": "0xB530",
-        "LoD/1.09d": "0xB530",
-        "LoD/1.10": "0xB180",
         "LoD/1.11": "0xACF0",
         "LoD/1.11b": "0xCEB0",
         "LoD/1.12a": "0x16B70",
@@ -1221,8 +1184,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x9790"
       },
       "name": "Ordinal_10012",
-      "signature": "undefined Ordinal_10012(undefined4 * param_1)",
-      "name_source": "LoD/1.07",
+      "signature": "undefined Ordinal_10012(undefined4 * param_1, undefined4 * param_2, undefined4 * param_3, uint * param_4)",
+      "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10012"
     },
@@ -1244,43 +1207,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x14E0"
       },
       "name": "Ordinal_10013",
-      "signature": "uint Ordinal_10013(int param_1, uint param_2, undefined4 * param_3, int param_4)",
+      "signature": "uint Ordinal_10013(int nFormat, uint dwNumDirections, void * pCelCreateConfig, int nGeneratePhysicalCelFile)",
+      "comment": "Allocate and initialize a new celeration entry in the global container.\n\nAlgorithm:\n1. Validate bitcount of dwNumDirections equals 1 (must be power of 2)\n2. Validate dwNumDirections <= 0x20 (max 32 directions)\n3. Validate nFormat < 2 (must be 0 or 1)\n4. Acquire critical section lock for thread safety\n5. Generate unique celeration ID by incrementing global counter\n6. Reset wrap flag if counter overflows to zero\n7. Search hash table for existing ID allocation\n8. Allocate new celeration entry in container\n9. Unlink any prior celeration entries from new entry\n10. Clear entry fields (direction count, format, config)\n11. Set direction count and format type from parameters\n12. If physical generation enabled, set flag and copy config if provided\n13. Release critical section lock\n14. Return assigned celeration ID\n\nParameters:\nnFormat (int) - Celeration format type (0 or 1, must be < 2)\ndwNumDirections (uint) - Number of directions (power of 2, > 0 and <= 0x20)\npCelCreateConfig (void *) - Optional celeration config pointer, NULL if unused\nnGeneratePhysicalCelFile (int) - Flag to enable physical cel generation\n\nReturns:\nuint - Assigned celeration ID counter value\n\nNote: Function uses 3+ stack-allocated temporaries optimized away by compiler (puVar1, uVar3, iVar2).",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10013"
-    },
-    "D2CMP_EXP_10014": {
-      "addresses": {
-        "LoD/1.07": "0x6FE11950",
-        "LoD/1.08": "0x6FE11950",
-        "LoD/1.09": "0x6FDF1950",
-        "LoD/1.09b": "0x6FDF1950",
-        "LoD/1.09d": "0x6FDF1950",
-        "LoD/1.10": "0x6FDF17E0",
-        "LoD/1.11": "0x6FE210F0",
-        "LoD/1.11b": "0x6FE1EDF0",
-        "LoD/1.12a": "0x6FE1A660",
-        "LoD/1.13c": "0x6FE22670",
-        "LoD/1.13d": "0x6FE24700"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1950",
-        "LoD/1.08": "0x1950",
-        "LoD/1.09": "0x1950",
-        "LoD/1.09b": "0x1950",
-        "LoD/1.09d": "0x1950",
-        "LoD/1.10": "0x17E0",
-        "LoD/1.11": "0x110F0",
-        "LoD/1.11b": "0xEDF0",
-        "LoD/1.12a": "0xA660",
-        "LoD/1.13c": "0x12670",
-        "LoD/1.13d": "0x14700"
-      },
-      "name": "Ordinal_10014",
-      "signature": "undefined Ordinal_10014(uint param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10014"
     },
     "D2CMP_EXP_10016": {
       "addresses": {
@@ -1300,31 +1231,22 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x18D0"
       },
       "name": "Ordinal_10016",
-      "signature": "undefined4 Ordinal_10016(uint param_1, undefined4 * param_2)",
+      "signature": "dword Ordinal_10016(dword dwTableIndex, undefined4 * ppOutput)",
+      "comment": "Find or create a CEL data record by table index and return configured output structure.\n\nAlgorithm:\n1. Acquire CEL table critical section (thread-safe access)\n2. Hash table lookup: compute bucket using (index & mask) * 12 offset\n3. Load first entry pointer from hash bucket\n4. Linear search: compare each entry[0] with dwTableIndex until match found\n5. If no match found, signal error and release lock\n6. Validate entry: check field[9] (height) is divisible by field[10] (stride)\n7. Allocate new output record via Ordinal_10042(0x255, 0)\n8. Initialize output record fields: copy entry fields [6-10], compute height/stride ratio\n9. If entry[6] has flag 0x04 set, call processor FUN_6fe1be90, else dispatch via table\n10. Release critical section if acquired\n\nParameters:\n  dwTableIndex - Hash table lookup key for CEL resource\n  ppOutput - Pointer to output structure (set to record on success or NULL on error)\n\nReturns:\n  0 on success\n  0x85200001 if entry height validation fails\n  0x85200002 if height not divisible by stride\n\nSpecial Cases:\n  Entry not found after linear search - release lock and return error\n  Height field zero - return 0x85200001 validation error\n  Division by stride fails - return 0x85200002 modulo error\n\nMagic Numbers:\n  0x255 - Allocation size parameter for Ordinal_10042\n  0x6fe33ba8 - g_CelCriticalSection address\n  0x04 - Processing flag bit in entry field[6]\n  0x85200001, 0x85200002 - Error codes",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10016"
     },
     "D2CMP_EXP_10017": {
       "addresses": {
-        "LoD/1.07": "0x6FE1FE80",
-        "LoD/1.08": "0x6FE1FE80",
-        "LoD/1.09": "0x6FDFFC70",
-        "LoD/1.09b": "0x6FDFFC70",
-        "LoD/1.09d": "0x6FDFFC70",
-        "LoD/1.10": "0x6FDFF780"
+        "LoD/1.10": "0x6FDF11F0"
       },
       "rvas": {
-        "LoD/1.07": "0xFE80",
-        "LoD/1.08": "0xFE80",
-        "LoD/1.09": "0xFC70",
-        "LoD/1.09b": "0xFC70",
-        "LoD/1.09d": "0xFC70",
-        "LoD/1.10": "0xF780"
+        "LoD/1.10": "0x11F0"
       },
       "name": "Ordinal_10017",
-      "signature": "undefined4 Ordinal_10017(uint param_1, uint param_2)",
-      "name_source": "LoD/1.07",
+      "signature": "undefined4 Ordinal_10017(int param_1, uint param_2)",
+      "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10017"
     },
@@ -1367,7 +1289,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x1210"
       },
       "name": "Ordinal_10019",
-      "signature": "undefined1 Ordinal_10019(uint param_1, uint param_2, int param_3, int param_4)",
+      "signature": "byte Ordinal_10019(dword dwDirectionIndex, dword dwDirectionBits, int nTableVariant, int nUseAlternateTable)",
+      "comment": "Convert direction value to normalized 8-bit direction using lookup tables\n\nAlgorithm:\n1. Validate direction index against bit width (index must be < bit width)\n   - If index >= bit width, raise fatal error with code 0x18e\n2. Select lookup table based on format and variant flags\n   - 8-bit direction: use standard 8-bit table if variant 0x04, or alternate if nUseAlternateTable set\n   - 16-bit direction: use standard 16-bit table if variant 0x08, or alternate if nUseAlternateTable set\n3. Index lookup table with direction index to get normalized byte value\n4. Return the byte value (0-7 representing direction octants)\n5. If neither format matches, raise fatal error with code 0x1a7\n\nParameters:\n- dwDirectionIndex: uint - Index into direction table (0-7 for 8-bit, 0-15 for 16-bit)\n- dwDirectionBits: uint - Direction format width (0x08 for 8-bit, 0x10 for 16-bit directions)\n- nTableVariant: int - Format variant identifier (0x04 for 8-bit, 0x08 for 16-bit table match)\n- nUseAlternateTable: int - Flag to select alternate lookup tables (0=standard, non-0=alternate)\n\nReturns:\n- byte: Normalized 8-bit direction value (0-7) on success\n- Never returns on validation failure: raises fatal error\n\nMagic Numbers:\n- 0x08: 8-bit direction format width\n- 0x10: 16-bit direction format width\n- 0x04: 8-bit table variant identifier\n- 0x18e: Direction index out of range error code\n- 0x1a7: Invalid direction format error code",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10019"
@@ -1390,7 +1313,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x12B0"
       },
       "name": "Ordinal_10020",
-      "signature": "undefined4 Ordinal_10020(int param_1, int param_2)",
+      "signature": "undefined4 Ordinal_10020(int nDirection, int nDestination)",
+      "comment": "Validate UI state direction/destination pair mapping (D2Client.GetUIState wrapper).\n\nAlgorithm:\n1. Check if nDirection == 4\n   - If true and nDestination == 8, return 0 (valid combination)\n   - If true but nDestination != 8, fall through to error\n2. Check if nDirection == 8\n   - If true and nDestination == 0x10, return 1 (valid combination)\n   - If true but nDestination != 0x10, fall through to error\n3. If neither direction matched, call error logging function\n\nParameters:\n- nDirection: UI state direction identifier (4 or 8 are valid)\n- nDestination: Destination state value associated with direction (8 or 0x10)\n\nReturns:\n- 0: Valid direction/destination pair (dir=4, dest=8)\n- 1: Valid direction/destination pair (dir=8, dest=0x10)\n- Non-returning: Invalid pair triggers error logging (Fog.LogMessage)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10020"
@@ -1437,39 +1361,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "EXP",
       "index": "EXP:10022"
     },
-    "D2CMP_EXP_10023": {
-      "addresses": {
-        "LoD/1.07": "0x6FE11EA0",
-        "LoD/1.08": "0x6FE11EA0",
-        "LoD/1.09": "0x6FDF1EA0",
-        "LoD/1.09b": "0x6FDF1EA0",
-        "LoD/1.09d": "0x6FDF1EA0",
-        "LoD/1.10": "0x6FDF1D30",
-        "LoD/1.11": "0x6FE268D0",
-        "LoD/1.11b": "0x6FE26D50",
-        "LoD/1.12a": "0x6FE26830",
-        "LoD/1.13c": "0x6FE21B90",
-        "LoD/1.13d": "0x6FE23C20"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1EA0",
-        "LoD/1.08": "0x1EA0",
-        "LoD/1.09": "0x1EA0",
-        "LoD/1.09b": "0x1EA0",
-        "LoD/1.09d": "0x1EA0",
-        "LoD/1.10": "0x1D30",
-        "LoD/1.11": "0x168D0",
-        "LoD/1.11b": "0x16D50",
-        "LoD/1.12a": "0x16830",
-        "LoD/1.13c": "0x11B90",
-        "LoD/1.13d": "0x13C20"
-      },
-      "name": "Ordinal_10023",
-      "signature": "undefined4 Ordinal_10023(undefined4 * param_1, undefined4 * param_2, int * param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10023"
-    },
     "D2CMP_EXP_10024": {
       "addresses": {
         "LoD/1.07": "0x6FE12010",
@@ -1488,7 +1379,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x1EA0"
       },
       "name": "Ordinal_10024",
-      "signature": "undefined Ordinal_10024(int * param_1, undefined4 * param_2, undefined4 param_3, undefined4 param_4, int param_5)",
+      "signature": "undefined Ordinal_10024(uint * pCelFile, uint * * ppCelImage, uint dwUnused1, uint dwUnused2, int nVersion)",
+      "comment": "Allocate and initialize CEL image data array from CEL file header. Validates version and flags before allocation.\n\nAlgorithm:\n1. Validate pCelFile pointer is not NULL, fail with error 0x379 if invalid\n2. Validate CELFILE_SERIALIZED flag (0x01) is set in dwFlags, fail with error 0x382 if not\n3. If nVersion is -1, verify CEL version field equals 6, fail with error 0x385 if mismatch\n4. If nVersion is not -1, verify CEL version field matches nVersion parameter, fail with error 0x387 if mismatch\n5. If flag 0x02 already set, exit (image data already allocated)\n6. Set flag 0x02 in dwFlags to mark initialization in progress\n7. Calculate total allocation size: (nWidth * nHeight * 0x2c bytes) with alignment\n8. Call Ordinal_10042(0x392, 0) to allocate memory, get pointer to allocation\n9. Zero-fill entire allocated buffer using STOSD/STOSB for efficiency\n10. Iterate through nWidth*nHeight image entries, set each offset field and link to image data\n11. Set output ppCelImage to pCelFile address\n\nParameters:\n  pCelFile (uint *) - Pointer to CEL file structure, field [0]=version, [1]=flags, [4]=width, [5]=height\n  ppCelImage (uint **) - Pointer to output CEL image pointer (will be set to pCelFile)\n  dwUnused1 (uint) - Unused parameter\n  dwUnused2 (uint) - Unused parameter\n  nVersion (int) - Expected CEL version (-1 to skip version check, or specific version like 6)\n\nReturns:\n  void - On success outputs pCelFile via ppCelImage\n  Never returns on validation failure - calls exit function\n\nSpecial Cases:\n  - If pCelFile is NULL, calls debug error handler then exit\n  - If SERIALIZED flag not set, calls debug error handler then exit\n  - If version mismatch, calls debug error handler then exit\n  - If flag 0x02 already set, returns without reallocation (idempotent)\n  - Uses Ordinal_10042 (Fog.MemAlloc) to allocate buffer\n\nMagic Numbers:\n  0x01 - CELFILE_SERIALIZED flag (must be set)\n  0x02 - CELFILE_IMAGEDATA_ALLOCATED flag (set after allocation)\n  0x2c - Size in bytes per image entry (44 bytes)\n  0x18 - Offset to image data pointer field within entry\n  0xb - Increment for next image data block (11 dwords = 44 bytes)\n  0x392 - Allocation request ID/code passed to Ordinal_10042\n  0x379, 0x382, 0x385, 0x387 - Error codes for different validation failures",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10024"
@@ -1521,7 +1413,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x15D90"
       },
       "name": "Ordinal_10025",
-      "signature": "undefined4 Ordinal_10025(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4)",
+      "signature": "dword Ordinal_10025(dword pCelFile, dword dwCallbackIndex, dword dwCallbackParam1, dword dwCallbackParam2)",
+      "comment": "Allocates frame buffer for cel file and invokes callback handler.\n\nAlgorithm:\n1. Validate cel file has 24-bit flag set (0x4 & dwFlags)\n2. If flag missing, log error and abort with exit code -1\n3. Allocate frame buffer via Ordinal_10042, storing pointer in ppFrameBuffer\n4. Initialize buffer fields: dwMagic=6, dwFlags, dwWidth, dwHeight\n5. Clear buffer accumulator (offset 0x8 = 0)\n6. Retrieve callback function pointer from indexed function table at 0x6fe2a1bc\n7. Invoke callback with parameters, passing buffer descriptor\n8. Store allocated buffer pointer to output parameter\n9. Return success code 1\n\nParameters:\npCelFile (dword): Cel file structure pointer; validates dwFlags & 0x4 required\ndwCallbackIndex (dword): Index into callback function table (0x6fe2a1bc)\ndwCallbackParam1 (dword): First callback parameter value\ndwCallbackParam2 (dword): Second callback parameter value\n\nReturns:\n1 = Success, buffer allocated and callback invoked\n\nSpecial Cases:\n- Cel file missing 24-bit flag triggers fatal abort (non-returning call to FUN_6fe21293)\n- Callback function selection via indexed table lookup from dwCallbackIndex\n\nMagic Numbers:\n0x4 = Cel file 24-bit format flag\n0x6 = Buffer magic value (frame buffer signature)\n0xf8 = Mask for preserving upper 5 bits of flags (ANDs out lower 3 bits)\n0x6fe2a1bc = Callback function table base address\n0x6fe2a1bc + index*4 = Calculated callback function pointer",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10025"
@@ -1544,7 +1437,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x1CC0"
       },
       "name": "Ordinal_10026",
-      "signature": "undefined Ordinal_10026(int param_1, undefined * param_2)",
+      "signature": "undefined Ordinal_10026(int nConfigPtr, void * pContext)",
+      "comment": "Process 2D array of elements with stride configuration\n\nAlgorithm:\n1. Check if configuration flag 0x04 is set in nConfigPtr[4]\n2. If flag not set, log error and abort with ExitProcess\n3. If flag set, initialize row counter to 0\n4. Check if row count at nConfigPtr[0x10] is > 0\n5. For each row from 0 to row count:\n   6. Load column count from nConfigPtr[0x14]\n   7. Initialize column counter to 0\n   8. For each column from 0 to column count:\n      9. Calculate element index: (row * column_count + column)\n      10. Load element from array at nConfigPtr[0x18 + index*4]\n      11. Call FUN_6fe1bfa0 to process element with nConfigPtr[0xc] as config\n      12. Increment column counter, reload column count\n   13. Increment row counter\n\nParameters:\nnConfigPtr - int pointer to configuration structure with:\n  [0x04] - flags (bit 2 = valid flag)\n  [0x0c] - processing context/config value\n  [0x10] - row count\n  [0x14] - column count\n  [0x18] - start of element array (each element is 4 bytes)\npContext - void * context passed to element processor\n\nReturns:\nvoid - no return value; logs error and exits on flag validation failure",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10026"
@@ -1567,7 +1461,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x1FE0"
       },
       "name": "Ordinal_10027",
-      "signature": "undefined Ordinal_10027(int * param_1)",
+      "signature": "undefined Ordinal_10027(int * pData)",
+      "comment": "Validates data pointer and processes conditional flags.\n\nAlgorithm:\n1. Check if pData is NULL\n2. If NULL, log error message with path \"C:\\Projects\\Diablo2\\Source\\D2CMP\" and code 0x404, then terminate\n3. Load flag value from pData[1] (offset 0x4)\n4. Check if flags & 0x03 != 0 (lower 2 bits set)\n5. If yes and flags & 0x02 != 0 (bit 1 set), call Ordinal_10032 to process data\n6. Call Ordinal_10043 to update skill data table (code 0x40b)\n7. Return\n\nParameters:\npData (int *) - Pointer to data structure with flags at offset +4\n\nReturns:\nvoid - No return value on success; terminates on NULL input\n\nSpecial Cases:\n- NULL pointer triggers error logging and abnormal termination\n- Conditional processing depends on bit flags at offset +4\n- Magic number 0x404 = error severity code\n- Magic number 0x40b = skill data update code\n- Magic number 0x03 = flag test mask\n- Magic number 0x02 = conditional processing bit\n\nRelated Functions:\n- Ordinal_10023() - Error reporting (Storm.dll ErrorMsg)\n- Ordinal_10032() - Data processing handler\n- Ordinal_10043() - Skill data table lookup (D2Common.GetSkillData)\n- FUN_6fe21293() - Fatal exit handler",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10027"
@@ -1590,7 +1485,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x1FA0"
       },
       "name": "Ordinal_10028",
-      "signature": "undefined Ordinal_10028(int param_1)",
+      "signature": "void Ordinal_10028(dword dwFlags)",
+      "comment": "CMP library version validation and initialization routine.\n\nAlgorithm:\n1. Check if dwFlags parameter is zero (initialization check)\n2. If zero: log error message with file reference and error code 0x3f6 to Ordinal_10023\n3. If zero: call Ordinal_10023 to report critical error (does not return)\n4. Call Ordinal_10043 with error code 0x3f7 and parameter 0 (post-initialization check)\n5. Return to caller\n\nParameters:\ndwFlags (uint): Initialization flag (0 = uninitialized state triggering error, non-zero = initialized)\n\nReturns:\nvoid - Function either triggers non-returning error handler or completes normally\n\nSpecial Cases:\n- If dwFlags == 0: executes non-returning Ordinal_10023 call (error handling, does not continue)\n- If dwFlags != 0: completes Ordinal_10043 check and returns normally\n\nMagic Numbers:\n0x3f6 (1014 decimal): Error code for Ordinal_10023 - serialization/file error\n0x3f7 (1015 decimal): Error code for Ordinal_10043 - post-initialization validation\n\nRelated Functions:\n- Ordinal_10023 - Error reporting handler (Storm.dll)\n- Ordinal_10043 - Post-initialization validation (Fog.dll)\n- FUN_6fe21293 - Non-returning failure handler",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10028"
@@ -1613,35 +1509,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x15895"
       },
       "name": "Ordinal_10029",
-      "signature": "undefined Ordinal_10029(int param_1)",
+      "signature": "void Ordinal_10029(int nFileHandle)",
+      "comment": "Validate file handle and trigger fatal error if invalid\n\nAlgorithm:\n1. Check if nFileHandle is zero (invalid handle)\n2. If invalid (zero), call Ordinal_10023 to log error with file path and error code 0x28a\n3. Call FUN_6fe21293 with -0x1 to terminate application with exit code -1\n4. If valid (non-zero), return normally\n\nParameters:\nnFileHandle - File handle value to validate, zero indicates error condition\n\nReturns:\nvoid - Does not return if handle is invalid (terminates via FUN_6fe21293)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10029"
-    },
-    "D2CMP_EXP_10030": {
-      "addresses": {
-        "LoD/1.07": "0x6FE11C40",
-        "LoD/1.08": "0x6FE11C40",
-        "LoD/1.09": "0x6FDF1C40",
-        "LoD/1.09b": "0x6FDF1C40",
-        "LoD/1.09d": "0x6FDF1C40",
-        "LoD/1.10": "0x6FDF1AD0",
-        "LoD/1.12a": "0x6FE231C0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1C40",
-        "LoD/1.08": "0x1C40",
-        "LoD/1.09": "0x1C40",
-        "LoD/1.09b": "0x1C40",
-        "LoD/1.09d": "0x1C40",
-        "LoD/1.10": "0x1AD0",
-        "LoD/1.12a": "0x131C0"
-      },
-      "name": "Ordinal_10030",
-      "signature": "undefined Ordinal_10030(int * param_1, undefined4 * param_2, int * param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10030"
     },
     "D2CMP_EXP_10031": {
       "addresses": {
@@ -1661,7 +1533,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x2030"
       },
       "name": "Ordinal_10031",
-      "signature": "undefined Ordinal_10031(int param_1)",
+      "signature": "void Ordinal_10031(CelFileInfo * pCelFileInfo)",
+      "comment": "ProcessCelFileData - Iterate through all cells in a CEL file and invoke a callback for each.\n\nAlgorithm:\n1. Validate input pointer pCelFileInfo - if NULL, log error and exit with code 0x41a\n2. Load width from pCelFileInfo->width and height from pCelFileInfo->height\n3. Calculate total cell count by multiplying width * height\n4. If cell count equals zero, skip loop and return immediately\n5. Initialize loop counter dwCelIndex to zero\n6. Enter loop: load table index from pCelFileInfo->tableIndex\n7. Retrieve function pointer from g_pCelFunctionTable indexed by table index\n8. Invoke function pointer for current cell\n9. Increment dwCelIndex, test against total cell count\n10. If dwCelIndex < cell_count, repeat from step 7, else exit loop\n11. Return to caller\n\nParameters:\npCelFileInfo (CelFileInfo *) - Pointer to CEL file structure:\n  tableIndex: Table index for function lookup\n  width: Horizontal dimension (dword)\n  height: Vertical dimension (dword)\n  cellData: Cell data array start\n\nReturns:\nvoid - Returns after processing all cells or error condition\nOn NULL pointer: Error logged and application terminated with code 0x41a\n\nSpecial Cases:\nNULL input pointer triggers error handler chain\nZero cell count causes immediate return without processing",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10031"
@@ -1694,33 +1567,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xD2A0"
       },
       "name": "Ordinal_10032",
-      "signature": "undefined4 Ordinal_10032(int * param_1)",
+      "signature": "dword Ordinal_10032(int * pCelFile)",
+      "comment": "Validates CEL file structure and clears cell graphics cache\n\nAlgorithm:\n1. Verify input CEL file pointer not NULL; return 0 on null\n2. Check if CEL type field (offset +0x00) equals 6\n3. Validate CEL data pointer at offset +0x18 is not NULL\n4. Calculate total cells = width (offset +0x10) * height (offset +0x14)\n5. Loop through each cell index from 0 to count-1\n6. For each cell, check data pointer at offset +0x18\n7. If cell pointer non-NULL and data valid, invoke callback if registered\n8. Clear graphics reference by writing 0x00000000 to offset +0x18\n9. After loop completes, call Ordinal_10043(0x5ff, 0) for palette update\n10. Return 1 on successful cache clear\n\nParameters:\npCelFile (int *) - Pointer to CEL file structure\n   Offset +0x00: Type field (must equal 6)\n   Offset +0x10: Width (cell count X dimension)\n   Offset +0x14: Height (cell count Y dimension)\n   Offset +0x18: Pointer to first cell data element\n   Subsequent offsets +0x18: Cell data pointers in row-major layout\n\nReturns:\n1 - Cache clear succeeded, all graphics references cleared\n0 - NULL input pointer provided\nDoes not return - Asserts on type mismatch or NULL data pointer",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10032"
-    },
-    "D2CMP_EXP_10033": {
-      "addresses": {
-        "LoD/1.07": "0x6FE12440",
-        "LoD/1.08": "0x6FE12440",
-        "LoD/1.09": "0x6FDF2440",
-        "LoD/1.09b": "0x6FDF2440",
-        "LoD/1.09d": "0x6FDF2440",
-        "LoD/1.10": "0x6FDF22C0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x2440",
-        "LoD/1.08": "0x2440",
-        "LoD/1.09": "0x2440",
-        "LoD/1.09b": "0x2440",
-        "LoD/1.09d": "0x2440",
-        "LoD/1.10": "0x22C0"
-      },
-      "name": "Ordinal_10033",
-      "signature": "undefined Ordinal_10033(int * param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, undefined4 param_8, undefined4 param_9, undefined4 param_10, undefined4 param_11)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10033"
     },
     "D2CMP_EXP_10035": {
       "addresses": {
@@ -1740,7 +1591,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xAC50"
       },
       "name": "Ordinal_10035",
-      "signature": "undefined Ordinal_10035(int * param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, uint param_8, int param_9, byte param_10)",
+      "signature": "undefined Ordinal_10035(int * pCmpFile, int nXOffset, int nYOffset, int nDestX, int nDestY, byte * pDestSurface, int nMaxY, uint dwPitch, int nPaletteIndex, byte bTransparency)",
+      "comment": "Blit scaled CMP frame with clipping to destination surface.\n\nAlgorithm:\n1. Validate CMP file pointer and CEL data exists (pCelData = pCmpFile[1])\n2. Check CEL version is 6 (standard Diablo II CMP version)\n3. Check CEL flags 0x4 not set (format incompatibility check)\n4. Validate destination surface non-null (error if NULL)\n5. Retrieve CMP frame dimensions from pCmpFile[0]->width and pCmpFile[0]->height\n6. Calculate half-width: nHalfWidth = frame_width / 2 (center baseline for scaling)\n7. Calculate scaled Y start: nStartY = nYOffset + nHalfWidth\n8. Calculate scaled height: dwHeightToDraw = frame_height / 2\n9. If nStartY < scaled_height, adjust: dwHeightToDraw = nStartY + 1\n10. Validate dwHeightToDraw > 0 (skip if entirely offscreen)\n11. If nStartY > nMaxY (bottom clipping): adjust nClipLeft = nStartY - nMaxY + 1, recalculate height\n12. Verify clipped height > 0 (return if completely clipped vertically)\n13. Calculate source offset: nHalfWidth = (nXOffset + frame_offset_x + nHalfWidth) - nClipLeft\n14. Call FUN_6fe18630 with calculated parameters to perform actual blit\n\nParameters:\npCmpFile - Pointer to CMP frame (CELFILE structure: [0]=pCelData, [1]=pCelHeader)\nnXOffset - Source X offset into frame\nnYOffset - Source Y offset into frame\nnDestX - Destination X coordinate on surface\nnDestY - Destination Y coordinate on surface\npDestSurface - Destination surface buffer pointer\nnMaxY - Maximum Y coordinate (clipping boundary)\ndwPitch - Surface pitch (bytes per scan line)\nnPaletteIndex - Palette offset/index for color remapping\nbTransparency - Transparency/blitting mode flags\n\nReturns:\nvoid - Updates destination surface in-place\n\nStructure Layout - CMP/CEL Data:\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | pCelData   | ptr  | Pointer to CEL raster data\n0x4    | 4    | dwWidth    | uint | Frame width in pixels (typically 256-512)\n0x8    | 4    | dwHeight   | uint | Frame height in pixels\n0xc    | 4    | nOffsetX   | int  | Horizontal offset from origin\n0x10   | 4    | nOffsetY   | int  | Vertical offset from origin\n\nSpecial Cases:\n- NULL pCmpFile triggers assertion (Ordinal_10023 + exit)\n- CEL version != 6 triggers assertion (invalid CMP format)\n- CEL flags & 0x4 triggers assertion (unsupported CEL compression)\n- NULL pDestSurface triggers assertion (invalid blit target)\n- Entirely offscreen (nStartY - height <= 0) returns early\n- Vertically clipped entirely (dwHeightToDraw <= 0 after clipping) returns early\n\nMagic Numbers:\n0x4 - CEL flag mask for format incompatibility check\n0x6 - Expected CEL version for CMP compatibility\n0x4f6, 0x4f7, 0x4fa, 0x4fd - Line numbers in source code for assertions\n-0x1 - Exit code for assertion failures (passed to FUN_6fe21293)\n0x1 - Minimum valid height threshold\n\nNote: Function uses compiler-optimized temporaries (iVar1, iVar3, iVar2, uVar4) that are not renameable due to SSA form elimination.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10035"
@@ -1752,6 +1604,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF26C0",
         "LoD/1.09b": "0x6FDF26C0",
         "LoD/1.09d": "0x6FDF26C0",
+        "LoD/1.10": "0x6FDFF950",
         "LoD/1.11": "0x6FE1B120",
         "LoD/1.11b": "0x6FE22450",
         "LoD/1.12a": "0x6FE21170",
@@ -1764,6 +1617,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x26C0",
         "LoD/1.09b": "0x26C0",
         "LoD/1.09d": "0x26C0",
+        "LoD/1.10": "0xF950",
         "LoD/1.11": "0xB120",
         "LoD/1.11b": "0x12450",
         "LoD/1.12a": "0x11170",
@@ -1771,7 +1625,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x10BF0"
       },
       "name": "Ordinal_10036",
-      "signature": "int Ordinal_10036(int param_1)",
+      "signature": "int Ordinal_10036(CelFileInfo * pCelContext)",
+      "comment": "Retrieve cel data from a cel context by row and column indices.\n\nAlgorithm:\n1. Validate pCelContext is not NULL, assert with error 0x548 if null\n2. Dereference pCelData = [pCelContext + 0x4]\n3. Validate pCelData is not NULL, assert with error 0x532 if null\n4. Validate: [pCelData] == 0x6 (cel type is valid)\n5. Validate: dwColIndex ([pCelContext + 0xc]) < 0x40 (column in range)\n6. Validate: nRowIndex ([pCelContext + 0x8]) <= [pCelData + 0x14] (row in bounds)\n7. Call Ordinal_10018 to compute linear index from (dwColIndex, [pCelData + 0x10])\n8. Calculate array offset: dwCelIndex * [pCelData + 0x14] + nRowIndex + 6\n9. Return: [pCelData + offset*4]\n10. If any validation fails, assert with error 0x549\n\nParameters:\n  pCelContext: Pointer to cel context structure\n    [+0x4] - Pointer to cel data array (type flag at [+0])\n    [+0x8] - Row index (0-based)\n    [+0xc] - Column index (0-0x3F)\n\nReturns:\n  int: Cel data value at [row_index][col_index] in cel array, or fatal error\n\nSpecial Cases:\n  - Function does not return if validation fails, calls FUN_6fe21293 for fatal error\n  - Cel type must equal 0x6 for valid operation\n  - Column index capped at 0x3F, row index must be <= stride value",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10036"
@@ -1794,7 +1649,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x2820"
       },
       "name": "Ordinal_10037",
-      "signature": "undefined4 Ordinal_10037(int param_1)",
+      "signature": "uint Ordinal_10037(CelFileInfo * pCelFile)",
+      "comment": "Returns field value from CelFileInfo structure; validates pointer and reads at offset +4.\n\nAlgorithm:\n1. Load pCelFile parameter from stack [ESP+4]\n2. Test if pCelFile is NULL\n3. If NULL: Call Ordinal_10023 (D2Common.LogError) with error context (0x55d)\n4. If NULL: Call FUN_6fe21293 with 0xFFFFFFFF (termination call)\n5. If valid: Dereference pCelFile[1] (4-byte read at offset +4)\n6. Return dereferenced value in EAX\n\nParameters:\npCelFile (CelFileInfo *) - Pointer to CelFileInfo structure; cannot be NULL. Function will error and terminate if NULL.\n\nReturns:\nuint - Value read from CelFileInfo at offset +4 (typically field at index 1 of structure)\n\nSpecial Cases:\nFunction terminates process if pCelFile is NULL; does not return normally in error case.\nMagic Numbers: 0x55d = error code context for logging.\n\nRelated Functions:\n- Ordinal_10023 (D2Common.LogError) - Logs error message\n- FUN_6fe21293 - Triggers process termination",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10037"
@@ -1838,7 +1694,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x2210"
       },
       "name": "Ordinal_10042",
-      "signature": "undefined4 Ordinal_10042(int * param_1, uint param_2, int param_3, undefined4 * param_4)",
+      "signature": "undefined4 Ordinal_10042(int * pnCelData, uint dwCelIndex, int nFrameIndex, uint * pdwDestBuffer)",
+      "comment": "Extract and copy CEL frame pixel data to destination buffer.\n\nAlgorithm:\n1. Verify pnCelData->dwVersion == 0x6 (CEL_V6 format required)\n2. Verify pnCelData->dwFlags & 0x4 (24-bit CEL flag set)\n3. Calculate frame offset: dwFrameOffset = Ordinal_10018(dwCelIndex, pnCelData[4])\n4. Load frame descriptor: pFrameData = pnCelData[dwFrameOffset * pnCelData[5] + nFrameIndex + 6]\n5. Calculate pixel count: dwTotalBytes = pFrameData[2] * pFrameData[1] * 3 (width * height * 24-bit)\n6. Copy DWORD-aligned data: loop dwDWordCount = dwTotalBytes >> 2 times, copy 4 bytes per iteration\n7. Copy remaining bytes: loop dwTotalBytes & 3 times, copy 1 byte per iteration\n8. Return 1 (success)\n\nParameters:\n- pnCelData (int *): Pointer to CEL file structure containing version, flags, frames, and frame descriptors\n- dwCelIndex (uint): Index of CEL graphic within archive\n- nFrameIndex (int): Frame number within CEL graphic\n- pdwDestBuffer (undefined4 *): Destination buffer to receive pixel data (32-bit aligned writes)\n\nReturns:\n- 1: Success - frame pixels copied to destination\n- Does not return on validation failure (calls FUN_6fe21293 with -1)\n\nSpecial Cases:\n- Magic numbers: 0x6 (CEL version), 0x4 (24-bit flag), 0x489 (error line 1161), 0x48a (error line 1162)\n- Validation failures trigger assertion failure via FUN_6fe21293(-1)\n- Pixel data assumed 24-bit RGB (3 bytes per pixel)\n- Both DWORD and byte copy loops required for alignment\n\nNote: Function uses SSA temporaries (uVar3, uVar4, puVar5) optimized away by compiler.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10042"
@@ -1871,7 +1728,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x15630"
       },
       "name": "Ordinal_10044",
-      "signature": "undefined Ordinal_10044(undefined4 param_1)",
+      "signature": "void Ordinal_10044(dword pfnCallback)",
+      "comment": "Set global CEL file callback function pointer.\n\nAlgorithm:\n1. Load callback function pointer from stack parameter [ESP+0x4]\n2. Store in global g_pfnCelfileCallback\n3. Return to caller\n\nParameters:\npfnCallback (dword) - Function pointer to CEL file processing callback\n\nReturns:\nvoid - No return value\n\nNotes:\n- Global g_pfnCelfileCallback is used by Ordinal_10032 to process CEL files\n- Ordinal_10045 retrieves the current callback pointer\n- Callback is invoked for each CEL file element during processing",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10044"
@@ -1905,6 +1763,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10045",
       "signature": "undefined4 Ordinal_10045(void)",
+      "comment": "Returns the current Celfile callback function pointer.\n\nAlgorithm:\n1. Load g_pfnCelfileCallback global function pointer from 0x6fe33bc0\n2. Return the function pointer in EAX\n\nParameters:\nNone\n\nReturns:\nEAX - Function pointer to Celfile callback (void* function pointer), or NULL if not set\n\nSpecial Cases:\n- Returns NULL if g_pfnCelfileCallback has not been initialized\n- Used by image rendering/decompression subsystem to customize Celfile processing\n\nRelated Functions:\n- FUN_6fe18e30() - Calls this getter to retrieve callback",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10045"
@@ -1958,7 +1817,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x14820"
       },
       "name": "Ordinal_10047",
-      "signature": "int Ordinal_10047(int * param_1)",
+      "signature": "int Ordinal_10047(int * pCelFile)",
+      "comment": "Validate CEL file version and return sprite data pointer.\n\nAlgorithm:\n1. Load pCelFile parameter from stack\n2. Dereference pCelFile to read version field [0x0]\n3. If version equals 6, skip error handling (JZ)\n4. If version != 6:\n   - Push 0x5a4 (max size parameter)\n   - Push global error string pointer (source location)\n   - Push global error string pointer (file marker CELFILE_VERS)\n   - Call Ordinal_10023 /* D2Win.ErrorMsg - Display error dialog */\n   - Call FUN_6fe21293 with 0xFFFFFFFF (exit handler)\n5. Return pCelFile[4] - the sprite data pointer at offset +0x10\n\nParameters:\n- pCelFile (int *): Pointer to CEL file structure, must have version 6 at offset 0\n\nReturns:\n- int: Sprite data pointer from offset +0x10 if version valid\n\nSpecial Cases:\n- If version != 6, displays error and terminates via non-returning call\n- Version field stored at offset 0, sprite data pointer at offset +0x10\n\nMagic Numbers Reference:\n- 0x6 (6): Required CEL file version\n- 0x10 (16): Offset of sprite data pointer within structure\n- 0x5a4 (1444): Maximum error string length\n- 0xFFFFFFFF (-1): Exit code parameter",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10047"
@@ -1981,7 +1841,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x7FB0"
       },
       "name": "Ordinal_10048",
-      "signature": "undefined Ordinal_10048(int param_1, int param_2)",
+      "signature": "void Ordinal_10048(int nOffsetBase, int nRowStride)",
+      "comment": "Refresh viewport scroll region with directional tile updates\n\nAlgorithm:\n1. First loop (upper region): For each of 40 horizontal strips (iVar4 += 4, max 0xa0):\n   a. Load boundary values: nBoundValue from g_anVertBoundsLower, offset base from g_anHorizBoundsLow\n   b. Clamp nBoundValue to range [0, 0x29] to prevent overflow\n   c. Calculate destination pointer: nOffsetBase + offset, row position: nBoundValue + row stride\n   d. If destination < boundary: Fill forward using offset map (g_anOffsetMapTable) with byte copies\n   e. Swap to opposite boundary: Load g_anVertBoundsLower, g_anHorizBoundsLow\n   f. Clamp value to [0x28, inf] to ensure valid range\n   g. Calculate upper boundary and position\n   h. If destination > boundary: Fill backward with offset map byte copies, decrementing pointers\n   i. Advance: nRegionIdx += 4, nTileOffset += 0x50, nCurrentOffset += param_2\n2. Second loop (lower region): Similar pattern for bottom region (iVar6 from 0 to -0xa0):\n   a. Calculate corner position: param_1 + (param_2 * 0x4f)\n   b. Process 40 more strips using g_anVertBoundsUpper, g_anHorizBoundsMid boundaries\n   c. Forward and backward fill operations using offset map\n   d. Decrement indices: nTileOffset -= 0x50, nRegionIdx -= 4, nCurrentOffset -= param_2\n\nParameters:\nnOffsetBase (int): Base offset into viewport data region\nnRowStride (int): Row stride in bytes for viewport advancement\n\nReturns:\nvoid (updates viewport tiles in-place)\n\nSpecial Cases:\n- Magic value 0x29 (41): Maximum width clamp for forward fill region\n- Magic value 0x28 (40): Minimum width threshold for backward fill region\n- Magic value 0xa0 (160): 40 horizontal strips * 4 bytes stride\n- Magic value 0x50 (80): Tile row size in offset map\n- Magic value 0x4f (79): Row multiplier for corner calculation\n- Magic value 0x18b0 (6320): Starting tile offset for second loop\n\nMagic Numbers Reference:\n0x29 - 41 decimal - Forward region max width (prevents buffer overrun)\n0x28 - 40 decimal - Backward region min width threshold\n0xa0 - 160 decimal - Total strips in first loop (40 * 4 byte stride)\n0x50 - 80 decimal - Bytes per tile row in offset map\n0x4f - 79 decimal - Row calculation multiplier\n0x18b0 - 6320 decimal - Starting offset for second loop region\n0x4 - 4 bytes - Stride for offset map table access\n\nStructure Layout (Viewport Boundary Tables):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | nVertBoundsLower[0] | int | Lower vertical bound for strip 0\n0x4    | 4    | nHorizBoundsLow[0] | int | Lower horizontal bound for strip 0\n... (repeats for 40 strips)\n(External: g_anOffsetMapTable: array of 6320 bytes containing isometric offset map)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10048"
@@ -2015,6 +1876,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10049",
       "signature": "undefined Ordinal_10049(void)",
+      "comment": "Toggle/check game running flag\n\nAlgorithm:\n1. Load current game running flag (g_dwGameRunning)\n2. Clear EAX register\n3. Test if flag is zero (game not running)\n4. Set AL to 1 if flag is zero, 0 otherwise (inverted check)\n5. Store result back to g_dwGameRunning\n6. Return inverted state\n\nParameters:\n(none)\n\nReturns:\nvoid (result stored in g_dwGameRunning global)\n\nSpecial Cases:\n- Function toggles the flag state on each call\n- Used as a simple game state check mechanism\n\nMagic Numbers:\n- 0x00 = game not running state\n- 0x01 = game running state",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10049"
@@ -2037,51 +1899,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xB950"
       },
       "name": "Ordinal_10050",
-      "signature": "undefined Ordinal_10050(char * param_1, int param_2, byte * param_3, undefined4 * param_4)",
+      "signature": "void Ordinal_10050(char * szDest, int nCheckValue, byte * pbParam3, void * pParam4)",
+      "comment": "String concatenation using game structure or fallback source pointer.\n\nAlgorithm:\n1. Call FUN_6fe21447 to preprocess input parameters (purpose unknown, likely validation)\n2. Select source string pointer based on nCheckValue: if zero or g_pGameStructurePtr null, use g_pFallbackGamePtr; else use g_pDefaultGamePtr\n3. Scan source string with REPNE SCASB to locate null terminator (stores negative length in ECX)\n4. Calculate actual source string length: ~ECX\n5. Scan destination buffer with REPNE SCASB to locate end of existing string\n6. Decrement destination pointer to overwrite null terminator\n7. Copy source to destination end using DWORD-aligned copy loop (length >> 2 iterations of MOVSD)\n8. Copy remaining bytes (length & 3) using byte copy loop (MOVSB)\n\nParameters:\nchar * szDest - Destination buffer to append source string to (modified in place)\nint nCheckValue - Selection flag: 0 or null g_pGameStructurePtr selects fallback source\nbyte * pbParam3 - Preprocessing parameter passed to FUN_6fe21447 (purpose unknown)\nvoid * pParam4 - Preprocessing parameter passed to FUN_6fe21447 (purpose unknown)\n\nReturns:\nvoid - Returns nothing; modifies szDest in place by appending source string\n\nSpecial Cases:\n- If nCheckValue == 0, always uses g_pFallbackGamePtr\n- If g_pGameStructurePtr is null (0x00000000), uses g_pFallbackGamePtr\n- Assumes both source and destination are null-terminated strings\n- Uses REPNE SCASB which requires AL = 0x00 for string scanning\n- DWORD-aligned copy improves performance for long concatenations",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10050"
     },
-    "D2CMP_EXP_10051": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1C020",
-        "LoD/1.08": "0x6FE1C020",
-        "LoD/1.09": "0x6FDFBDE0",
-        "LoD/1.09b": "0x6FDFBDE0",
-        "LoD/1.09d": "0x6FDFBDE0",
-        "LoD/1.10": "0x6FDFB930",
-        "LoD/1.11": "0x6FE1BC50",
-        "LoD/1.11b": "0x6FE23050",
-        "LoD/1.12a": "0x6FE21D60",
-        "LoD/1.13c": "0x6FE1C9D0",
-        "LoD/1.13d": "0x6FE21730"
-      },
-      "rvas": {
-        "LoD/1.07": "0xC020",
-        "LoD/1.08": "0xC020",
-        "LoD/1.09": "0xBDE0",
-        "LoD/1.09b": "0xBDE0",
-        "LoD/1.09d": "0xBDE0",
-        "LoD/1.10": "0xB930",
-        "LoD/1.11": "0xBC50",
-        "LoD/1.11b": "0x13050",
-        "LoD/1.12a": "0x11D60",
-        "LoD/1.13c": "0xC9D0",
-        "LoD/1.13d": "0x11730"
-      },
-      "name": "Ordinal_10051",
-      "signature": "undefined * Ordinal_10051(int param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10051"
-    },
     "D2CMP_EXP_10052": {
       "addresses": {
-        "LoD/1.07": "0x6FE1C0E0",
-        "LoD/1.08": "0x6FE1C0E0",
-        "LoD/1.09": "0x6FDFBEA0",
-        "LoD/1.09b": "0x6FDFBEA0",
-        "LoD/1.09d": "0x6FDFBEA0",
         "LoD/1.10": "0x6FDFB9F0",
         "LoD/1.11": "0x6FE229F0",
         "LoD/1.11b": "0x6FE1B720",
@@ -2090,11 +1915,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE25E20"
       },
       "rvas": {
-        "LoD/1.07": "0xC0E0",
-        "LoD/1.08": "0xC0E0",
-        "LoD/1.09": "0xBEA0",
-        "LoD/1.09b": "0xBEA0",
-        "LoD/1.09d": "0xBEA0",
         "LoD/1.10": "0xB9F0",
         "LoD/1.11": "0x129F0",
         "LoD/1.11b": "0xB720",
@@ -2104,32 +1924,9 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10052",
       "signature": "undefined Ordinal_10052(undefined4 param_1, undefined4 param_2, undefined4 param_3, uint param_4)",
-      "name_source": "LoD/1.07",
+      "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10052"
-    },
-    "D2CMP_EXP_10053": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1C230",
-        "LoD/1.08": "0x6FE1C230",
-        "LoD/1.09": "0x6FDFBFF0",
-        "LoD/1.09b": "0x6FDFBFF0",
-        "LoD/1.09d": "0x6FDFBFF0",
-        "LoD/1.10": "0x6FDFBBF0"
-      },
-      "rvas": {
-        "LoD/1.07": "0xC230",
-        "LoD/1.08": "0xC230",
-        "LoD/1.09": "0xBFF0",
-        "LoD/1.09b": "0xBFF0",
-        "LoD/1.09d": "0xBFF0",
-        "LoD/1.10": "0xBBF0"
-      },
-      "name": "Ordinal_10053",
-      "signature": "undefined Ordinal_10053(int param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10053"
     },
     "D2CMP_EXP_10054": {
       "addresses": {
@@ -2159,7 +1956,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x11700"
       },
       "name": "Ordinal_10054",
-      "signature": "undefined Ordinal_10054(int param_1)",
+      "signature": "void Ordinal_10054(bool fInitialize)",
+      "comment": "Initialize or cleanup compressed game data structure\n\nAlgorithm:\n1. Call Ordinal_423 (LoadCompressedData) to process compressed game resources\n   - Takes source label \"Diablo II\" and data label \"CompressedData\"\n   - Loads result into global g_pGameStructurePtr at address 0x6fe3011c\n2. Read fInitialize parameter from stack [ESP + 0x4]\n3. If fInitialize equals 0 (FALSE - cleanup request):\n   - Clear g_pGameStructurePtr to NULL (0x00000000)\n4. Return to caller (RET 0x4 - callee cleanup of 1 parameter)\n\nParameters:\n- fInitialize (bool): Non-zero (0xFF) to initialize/retain; zero (0x00) to cleanup\n\nReturns:\n- void\n\nSpecial Cases:\n- Ordinal_423 is always called regardless of fInitialize value\n- Cleanup only sets pointer to NULL, does not call deallocator\n- g_pGameStructurePtr is global and shared with other functions\n\nNote: Function uses 1 stack-allocated temporary optimized away (return address)\n\nOrdinal Documentation:\n- Ordinal_423: LoadCompressedData - Loads resource from compressed data container\n- Ordinal_10054: This function - Game structure initialization/cleanup handler",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10054"
@@ -2192,7 +1990,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x11F40"
       },
       "name": "Ordinal_10055",
-      "signature": "uint Ordinal_10055(int * param_1, int param_2, int param_3)",
+      "signature": "uint Ordinal_10055(int * pnCelFile, int nIsAsyncLoad, int nFrameIndex)",
+      "comment": "Load or retrieve cached CEL (sprite graphic) data and decompile to frame context.\n\nAlgorithm:\n1. Validate pnCelFile pointer is not NULL\n2. Initialize output to NULL (*pnCelFile = 0)\n3. If pnCelFile[1] != 0 (already loaded), call Ordinal_10036 cache handler and return 1\n4. Initialize local CEL frame buffer (256 bytes, zeroed) and palette index buffer (256 bytes)\n5. Call FUN_6fe1c7a0 (LoadOrInitializeSpriteCelData) to load/init CEL data from file\n6. Find matching table entry in 0x6fef2bc0 table using pnCelFile parameters\n7. If table size > 1 AND entry found:\n   a. Verify async data structure exists (offset 0xb0)\n   b. Call Ordinal_10092 (CheckAsyncLoadStatus) to check async status, skip if pending\n   c. If CEL bit flag 0x01 clear, recalculate pnCelFile[3] using Ordinal_10019\n8. If no table match found:\n   a. Return 0 if async load requested (nIsAsyncLoad != 0)\n   b. Call FUN_6fe1d260 (InitializeSpriteFrameData) to setup frame data\n   c. Call FUN_6fe1d810 to apply frame data\n   d. Return result\n9. Otherwise (table match exists):\n   a. Get graphics block pointer from table entry at offset 0x20\n   b. Verify graphics block flags (0x20:0x01 must be clear)\n   c. Verify async data structure exists (offset 0xb0)\n   d. If async load requested, call Ordinal_10092 and return result\n   e. If async queue active (g_dwQueueItemCount != 0), process queue item\n   f. Initialize graphics block if needed (offset 0x28)\n   g. Call Ordinal_10094 (GetGraphicsContextOffset) to get context offset\n   h. Store palette index at pnCelFile[5] from graphics block offset 0x24\n   i. Calculate frame pointer based on pnCelFile[8] direction (2/4/6 handling)\n   j. Iterate through frame data chain pnCelFile[2]+1 times using offset arithmetic\n10. Store final frame pointer in *pnCelFile\n11. If table size > 1 AND no async, call FUN_6fe1d810 for final processing\n12. Return dwReturnStatus (1 = success, 0 = failure)\n\nParameters:\n  pnCelFile (int *) - Pointer to CEL file context structure [modified in-place]\n  nIsAsyncLoad (int) - If non-zero, perform async/cached load; if 0, sync load\n  nFrameIndex (int) - Frame index for animation sequence\n\nReturns:\n  uint: 1 on success (pnCelFile[0] populated with frame pointer), 0 on failure\n\nSpecial Cases:\n  - Cache hit (pnCelFile[1] != 0): returns 1 via Ordinal_10036\n  - Async mode: skips frame decompilation, returns async status\n  - Direction remapping: uses Ordinal_10019 when flag 0x01 set\n  - Frame chain: accumulates offsets via 0x1c (size) and 0x14 (stride) fields\n\nNote: Function uses 14 compiler-optimized temporaries (iVar2-7, dVar3, uVar4, bVar1, puVar8, extraout_var, local_207/103 arrays) that cannot be renamed due to SSA optimization. These are assembly-only references not appearing in standard Hungarian notation.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10055"
@@ -2215,7 +2014,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xD600"
       },
       "name": "Ordinal_10056",
-      "signature": "undefined4 Ordinal_10056(int * param_1)",
+      "signature": "undefined4 Ordinal_10056(CelFileInfo * pcelFile)",
+      "comment": "Initiate or update sprite CEL graphics block for a game unit\n\nAlgorithm:\n1. Validate input parameter (pcelFile) - assert if NULL\n2. Check if CEL file already loaded (pcelFile[1] == 0):\n   a. If loaded: call Ordinal_10036 to reinitialize and set pcelFile[0]\n   b. Return 1 (success)\n3. If not loaded (uninitialized CEL file):\n   a. Initialize two 0x104-byte buffers (adGfxDataA, adGfxDataB) with zeros\n   b. Call LoadOrInitializeSpriteCelData to load CEL data into first buffer\n   c. Call FindMatchingTableEntry with hash table 0x6fef2bc0\n   d. If found entry: check flag byte at [entry+0x20][0x20] & 0x01\n      - If set: OR pcelFile[6] with 0x04 (mark as initialized)\n      - Return 1 (success)\n   e. If not found and conditions met (dwHashIndexB > 1 AND dwHashIndexA != 0 AND !(pbUnused & 0x01)):\n      - Calculate scaled CEL index via Ordinal_10019 with unit dimension/64 shift\n      - Adjust dwCelIndex based on CEL data stride (divide by dwCelStride if > 2)\n      - Retry FindMatchingTableEntry with updated index\n      - Assert if not found on retry (triggers Ordinal_10036 == FUN_6fe21293 at 0x69a)\n      - Assert if dwHashIndexA still != 0 (triggers at 0x69b)\n4. Call InitializeSpriteGraphicsBlock to build graphics data structures\n5. Return result from InitializeSpriteGraphicsBlock\n\nParameters:\npcelFile (CelFileInfo *) - CEL file info structure (array with fields indexed by offset: [0]=loaded_data, [1]=init_flag, [3]=dimension, [6]=flags, [7]=layer_flags)\n\nReturns:\n0x01 = Success (entry found in hash table or newly initialized)\n0x00 = Failure (rare, only if InitializeSpriteGraphicsBlock fails)\n\nSpecial Cases:\n- NULL pcelFile triggers assertion at file:0x663\n- Non-zero pcelFile[1] indicates pre-loaded CEL, uses fast path\n- Ordinal_10036 appears to reset/reload CEL file data\n- Ordinal_10019 calculates scaled index for graphics block lookup\n- Magic number 0x6fef2bc0: graphics hash table base address\n- Magic number 0x14: CEL data stride field offset in pbUnused\n- Magic number 0x20: hash entry structure offset + flags field offset\n- Magic number 0x01: CEL initialization/validity flag bit\n- Magic number 0x04: sprite graphics flag to set in pcelFile[6]\n- Magic number 0x06: shift amount for CEL index scaling\n- Magic number 0x40: loop count for buffer initialization (64 dwords)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10056"
@@ -2238,7 +2038,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xDF70"
       },
       "name": "Ordinal_10058",
-      "signature": "undefined4 Ordinal_10058(int param_1, int param_2, int param_3)",
+      "signature": "dword Ordinal_10058(dword dwId1, dword dwId2, dword dwId3)",
+      "comment": "Search async data list for matching node and validate its state\n\nAlgorithm:\n1. Get head of g_pAsyncDataList global\n2. If list empty, return 0 (not found)\n3. Loop through linked list entries\n4. Get node pointer from list entry offset 0x0\n5. Check if node valid (not NULL)\n6. Check if bit 0 at offset 0x20 is CLEAR\n7. Compare dwId1 against node[0x0]\n8. Compare dwId2 against node[0x4]\n9. Compare dwId3 against node[0x8]\n10. If all three IDs match, check field at offset 0xb0 (handle/resource)\n11. If handle is NULL, assert fail with error code 0xa5f\n12. Call Ordinal_10092 to validate/process node\n13. Return 1 if validation succeeds (non-zero result)\n14. Advance to next list entry via pList[5]\n15. Loop until next pointer is NULL\n16. Return 0 if no matching node found\n\nParameters:\ndwId1 - First identifier field to match against node offset 0x0\ndwId2 - Second identifier field to match against node offset 0x4\ndwId3 - Third identifier field to match against node offset 0x8\n\nReturns:\n1 - Matching node found and validation succeeded\n0 - No matching node found or validation failed\n\nSpecial Cases:\nNode found but handle field (offset 0xb0) is NULL triggers assertion failure\nBit 0 at offset 0x20 must be CLEAR for node to be valid\nFunction does NOT return on assertion failure (calls non-returning function)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10058"
@@ -2262,6 +2063,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10059",
       "signature": "undefined Ordinal_10059(void)",
+      "comment": "Thunk wrapper for Ordinal_10103 (context dispatcher).\n\nAlgorithm:\n1. Load ECX with context pointer (0x6fef2bc0)\n2. Jump to Ordinal_10103 implementation\n\nParameters:\n  None\n\nReturns:\n  void - delegates to Ordinal_10103\n\nSpecial Cases:\n  This is a stub/thunk function that acts as an entry point dispatcher. The context pointer (0x6fef2bc0) is likely a global object or singleton state required by Ordinal_10103.\n\nMagic Numbers:\n  0x6fef2bc0 - Context/state pointer address (global data)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10059"
@@ -2285,6 +2087,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10060",
       "signature": "undefined4 Ordinal_10060(void)",
+      "comment": "Retrieves the current queue value while holding the queue critical section lock.\n\nAlgorithm:\n1. Check if g_pQueueCriticalSection is NULL - if so, assertion failure\n2. Enter the critical section (acquire lock)\n3. Read and cache the queue value from g_dwQueueValue\n4. Leave the critical section (release lock)\n5. Return the cached queue value\n\nParameters:\nNone\n\nReturns:\nuint - The current queue value\n\nSpecial Cases:\n- If critical section is NULL, assertion failure with file/line info and fatal exit\n- Returns the queue value atomically under lock protection",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10060"
@@ -2372,7 +2175,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xE9D0"
       },
       "name": "Ordinal_10067",
-      "signature": "undefined4 * Ordinal_10067(int param_1, undefined2 param_2, undefined2 param_3, undefined4 param_4, undefined4 param_5, undefined4 param_6, undefined4 param_7, undefined4 param_8, undefined4 * param_9)",
+      "signature": "dword * Ordinal_10067(dword pListNode, word wX, word wY, dword dwType, dword dwSubType, dword dwOrientation, dword dwFrame, dword dwUnknown, dword * pDataArray)",
+      "comment": "Allocate a tile structure, initialize it with parameters, and link it into a list.\n\nAlgorithm:\n1. Validate input list node pointer (non-null check)\n2. Allocate 0x44-byte tile structure via Ordinal_10042 memory allocator\n3. Initialize all fields in allocated tile to zero via STOSD (24 dword loop)\n4. Store linked list chain pointer at offset 0x5C (previous list head)\n5. Update list head pointer at pListNode+0x0C to new tile\n6. Increment list count at pListNode+0x08\n7. Write X coordinate (wX) to tile offset 0x16\n8. Write Y coordinate (wY) to tile offset 0x14\n9. Write tile type to offset 0x24\n10. Write tile subtype to offset 0x28\n11. Write orientation to offset 0x2C\n12. Write frame index to offset 0x30\n13. Write unknown parameter to offset 0x10\n14. Write parent reference from pListNode+0x04 to offset 0x34\n15. Write flag 0x02 at offset 0x51\n16. Copy 6 dwords + 1 byte from pDataArray to tile offsets 0x38-0x54 via MOVSD+MOVSB\n17. Return pointer to newly allocated tile\n\nParameters:\npListNode (int) - List node structure pointer (list head, count, parent fields)\nwX (word) - Tile X coordinate\nwY (word) - Tile Y coordinate  \ndwType (dword) - Tile type identifier\ndwSubType (dword) - Tile subtype\ndwOrientation (dword) - Tile orientation/rotation\ndwFrame (dword) - Animation frame index\ndwUnknown (dword) - Unknown parameter (stored at offset 0x10)\npDataArray (dword*) - Pointer to data array (6 dwords + 1 byte copied to tile)\n\nReturns:\nPointer to newly allocated and initialized tile structure (68 bytes)\nReturns via EAX as undefined4* per __stdcall\n\nSpecial Cases:\n- If pListNode is NULL, calls FogAssertFail assertion with line 0xa1\n- If allocation fails (Ordinal_10042 returns NULL), calls FogAssertFail with line 0x45\n- Both error paths call FUN_6fe21293(0xffffffff) which does not return\n\nMagic Numbers Reference:\n0x44 (68) - Size in bytes of tile structure\n0x18 (24) - Number of dwords to zero-initialize\n0x5C (92) - Offset to linked list previous pointer field\n0x16 (22) - Offset to X coordinate field (word)\n0x14 (20) - Offset to Y coordinate field (word)\n0x24 (36) - Offset to tile type field\n0x28 (40) - Offset to tile subtype field  \n0x2C (44) - Offset to orientation field\n0x30 (48) - Offset to frame index field\n0x10 (16) - Offset to unknown parameter field\n0x34 (52) - Offset to parent reference field\n0x51 (81) - Offset to flag byte (set to 0x02)\n0x38 (56) - Offset to data array copy start\n0x02 - Flag value written at offset 0x51\n\nTile Structure Layout:\nOffset | Size | Field Name     | Type    | Description\n0x00   | 0x5C | tile_data      | byte[92]| Tile data (initialized to zero then populated)\n0x5C   | 0x04 | prev_tile      | dword*  | Linked list previous pointer\n0x60   | 0x04 | padding        | byte[4] | Padding to 0x44 (68 bytes)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10067"
@@ -2403,56 +2207,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x14390"
       },
       "name": "Ordinal_10069",
-      "signature": "undefined Ordinal_10069(undefined4 * param_1, int param_2)",
+      "signature": "undefined Ordinal_10069(uint * pTile, int nBaseOffset)",
+      "comment": "Build tile display graphics data from tile/image data.\n\nAlgorithm:\n1. Validate input: pTile != NULL, nBaseOffset != 0 (assertion failures call FUN_6fe21293(-1))\n2. Iterate through g_pawTileCoordinateList entries (pnCoordinate pairs at offsets 0xc0...):\n   a. Extract source tile image row/column from coordinates\n   b. Allocate square buffer (0x600 bytes) via Ordinal_10042(0x153, 0)\n   c. Initialize square buffer to 0x0 (0x180 iterations = 0x600/4 bytes)\n   d. Extract pixel color from tile field [0xd] (3 bytes: B, G, R)\n   e. Fill entire square with pixel color (0x200 repetitions of 3-byte pattern)\n   f. Copy pixel data from source tile to square (15 chunks, variable offsets/sizes)\n   g. Verify all pixels match expected color (0x200 samples), else flag as error (0x2001 | color in flags)\n   h. Call Ordinal_10043(0x185, 0) to register square\n3. If error flag set (0x10000 bit):\n   a. Allocate component buffer (0x14 bytes) via Ordinal_10042(0x1a6, 0)\n   b. Initialize component to 0x0\n   c. Copy local color/flag data (5 dwords) into component\n   d. Link component into pTile[0x16] chain, increment pTile[0x15] (component count)\n   e. Store row/column in component words at +0x0, +0x2\n4. Advance to next coordinate pair, repeat until address >= 0x6fe307ac (list end)\n5. Reset pTile viewport state: [0x0]=0x0, [0x1]=0x0, [0x2]=0xa0, [0x3]=0xffffff80\n\nParameters:\npTile (uint *) - Tile structure pointer, contains image data at [0xd], component list at [0x16], component count at [0x15]\nnBaseOffset (int) - Base memory offset for tile image data buffer\n\nReturns:\nvoid - Modifies pTile in-place; writes tile/square graphics data",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10069"
-    },
-    "D2CMP_EXP_10070": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1F650",
-        "LoD/1.08": "0x6FE1F650",
-        "LoD/1.09": "0x6FDFF440",
-        "LoD/1.09b": "0x6FDFF440",
-        "LoD/1.09d": "0x6FDFF440",
-        "LoD/1.10": "0x6FDFEF60"
-      },
-      "rvas": {
-        "LoD/1.07": "0xF650",
-        "LoD/1.08": "0xF650",
-        "LoD/1.09": "0xF440",
-        "LoD/1.09b": "0xF440",
-        "LoD/1.09d": "0xF440",
-        "LoD/1.10": "0xEF60"
-      },
-      "name": "Ordinal_10070",
-      "signature": "undefined4 Ordinal_10070(int * param_1, undefined4 * param_2)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10070"
-    },
-    "D2CMP_EXP_10071": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1FA70",
-        "LoD/1.08": "0x6FE1FA70",
-        "LoD/1.09": "0x6FDFF860",
-        "LoD/1.09b": "0x6FDFF860",
-        "LoD/1.09d": "0x6FDFF860",
-        "LoD/1.10": "0x6FDFF380"
-      },
-      "rvas": {
-        "LoD/1.07": "0xFA70",
-        "LoD/1.08": "0xFA70",
-        "LoD/1.09": "0xF860",
-        "LoD/1.09b": "0xF860",
-        "LoD/1.09d": "0xF860",
-        "LoD/1.10": "0xF380"
-      },
-      "name": "Ordinal_10071",
-      "signature": "undefined Ordinal_10071(undefined4 * param_1, undefined4 * param_2, uint * param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10071"
     },
     "D2CMP_EXP_10072": {
       "addresses": {
@@ -2483,7 +2242,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10072",
       "signature": "undefined Ordinal_10072(int * param_1, undefined4 * param_2, char * param_3)",
-      "name_source": "LoD/1.07",
+      "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10072"
     },
@@ -2505,25 +2264,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xF220"
       },
       "name": "Ordinal_10073",
-      "signature": "undefined Ordinal_10073(int param_1, int param_2)",
+      "signature": "void Ordinal_10073(TileProject * pProjectTile, int nFlags)",
+      "comment": "Reset and clear all data from a D2CMP tile project structure, including cells and linked lists.\n\nAlgorithm:\n1. Validate nFlags parameter is zero; if not, return immediately without modification\n2. Validate pProjectTile pointer is not NULL, else call FogAssertFail and exit with -1\n3. Call ClearLinkedListNodesFromArray(pProjectTile) to clear project's internal linked list\n4. Check flags at pProjectTile->dwFlags (+0x4): if (flags & 0x4) is set, log Ordinal_10043(0x261) checkpoint and return\n5. Check critical flag: if (flags & 0x8) is set, call FogAssertFail and exit with -1\n6. Initialize tile loop counter to 0; iterate while tileIdx < pProjectTile->dwTileCount (+0x10c):\n   a. Calculate base tile pointer: tilePtr = pProjectTile->pTileArray (+0x110) + (tileIdx * 0x60)\n   b. Get cell count from tile: cellCount = tilePtr->cellCount (+0x50)\n   c. For each cell in tile (cellIdx = 0 to cellCount-1):\n      i. Calculate cell pointer: cellPtr = tilePtr->pCellArray (+0x54) + (cellIdx * 0x14)\n      ii. Check cell status: if cellPtr->status (+0x10) != 0, log Ordinal_10043(0x273) checkpoint\n      iii. Clear cell data: zero flag word at +0xa, zero status dword at +0x10\n   d. After cell loop, check tile pointer: if tilePtr->pCellArray (+0x54) != 0, log Ordinal_10043(0x27a) checkpoint\n   e. Reset tile counters: zero cellCount (+0x50) and pCellArray (+0x54)\n7. Log checkpoint Ordinal_10043(0x280) after tile loop completes\n8. Reset project structure: zero pProjectTile->dwTileCount (+0x10c) and pProjectTile->pTileArray (+0x110)\n9. Log final checkpoint Ordinal_10043(0x284)\n\nParameters:\n  pProjectTile (TileProject*) - Pointer to tile project structure containing tile array metadata and cell pointers\n  nFlags (int) - Control flags; function executes only when nFlags == 0, ignored otherwise\n\nReturns:\n  void - No return value; all state changes made through pProjectTile pointer modification\n\nSpecial Cases:\n  - Magic value 0x60: size of each tile structure (0x60 bytes per tile in array)\n  - Magic value 0x14: size of each cell structure (0x14 bytes per cell in array)\n  - Magic value 0x4 in dwFlags: indicates project has been modified, function returns early\n  - Magic value 0x8 in dwFlags: critical flag set, triggers fatal assertion and process exit\n  - Ordinal_10043 calls: Fog.dll debug checkpoint logging (0x261, 0x273, 0x27a, 0x280, 0x284)\n  - All cell and tile pointers must be non-NULL before clearing, assertions verify invariants",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10073"
-    },
-    "D2CMP_EXP_10075": {
-      "addresses": {
-        "LoD/1.11": "0x6FE1D170",
-        "LoD/1.11b": "0x6FE244A0"
-      },
-      "rvas": {
-        "LoD/1.11": "0xD170",
-        "LoD/1.11b": "0x144A0"
-      },
-      "name": "Ordinal_10075",
-      "signature": "undefined4 Ordinal_10075(void * this, uint * param_1)",
-      "name_source": "LoD/1.11",
-      "method": "EXP",
-      "index": "EXP:10075"
     },
     "D2CMP_EXP_10077": {
       "addresses": {
@@ -2543,7 +2288,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xFFF0"
       },
       "name": "Ordinal_10077",
-      "signature": "undefined4 Ordinal_10077(int param_1)",
+      "signature": "dword Ordinal_10077(dword dwHandle)",
+      "comment": "Get property value from handle with lazy initialization\n\nAlgorithm:\n1. Test if handle parameter is NULL (zero)\n2. If NULL detected, call Ordinal_10025 to initialize text property\n   - Passes string reference s_hTile (address 0x6fe30adc)\n   - Passes path string s_C__Projects_Diablo2_Source_D2CMP (address 0x6fe30aa8)\n   - Passes size parameter 0x78 (120 decimal)\n3. Access property structure at handle memory location\n4. Load 32-bit property value from offset +0x14 (20 decimal)\n5. Return property value to caller\n\nParameters:\ndwHandle (dword) - Handle/pointer to property structure, 0 if uninitialized\n\nReturns:\ndword - Property value at offset +0x14 from handle structure\n\nSpecial Cases:\n- NULL handle (0) triggers initialization sequence\n- Function called at entry point, suggesting early initialization requirement\n\nMagic Numbers:\n0x14 = 20 (offset to property field)\n0x78 = 120 (size passed to GetTextHeight)\n0 = NULL handle check",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10077"
@@ -2576,7 +2322,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x13AC0"
       },
       "name": "Ordinal_10079",
-      "signature": "undefined2 Ordinal_10079(int param_1)",
+      "signature": "ushort Ordinal_10079(void * pTileData)",
+      "comment": "Get tile height value at offset +6\n\nAlgorithm:\n1. Test if pTileData is NULL\n2. If NULL, invoke GetTextHeight (Ordinal_10025) with error handling parameters\n3. Extract and return 16-bit value from offset +6 in tile data structure\n4. Return via AX register\n\nParameters:\n- pTileData (void*): Pointer to tile data structure, or NULL to trigger error handling\n\nReturns:\n- ushort: Height value from tile data offset +6, or zero if pTileData is NULL\n\nSpecial Cases:\n- NULL pointer triggers initialization call via Ordinal_10025\n- Caller expected to handle NULL case separately\n- Return value is 16-bit only (AX register used)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10079"
@@ -2599,7 +2346,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x159FB"
       },
       "name": "Ordinal_10083",
-      "signature": "undefined4 Ordinal_10083(undefined4 * param_1)",
+      "signature": "dword Ordinal_10083(dword * pdwValue)",
+      "comment": "Validates data pointer and returns dereferenced value, logging error if NULL.\n\nAlgorithm:\n1. Check if pdwValue pointer is NULL\n2. If NULL: call Ordinal_10025 (GetTextHeight) with error code 0x7e and file location strings\n3. Dereference pointer and return value in EAX\n4. Callee cleanup for 4-byte parameter (stdcall)\n\nParameters:\npdwValue (dword *) - Pointer to 32-bit data value to validate and retrieve\n\nReturns:\neax = dereferenced value from pdwValue\n      If pdwValue is NULL, undefined value (error case logged)\n\nSpecial Cases:\nNULL pointer validation with error logging callback\nMagic constant 0x7e = 126 (error code passed to logging function)\n\nStructure Layout:\nN/A - operates on single dword pointer",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10083"
@@ -2611,7 +2359,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE072D8",
         "LoD/1.09b": "0x6FE072D8",
         "LoD/1.09d": "0x6FE072D8",
-        "LoD/1.10": "0x6FE06DC8"
+        "LoD/1.10": "0x6FE06DC8",
+        "LoD/1.11": "0x6FE16EB8",
+        "LoD/1.11b": "0x6FE16EA8",
+        "LoD/1.12a": "0x6FE16E88",
+        "LoD/1.13c": "0x6FE16E88",
+        "LoD/1.13d": "0x6FE16EB8"
       },
       "rvas": {
         "LoD/1.07": "0x174E8",
@@ -2619,43 +2372,22 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x172D8",
         "LoD/1.09b": "0x172D8",
         "LoD/1.09d": "0x172D8",
-        "LoD/1.10": "0x16DC8"
+        "LoD/1.10": "0x16DC8",
+        "LoD/1.11": "0x6EB8",
+        "LoD/1.11b": "0x6EA8",
+        "LoD/1.12a": "0x6E88",
+        "LoD/1.13c": "0x6E88",
+        "LoD/1.13d": "0x6EB8"
       },
       "name": "Ordinal_10087",
-      "signature": "undefined Ordinal_10087(int * param_1, byte * param_2)",
+      "signature": "undefined Ordinal_10087(int * pnIndices, byte * pszName)",
+      "comment": "Validates and initializes tile library projection with name assignment (D2CMP module)\n\nAlgorithm:\n1. Assert pnIndices is not NULL; fail with \"ptTileLibrary\" assert message if null\n2. Assert pszName is not NULL; fail with \"szName\" assert message if null\n3. Loop through indices array (up to 0x20 entries)\n   - While current index [pnIndices + nIndex] != 0, increment nIndex\n   - If zero found before limit (nIndex < 0x20), call Ordinal_10095 to assign name\n   - Return success after assignment\n4. If all 0x20 indices are non-zero (no empty slot found), fail with \"<MAX_TILEPROJECT\" assert\n5. Call FUN_6fe21293(0xffffffff) to terminate on assertion failure\n\nParameters:\n  pnIndices (int *) - pointer to tile projection index array (up to 32 entries)\n  pszName (byte *) - tile name string to assign to first available slot\n\nReturns:\n  void - Terminates on assertion failure via FUN_6fe21293(0xffffffff)\n\nSpecial Cases:\n  Magic number 0x20 (32 decimal): Maximum tile projects allowed\n  Asserts on NULL parameters or array full condition\n  Early return when empty slot found (nIndex < 0x20)\n  \nNote: Ordinal_10087 and Ordinal_10095 are undocumented D2CMP tile library functions",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10087"
     },
-    "D2CMP_EXP_10088": {
-      "addresses": {
-        "LoD/1.07": "0x6FE205A0",
-        "LoD/1.08": "0x6FE205A0",
-        "LoD/1.09": "0x6FE00390",
-        "LoD/1.09b": "0x6FE00390",
-        "LoD/1.09d": "0x6FE00390"
-      },
-      "rvas": {
-        "LoD/1.07": "0x105A0",
-        "LoD/1.08": "0x105A0",
-        "LoD/1.09": "0x10390",
-        "LoD/1.09b": "0x10390",
-        "LoD/1.09d": "0x10390"
-      },
-      "name": "Ordinal_10088",
-      "signature": "uint Ordinal_10088(int * param_1, int param_2, int param_3, int param_4, int param_5, uint param_6)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10088"
-    },
     "D2CMP_EXP_10089": {
       "addresses": {
-        "LoD/1.07": "0x6FE1EC90",
-        "LoD/1.08": "0x6FE1EC90",
-        "LoD/1.09": "0x6FDFEA80",
-        "LoD/1.09b": "0x6FDFEA80",
-        "LoD/1.09d": "0x6FDFEA80",
-        "LoD/1.10": "0x6FDFE600",
         "LoD/1.11": "0x6FE1F5C0",
         "LoD/1.11b": "0x6FE24D90",
         "LoD/1.12a": "0x6FE1CAF0",
@@ -2663,12 +2395,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE27560"
       },
       "rvas": {
-        "LoD/1.07": "0xEC90",
-        "LoD/1.08": "0xEC90",
-        "LoD/1.09": "0xEA80",
-        "LoD/1.09b": "0xEA80",
-        "LoD/1.09d": "0xEA80",
-        "LoD/1.10": "0xE600",
         "LoD/1.11": "0xF5C0",
         "LoD/1.11b": "0x14D90",
         "LoD/1.12a": "0xCAF0",
@@ -2676,8 +2402,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x17560"
       },
       "name": "Ordinal_10089",
-      "signature": "undefined Ordinal_10089(undefined4 param_1, undefined4 param_2)",
-      "name_source": "LoD/1.07",
+      "signature": "undefined * Ordinal_10089(int param_1, int param_2)",
+      "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10089"
     },
@@ -2709,7 +2435,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x13FF0"
       },
       "name": "Ordinal_10090",
-      "signature": "undefined Ordinal_10090(int param_1)",
+      "signature": "void Ordinal_10090(dword nFlags)",
+      "comment": "Initialize or reset the main queue structure based on initialization flag.\n\nAlgorithm:\n1. Check if g_dwQueueInitFlag is 0 (not initialized)\n2. If not initialized: call Ordinal_10094 (initialization handler) and return immediately\n3. If initialized and nFlags is nonzero: call ProcessAndClearQueueItems to process pending items\n4. Clear 13 dwords (52 bytes) starting at g_pQueueHead by using STOSD in a loop\n5. Zero out g_dwQueueCount flag\n6. Call Ordinal_10094 to finalize queue state\n7. Return to caller\n\nParameters:\nnFlags (dword): Control flag; nonzero triggers queue item processing before reset\n\nReturns:\nvoid\n\nSpecial Cases:\n- If g_dwQueueInitFlag == 0: skips queue processing and returns after initialization\n- Queue structure is 52 bytes (13 dwords); cleared via STOSD.REP for efficiency\n- Both code paths call Ordinal_10094, suggesting dual-phase initialization pattern\n\nStructure Layout:\nQueue structure at 0x6ff12c40:\nOffset | Size | Field Name | Type | Description\n0x00   | 0x34 | Queue data | uint[13] | Queue item array (13 dwords)\n0x34   | 0x04 | QueueCount | uint | Queue item counter, zeroed on reset",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10090"
@@ -2742,7 +2469,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x12F20"
       },
       "name": "Ordinal_10091",
-      "signature": "undefined4 Ordinal_10091(int param_1)",
+      "signature": "uint Ordinal_10091(void * pObject)",
+      "comment": "Allocates and initializes a data structure with zero-filled memory.\nThis is an exported Ordinal function from Fog.dll/Storm.dll (Ordinal 10091).\n\nAlgorithm:\n1. Check if structure at offset 0x5c already has allocated data pointer\n   - If allocated, remove allocation from linked list g_LinkedListHead and return 1 (success)\n   - This prevents double-allocation on re-initialization\n2. Check if structure size field at offset 0x50 is non-zero\n   - If size is zero, return 0 (failure/invalid)\n   - Non-zero size is required to proceed\n3. Allocate memory block using AllocateMemoryBlockToArray function\n   - Request g_LinkedListHead as source\n   - Use size from offset 0x4c (size field)\n   - Pass pObject as third parameter (context/reference)\n   - Store returned allocation pointer at structure offset 0x5c\n4. Extract buffer address from allocation (dereference allocation header)\n   - Store buffer pointer at structure offset 0x54\n5. Zero-fill the allocated buffer using REP instructions\n   - Calculate dword count: size >> 2\n   - Zero dwords using REP STOSD with EAX=0\n   - Calculate remaining bytes: size & 0x3\n   - Zero remaining bytes using REP STOSB with AL=0\n6. Call initialization function FUN_6fe20b5e\n   - Pass 0 as first param (implicit register or calling convention)\n   - Pass field1 value from offset 0x58\n   - Pass address of pObject parameter\n   - Pass 0 as fourth param\n   - Return 0 (failure) if initialization fails\n7. Call setup function FUN_6fe20bcc with configuration\n   - Pass 0, pObject, field2 (offset 0x48), 0, 0\n8. Call population function FUN_6fe20c42 to populate buffer\n   - Pass 0, pObject, buffer pointer (offset 0x54), size (offset 0x4c)\n9. Call finalization function FUN_6fe20ba6\n   - Pass 0 and pObject\n10. Call post-initialization function FUN_6fe20000 with pObject\n11. Return 1 (success)\n\nParameters:\npObject (void *) - Base pointer to structure requiring initialization\n  Structure contains fields at:\n  +0x48: dwParam1 - Configuration parameter for setup\n  +0x4c: dwSize - Size in bytes to allocate and populate\n  +0x50: bHasSize - Flag indicating valid size (non-zero = valid)\n  +0x54: pBuffer - Destination pointer for allocated buffer address\n  +0x58: dwParam2 - Initialization parameter\n  +0x5c: pAllocHeader - Pointer to allocation metadata/header\n\nReturns:\n1 - Success: Memory allocated, zeroed, initialized, and populated successfully\n0 - Failure: Either size field was zero or initialization (step 6) failed\n\nSpecial Cases:\nIf the structure already has allocated data (non-NULL at +0x5c), the function removes\nit from the linked list and returns immediately with success. This allows safe \nre-initialization without leaking previous allocations.\nThe zero-fill operation handles non-dword-aligned sizes by first clearing full dwords,\nthen clearing any remaining 1-3 bytes individually.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10091"
@@ -2765,7 +2493,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xE7F0"
       },
       "name": "Ordinal_10092",
-      "signature": "undefined Ordinal_10092(undefined4 * param_1, undefined4 * param_2, undefined4 * param_3, uint * param_4)",
+      "signature": "void Ordinal_10092(dword * pLinkedListSize, dword * pHeadNode, dword * pTailNode, dword * pPercentageResult)",
+      "comment": "Get current linked list state and calculate utilization percentage.\n\nAlgorithm:\n1. Read current linked list size from global g_dwLinkedListSize into pLinkedListSize\n2. Read tail node pointer from global 0x6ff12c70 into pTailNode\n3. Read head node pointer from global 0x6ff12c6c into pHeadNode\n4. Read current allocation count from global 0x6ff12c44\n5. If allocation count is zero, set pPercentageResult to 0xFFFFFFFF (error/invalid marker)\n6. Otherwise calculate: (0x6ff12c48 * 100) / allocation_count and store in pPercentageResult\n7. Return via RET 0x10 (caller cleanup 4 parameters)\n\nParameters:\npLinkedListSize - Pointer to dword to receive current linked list size value\npHeadNode - Pointer to dword to receive head node address from global\npTailNode - Pointer to dword to receive tail node address from global\npPercentageResult - Pointer to dword to receive calculated percentage (0-100) or 0xFFFFFFFF on error\n\nReturns:\nvoid - Results written to output parameters via pointers\n\nSpecial Cases:\n0xFFFFFFFF in pPercentageResult indicates zero allocation count (error condition)\nMagic number 0x6ff12c78: g_dwLinkedListSize\nMagic number 0x6ff12c70: g_dwLinkedListTail (tail node pointer)\nMagic number 0x6ff12c6c: g_dwLinkedListHead (head node pointer)\nMagic number 0x6ff12c44: g_dwAllocationCount\nMagic number 0x6ff12c48: g_dwActiveCount\nCalculation uses *100 scaling for fixed-point percentage arithmetic",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10092"
@@ -2799,6 +2528,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10093",
       "signature": "undefined Ordinal_10093(void)",
+      "comment": "Reset D2Common global state flags to zero.\n\nAlgorithm:\n1. Clear g_dwResetFlag1 by loading 0 into EAX and writing to memory\n2. Clear g_dwResetFlag2 by writing the same zero value to memory\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nCalled during D2Common initialization/reset sequence. Both global flags are cleared atomically.\n\nRelated Functions:\n- Ordinal_10092() - Reads g_dwResetFlag1 and g_dwResetFlag2 values after they are set",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10093"
@@ -2822,32 +2552,10 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10094",
       "signature": "undefined Ordinal_10094(void)",
+      "comment": "Cleanup Project Nodes - Traverse and deallocate linked list of project structures\n \nAlgorithm:\n1. Load first project node from global pointer g_pFirstProjectNode\n2. If list is empty (NULL), set global to NULL and return immediately\n3. For each node in the linked list:\n   a. Save next node pointer (offset 0x10c) before deallocation\n   b. Call Ordinal_10073 to cleanup TileProject at offset 0x104\n   c. Clear TileProject pointer to NULL\n   d. Call ClearHashTableBuckets to deallocate hash table at offset 0x108\n   e. Clear hash table pointer to NULL\n   f. Call Ordinal_10043(0x29, 0) to trigger cleanup event\n   g. Move to next node and continue loop until end of list (NULL)\n4. Final step: Set global g_pFirstProjectNode to NULL to mark list as cleaned\n\nParameters:\n   None\n\nReturns:\n   void\n\nSpecial Cases:\n   - If g_pFirstProjectNode is NULL initially, function exits without processing\n   - Magic number 0x29: Cleanup event code passed to Ordinal_10043\n\nStructure Layout:\n   ProjectNode structure (inferred from offset patterns):\n   Offset | Size | Field Name | Type | Description\n   0x104 | 4 | pTileProject | TileProject* | Tile data pointer\n   0x108 | 4 | pHashTable | int*** | Hash table pointer\n   0x10c | 4 | pNextNode | int | Next node in linked list\n\nRelated Functions:\n   - ClearHashTableBuckets() - Deallocates hash table buckets\n   - Ordinal_10073 - TileProject cleanup\n   - Ordinal_10043 - Cleanup event handler (code 0x29)\n   - Ordinal_10090 - Caller that triggers this cleanup",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10094"
-    },
-    "D2CMP_EXP_10095": {
-      "addresses": {
-        "LoD/1.07": "0x6FE208F0",
-        "LoD/1.08": "0x6FE208F0",
-        "LoD/1.09": "0x6FE006E0",
-        "LoD/1.09b": "0x6FE006E0",
-        "LoD/1.09d": "0x6FE006E0",
-        "LoD/1.10": "0x6FE001A0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x108F0",
-        "LoD/1.08": "0x108F0",
-        "LoD/1.09": "0x106E0",
-        "LoD/1.09b": "0x106E0",
-        "LoD/1.09d": "0x106E0",
-        "LoD/1.10": "0x101A0"
-      },
-      "name": "Ordinal_10095",
-      "signature": "int Ordinal_10095(undefined4 * param_1, byte * param_2)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10095"
     },
     "D2CMP_EXP_10096": {
       "addresses": {
@@ -2878,6 +2586,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10096",
       "signature": "undefined Ordinal_10096(void)",
+      "comment": "Initialize color palettes from global string sources\n\nAlgorithm:\n1. For each of 5 color palette sources (white/brown/greybrown palette strings):\n   a. Load source string pointer from global (s_Data_Global_Items_Palette__6fe30094, DAT_6fe3008c, DAT_6fe30084, etc.)\n   b. Calculate string length using SCASB REPNE loop (count until null terminator)\n   c. Copy source string to local 256-byte buffer using MOVSD/MOVSB for dword/byte remainder\n   d. Load target string pointer and calculate its length\n   e. Append source string content to target string by seeking to destination end with SCASB\n   f. Call FUN_6fe20b5e(0, abBuffer, &nFileHandle, 1) to parse palette configuration\n   g. If parse fails (EAX==0): call Ordinal_10025 then zero-fill palette buffer (0x540 dwords)\n   h. If parse succeeds: call FUN_6fe20c42 to load palette data (0x1500 bytes), then FUN_6fe20ba6 to finalize\n2. Final: Call FUN_6fe1bcf0 with hardcoded resource IDs 7 and 8 to load final palette variants\n\nParameters:\n(void) - no parameters, initializes global palette data\n\nReturns:\n(void) - no return value\n\nSpecial Cases:\n- Function operates on 6 different target palette buffers (g_abPalette1, g_abPalette2, etc.) with different color configurations\n- Parse errors default to zeroing palette buffer (0x540 = 1344 bytes allocated per palette)\n- Final FUN_6fe1bcf0 calls with resource IDs 7 and 8 appear to load system palettes (invgrey2, invgreybrown)\n\nMagic Numbers:\n- 0xFFFFFFFF: Initial value for string length counter (SCASB terminator search)\n- 0x540: Palette buffer size in dwords (1344 bytes)\n- 0x1500: Palette load size in bytes (5376 bytes)\n- 0x38: Copy size for error path (56 bytes)\n- 0x2, 0x3: Bitmask for remaining bytes after dword copy (alignment check)\n\nGlobal Data Accessed:\n| Address | Name | Purpose |\n|---------|------|---------|\n| 0x6fe30094 | s_Data_Global_Items_Palette__6fe30094 | Source palette path |\n| 0x6fe3008c | DAT_6fe3008c | Source palette subpath |\n| 0x6fe30084 | DAT_6fe30084 | Target palette subpath |\n| 0x6fe3004c | DAT_6fe3004c | Global error state |\n| 0x6fe30050 | s_C__Projects_Diablo2_Source_D2CMP | Debug path string |\n| 0x6febd3c0 | DAT_6febd3c0 | Palette 1 buffer |\n| 0x6fec3cc0 | DAT_6fec3cc0 | Palette 2 buffer |\n| 0x6feca5c0 | DAT_6feca5c0 | Palette 3 buffer |\n| 0x6fed0ec0 | DAT_6fed0ec0 | Palette 4 buffer |\n| 0x6fed77c0 | DAT_6fed77c0 | Palette 5 buffer |\n| 0x6fede0c0 | DAT_6fede0c0 | Palette 6 buffer |\n| 0x6fe30014 | s_invgrey2_6fe30014 | Inventory palette variant 2 |\n| 0x6fe30004 | s_invgreybrown_6fe30004 | Inventory palette variant 3 |",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10096"
@@ -2910,19 +2619,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x175A0"
       },
       "name": "Ordinal_10097",
-      "signature": "undefined Ordinal_10097(int param_1)",
+      "signature": "undefined Ordinal_10097(int nMode)",
+      "comment": "Set global game mode if value is valid (1-5 range)\n\nAlgorithm:\n1. Load nMode parameter from stack\n2. Test if nMode > 0\n3. If not, return without modification\n4. Compare if nMode > 5\n5. If yes, return without modification\n6. Store nMode to g_nGameMode global\n7. Return to caller\n\nParameters:\nnMode (int) - New game mode value to set (valid range: 1-5)\n\nReturns:\nvoid - No return value, modifies global state only\n\nSpecial Cases:\n- Values <= 0 are rejected silently\n- Values > 5 are rejected silently\n- Only values 1-5 inclusive are accepted\n- Global g_nGameMode is only modified on valid input\n\nMagic Numbers:\n0x05 - Maximum valid mode value (exclusive upper bound)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10097"
     },
     "D2CMP_EXP_10098": {
       "addresses": {
-        "LoD/1.07": "0x6FE28750",
-        "LoD/1.08": "0x6FE28750",
-        "LoD/1.09": "0x6FE08540",
-        "LoD/1.09b": "0x6FE08540",
-        "LoD/1.09d": "0x6FE08540",
-        "LoD/1.10": "0x6FE07393",
         "LoD/1.11": "0x6FE1A1D0",
         "LoD/1.11b": "0x6FE1A340",
         "LoD/1.12a": "0x6FE20040",
@@ -2930,12 +2634,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE1AEC0"
       },
       "rvas": {
-        "LoD/1.07": "0x18750",
-        "LoD/1.08": "0x18750",
-        "LoD/1.09": "0x18540",
-        "LoD/1.09b": "0x18540",
-        "LoD/1.09d": "0x18540",
-        "LoD/1.10": "0x17393",
         "LoD/1.11": "0xA1D0",
         "LoD/1.11b": "0xA340",
         "LoD/1.12a": "0x10040",
@@ -2943,8 +2641,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xAEC0"
       },
       "name": "Ordinal_10098",
-      "signature": "undefined * Ordinal_10098(int param_1, int param_2)",
-      "name_source": "LoD/1.07",
+      "signature": "undefined Ordinal_10098(void * this, undefined4 * param_1, undefined4 * param_2, uint * param_3)",
+      "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10098"
     },
@@ -2977,6 +2675,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10099",
       "signature": "undefined Ordinal_10099(void)",
+      "comment": "Process asynchronous data list items, calling cleanup handlers on each item.\n\nAlgorithm:\n1. Load first async data item from global g_pAsyncDataList\n2. If list is NULL, return immediately\n3. For each item in linked list:\n   a. Load item pointer from [pItem]\n   b. If item pointer is NULL, skip to next\n   c. Load field at [pItem + 0xB0]\n   d. If field is NULL, skip to next\n   e. Call Ordinal_10092 with field (check/validate operation)\n   f. If Ordinal_10092 returns TRUE (non-zero), skip to next\n   g. Call Ordinal_10097 with field (cleanup/processing operation)\n   h. Clear field at [pItem + 0xB0] to NULL\n   i. Continue to next item via [pItem + 0x14]\n\nParameters:\nNone\n\nReturns:\nvoid - No return value. Operations performed on global state.\n\nSpecial Cases:\n- Handles NULL item pointers gracefully with JZ skip\n- Clears processed field after cleanup\n- Continues iteration even if Ordinal_10092 returns TRUE (field remains)",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10099"
@@ -3009,7 +2708,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x291F"
       },
       "name": "Ordinal_10100",
-      "signature": "undefined2 Ordinal_10100(int param_1)",
+      "signature": "ushort Ordinal_10100(int nHandle)",
+      "comment": "Get text height or initialize tile handle data.\n\nAlgorithm:\n1. Test if nHandle parameter is zero (null)\n2. If nHandle is zero: call Ordinal_10025 (D2Win.GetTextHeight) with g_hTileHandle, g_szSourcePath, and flag 0x82\n3. Always return the unsigned word value at offset +4 from nHandle parameter\n\nParameters:\nnHandle (int): Handle pointer or initialization indicator; if zero triggers initialization sequence\n\nReturns:\nushort: Word-sized value at nHandle+4 offset; represents data word or query result\n\nSpecial Cases:\n- Initialization call only executes when nHandle is zero\n- Return value is always read from nHandle+4 regardless of initialization path\n- Flag 0x82 likely indicates text height query mode or data format option",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10100"
@@ -3043,6 +2743,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10103",
       "signature": "undefined Ordinal_10103(void)",
+      "comment": "Ordinal_10103 - Context dispatcher/stub (likely Fog.dll or thread management related)\n\nAlgorithm:\n1. Receives implicit ECX register parameter (context/state pointer)\n2. Used by wrapper functions Ordinal_10059 and Ordinal_10062 as dispatch target\n3. Acts as delegation point for context-aware operations\n\nParameters:\nIMPLICIT: ECX - Context/state pointer (passed by caller)\n\nReturns:\nvoid - No explicit return value\n\nSpecial Cases:\nThis is a stub dispatcher function that serves as a target for tail-call optimization wrappers.\nMultiple entry points (Ordinal_10059, Ordinal_10062) set different ECX values before jumping here.\nThe actual implementation may be optimized away or inlined by the compiler.\n\nRelated Functions:\n- Ordinal_10059 - Wrapper setting context 0x6fef2bc0\n- Ordinal_10062 - Wrapper setting context 0x6fef1bc0\n- Ordinal_10101 (EnterCriticalSection) - Thread lock entry\n- Ordinal_10102 (LeaveCriticalSection) - Thread lock exit",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10103"
@@ -3076,6 +2777,7 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "name": "Ordinal_10105",
       "signature": "undefined Ordinal_10105(void)",
+      "comment": "Stub function - no operation, immediate return.\n\nAlgorithm:\n1. Return immediately to caller\n\nParameters:\nTwo dword-sized arguments passed via stack (consumed by RET 0x8)\n\nReturns:\nvoid - no return value\n\nNote:\nThis is a stub or placeholder function with no implementation. Exact parameter types unknown due to lack of usage context. Function returns immediately without performing any operations.",
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10105"
@@ -3118,6 +2820,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14654",
         "LoD/1.10": "0x14154"
       },
+      "name": "AllocateCompressionBuffer",
+      "signature": "int AllocateCompressionBuffer(CompressionContext * pContext)",
+      "comment": "Allocates and initializes a 32KB compression buffer slot for the decompression engine.\n\nAlgorithm:\n1. Retrieve context data pointer from pContext[0x10]\n2. Calculate slot index by counting leading zero bits in pContext[0x8] bitmap\n3. Calculate table header size: (nSlot * 0x204 + 0x144) and entry base address\n4. Initialize 64-entry doubly-linked list node pool (8 bytes per node, self-pointing)\n5. Calculate virtual memory address: (nSlot * 0x8000 + pContext[0xc])\n6. Call VirtualAlloc(pAddr, 0x8000, MEM_COMMIT, PAGE_READWRITE)\n7. If allocation fails, return -1 immediately\n8. Initialize free block chain: iterate 0x1000-byte free blocks (7 blocks total)\n   - Each block: prev=-1, next=-1, size=0xff0 (4080 bytes usable)\n   - Link chain: forward/backward pointers connect blocks sequentially\n9. Link buffer into context doubly-linked list at positions [0x1fc] and [0x200]\n10. Update context arrays: zero usage counter, set active flag to 1\n11. Increment global slot counter if first allocation, set context flag 0x01\n12. Clear allocated slot bit in availability bitmap: clear bit (0x80000000 >> nSlot)\n13. Return slot index on success\n\nParameters:\npContext (CompressionContext*) - Compression context structure:\n  [0x4]=dwFlags, [0x8]=dwBitmap (slot availability), [0xc]=pBaseAddr (buffer base)\n\nReturns:\nSlot index (0-63) on success, -1 if VirtualAlloc fails\n\nSpecial Cases:\nMagic Numbers: 0x8000=buffer size, 0x1000=allocation granularity, 0xff0=block size, 0x204=header stride\nStructure offsets: 0x10=data pointer, 0xc=base address, 0x1fc/0x200=list links",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0002c858ef3942a0b403454c72674bfe"
     },
@@ -3138,6 +2844,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3F10",
         "LoD/1.10": "0x3CF0"
       },
+      "name": "InitializeNodeData",
+      "signature": "void InitializeNodeData(undefined4 * pNodeData, undefined4 * pSourceData)",
+      "comment": "Initialize node data structure with pointer and inverted flag.\n\nAlgorithm:\n1. Check if pNodeData is not null (test ECX against 0)\n2. Calculate address of second field (pNodeData + 1)\n3. Zero initialize second and third fields\n4. Load value from pSourceData[0]\n5. Store pNext pointer in first field\n6. Store source value in second field\n7. Store bitwise NOT of pNext in third field (inverted flag)\n8. Return\n\nParameters:\n- pNodeData: Pointer to node structure (in ECX via __fastcall)\n- pSourceData: Pointer to source data (in EDX via __fastcall)\n\nReturns:\n- void\n\nSpecial Cases:\n- If pNodeData is NULL, function returns early without modification\n- Third field stores inverted pointer (NOT operation)\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | field_0    | undefined4 | Source data value\n0x4    | 4    | field_4    | undefined4 | Next pointer self-reference\n0x8    | 4    | field_8    | undefined4 | Inverted next pointer (NOT field_4)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0023dcc086842565e4f6dbcdc8ca81f4"
     },
@@ -3147,15 +2857,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE18FB0",
         "LoD/1.09": "0x6FDF8D70",
         "LoD/1.09b": "0x6FDF8D70",
-        "LoD/1.09d": "0x6FDF8D70"
+        "LoD/1.09d": "0x6FDF8D70",
+        "LoD/1.10": "0x6FDF8A60"
       },
       "rvas": {
         "LoD/1.07": "0x8FB0",
         "LoD/1.08": "0x8FB0",
         "LoD/1.09": "0x8D70",
         "LoD/1.09b": "0x8D70",
-        "LoD/1.09d": "0x8D70"
+        "LoD/1.09d": "0x8D70",
+        "LoD/1.10": "0x8A60"
       },
+      "name": "ComputeRotatedGraphicDimension",
+      "signature": "dword ComputeRotatedGraphicDimension(int nObjectData, dword * pdwDivisor, byte * pbFlags)",
+      "comment": "Computes the scaled dimension of a rotated graphic based on object rotation state.\n\nAlgorithm:\n1. Initialize divisor to 0\n2. Determine divisor based on object orientation:\n   - Orientation 0: Set divisor to 8, check for special cases (orientation 0x11 or flags & 0x02), adjust to 1\n   - Orientation 1: Check rotation flags, set divisor based on 0x14 field comparison with 8\n   - Orientation 2-6: Check for specific conditions and bit flags\n   - Orientation 3-4: Proceed with rotation calculation\n   - Other: Return with divisor 1\n3. If flags bit 0 is set, skip rotation calculation\n4. Extract rotation bits from param_3[0x14] and object level from param_1[0xc]\n5. Call Ordinal_10018 (Storm rotation/transform function - likely GetRotatedDimension, not GetMouseX)\n6. Return: 0 if divisor is 0, otherwise (rotated_size / divisor)\n\nParameters:\n- nObjectData: Pointer to object structure containing orientation and level fields\n- pdwDivisor: Pointer to output divisor value (set by function)\n- pbFlags: Pointer to byte flags controlling rotation behavior\n\nReturns:\n- 0 if divisor is 0 (special case)\n- Scaled dimension: result of division by computed divisor\n\nOrdinals Used:\n- Ordinal_10018 (Storm.dll) - Rotated dimension/rotation transform calculation\n\nStructure Layout:\nOffset | Size | Field Name        | Type   | Description\n0x0c   | 4    | dwLevel           | dword  | Rotation/level value\n0x18   | 1    | byFlags1          | byte   | Flag bits (bit 1 = 0x02)\n0x1c   | 1    | byFlags2          | byte   | Flag bits (bit 1 = 0x02)\n0x20   | 4    | dwOrientation     | dword  | Object orientation (0-6)\n0x28   | 4    | dwSpecialFlag     | dword  | Special orientation flag (0x11 or 0)\n\nSpecial Cases:\n- Returns 0 if divisor becomes 0 (division by zero protection)\n- Orientation 1 with rotation flag 0x08 uses divisor 4, otherwise 2\n- Orientation 2 returns early (no rotation)\n- Flags bit 0 set skips rotation calculation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:00f892b7d6a43406dd661da9fe57b3bd"
     },
@@ -3176,6 +2892,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15A89",
         "LoD/1.10": "0x15C45"
       },
+      "name": "SetFPUControlWordFlags",
+      "signature": "dword SetFPUControlWordFlags(void * this, void * pThis, dword dwSetMask, dword dwClearMask)",
+      "comment": "Modify FPU control word flags based on set and clear bit masks.\n\nAlgorithm:\n1. Save current FPU control word from FCW register to stack at [EBP-4] using FSTCW\n2. Load saved FPU control word via FUN_6fe25ce4()\n3. Create clear mask: dwTemp = ~dwClearMask (invert bit positions to clear)\n4. Apply clear operation: dwTemp &= dwClearMask (clear specified bits)\n5. Create set mask: dwSetMask & dwClearMask (only set bits that exist in both masks)\n6. Apply set operation: result |= (dwSetMask & dwClearMask) (set specified bits)\n7. Write modified control word to FPU via FUN_6fe25d76(dwResult)\n8. Restore original FPU control word from stack using FLDCW [EBP+C] \n9. Return modified control word value in EAX\n\nParameters:\n- this (void *): IMPLICIT This pointer passed in ECX register via __thiscall convention\n- dwSetMask (dword): Bitmask indicating which bits to SET (1 = set this bit to 1)\n- dwClearMask (dword): Bitmask indicating which bits to CLEAR (1 = set this bit to 0)\n\nReturns:\n- EAX (dword): Modified FPU control word with set/clear operations applied\n\nSpecial Cases:\n- Bitwise operation: Only bits in BOTH dwSetMask and dwClearMask are actually set\n- Uses FSTCW/FLDCW for FPU state management (assembly-only operations)\n- Original FCW value preserved on stack during modification",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:01839c0631f6879602250d0f45268558"
     },
@@ -3298,10 +3018,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19EA5",
         "LoD/1.13d": "0x19E99"
       },
-      "name": "__controlfp",
-      "signature": "uint __controlfp(uint _NewValue, uint _Mask)",
-      "comment": "Library Function - Single Match\n __controlfp\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "SetMemoryRegionFlags",
+      "signature": "void SetMemoryRegionFlags(void * this, void * pMemMgr, dword nSize1, dword nSize2)",
+      "comment": "Memory region flags wrapper - masks off a flag before delegating to core function.\n\nAlgorithm:\n1. Load second parameter (nSize2) from stack [ESP + 8]\n2. Mask off bit 0x00080000 using AND with 0xfff7ffff\n3. Push masked value and first parameter onto stack\n4. Call FUN_6fe25c99 with this pointer (ECX), param_1, and masked param_2\n5. Clean up stack and return to caller\n\nParameters:\npMemMgr - Memory manager context structure pointer (ECX register, __thiscall implicit)\nnSize1 - First region size parameter or configuration value (stack offset +4)\nnSize2 - Second region size or flags value to be masked (stack offset +8)\n\nReturns:\nvoid - No return value. Delegates all output to called function.\n\nSpecial Cases:\nFlag masking (0xfff7ffff) selectively clears bit 0x00080000 from the second parameter before delegation to underlying implementation. Purpose of flag clearing relates to memory region configuration.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:03d2d9a1894bad6481c3d75928ae7b95"
     },
@@ -3422,6 +3142,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16D5F",
         "LoD/1.10": "0x1684B"
       },
+      "name": "InitializeCharacterTypeData",
+      "signature": "void InitializeCharacterTypeData(void)",
+      "comment": "Initializes the character type lookup table and related global flags to zero state.\n\nAlgorithm:\n1. Save EDI register for restoration at function end\n2. Initialize loop counter to 0x40 (64 dwords for 256 character types)\n3. Clear EAX to zero for efficient bulk clearing\n4. Set EDI to g_abCharTypeTable base address (0x6ff13120)\n5. Perform bulk clear of 64 dwords via STOSD.REP, clearing 256 bytes\n6. Clear final byte with STOSB for 257-byte total (256 chars + 1 null)\n7. Set EDI to g_abCharTypeExtension base (0x6ff13010)\n8. Clear all character type state globals to 0\n9. Store 3 dwords (12 bytes) at g_abCharTypeExtension via STOSD\n10. Restore EDI and return\n\nParameters:\nvoid (no parameters)\n\nReturns:\nvoid (initializes global state; no return value)\n\nSpecial Cases:\n- Character type table size is 257 bytes (256 character types + 1 padding byte)\n- Multiple global state variables cleared in single initialization\n- g_abCharTypeTable is a pre-allocated static buffer in D2Common data segment\n- Called during initialization phase (from InitializeCharacterTypeTable caller)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:05d3556ba26e52c51954a1255d97c525"
     },
@@ -3442,6 +3166,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15EE4",
         "LoD/1.10": "0x160A0"
       },
+      "name": "ClearThreeDwords",
+      "signature": "void ClearThreeDwords(dword * pdwData)",
+      "comment": "Clear three consecutive dwords (12 bytes total) to zero.\nUses STOSD for efficient zeroing via EDI pointer.\n\nAlgorithm:\n1. Save EDI register to preserve caller state\n2. Load parameter pointer (stack parameter at [ESP+8]) into EDI\n3. Clear EAX register to 0\n4. Execute STOSD: [EDI] = 0, EDI += 4 (first dword)\n5. Execute STOSD: [EDI] = 0, EDI += 4 (second dword)\n6. Execute STOSD: [EDI] = 0, EDI += 4 (third dword)\n7. Restore EDI from stack\n8. Return to caller\n\nParameters:\n  pdwData (dword *): Pointer to buffer with at least 3 dwords\n\nReturns:\n  void\n\nSpecial Cases:\n  Called during precision adjustment in numeric calculations\n  Always zeros exactly 12 bytes regardless of input\n\nRelated Functions:\n- FUN_6fe261a8: Numeric precision processor that calls this function",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:06356139b9d27a571ec4e5eae9a16f67"
     },
@@ -3480,6 +3208,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10C86",
         "LoD/1.10": "0x10732"
       },
+      "name": "DispatchExceptionHandler",
+      "signature": "void DispatchExceptionHandler(void * pfnHandler)",
+      "comment": "SEH exception dispatcher - chains and invokes stored exception handler.\n\nAlgorithm:\n1. Push EBP and setup stack frame; save volatile registers (EBX, ESI, EDI)\n2. Load exception frame base from [EBP + 0x0C] (exception structure pointer)\n3. Calculate exception handler offset by adding 0x0C to frame base\n4. Store calculated offset in local variable [EBP - 0x04]\n5. Load current SEH exception chain head from FS segment:[0x00]\n6. Retrieve handler pointer from loaded chain head via [EBX + 0x00]\n7. Chain new exception handler into SEH linked list using FS:[0x00]\n8. Load target exception handler function address from [EBP + 0x08]\n9. Load exception record/context from [EBP + 0x0C]\n10. Restore ESP from exception frame storage [EBX - 0x04]\n11. Restore EBP from locally stored offset\n12. Execute indirect jump to handler via EAX register\n\nParameters:\n  [EBP + 0x08]: Exception handler function pointer (void (*)(void))\n  [EBP + 0x0C]: Exception frame/context pointer (exception data structure)\n  IMPLICIT FS:[0x00]: SEH chain head (thread exception handlers list)\n\nReturns:\n  void - Control never returns to caller; jumps to exception handler routine\n\nSpecial Cases:\n  - Structured Exception Handling (SEH) frame linked list manipulation\n  - Indirect jump dispatch depends on exact handler address computation\n  - FS segment register used for thread-local exception chain access\n  - Frame pointer saved and restored across exception handler invocation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:074c58384030e677416bb5e3943eefd6"
     },
@@ -3518,6 +3250,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16201",
         "LoD/1.10": "0x163BD"
       },
+      "name": "DecomposeDoubleValue",
+      "signature": "void DecomposeDoubleValue(uint dwLowValue, uint dwHighValue, int * pnComponentOutput, uint * pdwDigitArray)",
+      "comment": "Decompose IEEE double-precision floating point value into components.\n\nAlgorithm:\n1. Extract upper 16 bits from stack parameter as exponent seed\n2. Call FUN_6fe2646d to decompose lower and upper value parts\n3. Load temporary double from stack offset -0x10\n4. Call FUN_6fe28247 to extract exponent and mantissa digits with precision 0x11\n5. Copy exponent result to output array at offset [1]\n6. Copy sign byte to output array at offset [0]\n7. Call FUN_6fe26530 to copy digit array to output buffer\n8. Store buffer pointer at output array offset [3]\n9. Return output pointer\n\nParameters:\n  dwLowValue (uint) - Lower 32-bits of IEEE double\n  dwHighValue (uint) - Upper 32-bits of IEEE double\n  pnComponentOutput (int *) - Output array [sign, exponent, mantissa, bufptr]\n  pdwDigitArray (uint *) - Output digit buffer array\n\nReturns:\n  void - Results stored in output arrays via pointers",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:07936634ed8227ea1db3308335da1e5c"
     },
@@ -3566,10 +3302,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19B0A",
         "LoD/1.13d": "0x19B1A"
       },
-      "name": "FID_conflict:__ld12tod",
-      "signature": "INTRNCVT_STATUS FID_conflict:__ld12tod(_LDBL12 * _Ifp, _CRT_DOUBLE * _D)",
-      "comment": "Library Function - Multiple Matches With Different Base Names\n __ld12tod\n __ld12tof\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ProcessExponentValue",
+      "signature": "undefined ProcessExponentValue(ushort * pwExponentFields, uint * pdwOutputResult)",
+      "comment": "Wrapper to process exponent value with configuration table.\n\nAlgorithm:\n1. Extract exponent fields from input array (pwExponentFields)\n2. Push configuration table pointer (g_adExponentConfigTable)\n3. Call ProcessExponentValue with array and result pointer\n4. Return result in pdwOutputResult\n\nParameters:\n- pwExponentFields: ushort* - Array of 6 exponent field values\n- pdwOutputResult: uint* - Output result buffer (2 dwords for 32-bit or 64-bit result)\n\nReturns:\n- undefined4: Result code (0=success, 1=overflow, 2=underflow)\n\nSpecial Cases:\n- Magic numbers: 0x3fff, 0x7fff, 0x8000 used for exponent range validation\n- Function handles floating-point exponent normalization",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:09d6403e834e217532debf7a54bafa14"
     },
@@ -3675,15 +3411,25 @@ var FUNCTIONS_D2CMP_dll = {
     },
     "D2CMP_MNE_0c73a676b27f": {
       "addresses": {
+        "LoD/1.07": "0x6FE1E510",
+        "LoD/1.08": "0x6FE1E510",
         "LoD/1.09": "0x6FDFE2E0",
         "LoD/1.09b": "0x6FDFE2E0",
-        "LoD/1.09d": "0x6FDFE2E0"
+        "LoD/1.09d": "0x6FDFE2E0",
+        "LoD/1.10": "0x6FDFDE60"
       },
       "rvas": {
+        "LoD/1.07": "0xE510",
+        "LoD/1.08": "0xE510",
         "LoD/1.09": "0xE2E0",
         "LoD/1.09b": "0xE2E0",
-        "LoD/1.09d": "0xE2E0"
+        "LoD/1.09d": "0xE2E0",
+        "LoD/1.10": "0xDE60"
       },
+      "name": "RemoveCacheBlockNode",
+      "signature": "void RemoveCacheBlockNode(int nCacheNode, int nBlockNode)",
+      "comment": "Remove a cache block node from its parent cache structure.\nManages doubly-linked list removal from either primary or secondary node chains based on node flags.\n\nAlgorithm:\n1. Validate param_2 (pBlockNode) is not NULL - assert failure if NULL\n2. Check pBlockNode flag at offset 0xc bit 0 to determine list type (primary=0, secondary=1)\n3. PRIMARY LIST (flag bit 0 = 0):\n   - If pCacheNode.pPrimaryHead is NULL, return (empty list)\n   - If pBlockNode is pPrimaryHead, call FUN_6fe1e490(pCacheNode, 0) to handle head removal\n   - If pBlockNode is pCacheNode.pPrimaryTail, unlink from tail and update list pointers\n   - Otherwise unlink middle node by updating prev/next pointers\n4. SECONDARY LIST (flag bit 0 = 1):\n   - If pCacheNode.pSecondaryHead is NULL, return (empty list)\n   - If pBlockNode is pSecondaryHead, call FUN_6fe1e490(pCacheNode, 1) to handle head removal\n   - If pBlockNode is pCacheNode.pSecondaryTail, unlink from tail and update list pointers\n   - Otherwise unlink middle node by updating prev/next pointers\n5. Clear node linkage: set pBlockNode offsets 0x14 and 0x18 to NULL\n\nParameters:\n  pCacheNode (int): Cache structure containing two doubly-linked lists at offsets 0x14/0x18 (primary) and 0x1c/0x20 (secondary)\n  pBlockNode (int): Node to remove; flag bit 0 at offset 0xc indicates list membership\n\nReturns:\n  void\n\nStructure Layout:\n  Offset | Size | Field Name     | Type | Description\n  0x14   | 4    | pPrimaryHead   | int* | Head of primary doubly-linked list\n  0x18   | 4    | pPrimaryTail   | int* | Tail of primary doubly-linked list\n  0x1c   | 4    | pSecondaryHead | int* | Head of secondary doubly-linked list\n  0x20   | 4    | pSecondaryTail | int* | Tail of secondary doubly-linked list\n  \n  Block Node (offset 0xc bit 0 indicates list membership):\n  0x0c   | 1    | dwFlags        | byte | Bit 0: 0=primary list, 1=secondary list\n  0x14   | 4    | pPrevNode      | int* | Previous node in list\n  0x18   | 4    | pNextNode      | int* | Next node in list\n\nMagic Numbers Reference:\n  0x0c: Offset to flags field in block node\n  0x14: Offset to primary head / prev node pointer\n  0x18: Offset to primary tail / next node pointer\n  0x1c: Offset to secondary head\n  0x20: Offset to secondary tail\n  1: Bitmask for list type flag",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0c73a676b27f3c684af16a45e984d1c4"
     },
@@ -3724,6 +3470,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3B50",
         "LoD/1.09d": "0x3B50"
       },
+      "name": "RebuildHashTable",
+      "signature": "void RebuildHashTable(HashTableStruct * pHashTable)",
+      "comment": "Rebuild hash table with increased capacity after reaching saturation.\n\nAlgorithm:\n1. Calculate new bucket count: (original_size + 1) * 2\n2. Initialize exception handler frame for cleanup\n3. Drain old hash buckets, extracting all list nodes to temporary list\n4. Verify all nodes extracted (check list count <= 0)\n5. Reallocate hash table to new bucket count via FUN_6fe13d60\n6. Re-insert all nodes: compute hash = (node_ptr & size_mask)\n7. Place node in appropriate bucket via list operations\n8. Update size field to (new_capacity - 1)\n9. Perform final cleanup via ExtractListNode on list head\n10. Restore exception handler frame\n\nParameters:\n  pHashTable (__fastcall ECX): Pointer to hash table structure\n    Offset 0x1c: Pointer to bucket array (12 bytes per bucket)\n    Offset 0x24: Current hash table size/capacity mask\n\nReturns:\n  void (modifies hash table in-place, returns via exception frame)\n\nSpecial Cases:\n  If table already at new size (local_18 == 4), skip rebuild\n  Uses SEH exception handling for guaranteed cleanup on error\n  Bucket stride is 0xc bytes (12 bytes)\n\nMagic Numbers:\n  0x24: Size field offset in hash table\n  0x1c: Bucket array pointer offset\n  0x8: List node count field offset in bucket  \n  0xc: Bucket entry stride (12 bytes)\n  0x4: List initialized state marker",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0d12104a04591071bf853e80b8b46902"
     },
@@ -3754,8 +3504,36 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x17170",
         "LoD/1.13d": "0x14AC0"
       },
+      "name": "ValidateAndCheckFlag",
+      "signature": "int ValidateAndCheckFlag(int * pData)",
+      "comment": "Validates data structure and checks conditional flag status.\n\nAlgorithm:\n1. Call FUN_6fe28750 to validate input data structure\n2. Return -1 (0xFFFFFFFF) if validation fails\n3. Test flag at offset +0xd against mask 0x40\n4. If flag is set (0x40 & byte[+0xd] != 0):\n   - Retrieve value from structure offset +0x10\n   - Call FUN_6fe28d33 with retrieved value\n   - Negate result using NEG instruction\n   - SBB converts to -1 (true) or 0 (false)\n5. Return result: -1 if flag set and condition true, 0 otherwise\n\nParameters:\n  pData (int *): Pointer to structure containing flag at offset +0xd, value at offset +0x10\n\nReturns:\n  int: -1 (0xFFFFFFFF) if validation fails or flag condition met, 0 if flag not set\n\nSpecial Cases:\n  - Validation failure takes priority, returns -1 immediately\n  - Flag value at offset 0xd is masked with 0x40 before checking\n  - Result of FUN_6fe28d33 is negated, then SBB converts to boolean\n\nMagic Numbers:\n  0xd: Offset in structure for flag byte\n  0x40: Bit flag mask (0x40 = 0b01000000)\n  0x10: Offset in structure for check value\n  -1 (0xFFFFFFFF): Failure/true indicator\n  0: Success/false indicator",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0db91ea76f5c7c9fd0bef446c106db61"
+    },
+    "D2CMP_MNE_0dbded8aa06f": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1B1A0",
+        "LoD/1.08": "0x6FE1B1A0",
+        "LoD/1.09": "0x6FDFAF60",
+        "LoD/1.09b": "0x6FDFAF60",
+        "LoD/1.09d": "0x6FDFAF60",
+        "LoD/1.10": "0x6FDFABA0"
+      },
+      "rvas": {
+        "LoD/1.07": "0xB1A0",
+        "LoD/1.08": "0xB1A0",
+        "LoD/1.09": "0xAF60",
+        "LoD/1.09b": "0xAF60",
+        "LoD/1.09d": "0xAF60",
+        "LoD/1.10": "0xABA0"
+      },
+      "name": "FindMaxColorDistancePixel",
+      "signature": "uint FindMaxColorDistancePixel(int nBuffer, uint dwCount, int nColorB, int nColorG, int nColorR)",
+      "comment": "Find pixel with maximum Euclidean distance from target RGB color.\nUtility function for image processing/color matching in Diablo II.\n\nAlgorithm:\n1. Initialize distance accumulators (dwMaxDist=0, dwCurrentDist=0, dwPixelIdx=0)\n2. Return 0 if dwCount is 0 (no pixels to search)\n3. For each of dwCount pixels in sequence:\n   a. Load 3 bytes at [nBuffer + offset]: B at [-2], G at [-1], R at [0]\n   b. Calculate squared Euclidean distance: (R-nColorR)^2 + (G-nColorG)^2 + (B-nColorB)^2\n   c. If calculated distance > dwCurrentDist, update distance and store pixel index\n   d. Increment pixel counter dwPixelIdx, advance pointer by 4 bytes\n4. Return index of pixel with maximum distance in low byte\n\nParameters:\n  nBuffer (int) - Base address, pixels at [nBuffer+2], [nBuffer+6], [nBuffer+10], etc.\n  dwCount (uint) - Number of pixels to search\n  nColorB (int) - Target blue component (0-255)\n  nColorG (int) - Target green component (0-255)\n  nColorR (int) - Target red component (0-255)\n\nReturns:\n  uint - Low byte contains index of pixel with maximum distance; 0 if dwCount=0\n\nSpecial Cases:\n  - Pixels are 4-byte aligned, each occupies 4 bytes but only 3 bytes are used\n  - Distance formula uses squared values to avoid floating point operations\n  - Return value extracts low byte via CONCAT31 operation (masks to 0xFF)\n  - Used for color-based image analysis in UI/map rendering",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:0dbded8aa06f69bc0c5476a5eb0f3ad6"
     },
     "D2CMP_MNE_0e6c60682690": {
       "addresses": {
@@ -3796,6 +3574,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x39F0",
         "LoD/1.10": "0x3800"
       },
+      "name": "FinalizeQueueNode",
+      "signature": "void FinalizeQueueNode(uint dwQueueNode)",
+      "comment": "Process two queue/list structures and finalize their nodes by linking back pointers\n\nAlgorithm:\n1. Load first queue head pointer from [dwQueueNode + 0xc]\n2. If first queue not empty:\n   a. Load offset value from [dwQueueNode + 0x10]\n   b. If offset negative: use bitwise NOT to get pointer\n   c. If offset positive: calculate target = head_addr + (offset - head[+4])\n   d. Write first queue head to target pointer\n   e. Copy offset value to [head + 4]\n   f. Clear first queue head and offset\n3. Load second queue head pointer from [dwQueueNode + 4]\n4. If second queue not empty:\n   a. Load offset value from [dwQueueNode + 8]\n   b. If offset negative: use bitwise NOT to get pointer\n   c. If offset positive: calculate target = head_addr + (offset - head[+4])\n   d. Write second queue head to target pointer\n   e. Copy offset value to [head + 4]\n   f. Clear second queue head and offset\n\nParameters:\nIMPLICIT dwQueueNode (ECX): uint - Pointer to queue node structure with two queue heads at +0x4 and +0xc\n\nReturns:\nvoid - No return value\n\nStructure Layout:\n| Offset | Size | Field Name | Type | Description |\n|--------|------|------------|------|-------------|\n| 0x00   | 4    | reserved0  | uint | Unknown usage |\n| 0x04   | 4    | pQueueHead1| uint | Head pointer for first queue/list |\n| 0x08   | 4    | dwOffset2  | uint | Offset value for second queue |\n| 0x0c   | 4    | pQueueHead2| uint | Head pointer for second queue/list |\n| 0x10   | 4    | dwOffset1  | uint | Offset value for first queue |\n\nSpecial Cases:\n- Negative offset values are inverted with NOT operation to produce pointer address\n- Offset calculations use [head + 4] as a size/stride reference point\n- Both queue structures processed with identical logic (loops unrolled by compiler)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0e8a163b1dfdc9385e2bd41b7e5e057d"
     },
@@ -3816,6 +3598,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x187D0",
         "LoD/1.10": "0x183D0"
       },
+      "name": "FindFirstCharInSet",
+      "signature": "byte * FindFirstCharInSet(byte * pbStringToSearch, byte * pbCharSet)",
+      "comment": "Finds the first byte in a string that belongs to a character set.\n\nAlgorithm:\n1. Initialize 32-byte bitmap (256 bits for all byte values 0-255) to zero\n2. Iterate through pbCharSet, setting bitmap bit for each character (shift by 3 for byte index, shift by 0-7 for bit position)\n3. Iterate through pbStringToSearch byte-by-byte\n4. For each byte, check if its bit is set in the bitmap\n5. Return pointer to first matched byte, or NULL if end of string (byte = 0) reached\n\nParameters:\n- pbStringToSearch: pointer to null-terminated search string\n- pbCharSet: pointer to null-terminated character set to find\n\nReturns:\n- pointer to first byte in pbStringToSearch that matches any byte in pbCharSet\n- NULL (cast as byte*) if no match found or pbStringToSearch is empty\n\nSpecial Cases:\n- Both parameters must be null-terminated\n- Uses bit-level set membership testing for O(n) search performance\n- Bitmap allows matching any byte value from 0x00-0xFF\n\nMagic Numbers:\n- 0x20: bitmap size (32 bytes = 256 bits for all byte values)\n- 0x03: right-shift for byte index in bitmap (divide by 8)\n- 0x07: bit mask for position within byte (modulo 8)\n- 0x01: bit pattern for setting membership flag",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0eb6c316488d30b6ee5d8d243ea3c5d6"
     },
@@ -3846,6 +3632,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x175F0",
         "LoD/1.10": "0x170E0"
       },
+      "name": "FindCallHandler",
+      "signature": "uint FindCallHandler(int nHandlerId, uint dwHandlerArray)",
+      "comment": "Linear search to find a call handler entry matching a handler ID.\n\nAlgorithm:\n1. Check if first handler entry at pHandlerArray+4 matches nHandlerId, if yes return it\n2. If not found, iterate through handler array entries (each 0xC bytes):\n   - Load offset to next entry (uVar3 + 0x10, 4-byte pointer)\n   - Check if at end of array (calculated as pHandlerArray + g_cCallHandlers*0xC)\n   - If at end, break loop\n   - Compare handler ID at current+4 with nHandlerId\n   - Advance to next entry if no match\n3. After loop, verify not at array boundary and handler ID matches\n4. Return pointer to matched handler, or 0 if not found\n\nParameters:\n- nHandlerId: Handler ID to search for (search key)\n- pHandlerArray: Pointer to handler array start\n\nReturns:\n- Address of matching handler entry (address of structure with ID at +4), or 0 if not found\n\nStructure Layout (inferred from usage):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | unknown    | uint | Unknown field\n0x4    | 4    | nId        | int  | Handler ID (search key)\n0x8    | 4    | pfnFunc    | void*| Handler function pointer\n0xC    | -    | [array]    | -    | Next entry at +0xC offset",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0ee933a53557ccda12e1264093e70d3a"
     },
@@ -3884,6 +3674,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xE260",
         "LoD/1.10": "0xDDE0"
       },
+      "name": "SelectCacheBlockBySearchMode",
+      "signature": "int SelectCacheBlockBySearchMode(int nCacheManager, int nSearchCriteria)",
+      "comment": "Select first cache block node from doubly-linked list by search mode.\n\nAlgorithm:\n1. Load list head pointer based on nSearchCriteria:\n   - If nSearchCriteria == 0, select from nCacheManager[0x14] (primary cache list)\n   - If nSearchCriteria != 0, select from nCacheManager[0x1c] (secondary cache list)\n2. Return NULL if selected list head is NULL\n3. Check block flags (byte at offset +0x0c) & 0x02:\n   - If bit 0x02 is set, return NULL (block already allocated or locked)\n4. Extract next pointer from block[0x14] (first link in doubly-linked chain)\n5. Update list head: write next pointer to list head offset in nCacheManager\n6. Update backward pointers if next pointer exists:\n   - Clear forward pointer at next[0x18] to NULL (this node becomes first)\n   - Clear forward pointer at this node[0x14] to NULL (list is now linear)\n   - Clear backward pointer at this node[0x18] to NULL\n7. Update tail pointer if next pointer is NULL:\n   - Clear nCacheManager[0x18] or [0x20] to NULL (list tail becomes NULL)\n   - Clear forward pointer at this node[0x14] to NULL\n   - Clear backward pointer at this node[0x18] to NULL\n8. Return pointer to selected block node (or NULL if check failed)\n\nParameters:\n  nCacheManager (int, ECX): Pointer to cache manager structure containing linked lists\n  nSearchCriteria (int, EDX): Search mode (0=primary list at +0x14, 1=secondary list at +0x1c)\n\nReturns:\n  Pointer to first block node from selected list on success\n  NULL if list empty or if block has allocation flag (0x02) set",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1158503fe206e0ca586bcbe833792702"
     },
@@ -3944,6 +3738,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x134B0",
         "LoD/1.10": "0x12FB0"
       },
+      "name": "InitializeCharacterTableArray",
+      "signature": "void InitializeCharacterTableArray(void)",
+      "comment": "Allocate and initialize character table array with inherited file handles from parent process and standard I/O.\n\nAlgorithm:\n1. Allocate initial character table (0x480 bytes = 288 char table entries)\n2. Exit on allocation failure (exit code 0x1B)\n3. Initialize all slots: handle=0xFFFFFFFF, flags=0x00, reserved=0x00, fileType=0x0A\n4. Query parent startup info (GetStartupInfoA) for inherited handle count/flags\n5. If inherited handles exist (cbReserved2 > 0 and lpReserved2 valid):\n   a. Read inherit count from start of reserved2 block\n   b. Clamp count to max 0x800 to prevent overflow\n   c. Allocate additional tables if needed (0x20 slots per table)\n   d. For each inherited handle: validate handle (not -1) and flags (bit 0=valid, bit 3=pipe)\n      - Check handle type with GetFileType if not already marked pipe\n      - Store valid handles in character table\n6. Initialize standard I/O handles (stdin=0, stdout=1, stderr=2):\n   a. Get handle via GetStdHandle (-10 = stdin, -11 = stdout, -12 = stderr)\n   b. Check handle validity (not -1) and get type with GetFileType\n   c. Set appropriate flags: 0x40=console/file, 0x80=pipe, 0x08=pipe type\n7. Call SetHandleCount with final character table count to reserve OS resources\n\nParameters:\nNone (void)\n\nReturns:\nvoid (no return value, process terminates on failure via __amsg_exit)\n\nSpecial Cases:\n- Inherited handle overflow: clamps to 0x800 maximum\n- Missing inherited info: proceeds with only standard I/O initialization\n- Invalid inherited handles: silently skipped\n- GetFileType failures: treats as console/file (sets 0x40 flag)\n\nMagic Numbers Reference:\n0x480 = 1152 bytes (288 entries @ 4 bytes each for handle table)\n0x120 = 288 entries (0x480 / 4)\n0x20 = 32 increment for handle count tracking\n0x800 = 2048 (maximum inherited handle count)\n0x24 = 36 bytes (size of character table entry structure)\n0x1F = 31 (bitmask for lower 5 bits of handle index)\n0x1B = 27 (exit code for malloc failure)\n0x40 = console/file type flag\n0x80 = inherited handle flag\n0x08 = pipe type indicator\n0x1 = valid handle flag bit 0\n0x8 = pipe type flag bit 3\n\nStructure Layout (Character Table Entry at +0x00):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | handle     | void*| File handle or -1 if unused\n0x04   | 1    | flags      | byte | Handle flags (valid, console/pipe, type)\n0x05   | 3    | reserved   | byte | Reserved padding\n\nRelated Functions:\n- InitializeGameState - Calls this function during startup\n- GetStartupInfoA - Retrieves inherited handle info from parent process\n- GetStdHandle - Obtains handles for stdin/stdout/stderr\n- GetFileType - Determines handle type (console, file, pipe)\n- SetHandleCount - Reserves OS resources for handle table",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1352fc0555ea3629db2c9325fd0e6c42"
     },
@@ -3994,6 +3792,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15B66",
         "LoD/1.10": "0x15D22"
       },
+      "name": "ConvertCharacterFlagsToFPU",
+      "signature": "uint ConvertCharacterFlagsToFPU(uint dwInputFlags)",
+      "comment": "Convert character/flags representation to FPU control word flags.\n\nAlgorithm:\n1. Initialize result to 0 (uVar1 = 0)\n2. Check bit 4 (0x10) of input: if set, result = 1, else 0\n3. Check bits and map to FPU format:\n   - Input bit 3 (0x08) -> Output bit 2 (0x04)\n   - Input bit 2 (0x04) -> Output bit 3 (0x08)\n   - Input bit 1 (0x02) -> Output bit 4 (0x10)\n   - Input bit 0 (0x01) -> Output bit 5 (0x20)\n   - Input bit 19 (0x80000) -> Output bit 1 (0x02)\n4. Extract precision bits (0x300) and map:\n   - 0x100 -> 0x400\n   - 0x200 -> 0x800\n   - 0x300 -> 0xc00\n5. Extract rounding bits (0x30000) and map:\n   - Clear (0x00000) -> 0x300\n   - 0x10000 -> 0x200\n   - Other values (0x20000, 0x30000) -> no mapping\n6. Check bit 18 (0x40000): if set, output |= 0x1000\n7. Return mapped result in EAX\n\nParameters:\n- dwInputFlags (uint): Input flags in character/platform format containing precision, rounding, exception mask bits\n\nReturns:\n- EAX (uint): Converted flags in FPU control word format (x86 x87 FPU CW register format)\n\nSpecial Cases:\n- Precision bits: Three valid states (00, 01, 10, 11 binary) map to FPU CW bits 8-9\n- Rounding bits: Only 0x10000 is checked; 0x20000 treated same as 0x30000 (both no mapping)\n- Bit 4 (0x10) determines lowest bit of result (acts as exception invalid flag)\n\nMagic Numbers:\n- 0x10: Input character exception invalid bit\n- 0x08, 0x04, 0x02, 0x01: Input exception mask bits\n- 0x80000: Input exception overflow bit\n- 0x300, 0x100, 0x200: Precision bits (single, double, extended)\n- 0x30000, 0x10000: Rounding mode bits\n- 0x40000: Input exception underflow bit\n- 0x04, 0x08, 0x10, 0x20, 0x400, 0x800, 0xc00, 0x1000, 0x200, 0x300: Output FPU CW bit positions\n\nRelated Functions:\n- SetFPUControlWordFlags() - Caller that uses this conversion\n- ConvertFPUFlagsToCharacter() - Likely inverse conversion function",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:13aed512c644fb08ccd536c95b2ae182"
     },
@@ -4024,10 +3826,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x88EA",
         "LoD/1.13d": "0x88F5"
       },
-      "name": "__close_lk",
-      "signature": "undefined4 __close_lk(uint param_1)",
-      "comment": "Library Function - Single Match\n __close_lk\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "CloseCharacterSlot",
+      "signature": "dword CloseCharacterSlot(dword nSlotIndex)",
+      "comment": "Close and invalidate a character slot, clearing associated resources.\n\nAlgorithm:\n1. Retrieve character entry for given slot index via GetCharacterTableEntry\n2. Validate entry exists (not 0xffffffff)\n3. If slot is 1 or 2, verify slot 1 and slot 2 don't have matching entries (sanity check)\n4. Cast entry to HANDLE and close it via CloseHandle\n5. If CloseHandle fails, retrieve error code via GetLastError\n6. Invalidate character table entry via InvalidateCharacterTableEntry\n7. Clear the character slot flag byte at (&g_pCharacterTableArray)[index >> 5] + 4 + (index & 0x1f) * 0x24\n8. If error code is non-zero, classify error via ClassifyErrorCode and return 0xffffffff\n9. Return 0 on success\n\nParameters:\nnSlotIndex: Character slot index to close\n\nReturns:\n0 on successful close\n0xffffffff on error (CloseHandle failure or internal error)\n\nSpecial Cases:\n- Slots 1 and 2 are validated against each other to prevent closing matching entries\n- The function uses a complex bit-packing scheme: array indexed by (index >> 5), element at (index & 0x1f) * 0x24\n\nStructure Layout (Character Slot Flag Array):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | pTableEntry| ptr  | Pointer to character table entry\n0x4    | 1    | bSlotFlags | byte | Slot status flags (bit 0 = active)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:13d93ac20184bc58361cf8520dc0da42"
     },
@@ -4076,6 +3878,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x124AC",
         "LoD/1.10": "0x11FAC"
       },
+      "name": "InitializeThreadLocalStorage",
+      "signature": "dword InitializeThreadLocalStorage(void)",
+      "comment": "Initialize thread-local storage for game thread data.\n\nAlgorithm:\n1. Initialize critical sections for synchronization\n2. Allocate thread-local storage index via TlsAlloc()\n3. If allocation successful (not 0xffffffff):\n   a. Allocate 0x74-byte buffer via FUN_6fe25b45(1, 0x74)\n   b. If allocation successful (not NULL):\n      i. Set TLS value to buffer via TlsSetValue(g_dwTlsIndex, pTlsBuffer)\n      ii. If TlsSetValue successful (non-zero result):\n          - Initialize buffer: pTlsBuffer[0] = GetCurrentThreadId()\n          - pTlsBuffer[1] = 0xffffffff (state marker)\n          - Call FUN_6fe2272e(pTlsBuffer) for additional init\n          - Return 1 (success)\n4. Return 0 (failure)\n\nParameters:\nvoid - Function takes no parameters\n\nReturns:\n1 on success (TLS initialized with buffer)\n0 on failure (allocation or setup failed)\n\nSpecial Cases:\n- TlsAlloc() returns 0xffffffff on failure (checked at 0x6fe226c8)\n- Buffer allocation failure returns NULL (checked at 0x6fe226de)\n- TlsSetValue() failure detected via zero result test (checked at 0x6fe226f0)\n- pTlsBuffer[1] = 0xffffffff is a state marker (possibly \"not initialized\" flag)\n\nMagic Numbers:\n0x74 - Buffer size in bytes (116 decimal) allocated for thread context\n0xffffffff - TlsAlloc() failure code and TlsBuffer[1] state marker\n0x01 - Success return value",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1563254ce315644019ac4e0b71caac74"
     },
@@ -4124,10 +3930,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x769D",
         "LoD/1.13d": "0x76CD"
       },
-      "name": "__flush",
-      "signature": "int __flush(FILE * _File)",
-      "comment": "Library Function - Single Match\n __flush\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeHeapAndCompressionMode",
+      "signature": "int InitializeHeapAndCompressionMode(int nFlags)",
+      "comment": "Initialize process heap and compression mode handler\n\nAlgorithm:\n1. Create process heap with HeapCreate (1024-byte initial allocation)\n2. Check heap creation success; return 0 if failed\n3. Call FUN_6fe23d35() to query compression mode (returns 2 or 3)\n4. If mode == 3: allocate 0x3f8 bytes via FUN_6fe2410e\n5. If mode == 2: initialize compression via FUN_6fe24c55\n6. Check if initialization result is non-NULL (failure case)\n7. If NULL (success): destroy heap and return 0\n8. If non-NULL (failure): return 1\n\nParameters:\nnFlags (int) - Heap creation flag (0 = multi-threaded, non-zero = single-threaded)\n\nReturns:\n1 - Initialization successful (functions called, heap created)\n0 - Initialization failed (heap create failed or init result non-NULL)\n\nSpecial Cases:\nMode values: 2 = alternative compression, 3 = primary compression\nUnknown modes (not 2 or 3) cause immediate return with success code (1)\nHeap is destroyed on NULL result from init function\n\nStructure Layout (if applicable): None",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:15aa81e73603ef0f9aff675af9b3ec8c"
     },
@@ -4148,6 +3954,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11740",
         "LoD/1.10": "0x11240"
       },
+      "name": "ResetMemoryAllocatorState",
+      "signature": "void ResetMemoryAllocatorState(void)",
+      "comment": "Reset memory allocator state and clear temporary registers\n\nAlgorithm:\n1. Push allocator mode value (9) onto stack as parameter\n2. Call FUN_6fe21cc4 to execute allocator cleanup routine\n3. Pop cleanup result into ECX and discard\n4. Clear EDI register to zero (XOR EDI, EDI)\n5. Return to caller via RET instruction\n\nParameters:\n  None (void function)\n\nReturns:\n  void - Function returns no value, used for side effects only\n\nSpecial Cases:\n  Called within exception handling context during memory reallocation retry loops\n  Used to reset allocator state between successive allocation attempts\n  Executes when DAT_6ff14264 mode is 2 (secondary allocator strategy)\n  Called after failed allocations during the loop retry mechanism\n\nMagic Numbers:\n  9: Allocator mode/context identifier passed to FUN_6fe21cc4\n\nRelated Functions:\n- ReallocateMemoryWithStrategy() - Calls this function during memory reallocation retries\n- FUN_6fe21cc4() - Allocator cleanup handler taking mode parameter",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:15c1391d599afb321981e8dd71ecc926"
     },
@@ -4186,6 +3996,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12598",
         "LoD/1.10": "0x12098"
       },
+      "name": "DestroyThreadLocalCompressionContext",
+      "signature": "void DestroyThreadLocalCompressionContext(CompressionContext * pContext)",
+      "comment": "Cleanup and release all thread-local compression buffers and context structure.\n\nAlgorithm:\n1. Check if TLS index is initialized (not 0xffffffff)\n2. If initialized, check if context parameter provided\n3. If no parameter, retrieve context from thread-local storage slot\n4. If context obtained, iterate through 7 compression buffer pointers\n5. For each non-NULL buffer at offsets 0x24, 0x28, 0x30, 0x38, 0x40, 0x44, call DestroyCompressionBuffer\n6. Check buffer at offset 0x50 against default marker\n7. If not default buffer, destroy it; otherwise skip (shared resource)\n8. Destroy the context structure itself\n9. Clear TLS slot by calling TlsSetValue with NULL\n10. Return normally\n\nParameters:\n- pContext: CompressionContext * - Optional pointer to thread-local compression context. If NULL, retrieved from TLS using g_dwTlsIndex. If provided, used directly without TLS access.\n\nReturns:\n- void - No return value. Cleanup always completes if TLS index valid.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:17d5e4a2ea8eca0808e1116fecc65876"
     },
@@ -4198,6 +4012,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.07": "0x52C0",
         "LoD/1.08": "0x52C0"
       },
+      "name": "ExtractBitfieldMask",
+      "signature": "uint ExtractBitfieldMask(int * pBitBuffer, int nBitCount)",
+      "comment": "Extract N-bit field from bit-packed buffer using mask table lookup.\n\nAlgorithm:\n1. Validate buffer has sufficient bits remaining (0x20 - current_offset + next_offset*32 >= nBitCount)\n2. If validation fails, call error handler Ordinal_10023 with buffer/location/line info, then FUN_6fe21293\n3. Return 0 if nBitCount is 0 (zero-length field)\n4. Calculate remaining bits in current word: nRemainingBits = 0x20 - buffer[3] (word offset)\n5. If nBitCount <= nRemainingBits (field fits in current word):\n   - Load mask for nBitCount bits from g_auBitMaskTable[nBitCount]\n   - Extract field: shift current word right by buffer[3] bits\n   - Apply mask: dwResult = mask & (word >> offset)\n   - Update buffer state: increment word pointer, don't update offset (short read)\n6. If nBitCount > nRemainingBits (field spans 2 words):\n   - Extract high bits from current word using nRemainingBits-bit mask\n   - Advance to next word (buffer[1]++, buffer[3]=0)\n   - Extract low bits from next word using (nBitCount-nRemainingBits)-bit mask\n   - Combine: dwResult = (mask_high & word0) | ((mask_low & word1) << nRemainingBits)\n   - Update buffer state: advance word if offset reaches 0x20\n7. Return dwResult\n\nParameters:\npBitBuffer: int * (ECX) - Pointer to BufferControl structure:\n   [0] = start address of buffer (uint *)\n   [1] = current word pointer within buffer (uint *)\n   [2] = total bits in buffer (uint)\n   [3] = bit offset within current word (0-31)\nnBitCount: int (EDX) - Number of bits to extract (1-32)\n\nReturns:\nuint (EAX) - Extracted N-bit field value, masked and shifted to [0, 2^nBitCount)\n\nSpecial Cases:\n- nBitCount=0: Returns 0 immediately\n- Field at word boundary: Offset resets to 0, word pointer advances\n- Spans words: High bits from current word, low bits from next word, combined with shift\n- Buffer overflow: Ordinal_10023 error, then FUN_6fe21293 termination\n\nMagic Numbers:\n- 0x20 (32): 32-bit word size\n- 0x1f (31): Bit count mask for SHIFT operations (& 0x1f on shift amount)\n- g_auBitMaskTable: Lookup table [0]=0x0, [1]=0x1, [2]=0x3, [3]=0x7...,[32]=0xFFFFFFFF\n  Stores pre-computed masks (1 << nBitCount) - 1 for efficient bit extraction",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1a333d539b6ab61563fa73548c034e9c"
     },
@@ -4218,6 +4036,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10E7C",
         "LoD/1.10": "0x10928"
       },
+      "name": "StructuredException_Handler",
+      "signature": "uint StructuredException_Handler(PEXCEPTION_RECORD pExcepRec, PVOID pContext, DWORD nDispatch)",
+      "comment": "Structured exception handler that processes SEH exceptions with dispatch context\n\nAlgorithm:\n1. Check if exception flags contain continuation bits (0x66): EXCEPTION_NONCONTINUABLE or EXCEPTION_UNWINDING\n2. If non-continuable or unwinding, set context status field to 1 and return success\n3. Otherwise invoke FUN_6fe21e54 with exception record, dispatch context, and handler arguments\n4. After handler returns, check if context status field equals 0 (no error)\n5. If status is 0, call HandleStructuredException to process unhandled exception\n6. Retrieve and invoke continuation handler function pointer from context[0x18]\n7. Return result from continuation handler (may restore execution context)\n\nParameters:\n  pExcepRec: PEXCEPTION_RECORD - Exception record with flags, code, and context info\n  pContext: PVOID - Dispatch context structure containing handler state (offsets: 0x8=handler arg1, 0xc=handler arg2, 0x10=handler arg3, 0x14=handler arg4, 0x18=continuation func ptr, 0x1c=stack ptr, 0x20=base ptr, 0x24=status)\n  nDispatch: DWORD - Dispatch ID or continuation code\n\nReturns:\n  uint - Result from continuation handler (typically exception handling disposition code)\n\nSpecial Cases:\n  - If ExceptionFlags & 0x66 != 0 (EXCEPTION_NONCONTINUABLE|EXCEPTION_UNWINDING), early return with status 1\n  - Indirect jump at 0x6fe210f0 uses context continuation pointer, may have multiple targets (jumptable warning)\n  - Context parameter is opaque structure; access only via documented offsets\n\nMagic Numbers Reference:\n  0x66 - Exception flags mask (EXCEPTION_NONCONTINUABLE=0x20 | EXCEPTION_UNWINDING=0x02 | EXCEPTION_EXIT_UNWIND=0x04 | EXCEPTION_NESTED_CALL=0x10 | EXCEPTION_TARGET_UNWIND=0x40)\n  0x24 - Offset into context structure for status/result field\n  0x18 - Offset into context structure for continuation handler function pointer",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1b0b1e6e79b2a5cc4159cdd97f6ed90f"
     },
@@ -4326,6 +4148,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x129DE",
         "LoD/1.10": "0x12E00"
       },
+      "name": "ProcessNumberFormatting",
+      "signature": "char * ProcessNumberFormatting(char * szBuffer, size_t nDecimalPlaces, int * pnNumberParts, char chAddZero)",
+      "comment": "Formats a number string with sign, digits, and decimal separator.\n\nAlgorithm:\n1. Load exponent value from pnNumberParts[1]\n2. If fAddZero is true and exponent-1 equals nDecimalPlaces, append '0' before null terminator\n3. Copy negative sign '-' (0x2d) to output if pnNumberParts[0] is negative\n4. If exponent < 1, call FUN_6fe22d79 to prepare buffer and write '0'\n5. Otherwise advance pointer by exponent count\n6. If nDecimalPlaces > 0, prepare decimal point location with FUN_6fe22d79 and write compression value\n7. If exponent is negative, determine digit count (honor fAddZero flag for rounding)\n8. Call FUN_6fe22d79 to prepare decimal digits and memset fill with '0' (0x30)\n9. Return input buffer szBuffer\n\nParameters:\n- szBuffer (char*): Output string buffer for formatted number\n- nDecimalPlaces (size_t): Number of digits after decimal point\n- pnNumberParts (int*): Pointer to [mantissa, exponent] pair (0x2d indicates negative)\n- fAddZero (char): Boolean flag to add trailing zero during rounding\n\nReturns:\n- char*: Input buffer szBuffer with formatted number\n\nSpecial Cases:\n- Handles negative numbers via 0x2d check in mantissa field\n- Adjusts decimal position based on exponent relative to precision\n- Uses g_byCompressionValue global for decimal separator character\n- Handles edge cases where exponent < 1 (force leading zero)\n- Rounding consideration: fAddZero controls whether to extend precision\n\nMagic Numbers:\n0x2d = '-' (minus sign) for negative check\n0x30 = '0' (zero character) for padding fractional digits\n1 = default digit count when exponent < 1",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1d26a9e5ce55b73c17db6b9f60fe2994"
     },
@@ -4384,10 +4210,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4D1A",
         "LoD/1.13d": "0x4D29"
       },
-      "name": "__dosmaperr",
-      "signature": "void __dosmaperr(ulong param_1)",
-      "comment": "Library Function - Single Match\n __dosmaperr\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ClassifyErrorCode",
+      "signature": "void ClassifyErrorCode(dword dwErrorCode)",
+      "comment": "Classify error code into category and store result in error storage.\n\nAlgorithm:\n1. Get error storage pointer via FUN_6fe28556()\n2. Store input error code into storage\n3. Search error mapping table (pairs of error code and category) from g_adwErrorMappingTable to g_adwErrorMappingTableEnd\n4. If error code found in lookup table, store corresponding category value and return\n5. If error code in range 0x13-0x24, store category 0xd and return\n6. If error code in range 0xbc-0xca, store category 0x8 and return\n7. Default: store category 0x16 and return\n\nParameters:\n  param_1 (dword): Error code to classify\n\nReturns:\n  void: Stores classification result via FUN_6fe2854d() error storage pointer\n\nMagic Numbers Reference:\n  0x13, 0x24: Range boundaries for category 0xd classification\n  0xbc, 0xca: Range boundaries for category 0x8 classification  \n  0xd: Category code for error range 0x13-0x24\n  0x8: Category code for error range 0xbc-0xca\n  0x16: Default category code for all other errors",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1f1ea39570d78b40a761876432663560"
     },
@@ -4430,6 +4256,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x5DA0",
         "LoD/1.10": "0x5AF0"
       },
+      "name": "SearchCharInBufferWithLimit",
+      "signature": "void SearchCharInBufferWithLimit(char chSearchChar, char * szStart, char * szEnd, int nMaxCount, dword * pnFoundStatus, dword * pnEndFlag)",
+      "comment": "Search for first occurrence of a character within a bounded buffer range with optional count limit.\n\nAlgorithm:\n1. Validate buffer bounds: szEnd must be > szStart (asserts failure and crashes if violated)\n2. Linear search phase: Count matching characters from szStart up to nMaxCount or end of buffer\n3. Determine search result: If count reached limit (nMaxCount) before szEnd, break search early\n4. Handle full-range match: If search continued to szEnd with no partial match found:\n   - Set pnFoundStatus = 1 (complete match found)\n   - Set pnEndFlag = 0 (end-of-range not reached)\n   - Return\n5. Handle partial/no match: If early break occurred:\n   - Set pnFoundStatus = 0 (no match or partial)\n   - Skip remaining characters that match\n   - Set pnEndFlag = 1 if szStart reached szEnd, 0 otherwise\n   - Return\n\nParameters:\n- chSearchChar: Target character to search for\n- szStart: Pointer to start of buffer (must be < szEnd)\n- szEnd: Pointer to end of buffer (exclusive boundary)\n- nMaxCount: Maximum number of matching characters to count before stopping\n- pnFoundStatus: Output flag, 1=match found for full range, 0=no match or partial\n- pnEndFlag: Output flag, 1=buffer completely consumed, 0=stopped by count limit\n\nReturns:\nvoid (Results written to pnFoundStatus and pnEndFlag pointers)\n\nSpecial Cases:\n- Assertion fails if szEnd <= szStart (calls FogAssertFail + FUN_6fe21293 termination)\n- Count overflow: Function does not check for count > 0x7FFFFFFF (signed int range)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2054b0e4fc53a2ee670e988d804c7342"
     },
@@ -4486,6 +4316,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x118C2",
         "LoD/1.10": "0x113C2"
       },
+      "name": "AllocateMemoryWithExceptionHandler",
+      "signature": "void AllocateMemoryWithExceptionHandler(dword nRequestedSize)",
+      "comment": "Allocates memory with exception handling support for compression and pool allocation modes.\n\nAlgorithm:\n1. Initialize exception handler chain and state flag to 0xFFFFFFFF\n2. Check global compression mode setting\n3. If compression mode (3):\n   a. Verify requested size does not exceed g_dwMaxCompressionSize\n   b. Call FUN_6fe21c63(9) to acquire compression resource lock\n   c. Call FUN_6fe244aa() to allocate from compressed memory pool\n   d. Call FUN_6fe21b39() to release compression resource lock\n   e. Return successfully if allocation succeeded\n4. If pool mode (2):\n   a. Calculate size with 16-byte alignment: max(16, (size + 15) & ~15)\n   b. Verify aligned size does not exceed g_dwMaxPoolSize\n   c. Call FUN_6fe21c63(9) to acquire pool resource lock\n   d. Call FUN_6fe24f4d(alignedSize >> 4) with pool array index\n   e. Call FUN_6fe21b98() to release pool resource lock\n   f. Return successfully if allocation succeeded\n5. For standard allocation mode:\n   a. If size is NULL, use minimum value 1\n   b. Align to 16-byte boundary: (size + 15) & ~15\n6. Call HeapAlloc(g_hHeapProcess, 0, finalSize) to allocate from system heap\n7. Restore previous exception handler chain before return\n\nParameters:\nnRequestedSize (dword): Requested allocation size in bytes; NULL/0 treated as minimum\n\nReturns:\nvoid - Allocation result returned in EAX (pointer to allocated memory or NULL on failure)\n\nSpecial Cases:\nMagic numbers: 0x0F = 15 (alignment offset), 0xFFFFFFF0 = alignment mask, 0x10 = 16-byte minimum\nNULL parameter treated as 1 for alignment calculation in standard mode\nSEH exception handling wraps entire allocation sequence with cleanup handlers",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2427cd9c654afc2c511ea083018810d8"
     },
@@ -4568,6 +4402,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12B8E",
         "LoD/1.10": "0x121EF"
       },
+      "name": "WriteCharacterToBuffer",
+      "signature": "dword WriteCharacterToBuffer(dword nCharByte, int * pBufferHeader)",
+      "comment": "Writes a single character byte to a data buffer with state management.\n\nAlgorithm:\n1. Load buffer header flags (offset +0xC) and character index (offset +0x10)\n2. Check if flags have bits 0x82 clear AND bit 0x40 clear; if not, set flag 0x20 and return failure\n3. If flag 0x01 is set: clear offset +0x04, check flag 0x10; if clear return; if set restore buffer pointer from offset +0x08 and clear flag 0x01\n4. Reload flags and clear offset +0x04\n5. Set flags to (flags & 0xFFFFFFEF) | 0x02\n6. Check if flags (0x10C) are clear and character is valid (not -1) or passes validation check; if so call FUN_6fe269cc\n7. If flags (0x108) clear: call FUN_6fe267dc with single byte count (1), store result\n8. If flags (0x108) set: load buffer write pointer, calculate available space, increment pointer, decrement counter\n9. If space available: call FUN_6fe267dc with calculated space; else load character table entry and validate flag 0x20, call FUN_6fe26704 if needed\n10. Write byte to buffer position, compare write result with space available\n11. If result matches space: return character byte & 0xFF; else set flag 0x20 and return 0xFFFFFFFF\n\nParameters:\nnCharByte: byte value to write (0x00-0xFF)\npBufferHeader: pointer to stream/buffer header structure (flags at +0xC, char index at +0x10)\n\nReturns:\n0x00-0xFF: success, returns the character byte written\n0xFFFFFFFF: failure due to flag state or buffer exhaustion\n\nSpecial Cases:\nMagic Number 0x82: Tests for read-locked state\nMagic Number 0x40: Tests for error flag\nMagic Number 0x01: Peek flag (incomplete read)\nMagic Number 0x10: Buffer switch flag\nMagic Number 0x10C: Extended status check\nMagic Number 0x108: Buffer mode selector (0=unbuffered, non-0=buffered)\nMagic Number 0x20: Error/overflow flag set on failure\nGlobal Data Reference: g_pCharacterTableArray indexed by (nCharIndex >> 5) with stride 0x24",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:28393cf54a38bf1465f92d01d5d4df21"
     },
@@ -4630,6 +4468,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3870",
         "LoD/1.09d": "0x3870"
       },
+      "name": "DestroyListNode",
+      "signature": "void DestroyListNode(int * pnList)",
+      "comment": "Iterates through linked list array and destroys/unlinks nodes.\n\nAlgorithm:\n1. Iterate while count at offset 0x8 > 0\n2. Calculate current node address: base + offset\n3. If node pointer is non-zero:\n   a. Get next node offset from node[1]\n   b. If next offset < 0: bitwise NOT to get actual pointer\n   c. Else: calculate target as (current + (offset - node[4]))\n   d. Copy node pointer to target node\n   e. Copy next offset value to node[4]\n   f. Zero out current node pointer and next offset\n\nParameters:\npnList: Pointer to list structure (offset 0 = base pointer, offset 8 = count)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Negative next offset values indicate direct pointer references (stored as NOT)\n- Positive offsets are relative calculations from current node position\n- Nodes with zero pointer skip processing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:29f4ec93897d5a445d15a348b24454ac"
     },
@@ -4660,10 +4502,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4EC6",
         "LoD/1.13d": "0x5116"
       },
-      "name": "___sbh_find_block",
-      "signature": "uint ___sbh_find_block(int param_1)",
-      "comment": "Library Function - Single Match\n ___sbh_find_block\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "FindCompressionBufferBySize",
+      "signature": "dword * FindCompressionBufferBySize(int nSize)",
+      "comment": "Finds compression buffer matching requested size threshold.\n\nAlgorithm:\n1. Initialize iterator to start of compression buffer array (g_pCompressionBufferArray)\n2. Loop through buffer array (array size = g_dwCompressionBufferCount * 0x14 per entry)\n3. Check if current position exceeds array bounds, return NULL if exhausted\n4. Calculate size delta: nSize - (value at current_buffer + 0xc offset)\n5. If delta less than 0x100000 (1MB), return pointer to current buffer\n6. Otherwise advance to next entry (+0x14 bytes) and continue loop\n\nParameters:\n  nSize: Requested size to match\n\nReturns:\n  Pointer to matching buffer entry if found, NULL (0) if no suitable buffer exists\n\nSpecial Cases:\n  - Returns NULL if buffer array is empty or exhausted\n  - Size threshold 0x100000 (1MB) is hardcoded limit\n\nStructure Layout:\n  Offset | Size | Field Name     | Type | Description\n  0x00   | 0x0c | ???            | ???  | (unknown fields)\n  0x0c   | 0x4  | dwSizeField    | uint | Size value checked against nSize",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a0dd1f395da0f8e13609d337843c676"
     },
@@ -4684,6 +4526,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10D4D",
         "LoD/1.10": "0x107F9"
       },
+      "name": "InvokeBltFrameEventHandler",
+      "signature": "uint InvokeBltFrameEventHandler(uint dwFramePointer, uint dwEventInfo, uint dwEventParam, int nEventType, int nEventAction)",
+      "comment": "Invoke a BLT frame event handler with structured exception handling wrapper.\n\nAlgorithm:\n1. Save caller's ESP in EBP (function prologue)\n2. Allocate 0x14 (20) bytes stack space for local variables\n3. Clear local_14 (FS:[0] handler address field)\n4. Load param_2 (event info) into local_10\n5. Set local_14 to handler address (0x6fe20fab)\n6. Increment param_4 and store as nActionIncr\n7. Store param_1 (frame pointer) as dwFrameCopy\n8. Save current FS:[0] exception handler to pExceptionList\n9. Install new exception handler at FS:[0] pointing to [EBP-0x14]\n10. Call __CallSettingFrame with param_3, param_1, param_5\n11. Restore original exception handler from pExceptionList to FS:[0]\n12. Return result (dwResult) in EAX\n\nParameters:\n- dwFramePointer (uint): Pointer to BLT frame object\n- dwEventInfo (uint): Event information/flags for frame\n- dwEventParam (uint): Event-specific parameter\n- nEventType (int): Type of event being processed\n- nEventAction (int): Event action/handler index\n\nReturns:\n- uint: Return value from __CallSettingFrame (typically frame state or event status)\n\nSpecial Cases:\n- Exception handling uses Borland SEH (__try/__except) via FS:[0]\n- Local exception handler (0x6fe20fab) catches frame-related exceptions\n- Frame reference param_1 passed as second argument to __CallSettingFrame\n- Uses stack-allocated exception frame structure (20 bytes)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a1e21cd2b9905fd02a4b69e9156a563"
     },
@@ -4704,6 +4550,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x111E0",
         "LoD/1.10": "0x10CE0"
       },
+      "name": "ProbeStackAndSwitchFrame",
+      "signature": "void ProbeStackAndSwitchFrame(void)",
+      "comment": "Stack probe and frame switch for large allocations.\n\nAlgorithm:\n1. Preserve ECX by pushing on stack\n2. Load stack probe address from return pointer: LEA ECX, [ESP + 0x8]\n3. While in_EAX > 0xFFF (4KB):\n   a. Decrement probe address by 0x1000 (4KB)\n   b. Decrement in_EAX by 0x1000\n   c. Test memory access at [ECX] with EAX (probe stack pages)\n   d. Compare EAX with 0xFFF to check remaining size\n4. After loop, adjust final probe address: SUB ECX, in_EAX\n5. Probe final page: TEST dword ptr [ECX], EAX\n6. Copy return address: Load [ESP] and [ESP+4], push return address\n7. Switch stack frame to new location: MOV ESP, ECX\n8. Load saved ECX (now at new frame): MOV ECX, [EAX]\n9. Load return address: MOV EAX, [EAX + 0x4]\n10. Execute return: PUSH EAX; RET\n\nParameters:\nin_EAX: Size of stack space to allocate (implicit register parameter)\nin_ECX: Current frame pointer (destroyed during execution)\n\nReturns:\nExecution continues at return address in new stack frame\n\nSpecial Cases:\nIf in_EAX <= 0xFFF, no loop iteration occurs, skips directly to final probe\nStack probing ensures all pages are committed before switching\nSwaps return address to new stack frame via PUSH/RET technique\n\nNote: Function uses 3 stack-allocated temporaries optimized away.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6"
     },
@@ -4742,6 +4592,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x120C8",
         "LoD/1.10": "0x11BC8"
       },
+      "name": "InvokeBltFrameWithSEH",
+      "signature": "dword InvokeBltFrameWithSEH(dword dwFrameFlags, dword pFrameData, dword dwFrameMode, dword param4, dword param5, int nX, int nY)",
+      "comment": "Invokes BltFrame event handler within SEH (Structured Exception Handling) context.\n\nAlgorithm:\n1. Initialize SEH frame with exception handler pointers (g_sehFrameData, LAB_6fe25680)\n2. Push exception list chain onto stack for Windows SEH mechanism\n3. Call FUN_6fe22741 three times to retrieve frame pointer\n4. Populate frame structure fields: [0x1b]=dwFrameFlags, [0x1c]=dwFrameMode\n5. Set SEH state to 1 (active)\n6. Invoke InvokeBltFrameEventHandler(pFrameData, param4, param5, nX, nY)\n7. Store result in dwFrameState (0xffffffff on completion)\n8. Call FUN_6fe223a5 to cleanup frame\n9. Restore exception list from stack\n10. Return result from event handler\n\nParameters:\ndwFrameFlags (Stack[0x4]): Frame flags/options\npFrameData (Stack[0x8]): Pointer to frame data structure\ndwFrameMode (Stack[0xc]): Frame mode selector\nparam4 (Stack[0x10]): Frame parameter 4\nparam5 (Stack[0x14]): Frame parameter 5\nnX (Stack[0x18]): X coordinate\nnY (Stack[0x1c]): Y coordinate\n\nReturns:\nEAX: Result from InvokeBltFrameEventHandler (0=failure, non-zero=success/code)\n\nNotes: Function manages Windows SEH exception handling context. Stack-allocated temporaries optimized away: local_1c through local_30 (7 variables). SSA temporaries (pDVar1, uVar2) exist only in decompiled code for optimization and cannot be renamed.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a96814eec6650ccf99fd41da6e91b27"
     },
@@ -4784,6 +4638,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11CDF",
         "LoD/1.10": "0x117DF"
       },
+      "name": "ProcessCppException",
+      "signature": "void ProcessCppException(PEXCEPTION_RECORD pException, void * pContext, DWORD dwErrorCode, uint dwState, uint dwSlotTable, bool fAsyncReturn, int nSlotIndex, void * pCustomData)",
+      "comment": "Handle C++ exception processing and routing. Validates exception code and parameters, searches slot table, processes exception data, or routes to error handlers.\n\nAlgorithm:\n1. Load current slot index from context at offset +0x8\n2. Validate slot index is within valid range [-1, slotTableMax)\n3. Check if exception is C++ exception (code=0xe06d7363, 3 params, marker=0x19930520, info[2]=0)\n4. If standard C++ exception: fetch global data table, retrieve nested exception and error code\n5. Validate nested exception via FUN_6fe257bc, skip if invalid\n6. Search slot table for matching range using SearchSortedSlots(param_5, nSlotIndex, nSlotID, &dwMinIndex, &dwMaxIndex)\n7. For each slot entry in results:\n   - Check if nSlotID falls within [piVar4[0], piVar4[1]] range\n   - Load exception info block from piVar4[4], iterate through all data blocks (count=piVar4[3])\n   - For each data block (16 bytes per block), scan item list at offset 0x0c\n   - Call FUN_6fe2214c to match current item against slot data\n   - If match found, call FUN_6fe2225d to process exception with matched slot info\n8. Increment result index, move to next slot entry (stride=0x14 bytes)\n9. If no match found and fAsyncReturn=false, call FUN_6fe220a2 for alternative routing\n10. If fAsyncReturn=true, call FUN_6fe22848 for async error handling\n\nParameters:\n  pException (PEXCEPTION_RECORD) - Pointer to exception record with code, parameter count, and information array\n  pContext (void*) - Pointer to context structure containing slot ID at offset +0x8 (TODO: identify specific structure type)\n  dwErrorCode (DWORD) - Error code associated with exception\n  dwState (uint) - State flags for exception handling (unused in main logic)\n  dwSlotTable (uint) - Base address of slot table lookup array\n  fAsyncReturn (bool) - If true, use async error handler; if false, use standard handler\n  nSlotIndex (int) - Current slot index for exception source identification\n  pCustomData (void*) - Pointer to custom exception handling data (TODO: identify specific structure type)\n\nReturns:\n  void - Function does not return normally; either processes exception and returns, or routes to error handlers\n\nSpecial Cases:\n  - Returns immediately if standard C++ exception marker not found (code != 0xe06d7363)\n  - Returns if nested exception data pointer is NULL (pDataTable[0x1b] == 0)\n  - Returns if no matching slot found in search results\n  - Calls FUN_6fe228a9 to trigger fatal error if slot validation fails\n  - Note: Function contains 4 SSA temporaries optimized by compiler (visible only in decompiled view): result of FUN_6fe257bc (bool), FUN_6fe22741 (DWORD*), loop counter (int), and pointer array dereference (uint*)\n\nMagic Numbers Reference:\n  0xe06d7363 - C++ exception code identifier\n  0x19930520 - C++ exception marker constant (magic signature)\n  0x3 - Expected number of exception parameters for C++ exceptions\n  0x1b (27) - Offset in global data table for nested exception pointer\n  0x1c (28) - Offset in global data table for nested exception error code\n  0x10 (16) - Stride/size of each data block entry in slot search results\n  0x0c (12) - Offset to item list in exception data block",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2b681afdb44a9f2bdf49c0adb7703440"
     },
@@ -4848,10 +4706,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19D53",
         "LoD/1.13d": "0x19D47"
       },
-      "name": "__abstract_cw",
-      "signature": "uint __abstract_cw(void)",
-      "comment": "Library Function - Single Match\n __abstract_cw\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ConvertCharacterFlags",
+      "signature": "dword ConvertCharacterFlags(dword dwInputFlags)",
+      "comment": "Converts character state/attribute flags from one encoding to another.\n\nAlgorithm:\n1. Initialize output flags (dwOutputFlags = 0)\n2. Map input bit 0x01 \u2192 output bit 0x10 (set if set)\n3. Map input bit 0x04 \u2192 output bit 0x08 (OR into output)\n4. Map input bit 0x08 \u2192 output bit 0x04 (OR into output)\n5. Map input bit 0x10 \u2192 output bit 0x02 (OR into output)\n6. Map input bit 0x20 \u2192 output bit 0x01 (OR into output)\n7. Map input bit 0x02 \u2192 output bit 0x80000 (OR into output)\n8. Map input bits 0x0C00 to output bits 0x0300:\n   - 0x0400 \u2192 0x0100\n   - 0x0800 \u2192 0x0200\n   - 0x0C00 \u2192 0x0300\n9. Map input bits 0x0300 to output bits:\n   - 0x0000 \u2192 0x20000\n   - 0x0200 \u2192 0x10000\n10. Map input bit 0x1000 \u2192 output bit 0x40000\n11. Return converted flags\n\nParameters:\n  dwInputFlags (dword): Input flag value with character state bits\n\nReturns:\n  dword: Converted output flag value with mapped bits\n\nSpecial Cases:\n  - Input 0x00 returns 0x20000 (default state flag)\n  - Exclusive bits in 0x0C00 range checked sequentially\n  - Bit 0x0300 check for alternative output paths",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2d415c643620c5a6b5394f7144cab162"
     },
@@ -4944,6 +4802,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10C00",
         "LoD/1.10": "0x106AC"
       },
+      "name": "BoolToInt",
+      "signature": "int BoolToInt(uint dwValue)",
+      "comment": "Converts a 32-bit unsigned value to a signed integer: -1 if non-zero, 0 if zero.\n\nAlgorithm:\n1. Call FUN_6fe20d8c with input value (unknown operation)\n2. Negate result (NEG EAX)\n3. Perform SBB EAX,EAX to convert sign bit to boolean (-1 for negative, 0 for positive)\n4. Negate again to flip result\n5. Decrement by 1 to get final boolean conversion: -1 if non-zero, 0 if zero\n\nParameters:\n  dwValue (uint): Input value to test for non-zero condition\n\nReturns:\n  int: -1 if dwValue is non-zero, 0 if dwValue is zero\n\nSpecial Cases:\n  Function performs boolean-to-integer conversion using bitwise operations\n  Result is always -1 or 0, never positive values",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:30121dcb0e48ab1814aec1130583025a"
     },
@@ -4998,6 +4860,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xEC60",
         "LoD/1.10": "0xE7E0"
       },
+      "name": "SetGameMode",
+      "signature": "void SetGameMode(uint dwGameMode)",
+      "comment": "Sets the global game mode configuration value.\n\nAlgorithm:\n1. Store parameter dwGameMode into global g_dwGameMode (0x6ff12c7c)\n2. Return to caller\n\nParameters:\n  dwGameMode (uint) - Game mode value to set (typically flags or mode identifier)\n\nReturns:\n  void\n\nSpecial Cases:\n  - Function uses __fastcall: parameter passed in ECX\n  - Modifies global state g_dwGameMode accessed by other functions",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:305c32d33191c1b22ce2562362c5fa24"
     },
@@ -5040,6 +4906,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18790",
         "LoD/1.10": "0x18390"
       },
+      "name": "FindFirstCharNotInSet",
+      "signature": "int FindFirstCharNotInSet(byte * pbSearch, byte * pbSet)",
+      "comment": "Find the position of the first character in pbSearch that does not exist in pbSet.\n\nAlgorithm:\n1. Initialize a 32-byte bitmap (abStack_28) to track which characters exist in pbSet\n2. Scan pbSet character by character until null terminator\n   - For each character, set the corresponding bit in the bitmap using byte index (char>>3) and bit offset (char&7)\n3. Initialize position counter nPos to -1\n4. Scan pbSearch character by character until null terminator\n   - Increment nPos for each character processed\n   - Load current character from pbSearch\n   - Check if the corresponding bit is set in the bitmap (abStack_28[char>>3] >> (char&7) & 1)\n   - If bit is NOT set (character not in pbSet), return nPos (first character not in set)\n5. If all characters in pbSearch exist in pbSet, return final nPos value\n\nParameters:\npbSearch (byte *): Pointer to null-terminated string to search\npbSet (byte *): Pointer to null-terminated set of characters to match against\n\nReturns:\nint: Position (0-based) of first character in pbSearch not found in pbSet, or final position if all match\n\nSpecial Cases:\n- If pbSet is empty, returns 0 (first character of pbSearch)\n- If pbSearch is empty, returns -1 (no characters scanned)\n- Uses 256-character bitmap approach (8 bits per byte, 32 bytes total for 256 ASCII characters)\n- Magic number 0x20: Size of bitmap in bytes (256 bits / 8 bits per byte)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:30f0fd08cad97c1e8bd24ed371c4d8a2"
     },
@@ -5060,6 +4930,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x17A72",
         "LoD/1.10": "0x178E1"
       },
+      "name": "RotateRight96Bits",
+      "signature": "void RotateRight96Bits(uint * pdwData)",
+      "comment": "Right-rotate three consecutive dwords (96 bits) by 1 bit position.\n\nAlgorithm:\n1. Load temp = param[1] (middle dword)\n2. Rotate middle: param[1] = (temp >> 1) | (param[2] << 31) [LSB from right, MSB from low]\n3. Rotate high: param[2] = param[2] >> 1 [high dword shifts right]\n4. Rotate low: param[0] = (param[0] >> 1) | (temp << 31) [fill from temp's high bit]\n\nParameters:\npdwData - Pointer to array of 3 uints representing 96-bit value [param[0], param[1], param[2]]\n\nReturns:\nvoid - Array modified in-place\n\nMagic Numbers:\n0x1f - Bit shift count (31) for uint rotate operations (32-bit - 1)\n0x1  - Right rotate count (1 bit)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:31be27c1480e9c363bab7437010362e2"
     },
@@ -5080,6 +4954,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x108CB",
         "LoD/1.10": "0x10388"
       },
+      "name": "CopyMemoryWithStride",
+      "signature": "void CopyMemoryWithStride(byte * pbDest, byte * pbSrc, dword nDestStride, dword nSrcStride, dword nLineCount, dword nWidthDwords)",
+      "comment": "Copies memory between two buffers with stride/pitch support for rectangular data regions.\n\nAlgorithm:\n1. For each of nLineCount lines:\n   a. Handle unaligned bytes (remainder bytes mod 4) at buffer start\n   b. Copy dword-aligned data (nWidthDwords dwords per line)\n   c. Advance both pointers by their respective strides (nDestStride, nSrcStride)\n   d. Repeat for next line\n\nParameters:\n  pbDest       - Destination buffer pointer (byte array)\n  pbSrc        - Source buffer pointer (byte array)\n  nDestStride  - Bytes to advance in dest per line (pitch)\n  nSrcStride   - Bytes to advance in src per line (pitch)\n  nLineCount   - Number of lines to copy\n  nWidthDwords - Width in dwords (32-bit units) per line\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  - Width is specified in dwords; remainder bytes (width % 4) handled separately\n  - Strides allow copying rectangular regions from larger buffers\n  - Optimized for dword-aligned copies with byte-aligned remainder handling",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:33505a6d892026b53e0ed30710cbacf7"
     },
@@ -5098,6 +4976,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x98D0",
         "LoD/1.09d": "0x98D0"
       },
+      "name": "QuantizeColorTo256Palette",
+      "signature": "void QuantizeColorTo256Palette(byte * pbPalette)",
+      "comment": "Quantize a 256x256 RGB image to a 256-color indexed palette using color distance matching.\n\nAlgorithm:\n1. Iterate through each pixel in the 256x256 source image (outer Y loop: 256 rows)\n2. For each row, iterate through columns (middle X loop: 256 pixels per row)\n3. For each source pixel, extract R, G, B components and apply inverse alpha blending: (src * palette) / 255\n4. Search entire 256-color palette to find closest color match using Euclidean distance: sqrt((R-palR)^2 + (G-palG)^2 + (B-palB)^2)\n5. Store the palette index (0-255) of best match at output position\n6. Advance to next output row (256 bytes per row in output buffer)\n7. Continue until all 256x256 pixels processed\n\nParameters:\n  pbPalette: Pointer to input buffer containing 256x256 RGB image followed by 256 palette entries at offset +0x43500\n\nReturns:\n  void; Output written to palette array at pbPalette[0x43500:0x43500+0x10000]\n\nSpecial Cases:\n  Palette format: 256 entries x 4 bytes each (RGBA or XBGR format)\n  Alpha blending: Uses magic constant 0x80808081 for fast division by 255\n  Distance calculation: Uses IMUL + MUL + SHR sequence for fixed-point arithmetic",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:33936a68c2c01a1c37904c4e5d238e24"
     },
@@ -5134,6 +5016,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x51A0",
         "LoD/1.09d": "0x51A0"
       },
+      "name": "AdvanceBitOffset",
+      "signature": "void AdvanceBitOffset(int * pStream)",
+      "comment": "Advances bit stream read position by specified number of bits.\n\nAlgorithm:\n1. Calculate: dwOffset = nBitsToAdvance + pStream[0xC] (current bit offset)\n2. Mask to 5 bits: pStream[0xC] = dwOffset & 0x1F (keeps within-dword position, range 0-31)\n3. Handle rounding: Apply signed right shift with adjustment ((dwOffset + (dwOffset >> 31 & 0x1F)) >> 5)\n4. Multiply result by 4 bytes and add to dword pointer: pStream[0x4] += (result * 4)\n5. Return\n\nParameters:\n  pStream (ECX): Pointer to bit stream state - Offset 0x4 = dword pointer, Offset 0xC = bit offset\n  nBitsToAdvance (EDX): Number of bits to advance (magn, can be positive or negative)\n\nReturns: void (modifies pStream in-place)\n\nSpecial Cases:\n  Magic value 0x1F (31 bits): Masks to keep only position within current dword (5 bits = 0-31)\n  Signed rounding: ((x + (x>>31 & 0x1F)) >> 5) divides by 32 with proper rounding for negative values\n  Bit-to-byte conversion: Left shift by 2 = multiply by 4 bytes per dword\n\nStructure Layout:\n  Offset | Size | Field Name | Type | Description\n  0x04   | 4    | pdwCurr    | uint*| Current dword pointer in bit stream buffer\n  0x0C   | 4    | dwBitPos   | uint | Bit offset within current dword (0-31)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3573f3e74899cfd7b483ab426c7ca494"
     },
@@ -5187,16 +5073,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:360d303b0ef4a8fe78e9969d33c53568"
     },
-    "D2CMP_MNE_3612f81a83ad": {
-      "addresses": {
-        "LoD/1.10": "0x6FDFF8F0"
-      },
-      "rvas": {
-        "LoD/1.10": "0xF8F0"
-      },
-      "method": "MNE",
-      "index": "MNE:3612f81a83adf18ac8749f504eded401"
-    },
     "D2CMP_MNE_3696c99bac24": {
       "addresses": {
         "LoD/1.11": "0x6FE1DA10",
@@ -5214,6 +5090,40 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:3696c99bac241fd383fa88702b5a92ff"
+    },
+    "D2CMP_MNE_36b4a8b367f6": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1B0F0",
+        "LoD/1.08": "0x6FE1B0F0",
+        "LoD/1.09": "0x6FDFAEB0",
+        "LoD/1.09b": "0x6FDFAEB0",
+        "LoD/1.09d": "0x6FDFAEB0",
+        "LoD/1.10": "0x6FDFAAF0",
+        "LoD/1.11": "0x6FE24110",
+        "LoD/1.11b": "0x6FE1CE40",
+        "LoD/1.12a": "0x6FE1CAD0",
+        "LoD/1.13c": "0x6FE1BA00",
+        "LoD/1.13d": "0x6FE27540"
+      },
+      "rvas": {
+        "LoD/1.07": "0xB0F0",
+        "LoD/1.08": "0xB0F0",
+        "LoD/1.09": "0xAEB0",
+        "LoD/1.09b": "0xAEB0",
+        "LoD/1.09d": "0xAEB0",
+        "LoD/1.10": "0xAAF0",
+        "LoD/1.11": "0x14110",
+        "LoD/1.11b": "0xCE40",
+        "LoD/1.12a": "0xCAD0",
+        "LoD/1.13c": "0xBA00",
+        "LoD/1.13d": "0x17540"
+      },
+      "name": "InitializeQuantizationAndConvert",
+      "signature": "void InitializeQuantizationAndConvert(uint dwConfigValue, uint * pdwOutputValue)",
+      "comment": "Ordinal_10001: Initialize output value and invoke ConvertAndQuantizeRGBImage\n\nAlgorithm:\n1. Write initialization constant 0x6c327 to output parameter\n2. Pass configuration value to ConvertAndQuantizeRGBImage\n3. Return to caller\n\nParameters:\n- dwConfigValue (uint): Configuration parameter for image conversion\n- pdwOutputValue (uint *): Pointer to output/result value, initialized to 0x6c327\n\nReturns:\n- void (result in pdwOutputValue)\n\nSpecial Cases:\n- Magic constant 0x6c327 (443175) appears to be quantization or color palette identifier\n- Function uses __stdcall convention with callee cleanup",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:36b4a8b367f6115b6a9f3eef5837aba8"
     },
     "D2CMP_MNE_36e01314f6cc": {
       "addresses": {
@@ -5242,6 +5152,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x33D0",
         "LoD/1.10": "0x3240"
       },
+      "name": "InsertListNode",
+      "signature": "void InsertListNode(void * this, void * pListContainer, int nInsertMode, int nNodeHeader, dword dwFlags)",
+      "comment": "Inserts a doubly-linked list node at head or tail position.\n\nAlgorithm:\n1. Allocate node structure via Ordinal_401 with AUCELL list template and flags (param_3 | 0x8)\n2. Initialize all node fields to 0: offsets +4, +8, +C, +10, +2C, +30, +34\n3. Set node self-reference at offset +30 and inverted hash at offset +34\n4. If nInsertMode != 0 (insertion enabled):\n   a. Calculate list node pointer from nNodeHeader offset or container offset +4\n   b. If node handle exists, unlink from current position using pointer arithmetic\n   c. If nInsertMode != 1 (head insertion):\n      - Link to current head via container offset +4, update container\n   d. If nInsertMode == 1 (tail insertion):\n      - Link to tail metadata at container offset +8, handle negative offsets\n\nParameters:\n  this (void*) - IMPLICIT in ECX (auto-parameter __thiscall); container for doubly-linked list (offsets +4, +8)\n  nInsertMode (int) - 0=head insertion, 1=tail insertion; 0 disables all insertion\n  nNodeHeader (int) - pointer to node structure (Ordinal_401 receives offset +0x38)\n  dwFlags (dword) - allocation flags passed to Ordinal_401 (ORed with 0x8)\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  Ordinal_401 failure (returns 0) - node insertion is skipped, function returns early\n  \nNote: Function uses register-allocated temporaries optimized away by compiler (iVar2, uVar3, piVar1)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3706dc18d628fcf20ff6252d77e2a882"
     },
@@ -5262,6 +5176,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15935",
         "LoD/1.10": "0x15435"
       },
+      "name": "AllocateMemoryWithFallback",
+      "signature": "void * AllocateMemoryWithFallback(dword nWidth, dword nHeight)",
+      "comment": "Allocate memory with multiple fallback strategies and exception handling.\n\nAlgorithm:\n1. Compute requested size as nWidth * nHeight\n2. Validate size <= 0xFFFFFFE1 (max allocatable size)\n3. If size is 0, use minimum 1 byte; align to 16-byte boundary\n4. Try allocation based on g_dwCompressionMode:\n   - Mode 3: Compression buffer (size must be <= g_dwMaxCompressionSize)\n     * Acquire critical section (slot 9)\n     * Call AllocateCompressionBufferSlot with original size\n     * Set exception state to 0xFFFFFFFF (SehFrame.ExceptionCode)\n     * Call cleanup function FUN_6fe25bde\n     * If allocation succeeded, memset buffer to 0 and return\n   - Mode 2: Memory pool (aligned size must be <= g_dwMaxPoolSize)\n     * Acquire critical section (slot 9)\n     * Call AllocateFromMemoryPool with (aligned_size >> 4)\n     * Set exception state to 0xFFFFFFFF\n     * Call cleanup function FUN_6fe25c67\n     * If allocation succeeded, memset buffer to 0 and return\n   - Default: Skip to heap allocation\n5. Fall back to HeapAlloc with HEAP_ZERO_MEMORY flag (0x8)\n6. If all allocations fail:\n   - If g_dwOutOfMemoryHandler is NULL, return NULL\n   - Call InvokeMemoryAllocationHandler with requested size\n   - Retry entire allocation sequence (loop) if handler returns non-zero\n7. Return allocated buffer or NULL on failure\n\nParameters:\n  nWidth (uint): Width dimension of memory region\n  nHeight (uint): Height dimension of memory region\n\nReturns:\n  Pointer to allocated memory block (16-byte aligned) or NULL if all allocation attempts fail\n\nSpecial Cases:\n  - Size overflow: If nWidth * nHeight > 0xFFFFFFE1, returns NULL\n  - Zero size: Treated as minimum 1-byte allocation\n  - Exception handling: Maintains SEH chain with exception handlers at 0x6fe25680\n  - Critical sections: Compression/pool allocations require slot 9 lock\n  - Retry loop: Invokes OutOfMemory handler up to policy limit\n\nMagic Numbers:\n  0xFFFFFFE1: Maximum allocatable size\n  0x0F: 16-byte alignment mask (align down after adding 0xF)\n  0xFFFFFFF0: 16-byte alignment mask (round up)\n  0x8: HEAP_ZERO_MEMORY flag for HeapAlloc\n  0x9: Critical section slot ID\n  0x4: Shift count for dividing by 16 (pool allocation)\n  0xFFFFFFFF: SEH exception state marker",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:371cf2604575a233020cd5d20fe5277c"
     },
@@ -5304,6 +5222,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x108AB",
         "LoD/1.10": "0x10368"
       },
+      "name": "AllocateMemoryBlock",
+      "signature": "void * AllocateMemoryBlock(SIZE_T cbSize)",
+      "comment": "Allocate a block of virtual memory with specific flags.\n\nAlgorithm:\n1. Call VirtualAlloc with lpAddress=NULL (system chooses), dwSize=cbSize, flAllocType=0x3000 (MEM_COMMIT|MEM_RESERVE), flProtect=0x40 (PAGE_EXECUTE_READWRITE)\n2. Return allocated memory pointer (in EAX)\n\nParameters:\n  cbSize (SIZE_T): Number of bytes to allocate\n\nReturns:\n  void *: Pointer to allocated memory block, or NULL on failure\n\nSpecial Cases:\n  - Memory allocated with execute permission (0x40 = PAGE_EXECUTE_READWRITE)\n  - Used for allocating code/data buffers in image conversion pipeline\n  - Caller must track allocation for cleanup\n\nMagic Numbers:\n  0x3000: MEM_COMMIT (0x1000) | MEM_RESERVE (0x2000) - allocate and commit pages\n  0x40: PAGE_EXECUTE_READWRITE - full read/write/execute access",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:38603ed7b3e553c52008df96c26073b4"
     },
@@ -5324,6 +5246,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11AC9",
         "LoD/1.10": "0x115C9"
       },
+      "name": "DestroyCompressionBuffer",
+      "signature": "void DestroyCompressionBuffer(void * pBuffer)",
+      "comment": "Deallocate compression buffer and release associated resources based on compression mode.\n\nAlgorithm:\n1. Validate input: If pBuffer is NULL, return immediately via cleanup path\n2. Initialize FS-based SEH (exception stack = local_14, handler = 0x6fe25680, context = 0x6fe2cc00)\n3. Acquire critical section lock (index 9) for thread-safe processing\n4. Check g_dwCompressionMode value:\n   a) Mode 3 (Type A compression):\n      - Call FUN_6fe24156(pBuffer) to extract compression data pointer into pdwCompressionData1\n      - If pdwCompressionData1 valid, call FUN_6fe24181(pdwCompressionData1, pBuffer) to process\n      - Call FUN_6fe21d43() to release critical section\n   b) Mode 2 (Type B compression):\n      - Call FUN_6fe24eb1(pBuffer, pOldExceptionList, dwSize1) to decompress and extract parameters\n      - If pdwCompressionData2 valid, call FUN_6fe24f08(dwSize2, dwSize1, pdwCompressionData2) to process\n      - Call FUN_6fe21d9b() to release critical section\n   c) Other modes: Skip compression processing, proceed to cleanup\n5. If compression succeeded (returned non-NULL pointer), restore exception list and return\n6. Otherwise free pBuffer via HeapFree(g_hHeapProcess, 0, pBuffer)\n7. Restore FS:[0x0] exception list pointer on exit (FS-based SEH cleanup)\n\nParameters:\n  pBuffer (void *) - Pointer to compression buffer to destroy; may be NULL to skip processing\n\nReturns:\n  void - No return value; resources freed or processed based on mode\n\nSpecial Cases:\n  - NULL pBuffer: Function returns immediately without heap operations\n  - Compression failure: Buffer freed via HeapFree instead of transferred to callees\n  - Mode 1 or other: Skips both compression paths, proceeds directly to cleanup\n  - Exception handling: Uses FS-based structured exception handling with restoration on exit\n  - Assembly temporaries: puStack_10=0x6fe25680 (handler), puStack_c=0x6fe2cc00 (context), puVar1=ESI (reused register)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:38a52ad8d9123a0ed65e4de10b1cf943"
     },
@@ -5607,6 +5533,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11F99",
         "LoD/1.10": "0x11A99"
       },
+      "name": "IterateLinkedListWithHandler",
+      "signature": "void IterateLinkedListWithHandler(int nListNode, dword dwUnused, int nListArray, int nEndValue)",
+      "comment": "Iterates linked list with SEH exception frame setup\n\nAlgorithm:\n1. Initialize exception frame linking current handler to previous frame\n2. Load initial list node index from nListNode+8 (next field)\n3. Loop while nCurrentIndex != nEndValue:\n   a. Validate nCurrentIndex range: 0 <= nCurrentIndex < nListArray+4 (max count)\n   b. Call FUN_6fe228a9 if validation fails (out of bounds)\n   c. Set nStatus = 0 (process marker)\n   d. Load element callback from nListArray+8[nCurrentIndex*8+4]\n   e. Call __CallSettingFrame_12(nElementValue, nListNode, 0x103) if callback != 0\n   f. Load next index from nListArray+8[nCurrentIndex*8]\n4. Store final nCurrentIndex back to nListNode+8\n5. Restore exception frame linking\n\nParameters:\nnListNode (int) - List node with next field at +8\ndwUnused (dword) - Unused parameter\nnListArray (int) - Array structure with count at +4, data at +8\nnEndValue (int) - Terminating index value\n\nReturns:\nvoid - None\n\nSpecial Cases:\n- SEH frame chaining for exception safety (ExceptionList)\n- Validates all array indices before dereferencing\n- nStatus field set to 0 or 0xffffffff on each iteration\n- Note: Function uses 2 stack-allocated SEH temporaries (puStack_c, puStack_10) optimized away\n\nMagic Numbers:\n0x103 - Callback flag/type constant\n0x8 - Offset to next index in array element (size of one element)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:416b2371f2adbf45b25663d159a59cdc"
     },
@@ -5645,6 +5575,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x134A2",
         "LoD/1.10": "0x12B03"
       },
+      "name": "GetWideCharFromEncoding",
+      "signature": "uint GetWideCharFromEncoding(int * pEncodedData)",
+      "comment": "Extracts a wide character from a variable-length encoded data stream\n\nAlgorithm:\n1. Advance encoded data pointer by 4 bytes to next value position\n2. Load high 16-bits from the new pointer position\n3. Load low 16-bits from pointer offset -4 (backing up 4 bytes from new position)\n4. Combine high and low words into single 32-bit wide character value\n\nParameters:\npEncodedData [in/out] - Pointer to encoded wide-character data stream; pointer value is incremented by 4\n\nReturns:\nuint - Combined 32-bit wide character value with high word from forward position and low word from back position",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:42dbe7ade19c5b9c81e427c9077693e7"
     },
@@ -5687,6 +5621,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14BDF",
         "LoD/1.10": "0x146DF"
       },
+      "name": "FreePoolMemoryPages",
+      "signature": "void FreePoolMemoryPages(int nPageCount)",
+      "comment": "Deallocates virtual memory pages from a memory pool and tracks freed pages.\n\nAlgorithm:\n1. Iterate through linked list of pool nodes starting at g_ppPoolTail\n2. For each pool node (if data pointer valid and not -1):\n   a. Initialize offset counter at 0 and bitmap pointer to pool node + 0x2010\n   b. For each memory page in node (iVar3 from 0x3ff000 down by 0x1000):\n      - If bitmap entry equals 0xf0 (free marker):\n        * Call VirtualFree to release memory at [node_data_ptr + iVar3]\n        * On success: set bitmap entry to 0xffffffff, decrement g_dwPoolFreeCount\n        * Update node's minimum free entry if current is lower\n        * Increment freed pages counter, decrement page quota\n        * Exit if page quota reached\n   c. After inner loop, check if any pages were freed and node is fully empty (all entries 0xffffffff)\n   d. If yes, call RemoveLinkedListNode to unlink from pool chain\n3. Move to next pool node (ppvVar4[1])\n4. Exit when all pages freed or reached g_ppPoolTail again\n\nParameters:\n  nPageCount (int) - Number of memory pages to deallocate; function stops after this many\n\nReturns:\n  void - No return value; modifies g_dwPoolFreeCount and pool node structures\n\nSpecial Cases:\n  - If pool node data pointer is -1, skip entire node\n  - If no pages freed in node iteration, do NOT remove node from linked list\n  - Function terminates early if nPageCount reaches 0\n\nMagic Numbers:\n  0xf0 - Bitmap entry value indicating free/available page\n  0xffffffff - Marker for deallocated or unallocated entry\n  0x2010 - Offset to bitmap array within pool node structure\n  0x1000 - Size of single memory page (4096 bytes)\n  0x3ff000 - Starting offset for page iteration (largest page offset)\n  0x400 - Number of pages per pool node (1024 pages)\n  0x4000 - MEM_DECOMMIT flag for VirtualFree\n  0x1000 - Decommit size parameter (4096 bytes)\n\nPool Node Structure Layout:\n  Offset | Size | Field Name | Type | Description\n  0x00   | 4    | reserved   | uint | (unused)\n  0x04   | 4    | pNext      | void*| Next pool node pointer\n  0x0c   | 4    | pMinFree   | void*| Minimum free bitmap entry pointer\n  0x10   | 4    | dwDataPtr  | uint | Base address of virtual memory block or -1\n  0x18   | 4    | bFlags     | uint | Node state flags; 0xffffffff = fully empty\n  0x2010 | 1024 | bitmap[1024]| uint*| Bitmap tracking page allocation status",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4356a93c484fa354f7841c9d1d714a19"
     },
@@ -5729,6 +5667,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x2AB0",
         "LoD/1.10": "0x2930"
       },
+      "name": "InitializeDiabloObject",
+      "signature": "dword * InitializeDiabloObject(dword * pObject)",
+      "comment": "Initialize Diablo object with vtables and internal structures\n\nAlgorithm:\n1. Setup structured exception handling frame (SEH)\n2. Call initialization on field at offset +1 (__cdecl convention)\n3. Initialize field at offset +5 with critical section\n4. Set primary vtable pointer at offset 0 to FUN_6fe2c8fc\n5. Initialize field at offset +1 again with size 0xc\n6. Set field at offset +9 to count 3\n7. Loop 0 to 3, initializing array elements at offset +7 with size 4 each\n8. Initialize field at offset +10 (this pointer)\n9. Initialize field at offset +0xe (another structure)\n10. Set field at offset +0xe to size 0x10\n11. Update primary vtable to FUN_6fe2c90c\n12. Set field at offset +0x34 to 0x10\n13. Update primary vtable to FUN_6fe2c92c\n14. Compute NOT(pObject) & 0xfffffff and store at offset +0x48\n15. Initialize critical section at offset +0x14\n16. Set final vtable to FUN_6fe2c91c\n17. Return pObject\n\nParameters:\npObject (dword *): Pointer to object being initialized\n\nReturns:\npObject: Same pointer passed in, now fully initialized\n\nSpecial Cases:\nUses three different vtables for different initialization phases\nUses Windows SEH mechanism for exception safety during initialization\nField at +9 contains element count (3) for array at offset +7",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:441f6f2892a08e2c6f075e2eb5ddddb4"
     },
@@ -5966,6 +5908,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x133E7",
         "LoD/1.10": "0x12A48"
       },
+      "name": "WriteCharacterWithCount",
+      "signature": "void WriteCharacterWithCount(byte byChar, int * pnBuffer, int * pnCount)",
+      "comment": "Write a character to a formatted output buffer with capacity tracking.\n\nAlgorithm:\n1. Decrement the remaining capacity counter (pnBuffer[1])\n2. If capacity < 0, call WriteCharacterToBuffer to handle buffer exhaustion\n3. If capacity >= 0, write character directly: *(byte*)pnBuffer = byChar\n4. Increment the buffer pointer (pnBuffer[0])\n5. Check result: if WriteCharacterToBuffer returns 0xffffffff (error), set pnCount to -1 and return\n6. Increment output count (pnCount[0]) to track characters written\n\nParameters:\n- byChar (byte): Character to write\n- pnBuffer (int*): Pointer to [0]=buffer_position, [1]=remaining_capacity\n- pnCount (int*): Pointer to character count, set to -1 on error\n\nReturns:\n- void (returns on success or error)\n- Sets pnCount to -1 if WriteCharacterToBuffer fails (buffer error condition)\n- Increments pnCount on successful write\n\nSpecial Cases:\n- When capacity reaches 0 or below, delegates to WriteCharacterToBuffer for handling\n- Truncates character to byte value (& 0xff masking)\n- Tracks total characters written including failed attempts",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:48de6fa61a4bf40c36c288aa452eb3ad"
     },
@@ -6014,9 +5960,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x18ABC",
         "LoD/1.13d": "0x18ACC"
       },
-      "name": "__fassign",
-      "signature": "void __fassign(int flag, char * argument, char * number)",
-      "comment": "Library Function - Single Match\n __fassign\n\nLibrary: Visual Studio 2003 Release",
+      "name": "CheckFloatModuloExceedsClamp",
+      "signature": "int CheckFloatModuloExceedsClamp(void)",
+      "comment": "Check if floating-point modulo result exceeds clamping threshold.\n\nAlgorithm:\n1. Load divisor (g_dDivisor) into FPU ST(0)\n2. Store divisor to local stack temporary [EBP - 0x8]\n3. Load dividend (g_dDividend) into FPU ST(0)\n4. Store dividend to local stack temporary [EBP - 0x10]\n5. Load dividend from [EBP - 0x10] into FPU ST(0)\n6. Divide by divisor from [EBP - 0x8], result in ST(0)\n7. Multiply by divisor from [EBP - 0x8] to compute (dividend/divisor)*divisor\n8. Calculate modulo: dividend - (dividend/divisor)*divisor, result in ST(0)\n9. Store modulo result to local temporary [EBP - 0x18]\n10. Load modulo result and compare with g_dUpperClampMax\n11. Return 1 if modulo > g_dUpperClampMax, else return 0\n\nParameters:\nNone\n\nReturns:\nint - 1 (0x1) if modulo exceeds clamp max, 0 if within bounds\n\nSpecial Cases:\n- Both global values (g_dDivisor, g_dDividend) must be loaded from memory\n- All intermediate calculations stored to stack temporaries due to FPU stack constraints\n- FPU comparison uses FCOMP/FNSTSW/SAHF for flags\n- JBE branch targets: 0x6fe2294b if result <= clamp, else continues to return 1\n- Calling function FUN_6fe2294f uses this as fallback after Windows API check\n\nStack Layout:\n[EBP + 0x0] - Saved EBP\n[EBP - 0x4] - Reserved (SUB ESP 0x18 allocates 24 bytes)\n[EBP - 0x8] - dDivisor temporary\n[EBP - 0x10] - dDividend temporary\n[EBP - 0x18] - dModulo result\n\nMagic Numbers:\n- Globals referenced: g_dDivisor (0x6fe2cc98), g_dDividend (0x6fe2cc90), g_dUpperClampMax (0x6fe2cb28)\n- All are double-precision floats (8 bytes each)",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:49e318c9f11868b2ccda0cc5be0e6fb1"
@@ -6048,10 +5994,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x8B35",
         "LoD/1.13d": "0x8B40"
       },
-      "name": "_tolower",
-      "signature": "int _tolower(int _C)",
-      "comment": "Library Function - Single Match\n _tolower\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeListNode",
+      "signature": "void InitializeListNode(void * pNode)",
+      "comment": "Initialize doubly-linked list node with magic value and checksum for validation.\n\nAlgorithm:\n1. Check if node pointer is non-NULL (return immediately if NULL)\n2. Calculate next pointer at offset +4 from node base\n3. Clear next pointer to zero\n4. Clear checksum field at offset +8 to zero\n5. Set next pointer to point to itself (self-reference)\n6. Set magic value at offset 0 to 0xdddddddd sentinel\n7. Set checksum at offset +8 to bitwise NOT of next pointer address\n\nParameters:\nECX (IMPLICIT) - pNode: void * pointer to list node structure to initialize\n  Offset 0: uint dwMagic - sentinel value (0xdddddddd)\n  Offset 4: void * pNext - next node pointer (self-referencing)\n  Offset 8: uint dwChecksum - bitwise NOT of pNext for validation\n\nReturns:\nvoid - No return value, initializes node in-place\n\nSpecial Cases:\n- If pNode is NULL, function returns without modification\n- Magic value 0xdddddddd indicates initialized/free node\n- Checksum is bitwise NOT of next pointer for redundancy checking\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n-------|------|------------|------|----------------------------\n0x0    | 4    | dwMagic    | uint | Sentinel value (0xdddddddd)\n0x4    | 4    | pNext      | void*| Next node pointer (self-ref)\n0x8    | 4    | dwChecksum | uint | NOT(pNext) for validation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4a6430d1a80fe2522c3aa0640dc4efd7"
     },
@@ -6104,6 +6050,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x51C0",
         "LoD/1.10": "0x4F40"
       },
+      "name": "UpdateBufferIndexAndOffset",
+      "signature": "void UpdateBufferIndexAndOffset(BufferControl * pBuffer)",
+      "comment": "Update buffer control fields: index and offset with modular arithmetic\n\nAlgorithm:\n1. Load index value from pBuffer->index (+0xc)\n2. Add 7 to index creating intermediate value\n3. Mask intermediate with 0xf8 for lower bits\n4. Mask result with 0x1f (bits 3-4) to store new index at +0xc\n5. Right shift masked value by 5 to get multiplier\n6. Left shift multiplier by 2 (equivalent to multiply by 4)\n7. Add 4-byte stride to current offset at pBuffer->offset (+0x4)\n\nParameters:\npBuffer (BufferControl* IMPLICIT in ECX) - Control structure containing index and offset fields\n\nReturns:\nvoid - Modifies pBuffer fields in-place\n\nSpecial Cases:\nMagic numbers: 0x7 (stride adjustment), 0x18/0x1f (index mask range), 0x5 (shift factor)\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n+0x0   | 4    | reserved0  | uint | Reserved field\n+0x4   | 4    | offset     | uint | Current buffer offset incremented by stride\n+0x8   | 4    | reserved1  | uint | Reserved field\n+0xc   | 4    | index      | uint | Buffer index (masked to 0-24 range)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4ada420801a119ba2aed31bf2d149535"
     },
@@ -6129,6 +6079,28 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:4af6f4d1378e3b27617b296b4a2b16cc"
     },
+    "D2CMP_MNE_4afe31ceadb5": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1B6C0",
+        "LoD/1.08": "0x6FE1B6C0",
+        "LoD/1.09": "0x6FDFB480",
+        "LoD/1.09b": "0x6FDFB480",
+        "LoD/1.09d": "0x6FDFB480"
+      },
+      "rvas": {
+        "LoD/1.07": "0xB6C0",
+        "LoD/1.08": "0xB6C0",
+        "LoD/1.09": "0xB480",
+        "LoD/1.09b": "0xB480",
+        "LoD/1.09d": "0xB480"
+      },
+      "name": "ProcessByteTripletsWithCallback",
+      "signature": "dword ProcessByteTripletsWithCallback(byte * pbInputBuffer, byte * pbOutputBuffer, int nCount, void * pfnCallback)",
+      "comment": "Process byte triplets through callback function with optional validation.\n\nAlgorithm:\n1. Check if g_dwPaletteValidFlag is set (palette/validation mode enabled)\n2. If not set, return 0 immediately\n3. Select callback: use pfnCallback if provided, otherwise use Ordinal_10007 (D2Common.PaletteConvert) default\n4. Initialize output pointer to pbOutputBuffer start\n5. Loop for nCount iterations:\n   - Read three consecutive bytes from pbInputBuffer into byCurrentByte, second byte, third byte\n   - Increment input pointer by 3 bytes per iteration\n   - Check if g_dwByteSwapResult is set AND all three bytes are less than 0x0B:\n     * If condition met, set byCurrentByte=0x04, second=0x00, third=0x00 (validation triplet)\n   - Call callback or Ordinal_10007 with (byCurrentByte, second, third) as three separate parameters\n   - Store callback result (byte) to current output position\n   - Increment output pointer\n   - Decrement iteration counter\n6. Return 0 on success\n\nParameters:\n- pbInputBuffer: Pointer to input byte array (read-only, 3 bytes per iteration)\n- pbOutputBuffer: Pointer to output byte array (write-only, 1 byte per iteration)\n- nCount: Number of triplets to process (each triplet = 3 input bytes)\n- pfnCallback: Optional function pointer to custom processor; NULL uses Ordinal_10007 (D2Common.PaletteConvert)\n\nReturns:\n- 0 on success (function always returns 0)\n\nSpecial Cases:\n- If g_dwPaletteValidFlag is 0, function returns 0 without processing\n- If pfnCallback is NULL, uses default Ordinal_10007 callback (D2Common.PaletteConvert)\n- If g_dwByteSwapResult is set and all bytes < 0x0B, forces validation triplet (0x04, 0x00, 0x00)\n- Assumes callback accepts 3 byte parameters and returns byte result\n\nMagic Numbers:\n- 0x0A (0x0B check): Maximum palette index validation threshold\n- 0x04: Validation marker in triplet replacement\n- 3: Bytes read per iteration (triplet size)\n\nRelated Functions:\n- Ordinal_10007 - Default callback processor (D2Common.PaletteConvert) used when pfnCallback is NULL",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:4afe31ceadb5afa13c4719d34ed779eb"
+    },
     "D2CMP_MNE_4b3ae60450c5": {
       "addresses": {
         "LoD/1.07": "0x6FE12BE0",
@@ -6136,7 +6108,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF2C70",
         "LoD/1.09b": "0x6FDF2C70",
         "LoD/1.09d": "0x6FDF2C70",
-        "LoD/1.10": "0x6FDF2AF0"
+        "LoD/1.10": "0x6FDF2AF0",
+        "LoD/1.11": "0x6FE11300",
+        "LoD/1.11b": "0x6FE11300",
+        "LoD/1.12a": "0x6FE11360",
+        "LoD/1.13c": "0x6FE112C0",
+        "LoD/1.13d": "0x6FE111E0"
       },
       "rvas": {
         "LoD/1.07": "0x2BE0",
@@ -6144,8 +6121,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x2C70",
         "LoD/1.09b": "0x2C70",
         "LoD/1.09d": "0x2C70",
-        "LoD/1.10": "0x2AF0"
+        "LoD/1.10": "0x2AF0",
+        "LoD/1.11": "0x1300",
+        "LoD/1.11b": "0x1300",
+        "LoD/1.12a": "0x1360",
+        "LoD/1.13c": "0x12C0",
+        "LoD/1.13d": "0x11E0"
       },
+      "name": "ProcessAuctionSlot",
+      "signature": "void ProcessAuctionSlot(int nSlotIndex)",
+      "comment": "Populate auction list for a specific slot with items.\n\nAlgorithm:\n1. Validate/process the slot index via FUN_6fe132f0\n2. Call Ordinal_403 (AucDraw_UpdateAutoAuctionList) to refresh auction list display with slot data\n3. Return to caller\n\nParameters:\nnSlotIndex - Auction list slot index (0-based)\n\nReturns:\nvoid - Function performs side effects (display update)\n\nSpecial Cases:\n- Called from data reference table (function pointers at 0x6fe2c8fc, 0x6fe2c90c, 0x6fe2c91c, 0x6fe2c92c)\n- Ordinal_403 reference points to s___AUCELLIST___6fe2e048 (auction cell list structure)\n- Magic number 0xfffffffe (-2) indicates \"refresh all\" or \"invalid\" marker for Ordinal_403",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4b3ae60450c59dea6f89451ba50ff9b0"
     },
@@ -6166,6 +6152,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18649",
         "LoD/1.10": "0x18139"
       },
+      "name": "ConvertCharacterCase",
+      "signature": "dword ConvertCharacterCase(dword nChar)",
+      "comment": "Convert ASCII character to uppercase with optional thread-safe table lookup\n \nAlgorithm:\n1. Check if g_bTableEnabled conversion table is disabled\n   - If disabled: Check if char is between 0x41-0x5A (uppercase A-Z)\n   - If in range: Return char + 0x20 offset\n   - Otherwise: Return char unchanged\n2. If table is enabled:\n   - Increment g_dwReferenceCount to track active operations\n   - Check g_bCriticalSectionInUse flag\n   - If flag set: Acquire critical section 0x13 for thread safety\n   - Call FUN_6fe25ee3 to perform table-based conversion with lock acquired\n   - If flag set: Release critical section 0x13\n   - Otherwise: Decrement reference count immediately\n3. Return converted character value\n\nParameters:\n  nChar (uint) - ASCII character value to convert (typically 0x41-0x5A for uppercase)\n\nReturns:\n  dword - Converted character value (original if no conversion needed)\n\nSpecial Cases:\n  - Characters outside A-Z range (0x41-0x5A) are returned unchanged\n  - Thread-safety depends on g_bTableEnabled flag\n  - Reference counting prevents table swaps during active conversions\n\nMagic Numbers:\n  0x41 - ASCII 'A' (65 decimal)\n  0x5A - ASCII 'Z' (90 decimal)  \n  0x5B - ASCII '[' (91 decimal), upper bound exclusive\n  0x20 - Offset from uppercase to lowercase (32 decimal)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4b965c6b568965e3ac70ee94d9ada740"
     },
@@ -6193,24 +6183,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:4beef3b29c3b4b805408e60c6861211a"
     },
-    "D2CMP_MNE_4e6c722d33ab": {
-      "addresses": {
-        "LoD/1.11": "0x6FE11300",
-        "LoD/1.11b": "0x6FE11300",
-        "LoD/1.12a": "0x6FE11360",
-        "LoD/1.13c": "0x6FE112C0",
-        "LoD/1.13d": "0x6FE111E0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1300",
-        "LoD/1.11b": "0x1300",
-        "LoD/1.12a": "0x1360",
-        "LoD/1.13c": "0x12C0",
-        "LoD/1.13d": "0x11E0"
-      },
-      "method": "MNE",
-      "index": "MNE:4e6c722d33ab754befc00523d8bdeb82"
-    },
     "D2CMP_MNE_4ebd25a652d4": {
       "addresses": {
         "LoD/1.07": "0x6FE2867F",
@@ -6228,6 +6200,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1846F",
         "LoD/1.10": "0x172C2"
       },
+      "name": "ReleaseCharacterTableLock",
+      "signature": "void ReleaseCharacterTableLock(dword dwCharacterSlot)",
+      "comment": "Release critical section lock for a character table slot.\n\nAlgorithm:\n1. Extract high 27 bits (>> 5) to index first-level array g_pCharacterTableArray\n2. Extract low 5 bits (&0x1f) for second-level offset within slot (multiply by 0x24 per entry)\n3. Add base offset 0xc to critical section location within slot structure\n4. Call LeaveCriticalSection to release the lock\n\nParameters:\n- dwCharacterSlot: Character slot index (encodes array index in high bits, entry offset in low bits)\n\nReturns:\n- void\n\nSpecial Cases:\n- Slot index encodes two-level array access: high 27 bits select array, low 5 bits select entry within array\n- Each slot occupies 0x24 bytes; critical section is at offset 0xc\n- Must be paired with AcquireCharacterTableLock; imbalanced calls cause deadlock\n\nRelated Functions:\n- AcquireCharacterTableLock() - Acquire lock for same slot\n- InitializeCharacterTableArray() - Initialize table and critical sections\n- ProcessCharacterTableWrite() - Caller using this to protect writes",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4ebd25a652d48fc0c3275eab0a712286"
     },
@@ -6248,6 +6224,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14F45",
         "LoD/1.10": "0x14A45"
       },
+      "name": "AllocateBufferSlot",
+      "signature": "byte * AllocateBufferSlot(dword * ppHeapControl, dword dwFreeSize, dword dwSlotSize)",
+      "comment": "Allocate a fixed-size slot in a managed heap buffer with marker support\n\nAlgorithm:\n1. Extract heap control parameters: current position and remaining free size\n2. Set marker byte at slot position (dwSlotSize as marker value)\n3. Scan for available slot:\n   - If allocation index < requested size, search for first empty slot at offset index\n   - Walk buffer using marker bytes as strides (each marker byte indicates slot size)\n4. Calculate zero-byte padding between slots:\n   - Count consecutive zero bytes after current position\n   - If zero count >= requested size, slot found with enough space\n5. Update heap control pointer and remaining size based on allocation:\n   - Move pointer past marker (8 bytes offset) and padding\n   - Decrement remaining free size\n   - If space insufficient after allocation, return 0 (failure)\n6. Return pointer to allocated slot (or 0 if no space available)\n\nParameters:\nppHeapControl (uint *) - Pointer to heap control struct with two fields: [0]=current_position, [4]=allocation_index\ndwFreeSize (dword) - Remaining free space in heap in bytes\ndwSlotSize (dword) - Marker byte value identifying this allocation size category\n\nReturns:\nPointer to allocated slot in heap (non-zero on success)\n0 - If insufficient space or heap exhausted\n\nStructure Layout:\nOffset | Size | Field | Type | Description\n0x00   | 4    | pos   | dword | Current allocation position pointer\n0x04   | 4    | idx   | dword | Allocation index for slot scanning",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4f3543287939943021eaf1632a1582f1"
     },
@@ -6286,28 +6266,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16559",
         "LoD/1.10": "0x155EE"
       },
+      "name": "SeekCharacterTableFile",
+      "signature": "uint SeekCharacterTableFile(uint dwCharIndex, long lFileOffset, uint dwSeekOrigin)",
+      "comment": "Seek file pointer in character table file and clear busy flag.\n\nAlgorithm:\n1. Get file handle from character table slot using nCharIndex\n2. If handle is invalid (-1), get error storage pointer and set error code to 9\n3. Otherwise, call SetFilePointer to seek to nOffset position from nOrigin\n4. If seek fails (returns -1), call GetLastError to get error code\n5. If no error, get character entry flags from character table array\n6. Clear bit 1 (busy flag 0x02) from flags using AND 0xFD mask\n7. Return file position or -1 on error\n\nParameters:\n  nCharIndex (uint): Character table slot index (0-based)\n  nOffset (long): Seek offset in bytes\n  nOrigin (uint): Seek origin (0=start, 1=current, 2=end)\n\nReturns:\n  uint: File position after seek, or -1 (0xFFFFFFFF) on error\n\nSpecial Cases:\n  - Character table is organized as 32-character groups in array\n  - Each character entry is 0x24 bytes (36 bytes)\n  - Busy flag (0x02) is cleared after successful seek\n  - Error code 9 indicates invalid character slot\n\nRelated Functions:\n  - FUN_6fe285de: Gets file handle for character slot\n  - FUN_6fe2854d: Gets error code storage pointer\n  - SetFilePointer: Win32 API for file seeking\n  - GetLastError: Win32 API for last error\n  - FUN_6fe284da: Error handler/logger",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4f4efd8121d403a870aeab94c4a12f4c"
-    },
-    "D2CMP_MNE_4fa45e51f3ce": {
-      "addresses": {
-        "LoD/1.07": "0x6FE131D0",
-        "LoD/1.08": "0x6FE131D0",
-        "LoD/1.09": "0x6FDF31D0",
-        "LoD/1.09b": "0x6FDF31D0",
-        "LoD/1.09d": "0x6FDF31D0",
-        "LoD/1.10": "0x6FDF3060"
-      },
-      "rvas": {
-        "LoD/1.07": "0x31D0",
-        "LoD/1.08": "0x31D0",
-        "LoD/1.09": "0x31D0",
-        "LoD/1.09b": "0x31D0",
-        "LoD/1.09d": "0x31D0",
-        "LoD/1.10": "0x3060"
-      },
-      "method": "MNE",
-      "index": "MNE:4fa45e51f3ceaf8c504825f9cef7e4ae"
     },
     "D2CMP_MNE_4fab193fe262": {
       "addresses": {
@@ -6340,6 +6304,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x7AE0",
         "LoD/1.09d": "0x7AE0"
       },
+      "name": "ApplyTableLookup",
+      "signature": "void ApplyTableLookup(byte * pbSourceData, int nStartCol, int nRows, int nRowStride, int nStartPixel, int nEndPixel, int nWidth, int nTableBase)",
+      "comment": "Apply table lookup transformation to pixel data with RLE decoding.\n\nAlgorithm:\n1. Initialize row offset and pixel base from parameters\n2. Loop through encoded source data:\n   a. Read byte from encoded stream (advance pointer)\n   b. If byte is negative (has high bit), strip high bit and:\n      - If result is 0x00, decrement row counter and reset to next row\n      - Otherwise, add stripped value to current pixel position\n   c. If byte is non-negative, process as a run of pixels:\n      - Calculate visible range (intersection of pixel position and drawable area)\n      - Compute count of pixels in range\n      - If count > 0, copy pixels with table lookup:\n        * Use dword-unrolled loop for 8-byte blocks\n        * Handle remainders via Duff's device switch statement\n        * Each pixel: lookup_value = source[pixel] + base_offset + (dest[pixel] * 256)\n        * Write back lookup result to destination\n      - Advance all pointers by run length\n3. Return when row counter reaches 0\n\nParameters:\n- pbSourceData: Pointer to RLE-encoded pixel source data\n- nStartCol: Starting column (left edge of drawable area)\n- nRows: Number of rows to process\n- nRowStride: Bytes to advance per row\n- nStartPixel: Left boundary of visible region\n- nEndPixel: Right boundary of visible region\n- nWidth: Width of encoded data per row\n- nTableBase: Base offset for table lookup operations\n\nReturns:\n- void (modifies destination buffer in-place)\n\nSpecial Cases:\n- RLE encodes runs as positive bytes, metadata as negative bytes (0x80-0xFF)\n- High bit stripped before use: actual value = byte & 0x7F\n- Clipping against drawable region happens during block copy\n- Duff's device switch optimization reduces loop overhead for byte-aligned copies\n- Local_14 persists row offset state across outer loop iterations\n\nMagic Numbers Reference:\n- 0x7F: Mask to strip high bit from encoded byte\n- 0x100: Multiplier to weight destination pixel in lookup index\n- 8: Block size for dword-unrolled copy loop\n\nStructure Layout (Implicit - operates on byte buffers):\nOffset | Size | Field | Type | Description\n-------|------|-------|------|-------------\nvaries | 1    | pixel | byte | Source/dest pixel value for lookup operation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4febccc27a3bf0061340b6e12c9ecc7e"
     },
@@ -6350,7 +6318,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00CC8",
         "LoD/1.09b": "0x6FE00CC8",
         "LoD/1.09d": "0x6FE00CC8",
-        "LoD/1.10": "0x6FE00774"
+        "LoD/1.10": "0x6FE00774",
+        "LoD/1.11": "0x6FE277B6",
+        "LoD/1.11b": "0x6FE277A6",
+        "LoD/1.12a": "0x6FE27856",
+        "LoD/1.13c": "0x6FE2786C",
+        "LoD/1.13d": "0x6FE27876"
       },
       "rvas": {
         "LoD/1.07": "0x10ED2",
@@ -6358,8 +6331,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10CC8",
         "LoD/1.09b": "0x10CC8",
         "LoD/1.09d": "0x10CC8",
-        "LoD/1.10": "0x10774"
+        "LoD/1.10": "0x10774",
+        "LoD/1.11": "0x177B6",
+        "LoD/1.11b": "0x177A6",
+        "LoD/1.12a": "0x17856",
+        "LoD/1.13c": "0x1786C",
+        "LoD/1.13d": "0x17876"
       },
+      "name": "HandleStructuredException",
+      "signature": "void HandleStructuredException(void * pFrame, PEXCEPTION_RECORD pExceptRecord)",
+      "comment": "Handle structured exception by unwinding and clearing flags.\n\nAlgorithm:\n1. Save current FS:[0] (exception handler chain head) to local_8\n2. Set local_c to recovery address (0x6fe20efa) for exception unwinding\n3. Call RtlUnwind(pFrame, recovery_addr, pExceptRecord, NULL) to unwind stack and trigger exception handlers\n4. After unwinding returns, clear EXCEPTION_UNWINDING flag (0x02) from pExceptRecord->ExceptionFlags via AND with 0xFD\n5. Restore exception handler chain: Read current FS:[0] to EAX, write to [original FS:[0]] to maintain chain integrity\n6. Restore original FS:[0] from saved local_8\n\nParameters:\n- pFrame (void *): Target stack frame to unwind to during exception handling\n- pExceptRecord (PEXCEPTION_RECORD): Exception record containing flags and context\n\nReturns:\n- void (modifies pExceptRecord->ExceptionFlags in-place)\n\nSpecial Cases:\n- Clears unwinding flag to allow nested exception processing\n- Preserves exception handler chain by swapping FS:[0] values\n- Recovery address 0x6fe20efa is jump target for RtlUnwind\n\nMagic Numbers:\n- 0xFD (binary: 11111101): AND mask to clear bit 1 (EXCEPTION_UNWINDING flag)\n- 0x02: EXCEPTION_UNWINDING flag value being cleared\n- FS:[0]: Thread exception handler chain list head (TEB structure offset)\n\nRelated Functions:\n- RtlUnwind() - Windows API for structured exception handling unwinding",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee"
     },
@@ -6380,6 +6362,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13812",
         "LoD/1.10": "0x13312"
       },
+      "name": "ParseCommandArguments",
+      "signature": "void ParseCommandArguments(char * szInput, char * * ppszArgvList, char * szOutput, int * pnArgc, int * pnCharCount)",
+      "comment": "Parse command-line arguments with support for quoted strings and escape sequences.\n\nAlgorithm:\n1. Initialize argument count to 1, character count to 0, and clear first argv pointer\n2. If input starts with quote (0x22): process quoted string mode\n   - Scan characters until closing quote or null terminator (0x00)\n   - Check character type via g_abCharTypeTable[char + 1] & 0x04 for escape characters\n   - Handle escape sequences: if escape char found, skip next char\n   - Copy unescaped chars to output buffer, count total characters\n   - Terminate quoted string with null (0x00)\n3. For unquoted strings: scan until space (0x20), tab (0x09), or null (0x00)\n   - Handle escape sequences same as quoted mode\n   - If space/tab found, backtrack one position\n   - If null found, decrement pointer\n4. Skip whitespace (0x20, 0x09) in input\n5. For each non-whitespace token found:\n   - Store output pointer to argv array (or skip if argv is null)\n   - Increment argument count\n   - Process backslash escapes (0x5c): count consecutive backslashes\n     - If followed by quote (0x22): determine if quote is escaped (odd backslashes = escaped)\n     - If quote not escaped: toggle quoted mode, output half the backslashes\n     - If quote escaped: output half the backslashes, treat quote as literal char\n   - Check character type and handle escape sequences\n   - Copy characters to output buffer\n   - Null-terminate each argument\n6. Store final argv pointer (null terminator) if argv provided\n7. Increment final argument count\n\nParameters:\nszInput (char *): Input command-line string to parse\nppszArgvList (char **): Pointer to argv array to populate (NULL to skip)\nszOutput (char *): Output buffer for parsed argument strings (NULL to count only)\npnArgc (int *): Pointer to argument count (initialized to 1, incremented per argument)\npnCharCount (int *): Pointer to character count output (total chars written)\n\nReturns:\nvoid (void): No return value. Results written via pointers.\n\nSpecial Cases:\n- If szInput starts with 0x22 (quote), uses quoted string parsing mode\n- If ppszArgvList is NULL, skips storing argv pointers but still counts arguments\n- If szOutput is NULL, counts characters and arguments without writing output\n- Escape character check uses g_abCharTypeTable with flag 0x04\n- Consecutive backslashes before quote: if even count, quote starts/ends string; if odd, quote is literal\n- Final argv element set to NULL (0x00) to mark end of argument list\n- Note: Function uses stack-allocated temporaries optimized away (temp bool variables in disassembly only)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0"
     },
@@ -6523,10 +6509,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x2D3A",
         "LoD/1.13d": "0x2D3A"
       },
-      "name": "__mtinitlocks",
-      "signature": "int __mtinitlocks(void)",
-      "comment": "Library Function - Single Match\n __mtinitlocks\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "CheckBitmapRangeCleared",
+      "signature": "dword CheckBitmapRangeCleared(dword pBitmap, dword nBitOffset)",
+      "comment": "Check if a range of bits in a bitmap starting from a given offset are all cleared (zero).\n\nAlgorithm:\n1. Calculate dword index: nDwordIndex = nBitOffset / 0x20 (divide by 32)\n2. Calculate bit position within dword: nBitMask = 1 << (0x1f - (nBitOffset % 0x20))\n3. Read dword at [pBitmap + nDwordIndex*4] and test if the bit is set (inverted mask: ~(-1 << shift))\n4. If the tested bit is set, return 0 (range not cleared)\n5. Increment dword index and check remaining dwords (indices 1 through 2)\n6. For each remaining dword, verify it contains all zeros\n7. Return 1 if all bits from nBitOffset onwards are clear, else 0\n\nParameters:\n  pBitmap (int *) - Pointer to array of dword bitmaps (base address)\n  nBitOffset (int) - Starting bit offset to check from (0-based)\n\nReturns:\n  1 if all bits from nBitOffset through end of bitmap are cleared\n  0 if any bit from nBitOffset onwards is set\n\nSpecial Cases:\n  - Bitmap is 96-bit (3 dwords total) - checks up to bit 95\n  - Bit position calculation uses inverted mask for range checking\n  - Loop validates remaining dwords contain no set bits",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546b5c43c0effce0a0403e1069ea2e2c"
     },
@@ -6581,6 +6567,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15DE7",
         "LoD/1.10": "0x15FA3"
       },
+      "name": "RemoveLinkedListNode",
+      "signature": "void RemoveLinkedListNode(void * * ppNode)",
+      "comment": "Remove doubly-linked list node from global node list.\n\nAlgorithm:\n1. Deallocate virtual memory at ppNode[4] using VirtualFree(MEM_RELEASE)\n2. Check if node is head of global PTR_PTR_LOOP_6fe32da0; update head to ppNode[1] if match\n3. If node is not list sentinel (PTR_LOOP_6fe30d80):\n   a. Update forward pointer: ppNode[1][0] = ppNode[0]\n   b. Update backward pointer: ppNode[0][4] = ppNode[1]\n   c. Free heap memory at ppNode using HeapFree\n   d. Return\n4. If node is sentinel:\n   a. Set g_dwNodeListCount = 0xffffffff (list empty)\n   b. Return\n\nParameters:\nppNode (void **) - Pointer to doubly-linked list node; must be valid heap address\n\nReturns:\nvoid - No return value; performs in-place list removal\n\nSpecial Cases:\n- Sentinel node (PTR_LOOP_6fe30d80) marks list end; removing it sets g_dwNodeListCount to 0xffffffff\n- VirtualFree deallocates large buffer at ppNode[4]; HeapFree deallocates node structure itself\n- Null pointer checks absent; caller responsible for valid ppNode\n\nStructure Layout (Node):\n| Offset | Size | Field Name      | Type      | Description              |\n|--------|------|-----------------|-----------|--------------------------|\n| 0x00   | 4    | pPrev           | void **   | Previous node pointer    |\n| 0x04   | 4    | pNext           | void **   | Next node pointer        |\n| 0x08   | 4    | Reserved        | uint      | (unused)                 |\n| 0x0C   | 4    | Reserved        | uint      | (unused)                 |\n| 0x10   | ?    | pDataBuffer     | void *    | Large virtual allocation |",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:54ffff5ceafbb1247d2270b70dfe4f31"
     },
@@ -6627,6 +6617,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x9280",
         "LoD/1.09d": "0x9280"
       },
+      "name": "QuantizePaletteImage",
+      "signature": "void QuantizePaletteImage(byte * pImageData)",
+      "comment": "Quantize RGB image pixels to indexed palette format using nearest-color matching.\n\nAlgorithm:\n1. Initialize output buffer at offset +0x33500 from input image data\n2. Iterate through each row (0x100 rows, stepping by 4 bytes for DWORD alignment)\n3. For each row, iterate through 0x100 pixels\n4. Extract R/G/B components from current pixel and reference row pixel\n5. Sum component values and clamp to [0..0xFF] range (saturating add)\n6. Search palette (0x100 entries) to find closest color match using Euclidean distance\n7. Distance calculated as: sqrt((R-ref_R)^2 + (G-ref_G)^2 + (B-ref_B)^2)\n8. Write best match palette index to output buffer\n9. Continue until entire 0x100x0x100 image processed\n\nParameters:\npImageData (__fastcall in ECX): Pointer to RGB image data; output written at [pImageData + 0x33500]\n\nReturns:\nvoid - output palette indices written to memory at offset 0x33500\n\nSpecial Cases:\n- Pixel stride: 4 bytes (DWORD-aligned, likely BGRA or XRGB format with padding)\n- Component addition saturates at 0xFF (checked via CMP EDX)\n- Palette color format: 4 bytes per entry (same 4-byte stride as pixel processing)\n- Distance calculation uses integer math (IMUL) - may overflow for large distances\n- Inner loop searches entire 0x100 palette per pixel (not optimized)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:57251327025cae3bc206a4c7c58e4bf5"
     },
@@ -6669,6 +6663,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13485",
         "LoD/1.10": "0x12AE6"
       },
+      "name": "GetNextVarArgValue",
+      "signature": "uint GetNextVarArgValue(uint * pVarArgPtr)",
+      "comment": "Retrieves the next value from a variadic argument list\n\nAlgorithm:\n1. Increment the vararg pointer by 4 bytes (word boundary alignment for x86)\n2. Read and return the value at pointer-4 (the value at the current argument location)\n\nParameters:\npVarArgPtr (uint *) - Pointer to current position in variadic argument list; incremented on each call\n\nReturns:\nuint - The next argument value from the vararg list\n\nSpecial Cases:\n- Assumes 32-bit argument size (4 bytes per argument)\n- Pointer arithmetic: moves by word size, retrieves previous word's value\n- No validation of pointer validity or null termination",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:57ac66118a20c90490ffe62af18c6499"
     },
@@ -6689,6 +6687,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x17A44",
         "LoD/1.10": "0x178B3"
       },
+      "name": "ShiftLeft96Bit",
+      "signature": "void ShiftLeft96Bit(uint * pdwBuffer)",
+      "comment": "Left shift 96-bit value stored in 3-element uint array.\n\nAlgorithm:\n1. Load first two uint values from array at offsets 0 and 4\n2. Left shift first value (dwValue0) by 1, store at offset 0\n3. Left shift second value (dwValue1) by 1, OR with sign bit from dwValue0, store at offset 4\n4. Left shift third value by 1, OR with sign bit from dwValue1, store at offset 8\n\nParameters:\npdwBuffer - pointer to 3-element uint array [dw0, dw1, dw2]\n\nReturns:\nvoid - buffer modified in place\n\nSpecial Cases:\nSign bits propagate from lower to higher elements to maintain precision across 96-bit boundary",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:58ce78ec7b76961d09886d9a93b93cae"
     },
@@ -6709,18 +6711,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x186B8",
         "LoD/1.10": "0x181A8"
       },
+      "name": "DecompressCharacterWithCompression",
+      "signature": "uint DecompressCharacterWithCompression(void * this, void * pBuffer, uint dwCharCode)",
+      "comment": "Decompresses character codes using compression lookup tables and locale conversion.\n\nAlgorithm:\n1. If compression disabled (g_bTableEnabled == 0):\n   - If character in range [0x61, 0x7A] (lowercase a-z), subtract 0x20 to convert to uppercase\n   - Otherwise return unchanged\n2. If compression enabled:\n   - For characters < 0x100, check compression flag (0x02 bit) in lookup table\n   - If compression mode < 2: check table directly, else call DecompressValueFromTable\n   - If flag is 0, return early without conversion\n3. Bit manipulation phase:\n   - Extract high byte (char >> 8) and check bit 0x80 in lookup table[high_byte*2+1]\n   - If bit 0x80 clear: set low byte only (1 byte result)\n   - If bit 0x80 set: prepare 2-byte output combining bytes\n4. Locale conversion:\n   - Call LocaleMapStringWithConversion to convert bytes using locale tables\n   - Output size: 1 or 2 bytes depending on bit 0x80 check\n   - Extract result: 1 byte if conversion returned 1, 2 bytes if returned 2\n\nParameters:\n  pBuffer (void*) - IMPLICIT: Pointer passed via ECX (thiscall convention)\n  dwCharCode (uint) - Character code to decompress, range varies\n\nReturns:\n  uint - Decompressed character code or original if no conversion applied\n\nSpecial Cases:\n  - Magic constant 0x61: lowercase 'a' ASCII boundary\n  - Magic constant 0x7A: lowercase 'z' ASCII boundary  \n  - Magic constant 0x20: ASCII offset for uppercase conversion (32 decimal)\n  - Magic constant 0x100: Compression table size boundary\n  - Magic constant 0x80: High bit flag in compression lookup byte\n  - Bit 0x02 in compression flag: Indicates character needs decompression\n\nNote: Function uses stack-allocated temporaries for multi-byte conversion buffer at [EBP-0x4].",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5918dc16e1bf74054af7a7988b490678"
-    },
-    "D2CMP_MNE_591ee66471af": {
-      "addresses": {
-        "LoD/1.10": "0x6FDFB5C0"
-      },
-      "rvas": {
-        "LoD/1.10": "0xB5C0"
-      },
-      "method": "MNE",
-      "index": "MNE:591ee66471afd1ec7c4ab96c7b771e10"
     },
     "D2CMP_MNE_59ffffab07eb": {
       "addresses": {
@@ -6739,16 +6735,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:59ffffab07eb47efe6912898b879c930"
-    },
-    "D2CMP_MNE_5a84972b29e2": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF3D20"
-      },
-      "rvas": {
-        "LoD/1.10": "0x3D20"
-      },
-      "method": "MNE",
-      "index": "MNE:5a84972b29e279caa387545e908138a2"
     },
     "D2CMP_MNE_5adadc886de1": {
       "addresses": {
@@ -6795,6 +6781,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0xFB50",
         "LoD/1.13d": "0xD080"
       },
+      "name": "AcquireOrInitializeCriticalSection",
+      "signature": "void AcquireOrInitializeCriticalSection(int nSectionIndex)",
+      "comment": "Acquire or initialize a critical section from a global array indexed by nSectionIndex.\n\nAlgorithm:\n1. Calculate pointer to critical section array element: pnSectionPtr = &g_paCriticalSections[nSectionIndex]\n2. Check if critical section at index is already initialized (pnSectionPtr == NULL)\n   - If initialized, jump to step 8\n3. Allocate 0x18 bytes (24 bytes = CRITICAL_SECTION structure size) via _malloc\n4. Check allocation success - if NULL, call __amsg_exit(0x11)\n5. Acquire global initialization lock via recursive call FUN_6fe21c63(0x11)\n6. Double-check if section is still NULL (another thread may have initialized)\n7. Initialize critical section structure and store pointer in array element\n   - If still NULL: InitializeCriticalSection, then store pointer\n   - If non-NULL: Free allocated memory via FUN_6fe21cd9 (cleanup duplicate allocation)\n8. Release global initialization lock via FUN_6fe21cc4(0x11)\n9. Enter the critical section via EnterCriticalSection(pnSectionPtr)\n\nParameters:\nnSectionIndex (int) - Index into global critical section array (0x11 = lock index for initialization)\n\nReturns:\nvoid\n\nSpecial Cases:\n- nSectionIndex == 0x11 is reserved for the global initialization lock itself\n- Uses recursive call mechanism: outer call acquires lock at [0x11], inner calls wait for initialization\n- Double-check pattern prevents race condition where multiple threads try to allocate same section\n\nMagic Numbers:\n0x18 - CRITICAL_SECTION structure size (24 bytes)\n0x11 - Reserved index for global initialization lock",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5ba7875cbad7a3d5fce31ff25fd40455"
     },
@@ -6845,6 +6835,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3120",
         "LoD/1.09d": "0x3120"
       },
+      "name": "UnlinkAndCloseNode",
+      "signature": "void UnlinkAndCloseNode(int * pNode)",
+      "comment": "Unlink and close a doubly-linked list node, handling both previous and next pointer updates.\n\nAlgorithm:\n1. Store address of head pointer (param_1 + 1)\n2. While list size [param_1 + 2] > 0:\n   a. Load current node at offset [param_1[0]] + [param_1[2]]\n   b. If node value non-zero, unlink from list:\n      - Load next pointer offset [current + 4]\n      - If offset negative, use bitwise NOT to get target address\n      - If offset positive, calculate target as [current + offset - previous_offset]\n      - Copy node value to target address\n      - Update previous node's next pointer\n      - Clear current node value and next pointer\n3. Process head node if present:\n   a. If head [param_1 + 1] non-zero:\n      - Load head offset [param_1 + 2]\n      - Calculate target address (negative offset uses NOT, positive uses offset calc)\n      - Copy head value to target\n      - Update next pointer in target\n      - Clear head value and offset\n\nParameters:\n  pNode (int *): IMPLICIT ECX - Pointer to list structure [0]=data, [1]=head, [2]=size\n\nReturns:\n  void\n\nSpecial Cases:\n  Negative offsets indicate bitwise NOT encoded addresses\n  Handles empty lists (size == 0, no iteration needed)\n\nMagic Numbers Reference:\n  0x0: NULL terminator for node values/pointers\n  Offset calculations: array indexing by field offset from base address",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5d1c4c20e16b03848e6295cc537b2bab"
     },
@@ -6887,6 +6881,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1220D",
         "LoD/1.10": "0x11D0D"
       },
+      "name": "ProcessExceptionRecord",
+      "signature": "void ProcessExceptionRecord(int * pExceptionContext, int nCodeOffset, byte * pExceptionInfo, byte * pTargetInfo)",
+      "comment": "Process exception record with context validation and handler invocation\n\nAlgorithm:\n1. Initialize exception handling context by saving/setting exception list pointers\n2. Validate pExceptionInfo: check offset+4 for non-null handler reference, return if null\n3. Validate handler name: ensure byte at handler+8 is not null terminator, return if null\n4. Validate pExceptionInfo: check offset+8 for non-null data table reference, return if null\n5. Calculate pDataBuffer = data_table[0xc] + nCodeOffset\n6. Initialize local exception flags to 0\n7. Branch on pExceptionInfo flag 0x8: if clear (0), execute simple handler path; if set (1), execute complex handler path\n8. For flag clear (simple path): check pTargetInfo flag 0x1 for processing variant\n9. Call FUN_6fe257bc to validate context handler, FUN_6fe257d8 to validate buffer\n10. Call FUN_6fe22648 to prepare transformation and FUN_6fe25810 or FUN_6fe257f4 to execute\n11. Check pTargetInfo flags 0x4 to select between ComputedJumpThunk and TrampolineIndirectCall\n12. For flag set (complex path): validate size field at pTargetInfo+0x14 equals 4, continue array processing\n13. On success: restore exception list and return\n14. On failure: call FUN_6fe228a9 error handler, restore exception list, return\n\nParameters:\n- pExceptionContext (int*): Context structure with handler info at offset 0x18\n- nCodeOffset (int): Offset into data table for calculating buffer address\n- pExceptionInfo (byte*): Exception info structure with flags (bit 0x8), handler ref at offset 0x4, data table at offset 0x8\n- pTargetInfo (byte*): Target configuration with flags (bits 0x1, 0x4), callback at offset 0x18, size at offset 0x14, data at offset 0x8\n\nReturns:\n- void: Function returns void in all paths (success and failure)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5d9faef2c102c03bf273541fb527de6c"
     },
@@ -6907,6 +6905,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18A2A",
         "LoD/1.10": "0x1862A"
       },
+      "name": "AccumulateExponentDigits",
+      "signature": "void AccumulateExponentDigits(dword * pdwArray, dword dwExponent, int nSign)",
+      "comment": "Accumulate exponent digits into a 96-bit number array.\n\nAlgorithm:\n1. Initialize base pointer to positive exponent table (g_pExponentBasePointer)\n2. If exponent is negative, negate it and use alternate table (0x6fe33880)\n3. If sign flag is zero, clear output array first\n4. While exponent != 0:\n   - Shift to next table entry (advance by 0x15 * sizeof(pointer))\n   - Extract high 3 bits of exponent (>> 3) for quotient\n   - Extract low 3 bits of exponent (& 7) for remainder\n   - If remainder is non-zero, add corresponding table entry to output\n   - Check if table value exceeds 0x7fff: if yes, adjust local variables\n   - Call AddUint96() to accumulate into result array\n   - Continue until exponent becomes zero\n\nParameters:\n  pdwArray: Pointer to output 96-bit accumulator (3x dword array)\n  dwExponent: Exponent value to accumulate (can be negative)\n  nSign: Sign flag (0=clear array first, non-zero=preserve)\n\nReturns:\n  void (result stored in pdwArray)\n\nSpecial Cases:\n  - Negative exponents use alternate table at 0x6fe33880\n  - Values >= 0x8000 trigger special handling with local variable swapping\n  - Exponent 0 results in immediate return",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5da54fa8fcd8f9f672e8d39458e0992c"
     },
@@ -6945,16 +6947,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:5e0c753c496e2cbf530095a83dc9362a"
-    },
-    "D2CMP_MNE_5ead84294924": {
-      "addresses": {
-        "LoD/1.07": "0x6FE16260"
-      },
-      "rvas": {
-        "LoD/1.07": "0x6260"
-      },
-      "method": "MNE",
-      "index": "MNE:5ead84294924e40ef37e3b2bf40931f4"
     },
     "D2CMP_MNE_5f5a2dadfb6e": {
       "addresses": {
@@ -7006,15 +6998,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE12CB0",
         "LoD/1.09": "0x6FDF2CB0",
         "LoD/1.09b": "0x6FDF2CB0",
-        "LoD/1.09d": "0x6FDF2CB0"
+        "LoD/1.09d": "0x6FDF2CB0",
+        "LoD/1.10": "0x6FDF2B30"
       },
       "rvas": {
         "LoD/1.07": "0x2CB0",
         "LoD/1.08": "0x2CB0",
         "LoD/1.09": "0x2CB0",
         "LoD/1.09b": "0x2CB0",
-        "LoD/1.09d": "0x2CB0"
+        "LoD/1.09d": "0x2CB0",
+        "LoD/1.10": "0x2B30"
       },
+      "name": "TriggerFatalError",
+      "signature": "void TriggerFatalError(dword * pExceptionRecord)",
+      "comment": "Exception handler destructor - cleanup and finalize exception context.\n\nAlgorithm:\n1. Set exception handler pointer and mark exception active (state=1)\n2. Loop while child list exists: get child list entry, mark for cleanup\n3. First cleanup pass: iterate array items, move items to new container\n4. Call cleanup handler for each array item\n5. Deallocate main container using Ordinal_403\n6. Second cleanup pass: process remaining list entries\n7. Move final container entry to new location, clear flags\n8. Restore previous exception handler and exit\n\nParameters:\npExceptionRecord (dword *) - Exception record structure pointer, IMPLICIT in EAX\nAlgorithm parameter registers: EBX (implicit), ESI (implicit)\n\nReturns:\nvoid - No return value, modifies exception context in-place\n\nSpecial Cases:\n- Flag test [EBP + 0x8] determines cleanup path\n- Negative size values use bitwise NOT: (~dwSize) for offset calculation\n- Container reallocation occurs when size >= 0\n\nMagic Numbers Reference:\n0x6fe2c8fc - Pointer to PopulateAuctionList (VTable entry)\n0x6fe291c1 - Exception handler label\n0x6fe2e500 - Container type identifier\n0xfffffffe - Special flag for container deletion\n0xffffff00 - Mask for clearing exception flag\n0xc - Container stride (3 dwords per item)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6064991a2af50651cf2902deed604c79"
     },
@@ -7057,6 +7055,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x90C0",
         "LoD/1.09d": "0x90C0"
       },
+      "name": "RemoveNodeFromLinkedList",
+      "signature": "void RemoveNodeFromLinkedList(void * pListManager, void * pNode)",
+      "comment": "Removes a node from a doubly-linked list in a queue/cache manager.\n\nAlgorithm:\n1. Check if list is non-empty (pListManager->count != 0), exit if empty\n2. If pNode is NULL, remove first node from head:\n   - Load head pointer from pListManager->next[0x18]\n   - Set head to pNode->next[0xc]\n   - Update pListManager->next pointer and tail pointer\n   - Clear node's prev/next links\n3. If pNode is specified:\n   - Load current head pointer\n   - Handle special cases: if removing head node or tail node\n   - For other nodes, unlink from neighbors via double-link pointers\n   - Clear node's prev/next links to 0\n4. If pNode is non-NULL after removal:\n   - Decrement pListManager->count from pNode->size[0x4]\n   - Call optional callback function pointer if pNode->flags[0x8] != 0\n   - Clear pNode fields\n   - Insert into free list at pListManager->tail[0x24]\n5. Decrement count and return\n\nParameters:\npListManager (void * IMPLICIT ECX): Pointer to list manager structure containing:\n  - [+0x08] total_size: sum of node sizes in list\n  - [+0x0c] count: number of nodes currently in list\n  - [+0x18] head: pointer to first/head node\n  - [+0x1c] tail: pointer to last/tail node\n  - [+0x20] free_head: pointer to start of free list\n  - [+0x24] free_tail: pointer to end of free list\n  - [+0x28] callback_func: optional cleanup callback\npNode (void * IMPLICIT EDX): Pointer to node to remove, NULL to remove head\n\nReturns:\nvoid - updates pListManager and returns (no return value)\n\nSpecial Cases:\n- If pListManager->count == 0, early exit (list empty check)\n- If pNode is NULL, removes from head of list\n- If removing head node and no next, clears tail pointer\n- Handles both middle removals (update neighbors) and boundary removals\n- Maintains count of nodes in list via decrement\n\nMagic Numbers Reference:\n0x08 - offset to total_size field in manager struct\n0x0c - offset to count field in manager struct\n0x10 - offset to prev pointer field in node struct\n0x18 - offset to head/next pointer in manager struct\n0x1c - offset to tail pointer in manager struct\n0x20 - offset to free_head in manager struct\n0x24 - offset to free_tail in manager struct\n0x28 - offset to callback function pointer\n0x04 - offset to size field in node struct\n0x08 - offset to flags field in node struct\n\nNode Structure Layout:\nOffset | Size | Field Name    | Type     | Description\n0x00   | 0x04 | unknown[0]    | uint     | Node data/reference\n0x04   | 0x04 | size          | uint     | Size/count value\n0x08   | 0x04 | flags         | uint     | Flags/callback trigger\n0x0c   | 0x04 | next          | void *   | Pointer to next node\n0x10   | 0x04 | prev          | void *   | Pointer to previous node",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:628f8a23271044b907f7a417c5072702"
     },
@@ -7117,6 +7119,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16D88",
         "LoD/1.10": "0x16874"
       },
+      "name": "InitializeCharacterTypeTable",
+      "signature": "undefined InitializeCharacterTypeTable(void)",
+      "comment": "Initializes character type and case conversion tables for multi-byte and single-byte character sets.\n\nAlgorithm:\n1. Call GetCPInfo to retrieve code page lead byte information\n2. If successful (multi-byte encoding):\n   a. Initialize ANSI character table [0x00-0xFF] with character values\n   b. Set position 0x00 to space (0x20) for control character handling\n   c. Iterate through LeadByte ranges and fill positions with spaces (0x20)\n   d. Call FUN_6fe2783d to calculate character type flags for each character\n   e. Call FUN_6fe27986 twice with modes 0x100 and 0x200 to populate case conversion tables (WCHAR)\n   f. Iterate 0x100 times: for each character type flag, set appropriate flags (0x10 for uppercase, 0x20 for lowercase) in g_abCharTypeTable offset+1, and store corresponding case conversion character in g_abCaseConversionTable\n3. If GetCPInfo fails (single-byte ASCII):\n   a. For characters 0x41-0x5A (uppercase A-Z): set flag 0x10, conversion = char + 0x20 (to lowercase)\n   b. For characters 0x61-0x7A (lowercase a-z): set flag 0x20, conversion = char - 0x20 (to uppercase)\n   c. For all other characters: set conversion = 0x00\n\nParameters:\nNone - function uses globals g_dwCharTypeFlags, g_dwCharTypeMode, g_abCharTypeTable, g_abCaseConversionTable\n\nReturns:\nvoid\n\nSpecial Cases:\n- If code page information unavailable, falls back to ASCII-only character classification\n- LeadByte ranges filled with spaces for multi-byte encoding support\n- g_abCharTypeTable flag operations preserve existing flags with OR (0x10 | 0x20)\n\nMagic Numbers Reference:\n0x100: Character set size (256 ASCII values 0x00-0xFF)\n0x01: Type flag bit for uppercase character class (from FUN_6fe2783d output)\n0x02: Type flag bit for lowercase character class (from FUN_6fe2783d output)\n0x10: Uppercase flag to set in g_abCharTypeTable (position+1)\n0x20: Space character value, and lowercase flag to set in g_abCharTypeTable (position+1)\n0x41-0x5A: ASCII uppercase letter range A-Z\n0x60-0x7B: ASCII lowercase letter range a-z\n0x200: Mode for second FUN_6fe27986 call (uppercase conversion)\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0      | 256  | g_abCaseConversionTable | byte[256] | Case conversion character lookup table\n1+N    | 1    | g_abCharTypeTable[N+1] | byte | Character type flags (bits 0x10=uppercase, 0x20=lowercase)\n\nRelated Functions:\n- GetCPInfo (Windows API) - Retrieve code page information\n- FUN_6fe2783d - Calculate character type flags for entire character set\n- FUN_6fe27986 - Generate case conversion tables from ANSI input\n- InitializeCharacterTypeTable - Initializes lookup tables at startup",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:63906d1f35f7842042066a6643d2050c"
     },
@@ -7149,6 +7155,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18C90",
         "LoD/1.10": "0x18890"
       },
+      "name": "CompareStringsWithLookup",
+      "signature": "int CompareStringsWithLookup(byte * pbStr1, char * szStr2, int nLength)",
+      "comment": "Case-insensitive string comparison with optional decompression lookup support.\n\nAlgorithm:\n1. Verify input length > 0\n2. If decompression disabled (g_bTableEnabled == 0):\n   a. Loop through string pairs char-by-char until NULL terminator or length exhausted\n   b. Convert uppercase ASCII (0x41-0x5A) to lowercase by adding 0x20\n   c. Compare normalized bytes - set return value immediately on mismatch\n   d. Return 0 if strings match, 0xFFFFFFFF if str1 < str2, 0x1 if str1 > str2\n3. If decompression enabled:\n   a. Increment reference count with LOCK; check if critical section needed\n   b. Acquire critical section (0x13) if required\n   c. Call DecompressCharacterLookupValue for each byte pair\n   d. Compare decompressed values using same result logic\n   e. Release critical section and decrement reference count\n4. Return comparison result to caller\n\nParameters:\n  pbStr1 (byte*): First string buffer (may contain encoded characters)\n  szStr2 (char*): Second comparison string\n  nLength (int): Maximum character count to compare\n\nReturns:\n  0 if strings match\n  0xFFFFFFFF if pbStr1 < szStr2\n  0x1 if pbStr1 > szStr2\n\nSpecial Cases:\n  - NULL terminator in either string stops comparison early\n  - Uppercase A-Z (0x41-0x5A) automatically converted to lowercase\n  - Decompression lookup requires critical section synchronization\n  - Uses LOCK instructions for thread-safe reference counting\n\nMagic Numbers:\n  0x41: ASCII 'A' (uppercase range start)\n  0x5A: ASCII 'Z' (uppercase range end)\n  0x20: Difference between uppercase and lowercase ASCII\n  0x13: Critical section index for decompression state",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:662566ebcde3842108cf876001e2ae79"
     },
@@ -7195,6 +7205,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x37F0",
         "LoD/1.09d": "0x37F0"
       },
+      "name": "SearchHashTableForId",
+      "signature": "dword * SearchHashTableForId(void * this, void * pHashTable, dword dwSearchId)",
+      "comment": "Search hash table for matching ID using linked list traversal.\n\nAlgorithm:\n1. Calculate hash index from dwSearchId using modulo operation (dwSearchId & mask at struct+0x24)\n2. Retrieve initial node pointer from hash table array at struct+0x1c + (index * 12) + 4\n3. Validate initial node (must be > 0); if not valid, return NULL\n4. Loop through linked list:\n   a. Test if current node pointer is valid (> 0)\n   b. If invalid, exit loop and return NULL\n   c. Load node ID from node[0] and compare with dwSearchId\n   d. If match found, return pointer to current node\n   e. If no match, calculate next node from offset chain\n   f. Get next pointer from current node offset + 4, repeat loop\n5. Return pointer to matching node or NULL if not found\n\nParameters:\n- IMPLICIT this (ECX): Pointer to hash table structure containing:\n  - Offset 0x1c: Array of hash table entries\n  - Offset 0x24: Hash mask (size - 1)\n- dwSearchId: ID value to search for in hash table\n\nReturns:\n- Pointer to matching entry if found\n- NULL (0x0) if dwSearchId not found in table\n\nSpecial Cases:\n- Empty table: First node validation fails, returns NULL\n- Single entry table: Direct match on first comparison\n- Collision chain: Multiple entries at same hash with linked list traversal\n- Note: Function contains phantom variable optimized by compiler; all visible variables documented\n\nMagic Numbers:\n- 0x1c: Offset to hash table data array within structure\n- 0x24: Offset to hash mask for modulo calculation\n- 0xc (12 bytes): Size of each hash table entry\n- 0x4 (4 bytes): Offset to next pointer field",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:683cde5a0888cc5a45f9222bdf3de1a2"
     },
@@ -7215,6 +7229,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x108BC",
         "LoD/1.10": "0x10379"
       },
+      "name": "FreeMemory",
+      "signature": "void FreeMemory(void * pMemory)",
+      "comment": "Deallocate virtual memory allocated by caller\n\nAlgorithm:\n1. Call VirtualFree with lpAddress = pMemory, dwSize = 0, dwFreeType = MEM_RELEASE (0x8000)\n2. Return void\n\nParameters:\npMemory - Pointer to virtual memory block to deallocate (allocated with VirtualAlloc)\n\nReturns:\nvoid - VirtualFree result not checked\n\nNotes:\n- Simple wrapper around Windows VirtualFree API call\n- Uses __fastcall: pMemory passed in ECX register\n- Assumes successful allocation and valid pointer\n- MEM_RELEASE (0x8000) frees entire allocation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6a83297e71d435a90cf39a976556d852"
     },
@@ -7287,6 +7305,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6960",
         "LoD/1.09d": "0x6960"
       },
+      "name": "DecodeCompressedData",
+      "signature": "void DecodeCompressedData(byte * pbSource, byte * pbDest, int nRowCount, int nRowStride, dword dwIndexTableBase, dword dwValueTableBase)",
+      "comment": "Decompress row-based data using lookup tables with variable-length encoding\n\nAlgorithm:\n1. Initialize pbRowEnd pointer to first row of destination (param_2 + nRowStride)\n2. Read next command byte from pbSource; if negative (0x80+), extract 7-bit row offset and command bits\n3. Extract lower 3 bits (case 0-7) for initial unrolled copy count, upper 5 bits for main loop iterations\n4. Use switch statement for initial 0-7 byte copy: each byte read from pbSource[i], index into dwIndexTableBase, result indexes dwValueTableBase, stored in pbDest[i]\n5. After initial copy, loop nLoopCount times: copy 8 bytes per iteration using index/value lookup\n6. For negative command: extract row offset from lower 7 bits, advance pbRowEnd by (nRowStride * offset), re-init pbRowEnd pointer\n7. Repeat until nRowCount iterations complete (decrement counter after each negative command)\n8. Return when nRowCount reaches 0\n\nParameters:\npbSource (byte *) - Source compressed data stream\npbDest (byte *) - Destination decompressed data, packed row-by-row\nnRowCount (int) - Number of rows to decompress\nnRowStride (int) - Stride between rows in destination (row width)\ndwIndexTableBase (dword) - Base address of lookup index table (byte values -> indices)\ndwValueTableBase (dword) - Base address of lookup value table (indices -> decompressed bytes)\n\nReturns:\nvoid - Decompresses data in-place to pbDest\n\nSpecial Cases:\n- Negative command byte triggers row reset instead of data copy\n- Switch fallthrough provides unrolled 0-7 byte copy for alignment optimization\n- 8-byte loop unrolling matches typical cache line and SIMD patterns\n- Handles variable-length commands where MSB signals row boundary vs data bytes",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6caecb777ce79092df3b400b4bb46a7e"
     },
@@ -7341,6 +7363,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12531",
         "LoD/1.10": "0x12031"
       },
+      "name": "GetTlsContext",
+      "signature": "dword * GetTlsContext(void)",
+      "comment": "Initialize or retrieve thread-local storage context for exception handling.\n\nAlgorithm:\n1. Preserve current error code (GetLastError) to prevent loss of error state\n2. Query TLS storage via TlsGetValue(g_dwTlsIndex) to check if initialized\n3. If NULL (first call on thread):\n   - Allocate memory block (0x74 bytes) via FUN_6fe25b45(1, 0x74)\n   - Validate allocation success; if failed, terminate via __amsg_exit(0x10)\n   - Associate allocated pointer with TLS index via TlsSetValue\n   - If TlsSetValue fails, terminate via __amsg_exit(0x10)\n   - Invoke FUN_6fe2272e to initialize exception handler structures\n   - Store current thread ID at offset 0x00\n   - Store 0xFFFFFFFF (uninitialized flag) at offset 0x04\n4. Restore original error code (SetLastError) before returning context pointer\n\nParameters: None (uses global g_dwTlsIndex for thread-local access)\n\nReturns: DWORD pointer to TLS context (2-element array)\n  [0] = Thread ID (uint)\n  [1] = Handler state (uint, 0xFFFFFFFF = uninitialized)\n\nSpecial Cases: Memory allocation failure triggers process termination via __amsg_exit(0x10)\n\nMagic Numbers:\n  0x74 (116 decimal): TLS context allocation size (2 DWORDs + headers)\n  0xFFFFFFFF: Uninitialized exception handler state marker\n  0x10: Exit code passed to __amsg_exit on allocation/TLS failure",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6dad5d06763847d66c3aa4a89105e250"
     },
@@ -7371,10 +7397,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x5F50",
         "LoD/1.13d": "0x62D5"
       },
-      "name": "__getbuf",
-      "signature": "void __getbuf(FILE * _File)",
-      "comment": "Library Function - Single Match\n __getbuf\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeBufferField",
+      "signature": "void InitializeBufferField(uint * pGameData)",
+      "comment": "Initialize game data buffer field with dynamic or static allocation.\n\nAlgorithm:\n1. Increment global buffer initialization counter (g_dwBufferInitCount)\n2. Allocate 0x1000 (4096) bytes of heap memory via malloc\n3. Store allocated pointer in pGameData[2]\n4. If allocation succeeded (pvBuffer != NULL):\n   - Set flag 0x8 in pGameData[3]\n   - Set pGameData[6] = 0x1000 (allocated buffer size)\n5. If allocation failed (pvBuffer == NULL):\n   - Set flag 0x4 in pGameData[3] (fallback indicator)\n   - Point pGameData[2] to pGameData[5] (fallback buffer location)\n   - Set pGameData[6] = 0x2 (fallback buffer size)\n6. Clear pGameData[1] to 0\n7. Set pGameData[0] to point to pGameData[2] (buffer pointer)\n\nParameters:\npGameData: Pointer to game data structure array, at least 7 elements\n  [0] - Current buffer pointer\n  [1] - Offset/index field (cleared)\n  [2] - Buffer pointer (allocated or fallback)\n  [3] - Flags (bit 2=fallback allocation, bit 3=heap allocation)\n  [4] - (unused)\n  [5] - Fallback buffer start address\n  [6] - Current buffer size/capacity\n\nReturns: void (always succeeds, uses fallback on malloc failure)\n\nSpecial Cases:\n- Malloc failure triggers fallback to static buffer at pGameData[5]\n- Two-tier allocation strategy ensures functionality even under memory pressure\n- Flag bits 0x4 and 0x8 indicate allocation method",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6db4eec4529d7320d9c182be8df08afa"
     },
@@ -7425,6 +7451,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10DC6",
         "LoD/1.10": "0x10872"
       },
+      "name": "ExceptionHandlerWrapper",
+      "signature": "int ExceptionHandlerWrapper(void * pExceptionRecord, void * pEstablisherFrame, void * pContextRecord, void * pDispatcherContext, dword dwOptions, int iScopeIndex, void * pParam)",
+      "comment": "Structured Exception Handler (SEH) callback wrapper\n\nAlgorithm:\n1. Set up exception frame and save processor context\n2. Initialize exception list chain from FS:[0] (thread exception list)\n3. Call FUN_6fe22741() to obtain handler dispatch table\n4. Invoke handler function at offset [table + 0x68] with exception code and frame pointer\n5. Check exception disposition return value (local_8)\n6. If disposition is non-zero (EXCEPTION_CONTINUE_SEARCH), restore exception chain\n7. Return exception disposition code\n\nParameters:\npExceptionRecord: PEXCEPTION_RECORD, exception information structure\npEstablisherFrame: PVOID, pointer to establishing stack frame (argument page)\npContextRecord: PCONTEXT, processor context record\npDispatcherContext: PVOID, dispatcher context\ndwOptions: DWORD, exception handling options\niScopeIndex: int, scope/try level index\npParam: PVOID, additional exception parameter\n\nReturns:\nEXCEPTION_CONTINUE_EXECUTION (0) - Continue execution after exception\nEXCEPTION_CONTINUE_SEARCH (non-zero) - Continue searching handler chain\nEXCEPTION_NESTED_HANDLER (-2) - For nested exceptions\n\nSpecial Cases:\n- Uses Windows SEH (Structured Exception Handling) protocol\n- Modifies FS:[0] to chain exception frames\n- Handler dispatch via vtable-style function pointer table\n- Validates exception handler presence before invocation\n\nStructure Layout:\nThis function manages exception frames internally:\nOffset | Size | Field | Type | Description\n-0x4  | 4    | local_14 | dword | Exception list pointer in handler\n-0x8  | 4    | iDisposition | int | Handler return code\n-0x10 | 4    | dwFiller1 | dword | Frame flags\n-0x1c | 4    | dwFiller3 | dword | Context flags\n-0x28 | 4    | pExceptionList | void* | Current exception chain head\n-0x30 | 4    | dwExceptionCode | dword | Extracted exception code",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6e30ba34774d96f56de33b628859ffe5"
     },
@@ -7445,6 +7475,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x136C0",
         "LoD/1.10": "0x131C0"
       },
+      "name": "ParseGameResourceStrings",
+      "signature": "void ParseGameResourceStrings(void)",
+      "comment": "Parse game resource strings from global buffer and build array of pointers\n\nAlgorithm:\n1. Check initialization flag (g_dwInitFlag); if zero, call FUN_6fe2711d to initialize\n2. First pass: iterate through g_dwGameResourceHandle, count non-'=' delimiter entries\n3. Allocate array: (count * 4) + 4 bytes for NULL terminator\n4. Store pointer to array in g_ppResourceStringArray\n5. Second pass: iterate through resource buffer again\n   - For each non-'=' entry: allocate (strlen + 1) bytes\n   - Copy string via FUN_6fe26530\n   - Store pointer in array, advance array pointer\n   - For '=' entries: skip (delimiter character)\n6. Cleanup: call DestroyCompressionBuffer, NULL g_dwGameResourceHandle\n7. Set g_dwProcessedFlag = 1, terminate array with NULL pointer\n\nParameters:\n(none) - Uses globals: g_dwGameResourceHandle (input), g_dwInitFlag (state)\n\nReturns:\nvoid - Exits with error code 9 on malloc failure\n\nSpecial Cases:\n- Error code 9: Memory allocation failure\n- Empty string handling: skipped if entry is '='\n- Array NULL termination: critical for safe iteration\n- Relies on FUN_6fe2711d initialization\n",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6e538b3bbbeec8f94bef058bdad701fe"
     },
@@ -7482,16 +7516,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:6f3ac04dfa07e0fdc07662c587e9fc81"
     },
-    "D2CMP_MNE_6f989b51df72": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF3700"
-      },
-      "rvas": {
-        "LoD/1.10": "0x3700"
-      },
-      "method": "MNE",
-      "index": "MNE:6f989b51df723148e6ab6453af50da4f"
-    },
     "D2CMP_MNE_6fa891ea46ae": {
       "addresses": {
         "LoD/1.07": "0x6FE1E6F0",
@@ -7509,6 +7533,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xE4E0",
         "LoD/1.10": "0xE050"
       },
+      "name": "ProcessAndEncodeDataChunks",
+      "signature": "void ProcessAndEncodeDataChunks(char * szInputData, int * pnOutSize)",
+      "comment": "Encodes data from input buffer into 0x20-byte chunks with run-length encoding\n\nAlgorithm:\n1. Allocate 0x1c-byte (28-byte) output buffer via Ordinal_10042 memory allocator\n2. Initialize processing for up to 0x20 chunks (0x20 iterations maximum)\n3. For each chunk iteration:\n   a. Search input for null terminator within 0x20-byte boundary using SearchCharInBufferWithLimit\n   b. If null found (local_14 or local_10 non-zero), encode as terminator pair 0x00 0x00 and advance to next 0x20-byte chunk\n   c. If not found, check if exactly 0x7f bytes remain in current chunk:\n      - If yes: encode as single 0x7f byte (full chunk marker) and advance\n      - If no: call ScanStringForCharacter to count bytes before terminator\n      - Encode as: [byteCount][charCount][charBytes...]\n   d. Copy charCount bytes from input to output buffer\n4. Stop iteration when chunk counter reaches 0x20 limit\n5. Calculate final encoded size (output buffer end - output buffer start) and store in pnOutSize\n\nParameters:\n  szInputData (char*) - Input data buffer to encode (source data)\n  pnOutSize (int*) - Pointer to store encoded output size in bytes (result)\n\nReturns:\n  void - Function returns via void; result stored in pnOutSize parameter; encoded data in allocated buffer\n\nSpecial Cases:\n  - Input processed in 0x20-byte aligned chunks (0x20 offset stride between iterations)\n  - Run-length encoding: 0x7f indicates full chunk, 0x00 0x00 indicates chunk terminator\n  - Maximum 0x20 iterations supported; stops early if data exhausted\n  - SearchCharInBufferWithLimit: searches for 0x00 within 0x20-byte boundary\n  - ScanStringForCharacter: counts non-null characters before null terminator\n\nMagic Numbers:\n  0x20 - Chunk size in bytes (32 bytes per iteration, chunk stride)\n  0x1c - Output buffer allocation size (28 bytes)\n  0x7f - Full chunk indicator and search byte limit (127)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6fa891ea46ae0a4b1668f6a957f37bb3"
     },
@@ -7551,6 +7579,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1746E",
         "LoD/1.10": "0x16F5E"
       },
+      "name": "GetCallHandlerFunction",
+      "signature": "uint GetCallHandlerFunction(uint dwHandlerId)",
+      "comment": "Retrieves and invokes the appropriate handler function for a given handler ID with thread-local context management.\n\nAlgorithm:\n1. Check if dwHandlerId is 0x2 (direct handler): acquire critical section 1, set fAcquiredLock=true\n2. If dwHandlerId is 0x4, 0x8, or 0xb: call GetTlsContext() to get thread-local storage context\n3. Otherwise, check for valid handler IDs (0xf, 0x15, 0x16) and use their corresponding global pointers\n4. For other IDs, return -1 (0xffffffff - invalid handler)\n5. Retrieve handler function pointer from the handler table or computed offset\n6. If handler pointer is 0x1: release lock if held, return 0 (success)\n7. If handler pointer is 0x0: release lock if held, call __exit(3) (fatal error, process termination)\n8. For IDs 0x4, 0x8, 0xb: save current TLS context values at offsets 0x54, 0x58\n9. If ID is 0x8: iterate through slot entries (0 to g_dwSlotIndex+g_dwSlotCount) and zero them\n10. Call the handler function with appropriate parameters (8, dwSavedValue or dwHandlerId)\n11. Restore saved TLS context values back to original state\n12. Release critical section if previously acquired\n13. Return 0 (success)\n\nParameters:\n  dwHandlerId (uint) - Handler identifier: 0x2=direct critical section, 0x4/0x8/0xb=TLS lookup, 0xf/0x15/0x16=global handler pointers\n\nReturns:\n  0 on success, 0xffffffff (-1) if invalid handler ID\n\nSpecial Cases:\n  - Handler ID 0x2 causes critical section 1 acquisition to prevent concurrent execution\n  - ID 0x8 requires slot initialization/cleanup via iteration loop over g_dwSlotIndex/g_dwSlotCount\n  - IDs 0x4, 0xb, 0x8 temporarily modify TLS context fields 0x54, 0x58 for handler execution\n  - NULL handler (0x0) is fatal error requiring immediate process termination via __exit(3)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6fd8fa0a9a06bd481e09533e1d62de94"
     },
@@ -7571,6 +7603,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8B30",
         "LoD/1.10": "0x8830"
       },
+      "name": "AllocateAndLinkResourceNode",
+      "signature": "dword * AllocateAndLinkResourceNode(dword dwResourceType, dword * pResourceTable, dword dwResourceHash, dword pResourceData, byte * pbResourceBuffer)",
+      "comment": "Allocate and link a new resource node into hash table\n\nAlgorithm:\n1. Allocate new resource node (0xf6=246 bytes) via Ordinal_10045\n2. Store resource hash in node[8]\n3. Compute resource hash value using ComputeResourceHash\n4. Copy resource properties to node fields:\n   - node[2] = resourceData[0x30]\n   - node[3] = resourceData[0x34]\n   - node[4] = resourceData[0x38]\n   - node[5] = resourceData[0x3c]\n   - node[6] = resourceData[0x40]\n5. Extract resource type from resourceData[0x20]\n6. If type==6 AND flag[0x1c]&2: node[1] = resourceData[0x2c]\n   Else if type==4 OR type==3: node[1] = resourceData[0x24]\n7. Set node[10] = 0 (next pointer clear)\n8. Look up existing node at hash table[hashIndex]\n9. Link: new node inserted into doubly-linked list\n   - node[0x2c] = previous node\n   - if previous exists: previous[0x28] = new node\n10. Insert node at hash table[hashIndex]\n11. Return pointer to allocated node\n\nParameters:\n  dwResourceType (ECX) - Resource type identifier\n  pResourceTable (EDX) - Hash table base pointer\n  dwResourceHash - Resource hash value\n  pResourceData - Pointer to resource data structure\n  pbResourceBuffer - Resource buffer/data pointer\n\nReturns:\n  Pointer to newly allocated and linked resource node\n\nSpecial Cases:\n  Magic values: 0xf6 (246) = node allocation size\n  Table offset: 0x8000 = hash table base\n  Field offsets vary by resource type (3, 4, 6)\n  Node size: 0x30 bytes (12 dword fields)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70549bcd22aede2d994ba5251c2a6921"
     },
@@ -7601,6 +7637,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x6D90",
         "LoD/1.13d": "0x6DC0"
       },
+      "name": "CopyStringAligned",
+      "signature": "uint * CopyStringAligned(char * szDest, char * szSrc)",
+      "comment": "Copy source string to destination using dword-aligned reads for efficient null terminator detection.\n\nAlgorithm:\n1. Align destination pointer to 4-byte boundary by copying bytes one at a time until alignment achieved\n2. Load 4 bytes from source, check for embedded null using XOR-based null detection (value ^ 0xFFFFFFFF ^ (value + 0x7EFEFEFF)) & 0x81010100\n3. If null detected, determine which byte contains null and copy only up to that byte\n4. If no null detected, copy full dword and advance pointers\n5. Repeat until null terminator found and written\n\nParameters:\npszDest - Destination buffer pointer, written incrementally\npszSrc - Source string pointer, read in byte or dword chunks\n\nReturns:\nchar * - Pointer to destination buffer (pszDest)\n\nSpecial Cases:\n- Handles unaligned source buffers by aligning to dword boundary first\n- Null terminator always written to destination\n- Uses magic constant 0x7EFEFEFF and 0x81010100 for byte-wise null detection in aligned reads",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8"
     },
@@ -7621,6 +7661,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12989",
         "LoD/1.10": "0x12DAB"
       },
+      "name": "ConvertFloatToString",
+      "signature": "char * ConvertFloatToString(double * pValue, char * szBuffer, size_t nLength)",
+      "comment": "Convert double-precision floating-point value to string representation.\n\nAlgorithm:\n1. Extract double value from pValue pointer using FLD instruction\n2. Call FUN_6fe26411 to convert double to digit array (adDigits[6])\n3. Check nSignFlag result - if 0x2d ('-'), output is negative\n4. Call FUN_6fe2639a to add sign character (if negative) to buffer at offset\n5. Call FUN_6fe22bee to append formatted string to buffer\n6. Return pointer to output buffer\n\nParameters:\npValue (double *) - Pointer to 64-bit IEEE floating-point value to convert\npszBuffer (char *) - Output character buffer for formatted string\nnLength (size_t) - Maximum length available in buffer\n\nReturns:\nchar * - Pointer to pszBuffer (same as input parameter)\n\nSpecial Cases:\n- Negative numbers: nSignFlag == 0x2d indicates negative value\n- Buffer overflow: Caller must ensure nLength is sufficient\n- Precision: Converted to 6-element digit array internally",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7087168427d0bddca2ba323be7c412bf"
     },
@@ -7704,16 +7748,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:71e3adec86883da683f0e423eb14e485"
     },
-    "D2CMP_MNE_72ca41d55fdd": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF2B30"
-      },
-      "rvas": {
-        "LoD/1.10": "0x2B30"
-      },
-      "method": "MNE",
-      "index": "MNE:72ca41d55fdd3d07a506822e321f78cb"
-    },
     "D2CMP_MNE_73297bc86d30": {
       "addresses": {
         "LoD/1.11": "0x6FE1DE90",
@@ -7793,10 +7827,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19023",
         "LoD/1.13d": "0x19025"
       },
-      "name": "AdjustPointer",
-      "signature": "void * AdjustPointer(void * param_1, PMD * param_2)",
-      "comment": "Library Function - Single Match\n void * __cdecl AdjustPointer(void *,struct PMD const &)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeSpriteDecompressionLock",
+      "signature": "undefined InitializeSpriteDecompressionLock(void)",
+      "comment": "Initializes the sprite decompression critical section on first call.\n\nAlgorithm:\n1. Load initialization flag g_dwSpriteDecompressionLockInitialized\n2. Check if flag is 0 (not yet initialized)\n3. If not initialized, call InitializeCriticalSection for g_hSpriteDecompressionLock\n4. Set flag to 1 to prevent re-initialization\n5. Return\n\nParameters:\n(none)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Function is idempotent: multiple calls safe due to flag check\n- Uses Windows critical section for thread synchronization\n- Flag value: 0 = not initialized, 1 = initialized",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:75d5571a168a5211803d62e4d3b3d8bf"
     },
@@ -7817,6 +7851,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12768",
         "LoD/1.10": "0x12B8A"
       },
+      "name": "ProcessCharacterData",
+      "signature": "void ProcessCharacterData(char * szData)",
+      "comment": "Process character data by encoding/transforming based on compression mode. Iterates through string replacing characters using lookup table conditional on compression mode setting. Function uses multiple stack-allocated temporaries optimized away by compiler (uVar3, cVar1, cVar2, puVar4, this reference).\n\nAlgorithm:\n1. Load first character from input string, sign-extend to 32-bit (EAX)\n2. Call FUN_6fe25e74() with character value - check if result equals 0x65\n3. If result == 0x65, skip to character transformation loop\n4. Otherwise, enter encoding loop:\n   a. Increment input pointer (move to next character)\n   b. Check g_dwCompressionMode: if < 2, use table lookup; otherwise call FUN_6fe25dff()\n   c. Test result for non-zero; if zero, exit loop; else continue\n5. Enter character swap/transformation loop starting at current position:\n   a. Load initial swap value from g_byCompressionValue into CL\n   b. Load character at current position into AL\n   c. Store CL (swap value) at current position\n   d. Rotate/advance to next character, repeating until null terminator found\n\nParameters:\n  szData: char* - Pointer to character string to process\n\nReturns:\n  void\n\nMagic Numbers:\n  0x65: Sentinel character value used to determine processing mode\n  0x4: Bit flag mask applied to compression lookup result\n  0x2: Threshold for g_dwCompressionMode to select encoding method\n\nStructure Layout:\n  Offset | Size | Field Name | Type | Description\n  0x0    | 4    | g_dwCompressionMode | uint | Controls encoding: 0-1 uses table lookup, >=2 calls FUN_6fe25dff()\n  0x4    | 1    | g_byCompressionValue | byte | Initial swap/transformation value applied during character rotation\n  0xC    | 4    | g_pCompressionLookupTable | byte* | 2-stride lookup table for table-based encoding",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:76bcdc60e2279c3182537e650d7ffd3e"
     },
@@ -7847,10 +7885,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x17865",
         "LoD/1.13d": "0x1786F"
       },
-      "name": "FID_conflict:_CallMemberFunction1",
-      "signature": "undefined FID_conflict:_CallMemberFunction1(undefined4 param_1, undefined * UNRECOVERED_JUMPTABLE)",
-      "comment": "Library Function - Multiple Matches With Different Base Names\n void __stdcall _CallMemberFunction1(void *,void *,void *)\n void __stdcall _CallMemberFunction2(void *,void *,void *,int)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "TrampolineIndirectCall",
+      "signature": "void TrampolineIndirectCall(void * pData, void * pfnCallback)",
+      "comment": "Trampoline for indirect function call with stack-preserved return address.\n\nAlgorithm:\n1. Pop return address from stack into EAX\n2. Pop callback function pointer into ECX\n3. Exchange EAX with [ESP] to restore return address on stack\n4. Jump through EAX (indirect call preserving callback context)\n\nParameters:\npData (void *) - Context/data pointer passed as first arg before trampoline\npfnCallback (void *) - Function pointer to call indirectly\n\nReturns:\nNone - function jumps to target, never returns normally\n\nSpecial Cases:\nThis is a code generation artifact - the trampoline enables indirect calls through\ncomputed function pointers while maintaining SEH exception handling frame state.\nStack frame is: [return_addr][pData][pfnCallback] before POP instructions.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:772d22c2541e825eefebea33eefd1baf"
     },
@@ -7903,6 +7941,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13779",
         "LoD/1.10": "0x13279"
       },
+      "name": "InitializePathBuffers",
+      "signature": "void InitializePathBuffers(void)",
+      "comment": "Initialize path token array by parsing module path or command-line path argument.\n\nAlgorithm:\n1. Check if global initialization flag (g_dwInitFlag) is set; if not, call FUN_6fe2711d() to initialize\n2. Retrieve module executable path via GetModuleFileNameA() into g_szModulePath buffer\n3. Set g_pCurrentPath to point to g_szModulePath\n4. If command-line argument g_szCommandLine is non-empty, override g_pCurrentPath to use it instead\n5. Call FUN_6fe23a22() first without buffer (NULL puVar1) to determine token count and size requirements\n   - nTokenSize stores count needed\n   - nTokenCount stores size of each token entry (likely element stride)\n6. Allocate memory: g_nPathTokenCount * 4 + nTokenSize bytes via malloc()\n7. If allocation fails, terminate with error code 8 via __amsg_exit()\n8. Call FUN_6fe23a22() second time with allocated buffer pnTokenArray to parse path into tokens\n9. Store results: g_pPathTokenArray = allocated buffer, g_nPathTokenCount = nTokenSize - 1\n\nParameters:\n(none - void function)\n\nReturns:\nvoid - allocates globals g_pPathTokenArray and g_nPathTokenCount for downstream use; calls exit on allocation failure",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:78c0be793b204c577b78460711bf70fb"
     },
@@ -7977,6 +8019,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xBD60",
         "LoD/1.10": "0xB8B0"
       },
+      "name": "ForEachPixelNotEqual",
+      "signature": "void ForEachPixelNotEqual(void * pBufferInfo, void * pfnCallback, uint dwColorRGB24)",
+      "comment": "Iterates through pixel buffer, invoking callback for non-matching pixels.\n\nAlgorithm:\n1. Calculate total pixels from width and height stored at pBufferInfo offsets +4 and +8\n2. If total pixels is zero, return immediately without processing\n3. Initialize pixel data pointer to pBufferInfo + 0x20 and counter to zero\n4. Loop through each pixel:\n   a. Read 3 bytes in order (offset+2, offset+1, offset+0) into big-endian 24-bit value\n   b. Extract target RGB24 components: (param_3 >> 16) & 0xFF, (param_3 >> 8) & 0xFF, param_3 & 0xFF\n   c. Assemble pixel color: (byte[2] << 16) | (byte[1] << 8) | byte[0]\n   d. If pixel color != target color, invoke pfnCallback with pixel color value\n   e. Advance to next 3-byte pixel and increment counter\n5. Continue until counter reaches total pixel count, then return\n\nParameters:\n- pBufferInfo (void*): Pointer to buffer descriptor containing dimensions and pixel data\n- pfnCallback (void*): Callback function pointer invoked with uint color for non-matching pixels\n- dwColorRGB24 (uint): Target RGB24 color to exclude from callback invocation\n\nReturns: void (no return value)\n\nSpecial Cases:\n- If width or height is zero, function returns without processing\n- Pixel callback only invoked for colors that DO NOT match target color\n- Uses 3-byte big-endian RGB format (high byte at offset+2)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7a2256095936b52cbee65b46ca0f97d0"
     },
@@ -8007,10 +8053,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x28F2",
         "LoD/1.13d": "0x2890"
       },
-      "name": "__cexit",
-      "signature": "void __cexit(void)",
-      "comment": "Library Function - Single Match\n __cexit\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeProcessCleanup",
+      "signature": "void InitializeProcessCleanup(void)",
+      "comment": "Initialize process cleanup/shutdown handler\n\nAlgorithm:\n1. Push three parameters onto stack: exit code (0x0), parameter 2 (0x0), flag (0x1)\n2. Call FUN_6fe212c4 with these parameters (handler function)\n3. Clean up stack (ADD ESP, 0xc removes 3 DWORD parameters)\n4. Return to caller\n\nParameters:\n(none)\n\nReturns:\nvoid - function does not return a value. Control flow delegates to FUN_6fe212c4 which may call ExitProcess()\n\nSpecial Cases:\n- Parameter values are hardcoded: exit code 0, cleanup mode 0, flag 1\n- The called function (FUN_6fe212c4) may not return if cleanup triggers ExitProcess()\n- Used during initialization to prepare cleanup handlers",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7a5e6ed384be31095abb7960c9f1d6d0"
     },
@@ -8023,16 +8069,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:7a67c44055d89a68274e6b3d6dbb3f97"
-    },
-    "D2CMP_MNE_7aa2114b6688": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF8A60"
-      },
-      "rvas": {
-        "LoD/1.10": "0x8A60"
-      },
-      "method": "MNE",
-      "index": "MNE:7aa2114b668840d6259e6fd0e45865f4"
     },
     "D2CMP_MNE_7ae8facd2848": {
       "addresses": {
@@ -8073,6 +8109,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15F98",
         "LoD/1.10": "0x16154"
       },
+      "name": "NormalizeDoubleValue",
+      "signature": "undefined4 NormalizeDoubleValue(ushort * pwValue, uint * pdwOutput, int * pnConfig)",
+      "comment": "Normalize IEEE 754 double precision number with exponent and bitfield manipulation.\n\nAlgorithm:\n1. Extract exponent bits (bits 10-14) from high word and mask to 15 bits\n2. Calculate exponent offset (subtract 0x3FFF)\n3. If normalized (exponent == 0): check if mantissa is zero, clear to zero if so\n4. Else if denormalized: copy mantissa, clear bitfield range at param_3[2], recalculate exponent\n5. Apply conditional sign bit manipulation based on original sign flag (bit 15)\n6. Output to param_2 based on config param_3[4]: 0x40 = both words, 0x20 = high word only\n7. Return: 0 = success/zero, 1 = overflow, 2 = default result\n\nParameters:\n  pwValue: Pointer to IEEE 754 double high word (exponent + sign)\n  pdwOutput: Output buffer for normalized result (1-2 dwords)\n  pnConfig: Configuration array [0]=exponent_min, [1]=range_max, [2]=clear_bits, [3]=rotate_count, [4]=output_format, [5]=exponent_base\n\nReturns:\n  0 - Normalized successfully\n  1 - Overflow condition detected\n  2 - Default mantissa configuration applied\n\nMagic Numbers:\n  0x3FFF - Exponent bias for normalization\n  0x7FFF - Exponent mask (15 bits)\n  0x8000 - Sign bit mask\n  0x80000000 - Sign extension mask",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7af322ad22a8e231117c7fe6d2adf33c"
     },
@@ -8093,6 +8133,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3B40",
         "LoD/1.10": "0x3940"
       },
+      "name": "ExtractExceptionListItem",
+      "signature": "void * ExtractExceptionListItem(int nItemCount, int nFirstElement)",
+      "comment": "Calculate item address within exception node list using count and base pointer.\n\nAlgorithm:\n1. Load item count into ECX (__fastcall first parameter)\n2. Load first element pointer into EDX (__fastcall second parameter)\n3. Execute LEA EAX, [ECX + EDX*0x1] - compute address as base + count\n4. Return calculated address in EAX register\n\nParameters:\n- nItemCount (int): Item count value in exception node, used as offset multiplier\n- nFirstElement (int): Base pointer to first element in linked list array\n\nReturns:\n- void*: Calculated address of item within exception node (base + count)\n\nSpecial Cases:\n- Single instruction implementation: Optimized by compiler as single LEA\n- No validation: Assumes valid pointers passed by caller",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7bb69882fe8348945a255bb23cae4c3b"
     },
@@ -8147,6 +8191,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6B10",
         "LoD/1.09d": "0x6B10"
       },
+      "name": "TranslatePaletteRunLength",
+      "signature": "void TranslatePaletteRunLength(byte * pbData, int nDestOffset, int nRunCount, int nRowWidth, int nCurrentY, int nMinX, int nMaxX, dword dwTable2, dword dwTable1)",
+      "comment": "Translate palette indices via run-length encoded data through two-stage lookup tables.\n\nAlgorithm:\n1. Initialize line offset from base offset and row width (line-by-line processing).\n2. Read run-length byte: if negative, encoded run with count in lower 7 bits; if non-negative (ASCII), literal pixel.\n3. For encoded runs: compute drawable region as intersection of [nMinX, nMaxX] and current position span.\n4. If drawable span exists, use Duff's device unrolled loop (8-byte blocks) to translate pixels: fetch index from pbData[i], use as offset into dwTable1 to get intermediate value, use that as offset into dwTable2 to get final palette index, store result.\n5. For literal pixels: add single pixel to current position.\n6. At end of run: check if low bit set (0x01); if set, move to next line.\n7. Repeat until nRunCount reaches zero.\n8. Returns void.\n\nParameters:\n  pbData (byte*): Pointer to run-length encoded source data; format: negative byte=run (count in lower 7 bits), non-negative=single pixel value.\n  nDestOffset (int): Destination buffer write offset, incremented as pixels written.\n  nRunCount (int): Number of line-end markers to process; determines total iterations.\n  nRowWidth (int): Pixel pitch/stride between lines in destination buffer.\n  nCurrentY (int): Current vertical position, used to compute drawable region bounds.\n  nMinX (int): Minimum drawable x-coordinate (clipping left edge).\n  nMaxX (int): Maximum drawable x-coordinate (clipping right edge).\n  dwTable2 (int): Base address of second lookup table (final palette mapping).\n  dwTable1 (int): Base address of first lookup table (intermediate index mapping).\n\nReturns: void\n\nSpecial Cases:\n  - Zero-length runs (drawable span <= 0) skip write, just advance position counter.\n  - Run-length value 0x80 represents 128-pixel span.\n  - Duff's device handles remainder via switch statement; 8 cases unroll 7-byte prolog before main 8-byte loop.\n  - Register optimization: uses ESI/EDI as implicit table base registers, ECX/EDX as implicit offset registers across loop iterations.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7eb012653775e38a9de82003a9ef1ebb"
     },
@@ -8207,6 +8255,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15EF0",
         "LoD/1.10": "0x160AC"
       },
+      "name": "CheckThreeDwordsZero",
+      "signature": "dword CheckThreeDwordsZero(dword * pDwValues)",
+      "comment": "Checks if three consecutive dwords are all zero.\n\nAlgorithm:\n1. Initialize loop counter nIndex to 0\n2. Loop while nIndex < 3:\n   a. Load dword at [pDwValues + nIndex*4]\n   b. Compare to 0\n   c. If non-zero, return 0 (fail condition)\n   d. Increment nIndex and continue\n3. After loop completes, return 1 (all three dwords were zero)\n\nParameters:\npDwValues: Pointer to dword array containing at least 3 elements to check\n\nReturns:\n1 - All three dwords [0], [1], [2] are zero\n0 - At least one dword is non-zero\n\nSpecial Cases:\nUses loop counter incremented before comparison, checking exactly 3 dwords.\n\nMagic Numbers:\n0x3 (3) - number of dwords to validate",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7ef9c351fc7bceec813ab833e5911666"
     },
@@ -8225,6 +8277,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x8990",
         "LoD/1.09d": "0x8990"
       },
+      "name": "FindMatchingTableEntry",
+      "signature": "dword FindMatchingTableEntry(dword nTableBaseOffset, dword nConfigPtr, dword * pdwSearchKey, dword * pdwUnused, byte * pbUnused)",
+      "comment": "Searches linked list for entry matching configuration criteria\n\nAlgorithm:\n1. Calculate index offset via FUN_6fe18cc0(nConfigPtr, pbUnused, pdwSearchKey, pdwUnused)\n2. Load list head pointer: nCurrentNode = [nTableBaseOffset + dwIndexOffset*4 + 0x8000]\n3. Extract config criteria: nX, nY, nZ from offsets 0x30, 0x34, 0x38\n4. Loop through linked list:\n   - Check if nCurrentNode == NULL (list end), return 0\n   - Load config type from offset 0x20\n   - Branch matching on config type:\n     * Type 6 with flag 0x2 at [0x1c]: Match X,Y,Z,W,V coords + [0x2c] field == [nCurrentNode+4]\n     * Type 3 or 4: Match X,Y,Z,W,V coords + [0x24] field == [nCurrentNode+4]\n     * Other types: Match X,Y,Z,W coords, conditional on [0x40] == [nCurrentNode+0x18]\n   - For all matches: Verify search key match: [pdwSearchKey] == [nCurrentNode+0x1c]\n   - If matched, return nCurrentNode\n   - Move to next: nCurrentNode = [nCurrentNode + 0x2c]\n\nParameters:\n- nTableBaseOffset (ECX): Base address of lookup table\n- nConfigPtr (EDX): Configuration structure with criteria at offsets 0x1c,0x20,0x24,0x2c,0x30,0x34,0x38,0x3c,0x40\n- pdwSearchKey (EBX/stack): Pointer to key value matching at node offset 0x1c\n- pdwUnused: Unused\n- pbUnused: Unused\n\nReturns:\n- Pointer to matching node if found\n- 0 if no match or nCurrentNode becomes NULL",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7f2c035360aca8c47614a3d0ce2a28c2"
     },
@@ -8333,9 +8389,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x34C0",
         "LoD/1.10": "0xB760"
       },
-      "name": "Ordinal_10098",
-      "signature": "undefined * Ordinal_10098(int param_1, int param_2)",
-      "name_source": "LoD/1.10",
+      "name": "DestroyHashTableNodes",
+      "signature": "void DestroyHashTableNodes(void * pHashTable)",
+      "comment": "Destroy all nodes in hash table and free the table itself.\n\nAlgorithm:\n1. Load node count from [pHashTable + 0x4]\n2. If count > 0:\n   a. Initialize offset counter (EBX=0)\n   b. Calculate node address: [pHashTable + 0x8] + offset\n   c. Call UnlinkAndCloseNode to destroy node\n   d. Increment index, advance offset by 0xc (12 bytes per node)\n   e. Repeat until all nodes processed\n3. Load array pointer from [pHashTable + 0x8]\n4. If pointer non-null:\n   a. Call Ordinal_403 (memory deallocator) with array pointer and flags\n5. Return\n\nParameters:\npHashTable (void*): Generic pointer to hash table structure with fields:\n  - [+0x4]: Node count (dword)\n  - [+0x8]: Pointer to dynamically allocated node array (dword)\n  Note: Specific structure type undetermined; used generically by callers\n\nReturns:\nvoid\n\nSpecial Cases:\n- Early exit if node count is 0 (empty table)\n- NULL pointer guard on array deallocation\n- Node size is 0xc (12) bytes",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:82e05515bca98ac3c5cf6064f3dfcb0d"
     },
@@ -8356,6 +8413,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15069",
         "LoD/1.10": "0x14B69"
       },
+      "name": "ValidatePoolBlockReusability",
+      "signature": "int ValidatePoolBlockReusability(int nBlockIndex, int * pnPoolMetadata, byte * pbBlockData, dword nQuadrantSize)",
+      "comment": "Validate pool block reusability and track pointer location within block region.\n\nAlgorithm:\n1. Load current block size from pbBlockData[0], save as dwCurrentSize\n2. Calculate pool metadata entry: pnBlockInfo = param_1 + 0x18 + ((pnPoolMetadata - *(param_1 + 0x10)) >> 12) * 8\n3. If nQuadrantSize < dwCurrentSize: size is decreasing\n   - Update pbBlockData[0] = nQuadrantSize (new size)\n   - Increase pool free space: *pnBlockInfo += (dwCurrentSize - nQuadrantSize)\n   - Mark metadata flag: pnBlockInfo[1] = 0xf1\n   - Return 1 (reuse allowed)\n4. If nQuadrantSize == dwCurrentSize: size unchanged, return 0 (no action needed)\n5. If nQuadrantSize > dwCurrentSize: size is increasing, validate expansion feasibility\n   - Calculate new region end: pbBlockEnd = pbBlockData + nQuadrantSize\n   - Check boundary: if (pnPoolMetadata + 0x3e >= pbBlockEnd) return 0 (insufficient space)\n   - Scan zero padding: from pbBlockData[dwCurrentSize] to pbBlockEnd, all bytes must be 0x00\n   - If non-zero padding found before pbBlockEnd, return 0 (invalid expansion)\n   - Update size: pbBlockData[0] = nQuadrantSize\n   - If pointer *(pnPoolMetadata) is within expansion region [pbBlockData, pbBlockEnd):\n     a) If pbBlockEnd < pnPoolMetadata + 0x3e: calculate new pointer position\n        - Scan from pbBlockEnd to find first non-zero byte\n        - pnPoolMetadata[0] = pbBlockEnd (move pointer to end)\n        - pnPoolMetadata[1] = nZeroCount (store bytes scanned to first non-zero)\n     b) Otherwise: pointer exceeds limit\n        - pnPoolMetadata[1] = 0 (clear offset)\n        - pnPoolMetadata[0] = pnPoolMetadata + 2 (skip pointer storage)\n   - Decrease pool free space: *pnBlockInfo -= (nQuadrantSize - dwCurrentSize)\n   - Return 1 (reuse allowed with pointer update)\n\nParameters:\nnBlockIndex (int) - Block index into pool metadata array\npnPoolMetadata (int *) - Pointer to pool metadata structure (contains pointers and size info)\npbBlockData (byte *) - Pointer to block data with size byte at offset 0\nnQuadrantSize (dword) - New size in 16-byte quadrants (actual size = nQuadrantSize * 16)\n\nReturns:\n1 if block can be reused and is updated, 0 if block cannot be reused or expansion invalid\n0 = incompatible (insufficient space, invalid padding, pointer conflict)\n1 = reusable (size fits within pool constraints)\n\nSpecial Cases:\nMagic number 0xf1: Metadata flag value written to pnBlockInfo[1] during size decrease\nMagic number 0x3e (62 bytes): Maximum extension boundary check from pnPoolMetadata\nMagic number 0xc (12 bytes offset): Shift right 0xc for block index calculation\nMagic number 0xf8 (248 bytes): Boundary limit check (pnPoolMetadata + 0xf8)\nPointer tracking: pbBlockData[0] is both size byte AND mutable pointer field\nQuadrant size: All size values are in 16-byte quadrants, actual bytes = nQuadrantSize * 16\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0x0    | 1    | bSize      | byte | Current block size in quadrants (0-255)\nvaries | 4    | dwPoolInfo | int* | Pointer to pool metadata entry\nvaries | varies| abData    | byte[]| Block data region (size checked via bSize)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:83295157daa32d8a2ec17bdc4754c492"
     },
@@ -8386,10 +8447,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x17817",
         "LoD/1.13d": "0x17821"
       },
-      "name": "___initmbctable",
-      "signature": "undefined4 ___initmbctable(void)",
-      "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "CleanupGameThreadState",
+      "signature": "void CleanupGameThreadState(void)",
+      "comment": "Cleanup game thread state and free allocated TLS resources\n\nAlgorithm:\n1. Call CleanupGameCriticalSections() to release critical section resources\n2. Load global TLS index from g_dwTlsIndex\n3. Compare TLS index against -1 (0xffffffff)\n4. If TLS index is -1, skip TLS cleanup (already cleaned, jump to end)\n5. If TLS index is not -1, push index onto stack\n6. Call TlsFree() via function pointer to deallocate thread-local storage\n7. Set g_dwTlsIndex to 0xffffffff to mark TLS as freed\n8. Return to caller\n\nParameters:\n(none)\n\nReturns:\n(void) - No return value. Function is called for side effects only.\n\nSpecial Cases:\n- If g_dwTlsIndex is already 0xffffffff, TlsFree is not called (idempotent cleanup)\n- Function performs immediate cleanup without error checking\n- Assumes g_dwTlsIndex and TlsFree pointer are properly initialized by game startup\n\nMagic Numbers:\n- 0xffffffff: Sentinel value indicating invalid/unallocated TLS index",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:83d07e3c014d31c19cf14861bc62b0a0"
     },
@@ -8410,6 +8471,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xC0C0",
         "LoD/1.10": "0xBCBE"
       },
+      "name": "DecompressAndLoadSpriteFrame",
+      "signature": "int DecompressAndLoadSpriteFrame(uint * pPalette, int nFrameIndex, int * pFrameData)",
+      "comment": "Decompress sprite frame and update frame flags\n\nAlgorithm:\n1. Extract frame header pointer from pFrameData at offset +0x08\n2. Extract sprite image data pointer from pFrameData at offset +0x04\n3. Load frame flags pointer from frame header at offset +0x94\n4. Set frame processing flag (0x02) in flags[3]\n5. Call DecompressSpriteFrame with palette, frame index, image data, and frame parameters\n6. Store decompressed data pointer in pFrameData at offset +0x14\n7. Clear frame processing flag (0x02) from flags[3]\n8. Clear frame dirty flag (0x04) from frame header\n9. Call FUN_6fe1e330 to update visual cache with frame data\n10. If decompression failed (returned NULL), set error flag (0x01) in image data\n11. Return success (1)\n\nParameters:\npPalette: Pointer to palette cache header for color lookup\nnFrameIndex: Frame index to decompress from sprite data\npFrameData: Pointer to sprite frame structure containing:\n  +0x04: pImageData (sprite image data buffer)\n  +0x08: pFrameHeader (frame metadata and flags)\n  +0x0c: dwWidth (frame width in pixels)\n  +0x10: dwHeight (frame height in pixels)\n  +0x14: pDecompressed (output decompressed frame buffer)\n  +0x18: nDrawMode (rendering mode flags)\n\nReturns:\n1 - Decompression successful\nNULL/0 - Decompression failed\n\nMagic Numbers:\n0x02 - Frame processing flag (prevents concurrent access)\n0x04 - Frame dirty flag (marks stale sprite data)\n0x01 - Image error flag (decompression failed)\n0xfb - Mask to clear frame dirty flag (0xfb = ~0x04)\n0xfffffffd - Mask to clear processing flag\n0x94 - Offset to frame flags array in frame header\n0xa0 - Offset for decompression scratch buffer",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:83e0fefb6aed29689b8b93105e670605"
     },
@@ -8448,8 +8513,36 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16330",
         "LoD/1.10": "0x164E0"
       },
+      "name": "CopyStringAligned",
+      "signature": "void * CopyStringAligned(void * pszSource, void * pszDest)",
+      "comment": "Copies null-terminated ANSI string using alignment-optimized dword operations for fast scanning and copying.\n\nAlgorithm:\n1. Align source pointer to 4-byte boundary by advancing byte-by-byte\n2. Scan aligned source using dword pattern detection for null bytes (mask 0x81010100)\n3. When null detected, determine position within dword (byte 0, 1, 2, or 3)\n4. Align destination pointer to 4-byte boundary, copying source bytes\n5. Copy source dwords to destination until null terminator detected\n6. Store final 1-4 bytes based on null byte position within detected dword\n7. Return original source pointer passed as parameter\n\nParameters:\n  pszSource (void *) - Pointer to source ANSI string (input only)\n  pszDest (void *) - Pointer to destination buffer (output only)\n\nReturns:\n  void * - Pointer to original source buffer (pszSource), for chaining\n\nSpecial Cases:\n  - Handles unaligned source/destination pointers gracefully\n  - Detects null byte at any position within 4-byte dword\n  - Returns original source pointer, not destination\n  - No buffer overflow checking performed",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6"
+    },
+    "D2CMP_MNE_84b05168a8e3": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1B770",
+        "LoD/1.08": "0x6FE1B770",
+        "LoD/1.09": "0x6FDFB530",
+        "LoD/1.09b": "0x6FDFB530",
+        "LoD/1.09d": "0x6FDFB530",
+        "LoD/1.10": "0x6FDFB180"
+      },
+      "rvas": {
+        "LoD/1.07": "0xB770",
+        "LoD/1.08": "0xB770",
+        "LoD/1.09": "0xB530",
+        "LoD/1.09b": "0xB530",
+        "LoD/1.09d": "0xB530",
+        "LoD/1.10": "0xB180"
+      },
+      "name": "CopyPaletteFlags",
+      "signature": "void CopyPaletteFlags(uint * pdwPaletteData)",
+      "comment": "Copy palette data to global palette flags buffer.\n\nAlgorithm:\n1. Set g_dwPaletteValidFlag to 1 to mark palette as valid\n2. Initialize destination pointer to g_abPaletteUsedFlags array base\n3. Set loop counter to 0x40 (64 iterations)\n4. For each iteration: copy dword from source to destination, advance both pointers\n5. Return after all 64 dwords copied\n\nParameters:\npdwPaletteData (uint *) - Pointer to source palette data array (64 dwords)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Copies exactly 0x40 (64) dwords using REP MOVSD instruction\n- Always sets palette valid flag to 1\n- Destination buffer size must be at least 256 bytes (64 dwords)",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:84b05168a8e3aeeea6967d7c1f49f3f4"
     },
     "D2CMP_MNE_84b493fd8f41": {
       "addresses": {
@@ -8468,6 +8561,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3850",
         "LoD/1.10": "0x3660"
       },
+      "name": "GetOffsetPointer",
+      "signature": "int * GetOffsetPointer(void * this, void * pThis, int nOffset)",
+      "comment": "Calculate offset pointer from base address with optional offset parameter.\n\nAlgorithm:\n1. Check if nOffset parameter is non-zero\n2. If offset provided: dereference pThis (get value at address), add nOffset to value, return pointer\n3. If offset is zero: return pointer to pThis + 4 bytes\n\nParameters:\n- pThis: Base address (pointer to data structure)\n- nOffset: Offset to add to dereferenced value, or zero to use default offset (+4)\n\nReturns:\n- Pointer to calculated memory address\n- If nOffset != 0: *(pThis) + nOffset\n- If nOffset == 0: pThis + 0x4\n\nSpecial Cases:\n- Function implements polymorphic offset calculation with default fallback\n- Used by container/collection accessor pattern with variable stride support",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:84b493fd8f41107c7beb464dc42894f6"
     },
@@ -8488,6 +8585,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12195",
         "LoD/1.10": "0x11C95"
       },
+      "name": "CleanupFrameExceptionHandler",
+      "signature": "void CleanupFrameExceptionHandler(void)",
+      "comment": "SEH exception handler for frame rendering cleanup. Validates exception info and cleans up frame state.\n\nAlgorithm:\n1. Store frame flags stack value to ESI slot offset -4\n2. Get global frame config, set field offset +0x1b with frame flags from stack\n3. Get global frame config, set field offset +0x1c with frame mode from stack\n4. Validate exception info magic: first dword must equal 0xe06d7363 (SEH marker)\n5. Check exception dispatch target [EDI+0x10] equals 0x03\n6. Check exception nested call marker [EDI+0x14] equals 0x19930520\n7. Verify frame state [EBP-0x24] is zero (initialization complete)\n8. Verify exception depth [EBP-0x2c] is non-zero (within try block)\n9. If all conditions pass: call __abnormal_termination() and invoke FUN_6fe225e1 with exception info pointer\n\nParameters:\nIMPLICIT: pExceptionInfo (EDI) - Pointer to exception record with magic markers\nIMPLICIT: nFrameDataPtr (EBP) - Base pointer to frame state on stack\nIMPLICIT: nFrameStackPtr (ESI) - Stack frame pointer for cleanup\n\nReturns:\nvoid\n\nSpecial Cases:\n- Function executes within SEH exception handler context\n- Magic values 0xe06d7363, 0x03, 0x19930520 are compiled-in SEH markers\n- Stack values at [EBP-0x28], [EBP-0x1c], [EBP-0x20] come from outer try block\n- Exception is re-dispatched via FUN_6fe225e1 if all validation passes",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:84f733a34932ba1d84f1e0708b18403c"
     },
@@ -8506,6 +8607,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x72C0",
         "LoD/1.09d": "0x72C0"
       },
+      "name": "ProcessBufferWithTableLookup",
+      "signature": "undefined ProcessBufferWithTableLookup(byte * pbSource, int nDestX, int nRowCount, int nRowWidth, int nPosY, int nXMax, int nYMax, int nTableBase, int nSeed)",
+      "comment": "Transform source buffer using lookup table with Duff's device optimization.\n\nAlgorithm:\n1. Load initial row offset (nInitialY) and table seed value\n2. For each row iteration (nRowCount)\n3.   Read source bytes from current position\n4.   If high bit SET (0x80): advance position by low 7 bits, continue\n5.   If high bit CLEAR: perform byte transformation with table lookup\n6.     Calculate available space: nXMax - nInitialY\n7.     Calculate min(byteValue, nYMax - nInitialY)\n8.     If available width >= 1: perform 8-byte unrolled loops\n9.     Unroll remainder bytes (1-7) using switch statement\n10.    Load source[i], add table[table[src[i] + pTableBase] + nTableSeed], store to dest\n11.  Advance position and repeat until row complete\n12.  Reset for next row if remaining rows exist\n\nParameters:\n- pbSourceBuffer: Pointer to compressed source data (bytes with control markers)\n- nXOffset: Horizontal offset into destination (ECX in __fastcall)\n- nRowCount: Number of rows to process (EDX in __fastcall)\n- nRowWidth: Width of each row in destination\n- nInitialY: Initial vertical position (parameter 5)\n- nXMax: Horizontal extent/limit\n- nYMax: Vertical extent/limit\n- pTableBase: Pointer to lookup table base address (parameter 8)\n- nTableSeed: Table seed/offset value (parameter 9)\n\nReturns: void - modifies destination buffer in-place\n\nSpecial Cases:\n- Control byte 0x00: terminates current row, moves to next\n- Control byte 0x01-0x7F: literal byte counts (advance without transformation)\n- Control byte 0x80-0xFF: literal byte counts with transformation flag set\n- Duff's device unroll with 1-8 byte remainder handling\n\nMagic Numbers:\n- 0x80: High bit flag indicating transformation\n- 0x7F: Mask for low 7 bits (byte count)\n- 0x100: Multiply factor for table lookup combining\n- 0x8: Unroll factor for byte-processing loop (8 bytes per iteration)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8586ab16f4fa712bd16dfca826173e7c"
     },
@@ -8526,6 +8631,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xEC00",
         "LoD/1.10": "0xE780"
       },
+      "name": "AllocateAndInitializeResourceBuffer",
+      "signature": "int AllocateAndInitializeResourceBuffer(uint dwResourceId)",
+      "comment": "Allocates and initializes a 268-byte resource buffer\n\nAlgorithm:\n1. Allocate 280 bytes (0x118) on stack for local storage\n2. Call FUN_6fe20b5e(0, dwResourceId, &nResult, 0) to initialize resource\n3. If initialization fails (nResult == 0), return 0 immediately\n4. Call FUN_6fe20c42(0, nResult, &abResourceBuffer, 0x114) to copy data to buffer\n5. Call FUN_6fe20ba6(0, nResult) to process and finalize resource\n6. Load slot count from [ESP + 0x110]\n7. Calculate final offset: (nSlotCount * 3) << 5 + 0x114\n8. Return calculated buffer offset or 0\n\nParameters:\n- dwResourceId (uint, ECX register): Resource identifier to allocate\n\nReturns:\n- int: Calculated buffer offset (unit size * 96 + 268) or 0 on failure\n\nSpecial Cases:\n- Returns 0 if FUN_6fe20b5e initialization fails\n- Magic constant 0x114 (268 decimal) is the buffer allocation size\n- Final calculation: (nSlotCount * 3) << 5 + 0x114 = nSlotCount * 96 + 268\n\nNote: abResourceBuffer is a 268-byte stack array (byte[268])\n\nRelated Functions:\n- FUN_6fe20b5e - Resource initialization\n- FUN_6fe20c42 - Data copy to buffer\n- FUN_6fe20ba6 - Resource processing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:85908df50a8e84aa4f078e619fa6618b"
     },
@@ -8546,6 +8655,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xE770",
         "LoD/1.10": "0xE2F0"
       },
+      "name": "ScanGridForNullTerminator",
+      "signature": "void ScanGridForNullTerminator(int nGridData)",
+      "comment": "Scans a grid structure to find the first null terminator, branching based on detection.\n\nAlgorithm:\n1. Extract grid base pointer from param_1 + 0x10\n2. Initialize row counter (nRow=0), row offset (nOffsetDelta=0x0e), column count (nColCount=4)\n3. For each row (15 iterations):\n   a. Scan nColCount bytes starting at offset nRowOffset from grid base\n   b. If null terminator (0x00) found, call FUN_6fe1ea00 and jump to cleanup\n   c. If no null found, advance to next row (ECX += 0x20)\n   d. Adjust offsets: if nRow < 7, decrease nRowOffset by 2 and increase nColCount by 4\n   e. Else decrease nColCount by 4 and increase nRowOffset by 2\n4. After 15 rows, call FUN_6fe1ebc0 with grid data\n5. Call Ordinal_10043(0x1de, 0) (Storm.dll ordinal)\n6. Return void\n\nParameters:\npGridData (int) - Pointer to structure containing grid reference at offset +0x10\n\nReturns:\nvoid - Function never returns a value, but triggers different handlers based on grid state\n\nSpecial Cases:\n- Grid structure assumed: base array with 0x20-byte stride per row\n- 15 total rows scanned\n- First 8 rows (0-7): scan offset increases (0x0e, 0x0c, 0x0a...)\n- Last 7 rows (8-14): scan offset decreases but column count decreases\n- Null terminator triggers early exit to FUN_6fe1ea00\n- If no null found through all rows, calls FUN_6fe1ebc0",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:88d312b7ac358c4090f4f57e15498cff"
     },
@@ -8564,6 +8677,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3280",
         "LoD/1.09d": "0x3280"
       },
+      "name": "ClearListNodeState",
+      "signature": "void ClearListNodeState(int * pListNode)",
+      "comment": "Clear list node state by unlinking from double-linked list structure\n\nAlgorithm:\n1. Load first value from pListNode[0]\n2. If first value is null, skip to step 10\n3. Load offset value from pListNode[1]\n4. If offset < 0 (bit 0x80000000 set), compute pTarget = ~offset (inverted pointer)\n5. Else compute pTarget = pListNode + (offset - *(first_value + 4))\n6. Store first_value at pTarget memory location (*pTarget = first_value)\n7. Unlink by copying pListNode[1] to *(first_value + 4)\n8. Clear pListNode[0] and pListNode[1] to zero\n9. Repeat steps 1-8 again (second iteration for dual unlinking)\n10. Return to caller\n\nParameters:\n- pListNode (int*): Pointer to list node structure containing two DWORDs: [pointer_value, offset_value]\n\nReturns:\n- void: No return value, performs in-place unlinking\n\nSpecial Cases:\n- Function iterates twice with identical logic (loop unrolling in binary)\n- Offset with sign bit set (0x80000000+): indicates inverted pointer storage\n- Positive offset: relative addressing from node base\n- Null pointer: node already unlinked, entire iteration skipped",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89358f5488921872c0ec27f675b2c736"
     },
@@ -8582,6 +8699,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x7050",
         "LoD/1.09d": "0x7050"
       },
+      "name": "DecompressTableData",
+      "signature": "void DecompressTableData(byte * pbSrcData, byte * pbDestData, int nNumBlocks, int nBlockWidth, int nTableBase, int nTableOffset)",
+      "comment": "Decompresses table-indexed data blocks using implicit byte offsets.\n\nAlgorithm:\n1. Initialize destination line start pointer (pbDestLineStart = pbDestData + nBlockWidth)\n2. For each block (nNumBlocks iterations):\n   a. Read source command byte from pbSrcData\n   b. If byte >= 0x00 (positive): Extract literal count (low 7 bits) and copy count (byte >> 3)\n   c. Process literal run: Copy (low 7 bits) bytes with table lookup\n   d. If byte < 0x00 (negative): Extract copy count (high 5 bits), literal count (low 3 bits)\n   e. Apply switch table (8 cases) to handle unaligned literal runs (1-7 bytes)\n   f. Process 8-byte aligned chunks: Loop copy count times, copying 8-byte blocks\n      - Each byte: load from table via offset + pbSrcData[i]\n      - Store back to pbDestData[i]\n   g. Advance to next block (pbDestData += nBlockWidth)\n3. Return when nNumBlocks exhausted\n\nParameters:\npbSrcData (in ECX) - IMPLICIT: Source buffer pointer\npbDestData (in EDX) - IMPLICIT: Destination buffer start address\nnNumBlocks - Number of 8-byte output blocks to process\nnBlockWidth - Byte stride between block rows (row pitch)\nnTableBase - Base table address for indirect lookup\nnTableOffset - Source data offset into compressed format\n\nReturns:\nvoid (modifies pbDestData in-place)\n\nSpecial Cases:\n- Unaligned literals (1-7 bytes) handled via duff's device switch table at 0x6fe16874\n- Negative command bytes trigger table-based lookup fallback (high 5 bits = copy count)\n- When copy count = 0 after first 7 bytes, skip to next block immediately\n- Table lookup: byte * 0x100 + nTableBase + src[pbSrcData[offset] + nTableOffset]\n\nMagic Numbers:\n- 0x7F: Mask for literal count from command byte\n- 0x3: Shift right 3 bits to extract copy count\n- 0x100 (256): Byte multiplier for table lookup offset\n- 0x8: Block size for aligned processing\n- 0x07: Case selector for unaligned literal switch table",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89baecb2a477b60ec426467fbc05be49"
     },
@@ -8602,6 +8723,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18410",
         "LoD/1.10": "0x17263"
       },
+      "name": "AcquireCharacterLock",
+      "signature": "void AcquireCharacterLock(uint dwCharacterIndex)",
+      "comment": "Acquire exclusive access to a character's critical section for thread-safe table modification.\n\nAlgorithm:\n1. Extract table array index (high 27 bits) and slot offset (low 5 bits) from dwCharacterIndex\n2. Multiply slot offset by 0x24 (36-byte entry size) to get nSlotOffset\n3. Load character entry pointer from g_pCharacterTableArray using array index\n4. Calculate absolute address nCharacterOffset = entry_pointer + nSlotOffset\n5. Check initialization flag at offset +0x8 from character entry\n6. If flag equals 0: acquire global critical section (index 0x11) for synchronization\n7. Verify flag again (double-checked locking) to prevent redundant initialization\n8. If still 0: call InitializeCriticalSection on critical section at offset +0xc\n9. Increment initialization flag to 1\n10. Release global critical section (index 0x11)\n11. Acquire character's critical section (at offset +0xc + nSlotOffset) for caller\n12. Return with critical section held\n\nParameters:\ndwCharacterIndex (uint): Packed character identifier combining array index and slot offset\n\nReturns:\nvoid - Returns with character critical section acquired by EnterCriticalSection(); caller must explicitly release\n\nSpecial Cases:\n- Uses double-checked locking to minimize global lock contention during initialization\n- Critical section index 0x11 reserved for global table synchronization\n- Character entry size fixed at 0x24 (36) bytes\n- Initialization flag at offset +0x8; critical section at offset +0xc within entry",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89c8ec97483b3d89b792dc7acc8a9af7"
     },
@@ -8632,6 +8757,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x306A",
         "LoD/1.13d": "0x3082"
       },
+      "name": "UnwindExceptionFrame",
+      "signature": "void UnwindExceptionFrame(ExceptionFrame * pExceptionFrame)",
+      "comment": "Unwinds exception handling frame and invokes exception handler\n\nAlgorithm:\n1. Save current EBP register value on stack\n2. Load exception frame pointer from ESP+8 (first parameter)\n3. Extract EBP value from frame offset +0x00 into register\n4. Extract handler dispatch index from frame offset +0x1c\n5. Extract handler routine address from frame offset +0x18\n6. Push both handler parameters (dispatch index, handler address) to stack\n7. Call __local_unwind2 to perform structured exception unwinding\n8. Clean up stack arguments (ADD ESP, 8)\n9. Restore original EBP from stack\n10. Return with stack frame cleanup (__stdcall returns +4 bytes)\n\nParameters:\npExceptionFrame (ExceptionFrame *) - Pointer to exception frame structure\n  Contains: savedEBP, handlerAddress, dispatchIndex for stack unwinding\n\nReturns:\nvoid - Does not return normally; transfers control to exception handler via __local_unwind2\n\nSpecial Cases:\n- Part of structured exception handling (SEH) mechanism\n- Called during exception propagation and stack unwinding\n- __stdcall calling convention (callee cleans ESP+4)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89d1b619054116ad559c7c543db397fd"
     },
@@ -8679,16 +8808,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:8b97ebec1e2ba4f1376a18655897a974"
     },
-    "D2CMP_MNE_8bbd022d51d5": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF3330"
-      },
-      "rvas": {
-        "LoD/1.10": "0x3330"
-      },
-      "method": "MNE",
-      "index": "MNE:8bbd022d51d58c9663c897a95eec0b8a"
-    },
     "D2CMP_MNE_8c1ef08c1332": {
       "addresses": {
         "LoD/1.07": "0x6FE28DD0",
@@ -8706,6 +8825,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18BC0",
         "LoD/1.10": "0x187C0"
       },
+      "name": "CompareStringsCaseInsensitive",
+      "signature": "int CompareStringsCaseInsensitive(void * this, void * pContext, byte * pszStr1, byte * pszStr2)",
+      "comment": "Case-insensitive string comparison (ASCII). Returns -1, 0, or 1 based on character order.\n\nAlgorithm:\n1. Check if g_bTableEnabled flag is set\n2. If disabled: direct byte-by-byte comparison with ASCII case conversion:\n   - Normalize both bytes via (byte - 0x41) conversion\n   - Check if difference is < 0x1a (26, A-Z range)\n   - If true, apply 0x20 mask to toggle case\n   - Compare normalized values, return difference or -1/0/1\n3. If enabled: table-based lookup via DecompressCharacterLookupValue:\n   - Acquire critical section (0x13) if g_bCriticalSectionInUse > 0\n   - Increment _g_dwReferenceCount with LOCK prefix\n   - Load bytes with marker 0xff, loop through input strings\n   - Call DecompressCharacterLookupValue on each byte for lookup\n   - Compare results, return difference or -1/0/1\n   - Decrement reference count with LOCK prefix on exit\n\nParameters:\n  this - __thiscall implicit context pointer (ECX register, cannot be renamed in auto-parameter)\n  pContext (void*) - Secondary context/state pointer (registration parameter)\n  pszStr1 (byte*) - First null-terminated ASCII string pointer\n  pszStr2 (byte*) - Second null-terminated ASCII string pointer\n\nReturns:\n  int - Comparison result: -1 if str1 < str2, 0 if equal, 1 if str1 > str2\n\nLocal Variables (renamed with Hungarian notation):\n  byChar (byte) - Current byte marker in lookup loop (initially 0xff)\n  byChar1 (byte) - Character from pszStr1 in active comparison\n  byChar2 (byte) - Character from pszStr2 in active comparison\n  fCriticalSection (bool) - Flag indicating critical section was acquired\n  \nSpecial Cases:\n  - Supports two comparison modes: table-enabled and disabled\n  - Uses atomic LOCK operations for thread safety with table mode\n  - Handles critical section initialization/release logic\n  - Case conversion works via character arithmetic (A-Z = 0x41-0x5A)\n\nMagic Numbers Reference:\n  0xff - Initial byte marker / loop terminator\n  0x41 - ASCII 'A' base\n  0x1a - 26, A-Z range size\n  0x20 - Case toggle bitmask\n  0xbf - Intermediate calculation constant (0x41 - 1)\n  0x13 - Critical section handle/index\n  0x6ff12e9c - g_bTableEnabled flag address\n  0x6ff13004 - _g_dwReferenceCount address\n  0x6ff13000 - g_bCriticalSectionInUse flag address",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8c1ef08c13327b78f680f81ff5d26364"
     },
@@ -8868,6 +8991,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x91C0",
         "LoD/1.10": "0x8EB0"
       },
+      "name": "RemoveNodeFromDoubleLinkedList",
+      "signature": "void RemoveNodeFromDoubleLinkedList(void * pListHead, void * pNodeToRemove)",
+      "comment": "Remove a node from a doubly-linked list. Updates list head/tail pointers and node links.\n\nAlgorithm:\n1. Check if list is active (head.next != NULL): exit if not\n2. Increment list node count at offset 0x30\n3. Validate pNodeToRemove is not NULL: assert if NULL\n4. Load list head pointer from offset 0x18 (head.next)\n5. Handle node removal cases:\n   a. If pNodeToRemove is first node (== head.next):\n      - Update head.next to node's prev pointer (offset 0xc)\n      - If new head is NULL: clear tail pointer (offset 0x1c)\n      - Else: clear new head's prev pointer (offset 0x10)\n      - Clear removed node's links (offsets 0xc, 0x10)\n   b. Else if pNodeToRemove is tail node (== head.prev):\n      - Update tail pointer to node's prev pointer (offset 0x10)\n      - Clear new tail's next pointer (offset 0xc)\n   c. Else node is in middle:\n      - Unlink from prev: prev.next = node.next (copy offset 0xc to prev+0xc)\n      - Unlink from next: next.prev = node.prev (copy offset 0x10 to next+0x10)\n      - Clear removed node's links (offsets 0xc, 0x10)\n6. If list empty after removal (tail == NULL):\n   - Set head.next = pNodeToRemove\n   - Set head.prev = pNodeToRemove\n7. Else add node to tail:\n   - Set tail.next = pNodeToRemove\n   - Set node.prev = current tail\n   - Update head.prev = pNodeToRemove\n\nParameters:\npListHead (void *) - Container/head structure with:\n  - Offset 0xc: list active flag (head.next pointer, non-zero = active)\n  - Offset 0x18: head pointer (first node in list)\n  - Offset 0x1c: tail pointer (last node in list)\n  - Offset 0x30: node count (incremented on operations)\npNodeToRemove (void *) - Node to remove from list with:\n  - Offset 0xc: prev pointer (doubly-linked)\n  - Offset 0x10: next pointer (doubly-linked)\n\nReturns:\nvoid - No return value\n\nNote: Function uses stack-allocated temporary optimized away (pvVar1)\n\nStructure Layout (Doubly-Linked Node):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | (data)     | dword| Node-specific data\n0x0c   | 4    | prev       | void*| Previous node pointer (doubly-linked)\n0x10   | 4    | next       | void*| Next node pointer (doubly-linked)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:902a5d69ab2988978fa8aa6b91e50aeb"
     },
@@ -8886,6 +9013,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6660",
         "LoD/1.09d": "0x6660"
       },
+      "name": "ApplyPaletteTransformLines",
+      "signature": "void ApplyPaletteTransformLines(byte * pbSourceLine, int nDestLineOffset, int nNumLines, int nLineWidth, int nSourceStartCol, int nDestStartCol, int nDestEndCol, int nPaletteOffset, int nPaletteData)",
+      "comment": "Apply a palette/color lookup table transformation to an array of scan lines.\n\nAlgorithm:\n1. Initialize: Save nSourceStartCol and nPaletteData for reuse across lines\n2. Main loop: Process each scan line (nNumLines iterations)\n3. For each scan line:\n   a. Read source bytes from pbSourceLine (variable-length encoding)\n   b. Each byte encodes: high bit = end-of-line flag, low 7 bits = count\n   c. If count > 0: Process count bytes\n      - Clip column range to [nDestStartCol, nDestEndCol]\n      - Calculate dwBytesToProcess = clipped range size\n      - If dwBytesToProcess < 1: Skip (bounds check)\n      - Else: Apply palette lookup transformation using unrolled 8x loop\n   d. Accumulate nDestLineOffset to pointers after each count bytes processed\n   e. After line complete (0x00 terminator): Move to next line\n4. Return after processing all nNumLines lines\n\nParameters:\npbSourceLine (byte *) - Source buffer: variable-length encoded scan lines\nnDestLineOffset (int) - Width of destination array per line (row stride)\nnNumLines (int) - Number of scan lines to process (outer loop count)\nnLineWidth (int) - Total width of line area for offset calculation\nnSourceStartCol (int) - Left margin (relative position)\nnDestStartCol (int) - Destination column start (viewport left)\nnDestEndCol (int) - Destination column end (viewport right)\nnPaletteOffset (int) - Base offset into palette lookup table\nnPaletteData (int) - Palette data value (high byte of lookup index)\n\nReturns:\nvoid - Transformation applied in-place to destination line buffer\n\nSpecial Cases:\n- Variable-length encoding: bytes with sign bit clear terminate count\n- Bytes with sign bit set: treated as end-of-line (0x00) or special count (0x80-0xFF)\n- Clipping: destination columns clipped to [nDestStartCol, nDestEndCol] range\n- Unrolled 8x inner loop: processes 8 pixels at a time with duff's device switch fallthrough\n- Phantom stack temporaries (local_4, local_8, local_c, local_10) optimized away\n\nMagic Numbers:\n- 0x7f: Mask to extract 7-bit count from variable-length encoding byte\n- 0x80: Sign bit flag (indicates end-of-line when set alone)\n- 0x100: Multiply by 256 to shift palette byte index for lookup\n- 0x8: Unroll factor for inner loop (8 pixels per iteration)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:90df6b464796db1f081eed3ba8690ad9"
     },
@@ -8924,6 +9055,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1618A",
         "LoD/1.10": "0x16346"
       },
+      "name": "FormatNumericStringWithRounding",
+      "signature": "void FormatNumericStringWithRounding(char * szBuffer, int nLength, int nFormatContext)",
+      "comment": "Formats a numeric string with decimal rounding and overflow handling.\n\nAlgorithm:\n1. Initialize buffer with '0' at offset 0, point to offset 1\n2. Copy source characters from pszSourceChar to buffer positions, defaulting to '0' for null/end\n3. Copy up to nLength characters, replacing nulls with '0'\n4. Null-terminate the constructed string\n5. If nLength >= 0 and next source char > '5', perform rounding:\n   - Walk backwards from current position, replacing '9' with '0'\n   - Increment the first non-'9' digit, causing carry propagation\n6. If first character is '1', increment exponent counter at nFormatContext + 0x4\n7. Otherwise, copy the formatted string (from position 1) back to szBuffer using memory overlap handling\n\nParameters:\nszBuffer: Destination buffer for formatted numeric string\nnLength: Number of characters to format (loop count)\nnFormatContext: Pointer to format context structure containing:\n  - Offset +0xc: Pointer to source character string\n  - Offset +0x4: Exponent counter (incremented on '1' prefix)\n\nReturns: void\n\nSpecial Cases:\n- Null characters in source are replaced with '0'\n- If source ends before nLength chars, remaining positions get '0'\n- Rounding only occurs when next source char >= '5'\n- Carry propagation continues until non-'9' digit found\n- Memory overlap between szBuffer and constructed string handled by CopyMemoryWithOverlapHandling",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:91502dc0968a39359be974ca352b925c"
     },
@@ -8944,6 +9079,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1880A",
         "LoD/1.10": "0x1840A"
       },
+      "name": "AddUint96",
+      "signature": "void AddUint96(dword * pResult, dword * pAddend)",
+      "comment": "Adds two 96-bit unsigned integers with sign-bit preservation and rounding.\n\nAlgorithm:\n1. Extract exponent and sign bit from both operands (bits [15:10] are exponent, bit 15 is sign)\n2. Validate exponents are in range [0, 0x7fff) and sum is in range [0, 0xbffe)\n3. If result would underflow (exponent < 0x3fc0), return zero\n4. Align operands: if either has zero exponent, increment its exponent\n5. Perform 96-bit multiplication using 5-iteration convolution loop with carries\n6. Normalize result: right-shift if overflow, left-shift if underflow using RotateRight96Bits/ShiftLeft96Bit\n7. Perform post-normalization rounding based on MSB of 96-bit accumulator\n8. Reconstruct exponent with sign preservation and overflow handling\n9. Write result back to output, or return overflow/underflow error code\n\nParameters:\n  pResult [dword*] - Pointer to 96-bit output value (3 dwords). Fields: [0]=low, [2]=mid, [6]=high, [10]=exponent+sign\n  pAddend [dword*] - Pointer to 96-bit addend value (same layout)\n\nReturns:\n  void - Result written to pResult. On overflow: pResult[2]=0x7fff8000. On underflow: pResult[0..2]=0\n\nSpecial Cases:\n  - Exponent overflow: result clamped to 0x7fff with appropriate sign\n  - Exponent underflow: result set to zero (all fields zero)\n  - Sign bit handling: preserved in bit 15 of final exponent\n\nStructure Layout (96-bit value layout):\n  Offset | Size | Field Name | Type | Description\n  0      | 4    | dwLowWord  | uint | Low 32-bits of mantissa\n  4      | 4    | dwMidWord  | uint | Middle 32-bits of mantissa  \n  8      | 2    | wExponent  | ushort | Exponent in bits [14:0], sign in bit 15",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9164e08642353fc9b6a5a942bb4e12cf"
     },
@@ -8998,10 +9137,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x5F94",
         "LoD/1.13d": "0x6319"
       },
-      "name": "__isatty",
-      "signature": "int __isatty(int _FileHandle)",
-      "comment": "Library Function - Single Match\n __isatty\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeDecompressionBuffer",
+      "signature": "undefined4 InitializeDecompressionBuffer(int nBufferControl, dword * pOutputBuffer)",
+      "comment": "Initialize decompression output buffer to zero and delegate to next decompression handler.\n\nAlgorithm:\n1. Check if buffer control structure has valid cell count (offset 0x1c)\n2. If zero cells, return 0 immediately (empty operation)\n3. Initialize 16 consecutive dwords in output buffer to 0x00000000\n4. Set first element to 0xffffffff (sentinel/end marker)\n5. Call FUN_6fe15380 with buffer control and output buffer\n6. Return result from FUN_6fe15380\n\nParameters:\n- pBufferControl: int (ECX) - Decompression control structure address; cell count at offset 0x1c\n- pOutputBuffer: dword * (EDX) - Output destination; 16-dword array for intermediate results\n\nReturns:\n- uint: Result code from FUN_6fe15380 (0 for success, non-zero for error/continue)\n\nSpecial Cases:\n- Empty buffer: Returns 0 if cell count at [pBufferControl + 0x1c] == 0\n- Buffer layout: First 16 elements of output array cleared, element 0 set to sentinel 0xffffffff\n\nMagic Numbers:\n- 0x1c: Offset to cell count in buffer control structure\n- 0x0f: Loop count (15 iterations = 16 elements for buffer initialization)\n- 0xffffffff: Sentinel value written to element 0",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:924af6303e8dbcff64ae69199889306b"
     },
@@ -9022,6 +9161,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x183CE",
         "LoD/1.10": "0x17221"
       },
+      "name": "GetCharacterTableEntry",
+      "signature": "dword GetCharacterTableEntry(dword nCharIndex)",
+      "comment": "Retrieve character table entry by index with validation\n\nAlgorithm:\n1. Check if character index is within valid range (< g_dwCharacterTableCount)\n2. Calculate table array index: nCharIndex >> 5 (divide by 32)\n3. Calculate bit position within flag byte: nCharIndex & 0x1f (modulo 32)\n4. Load flag byte from table array at calculated offset + 4\n5. Check if flag bit 0x01 is set (character entry is valid)\n6. If valid, return character data from table at calculated offset\n7. If invalid, set TLS error code to 9 and pointer to NULL via GetTlsContextOffset8/GetTlsContextOffsetPointer\n8. Return 0xffffffff (-1) on error\n\nParameters:\n  nCharIndex (dword) - Index into character table (0-based)\n\nReturns:\n  Success: Character table entry data (dword from array)\n  Error: 0xffffffff (-1) if index out of range or entry flag not set\n  \nSpecial Cases:\n  - Sets TLS error code to 9 on invalid index or unset flag bit\n  - Sets TLS error pointer to NULL before return\n  \nMagic Numbers:\n  0x1f - Bitmask for modulo 32 operation (0x1f = 31)\n  0x5 - Right shift amount for divide by 32\n  0x24 - Character entry size in bytes (36 bytes per entry)\n  0x1 - Flag bit mask for checking valid entry\n  0xffffffff - Error return value (-1)\n  9 - TLS error code for invalid character index",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:925a8d581e90d1850e90a2aaf94686cb"
     },
@@ -9042,6 +9185,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3A60",
         "LoD/1.10": "0x3870"
       },
+      "name": "GetListNodeValueMask",
+      "signature": "dword GetListNodeValueMask(int nListNode)",
+      "comment": "Extract list node value and return masked result based on sign.\n\nAlgorithm:\n1. Load value at offset +4 from pListNode\n2. Test if value is less than 1 (negative or zero)\n3. If true, set mask to 0xFFFFFFFF, otherwise 0\n4. AND the value with mask and return result\n5. Result: returns value if >= 1, otherwise 0\n\nParameters:\npListNode (int) - Pointer to list node structure, offset +4 contains the value to test\n\nReturns:\nMasked value - Returns value at [pListNode+4] if positive (>= 1), returns 0 if value <= 0\n\nSpecial Cases:\n- Zero or negative values return 0\n- Used in cleanup loop to conditionally process list nodes",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9290c9676f2f31877cf6a5dc1a541034"
     },
@@ -9104,6 +9251,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xBAB0",
         "LoD/1.09d": "0xBAB0"
       },
+      "name": "BuildAndApplyPaletteShift",
+      "signature": "void BuildAndApplyPaletteShift(char * szPaletteType, int nPaletteIndex)",
+      "comment": "Builds a combined palette shift string and applies it to the palette data buffer.\n\nAlgorithm:\n1. Get length of global palette extension string\n2. Copy extension string to local buffer (256 bytes)\n3. Append input palette type string to buffer\n4. Append global palette shift source path to buffer\n5. Call FUN_6fe20b5e to load/parse the combined string into dwHandle\n6. If loading succeeds (nResult == 0):\n   - Call Ordinal_10025 (storm library) to clear error state (0x38 bytes)\n   - Zero-fill palette shift buffer (0x540 dwords = 5376 bytes per palette index)\n   - Return\n7. If loading fails (nResult != 0):\n   - Call FUN_6fe20c42 to decode data from loaded file into palette buffer (0x1500 bytes)\n   - Call FUN_6fe20ba6 to cleanup dwHandle\n   - Return\n\nParameters:\nszPaletteType: Palette type string to prepend to shift path\nnPaletteIndex: Palette index to select within g_pPaletteShiftBuffer (base + nPaletteIndex * 0x6900)\n\nReturns:\nvoid - Always succeeds; either initializes palette or applies loaded shift data\n\nStructure Layout:\nPalette Buffer: 0x6900 bytes per palette (16 total)\n- Palette data: 0x1500 bytes (max data)\n- Padding/unused: remaining bytes\n\nMagic Numbers:\n0x1500 (5376) - Palette data size in bytes\n0x540 (1344) - Palette zero-fill size in dwords (0x540 * 4 = 0x1500)\n0x6900 (26880) - Per-palette buffer stride\n0x38 (56) - Storm error buffer clear size\n\nNote: Uses repne scasb loop pattern for string length calculation (optimized strlen equivalent)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:964be4e5f49e5501c820298f2af31bae"
     },
@@ -9124,6 +9275,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11288",
         "LoD/1.10": "0x10D88"
       },
+      "name": "InitializeGameState",
+      "signature": "dword InitializeGameState(dword pInstanceHandle, int nGameMode)",
+      "comment": "Manage game initialization and cleanup lifecycle based on mode parameter.\n\nAlgorithm:\n1. If nGameMode == 1: Initialize game state\n   - Retrieve Windows version via GetVersion() and decompose into major/minor components\n   - Call FUN_6fe23e7d(1) to validate initialization prerequisites\n   - If validation fails, call FUN_6fe23eda() and return 0\n   - Extract and store Windows version components (major in g_byWindowsVersionMajor, minor in g_byWindowsVersionMinor, build in g_dwWindowsVersion >> 16)\n   - Compute combined version word: (minor << 8) | major into g_wWindowsVersionCombo\n   - Call FUN_6fe226bc() to initialize subsystems\n   - If subsystem init fails, call FUN_6fe23eda() and return 0\n   - On success: retrieve command line, initialize resources, execute initializer chain, increment g_dwInitializationCounter, return 1\n\n2. If nGameMode == 0: Cleanup game state\n   - Decrement g_dwInitializationCounter\n   - If counter drops to 0, perform full cleanup: InitializeProcessCleanup(), FUN_6fe2387c(), FUN_6fe22710(), FUN_6fe23eda()\n   - Otherwise call FUN_6fe23eda() only\n\n3. If nGameMode == 3: Special cleanup\n   - Call FUN_6fe227a8(NULL)\n   - Return 1\n\nParameters:\n  pInstanceHandle: Instance handle (unused, reserved)\n  nGameMode: Operation mode (1=initialize, 0=cleanup, 3=special cleanup)\n\nReturns:\n  1 on success (initialization complete or cleanup succeeded)\n  0 on failure or cleanup mode\n\nGlobal Data Modified:\n  g_dwInitializationCounter - Reference counter for init/cleanup pairs\n  g_dwWindowsVersion - Full Windows version dword\n  g_byWindowsVersionMajor - Major version component\n  g_byWindowsVersionMinor - Minor version component\n  g_wWindowsVersionCombo - Combined (minor << 8) | major\n  g_dwGameResourceHandle - Handle to game resources\n  g_szCommandLine - Command line string pointer",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:966ae3d3931d4719f3b38eb61e43e94b"
     },
@@ -9144,6 +9299,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13492",
         "LoD/1.10": "0x12AF3"
       },
+      "name": "ReadOffsetAndValue",
+      "signature": "longlong ReadOffsetAndValue(int * pnOffsetPtr)",
+      "comment": "Read and advance offset pointer, returning 64-bit value from structure\n\nAlgorithm:\n1. Load pointer address from parameter (pnOffsetPtr)\n2. Add 8 bytes to the offset value it points to (advance offset)\n3. Load the incremented offset value into ECX\n4. Read 64-bit value from memory at [ECX - 8] (return in EDX:EAX)\n\nParameters:\npnOffsetPtr: Pointer to an offset/position value (int *)\n             Used to track position in data structure\n\nReturns:\nEAX/EDX: 64-bit value (qword) from structure at current offset position\n         Lower 32 bits in EAX, upper 32 bits in EDX\n\nSpecial Cases:\n- Assumes pnOffsetPtr points to valid writable memory\n- Assumes target memory at [offset - 8] is readable and aligned\n- Offset is incremented before read (read-then-advance pattern)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9696a1fa07b46e8a513683c75ff67fe3"
     },
@@ -9196,6 +9355,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x14D0",
         "LoD/1.13d": "0x13F0"
       },
+      "name": "Destructor",
+      "signature": "void * Destructor(void * this, void * pThis, byte fDeleteContents)",
+      "comment": "Destructor: Cleanup and optionally delete object contents\n\nAlgorithm:\n1. Call DestroyHashTableManager to deallocate internal hash table\n2. Check if fDeleteContents flag (0x01) is set AND pThis is not NULL\n3. If both conditions true, call Ordinal_403 (likely memory deallocation) with:\n   - pThis as object pointer\n   - s_delete string constant as label/identifier\n   - 0xFFFFFFFF as size indicator (all contents)\n   - 0 as reserved parameter\n4. Return pThis pointer (for chaining)\n\nParameters:\n  pThis (void *): Object instance pointer (this pointer)\n  fDeleteContents (byte): Flags controlling cleanup behavior\n    - Bit 0 (0x01): If set, deallocate object contents via Ordinal_403\n    - Other bits: Reserved\n\nReturns:\n  void *: Returns pThis pointer unchanged (destructor pattern)\n\nSpecial Cases:\n  - If pThis is NULL, skips Ordinal_403 call (safe null handling)\n  - DestroyHashTableManager always called regardless of flags\n  - fDeleteContents & 0x01 determines content deallocation\n\nRelated Functions:\n  - DestroyHashTableManager: Frees internal hash table structures first\n  - Ordinal_403: Storm.dll function for memory management/content deletion",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4"
     },
@@ -9226,10 +9389,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4C34",
         "LoD/1.13d": "0x4C43"
       },
-      "name": "__FF_MSGBANNER",
-      "signature": "void __FF_MSGBANNER(void)",
-      "comment": "Library Function - Single Match\n __FF_MSGBANNER\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ExecuteExitSequence",
+      "signature": "void ExecuteExitSequence(void)",
+      "comment": "Execute exit cleanup handlers during process termination.\n\nAlgorithm:\n1. Check if exit initialized (g_dwExitInitialized == 1) OR (g_dwExitInitialized == 0 AND g_dwExitPhaseOneComplete == 1)\n2. If true, execute first cleanup phase (0xfc - initialize cleanup)\n3. Check if custom exit handler set (g_pUserExitHandler != NULL)\n4. If handler exists, invoke it via function pointer\n5. Execute second cleanup phase (0xff - finalize cleanup)\n6. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Both cleanup phases (0xfc, 0xff) called regardless of handler presence\n- Custom handler (g_pUserExitHandler) is optional - skipped if NULL\n- Exit sequence only runs if initialization check passes\n\nRelated Functions:\n- FUN_6fe23fbb - Cleanup handler dispatch (called with phase marker)\n- __amsg_exit - Caller, main exit routine",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9765460a30498931557fab10cfc0be00"
     },
@@ -9358,18 +9521,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16CE2",
         "LoD/1.10": "0x167CE"
       },
+      "name": "ClearLinkedListNodesFromArray",
+      "signature": "void ClearLinkedListNodesFromArray(void * pArrayBase)",
+      "comment": "Iterates through array of fixed-size elements and removes linked list nodes.\n\nAlgorithm:\n1. Load element count from pArrayBase[0x10c]\n2. If count is 0, return immediately\n3. Initialize loop counter nSlotIndex = 0, base offset nSlotOffset = 0\n4. Loop through each element:\n   a. Calculate element address: nSlotOffset + pArrayBase[0x110]\n   b. Load node pointer from offset 0x5c in element\n   c. If node is non-NULL, call RemoveNodeFromLinkedList to remove it\n   d. Clear node pointer at offset 0x5c and data at offset 0x54\n   e. Increment nSlotIndex and add 0x60 to offset\n5. Continue loop while nSlotIndex < element count\n\nParameters:\npArrayBase (void * IMPLICIT ECX): Pointer to array structure containing:\n  - [+0x10c] nElementCount: Number of elements in array\n  - [+0x110] nBaseOffset: Base offset to elements\n  (Note: Requires domain-specific structure type - unknown without codebase context)\n\nReturns:\nvoid - Modifies linked list state via RemoveNodeFromLinkedList calls\n\nSpecial Cases:\n- Early exit if element count is 0\n- Skips removal if node pointer at offset 0x5c is NULL\n- Fixed element stride of 0x60 bytes\n\nMagic Numbers Reference:\n0x10c - offset to element count in array structure\n0x110 - offset to base offset in array structure\n0x5c - offset to node pointer within each element\n0x54 - offset to data field cleared after removal\n0x60 - element stride/size in bytes\n\nRelated Functions:\n- RemoveNodeFromLinkedList() - Removes node from linked list",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:99d9d7ab74672436cc8e3bf11bff9f41"
-    },
-    "D2CMP_MNE_9a1f40d78d0e": {
-      "addresses": {
-        "LoD/1.07": "0x6FE15F50"
-      },
-      "rvas": {
-        "LoD/1.07": "0x5F50"
-      },
-      "method": "MNE",
-      "index": "MNE:9a1f40d78d0e0fedaa9c8d652d141feb"
     },
     "D2CMP_MNE_9a5ce2267bc1": {
       "addresses": {
@@ -9398,10 +9555,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x8A33",
         "LoD/1.13d": "0x8A3E"
       },
-      "name": "_isdigit",
-      "signature": "int _isdigit(int _C)",
-      "comment": "Library Function - Single Match\n _isdigit\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ProcessAndClearQueueItems",
+      "signature": "void ProcessAndClearQueueItems(void * pQueueNode)",
+      "comment": "Process and clear a queue or linked list, draining all items and clearing a completion flag.\n\nAlgorithm:\n1. Load initial next item pointer from offset +0xc\n2. While next item exists:\n   a. Call FUN_6fe19300 to process/remove the item\n   b. Reload next item pointer from offset +0xc\n3. Check completion flag at offset +0x10\n4. If flag is set, log debug message (line 0x62) and clear the flag\n\nParameters:\npQueueNode - Pointer to queue/list structure with:\n  +0xc: next item pointer (linked list head)\n  +0x10: completion flag (non-zero if processing incomplete)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Function loops until queue empty (next item = 0)\n- Debug message uses string at 0x6fe2e9ec with line number 0x62\n- Flag is cleared after debug logging regardless of prior state",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9a5ce2267bc145a21b95341852f43eee"
     },
@@ -9480,6 +9637,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12866",
         "LoD/1.10": "0x12C88"
       },
+      "name": "ConvertDoubleToAscii",
+      "signature": "byte * ConvertDoubleToAscii(double * pValue, byte * pbOutput, int nPrecision, int nFlags)",
+      "comment": "Convert double-precision floating point to ASCII decimal string representation.\n\nAlgorithm:\n1. Extract mantissa and exponent from double using FUN_6fe26411\n2. Store decomposed components in anComponents array\n3. Prepare output buffer positioning: skip 1 byte if value positive, skip 2 if negative (for sign)\n4. Call FUN_6fe2639a to insert sign character and decimal point at appropriate position\n5. Call FUN_6fe22ad7 to format digit string into final buffer with precision and flags\n6. Return pointer to output buffer\n\nParameters:\n  pValue (double *) - Pointer to double-precision value to convert\n  pbOutput (byte *) - Pointer to output buffer for ASCII string\n  nPrecision (int) - Precision digits to include after decimal point\n  nFlags (int) - Format flags controlling output layout\n\nReturns:\n  byte * - Pointer to output buffer (same as pbOutput parameter)\n\nSpecial Cases:\n  - Negative values: sign '-' prepended before decomposition\n  - Zero precision: only integer portion included\n  - Large exponents: scientific notation formatting via FUN_6fe2639a",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9d2a5d769a01e278db09b78de631f581"
     },
@@ -9498,6 +9659,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x9D70",
         "LoD/1.09d": "0x9D70"
       },
+      "name": "BuildPaletteQuantizationTable",
+      "signature": "void BuildPaletteQuantizationTable(byte * pbPaletteData)",
+      "comment": "Build palette quantization lookup table for 8-bit color nearest-neighbor search\n\nAlgorithm:\n1. Initialize output table pointer to pbPaletteData + 0x6b727 and palette pointer to pbPaletteData + 0x6b604\n2. Set component counter to 12 (process 12 color components)\n3. For each color component (outer loop):\n   a. Initialize pixel index counter to 0\n   b. For each input color value 0-255 (middle loop):\n      - Initialize minimum distance to 0xffffffff (maximum uint)\n      - Load input intensity from current pixel offset\n      - For each palette entry 0-255 (inner loop):\n        * Load R/G/B bytes from palette at current component offset\n        * Calculate weighted delta for each channel: (palette_value * intensity) / 0xff\n        * Compute Euclidean distance squared: dR^2 + dG^2 + dB^2\n        * If distance < minimum: update minimum distance and store palette index\n      - Write best palette index to output table\n   c. Advance palette pointer by 3 bytes (next color component set)\n   d. Advance output table pointer by 256 bytes (next lookup row)\n4. Repeat until all 12 color components processed\n\nParameters:\npbPaletteData: byte * - Base palette data pointer (contains both source palette and output table)\n\nReturns:\nvoid - Quantization lookup table written to memory at pbPaletteData + 0x6b727\n\nSpecial Cases:\n- Builds 12 lookup tables of 256x256 bytes each (total 786432 bytes)\n- Uses magic constant 0x80808081 for fixed-point division optimization\n- Processes palette in component-major order (R0..R255, G0..G255, B0..B255, repeating 4x)\n- Output indexed by [component][intensity][palette_index]\n\nMagic Numbers:\n0x6b604 - Offset to source palette data (3072 bytes = 256 colors * 3 channels)\n0x6b727 - Offset to output quantization table (786432 bytes = 12 * 65536)\n0xff - Color intensity maximum\n0x80808081 - Fixed-point division constant for division by 255\n0x100 - 256 (palette entry count, loop counter limit)\n0xc - 12 (color component count)\n0x3 - 3 bytes per color (RGB)\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0x6b604 | 3072 | palette_data | byte[1024*3] | Source palette (256 colors, 3 components each)\n0x6b727 | 786432 | quant_table | byte[12*256*256] | Quantization lookup tables",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9d3889e1d3f528e9a4ff324bd1470a53"
     },
@@ -9554,6 +9719,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8980",
         "LoD/1.10": "0x8690"
       },
+      "name": "ClearBuffer",
+      "signature": "void ClearBuffer(dword * pdwBuffer)",
+      "comment": "Clear 0x400 DWORDs (4096 bytes) of memory to zero using __fastcall\n\nAlgorithm:\n1. Initialize loop counter to 0x400 (1024 iterations)\n2. For each iteration: write 0 to current buffer location\n3. Increment buffer pointer by 4 bytes (DWORD size)\n4. Decrement counter, repeat until counter reaches 0\n5. Return to caller\n\nParameters:\npdwBuffer - Pointer to DWORD array to clear (passed in ECX)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Uses REP STOSD for efficient zero-filling (memset equivalent)\n- Clears exactly 0x400 DWORDs = 4096 bytes = 1 page",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9e20ea0b749b6a6baa3c5bb158fff5cf"
     },
@@ -9664,6 +9833,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x119E7",
         "LoD/1.10": "0x114E7"
       },
+      "name": "CleanupGameCriticalSections",
+      "signature": "void CleanupGameCriticalSections(void)",
+      "comment": "Cleanup all game critical sections before shutdown\n\nAlgorithm:\n1. Load address of first critical section pointer (g_paCriticalSections)\n2. Initialize loop: iterate through array of critical section pointers, 4 bytes per entry\n3. For each section pointer:\n   - Check if pointer is non-NULL (0x6fe21c06: TEST EAX, EAX)\n   - Skip cleanup for reserved sections (g_pGameCriticalSection1-4) by comparing pointer address\n   - If valid (not reserved), call DeleteCriticalSection via EDI function pointer\n   - Call FUN_6fe21cd9 to release associated resources\n4. Increment pointer by 4 bytes, continue while ESI < 0x6fe30c90 (array end)\n5. Delete four main critical sections in order:\n   - g_pGameCriticalSection3 (0x6fe30bf4)\n   - g_pGameCriticalSection2 (0x6fe30c04)\n   - g_pGameCriticalSection1 (0x6fe30c14)\n   - g_pGameCriticalSection4 (0x6fe30bd4)\n6. Return to caller\n\nParameters:\n(none)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Reserved critical sections (1-4) are NOT deleted in the loop but instead deleted explicitly after loop\n- Pointer is loaded into EDI at start (0x6fe21bf9) and remains throughout - points to DeleteCriticalSection\n- Loop array spans 0x6fe30bd0 to 0x6fe30c90 (192 bytes, 48 critical section entries)\n- Critical section pointers marked with g_pa prefix indicate array of pointers",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a0707ad44a579985e4c3b985375d38cb"
     },
@@ -9712,15 +9885,16 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x3E0A",
         "LoD/1.13d": "0x3E3F"
       },
-      "name": "__initptd",
-      "signature": "void __initptd(_ptiddata _Ptd, pthreadlocinfo _Locale)",
-      "comment": "Library Function - Single Match\n __initptd\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeGameObjectFields",
+      "signature": "void InitializeGameObjectFields(void * pObject)",
+      "comment": "Initialize thread-local storage buffer with template data and active state.\n\nAlgorithm:\n1. Load pointer parameter into EAX\n2. Set field at offset 0x50 to address of global template structure\n3. Set field at offset 0x14 to 1 (active/initialized flag)\n4. Return\n\nParameters:\npObject (void *) - Pointer to thread-local context buffer (typically from FUN_6fe25b45 allocation)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Called during thread initialization (InitializeThreadLocalStorage)\n- Buffer at offset 0x50 stores pointer to read-only template\n- Field at offset 0x14 (byte offset 20) indicates thread state (0x01 = active)\n- Must be called after TlsSetValue() but before thread uses buffer\n\nMagic Numbers:\n0x50 - Template pointer field offset (80 decimal) in thread context\n0x14 - Active state flag field offset (20 decimal) in thread context\n0x01 - Active/initialized flag value",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a1900c49d3b847e69ff3bf21a94518de"
     },
     "D2CMP_MNE_a1995a836549": {
       "addresses": {
+        "LoD/1.10": "0x6FDF3D20",
         "LoD/1.11": "0x6FE21CA0",
         "LoD/1.11b": "0x6FE1F3A0",
         "LoD/1.12a": "0x6FE1CEF0",
@@ -9728,6 +9902,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE19DC0"
       },
       "rvas": {
+        "LoD/1.10": "0x3D20",
         "LoD/1.11": "0x11CA0",
         "LoD/1.11b": "0xF3A0",
         "LoD/1.12a": "0xCEF0",
@@ -9794,6 +9969,30 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:a3916ea23e38a520734795fd2a3822db"
+    },
+    "D2CMP_MNE_a478151b843d": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1EC90",
+        "LoD/1.08": "0x6FE1EC90",
+        "LoD/1.09": "0x6FDFEA80",
+        "LoD/1.09b": "0x6FDFEA80",
+        "LoD/1.09d": "0x6FDFEA80",
+        "LoD/1.10": "0x6FDFE600"
+      },
+      "rvas": {
+        "LoD/1.07": "0xEC90",
+        "LoD/1.08": "0xEC90",
+        "LoD/1.09": "0xEA80",
+        "LoD/1.09b": "0xEA80",
+        "LoD/1.09d": "0xEA80",
+        "LoD/1.10": "0xE600"
+      },
+      "name": "InitializeLinkedListGlobal",
+      "signature": "void InitializeLinkedListGlobal(dword dwFlags, dword dwSize)",
+      "comment": "Initialize global linked list structure with specified flags and size.\n\nAlgorithm:\n1. Clear 13 dwords (52 bytes) at g_LinkedListHead to zero via REP STOSD\n2. Store size parameter to g_dwLinkedListSize global variable\n3. Load linked list head address and call InitializeLinkedListStructure with flags, size, fixed callback address (0x6fe1ed10), and fixed buffer size (0x1000)\n4. Set g_dwLinkedListInitialized flag to 1 to mark initialization complete\n\nParameters:\n- dwFlags (dword): Initialization control flags passed to InitializeLinkedListStructure\n- dwSize (dword): Size parameter for linked list configuration\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- Clears exactly 13 dwords (0xd = 52 bytes) before linked list initialization\n- Uses hardcoded callback address 0x6fe1ed10\n- Uses hardcoded buffer size 0x1000 (4096 bytes)\n- Global storage for linked list head structure starts at 0x6ff12c40",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:a478151b843de2be66d3ed29fb09a328"
     },
     "D2CMP_MNE_a4b2a429e6b9": {
       "addresses": {
@@ -9872,10 +10071,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4E7E",
         "LoD/1.13d": "0x50CE"
       },
-      "name": "___sbh_heap_init",
-      "signature": "undefined4 ___sbh_heap_init(undefined4 param_1)",
-      "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InitializeCompressionBuffer",
+      "signature": "bool InitializeCompressionBuffer(uint dwMaxBufferSize)",
+      "comment": "Allocate and initialize the compression buffer with tracking metadata\n\nAlgorithm:\n1. Allocate 0x140 (320) bytes from process heap via HeapAlloc\n2. Check allocation success; return 0 on failure (NULL)\n3. Initialize compression index to 0\n4. Initialize compression buffer count to 0\n5. Store buffer pointer for later access\n6. Store max buffer size parameter\n7. Set compression slot size to 0x10 (16 bytes)\n8. Return 1 (TRUE) on success\n\nParameters:\n- dwMaxBufferSize: Maximum size of compression buffer to allocate (in bytes)\n\nReturns:\n- 1 (TRUE) on successful allocation and initialization\n- 0 (FALSE) if HeapAlloc fails\n\nMagic Numbers:\n- 0x140: Physical allocation size (320 bytes) for compression buffer\n- 0x10: Compression slot/block size (16 bytes) - size of each compression entry",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a57b3ae583e4f6f104245d4da8d3b9fe"
     },
@@ -9918,6 +10117,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1762D",
         "LoD/1.10": "0x1749C"
       },
+      "name": "GetCharacterTypeWithConversion",
+      "signature": "BOOL GetCharacterTypeWithConversion(DWORD dwCharType, LPCSTR pszString, int cchLength, LPWORD pwCharInfo, UINT nCodePage, LCID nLocale, int nFlags)",
+      "comment": "Get character type information for string with multi-byte to wide character conversion.\n\nAlgorithm:\n1. Initialize exception handling frame and load cached string type mode\n2. If string type cache is uninitialized (0):\n   a. Test Unicode support via GetStringTypeW with empty wide string\n   b. If Unicode available, cache type 1; otherwise test ANSI via GetStringTypeA\n   c. If ANSI test fails, return FALSE (no string type support)\n   d. Set cache to type 2 for ANSI mode\n3. If string type mode is 1 (Unicode):\n   a. Use default code page if none provided\n   b. Calculate required wide character buffer size via MultiByteToWideChar\n   c. If size > 0, allocate stack buffer, clear it, convert string to wide chars\n   d. Call GetStringTypeW on converted wide character buffer\n   e. Return result to caller\n4. If string type mode is 2 (ANSI):\n   a. Use default locale if none provided\n   b. Call GetStringTypeA directly on input string\n   c. Return result to caller\n5. Restore exception handling context and return success/failure\n\nParameters:\ndwCharType (DWORD) - Character type classification flags for GetStringTypeA/W\npszString (LPCSTR) - Input multi-byte string to analyze\ncchLength (int) - Length of input string in bytes\npwCharInfo (LPWORD) - Output buffer for character type information\nnCodePage (UINT) - Code page for multi-byte to wide conversion (0=default)\nnLocale (LCID) - Locale ID for ANSI character classification (0=default)\nnFlags (int) - Flags controlling MB to WC conversion (0x8 if true)\n\nReturns:\nTRUE (nonzero) if character type information obtained successfully\nFALSE (0) if GetStringTypeA/W call failed or no string type support available\n\nSpecial Cases:\n- Function initializes string type support detection on first call\n- Wide character conversion requires stack space allocation (may fail for very large strings)\n- Exception frame preserved for SEH compatibility",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a7046d73bbd286a50d5e7204509858d2"
     },
@@ -9978,9 +10181,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0xD560",
         "LoD/1.13d": "0x122D0"
       },
-      "name": "Ordinal_10104",
-      "signature": "undefined Ordinal_10104(int param_1)",
-      "name_source": "LoD/1.11",
+      "name": "InsertCacheBlockIntoList",
+      "signature": "void InsertCacheBlockIntoList(dword pCache, dword pBlock, dword hBlockType)",
+      "comment": "Inserts a cache block into a doubly-linked list structure (free or used).\n\nAlgorithm:\n1. Determine list type based on hBlockType flag (0 for free list, 1+ for used list)\n2. For target list in cache structure:\n   - If list empty (tail pointer is 0), set head and tail to pBlock\n   - Otherwise, update tail's next pointer to pBlock and set pBlock's prev to current tail\n   - Update tail pointer to pBlock\n3. Record insertion timestamp via GetTickCount() into block's timestamp field\n4. Return without result code (void function)\n\nParameters:\n- pCache (ECX:dword): Pointer to cache control structure containing list heads/tails\n- pBlock (EDX:dword): Pointer to cache block node to insert (must be valid)\n- hBlockType (Stack[0x4]:dword): List type selector (0=free list, non-0=used list)\n\nReturns:\n- void: No return value, modifies pCache structure in-place\n\nSpecial Cases:\n- Function assumes pBlock is non-NULL and already allocated\n- Inserting into tail maintains insertion order for block management\n- Timestamp field at offset 0x10 in pBlock tracks insertion time\n\nStructure Layout:\nCache structure (pCache):\n  Offset | Size | Field Name           | Type    | Description\n  0x14   | 4    | pFreeListHead        | dword*  | Head of free list\n  0x18   | 4    | pFreeListTail        | dword*  | Tail of free list\n  0x1C   | 4    | pUsedListHead        | dword*  | Head of used list\n  0x20   | 4    | pUsedListTail        | dword*  | Tail of used list\n\nBlock structure (pBlock):\n  Offset | Size | Field Name           | Type    | Description\n  0x10   | 4    | dwTickCount          | dword   | Timestamp of insertion\n  0x14   | 4    | pNextBlock           | dword*  | Link to next block in list\n  0x18   | 4    | pPrevBlock           | dword*  | Link to previous block in list",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a9dc21945277ce00ea4d515a20407c5d"
     },
@@ -10001,6 +10205,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14CF8",
         "LoD/1.10": "0x147F8"
       },
+      "name": "ReturnPageToPool",
+      "signature": "void ReturnPageToPool(int nPoolBase, int nPageSize, byte * pnPageData)",
+      "comment": "Return memory page to pool and trigger bulk deallocation when threshold reached.\n\nAlgorithm:\n1. Load pool base address from first parameter\n2. Calculate page offset by dividing page size by 4096 (right shift 12 bits)\n3. Compute pool entry address at [pPoolBase + 0x18] + (offset * 8)\n4. Load page data byte and add to pool entry accumulator\n5. Clear input page data byte to zero\n6. Set pool entry marker to 0xf1 (in-process flag)\n7. Check if accumulator equals 0xf0 (threshold)\n8. If threshold reached, increment global free count\n9. If free count equals 0x20 (32 pages), call FreePoolMemoryPages(0x10)\n\nParameters:\n  nPoolBase - int: Base address of memory pool structure\n  nPageSize - int: Size of page being returned to pool\n  pnPageData - byte*: Pointer to page data byte (zeroed after use)\n\nReturns:\n  void: No return value\n\nSpecial Cases:\n  Entry marker 0xf1 indicates processing in progress\n  Bulk deallocation triggers every 32 page returns\n  Magic offsets: 0x18 (pool entry base), 0x10 (size offset)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ab1eb8b21e2bded2678160ac668c3175"
     },
@@ -10021,6 +10229,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x17B66",
         "LoD/1.10": "0x179D5"
       },
+      "name": "ParseScientificNotation",
+      "signature": "dword ParseScientificNotation(void * this, void * pThis, word * pResultValues, int * pEndPos, byte * pInput, int nRadix, int nMaxExponent, int nMinExponent, int nAllowExponent)",
+      "comment": "Parse scientific notation number from ASCII input string\n\nAlgorithm:\n1. Skip leading whitespace characters (space, tab, newline, carriage return)\n2. Initialize state machine variables (state=0, exponent=0, digit_count=0)\n3. Main parsing loop: Consume byte and transition states based on character\n4. State 0-2: Parse optional sign (+ or -), set sign flag 0x8000 if negative\n5. State 3-5: Parse decimal digits, collect digit buffer, track position\n6. State 6-7: Parse exponent indicator (D/E/d/e), validate character range\n7. State 8-9: Parse exponent digits, apply sign adjustment, check bounds\n8. State 10-11: Validate and error handling, return to skip invalid input\n9. FUN_6fe27caf converts digit buffer to mantissa (high/low pair)\n10. Apply exponent offset, bounds check for overflow (>0x1451) and underflow (<-0x1451)\n11. Store mantissa pair and sign flag in result array, return status code\n\nParameters:\npThis: void * - Class/parser instance pointer (ECX implicit __thiscall)\npResultValues: word * - Output: mantissa high/low and sign flag storage\npEndPos: int * - Output: pointer to char after parsed number\npInput: byte * - Input: ASCII string to parse\nnRadix: int - Base for parsing (typically 10 for decimal)\nnMaxExponent: int - Maximum permitted exponent value\nnMinExponent: int - Minimum permitted exponent value\nnAllowExponent: int - Enable exponent parsing (1=allow, 0=disable)\n\nReturns:\n0 - Success, valid number parsed with valid exponent range\n1 - Underflow, exponent too negative (result < 10^-0x1451)\n2 - Overflow, exponent too positive (result > 10^0x1451)\n4 - Invalid format, no digits found or malformed input",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ab787578be0f52440df577da55f0ef97"
     },
@@ -10074,6 +10286,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x75C0",
         "LoD/1.10": "0x72D0"
       },
+      "name": "CopyIndirectIndexedBytes",
+      "signature": "void CopyIndirectIndexedBytes(byte * pbSrcData, byte * pbDstData, int nRows, int nRowBytes, uint dwBaseOffset)",
+      "comment": "Copy byte data using indirect indexed addressing across multiple row buffers.\n\nAlgorithm:\n1. Initialize row end pointer: pbRowEnd = pbDstData + nRowBytes\n2. For each input row:\n   a. Read control byte: bCode = *pbSrcData++\n   b. If bCode >= 0: process as unroll count\n      - Extract tail bytes: nTailBytes = bCode & 0x7 (bits 0-2)\n      - Extract block count: nBlockCount = bCode >> 3 (bits 3-7)\n      - Copy tail bytes (1-7) using indirect: *pbDstData++ = *((byte*)(pbSrcData[i] + dwBaseOffset))\n      - Advance both pointers by nTailBytes\n      - While nBlockCount > 0: copy 8 bytes per block using indirect, advance by 8, decrement nBlockCount\n   c. If bCode < 0: processed as signed (negative)\n      - Extract skip bytes: nTailBytes = bCode & 0x7f (bits 0-6)\n      - Advance pbDstData by nTailBytes, restart inner loop\n3. Decrement row counter (nRows)\n4. Repeat until all rows processed, advance pbRowEnd per nRowBytes stride\n\nParameters:\nIMPLICIT ECX: pbSrcData (byte *) - Pointer to encoded source data containing control bytes and index values\nIMPLICIT EDX: pbDstData (byte *) - Pointer to destination buffer where decoded bytes are written\nStack[0x4]: nRows (int) - Number of rows to process\nStack[0x8]: nRowBytes (int) - Byte stride per row in destination buffer\nStack[0xc]: dwBaseOffset (uint) - Base address offset for indirect indexing: dst[i] = src[src[i] + dwBaseOffset]\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Negative control bytes (bit 7 set) trigger position advance without data copy\n- Switch table at 0x6fe17098 provides unroll dispatch for 0-7 tail bytes\n- Inner loop processes data in 8-byte chunks for efficiency\n- Indirect indexing requires source bytes to be valid indices into base offset table",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ac6111f4ea8617081b83fe0914a01a43"
     },
@@ -10112,6 +10328,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12699",
         "LoD/1.10": "0x12199"
       },
+      "name": "SetupExceptionHandler",
+      "signature": "void SetupExceptionHandler(void)",
+      "comment": "Initializes Structured Exception Handling (SEH) frame for exception handling\n\nAlgorithm:\n1. Save current ExceptionList from FS:[0] to stack frame\n2. Initialize local exception handler state (dwHandlerState = 0)\n3. Load exception frame data pointer (pbExceptionHandler = LAB_6fe25680)\n4. Load exception context pointer (pvExceptionFrame = g_pExceptionFrameData)\n5. Set up new exception handler chain in FS:[0] pointing to current stack frame\n6. Check if custom exception function pointer (PTR_FUN_6fe30ca4) is non-null\n7. If function pointer exists: set dwHandlerState = 1 and call the custom handler\n8. Set dwHandlerState = 0xffffffff (disabled state)\n9. Call FUN_6fe22848 to finalize exception frame cleanup\n10. Return control to caller\n\nParameters:\n(none - takes no parameters, uses global exception data)\n\nReturns:\nvoid (no return value)\n\nSpecial Cases:\n- Exception handling depends on custom handler function pointer at PTR_FUN_6fe30ca4\n- If custom handler is NULL, skips handler invocation\n- Final state 0xffffffff indicates exception frame disabled after cleanup\n- Uses FS:[0] segment register for TIB (Thread Information Block) exception chain\n\nMagic Numbers Reference:\n- 0x0: Offset in FS (Thread Information Block) for current exception handler\n- 0xffffffff: Exception frame disabled/cleanup marker\n- 0x1: Handler enabled state flag\n\nStructure Layout (Exception Frame):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwState    | uint | Handler state (0=init, 1=active, -1=disabled)\n0x4    | 4    | pbHandler  | byte*| Pointer to exception handler code\n0x8    | 4    | pvFrame    | void*| Exception frame data pointer",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:acf08c90b55418c8321e69465d69c39b"
     },
@@ -10208,6 +10428,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15548",
         "LoD/1.10": "0x15048"
       },
+      "name": "ValidateAndDispatchException",
+      "signature": "int ValidateAndDispatchException(int * pExceptionRecord)",
+      "comment": "Validates exception record and dispatches to registered handler or default handler.\n\nAlgorithm:\n1. Extract exception structure pointer from pExceptionRecord\n2. Validate exception magic signature (0xe06d7363) at offset 0\n3. Check exception handler type at offset 4 == 3\n4. Verify exception flags at offset 5 == 0x19930520\n5. If all checks pass, call RegisterExceptionHandler() and return\n6. Check if global exception handler g_pfnExceptionHandler is registered\n7. Call FUN_6fe257f4(g_pfnExceptionHandler) to validate handler readiness\n8. If handler ready, call registered handler with exception record pointer\n9. Return handler result, or 0 if no handler available\n\nParameters:\npExceptionRecord (int *): Pointer to exception structure containing:\n  - [0]: magic signature (0xe06d7363)\n  - [4]: handler type (3 = standard exception handler)\n  - [5]: exception flags (0x19930520)\n\nReturns:\nint: Handler function result if executed, 0 if no custom handler available\n\nSpecial Cases:\n- Magic signature must be exactly 0xe06d7363 (C++ exception signature)\n- Handler type field at offset 4 must equal 3\n- Exception flags at offset 5 must equal 0x19930520\n- If g_pfnExceptionHandler is NULL, returns 0 (no handler)\n- If FUN_6fe257f4 validation fails, returns 0\n\nNote: Function uses 3 stack-allocated temporaries optimized away (iVar2, bVar1, extraout_var)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ae97885008bdc2ae91cd79843075d856"
     },
@@ -10228,6 +10452,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10EF1",
         "LoD/1.10": "0x1099D"
       },
+      "name": "SearchSortedSlots",
+      "signature": "int SearchSortedSlots(dword pSlotArray, int nSlotCount, int nSearchValue, dword * pOutFoundIndex, dword * pOutPrevIndex)",
+      "comment": "Binary search in sorted slot array structure with range lookups.\n\nAlgorithm:\n1. Load array metadata: base pointer (pSlotArray + 0xc), entry count (pSlotArray + 0x10)\n2. Initialize current index to slot count, save as previous index\n3. Loop nSlotCount times:\n   a. Decrement current index\n   b. Check if value nSearchValue falls within [entry[i].start, entry[i].end) range\n   c. If range contains value OR reached sentinel (0xffffffff), update previous = current\n4. Increment index to get position after found slot\n5. Output: found index and previous index via pointers\n6. Validate results: found must be within array bounds, previous >= found\n\nParameters:\n- pSlotArray (dword): Pointer to slot array structure [0xc] = slot count, [0x10] = entries\n- nSlotCount (int): Number of slots to search (loop iteration count)\n- nSearchValue (int): Value to locate in slot ranges\n- pOutFoundIndex (dword *): Output - index after found/last slot\n- pOutPrevIndex (dword *): Output - previous valid index (before found)\n\nReturns:\n- int: Computed offset into slot entry array: pSlotEntries + dwCurrentIndex * 0x14\n\nSpecial Cases:\n- Magic constant 0xffffffff indicates sentinel/boundary value\n- Slot entries are 0x14 bytes each (20 bytes, likely two range boundaries + data)\n- Entry layout appears to be [start:int @+0x4][end:int @+0x8]...@offset 0x14\n- If search value not found, returns last valid slot location\n- Validation error path calls FUN_6fe228a9 (likely assertion/error handler)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:aeb6015352f39d3219cf32b63d44a754"
     },
@@ -10259,15 +10487,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE138F0",
         "LoD/1.09": "0x6FDF38F0",
         "LoD/1.09b": "0x6FDF38F0",
-        "LoD/1.09d": "0x6FDF38F0"
+        "LoD/1.09d": "0x6FDF38F0",
+        "LoD/1.10": "0x6FDF3700"
       },
       "rvas": {
         "LoD/1.07": "0x38F0",
         "LoD/1.08": "0x38F0",
         "LoD/1.09": "0x38F0",
         "LoD/1.09b": "0x38F0",
-        "LoD/1.09d": "0x38F0"
+        "LoD/1.09d": "0x38F0",
+        "LoD/1.10": "0x3700"
       },
+      "name": "CleanupListNodeItems",
+      "signature": "void CleanupListNodeItems(int * pNode)",
+      "comment": "Cleanup list node items and release resources from a container structure.\n\nAlgorithm:\n1. Save current exception list and setup new exception handler\n2. If list head exists, unlink it from linked list chain:\n   - Check if next size is negative (complement) or positive (offset-based)\n   - Compute correct next node pointer from offset or bitwise NOT\n   - Update pointers to unlink from chain\n   - Clear list head and size fields\n3. Iterate through all items in container (indexed by offset 0x38 per item):\n   - For each item, get list head at offset 0x30\n   - Extract all child list nodes (0x2c offset) via GetListSize and ExtractListNode loop\n   - Extract parent list node\n   - Call FUN_6fe139f0 to cleanup item\n4. If container pointer exists, call Ordinal_403 (memory dealloc) with AUCELLIST type marker\n5. Restore exception list before return\n\nParameters:\n  pNode - Pointer to container node (ECX register, __fastcall implicit)\n    Offset 0x4: item count\n    Offset 0x8: items array pointer  \n    Offset 0x10: list head pointer\n    Offset 0x14: next size/offset field\n\nReturns:\n  void - Resources released, structure cleaned\n\nSpecial Cases:\n  - Handles negative next offset (complement format ~offset)\n  - Exception handler setup and restoration for structured error handling\n  - Contains phantom variable local_10 optimized away by compiler",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:af3d376c9b25fcb6a80c13daf1682a51"
     },
@@ -10298,6 +10532,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1344D",
         "LoD/1.10": "0x12AAE"
       },
+      "name": "WriteBufferWithCount",
+      "signature": "void WriteBufferWithCount(byte * pszBuffer, int nCount, int * pnInputCount, int * pnOutputCount)",
+      "comment": "Iterates through a buffer and writes each character to output using a count mechanism.\n\nAlgorithm:\n1. Load nCount parameter; if <= 0, return immediately\n2. Initialize loop with pszBuffer and output counter pointer\n3. Loop iteration:\n   - Decrement nCount\n   - Load character from pszBuffer[current]\n   - Advance pszBuffer pointer\n   - Call WriteCharacterWithCount with character and counters\n   - Check if pnOutputCount becomes -1 (error); return if true\n   - Repeat while nCount > 0\n\nParameters:\n  pszBuffer (byte *) - Input buffer containing characters to process\n  nCount (int) - Number of characters to write (positive integer)\n  pnInputCount (int *) - Pointer to input counter (for tracking)\n  pnOutputCount (int *) - Pointer to output counter; -1 signals error\n\nReturns:\n  void - Modifies pnOutputCount via pointer; -1 indicates error occurred\n\nSpecial Cases:\n  - Exits early if pnOutputCount becomes -1 (WriteCharacterWithCount failure)\n  - Handles nCount <= 0 by returning without processing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:afc6bf96e31e41127728e4d6585e174f"
     },
@@ -10380,6 +10618,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14A45",
         "LoD/1.10": "0x14545"
       },
+      "name": "InitializeMemoryPoolManager",
+      "signature": "pointer InitializeMemoryPoolManager(void)",
+      "comment": "Initialize memory pool manager with heap and virtual memory allocation.\n\nAlgorithm:\n1. Check g_dwPoolManagerInitialized (-1 = static pool root PTR_LOOP_6fe30d80, else allocate)\n2. If g_dwPoolManagerInitialized != -1, HeapAlloc pool node (0x2020 bytes)\n3. VirtualAlloc 4MB address range (0x400000 bytes) at any base\n4. VirtualAlloc 64KB (0x10000) at base + 0 for initial view\n5. Initialize pool linked list: append node to g_ppPoolTail if not static root\n6. Initialize static root pointers if NULL: g_pPoolRoot, g_ppPoolTail\n7. Set pool structure fields: address range [lpAddress, lpAddress+0x400000), slots, layout\n8. Initialize slot free list: 1024 slots (0x400 entries) with pattern [mark, 0xf1]\n9. memset virtual memory to 0 (0x10000 bytes)\n10. Initialize 4KB block headers in virtual memory: pointer to next block, 0xf0 marker\n\nParameters: none\n\nReturns: Pool manager pointer (ppPoolNode) or NULL on failure\n  - Success: pointer to allocated/static pool node\n  - Failure: NULL if VirtualAlloc fails or node allocation fails\n\nSpecial Cases:\n  - g_dwPoolManagerInitialized = -1: use static PTR_LOOP_6fe30d80 (never heap allocate)\n  - Slot pattern: (-1 & 0xf1) - 1 = 0xf0 for slots < 16, wraps to 0xf1 for >= 16\n  - Block headers every 0x1000 (4KB): set offset 0x3e to 0xff, pointer at 0, marker 0xf0",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b10e654b1e0872dc227e39198444a376"
     },
@@ -10400,6 +10642,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18B23",
         "LoD/1.10": "0x182F1"
       },
+      "name": "FlushAndValidateCharacterEntry",
+      "signature": "dword FlushAndValidateCharacterEntry(dword nCharacterIndex)",
+      "comment": "Flush character entry file buffers and validate character table status\n\nAlgorithm:\n1. Check if character index exceeds table count, set error code 0x09 and return 0xFFFFFFFF if out of bounds\n2. Calculate slot offset: (index & 0x1F) * 0x24 for bit-packed character flags\n3. Check character flags in table array at [base + offset]: bit 0x01 indicates valid/active entry\n4. If invalid before lock, jump to error path and return\n5. Acquire exclusive lock on character table entry\n6. Recheck character valid flag after acquiring lock (double-check pattern)\n7. If valid: obtain file handle from GetCharacterTableEntry()\n8. Call FlushFileBuffers() on handle to flush pending I/O\n9. If flush fails (returns FALSE), retrieve Windows error code via GetLastError()\n10. If error obtained, write to TLS context error offset via GetTlsContextOffsetPointer()\n11. Set global error code 0x09 in TLS context via GetTlsContextOffset8()\n12. Release character table lock and return error code (0x00 success, 0xFFFFFFFF failure)\n\nParameters:\n- nCharacterIndex (dword): Index into character table (0-based); checked against g_dwCharacterTableCount\n\nReturns:\n- 0x00000000: Success, file buffers flushed\n- 0xFFFFFFFF: Failure, invalid index or flush error\n\nSpecial Cases:\n- Index out of bounds: Returns immediately without lock acquisition\n- Character invalid flag: Double-checked before and after lock to prevent race conditions\n- Flush failure: Error code preserved in TLS context for caller inspection\n- Lock always released in both success and failure paths",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b14dfb771e9c85951130aa7c0ee6e7bc"
     },
@@ -10430,18 +10676,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4D11",
         "LoD/1.13d": "0x4D20"
       },
+      "name": "GetTlsContextOffset8",
+      "signature": "DWORD * GetTlsContextOffset8(void)",
+      "comment": "Get TLS context and return pointer to offset +8.\n\nAlgorithm:\n1. Call GetTlsContext() to retrieve TLS context structure pointer\n2. Add 0x8 (8 bytes) to pointer\n3. Return modified pointer\n\nParameters:\n(none)\n\nReturns:\nPointer to TLS context structure + 8 bytes offset",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b1691d6b7b8ba065c3fc1a089e8db64e"
-    },
-    "D2CMP_MNE_b17112fadd08": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE274D0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x174D0"
-      },
-      "method": "MNE",
-      "index": "MNE:b17112fadd08220f44ed838269bfaf2f"
     },
     "D2CMP_MNE_b1ed3178a622": {
       "addresses": {
@@ -10500,6 +10740,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11F3C",
         "LoD/1.10": "0x11A3C"
       },
+      "name": "CompareObjectsWithFlagValidation",
+      "signature": "undefined4 CompareObjectsWithFlagValidation(byte * pbObj1, byte * pbObj2, uint * pdwFlags)",
+      "comment": "Compares two objects by name and validates compatibility flags.\n\nAlgorithm:\n1. Load name pointer from object 1 at offset +4\n2. If name pointer is NULL or name at +8 is empty string, return 1 (success)\n3. If name pointers match exactly, proceed to flag validation\n4. If pointers differ, compare names using strcmp(name1+8, name2+8)\n5. If strcmp returns 0 (names equal), proceed to flag validation\n6. If names differ, return 0 (mismatch)\n7. Flag validation: Check object 2 flag 0x2, object 1 flags 0x8, and params 0x1/0x2\n8. If all flag conditions met, return 1 (success), else return 0 (mismatch)\n\nParameters:\npbObj1 (byte *) - First object pointer, flag field at offset 0, name ptr at offset 4\npbObj2 (byte *) - Second object pointer, flag field at offset 0, name ptr at offset 4\npdwFlags (uint *) - Flags dword pointer for compatibility validation\n\nReturns:\n1 - Objects match (same/empty name and flags validate)\n0 - Objects don't match (different names or flag mismatch)\n\nSpecial Cases:\n- Empty names (NULL or empty string at offset +8) considered success\n- Flag 0x2 on obj2 blocks success unless obj1 has flag 0x8\n- Flag bits in pdwFlags control validation: 0x1 requires obj1 flag 0x1, 0x2 requires obj1 flag 0x2\n\nRelated Functions:\n- ProcessCppException() - Caller, validates exception objects\n- _strcmp() - Compares name strings when pointers differ",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b32bb6cc9ffd3d673291796bb2774c56"
     },
@@ -10520,6 +10764,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x17A9F",
         "LoD/1.10": "0x1790E"
       },
+      "name": "MultiplyBignum96Bit",
+      "signature": "void MultiplyBignum96Bit(byte * pbInput, int nInputLength, uint * pdwResult)",
+      "comment": "Multiplies a bignum buffer by successive single-byte values using 96-bit arithmetic.\n\nAlgorithm:\n1. Initialize result buffer (pdwResult) to zero across three 32-bit words\n2. For each input byte from pbInput[0..nInputLength-1]:\n   a. Copy current result to temporary buffer (dwHighWord, dwMidWord, dwLowWord)\n   b. Left-shift result 24 bits (three 8-bit shifts)\n   c. Add temporary buffer (before shift) to result\n   d. Left-shift result 8 bits \n   e. Add current input byte to result\n3. Normalize result: While high word is zero, shift all words left 16 bits and decrement exponent\n4. Normalize result: While high word bit 15 (0x8000) is clear, shift left 1 bit and decrement exponent\n5. Store final exponent as word at offset +10 bytes in result buffer\n\nParameters:\npbInput - Pointer to input bytes (multiplicands, processed in sequence)\nnInputLength - Number of bytes to process from input buffer\npdwResult - Pointer to 96-bit result buffer (3 x 32-bit words): [0]=low, [1]=mid, [2]=high\n\nReturns:\nvoid - Result stored in pdwResult buffer with exponent at pdwResult[2.5] (offset +10)\n\nSpecial Cases:\n- Zero input length: returns zero result\n- Exponent adjustment: encoded as two's complement decrement (0xfff0 = -16, 0xffff = -1)\n- Final normalization: ensures high word has bit 15 set (0x8000)\n\nMagic Numbers:\n0x404e - Initial exponent value (16462 decimal, represents scaling factor baseline)\n0x8000 - Bit mask for word 15 (high bit of 16-bit value)\n0xfff0 - Decrement by 16 (left shift 16 bits removes one word, exponent -= 16)\n0xffff - Decrement by 1 (bit shift right 1 removes one bit, exponent -= 1)\n0x10 - Bit position 16 (word boundary between 32-bit words)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b41de5b81e6f5c290111b6d697b33467"
     },
@@ -10540,6 +10788,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10B82",
         "LoD/1.10": "0x1062E"
       },
+      "name": "EnqueueItem",
+      "signature": "undefined4 EnqueueItem(uint dwItem)",
+      "comment": "Enqueues an item into a dynamic queue buffer with automatic reallocation.\n\nAlgorithm:\n1. Call FUN_6fe21369 to acquire queue lock/synchronization\n2. Load current write position from g_pQueueEnd\n3. Calculate remaining space: (g_pQueueBegin + 4) - (int)g_pQueueBegin\n4. If written data >= space available:\n   a. Call FUN_6fe219a6 to get buffer metadata (returns offset into buffer)\n   b. Add 0x10 to metadata offset to get expansion size\n   c. Call FUN_6fe21677 with expansion size to reallocate buffer\n   d. If reallocation fails (NULL return), set dwItem = 0 and return\n   e. Update g_pQueueEnd to new write position: pbNewBuffer + old_size\n   f. Update g_pQueueBegin to reallocated buffer address\n5. Write dwItem to current write position at [g_pQueueEnd]\n6. Increment g_pQueueEnd by 4 bytes (dword size)\n7. Call FUN_6fe21372 to release queue lock/synchronization\n8. Return dwItem (or 0 on allocation failure)\n\nParameters:\ndwItem (uint): Item value to enqueue into the queue buffer\n\nReturns:\nundefined4: Original dwItem on success, 0 if buffer reallocation failed\n\nSpecial Cases:\n- Queue uses dynamic buffer reallocation strategy when space exhausted\n- Uses implicit spin-lock or critical section via FUN_6fe21369/FUN_6fe21372\n- Buffer stores dwords (4-byte items)\n- Metadata at offset 0x10 contains size information for expansion\n- Note: Function uses SSA temporaries pbVar2, SVar1 optimized away by compiler",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b5756233a5a7628ebca8fed8bafffdce"
     },
@@ -10576,6 +10828,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x145A3",
         "LoD/1.10": "0x140A3"
       },
+      "name": "AllocateCompressionBufferSlot",
+      "signature": "dword * AllocateCompressionBufferSlot(void)",
+      "comment": "Allocate and initialize a new compression buffer slot in the global array.\n\nAlgorithm:\n1. Check if compression buffer array is at capacity (g_dwCompressionBufferCount == g_dwCompressionSlotSize)\n2. If at capacity, reallocate array to 5x size + 0x50 using HeapReAlloc\n3. If realloc failed, return NULL (0x0)\n4. Increment slot size by 0x10 on successful realloc\n5. Calculate pointer to new slot: pCompressionSlot = g_pCompressionBufferArray + (count * 0x14 bytes)\n6. Allocate buffer structure (0x41c4 bytes) with HeapAlloc (flags 0x08)\n7. Store allocated buffer pointer at slot[4]\n8. If buffer allocation failed, return NULL\n9. Allocate virtual memory region (0x100000 bytes, commit + reserve)\n10. Store virtual allocation at slot[3]\n11. If virtual alloc failed, free buffer and return NULL\n12. Initialize slot fields: slot[2] = 0xffffffff, slot[0] = 0, slot[1] = 0\n13. Increment g_dwCompressionBufferCount\n14. Initialize first dword of buffer structure to 0xffffffff\n15. Return pointer to initialized slot\n\nParameters:\n(none) - Uses global g_dwCompressionBufferCount, g_dwCompressionSlotSize, g_pCompressionBufferArray, g_hHeapProcess\n\nReturns:\n- Pointer to initialized compression slot (dword array) on success\n- NULL (0x0) on allocation failure\n\nStructure Layout (Compression Buffer Slot):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | [0]        | uint | Initialize counter or status\n0x04   | 4    | [1]        | uint | Secondary counter/flags\n0x08   | 4    | [2]        | uint | Bit flags (0xffffffff = initialized)\n0x0c   | 4    | [3]        | void*| Virtual memory buffer (0x100000 bytes)\n0x10   | 4    | [4]        | void*| Heap-allocated structure (0x41c4 bytes)\n\nMagic Numbers:\n- 0x50: Size adjustment for realloc calculation\n- 5: Multiplication factor for realloc (5x current size)\n- 0x41c4: Size of heap-allocated structure (16868 bytes)\n- 0x14: Bytes per slot in array (5 dwords)\n- 0x10: Slot size increment on realloc\n- 0x100000: Virtual memory region size (1 MB)\n- 0x2000: Virtual allocation flags (MEM_RESERVE | MEM_COMMIT)\n- 0x04: Memory page protection (PAGE_READWRITE)\n- 0x08: Heap allocation flags\n- 0xffffffff: Initialization marker",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847"
     },
@@ -10596,9 +10852,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15F0B",
         "LoD/1.10": "0x160C7"
       },
-      "name": "Ordinal_10088",
-      "signature": "uint Ordinal_10088(int param_1, int param_2, int param_3, int param_4, int param_5, uint param_6)",
-      "name_source": "LoD/1.10",
+      "name": "RotateUintArrayRight",
+      "signature": "void RotateUintArrayRight(uint * pBuffer, uint dwBitShift)",
+      "comment": "Rotate a 4-dword array right by N bits with carry propagation.\n\nAlgorithm:\n1. Calculate word rotation: nWordCount = dwBitShift / 0x20 (32 bits per word)\n2. Calculate bit rotation within word: byShiftAmount = dwBitShift % 0x20\n3. Phase 1 - Shift and carry propagate (3 iterations):\n   - Load current dword dwValue from *pCurrentWord\n   - Extract low bits for next iteration: carry = (dwValue & mask) << (32-byShiftAmount)\n   - Store shifted value | previous carry: *pCurrentWord = dwValue >> byShiftAmount | carry\n   - Move to next word: pCurrentWord++\n4. Phase 2 - Finalize remaining 2 words:\n   - If nWordIdx < nWordCount: Zero the word (fully rotated out)\n   - Else: Copy from source position nWordCount words back (rotate wrap-around)\n\nParameters:\n  pBuffer (uint *) - Pointer to 4-element uint array [index 0..3] to rotate\n  dwBitShift (uint) - Number of bits to rotate right (typically 0-31 for single rotation)\n\nReturns:\n  void - Modifies pBuffer in place\n\nMagic Numbers:\n  0x20 - 32 bits per uint, used for word/bit boundary calculations\n  0x1f - Bitmask (31) to keep shift count valid (0-31 range)\n  3 - First loop count for 4-word array processing\n  2 - Second phase starting index\n  8 - Starting byte offset for second phase (2 * sizeof(uint))\n\nSpecial Cases:\n  dwBitShift = 0 - No rotation, array unchanged\n  dwBitShift >= 0x80 - Rotates multiple complete words, wraps to same position\n\nNote: Function uses 2 stack-allocated temporaries (local_c, local_10) optimized away by compiler.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b5aa33b0420f2d311658da83496527f7"
     },
@@ -10669,6 +10926,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16B35",
         "LoD/1.10": "0x16621"
       },
+      "name": "InitializeCharacterTypeTable",
+      "signature": "dword InitializeCharacterTypeTable(dword dwCodePage)",
+      "comment": "Initialize character type table for a code page using lead byte ranges.\n\nAlgorithm:\n1. Acquire critical section (0x19) to prevent concurrent initialization\n2. Get effective code page via FUN_6fe26ef2\n3. Check if code page already initialized in DAT_6ff13008\n4. If previously initialized, return success (0x00)\n5. If code page is zero, return error\n6. If code page is known:\n   a. Search predefined table DAT_6fe33308 for matching code page (stride 0x30)\n   b. If found, clear g_abCharTypeTable (0x41 bytes)\n   c. Copy 4 predefined character class ranges (at DAT_6fe33318 + offset)\n   d. Mark each range start/stop with class flags from DAT_6fe33300\n   e. Flags: 0x04=LeadByte, 0x08=TrailByte\n7. If code page not in predefined table:\n   a. Call GetCPInfo to retrieve system code page properties\n   b. Clear g_abCharTypeTable\n   c. If MaxCharSize >= 2 (multibyte):\n      - Parse LeadByte array from sCharInfo\n      - Mark each lead byte range with flag 0x04\n      - Mark all trail bytes (0x01-0xFF) with flag 0x08\n      - Cache via FUN_6fe26f3c\n   d. If MaxCharSize < 2 (single-byte), don't set _DAT_6ff1301c\n8. Set global flags: DAT_6ff13008=CodePage, _DAT_6ff1301c=initialized, DAT_6ff13010/14/18=offsets\n9. Call FUN_6fe26f98 cleanup\n10. Release critical section\n11. Return 0 on success, 0xFFFFFFFF on failure\n\nParameters:\ndwCodePage (IMPLICIT EBX): Code page identifier (0=unknown, other=system code page)\n\nReturns:\n0x00000000: Success\n0xFFFFFFFF: Failure (GetCPInfo failed and no fallback available)\n\nSpecial Cases:\n- Handles multibyte code pages with variable-length lead bytes\n- Supports both predefined tables and Windows API GetCPInfo fallback\n- Guard interval offsets: 0x6fe33308-0x6fe333F8 (0x30 stride, supports 16 entries)\n- Character type flags: 0x04=LeadByte, 0x08=TrailByte, 0x01=Separator\n- Lead byte ranges can have overlapping marks via bitwise OR",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b7003782678f33a2ea4e8b0cc2bae15e"
     },
@@ -10689,6 +10950,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1366C",
         "LoD/1.10": "0x1316C"
       },
+      "name": "DestroyCharacterTableArray",
+      "signature": "void DestroyCharacterTableArray(void)",
+      "comment": "Destroy all character table entries and cleanup associated resources.\n\nAlgorithm:\n1. Initialize pointer to character table array at 0x6ff14280\n2. For each character table entry (4-byte pointer):\n   a. Load table base address from memory\n   b. If table exists (non-zero):\n      - Calculate table bounds: [base, base + 0x480)\n      - For each CRITICAL_SECTION in table (stride 0x24 bytes):\n        * Check SpinCount field at offset -4\n        * Call DeleteCriticalSection if SpinCount != 0\n   c. Call DestroyCompressionBuffer on table base address\n   d. Clear pointer to zero\n3. Move to next entry (increment by 4 bytes)\n4. Stop when reaching terminator address 0x6ff14380\n\nParameters:\n(none - operates on global character table array)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Skips deletion if table entry is NULL\n- Only deletes critical sections with non-zero SpinCount\n- Table size fixed at 0x480 bytes per entry\n- Iteration terminates at fixed address 0x6ff14380\n\nMagic Numbers:\n0x6ff14280 - Character table array base address\n0x6ff14380 - Character table array terminator address\n0x480 - Size of each character table entry (1152 bytes)\n0x24 - Stride between CRITICAL_SECTION structures (36 bytes)\n0xc - Offset to first CRITICAL_SECTION within entry",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b7026c232ba5b32b3521a3c7482af720"
     },
@@ -10719,6 +10984,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x9040",
         "LoD/1.13d": "0x9190"
       },
+      "name": "CopyStringToOffset",
+      "signature": "undefined CopyStringToOffset(char * szSource, int nOffset)",
+      "comment": "Copies a string to a destination offset in memory.\n\nAlgorithm:\n1. Check if nOffset is non-zero (validation)\n2. If offset is zero, return early (no-op)\n3. Calculate string length via strlen()\n4. Call FUN_6fe25810 to copy bytes from szSource to (szSource + nOffset)\n5. Copy length is calculated as strlen(szSource) + 1 (includes null terminator)\n\nParameters:\n- szSource: Pointer to null-terminated string to copy\n- nOffset: Offset value determining destination address within same buffer\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- If nOffset is 0, function returns without performing copy\n- String length includes null terminator in copy operation\n\nRelated Functions:\n- _strlen() - Calculate string length\n- FUN_6fe25810() - Perform actual memory copy",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b7d4a5a4939b00399701a93fe243a594"
     },
@@ -10739,6 +11008,40 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "MNE",
       "index": "MNE:b8ad5d03f7deda8a726f893f64097cd4"
+    },
+    "D2CMP_MNE_b8c9ce8dd4dc": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1C020",
+        "LoD/1.08": "0x6FE1C020",
+        "LoD/1.09": "0x6FDFBDE0",
+        "LoD/1.09b": "0x6FDFBDE0",
+        "LoD/1.09d": "0x6FDFBDE0",
+        "LoD/1.10": "0x6FDFB930",
+        "LoD/1.11": "0x6FE1BC50",
+        "LoD/1.11b": "0x6FE23050",
+        "LoD/1.12a": "0x6FE21D60",
+        "LoD/1.13c": "0x6FE1C9D0",
+        "LoD/1.13d": "0x6FE21730"
+      },
+      "rvas": {
+        "LoD/1.07": "0xC020",
+        "LoD/1.08": "0xC020",
+        "LoD/1.09": "0xBDE0",
+        "LoD/1.09b": "0xBDE0",
+        "LoD/1.09d": "0xBDE0",
+        "LoD/1.10": "0xB930",
+        "LoD/1.11": "0xBC50",
+        "LoD/1.11b": "0x13050",
+        "LoD/1.12a": "0x11D60",
+        "LoD/1.13c": "0xC9D0",
+        "LoD/1.13d": "0x11730"
+      },
+      "name": "GetGameStructureSelector",
+      "signature": "undefined * GetGameStructureSelector(int nGameIndex)",
+      "comment": "Returns one of two global game structure pointers based on input parameter\n\nAlgorithm:\n1. Load game index parameter from stack\n2. Test if game index is zero\n3. If zero OR game structure is NULL, use fallback pointer\n4. Otherwise use default game pointer\n5. Return selected pointer in EAX\n\nParameters:\nnGameIndex - Game index to validate (0 = invalid)\n\nReturns:\nvoid * - Pointer to game structure (either default or fallback)\n         NULL/0 if both pointers are invalid\n\nSpecial Cases:\n- Returns fallback pointer if index is 0\n- Returns fallback pointer if default structure is NULL\n- Both globals should be set before calling this function\n\nStructure Layout:\nReturns pointer to game structure containing:\n  [offset 0x00+] - Game state/data\n  [offset 0x04+] - Player/unit data references\n  [offset 0x08+] - World/map state",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:b8c9ce8dd4dc1a9392cf62cda6bfa809"
     },
     "D2CMP_MNE_b971a7136b1d": {
       "addresses": {
@@ -10767,10 +11070,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19F61",
         "LoD/1.13d": "0x19F55"
       },
-      "name": "_ValidateExecute",
-      "signature": "int _ValidateExecute(_func_int * param_1)",
-      "comment": "Library Function - Single Match\n int __cdecl _ValidateExecute(int (__stdcall*)(void))\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "FreeObjectMemory",
+      "signature": "void FreeObjectMemory(void * pObject)",
+      "comment": "Conditional memory deallocation wrapper for object cleanup.\n\nAlgorithm:\n1. Load object pointer from parameter\n2. Test if pointer non-zero\n3. If non-zero: call SMemFree with object pointer, delete string reference, and flags\n4. Return (void)\n\nParameters:\npObject - Pointer to object memory to conditionally free (NULL safe)\n\nReturns:\nvoid (no return value; always succeeds)\n\nSpecial Cases:\nPasses NULL-safe pointer check: if pObject is NULL, function exits immediately without freeing. Magic value 0xffffffff (-1) passed as size parameter suggests unbounded deletion or Storm.dll implementation detail.\n\nMagic Numbers:\n0xffffffff - Size parameter for SMemFree (likely -1 indicating full allocation deletion)\n0x00000000 - Flags parameter for SMemFree (no special flags)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b971a7136b1dcd60f532df35ec55e166"
     },
@@ -10859,6 +11162,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x165CC",
         "LoD/1.10": "0x15661"
       },
+      "name": "ProcessCharacterWrite",
+      "signature": "DWORD ProcessCharacterWrite(uint dwCharacterIndex, long lBufferOffset, DWORD dwBufferSize)",
+      "comment": "Processes character write to buffer, validating character exists and is active.\n\nAlgorithm:\n1. Check if character index dwCharacterIndex is less than g_dwCharacterTableCount\n2. Verify character is active: check bit flag at (&g_pCharacterTableArray)[dwCharacterIndex >> 5] + 4 + (dwCharacterIndex & 0x1f) * 0x24\n3. If both checks pass: \n   - Call FUN_6fe28620(dwCharacterIndex) to prepare character\n   - Call FUN_6fe26769() to write character data with buffer parameters\n   - Call FUN_6fe2867f(dwCharacterIndex) to finalize character\n4. If checks fail:\n   - Get error code pointer from FUN_6fe2854d(), set value to 9 (ERR_NO_VALID_CHARACTER)\n   - Get error state pointer from FUN_6fe28556(), clear to 0\n5. Return result from FUN_6fe26769 on success, 0xFFFFFFFF on failure\n\nParameters:\n- dwCharacterIndex (uint): Index into character table to write (0-based)\n- lBufferOffset (LONG): Signed offset within buffer for write operation\n- dwBufferSize (DWORD): Total size of buffer available (bytes)\n\nReturns:\n- DWORD: Result code from FUN_6fe26769 on success, 0xFFFFFFFF (error) on failure\n\nSpecial Cases:\n- Error code 0x9 indicates character index out of bounds or character not active\n- Returns 0xFFFFFFFF when character validation fails\n- Character must have active flag (0x1) set in bitfield\n- Bitfield calculation: table[(index >> 5)] + offset_4 + (index & 0x1f) * 36 (0x24 bytes per character entry)\n\nMagic Numbers:\n- 0x5: Shift count for dividing index by 32 (bits per table entry)\n- 0x1f: Mask for lower 5 bits (modulo 32)\n- 0x24 (36): Size of each character entry in table\n- 0x1: Active flag bit value\n- 0x9: Error code for invalid/inactive character\n- 0xFFFFFFFF: Error return value (DWORD_MAX, -1 as signed)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf"
     },
@@ -10909,6 +11216,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x6263",
         "LoD/1.13d": "0x65F3"
       },
+      "name": "GetListNodeValue",
+      "signature": "int * GetListNodeValue(void * this, void * pNode, int nValue)",
+      "comment": "Return list node value or default from container offset.\n\nAlgorithm:\n1. Test if nValue parameter is zero\n2. If zero, compute address: pNode + 4 (offset field access)\n3. Return computed offset if zero, otherwise return nValue as-is\n\nParameters:\n  pNode - Pointer to list node container (ECX register, __thiscall implicit)\n  nValue - Potential list node value or zero\n\nReturns:\n  Pointer to list node value (either nValue or pNode offset +4)\n\nSpecial Cases:\n  Used in iteration loops where nValue comes from GetListNodeValueMask()\n  Provides fallback to default list head at container +4 offset",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bb2b33ac6542be9917f82394b10f4825"
     },
@@ -10993,6 +11304,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x78D0",
         "LoD/1.09d": "0x78D0"
       },
+      "name": "DecompressPalettizedData",
+      "signature": "void DecompressPalettizedData(byte * pbSrc, byte * pbDest, int nLines, int nWidth, dword pPalette)",
+      "comment": "Decompress palettized image data using a lookup table (palette)\n\nAlgorithm:\n1. Initialize line end pointer: pbLineEnd = pbDest + nWidth\n2. Process each line (nLines iterations):\n   a. Read command byte from pbSrc\n   b. If bit 7 clear (signed byte >= 0):\n      - Extract alignment offset (bits 0-2) and block count (bits 3-6)\n      - Process unaligned leading bytes (1-7 bytes) using palette lookup\n      - Process aligned 8-byte blocks in tight loop, each byte: palette[(byte << 8) | dest_byte]\n      - If bit 7 set after masking 0x7F: add offset and repeat from step 2a\n      - Otherwise: move to next line\n   c. If bit 7 set (signed byte < 0):\n      - Extract count (bits 0-6, magnitude when negative)\n      - Sign-extend and advance pbDest pointer\n      - Continue reading next command byte\n3. Return when all lines processed\n\nParameters:\npbSrc (byte *) IMPLICIT ECX - Pointer to compressed source data, command bytes + lookup table indices\npbDest (byte *) IMPLICIT EDX - Pointer to destination decompressed buffer (output image)\nnLines (int) - Number of scanlines to decompress\nnWidth (int) - Width of each scanline in bytes\npPalette (dword) - Base address of lookup table for palette translation\n\nReturns:\nvoid - Modifies pbDest buffer in-place with decompressed scanlines\n\nSpecial Cases:\n- Bit 7 clear in command: alignment mode (process 1-7 unaligned + N*8 aligned bytes)\n- Bit 7 set in command: skip mode (advance pointer by sign-extended low 7 bits)\n- Used in inner loop: switch statement provides unrolled paths for 8 different offsets\n- Table lookup pattern: palette[source_byte << 8 | dest_byte] enables palette translation\n- Note: Function uses 3 register temporaries (EAX, EBX, EBP) optimized away in decompilation\n\nMagic Numbers:\n0x7F - Mask for lower 7 bits (skip count or alignment offset)\n0x7 - Mask for alignment offset (3 bits)\n0x100 - Multiplication factor for palette indexing (shifts source byte left 8 bits)\n0x8 - Block size in alignment mode (8 bytes processed per iteration)\n0x3 - Right shift amount to extract block count from upper bits",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bd9b8531f4901d8df50571f462c8a2fd"
     },
@@ -11072,6 +11387,30 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:bed936c73fe1864937225129603e250c"
     },
+    "D2CMP_MNE_bf12a0285d4c": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1B120",
+        "LoD/1.08": "0x6FE1B120",
+        "LoD/1.09": "0x6FDFAEE0",
+        "LoD/1.09b": "0x6FDFAEE0",
+        "LoD/1.09d": "0x6FDFAEE0",
+        "LoD/1.10": "0x6FDFAB20"
+      },
+      "rvas": {
+        "LoD/1.07": "0xB120",
+        "LoD/1.08": "0xB120",
+        "LoD/1.09": "0xAEE0",
+        "LoD/1.09b": "0xAEE0",
+        "LoD/1.09d": "0xAEE0",
+        "LoD/1.10": "0xAB20"
+      },
+      "name": "FindClosestColorMatch",
+      "signature": "uint FindClosestColorMatch(byte * pbPalette, uint dwEntries, byte bSearchRed, byte bSearchGreen, byte bSearchBlue)",
+      "comment": "Finds the closest color match in a palette using Euclidean distance.\n\nAlgorithm:\n1. Initialize minimum distance to maximum uint value (0xffffffff)\n2. If palette entry count is 0, return 0\n3. Set palette pointer to param_1 + 2 (first RGB byte location)\n4. For each palette entry (0 to dwEntries-1):\n   a. Calculate Euclidean distance: (R-searchR)^2 + (G-searchG)^2 + (B-searchB)^2\n   b. Compare with current minimum distance\n   c. If smaller, update minimum and store entry index\n   d. Advance palette pointer by 4 bytes (assumes RGBA/BGRA format)\n5. Return low byte of dwEntries (dwEntries >> 8) with matched index in AL\n\nParameters:\npbPalette - Pointer to palette data (byte array, RGBA/BGRA format, entry stride=4)\ndwEntries - Number of palette entries to search\nbSearchRed - Target red component to match\nbSearchGreen - Target green component to match\nbSearchBlue - Target blue component to match\n\nReturns:\nAL - Index of closest matching palette entry (0-255)\nHigh bytes - (dwEntries >> 8) preserved in upper result\n\nSpecial Cases:\n- If dwEntries == 0, returns 0 without searching\n- Assumes palette entries are 4 bytes apart (RGBA/BGRA format)\n- Palette pointer calculation (param_1 + 2) suggests RGB byte order: [skip][skip][R][G][B]\n- Uses squared Euclidean distance to avoid sqrt() operation\n- Function uses 4 SSA temporaries (uVar1, uVar2, uVar3, pbVar4) optimized away by compiler\n- Additional undefined3 stack parameters (0x0d, 0x11, 0x15) are padding/alignment artifacts",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:bf12a0285d4c59ecee6b444cc107c630"
+    },
     "D2CMP_MNE_bf2cf5e2d014": {
       "addresses": {
         "LoD/1.07": "0x6FE136A0",
@@ -11099,6 +11438,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x1680",
         "LoD/1.13d": "0x1680"
       },
+      "name": "ExtractListNode",
+      "signature": "void ExtractListNode(int * pNodeData)",
+      "comment": "Extracts/removes a node from a doubly-linked list structure\n\nAlgorithm:\n1. Read node header pointer from pNodeData[0]\n2. If node header is NULL, return (nothing to extract)\n3. Read offset value from pNodeData[1]\n4. If offset is negative (bit set), compute next = ~offset (bitwise NOT)\n5. Otherwise compute next = (pNodeData + (offset - *(node_header + 4)))\n6. Write node header to location [next]\n7. Update *(node_header + 4) = pNodeData[1] (update link field)\n8. Clear pNodeData[0] and pNodeData[1] (mark as extracted)\n\nParameters:\npNodeData - Pointer to 2-element int array containing [node_header, offset]\n\nReturns:\nvoid\n\nSpecial Cases:\n- Negative offset triggers fast path (bitwise NOT)\n- Positive offset requires calculating base address difference\n- Function assumes structure invariants: node_header valid pointer, offset in valid range\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0      | 4    | node_header | int* | Pointer to node header\n4      | 4    | offset      | uint | Offset/index to next location",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bf2cf5e2d01486392f917db7052df210"
     },
@@ -11129,6 +11472,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x177DF",
         "LoD/1.13d": "0x177E9"
       },
+      "name": "InitializeFloatingPointTrapHandlers",
+      "signature": "void InitializeFloatingPointTrapHandlers(void)",
+      "comment": "Initialize floating-point trap handler function pointers for C runtime error handling.\n\nAlgorithm:\n1. Load address of __cfltcvt function into EAX (float conversion handler)\n2. Store LAB_6fe229d2 into PTR___fptrap_6fe30cac (trap handler for primary trap)\n3. Store __cfltcvt address into PTR___fptrap_6fe30ca8 (conversion/formatting handler)\n4. Store __fassign address into PTR___fptrap_6fe30cb0 (assignment trap handler)\n5. Store FUN_6fe22978 address into PTR___fptrap_6fe30cb4 (custom handler)\n6. Store LAB_6fe22a20 address into PTR___fptrap_6fe30cb8 (secondary trap vector)\n7. Store __cfltcvt address again into PTR___fptrap_6fe30cbc (redundant conversion handler)\n8. Return void\n\nParameters:\n(none - initialization function)\n\nReturns:\nvoid\n\nSpecial Cases:\nThese trap handlers are called by the C runtime to handle floating-point exceptions (0x0, 0x80, etc.). The handlers intercept math errors and invalid operations before they propagate to the application.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bfc3ed25e9152f457419d9112a775bc2"
     },
@@ -11159,10 +11506,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19F91",
         "LoD/1.13d": "0x19F85"
       },
-      "name": "___addl",
-      "signature": "undefined4 ___addl(uint param_1, uint param_2, uint * param_3)",
-      "comment": "Library Function - Single Match\n ___addl\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "CheckedAddUint",
+      "signature": "uint CheckedAddUint(uint dwValue1, uint dwValue2, uint * pdwResult)",
+      "comment": "Performs checked addition of two unsigned 32-bit integers, detecting overflow.\n\nAlgorithm:\n1. Initialize overflow flag to 0\n2. Add the two input values\n3. Check for overflow: (sum < dwValue1) OR (sum < dwValue2)\n4. Set overflow flag to 1 if overflow detected\n5. Store result in output pointer\n6. Return overflow flag (0=success, 1=overflow)\n\nParameters:\ndwValue1 - First unsigned integer value\ndwValue2 - Second unsigned integer value  \npdwResult - Pointer to uint to store the sum result\n\nReturns:\n0 - Addition succeeded, no overflow occurred\n1 - Integer overflow detected during addition\n\nMagic Numbers:\n0x0 - Success flag (no overflow)\n0x1 - Overflow flag (overflow occurred)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bff073652f00cbfc0b0f227bb7a313e1"
     },
@@ -11183,6 +11530,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15600",
         "LoD/1.10": "0x15100"
       },
+      "name": "CopyMemoryWithAlignment",
+      "signature": "void * CopyMemoryWithAlignment(void * pdwDest, void * pdwSrc, dword cbSize)",
+      "comment": "\nCopy memory with optimized aligned DWORD copying, handling both forward and backward (overlapping) copies.\n\nAlgorithm:\n1. Check if regions overlap and dest < src: use backward copy to avoid corruption\n2. For backward copy: align destination to 4-byte boundary from end, copy DWORDs backward, handle remainder\n3. For forward copy: align destination to 4-byte boundary from start, copy DWORDs forward, handle remainder\n4. Use loop unrolling (8+ DWORDs per iteration) for performance\n5. Handle alignment cases: 0 (dword), 1, 2, 3 byte alignments with byte-by-byte setup\n6. Copy remaining bytes (0-3) after main DWORD loop via switch statement\n\nParameters:\npdwDest: void * - Destination buffer\npdwSrc: void * - Source buffer  \ncbSize: dword - Number of bytes to copy\n\nReturns:\npdwDest - Pointer to destination buffer (always returns destination)\n\nSpecial Cases:\n- Overlapping regions with dest < src: uses backward copy loop\n- Overlapping regions with dest >= src: uses forward copy loop\n- Non-overlapping: uses optimized forward copy\n- Handles all alignment boundaries: destination 0x0, 0x1, 0x2, 0x3 mod 4\n\nMagic Numbers:\n0x03 - Alignment mask (4-byte boundary check)\n7 - Minimum DWORD count for loop unrolling threshold\n3 - Remainder byte mask after DWORD count\n",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bff09423b51fd121ea30afec957819f4"
     },
@@ -11253,6 +11604,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x17776",
         "LoD/1.10": "0x175E5"
       },
+      "name": "LocaleMapStringWithConversion",
+      "signature": "int LocaleMapStringWithConversion(dword nLocaleId, dword dwMapFlags, char * szSourceString, int nSourceLength, wchar_t * wszOutputBuffer, int nOutputLength, dword dwCodePage, int nUseDefaults)",
+      "comment": "Performs locale-aware string mapping with multi-byte/wide character encoding conversion.\n\nAlgorithm:\n1. Initialize exception handler frame (local_14, ExceptionList chain)\n2. Check g_dwLocaleStringMapMode for capability detection (0=uninitialized, 1=Unicode, 2=ANSI)\n3. If uninitialized, probe LCMapStringW on empty string: if succeeds set mode=1 (Unicode), else try LCMapStringA and set mode=2 (ANSI)\n4. If mode check fails (neither API available), return 0 (failure)\n5. Normalize nSourceLength via FUN_6fe27baa if positive\n6. If mode=2 (ANSI): directly call LCMapStringA with original parameters and return\n7. If mode=1 (Unicode):\n   a. Determine codepage: use dwCodePage if provided, else use g_dwCodePage global\n   b. Convert ANSI source to UTF-16 via MultiByteToWideChar with proper flags\n   c. Calculate required output size via LCMapStringW on converted string\n   d. If dwMapFlags has 0x400 set: apply mapped result back to ANSI via WideCharToMultiByte with flags 0x220\n   e. If dwMapFlags lacks 0x400: verify output buffer size sufficient, direct copy mapped Unicode result\n   f. Return mapped character count or 0 on failure\n\nParameters:\nnLocaleId (uint) - Locale ID for string mapping operations\ndwMapFlags (uint) - Mapping flags (e.g., LCMAP_UPPERCASE, LCMAP_SORTKEY); bit 0x400 determines output format\nszSourceString (const char *) - Null-terminated or length-specified ANSI source string\nnSourceLength (int) - Character count of source; if <=0 null-terminated processing occurs\npwszOutputBuffer (wchar_t *) - Output buffer for mapped string (Unicode or ANSI conversion result)\nnOutputLength (int) - Size of output buffer in characters; 0=query mode returns required size\ndwCodePage (uint) - Code page for ANSI<->Unicode conversion; 0=use g_dwCodePage default\nbUseDefaults (int) - MultiByteToWideChar flag: if non-zero, use replacement char for unmappable chars\n\nReturns:\nint - Character count written to output buffer (includes null terminator for size queries), 0 on error\n\nSpecial Cases:\n- If both LCMapStringW and LCMapStringA fail during initialization, function permanently fails (returns 0)\n- Stack allocation for intermediate wide-char string depends on output size calculation\n- ExceptionList manipulation indicates exception handling context for longjmp unwinding\n- puStack_10 stores reference to exception handler code location (LAB_6fe25680)\n- puStack_c stores reference to exception descriptor (DAT_6fe2d0d8)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
     },
@@ -11273,6 +11628,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10DA1",
         "LoD/1.10": "0x1084D"
       },
+      "name": "ExceptionHandlerDispatcher",
+      "signature": "void ExceptionHandlerDispatcher(PEXCEPTION_RECORD pExceptionRec, PVOID pContext, DWORD dwExceptionCode)",
+      "comment": "Exception handler dispatcher that forwards exception data to the main exception processing routine.\n\nAlgorithm:\n1. Extract context pointer offset (pContext + 0xC) - points to stack frame info\n2. Load thread-local context (pContext + 0x8) - saved register state\n3. Load additional context value (pContext + 0x10) - extended exception data\n4. Call FUN_6fe21e54 with assembled parameters\n5. Return to caller\n\nParameters:\n- pExceptionRec: PEXCEPTION_RECORD - Exception information record (code, address, flags)\n- pContext: PVOID - Context block containing exception handling state and saved registers\n- dwExceptionCode: DWORD - Exception code classification for handler routing\n\nReturns:\n- void: Function performs no return value handling\n\nSpecial Cases:\n- Function acts as thin wrapper - all real work done in FUN_6fe21e54\n- Context block structure: offset +0x8 (saved regs), +0xC (stack frame), +0x10 (extended data)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2154911e6802eec71c70e2bd7fe10b2"
     },
@@ -11303,10 +11662,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x73FD",
         "LoD/1.13d": "0x742D"
       },
-      "name": "__free_osfhnd",
-      "signature": "int __free_osfhnd(int param_1)",
-      "comment": "Library Function - Single Match\n __free_osfhnd\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InvalidateCharacterTableEntry",
+      "signature": "int InvalidateCharacterTableEntry(uint dwCharacterIndex)",
+      "comment": "Invalidates a character table entry and resets standard handles if in exit phase one.\n\nAlgorithm:\n1. Validate character index is within table bounds (< g_dwCharacterTableCount)\n2. Calculate slot offset: (nCharacterIndex & 0x1f) * 0x24 (32 slots per entry, 36 bytes each)\n3. Get character entry pointer from g_pCharacterTableArray using binary index\n4. Check if slot is allocated: (entry[1] & 0x1) != 0 AND entry[0] != -1\n5. If g_dwExitPhaseOneComplete == 1, reset standard handles based on character index:\n   - Index 0: SetStdHandle(STD_OUTPUT_HANDLE, NULL)\n   - Index 1: SetStdHandle(STD_ERROR_HANDLE, NULL)\n   - Index 2: SetStdHandle(STD_INPUT_HANDLE, NULL)\n6. Mark entry as invalid: set entry[0] = 0xffffffff\n7. Return 0 (success)\n8. If validation fails: set error code 9 in TLS context, return 0xffffffff (error)\n\nParameters:\n- nCharacterIndex (uint): Index into character table (0-based)\n\nReturns:\n- 0 on successful invalidation\n- 0xffffffff on failure (invalid index or unallocated entry)\n\nSpecial Cases:\n- Magic number 0x1f: Character index mask (modulo 32)\n- Magic number 0x24: Slot entry size in bytes (36 bytes per character)\n- Magic number 0xfffffff6/0xfffffff5/0xfffffff4: Standard handle constants (STD_OUTPUT/ERROR/INPUT)\n- Magic number 0xffffffff: Invalid marker for invalidated entries\n- Error code 9: Set in TLS context on failure (indicates invalid parameter or unallocated entry)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2bda2cc0331ae5bf6246d61a0224d72"
     },
@@ -11327,6 +11686,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13CCA",
         "LoD/1.10": "0x137CA"
       },
+      "name": "DestroyCompressionResources",
+      "signature": "void DestroyCompressionResources(void)",
+      "comment": "Destroys and deallocates all memory resources used by compression buffers.\n\nAlgorithm:\n1. Check if compression mode is 3 (Mode-3 compression)\n   a. If true, iterate through buffer array (DAT_6ff14254 count of entries)\n   b. For each buffer entry:\n      - Decommit virtual memory region (0x100000 bytes, MEM_DECOMMIT)\n      - Release virtual memory region (MEM_RELEASE)\n      - Free buffer metadata from process heap\n      - Advance to next buffer entry (20-byte stride)\n   c. Free the array header from process heap\n2. Else if compression mode is 2 (Mode-2 compression)\n   a. Traverse circular linked list starting at PTR_LOOP_6fe30d80\n   b. For each node:\n      - If offset +0x10 contains valid pointer, release virtual memory region (MEM_RELEASE)\n      - Move to next node in circular list\n   c. Continue until returning to list head\n3. Destroy process heap\n4. Return\n\nParameters:\nIMPLICIT EBX: compression mode field from global config\nIMPLICIT [0x6fe2a0d4]: pointer to HeapFree function\nIMPLICIT [0x6fe2a0a4]: pointer to VirtualFree function\n\nReturns:\nvoid\n\nSpecial Cases:\n- Compression mode 3 processes linear array of buffers; mode 2 uses circular linked list\n- Magic number 0x100000 (1MB) is decommit size for virtual memory regions\n- Magic number 0xc is offset into buffer array structure (first element location)\n- Magic number 0x14 (20) is stride between buffer entries\n- Both modes properly deallocate heap and virtual memory resources before heap destruction\n\nRelated Functions:\n- InitializeCompressionResources() - Allocates resources deallocated by this function\n- GetCompressionMode() - Provides mode value used for branching",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2ccec13492440089beaf10a53536424"
     },
@@ -11345,6 +11708,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x9EF0",
         "LoD/1.09d": "0x9EF0"
       },
+      "name": "QuantizeColorPalette",
+      "signature": "void QuantizeColorPalette(byte * pPixelBuffer)",
+      "comment": "\nMaps source pixel colors to nearest palette colors using Euclidean distance.\n\nAlgorithm:\n1. Iterate through 16 alpha/intensity levels (0x00 to 0x0F)\n2. For each level, blend palette colors with target colors using: blended = (0xFF - palette) * level >> 4\n3. For each of 256 target color entries:\n   a. Find matching palette entry by iterating through 256 palette colors\n   b. Calculate RGB delta for each palette color: delta = (target - blended - palette)\n   c. Compute Euclidean distance: distance = R^2 + G^2 + B^2\n   d. Track minimum distance and corresponding palette index\n4. Write best palette index to 256x16 lookup table at offset 0x2400\n5. Move to next output row and repeat\n\nParameters:\npPixelBuffer (byte *) - Pixel/palette buffer base address containing palette and color data\n\nReturns:\nvoid - Writes results to 256x16 lookup table at (pPixelBuffer + 0x2400)\n\nMagic Numbers:\n0x2400 - Lookup table destination offset (256 * 16 bytes output)\n0xFF - Maximum color channel value (used for blending)\n0x0F - Shift factor for blending calculation (>> 4)\n0x100 - 256 entries (iterations per dimension)\n0x10 - 16 alpha/intensity levels (outer loop count)\n0x04 - Stride for byte pair processing (RGB pairs in 4-byte chunks)\n\nStructure Layout:\nPalette entries are byte triplets: [B][G][R] at offsets [pPixelBuffer+0], [pPixelBuffer+1], [pPixelBuffer+2]\nColor entries follow same format\nOutput lookup table: [pPixelBuffer+0x2400] through [pPixelBuffer+0x2400+0xFFF] (4096 bytes)\n",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c31e23d109c0adcacbb8c77a77f741bb"
     },
@@ -11375,10 +11742,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x178BE",
         "LoD/1.13d": "0x178C8"
       },
-      "name": "___CxxFrameHandler",
-      "signature": "undefined4 ___CxxFrameHandler(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4)",
-      "comment": "Library Function - Single Match\n ___CxxFrameHandler\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ExceptionHandlerDispatch",
+      "signature": "dword ExceptionHandlerDispatch(PEXCEPTION_RECORD pExcRecord, PVOID pContextRecord, DWORD dwEstablisherFrame, dword dwDispatcherContext)",
+      "comment": "Exception handler dispatcher - wrapper for structured exception handling\n\nAlgorithm:\n1. Save EAX to local stack variable (dwEAXSaved)\n2. Call FUN_6fe21e54 with full exception context parameters\n3. Return result in EAX\n\nParameters:\npExcRecord - PEXCEPTION_RECORD exception record pointer\npContextRecord - PVOID context record (PCONTEXT)\ndwEstablisherFrame - DWORD establisher frame (SEH frame)\ndwDispatcherContext - DWORD dispatcher context\n\nReturns:\ndword - Status from exception handler (1 for handled, 0 for unhandled)\n\nRelated Functions:\n- FUN_6fe21e54 - Main exception handler routing logic",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c3e67f0f66e9fe1748a93603f0dc99e6"
     },
@@ -11455,6 +11822,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3ED0",
         "LoD/1.10": "0x3B40"
       },
+      "name": "InitializeHashNodeChecksum",
+      "signature": "void InitializeHashNodeChecksum(HashNode * pNode)",
+      "comment": "Initialize hash table node with checksum validation fields.\nStores a calculated value and its bitwise complement at fixed offsets.\nUsed to detect uninitialized or corrupted hash nodes.\n\nAlgorithm:\n1. Calculate checksum address: dwChecksum = pNode + 4\n2. Store checksum value at [pNode + 4] = dwChecksum\n3. Compute inverted checksum: inverted = ~dwChecksum\n4. Store inverted value at [pNode + 8] = inverted\n5. Return to caller\n\nParameters:\npNode (HashNode*) - Pointer to hash node, minimum 16 bytes\n\nReturns:\nvoid - Node initialized with checksum pair (value + inverted)\n\nSpecial Cases:\nChecksum pattern enables runtime validation of node integrity\n\nMagic Numbers:\n0x4 - Offset to checksum field\n0x8 - Offset to inverted checksum field",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c44ae1e162c2930cd758a6126855d763"
     },
@@ -11533,6 +11904,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x5C90",
         "LoD/1.10": "0x59E0"
       },
+      "name": "ApplyPaletteLookup",
+      "signature": "void ApplyPaletteLookup(int * pPixelBuffer, int nLookupTable)",
+      "comment": "Apply palette lookup table transformation to pixel buffer\n\nAlgorithm:\n1. Initialize loop counter nLoopCounter = 0\n2. Load buffer count from pPixelBuffer[1]; if count <= 0, exit immediately\n3. Loop for each pixel in range [0, count):\n   a. Load base address from pPixelBuffer[0]\n   b. Calculate pixel address = base + nLoopCounter (byte offset)\n   c. Load pixel byte value at address\n   d. Add nLookupTable offset to pixel value (palette transformation)\n   e. Store transformed pixel back to original address\n   f. Increment nLoopCounter\n4. Return to caller\n\nParameters:\n- pPixelBuffer (int *): Pointer to structure [int nBaseAddress, int nPixelCount]\n  - pPixelBuffer[0]: Base address of pixel data (byte *)\n  - pPixelBuffer[1]: Number of pixels to process\n- nLookupTable (int): Lookup table base offset or additive palette value\n\nReturns:\n- void\n\nSpecial Cases:\n- Empty buffer: Skipped if nPixelCount (pPixelBuffer[1]) <= 0\n- Single pixel: Processed normally by loop logic\n- Out-of-bounds: Caller responsible for valid buffer bounds\n\nContext:\nCalled from DecompressSpriteFrame() during sprite decompression to apply\ncolor palette transformations to decompressed pixel data",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c4a609658719de82a27dc1bd2608e87a"
     },
@@ -11563,6 +11938,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3B10",
         "LoD/1.10": "0x3910"
       },
+      "name": "GetListNodeOffset",
+      "signature": "int * GetListNodeOffset(void * this, int * pListHead, int nOffset)",
+      "comment": "Get pointer to doubly-linked list node at offset.\n\nAlgorithm:\n1. Load value at [pListHead + 4] into dwValue\n2. Test dwValue sign: if negative, return ~dwValue (bitwise NOT = invert bits)\n3. Test nOffset sign: if non-negative, skip computation and add to dwValue\n4. If nOffset < 0: Load base pointer from [pListHead[0]], subtract it from pListHead\n5. Add adjusted offset to dwValue and return\n\nParameters:\nvoid * this (ECX) - pointer to container/structure (implicit __thiscall)\nint * pListHead - head of doubly-linked list structure\nint nOffset - offset within list (-1 to get last node)\n\nReturns:\nint * - pointer to list node at specified offset (adjusted by container base if offset negative)\n\nSpecial Cases:\nnOffset = -1 returns last node of list (via bitwise NOT transformation)\nNegative dwValue indicates error condition, returns bitwise NOT of error code",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c4bde9d60d76edca5ca48f92359b6763"
     },
@@ -11573,6 +11952,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDFFDF0",
         "LoD/1.09b": "0x6FDFFDF0",
         "LoD/1.09d": "0x6FDFFDF0",
+        "LoD/1.10": "0x6FDFF8F0",
         "LoD/1.11": "0x6FE14C8C",
         "LoD/1.11b": "0x6FE14C9C",
         "LoD/1.12a": "0x6FE14C7D",
@@ -11585,16 +11965,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0xFDF0",
         "LoD/1.09b": "0xFDF0",
         "LoD/1.09d": "0xFDF0",
+        "LoD/1.10": "0xF8F0",
         "LoD/1.11": "0x4C8C",
         "LoD/1.11b": "0x4C9C",
         "LoD/1.12a": "0x4C7D",
         "LoD/1.13c": "0x4C7D",
         "LoD/1.13d": "0x4C8C"
       },
-      "name": "___crtInitCritSecAndSpinCount",
-      "signature": "undefined ___crtInitCritSecAndSpinCount(undefined4 param_1, undefined4 param_2)",
-      "comment": "Library Function - Single Match\n ___crtInitCritSecAndSpinCount\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "UpdateTileOffsets",
+      "signature": "void UpdateTileOffsets(TileProject * pTile)",
+      "comment": "Updates offset values for all tile objects in a tile array structure.\n\nAlgorithm:\n1. Validate pTile pointer is non-null; exit via FogAssertFail if null\n2. Extract base offset value from pTile->dwBaseOffset (offset 0x54)\n3. Retrieve tile count from pTile->nTileCount (offset 0x50)\n4. Exit loop if count is 0 or negative\n5. For each tile index 0 to count-1:\n   a. Calculate memory address: baseAddr = byteOffset + baseOffset\n   b. Load current offset value from baseAddr[0x10]\n   c. Add base offset to current value\n   d. Store updated result back to baseAddr[0x10]\n   e. Increment byte offset by 0x14 (tile structure size)\n6. Return after processing all tiles\n\nParameters:\npTile (TileProject *): Pointer to tile array structure with:\n  - Offset 0x50: nTileCount - number of tile objects to process\n  - Offset 0x54: dwBaseOffset - offset value to add to all tiles\n\nReturns:\nvoid - Modifies tile structures in-place with updated offset values\n\nSpecial Cases:\n- NULL pointer triggers assertion failure and abnormal exit\n- Empty tile count (0) causes immediate return without iteration\n- Operates destructively on input structure memory",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c6722e7c6cb8ceef9baec556453717a2"
     },
@@ -11615,6 +11996,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16989",
         "LoD/1.10": "0x15A9B"
       },
+      "name": "ProcessStringWithCriticalSection",
+      "signature": "LPSTR ProcessStringWithCriticalSection(LPSTR lpszInputString, WCHAR wcCharacter)",
+      "comment": "Thread-safe wrapper for string processing with critical section management\n\nAlgorithm:\n1. Increment global reference count (InterlockedIncrement)\n2. Check if critical section already in use (g_bCriticalSectionInUse)\n3. If in use: decrement reference count, acquire/initialize critical section index 0x13\n4. Delegate string processing to FUN_6fe26bf2(lpszInputString, wcCharacter)\n5. If critical section was active: release critical section index 0x13\n6. Else: decrement reference count\n7. Return processed string pointer\n\nParameters:\nlpszInputString (LPSTR) - Input string to process\nwcCharacter (WCHAR) - Character parameter for processing\n\nReturns:\nLPSTR - Processed string pointer from FUN_6fe26bf2\n\nSpecial Cases:\n- Critical section state prevents reentrant locking\n- Reference counting tracks concurrent access\n- Magic number 0x13 identifies critical section resource",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c85f8270e3f1487f07a5ecca3d9faf90"
     },
@@ -11653,6 +12038,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16631",
         "LoD/1.10": "0x156C6"
       },
+      "name": "WriteCharacterTableData",
+      "signature": "int WriteCharacterTableData(dword nCharIndex, char * szBuffer, dword nBytesToWrite)",
+      "comment": "Writes character data to character table file with CRLF line ending conversion.\n\nAlgorithm:\n1. Validate param_3 is non-zero; return 0 if empty\n2. Get character table entry from g_pCharacterTableArray by index (param_1)\n3. Check 0x20 flag in entry metadata; seek to end if set\n4. If 0x80 flag NOT set: Direct write via WriteFile() to HANDLE\n   - If write fails, capture error code with GetLastError()\n   - Otherwise, accumulate bytes written\n   - Return written bytes or error code\n5. If 0x80 flag IS set: Use CRLF conversion path\n   - Initialize temp buffer (local_418, 1028 bytes)\n   - Read from param_2, convert LF (0x0A) to CRLF (0x0D 0x0A)\n   - Track line count increments (local_14)\n   - Write in 0x400-byte chunks when buffer full\n   - Continue until all bytes processed\n6. Check 0x40 flag and first byte; return 0 if both set and first byte is 0x1A\n7. Otherwise call FUN_6fe2854d() and FUN_6fe28556() to set error flags\n8. Return -1 on error path, or (total_bytes_written - line_increments)\n\nParameters:\n- param_1 (uint): Index into character table (0-based, packed in array)\n- param_2 (char*): Pointer to data buffer to write\n- param_3 (uint): Number of bytes to write\n\nReturns:\n- 0: Success with no output written\n- Positive: Number of bytes written (minus CRLF conversions)\n- Negative (-1): Error condition\n- Error codes: GetLastError() result or 0x09/0x05 from error handler\n\nSpecial Cases:\n- 0x20 flag: Seek behavior flag for file positioning\n- 0x80 flag: CRLF conversion required (line ending translation)\n- 0x40 flag combined with 0x1A: Skip error handling for special case\n- 0x1A byte: EOF marker (special termination condition)\n- 0x400 (1024): Write buffer size for chunked I/O\n\nMagic Numbers:\n- 0x20: File seek flag in metadata offset +4\n- 0x80: CRLF conversion required flag in metadata offset +4\n- 0x40: EOF marker check flag in metadata offset +4\n- 0x1A: End-of-file marker byte\n- 0x24: Character table entry size (36 bytes)\n- 0x1F: Mask for table entry index within group\n- 0x5: GetLastError code for resource exhaustion\n- 0x9: Error code written to FUN_6fe2854d() result\n- 0x1C: Error code written to FUN_6fe28556() result\n- 0x400: Buffer size limit (1024 bytes)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c8b59bb5b7eca5aa50d6fe27320b53cd"
     },
@@ -11671,18 +12060,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x9A50",
         "LoD/1.09d": "0x9A50"
       },
+      "name": "QuantizePaletteIndex",
+      "signature": "void QuantizePaletteIndex(int iPaletteDataBase)",
+      "comment": "Quantize 256x256 RGB grid to palette indices using direct and blended lookups.\n\nAlgorithm:\n1. Phase 1: Direct palette lookup (rows 0-255)\n   Step 1.1: For each RGB triplet in palette at iPaletteDataBase+2\n   Step 1.2: Load reference RGB: bRefB = [ptr-2], bRefG = [ptr-1], bRefR = [ptr]\n   Step 1.3: Apply rounding correction to non-zero components using 0x55555555 magic\n   Step 1.4: Inner loop: Compare against all 256 palette entries by Euclidean distance\n   Step 1.5: Find minimum distance index, store in iPaletteDataBase+0x6b500+rowIndex\n\n2. Phase 2: Blended palette lookup (rows 0-255 x columns 0-255)\n   Step 2.1: For each main RGB row\n   Step 2.2: Calculate max RGB component = max(bRefB, bRefG, bRefR)\n   Step 2.3: Opposite weight = 0xff - maxComponent\n   Step 2.4: For each blend iteration (0-255)\n   Step 2.5: Blend = (palette_val * weight + main_val * opposite_weight) / 0xff\n   Step 2.6: Find closest palette match to blended color by distance\n   Step 2.7: Store match index in iPaletteDataBase+0x5b500 (256-entry blocks)\n\nParameters:\n  iPaletteDataBase (ECX): Base pointer for data structure\n    +2: Start of 256 RGB palette entries (3-byte triplets)\n    +0x5b500: Blend lookup output (256x256 byte array, 256 sequential 256-entry rows)\n    +0x6b500: Direct lookup output (256 entries for palette quantization)\n\nReturns:\n  void (modifies memory at iPaletteDataBase+0x5b500 and iPaletteDataBase+0x6b500)\n\nSpecial Cases:\n  - Zero-valued RGB: Skip rounding adjustment, use component as-is\n  - Magic constant 0x55555555: Computes floor((component * 2/3)) for rounding\n  - Euclidean distance metric: (R_diff)^2 + (G_diff)^2 + (B_diff)^2\n  - Fixed sizes: 256 palette entries, 256x256 grid of blend combinations",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c905657fac94e14a397152c1dd52cc1a"
-    },
-    "D2CMP_MNE_c94d589a7309": {
-      "addresses": {
-        "LoD/1.10": "0x6FDFDE60"
-      },
-      "rvas": {
-        "LoD/1.10": "0xDE60"
-      },
-      "method": "MNE",
-      "index": "MNE:c94d589a730963675570d968b6b11d55"
     },
     "D2CMP_MNE_c9529d246abf": {
       "addresses": {
@@ -11733,6 +12116,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x15D0",
         "LoD/1.13d": "0x1530"
       },
+      "name": "ProcessExceptionHandlerSlots",
+      "signature": "void ProcessExceptionHandlerSlots(PEXCEPTION_RECORD pExceptionRecord, PVOID pContext, DWORD dwParam3, void * pParam4, dword dwSlotArray, int nSearchValue, int nParam7, PVOID pParam8)",
+      "comment": "Search exception handler slots and process matching handlers.\n\nAlgorithm:\n1. Get pointer to slot data array via FUN_6fe22741()\n2. Check if handler is enabled (offset +0x68 != 0)\n3. If enabled, call ExceptionHandlerWrapper with passed parameters\n4. If ExceptionHandlerWrapper returns non-zero, exit (handled)\n5. Call SearchSortedSlots to find range of matching slots for nSearchValue\n6. Iterate through each matching slot:\n   - Check if nSearchValue falls within slot bounds [min, max]\n   - Calculate slot offset = (piSlotInfo[3] << 4) + piSlotInfo[4]\n   - Load pointer from offset - 0xc (check if nullptr or empty)\n   - If handler not null and name at +0x8 not null terminator:\n     - Call FUN_6fe2225d to process slot handler\n   - Move to next slot (piSlotInfo += 5)\n\nParameters:\n  pExceptionRecord (PEXCEPTION_RECORD) - exception record\n  pContext (PVOID) - exception context\n  dwParam3 (DWORD) - context parameter\n  pParam4 (void *) - generic parameter\n  dwSlotArray (dword) - slot array base address\n  nSearchValue (int) - search key for slot matching\n  nParam7 (int) - parameter 7\n  pParam8 (PVOID) - parameter 8\n\nReturns:\n  void\n\nStructure Layout (Slot Info Array):\n  Offset | Size | Field Name | Type | Description\n  0x0    | 0x4  | min        | int  | Minimum slot range value\n  0x4    | 0x4  | max        | int  | Maximum slot range value\n  0x8    | 0x4  | unused     | uint | Padding\n  0xc    | 0x4  | index      | uint | Slot index multiplier\n  0x10   | 0x4  | base       | uint | Base slot offset\n\nMagic Numbers:\n  0x68 - Offset of handler enabled flag in slot data structure\n  0x1a - Offset of handler enabled flag in ppSlotData array\n  0x10 - Shift factor for slot offset calculation\n  0x0c - Offset of handler pointer in calculated slot location\n  0x08 - Offset of handler name in handler structure\n  0x14 - Slot info array stride (5 dwords)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c99bfad5ccf26df1c5caa351771cc12d"
     },
@@ -11755,6 +12142,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x134D0",
         "LoD/1.13d": "0xE4A0"
       },
+      "name": "BuildBitArrayIndexTables",
+      "signature": "void BuildBitArrayIndexTables(dword * pBitArray, byte * pForwardTable, int * pReverseTable)",
+      "comment": "Build forward and reverse index lookup tables from a 256-bit array.\n\nAlgorithm:\n1. Extract bits from 256-bit array: Loop through 256 positions, test each bit and store boolean (0/1) in local array\n   - For each bit position (0-255): compute dword offset via (index >> 5) * 4\n   - Load bit mask via gdwBitMasks_exref[(index & 0x1f) * 4]\n   - Test AND: if non-zero, set local_100[index] = 1, else 0\n2. Build bidirectional mapping: Loop through 256 slots\n   - For each slot (0-255): check if forward table[slot] is non-zero\n   - If active: set forward_table[slot] = active count, reverse_table[active_count] = slot\n   - Increment active count\n3. Store sentinel values: Write 0x100 (256) to end of forward table and active count to end of reverse table\n\nParameters:\n- pBitArray: Pointer to array of 8 dwords (32 bits each = 256 bits total) containing bit flags\n- pForwardTable: Pointer to 257-byte buffer (256 slots + 1 sentinel) mapping slots to active indices\n- pReverseTable: Pointer to integer array (257 slots) mapping active indices back to slots\n\nReturns:\n- None (void) - Tables populated in-place\n\nSpecial Cases:\n- Function processes exactly 256 bit positions (0x100 loop limit)\n- If no bits set: active count remains 0, reverse table empty except sentinel\n- Sentinel at offset 0x100: forward_table[256] = 0x100, reverse_table[256] = active_count\n\nRelated Functions:\n- DecompressSpriteFrame() - Calls to decompress sprite data using bit arrays\n- ExtractBitfieldMask() - Helper for bit extraction operations",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ca69e0bdc67a14f2e5131c3148061548"
     },
@@ -11775,6 +12166,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x29D0",
         "LoD/1.10": "0x2850"
       },
+      "name": "InsertListNodeLinked",
+      "signature": "void InsertListNodeLinked(void * this, void * pThis, int nMode, int nBaseOffset, uint dwFlags)",
+      "comment": "Inserts a list node into a doubly-linked list at a specified position.\n\nAlgorithm:\n1. Allocate new list node via Storm.SMemAlloc (Ordinal_401) with base offset + 0x24, flag 0xFFFFFFFE OR dwFlags\n2. If allocation succeeds, initialize new node offsets at +0 and +4 to zero\n3. If nMode is 0, skip insertion and return\n4. If nMode != 0, determine insertion point: use pNewNode if allocated, else use (pThis + 4)\n5. If insertion point contains data (nLinkedValue != 0):\n   a. Get offset value at insertion point + 4 (signed)\n   b. If offset negative, use bitwise NOT to get target address\n   c. Otherwise calculate: insertion_point + (offset - value_at_linked_offset_4)\n   d. Store linked value at target, update linked value's offset field\n   e. Zero insertion point node offsets\n6. Get list head from (pThis + 4)\n7. If nMode == 1 (insert at head):\n   a. Link insertion point to list head structure\n   b. Store (pThis + 8) offset in insertion point + 4\n   c. If offset at pThis + 8 negative, store insertion point via NOT\n   d. Else calculate and store at offset location\n   e. Update list head to pNewNode\n8. If nMode != 1 (insert elsewhere):\n   a. Copy list head data to insertion point\n   b. Link old head to pNewNode\n   c. Update list head to insertion point\n\nParameters:\n  void * pThis - IMPLICIT ECX: List structure [offset @ +0], [head @ +4], [tail @ +8]\n  int nMode - Mode: 0=skip, 1=insert at head, other=insert elsewhere\n  int nBaseOffset - Base offset, added to 0x24 for SMemAlloc\n  uint dwFlags - Allocation flags, OR'd with 0x8\n\nReturns:\n  void (no return value)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ca6c3d77b5f569f55ab4bf56002c41f1"
     },
@@ -11795,6 +12190,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11189",
         "LoD/1.10": "0x10C87"
       },
+      "name": "InitializeFloatingPointAndCPU",
+      "signature": "undefined InitializeFloatingPointAndCPU(void)",
+      "comment": "Initialize floating point hardware and CPU feature detection.\n\nAlgorithm:\n1. Set up floating point trap handler function pointers and conversion routines\n2. Query Windows Kernel32 module for IsProcessorFeaturePresent function\n3. If available, call IsProcessorFeaturePresent(0) to test processor features\n4. Store processor feature detection result to global variable g_dwProcessorFeature\n5. If IsProcessorFeaturePresent not available, call FUN_6fe22911 (fallback detection)\n6. Clear FPU exception flags with FNCLEX\n7. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- GetModuleHandleA may fail if Kernel32 not found (rare)\n- IsProcessorFeaturePresent may not be available on older Windows versions\n- Fallback FUN_6fe22911 handles alternative processor feature detection",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cb09f6b5d9797072e6568a27cb29dcdf"
     },
@@ -11885,6 +12284,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.12a": "0x40F3",
         "LoD/1.13c": "0x40F3"
       },
+      "name": "DecompressCharacterLookupValue",
+      "signature": "dword DecompressCharacterLookupValue(void * this, void * pCompressionState, dword dwCharValue)",
+      "comment": "Decompresses and translates a character code using compression lookup table\n\nAlgorithm:\n1. If compression disabled (g_bTableEnabled == 0): Apply ASCII case conversion for uppercase A-Z (0x40-0x5A)\n   - Add 0x20 to convert uppercase to lowercase, otherwise return unchanged\n2. If compression enabled:\n   a. For values < 0x100: Check if character is valid in compression table\n      - If g_dwCompressionMode < 2: Read validity bit from g_pCompressionLookupTable\n      - If g_dwCompressionMode >= 2: Call DecompressValueFromTable for validation\n      - If invalid (bit == 0): Return original dwCharValue\n   b. Extract high byte (dwCharValue >> 8) from table at offset [high_byte * 2 + 1]\n   c. Check 0x80 flag bit:\n      - If flag clear: 1-byte translation - reconstruct as [high_byte | (dwCharValue & 0xFF)]\n      - If flag set: 2-byte translation - call FUN_6fe27986 decompression with both bytes\n   d. Call FUN_6fe27986 to decompress character pair into output buffer\n   e. Extract result based on decompression mode:\n      - If nByteCount == 1: Return low byte (pOutput & 0xFF)\n      - If nByteCount == 2: Return word (high_byte | low_byte)\n\nParameters:\npCompressionState (void*): Compression context/state object passed to decompression function\ndwCharValue (dword): Input character code (0-0xFFFF range typically)\n\nReturns:\ndword: Translated/decompressed character value or original if invalid/disabled\n\nSpecial Cases:\n- Compression disabled: Only ASCII uppercase A-Z translated, all other values pass through\n- Invalid character in compression table: Returns original input value\n- g_dwCompressionMode selects between table lookup (mode 0-1) vs decompression (mode 2+)\n- Local stack variable pOutput receives decompression result from FUN_6fe27986\n\nMagic Numbers:\n- 0x40 (64): ASCII '@' character, start of uppercase range\n- 0x5A (90): ASCII 'Z' character, end of uppercase range  \n- 0x5B (91): ASCII '[' character, boundary check for case conversion\n- 0x20 (32): ASCII case offset (difference between 'A' and 'a')\n- 0x100 (256): Compression table maximum index for direct table lookup\n- 0x80: High bit flag in compression table indicating 2-byte result\n- 0xFF, 0xFFFF: Masks for extracting bytes from character value\n\nRelated Functions:\n- DecompressValueFromTable: Alternative compression lookup for mode 2+\n- FUN_6fe27986: Main decompression engine\n- ConvertCharacterCase: Related ASCII case conversion function\n- g_bTableEnabled: Global flag controlling compression activation",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cc0e19248bdb90cb6bf790db102f9ddf"
     },
@@ -11905,6 +12308,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3D40",
         "LoD/1.10": "0x3B30"
       },
+      "name": "InitializeStructureFields",
+      "signature": "void InitializeStructureFields(dword * pStructure)",
+      "comment": "Initialize 16-byte structure with zeros\n\nAlgorithm:\n1. Move parameter from ECX to EAX (fastcall convention)\n2. Zero ECX register\n3. Write 0 to [EAX + 0x0] (first dword)\n4. Write 0 to [EAX + 0x4] (second dword)\n5. Write 0 to [EAX + 0x8] (third dword)\n6. Write 0 to [EAX + 0xc] (fourth dword)\n7. Return to caller\n\nParameters:\npStructure (dword *): Pointer to structure/array element to initialize (passed in ECX)\n\nReturns:\nvoid: Function modifies memory in-place, returns nothing\n\nSpecial Cases:\nNone - straightforward zero initialization\nUses fastcall convention (parameter in ECX register)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cc80bc73a373b0bee91742ce5c266d40"
     },
@@ -11969,24 +12376,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x28E1",
         "LoD/1.13d": "0x287F"
       },
-      "name": "__exit",
-      "signature": "void __exit(int _Code)",
-      "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
+      "name": "TerminateProcessWithCode",
+      "signature": "void TerminateProcessWithCode(dword nExitCode)",
+      "comment": "Terminate the current process with specified exit code.\n\nAlgorithm:\n1. Invoke core termination handler FUN_6fe212c4 with exit code, param 0, param 0\n2. Termination handler performs cleanup and calls ExitProcess with exit code\n3. Function never returns (noreturn attribute)\n\nParameters:\nnExitCode (dword) - Process exit code to be returned to OS\n\nReturns:\nDoes not return - terminates process immediately\n\nSpecial Cases:\n- If global flag DAT_6ff12cc4 == 1, calls TerminateProcess immediately\n- Otherwise processes cleanup queues and finalizes before ExitProcess\n- Used throughout codebase for consistent process termination\n\nRelated Functions:\n- FUN_6fe212c4 - Core termination handler with cleanup logic",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba"
-    },
-    "D2CMP_MNE_cdd01353cfb9": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1E510",
-        "LoD/1.08": "0x6FE1E510"
-      },
-      "rvas": {
-        "LoD/1.07": "0xE510",
-        "LoD/1.08": "0xE510"
-      },
-      "method": "MNE",
-      "index": "MNE:cdd01353cfb9a5eb9042a1a2bb154bea"
     },
     "D2CMP_MNE_ced0f88cca03": {
       "addresses": {
@@ -12041,6 +12436,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16F40",
         "LoD/1.10": "0x16A2C"
       },
+      "name": "ParseIntegerFromStringEx",
+      "signature": "int ParseIntegerFromStringEx(void * this, byte * pbInput, int * pnOutput, int nRadix, dword dwFlags)",
+      "comment": "Parses a string to extract an integer value with support for multiple radix bases.\n\nAlgorithm:\n1. Skip leading whitespace characters (check compression mode for validity)\n2. Parse optional sign ('+' or '-') - if '-', set flag 0x02\n3. Validate radix (must be 0 or in range [2, 36])\n4. Auto-detect radix if radix=0: check for '0x' prefix (hex), '0' prefix (octal), else decimal\n5. Skip radix prefix ('0x', '0X' for hex; '0' for octal)\n6. Calculate max_value = 0xffffffff / radix for overflow detection\n7. Parse digit loop until non-digit character:\n   - Get digit value: use compression lookup or FUN_6fe28859 for letter values\n   - Check digit < radix (within valid range)\n   - Check for overflow: value * radix + digit > max_value\n   - Update value = value * radix + digit\n8. Store final position in pnOutput, sign-adjust result if flag 0x02 set\n\nParameters:\n  this (void *) - IMPLICIT ECX, compression lookup context\n  pbInput (byte *) - Input string to parse (must be null-terminated)\n  pnOutput (int *) - Output: stores position of first non-digit character (NULL allowed)\n  nRadix (int) - Number base (0=auto-detect, 2-36 for specific base)\n  dwFlags (dword) - Control flags: 0x01=signed, 0x02=negate result, 0x04=overflow error, 0x08=value_set\n\nReturns:\n  int - Parsed integer value, or 0xffffffff/-1 on overflow/error\n  Overflow sets flag 0x04, stores error code 0x22 at GetErrorLocation()\n  Negative flag 0x02 causes result to be negated\n\nSpecial Cases:\n  - Empty string or no digits: returns 0\n  - Radix out of range: returns 0, stores original string pointer in pnOutput\n  - Overflow detection using max_value = 0xffffffff / radix\n  - Signed range validation: checks against 0x80000000 (neg) or 0x7fffffff (pos)\n  - Letter digits (A-F) require compression mode >= 2 or lookup table",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cf4bba8373cc6f7fefec3dac17cb97f9"
     },
@@ -12318,6 +12717,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x14EB0",
         "LoD/1.13d": "0x131B0"
       },
+      "name": "InitializeDefaults",
+      "signature": "undefined4 InitializeDefaults(void)",
+      "comment": "Initialize default configuration or state. Called unconditionally during DLL attachment.\n\nAlgorithm:\n1. Return success status (1) indicating initialization complete\n\nParameters:\n(none)\n\nReturns:\n1 - Success, initialization completed",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9"
     },
@@ -12338,6 +12741,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1625D",
         "LoD/1.10": "0x16419"
       },
+      "name": "ConvertDoubleToExtended",
+      "signature": "void ConvertDoubleToExtended(uint * pMantissaDest, uint * pSourceDouble)",
+      "comment": "Converts double-precision floating-point to extended-precision (80-bit) format\n\nAlgorithm:\n1. Extract exponent from source [param_2 + 6], mask 0x7ff0 bits (exponent field)\n2. Check if exponent is zero (denormal/zero case):\n   - If mantissa also zero, store zero in destination and return\n   - Otherwise normalize: set exponent bias 0x3c01, clear high mantissa bit\n3. If exponent is 0x7ff (infinity/NaN), set exponent to 0x7fff\n4. For normal case, add bias 0x3c00 to exponent\n5. Combine mantissa: high bits from param_2[0] >> 0x15, low bits from param_2[1] & 0xfffff\n6. Initialize high mantissa with 0x80000000 (implicit leading 1 bit)\n7. Normalize: while high bit clear, left-shift both mantissa parts, decrement exponent\n8. Store sign bit (0x8000) | exponent in [param_1 + 4]\n\nParameters:\npMantissaDest (uint *) - Destination buffer for extended-precision result (6 bytes / 3 uints)\npSourceDouble (uint *) - Source IEEE 754 double (2 uints, 64 bits total)\n\nReturns:\nvoid - Stores result in destination buffer\n\nMagic Numbers:\n0x7ff0 - Exponent mask (11 bits, positions 4-14)\n0x7fff - Extended-precision max exponent (special value)\n0x3c01 - Denormal exponent bias offset\n0x3c00 - Normal exponent bias offset (Bias difference: double 1023 vs extended 16383)\n0x80000000 - Implicit leading bit for extended format\n0xffff - Exponent decrement for each normalization iteration\n\nStructure Layout:\nOffset | Size | Field | Type | Description\n0x0    | 4    | Low   | uint | Lower mantissa bits\n0x4    | 4    | High  | uint | Upper mantissa bits + implicit bit\n0x8    | 2    | Sign  | word | Sign bit (0x8000) | exponent",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d7ddf3c1b7f31503b888765ebbb66d57"
     },
@@ -12358,6 +12765,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15BEF",
         "LoD/1.10": "0x15DAB"
       },
+      "name": "DecompressValueFromTable",
+      "signature": "uint DecompressValueFromTable(void * this, void * pThis, int nLookupValue, uint dwMask)",
+      "comment": "Decompresses or looks up a value from compression table with mask filtering.\n\nAlgorithm:\n1. Check if lookup value + 1 is less than 0x100 (256)\n2. If YES - Direct table lookup: fetch word from g_pCompressionLookupTable at offset (nLookupValue * 2)\n3. If NO - Two-stage decompression:\n   a. Extract high byte of nLookupValue, use as index into table (offset = (high_byte * 2 + 1))\n   b. Test bit 0x80 in table entry to determine decompression method\n   c. If bit SET: 2-byte decompression - construct dwDecompData from bytes [nLookupValue & 0xFF, nLookupValue >> 8]\n   d. If bit NOT SET: 1-byte decompression - construct dwDecompData from single byte (nLookupValue & 0xFF)\n4. Call FUN_6fe2783d with decompressed data and byte count (1 or 2)\n5. If call fails (returns 0) - return 0 (error)\n6. If call succeeds - apply mask: return (table_result & dwMask)\n\nParameters:\n- this: void* - This pointer (ECX register, __thiscall convention)\n- nLookupValue: int - Input value to decompress (0-based index/code)\n- dwMask: uint - Bitmask to apply to final result\n\nReturns:\n- uint - Masked decompressed result from table, or 0 if decompression fails\n\nSpecial Cases:\n- Values 0-255: Fast path using direct table lookup\n- Values 256+: Use two-stage decompression with compression flags\n- Decompression failure (FUN_6fe2783d returns 0): Return 0 immediately\n- Bit 0x80 in compression flag table controls 1-byte vs 2-byte decompression\n- Note: Function uses 2 compiler-optimized temporaries (phantom variables) in decompression logic\n\nMagic Numbers:\n- 0x100 (256): Threshold between fast and slow path\n- 0x80: Flag bit in compression lookup table byte 1 (determines decompression width)\n- 0xFF: Byte mask for extracting individual bytes from nLookupValue\n- 0xFFFF00FF, 0xFF00FFFF: Masks for constructing decompressed dword",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d858691b25ff9d68f1965dc04bb2a9aa"
     },
@@ -12406,10 +12817,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x8DF0",
         "LoD/1.13d": "0x8E00"
       },
-      "name": "_strrchr",
-      "signature": "char * _strrchr(char * _Str, int _Ch)",
-      "comment": "Library Function - Single Match\n _strrchr\n\nLibrary: Visual Studio",
-      "name_source": "LoD/1.11",
+      "name": "ReadModuleCharacteristics",
+      "signature": "void ReadModuleCharacteristics(ushort * pwCharacteristics)",
+      "comment": "Reads PE header characteristics from current module base address.\n\nAlgorithm:\n  1. Zero the output buffer (param_1)\n  2. Get current module base via GetModuleHandleA(NULL)\n  3. Validate PE signature (0x5A4D, \"MZ\" header)\n  4. Load PE offset from module+0x3c\n  5. Validate PE offset is non-zero\n  6. Read machine type from PE+0x04 (COFF header machine field)\n  7. Read characteristics from PE+0x06 (COFF header characteristics field)\n  8. Store machine type at pwCharacteristics[0]\n  9. Store characteristics at pwCharacteristics[1]\n  10. Return to caller\n\nParameters:\n  ushort * pwCharacteristics - Output buffer (2 ushorts) for machine type and characteristics\n\nReturns:\n  void - Results written to pwCharacteristics buffer\n\nSpecial Cases:\n  - Invalid PE signature (not 0x5A4D) results in zero output\n  - Zero PE offset pointer results in zero output\n  - Function operates on current module loaded in memory\n\nPE Header Structure (offsets from module base):\n  Offset | Size | Field | Type | Description\n  0x0000 |    2 | e_magic | ushort | \"MZ\" signature (0x5A4D)\n  0x003C |    4 | e_lfanew | uint | Relative offset to PE header\n  +0x00  |    2 | Machine | ushort | Target machine (x86=0x14C)\n  +0x02  |    2 | Characteristics | ushort | File characteristics flags",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d8be7433da8984a6d08ceacc3367b90b"
     },
@@ -12440,30 +12851,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14CA1",
         "LoD/1.10": "0x147A1"
       },
+      "name": "ValidateAndExtractPoolMetadata",
+      "signature": "int ValidateAndExtractPoolMetadata(byte * pbPoolPtr, void * * ppPoolNode, dword * pdwPageBase)",
+      "comment": "Validates pointer within memory pool and extracts pool node and page base address.\n\nAlgorithm:\n1. Initialize ppPoolCurrent to g_pPoolRoot (global pool chain head)\n2. Loop through pool chain:\n   - Check if pbPoolPtr lies within current pool bounds [ppPoolCurrent[4], ppPoolCurrent[5])\n   - If found within bounds, exit loop with ppPoolCurrent set to containing pool\n   - Otherwise, advance to next pool via ppPoolCurrent[0]\n   - If ppPoolCurrent cycles back to g_pPoolRoot, pointer not found in any pool - return 0\n3. Validate pbPoolPtr alignment:\n   - Check if (pbPoolPtr & 0xF) == 0 (16-byte alignment required)\n   - If not aligned, return 0 (invalid allocation)\n4. Validate pbPoolPtr is in valid allocation region:\n   - Extract lower 12 bits: pbPoolPtr & 0xFFF\n   - Check if >= 0x100 (must be past 256-byte pool header)\n   - If not, return 0 (pointer in pool metadata region)\n5. Store pool node pointer to *ppPoolNode\n6. Extract page base: pdwPageBase = pbPoolPtr & 0xFFFFF000 (align to 4KB page)\n7. Store page base address to *pdwPageBase\n8. Calculate offset within page: (pbPoolPtr - 0x100 - pdwPageBase) >> 4\n9. Return total size: (offset >> 4) + 8 + pdwPageBase\n\nParameters:\n- pbPoolPtr: byte * - Pointer to validate within memory pool chains\n- ppPoolNode: void * * - Output parameter, receives pool node containing pbPoolPtr\n- pdwPageBase: dword * - Output parameter, receives aligned 4KB page base address\n\nReturns:\n- int: Non-zero value if pointer valid and within pool (size calculation)\n- 0: If pointer not in any pool, misaligned, or in pool metadata region\n\nSpecial Cases:\n- Pointer must be 16-byte aligned (0x10)\n- Pointer must be in allocation region beyond 0x100 offset in pool\n- Cycles through entire pool chain returning 0 if not found\n- Magic number 0x100 = 256-byte pool header size\n- Magic number 0xF = 16-byte alignment mask\n- Magic number 0xFFF = page offset mask (lower 12 bits)\n- Magic number 0xFFFFF000 = page base mask (upper 20 bits)\n\nPool Structure Layout:\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | pNext      | void * | Pointer to next pool in chain\n0x4    | 4    | pLower     | void * | Lower boundary of pool\n0x8    | 4    | pUpper     | void * | Upper boundary of pool\n0xC    | 4    | reserved   | dword | Reserved field",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac"
-    },
-    "D2CMP_MNE_d9a12ae164ce": {
-      "addresses": {
-        "LoD/1.11": "0x6FE277B6",
-        "LoD/1.11b": "0x6FE277A6",
-        "LoD/1.12a": "0x6FE27856",
-        "LoD/1.13c": "0x6FE2786C",
-        "LoD/1.13d": "0x6FE27876"
-      },
-      "rvas": {
-        "LoD/1.11": "0x177B6",
-        "LoD/1.11b": "0x177A6",
-        "LoD/1.12a": "0x17856",
-        "LoD/1.13c": "0x1786C",
-        "LoD/1.13d": "0x17876"
-      },
-      "name": "_UnwindNestedFrames",
-      "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
-      "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18"
     },
     "D2CMP_MNE_da9fe63256c7": {
       "addresses": {
@@ -12482,6 +12875,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11467",
         "LoD/1.10": "0x10F67"
       },
+      "name": "ReallocateMemoryWithStrategy",
+      "signature": "byte * ReallocateMemoryWithStrategy(byte * pbBuffer, dword * pdwSize)",
+      "comment": "Reallocate memory buffer with strategy-based allocation.\n\nAlgorithm:\n1. If pbBuffer is NULL: Allocate new memory via _malloc with pdwSize\n2. If pdwSize is NULL: Free pbBuffer via FUN_6fe21cd9 and return NULL\n3. Check allocation strategy flag DAT_6ff14264:\n   a) If value == 3: Pool-based allocation strategy\n      - Validate pdwSize < 0xffffffe1 (max size)\n      - Get pool info for pbBuffer via FUN_6fe24156\n      - If pool valid: Check reuse compatibility via FUN_6fe2495f\n      - Allocate new block from pool via FUN_6fe244aa\n      - Copy data from pbBuffer to new block (bounded by min(pdwSize, original_size))\n      - If pool allocation fails: Fall through to heap allocation\n      - Align pdwSize to 16-byte boundary (pdwSize = (pdwSize + 0x0F) & 0xFFFFFFF0)\n      - Retry with HeapAlloc on failure (calls FUN_6fe25322 for retry)\n   b) If value == 2: Specialized allocation strategy\n      - Similar pool-based approach as mode 3\n      - Uses FUN_6fe24eb1 for pool query (alternative pool interface)\n      - Uses FUN_6fe25279 for compatibility check\n      - Uses FUN_6fe24f4d for allocation\n      - Default to HeapAlloc if pool unavailable\n   c) Otherwise: Simple heap reallocation strategy\n      - Round-robin HeapReAlloc with 16-byte alignment\n      - Retry on failure\n\nParameters:\npbBuffer - Pointer to existing buffer or NULL for new allocation\npdwSize - Pointer to size in bytes or NULL to deallocate\n\nReturns:\nPointer to reallocated buffer on success\nNULL on allocation failure or if pbBuffer is deallocated\n\nSpecial Cases:\n- If pbBuffer is NULL, pdwSize is dereferenced to get allocation size\n- Memory is aligned to 16-byte boundary (0xFFFFFFF0 mask)\n- Minimum allocation size is 1 byte even if pdwSize is 0\n- Function uses structured exception handling (ExceptionList frame)\n- Retry logic via FUN_6fe25322 on allocation failure\n- Global DAT_6ff12e5c can trigger immediate NULL return",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:da9fe63256c776da60d8a55e82f34c74"
     },
@@ -12500,6 +12897,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xAD90",
         "LoD/1.09d": "0xAD90"
       },
+      "name": "BuildColorQuantizationLookupTable",
+      "signature": "void BuildColorQuantizationLookupTable(byte * pPalette, int * pInputRGB)",
+      "comment": "Build RGB color quantization lookup table (256 entries mapping input colors to closest quantized palette)\n\nAlgorithm:\n1. Normalize input palette double values:\n   - Compare each palette double [param_2 + 0x10 + i*24] against threshold at g_dPaletteQuantizeThresholds (0x6fe2cb30)\n   - If not equal, add luminance adjustment g_dLuminanceUpperAdjust (0x6fe2cb70)\n   - If result exceeds upper clamp g_dUpperClampMax (0x6fe2cb28), clamp to 0.0 and 1.0\n   - Process all 256 palette entries (loop 0x100 iterations with +24 byte stride for double triples)\n2. Quantize palette:\n   - Call QuantizeColorToRGB(pPalette, abQuantBuffer) to convert doubles to byte RGB triplets in local_408\n3. Build lookup table (256 output entries):\n   - For each input color index (0..255):\n     - Initialize minimum distance uMinDist = 0xffffffff, best palette index dwBestIndex = 0\n     - For each quantized palette entry (0..255):\n       - Load current quantized RGB at pPalette[2] (blue), [1] (green), [0] (red)\n       - Compute squared Euclidean distance: (R_diff^2 + G_diff^2 + B_diff^2)\n       - If distance < minimum, update uMinDist and dwBestIndex\n     - Store best matching palette index byte at [pPalette + 0x3400 + dwColorIdx]\n   - Advance input color pointer by 4 bytes per iteration (skip stride)\n\nNote: Function uses 5 stack-allocated temporaries (local_40c through local_41c) optimized away by compiler.\n\nParameters:\n- pPalette (ECX, fastcall): pointer to quantized palette buffer (256 entries at offset 0x3400)\n- pInputRGB (EDX, fastcall): pointer to input RGB image data (RGB triplets)\n\nReturns:\n- void (populates lookup table at offset 0x3400 from pPalette)\n\nSpecial Cases:\n- Input palette processed by QuantizeColorToRGB() must have valid double values (threshold checks applied)\n- Lookup table stores exact palette index (0-255) for each input color\n- All 256 palette entries checked for each input color (nearest-neighbor quantization)\n\nMagic Numbers:\n- 0x100 (256): number of quantized palette entries and input colors\n- 0x18 (24): stride for palette doubles (3 doubles per entry)\n- 0x10: offset to palette data within param_2 structure\n- 0x3400: offset within pPalette where lookup table is stored\n- 0x3ff00000: IEEE double for 1.0 (high dword)\n- 0x6fe2cb30: address of g_dPaletteQuantizeThresholds\n- 0x6fe2cb70: address of g_dLuminanceUpperAdjust\n- 0x6fe2cb28: address of g_dUpperClampMax\n\nStructure Layout (param_2):\nOffset | Size | Field Name | Type | Description\n     0 |    4 | -reserved  | uint | (unknown)\n     8 |    4 | -reserved  | uint | (unknown)\n  0x10 |  768 | palette    | double[128] | 256 entries * 3 doubles (R, G, B)\n\nRelated Functions:\n- QuantizeColorToRGB(0x6fe1ad70) - Convert palette to byte RGB triplets\n- ConvertAndQuantizeRGBImage() - Caller, passes image data",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dab228739c2f6e7601bd29c688b22340"
     },
@@ -12538,6 +12939,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12638",
         "LoD/1.10": "0x12138"
       },
+      "name": "InvokeExceptionCallback",
+      "signature": "void InvokeExceptionCallback(int nExceptionInfo)",
+      "comment": "Invoke exception handler callback within SEH context\n\nAlgorithm:\n1. Save current exception list pointer for restoration\n2. Validate exception info pointer is not null\n3. Dereference exception info at offset +0x1c to get handler vtable\n4. Dereference vtable at offset +0x4 to get callback function pointer\n5. Check callback pointer is not null\n6. If all checks pass: set exception status to zero, update ExceptionList register\n7. Call TrampolineIndirectCall with context pointer (at offset +0x18) and callback function\n8. Restore previous exception list pointer on exit\n\nParameters:\nnExceptionInfo (int) - Exception record pointer containing callback references at offsets +0x18 and +0x1c\n\nReturns:\nvoid - Function returns after callback invocation; exception list always restored\n\nSpecial Cases:\n- Operates within SEH exception handler context (__except block)\n- If pExceptionInfo is null or callback is null, skips invocation\n- ExceptionList is always restored regardless of callback success\n- Uses implicit register for exception context (EDI from caller)\n- Note: Function uses 2 SSA temporaries (puStack_10, puStack_c) optimized away\n\nMagic Numbers:\n- Offset +0x18 - Exception context pointer passed to callback\n- Offset +0x1c - Handler vtable offset in exception record\n- Offset +0x4 - Callback function pointer offset in vtable",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:db5486806847a3abb9c37b86b3fdc359"
     },
@@ -12558,6 +12963,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x3D20",
         "LoD/1.10": "0x3B10"
       },
+      "name": "InitializeObjectFields",
+      "signature": "void InitializeObjectFields(dword * pObject)",
+      "comment": "Initialize nested structure fields with marker values and checksums.\n\nAlgorithm:\n1. Load object pointer from ECX register\n2. Calculate field pointer (pObject + 4)\n3. Clear field at offset +0 (pObject[1])\n4. Clear field at offset +4 (pObject[2])\n5. Store field pointer at offset +0 as self-reference\n6. Store marker value 0xdddddddd at offset +0 (pObject[0])\n7. Calculate inverted checksum: NOT(pField)\n8. Store inverted checksum at offset +8 (pObject[2])\n9. Return void\n\nParameters:\npObject (dword *): Pointer to structure being initialized, passed in ECX (__fastcall)\n\nReturns:\nvoid\n\nSpecial Cases:\nUses __fastcall convention with implicit parameter in ECX register\nSelf-referential pointer stored for internal tracking\nNOT operation used to create checksum from field address\nNote: Function uses 1 stack-allocated temporary optimized away by compiler (pdField)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dc6b8759b071e7ff4671770e8e403ff7"
     },
@@ -12600,6 +13009,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x14D3D",
         "LoD/1.10": "0x1483D"
       },
+      "name": "AllocateFromMemoryPool",
+      "signature": "int * AllocateFromMemoryPool(uint dwSize)",
+      "comment": "Allocate memory from a pool-based memory manager.\n\nAlgorithm:\n1. Search existing pool nodes for available slots matching requested size\n2. For each node, iterate through memory slots checking if size requirements met\n3. Call FUN_6fe25155 to validate and allocate from potential slot\n4. If allocation succeeds, subtract size from slot capacity and return pointer\n5. If no existing slot suitable, check for free pool memory\n6. If free memory available, skip to step 10\n7. Search global pool root for uninitialized node with available slots\n8. If all nodes full, try to initialize new node via InitializeMemoryPoolManager\n9. If new node allocated, populate slot tables and allocate memory\n10. Use VirtualAlloc to reserve new memory block at calculated address\n11. Initialize block with memset and populate pool slot metadata\n12. Update pool root and return allocated memory pointer + 0x100 offset\n\nParameters:\nnSize: uint - Size in bytes to allocate from pool\n\nReturns:\nint * - Pointer to allocated memory block, offset by 0x100 from base\nNULL (0x0) - On allocation failure (no pool available or VirtualAlloc failed)\n\nSpecial Cases:\n- Size alignment: Function uses implicit 4KB block alignment (0x1000)\n- Pool metadata: First 0x100 bytes reserved for block header\n- Reallocation strategy: Searches multiple pool nodes before expanding\n- Magic constant 0xf0: Slot capacity indicator (240 bytes per slot)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:de76025ed2839a23b964285c7e0d5701"
     },
@@ -12620,6 +13033,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6340",
         "LoD/1.10": "0x6080"
       },
+      "name": "CopyEncodedMemory",
+      "signature": "void CopyEncodedMemory(byte * pbSource, int nDestOffset, int nLineLength, int nParam4, int nYPos, int nCopyWidth, int nCopyHeight)",
+      "comment": "Copies memory regions with run-length encoded byte offsets, handling multi-line operations\n\nAlgorithm:\n1. For each encoded byte in source:\n   - If byte < 0x00 (sign bit set), it's a run-length count (2-127 bytes)\n   - If byte >= 0x00, it's a literal offset value (1-127)\n2. For each encoding entry:\n   - Calculate source offset range: MAX(0, param_6 - nCurrentYPos)\n   - Calculate copy height: MIN((byte & 0x7f), param_7 - nCurrentYPos)\n   - Verify range (cbCopySize = copy_height - src_offset) and if positive, copy memory\n3. Copy cbCopySize bytes from [source + src_offset] to [dest + nDestOffset] using dword-aligned copy\n4. Increment nCurrentYPos by encoding value\n5. When encoded byte sign bit clear (< 0), decrement line counter and reset to next line\n\nParameters:\n  pbSource: IMPLICIT ECX - pointer to encoded data stream (bytes: offset values or RL counts)\n  nDestOffset: EDX - base destination memory offset\n  nLineCount: EAX - number of image lines to process\n  nLineLength: [ESP+0x20] - width of each line in bytes\n  nYPos: [ESP+0x10] - initial Y position (height offset into image)\n  nCopyWidth: [ESP+0x28] - maximum horizontal copy width\n  nCopyHeight: [ESP+0x2c] - maximum vertical copy height\n\nReturns:\n  void - modifies memory in-place; no return value\n\nSpecial Cases:\n  - Source offset range bounds: 0 to nCopyWidth\n  - Copy height capped to: MIN((signed_byte), nCopyHeight - nYPos)\n  - RL encoding: high bit set = literal offset, high bit clear = RL count size\n  - Zero-length copy: skipped (cbCopySize <= 0)\n  - Final line iteration: when nLineCount reaches 0\n\nMagic Numbers:\n  0x7f: Mask to extract encoding value magnitude (clear sign bit)\n  0x80: High bit test (sign extension indicator)\n  0x2: DWord unit size for fast memory copy",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:de865908d53f7c02be202df3d460ed19"
     },
@@ -12704,10 +13121,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19921",
         "LoD/1.13d": "0x19931"
       },
-      "name": "__ShrMan",
-      "signature": "undefined __ShrMan(int param_1, int param_2)",
-      "comment": "Library Function - Single Match\n __ShrMan\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ProcessExceptionHandler",
+      "signature": "void ProcessExceptionHandler(PEXCEPTION_RECORD pExceptionRecord, PVOID pContext, DWORD dwContextFlags, uint dwFlags, int nStatusCode, byte * pbBuffer, byte * pbExtData, int * pnFieldOffsets, int nFieldCount, PVOID pAlternateContext)",
+      "comment": "Dispatch and handle an exception in a structured context.\n\nAlgorithm:\n1. If extension data (pbExtData) provided, preprocess exception record\n2. Use alternate context if provided, otherwise default to pContext\n3. Handle structured exception using context\n4. Initialize/iterate linked list structure with handler\n5. Increment field offset counter\n6. Invoke exception handler through SEH frame with 256-byte buffer limit\n7. If handler returned non-NULL (found), dispatch it\n8. Return to caller\n\nParameters:\n  pExceptionRecord - PEXCEPTION_RECORD: Exception info with code/flags\n  pContext - PVOID: Primary context structure\n  dwContextFlags - DWORD: Exception context flags\n  dwFlags - uint: Handler dispatch flags/mode\n  nStatusCode - int: Current status/result code\n  pbBuffer - byte*: Exception data buffer\n  pbExtData - byte*: Extended exception data (NULL to skip preprocessing)\n  pnFieldOffsets - int*: Array of field offsets [offset, count, ...]\n  nFieldCount - int: Number of fields to process\n  pAlternateContext - PVOID: Alternate context (NULL uses pContext)\n\nReturns:\n  void\n\nSpecial Cases:\n  pbExtData=NULL: Skips preprocessing step\n  pAlternateContext=NULL: Uses pContext as primary",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dfa782dab6d75357d3a41521d54ade73"
     },
@@ -12768,6 +13185,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x119BE",
         "LoD/1.10": "0x114BE"
       },
+      "name": "InitializeCriticalSections",
+      "signature": "undefined InitializeCriticalSections(void)",
+      "comment": "Initialize game engine critical sections for thread synchronization.\n\nAlgorithm:\n1. Initialize critical section for g_pGameCriticalSection1\n2. Initialize critical section for g_pGameCriticalSection2\n3. Initialize critical section for g_pGameCriticalSection3\n4. Initialize critical section for g_pGameCriticalSection4\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\nCritical sections are initialized for synchronizing access to shared game engine resources.\n\nRelated Functions:\n- InitializeCriticalSection (Windows API) - Initialize each critical section\n- Called from FUN_6fe226bc - Main initialization routine",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e1bb2af96e763a0793e4aabbeb4bef2b"
     },
@@ -12840,8 +13261,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x8E42",
         "LoD/1.13d": "0x8E52"
       },
-      "name": "Ordinal_10023",
-      "signature": "undefined Ordinal_10023(void)",
+      "name": "FogAssertFail",
+      "signature": "undefined FogAssertFail(void)",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a"
@@ -12863,6 +13284,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16F29",
         "LoD/1.10": "0x16A15"
       },
+      "name": "ParseIntegerFromString",
+      "signature": "void * ParseIntegerFromString(void * this, byte * pszInput, int * pnOutput, int nRadix)",
+      "comment": "Wrapper function that parses a string representation of an integer.\n\nAlgorithm:\n1. Initialize parameters: pszInput (string pointer), pnOutput (result location), nRadix (base)\n2. Prepare flags parameter value as 0x0 (default flags)\n3. Call ParseIntegerFromStringInternal with input string, output pointer, radix, and default flags\n4. Stack cleanup: deallocate parameter space (ADD ESP, 0x10)\n5. Return parsed integer value as void pointer\n\nParameters:\n- this: IMPLICIT Pointer to NumberParser object in ECX register\n- pszInput: byte * - pointer to null-terminated input string containing number\n- pnOutput: int * - pointer to output location for parsed integer value\n- nRadix: int - numeric base (8 for octal, 10 for decimal, 16 for hexadecimal)\n\nReturns:\n- void *: Parsed integer value cast to void pointer (convert to int for use)\n- NULL on parsing failure or invalid radix",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e4c337356f231e5baad169a03bc50c48"
     },
@@ -12883,6 +13308,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1474F",
         "LoD/1.10": "0x1424F"
       },
+      "name": "AllocateOrDeallocatePoolBlock",
+      "signature": "uint AllocateOrDeallocatePoolBlock(uint * pPoolHeader, int nBlockOffset, int nBlockSize)",
+      "comment": "Allocate or deallocate memory block from pool with bitmap tracking.\n\nAlgorithm:\n1. Calculate bank index as (nBlockOffset - pPoolBase) >> 15 for bitmap selection\n2. Align requested size to 16-byte boundary: dwAllocSize = (nBlockSize + 0x17) & 0xFFFFFFF0\n3. Read reference count metadata from block location\n4. If nBlockCount < dwAllocSize: deallocation path\n   a. Validate reference count is even and sum is positive\n   b. Decrement reference counters in associated bank slots\n   c. Update bitmap flags for those slots\n   d. Remove block from allocation list, relink to free list\n   e. Return 0 on validation failure, 1 on success\n5. Else if dwAllocSize < nBlockCount: allocation path\n   a. Update free list pointers and allocation tracking\n   b. Link block into active allocation doubly-linked list\n   c. Set reference counters and enable bitmap flags\n   d. Return 1 on success\n6. Return 1 if size unchanged (no operation)\n\nParameters:\npPoolHeader (uint *): Pool control structure with bitmap dwords and list pointers\nnBlockOffset (int): Memory offset to block being processed\nnBlockSize (int): Target size in bytes\n\nReturns:\n0: Operation failed (deallocation validation error)\n1: Success (allocation, deallocation, or no-op completed)\n\nSpecial Cases:\nBitmap spread: slots 0-31 use pPoolHeader[0], slots 32-63 use pPoolHeader[1]\nReference counters at offset+4 through offset+67 (64 byte slots)\nDoubly-linked free/active list with metadata at offset-4 and offset+4\n16-byte granule minimum block size",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e4f799c77acab14c5b1bdda2181c2d46"
     },
@@ -12943,6 +13372,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15A72",
         "LoD/1.10": "0x15572"
       },
+      "name": "HandleCriticalInitializationError",
+      "signature": "void HandleCriticalInitializationError(void)",
+      "comment": "Critical initialization error handler. Displays runtime error, triggers exception handler chain, exits with code 3.\n\nAlgorithm:\n1. Display runtime error code 10 via DisplayRuntimeError()\n2. Invoke exception handler callback with code 0x16 (SEH_FRAME_LOCALE_MAPPING)\n3. Exit process with code 3 (critical failure)\n\nParameters:\n  (none)\n\nReturns:\n  Never returns - calls __exit(3) unconditionally\n\nSpecial Cases:\n  - Exception handler at 0x16 must be registered or process exits\n  - Return type undefined (noreturn attribute required)\n  - Used for critical initialization failures that cannot recover\n\nRelated Functions:\n  - RegisterExceptionHandler() - Register this as SEH handler\n  - DisplayRuntimeError() - Display error message to user\n  - FUN_6fe2767e() - Exception handler dispatcher (code 0x16 triggers locale mapping cleanup)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e65987029a330b525d706048fc12bba9"
     },
@@ -12961,6 +13394,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x5260",
         "LoD/1.09d": "0x5260"
       },
+      "name": "AdvanceBitOffset",
+      "signature": "uint AdvanceBitOffset(int nDataOffset, int * pBitState)",
+      "comment": "Advance bitfield extraction state and emit pixels during sprite decompression.\n\nAlgorithm:\n1. If primary accumulator (param_2[9]) < max row height (param_2[1]):\n   a. Advance primary buffer pointer by step (param_2[13])\n   b. Increment row counter (param_2[8])\n   c. Check if we have sufficient data for full step (5+ pixels)\n   d. Set remaining pixel count to 4 or actual remainder\n   e. Return success\n2. Else if secondary accumulator (param_2[10]) < max column width (param_2[2]):\n   a. Increment resource index (param_2[0])\n   b. Load next row descriptor from resource table at [param_1 + 4]\n   c. Loop through entries until finding non-zero width & height\n   d. If resource index exceeds limit (param_1 + 0x1c), return failure\n   e. Copy row descriptor fields: height, width, offsets (param_2[1-3])\n   f. Calculate pixel data offsets from resource base (param_1 + 8/0xc)\n   g. Compute initial buffer positions and step sizes\n   h. Set remaining pixel counts\n   i. Return success\n3. Else (continuation of existing row):\n   a. Advance secondary buffer pointer by step (param_2[14])\n   b. Advance secondary accumulator by step\n   c. Check if we have sufficient data for full step\n   d. Set remaining pixel count to 4 or actual remainder\n   e. Return success\n\nParameters:\nnDataOffset: __fastcall ECX - Sprite frame offset (unused in fastcall, actual data in pBitState)\npBitState: __fastcall EDX - Pointer to bitfield state array (16 dwords):\n  [0] = Resource index counter\n  [1] = Row height limit\n  [2] = Column width limit\n  [3] = Y offset\n  [4] = X offset (adjusted)\n  [5] = Row data offset\n  [6] = Height increment\n  [7-8] = Buffer position (row)\n  [9] = Accumulator for row pixels\n  [10] = Accumulator for column pixels\n  [11-12] = Column offset tracking\n  [13] = Remaining pixels for current row\n  [14] = Remaining pixels for current column\n\nReturns:\n1 (EAX): Successfully processed; state updated, ready for next pixels\n0 (EAX): No more resources available; end of sprite frame\n\nStructure Layout - pBitState Array:\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | nResourceIdx | uint | Current resource index\n0x04   | 4    | nRowHeight | uint | Row height in pixels\n0x08   | 4    | nColWidth | uint | Column width in pixels\n0x0c   | 4    | nYOffset | int | Relative Y coordinate\n0x10   | 4    | nXOffset | int | Relative X coordinate\n0x14   | 4    | nRowDataOffset | uint | Resource row data pointer\n0x18   | 4    | nHeightIncrement | uint | Height step per iteration\n0x1c   | 4    | nRowBufferPos | uint | Current row buffer offset\n0x20   | 4    | nRowBufferNext | uint | Next row buffer offset\n0x24   | 4    | nRowAccumulator | uint | Pixels emitted from row\n0x28   | 4    | nColAccumulator | uint | Pixels emitted from column\n0x2c   | 4    | nColOffsetBase | uint | Column offset base\n0x30   | 4    | nColOffsetTracking | uint | Column offset tracking\n0x34   | 4    | nRowRemaining | uint | Remaining pixels in row step\n0x38   | 4    | nColRemaining | uint | Remaining pixels in column step",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e6c8ea7f554613a942e09606408fa2fb"
     },
@@ -13031,6 +13468,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1615D",
         "LoD/1.10": "0x16319"
       },
+      "name": "AssignExponentValue",
+      "signature": "void AssignExponentValue(void * this, void * pContext, dword * pdwResult, byte * pbData)",
+      "comment": "Assigns exponent values via two-stage field extraction and processing.\n\nAlgorithm:\n1. Create local array awExponentValues[6] (ushort) for intermediate field storage\n2. Call FUN_6fe27d76 to extract exponent fields from encoded input data into awExponentValues\n3. Call ProcessExponentValue to process extracted fields and compute final result\n4. Return void\n\nParameters:\n- pContext (void *): Implicit __thiscall context object in ECX register\n- pdwResult (dword *): Output buffer pointer to store processed exponent result\n- pbData (byte *): Input pointer containing encoded exponent field data\n\nReturns:\n- void (result written to pdwResult buffer via ProcessExponentValue)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e78d3e11a4929c0669f2164a27decb87"
     },
@@ -13051,6 +13492,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x185A5",
         "LoD/1.10": "0x173F8"
       },
+      "name": "ProcessAndValidateStructures",
+      "signature": "int ProcessAndValidateStructures(dword nMode)",
+      "comment": "Iterates through global structure array and validates/counts structures based on mode.\n\nAlgorithm:\n1. Acquire critical section 2 to protect global structure access\n2. Initialize counters: nValidCount=0, nInvalidResult=0\n3. Loop through each structure in g_pStructureArray[0..g_dwStructureCount-1]:\n   a. Load structure pointer from array (dword offset = index * 4)\n   b. Check if pointer is non-null AND structure flags[0xc] has 0x83 bits set\n   c. If yes, acquire critical section for this structure\n   d. Reload structure pointer and check flags again (dword at +0xc)\n   e. If flags still have 0x83 bits:\n      - If nMode==1: Call ValidateAndCheckFlag; if result != -1, increment nValidCount\n      - Else if nMode==0 AND flags have 0x02 bit: Call ValidateAndCheckFlag; if result == -1, set nInvalidResult=-1\n   f. Release critical section for this structure\n   g. Increment loop counter\n4. Release critical section 2\n5. Return nValidCount if nMode==1, else return nInvalidResult\n\nParameters:\n  nMode (dword) - Operation mode: 1=count valid structures, 0=check for invalid structures\n\nReturns:\n  int - If nMode==1: count of valid structures (>=0). If nMode==0: -1 if invalid found, else 0\n\nSpecial Cases:\n  Returns 0 if g_dwStructureCount<=0 (empty array). Critical sections prevent race conditions.",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e7b052927c73f8415c227814d8219b82"
     },
@@ -13112,6 +13557,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x2DD8",
         "LoD/1.13d": "0x2DD8"
       },
+      "name": "LeaveCriticalSectionIndex",
+      "signature": "void LeaveCriticalSectionIndex(int nIndex)",
+      "comment": "Leave the critical section at the specified index.\n\nAlgorithm:\n1. Access the critical section array element at index nIndex\n2. Call LeaveCriticalSection with the critical section pointer\n3. Return to caller\n\nParameters:\n- nIndex (int): Index into the global critical sections array (g_paCriticalSections)\n\nReturns:\n- None (void)\n\nSpecial Cases:\n- Assumes nIndex is a valid array index\n- Does not validate index bounds",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e83d104051445238b4510431aa98563d"
     },
@@ -13163,6 +13612,7 @@ var FUNCTIONS_D2CMP_dll = {
     },
     "D2CMP_MNE_e9843c68da2d": {
       "addresses": {
+        "LoD/1.10": "0x6FDF3330",
         "LoD/1.11": "0x6FE11F80",
         "LoD/1.11b": "0x6FE11F80",
         "LoD/1.12a": "0x6FE11F40",
@@ -13170,6 +13620,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE11F80"
       },
       "rvas": {
+        "LoD/1.10": "0x3330",
         "LoD/1.11": "0x1F80",
         "LoD/1.11b": "0x1F80",
         "LoD/1.12a": "0x1F40",
@@ -13206,10 +13657,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x2E8D",
         "LoD/1.13d": "0x2E8D"
       },
-      "name": "__lock",
-      "signature": "void __lock(int _File)",
-      "comment": "Library Function - Single Match\n __lock\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ProcessProtectedDataWithCriticalSection",
+      "signature": "uint ProcessProtectedDataWithCriticalSection(uint * pDataBlock)",
+      "comment": "Conditionally process protected data block with critical section locking.\n\nAlgorithm:\n1. Initialize result to 0xFFFFFFFF (error state)\n2. Check if flag 0x40 is SET in data block byte offset +0xC\n3. If flag NOT set (0):\n   - Acquire critical section for data block\n   - Call FUN_6fe28ce7 to process data and get result\n   - Release critical section\n   - Return processing result\n4. If flag IS set (0x40):\n   - Clear data block dword at offset +0xC\n   - Return error code 0xFFFFFFFF\n5. Return result to caller (EDI)\n\nParameters:\n- pDataBlock: uint * - Pointer to data structure with flag at offset +0xC (byte 3)\n\nReturns:\n- 0xFFFFFFFF: Flag was set or processing failed\n- Other value: Result from FUN_6fe28ce7 if flag was clear\n\nSpecial Cases:\n- Flag 0x40 indicates locked/invalid state - data is cleared instead of processed\n- Critical section protects concurrent access during processing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e9b7e334c31a0ed876fb0ca3fc54ed48"
     },
@@ -13228,6 +13679,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x3AA0",
         "LoD/1.09d": "0x3AA0"
       },
+      "name": "RebalanceNodeQueue",
+      "signature": "void RebalanceNodeQueue(void * this, NodeQueue * pQueue, int nNewHead)",
+      "comment": "Rebalance linked-list node queue after head update.\n\nAlgorithm:\n1. Load nNewHead from stack parameter\n2. Load current head from pQueue[0]\n3. If nNewHead equals current head, return (no-op)\n4. Initialize: dwWritePtr = pQueue + 0x4\n5. Loop while pQueue[8] > 0:\n   - Calculate node address: pnNode = (pQueue[0] + pQueue[8])\n   - If node pointer is NULL, continue loop\n   - Load node offset: dwNodeOffset = pnNode[1]\n   - Calculate target pointer (branch on sign):\n     - If negative: pnTarget = ~dwNodeOffset (bitwise complement)\n     - If positive: pnTarget = pnNode + (dwNodeOffset - pnNode[4])\n   - Copy node pointer: *pnTarget = *pnNode\n   - Update next link: *pnNode[4] = pnNode[1]\n   - Clear node: *pnNode = 0, pnNode[1] = 0\n6. Reset queue control: pQueue[4] = pQueue[4], pQueue[8] = ~pQueue[4]\n7. Update head: pQueue[0] = nNewHead\n8. Return\n\nParameters:\npQueue (NodeQueue *) - Queue structure with head, write_ptr, count fields\nnNewHead (int) - New head pointer value to install\n\nReturns:\nvoid - Updates queue structure in-place\n\nSpecial Cases:\n- If nNewHead == current head at pQueue[0], function performs no work\n- Negative offsets use bitwise NOT for target address calculation\n- Loop may be skipped if pQueue[8] <= 0 on entry",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e9dbf9085b5a9c730e4987b2d3e6c1b5"
     },
@@ -13253,12 +13708,14 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE24990",
         "LoD/1.11b": "0x6FE1DA50",
+        "LoD/1.12a": "0x6FE274D0",
         "LoD/1.13c": "0x6FE26F70",
         "LoD/1.13d": "0x6FE25390"
       },
       "rvas": {
         "LoD/1.11": "0x14990",
         "LoD/1.11b": "0xDA50",
+        "LoD/1.12a": "0x174D0",
         "LoD/1.13c": "0x16F70",
         "LoD/1.13d": "0x15390"
       },
@@ -13300,6 +13757,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x110B8",
         "LoD/1.10": "0x10B64"
       },
+      "name": "InitializeExitHandlers",
+      "signature": "void InitializeExitHandlers(uint dwExitCode, int nProcessCleanupMode, int nDelayedExit)",
+      "comment": "Initialize exit handlers and process termination sequence.\n\nAlgorithm:\n1. Call initialization handler FUN_6fe21369()\n2. If process termination already initiated (DAT_6ff12cc4 == 1), terminate immediately with exit code\n3. Mark exit handlers initialized (DAT_6ff12cc0 = 1)\n4. Store exit delay flag (DAT_6ff12cbc = fDelayedExit)\n5. If not quick exit (nProcessCleanupMode == 0):\n   a. Iterate exit handler queue backward from g_pQueueEnd-4 to g_pQueueBegin\n   b. Call each non-NULL handler function pointer in queue\n   c. Each pointer is 4 bytes, decrement by 1 dword per iteration\n6. Execute general cleanup (FUN_6fe2137b with DAT_6fe2e024/02c)\n7. Execute critical cleanup (FUN_6fe2137b with DAT_6fe2e030/038)\n8. If fDelayedExit == 0, set termination flag and call ExitProcess(dwExitCode)\n9. If fDelayedExit != 0, call cleanup handler (FUN_6fe21372) and return\n\nParameters:\n- dwExitCode (UINT): Exit code to pass to ExitProcess\n- nProcessCleanupMode (int): 0=run full cleanup, non-zero=skip queue handlers\n- fDelayedExit (int): 0=exit immediately, non-zero=return after cleanup\n\nReturns: void (may not return if fDelayedExit==0 due to ExitProcess)\n\nMagic Numbers:\n- 0x1: Termination initiated flag value\n- 0x4: Dword size for queue pointer decrement\n- 0x6ff12cc4: Global termination flag address\n- 0x6ff12cc0: Exit handlers initialized flag\n- 0x6ff12cbc: Exit delay flag storage\n- 0x6ff14398: Queue begin pointer address\n- 0x6ff14394: Queue end pointer address\n\nRelated Functions:\n- FUN_6fe21369() - Initialization handler\n- FUN_6fe2137b() - Cleanup execution\n- FUN_6fe21372() - Final cleanup handler\n- GetCurrentProcess() - Windows API to get current process handle\n- TerminateProcess() - Windows API to terminate process\n- ExitProcess() - Windows API to exit with code",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eb17d7abe573793d4b67d9aac794697b"
     },
@@ -13340,10 +13801,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x83B6",
         "LoD/1.13d": "0x83CC"
       },
-      "name": "__fclose_lk",
-      "signature": "undefined4 __fclose_lk(FILE * param_1)",
-      "comment": "Library Function - Single Match\n __fclose_lk\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.10",
+      "name": "ProcessTableDataWrite",
+      "signature": "uint ProcessTableDataWrite(uint * pTableHandle)",
+      "comment": "Process table data with compression and cleanup.\n\nAlgorithm:\n1. Initialize return status to 0xFFFFFFFF (error)\n2. Check if table handle has compression flags set (bits 0x80, 0x02, 0x01)\n3. If flags set:\n   a. Flush character table write operations\n   b. Execute table finalization processing\n   c. Decompress or verify table data\n   d. If decompression failed (negative result), set status to 0xFFFFFFFF\n   e. Else if compression buffer allocated, destroy and clear it\n4. Clear all compression flags from table handle\n5. Return final status (0xFFFFFFFF for error, or FlushCharacterTableWrite result for success)\n\nParameters:\n- pTableHandle (uint *): Pointer to table control structure with compression state at offset +12 (flags), +16 (decompress context), +28 (compression buffer)\n\nReturns:\n- 0xFFFFFFFF: Decompression failed or error occurred\n- Other: Success status from FlushCharacterTableWrite operation\n\nSpecial Cases:\n- If compression flags not set, only clears flags and returns error\n- If no compression buffer allocated, skips DestroyCompressionBuffer call\n- Negative decompression result triggers full error status\n\nMagic Numbers Reference:\n- 0x83: Compression flag mask (0x80 | 0x02 | 0x01)\n- 0x0C: Table handle + 3 = flags field offset (byte access)\n- 0x10: Table handle + 4 = decompress context parameter offset\n- 0x1C: Table handle + 7 = compression buffer pointer offset\n- 0xFFFFFFFF: Error sentinel value",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eb7ebe8853ab4246d611f1ee5af2c48e"
     },
@@ -13450,6 +13911,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x4E66",
         "LoD/1.13d": "0x4E72"
       },
+      "name": "SaveExceptionHandlerState",
+      "signature": "void SaveExceptionHandlerState(void)",
+      "comment": "Save exception handler state for structured exception handling.\n\nAlgorithm:\n1. Load global exception state base address (0x6fe30b90) into EBX\n2. Store caller's argument [EBP+8] at offset +0x8\n3. Store current return value (EAX) at offset +0x4\n4. Store current frame pointer (EBP) at offset +0xc\n5. Return\n\nParameters:\nIMPLICIT EAX - Exception/return value to save\nIMPLICIT EBP - Stack frame pointer\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nGlobal state block at 0x6fe30b90 must be initialized before calling.\nUsed during exception handling to restore context.\n\nRelated Globals:\n- g_dwExceptionCallerArg (offset 0x8) - Caller's argument value\n- g_dwExceptionReturnValue (offset 0x4) - Return value at exception\n- g_dwExceptionFramePointer (offset 0xc) - Frame pointer at exception",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf"
     },
@@ -13488,6 +13953,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x139C6",
         "LoD/1.10": "0x134C6"
       },
+      "name": "GetEnvironmentStringsCached",
+      "signature": "char * GetEnvironmentStringsCached(void)",
+      "comment": "Retrieve environment strings with caching support for both ANSI and Unicode.\n\nAlgorithm:\n1. Check cache status in g_dwEnvironmentStringsCacheInitialized (0=uninitialized, 1=wide, 2=ANSI)\n2. If uninitialized (0), attempt to get wide-character environment strings via GetEnvironmentStringsW\n3. If GetEnvironmentStringsW succeeds, set cache flag to 1 and proceed to convert strings\n4. If GetEnvironmentStringsW fails, fall back to GetEnvironmentStrings (ANSI), set cache flag to 2\n5. Iterate through null-terminated string pairs (KEY=VALUE\\0) to find total byte length\n6. Calculate byte length by advancing through WCHAR pairs until double null terminator found\n7. Call WideCharToMultiByte with code page 0 to determine required ANSI buffer size\n8. Allocate buffer via _malloc with calculated size\n9. Convert wide strings to ANSI with WideCharToMultiByte\n10. If conversion fails, free buffer and return NULL\n11. Free original wide-character buffer\n12. For ANSI path: iterate through ANSI strings to find end, allocate buffer for copy\n13. Call FUN_6fe25340 (likely memcpy) to copy ANSI environment strings\n14. Free original ANSI environment buffer\n15. Return pointer to converted/copied environment strings or NULL on failure\n\nParameters:\nvoid - No parameters. Uses global cache flag.\n\nReturns:\nPointer to null-terminated environment strings in ANSI format (char *)\nNULL if initialization fails or memory allocation fails\nSuccess requires either successful wide-to-ANSI conversion or direct ANSI retrieval\n\nSpecial Cases:\n- Cache prevents redundant OS calls after first initialization\n- Handles platform differences (GetEnvironmentStringsW may fail on older Windows)\n- Falls back to ANSI path if wide-character path unavailable\n- Buffer size calculation accounts for null terminators in wide-character strings\n\nMagic Numbers:\n0x0 - Code page for WideCharToMultiByte (auto-detect system default)\n0x1 - Cache flag value indicating wide-character strings cached\n0x2 - Cache flag value indicating ANSI strings cached",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d"
     },
@@ -13518,10 +13987,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x6315",
         "LoD/1.13d": "0x50B3"
       },
-      "name": "__callnewh",
-      "signature": "int __callnewh(size_t _Size)",
-      "comment": "Library Function - Single Match\n __callnewh\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "InvokeMemoryAllocationHandler",
+      "signature": "int InvokeMemoryAllocationHandler(dword nSize)",
+      "comment": "Invoke memory allocation failure handler callback\n\nAlgorithm:\n1. Load function pointer from g_pfnMemoryAllocationHandler global\n2. If pointer is NULL, return 0 (no handler available)\n3. Call handler with allocation size parameter\n4. If handler returns non-zero, return 1 (success)\n5. If handler returns 0, return 0 (failure)\n\nParameters:\nnSize (dword) - Allocation size that failed\n\nReturns:\n1 - Handler executed and returned non-zero (caller should retry allocation)\n0 - No handler available OR handler returned 0 (allocation failed permanently)\n\nSpecial Cases:\n- Handler is optional; if NULL, function returns 0\n- Handler is expected to free memory and make space available for retry\n- Part of memory allocation with exception handling strategy in __nh_malloc",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ee4facdaccbd6fc5f3297fd5b85b73c2"
     },
@@ -13552,10 +14021,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x198ED",
         "LoD/1.13d": "0x198FD"
       },
-      "name": "__CopyMan",
-      "signature": "undefined __CopyMan(int param_1, undefined4 * param_2)",
-      "comment": "Library Function - Single Match\n __CopyMan\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "GetLowestBitPosition",
+      "signature": "int GetLowestBitPosition(uint dwValue)",
+      "comment": "Find the lowest set bit position in a value and return 1-based index.\n\nAlgorithm:\n1. Check if input value is zero: return 0 (special case, no bits set)\n2. Use BSF instruction to find bit scan forward - returns 0-based position of lowest set bit\n3. Increment result by 1 to convert to 1-based position\n4. Return final 1-based position\n\nParameters:\n- dwValue (uint): Input value to scan for lowest set bit. 0 returns 0.\n\nReturns:\n- int: 1-based position of lowest set bit (1 = LSB set, 2 = bit 1 set, etc). Returns 0 if input is 0.\n\nSpecial Cases:\n- Input 0 returns 0 (no bits set)\n- Input 1 returns 1 (bit 0 is set)\n- Input 2 returns 2 (bit 1 is set)\n- Input 3 returns 1 (bit 0 is set)\n\nMagic Numbers:\n- 0x0: Zero check for no bits set\n- 0x1: Bit mask for testing each bit position\n- +1: Conversion from 0-based BSF result to 1-based return value",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eec0749ef2bff57a0570b6bf799026d4"
     },
@@ -13594,6 +14063,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11796",
         "LoD/1.10": "0x11296"
       },
+      "name": "GetBlockSize",
+      "signature": "SIZE_T GetBlockSize(void * pBlock)",
+      "comment": "Calculate uncompressed block size based on compression mode\n\nAlgorithm:\n1. Save current exception list pointer for restoration\n2. Check global compression mode (g_dwCompressionMode):\n   - If mode == 3: Extract RLE-compressed size\n   - If mode == 2: Extract DEFLATE-compressed size\n   - If mode != 2,3: Use raw heap size\n3. For mode 3: Call GetRLEBlockSize, subtract 9-byte header, return size\n4. For mode 2: Call GetDeflateBlock, shift byte[0] left 4 bits (multiply by 16), return size\n5. If extraction failed: Fall through to HeapSize call\n6. Call HeapSize on g_hHeapProcess heap handle for fallback size\n7. Restore exception list pointer and return calculated size\n\nParameters:\npBlock (void *): Memory block pointer from allocator (used for size lookup)\n\nReturns:\nSIZE_T: Uncompressed block size in bytes\n\nSpecial Cases:\n- Compression mode 3: RLE decompression, subtract 9-byte frame header\n- Compression mode 2: DEFLATE with size stored in high bits of first byte\n- NULL input handling: Falls through to default HeapSize\n- Exception frame setup: Uses SEH for cleanup in event of errors",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eef5ae1e69543f2ca247fd0a568bf7f0"
     },
@@ -13632,6 +14105,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13F71",
         "LoD/1.10": "0x13A71"
       },
+      "name": "DeallocateCompressionBlockAndUpdateBitmaps",
+      "signature": "void DeallocateCompressionBlockAndUpdateBitmaps(dword * pBlockTableEntry, int nBlockMemoryOffset)",
+      "comment": "Deallocate a compression block and update in-use bitmaps for all allocators\n\nAlgorithm:\n1. Validate block size is even (bit 0 clear) - exit if odd\n2. Extract next block size from memory following current block\n3. If next block free, unlink from free list by updating prev/next pointers\n4. Calculate block size index (size>>4)-1, capped at 0x3F\n5. Update bitmap counters (decrement byte at offset 4+index in allocator)\n6. If counter becomes zero, clear bit in bitmap word (0x44 or 0xC4 offset)\n7. Clear bit in global control flags (param_1[0] or param_1[1])\n8. If previous block free, unlink it similarly and merge size\n9. Extract previous block free list pointers and relink into current position\n10. Calculate new block index and insert into free list at appropriate bucket\n11. Update block header: set size field and back-pointer to -4 offset\n12. Decrement block list counter\n13. If counter reaches zero, deallocate entire memory page and free allocator structure\n14. Update global compression buffer tracking variables\n\nParameters:\npBlockTableEntry - Pointer to block table entry containing allocator state/bitmap\nnBlockMemoryOffset - Memory offset to block being deallocated (relative to heap base)\nIMPLICIT: g_pCompressionBufferArray - Pointer to compression buffer array\nIMPLICIT: g_dwCurrentBufferIndex - Current buffer index\nIMPLICIT: g_pCurrentCompressionBuffer - Current compression buffer pointer\n\nReturns:\nvoid - No return value, updates memory in place\n\nSpecial Cases:\n- If block is odd-aligned, function exits early without processing\n- If counter underflows to 0xFFFFFFFF, deallocate entire compression buffer\n- Handles both small (0-31) and large (32-63) allocations with separate bitmap words\n- Global variables updated only when buffer fully freed\n\nMagic Numbers:\n0x0F - Bit mask for validity check\n0x204 - Block table entry size (520 bytes)\n0x144 - Offset to block list head in table\n0xF - Shift count for block index calculation\n0x1F - Mask for bitmap bit position\n0x20 - Boundary between two bitmap words\n0x44/0xC4 - Bitmap word offsets (4 and 196 bytes from base)\n0x8000 - Page size for virtual memory\n0x4000 - MEM_DECOMMIT flag for VirtualFree\n0x80000000 - Sign bit for bit rotation masks",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef5171f8f7487cff01081036951ae8fa"
     },
@@ -13652,6 +14129,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15E3D",
         "LoD/1.10": "0x15FF9"
       },
+      "name": "ClearBitfieldRange",
+      "signature": "dword ClearBitfieldRange(int nBitfieldPtr, int nBitPosition)",
+      "comment": "Clear bits in a bitfield array from specified position to end of array.\n\nAlgorithm:\n1. Calculate array index and bit position within element using division: nArrayIndex = nBitPosition / 32, nBitShift = 31 - (nBitPosition % 32)\n2. Check if bit at current position is set using bitmask test\n3. If bit is set, call FUN_6fe25fae (conditional validation) with position+1\n4. If validation succeeds (result == 0), call FUN_6fe25ff7 (get value) with position-1 and save result\n5. Clear bits from current position forward: apply mask (0xFFFFFFFF << nBitShift) to current element\n6. For remaining array elements (up to 3 total), fill with zeros using STOSD operation\n7. Return saved value from step 4 or zero if no save occurred\n\nParameters:\n  nBitfieldPtr (int): Base address of bitfield array (3 dword elements = 96 bits total)\n  nBitPosition (int): Starting bit position to clear from (0-based, 0=LSB)\n\nReturns:\n  dword: Value from FUN_6fe25ff7 call (conditional), or 0 if bit was not set\n\nSpecial Cases:\n  - Array is always 3 dwords (96 bits), partial positions handled by element index bounds check\n  - Mask calculation ensures all bits from position to end are cleared atomically\n  - Both function calls use implicit register passing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef6cff05ab48173ef496ad6dbe48e5ef"
     },
@@ -13672,6 +14153,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x5E20",
         "LoD/1.10": "0x5B70"
       },
+      "name": "ScanStringForCharacter",
+      "signature": "int ScanStringForCharacter(char * szStart, char * szEnd, char chTarget, int nMaxCount, dword * pFoundFlag, dword * pReachedEnd)",
+      "comment": "Scans a string range for the first occurrence of a target character.\n\nAlgorithm:\n1. Validate pStart < pEnd (assert on failure)\n2. Initialize nCount = 0\n3. Iterate from pStart to pEnd:\n   - If current char == chTarget, stop iteration\n   - If nCount >= nMaxCount, stop iteration\n   - Increment both nCount and position pointer\n4. Check if reached end of range (pStart == pEnd):\n   - If yes: *pFoundFlag = 1, *pReachedEnd = 0\n   - If no: *pFoundFlag = 0, continue scanning for trailing characters\n5. Skip trailing occurrences of chTarget (if any)\n6. Set *pReachedEnd = 1 if pStart == pEnd after loop, else 0\n7. Return nCount (position of first match or position where limit reached)\n\nParameters:\n  pStart - Pointer to start of string range\n  pEnd - Pointer to end of string range (exclusive)\n  chTarget - Character to search for\n  nMaxCount - Maximum number of characters to scan before stopping\n  pFoundFlag - Output: 1 if reached end without finding character, 0 if found\n  pReachedEnd - Output: 1 if pointer reached pEnd, 0 otherwise\n\nReturns:\n  Position (count) of first character match or where limit was reached\n\nSpecial Cases:\n  - Empty range (pStart >= pEnd) triggers assertion failure\n  - Trailing character handling: skips all consecutive matches after first match",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef8012fd0e93cf93bb3dfb79bcdc88b8"
     },
@@ -13754,6 +14239,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1116F",
         "LoD/1.10": "0x10C1B"
       },
+      "name": "ExecuteFunctionPointerArray",
+      "signature": "void ExecuteFunctionPointerArray(void * * ppBegin, void * * ppEnd)",
+      "comment": "Iterate through an array of function pointers and execute each one.\n\nAlgorithm:\n  1. Load begin pointer from first parameter (ESI = [ESP+8])\n  2. Loop: Compare current pointer against end pointer [ESP+C]\n  3. If pointer >= end, exit loop\n  4. Load function pointer from current array element [ESI]\n  5. Test if function pointer is NULL\n  6. If NULL, skip call; otherwise invoke function via indirect CALL\n  7. Advance pointer by 4 bytes (next array element)\n  8. Repeat from loop check\n  9. Pop ESI, return to caller\n\nParameters:\n  ppBegin: Pointer to first element in function pointer array\n  ppEnd: Pointer to one-past-last element (sentinel for loop termination)\n\nReturns:\n  void - No return value; function executes each pointer in the array\n\nSpecial Cases:\n  - NULL function pointers in array are skipped (checked before call)\n  - Array traversal assumes 4-byte elements (code pointer size)\n  - Used by initialization and exit handler chains",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6"
     },
@@ -13772,6 +14261,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xA050",
         "LoD/1.09d": "0xA050"
       },
+      "name": "PaletteQuantizeImage",
+      "signature": "void PaletteQuantizeImage(void)",
+      "comment": "Quantize source image to multiple palettes using k-nearest-neighbor color matching\n\nAlgorithm:\n1. Initialize work buffer and retrieve source image dimensions from FUN_6fe213f0()\n2. Generate 5 quantized palette variants (0x18 layers each):\n   - Layer 0-23 (0x53500): Luminance-weighted quantization with threshold 0x6fe2cb08\n   - Layer 24-47 (0x54d00): Lower luminance variant with adjustment 0x6fe2cb78\n   - Layer 48-71 (0x56500): Upper luminance variant with adjustment 0x6fe2cb70\n   - Layer 72-95 (0x57d00): Normalized variant with scaling 0x6fe2cb38\n   - Layer 96-119 (0x57e00): Secondary normalized variant with scaling 0x6fe2cb68 + offset 0x6fe2cb60\n3. For each layer, apply conditional filtering based on value range [0x6fe2cb58, 0x6fe2cb50]\n4. Generate final palettes (0x5a400-0x5a600, 0x59800, 0x5a400):\n   - Generate base palette (0x5a400): Match pixels to 256-color palette\n   - Generate alternate palettes (0x5a500, 0x5a600): Color channel variants\n5. Process remaining palette (0x5a400-0x5a600): Final quantization with gradient scaling\n\nParameters:\n(none - uses global state from FUN_6fe213f0 and data tables at 0x6fe2cb08-0x6fe2cb80)\n\nReturns:\nvoid (modifies global palette tables)\n\nSpecial Cases:\n- Work buffer allocated on stack (0x42c bytes)\n- Uses floating-point for color distance calculations with integer truncation\n- Magic number 0x100 = 256 colors per palette layer\n- Magic number 0x18 = 24 palette layers total\n- FILD/FMUL operations convert integer indices to float for scaling\n\nMagic Numbers Reference:\n0x53500 - Output offset for luminance-weighted layer\n0x54d00 - Output offset for lower luminance variant (+0x1000 from previous)\n0x56500 - Output offset for upper luminance variant (+0x2000)\n0x57d00 - Output offset for normalized variant (+0x1800)\n0x57e00 - Output offset for secondary normalized variant (+0x100)\n0x59800 - Output offset for gradient scaling layer (+0x2000)\n0x5a400 - Output offset for base palette quantization\n0x5a500 - Output offset for red/blue channel variant\n0x5a600 - Output offset for green channel variant\n0x100 - 256 colors per palette layer\n0x18 - 24 palette layers (0-23)\n0x6fe2cb08 - Global luminance threshold constant\n0x6fe2cb78 - Global luminance adjustment (lower variant)\n0x6fe2cb70 - Global luminance adjustment (upper variant)\n0x6fe2cb80 - Global color scaling multiplier\n0x6fe2cb38 - Global normalization scaling factor\n0x6fe2cb68 - Secondary normalization scaling\n0x6fe2cb60 - Secondary normalization offset\n0x6fe2cb58 - Value range minimum (filter condition)\n0x6fe2cb50 - Value range maximum (filter condition)\n0x6fe2cb30 - Minimum clamp value for lower variant\n0x6fe2cb28 - Maximum clamp value for upper variant\n0x6fe2cb48 - Gradient scaling multiplier for final palette\n0x3fe00000 - Float constant 0.5\n0x3ff00000 - Float constant 1.0\n\nStructure Layout: (Work buffer - stack allocation at [EBP-0x42c])\nOffset | Size | Field Name | Type | Description\n0x0000 | 1536 | abPixelData | byte[1536] | Pixel cache for color matching (256*6 bytes)\n0x600 | 8 | dWorkValue | double | Temporary floating-point accumulator",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f15ed3d94478bd70de39635f53851b7f"
     },
@@ -13842,9 +14335,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x7806",
         "LoD/1.13d": "0x7836"
       },
-      "name": "__fptrap",
-      "signature": "void __fptrap(void)",
-      "comment": "Library Function - Single Match\n __fptrap\n\nLibrary: Visual Studio 2003 Release",
+      "name": "AcquireQueueLock",
+      "signature": "void AcquireQueueLock(void)",
+      "comment": "Acquires a synchronization lock for the dynamic queue buffer.\n\nAlgorithm:\n1. Call FUN_6fe21c63 with critical section pool index 0xd\n2. Function initializes the critical section if not already created\n3. Calls EnterCriticalSection to acquire the lock\n4. Prevents concurrent queue modifications during EnqueueItem operations\n\nParameters:\n(none) - Uses fixed critical section ID 0xd for queue synchronization\n\nReturns:\n(void) - Lock acquired on return; function blocks until lock available\n\nSpecial Cases:\n- Critical section pool index 0xd is reserved for queue synchronization\n- Part of synchronization pair with ReleaseQueueLock (FUN_6fe21372)\n- Used by EnqueueItem and process cleanup routines\n- Wrapper function that encapsulates lock ID to prevent caller mistakes\n\nMagic Numbers:\n- 0xd (13 decimal): Critical section pool index for queue lock",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0"
@@ -13884,6 +14377,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x16D2C",
         "LoD/1.10": "0x16818"
       },
+      "name": "MapResourceIdToReturnCode",
+      "signature": "uint MapResourceIdToReturnCode(uint dwResourceId)",
+      "comment": "Map resource/skill ID to return code lookup table.\n\nAlgorithm:\n1. Load resource ID parameter from stack [ESP + 0x4]\n2. Check if ID == 0x3a4 (932), return 0x411 (1041)\n3. Check if ID == 0x3a8 (936), return 0x804 (2052)\n4. Check if ID == 0x3b5 (949), return 0x412 (1042)\n5. Check if ID == 0x3b6 (950), return 0x404 (1028)\n6. If no match, return 0 (failure/unmapped)\n\nParameters:\n- nResourceId (uint): Resource or skill ID to map\n\nReturns:\n- uint: Mapped return code for matching IDs, 0 if not found\n\nSpecial Cases:\n- Only 4 specific IDs are mapped (0x3a4, 0x3a8, 0x3b5, 0x3b6)\n- All other IDs return 0 (unmapped resource)\n\nMagic Numbers:\n- 0x3a4 (932): Input resource ID\n- 0x3a8 (936): Input resource ID\n- 0x3b5 (949): Input resource ID\n- 0x3b6 (950): Input resource ID\n- 0x411 (1041): Return code for 0x3a4\n- 0x804 (2052): Return code for 0x3a8\n- 0x412 (1042): Return code for 0x3b5\n- 0x404 (1028): Return code for 0x3b6",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f31c6439952ca9c3e10694cce3d833df"
     },
@@ -13932,10 +14429,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x8A08",
         "LoD/1.13d": "0x8A13"
       },
-      "name": "__freebuf",
-      "signature": "void __freebuf(FILE * _File)",
-      "comment": "Library Function - Single Match\n __freebuf\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.10",
+      "name": "DestroyCompressionContextIfActive",
+      "signature": "void DestroyCompressionContextIfActive(CompressionContext * pCompressionCtx)",
+      "comment": "Destroys active compression buffer and resets context structure\n\nAlgorithm:\n1. Test flags field (offset 0xc) for both 0x83 and 0x08 bits\n2. If both flags are set, retrieve buffer pointer from offset 0x8\n3. Call DestroyCompressionBuffer to free the allocated buffer\n4. Clear compression flag bits by AND'ing with 0xfbf7 mask\n5. Zero all structure fields: offset 0x0 (dwState), 0x4 (dwCount), 0x8 (pBuffer)\n6. Return with structure in clean state\n\nParameters:\n  pCompressionCtx (CompressionContext *) - Compression context structure containing buffer pointer and state flags\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  If 0x83 flag not set, function returns without cleanup (buffer may still be active)\n  If 0x08 flag not set, function returns without cleanup (context not marked for destruction)\n\nMagic Numbers:\n  0x83 - Compression status mask (includes flags 0x80 and 0x03)\n  0x08 - Active compression indicator flag\n  0xfbf7 - Flag clear mask (clears bits 0x0408 and 0x0800)\n\nNote: Function uses 2 stack-allocated temporaries (uVar1, uVar2) optimized away by compiler",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f38bb98de0cae7e771d97b2937aba094"
     },
@@ -13977,6 +14474,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x36E0",
         "LoD/1.10": "0x3500"
       },
+      "name": "InsertListNode",
+      "signature": "void InsertListNode(void * this, void * pContainer, uint dwFlagMask, uint dwParam3, uint dwParam4)",
+      "comment": "Insert node into linked list container with state management.\n\nAlgorithm:\n1. Apply dwFlagMask to container state at offset 0x24\n2. If capacity < 0x3ff, adjust index counter (offset 0x10)\n3. Walk node chain from data table, increment counter up to 0xd\n4. On counter overflow, call FUN_6fe13b50 to reset state\n5. Call virtual method [this + 0x4] with data table entry\n6. Unlink existing node if present from doubly-linked list\n7. Link new node at container head, update bidirectional pointers\n8. Store extra data from registers to result offset +0, +5\n\nParameters:\npContainer (void*): Container object, offsets: +0x4=vfunc, +0x8=head, +0x10=counter, +0x1c=table, +0x24=state\ndwFlagMask (uint): Mask applied to state\ndwParam3 (uint): Virtual method param 3\ndwParam4 (uint): Virtual method param 4\n\nReturns:\nvoid: Container modified in-place with new linked node\n\nSpecial Cases:\nVirtual method returns NULL: use container head at offset +8\nNegative offset in link: complements for reverse direction\nCounter reaches 0xd: triggers state reset callback",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f47ddfa85791e5781642943b61cb534f"
     },
@@ -14057,6 +14558,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xAB30",
         "LoD/1.09d": "0xAB30"
       },
+      "name": "QuantizeColorToRGB",
+      "signature": "void QuantizeColorToRGB(ColorData * pColorData, byte * pbOutputRGB)",
+      "comment": "Quantize floating-point color data to 8-bit RGB components\n\nAlgorithm:\n1. Initialize loop counter to 0x100 (256 iterations)\n2. Load pColorData[0x8] as double and compare with threshold g_dPaletteQuantizeThresholds\n3. If equal threshold: multiply pColorData[0x10] by scaling factor 0x6fe2cba8, call __ftol to convert, store result in byR/G/B trio\n4. Else path: perform three independent __ftol conversions for each color channel from pColorData[0x8], pColorData[0x10]\n5. Complex floating-point conditionals using FCOM/FNSTSW determine actual color channel calculations\n6. Write quantized R/G/B bytes to output buffer at pbOutputRGB[0], pbOutputRGB[1], pbOutputRGB[2]\n7. Advance output pointer by 4 bytes, input pointer by 0x18, decrement counter\n8. Repeat until counter reaches 0\n\nParameters:\npColorData (ECX, IMPLICIT): Pointer to ColorData array, 256 entries with 0x18-byte stride\npbOutputRGB (EDX, IMPLICIT): Pointer to output RGB byte buffer, 256 entries with 4-byte stride\n\nReturns:\nvoid - Modifies pbOutputRGB buffer in-place with quantized RGB values\n\nNote: Local variables uVar1/uVar2/uVar3 (color channels) and lVar5 (temp conversion result) optimized by compiler; renaming blocked by Ghidra compiler optimizations.\n\nMagic Numbers:\n0x100 - Total palette entries to process (256 colors)\n0x18 - ColorData structure stride (3 doubles = 24 bytes)\n0x8, 0x10 - Offsets within ColorData for color components\n0x6fe2cba8 - Scaling factor for fast path quantization\n0x6fe21420 - __ftol function address (float-to-long conversion)\n0x4 - Output buffer stride per iteration",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f50a9a42effcb6e3561e007666ae8a7f"
     },
@@ -14077,6 +14582,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x18D91",
         "LoD/1.10": "0x186A6"
       },
+      "name": "ValidateCharacterSlotAccess",
+      "signature": "dword ValidateCharacterSlotAccess(dword dwSlotIndex)",
+      "comment": "Validate character slot accessibility and process slot data if valid.\n\nAlgorithm:\n1. Verify dwSlotIndex < g_dwCharacterTableCount\n2. Index into character table: array[dwSlotIndex >> 5], offset by 4 + (dwSlotIndex & 0x1f) * 0x24\n3. Check if status flag & 0x01 (bit 0) is set (slot active)\n4. If both checks pass: Acquire lock, process character via FUN_6fe28ffe, release lock\n5. If validation fails: Set TLS error context (error 0x09, NULL pointer), return 0xffffffff\n\nParameters:\n- dwSlotIndex (dword): Character slot index to validate\n  Range: [0, g_dwCharacterTableCount - 1]\n\nReturns:\n- Success: Result from FUN_6fe28ffe processing (typically 0 or positive status code)\n- Error: 0xffffffff (0xFFFFFFFF or -1) if slot index out of range or slot inactive\n\nSpecial Cases:\n- Out of range slot index: Triggers error path with TLS context code 0x09\n- Inactive slot (bit 0 clear): Same error path as out of range\n- TLS context initialization: GetTlsContextOffset8() and GetTlsContextOffsetPointer() called on error\n\nMagic Numbers:\n- 0x1f: Mask for bit position within 32-slot group (slot index & 0x1f)\n- 0x20 (32): Shift count for array indexing (slot index >> 5)\n- 0x24 (36): Size of each character record in array (36 bytes per slot)\n- 0x01: Status flag bit - slot active indicator\n- 0x09: TLS error code for invalid character access\n- 0xffffffff: Error return code (-1)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f69087a4d0d613e8eb1a99e63a6b0789"
     },
@@ -14095,6 +14604,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x32F0",
         "LoD/1.09d": "0x32F0"
       },
+      "name": "ClearLinkedListNodes",
+      "signature": "void ClearLinkedListNodes(dword pListContainer)",
+      "comment": "Reset all linked list node pointers in a container structure to zero.\n\nAlgorithm:\n1. For container field at +0x34: while node list exists (pointer > 0)\n   a. Load node at [+0x34] offset\n   b. If node pointer non-zero, extract offset field at [node + 0x4]\n   c. Calculate destination pointer: if offset < 0, use bitwise NOT; else use node base + (offset - *[node + 0x4])\n   d. Copy node pointer to destination and zero source fields\n2. For container field at +0x30: if node exists\n   a. Extract offset at [+0x34]\n   b. Calculate destination: if offset < 0, use NOT; else use field_ptr + (offset - *[node + 0x4])\n   c. Clear node pointer and offset field\n3. Repeat same pattern for fields at +0xc, +0x10, +0x4, +0x8\n\nParameters:\n  pListContainer (ECX): Pointer to container structure with linked list fields at offsets 0x04, 0x08, 0x0C, 0x10, 0x30, 0x34\n\nReturns:\n  void - All list node pointers zeroed, structure fields reset\n\nSpecial Cases:\n  Offset values: negative offsets use bitwise NOT to calculate destination; non-negative offsets calculate relative pointer\n  Empty lists: skipped (null pointer check)\n  Multiple independent lists: function manages 4 separate lists from single container\n\nMagic Numbers:\n  0x04, 0x08, 0x0C, 0x10: Offset fields and pointers for separate linked list segments\n  0x30, 0x34: Main/primary list head pointer and offset field",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f6ff89245d2312864e7922c932abc147"
     },
@@ -14137,6 +14650,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1341C",
         "LoD/1.10": "0x12A7D"
       },
+      "name": "WriteCharacterRepeat",
+      "signature": "void WriteCharacterRepeat(byte bChar, int nCount, int * pnBufPos, int * pnResult)",
+      "comment": "Write a character to output buffer repeatedly\n\nAlgorithm:\n1. Check if repeat count (nCount) is positive\n2. If count <= 0, return immediately\n3. Loop: decrement count, call WriteCharacterWithCount() with byte-casted character\n4. After each write, check result pointer for error flag (-1)\n5. If write error detected (*pnResult == -1), exit loop immediately\n6. Continue looping until count exhausted or error encountered\n\nParameters:\n  bChar - Character to write (passed as byte, caller ensures range)\n  nCount - Number of times to repeat write (positive count for loop, 0 skips)\n  pnBufPos - Pointer to current buffer position (passed to WriteCharacterWithCount)\n  pnResult - Pointer to write result code (checked for -1 error flag after each write)\n\nReturns:\n  void - No direct return value; result passed via pnResult pointer\n  Success: All characters written, *pnResult != -1\n  Failure: *pnResult == -1 detected during write, loop exits early\n\nSpecial Cases:\n  - Count of 0 or negative: loop skipped entirely, function returns\n  - Error flag (-1) stops writing immediately without completing all repeats\n  - Character cast from uint to byte may truncate upper bits\n\nRelated Functions:\n  - WriteCharacterWithCount() - Performs single character write with error tracking",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f7657de81ac8d5d29214c35b4fa6fd17"
     },
@@ -14195,6 +14712,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x7700",
         "LoD/1.09d": "0x7700"
       },
+      "name": "DecompressRleWithTranslation",
+      "signature": "void DecompressRleWithTranslation(byte * pbData, int nCurrentPos, int nIterations, int nLineWidth, int nYPos, int nStartX, int nEndX, byte * pbTranslationTable)",
+      "comment": "Decompress RLE-encoded data with per-byte translation table lookup.\n\nAlgorithm:\n1. Initialize line position tracking (nLineStart = nCurrentPos + nLineWidth)\n2. For each iteration (nIterations lines to process):\n   a. Read RLE byte value (bRleValue)\n   b. If MSB clear (positive): literal byte count in [0x00..0x7f]\n      - Clamp copy width to valid range [nStartX, nEndX]\n      - Use Duff's device (switch fallthrough) for unrolled 8-byte copy\n      - For each byte: translate via pbTranslationTable[src_byte] -> dest_byte\n   c. If MSB set (negative): repeat next 0x7f bytes (after masking)\n      - Read next byte, translate, advance position\n   d. Advance to next line on iteration end\n3. Return when all iterations complete\n\nParameters:\n  pbData (ECX): RLE-encoded data stream pointer\n  nCurrentPos (EDX): Destination buffer start position\n  nIterations: Line count to decompress\n  nLineWidth: Bytes per line (scanline stride)\n  nYPos: Current Y position tracking\n  nStartX: Minimum valid X column index\n  nEndX: Maximum valid X column index\n  pbTranslationTable (ESI): Byte lookup table for value translation\n\nReturns: void (modifies destination buffer in-place)\n\nSpecial Cases:\n  - Empty range (nStartX >= nEndX): Skip copy, advance buffer pointers\n  - Duff's device optimizes copy for alignment: remainder handled via switch, then 8-byte chunks\n  - RLE value 0x00 marks line end, triggers nIterations decrement\n  - Negative values (MSB=1): masked to 0x7f for repeat count\n\nMagic Numbers:\n  0x80: RLE marker (MSB check for negative/repeat flag)\n  0x7f: RLE mask and max literal/repeat count\n  0x08: Duff's device unroll factor (8-byte chunks)\n  0x07: Remainder mask (modulo 8)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f8c7a81d81eaaab45678bd489418aacb"
     },
@@ -14239,6 +14760,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11C44",
         "LoD/1.10": "0x11744"
       },
+      "name": "DispatchExceptionHandler",
+      "signature": "dword DispatchExceptionHandler(PEXCEPTION_RECORD pExcRecord, PVOID pContextRecord, dword dwEstablisherFrame, dword dwDispatcherContext, int * pEAXSaved, int nReturnValue, PVOID pDispatcherContext, char cUnused)",
+      "comment": "Exception Handler Dispatcher - Routes C++ exceptions to registered handlers\n\nAlgorithm:\n1. Validate magic number (0x19930520) in pEAXSaved[0]\n   - If invalid, call TerminateException()\n2. Check exception flags (ExceptionFlags & 0x66) for early return\n   - If flags set, skip to parameter check\n3. If pEAXSaved[3] non-zero:\n   a. Check if ExceptionCode equals 0xe06d7363 (C++ exception)\n   b. Verify magic cookie 0x19930520 in ExceptionInformation[0]\n   c. Load handler function pointer from ExceptionInformation[2] + 8\n   d. Call handler with full exception context and return result\n   e. If handler invalid, call UnhandledException(...)\n4. Else if pEAXSaved[1] non-zero AND nReturnValue equals 0:\n   - Call TerminateActiveFrame(..., -1)\n5. Return success (1)\n\nParameters:\npExcRecord: PEXCEPTION_RECORD - Exception record from OS\npContextRecord: PVOID - Context record (PCONTEXT)\ndwEstablisherFrame: dword - SEH establisher frame pointer\ndwDispatcherContext: undefined4 - Dispatcher context value\npEAXSaved: int* - Saved EAX register context (3 int array: [magic, flags, handlers])\nnReturnValue: int - Return value from dispatcher (0 = continue)\npDispatcherContext: PVOID - Additional dispatcher context data\ncUnused: char - Unused padding parameter\n\nReturns:\ndword - 1 if exception handled, implicit from handler if routed\n\nMagic Numbers:\n0x19930520 - C++ exception magic cookie (validation marker)\n0x66 - Exception flags bitmask for early exit (0x02 | 0x04 | 0x60)\n0xe06d7363 - EXCEPTION_CPP_THROW status code (C++ throw)\n\nRelated Functions:\n- FUN_6fe221a9 - TerminateActiveFrame (frame cleanup)\n- FUN_6fe228a9 - TerminateException (fatal handler)\n- FUN_6fe21eef - UnhandledException (routing fallback)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f98e8e4083780c134b0ca50390abeff0"
     },
@@ -14325,6 +14850,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x12A85",
         "LoD/1.10": "0x12EA7"
       },
+      "name": "ConvertDoubleToString",
+      "signature": "void ConvertDoubleToString(double * pDblValue, char * szOutputBuffer, dword dwBufferSize, int nFormatFlags)",
+      "comment": "Convert 64-bit double to string representation with optional sign prefix handling.\n\nAlgorithm:\n1. Extract double value from pDblValue pointer, split into low/high 32-bit parts\n2. Call FUN_6fe26411 to analyze value and populate adFormatState array\n3. Position szWritePos to skip '-' sign if nSignFlag equals 0x2d ('-' character)\n4. Call FUN_6fe2639a to process initial formatting and populate nSignFlag\n5. Decrement nOutputLen counter and check bounds:\n   - If nOutputLen < -4 (value too large for buffer), call FUN_6fe22ad7 with fallback formatting\n   - If nOutputLen >= dwBufferSize, call FUN_6fe22ad7 with fallback formatting\n6. Otherwise proceed with standard formatting:\n   - Locate null terminator at end of output\n   - Back up one position and overwrite null with 0x00\n   - Call FUN_6fe22bee to apply final formatting\n7. Return to caller\n\nParameters:\n- pDblValue: double* - pointer to 64-bit double value to convert\n- szOutputBuffer: char* - output string buffer for result\n- dwBufferSize: dword - maximum size of output buffer in bytes\n- nFormatFlags: int - formatting control flags\n\nReturns:\n- void - output is written directly to szOutputBuffer\n\nSpecial Cases:\n- Negative values: prefixed with '-' character (0x2d)\n- Buffer overflow: triggers fallback formatting via FUN_6fe22ad7\n- Result truncation: final string null-terminated by FUN_6fe22bee\n\nNote: Function uses 2 stack-allocated temporaries optimized away (local_EAX_72, local_EDI_91).\n\nRelated Functions:\n- FUN_6fe26411: Extracts and analyzes double value components\n- FUN_6fe2639a: Initial formatting processor\n- FUN_6fe22ad7: Fallback/alternate string formatter\n- FUN_6fe22bee: Final formatting and null-termination",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fad3eac2df5559e93c2297970ed0004b"
     },
@@ -14373,10 +14902,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x19F45",
         "LoD/1.13d": "0x19F39"
       },
-      "name": "`scalar_deleting_destructor'",
-      "signature": "void * `scalar_deleting_destructor'(type_info * this, uint param_1)",
-      "comment": "Library Function - Single Match\n public: virtual void * __thiscall type_info::`scalar deleting destructor'(unsigned int)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "DestroyObject",
+      "signature": "undefined4 * DestroyObject(void * this, byte bDeleteMemory)",
+      "comment": "Destructor: Cleanup object state and optionally free allocated memory.\n\nAlgorithm:\n1. Call FUN_6fe20e4b to perform cleanup operations (vtable reset, internal field cleanup)\n2. Test if bit 0 of bDeleteMemory flag is set (0x01)\n3. If set: call FreeObjectMemory to deallocate object memory\n4. Return pointer to object (this)\n\nParameters:\nthis - Pointer to object to destroy (passed via ECX register, __thiscall)\nbDeleteMemory - Destruction flags (bit 0: 1=free memory, 0=preserve memory)\n\nReturns:\nPointer to the object itself (this)\n\nSpecial Cases:\n- If bDeleteMemory bit 0 is clear, object is cleaned but not freed (typical for stack-allocated objects)\n- If bDeleteMemory bit 0 is set, FreeObjectMemory is called for complete deallocation\n- Function returns object pointer even though memory may be freed\n\nMagic Numbers:\n0x01 - Bit mask for memory deletion flag (tests bit 0)",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fcd666aa0beb6eec15da06c485365b59"
     },
@@ -14474,6 +15003,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x11237",
         "LoD/1.10": "0x10D37"
       },
+      "name": "ProcessFormatStringBuffer",
+      "signature": "int ProcessFormatStringBuffer(int * pFormatContext, byte * pFormatString, int * pArgList)",
+      "comment": "Process formatted string with argument list and context management\n\nAlgorithm:\n1. Initialize dwBufferByte = 0x42 (format specifier marker)\n2. Initialize nCountLimit = 0x7fffffff (large sentinel value for overflow detection)\n3. Copy context pointers: Store pFormatContext in both pContextStart and pContextCopy for dual tracking\n4. Call FUN_6fe22eb6 (main format string parser) with context pointer, format string, and argument list\n5. Decrement nCountLimit by 1 to track processing progress\n6. Check if nCountLimit < 0 (counter underflow condition indicating error)\n7. If underflow: Call FUN_6fe22d9e to handle error state and cleanup context\n8. If no underflow: Zero out the memory location pointed by pContextStart as completion marker\n9. Return the result code from FUN_6fe22eb6 (typically character count or error code)\n\nParameters:\n  pFormatContext: Pointer to format processing context structure (typically FILE-like struct)\n  pFormatString: Format string pointer containing conversion specifiers (e.g., %d %s)\n  pArgList: Pointer to argument list for format substitutions\n\nReturns:\n  int: Result code from FUN_6fe22eb6 parser (typically character count or error code)\n\nSpecial Cases:\n  - Counter nCountLimit uses 0x7fffffff sentinel allowing ~2B iterations before error\n  - pContextStart gets zeroed only on successful completion (counter >= 0)\n  - Error path FUN_6fe22d9e resets context state when counter underflows\n  - Both pContextStart and pContextCopy track same pointer for dual operations",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fe43fbd410bd9be7789c47110988479b"
     },
@@ -14516,6 +15049,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8E30",
         "LoD/1.10": "0x8B30"
       },
+      "name": "InitializeLinkedListStructure",
+      "signature": "void InitializeLinkedListStructure(dword * pListHeader, dword dwItemType, dword dwInitValue, dword dwFlags, int nItemCount)",
+      "comment": "Initialize a doubly-linked list structure with preallocated array of node elements.\n\nAlgorithm:\n1. Store initialization parameters in structure header fields (type, init value, flags, count)\n2. Allocate contiguous buffer for (count * 5) dwords via Ordinal_10045 (memory allocator)\n3. Zero-initialize allocated buffer using REP STOSD for dwords, REP STOSB for remainder bytes\n4. For each item in the array (count iterations):\n   - Set forward link (offset 0xC) to next node if not last item\n   - Set backward link (offset 0x10) to previous node if not first item\n   - Zero-initialize node fields (offsets 0x0, 0x4, 0x8)\n5. Initialize list metadata: head, tail, and other tracking fields\n6. Calculate final tail pointer as buffer + (count * 0x14) - 0x14\n\nParameters:\npListHeader (ECX): Pointer to list header structure (dword array)\ndwItemType (EDX): Item/node type identifier\ndwInitValue (Stack+0x4): Initial value to store in header\ndwFlags (Stack+0x8): Configuration flags\nnItemCount (Stack+0xC): Number of nodes to allocate and initialize\n\nReturns:\nvoid - List structure modified in place with allocated and initialized nodes\n\nMagic Numbers:\n0x3FFFFFFF - Bitmask to clamp byte count within 30-bit limit\n0x14 - Node size in bytes (5 dwords per node)\n0x2F - Allocation size parameter (47 bytes)\n0xC - Forward link offset within node\n0x10 - Backward link offset within node\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwItemType | dword | Item type from param_2\n0x4    | 4    | dwInitValue | dword | Init value from param_3\n0x8    | 4    | reserved0  | dword | Always 0\n0xC    | 4    | reserved1  | dword | Always 0\n0x10   | 4    | pNodeArray | dword* | Pointer to allocated node buffer\n0x14   | 4    | nCount     | dword | Item count from param_5\n0x18   | 4    | dwFlags    | dword | Flags from param_4\n0x1C   | 4    | reserved2  | dword | Always 0\n0x20   | 4    | reserved3  | dword | Always 0\n0x24   | 4    | pEnd       | dword* | Pointer to last node\n0x28   | 4    | reserved4  | dword | Always 0\n0x2C   | 4    | reserved5  | dword | Always 0\n0x30   | 4    | reserved6  | dword | Always 0",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fe7d9cdfca17307a1b88fa328d345db3"
     },
@@ -14536,6 +15073,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1429A",
         "LoD/1.10": "0x13D9A"
       },
+      "name": "AllocateCompressionBufferSlot",
+      "signature": "int * AllocateCompressionBufferSlot(uint * pBufferSize)",
+      "comment": "Allocate a compression buffer slot for a given size requirement. Searches compression buffer pool for available or partially-filled slots. Returns pointer to slot if successful, NULL if allocation fails.\n\nAlgorithm:\n1. Calculate aligned size: (size + 0x17) & 0xfffffff0 (16-byte alignment)\n2. Generate bitmasks for slot availability checking: 0x80000000 >> (byBitIndex & 0x1f)\n3. Search primary buffer list from current start (g_pCompressionBufferStart) for available slot\n4. If not found, search from beginning (g_pCompressionBufferArray) for available slot\n5. If still not found, search for completely empty slot (flags == 0)\n6. If all empty, allocate new buffer via FUN_6fe247b3() to expand buffer array\n7. Find best-fit bucket in target buffer via binary search on size (0-63 buckets)\n8. Update linked list pointers to relink slot: update next[prev], prev[next], parent[bucket]\n9. Adjust slot flags and counter in bucket header\n10. Calculate return offset as aligned size + 1 and return pointer to slot\n\nParameters:\npBufferSize (uint *): Pointer to required allocation size in bytes\n\nReturns:\nint *: Pointer to allocated slot data + 1, or NULL (0x0) if allocation failed\n\nSpecial Cases:\n- Slot reuse: If best-fit size matches requirement exactly, relinks into appropriate bucket\n- Size alignment: Always rounds up to 16-byte boundaries (min 0x10, max aligned 0x1000+)\n- Index clamping: Clamps calculated index to 0x3f maximum for safety\n- Flag bit tracking: Uses separate 32-bit flags for slots 0-31 and 32-63\n- Global reset: Clears g_dwCompressionIndex if counter underflows to zero\n- Failure conditions: Returns NULL only if FUN_6fe247b3() fails to allocate new buffer\n\nMagic Numbers Reference:\n0x17: Size padding value for 16-byte boundary alignment\n0xfffffff0: Bitmask for 16-byte alignment (clears lower 4 bits)\n0x20: Threshold separating lower/upper 32-bit flag words\n0x3f: Maximum bit index for 64-slot compression array (0-63)\n0x14: Compression buffer entry stride in bytes (4 pointers: 0x4 each)\n0x204: Bytes per slot in target buffer (520 = 0x204)\n0x1: Return offset (+1) to skip header data\n\nStructure Layout (Compression Buffer Entry):\nOffset | Size | Field Name       | Type    | Description\n0x00   | 4    | pNext            | int*    | Next node in size bucket list\n0x04   | 4    | pPrev            | int*    | Previous node in size bucket list\n0x08   | 4    | pParent          | int*    | Parent size bucket header\n0x0c   | 4    | pReserved        | int*    | Reserved pointer field\n0x10   | 4    | nSlotIndex       | int     | Index of this slot in buffer array",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ff64648b3e6e32bc28a5e4bc8d984c1e"
     },
@@ -14566,12 +15107,36 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x2749",
         "LoD/1.13d": "0x26E7"
       },
-      "name": "___crtExitProcess",
-      "signature": "void ___crtExitProcess(int param_1)",
-      "comment": "Library Function - Single Match\n ___crtExitProcess\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "GetCriticalSectionForPointer",
+      "signature": "void GetCriticalSectionForPointer(uint dwAddress)",
+      "comment": "Acquire or enter critical section based on pointer address range\n\nAlgorithm:\n  1. Load address parameter from stack at ESP+4\n  2. Compare address against range boundary 0x6fe3307f (lower bound)\n  3. If address below range, skip to line 5\n  4. Compare address against range boundary 0x6fe332e1 (upper bound)\n  5. If address outside [0x6fe3307f, 0x6fe332e1], add offset 0x20 and enter critical section\n  6. If address in range, subtract base 0x6fe33080, divide by 32 (>>5), add 0x1c offset\n  7. Call AcquireOrInitializeCriticalSection with computed critical section index\n  8. Return to caller\n\nParameters:\n  dwAddress (uint) - Memory address to classify for critical section access\n\nReturns:\n  void - No return value; caller does not depend on output\n\nSpecial Cases:\n  - Addresses in range [0x6fe3307f, 0x6fe332e1]: indexed critical section access via computed offset\n  - Addresses outside range: direct critical section at dwAddress + 0x20\n  - Right shift by 5 bits divides address range into 32-byte chunks for indexing",
+      "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ff70d7fac2548b5958f726d1eeb33c1c"
+    },
+    "D2CMP_STR_036ffe4ea5a2": {
+      "addresses": {
+        "LoD/1.07": "0x6FE12440",
+        "LoD/1.08": "0x6FE12440",
+        "LoD/1.09": "0x6FDF2440",
+        "LoD/1.09b": "0x6FDF2440",
+        "LoD/1.09d": "0x6FDF2440",
+        "LoD/1.10": "0x6FDF22C0"
+      },
+      "rvas": {
+        "LoD/1.07": "0x2440",
+        "LoD/1.08": "0x2440",
+        "LoD/1.09": "0x2440",
+        "LoD/1.09b": "0x2440",
+        "LoD/1.09d": "0x2440",
+        "LoD/1.10": "0x22C0"
+      },
+      "name": "D2CMP_DecodeAndDrawCelFrame",
+      "signature": "void D2CMP_DecodeAndDrawCelFrame(CelFile * pCelFile, int nXPos, int nYPos, int nDstX, int nDstY, int nDestSurface, int nMaxWidth, uint dwBlendMode, uint dwParam9, uint dwParam10, uint dwParam11)",
+      "comment": "Decode and render CEL frame with blending to destination surface.\n\nAlgorithm:\n1. Verify pCelFile pointer is non-NULL, abort if NULL with error 0x442\n2. If pCelFile provided, check dwVersion field equals 6, else abort with error 0x43b\n3. If pCelFile provided, verify dwFlags & 0x04 equals 0, else abort with error 0x43c\n4. Verify pDestSurface handle is non-NULL, abort if NULL with error 0x43f\n5. Load CEL data pointer from pCelFile->pCelData\n6. Extract header dimensions: pCelFile->nTopOffset, nLeftOffset, nFrameHeight\n7. Calculate frame bounds: nCalcX = nXPos + nLeftOffset, nCalcY = nYPos + nFrameHeight\n8. Adjust nCalcY for negative height: if delta < 0 then use original frame bottom\n9. Validate resulting height > 0, skip rendering if failed\n10. Apply nMaxWidth constraint: clamp rendered height if frame exceeds width limit\n11. Validate coordinate conditions: nDstX, nMaxWidth, or override flags must allow rendering\n12. Look up pixel decoder function: PTR_LAB_6fe2a1b4[pCelFile->dwFormat]\n13. Validate decoder function pointer is non-NULL, abort if NULL with error 0x46a\n14. Call decoder with adjusted offsets, blend mode, and surface parameters\n\nParameters:\npCelFile (CelFile *) - CEL file header with pixel data and dimension metadata\nnXPos (int) - Source X offset within CEL frame\nnYPos (int) - Source Y offset within CEL frame\nnDstX (int) - Destination surface X coordinate for rendered output\nnDstY (int) - Destination surface Y coordinate for rendered output\nnDestSurface (int) - Destination video surface handle/pointer\nnMaxWidth (int) - Maximum rendering width constraint in pixels\ndwBlendMode (uint) - Pixel blending operation index for decoder\ndwParam9 (uint) - Format-specific parameter passed to decoder\ndwParam10 (uint) - Format-specific parameter passed to decoder\ndwParam11 (uint) - Format-specific parameter passed to decoder\n\nReturns:\nvoid - Function returns void, terminates process on validation failure",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:036ffe4ea5a2d2ce76758cf4024904ff"
     },
     "D2CMP_STR_03f998da994b": {
       "addresses": {
@@ -14592,6 +15157,30 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "method": "STR",
       "index": "STR:03f998da994b54393077a00f814e29c8"
+    },
+    "D2CMP_STR_0772d08fa254": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1FA70",
+        "LoD/1.08": "0x6FE1FA70",
+        "LoD/1.09": "0x6FDFF860",
+        "LoD/1.09b": "0x6FDFF860",
+        "LoD/1.09d": "0x6FDFF860",
+        "LoD/1.10": "0x6FDFF380"
+      },
+      "rvas": {
+        "LoD/1.07": "0xFA70",
+        "LoD/1.08": "0xFA70",
+        "LoD/1.09": "0xF860",
+        "LoD/1.09b": "0xF860",
+        "LoD/1.09d": "0xF860",
+        "LoD/1.10": "0xF380"
+      },
+      "name": "SerializeMapProjectData",
+      "signature": "void SerializeMapProjectData(uint * pSrcProject, uint * pDstBuffer, uint * pnDataSize)",
+      "comment": "Serializes Diablo II map project data into contiguous memory buffer for storage/transmission.\n\nAlgorithm:\n1. Validate input parameters: pSrcProject, pDstBuffer, pnDataSize all non-NULL\n2. Calculate total serialized size: 0x114 base + (nSlotCount * 0x60) + variable payload\n3. For each slot: accumulate (nSubSlotCount * 0x14) + sub-slot data sizes\n4. Allocate buffer via Ordinal_10042(0x2e2, 0) from memory pool\n5. Zero-initialize allocated buffer (dword-aligned then byte remainder)\n6. Copy project header: 0x45 dwords (276 bytes) to serialized buffer start\n7. Copy slot metadata table: (nSlotCount * 0x60) bytes after header\n8. For each slot iteration: copy slot base data + variable-size tables with offsets\n9. Set source project flag: pSrcProject[1] |= 0x02 (serialized)\n10. Set destination project flags: serialized[1] |= 0x06 (active | serialized)\n\nParameters:\npSrcProject (uint *) - Source map project structure\n  Offset 0x43: nSlotCount - number of slots to serialize\n  Offset 0x44: pointer to slot metadata array\n  Offset 0x01: flags field, bit 1 = serialized flag\npDstBuffer (uint *) - Output pointer to serialized buffer\npnDataSize (uint *) - Output total serialized size in bytes\n\nReturns:\nvoid - Sets pDstBuffer[0] = serialized buffer pointer, pnDataSize[0] = size\nExits via FUN_6fe21293(0xffffffff) if any assertion fails (non-returning)",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:0772d08fa25407045657d07155c253a0"
     },
     "D2CMP_STR_16032f476aba": {
       "addresses": {
@@ -14620,24 +15209,36 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x18B17",
         "LoD/1.13d": "0x18B27"
       },
-      "name": "__cftoe2",
-      "signature": "undefined __cftoe2(int param_1, int param_2, char param_3)",
-      "comment": "Library Function - Single Match\n __cftoe2\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "FormatFloatingPointExponent",
+      "signature": "byte * FormatFloatingPointExponent(byte * pbBuffer, int nIntegerDigits, bool fUseUpperE, int * pnExponentFields, bool fSignPrefix)",
+      "comment": "Formats floating-point exponent notation into buffer (scientific notation E format)\n\nAlgorithm:\n1. If sign flag set, call FUN_6fe22d79 with optional sign character\n2. If exponent is negative (0x2d '-'), prepend sign to output buffer\n3. If integer digits > 0, copy exponent digit and set compression value at position\n4. Calculate exponent position by adding integer digits, compression flag, and sign flag offset\n5. Call FUN_6fe26530 to write exponent format string \"e+000\" or \"E+000\" at position\n6. If uppercase flag set, replace 'e' with 'E' (0x45)\n7. Process exponent value from pnExponentFields[1]:\n   - If pnExponentFields[3] != '0', format multi-digit exponent\n   - Handle negative exponent: negate and mark with '-' (0x2d)\n   - Divide by 100, 10 for digit extraction (floor division for digit positions)\n   - Add digit offsets to pre-filled positions in \"e+000\" template\n\nParameters:\npbBuffer: Byte pointer to output buffer being constructed (returned)\nnIntegerDigits: Number of significant integer digits in mantissa (0+ for spacing)\nfUseUpperE: Non-zero to use 'E' (0x45) instead of 'e' (0x65) for exponent marker\npnExponentFields: Pointer to array [0]=unknown, [1]=exponent value, [3]=format flag\nfSignPrefix: Non-zero character (0x00 treated as false) to add sign prefix\n\nReturns:\nByte pointer to start of buffer (pbBuffer); modified buffer contains exponent notation\n\nSpecial Cases:\n- If fSignPrefix is null and exponent is negative, absolute value is used\n- If nIntegerDigits > 0, automatically inserts compression marker at offset 1\n- Handles 3-digit exponents (100-999): adds hundreds to digit[0], reduces iVar4 before tens/units\n- Handles 2-digit exponents (10-99): adds tens to digit[1], units to digit[2]\n- Single digit exponents (0-9): adds directly to last position",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:16032f476aba0e42e163f0f1660d4b55"
     },
-    "D2CMP_STR_1ddf3314feb1": {
+    "D2CMP_STR_223c964f78be": {
       "addresses": {
-        "LoD/1.07": "0x6FE1D260",
-        "LoD/1.08": "0x6FE1D260"
+        "LoD/1.07": "0x6FE1FE80",
+        "LoD/1.08": "0x6FE1FE80",
+        "LoD/1.09": "0x6FDFFC70",
+        "LoD/1.09b": "0x6FDFFC70",
+        "LoD/1.09d": "0x6FDFFC70",
+        "LoD/1.10": "0x6FDFF780"
       },
       "rvas": {
-        "LoD/1.07": "0xD260",
-        "LoD/1.08": "0xD260"
+        "LoD/1.07": "0xFE80",
+        "LoD/1.08": "0xFE80",
+        "LoD/1.09": "0xFC70",
+        "LoD/1.09b": "0xFC70",
+        "LoD/1.09d": "0xFC70",
+        "LoD/1.10": "0xF780"
       },
+      "name": "GetDirectionTableEntry",
+      "signature": "undefined4 GetDirectionTableEntry(uint dwStartIndex, uint dwDirection)",
+      "comment": "Retrieve direction-specific entry from lookup table with validation\n\nAlgorithm:\n1. Validate dwDirection > dwStartIndex (order validation)\n2. Call GetFirstBitPos(dwDirection) to get bit position, must be <= 7\n3. Perform bitcount validation using parallel bit manipulation (0x77777777, 0x33333333, 0x11111111 masks)\n4. Verify dwDirection has exactly 1 bit set via bitcount modulo 0xFF == 1 check\n5. Call GetFirstBitPos(dwDirection) again to get final direction index\n6. Calculate table offset: (nDirectionIndex * 0x20 + dwStartIndex) * 4\n7. Return uint from g_adDirectionIndexTable at calculated offset\n\nParameters:\n- dwStartIndex (uint): Base index within direction table (0-31 expected)\n- dwDirection (uint): Direction bitmask, must be power-of-2 (0x1, 0x2, 0x4, 0x8, 0x10, 0x20, 0x40, 0x80)\n\nReturns:\n- uint: Entry from g_adDirectionIndexTable, typically encoding direction-relative data\n\nMagic Numbers:\n- 0x77777777: Parallel bit shift mask for bitcount step 1\n- 0x33333333: Parallel bit shift mask for bitcount step 2  \n- 0x11111111: Parallel bit shift mask for bitcount step 3\n- 0xf0f0f0f: Final bitcount mask before modulo\n- 0xff: Modulo divisor for bitcount validation\n- 0x20: Stride multiplier (8 directions * 4 bytes per entry)\n- 7: Maximum valid bit position for 8-directional encoding",
+      "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:1ddf3314feb1c6f36712cfced145d635"
+      "index": "STR:223c964f78be28754951e41d10cebe62"
     },
     "D2CMP_STR_231be8621e7e": {
       "addresses": {
@@ -14645,15 +15246,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE143B0",
         "LoD/1.09": "0x6FDF43B0",
         "LoD/1.09b": "0x6FDF43B0",
-        "LoD/1.09d": "0x6FDF43B0"
+        "LoD/1.09d": "0x6FDF43B0",
+        "LoD/1.10": "0x6FDF4160"
       },
       "rvas": {
         "LoD/1.07": "0x43B0",
         "LoD/1.08": "0x43B0",
         "LoD/1.09": "0x43B0",
         "LoD/1.09b": "0x43B0",
-        "LoD/1.09d": "0x43B0"
+        "LoD/1.09d": "0x43B0",
+        "LoD/1.10": "0x4160"
       },
+      "name": "DecompressSpriteFrame",
+      "signature": "undefined * DecompressSpriteFrame(uint * pBuffer, undefined * pUnknown1, int nDataSize, int * pSpriteData, int nFrameOffset, int nStartDir, int nEndDir, int * pPixelCount, undefined4 dwHandle)",
+      "comment": "Decompress sprite frame from bit-packed buffer into pixel data.\n\nAlgorithm:\n1. Lock critical section for sprite decompression atomicity\n2. Read sprite frame metadata (width, height, cell count, direction info)\n3. Initialize palette lookup tables from control bits in input\n4. For each direction in range [nStartDir, nEndDir):\n   a. Read palette index bytes (4-bit fields) and control flags\n   b. Resolve palette entries to cell properties (position, size)\n   c. Call DecompressSpriteRow to decompress pixel data for each cell\n   d. Validate frame bounds and error flags\n   e. Accumulate total pixels via pPixelCount\n5. Copy final frame to output and unlock critical section\n\nParameters:\n- pBuffer: Input bitstream buffer (uint *, ECX-fastcall) - source sprite data\n- pUnknown1: Unknown context (undefined *, EDX-fastcall)\n- nDataSize: Size of input in uint32 units (int)\n- pSpriteData: Sprite metadata (int *) - frame cell descriptions\n- nFrameOffset: Offset within sprite (int)\n- nStartDir: Starting direction (int)\n- nEndDir: Ending direction (int)\n- pPixelCount: Output pixel accumulator (int *) - incremented per frame\n- dwHandle: Error context handle (undefined4)\n\nReturns:\n- undefined *: Decompressed sprite frame data pointer\n\nSpecial Cases:\n- Buffer underflow: Asserts prevent reading past end\n- Empty palettes: Skipped if cell count is zero\n- Direction ordering: Must satisfy nStartDir < nEndDir",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:231be8621e7e60fd97f817609dd2e386"
     },
@@ -14684,10 +15291,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x18E7A",
         "LoD/1.13d": "0x18E7C"
       },
-      "name": "__ms_p5_mp_test_fdiv",
-      "signature": "undefined __ms_p5_mp_test_fdiv(void)",
-      "comment": "Library Function - Single Match\n __ms_p5_mp_test_fdiv\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "CheckProcessorFeatures",
+      "signature": "void CheckProcessorFeatures(void)",
+      "comment": "Dynamically load and invoke the IsProcessorFeaturePresent API to check CPU capabilities.\n\nAlgorithm:\n1. Obtain KERNEL32.dll module handle via GetModuleHandleA\n2. If KERNEL32 loaded, dynamically resolve IsProcessorFeaturePresent function address\n3. If function found, call IsProcessorFeaturePresent(0) to check for processor features\n4. If GetProcAddress fails or KERNEL32 unavailable, fallback to CheckFloatModuloExceedsClamp()\n\nParameters:\n(none)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Handles missing KERNEL32.dll (should not occur on Windows)\n- Handles missing IsProcessorFeaturePresent on older Windows versions\n- Fallback function CheckFloatModuloExceedsClamp() called if dynamic load fails",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:28768683ecd1bb6c4e5ee8c2282cbc71"
     },
@@ -14708,6 +15315,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xC590",
         "LoD/1.10": "0xC530"
       },
+      "name": "LoadOrInitializeSpriteCelData",
+      "signature": "byte * LoadOrInitializeSpriteCelData(int nSpriteIndex, char * szSpriteFile, byte * pbSpriteName)",
+      "comment": "Loads or initializes sprite cel data header from file or cache\n\nAlgorithm:\n1. Call preprocessing function to handle sprite file operations\n2. Search graphics buffer hash table for sprite by name (pbSpriteName)\n3. If not cached (nHashResult == 0):\n   a. Allocate new sprite cache block from file buffer (0x6fef1bc0)\n   b. Allocate cel data memory block (0xc0 bytes = 48 dwords for offset table)\n   c. Clear first 0x30 dwords (48 dwords * 4 = 192 bytes) to zero\n   d. Calculate string length of sprite name (dwStringLen)\n   e. Copy sprite name string to cel data buffer offset 0xa0\n   f. Check bit 0 of entity state flag (nSpriteIndex + 0x18):\n      - If CLEAR: Call sprite header initialization (Ordinal_10104/10105)\n        * Ordinal_10104 - begin sprite load context with 0x18 byte header\n        * Ordinal_10105 - finalize and return terminator value for cel table\n        * Populate header fields: nWidth, nNumDirections, reserved fields\n        * Validate cel array size <= 0x3fff (16383 entries)\n        * Ordinal_10104 - allocate cel array buffer (nWidth * nNumDirections * 4 bytes)\n        * Ordinal_10103 - finish sprite loading, return to normal mode\n        * Fill cel offset table at buffer + 0x1c with offsets from g_pCelOffsetTable\n      - If SET: Call LoadSpriteHeaderData() to read header from file\n   g. Set bit 0 of first byte if loading failed\n4. Else (found in cache):\n   a. Remove node from double-linked cache list\n   b. Reuse existing cel data buffer from cache\n5. Validate pbCelDataBuffer is not NULL before return\n\nParameters:\n  nSpriteIndex (int, IMPLICIT ECX): Entity/sprite index to load data for\n  szSpriteFile (char*, IMPLICIT EDX): Path to sprite file for LoadSpriteHeaderData\n  pbSpriteName (byte*, Stack[0x4]): Sprite name string for cache lookup\n\nReturns:\n  byte*: Pointer to cel data buffer (offset 0xa0+) or NULL if validation fails\n\nSpecial Cases:\n  - Asserts if AllocateMemoryBlockToArray fails or cel data NULL\n  - Asserts if total cel array size (nWidth * nNumDirections) exceeds 0x3fff entries\n  - Asserts if number of directions exceeds 0x20 (32 directions max)\n  - Asserts if cel buffer pointer is NULL at exit (validation failure)\n  - WARNING: Function does not return on assertion failures (calls FUN_6fe21293 with -1)\n  - NOTE: Function uses SSA temporaries optimized away (6 phantom variables, documented in decompiler/disassembly)\n\nMagic Numbers:\n  0xc0 (192): Cel data block allocation size\n  0x30 (48): Number of dwords to clear in initialization\n  0xa0 (160): Offset in buffer to store sprite name\n  0x1c (28): Offset in buffer to start cel offset table\n  0x18 (24): Size of header fields structure\n  0x3fff (16383): Maximum total cel entries (width * height)\n  0x20 (32): Maximum number of sprite directions supported\n\nRelated Functions:\n  - FUN_6fe1c9d0: Preprocessing/validation function called at entry\n  - LoadSpriteHeaderData: Loads cel header from file when bit 0 SET\n  - Ordinal_10102: Storm.dll sprite initialization setup\n  - Ordinal_10103: Storm.dll sprite initialization complete\n  - Ordinal_10104: Storm.dll begin sprite load context (allocate buffers)\n  - Ordinal_10105: Storm.dll finish sprite load and return terminator\n  - AllocateAndInitializeFileBuffer: Allocates sprite cache block\n  - SearchHashTableByString: Looks up sprite in graphics cache\n  - RemoveNodeFromDoubleLinkedList: Cache management for reused sprites",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:2eae0446bc681b4c7624efc370282c98"
     },
@@ -14750,6 +15361,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xD5F0",
         "LoD/1.10": "0xD160"
       },
+      "name": "InitializeSpriteDirection",
+      "signature": "void InitializeSpriteDirection(int * pSpriteContext, dword nDirection, dword nFrameCount, byte * pCelData, undefined4 dwFlags, int nUseAlternateInit)",
+      "comment": "Initialize sprite direction rendering data for cel file animation.\n\nAlgorithm:\n1. Validate input pointers: pCelData and pSpriteContext must be non-null\n2. Determine if frame rendering is valid based on sprite context flags at offset 0x1c and frame count\n3. If nDirection == 0 AND nFrameCount > 1 AND fValidateRender is true:\n   a. Call Ordinal_10020 to get cell size (nCellSize = Ordinal_10020(nFrameCount, nFrameCount * 2))\n   b. Calculate render scale: dwRenderScale = (nCellSize << 6) / pCelData[0x14] if pCelData[0x14] >= 2, else 1\n   c. Store dwRenderScale in sprite context at offset 0xc (pSpriteContext[3])\n   d. Find matching table entry at address 0x6fef2bc0 with FindMatchingTableEntry\n4. If table entry found (dwTableEntry == 0):\n   a. Validate dwDirBlockOut == 1, else trigger assertion\n   b. Validate nFrameCount > 1, else trigger assertion\n   c. If bUseAlternateInit != 0: call FUN_6fe1d980 (alternate initialization)\n   d. Else: call InitializeSpriteFrameData (standard initialization)\n\nParameters:\npSpriteContext (int *) - Sprite animation context structure pointer; member at [+0xc] receives render scale\nnDirection (dword) - Direction index for multi-directional sprites (0 = primary)\nnFrameCount (dword) - Number of animation frames in cel file\npCelData (byte *) - Cel file data structure; member at [+0x14] contains max buffer size\ndwFlags (undefined4) - Reserved flags parameter\nbUseAlternateInit (int) - If non-zero, use alternate initialization path\n\nReturns:\nvoid - No explicit return value. Initializes sprite animation context or triggers assertion on error.\n\nSpecial Cases:\n- Function validates critical pointers and triggers fatal assertion if null\n- Render scale calculation requires cel data buffer size > 1 for division\n- Direction 0 with single frame (nFrameCount == 1) skips initialization\n- Validation flags in sprite context control whether rendering is attempted\n- Some sprite types (dwType == 6 with flags) bypass normal validation",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3564bcbc5d52d3a314051ce654857b5a"
     },
@@ -14757,12 +15372,14 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.09": "0x6FDFD050",
         "LoD/1.09b": "0x6FDFD050",
-        "LoD/1.09d": "0x6FDFD050"
+        "LoD/1.09d": "0x6FDFD050",
+        "LoD/1.10": "0x6FDFCC10"
       },
       "rvas": {
         "LoD/1.09": "0xD050",
         "LoD/1.09b": "0xD050",
-        "LoD/1.09d": "0xD050"
+        "LoD/1.09d": "0xD050",
+        "LoD/1.10": "0xCC10"
       },
       "method": "STR",
       "index": "STR:3a8fd2884284c03921d526416073a95e"
@@ -14784,6 +15401,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x10A32",
         "LoD/1.10": "0x104F0"
       },
+      "name": "ReadAndValidateFileData",
+      "signature": "void ReadAndValidateFileData(int * pFileHandle, int nFile, int * pBytesRead, int nBytesToRead)",
+      "comment": "Read file data into stack buffer and validate complete read.\n\nAlgorithm:\n1. Allocate 260-byte stack buffer for data\n2. Check nFile parameter is non-zero; if zero, log assertion at line 0x87\n3. Call Ordinal_10104 to read file data (validates bytes read vs requested)\n4. Test read operation result; if failed, log assertion at line 0x8f\n5. Verify bytes actually read matches expected nBytesToRead count\n6. On mismatch, log assertion at line 0x92 and terminate\n7. Return void after cleanup\n\nParameters:\npFileHandle (int*) - IMPLICIT ECX: File context pointer\nnFile (int) - IMPLICIT EDX: File handle identifier\npBytesRead (int*) - Stack[0x4]: Pointer to bytes read count (updated by read op)\nnBytesToRead (int) - Stack[0x8]: Expected number of bytes to read\n\nReturns:\nvoid - Success: function returns normally; Failure: asserts and terminates\n\nSpecial Cases:\nBuffer size 260 bytes (0x104) - used for temporary file data\nMultiple validation points ensure complete and correct file reads\nAssertions terminate with -1 exit code via FUN_6fe21293",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:477da5eccddd3240a2d11a015ebb49db"
     },
@@ -14823,19 +15444,51 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "STR",
       "index": "STR:5646b1d5d4735ac7ea1e8ca41bc4261c"
     },
+    "D2CMP_STR_63366405376f": {
+      "addresses": {
+        "LoD/1.07": "0x6FE208F0",
+        "LoD/1.08": "0x6FE208F0",
+        "LoD/1.09": "0x6FE006E0",
+        "LoD/1.09b": "0x6FE006E0",
+        "LoD/1.09d": "0x6FE006E0",
+        "LoD/1.10": "0x6FE001A0"
+      },
+      "rvas": {
+        "LoD/1.07": "0x108F0",
+        "LoD/1.08": "0x108F0",
+        "LoD/1.09": "0x106E0",
+        "LoD/1.09b": "0x106E0",
+        "LoD/1.09d": "0x106E0",
+        "LoD/1.10": "0x101A0"
+      },
+      "name": "LoadOrCreateTileHash",
+      "signature": "dword LoadOrCreateTileHash(dword * pHashTableHandle, char * szTileName)",
+      "comment": "Load or create tile hash table by name from a linked list, allocating memory as needed.\n\nAlgorithm:\n1. Search global tile hash list (g_pTileHashListHead) for entry with matching tile name\n2. Compare names byte-by-byte using case-sensitive string matching\n3. If found, return existing hash handle and data pointer\n4. If not found: allocate memory buffer (size based on name length), allocate tile hash structure\n5. Zero-fill allocated tile hash structure (0x110 bytes)\n6. Initialize tile projection data and hash table within structure\n7. Allocate tile record buffer (0x110 bytes) and zero-fill\n8. Insert new record at head of linked list, update pointers\n9. Copy tile name to record buffer using REP MOVSD/MOVSB\n\nParameters:\npHashTableHandle (uint *) - Output pointer to receive hash table handle\nszTileName (const char *) - Null-terminated tile name string to search or create\n\nReturns:\nuint - Hash handle ID for successful load/creation, or assertion failure if allocation fails\n\nSpecial Cases:\n- If tile name not found: allocation must succeed or calls FogAssertFail\n- Uses double-pointer linking for linked list traversal\n- Name matching: if first bytes equal, continues; if first bytes differ, uses SBB for comparison value\n- List termination: zero pointer in 0x10c offset terminates search\n\nMagic Numbers:\n0x104 - Offset to hash handle within record\n0x108 - Offset to hash table pointer within record\n0x10c - Offset to next list pointer within record\n0x110 - Size of tile record structure (68 DWORDs)\n\nStructure Layout (TileRecord @ offset 0):\n| Offset | Size | Field Name | Type | Description |\n| 0x000 | 0x104 | tileData | byte[260] | Tile record data area |\n| 0x104 | 0x4 | hashHandle | uint * | Pointer to tile hash handle |\n| 0x108 | 0x4 | hashTablePtr | dword * | Pointer to hash table |\n| 0x10c | 0x4 | nextRecord | TileRecord * | Next record in linked list |\n\nRelated Functions:\n- AllocateAndInitializeResourceBuffer() - Allocates memory for name buffer\n- InitializeTileProjectData() - Sets up projection data within hash\n- InitializeTileHashTable() - Initializes hash table structure",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:63366405376f957779a6e6f70801bb3b"
+    },
     "D2CMP_STR_6449b42aff6e": {
       "addresses": {
+        "LoD/1.07": "0x6FE1E020",
+        "LoD/1.08": "0x6FE1E020",
         "LoD/1.09": "0x6FDFDE00",
         "LoD/1.09b": "0x6FDFDE00",
         "LoD/1.09d": "0x6FDFDE00",
         "LoD/1.10": "0x6FDFD940"
       },
       "rvas": {
+        "LoD/1.07": "0xE020",
+        "LoD/1.08": "0xE020",
         "LoD/1.09": "0xDE00",
         "LoD/1.09b": "0xDE00",
         "LoD/1.09d": "0xDE00",
         "LoD/1.10": "0xD940"
       },
+      "name": "AllocateAndInitializeCacheItem",
+      "signature": "void * AllocateAndInitializeCacheItem(void * pPool, dword dwResourceId, void * pVariantData, int nApplyPermissions)",
+      "comment": "Allocate and initialize cache item with resource metadata and permission flags\n\nAlgorithm:\n1. Validate resource ID is within pool bounds (dwResourceId < pPool.dwMaxAllocated)\n2. If nApplyPermissions: determine minimum allocation time from pool timestamps (fields 0x14, 0x1c)\n3. Call FUN_6fe1e120 to allocate item from cache pool\n4. Loop until allocation succeeds:\n   - If item allocated: initialize cache item with timestamp, resource ID, variant data\n   - Set permission flags (0x01 bit) based on nApplyPermissions\n   - Increment pool counters (offsets 0x34, 0x38)\n   - Return allocated item pointer\n   - If allocation failed: check timeout (15000ms for nApplyPermissions, immediate otherwise)\n   - If timeout exceeded: call FUN_6fe1e1f0 to garbage collect and retry\n   - Otherwise: loop back to retry allocation\n\nParameters:\npPool: void* cache pool structure - contains item slots, size limits, counters at fixed offsets\ndwResourceId: dword resource identifier - must be < pPool.dwMaxAllocated (offset 0x4)\npVariantData: void* variant-specific data pointer - stored in item[2] at offset 0x8\nnApplyPermissions: int flag - if nonzero, set 0x01 permission bit and enforce 15s timeout\n\nReturns:\nvoid* pointer to initialized cache item or NULL if allocation timeout exceeded\n\nSpecial Cases:\n- Resource ID validation enforces bounds (dwResourceId must be < pPool offset+4 dword)\n- Timestamp obtained from Ordinal_10045 (Fog.dll debug/breakpoint function)\n- Permission bit 0x01 indicates item requires special handling\n- Timeout 0x3a98 (15000ms) applies only when nApplyPermissions nonzero\n- Stack offset [ESP+0x10] caches allocation time for timeout comparison\n- Note: Function uses 3 stack-allocated temporaries optimized away by compiler (SSA variables)\n\nMagic Numbers:\n0x04: Pool size limit offset (dword capacity)\n0x14: Pool pointer field 1 offset (timestamp source A)\n0x1c: Pool pointer field 2 offset (timestamp source B)\n0x34: Pool counter 1 offset (increment on allocation)\n0x38: Pool counter 2 offset (increment on allocation)\n0x0c: Item permission flags field offset\n0x01: Permission bit flag (apply permissions bit)\n0xfe: Permission clear mask (~0x01)\n0x856: Timestamp type code\n0x3a98: Timeout milliseconds (15000ms)\n\nStructure Layout - Cache Item:\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwTimestamp | dword | Item creation timestamp from Ordinal_10045\n0x4    | 4    | dwResourceId | dword | Resource ID / index\n0x8    | 4    | pVariantData | pointer | Variant-specific data\n0xc    | 4    | dwFlags | dword | Permission flags (0x01 = requires special handling)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:6449b42aff6e71594d0f844f14c8c59a"
     },
@@ -14878,36 +15531,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x42A0",
         "LoD/1.10": "0x4050"
       },
+      "name": "LoadSpriteHeaderData",
+      "signature": "int LoadSpriteHeaderData(dword dwContext, byte * pbOutputBuffer)",
+      "comment": "Loads sprite header data from file into output buffer structure.\n\nAlgorithm:\n1. Call Ordinal_10102 (file open/context initialization)\n2. If read fails (dwReadBytes == 0), return 0 (failure)\n3. Call Ordinal_10104 to read 0x0F bytes of header signature into dwBytesRead\n4. Validate header: must be 0x0F bytes, character at [0x10] must be 't' (signature check)\n5. If validation passes, populate output buffer fields:\n   - [pbOutputBuffer + 0x08] = dwValue (read data)\n   - [pbOutputBuffer + 0x04] = CONCAT(byValue, byteVal) & 0xFF (mask to byte)\n   - [pbOutputBuffer + 0x0C:0x0F] = 0 (clear reserved bytes)\n   - [pbOutputBuffer + 0x18] = CONCAT(uStack_a, CONCAT(uStack_b, uStack_d)) (composite value)\n   - [pbOutputBuffer + 0x14] = byValue as uint\n6. Validate sprite direction count: if byValue > 0x20, log error and exit via FUN_6fe21293\n7. Calculate data block size: nResult = byValue * 4\n8. Read sprite direction data: call Ordinal_10104 with calculated size\n9. Validate read operation: must succeed and dwBytesRead must equal requested size\n10. If validation passes: call Ordinal_10105 to get value, store at [pbOutputBuffer + byValue*4 + 0x1c]\n11. Call Ordinal_10103 (file close/cleanup)\n12. Set flag 0x02 in pbOutputBuffer[0]\n13. Return 1 (success)\n14. On any validation failure, call Ordinal_10103 and return 0\n\nParameters:\n  dwContext (ECX) - File context handle or resource identifier passed from caller\n  pbOutputBuffer (EDX/ESI) - Pointer to output structure receiving sprite header fields\n\nReturns:\n  EAX: 1 if header loaded and validated successfully, 0 on any validation failure\n\nSpecial Cases:\n  - Returns 0 if initial read fails (dwReadBytes == 0)\n  - Returns 0 if header signature validation fails (size != 0x0F or char != 't')\n  - Exits via FUN_6fe21293(0xFFFFFFFF) if direction count > 0x20 (fatal error)\n  - Returns 0 if sprite direction data read fails or byte count mismatch\n  - Sets flag 0x02 in pbOutputBuffer[0] only on complete success\n  \nNote: Function contains 3 stack-allocated temporaries optimized away by compiler (uStack_a, uStack_b, uStack_d used in CONCAT operations). These are assembly-only artifacts and cannot be renamed.\n\nMagic Numbers:\n  0x0F - header signature size in bytes\n  0x74 (0x74='t') - expected character at header offset 0x10\n  0x04 - bytes per direction entry (multiply count by 4)\n  0x20 - maximum valid direction count (32 directions)\n  0x1C - base offset for sprite direction data in output structure\n  0x02 - success flag to set in pbOutputBuffer[0]\n  0x4F9 (1273 decimal) - line number for error logging\n  0xFFFFFFFF - fatal error code passed to FUN_6fe21293\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0x00   | 1    | byFlags    | byte | Flag byte (bit 0x02 = loaded)\n0x04   | 4    | dwData1    | dword| First header data field\n0x08   | 4    | dwData2    | dword| Second header data field\n0x0C   | 4    | dwReserved | dword| Reserved/padding\n0x10   | 4    | dwData3    | dword| Third header data field\n0x14   | 4    | dwDirCount | dword| Direction count (validated <= 0x20)\n0x18   | 4    | dwData4    | dword| Fourth header data field\n0x1C   | Var  | dwDirData[N]| dword array | Direction data (N*4 bytes)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:70424ca6022e18dbd6430fbaeb6208fa"
-    },
-    "D2CMP_STR_7a8297bb8ec3": {
-      "addresses": {
-        "LoD/1.10": "0x6FDF4160"
-      },
-      "rvas": {
-        "LoD/1.10": "0x4160"
-      },
-      "method": "STR",
-      "index": "STR:7a8297bb8ec3cefe8e364a78cf9b6e79"
-    },
-    "D2CMP_STR_84211edeb829": {
-      "addresses": {
-        "LoD/1.11": "0x6FE1DD30",
-        "LoD/1.11b": "0x6FE1FB10",
-        "LoD/1.12a": "0x6FE1DA00",
-        "LoD/1.13c": "0x6FE23620",
-        "LoD/1.13d": "0x6FE1E5F0"
-      },
-      "rvas": {
-        "LoD/1.11": "0xDD30",
-        "LoD/1.11b": "0xFB10",
-        "LoD/1.12a": "0xDA00",
-        "LoD/1.13c": "0x13620",
-        "LoD/1.13d": "0xE5F0"
-      },
-      "method": "STR",
-      "index": "STR:84211edeb829a566443fad70d51d9d02"
     },
     "D2CMP_STR_854e75bd7977": {
       "addresses": {
@@ -14926,6 +15555,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x13B25",
         "LoD/1.10": "0x13625"
       },
+      "name": "DetectAndApplyHeapSelectionPolicy",
+      "signature": "int DetectAndApplyHeapSelectionPolicy(void)",
+      "comment": "Detects OS version and applies runtime heap selection policy based on environment variables.\n\nAlgorithm:\n1. Initialize OS version info (struct size = 0x94)\n2. Query GetVersionExA() for Windows version (major, minor, platform)\n3. Check if version is Windows NT (platform=2) with major >= 5 (NT 5.0+):\n   - If valid: Return 1 (success)\n   - If invalid: Continue to heap selection policy\n4. Query __MSVCRT_HEAP_SELECT environment variable\n5. If found:\n   - Convert variable to uppercase\n   - Compare with \"__GLOBAL_HEAP_SELECTED\":\n     * If match: Use environment variable value\n     * If no match: Get module filename, convert to uppercase\n6. Search for module filename within environment variable\n7. If found, locate comma (0x2C) delimiter in variable\n8. Scan from comma+1 to null terminator, replacing semicolons (0x3B) with null bytes\n9. Call FUN_6fe27139() to validate heap policy (returns 1, 2, or 3)\n10. Return code from FUN_6fe27139() if 1, 2, or 3; otherwise continue\n11. Call ReadModuleCharacteristics() to check module flags (via unaffected_BL)\n12. Return 3 if unaffected_BL < 6, else return 2\n\nParameters:\nNone (Windows version and environment variables read from system)\n\nReturns:\n1 - Windows NT 5.0+ detected (heap policy applied successfully)\n2 - ReadModuleCharacteristics indicates module flag >= 0x06\n3 - ReadModuleCharacteristics indicates module flag < 0x06\nAdditionally: Returns 1, 2, or 3 from FUN_6fe27139() if policy validation succeeds\n\nSpecial Cases:\n- Handles case-insensitive environment variable names (converts to uppercase)\n- Magic constant 0x1090 = 4240 bytes (buffer size for szEnvironmentBuffer)\n- Magic constant 0x104 = 260 bytes (buffer size for szModuleFilePath)\n- Magic constant 0x16 = 22 bytes (length of \"__GLOBAL_HEAP_SELECTED\")\n- Delimiter 0x2C (comma) separates configuration options\n- Terminator 0x3B (semicolon) marks end of policy specification\n\nMagic Numbers:\n0x94 - Size of OSVERSIONINFOA structure\n0x1090 - 4240 bytes, environment buffer size\n0x104 - 260 bytes, module path buffer size\n0x16 - 22, length of \"__GLOBAL_HEAP_SELECTED\" string\n0x2C - Comma character, configuration delimiter\n0x3B - Semicolon character, policy terminator\n0x20 - Uppercase conversion mask (subtract from lowercase ASCII)\n0x61 - 'a' character (lowercase boundary check start)\n0x7A - 'z' character (lowercase boundary check end)\n0x60 - Backtick (0x60 &lt; lowercase letters &lt; 0x7B)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:854e75bd7977160757e99400a787fb69"
     },
@@ -14935,17 +15568,47 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE1D980",
         "LoD/1.09": "0x6FDFD760",
         "LoD/1.09b": "0x6FDFD760",
-        "LoD/1.09d": "0x6FDFD760"
+        "LoD/1.09d": "0x6FDFD760",
+        "LoD/1.10": "0x6FDFD2D0"
       },
       "rvas": {
         "LoD/1.07": "0xD980",
         "LoD/1.08": "0xD980",
         "LoD/1.09": "0xD760",
         "LoD/1.09b": "0xD760",
-        "LoD/1.09d": "0xD760"
+        "LoD/1.09d": "0xD760",
+        "LoD/1.10": "0xD2D0"
       },
+      "name": "InitializeSpriteGraphicsBlock",
+      "signature": "dword InitializeSpriteGraphicsBlock(int nCelContext, byte * ptCelData, int nFrameWidth, int nFrameHeight)",
+      "comment": "Allocate and initialize graphics block for sprite animation frame loading.\n\nAlgorithm:\n1. Allocate 0xb8-byte graphics block node from memory pool\n2. Clear node (46 dwords) to initialize all fields\n3. Copy 5 cel context values (offsets 0x30, 0x3c, 0x34, 0x38, 0x40) to gfx node[3..7]\n4. Store allocated node pointer in node[0x2d] for backlink\n5. If cel data flag 0x01 (compressed): Load offset table, validate buffer sizes, setup async loader\n6. Calculate total frame data size: (nFrameWidth * nFrameHeight + nFrameHeight) * 4 bytes\n7. Validate size > 0; assert gfx node has no pending async data\n8. Store frame dimensions: node[0x21]=nFrameHeight, node[0x22]=nFrameWidth*nFrameHeight, node[0x23]=frameType+1\n9. If cel data flag 0x02 (additional data): Enable flag 0x04, setup DecompressAndLoadSpriteFrame callback\n10. Call Ordinal_10091 (async resource loader) with callback and offset table\n11. If async load fails or size=-1, deallocate gfx node and return 0\n12. Link node to palette cache via AllocateAndLinkResourceNode\n13. Set flags: 0x01=original format, 0x02=loaded format; return flag value\n\nParameters:\nptCelContext (int) - Pointer to CEL context structure (contains palette/header offsets)\nptCelData (byte*) - Pointer to CEL file data header with flags and size table\nnFrameWidth (int) - Width of sprite frame in pixels\nnFrameHeight (int) - Height of sprite frame in pixels\n\nReturns:\n0 - Allocation failed or async load failed\n1 - Frame loaded (CEL flag 0x01 = original format)\nimplicit: EAX contains return value for calling convention\n\nSpecial Cases:\n- Flags at ptCelData[0]: 0x01=compressed, 0x02=requires async loader\n- Frame dimensions must produce non-zero total size\n- Async loader callbacks use DecompressAndLoadSpriteFrame for CEL decompression\n\nMagic Numbers:\n0xb8 - Size of gfx node structure (184 bytes = 46 dwords)\n0x2e - Number of dwords to zero in initialization loop\n0x1c - Offset in CEL data to size table entries\n0x20 - Maximum direction offset count (assertion limit)\n0x04 - Flag bit for async loader enabled in gfx node[0x20]\n0x01, 0x02 - CEL data flags (compressed, async loader required)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:85a4f97031f1b73d146ba3eb0600417f"
+    },
+    "D2CMP_STR_86c46ac24460": {
+      "addresses": {
+        "LoD/1.07": "0x6FE11C40",
+        "LoD/1.08": "0x6FE11C40",
+        "LoD/1.09": "0x6FDF1C40",
+        "LoD/1.09b": "0x6FDF1C40",
+        "LoD/1.09d": "0x6FDF1C40",
+        "LoD/1.10": "0x6FDF1AD0"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1C40",
+        "LoD/1.08": "0x1C40",
+        "LoD/1.09": "0x1C40",
+        "LoD/1.09b": "0x1C40",
+        "LoD/1.09d": "0x1C40",
+        "LoD/1.10": "0x1AD0"
+      },
+      "name": "AllocateCelImageBuffer",
+      "signature": "void AllocateCelImageBuffer(dword * pCelHeader, dword * ppOutput, dword * pdwSize)",
+      "comment": "Allocate and initialize CEL image data buffer from parsed CEL header\n\nAlgorithm:\n1. Validate CEL version flag (0x01) - error if unset\n2. Verify type field equals 0x05 (CEL type constant)\n3. Set processed flag (0x02) in header\n4. Calculate total CEL frame count: height * width\n5. For each CEL frame entry: convert relative offset to absolute offset, fixup pointer offsets\n6. Calculate output buffer size: frameCount*4 + 0x18 + sum(each frame's size)\n7. Allocate output buffer using Ordinal_10042 (D2Common.AllocMem)\n8. Initialize output header: magic=0x06, flags from input header, frame dimensions\n9. For each CEL frame:\n   a. Copy frame header (offset, dimensions, properties) to output\n   b. Copy frame palette data using optimized DWORD/BYTE copy\n   c. Calculate and store data offsets in output structure\n   d. Copy frame pixel data in 4-byte blocks + remaining bytes\n10. Return output buffer pointer and total size\n\nParameters:\npCelHeader: Pointer to parsed CEL file header structure (verified type 0x05)\nppOutput: Output - pointer to allocated CEL image buffer (from Ordinal_10042)\npdwSize: Output - total allocated size including headers and frame data\n\nReturns:\nvoid - exceptions on validation failure (via Ordinal_10023)\n\nSpecial Cases:\n- If CEL type is not 0x05 or version flag not set: calls Ordinal_10023 with error info\n- If height*width is zero: skips frame processing but still allocates base structure\n- Frame palette offset = 0 is valid (no palette for this frame)\n\nMagic Numbers:\n0x01 - CEL version flag (LSB of param_1[1])\n0x02 - CEL processed flag (set during processing)\n0x04 - Palette flag in CEL header (param_1[1] & 0x04)\n0x05 - CEL type constant (param_1[0] must equal this)\n0x06 - Output magic number\n0x18 - Base header size for output structure (6 dwords)\n0x1c - Frame palette size offset within frame header\n0x20 - Frame palette data pointer offset within frame header\n0x23 - Frame header size in output (constant offset increment)\n0x24 - Frame data size field offset\n0x28 - Frame palette data pointer offset in source\n0x2b9 - Error code (dwFlags validation)\n0x2ba - Error code (dwVersion validation)\n0x2d1 - Buffer size for Ordinal_10042 allocation\n\nRelated Functions:\n- Ordinal_10042 (D2Common.AllocMem) - allocates output buffer\n- Ordinal_10023 (D2Common.error) - error reporting on validation failure\n- FUN_6fe21293 - exception/exit handler",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:86c46ac24460bff06384588d238ccf2b"
     },
     "D2CMP_STR_979687ed35bd": {
       "addresses": {
@@ -14982,18 +15645,36 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xCE50",
         "LoD/1.10": "0xCA30"
       },
+      "name": "InitializeHardwareCelData",
+      "signature": "undefined InitializeHardwareCelData(byte * pbCelData, int nCelContext, int nGfxNode)",
+      "comment": "Initialize hardware cel data for a gfx node.\n\nNote: Function uses multiple stack-allocated temporaries optimized away by compiler (iVar4, iVar5, uVar2, puVar6, puVar1). These SSA variables cannot be renamed.\n\nAlgorithm:\n1. Validate input parameters: nCelContext non-zero, nGfxNode non-zero\n2. Validate CelData flags: pbCelData & 0x01 == 0 (not in-use flag)\n3. Validate GfxNode state: fHardwareCelData not yet allocated (offset 0x28 == 0)\n4. Calculate total allocation: (bWidth * bHeight * 44 bytes) per cel\n5. Allocate memory block via Ordinal_10045 (Storm allocation)\n6. Zero-initialize allocated memory using REP STOSD/STOSB\n7. Get base data pointer via Ordinal_10094\n8. Iterate through each cel (bWidth * bHeight iterations):\n   a. Check validity: cel data non-null, dimensions <= 0x100\n   b. If invalid: construct error paths and log via Ordinal_10018/Ordinal_10024\n   c. If valid: link cel to allocation, advance pointer by 44 bytes\n9. Set fHardwareCelData flag = 1 to mark initialization complete\n\nParameters:\npbCelData: CelData structure pointer (checked for CELDATAFLAG_HW flag)\nnCelContext: Cel context ID for error reporting\nnGfxNode: GfxNode structure pointer containing width/height/allocation info\n\nReturns:\nvoid (terminating failures via Ordinal_10024)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9ddd4583eb05e5a6cad033d3356e6433"
     },
-    "D2CMP_STR_a0db61bf5b59": {
+    "D2CMP_STR_a2cf87069087": {
       "addresses": {
-        "LoD/1.10": "0x6FDF8100"
+        "LoD/1.07": "0x6FE19640",
+        "LoD/1.08": "0x6FE19640",
+        "LoD/1.09": "0x6FDF9400",
+        "LoD/1.09b": "0x6FDF9400",
+        "LoD/1.09d": "0x6FDF9400",
+        "LoD/1.10": "0x6FDF90E0"
       },
       "rvas": {
-        "LoD/1.10": "0x8100"
+        "LoD/1.07": "0x9640",
+        "LoD/1.08": "0x9640",
+        "LoD/1.09": "0x9400",
+        "LoD/1.09b": "0x9400",
+        "LoD/1.09d": "0x9400",
+        "LoD/1.10": "0x90E0"
       },
+      "name": "ConvertAndQuantizeRGBImage",
+      "signature": "byte * ConvertAndQuantizeRGBImage(void)",
+      "comment": "Convert RGB image to HSL color space and quantize palette\n\nAlgorithm:\n1. Validate source palette pointer is not NULL\n2. Allocate 0x6c327 bytes for output image buffer\n3. Copy source palette (0x100 entries) to output buffer\n4. For each RGB pixel in source (0x100 total):\n   - Convert RGB triplet to HSL (Hue, Saturation, Lightness) components\n   - Store HSL triplet in output HSL buffer\n5. For 3 color plane iterations (quantization levels):\n   - Calculate quantization parameters based on current plane\n   - Perform cross-plane color interpolation/blending\n   - Generate quantized palette indices using Ordinal_10004\n6. Generate grayscale ramp palette (32 levels)\n7. Post-process with QuantizePaletteImage\n8. Return pointer to converted and quantized image data\n\nParameters:\nIMPLICIT: EBP + 0x8 - source palette pointer (undefined4 *)\n\nReturns:\nEAX - pointer to quantized image buffer (byte *)\n\nMagic Numbers:\n0x6c327 - image buffer allocation size (442151 bytes)\n0x100 - palette entry count (256 colors)\n0xff - maximum RGB/HSL component value\n0x80 - bit flag for color channel operations\n0x20 - grayscale ramp level count (32 levels)\n0x3500 - intermediate buffer offset\n0x6b600 - final palette offset within buffer",
+      "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:a0db61bf5b593dd9064af345f6452fce"
+      "index": "STR:a2cf870690873ed905d5709695ebd5fc"
     },
     "D2CMP_STR_a81639b7b420": {
       "addresses": {
@@ -15015,16 +15696,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "STR",
       "index": "STR:a81639b7b420645059b930e3f9120ebd"
     },
-    "D2CMP_STR_aa97a1e022c3": {
-      "addresses": {
-        "LoD/1.10": "0x6FDFCC10"
-      },
-      "rvas": {
-        "LoD/1.10": "0xCC10"
-      },
-      "method": "STR",
-      "index": "STR:aa97a1e022c3873f92fd00b2c387334c"
-    },
     "D2CMP_STR_ad4cb38410fc": {
       "addresses": {
         "LoD/1.07": "0x6FE1E7D0",
@@ -15042,6 +15713,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xE5C0",
         "LoD/1.10": "0xE130"
       },
+      "name": "CompressPalette",
+      "signature": "void CompressPalette(dword * pPaletteData, dword * pSourceData, dword nColors, void * pfnTransformFunc)",
+      "comment": "Compress a 3-byte RGB palette into a byte-indexed palette format.\n\nAlgorithm:\n1. Validate input pointers (pPaletteData, pSourceData) and ptData field (non-zero)\n2. Copy 5 dwords from source to destination (structure copy)\n3. Clear the palette dirty flag (bit 0) in destination structure byte at offset +8\n4. Initialize palette size to 0\n5. Calculate palette item count by dividing source palette size by 3\n6. Validate item count (non-zero and < 0x10000)\n7. Allocate buffer via Ordinal_10042(0x90, 0) for compressed palette data\n8. Initialize allocated buffer with zeros using STOSD and STOSB for efficiency\n9. Set palette dirty flag (bit 0) in destination structure\n10. Set palette size in destination structure\n11. Iterate through each 3-byte RGB entry in source palette\n12. For each RGB triple, check if it matches nColors (optimization for repeated colors)\n13. If different, call pfnTransformFunc callback with RGB bytes to get palette index\n14. Assert transformation succeeded (non-zero result)\n15. Write resulting palette index byte to compressed palette buffer\n16. Return with compressed palette ready for use\n\nParameters:\npPaletteData (dword *) - Destination palette structure pointer (ECX register)\npSourceData (dword *) - Source palette structure pointer (EDX register)\nnColors (dword) - Optimization color value to skip transformation when matched\npfnTransformFunc (dword (*)(byte,byte,byte)) - Callback to transform RGB to palette index\n\nReturns:\nvoid - Modifies pPaletteData in-place with compressed palette\n\nStructure Layout (20 bytes):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | Reserved   | dword | Copy from source\n0x04   | 4    | Reserved   | dword | Copy from source  \n0x08   | 2    | wFlags     | word  | Bit 0: palette dirty flag\n0x0A   | 2    | wPalSize   | word  | Number of palette entries (div 3)\n0x0C   | 4    | Reserved   | dword | Copy from source\n0x10   | 4    | pPalData   | dword * | Pointer to compressed palette buffer\n\nSpecial Cases:\n- Ordinal_10042 is memory allocator (Storm.dll or equivalent)\n- RGB values packed as nColors._2_1_ for field access patterns\n- MOVSD.REP used for efficient 5-dword structure copy\n- STOSD.REP optimizes zero-fill for word-aligned counts\n- STOSB.REP handles remaining 0-3 bytes in zero-fill loop",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ad4cb38410fcbc856f9386b79fa3cd9d"
     },
@@ -15062,6 +15737,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xBC50",
         "LoD/1.10": "0xB7B0"
       },
+      "name": "ProcessListNodeBuffer",
+      "signature": "dword ProcessListNodeBuffer(dword pListNode, dword pOutputBuffer)",
+      "comment": "Processes linked list nodes and buffers data into output structure.\n\nAlgorithm:\n1. Calculate row height dividing node dimensions\n2. Iterate through linked list starting at offset 0x34 or 0x30\n3. For each node, allocate buffer via Ordinal_10042 with size marker 0x22\n4. Copy node metadata: dimensions, coordinates, pointers\n5. Copy node buffer data in quadword chunks then remaining bytes\n6. Calculate row index using Ordinal_10018 with computed offset\n7. Store buffer pointer in output array at computed position\n8. Continue until list exhausted\n\nParameters:\npListNode (uint): Base address of list node structure with offsets:\n  +0x24: numerator for height calc\n  +0x28: denominator for height calc\n  +0x30/0x34: linked list head pointer\n  +0xc-0x20: node metadata (dimensions, coords, data pointer)\npOutputBuffer (uint): Base address of output structure with offset +0x18 for result array\n\nReturns:\ndwByteCount (uint): Final byte count from last processed node\n\nSpecial Cases:\n- Empty list (height < 1): Returns 0\n- Single item: Uses hard-coded value 1 for row index\n- Uneven buffer size: Processes 4-byte aligned portion then remaining 1-byte portion",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:aedf9ddde8075436eaabe0f55d1a61e8"
     },
@@ -15072,21 +15751,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE02CA6",
         "LoD/1.09b": "0x6FE02CA6",
         "LoD/1.09d": "0x6FE02CA6",
-        "LoD/1.10": "0x6FE02307"
-      },
-      "rvas": {
-        "LoD/1.07": "0x12EB6",
-        "LoD/1.08": "0x12EB6",
-        "LoD/1.09": "0x12CA6",
-        "LoD/1.09b": "0x12CA6",
-        "LoD/1.09d": "0x12CA6",
-        "LoD/1.10": "0x12307"
-      },
-      "method": "STR",
-      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
-    },
-    "D2CMP_STR_c004c7748bfc": {
-      "addresses": {
+        "LoD/1.10": "0x6FE02307",
         "LoD/1.11": "0x6FE1361B",
         "LoD/1.11b": "0x6FE13347",
         "LoD/1.12a": "0x6FE13347",
@@ -15094,18 +15759,24 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE1361F"
       },
       "rvas": {
+        "LoD/1.07": "0x12EB6",
+        "LoD/1.08": "0x12EB6",
+        "LoD/1.09": "0x12CA6",
+        "LoD/1.09b": "0x12CA6",
+        "LoD/1.09d": "0x12CA6",
+        "LoD/1.10": "0x12307",
         "LoD/1.11": "0x361B",
         "LoD/1.11b": "0x3347",
         "LoD/1.12a": "0x3347",
         "LoD/1.13c": "0x3347",
         "LoD/1.13d": "0x361F"
       },
-      "name": "__output",
-      "signature": "undefined __output(undefined4 param_1, byte * param_2, wchar_t * param_3)",
-      "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ProcessFormatSpecifier",
+      "signature": "int ProcessFormatSpecifier(int * pnOutputBuffer, byte * pbFormatString, dword * pnArgList)",
+      "comment": "Process single format specifier from printf-style format string. Core engine for sprintf/vsprintf-like functions.\n\nAlgorithm:\n1. Initialize state machine: state=0 (literal output), set up buffer pointers and format structure\n2. Main parse loop: fetch format character from string, lookup character class \n3. Character class determination: compare to ASCII range, index into g_abCharacterClassTable\n4. State transition: use current state and character class to index g_abStateTransitionTable, compute next state\n5. State machine transitions (states 0-7):\n   STATE_0 (LITERAL): Output raw characters, check bit 7 of g_pCompressionLookupTable[byte] for conditional skip\n   STATE_1 (FORMAT_START): Reset format control flags, initialize width/precision/length fields\n   STATE_2 (FLAGS): Parse format flags: SPACE(0x20), ALT(0x23), SIGN(0x2B), LEFT(0x2D), ZERO(0x30)\n   STATE_3 (WIDTH): Parse width field from '*' (dynamic read) or ASCII digits, track negative for left-align\n   STATE_4 (PRECISION_START): Enter precision parsing mode\n   STATE_5 (PRECISION): Parse precision from '*' or digits, default -1 if not specified\n   STATE_6 (LENGTH): Parse length modifiers: I64, h (short), l (long), w (wide)\n   STATE_7 (CONVERSION): Parse conversion specifier and process:\n     - Numeric (d/i/o/u/x/X): fetch value via FUN_6fe23695/FUN_6fe236a2, convert to string, pad/align\n     - Float (e/E/g/G/f/F): convert via __fptrap functions, handle exponent/precision\n     - Char (c/C): fetch single character, handle wide conversion\n     - String (s/S): fetch pointer, scan for terminator, pad/align\n     - Pointer (p): convert address to hex string\n     - Count (n): write character count to buffer\n     - Error: invalid format, output literal character\n6. For numeric conversions: handle sign/unsigned, radix (2/8/10/16), 64-bit via __aulldiv/__aullrem\n7. Output formatting: apply width/precision, insert padding characters, handle alignment (left/right)\n8. Loop until null terminator or error condition, return total character count\n\nParameters:\npnOutputBuffer (int *): Pointer to character counter - incremented by output functions for each char written\npbFormatString (byte *): Current position in format string (C-style null-terminated ANSI string)\npnArgList (uint *): Pointer to va_list argument array (each arg is 4 bytes in stdcall convention)\n\nReturns:\nint: Total number of characters written/processed (accumulated in local_18 counter)\n\nSpecial Cases:\n- Precision -1 defaults to 1 for numbers, full string length for string types\n- Negative width triggers left-alignment flag automatically\n- Zero padding requires right-alignment and numeric conversion\n- Null pointers for strings default to g_szDefaultNullString or g_wszDefaultNullString\n- 64-bit integers require 64-bit division chain (__aulldiv / __aullrem) for each digit\n- Wide character support via FUN_6fe26b99 UTF-8/UTF-16 conversion\n- Exponent/mantissa split for floating-point via local_4c/local_48 registers\n\nMagic Numbers:\n0x20 = SPACE flag (space prefix for positive numbers)\n0x23 = ALT flag (0x prefix for hex, 0 prefix for octal)\n0x2B = SIGN flag (explicit + for positive numbers)\n0x2D = LEFT flag (left-align instead of right-align)\n0x30 = ZERO flag (pad with 0 instead of space)\n0x39 = ASCII '9' - used to check if digit or letter in radix conversion\n0x80 = High bit set in compression table - indicates special character handling\n0x100 = NEGATIVE flag (number is negative, needs - prefix)\n0x200 = ALT_HEX flag (0x prefix for hex output)\n0x400 = wide character flag (wchar_t instead of char)\n0x800 = wide string flag (wchar_t* instead of char*)\n0x1000 = short flag (16-bit instead of 32-bit)\n0x2000 = long flag (32-bit long)\n0x8000 = 64-bit flag (use 64-bit integer division)\n0x7fffffff = Maximum allowed width/precision value\n\nData Tables:\ng_abCharacterClassTable @ 0x6fe2ccb0 - Classification for each byte value (16 classes)\ng_abStateTransitionTable @ 0x6fe2ccd0 - 8x16 state machine transition matrix  \ng_szDefaultNullString @ 0x6fe30cc0 - Default ANSI null string pointer (empty)\ng_wszDefaultNullString @ 0x6fe30cc4 - Default wide null string pointer (empty)\ng_pCompressionLookupTable @ (referenced) - Bit compression flags for character handling",
+      "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
+      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
     "D2CMP_STR_c070d6a77382": {
       "addresses": {
@@ -15124,8 +15795,60 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xE7F0",
         "LoD/1.10": "0xE370"
       },
+      "name": "CompressPlayerBufferData",
+      "signature": "void CompressPlayerBufferData(int nStructure, char * szSourceBuffer)",
+      "comment": "Compress player buffer data with run-length encoding for efficient storage and transmission.\n\nAlgorithm:\n1. Allocate 0x128 bytes for compressed output buffer via Fog.MemAlloc\n2. Initialize buffer to null bytes (0x16b dwords + 3 bytes = 0x2ac bytes total) via REP STOSD\n3. Loop through source buffer in 0x20-byte blocks:\n   - Call SearchCharInBufferWithLimit to find null terminator (max 0x7f bytes from block start)\n   - If found at block boundary (local_14=0, local_10=0), output block separator (0x00 0x00)\n   - If data found before boundary, encode: (length_byte, character_count, ...character_data)\n   - Increment block counter; when counter reaches 0xf, prepare to flush\n4. Calculate compressed data size via pointer difference\n5. Allocate new buffer of exact compressed size via Fog.MemRealloc\n6. Clear new buffer to null via REP STOSD then REP MOVSB\n7. Copy compressed data to new buffer\n8. Update structure fields: [nStructure+0x8] |= 0x5, [nStructure+0x10] = pNewBuffer, [nStructure+0xa] = dwCompressedSize\n\nParameters:\n- nStructure: Data structure pointer (likely item/player unit); compressed buffer pointer stored at offset 0x10\n- szSourceBuffer: Source buffer to compress (player data, typically 0x2ac bytes)\n\nReturns:\n- void; side effect updates structure fields at nStructure with compressed data pointer and size flag\n\nSpecial Cases:\n- Full blocks (0x20 bytes): encoded as single length byte 0x7f\n- Partial blocks: encoded as (length, character_count, ...data)\n- Empty blocks: separated by double null terminator\n- Buffer exhaustion: asserts compressed size < 0x10000 bytes before reallocation",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c070d6a77382dbd3472ef58047830617"
+    },
+    "D2CMP_STR_c2fe20e91c1e": {
+      "addresses": {
+        "LoD/1.07": "0x6FE28750",
+        "LoD/1.08": "0x6FE28750",
+        "LoD/1.09": "0x6FE08540",
+        "LoD/1.09b": "0x6FE08540",
+        "LoD/1.09d": "0x6FE08540",
+        "LoD/1.10": "0x6FE07393"
+      },
+      "rvas": {
+        "LoD/1.07": "0x18750",
+        "LoD/1.08": "0x18750",
+        "LoD/1.09": "0x18540",
+        "LoD/1.09b": "0x18540",
+        "LoD/1.09d": "0x18540",
+        "LoD/1.10": "0x17393"
+      },
+      "name": "GetPaletteShiftBuffer",
+      "signature": "byte * GetPaletteShiftBuffer(int nClass, int nTransformation)",
+      "comment": "Get palette shift buffer pointer for armor class and transformation index.\n\nAlgorithm:\n1. Validate nClass is in range [0, 8] and nTransformation is in range [0, 20]\n2. If either parameter exceeds limit, assert and call exit handler with -1\n3. If nClass is 0 or in range [3, 4] (invalid class indices), return NULL\n4. Calculate offset: nClass*105 + nTransformation (0x69 = 105 decimal)\n5. Add to base g_pPaletteShiftBuffer and shift left 8 bits (multiply by 0x100)\n6. Return pointer to palette data for the requested class/transformation pair\n\nParameters:\n  nClass (int) - Armor/corpse class index (0-8)\n  nTransformation (int) - Palette transformation index (0-20)\n\nReturns:\n  Pointer to palette shift buffer for the class/transformation pair, or NULL if invalid\n\nSpecial Cases:\n  - Class 0 and classes 3-4 return NULL (invalid class indices)\n  - Classes 1, 2, 5, 6, 7, 8 are valid and return palette pointer\n  - Out-of-range parameters trigger assertion failure\n\nMagic Numbers Reference:\n  0x9 (9) - Maximum valid class index + 1\n  0x15 (21) - Maximum valid transformation index + 1\n  0x69 (105) - Bytes per class section in palette buffer\n  0x100 (256) - Palette entry size (shift left 8 bits)",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:c2fe20e91c1e8289fc1d1b13c29cec51"
+    },
+    "D2CMP_STR_c548fdf1ceaf": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1F650",
+        "LoD/1.08": "0x6FE1F650",
+        "LoD/1.09": "0x6FDFF440",
+        "LoD/1.09b": "0x6FDFF440",
+        "LoD/1.09d": "0x6FDFF440",
+        "LoD/1.10": "0x6FDFEF60"
+      },
+      "rvas": {
+        "LoD/1.07": "0xF650",
+        "LoD/1.08": "0xF650",
+        "LoD/1.09": "0xF440",
+        "LoD/1.09b": "0xF440",
+        "LoD/1.09d": "0xF440",
+        "LoD/1.10": "0xEF60"
+      },
+      "name": "AllocateAndInitializeTile",
+      "signature": "uint AllocateAndInitializeTile(int * pTileInfo, void * * ppTileData)",
+      "comment": "Allocate and initialize a tile structure with its associated tile data and components.\n\nAlgorithm:\n1. Validate pTileInfo is non-null; assert failure if null\n2. Check pTileInfo[2] (tile count); return error code 0x85200004 if zero\n3. Allocate main tile structure (547 bytes via Ordinal_10042 with size 0x22b)\n4. Clear tile structure to zeros (0x45 dwords, 276 bytes)\n5. Set pTileStruct[0] = 7 (tile type identifier)\n6. Set pTileStruct[1] = 1 if pTileInfo[0] is non-zero (active flag)\n7. Store tile count at pTileStruct[0x10c]\n8. Allocate tile data array (nTileCount * 0x60 bytes via Ordinal_10042 with size 0x237)\n9. Store tile array pointer at pTileStruct[0x110]\n10. Loop through linked list starting at pTileInfo[3]:\n    a. Copy tile metadata (position X/Y, dimensions, flags, etc.)\n    b. Allocate component array if tile has components (nCompCount * 0x14 bytes)\n    c. Copy component list data, zero out source component references\n    d. Validate component count matches stored count; assert if mismatch\n    e. Advance to next tile in linked list via pTileInfo[0x17]\n11. Verify total tiles processed equals pTileInfo[2]; return error if mismatch\n12. Store pointer to allocated tile structure in ppTileData[0]\n13. Return success code 0\n\nParameters:\npTileInfo: Pointer to tile descriptor structure with: [0] = base address, [2] = tile count, [3] = head of tile linked list, [0x10] = tile X offset, [0x14] = tile Y offset, [0x16] = components array, [0x17] = next tile pointer\nppTileData: Output pointer where allocated tile structure address is stored\n\nReturns:\n0 on success\n0x85200004 if tile count is zero or tile array allocation fails\nNever returns on validation failure (asserts and calls FUN_6fe21293)\n\nSpecial Cases:\n- If pTileInfo[0] is zero, tile active flag (offset 0x4) is not set\n- Component allocation is skipped if nCompCount is 0\n- Component data from source is cleared after copying\n- Multiple assertion checks for null allocations and count mismatches\n\nMagic Numbers:\n0x22b (547) - Size in 32-bit units for main tile structure allocation\n0x237 (567) - Size in 32-bit units for tile data array allocation\n0x200 (512) - Size in 32-bit units for component array allocation\n0x7 - Tile type identifier\n0x45 (69 dwords) - Tile structure zero-fill count\n0x60 (96 bytes) - Size of each tile data entry\n0x14 (20 bytes) - Size of each component entry\n0x10c - Offset of tile count in tile structure\n0x110 - Offset of tile array pointer in tile structure\n0x223, 0x22c, 0x201, 0x212, 0x246 - Assertion line numbers\n\nStructure Layout (Tile Structure):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwTileType | uint | Tile type (7)\n0x4    | 4    | dwActive   | uint | Active flag (1 if initialized)\n0x8-0x10b | varies | TileData | mixed | Reserved/untyped data\n0x10c  | 4    | nTileCount | uint | Total number of tiles\n0x110  | 4    | pTileArray | void * | Pointer to tile data array",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925"
     },
     "D2CMP_STR_caf0293062c4": {
       "addresses": {
@@ -15154,10 +15877,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x1A593",
         "LoD/1.13d": "0x1A571"
       },
-      "name": "$I10_OUTPUT",
-      "signature": "undefined $I10_OUTPUT(int param_1, uint param_2, uint param_3, int param_4, byte param_5, short * param_6)",
-      "comment": "Library Function - Single Match\n _$I10_OUTPUT\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
+      "name": "ExtractDoubleDigits",
+      "signature": "dword ExtractDoubleDigits(dword dwLowPart, dword dwHighPart, dword dwExponentBits, int nDesiredDigits, byte bRoundFlag, short * psExponent)",
+      "comment": "Extract decimal digits from IEEE double precision mantissa/exponent.\n\nAlgorithm:\n1. Initialize 96-bit working mantissa with marker bytes\n2. Extract exponent bits [15:0] and check if negative (sign bit)\n3. Test for special cases (zero mantissa, exponent overflow)\n4. If exponent = 0x7fff (infinity/NaN), classify special value and return 0\n5. Calculate decimal exponent using formula: ((exp_hi + exp_mid*2)*0x4d + offset + exp_lo*0x4d10)>>16\n6. If mantissa >= 0x3ffe, normalize by incrementing exponent and rotating\n7. Limit digit count to 0x15 (21 digits max)\n8. Left-shift mantissa 8 times to align binary point\n9. For negative mantissa shift, right-rotate to compensate\n10. Extract decimal digits via repeated doubling and integer part extraction\n11. Perform rounding with carry propagation if last digit > '4'\n12. Handle all-zero result by normalization to \"0\"\n\nParameters:\n  dwLowPart (dword) - Lower 32 bits of mantissa\n  dwHighPart (dword) - Upper 32 bits of mantissa\n  dwExponentBits (dword) - Exponent and sign bits\n  nDesiredDigits (int) - Target precision (0x11 = 17 digits)\n  bRoundFlag (byte) - Rounding control bit\n  psExponent (short *) - Output buffer pointer\n\nReturns:\n  0 if special IEEE value (Inf/NaN)\n  1 if normal number successfully converted",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:caf0293062c4e4caabf207f9f9a0ab4c"
     },
@@ -15178,30 +15901,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8670",
         "LoD/1.10": "0x8380"
       },
+      "name": "InsertTileIntoHashTable",
+      "signature": "void InsertTileIntoHashTable(dword * pBucketArray, dword * pTile)",
+      "comment": "Insert or update a tile in the hash table, managing tile references and key nodes.\n\nAlgorithm:\n1. Validate that pBucketArray and pTile are non-NULL (assert failure if not)\n2. Calculate hash key: (pTile[0x1c] * 2 - pTile[0x14]) + pTile[0x18], mask with 0x7F to get index\n3. Validate hash key < 0x80 (assert failure if >= 0x80)\n4. Load pBucketPtr from pBucketArray[dwIndex]\n5. If bucket chain exists:\n   a. Search chain for matching entry: pKeyNode[1] == pTile[0x1c] AND pKeyNode[0] == pTile[0x18] AND pKeyNode[2] == pTile[0x14]\n   b. If match found, check if pTile already referenced in pKeyNode[3] chain\n   c. If pTile not referenced, allocate new reference node via Ordinal_10042(0x6e, 0), link to pKeyNode[3]\n   d. Return on success or assert failure on allocation failure\n6. If bucket empty or no match found:\n   a. Allocate new key node via Ordinal_10042(0x82, 0), initialize all 5 fields to 0\n   b. Copy tile coordinates: pNewKeyNode[1]=pTile[0x1c], pNewKeyNode[0]=pTile[0x18], pNewKeyNode[2]=pTile[0x14]\n   c. Link in old bucket head: pNewKeyNode[4] = *pBucketPtr, update bucket: *pBucketPtr = pNewKeyNode\n   d. Allocate tile reference node via Ordinal_10042(0x8e, 0), initialize fields [0] and [1] to 0\n   e. Link pTile and old references: pRefNode[0]=pTile, pRefNode[1]=pNewKeyNode[3], pNewKeyNode[3]=pRefNode\n   f. Return or assert failure on allocation failure\n\nParameters:\npBucketArray: Pointer to hash bucket array (IMPLICIT ECX) - 128 bucket pointers\npTile: Pointer to tile structure to insert (IMPLICIT EDX) - contains coordinates at offsets 0x18, 0x1c, 0x14\n\nReturns:\nvoid - asserts on validation failure or allocation failure\n\nMagic Numbers:\n0x7F - Hash bucket count (128 buckets)\n0x02 - Tile coordinate multiplier in hash calculation\n0x1c - Offset in tile structure for first coordinate\n0x18 - Offset in tile structure for second coordinate\n0x14 - Offset in tile structure for third coordinate\n0x6e - Memory allocation size for tile reference node (8 bytes)\n0x82 - Memory allocation size for hash key node (20 bytes, 5 dwords)\n0x8e - Memory allocation size for reference list node (8 bytes)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d124488275e3e4e61be66ea3f3390b00"
-    },
-    "D2CMP_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6FE16EB8",
-        "LoD/1.11b": "0x6FE16EA8",
-        "LoD/1.12a": "0x6FE16E88",
-        "LoD/1.13c": "0x6FE16E88",
-        "LoD/1.13d": "0x6FE16EB8"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6EB8",
-        "LoD/1.11b": "0x6EA8",
-        "LoD/1.12a": "0x6E88",
-        "LoD/1.13c": "0x6E88",
-        "LoD/1.13d": "0x6EB8"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
     },
     "D2CMP_STR_dd842af969ac": {
       "addresses": {
@@ -15218,30 +15923,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xC7C0",
         "LoD/1.09d": "0xC7C0"
       },
+      "name": "CreateUnitFilePath",
+      "signature": "void CreateUnitFilePath(int pUnitInfo, char * pOutputPath, byte * pBaseFilename)",
+      "comment": "Constructs a Diablo II unit graphics file path based on unit type and attributes.\n\nAlgorithm:\n1. Load unit type from pUnitInfo[0x20], check if type is valid (3-6)\n2. Check unit class bits (pUnitInfo[0x1c] & 0x02) to determine processing path\n3. For types 3, 4, 6: Copy base cel filename from pUnitInfo[0x44] to szOutputPath\n4. If type=3: Build path from component strings (DATA_GLOBAL_CHARS/MONSTERS/OBJECTS/MISSILES)\n5. Build filenames by copying: base_filename + class_string + dir_string + equipment_string\n6. Concatenate components separated by path separators from pUnitInfo offsets 0x30-0x42\n7. For remaining types: Use default path with DATA_GLOBAL_OVERLAYS or DATA_GLOBAL_MISSILES\n8. Set unit status flag (pUnitInfo[0x18] |= 1) to mark filename resolved\n\nParameters:\npUnitInfo - Pointer to unit structure (offset-based field access 0x18-0x44)\nszOutputPath - Output buffer for constructed filename path (256+ bytes recommended)\npbBaseFilename - Base filename component to prepend to generated path\n\nReturns:\nvoid - No direct return value; output written to szOutputPath buffer\n\nSpecial Cases:\nType 6 + class 0x02: Always uses DATA_GLOBAL_OVERLAYS path\nType 4: Uses format s_%s_items_%s.dc6 with DATA_GLOBAL_MONSTERS, DATA_GLOBAL variants\nType 3: Complex multi-component path building for character/monster classes\nInvalid types: Triggers FogAssertFail() and calls FUN_6fe21293(-1)\nNULL pUnitInfo[0x44]: Triggers assertion, non-returning error handler\n\nMagic Numbers:\n0x20 - Unit type field offset (byte [0=CHAR, 1=MONSTER, 2=OBJECT, 3=MISSILE, 4=ITEM, 5=?, 6=OVERLAY])\n0x1c - Unit class flags offset\n0x02 - Class flag mask for special processing\n0x44 - Pointer to cel filename string offset\n0x30-0x42 - Component flag offsets (0x20=skip flag, else use component)\n0x18 - Unit status flags offset (bit 0=filename resolved)\n0xffffffff - Loop counter initialization (string length search)\n0x20 - Skip flag constant (space character)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dd842af969ac922174f22256a263b3cc"
-    },
-    "D2CMP_STR_eb2637b95a95": {
-      "addresses": {
-        "LoD/1.07": "0x6FE1E1F0",
-        "LoD/1.08": "0x6FE1E1F0"
-      },
-      "rvas": {
-        "LoD/1.07": "0xE1F0",
-        "LoD/1.08": "0xE1F0"
-      },
-      "method": "STR",
-      "index": "STR:eb2637b95a95399b7134fddb4b12c076"
-    },
-    "D2CMP_STR_ef54eeff0ed2": {
-      "addresses": {
-        "LoD/1.10": "0x6FDFD2D0"
-      },
-      "rvas": {
-        "LoD/1.10": "0xD2D0"
-      },
-      "method": "STR",
-      "index": "STR:ef54eeff0ed2349ac4e46c77d7015ac7"
     },
     "D2CMP_STR_f109cffbf32f": {
       "addresses": {
@@ -15250,7 +15937,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF4130",
         "LoD/1.09b": "0x6FDF4130",
         "LoD/1.09d": "0x6FDF4130",
-        "LoD/1.10": "0x6FDF3EE0"
+        "LoD/1.10": "0x6FDF3EE0",
+        "LoD/1.11": "0x6FE1DD30",
+        "LoD/1.11b": "0x6FE1FB10",
+        "LoD/1.12a": "0x6FE1DA00",
+        "LoD/1.13c": "0x6FE23620",
+        "LoD/1.13d": "0x6FE1E5F0"
       },
       "rvas": {
         "LoD/1.07": "0x4130",
@@ -15258,8 +15950,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x4130",
         "LoD/1.09b": "0x4130",
         "LoD/1.09d": "0x4130",
-        "LoD/1.10": "0x3EE0"
+        "LoD/1.10": "0x3EE0",
+        "LoD/1.11": "0xDD30",
+        "LoD/1.11b": "0xFB10",
+        "LoD/1.12a": "0xDA00",
+        "LoD/1.13c": "0x13620",
+        "LoD/1.13d": "0xE5F0"
       },
+      "name": "DecompressSpriteRow",
+      "signature": "int DecompressSpriteRow(CelHeaderFormat * pCelHeader, int * pOutputInfo, byte * pbOutputBuffer)",
+      "comment": "Decompresses a single row of sprite cel data using RLE-like compression.\n\nAlgorithm:\n1. Read pitch and source buffer pointer from CelHeaderFormat structure\n2. If mirror flag set, adjust source pointer to end and negate pitch for reverse iteration\n3. For each row in sprite height (nHeight):\n   a. Initialize column index to 0\n   b. While column index < sprite width (nWidth):\n      - Scan for first non-zero byte starting at current position\n      - If end of row reached, break (no more runs in this row)\n      - Calculate gap length between current position and first non-zero byte\n      - If gap > 0, encode as 0x80-bitmask for skip runs (max 127 bytes per run)\n      - Find end of non-zero data run starting at first non-zero position\n      - Encode literal run with length byte (no 0x80 bit) followed by copy data\n      - Copy run data using dword-aligned REP MOVSD + residual byte operations for efficiency\n   c. Write 0x80 byte to mark end of row\n4. Verify output size matches expected value (pbOutput == expected end address)\n5. Return 1 for success, 0 for decompression overrun error\n\nParameters:\n  pCelHeader (in ECX): Pointer to CelHeaderFormat structure containing:\n    - nWidth (offset 0x08): Sprite pixel width\n    - nHeight (offset 0x0C): Sprite pixel height\n    - pbSrcBuffer (offset 0x20): Pointer to compressed source data buffer\n    - nPitch (offset 0x24): Bytes per scanline (negative if mirrored)\n    - dwMirrorFlag (offset 0x28): Non-zero to reverse row iteration\n  pOutputInfo (in EDX): Pointer to output info structure (offset 0x1C contains expected end address)\n  pbOutputBuffer (on stack): Pointer to output decompressed row buffer\n\nReturns:\n  1 = Decompression successful, output buffer size matches expected value\n  0 = Decompression failed - buffer overrun detected (output exceeded expected size)\n\nSpecial Cases:\n  - Mirror flag (pCelHeader->dwMirrorFlag) causes source pointer adjustment to end of buffer with negative pitch\n  - Each scanline terminated with 0x80 marker byte\n  - Skip runs encoded with 0x80-0xFF (high bit set) for run length\n  - Literal runs encoded with 0x00-0x7F (high bit clear) followed by pixel data\n  - Dword-aligned copy optimization: (length >> 2) dword copies + (length & 3) byte copies\n  - Output validation checks exact size match (buffer overrun returns error)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f109cffbf32fd20bc7fa51bc858bbc96"
     },
@@ -15280,8 +15981,34 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x8F30",
         "LoD/1.10": "0x8C30"
       },
+      "name": "AllocateMemoryBlockToArray",
+      "signature": "void * AllocateMemoryBlockToArray(void * pArrayHeader, dword dwBlockSize, void * pNewBlock)",
+      "comment": "Allocate and add new memory block to array's linked list structure\n\nAlgorithm:\n1. Validate block size does not exceed array capacity (offset +0x4)\n2. Increment array header counters at offsets +0x2c and +0x30\n3. Check if linked list is empty (offset +0xc == offset +0x14) OR available space exhausted (offset +0x4 < offset +0x8 + dwBlockSize)\n4. If true, remove nodes from linked list via RemoveNodeFromLinkedList() until conditions clear\n5. Extract next available node from free list at offset +0x20\n6. Update linked list pointers: unlink node from free list, link into tail position\n7. Update array header total count (+0xc) and cumulative size (+0x8)\n8. Allocate memory via Ordinal_10045 (D2Mem.MemAlloc) with size passed to node\n9. Store allocation result in node [0]\n10. Set node properties: [4] = dwBlockSize, [8] = pNewBlock\n11. Return newly allocated node\n\nParameters:\npArrayHeader (void *) - IMPLICIT ECX: Pointer to array control structure\ndwBlockSize (dword) - IMPLICIT EDX: Size in bytes of block to allocate\npNewBlock (void *) - Stack +0x4: Caller-supplied context data\n\nReturns:\nPointer to allocated memory block node (cast from [pArrayHeader + 0x20])\nNULL if allocation fails (FogAssertFail triggered)\n\nSpecial Cases:\nMagic numbers 0x75, 0x9e, 0x83, 0x84 are assertion line numbers\nAssertion on dwBlockSize > array capacity prevents out-of-bounds allocation\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n+0x0   | 4    | lpData     | void* | Allocated memory pointer\n+0x4   | 4    | dwSize     | dword | Block size in bytes\n+0x8   | 4    | pContext   | void* | Context pointer (pNewBlock)\n+0xc   | 4    | pNext      | void* | Next node in list\n+0x10  | 4    | pPrev      | void* | Previous node in list",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f38e4d4846ca263a66a1bb64b9c3df79"
+    },
+    "D2CMP_STR_f5d7ef3e4e05": {
+      "addresses": {
+        "LoD/1.07": "0x6FE1C0E0",
+        "LoD/1.08": "0x6FE1C0E0",
+        "LoD/1.09": "0x6FDFBEA0",
+        "LoD/1.09b": "0x6FDFBEA0",
+        "LoD/1.09d": "0x6FDFBEA0"
+      },
+      "rvas": {
+        "LoD/1.07": "0xC0E0",
+        "LoD/1.08": "0xC0E0",
+        "LoD/1.09": "0xBEA0",
+        "LoD/1.09b": "0xBEA0",
+        "LoD/1.09d": "0xBEA0"
+      },
+      "name": "InitializeGraphicsSystem",
+      "signature": "void InitializeGraphicsSystem(void * pMemoryBase, dword dwUnknown2, dword dwSurfaceCount, dword dwPaletteSize)",
+      "comment": "Initialize D2Graphics subsystem with memory allocations and linked lists\n\nAlgorithm:\n1. Initialize sprite decompression lock\n2. If dwPaletteSize is 0: query Ordinal_10022 for graphics config, extract palette size from config offset 0xc minus 0xb00000\n3. Set global flag g_dwGraphicsMode if dwPaletteSize >= 0x4000000\n4. Clear main graphics buffer (DAT_6fef1bc0)\n5. Zero-fill 13 dwords at DAT_6ff02c00 (sprite cache header)\n6. Initialize linked list structure at DAT_6ff02c00 with pMemoryBase, dwSurfaceCount\n7. Zero-fill 16384 dwords at DAT_6fef2bc0 (large surface buffer)\n8. Call ZeroBufferDwords on surface buffer\n9. Zero-fill 15 dwords at DAT_6ff02bc0 (palette cache header)\n10. Initialize palette handler at DAT_6ff02bc0 with pMemoryBase, dwUnknown2\n\nParameters:\npMemoryBase - Base address of allocated graphics memory block\ndwUnknown2 - Unknown parameter passed to palette handler (may be memory limit or config)\ndwSurfaceCount - Number of surfaces to allocate in linked list\ndwPaletteSize - Palette memory size in bytes; if 0, queries from graphics config\n\nReturns:\nvoid\n\nSpecial Cases:\n- If dwPaletteSize is 0, function queries graphics config via Ordinal_10022; asserts if query fails\n- Global flag DAT_6ff12c34 indicates palette size validity (set to 1 if dwPaletteSize >= 0x4000000)\n- Multiple buffer initializations follow consistent pattern (zero-dword loops via STOSD)\n\nMagic Numbers:\n0x0b00000 - Offset subtraction for graphics config palette extraction\n0x4000000 - Threshold for valid palette size check\n0xd - Number of dwords in sprite cache header (52 bytes)\n0x4000 - Number of dwords in surface buffer (65536 bytes)\n0xf - Number of dwords in palette cache header (60 bytes)\n0x6fe1c210 - Address of graphics callback table\n0x106 - Line number for debug assertion",
+      "name_source": "LoD/1.07",
+      "method": "STR",
+      "index": "STR:f5d7ef3e4e05006fbe594519bf9ea24e"
     },
     "D2CMP_STR_f790d72e7bec": {
       "addresses": {
@@ -15289,39 +16016,23 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE18630",
         "LoD/1.09": "0x6FDF83F0",
         "LoD/1.09b": "0x6FDF83F0",
-        "LoD/1.09d": "0x6FDF83F0"
+        "LoD/1.09d": "0x6FDF83F0",
+        "LoD/1.10": "0x6FDF8100"
       },
       "rvas": {
         "LoD/1.07": "0x8630",
         "LoD/1.08": "0x8630",
         "LoD/1.09": "0x83F0",
         "LoD/1.09b": "0x83F0",
-        "LoD/1.09d": "0x83F0"
+        "LoD/1.09d": "0x83F0",
+        "LoD/1.10": "0x8100"
       },
+      "name": "DecompressCelData",
+      "signature": "void DecompressCelData(CelDrawDataInfo * pCelDrawDataInfo, byte * pOutputBuffer, int nOutputRows, int nLeftBounds, int nRightBounds, dword dwOutputWidth, int nRowIncrement, int nMidFlags, int nFillValueTable, byte byFillByte)",
+      "comment": "Decompress CEL image data using run-length and palette-based encoding.\n\nAlgorithm:\n1. Validate output stride against CEL structure width field at offset +0x04\n2. Load CEL data buffer pointer from structure offset +0x20\n3. Skip leading row headers by parsing (nRowIncrement * 2) marker bytes\n4. Main decompression loop processes encoded bytes from CEL buffer\n5. Positive/zero byte (0x00-0x7F): treat as literal pixel count, copy/fill pixels\n6. Negative byte (0x80+): treat as skip/fill marker, extract count from lower bits\n7. For boundary clipping: apply nLeftBounds and nRightBounds constraints\n8. Row terminator (0x80 marker): decrement nMidFlags, move to next row\n9. Fill operation: either solid fill with byFillByte OR palette lookup via nFillValueTable\n10. Continue until all rows processed or buffer exhausted, return void\n\nParameters:\n- pCelDrawDataInfo (CelDrawDataInfo*): CEL structure with width (+0x04) and buffer (+0x20)\n- pOutputBuffer (byte*): Destination image buffer for decompressed pixels\n- nOutputRows (int): Initial row count for decompression\n- nLeftBounds (int): Left edge clipping boundary\n- nRightBounds (int): Right edge clipping boundary\n- dwOutputWidth (dword): Stride validation against structure width\n- nRowIncrement (int): Row header count to skip (* 2 for bytes)\n- nMidFlags (int): Active row counter, exit when reaches 0\n- nFillValueTable (int): Palette translation table pointer (NULL=solid fill)\n- byFillByte (byte): Solid fill value when nFillValueTable is NULL\n\nReturns: void (decompression result stored in pOutputBuffer)",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f790d72e7bec41e5e1b0084035484787"
-    },
-    "D2CMP_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x6FE14ACC",
-        "LoD/1.11b": "0x6FE14ADC",
-        "LoD/1.12a": "0x6FE14ABC",
-        "LoD/1.13c": "0x6FE14ABC",
-        "LoD/1.13d": "0x6FE14ACC"
-      },
-      "rvas": {
-        "LoD/1.11": "0x4ACC",
-        "LoD/1.11b": "0x4ADC",
-        "LoD/1.12a": "0x4ABC",
-        "LoD/1.13c": "0x4ABC",
-        "LoD/1.13d": "0x4ACC"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
     },
     "D2CMP_STR_ff7880d11813": {
       "addresses": {
@@ -15330,7 +16041,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE03DAB",
         "LoD/1.09b": "0x6FE03DAB",
         "LoD/1.09d": "0x6FE03DAB",
-        "LoD/1.10": "0x6FE038AB"
+        "LoD/1.10": "0x6FE038AB",
+        "LoD/1.11": "0x6FE14ACC",
+        "LoD/1.11b": "0x6FE14ADC",
+        "LoD/1.12a": "0x6FE14ABC",
+        "LoD/1.13c": "0x6FE14ABC",
+        "LoD/1.13d": "0x6FE14ACC"
       },
       "rvas": {
         "LoD/1.07": "0x13FBB",
@@ -15338,8 +16054,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x13DAB",
         "LoD/1.09b": "0x13DAB",
         "LoD/1.09d": "0x13DAB",
-        "LoD/1.10": "0x138AB"
+        "LoD/1.10": "0x138AB",
+        "LoD/1.11": "0x4ACC",
+        "LoD/1.11b": "0x4ADC",
+        "LoD/1.12a": "0x4ABC",
+        "LoD/1.13c": "0x4ABC",
+        "LoD/1.13d": "0x4ACC"
       },
+      "name": "DisplayRuntimeError",
+      "signature": "void DisplayRuntimeError(uint dwErrorCode)",
+      "comment": "Display runtime error dialog or exit message.\n\nSearches error code lookup table to determine if this is a special exit code,\nthen either displays an exit message or constructs and shows a runtime error dialog.\n\nAlgorithm:\n1. Search g_aExitCodeTable for matching error code (linear scan, stride=8 bytes)\n2. If found and exit initialized flag set, write simple exit message to stdout\n3. If found but exit NOT initialized, construct detailed error message:\n   a. Get module filename via GetModuleFileNameA\n   b. Truncate path to 60 chars if needed, append \"...\"\n   c. Build message: \"Runtime Error!\\\n\\\nProgram: [path]\\\n[error message]\"\n   d. Display message box via FUN_6fe274e8\n4. If error code not found (0xfc), no action taken\n\nParameters:\n  dwErrorCode (uint) - Exit/error code to display\n\nReturns:\n  void - Function performs side effects (I/O or dialog display)\n\nSpecial Cases:\n  - Code 0xfc treated as no-op (returns immediately)\n  - Module name \"unknown\" shown if GetModuleFileNameA fails (returns 0)\n  - Path truncation: names longer than 60 chars get \"...\" appended\n  - Message construction uses helper functions FUN_6fe26530 (init), FUN_6fe26540 (append)\n\nMagic Numbers:\n  0x3c (60) - Max path length before truncation\n  0x104 (260) - MAX_PATH for GetModuleFileNameA buffer\n  0xfc - Special error code meaning \"no operation\"\n  0x12010 - Message box flags (title centered, info icon)\n\nNote: Function contains 3 compiler-optimized register temporaries (pdwErrorMessage, ppErrorTable, abyPathTruncMarker) that cannot be fully typed due to SSA optimization.",
+      "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Gdi.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -4410,28 +4410,6 @@ var FUNCTIONS_D2Gdi_dll = {
       "method": "STR",
       "index": "STR:c170bd72c7a30c3be9e6aa15fb836e49"
     },
-    "D2Gdi_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6F87453D",
-        "LoD/1.11b": "0x6F87453D",
-        "LoD/1.12a": "0x6F87456D",
-        "LoD/1.13c": "0x6F87456D",
-        "LoD/1.13d": "0x6F87453D"
-      },
-      "rvas": {
-        "LoD/1.11": "0x453D",
-        "LoD/1.11b": "0x453D",
-        "LoD/1.12a": "0x456D",
-        "LoD/1.13c": "0x456D",
-        "LoD/1.13d": "0x453D"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
-    },
     "D2Gdi_STR_edaa14afba45": {
       "addresses": {
         "LoD/1.07": "0x6F891120",
@@ -4459,7 +4437,12 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09": "0x6F835EC4",
         "LoD/1.09b": "0x6F835EC4",
         "LoD/1.09d": "0x6F835EC4",
-        "LoD/1.10": "0x6F835EF4"
+        "LoD/1.10": "0x6F835EF4",
+        "LoD/1.11": "0x6F87453D",
+        "LoD/1.11b": "0x6F87453D",
+        "LoD/1.12a": "0x6F87456D",
+        "LoD/1.13c": "0x6F87456D",
+        "LoD/1.13d": "0x6F87453D"
       },
       "rvas": {
         "LoD/1.07": "0x5EC4",
@@ -4467,13 +4450,28 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09": "0x5EC4",
         "LoD/1.09b": "0x5EC4",
         "LoD/1.09d": "0x5EC4",
-        "LoD/1.10": "0x5EF4"
+        "LoD/1.10": "0x5EF4",
+        "LoD/1.11": "0x453D",
+        "LoD/1.11b": "0x453D",
+        "LoD/1.12a": "0x456D",
+        "LoD/1.13c": "0x456D",
+        "LoD/1.13d": "0x453D"
       },
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
-    "D2Gdi_STR_f8f89093f5c5": {
+    "D2Gdi_STR_ff7880d11813": {
       "addresses": {
+        "LoD/1.07": "0x6F893F16",
+        "LoD/1.08": "0x6F893F16",
+        "LoD/1.09": "0x6F833F16",
+        "LoD/1.09b": "0x6F833F16",
+        "LoD/1.09d": "0x6F833F16",
+        "LoD/1.10": "0x6F833F46",
         "LoD/1.11": "0x6F8725CC",
         "LoD/1.11b": "0x6F8725CC",
         "LoD/1.12a": "0x6F8725EC",
@@ -4481,6 +4479,12 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "0x6F8725CC"
       },
       "rvas": {
+        "LoD/1.07": "0x3F16",
+        "LoD/1.08": "0x3F16",
+        "LoD/1.09": "0x3F16",
+        "LoD/1.09b": "0x3F16",
+        "LoD/1.09d": "0x3F16",
+        "LoD/1.10": "0x3F46",
         "LoD/1.11": "0x25CC",
         "LoD/1.11b": "0x25CC",
         "LoD/1.12a": "0x25EC",
@@ -4491,26 +4495,6 @@ var FUNCTIONS_D2Gdi_dll = {
       "signature": "void __NMSG_WRITE(int param_1)",
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "D2Gdi_STR_ff7880d11813": {
-      "addresses": {
-        "LoD/1.07": "0x6F893F16",
-        "LoD/1.08": "0x6F893F16",
-        "LoD/1.09": "0x6F833F16",
-        "LoD/1.09b": "0x6F833F16",
-        "LoD/1.09d": "0x6F833F16",
-        "LoD/1.10": "0x6F833F46"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3F16",
-        "LoD/1.08": "0x3F16",
-        "LoD/1.09": "0x3F16",
-        "LoD/1.09b": "0x3F16",
-        "LoD/1.09d": "0x3F16",
-        "LoD/1.10": "0x3F46"
-      },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

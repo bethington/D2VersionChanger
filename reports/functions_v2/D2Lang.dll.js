@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Lang.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -201,27 +201,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "API",
       "index": "API:eb10ff8435120b3c720eabae1a6eb481"
     },
-    "D2Lang_EXP_10000": {
-      "addresses": {
-        "LoD/1.07": "0x6FC43010",
-        "LoD/1.08": "0x6FC43010",
-        "LoD/1.09b": "0x6FC13030",
-        "LoD/1.09d": "0x6FC13030",
-        "LoD/1.10": "0x6FC12F90"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3010",
-        "LoD/1.08": "0x3010",
-        "LoD/1.09b": "0x3030",
-        "LoD/1.09d": "0x3030",
-        "LoD/1.10": "0x2F90"
-      },
-      "name": "Ordinal_10000",
-      "signature": "undefined4 Ordinal_10000(undefined4 param_1, char * param_2)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10000"
-    },
     "D2Lang_EXP_10001": {
       "addresses": {
         "LoD/1.07": "0x6FC43D40",
@@ -283,27 +262,6 @@ var FUNCTIONS_D2Lang_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10002"
-    },
-    "D2Lang_EXP_10003": {
-      "addresses": {
-        "LoD/1.07": "0x6FC43D20",
-        "LoD/1.08": "0x6FC43C80",
-        "LoD/1.09b": "0x6FC13CA0",
-        "LoD/1.09d": "0x6FC13C90",
-        "LoD/1.10": "0x6FC13BC0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3D20",
-        "LoD/1.08": "0x3C80",
-        "LoD/1.09b": "0x3CA0",
-        "LoD/1.09d": "0x3C90",
-        "LoD/1.10": "0x3BC0"
-      },
-      "name": "Ordinal_10003",
-      "signature": "undefined4 Ordinal_10003(uint * param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10003"
     },
     "D2Lang_EXP_10004": {
       "addresses": {
@@ -377,27 +335,6 @@ var FUNCTIONS_D2Lang_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10006"
-    },
-    "D2Lang_EXP_10007": {
-      "addresses": {
-        "LoD/1.07": "0x6FC43F50",
-        "LoD/1.08": "0x6FC43EB0",
-        "LoD/1.09b": "0x6FC13ED0",
-        "LoD/1.09d": "0x6FC13EC0",
-        "LoD/1.10": "0x6FC13DF0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3F50",
-        "LoD/1.08": "0x3EB0",
-        "LoD/1.09b": "0x3ED0",
-        "LoD/1.09d": "0x3EC0",
-        "LoD/1.10": "0x3DF0"
-      },
-      "name": "Ordinal_10007",
-      "signature": "uint Ordinal_10007(void)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10007"
     },
     "D2Lang_EXP_10008": {
       "addresses": {
@@ -1302,20 +1239,6 @@ var FUNCTIONS_D2Lang_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:1ca444181aa479bff1f1eb748b3a2663"
-    },
-    "D2Lang_MNE_1dffa8cbd10f": {
-      "addresses": {
-        "LoD/1.10": "0x6FC127C0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x27C0"
-      },
-      "name": "unicode2Sys",
-      "signature": "char * unicode2Sys(char * param_1, Unicode * param_2, int param_3)",
-      "comment": "public: static char * __fastcall Unicode::unicode2Sys(char *,struct Unicode const *,int)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:1dffa8cbd10f154d9bde35c53ea68b3c"
     },
     "D2Lang_MNE_1ed2cf4dd1e8": {
       "addresses": {
@@ -2273,20 +2196,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "MNE",
       "index": "MNE:43c0a0116a0179cd961980d35fb0c190"
     },
-    "D2Lang_MNE_4499edbeee59": {
-      "addresses": {
-        "LoD/1.10": "0x6FC11B30"
-      },
-      "rvas": {
-        "LoD/1.10": "0x1B30"
-      },
-      "name": "utf8ToUnicode",
-      "signature": "Unicode * utf8ToUnicode(Unicode * param_1, char * param_2, int param_3)",
-      "comment": "public: static struct Unicode * __fastcall Unicode::utf8ToUnicode(struct Unicode *,char const *,int)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:4499edbeee59d89b4993d6176ec6450c"
-    },
     "D2Lang_MNE_457ecf3d8055": {
       "addresses": {
         "LoD/1.11": "0x6FC03678",
@@ -2690,22 +2599,6 @@ var FUNCTIONS_D2Lang_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5309cc011f4489e83a895a5a05ecc215"
-    },
-    "D2Lang_MNE_53dbc40e337e": {
-      "addresses": {
-        "LoD/1.09b": "0x6FC11A00",
-        "LoD/1.09d": "0x6FC11A00"
-      },
-      "rvas": {
-        "LoD/1.09b": "0x1A00",
-        "LoD/1.09d": "0x1A00"
-      },
-      "name": "isLineBreak",
-      "signature": "int isLineBreak(Unicode * param_1, uint param_2)",
-      "comment": "public: static int __fastcall Unicode::isLineBreak(struct Unicode const *,unsigned int)",
-      "name_source": "LoD/1.09b",
-      "method": "MNE",
-      "index": "MNE:53dbc40e337e72cb3ef5ddab99d6415c"
     },
     "D2Lang_MNE_54ffff5ceafb": {
       "addresses": {
@@ -3236,28 +3129,18 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "MNE",
       "index": "MNE:71e3adec86883da683f0e423eb14e485"
     },
-    "D2Lang_MNE_72ac33b7925d": {
-      "addresses": {
-        "LoD/1.10": "0x6FC12650"
-      },
-      "rvas": {
-        "LoD/1.10": "0x2650"
-      },
-      "name": "sys2Unicode",
-      "signature": "Unicode * sys2Unicode(Unicode * param_1, char * param_2, int param_3)",
-      "comment": "public: static struct Unicode * __fastcall Unicode::sys2Unicode(struct Unicode *,char const *,int)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:72ac33b7925d59fa72688f297996ee40"
-    },
     "D2Lang_MNE_72c31db005e3": {
       "addresses": {
         "LoD/1.07": "0x6FC41A00",
-        "LoD/1.08": "0x6FC41A00"
+        "LoD/1.08": "0x6FC41A00",
+        "LoD/1.09b": "0x6FC11A00",
+        "LoD/1.09d": "0x6FC11A00"
       },
       "rvas": {
         "LoD/1.07": "0x1A00",
-        "LoD/1.08": "0x1A00"
+        "LoD/1.08": "0x1A00",
+        "LoD/1.09b": "0x1A00",
+        "LoD/1.09d": "0x1A00"
       },
       "name": "isLineBreak",
       "signature": "int isLineBreak(Unicode * param_1, uint param_2)",
@@ -5528,20 +5411,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "MNE",
       "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
     },
-    "D2Lang_MNE_c24ad02742f7": {
-      "addresses": {
-        "LoD/1.10": "0x6FC128D0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x28D0"
-      },
-      "name": "sysWidth",
-      "signature": "ulong sysWidth(Unicode * param_1, int param_2)",
-      "comment": "public: static unsigned long __fastcall Unicode::sysWidth(struct Unicode const *,int)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:c24ad02742f7f50fd92340ed80206b12"
-    },
     "D2Lang_MNE_c2bda2cc0331": {
       "addresses": {
         "LoD/1.07": "0x6FC49E2D",
@@ -5901,13 +5770,15 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.07": "0x6FC42910",
         "LoD/1.08": "0x6FC42910",
         "LoD/1.09b": "0x6FC12930",
-        "LoD/1.09d": "0x6FC12930"
+        "LoD/1.09d": "0x6FC12930",
+        "LoD/1.10": "0x6FC128D0"
       },
       "rvas": {
         "LoD/1.07": "0x2910",
         "LoD/1.08": "0x2910",
         "LoD/1.09b": "0x2930",
-        "LoD/1.09d": "0x2930"
+        "LoD/1.09d": "0x2930",
+        "LoD/1.10": "0x28D0"
       },
       "name": "sysWidth",
       "signature": "ulong sysWidth(Unicode * param_1, int param_2)",
@@ -6023,13 +5894,15 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.07": "0x6FC42800",
         "LoD/1.08": "0x6FC42800",
         "LoD/1.09b": "0x6FC12820",
-        "LoD/1.09d": "0x6FC12820"
+        "LoD/1.09d": "0x6FC12820",
+        "LoD/1.10": "0x6FC127C0"
       },
       "rvas": {
         "LoD/1.07": "0x2800",
         "LoD/1.08": "0x2800",
         "LoD/1.09b": "0x2820",
-        "LoD/1.09d": "0x2820"
+        "LoD/1.09d": "0x2820",
+        "LoD/1.10": "0x27C0"
       },
       "name": "unicode2Sys",
       "signature": "char * unicode2Sys(char * param_1, Unicode * param_2, int param_3)",
@@ -6175,13 +6048,15 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.07": "0x6FC422D0",
         "LoD/1.08": "0x6FC422D0",
         "LoD/1.09b": "0x6FC122F0",
-        "LoD/1.09d": "0x6FC122F0"
+        "LoD/1.09d": "0x6FC122F0",
+        "LoD/1.10": "0x6FC122B0"
       },
       "rvas": {
         "LoD/1.07": "0x22D0",
         "LoD/1.08": "0x22D0",
         "LoD/1.09b": "0x22F0",
-        "LoD/1.09d": "0x22F0"
+        "LoD/1.09d": "0x22F0",
+        "LoD/1.10": "0x22B0"
       },
       "name": "strncoll",
       "signature": "int strncoll(Unicode * param_1, Unicode * param_2, int param_3)",
@@ -6401,13 +6276,15 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.07": "0x6FC42670",
         "LoD/1.08": "0x6FC42670",
         "LoD/1.09b": "0x6FC12690",
-        "LoD/1.09d": "0x6FC12690"
+        "LoD/1.09d": "0x6FC12690",
+        "LoD/1.10": "0x6FC12650"
       },
       "rvas": {
         "LoD/1.07": "0x2670",
         "LoD/1.08": "0x2670",
         "LoD/1.09b": "0x2690",
-        "LoD/1.09d": "0x2690"
+        "LoD/1.09d": "0x2690",
+        "LoD/1.10": "0x2650"
       },
       "name": "sys2Unicode",
       "signature": "Unicode * sys2Unicode(Unicode * param_1, char * param_2, int param_3)",
@@ -7027,20 +6904,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "MNE",
       "index": "MNE:ef80c025e3831b06764dc8da4f7409c0"
     },
-    "D2Lang_MNE_f0b042a83531": {
-      "addresses": {
-        "LoD/1.10": "0x6FC122B0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x22B0"
-      },
-      "name": "strncoll",
-      "signature": "int strncoll(Unicode * param_1, Unicode * param_2, int param_3)",
-      "comment": "public: static int __fastcall Unicode::strncoll(struct Unicode const *,struct Unicode const *,int)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:f0b042a8353118cd9197c361f50053a7"
-    },
     "D2Lang_MNE_f1060dff4c8b": {
       "addresses": {
         "LoD/1.07": "0x6FC44B01",
@@ -7513,16 +7376,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "MNE",
       "index": "MNE:ff70d7fac2548b5958f726d1eeb33c1c"
     },
-    "D2Lang_STR_03f998da994b": {
-      "addresses": {
-        "LoD/1.10": "0x6FC14708"
-      },
-      "rvas": {
-        "LoD/1.10": "0x4708"
-      },
-      "method": "STR",
-      "index": "STR:03f998da994b54393077a00f814e29c8"
-    },
     "D2Lang_STR_0ef59d69c9da": {
       "addresses": {
         "LoD/1.07": "0x6FC43790",
@@ -7547,39 +7400,31 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.08": "0x6FC49C7F",
         "LoD/1.09b": "0x6FC19C9F",
         "LoD/1.09d": "0x6FC19C8F",
-        "LoD/1.10": "0x6FC19B9F"
+        "LoD/1.10": "0x6FC19B9F",
+        "LoD/1.11": "0x6FC06AC2",
+        "LoD/1.11b": "0x6FC06AA6",
+        "LoD/1.12a": "0x6FC06AC5",
+        "LoD/1.13c": "0x6FC06AC5",
+        "LoD/1.13d": "0x6FC06A92"
       },
       "rvas": {
         "LoD/1.07": "0x9D1F",
         "LoD/1.08": "0x9C7F",
         "LoD/1.09b": "0x9C9F",
         "LoD/1.09d": "0x9C8F",
-        "LoD/1.10": "0x9B9F"
+        "LoD/1.10": "0x9B9F",
+        "LoD/1.11": "0x6AC2",
+        "LoD/1.11b": "0x6AA6",
+        "LoD/1.12a": "0x6AC5",
+        "LoD/1.13c": "0x6AC5",
+        "LoD/1.13d": "0x6A92"
       },
-      "method": "STR",
-      "index": "STR:1d436b74681e11a9bd214b6331c37f94"
-    },
-    "D2Lang_STR_223fe7af2f02": {
-      "addresses": {
-        "LoD/1.11": "0x6FC0B0C0",
-        "LoD/1.11b": "0x6FC08210",
-        "LoD/1.12a": "0x6FC082F0",
-        "LoD/1.13c": "0x6FC0A9D0",
-        "LoD/1.13d": "0x6FC0AE10"
-      },
-      "rvas": {
-        "LoD/1.11": "0xB0C0",
-        "LoD/1.11b": "0x8210",
-        "LoD/1.12a": "0x82F0",
-        "LoD/1.13c": "0xA9D0",
-        "LoD/1.13d": "0xAE10"
-      },
-      "name": "loadSysMap",
-      "signature": "int loadSysMap(HD2ARCHIVE__ * param_1, char * param_2)",
-      "comment": "public: static int __fastcall Unicode::loadSysMap(struct HD2ARCHIVE__ *,char const *)",
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:223fe7af2f02f78bd821efe3e405e9c1"
+      "index": "STR:1d436b74681e11a9bd214b6331c37f94"
     },
     "D2Lang_STR_2dde037960e0": {
       "addresses": {
@@ -7649,28 +7494,6 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "STR",
       "index": "STR:477da5eccddd3240a2d11a015ebb49db"
     },
-    "D2Lang_STR_6829c7e2ecf5": {
-      "addresses": {
-        "LoD/1.11": "0x6FC04F26",
-        "LoD/1.11b": "0x6FC05E20",
-        "LoD/1.12a": "0x6FC05E3C",
-        "LoD/1.13c": "0x6FC0548A",
-        "LoD/1.13d": "0x6FC04EF6"
-      },
-      "rvas": {
-        "LoD/1.11": "0x4F26",
-        "LoD/1.11b": "0x5E20",
-        "LoD/1.12a": "0x5E3C",
-        "LoD/1.13c": "0x548A",
-        "LoD/1.13d": "0x4EF6"
-      },
-      "name": "___security_error_handler",
-      "signature": "undefined ___security_error_handler(int param_1)",
-      "comment": "Library Function - Single Match\n ___security_error_handler\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:6829c7e2ecf5617d1af04a2d6d84fcdc"
-    },
     "D2Lang_STR_8315eedfd35b": {
       "addresses": {
         "LoD/1.07": "0x6FC46C7A",
@@ -7691,6 +7514,7 @@ var FUNCTIONS_D2Lang_dll = {
     },
     "D2Lang_STR_90b6646da03c": {
       "addresses": {
+        "LoD/1.10": "0x6FC14708",
         "LoD/1.11": "0x6FC07EC0",
         "LoD/1.11b": "0x6FC07EA0",
         "LoD/1.12a": "0x6FC07EF0",
@@ -7698,6 +7522,7 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.13d": "0x6FC07EB0"
       },
       "rvas": {
+        "LoD/1.10": "0x4708",
         "LoD/1.11": "0x7EC0",
         "LoD/1.11b": "0x7EA0",
         "LoD/1.12a": "0x7EF0",
@@ -7735,14 +7560,24 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.08": "0x6FC423F0",
         "LoD/1.09b": "0x6FC12410",
         "LoD/1.09d": "0x6FC12410",
-        "LoD/1.10": "0x6FC123E0"
+        "LoD/1.10": "0x6FC123E0",
+        "LoD/1.11": "0x6FC0B0C0",
+        "LoD/1.11b": "0x6FC08210",
+        "LoD/1.12a": "0x6FC082F0",
+        "LoD/1.13c": "0x6FC0A9D0",
+        "LoD/1.13d": "0x6FC0AE10"
       },
       "rvas": {
         "LoD/1.07": "0x23F0",
         "LoD/1.08": "0x23F0",
         "LoD/1.09b": "0x2410",
         "LoD/1.09d": "0x2410",
-        "LoD/1.10": "0x23E0"
+        "LoD/1.10": "0x23E0",
+        "LoD/1.11": "0xB0C0",
+        "LoD/1.11b": "0x8210",
+        "LoD/1.12a": "0x82F0",
+        "LoD/1.13c": "0xA9D0",
+        "LoD/1.13d": "0xAE10"
       },
       "name": "loadSysMap",
       "signature": "int loadSysMap(HD2ARCHIVE__ * param_1, char * param_2)",
@@ -7757,15 +7592,29 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.08": "0x6FC42EE0",
         "LoD/1.09b": "0x6FC12F00",
         "LoD/1.09d": "0x6FC12F00",
-        "LoD/1.10": "0x6FC12E60"
+        "LoD/1.10": "0x6FC12E60",
+        "LoD/1.11": "0x6FC04F26",
+        "LoD/1.11b": "0x6FC05E20",
+        "LoD/1.12a": "0x6FC05E3C",
+        "LoD/1.13c": "0x6FC0548A",
+        "LoD/1.13d": "0x6FC04EF6"
       },
       "rvas": {
         "LoD/1.07": "0x2EE0",
         "LoD/1.08": "0x2EE0",
         "LoD/1.09b": "0x2F00",
         "LoD/1.09d": "0x2F00",
-        "LoD/1.10": "0x2E60"
+        "LoD/1.10": "0x2E60",
+        "LoD/1.11": "0x4F26",
+        "LoD/1.11b": "0x5E20",
+        "LoD/1.12a": "0x5E3C",
+        "LoD/1.13c": "0x548A",
+        "LoD/1.13d": "0x4EF6"
       },
+      "name": "___security_error_handler",
+      "signature": "undefined ___security_error_handler(int param_1)",
+      "comment": "Library Function - Single Match\n ___security_error_handler\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:9c6361eb052ab32a54aac214d82ba70d"
     },
@@ -7793,20 +7642,7 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.08": "0x6FC45739",
         "LoD/1.09b": "0x6FC15759",
         "LoD/1.09d": "0x6FC15749",
-        "LoD/1.10": "0x6FC15659"
-      },
-      "rvas": {
-        "LoD/1.07": "0x57D9",
-        "LoD/1.08": "0x5739",
-        "LoD/1.09b": "0x5759",
-        "LoD/1.09d": "0x5749",
-        "LoD/1.10": "0x5659"
-      },
-      "method": "STR",
-      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
-    },
-    "D2Lang_STR_c004c7748bfc": {
-      "addresses": {
+        "LoD/1.10": "0x6FC15659",
         "LoD/1.11": "0x6FC028D5",
         "LoD/1.11b": "0x6FC02310",
         "LoD/1.12a": "0x6FC02895",
@@ -7814,6 +7650,11 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.13d": "0x6FC023C5"
       },
       "rvas": {
+        "LoD/1.07": "0x57D9",
+        "LoD/1.08": "0x5739",
+        "LoD/1.09b": "0x5759",
+        "LoD/1.09d": "0x5749",
+        "LoD/1.10": "0x5659",
         "LoD/1.11": "0x28D5",
         "LoD/1.11b": "0x2310",
         "LoD/1.12a": "0x2895",
@@ -7825,29 +7666,7 @@ var FUNCTIONS_D2Lang_dll = {
       "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
-    },
-    "D2Lang_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6FC06AC2",
-        "LoD/1.11b": "0x6FC06AA6",
-        "LoD/1.12a": "0x6FC06AC5",
-        "LoD/1.13c": "0x6FC06AC5",
-        "LoD/1.13d": "0x6FC06A92"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6AC2",
-        "LoD/1.11b": "0x6AA6",
-        "LoD/1.12a": "0x6AC5",
-        "LoD/1.13c": "0x6AC5",
-        "LoD/1.13d": "0x6A92"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
+      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
     "D2Lang_STR_f1b993e1ca1b": {
       "addresses": {
@@ -7881,8 +7700,13 @@ var FUNCTIONS_D2Lang_dll = {
       "method": "STR",
       "index": "STR:f1b993e1ca1b1ff15b18c5d395d804ec"
     },
-    "D2Lang_STR_f8f89093f5c5": {
+    "D2Lang_STR_ff7880d11813": {
       "addresses": {
+        "LoD/1.07": "0x6FC46F00",
+        "LoD/1.08": "0x6FC46E60",
+        "LoD/1.09b": "0x6FC16E80",
+        "LoD/1.09d": "0x6FC16E70",
+        "LoD/1.10": "0x6FC16D80",
         "LoD/1.11": "0x6FC03AEC",
         "LoD/1.11b": "0x6FC03ACC",
         "LoD/1.12a": "0x6FC03ACC",
@@ -7890,6 +7714,11 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.13d": "0x6FC03ABC"
       },
       "rvas": {
+        "LoD/1.07": "0x6F00",
+        "LoD/1.08": "0x6E60",
+        "LoD/1.09b": "0x6E80",
+        "LoD/1.09d": "0x6E70",
+        "LoD/1.10": "0x6D80",
         "LoD/1.11": "0x3AEC",
         "LoD/1.11b": "0x3ACC",
         "LoD/1.12a": "0x3ACC",
@@ -7900,24 +7729,6 @@ var FUNCTIONS_D2Lang_dll = {
       "signature": "void __NMSG_WRITE(int param_1)",
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "D2Lang_STR_ff7880d11813": {
-      "addresses": {
-        "LoD/1.07": "0x6FC46F00",
-        "LoD/1.08": "0x6FC46E60",
-        "LoD/1.09b": "0x6FC16E80",
-        "LoD/1.09d": "0x6FC16E70",
-        "LoD/1.10": "0x6FC16D80"
-      },
-      "rvas": {
-        "LoD/1.07": "0x6F00",
-        "LoD/1.08": "0x6E60",
-        "LoD/1.09b": "0x6E80",
-        "LoD/1.09d": "0x6E70",
-        "LoD/1.10": "0x6D80"
-      },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

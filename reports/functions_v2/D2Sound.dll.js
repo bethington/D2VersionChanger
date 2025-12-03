@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Sound.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -147,7 +147,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F984AA0",
         "LoD/1.09b": "0x6F984AA0",
         "LoD/1.09d": "0x6F984AA0",
-        "LoD/1.10": "0x6F9848F0"
+        "LoD/1.10": "0x6F9848F0",
+        "LoD/1.11": "0x6F9B6790",
+        "LoD/1.11b": "0x6F9B7590",
+        "LoD/1.12a": "0x6F9B9990"
       },
       "rvas": {
         "LoD/1.07": "0x4AA0",
@@ -155,24 +158,13 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x4AA0",
         "LoD/1.09b": "0x4AA0",
         "LoD/1.09d": "0x4AA0",
-        "LoD/1.10": "0x48F0"
-      },
-      "method": "API",
-      "index": "API:6cec8016e341fe18c5c2c528442b90cb"
-    },
-    "D2Sound_API_732774d37772": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B6790",
-        "LoD/1.11b": "0x6F9B7590",
-        "LoD/1.12a": "0x6F9B9990"
-      },
-      "rvas": {
+        "LoD/1.10": "0x48F0",
         "LoD/1.11": "0x6790",
         "LoD/1.11b": "0x7590",
         "LoD/1.12a": "0x9990"
       },
       "method": "API",
-      "index": "API:732774d37772bda2ac38108c09107281"
+      "index": "API:6cec8016e341fe18c5c2c528442b90cb"
     },
     "D2Sound_API_85fcb8b53fed": {
       "addresses": {
@@ -490,7 +482,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x6F983A30",
         "LoD/1.11": "0x6F9B6DE0",
         "LoD/1.11b": "0x6F9B67C0",
-        "LoD/1.12a": "0x6F9B80F0"
+        "LoD/1.12a": "0x6F9B80F0",
+        "LoD/1.13c": "0x6F9B83C0",
+        "LoD/1.13d": "0x6F9B9100"
       },
       "rvas": {
         "LoD/1.07": "0x3BB0",
@@ -501,7 +495,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x3A30",
         "LoD/1.11": "0x6DE0",
         "LoD/1.11b": "0x67C0",
-        "LoD/1.12a": "0x80F0"
+        "LoD/1.12a": "0x80F0",
+        "LoD/1.13c": "0x83C0",
+        "LoD/1.13d": "0x9100"
       },
       "name": "Ordinal_10009",
       "signature": "undefined Ordinal_10009(int * param_1)",
@@ -554,37 +550,6 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10011"
-    },
-    "D2Sound_EXP_10012": {
-      "addresses": {
-        "LoD/1.07": "0x6F9E3FA0",
-        "LoD/1.08": "0x6F9E3FA0",
-        "LoD/1.09": "0x6F983FA0",
-        "LoD/1.09b": "0x6F983FA0",
-        "LoD/1.09d": "0x6F983FA0",
-        "LoD/1.10": "0x6F983E10",
-        "LoD/1.11": "0x6F9B8260",
-        "LoD/1.11b": "0x6F9B8CE0",
-        "LoD/1.13c": "0x6F9B8100",
-        "LoD/1.13d": "0x6F9B8DC0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3FA0",
-        "LoD/1.08": "0x3FA0",
-        "LoD/1.09": "0x3FA0",
-        "LoD/1.09b": "0x3FA0",
-        "LoD/1.09d": "0x3FA0",
-        "LoD/1.10": "0x3E10",
-        "LoD/1.11": "0x8260",
-        "LoD/1.11b": "0x8CE0",
-        "LoD/1.13c": "0x8100",
-        "LoD/1.13d": "0x8DC0"
-      },
-      "name": "Ordinal_10012",
-      "signature": "undefined Ordinal_10012(int * param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10012"
     },
     "D2Sound_EXP_10013": {
       "addresses": {
@@ -740,54 +705,6 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10018"
-    },
-    "D2Sound_EXP_10021": {
-      "addresses": {
-        "LoD/1.07": "0x6F9E4470",
-        "LoD/1.08": "0x6F9E4470",
-        "LoD/1.09": "0x6F984470",
-        "LoD/1.09b": "0x6F984470",
-        "LoD/1.09d": "0x6F984470",
-        "LoD/1.10": "0x6F9842C0",
-        "LoD/1.13c": "0x6F9B83C0",
-        "LoD/1.13d": "0x6F9B9100"
-      },
-      "rvas": {
-        "LoD/1.07": "0x4470",
-        "LoD/1.08": "0x4470",
-        "LoD/1.09": "0x4470",
-        "LoD/1.09b": "0x4470",
-        "LoD/1.09d": "0x4470",
-        "LoD/1.10": "0x42C0",
-        "LoD/1.13c": "0x83C0",
-        "LoD/1.13d": "0x9100"
-      },
-      "name": "Ordinal_10021",
-      "signature": "undefined Ordinal_10021(void * this, float param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10021"
-    },
-    "D2Sound_EXP_10022": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B8E90",
-        "LoD/1.11b": "0x6F9B9240",
-        "LoD/1.12a": "0x6F9B8050",
-        "LoD/1.13c": "0x6F9B8320",
-        "LoD/1.13d": "0x6F9B9060"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8E90",
-        "LoD/1.11b": "0x9240",
-        "LoD/1.12a": "0x8050",
-        "LoD/1.13c": "0x8320",
-        "LoD/1.13d": "0x9060"
-      },
-      "name": "Ordinal_10022",
-      "signature": "undefined Ordinal_10022(int * param_1)",
-      "name_source": "LoD/1.11",
-      "method": "EXP",
-      "index": "EXP:10022"
     },
     "D2Sound_EXP_10023": {
       "addresses": {
@@ -1150,7 +1067,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F982860",
         "LoD/1.09d": "0x6F982860",
         "LoD/1.10": "0x6F982750",
-        "LoD/1.11": "0x6F9B6B80"
+        "LoD/1.11": "0x6F9B6B80",
+        "LoD/1.11b": "0x6F9B9240",
+        "LoD/1.12a": "0x6F9B8050",
+        "LoD/1.13c": "0x6F9B8320",
+        "LoD/1.13d": "0x6F9B9060"
       },
       "rvas": {
         "LoD/1.07": "0x2860",
@@ -1159,7 +1080,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x2860",
         "LoD/1.09d": "0x2860",
         "LoD/1.10": "0x2750",
-        "LoD/1.11": "0x6B80"
+        "LoD/1.11": "0x6B80",
+        "LoD/1.11b": "0x9240",
+        "LoD/1.12a": "0x8050",
+        "LoD/1.13c": "0x8320",
+        "LoD/1.13d": "0x9060"
       },
       "name": "Ordinal_10038",
       "signature": "undefined Ordinal_10038(char * param_1)",
@@ -1255,37 +1180,6 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10041"
-    },
-    "D2Sound_EXP_10042": {
-      "addresses": {
-        "LoD/1.07": "0x6F9E2A80",
-        "LoD/1.08": "0x6F9E2A80",
-        "LoD/1.09": "0x6F982A80",
-        "LoD/1.09b": "0x6F982A80",
-        "LoD/1.09d": "0x6F982A80",
-        "LoD/1.10": "0x6F982950",
-        "LoD/1.11": "0x6F9B8D50",
-        "LoD/1.11b": "0x6F9B90F0",
-        "LoD/1.12a": "0x6F9B7510",
-        "LoD/1.13d": "0x6F9B8760"
-      },
-      "rvas": {
-        "LoD/1.07": "0x2A80",
-        "LoD/1.08": "0x2A80",
-        "LoD/1.09": "0x2A80",
-        "LoD/1.09b": "0x2A80",
-        "LoD/1.09d": "0x2A80",
-        "LoD/1.10": "0x2950",
-        "LoD/1.11": "0x8D50",
-        "LoD/1.11b": "0x90F0",
-        "LoD/1.12a": "0x7510",
-        "LoD/1.13d": "0x8760"
-      },
-      "name": "Ordinal_10042",
-      "signature": "undefined Ordinal_10042(void)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10042"
     },
     "D2Sound_EXP_10043": {
       "addresses": {
@@ -2117,7 +2011,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F985450",
         "LoD/1.09b": "0x6F985450",
         "LoD/1.09d": "0x6F985450",
-        "LoD/1.10": "0x6F9852A0"
+        "LoD/1.10": "0x6F9852A0",
+        "LoD/1.11": "0x6F9B9340",
+        "LoD/1.11b": "0x6F9B6C00",
+        "LoD/1.12a": "0x6F9B8F70",
+        "LoD/1.13c": "0x6F9B84A0",
+        "LoD/1.13d": "0x6F9B9420"
       },
       "rvas": {
         "LoD/1.07": "0x5450",
@@ -2125,7 +2024,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x5450",
         "LoD/1.09b": "0x5450",
         "LoD/1.09d": "0x5450",
-        "LoD/1.10": "0x52A0"
+        "LoD/1.10": "0x52A0",
+        "LoD/1.11": "0x9340",
+        "LoD/1.11b": "0x6C00",
+        "LoD/1.12a": "0x8F70",
+        "LoD/1.13c": "0x84A0",
+        "LoD/1.13d": "0x9420"
       },
       "method": "MNE",
       "index": "MNE:097b2d78f206dc38d4f8d1cf3a733c5b"
@@ -7082,24 +6986,6 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:d286a589c48283a2eda13c52495cb951"
     },
-    "D2Sound_MNE_d49921eb6528": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B9340",
-        "LoD/1.11b": "0x6F9B6C00",
-        "LoD/1.12a": "0x6F9B8F70",
-        "LoD/1.13c": "0x6F9B84A0",
-        "LoD/1.13d": "0x6F9B9420"
-      },
-      "rvas": {
-        "LoD/1.11": "0x9340",
-        "LoD/1.11b": "0x6C00",
-        "LoD/1.12a": "0x8F70",
-        "LoD/1.13c": "0x84A0",
-        "LoD/1.13d": "0x9420"
-      },
-      "method": "MNE",
-      "index": "MNE:d49921eb65284491dea0b481d719ae17"
-    },
     "D2Sound_MNE_d5c8453c3e2b": {
       "addresses": {
         "LoD/1.11": "0x6F9B1BD4",
@@ -8230,16 +8116,6 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:ff64648b3e6e32bc28a5e4bc8d984c1e"
     },
-    "D2Sound_STR_03f998da994b": {
-      "addresses": {
-        "LoD/1.10": "0x6F98566C"
-      },
-      "rvas": {
-        "LoD/1.10": "0x566C"
-      },
-      "method": "STR",
-      "index": "STR:03f998da994b54393077a00f814e29c8"
-    },
     "D2Sound_STR_16032f476aba": {
       "addresses": {
         "LoD/1.07": "0x6F9E63BA",
@@ -8398,14 +8274,16 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.08": "0x6F9E13D0",
         "LoD/1.09": "0x6F9813D0",
         "LoD/1.09b": "0x6F9813D0",
-        "LoD/1.09d": "0x6F9813D0"
+        "LoD/1.09d": "0x6F9813D0",
+        "LoD/1.10": "0x6F9812E0"
       },
       "rvas": {
         "LoD/1.07": "0x13D0",
         "LoD/1.08": "0x13D0",
         "LoD/1.09": "0x13D0",
         "LoD/1.09b": "0x13D0",
-        "LoD/1.09d": "0x13D0"
+        "LoD/1.09d": "0x13D0",
+        "LoD/1.10": "0x12E0"
       },
       "method": "STR",
       "index": "STR:5e7055b0a37b12c46f6e8bde67a7f74b"
@@ -8474,6 +8352,7 @@ var FUNCTIONS_D2Sound_dll = {
     },
     "D2Sound_STR_90b6646da03c": {
       "addresses": {
+        "LoD/1.10": "0x6F98566C",
         "LoD/1.11": "0x6F9B62D0",
         "LoD/1.11b": "0x6F9B62D0",
         "LoD/1.12a": "0x6F9B6360",
@@ -8481,6 +8360,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "0x6F9B62F0"
       },
       "rvas": {
+        "LoD/1.10": "0x566C",
         "LoD/1.11": "0x62D0",
         "LoD/1.11b": "0x62D0",
         "LoD/1.12a": "0x6360",
@@ -8624,38 +8504,6 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "STR",
       "index": "STR:cbe2aecc09a2d13c0738acbbf7438b9b"
     },
-    "D2Sound_STR_ce40d99bd9a8": {
-      "addresses": {
-        "LoD/1.10": "0x6F9812E0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x12E0"
-      },
-      "method": "STR",
-      "index": "STR:ce40d99bd9a8f232017707253b2a1a76"
-    },
-    "D2Sound_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B455D",
-        "LoD/1.11b": "0x6F9B455D",
-        "LoD/1.12a": "0x6F9B458D",
-        "LoD/1.13c": "0x6F9B458D",
-        "LoD/1.13d": "0x6F9B455D"
-      },
-      "rvas": {
-        "LoD/1.11": "0x455D",
-        "LoD/1.11b": "0x455D",
-        "LoD/1.12a": "0x458D",
-        "LoD/1.13c": "0x458D",
-        "LoD/1.13d": "0x455D"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
-    },
     "D2Sound_STR_dcf8f8729960": {
       "addresses": {
         "LoD/1.07": "0x6F9E3610",
@@ -8683,7 +8531,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F98B4A4",
         "LoD/1.09b": "0x6F98B4A4",
         "LoD/1.09d": "0x6F98B4A4",
-        "LoD/1.10": "0x6F98B2E4"
+        "LoD/1.10": "0x6F98B2E4",
+        "LoD/1.11": "0x6F9B455D",
+        "LoD/1.11b": "0x6F9B455D",
+        "LoD/1.12a": "0x6F9B458D",
+        "LoD/1.13c": "0x6F9B458D",
+        "LoD/1.13d": "0x6F9B455D"
       },
       "rvas": {
         "LoD/1.07": "0xB4A4",
@@ -8691,13 +8544,28 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0xB4A4",
         "LoD/1.09b": "0xB4A4",
         "LoD/1.09d": "0xB4A4",
-        "LoD/1.10": "0xB2E4"
+        "LoD/1.10": "0xB2E4",
+        "LoD/1.11": "0x455D",
+        "LoD/1.11b": "0x455D",
+        "LoD/1.12a": "0x458D",
+        "LoD/1.13c": "0x458D",
+        "LoD/1.13d": "0x455D"
       },
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
-    "D2Sound_STR_f8f89093f5c5": {
+    "D2Sound_STR_ff7880d11813": {
       "addresses": {
+        "LoD/1.07": "0x6F9E786C",
+        "LoD/1.08": "0x6F9E786C",
+        "LoD/1.09": "0x6F98786C",
+        "LoD/1.09b": "0x6F98786C",
+        "LoD/1.09d": "0x6F98786C",
+        "LoD/1.10": "0x6F9876AC",
         "LoD/1.11": "0x6F9B25EC",
         "LoD/1.11b": "0x6F9B25EC",
         "LoD/1.12a": "0x6F9B260C",
@@ -8705,6 +8573,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "0x6F9B25EC"
       },
       "rvas": {
+        "LoD/1.07": "0x786C",
+        "LoD/1.08": "0x786C",
+        "LoD/1.09": "0x786C",
+        "LoD/1.09b": "0x786C",
+        "LoD/1.09d": "0x786C",
+        "LoD/1.10": "0x76AC",
         "LoD/1.11": "0x25EC",
         "LoD/1.11b": "0x25EC",
         "LoD/1.12a": "0x260C",
@@ -8715,26 +8589,6 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "void __NMSG_WRITE(int param_1)",
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "D2Sound_STR_ff7880d11813": {
-      "addresses": {
-        "LoD/1.07": "0x6F9E786C",
-        "LoD/1.08": "0x6F9E786C",
-        "LoD/1.09": "0x6F98786C",
-        "LoD/1.09b": "0x6F98786C",
-        "LoD/1.09d": "0x6F98786C",
-        "LoD/1.10": "0x6F9876AC"
-      },
-      "rvas": {
-        "LoD/1.07": "0x786C",
-        "LoD/1.08": "0x786C",
-        "LoD/1.09": "0x786C",
-        "LoD/1.09b": "0x786C",
-        "LoD/1.09d": "0x786C",
-        "LoD/1.10": "0x76AC"
-      },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

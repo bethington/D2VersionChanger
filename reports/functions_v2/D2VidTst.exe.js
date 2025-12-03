@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2VidTst.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -2663,7 +2663,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x00406610",
         "LoD/1.09b": "0x00406610",
         "LoD/1.09d": "0x00406610",
-        "LoD/1.10": "0x004064F0"
+        "LoD/1.10": "0x004064F0",
+        "LoD/1.11": "0x0040E7A6",
+        "LoD/1.11b": "0x0040E7A6",
+        "LoD/1.12a": "0x0040E866",
+        "LoD/1.13c": "0x0040E866",
+        "LoD/1.13d": "0x0040E7A6"
       },
       "rvas": {
         "LoD/1.07": "0x669C",
@@ -2671,8 +2676,17 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x6610",
         "LoD/1.09b": "0x6610",
         "LoD/1.09d": "0x6610",
-        "LoD/1.10": "0x64F0"
+        "LoD/1.10": "0x64F0",
+        "LoD/1.11": "0xE7A6",
+        "LoD/1.11b": "0xE7A6",
+        "LoD/1.12a": "0xE866",
+        "LoD/1.13c": "0xE866",
+        "LoD/1.13d": "0xE7A6"
       },
+      "name": "_UnwindNestedFrames",
+      "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
+      "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee"
     },
@@ -3304,16 +3318,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:67c0855c00e7b7a5408f02f9c5ef5adc"
     },
-    "D2VidTst_MNE_6aaf5ca43841": {
-      "addresses": {
-        "LoD/1.07": "0x00401500"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1500"
-      },
-      "method": "MNE",
-      "index": "MNE:6aaf5ca43841afc4b44501a5590ceacf"
-    },
     "D2VidTst_MNE_6b07f716ad39": {
       "addresses": {
         "LoD/1.11": "0x00405B90",
@@ -3654,18 +3658,30 @@ var FUNCTIONS_D2VidTst_exe = {
     },
     "D2VidTst_MNE_736978bb623d": {
       "addresses": {
+        "LoD/1.07": "0x00401500",
         "LoD/1.08": "0x00401500",
         "LoD/1.09": "0x00401500",
         "LoD/1.09b": "0x00401500",
         "LoD/1.09d": "0x00401500",
-        "LoD/1.10": "0x00401490"
+        "LoD/1.10": "0x00401490",
+        "LoD/1.11": "0x0040CC40",
+        "LoD/1.11b": "0x0040CC40",
+        "LoD/1.12a": "0x0040CD00",
+        "LoD/1.13c": "0x0040CC60",
+        "LoD/1.13d": "0x0040CC40"
       },
       "rvas": {
+        "LoD/1.07": "0x1500",
         "LoD/1.08": "0x1500",
         "LoD/1.09": "0x1500",
         "LoD/1.09b": "0x1500",
         "LoD/1.09d": "0x1500",
-        "LoD/1.10": "0x1490"
+        "LoD/1.10": "0x1490",
+        "LoD/1.11": "0xCC40",
+        "LoD/1.11b": "0xCC40",
+        "LoD/1.12a": "0xCD00",
+        "LoD/1.13c": "0xCC60",
+        "LoD/1.13d": "0xCC40"
       },
       "method": "MNE",
       "index": "MNE:736978bb623debfc404b776f2b08e960"
@@ -4145,24 +4161,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:85190b86d73ebdc8e5739dd02ae41128"
-    },
-    "D2VidTst_MNE_864f6897daa9": {
-      "addresses": {
-        "LoD/1.11": "0x0040C930",
-        "LoD/1.11b": "0x0040C930",
-        "LoD/1.12a": "0x0040C9F0",
-        "LoD/1.13c": "0x0040C950",
-        "LoD/1.13d": "0x0040C930"
-      },
-      "rvas": {
-        "LoD/1.11": "0xC930",
-        "LoD/1.11b": "0xC930",
-        "LoD/1.12a": "0xC9F0",
-        "LoD/1.13c": "0xC950",
-        "LoD/1.13d": "0xC930"
-      },
-      "method": "MNE",
-      "index": "MNE:864f6897daa923302af5ec341fd7d520"
     },
     "D2VidTst_MNE_870f3f920d74": {
       "addresses": {
@@ -4797,16 +4795,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:996e3f0c6129985d37a2b36d657b6892"
-    },
-    "D2VidTst_MNE_9a037daf1eba": {
-      "addresses": {
-        "LoD/1.07": "0x00401730"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1730"
-      },
-      "method": "MNE",
-      "index": "MNE:9a037daf1eba976ac0f8f048650cea2b"
     },
     "D2VidTst_MNE_9a7404bf9554": {
       "addresses": {
@@ -6055,24 +6043,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:bd2e318ad25348813665cf4effb251a4"
     },
-    "D2VidTst_MNE_be29df6afad6": {
-      "addresses": {
-        "LoD/1.11": "0x0040CC40",
-        "LoD/1.11b": "0x0040CC40",
-        "LoD/1.12a": "0x0040CD00",
-        "LoD/1.13c": "0x0040CC60",
-        "LoD/1.13d": "0x0040CC40"
-      },
-      "rvas": {
-        "LoD/1.11": "0xCC40",
-        "LoD/1.11b": "0xCC40",
-        "LoD/1.12a": "0xCD00",
-        "LoD/1.13c": "0xCC60",
-        "LoD/1.13d": "0xCC40"
-      },
-      "method": "MNE",
-      "index": "MNE:be29df6afad6aadf5e43dadb8901efd1"
-    },
     "D2VidTst_MNE_bf35d350ef97": {
       "addresses": {
         "LoD/1.07": "0x00406370",
@@ -6203,18 +6173,30 @@ var FUNCTIONS_D2VidTst_exe = {
     },
     "D2VidTst_MNE_c16eee394b98": {
       "addresses": {
+        "LoD/1.07": "0x00401730",
         "LoD/1.08": "0x00401710",
         "LoD/1.09": "0x00401710",
         "LoD/1.09b": "0x00401710",
         "LoD/1.09d": "0x00401710",
-        "LoD/1.10": "0x004016A0"
+        "LoD/1.10": "0x004016A0",
+        "LoD/1.11": "0x0040C930",
+        "LoD/1.11b": "0x0040C930",
+        "LoD/1.12a": "0x0040C9F0",
+        "LoD/1.13c": "0x0040C950",
+        "LoD/1.13d": "0x0040C930"
       },
       "rvas": {
+        "LoD/1.07": "0x1730",
         "LoD/1.08": "0x1710",
         "LoD/1.09": "0x1710",
         "LoD/1.09b": "0x1710",
         "LoD/1.09d": "0x1710",
-        "LoD/1.10": "0x16A0"
+        "LoD/1.10": "0x16A0",
+        "LoD/1.11": "0xC930",
+        "LoD/1.11b": "0xC930",
+        "LoD/1.12a": "0xC9F0",
+        "LoD/1.13c": "0xC950",
+        "LoD/1.13d": "0xC930"
       },
       "method": "MNE",
       "index": "MNE:c16eee394b986a00db595ff72a7c13e5"
@@ -7114,28 +7096,6 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "method": "MNE",
       "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac"
-    },
-    "D2VidTst_MNE_d9a12ae164ce": {
-      "addresses": {
-        "LoD/1.11": "0x0040E7A6",
-        "LoD/1.11b": "0x0040E7A6",
-        "LoD/1.12a": "0x0040E866",
-        "LoD/1.13c": "0x0040E866",
-        "LoD/1.13d": "0x0040E7A6"
-      },
-      "rvas": {
-        "LoD/1.11": "0xE7A6",
-        "LoD/1.11b": "0xE7A6",
-        "LoD/1.12a": "0xE866",
-        "LoD/1.13c": "0xE866",
-        "LoD/1.13d": "0xE7A6"
-      },
-      "name": "_UnwindNestedFrames",
-      "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
-      "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18"
     },
     "D2VidTst_MNE_da9fe63256c7": {
       "addresses": {
@@ -8891,7 +8851,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x0040DC5C",
         "LoD/1.09b": "0x0040DC5C",
         "LoD/1.09d": "0x0040DC5C",
-        "LoD/1.10": "0x0040DB3C"
+        "LoD/1.10": "0x0040DB3C",
+        "LoD/1.11": "0x00407878",
+        "LoD/1.11b": "0x00407878",
+        "LoD/1.12a": "0x00407907",
+        "LoD/1.13c": "0x00407907",
+        "LoD/1.13d": "0x00407878"
       },
       "rvas": {
         "LoD/1.07": "0xCC14",
@@ -8899,8 +8864,17 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0xDC5C",
         "LoD/1.09b": "0xDC5C",
         "LoD/1.09d": "0xDC5C",
-        "LoD/1.10": "0xDB3C"
+        "LoD/1.10": "0xDB3C",
+        "LoD/1.11": "0x7878",
+        "LoD/1.11b": "0x7878",
+        "LoD/1.12a": "0x7907",
+        "LoD/1.13c": "0x7907",
+        "LoD/1.13d": "0x7878"
       },
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:1d436b74681e11a9bd214b6331c37f94"
     },
@@ -9183,24 +9157,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "STR",
       "index": "STR:854e75bd7977160757e99400a787fb69"
     },
-    "D2VidTst_STR_869a8cdbfb24": {
-      "addresses": {
-        "LoD/1.07": "0x00401000",
-        "LoD/1.08": "0x00401000",
-        "LoD/1.09": "0x00401000",
-        "LoD/1.09b": "0x00401000",
-        "LoD/1.09d": "0x00401000"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1000",
-        "LoD/1.08": "0x1000",
-        "LoD/1.09": "0x1000",
-        "LoD/1.09b": "0x1000",
-        "LoD/1.09d": "0x1000"
-      },
-      "method": "STR",
-      "index": "STR:869a8cdbfb2409ba470f3157ce7e7152"
-    },
     "D2VidTst_STR_94392139a94c": {
       "addresses": {
         "LoD/1.07": "0x00401B90",
@@ -9338,6 +9294,11 @@ var FUNCTIONS_D2VidTst_exe = {
     },
     "D2VidTst_STR_b175d582d335": {
       "addresses": {
+        "LoD/1.07": "0x00401000",
+        "LoD/1.08": "0x00401000",
+        "LoD/1.09": "0x00401000",
+        "LoD/1.09b": "0x00401000",
+        "LoD/1.09d": "0x00401000",
         "LoD/1.10": "0x00401000",
         "LoD/1.11": "0x0040D110",
         "LoD/1.11b": "0x0040D110",
@@ -9346,6 +9307,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "0x0040D110"
       },
       "rvas": {
+        "LoD/1.07": "0x1000",
+        "LoD/1.08": "0x1000",
+        "LoD/1.09": "0x1000",
+        "LoD/1.09b": "0x1000",
+        "LoD/1.09d": "0x1000",
         "LoD/1.10": "0x1000",
         "LoD/1.11": "0xD110",
         "LoD/1.11b": "0xD110",
@@ -9381,21 +9347,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x00406F17",
         "LoD/1.09b": "0x00406F17",
         "LoD/1.09d": "0x00406F17",
-        "LoD/1.10": "0x00406DF7"
-      },
-      "rvas": {
-        "LoD/1.07": "0x6F97",
-        "LoD/1.08": "0x6EF7",
-        "LoD/1.09": "0x6F17",
-        "LoD/1.09b": "0x6F17",
-        "LoD/1.09d": "0x6F17",
-        "LoD/1.10": "0x6DF7"
-      },
-      "method": "STR",
-      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
-    },
-    "D2VidTst_STR_c004c7748bfc": {
-      "addresses": {
+        "LoD/1.10": "0x00406DF7",
         "LoD/1.11": "0x00401CAD",
         "LoD/1.11b": "0x00401CAD",
         "LoD/1.12a": "0x00401CA9",
@@ -9403,6 +9355,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "0x00401CA9"
       },
       "rvas": {
+        "LoD/1.07": "0x6F97",
+        "LoD/1.08": "0x6EF7",
+        "LoD/1.09": "0x6F17",
+        "LoD/1.09b": "0x6F17",
+        "LoD/1.09d": "0x6F17",
+        "LoD/1.10": "0x6DF7",
         "LoD/1.11": "0x1CAD",
         "LoD/1.11b": "0x1CAD",
         "LoD/1.12a": "0x1CA9",
@@ -9414,7 +9372,7 @@ var FUNCTIONS_D2VidTst_exe = {
       "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
+      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
     "D2VidTst_STR_c69643978ae0": {
       "addresses": {
@@ -9578,28 +9536,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "STR",
       "index": "STR:e0c64c5b72de8a8f4fa39611a7e9d330"
     },
-    "D2VidTst_STR_e5a99c14932e": {
-      "addresses": {
-        "LoD/1.11": "0x00407878",
-        "LoD/1.11b": "0x00407878",
-        "LoD/1.12a": "0x00407907",
-        "LoD/1.13c": "0x00407907",
-        "LoD/1.13d": "0x00407878"
-      },
-      "rvas": {
-        "LoD/1.11": "0x7878",
-        "LoD/1.11b": "0x7878",
-        "LoD/1.12a": "0x7907",
-        "LoD/1.13c": "0x7907",
-        "LoD/1.13d": "0x7878"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:e5a99c14932ef1bc7f5735968306e329"
-    },
     "D2VidTst_STR_e9cb671a06f1": {
       "addresses": {
         "LoD/1.07": "0x00406144",
@@ -9681,28 +9617,6 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "STR",
       "index": "STR:f70aaa5cf1de660cb2865f924453c73e"
     },
-    "D2VidTst_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x00404B27",
-        "LoD/1.11b": "0x00404B27",
-        "LoD/1.12a": "0x00404B9C",
-        "LoD/1.13c": "0x00404B9C",
-        "LoD/1.13d": "0x00404B27"
-      },
-      "rvas": {
-        "LoD/1.11": "0x4B27",
-        "LoD/1.11b": "0x4B27",
-        "LoD/1.12a": "0x4B9C",
-        "LoD/1.13c": "0x4B9C",
-        "LoD/1.13d": "0x4B27"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
     "D2VidTst_STR_fe2e9ffe8e85": {
       "addresses": {
         "LoD/1.07": "0x00404930",
@@ -9740,7 +9654,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x00409D75",
         "LoD/1.09b": "0x00409D75",
         "LoD/1.09d": "0x00409D75",
-        "LoD/1.10": "0x00409C55"
+        "LoD/1.10": "0x00409C55",
+        "LoD/1.11": "0x00404B27",
+        "LoD/1.11b": "0x00404B27",
+        "LoD/1.12a": "0x00404B9C",
+        "LoD/1.13c": "0x00404B9C",
+        "LoD/1.13d": "0x00404B27"
       },
       "rvas": {
         "LoD/1.07": "0x9C5D",
@@ -9748,8 +9667,17 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x9D75",
         "LoD/1.09b": "0x9D75",
         "LoD/1.09d": "0x9D75",
-        "LoD/1.10": "0x9C55"
+        "LoD/1.10": "0x9C55",
+        "LoD/1.11": "0x4B27",
+        "LoD/1.11b": "0x4B27",
+        "LoD/1.12a": "0x4B9C",
+        "LoD/1.13c": "0x4B9C",
+        "LoD/1.13d": "0x4B27"
       },
+      "name": "__NMSG_WRITE",
+      "signature": "void __NMSG_WRITE(int param_1)",
+      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Glide.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -627,14 +627,24 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x6F875CB0",
         "LoD/1.09b": "0x6F815CB0",
         "LoD/1.09d": "0x6F815CB0",
-        "LoD/1.10": "0x6F815C90"
+        "LoD/1.10": "0x6F815C90",
+        "LoD/1.11": "0x6F856D10",
+        "LoD/1.11b": "0x6F85B5A0",
+        "LoD/1.12a": "0x6F8587C0",
+        "LoD/1.13c": "0x6F85A360",
+        "LoD/1.13d": "0x6F859D00"
       },
       "rvas": {
         "LoD/1.07": "0x5CB0",
         "LoD/1.08": "0x5CB0",
         "LoD/1.09b": "0x5CB0",
         "LoD/1.09d": "0x5CB0",
-        "LoD/1.10": "0x5C90"
+        "LoD/1.10": "0x5C90",
+        "LoD/1.11": "0x6D10",
+        "LoD/1.11b": "0xB5A0",
+        "LoD/1.12a": "0x87C0",
+        "LoD/1.13c": "0xA360",
+        "LoD/1.13d": "0x9D00"
       },
       "method": "API",
       "index": "API:a6f120fb61d383498d1f4982bb502b59"
@@ -2562,24 +2572,6 @@ var FUNCTIONS_D2Glide_dll = {
       "method": "MNE",
       "index": "MNE:40ace89e5da5d434e25a5d26402f71e1"
     },
-    "D2Glide_MNE_41c8d98e5176": {
-      "addresses": {
-        "LoD/1.11": "0x6F856D10",
-        "LoD/1.11b": "0x6F85B5A0",
-        "LoD/1.12a": "0x6F8587C0",
-        "LoD/1.13c": "0x6F85A360",
-        "LoD/1.13d": "0x6F859D00"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6D10",
-        "LoD/1.11b": "0xB5A0",
-        "LoD/1.12a": "0x87C0",
-        "LoD/1.13c": "0xA360",
-        "LoD/1.13d": "0x9D00"
-      },
-      "method": "MNE",
-      "index": "MNE:41c8d98e5176ec436695e3a332c52cea"
-    },
     "D2Glide_MNE_421e5158101c": {
       "addresses": {
         "LoD/1.07": "0x6F877130",
@@ -3427,16 +3419,6 @@ var FUNCTIONS_D2Glide_dll = {
       },
       "method": "MNE",
       "index": "MNE:6dd9e098c401c5314529c240c6cfca58"
-    },
-    "D2Glide_MNE_6e06947e2c9f": {
-      "addresses": {
-        "LoD/1.10": "0x6F817690"
-      },
-      "rvas": {
-        "LoD/1.10": "0x7690"
-      },
-      "method": "MNE",
-      "index": "MNE:6e06947e2c9fc4382182ddc2c076242a"
     },
     "D2Glide_MNE_6e27cf8ecbae": {
       "addresses": {
@@ -4383,13 +4365,15 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.07": "0x6F877700",
         "LoD/1.08": "0x6F877700",
         "LoD/1.09b": "0x6F817700",
-        "LoD/1.09d": "0x6F817700"
+        "LoD/1.09d": "0x6F817700",
+        "LoD/1.10": "0x6F817690"
       },
       "rvas": {
         "LoD/1.07": "0x7700",
         "LoD/1.08": "0x7700",
         "LoD/1.09b": "0x7700",
-        "LoD/1.09d": "0x7700"
+        "LoD/1.09d": "0x7700",
+        "LoD/1.10": "0x7690"
       },
       "method": "MNE",
       "index": "MNE:95a100be194bca135d73c1904b23464f"
@@ -4834,6 +4818,7 @@ var FUNCTIONS_D2Glide_dll = {
     },
     "D2Glide_MNE_a81a6d80e1e9": {
       "addresses": {
+        "LoD/1.10": "0x6F816F10",
         "LoD/1.11": "0x6F85CE30",
         "LoD/1.11b": "0x6F857BC0",
         "LoD/1.12a": "0x6F8570A0",
@@ -4841,6 +4826,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.13d": "0x6F8587D0"
       },
       "rvas": {
+        "LoD/1.10": "0x6F10",
         "LoD/1.11": "0xCE30",
         "LoD/1.11b": "0x7BC0",
         "LoD/1.12a": "0x70A0",
@@ -5593,16 +5579,6 @@ var FUNCTIONS_D2Glide_dll = {
       },
       "method": "MNE",
       "index": "MNE:c514b1190b765fb9a9fac6b3c508fb81"
-    },
-    "D2Glide_MNE_c75a89faaa4c": {
-      "addresses": {
-        "LoD/1.10": "0x6F816F10"
-      },
-      "rvas": {
-        "LoD/1.10": "0x6F10"
-      },
-      "method": "MNE",
-      "index": "MNE:c75a89faaa4ccfb43d73feb5ba7c9f1d"
     },
     "D2Glide_MNE_ca7f27832b0d": {
       "addresses": {
@@ -7265,14 +7241,24 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x6F872DA0",
         "LoD/1.09b": "0x6F812DA0",
         "LoD/1.09d": "0x6F812DA0",
-        "LoD/1.10": "0x6F812D90"
+        "LoD/1.10": "0x6F812D90",
+        "LoD/1.11": "0x6F85C4F0",
+        "LoD/1.11b": "0x6F856140",
+        "LoD/1.12a": "0x6F85C300",
+        "LoD/1.13c": "0x6F857A20",
+        "LoD/1.13d": "0x6F857E90"
       },
       "rvas": {
         "LoD/1.07": "0x2DA0",
         "LoD/1.08": "0x2DA0",
         "LoD/1.09b": "0x2DA0",
         "LoD/1.09d": "0x2DA0",
-        "LoD/1.10": "0x2D90"
+        "LoD/1.10": "0x2D90",
+        "LoD/1.11": "0xC4F0",
+        "LoD/1.11b": "0x6140",
+        "LoD/1.12a": "0xC300",
+        "LoD/1.13c": "0x7A20",
+        "LoD/1.13d": "0x7E90"
       },
       "method": "STR",
       "index": "STR:9ea33b5eb9122db41177f3587e9c6aa1"
@@ -7323,14 +7309,24 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x6F871B20",
         "LoD/1.09b": "0x6F811B20",
         "LoD/1.09d": "0x6F811B20",
-        "LoD/1.10": "0x6F811B30"
+        "LoD/1.10": "0x6F811B30",
+        "LoD/1.11": "0x6F85BBD0",
+        "LoD/1.11b": "0x6F858850",
+        "LoD/1.12a": "0x6F85B8D0",
+        "LoD/1.13c": "0x6F85D870",
+        "LoD/1.13d": "0x6F85D180"
       },
       "rvas": {
         "LoD/1.07": "0x1B20",
         "LoD/1.08": "0x1B20",
         "LoD/1.09b": "0x1B20",
         "LoD/1.09d": "0x1B20",
-        "LoD/1.10": "0x1B30"
+        "LoD/1.10": "0x1B30",
+        "LoD/1.11": "0xBBD0",
+        "LoD/1.11b": "0x8850",
+        "LoD/1.12a": "0xB8D0",
+        "LoD/1.13c": "0xD870",
+        "LoD/1.13d": "0xD180"
       },
       "method": "STR",
       "index": "STR:c03d6b3ee8d16cb6609687d68dd307be"
@@ -7389,46 +7385,6 @@ var FUNCTIONS_D2Glide_dll = {
       "method": "STR",
       "index": "STR:caf0293062c4e4caabf207f9f9a0ab4c"
     },
-    "D2Glide_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6F85487B",
-        "LoD/1.11b": "0x6F85487B",
-        "LoD/1.12a": "0x6F8548AB",
-        "LoD/1.13c": "0x6F8548AB",
-        "LoD/1.13d": "0x6F85487B"
-      },
-      "rvas": {
-        "LoD/1.11": "0x487B",
-        "LoD/1.11b": "0x487B",
-        "LoD/1.12a": "0x48AB",
-        "LoD/1.13c": "0x48AB",
-        "LoD/1.13d": "0x487B"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
-    },
-    "D2Glide_STR_dab85078ce1c": {
-      "addresses": {
-        "LoD/1.11": "0x6F85BBD0",
-        "LoD/1.11b": "0x6F858850",
-        "LoD/1.12a": "0x6F85B8D0",
-        "LoD/1.13c": "0x6F85D870",
-        "LoD/1.13d": "0x6F85D180"
-      },
-      "rvas": {
-        "LoD/1.11": "0xBBD0",
-        "LoD/1.11b": "0x8850",
-        "LoD/1.12a": "0xB8D0",
-        "LoD/1.13c": "0xD870",
-        "LoD/1.13d": "0xD180"
-      },
-      "method": "STR",
-      "index": "STR:dab85078ce1cb451c8a1741075fc797e"
-    },
     "D2Glide_STR_eac9a9a2550e": {
       "addresses": {
         "LoD/1.11": "0x6F85BFF0",
@@ -7447,39 +7403,35 @@ var FUNCTIONS_D2Glide_dll = {
       "method": "STR",
       "index": "STR:eac9a9a2550e85ce86c2deb7764c4c5b"
     },
-    "D2Glide_STR_efcfec4e3b6e": {
-      "addresses": {
-        "LoD/1.11": "0x6F85C4F0",
-        "LoD/1.11b": "0x6F856140",
-        "LoD/1.12a": "0x6F85C300",
-        "LoD/1.13c": "0x6F857A20",
-        "LoD/1.13d": "0x6F857E90"
-      },
-      "rvas": {
-        "LoD/1.11": "0xC4F0",
-        "LoD/1.11b": "0x6140",
-        "LoD/1.12a": "0xC300",
-        "LoD/1.13c": "0x7A20",
-        "LoD/1.13d": "0x7E90"
-      },
-      "method": "STR",
-      "index": "STR:efcfec4e3b6e4547eced132d069dae5c"
-    },
     "D2Glide_STR_f59c01a33eca": {
       "addresses": {
         "LoD/1.07": "0x6F87D20F",
         "LoD/1.08": "0x6F87D20F",
         "LoD/1.09b": "0x6F81D20F",
         "LoD/1.09d": "0x6F81D20F",
-        "LoD/1.10": "0x6F81D1AF"
+        "LoD/1.10": "0x6F81D1AF",
+        "LoD/1.11": "0x6F85487B",
+        "LoD/1.11b": "0x6F85487B",
+        "LoD/1.12a": "0x6F8548AB",
+        "LoD/1.13c": "0x6F8548AB",
+        "LoD/1.13d": "0x6F85487B"
       },
       "rvas": {
         "LoD/1.07": "0xD20F",
         "LoD/1.08": "0xD20F",
         "LoD/1.09b": "0xD20F",
         "LoD/1.09d": "0xD20F",
-        "LoD/1.10": "0xD1AF"
+        "LoD/1.10": "0xD1AF",
+        "LoD/1.11": "0x487B",
+        "LoD/1.11b": "0x487B",
+        "LoD/1.12a": "0x48AB",
+        "LoD/1.13c": "0x48AB",
+        "LoD/1.13d": "0x487B"
       },
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
@@ -7500,28 +7452,6 @@ var FUNCTIONS_D2Glide_dll = {
       },
       "method": "STR",
       "index": "STR:f673915a54315baf1e718cfcff82c162"
-    },
-    "D2Glide_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x6F852BEC",
-        "LoD/1.11b": "0x6F852BEC",
-        "LoD/1.12a": "0x6F852C0C",
-        "LoD/1.13c": "0x6F852C0C",
-        "LoD/1.13d": "0x6F852BEC"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2BEC",
-        "LoD/1.11b": "0x2BEC",
-        "LoD/1.12a": "0x2C0C",
-        "LoD/1.13c": "0x2C0C",
-        "LoD/1.13d": "0x2BEC"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
     },
     "D2Glide_STR_fc0dd2411549": {
       "addresses": {
@@ -7547,15 +7477,29 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x6F87A506",
         "LoD/1.09b": "0x6F81A506",
         "LoD/1.09d": "0x6F81A506",
-        "LoD/1.10": "0x6F81A4A6"
+        "LoD/1.10": "0x6F81A4A6",
+        "LoD/1.11": "0x6F852BEC",
+        "LoD/1.11b": "0x6F852BEC",
+        "LoD/1.12a": "0x6F852C0C",
+        "LoD/1.13c": "0x6F852C0C",
+        "LoD/1.13d": "0x6F852BEC"
       },
       "rvas": {
         "LoD/1.07": "0xA506",
         "LoD/1.08": "0xA506",
         "LoD/1.09b": "0xA506",
         "LoD/1.09d": "0xA506",
-        "LoD/1.10": "0xA4A6"
+        "LoD/1.10": "0xA4A6",
+        "LoD/1.11": "0x2BEC",
+        "LoD/1.11b": "0x2BEC",
+        "LoD/1.12a": "0x2C0C",
+        "LoD/1.13c": "0x2C0C",
+        "LoD/1.13d": "0x2BEC"
       },
+      "name": "__NMSG_WRITE",
+      "signature": "void __NMSG_WRITE(int param_1)",
+      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

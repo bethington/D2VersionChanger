@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2Gfx.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -53,52 +53,6 @@ var FUNCTIONS_D2Gfx_dll = {
       },
       "method": "API",
       "index": "API:48a2d34c19334196fd4687665deaf2d9"
-    },
-    "D2Gfx_EXP_10000": {
-      "addresses": {
-        "LoD/1.07": "0x6FAA3790",
-        "LoD/1.08": "0x6FAA3790",
-        "LoD/1.09": "0x6FA73790",
-        "LoD/1.09b": "0x6FA73790",
-        "LoD/1.09d": "0x6FA73790",
-        "LoD/1.10": "0x6FA73750"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3790",
-        "LoD/1.08": "0x3790",
-        "LoD/1.09": "0x3790",
-        "LoD/1.09b": "0x3790",
-        "LoD/1.09d": "0x3790",
-        "LoD/1.10": "0x3750"
-      },
-      "name": "Ordinal_10000",
-      "signature": "undefined4 Ordinal_10000(HINSTANCE param_1, WNDPROC param_2, int param_3, undefined4 param_4)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10000"
-    },
-    "D2Gfx_EXP_10001": {
-      "addresses": {
-        "LoD/1.07": "0x6FAA39A0",
-        "LoD/1.08": "0x6FAA39C0",
-        "LoD/1.09": "0x6FA739C0",
-        "LoD/1.09b": "0x6FA739C0",
-        "LoD/1.09d": "0x6FA739C0",
-        "LoD/1.10": "0x6FA739A0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x39A0",
-        "LoD/1.08": "0x39C0",
-        "LoD/1.09": "0x39C0",
-        "LoD/1.09b": "0x39C0",
-        "LoD/1.09d": "0x39C0",
-        "LoD/1.10": "0x39A0"
-      },
-      "name": "Ordinal_10001",
-      "signature": "undefined Ordinal_10001(void)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10001"
     },
     "D2Gfx_EXP_10002": {
       "addresses": {
@@ -1226,19 +1180,6 @@ var FUNCTIONS_D2Gfx_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10059"
-    },
-    "D2Gfx_EXP_10060": {
-      "addresses": {
-        "LoD/1.13c": "0x6FA885A0"
-      },
-      "rvas": {
-        "LoD/1.13c": "0x85A0"
-      },
-      "name": "Ordinal_10060",
-      "signature": "undefined4 Ordinal_10060(int param_1, int param_2)",
-      "name_source": "LoD/1.13c",
-      "method": "EXP",
-      "index": "EXP:10060"
     },
     "D2Gfx_EXP_10061": {
       "addresses": {
@@ -3500,7 +3441,12 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09": "0x6FA755FD",
         "LoD/1.09b": "0x6FA755FD",
         "LoD/1.09d": "0x6FA755FD",
-        "LoD/1.10": "0x6FA755B7"
+        "LoD/1.10": "0x6FA755B7",
+        "LoD/1.11": "0x6FA8B98A",
+        "LoD/1.11b": "0x6FA8B99F",
+        "LoD/1.12a": "0x6FA8B98A",
+        "LoD/1.13c": "0x6FA8BBF5",
+        "LoD/1.13d": "0x6FA8BBD7"
       },
       "rvas": {
         "LoD/1.07": "0x55D7",
@@ -3508,8 +3454,17 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09": "0x55FD",
         "LoD/1.09b": "0x55FD",
         "LoD/1.09d": "0x55FD",
-        "LoD/1.10": "0x55B7"
+        "LoD/1.10": "0x55B7",
+        "LoD/1.11": "0xB98A",
+        "LoD/1.11b": "0xB99F",
+        "LoD/1.12a": "0xB98A",
+        "LoD/1.13c": "0xBBF5",
+        "LoD/1.13d": "0xBBD7"
       },
+      "name": "_UnwindNestedFrames",
+      "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
+      "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee"
     },
@@ -7110,28 +7065,6 @@ var FUNCTIONS_D2Gfx_dll = {
       "method": "MNE",
       "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac"
     },
-    "D2Gfx_MNE_d9a12ae164ce": {
-      "addresses": {
-        "LoD/1.11": "0x6FA8B98A",
-        "LoD/1.11b": "0x6FA8B99F",
-        "LoD/1.12a": "0x6FA8B98A",
-        "LoD/1.13c": "0x6FA8BBF5",
-        "LoD/1.13d": "0x6FA8BBD7"
-      },
-      "rvas": {
-        "LoD/1.11": "0xB98A",
-        "LoD/1.11b": "0xB99F",
-        "LoD/1.12a": "0xB98A",
-        "LoD/1.13c": "0xBBF5",
-        "LoD/1.13d": "0xBBD7"
-      },
-      "name": "_UnwindNestedFrames",
-      "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
-      "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18"
-    },
     "D2Gfx_MNE_da9fe63256c7": {
       "addresses": {
         "LoD/1.07": "0x6FAA5A96",
@@ -8608,21 +8541,7 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09": "0x6FA7612D",
         "LoD/1.09b": "0x6FA7612D",
         "LoD/1.09d": "0x6FA7612D",
-        "LoD/1.10": "0x6FA760E5"
-      },
-      "rvas": {
-        "LoD/1.07": "0x6105",
-        "LoD/1.08": "0x612D",
-        "LoD/1.09": "0x612D",
-        "LoD/1.09b": "0x612D",
-        "LoD/1.09d": "0x612D",
-        "LoD/1.10": "0x60E5"
-      },
-      "method": "STR",
-      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
-    },
-    "D2Gfx_STR_c004c7748bfc": {
-      "addresses": {
+        "LoD/1.10": "0x6FA760E5",
         "LoD/1.11": "0x6FA81E28",
         "LoD/1.11b": "0x6FA81AC5",
         "LoD/1.12a": "0x6FA81E28",
@@ -8630,6 +8549,12 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.13d": "0x6FA81AC5"
       },
       "rvas": {
+        "LoD/1.07": "0x6105",
+        "LoD/1.08": "0x612D",
+        "LoD/1.09": "0x612D",
+        "LoD/1.09b": "0x612D",
+        "LoD/1.09d": "0x612D",
+        "LoD/1.10": "0x60E5",
         "LoD/1.11": "0x1E28",
         "LoD/1.11b": "0x1AC5",
         "LoD/1.12a": "0x1E28",
@@ -8641,29 +8566,7 @@ var FUNCTIONS_D2Gfx_dll = {
       "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
-    },
-    "D2Gfx_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6FA85A08",
-        "LoD/1.11b": "0x6FA85A18",
-        "LoD/1.12a": "0x6FA859E8",
-        "LoD/1.13c": "0x6FA859E8",
-        "LoD/1.13d": "0x6FA85A08"
-      },
-      "rvas": {
-        "LoD/1.11": "0x5A08",
-        "LoD/1.11b": "0x5A18",
-        "LoD/1.12a": "0x59E8",
-        "LoD/1.13c": "0x59E8",
-        "LoD/1.13d": "0x5A08"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
+      "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
     "D2Gfx_STR_e06516ece366": {
       "addresses": {
@@ -8702,7 +8605,12 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09": "0x6FA7A6BF",
         "LoD/1.09b": "0x6FA7A6BF",
         "LoD/1.09d": "0x6FA7A6BF",
-        "LoD/1.10": "0x6FA7A66F"
+        "LoD/1.10": "0x6FA7A66F",
+        "LoD/1.11": "0x6FA85A08",
+        "LoD/1.11b": "0x6FA85A18",
+        "LoD/1.12a": "0x6FA859E8",
+        "LoD/1.13c": "0x6FA859E8",
+        "LoD/1.13d": "0x6FA85A08"
       },
       "rvas": {
         "LoD/1.07": "0xA68F",
@@ -8710,8 +8618,17 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09": "0xA6BF",
         "LoD/1.09b": "0xA6BF",
         "LoD/1.09d": "0xA6BF",
-        "LoD/1.10": "0xA66F"
+        "LoD/1.10": "0xA66F",
+        "LoD/1.11": "0x5A08",
+        "LoD/1.11b": "0x5A18",
+        "LoD/1.12a": "0x59E8",
+        "LoD/1.13c": "0x59E8",
+        "LoD/1.13d": "0x5A08"
       },
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
@@ -8733,8 +8650,14 @@ var FUNCTIONS_D2Gfx_dll = {
       "method": "STR",
       "index": "STR:f6ed78b03f125024eca606c1c00a0c27"
     },
-    "D2Gfx_STR_f8f89093f5c5": {
+    "D2Gfx_STR_ff7880d11813": {
       "addresses": {
+        "LoD/1.07": "0x6FAA7396",
+        "LoD/1.08": "0x6FAA73BE",
+        "LoD/1.09": "0x6FA773BE",
+        "LoD/1.09b": "0x6FA773BE",
+        "LoD/1.09d": "0x6FA773BE",
+        "LoD/1.10": "0x6FA77376",
         "LoD/1.11": "0x6FA8362C",
         "LoD/1.11b": "0x6FA8362C",
         "LoD/1.12a": "0x6FA8360C",
@@ -8742,6 +8665,12 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.13d": "0x6FA8362C"
       },
       "rvas": {
+        "LoD/1.07": "0x7396",
+        "LoD/1.08": "0x73BE",
+        "LoD/1.09": "0x73BE",
+        "LoD/1.09b": "0x73BE",
+        "LoD/1.09d": "0x73BE",
+        "LoD/1.10": "0x7376",
         "LoD/1.11": "0x362C",
         "LoD/1.11b": "0x362C",
         "LoD/1.12a": "0x360C",
@@ -8752,26 +8681,6 @@ var FUNCTIONS_D2Gfx_dll = {
       "signature": "void __NMSG_WRITE(int param_1)",
       "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
-    },
-    "D2Gfx_STR_ff7880d11813": {
-      "addresses": {
-        "LoD/1.07": "0x6FAA7396",
-        "LoD/1.08": "0x6FAA73BE",
-        "LoD/1.09": "0x6FA773BE",
-        "LoD/1.09b": "0x6FA773BE",
-        "LoD/1.09d": "0x6FA773BE",
-        "LoD/1.10": "0x6FA77376"
-      },
-      "rvas": {
-        "LoD/1.07": "0x7396",
-        "LoD/1.08": "0x73BE",
-        "LoD/1.09": "0x73BE",
-        "LoD/1.09b": "0x73BE",
-        "LoD/1.09d": "0x73BE",
-        "LoD/1.10": "0x7376"
-      },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

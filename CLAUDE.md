@@ -26,14 +26,67 @@ Located in `tools/`:
 | Script | Purpose |
 |--------|---------|
 | `d2_hash_tool.py` | Core library: SHA256 hashing, PE version extraction, folder scanning, NoCD detection |
-| `gen_viewer_data.py` | Generates `reports/d2_data.js` for the HTML viewer |
+| `gen_viewer_data.py` | Generates `reports/d2_data.js` for the HTML viewer (hash data) |
+| `merge_function_index.py` | Merges Ghidra function exports into unified registry |
+| `generate_function_js.py` | Generates JS files for the function viewer from registry |
 
-### Running the tools
+### Refreshing the Report Viewer
+
+The `reports/d2_report_viewer.html` viewer has two main data sources that need to be refreshed:
+
+#### 1. Hash/Version Data (d2_data.js)
 
 ```bash
-# Generate viewer data (creates reports/d2_data.js)
+# Regenerates hash data for version detection
 python tools/gen_viewer_data.py
+```
 
+#### 2. Function Index Data (functions_v2/*.js)
+
+When Ghidra exports are updated in `data/function_index/`, run:
+
+```bash
+# Single command to refresh all function data
+python tools/refresh_viewer.py
+```
+
+This runs both steps automatically:
+1. `merge_function_index.py` - Merge Ghidra exports into unified registry
+2. `generate_function_js.py` - Generate JS files for the viewer
+
+**Data Flow:**
+```
+data/function_index/{LoD,Classic}/{version}/*.json  (Ghidra exports)
+    ↓ merge_function_index.py
+reports/function_registry_v2.json                    (unified registry)
+    ↓ generate_function_js.py
+reports/functions_v2/*.js                            (viewer data)
+```
+
+**Configuration:** `config/function_index.json`
+- `enabled_game_types`: Enable/disable Classic or LoD processing
+- `enabled_versions`: Fine-grained version control
+- `disabled_methods`: Index methods to skip (e.g., `["EXP"]` for ordinals)
+- `index_priority`: Method priority order for matching
+
+### Ghidra Scripts
+
+Located in `ghidra_scripts/`:
+
+| Script | Purpose |
+|--------|---------|
+| `ExportFunctionIndex.java` | Exports function data with multi-method indexes for cross-version matching |
+| `ExportNamesOnly.java` | Lightweight export of named functions only |
+
+**Exporting from Ghidra:**
+1. Open a D2 binary in Ghidra
+2. Run `ExportFunctionIndex.java` via Script Manager
+3. Save to `data/function_index/{LoD|Classic}/{version}/{DLL}.json`
+4. Repeat for all DLLs/versions, then run the merge scripts above
+
+### Running Other Tools
+
+```bash
 # Generate full analysis reports
 python tools/d2_hash_tool.py
 

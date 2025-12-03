@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for D2DDraw.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13d
 
@@ -5403,22 +5403,6 @@ var FUNCTIONS_D2DDraw_dll = {
       "method": "MNE",
       "index": "MNE:fd5b33dc54aadb52ffc0a2fd4afb6504"
     },
-    "D2DDraw_MNE_fd75b3ac8185": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C6660",
-        "LoD/1.11b": "0x6F8C8CE0",
-        "LoD/1.12a": "0x6F8C77D0",
-        "LoD/1.13d": "0x6F8C69D0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6660",
-        "LoD/1.11b": "0x8CE0",
-        "LoD/1.12a": "0x77D0",
-        "LoD/1.13d": "0x69D0"
-      },
-      "method": "MNE",
-      "index": "MNE:fd75b3ac8185fcfb9a92e9c1f652815f"
-    },
     "D2DDraw_MNE_fdd552c17b8c": {
       "addresses": {
         "LoD/1.11": "0x6F8C3659",
@@ -5646,7 +5630,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x6F883E70",
         "LoD/1.09b": "0x6F883E70",
         "LoD/1.09d": "0x6F883E70",
-        "LoD/1.10": "0x6F883E00"
+        "LoD/1.10": "0x6F883E00",
+        "LoD/1.11": "0x6F8C6660",
+        "LoD/1.11b": "0x6F8C8CE0",
+        "LoD/1.12a": "0x6F8C77D0",
+        "LoD/1.13d": "0x6F8C69D0"
       },
       "rvas": {
         "LoD/1.07": "0x3E70",
@@ -5654,7 +5642,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x3E70",
         "LoD/1.09b": "0x3E70",
         "LoD/1.09d": "0x3E70",
-        "LoD/1.10": "0x3E00"
+        "LoD/1.10": "0x3E00",
+        "LoD/1.11": "0x6660",
+        "LoD/1.11b": "0x8CE0",
+        "LoD/1.12a": "0x77D0",
+        "LoD/1.13d": "0x69D0"
       },
       "method": "STR",
       "index": "STR:643abc3f0ffcbe73440c55d4dc3992a5"
@@ -5829,22 +5821,6 @@ var FUNCTIONS_D2DDraw_dll = {
       "method": "STR",
       "index": "STR:c170bd72c7a30c3be9e6aa15fb836e49"
     },
-    "D2DDraw_STR_c48961a4a891": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C85B0",
-        "LoD/1.11b": "0x6F8C8060",
-        "LoD/1.12a": "0x6F8C8CC0",
-        "LoD/1.13d": "0x6F8C81E0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x85B0",
-        "LoD/1.11b": "0x8060",
-        "LoD/1.12a": "0x8CC0",
-        "LoD/1.13d": "0x81E0"
-      },
-      "method": "STR",
-      "index": "STR:c48961a4a89175f26031840d4f09099c"
-    },
     "D2DDraw_STR_caf0293062c4": {
       "addresses": {
         "LoD/1.07": "0x6F8EA478",
@@ -5884,7 +5860,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x6F8817B0",
         "LoD/1.09b": "0x6F8817B0",
         "LoD/1.09d": "0x6F8817B0",
-        "LoD/1.10": "0x6F881780"
+        "LoD/1.10": "0x6F881780",
+        "LoD/1.11": "0x6F8C85B0",
+        "LoD/1.11b": "0x6F8C8060",
+        "LoD/1.12a": "0x6F8C8CC0",
+        "LoD/1.13d": "0x6F8C81E0"
       },
       "rvas": {
         "LoD/1.07": "0x17B0",
@@ -5892,30 +5872,14 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x17B0",
         "LoD/1.09b": "0x17B0",
         "LoD/1.09d": "0x17B0",
-        "LoD/1.10": "0x1780"
+        "LoD/1.10": "0x1780",
+        "LoD/1.11": "0x85B0",
+        "LoD/1.11b": "0x8060",
+        "LoD/1.12a": "0x8CC0",
+        "LoD/1.13d": "0x81E0"
       },
       "method": "STR",
       "index": "STR:cdad128a8591e2e227d1367055b5b18a"
-    },
-    "D2DDraw_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C453B",
-        "LoD/1.11b": "0x6F8C453B",
-        "LoD/1.12a": "0x6F8C456B",
-        "LoD/1.13d": "0x6F8C453B"
-      },
-      "rvas": {
-        "LoD/1.11": "0x453B",
-        "LoD/1.11b": "0x453B",
-        "LoD/1.12a": "0x456B",
-        "LoD/1.13d": "0x453B"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
     },
     "D2DDraw_STR_efcfec4e3b6e": {
       "addresses": {
@@ -5952,7 +5916,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x6F8898EF",
         "LoD/1.09b": "0x6F8898EF",
         "LoD/1.09d": "0x6F8898EF",
-        "LoD/1.10": "0x6F88987F"
+        "LoD/1.10": "0x6F88987F",
+        "LoD/1.11": "0x6F8C453B",
+        "LoD/1.11b": "0x6F8C453B",
+        "LoD/1.12a": "0x6F8C456B",
+        "LoD/1.13d": "0x6F8C453B"
       },
       "rvas": {
         "LoD/1.07": "0x98DF",
@@ -5960,30 +5928,18 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x98EF",
         "LoD/1.09b": "0x98EF",
         "LoD/1.09d": "0x98EF",
-        "LoD/1.10": "0x987F"
+        "LoD/1.10": "0x987F",
+        "LoD/1.11": "0x453B",
+        "LoD/1.11b": "0x453B",
+        "LoD/1.12a": "0x456B",
+        "LoD/1.13d": "0x453B"
       },
-      "method": "STR",
-      "index": "STR:f59c01a33eca433430cfbab05d487108"
-    },
-    "D2DDraw_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C28AC",
-        "LoD/1.11b": "0x6F8C28AC",
-        "LoD/1.12a": "0x6F8C28CC",
-        "LoD/1.13d": "0x6F8C28AC"
-      },
-      "rvas": {
-        "LoD/1.11": "0x28AC",
-        "LoD/1.11b": "0x28AC",
-        "LoD/1.12a": "0x28CC",
-        "LoD/1.13d": "0x28AC"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
+      "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
     "D2DDraw_STR_fe3522a376af": {
       "addresses": {
@@ -6020,7 +5976,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x6F8868B1",
         "LoD/1.09b": "0x6F8868B1",
         "LoD/1.09d": "0x6F8868B1",
-        "LoD/1.10": "0x6F886841"
+        "LoD/1.10": "0x6F886841",
+        "LoD/1.11": "0x6F8C28AC",
+        "LoD/1.11b": "0x6F8C28AC",
+        "LoD/1.12a": "0x6F8C28CC",
+        "LoD/1.13d": "0x6F8C28AC"
       },
       "rvas": {
         "LoD/1.07": "0x68A1",
@@ -6028,8 +5988,16 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x68B1",
         "LoD/1.09b": "0x68B1",
         "LoD/1.09d": "0x68B1",
-        "LoD/1.10": "0x6841"
+        "LoD/1.10": "0x6841",
+        "LoD/1.11": "0x28AC",
+        "LoD/1.11b": "0x28AC",
+        "LoD/1.12a": "0x28CC",
+        "LoD/1.13d": "0x28AC"
       },
+      "name": "__NMSG_WRITE",
+      "signature": "void __NMSG_WRITE(int param_1)",
+      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-02T01:35:59.864212
+// Generated: 2025-12-03T14:42:04.471088
 // Functions for Fog.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -55,12 +55,14 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_API_0a3c29d06ca6": {
       "addresses": {
+        "LoD/1.11": "0x6FF5E0C0",
         "LoD/1.11b": "0x6FF6D380",
         "LoD/1.12a": "0x6FF6AD40",
         "LoD/1.13c": "0x6FF6B560",
         "LoD/1.13d": "0x6FF6C2B0"
       },
       "rvas": {
+        "LoD/1.11": "0xE0C0",
         "LoD/1.11b": "0x1D380",
         "LoD/1.12a": "0x1AD40",
         "LoD/1.13c": "0x1B560",
@@ -92,16 +94,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "API",
       "index": "API:0b35e998d399937e74e143528a2164a0"
-    },
-    "Fog_API_0b8a1a4d90f0": {
-      "addresses": {
-        "LoD/1.10": "0x6FF612C0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x112C0"
-      },
-      "method": "API",
-      "index": "API:0b8a1a4d90f0024ef2fa00b672ff301f"
     },
     "Fog_API_0ecc7bae8324": {
       "addresses": {
@@ -151,16 +143,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "API",
       "index": "API:1620abf771bf3b68e2ff7909f7171a52"
-    },
-    "Fog_API_1c8dc7d6cc1d": {
-      "addresses": {
-        "LoD/1.07": "0x6FF68070"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8070"
-      },
-      "method": "API",
-      "index": "API:1c8dc7d6cc1d573b5b63d90cc3d7ee2d"
     },
     "Fog_API_1e12edb01272": {
       "addresses": {
@@ -269,16 +251,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "API",
       "index": "API:3d7e851d404bcfa0b86461072896c533"
     },
-    "Fog_API_42d8040eb878": {
-      "addresses": {
-        "LoD/1.07": "0x6FF68780"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8780"
-      },
-      "method": "API",
-      "index": "API:42d8040eb878cb66439a2ca1b2453df9"
-    },
     "Fog_API_46e53f2d848e": {
       "addresses": {
         "LoD/1.11": "0x6FF68B00",
@@ -338,12 +310,14 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF63680",
         "LoD/1.08": "0x6FF63680",
         "LoD/1.09b": "0x6FF536D0",
+        "LoD/1.09d": "0x6FF539E0",
         "LoD/1.10": "0x6FF54C20"
       },
       "rvas": {
         "LoD/1.07": "0x3680",
         "LoD/1.08": "0x3680",
         "LoD/1.09b": "0x36D0",
+        "LoD/1.09d": "0x39E0",
         "LoD/1.10": "0x4C20"
       },
       "method": "API",
@@ -384,16 +358,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "API",
       "index": "API:589ba5739a9a4f170ae931c6595bfe70"
-    },
-    "Fog_API_5d0f09772610": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5E0C0"
-      },
-      "rvas": {
-        "LoD/1.11": "0xE0C0"
-      },
-      "method": "API",
-      "index": "API:5d0f097726102e1c29ffd13c8d3f9e48"
     },
     "Fog_API_5d6eab112f3f": {
       "addresses": {
@@ -440,16 +404,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "API",
       "index": "API:672039aef444ca5be234d8de6e3d7dce"
-    },
-    "Fog_API_7b9cdc0de721": {
-      "addresses": {
-        "LoD/1.07": "0x6FF68940"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8940"
-      },
-      "method": "API",
-      "index": "API:7b9cdc0de7218689362d5d9dca926f7a"
     },
     "Fog_API_7e3152b22536": {
       "addresses": {
@@ -757,6 +711,7 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_API_c78224f862d0": {
       "addresses": {
+        "LoD/1.10": "0x6FF612C0",
         "LoD/1.11": "0x6FF5F250",
         "LoD/1.11b": "0x6FF69B50",
         "LoD/1.12a": "0x6FF6CAF0",
@@ -764,6 +719,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF64110"
       },
       "rvas": {
+        "LoD/1.10": "0x112C0",
         "LoD/1.11": "0xF250",
         "LoD/1.11b": "0x19B50",
         "LoD/1.12a": "0x1CAF0",
@@ -790,22 +746,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "API",
       "index": "API:ce5c49911a3d55bcbe91b1284f4b1d93"
-    },
-    "Fog_API_cf7da95470cb": {
-      "addresses": {
-        "LoD/1.07": "0x6FF70440",
-        "LoD/1.08": "0x6FF70400",
-        "LoD/1.09b": "0x6FF604D0",
-        "LoD/1.09d": "0x6FF60CA0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x10440",
-        "LoD/1.08": "0x10400",
-        "LoD/1.09b": "0x104D0",
-        "LoD/1.09d": "0x10CA0"
-      },
-      "method": "API",
-      "index": "API:cf7da95470cbe47146dff77f8a75e8a0"
     },
     "Fog_API_d1c721114053": {
       "addresses": {
@@ -1509,23 +1449,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF6D7F0",
         "LoD/1.09b": "0x6FF5D880",
         "LoD/1.09d": "0x6FF5D6A0",
-        "LoD/1.10": "0x6FF5EDF0"
-      },
-      "rvas": {
-        "LoD/1.07": "0xD830",
-        "LoD/1.08": "0xD7F0",
-        "LoD/1.09b": "0xD880",
-        "LoD/1.09d": "0xD6A0",
-        "LoD/1.10": "0xEDF0"
-      },
-      "name": "Ordinal_10023",
-      "signature": "undefined Ordinal_10023(undefined4 param_1, char * param_2, undefined4 param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10023"
-    },
-    "Fog_EXP_10026": {
-      "addresses": {
+        "LoD/1.10": "0x6FF5EDF0",
         "LoD/1.11": "0x6FF6DE20",
         "LoD/1.11b": "0x6FF5E1A0",
         "LoD/1.12a": "0x6FF60EC0",
@@ -1533,17 +1457,22 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF5E440"
       },
       "rvas": {
+        "LoD/1.07": "0xD830",
+        "LoD/1.08": "0xD7F0",
+        "LoD/1.09b": "0xD880",
+        "LoD/1.09d": "0xD6A0",
+        "LoD/1.10": "0xEDF0",
         "LoD/1.11": "0x1DE20",
         "LoD/1.11b": "0xE1A0",
         "LoD/1.12a": "0x10EC0",
         "LoD/1.13c": "0x11130",
         "LoD/1.13d": "0xE440"
       },
-      "name": "Ordinal_10026",
-      "signature": "undefined Ordinal_10026(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4)",
-      "name_source": "LoD/1.11",
+      "name": "Ordinal_10023",
+      "signature": "undefined Ordinal_10023(undefined4 param_1, char * param_2, undefined4 param_3)",
+      "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10026"
+      "index": "EXP:10023"
     },
     "Fog_EXP_10028": {
       "addresses": {
@@ -1989,29 +1918,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10044"
-    },
-    "Fog_EXP_10045": {
-      "addresses": {
-        "LoD/1.07": "0x6FF67DB0",
-        "LoD/1.08": "0x6FF67DA0",
-        "LoD/1.09b": "0x6FF57E10",
-        "LoD/1.09d": "0x6FF57B40",
-        "LoD/1.10": "0x6FF58FF0",
-        "LoD/1.11": "0x6FF5CE10"
-      },
-      "rvas": {
-        "LoD/1.07": "0x7DB0",
-        "LoD/1.08": "0x7DA0",
-        "LoD/1.09b": "0x7E10",
-        "LoD/1.09d": "0x7B40",
-        "LoD/1.10": "0x8FF0",
-        "LoD/1.11": "0xCE10"
-      },
-      "name": "Ordinal_10045",
-      "signature": "int * Ordinal_10045(uint param_1, int param_2, char * param_3, undefined4 param_4)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10045"
     },
     "Fog_EXP_10046": {
       "addresses": {
@@ -2756,25 +2662,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10074"
-    },
-    "Fog_EXP_10075": {
-      "addresses": {
-        "LoD/1.07": "0x6FF617F0",
-        "LoD/1.08": "0x6FF617F0",
-        "LoD/1.09b": "0x6FF517F0",
-        "LoD/1.09d": "0x6FF517F0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x17F0",
-        "LoD/1.08": "0x17F0",
-        "LoD/1.09b": "0x17F0",
-        "LoD/1.09d": "0x17F0"
-      },
-      "name": "Ordinal_10075",
-      "signature": "undefined Ordinal_10075(int param_1)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10075"
     },
     "Fog_EXP_10076": {
       "addresses": {
@@ -3932,33 +3819,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "EXP",
       "index": "EXP:10125"
     },
-    "Fog_EXP_10126": {
-      "addresses": {
-        "LoD/1.07": "0x6FF62080",
-        "LoD/1.08": "0x6FF62080",
-        "LoD/1.09b": "0x6FF52080",
-        "LoD/1.09d": "0x6FF52070",
-        "LoD/1.11b": "0x6FF67BD0",
-        "LoD/1.12a": "0x6FF64C70",
-        "LoD/1.13c": "0x6FF6CD50",
-        "LoD/1.13d": "0x6FF6B3B0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x2080",
-        "LoD/1.08": "0x2080",
-        "LoD/1.09b": "0x2080",
-        "LoD/1.09d": "0x2070",
-        "LoD/1.11b": "0x17BD0",
-        "LoD/1.12a": "0x14C70",
-        "LoD/1.13c": "0x1CD50",
-        "LoD/1.13d": "0x1B3B0"
-      },
-      "name": "Ordinal_10126",
-      "signature": "undefined Ordinal_10126(undefined4 * param_1, undefined4 param_2, int param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10126"
-    },
     "Fog_EXP_10127": {
       "addresses": {
         "LoD/1.07": "0x6FF620D0",
@@ -5021,25 +4881,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "EXP",
       "index": "EXP:10171"
     },
-    "Fog_EXP_10172": {
-      "addresses": {
-        "LoD/1.07": "0x6FF65BF0",
-        "LoD/1.08": "0x6FF65BF0",
-        "LoD/1.09b": "0x6FF55C50",
-        "LoD/1.09d": "0x6FF55260"
-      },
-      "rvas": {
-        "LoD/1.07": "0x5BF0",
-        "LoD/1.08": "0x5BF0",
-        "LoD/1.09b": "0x5C50",
-        "LoD/1.09d": "0x5260"
-      },
-      "name": "Ordinal_10172",
-      "signature": "undefined Ordinal_10172(int param_1, uint param_2, uint param_3)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10172"
-    },
     "Fog_EXP_10173": {
       "addresses": {
         "LoD/1.07": "0x6FF65C50",
@@ -5672,27 +5513,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "EXP",
       "index": "EXP:10205"
     },
-    "Fog_EXP_10206": {
-      "addresses": {
-        "LoD/1.07": "0x6FF6FC80",
-        "LoD/1.08": "0x6FF6FC40",
-        "LoD/1.09b": "0x6FF5FD10",
-        "LoD/1.09d": "0x6FF604E0",
-        "LoD/1.10": "0x6FF61BD0"
-      },
-      "rvas": {
-        "LoD/1.07": "0xFC80",
-        "LoD/1.08": "0xFC40",
-        "LoD/1.09b": "0xFD10",
-        "LoD/1.09d": "0x104E0",
-        "LoD/1.10": "0x11BD0"
-      },
-      "name": "Ordinal_10206",
-      "signature": "undefined4 Ordinal_10206(undefined4 param_1, int param_2, int * param_3, int * param_4)",
-      "name_source": "LoD/1.07",
-      "method": "EXP",
-      "index": "EXP:10206"
-    },
     "Fog_EXP_10207": {
       "addresses": {
         "LoD/1.09b": "0x6FF59900",
@@ -6292,6 +6112,9 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_EXP_10234": {
       "addresses": {
+        "LoD/1.07": "0x6FF705C0",
+        "LoD/1.08": "0x6FF70580",
+        "LoD/1.09b": "0x6FF60650",
         "LoD/1.09d": "0x6FF5FCA0",
         "LoD/1.10": "0x6FF61E00",
         "LoD/1.11": "0x6FF65B20",
@@ -6301,6 +6124,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF61870"
       },
       "rvas": {
+        "LoD/1.07": "0x105C0",
+        "LoD/1.08": "0x10580",
+        "LoD/1.09b": "0x10650",
         "LoD/1.09d": "0xFCA0",
         "LoD/1.10": "0x11E00",
         "LoD/1.11": "0x15B20",
@@ -6317,6 +6143,9 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_EXP_10235": {
       "addresses": {
+        "LoD/1.07": "0x6FF6FC80",
+        "LoD/1.08": "0x6FF6FC40",
+        "LoD/1.09b": "0x6FF5FD10",
         "LoD/1.09d": "0x6FF5DB90",
         "LoD/1.10": "0x6FF61F20",
         "LoD/1.11": "0x6FF6CA40",
@@ -6326,6 +6155,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF6E230"
       },
       "rvas": {
+        "LoD/1.07": "0xFC80",
+        "LoD/1.08": "0xFC40",
+        "LoD/1.09b": "0xFD10",
         "LoD/1.09d": "0xDB90",
         "LoD/1.10": "0x11F20",
         "LoD/1.11": "0x1CA40",
@@ -6388,29 +6220,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10244"
-    },
-    "Fog_EXP_10245": {
-      "addresses": {
-        "LoD/1.10": "0x6FF55FF0",
-        "LoD/1.11": "0x6FF641B0",
-        "LoD/1.11b": "0x6FF66D30",
-        "LoD/1.12a": "0x6FF630B0",
-        "LoD/1.13c": "0x6FF5ED70",
-        "LoD/1.13d": "0x6FF671B0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x5FF0",
-        "LoD/1.11": "0x141B0",
-        "LoD/1.11b": "0x16D30",
-        "LoD/1.12a": "0x130B0",
-        "LoD/1.13c": "0xED70",
-        "LoD/1.13d": "0x171B0"
-      },
-      "name": "Ordinal_10245",
-      "signature": "undefined4 Ordinal_10245(int param_1, uint param_2)",
-      "name_source": "LoD/1.10",
-      "method": "EXP",
-      "index": "EXP:10245"
     },
     "Fog_EXP_10246": {
       "addresses": {
@@ -6526,27 +6335,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10250"
-    },
-    "Fog_EXP_10251": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6E0E0",
-        "LoD/1.11b": "0x6FF5E460",
-        "LoD/1.12a": "0x6FF61420",
-        "LoD/1.13c": "0x6FF61690",
-        "LoD/1.13d": "0x6FF5DAE0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1E0E0",
-        "LoD/1.11b": "0xE460",
-        "LoD/1.12a": "0x11420",
-        "LoD/1.13c": "0x11690",
-        "LoD/1.13d": "0xDAE0"
-      },
-      "name": "Ordinal_10251",
-      "signature": "undefined Ordinal_10251(uint * param_1, undefined4 param_2)",
-      "name_source": "LoD/1.11",
-      "method": "EXP",
-      "index": "EXP:10251"
     },
     "Fog_EXP_10252": {
       "addresses": {
@@ -7306,11 +7094,15 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF547FF",
         "LoD/1.11b": "0x6FF57C06",
+        "LoD/1.12a": "0x6FF57C81",
+        "LoD/1.13c": "0x6FF57C9C",
         "LoD/1.13d": "0x6FF57C07"
       },
       "rvas": {
         "LoD/1.11": "0x47FF",
         "LoD/1.11b": "0x7C06",
+        "LoD/1.12a": "0x7C81",
+        "LoD/1.13c": "0x7C9C",
         "LoD/1.13d": "0x7C07"
       },
       "name": "___sse2_available_init",
@@ -8967,35 +8759,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "MNE",
       "index": "MNE:305f98c2994b523fe4a005bfb539afe0"
     },
-    "Fog_MNE_30b726d4e1cd": {
-      "addresses": {
-        "LoD/1.07": "0x6FF63A10",
-        "LoD/1.08": "0x6FF63A10",
-        "LoD/1.09b": "0x6FF53A70",
-        "LoD/1.09d": "0x6FF537E0",
-        "LoD/1.11": "0x6FF62660",
-        "LoD/1.11b": "0x6FF6E0C0",
-        "LoD/1.12a": "0x6FF64740",
-        "LoD/1.13c": "0x6FF6F8C0",
-        "LoD/1.13d": "0x6FF608B0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x3A10",
-        "LoD/1.08": "0x3A10",
-        "LoD/1.09b": "0x3A70",
-        "LoD/1.09d": "0x37E0",
-        "LoD/1.11": "0x12660",
-        "LoD/1.11b": "0x1E0C0",
-        "LoD/1.12a": "0x14740",
-        "LoD/1.13c": "0x1F8C0",
-        "LoD/1.13d": "0x108B0"
-      },
-      "name": "Ordinal_10137",
-      "signature": "ushort Ordinal_10137(byte * param_1)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:30b726d4e1cd72a83329227082b69591"
-    },
     "Fog_MNE_30f0fd08cad9": {
       "addresses": {
         "LoD/1.07": "0x6FF7AB50",
@@ -9668,18 +9431,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "MNE",
       "index": "MNE:44e1de2e8adb85b98c05499e3a65ec6f"
-    },
-    "Fog_MNE_44f4f246fc7b": {
-      "addresses": {
-        "LoD/1.12a": "0x6FF57C81",
-        "LoD/1.13c": "0x6FF57C9C"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x7C81",
-        "LoD/1.13c": "0x7C9C"
-      },
-      "method": "MNE",
-      "index": "MNE:44f4f246fc7b0dfe7a4c27a8f0c38630"
     },
     "Fog_MNE_457ecf3d8055": {
       "addresses": {
@@ -14148,20 +13899,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "MNE",
       "index": "MNE:ad308a3db1ba280148d608adc1e8a8f1"
     },
-    "Fog_MNE_ada4934be1b8": {
-      "addresses": {
-        "LoD/1.07": "0x6FF66D60",
-        "LoD/1.08": "0x6FF66D50",
-        "LoD/1.09b": "0x6FF56DC0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x6D60",
-        "LoD/1.08": "0x6D50",
-        "LoD/1.09b": "0x6DC0"
-      },
-      "method": "MNE",
-      "index": "MNE:ada4934be1b87612dfd59fc302b932f9"
-    },
     "Fog_MNE_adafedc33ce1": {
       "addresses": {
         "LoD/1.11": "0x6FF5355D",
@@ -14459,16 +14196,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "MNE",
       "index": "MNE:b2142e05ac8c27126b8b7a16320004b6"
-    },
-    "Fog_MNE_b2324314a0d8": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF56360"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x6360"
-      },
-      "method": "MNE",
-      "index": "MNE:b2324314a0d80bfcf1c6ae0f682694e3"
     },
     "Fog_MNE_b2858c1eba0e": {
       "addresses": {
@@ -14827,6 +14554,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF63A60",
         "LoD/1.09b": "0x6FF53AC0",
         "LoD/1.09d": "0x6FF53830",
+        "LoD/1.10": "0x6FF55FF0",
         "LoD/1.11": "0x6FF68990",
         "LoD/1.11b": "0x6FF5F550",
         "LoD/1.12a": "0x6FF675B0",
@@ -14838,6 +14566,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x3A60",
         "LoD/1.09b": "0x3AC0",
         "LoD/1.09d": "0x3830",
+        "LoD/1.10": "0x5FF0",
         "LoD/1.11": "0x18990",
         "LoD/1.11b": "0xF550",
         "LoD/1.12a": "0x175B0",
@@ -16588,22 +16317,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:dd1410dc737c66ed6127a2f60f9bdf3c"
-    },
-    "Fog_MNE_de5ac3f14f00": {
-      "addresses": {
-        "LoD/1.07": "0x6FF641F0",
-        "LoD/1.08": "0x6FF641F0",
-        "LoD/1.09b": "0x6FF54250",
-        "LoD/1.09d": "0x6FF54020"
-      },
-      "rvas": {
-        "LoD/1.07": "0x41F0",
-        "LoD/1.08": "0x41F0",
-        "LoD/1.09b": "0x4250",
-        "LoD/1.09d": "0x4020"
-      },
-      "method": "MNE",
-      "index": "MNE:de5ac3f14f0082dc1233abb34fdc3558"
     },
     "Fog_MNE_de76025ed283": {
       "addresses": {
@@ -18401,16 +18114,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:073d12bf449a1f77ae948f0dd65b17ea"
     },
-    "Fog_STR_0b218b89dbc1": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF56070"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x6070"
-      },
-      "method": "STR",
-      "index": "STR:0b218b89dbc15e710435a87b88699197"
-    },
     "Fog_STR_0c30fb893d87": {
       "addresses": {
         "LoD/1.07": "0x6FF610B0",
@@ -18431,6 +18134,7 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_STR_0f58063caf63": {
       "addresses": {
+        "LoD/1.10": "0x6FF5FB30",
         "LoD/1.11": "0x6FF60580",
         "LoD/1.11b": "0x6FF6B560",
         "LoD/1.12a": "0x6FF6E500",
@@ -18438,6 +18142,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF65AF0"
       },
       "rvas": {
+        "LoD/1.10": "0xFB30",
         "LoD/1.11": "0x10580",
         "LoD/1.11b": "0x1B560",
         "LoD/1.12a": "0x1E500",
@@ -18480,13 +18185,25 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF66B30",
         "LoD/1.08": "0x6FF66B20",
         "LoD/1.09b": "0x6FF56B90",
-        "LoD/1.10": "0x6FF57EE0"
+        "LoD/1.09d": "0x6FF56070",
+        "LoD/1.10": "0x6FF57EE0",
+        "LoD/1.11": "0x6FF6AFE0",
+        "LoD/1.11b": "0x6FF70D60",
+        "LoD/1.12a": "0x6FF71040",
+        "LoD/1.13c": "0x6FF71050",
+        "LoD/1.13d": "0x6FF70D80"
       },
       "rvas": {
         "LoD/1.07": "0x6B30",
         "LoD/1.08": "0x6B20",
         "LoD/1.09b": "0x6B90",
-        "LoD/1.10": "0x7EE0"
+        "LoD/1.09d": "0x6070",
+        "LoD/1.10": "0x7EE0",
+        "LoD/1.11": "0x1AFE0",
+        "LoD/1.11b": "0x20D60",
+        "LoD/1.12a": "0x21040",
+        "LoD/1.13c": "0x21050",
+        "LoD/1.13d": "0x20D80"
       },
       "method": "STR",
       "index": "STR:14494f4f58f5e2c7031485d950098613"
@@ -18577,36 +18294,20 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:17e887243b6e680a9ff29e429dd90793"
     },
-    "Fog_STR_1d90f190d6c5": {
-      "addresses": {
-        "LoD/1.07": "0x6FF68140",
-        "LoD/1.08": "0x6FF680D0",
-        "LoD/1.09b": "0x6FF58140",
-        "LoD/1.09d": "0x6FF57E60",
-        "LoD/1.10": "0x6FF59310"
-      },
-      "rvas": {
-        "LoD/1.07": "0x8140",
-        "LoD/1.08": "0x80D0",
-        "LoD/1.09b": "0x8140",
-        "LoD/1.09d": "0x7E60",
-        "LoD/1.10": "0x9310"
-      },
-      "method": "STR",
-      "index": "STR:1d90f190d6c54308df7c4fc6d8b6fc96"
-    },
     "Fog_STR_1dcaea40b9d9": {
       "addresses": {
         "LoD/1.07": "0x6FF679E0",
         "LoD/1.08": "0x6FF679D0",
         "LoD/1.09b": "0x6FF57A40",
-        "LoD/1.09d": "0x6FF573C0"
+        "LoD/1.09d": "0x6FF573C0",
+        "LoD/1.10": "0x6FF58D20"
       },
       "rvas": {
         "LoD/1.07": "0x79E0",
         "LoD/1.08": "0x79D0",
         "LoD/1.09b": "0x7A40",
-        "LoD/1.09d": "0x73C0"
+        "LoD/1.09d": "0x73C0",
+        "LoD/1.10": "0x8D20"
       },
       "method": "STR",
       "index": "STR:1dcaea40b9d99bd66628a5912bf0bf83"
@@ -18616,13 +18317,15 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF69440",
         "LoD/1.08": "0x6FF69400",
         "LoD/1.09b": "0x6FF59450",
-        "LoD/1.09d": "0x6FF59180"
+        "LoD/1.09d": "0x6FF59180",
+        "LoD/1.10": "0x6FF5A5C0"
       },
       "rvas": {
         "LoD/1.07": "0x9440",
         "LoD/1.08": "0x9400",
         "LoD/1.09b": "0x9450",
-        "LoD/1.09d": "0x9180"
+        "LoD/1.09d": "0x9180",
+        "LoD/1.10": "0xA5C0"
       },
       "method": "STR",
       "index": "STR:1f5279705411283fd2a015c5706f2225"
@@ -18751,16 +18454,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:370b8cbe13698caeaaee92ddff8255c1"
     },
-    "Fog_STR_3ee84ddb78f5": {
-      "addresses": {
-        "LoD/1.10": "0x6FF5D1E0"
-      },
-      "rvas": {
-        "LoD/1.10": "0xD1E0"
-      },
-      "method": "STR",
-      "index": "STR:3ee84ddb78f5e8c5b97d6bb3dd5345e7"
-    },
     "Fog_STR_4295246be1e0": {
       "addresses": {
         "LoD/1.07": "0x6FF6B190",
@@ -18782,38 +18475,9 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:4295246be1e013152171e6d30abec394"
     },
-    "Fog_STR_48026d1fb780": {
-      "addresses": {
-        "LoD/1.10": "0x6FF5A5C0"
-      },
-      "rvas": {
-        "LoD/1.10": "0xA5C0"
-      },
-      "method": "STR",
-      "index": "STR:48026d1fb78014d68eaef5862eba254f"
-    },
-    "Fog_STR_48799f516ae1": {
-      "addresses": {
-        "LoD/1.13d": "0x6FF64DD0"
-      },
-      "rvas": {
-        "LoD/1.13d": "0x14DD0"
-      },
-      "method": "STR",
-      "index": "STR:48799f516ae1f7fc10304436daa8a57f"
-    },
-    "Fog_STR_4fb27b41dfcd": {
-      "addresses": {
-        "LoD/1.10": "0x6FF600B0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x100B0"
-      },
-      "method": "STR",
-      "index": "STR:4fb27b41dfcd92da152bfd6e8bf336e6"
-    },
     "Fog_STR_59ad52a59b45": {
       "addresses": {
+        "LoD/1.07": "0x6FF68780",
         "LoD/1.08": "0x6FF68550",
         "LoD/1.09b": "0x6FF585C0",
         "LoD/1.09d": "0x6FF582E0",
@@ -18825,6 +18489,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x6FF6C0E0"
       },
       "rvas": {
+        "LoD/1.07": "0x8780",
         "LoD/1.08": "0x8550",
         "LoD/1.09b": "0x85C0",
         "LoD/1.09d": "0x82E0",
@@ -18866,16 +18531,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:600d3ae033e0741e1139b14485aa8334"
     },
-    "Fog_STR_61aeeb0b1efe": {
-      "addresses": {
-        "LoD/1.10": "0x6FF5FB30"
-      },
-      "rvas": {
-        "LoD/1.10": "0xFB30"
-      },
-      "method": "STR",
-      "index": "STR:61aeeb0b1efe67794908d1b18511d9e4"
-    },
     "Fog_STR_62794276b365": {
       "addresses": {
         "LoD/1.09d": "0x6FF55F30"
@@ -18891,13 +18546,15 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF6E360",
         "LoD/1.08": "0x6FF6E320",
         "LoD/1.09b": "0x6FF5E3F0",
-        "LoD/1.09d": "0x6FF5E400"
+        "LoD/1.09d": "0x6FF5E400",
+        "LoD/1.10": "0x6FF60940"
       },
       "rvas": {
         "LoD/1.07": "0xE360",
         "LoD/1.08": "0xE320",
         "LoD/1.09b": "0xE3F0",
-        "LoD/1.09d": "0xE400"
+        "LoD/1.09d": "0xE400",
+        "LoD/1.10": "0x10940"
       },
       "method": "STR",
       "index": "STR:638e05a88b468490de3624ecf1666266"
@@ -18912,7 +18569,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11": "0x6FF5F7B0",
         "LoD/1.11b": "0x6FF6A560",
         "LoD/1.12a": "0x6FF6D500",
-        "LoD/1.13c": "0x6FF64F50"
+        "LoD/1.13c": "0x6FF64F50",
+        "LoD/1.13d": "0x6FF64DD0"
       },
       "rvas": {
         "LoD/1.07": "0xF380",
@@ -18923,7 +18581,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11": "0xF7B0",
         "LoD/1.11b": "0x1A560",
         "LoD/1.12a": "0x1D500",
-        "LoD/1.13c": "0x14F50"
+        "LoD/1.13c": "0x14F50",
+        "LoD/1.13d": "0x14DD0"
       },
       "method": "STR",
       "index": "STR:6ce20c24ac6c785d91126d8859782809"
@@ -18945,16 +18604,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "STR",
       "index": "STR:744c65e40de802c8e02230642f7eca2e"
-    },
-    "Fog_STR_77757faa9551": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF539E0"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x39E0"
-      },
-      "method": "STR",
-      "index": "STR:77757faa955192aabfd918a0b8488001"
     },
     "Fog_STR_7991fff2abb2": {
       "addresses": {
@@ -19017,12 +18666,14 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF646A0",
         "LoD/1.08": "0x6FF646A0",
         "LoD/1.09b": "0x6FF54700",
+        "LoD/1.09d": "0x6FF544D0",
         "LoD/1.10": "0x6FF55AD0"
       },
       "rvas": {
         "LoD/1.07": "0x46A0",
         "LoD/1.08": "0x46A0",
         "LoD/1.09b": "0x4700",
+        "LoD/1.09d": "0x44D0",
         "LoD/1.10": "0x5AD0"
       },
       "method": "STR",
@@ -19034,6 +18685,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF6F110",
         "LoD/1.09b": "0x6FF5F1E0",
         "LoD/1.09d": "0x6FF5F1F0",
+        "LoD/1.10": "0x6FF600B0",
         "LoD/1.11": "0x6FF5EA90",
         "LoD/1.11b": "0x6FF6A850",
         "LoD/1.12a": "0x6FF6D7F0",
@@ -19045,6 +18697,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0xF110",
         "LoD/1.09b": "0xF1E0",
         "LoD/1.09d": "0xF1F0",
+        "LoD/1.10": "0x100B0",
         "LoD/1.11": "0xEA90",
         "LoD/1.11b": "0x1A850",
         "LoD/1.12a": "0x1D7F0",
@@ -19115,34 +18768,18 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.07": "0x6FF67610",
         "LoD/1.08": "0x6FF67600",
         "LoD/1.09b": "0x6FF57670",
-        "LoD/1.09d": "0x6FF57000"
+        "LoD/1.09d": "0x6FF57000",
+        "LoD/1.10": "0x6FF58A00"
       },
       "rvas": {
         "LoD/1.07": "0x7610",
         "LoD/1.08": "0x7600",
         "LoD/1.09b": "0x7670",
-        "LoD/1.09d": "0x7000"
+        "LoD/1.09d": "0x7000",
+        "LoD/1.10": "0x8A00"
       },
       "method": "STR",
       "index": "STR:855761004b4ca98432395fc960fe4a58"
-    },
-    "Fog_STR_8b0deec5f672": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6AFE0",
-        "LoD/1.11b": "0x6FF70D60",
-        "LoD/1.12a": "0x6FF71040",
-        "LoD/1.13c": "0x6FF71050",
-        "LoD/1.13d": "0x6FF70D80"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1AFE0",
-        "LoD/1.11b": "0x20D60",
-        "LoD/1.12a": "0x21040",
-        "LoD/1.13c": "0x21050",
-        "LoD/1.13d": "0x20D80"
-      },
-      "method": "STR",
-      "index": "STR:8b0deec5f67260bfe4ae73e150bfe9c3"
     },
     "Fog_STR_8c32e4eebf55": {
       "addresses": {
@@ -19180,16 +18817,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:947d8d1015b741659c9b603f097a50b9"
     },
-    "Fog_STR_9728451ea86a": {
-      "addresses": {
-        "LoD/1.09d": "0x6FF544D0"
-      },
-      "rvas": {
-        "LoD/1.09d": "0x44D0"
-      },
-      "method": "STR",
-      "index": "STR:9728451ea86a502cfa771dacfea6f307"
-    },
     "Fog_STR_97d1e397fedc": {
       "addresses": {
         "LoD/1.11": "0x6FF6A3B0",
@@ -19207,16 +18834,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "STR",
       "index": "STR:97d1e397fedc0d33a5bc9792abc96489"
-    },
-    "Fog_STR_9bf20d263f34": {
-      "addresses": {
-        "LoD/1.10": "0x6FF58D20"
-      },
-      "rvas": {
-        "LoD/1.10": "0x8D20"
-      },
-      "method": "STR",
-      "index": "STR:9bf20d263f342ae4ed73b90a2a39247f"
     },
     "Fog_STR_9edd5270653a": {
       "addresses": {
@@ -19260,44 +18877,30 @@ var FUNCTIONS_Fog_dll = {
     },
     "Fog_STR_a015eab5fed8": {
       "addresses": {
-        "LoD/1.09d": "0x6FF5B9C0"
+        "LoD/1.09d": "0x6FF5B9C0",
+        "LoD/1.10": "0x6FF5D1E0"
       },
       "rvas": {
-        "LoD/1.09d": "0xB9C0"
+        "LoD/1.09d": "0xB9C0",
+        "LoD/1.10": "0xD1E0"
       },
       "method": "STR",
       "index": "STR:a015eab5fed8d337a5bab68b07193676"
-    },
-    "Fog_STR_a1367c02e1ae": {
-      "addresses": {
-        "LoD/1.11": "0x6FF65650",
-        "LoD/1.11b": "0x6FF630C0",
-        "LoD/1.12a": "0x6FF689F0",
-        "LoD/1.13c": "0x6FF68150",
-        "LoD/1.13d": "0x6FF614B0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x15650",
-        "LoD/1.11b": "0x130C0",
-        "LoD/1.12a": "0x189F0",
-        "LoD/1.13c": "0x18150",
-        "LoD/1.13d": "0x114B0"
-      },
-      "method": "STR",
-      "index": "STR:a1367c02e1ae1d02d00265a2c610e5cf"
     },
     "Fog_STR_a40bf57280aa": {
       "addresses": {
         "LoD/1.07": "0x6FF70770",
         "LoD/1.08": "0x6FF70730",
         "LoD/1.09b": "0x6FF60800",
-        "LoD/1.09d": "0x6FF60FD0"
+        "LoD/1.09d": "0x6FF60FD0",
+        "LoD/1.10": "0x6FF62C00"
       },
       "rvas": {
         "LoD/1.07": "0x10770",
         "LoD/1.08": "0x10730",
         "LoD/1.09b": "0x10800",
-        "LoD/1.09d": "0x10FD0"
+        "LoD/1.09d": "0x10FD0",
+        "LoD/1.10": "0x12C00"
       },
       "method": "STR",
       "index": "STR:a40bf57280aa8799f4c93814ebcee28e"
@@ -19378,16 +18981,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:ad3ba72ec17d8cc667b622e5969bd99c"
     },
-    "Fog_STR_aee4cb8c76a6": {
-      "addresses": {
-        "LoD/1.10": "0x6FF62C00"
-      },
-      "rvas": {
-        "LoD/1.10": "0x12C00"
-      },
-      "method": "STR",
-      "index": "STR:aee4cb8c76a69bfb842eb87f2bd21e48"
-    },
     "Fog_STR_b05a18f448a1": {
       "addresses": {
         "LoD/1.07": "0x6FF61A20",
@@ -19443,15 +19036,29 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF74722",
         "LoD/1.09b": "0x6FF6481D",
         "LoD/1.09d": "0x6FF65482",
-        "LoD/1.10": "0x6FF6746D"
+        "LoD/1.10": "0x6FF6746D",
+        "LoD/1.11": "0x6FF53CCC",
+        "LoD/1.11b": "0x6FF54072",
+        "LoD/1.12a": "0x6FF550A6",
+        "LoD/1.13c": "0x6FF5411F",
+        "LoD/1.13d": "0x6FF537CF"
       },
       "rvas": {
         "LoD/1.07": "0x14762",
         "LoD/1.08": "0x14722",
         "LoD/1.09b": "0x1481D",
         "LoD/1.09d": "0x15482",
-        "LoD/1.10": "0x1746D"
+        "LoD/1.10": "0x1746D",
+        "LoD/1.11": "0x3CCC",
+        "LoD/1.11b": "0x4072",
+        "LoD/1.12a": "0x50A6",
+        "LoD/1.13c": "0x411F",
+        "LoD/1.13d": "0x37CF"
       },
+      "name": "__output",
+      "signature": "undefined __output(undefined4 param_1, byte * param_2, wchar_t * param_3)",
+      "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:b7a52aed3655c7d65807498f610c8ff8"
     },
@@ -19491,28 +19098,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:be6569ba552271725c00e1bb8d02b46b"
     },
-    "Fog_STR_c004c7748bfc": {
-      "addresses": {
-        "LoD/1.11": "0x6FF53CCC",
-        "LoD/1.11b": "0x6FF54072",
-        "LoD/1.12a": "0x6FF550A6",
-        "LoD/1.13c": "0x6FF5411F",
-        "LoD/1.13d": "0x6FF537CF"
-      },
-      "rvas": {
-        "LoD/1.11": "0x3CCC",
-        "LoD/1.11b": "0x4072",
-        "LoD/1.12a": "0x50A6",
-        "LoD/1.13c": "0x411F",
-        "LoD/1.13d": "0x37CF"
-      },
-      "name": "__output",
-      "signature": "undefined __output(undefined4 param_1, byte * param_2, wchar_t * param_3)",
-      "comment": "Library Function - Single Match\n __output\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:c004c7748bfc4fad131df79cf3b532f1"
-    },
     "Fog_STR_c0a57bdce36b": {
       "addresses": {
         "LoD/1.11": "0x6FF5FC10",
@@ -19530,16 +19115,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "method": "STR",
       "index": "STR:c0a57bdce36bdf40a68f8409f3efd2e3"
-    },
-    "Fog_STR_c7ebf6048d58": {
-      "addresses": {
-        "LoD/1.10": "0x6FF58A00"
-      },
-      "rvas": {
-        "LoD/1.10": "0x8A00"
-      },
-      "method": "STR",
-      "index": "STR:c7ebf6048d5881647db4669ab306b10e"
     },
     "Fog_STR_caf0293062c4": {
       "addresses": {
@@ -19617,42 +19192,30 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:d2db0604fac412a2fe23539f154ae0a1"
     },
-    "Fog_STR_d73f4455ba8d": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5ADE8",
-        "LoD/1.11b": "0x6FF5ADE8",
-        "LoD/1.12a": "0x6FF5AEAD",
-        "LoD/1.13c": "0x6FF5AEB4",
-        "LoD/1.13d": "0x6FF5ADEA"
-      },
-      "rvas": {
-        "LoD/1.11": "0xADE8",
-        "LoD/1.11b": "0xADE8",
-        "LoD/1.12a": "0xAEAD",
-        "LoD/1.13c": "0xAEB4",
-        "LoD/1.13d": "0xADEA"
-      },
-      "name": "___crtMessageBoxA",
-      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
-      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:d73f4455ba8d6ae05bafe5684bccdb5a"
-    },
     "Fog_STR_dba0c01f8715": {
       "addresses": {
         "LoD/1.07": "0x6FF70D60",
         "LoD/1.08": "0x6FF70D20",
         "LoD/1.09b": "0x6FF60DF0",
         "LoD/1.09d": "0x6FF615C0",
-        "LoD/1.10": "0x6FF63010"
+        "LoD/1.10": "0x6FF63010",
+        "LoD/1.11": "0x6FF65650",
+        "LoD/1.11b": "0x6FF630C0",
+        "LoD/1.12a": "0x6FF689F0",
+        "LoD/1.13c": "0x6FF68150",
+        "LoD/1.13d": "0x6FF614B0"
       },
       "rvas": {
         "LoD/1.07": "0x10D60",
         "LoD/1.08": "0x10D20",
         "LoD/1.09b": "0x10DF0",
         "LoD/1.09d": "0x115C0",
-        "LoD/1.10": "0x13010"
+        "LoD/1.10": "0x13010",
+        "LoD/1.11": "0x15650",
+        "LoD/1.11b": "0x130C0",
+        "LoD/1.12a": "0x189F0",
+        "LoD/1.13c": "0x18150",
+        "LoD/1.13d": "0x114B0"
       },
       "method": "STR",
       "index": "STR:dba0c01f87159fff3b268de3f7945557"
@@ -19663,14 +19226,24 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF6D850",
         "LoD/1.09b": "0x6FF5D8E0",
         "LoD/1.09d": "0x6FF5D750",
-        "LoD/1.10": "0x6FF5EEA0"
+        "LoD/1.10": "0x6FF5EEA0",
+        "LoD/1.11": "0x6FF6D8D0",
+        "LoD/1.11b": "0x6FF5DB00",
+        "LoD/1.12a": "0x6FF60730",
+        "LoD/1.13c": "0x6FF609A0",
+        "LoD/1.13d": "0x6FF5DC90"
       },
       "rvas": {
         "LoD/1.07": "0xD890",
         "LoD/1.08": "0xD850",
         "LoD/1.09b": "0xD8E0",
         "LoD/1.09d": "0xD750",
-        "LoD/1.10": "0xEEA0"
+        "LoD/1.10": "0xEEA0",
+        "LoD/1.11": "0x1D8D0",
+        "LoD/1.11b": "0xDB00",
+        "LoD/1.12a": "0x10730",
+        "LoD/1.13c": "0x109A0",
+        "LoD/1.13d": "0xDC90"
       },
       "method": "STR",
       "index": "STR:dbf5b745bb0b04927e74b2f845c6f89d"
@@ -19693,38 +19266,30 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:e3337de051d22ed727c661d5c7cec256"
     },
-    "Fog_STR_e55ee0411b08": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6D8D0",
-        "LoD/1.11b": "0x6FF5DB00",
-        "LoD/1.12a": "0x6FF60730",
-        "LoD/1.13c": "0x6FF609A0",
-        "LoD/1.13d": "0x6FF5DC90"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1D8D0",
-        "LoD/1.11b": "0xDB00",
-        "LoD/1.12a": "0x10730",
-        "LoD/1.13c": "0x109A0",
-        "LoD/1.13d": "0xDC90"
-      },
-      "method": "STR",
-      "index": "STR:e55ee0411b082344387ce9faddc79a6a"
-    },
     "Fog_STR_e727c8dc688e": {
       "addresses": {
         "LoD/1.07": "0x6FF6C770",
         "LoD/1.08": "0x6FF6C730",
         "LoD/1.09b": "0x6FF5C770",
         "LoD/1.09d": "0x6FF5C590",
-        "LoD/1.10": "0x6FF5DC60"
+        "LoD/1.10": "0x6FF5DC60",
+        "LoD/1.11": "0x6FF6E0E0",
+        "LoD/1.11b": "0x6FF5E460",
+        "LoD/1.12a": "0x6FF61420",
+        "LoD/1.13c": "0x6FF61690",
+        "LoD/1.13d": "0x6FF5DAE0"
       },
       "rvas": {
         "LoD/1.07": "0xC770",
         "LoD/1.08": "0xC730",
         "LoD/1.09b": "0xC770",
         "LoD/1.09d": "0xC590",
-        "LoD/1.10": "0xDC60"
+        "LoD/1.10": "0xDC60",
+        "LoD/1.11": "0x1E0E0",
+        "LoD/1.11b": "0xE460",
+        "LoD/1.12a": "0x11420",
+        "LoD/1.13c": "0x11690",
+        "LoD/1.13d": "0xDAE0"
       },
       "name": "Ordinal_10251",
       "signature": "undefined Ordinal_10251(uint * param_1)",
@@ -19796,22 +19361,6 @@ var FUNCTIONS_Fog_dll = {
       "method": "STR",
       "index": "STR:efda210ad9921d46c8ca6e84e81e1b38"
     },
-    "Fog_STR_f0fcc2d54e80": {
-      "addresses": {
-        "LoD/1.07": "0x6FF705C0",
-        "LoD/1.08": "0x6FF70580",
-        "LoD/1.09b": "0x6FF60650",
-        "LoD/1.09d": "0x6FF60E20"
-      },
-      "rvas": {
-        "LoD/1.07": "0x105C0",
-        "LoD/1.08": "0x10580",
-        "LoD/1.09b": "0x10650",
-        "LoD/1.09d": "0x10E20"
-      },
-      "method": "STR",
-      "index": "STR:f0fcc2d54e80c59b36a1f4b16c5eee75"
-    },
     "Fog_STR_f5609875b324": {
       "addresses": {
         "LoD/1.09d": "0x6FF53910"
@@ -19828,49 +19377,31 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF7C661",
         "LoD/1.09b": "0x6FF6C751",
         "LoD/1.09d": "0x6FF6DB61",
-        "LoD/1.10": "0x6FF6F361"
+        "LoD/1.10": "0x6FF6F361",
+        "LoD/1.11": "0x6FF5ADE8",
+        "LoD/1.11b": "0x6FF5ADE8",
+        "LoD/1.12a": "0x6FF5AEAD",
+        "LoD/1.13c": "0x6FF5AEB4",
+        "LoD/1.13d": "0x6FF5ADEA"
       },
       "rvas": {
         "LoD/1.07": "0x1C6A1",
         "LoD/1.08": "0x1C661",
         "LoD/1.09b": "0x1C751",
         "LoD/1.09d": "0x1DB61",
-        "LoD/1.10": "0x1F361"
+        "LoD/1.10": "0x1F361",
+        "LoD/1.11": "0xADE8",
+        "LoD/1.11b": "0xADE8",
+        "LoD/1.12a": "0xAEAD",
+        "LoD/1.13c": "0xAEB4",
+        "LoD/1.13d": "0xADEA"
       },
-      "method": "STR",
-      "index": "STR:f59c01a33eca433430cfbab05d487108"
-    },
-    "Fog_STR_f788b2e2e7ed": {
-      "addresses": {
-        "LoD/1.10": "0x6FF60940"
-      },
-      "rvas": {
-        "LoD/1.10": "0x10940"
-      },
-      "method": "STR",
-      "index": "STR:f788b2e2e7edba8781db2775084613d7"
-    },
-    "Fog_STR_f8f89093f5c5": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5842C",
-        "LoD/1.11b": "0x6FF5841C",
-        "LoD/1.12a": "0x6FF584BC",
-        "LoD/1.13c": "0x6FF584CC",
-        "LoD/1.13d": "0x6FF5841C"
-      },
-      "rvas": {
-        "LoD/1.11": "0x842C",
-        "LoD/1.11b": "0x841C",
-        "LoD/1.12a": "0x84BC",
-        "LoD/1.13c": "0x84CC",
-        "LoD/1.13d": "0x841C"
-      },
-      "name": "__NMSG_WRITE",
-      "signature": "void __NMSG_WRITE(int param_1)",
-      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name": "___crtMessageBoxA",
+      "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
+      "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:f8f89093f5c5a57c3cdd998b61227276"
+      "index": "STR:f59c01a33eca433430cfbab05d487108"
     },
     "Fog_STR_fb0ebcabbf75": {
       "addresses": {
@@ -19912,15 +19443,29 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF7928C",
         "LoD/1.09b": "0x6FF6937C",
         "LoD/1.09d": "0x6FF6A6DC",
-        "LoD/1.10": "0x6FF6BF3C"
+        "LoD/1.10": "0x6FF6BF3C",
+        "LoD/1.11": "0x6FF5842C",
+        "LoD/1.11b": "0x6FF5841C",
+        "LoD/1.12a": "0x6FF584BC",
+        "LoD/1.13c": "0x6FF584CC",
+        "LoD/1.13d": "0x6FF5841C"
       },
       "rvas": {
         "LoD/1.07": "0x192CC",
         "LoD/1.08": "0x1928C",
         "LoD/1.09b": "0x1937C",
         "LoD/1.09d": "0x1A6DC",
-        "LoD/1.10": "0x1BF3C"
+        "LoD/1.10": "0x1BF3C",
+        "LoD/1.11": "0x842C",
+        "LoD/1.11b": "0x841C",
+        "LoD/1.12a": "0x84BC",
+        "LoD/1.13c": "0x84CC",
+        "LoD/1.13d": "0x841C"
       },
+      "name": "__NMSG_WRITE",
+      "signature": "void __NMSG_WRITE(int param_1)",
+      "comment": "Library Function - Single Match\n __NMSG_WRITE\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"
     }

@@ -57,15 +57,23 @@
         "CFG",
         "PRO"
     ],
-    "disabled_methods": [
+    "disabled_methods": [],
+    "verified_methods": [
         "EXP"
     ],
     "notes": {
-        "EXP_disabled": "Export ordinals are NOT stable across D2 versions. D2Common.dll has 40+ ordinals that point to different functions between 1.07-1.08. Do not use for cross-version matching."
+        "EXP_verified": "Export ordinals require secondary verification (API/MNE/CFG/STR must also match) because the same ordinal can point to different functions across versions."
     },
     "output": {
         "registry_file": "reports/function_registry_v2.json",
         "include_unmatched": true,
         "min_versions_for_match": 2
+    },
+    "fuzzy_matching": {
+        "enabled": true,
+        "min_similarity": 0.65,
+        "min_size_ratio": 0.55,
+        "min_feature_overlap": 0.25,
+        "normalize_strings": true
     }
 }
