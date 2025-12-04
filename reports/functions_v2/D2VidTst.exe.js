@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:26:13.185974
+// Generated: 2025-12-03T18:49:55.602495
 // Functions for D2VidTst.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -182,29 +182,29 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:03455c508a72225478b465bc4da0dc85",
       "candidates": {
-        "LoD/1.13d": {
+        "LoD/1.11": {
           "address": "0x004055D1",
           "rva": "0x55D1",
-          "confidence": 0.363,
+          "confidence": 0.232,
           "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.13c"
+          "direction": "reverse",
+          "source": "LoD/1.12a"
         },
         "LoD/1.11b": {
           "address": "0x004055D1",
           "rva": "0x55D1",
-          "confidence": 0.403,
+          "confidence": 0.323,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.12a"
         },
-        "LoD/1.11": {
+        "LoD/1.13d": {
           "address": "0x004055D1",
           "rva": "0x55D1",
-          "confidence": 0.327,
+          "confidence": 0.323,
           "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
+          "direction": "forward",
+          "source": "LoD/1.13c"
         }
       }
     },
@@ -300,18 +300,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:048fa86b16ba3f4924242f25b953c745",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x0040A905",
-          "rva": "0xA905",
-          "confidence": 0.4,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x0040AA25",
           "rva": "0xAA25",
-          "confidence": 0.324,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -319,7 +311,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x0040AA25",
           "rva": "0xAA25",
-          "confidence": 0.212,
+          "confidence": 0.166,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x0040AA25",
+          "rva": "0xAA25",
+          "confidence": 0.23,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x0040A905",
+          "rva": "0xA905",
+          "confidence": 0.32,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -477,7 +485,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.08": {
           "address": "0x00406220",
           "rva": "0x6220",
-          "confidence": 0.383,
+          "confidence": 0.307,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.07"
@@ -485,10 +493,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": {
           "address": "0x00406240",
           "rva": "0x6240",
-          "confidence": 0.14,
+          "confidence": 0.221,
           "method": "structural",
           "direction": "forward",
-          "source": "LoD/1.08"
+          "source": "LoD/1.07"
         }
       }
     },
@@ -975,7 +983,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x00410E02",
           "rva": "0x10E02",
-          "confidence": 0.295,
+          "confidence": 0.324,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -983,7 +991,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x00410E02",
           "rva": "0x10E02",
-          "confidence": 0.295,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -991,7 +999,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x00410F22",
           "rva": "0x10F22",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -999,7 +1007,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x00410F22",
           "rva": "0x10F22",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1531,10 +1539,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:28413b8bd9ddfb3032353a0938531af3",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x00406120",
-          "rva": "0x6120",
-          "confidence": 0.399,
+        "LoD/1.09b": {
+          "address": "0x00406240",
+          "rva": "0x6240",
+          "confidence": 0.165,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1542,15 +1550,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": {
           "address": "0x00406240",
           "rva": "0x6240",
-          "confidence": 0.323,
+          "confidence": 0.23,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09b": {
-          "address": "0x00406240",
-          "rva": "0x6240",
-          "confidence": 0.212,
+        "LoD/1.10": {
+          "address": "0x00406120",
+          "rva": "0x6120",
+          "confidence": 0.319,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2051,18 +2059,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:361dff683e42703cbb525fc19cb3cac1",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x004060D0",
-          "rva": "0x60D0",
-          "confidence": 0.398,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x004061F0",
           "rva": "0x61F0",
-          "confidence": 0.322,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2070,7 +2070,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x004061F0",
           "rva": "0x61F0",
-          "confidence": 0.211,
+          "confidence": 0.165,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x004061F0",
+          "rva": "0x61F0",
+          "confidence": 0.229,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x004060D0",
+          "rva": "0x60D0",
+          "confidence": 0.318,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2117,18 +2133,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x0040AF20",
-          "rva": "0xAF20",
-          "confidence": 0.402,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x0040B040",
           "rva": "0xB040",
-          "confidence": 0.326,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2136,7 +2144,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x0040B040",
           "rva": "0xB040",
-          "confidence": 0.214,
+          "confidence": 0.167,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x0040B040",
+          "rva": "0xB040",
+          "confidence": 0.232,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x0040AF20",
+          "rva": "0xAF20",
+          "confidence": 0.322,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2203,18 +2227,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:3a966d378a126a76a245d88e9b060455",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x00408B43",
-          "rva": "0x8B43",
-          "confidence": 0.401,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x00408C63",
           "rva": "0x8C63",
-          "confidence": 0.325,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2222,7 +2238,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x00408C63",
           "rva": "0x8C63",
-          "confidence": 0.213,
+          "confidence": 0.166,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x00408C63",
+          "rva": "0x8C63",
+          "confidence": 0.231,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x00408B43",
+          "rva": "0x8B43",
+          "confidence": 0.321,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2544,10 +2576,18 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:457ecf3d8055d8e00a172b3d901a03ca",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x004034C1",
-          "rva": "0x34C1",
-          "confidence": 0.392,
+        "LoD/1.09": {
+          "address": "0x004035D1",
+          "rva": "0x35D1",
+          "confidence": 0.117,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x004035D1",
+          "rva": "0x35D1",
+          "confidence": 0.163,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2555,34 +2595,18 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": {
           "address": "0x004035D1",
           "rva": "0x35D1",
-          "confidence": 0.302,
-          "method": "unique_string",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
-          "address": "0x004035D1",
-          "rva": "0x35D1",
-          "confidence": 0.286,
+          "confidence": 0.226,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
-          "address": "0x004035D1",
-          "rva": "0x35D1",
-          "confidence": 0.188,
+        "LoD/1.10": {
+          "address": "0x004034C1",
+          "rva": "0x34C1",
+          "confidence": 0.314,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x004035B1",
-          "rva": "0x35B1",
-          "confidence": 0.144,
-          "method": "unique_string",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
         }
       }
     },
@@ -3349,7 +3373,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x00409905",
           "rva": "0x9905",
-          "confidence": 0.295,
+          "confidence": 0.324,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3357,7 +3381,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x0040C255",
           "rva": "0xC255",
-          "confidence": 0.295,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3365,7 +3389,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x004097A5",
           "rva": "0x97A5",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3373,18 +3397,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x0040C315",
           "rva": "0xC315",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x0040AC05",
-          "rva": "0xAC05",
-          "confidence": 0.134,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -5335,7 +5351,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x0040ACF2",
           "rva": "0xACF2",
-          "confidence": 0.295,
+          "confidence": 0.324,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5343,7 +5359,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x0040A4C4",
           "rva": "0xA4C4",
-          "confidence": 0.295,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5351,7 +5367,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x0040ADB2",
           "rva": "0xADB2",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5359,18 +5375,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x0040A612",
           "rva": "0xA612",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x0040C184",
-          "rva": "0xC184",
-          "confidence": 0.134,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -5549,7 +5557,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.07": {
           "address": "0x00406260",
           "rva": "0x6260",
-          "confidence": 0.395,
+          "confidence": 0.316,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.08"
@@ -5896,7 +5904,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x00405C25",
           "rva": "0x5C25",
-          "confidence": 0.289,
+          "confidence": 0.317,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5904,7 +5912,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x00405C25",
           "rva": "0x5C25",
-          "confidence": 0.289,
+          "confidence": 0.228,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5912,7 +5920,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x00405C85",
           "rva": "0x5C85",
-          "confidence": 0.289,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5920,7 +5928,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x00405C85",
           "rva": "0x5C85",
-          "confidence": 0.289,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5949,18 +5957,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x0040AECD",
-          "rva": "0xAECD",
-          "confidence": 0.397,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x0040AFED",
           "rva": "0xAFED",
-          "confidence": 0.321,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -5968,7 +5968,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x0040AFED",
           "rva": "0xAFED",
-          "confidence": 0.211,
+          "confidence": 0.164,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x0040AFED",
+          "rva": "0xAFED",
+          "confidence": 0.228,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x0040AECD",
+          "rva": "0xAECD",
+          "confidence": 0.317,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6323,18 +6339,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:ba06e624928980d9b2c569e5db716aab",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x0040409C",
-          "rva": "0x409C",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x004041AC",
           "rva": "0x41AC",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6342,7 +6350,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x004041AC",
           "rva": "0x41AC",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x004041AC",
+          "rva": "0x41AC",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x0040409C",
+          "rva": "0x409C",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6451,18 +6475,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x004090B1",
-          "rva": "0x90B1",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x004091D1",
           "rva": "0x91D1",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6470,7 +6486,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x004091D1",
           "rva": "0x91D1",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x004091D1",
+          "rva": "0x91D1",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x004090B1",
+          "rva": "0x90B1",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6610,7 +6642,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x00406270",
           "rva": "0x6270",
-          "confidence": 0.293,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6618,7 +6650,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x00406270",
           "rva": "0x6270",
-          "confidence": 0.293,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6626,7 +6658,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x004062D0",
           "rva": "0x62D0",
-          "confidence": 0.293,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6634,7 +6666,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x004062D0",
           "rva": "0x62D0",
-          "confidence": 0.293,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6664,7 +6696,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x00401000",
           "rva": "0x1000",
-          "confidence": 0.288,
+          "confidence": 0.316,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6672,7 +6704,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x00401000",
           "rva": "0x1000",
-          "confidence": 0.288,
+          "confidence": 0.227,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6680,7 +6712,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x00401000",
           "rva": "0x1000",
-          "confidence": 0.288,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -6688,18 +6720,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x00401000",
           "rva": "0x1000",
-          "confidence": 0.288,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x00401000",
-          "rva": "0x1000",
-          "confidence": 0.131,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -7355,29 +7379,29 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:d0108701376b16ac6499325944a4e45e",
       "candidates": {
-        "LoD/1.13d": {
+        "LoD/1.11": {
           "address": "0x0040FD70",
           "rva": "0xFD70",
-          "confidence": 0.339,
+          "confidence": 0.217,
           "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.13c"
+          "direction": "reverse",
+          "source": "LoD/1.12a"
         },
         "LoD/1.11b": {
           "address": "0x0040FD70",
           "rva": "0xFD70",
-          "confidence": 0.377,
+          "confidence": 0.301,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.12a"
         },
-        "LoD/1.11": {
+        "LoD/1.13d": {
           "address": "0x0040FD70",
           "rva": "0xFD70",
-          "confidence": 0.305,
+          "confidence": 0.301,
           "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
+          "direction": "forward",
+          "source": "LoD/1.13c"
         }
       }
     },
@@ -7640,7 +7664,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.07": {
           "address": "0x0040A515",
           "rva": "0xA515",
-          "confidence": 0.395,
+          "confidence": 0.316,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.08"
@@ -7898,7 +7922,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x0040ECC1",
           "rva": "0xECC1",
-          "confidence": 0.289,
+          "confidence": 0.317,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7906,7 +7930,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x0040ECC1",
           "rva": "0xECC1",
-          "confidence": 0.289,
+          "confidence": 0.228,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7914,7 +7938,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x0040ED81",
           "rva": "0xED81",
-          "confidence": 0.289,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7922,7 +7946,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x0040ED81",
           "rva": "0xED81",
-          "confidence": 0.289,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8084,18 +8108,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x00406270",
-          "rva": "0x6270",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x00406390",
           "rva": "0x6390",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -8103,7 +8119,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x00406390",
           "rva": "0x6390",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x00406390",
+          "rva": "0x6390",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x00406270",
+          "rva": "0x6270",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -8614,7 +8646,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x0040BCCB",
           "rva": "0xBCCB",
-          "confidence": 0.282,
+          "confidence": 0.223,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8622,18 +8654,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x0040A73B",
           "rva": "0xA73B",
-          "confidence": 0.282,
+          "confidence": 0.116,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x0040A67B",
-          "rva": "0xA67B",
-          "confidence": 0.142,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.12a"
         }
       }
     },
@@ -8946,7 +8970,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": {
           "address": "0x0040174B",
           "rva": "0x174B",
-          "confidence": 0.295,
+          "confidence": 0.324,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8954,7 +8978,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": {
           "address": "0x0040174B",
           "rva": "0x174B",
-          "confidence": 0.295,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8962,7 +8986,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": {
           "address": "0x00401623",
           "rva": "0x1623",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8970,7 +8994,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": {
           "address": "0x0040174B",
           "rva": "0x174B",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9181,18 +9205,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "method": "MNE",
       "index": "MNE:fa8972b50a91454e34542a6f7b824984",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x0040B692",
-          "rva": "0xB692",
-          "confidence": 0.399,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x0040B7B2",
           "rva": "0xB7B2",
-          "confidence": 0.324,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -9200,7 +9216,23 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": {
           "address": "0x0040B7B2",
           "rva": "0xB7B2",
-          "confidence": 0.212,
+          "confidence": 0.166,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x0040B7B2",
+          "rva": "0xB7B2",
+          "confidence": 0.23,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x0040B692",
+          "rva": "0xB692",
+          "confidence": 0.32,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"

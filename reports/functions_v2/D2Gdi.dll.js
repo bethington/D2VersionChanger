@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:26:13.185974
+// Generated: 2025-12-03T18:49:55.602495
 // Functions for D2Gdi.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -187,7 +187,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11": {
           "address": "0x6F8775F0",
           "rva": "0x75F0",
-          "confidence": 0.285,
+          "confidence": 0.313,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -195,7 +195,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": {
           "address": "0x6F876200",
           "rva": "0x6200",
-          "confidence": 0.285,
+          "confidence": 0.225,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -203,7 +203,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": {
           "address": "0x6F876BA0",
           "rva": "0x6BA0",
-          "confidence": 0.285,
+          "confidence": 0.162,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -211,18 +211,10 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": {
           "address": "0x6F877230",
           "rva": "0x7230",
-          "confidence": 0.285,
+          "confidence": 0.117,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F876C80",
-          "rva": "0x6C80",
-          "confidence": 0.136,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -282,7 +274,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11": {
           "address": "0x6F876DF0",
           "rva": "0x6DF0",
-          "confidence": 0.29,
+          "confidence": 0.319,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -290,7 +282,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": {
           "address": "0x6F877890",
           "rva": "0x7890",
-          "confidence": 0.29,
+          "confidence": 0.229,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -298,7 +290,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": {
           "address": "0x6F877C20",
           "rva": "0x7C20",
-          "confidence": 0.29,
+          "confidence": 0.165,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -306,7 +298,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": {
           "address": "0x6F8764D0",
           "rva": "0x64D0",
-          "confidence": 0.29,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -397,10 +389,18 @@ var FUNCTIONS_D2Gdi_dll = {
       "method": "MNE",
       "index": "MNE:057b2070bbbdb5455d8d4d9018467770",
       "candidates": {
-        "LoD/1.10": {
+        "LoD/1.09": {
           "address": "0x6F8315D0",
           "rva": "0x15D0",
-          "confidence": 0.375,
+          "confidence": 0.112,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F8315D0",
+          "rva": "0x15D0",
+          "confidence": 0.156,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -408,34 +408,18 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09d": {
           "address": "0x6F8315D0",
           "rva": "0x15D0",
-          "confidence": 0.289,
-          "method": "unique_string",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F8315D0",
-          "rva": "0x15D0",
-          "confidence": 0.273,
+          "confidence": 0.216,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
+        "LoD/1.10": {
           "address": "0x6F8315D0",
           "rva": "0x15D0",
-          "confidence": 0.179,
+          "confidence": 0.3,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6F8915D0",
-          "rva": "0x15D0",
-          "confidence": 0.138,
-          "method": "unique_string",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
         }
       }
     },
@@ -1189,18 +1173,10 @@ var FUNCTIONS_D2Gdi_dll = {
       "method": "MNE",
       "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F834960",
-          "rva": "0x4960",
-          "confidence": 0.402,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F834930",
           "rva": "0x4930",
-          "confidence": 0.326,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1208,7 +1184,23 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": {
           "address": "0x6F834930",
           "rva": "0x4930",
-          "confidence": 0.214,
+          "confidence": 0.167,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F834930",
+          "rva": "0x4930",
+          "confidence": 0.232,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F834960",
+          "rva": "0x4960",
+          "confidence": 0.322,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1718,7 +1710,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11": {
           "address": "0x6F871030",
           "rva": "0x1030",
-          "confidence": 0.295,
+          "confidence": 0.324,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1726,7 +1718,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": {
           "address": "0x6F871030",
           "rva": "0x1030",
-          "confidence": 0.295,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1734,7 +1726,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": {
           "address": "0x6F871030",
           "rva": "0x1030",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1742,7 +1734,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": {
           "address": "0x6F871030",
           "rva": "0x1030",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3189,18 +3181,10 @@ var FUNCTIONS_D2Gdi_dll = {
       "method": "MNE",
       "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F833109",
-          "rva": "0x3109",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F8330D9",
           "rva": "0x30D9",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3208,7 +3192,23 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": {
           "address": "0x6F8330D9",
           "rva": "0x30D9",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F8330D9",
+          "rva": "0x30D9",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F833109",
+          "rva": "0x3109",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3296,7 +3296,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11": {
           "address": "0x6F874200",
           "rva": "0x4200",
-          "confidence": 0.293,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3304,7 +3304,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": {
           "address": "0x6F874200",
           "rva": "0x4200",
-          "confidence": 0.293,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3312,7 +3312,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": {
           "address": "0x6F874230",
           "rva": "0x4230",
-          "confidence": 0.293,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3320,7 +3320,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": {
           "address": "0x6F874230",
           "rva": "0x4230",
-          "confidence": 0.293,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3948,18 +3948,10 @@ var FUNCTIONS_D2Gdi_dll = {
       "method": "MNE",
       "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
       "candidates": {
-        "LoD/1.10": {
+        "LoD/1.09": {
           "address": "0x6F831000",
           "rva": "0x1000",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x6F831000",
-          "rva": "0x1000",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3967,7 +3959,23 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": {
           "address": "0x6F831000",
           "rva": "0x1000",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F831000",
+          "rva": "0x1000",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F831000",
+          "rva": "0x1000",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3997,7 +4005,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11": {
           "address": "0x6F875DE0",
           "rva": "0x5DE0",
-          "confidence": 0.288,
+          "confidence": 0.316,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4005,7 +4013,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": {
           "address": "0x6F876AF0",
           "rva": "0x6AF0",
-          "confidence": 0.288,
+          "confidence": 0.227,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4013,7 +4021,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": {
           "address": "0x6F875E50",
           "rva": "0x5E50",
-          "confidence": 0.288,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4021,18 +4029,10 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": {
           "address": "0x6F8768D0",
           "rva": "0x68D0",
-          "confidence": 0.288,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F877720",
-          "rva": "0x7720",
-          "confidence": 0.138,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },

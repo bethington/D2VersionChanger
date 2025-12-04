@@ -252,7 +252,12 @@ class CandidateMatcher:
                          confirmed_versions: Dict[str, str],
                          all_dll_versions: Set[str]) -> Dict[str, Candidate]:
         """
-        Propagate matches through the version chain from confirmed anchors.
+        Find candidates for empty cells using direct matching from anchors.
+        
+        Instead of chain propagation which breaks at gaps, this approach:
+        1. For each empty version, find the closest confirmed anchor
+        2. Try direct fuzzy match from that anchor
+        3. Apply distance-based confidence decay
         
         Args:
             func: Registry function entry
@@ -261,122 +266,86 @@ class CandidateMatcher:
             all_dll_versions: All versions where this DLL exists
             
         Returns:
-            Dict of version -> Candidate for propagated matches
+            Dict of version -> Candidate for found matches
         """
-        propagated: Dict[str, Candidate] = {}
+        candidates: Dict[str, Candidate] = {}
         
-        # Process each game type's version chain separately
+        # Process each game type's version chain separately  
         for version_chain in [LOD_VERSIONS, CLASSIC_VERSIONS]:
             # Filter to versions that exist for this DLL
             available = [v for v in version_chain if v in all_dll_versions]
             if not available:
                 continue
             
-            # Find confirmed anchors in this chain
+            # Build position map for quick distance calculation
+            pos_map = {v: i for i, v in enumerate(available)}
+            
+            # Find confirmed anchors in this chain with their function data
             anchors = []
-            for i, v in enumerate(available):
+            for v in available:
                 if v in confirmed_versions:
-                    anchors.append((i, v, confirmed_versions[v]))
+                    addr = confirmed_versions[v]
+                    func_data = self.addr_to_func.get(dll_name, {}).get(v, {}).get(addr)
+                    if func_data:
+                        anchors.append((pos_map[v], v, func_data))
             
             if not anchors:
                 continue
             
-            # Propagate from each anchor in both directions
-            for anchor_idx, anchor_ver, anchor_addr in anchors:
-                anchor_func = self.addr_to_func.get(dll_name, {}).get(anchor_ver, {}).get(anchor_addr)
-                if not anchor_func:
-                    continue
-                
-                # === Propagate FORWARD (to newer versions) ===
-                current_func = anchor_func
-                current_confidence = 1.0
-                last_good_version = anchor_ver
-                
-                for i in range(anchor_idx + 1, len(available)):
-                    target_ver = available[i]
+            # For each empty version, find best candidate from any anchor
+            for target_ver in available:
+                if target_ver in confirmed_versions:
+                    continue  # Already has confirmed address
                     
-                    # Skip if this is a confirmed version (it's another anchor)
-                    if target_ver in confirmed_versions:
-                        # Reset chain from this new anchor
-                        new_addr = confirmed_versions[target_ver]
-                        current_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(new_addr)
-                        current_confidence = 1.0
-                        last_good_version = target_ver
+                target_pos = pos_map[target_ver]
+                best_candidate = None
+                best_score = 0.0
+                
+                # Try each anchor
+                for anchor_pos, anchor_ver, anchor_func in anchors:
+                    # Calculate version distance
+                    distance = abs(target_pos - anchor_pos)
+                    direction = 'forward' if target_pos > anchor_pos else 'reverse'
+                    
+                    # Skip if too far (more than 8 versions apart)
+                    if distance > 8:
                         continue
                     
-                    # Already have a higher-confidence candidate?
-                    if target_ver in propagated:
-                        if propagated[target_ver].confidence >= current_confidence * self.chain_decay * 0.3:
-                            continue
-                    
-                    # Try to find match from current position
-                    candidate = self._find_direct_match(current_func, dll_name, target_ver)
-                    if not candidate:
-                        candidate = self._find_structural_match(current_func, dll_name, target_ver)
+                    # Try fuzzy match
+                    candidate = self._find_direct_match(anchor_func, dll_name, target_ver)
                     
                     if candidate:
-                        # Apply chain decay
-                        hops = i - anchor_idx
-                        chain_confidence = current_confidence * (self.chain_decay ** hops) * candidate.confidence
+                        # Apply distance decay
+                        decay = self.chain_decay ** distance
+                        adjusted_score = candidate.confidence * decay
                         
-                        if chain_confidence >= self.min_chain_confidence:
-                            candidate.confidence = chain_confidence
-                            candidate.direction = 'forward'
-                            candidate.source_version = last_good_version
-                            candidate.chain_length = hops
-                            propagated[target_ver] = candidate
+                        if adjusted_score > best_score and adjusted_score >= self.min_chain_confidence:
+                            candidate.confidence = adjusted_score
+                            candidate.direction = direction
+                            candidate.source_version = anchor_ver
+                            candidate.chain_length = distance
+                            best_candidate = candidate
+                            best_score = adjusted_score
+                    else:
+                        # Try structural match with higher decay
+                        structural = self._find_structural_match(anchor_func, dll_name, target_ver)
+                        if structural:
+                            decay = (self.chain_decay * 0.8) ** distance  # Extra decay for structural
+                            adjusted_score = structural.confidence * decay
                             
-                            # Update for next hop
-                            next_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(candidate.address)
-                            if next_func:
-                                current_func = next_func
-                                current_confidence = chain_confidence
-                                last_good_version = target_ver
-                            # Don't break - keep trying with structural matches
-                    # Even if no match, continue trying next versions with more decay
+                            if adjusted_score > best_score and adjusted_score >= self.min_chain_confidence:
+                                structural.confidence = adjusted_score
+                                structural.direction = direction
+                                structural.source_version = anchor_ver
+                                structural.chain_length = distance
+                                best_candidate = structural
+                                best_score = adjusted_score
                 
-                # === Propagate BACKWARD (to older versions) ===
-                current_func = anchor_func
-                current_confidence = 1.0
-                last_good_version = anchor_ver
-                
-                for i in range(anchor_idx - 1, -1, -1):
-                    target_ver = available[i]
-                    
-                    if target_ver in confirmed_versions:
-                        new_addr = confirmed_versions[target_ver]
-                        current_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(new_addr)
-                        current_confidence = 1.0
-                        last_good_version = target_ver
-                        continue
-                    
-                    if target_ver in propagated:
-                        if propagated[target_ver].confidence >= current_confidence * self.chain_decay * 0.3:
-                            continue
-                    
-                    candidate = self._find_direct_match(current_func, dll_name, target_ver)
-                    if not candidate:
-                        candidate = self._find_structural_match(current_func, dll_name, target_ver)
-                    
-                    if candidate:
-                        hops = anchor_idx - i
-                        chain_confidence = current_confidence * (self.chain_decay ** hops) * candidate.confidence
-                        
-                        if chain_confidence >= self.min_chain_confidence:
-                            candidate.confidence = chain_confidence
-                            candidate.direction = 'reverse'
-                            candidate.source_version = last_good_version
-                            candidate.chain_length = hops
-                            propagated[target_ver] = candidate
-                            
-                            next_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(candidate.address)
-                            if next_func:
-                                current_func = next_func
-                                current_confidence = chain_confidence
-                                last_good_version = target_ver
+                if best_candidate:
+                    candidates[target_ver] = best_candidate
         
-        return propagated
-    
+        return candidates
+
     def generate_candidates(self, registry: dict) -> dict:
         """
         Generate candidates for ALL empty cells in the registry.

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:26:13.185974
+// Generated: 2025-12-03T18:49:55.602495
 // Functions for D2MCPClient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -530,15 +530,7 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "EXP",
       "index": "EXP:10022",
       "candidates": {
-        "LoD/1.09d": {
-          "address": "0x6F9F2760",
-          "rva": "0x2760",
-          "confidence": 0.365,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
+        "LoD/1.09": {
           "address": "0x6F9F2760",
           "rva": "0x2760",
           "confidence": 0.328,
@@ -546,29 +538,29 @@ var FUNCTIONS_D2MCPClient_dll = {
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
+        "LoD/1.09b": {
           "address": "0x6F9F2760",
           "rva": "0x2760",
-          "confidence": 0.215,
+          "confidence": 0.365,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.08": {
-          "address": "0x6FA52740",
-          "rva": "0x2740",
-          "confidence": 0.103,
+        "LoD/1.09d": {
+          "address": "0x6F9F2760",
+          "rva": "0x2760",
+          "confidence": 0.405,
           "method": "minhash",
           "direction": "reverse",
-          "source": "LoD/1.09"
+          "source": "LoD/1.11"
         },
-        "LoD/1.07": {
-          "address": "0x6FA52740",
-          "rva": "0x2740",
-          "confidence": 0.157,
+        "LoD/1.10": {
+          "address": "0x6F9F2680",
+          "rva": "0x2680",
+          "confidence": 0.45,
           "method": "minhash",
           "direction": "reverse",
-          "source": "LoD/1.09b"
+          "source": "LoD/1.11"
         }
       }
     },
@@ -626,10 +618,34 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "EXP",
       "index": "EXP:10036",
       "candidates": {
+        "LoD/1.09": {
+          "address": "0x6F9F2470",
+          "rva": "0x2470",
+          "confidence": 0.1,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9F2470",
+          "rva": "0x2470",
+          "confidence": 0.139,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F2470",
+          "rva": "0x2470",
+          "confidence": 0.193,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
         "LoD/1.10": {
           "address": "0x6F9F2400",
           "rva": "0x2400",
-          "confidence": 0.161,
+          "confidence": 0.196,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -844,50 +860,50 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "EXP",
       "index": "EXP:10062",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9F2920",
-          "rva": "0x2920",
-          "confidence": 0.668,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x6F9F2A10",
-          "rva": "0x2A10",
-          "confidence": 0.541,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F9F2A10",
-          "rva": "0x2A10",
+        "LoD/1.07": {
+          "address": "0x6FA52A90",
+          "rva": "0x2A90",
           "confidence": 0.394,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.09": {
-          "address": "0x6F9F2A10",
-          "rva": "0x2A10",
-          "confidence": 0.438,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
         "LoD/1.08": {
-          "address": "0x6FA529C0",
-          "rva": "0x29C0",
-          "confidence": 0.355,
+          "address": "0x6FA52A90",
+          "rva": "0x2A90",
+          "confidence": 0.438,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.07": {
-          "address": "0x6FA529C0",
-          "rva": "0x29C0",
-          "confidence": 0.288,
+        "LoD/1.09": {
+          "address": "0x6F9F29E0",
+          "rva": "0x29E0",
+          "confidence": 0.487,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9F29E0",
+          "rva": "0x29E0",
+          "confidence": 0.541,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F29E0",
+          "rva": "0x29E0",
+          "confidence": 0.601,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F28F0",
+          "rva": "0x28F0",
+          "confidence": 0.668,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -954,18 +970,10 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "MNE",
       "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9F2C39",
-          "rva": "0x2C39",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9F2D79",
           "rva": "0x2D79",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -973,7 +981,23 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.09b": {
           "address": "0x6F9F2D79",
           "rva": "0x2D79",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F2D79",
+          "rva": "0x2D79",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F2C39",
+          "rva": "0x2C39",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1376,10 +1400,10 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "MNE",
       "index": "MNE:202d2c66c8a5b404ad3bf64c94b499c1",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9F2950",
-          "rva": "0x2950",
-          "confidence": 0.396,
+        "LoD/1.09": {
+          "address": "0x6F9F2A70",
+          "rva": "0x2A70",
+          "confidence": 0.118,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1387,15 +1411,23 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.09b": {
           "address": "0x6F9F2A70",
           "rva": "0x2A70",
-          "confidence": 0.288,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
+        "LoD/1.09d": {
           "address": "0x6F9F2A70",
           "rva": "0x2A70",
-          "confidence": 0.189,
+          "confidence": 0.228,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F2950",
+          "rva": "0x2950",
+          "confidence": 0.317,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1567,7 +1599,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.11": {
           "address": "0x6FA26190",
           "rva": "0x6190",
-          "confidence": 0.288,
+          "confidence": 0.316,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1575,7 +1607,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.11b": {
           "address": "0x6FA26990",
           "rva": "0x6990",
-          "confidence": 0.288,
+          "confidence": 0.228,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1583,7 +1615,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.12a": {
           "address": "0x6FA27350",
           "rva": "0x7350",
-          "confidence": 0.288,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1591,18 +1623,10 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.13c": {
           "address": "0x6FA269F0",
           "rva": "0x69F0",
-          "confidence": 0.288,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FA261A0",
-          "rva": "0x61A0",
-          "confidence": 0.138,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -1788,18 +1812,10 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "MNE",
       "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9F43C0",
-          "rva": "0x43C0",
-          "confidence": 0.402,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9F4500",
           "rva": "0x4500",
-          "confidence": 0.326,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1807,7 +1823,23 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.09b": {
           "address": "0x6F9F4500",
           "rva": "0x4500",
-          "confidence": 0.214,
+          "confidence": 0.167,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F4500",
+          "rva": "0x4500",
+          "confidence": 0.232,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F43C0",
+          "rva": "0x43C0",
+          "confidence": 0.322,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2394,21 +2426,21 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "MNE",
       "index": "MNE:6b4ad6d2941b712fcff606229e9dd829",
       "candidates": {
-        "LoD/1.09d": {
+        "LoD/1.09b": {
           "address": "0x6F9F1EF0",
           "rva": "0x1EF0",
-          "confidence": 0.153,
+          "confidence": 0.108,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09b": {
+        "LoD/1.09d": {
           "address": "0x6F9F1EF0",
           "rva": "0x1EF0",
-          "confidence": 0.133,
-          "method": "minhash",
+          "confidence": 0.149,
+          "method": "structural",
           "direction": "reverse",
-          "source": "LoD/1.09d"
+          "source": "LoD/1.11"
         }
       }
     },
@@ -3735,7 +3767,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.11": {
           "address": "0x6FA24200",
           "rva": "0x4200",
-          "confidence": 0.293,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3743,7 +3775,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.11b": {
           "address": "0x6FA24200",
           "rva": "0x4200",
-          "confidence": 0.293,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3751,7 +3783,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.12a": {
           "address": "0x6FA24230",
           "rva": "0x4230",
-          "confidence": 0.293,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3759,7 +3791,7 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.13c": {
           "address": "0x6FA24230",
           "rva": "0x4230",
-          "confidence": 0.293,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4329,18 +4361,10 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "MNE",
       "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9F17C0",
-          "rva": "0x17C0",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9F1850",
           "rva": "0x1850",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -4348,7 +4372,23 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.09b": {
           "address": "0x6F9F1850",
           "rva": "0x1850",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F1850",
+          "rva": "0x1850",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F17C0",
+          "rva": "0x17C0",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"

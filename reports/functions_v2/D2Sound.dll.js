@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:26:13.185974
+// Generated: 2025-12-03T18:49:55.602495
 // Functions for D2Sound.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -554,7 +554,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8770",
           "rva": "0x8770",
-          "confidence": 0.294,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -562,7 +562,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B91D0",
           "rva": "0x91D0",
-          "confidence": 0.294,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -570,7 +570,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B6F30",
           "rva": "0x6F30",
-          "confidence": 0.294,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -578,7 +578,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B6F30",
           "rva": "0x6F30",
-          "confidence": 0.294,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -677,7 +677,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B80D0",
           "rva": "0x80D0",
-          "confidence": 0.291,
+          "confidence": 0.319,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -685,7 +685,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B8A10",
           "rva": "0x8A10",
-          "confidence": 0.291,
+          "confidence": 0.23,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -693,7 +693,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B67F0",
           "rva": "0x67F0",
-          "confidence": 0.291,
+          "confidence": 0.165,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -701,7 +701,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B67F0",
           "rva": "0x67F0",
-          "confidence": 0.291,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -823,7 +823,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8020",
           "rva": "0x8020",
-          "confidence": 0.294,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -831,7 +831,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B87E0",
           "rva": "0x87E0",
-          "confidence": 0.294,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -839,7 +839,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B6B80",
           "rva": "0x6B80",
-          "confidence": 0.294,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -847,18 +847,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B6B80",
           "rva": "0x6B80",
-          "confidence": 0.294,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B7A30",
-          "rva": "0x7A30",
-          "confidence": 0.14,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -1087,34 +1079,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": {
           "address": "0x6F984050",
           "rva": "0x4050",
-          "confidence": 0.403,
+          "confidence": 0.323,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F984200",
-          "rva": "0x4200",
-          "confidence": 0.294,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09": {
-          "address": "0x6F984200",
-          "rva": "0x4200",
-          "confidence": 0.193,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6F9E4200",
-          "rva": "0x4200",
-          "confidence": 0.141,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
         }
       }
     },
@@ -1206,7 +1174,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B8100",
           "rva": "0x8100",
-          "confidence": 0.656,
+          "confidence": 0.591,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.12a"
@@ -1526,7 +1494,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8E90",
           "rva": "0x8E90",
-          "confidence": 0.294,
+          "confidence": 0.323,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1534,7 +1502,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B7650",
           "rva": "0x7650",
-          "confidence": 0.294,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1542,7 +1510,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B7650",
           "rva": "0x7650",
-          "confidence": 0.294,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1707,7 +1675,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B6E20",
           "rva": "0x6E20",
-          "confidence": 0.296,
+          "confidence": 0.329,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1773,7 +1741,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8230",
           "rva": "0x8230",
-          "confidence": 0.316,
+          "confidence": 0.534,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1781,7 +1749,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B8CB0",
           "rva": "0x8CB0",
-          "confidence": 0.316,
+          "confidence": 0.481,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1789,7 +1757,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B6950",
           "rva": "0x6950",
-          "confidence": 0.316,
+          "confidence": 0.433,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1797,7 +1765,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B6950",
           "rva": "0x6950",
-          "confidence": 0.316,
+          "confidence": 0.39,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1805,7 +1773,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": {
           "address": "0x6F9B7C40",
           "rva": "0x7C40",
-          "confidence": 0.316,
+          "confidence": 0.351,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1833,10 +1801,26 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "EXP",
       "index": "EXP:10066",
       "candidates": {
+        "LoD/1.09": {
+          "address": "0x6F984200",
+          "rva": "0x4200",
+          "confidence": 0.12,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F984200",
+          "rva": "0x4200",
+          "confidence": 0.167,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
         "LoD/1.09d": {
           "address": "0x6F984200",
           "rva": "0x4200",
-          "confidence": 0.327,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -1996,18 +1980,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F985883",
-          "rva": "0x5883",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F985A3B",
           "rva": "0x5A3B",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -2015,7 +1991,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F985A3B",
           "rva": "0x5A3B",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F985A3B",
+          "rva": "0x5A3B",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F985883",
+          "rva": "0x5883",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3042,18 +3034,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:266baaaf79f230c6a6856a4a53b42d70",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F984020",
-          "rva": "0x4020",
-          "confidence": 0.393,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9841D0",
           "rva": "0x41D0",
-          "confidence": 0.318,
+          "confidence": 0.117,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3061,7 +3045,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F9841D0",
           "rva": "0x41D0",
-          "confidence": 0.209,
+          "confidence": 0.163,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9841D0",
+          "rva": "0x41D0",
+          "confidence": 0.226,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F984020",
+          "rva": "0x4020",
+          "confidence": 0.314,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3203,7 +3203,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B80A0",
           "rva": "0x80A0",
-          "confidence": 0.291,
+          "confidence": 0.32,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3211,7 +3211,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B8860",
           "rva": "0x8860",
-          "confidence": 0.291,
+          "confidence": 0.23,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3219,7 +3219,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B67C0",
           "rva": "0x67C0",
-          "confidence": 0.291,
+          "confidence": 0.166,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3227,18 +3227,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B67C0",
           "rva": "0x67C0",
-          "confidence": 0.291,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B7B10",
-          "rva": "0x7B10",
-          "confidence": 0.139,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -3562,18 +3554,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F988400",
-          "rva": "0x8400",
-          "confidence": 0.402,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9885C0",
           "rva": "0x85C0",
-          "confidence": 0.326,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3581,7 +3565,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F9885C0",
           "rva": "0x85C0",
-          "confidence": 0.214,
+          "confidence": 0.167,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9885C0",
+          "rva": "0x85C0",
+          "confidence": 0.232,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F988400",
+          "rva": "0x8400",
+          "confidence": 0.322,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -3989,7 +3989,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8D50",
           "rva": "0x8D50",
-          "confidence": 0.284,
+          "confidence": 0.311,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -3997,7 +3997,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B90F0",
           "rva": "0x90F0",
-          "confidence": 0.284,
+          "confidence": 0.224,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4005,18 +4005,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B7510",
           "rva": "0x7510",
-          "confidence": 0.284,
+          "confidence": 0.161,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B8760",
-          "rva": "0x8760",
-          "confidence": 0.103,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.13c"
         }
       }
     },
@@ -4341,7 +4333,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9BC8B0",
           "rva": "0xC8B0",
-          "confidence": 0.301,
+          "confidence": 0.154,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9BC8E0",
+          "rva": "0xC8E0",
+          "confidence": 0.111,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4370,18 +4370,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:5b53deeaee2f2e36d1b6e935bca6b0ee",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9857AD",
-          "rva": "0x57AD",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F985965",
           "rva": "0x5965",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -4389,7 +4381,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F985965",
           "rva": "0x5965",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F985965",
+          "rva": "0x5965",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9857AD",
+          "rva": "0x57AD",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -4977,7 +4985,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B18CE",
           "rva": "0x18CE",
-          "confidence": 0.289,
+          "confidence": 0.317,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4985,7 +4993,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B18CE",
           "rva": "0x18CE",
-          "confidence": 0.289,
+          "confidence": 0.228,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -4993,7 +5001,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B147B",
           "rva": "0x147B",
-          "confidence": 0.289,
+          "confidence": 0.164,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5001,7 +5009,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B18CE",
           "rva": "0x18CE",
-          "confidence": 0.289,
+          "confidence": 0.118,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -5150,18 +5158,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:7ae8facd28484655a18ca60b688001a6",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F986034",
-          "rva": "0x6034",
-          "confidence": 0.397,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9861F4",
           "rva": "0x61F4",
-          "confidence": 0.322,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -5169,7 +5169,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F9861F4",
           "rva": "0x61F4",
-          "confidence": 0.211,
+          "confidence": 0.165,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9861F4",
+          "rva": "0x61F4",
+          "confidence": 0.229,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F986034",
+          "rva": "0x6034",
+          "confidence": 0.318,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -5703,10 +5719,18 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:8f7df14e6456cd93f8028b09582e6071",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F983E10",
-          "rva": "0x3E10",
-          "confidence": 0.389,
+        "LoD/1.09": {
+          "address": "0x6F983FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.116,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F983FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.161,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -5714,34 +5738,18 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": {
           "address": "0x6F983FA0",
           "rva": "0x3FA0",
-          "confidence": 0.283,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F983FA0",
-          "rva": "0x3FA0",
-          "confidence": 0.283,
+          "confidence": 0.224,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
-          "address": "0x6F983FA0",
-          "rva": "0x3FA0",
-          "confidence": 0.186,
+        "LoD/1.10": {
+          "address": "0x6F983E10",
+          "rva": "0x3E10",
+          "confidence": 0.311,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6F9E3FA0",
-          "rva": "0x3FA0",
-          "confidence": 0.136,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
         }
       }
     },
@@ -6335,18 +6343,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:a4b2a429e6b93d9fa514b9a34bf44774",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F984220",
-          "rva": "0x4220",
-          "confidence": 0.399,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F9843D0",
           "rva": "0x43D0",
-          "confidence": 0.323,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6354,18 +6354,26 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F9843D0",
           "rva": "0x43D0",
-          "confidence": 0.212,
+          "confidence": 0.165,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
+        "LoD/1.09d": {
           "address": "0x6F9843D0",
           "rva": "0x43D0",
-          "confidence": 0.137,
-          "method": "minhash",
+          "confidence": 0.23,
+          "method": "structural",
           "direction": "reverse",
-          "source": "LoD/1.09d"
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F984220",
+          "rva": "0x4220",
+          "confidence": 0.319,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
         }
       }
     },
@@ -6685,10 +6693,18 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F984910",
-          "rva": "0x4910",
-          "confidence": 0.397,
+        "LoD/1.09": {
+          "address": "0x6F984AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.119,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F984AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.165,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -6696,34 +6712,18 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": {
           "address": "0x6F984AC0",
           "rva": "0x4AC0",
-          "confidence": 0.289,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F984AC0",
-          "rva": "0x4AC0",
-          "confidence": 0.289,
+          "confidence": 0.229,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
-          "address": "0x6F984AC0",
-          "rva": "0x4AC0",
-          "confidence": 0.19,
+        "LoD/1.10": {
+          "address": "0x6F984910",
+          "rva": "0x4910",
+          "confidence": 0.318,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6F9E4AC0",
-          "rva": "0x4AC0",
-          "confidence": 0.138,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
         }
       }
     },
@@ -7201,7 +7201,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B4220",
           "rva": "0x4220",
-          "confidence": 0.293,
+          "confidence": 0.322,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7209,7 +7209,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B4220",
           "rva": "0x4220",
-          "confidence": 0.293,
+          "confidence": 0.232,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7217,7 +7217,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B4250",
           "rva": "0x4250",
-          "confidence": 0.293,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7225,7 +7225,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B4250",
           "rva": "0x4250",
-          "confidence": 0.293,
+          "confidence": 0.12,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7277,7 +7277,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B7A70",
           "rva": "0x7A70",
-          "confidence": 0.278,
+          "confidence": 0.305,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7285,18 +7285,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B9820",
           "rva": "0x9820",
-          "confidence": 0.278,
+          "confidence": 0.114,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B71B0",
-          "rva": "0x71B0",
-          "confidence": 0.126,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -7831,7 +7823,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B6B20",
           "rva": "0x6B20",
-          "confidence": 0.291,
+          "confidence": 0.32,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7839,7 +7831,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B6620",
           "rva": "0x6620",
-          "confidence": 0.291,
+          "confidence": 0.23,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7847,7 +7839,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B7DD0",
           "rva": "0x7DD0",
-          "confidence": 0.291,
+          "confidence": 0.166,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -7918,18 +7910,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:df39be31c90d40388c4132cbde70d848",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9880C9",
-          "rva": "0x80C9",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F988289",
           "rva": "0x8289",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -7937,7 +7921,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F988289",
           "rva": "0x8289",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F988289",
+          "rva": "0x8289",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9880C9",
+          "rva": "0x80C9",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -8125,18 +8125,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "MNE",
       "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9810D0",
-          "rva": "0x10D0",
-          "confidence": 0.405,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F981190",
           "rva": "0x1190",
-          "confidence": 0.328,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -8144,7 +8136,23 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F981190",
           "rva": "0x1190",
-          "confidence": 0.215,
+          "confidence": 0.168,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F981190",
+          "rva": "0x1190",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9810D0",
+          "rva": "0x10D0",
+          "confidence": 0.324,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -8248,7 +8256,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B65D0",
           "rva": "0x65D0",
-          "confidence": 0.281,
+          "confidence": 0.309,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8256,7 +8264,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B7460",
           "rva": "0x7460",
-          "confidence": 0.281,
+          "confidence": 0.222,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -8264,18 +8272,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B7BC0",
           "rva": "0x7BC0",
-          "confidence": 0.281,
+          "confidence": 0.115,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B7420",
-          "rva": "0x7420",
-          "confidence": 0.135,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -9008,18 +9008,10 @@ var FUNCTIONS_D2Sound_dll = {
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
       "candidates": {
-        "LoD/1.10": {
-          "address": "0x6F9842C0",
-          "rva": "0x42C0",
-          "confidence": 0.384,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
+        "LoD/1.09": {
           "address": "0x6F984470",
           "rva": "0x4470",
-          "confidence": 0.311,
+          "confidence": 0.115,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -9027,26 +9019,26 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": {
           "address": "0x6F984470",
           "rva": "0x4470",
-          "confidence": 0.204,
+          "confidence": 0.159,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09": {
+        "LoD/1.09d": {
           "address": "0x6F984470",
           "rva": "0x4470",
-          "confidence": 0.128,
-          "method": "minhash",
+          "confidence": 0.221,
+          "method": "structural",
           "direction": "reverse",
-          "source": "LoD/1.09d"
+          "source": "LoD/1.11"
         },
-        "LoD/1.08": {
-          "address": "0x6F9E4470",
-          "rva": "0x4470",
-          "confidence": 0.12,
-          "method": "minhash",
+        "LoD/1.10": {
+          "address": "0x6F9842C0",
+          "rva": "0x42C0",
+          "confidence": 0.307,
+          "method": "structural",
           "direction": "reverse",
-          "source": "LoD/1.09b"
+          "source": "LoD/1.11"
         }
       }
     },
@@ -9095,7 +9087,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8320",
           "rva": "0x8320",
-          "confidence": 0.291,
+          "confidence": 0.32,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9103,7 +9095,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B8F40",
           "rva": "0x8F40",
-          "confidence": 0.291,
+          "confidence": 0.23,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9111,7 +9103,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B6A40",
           "rva": "0x6A40",
-          "confidence": 0.291,
+          "confidence": 0.166,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9119,18 +9111,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B6A40",
           "rva": "0x6A40",
-          "confidence": 0.291,
+          "confidence": 0.119,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B7D30",
-          "rva": "0x7D30",
-          "confidence": 0.139,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -9219,7 +9203,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B7AA0",
           "rva": "0x7AA0",
-          "confidence": 0.295,
+          "confidence": 0.168,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9227,18 +9211,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B7AA0",
           "rva": "0x7AA0",
-          "confidence": 0.295,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B8CF0",
-          "rva": "0x8CF0",
-          "confidence": 0.141,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },
@@ -9327,7 +9303,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": {
           "address": "0x6F9B8B10",
           "rva": "0x8B10",
-          "confidence": 0.294,
+          "confidence": 0.323,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9335,7 +9311,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11b": {
           "address": "0x6F9B9580",
           "rva": "0x9580",
-          "confidence": 0.294,
+          "confidence": 0.233,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9343,7 +9319,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": {
           "address": "0x6F9B72D0",
           "rva": "0x72D0",
-          "confidence": 0.294,
+          "confidence": 0.167,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -9351,18 +9327,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": {
           "address": "0x6F9B72D0",
           "rva": "0x72D0",
-          "confidence": 0.294,
+          "confidence": 0.121,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6F9B8520",
-          "rva": "0x8520",
-          "confidence": 0.141,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
         }
       }
     },

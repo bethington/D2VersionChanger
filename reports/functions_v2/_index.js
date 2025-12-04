@@ -1,8 +1,8 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:26:13.185974
+// Generated: 2025-12-03T18:49:55.602495
 
 var FUNCTION_INDEX_V2 = {
-  "generated": "2025-12-03T18:26:13.185974",
+  "generated": "2025-12-03T18:49:55.602495",
   "source": "function_registry_v2.json",
   "total_functions": 27378,
   "total_named": 8861,
