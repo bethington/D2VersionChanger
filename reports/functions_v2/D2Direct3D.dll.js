@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 // Functions for D2Direct3D.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -54,7 +54,25 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0xA780"
       },
       "method": "API",
-      "index": "API:088c1739c19ccd3110d53726cb64ac5c"
+      "index": "API:088c1739c19ccd3110d53726cb64ac5c",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6F888A60",
+          "rva": "0x8A60",
+          "confidence": 0.271,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F88C7B0",
+          "rva": "0xC7B0",
+          "confidence": 0.13,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Direct3D_API_0a1454d978b7": {
       "addresses": {
@@ -74,7 +92,25 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0x91D0"
       },
       "method": "API",
-      "index": "API:0a1454d978b7e87243f36a7fc468cb16"
+      "index": "API:0a1454d978b7e87243f36a7fc468cb16",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6F888900",
+          "rva": "0x8900",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F889380",
+          "rva": "0x9380",
+          "confidence": 0.138,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Direct3D_API_1dff2ba43e05": {
       "addresses": {
@@ -92,7 +128,49 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.13d": "0xDF80"
       },
       "method": "API",
-      "index": "API:1dff2ba43e0527ceff247dcbd5268832"
+      "index": "API:1dff2ba43e0527ceff247dcbd5268832",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F846350",
+          "rva": "0x6350",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F846430",
+          "rva": "0x6430",
+          "confidence": 0.321,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F846430",
+          "rva": "0x6430",
+          "confidence": 0.211,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F846430",
+          "rva": "0x6430",
+          "confidence": 0.132,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6F8A6430",
+          "rva": "0x6430",
+          "confidence": 0.125,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Direct3D_API_3267216b35de": {
       "addresses": {
@@ -361,7 +439,33 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0xD2E2"
       },
       "method": "MNE",
-      "index": "MNE:0002c858ef3942a0b403454c72674bfe"
+      "index": "MNE:0002c858ef3942a0b403454c72674bfe",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F889860",
+          "rva": "0x9860",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F886A40",
+          "rva": "0x6A40",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F88CDC0",
+          "rva": "0xCDC0",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_00e42acceca9": {
       "addresses": {
@@ -1945,7 +2049,33 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F84DDC0",
+          "rva": "0xDDC0",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F84D660",
+          "rva": "0xD660",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F84D660",
+          "rva": "0xD660",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Direct3D_MNE_37a18a793197": {
       "addresses": {
@@ -2483,7 +2613,49 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.13d": "0xE100"
       },
       "method": "MNE",
-      "index": "MNE:4c5da4321cf079ddc610e827a81b613d"
+      "index": "MNE:4c5da4321cf079ddc610e827a81b613d",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F841770",
+          "rva": "0x1770",
+          "confidence": 0.38,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F841770",
+          "rva": "0x1770",
+          "confidence": 0.293,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F841770",
+          "rva": "0x1770",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F841770",
+          "rva": "0x1770",
+          "confidence": 0.183,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6F8A1770",
+          "rva": "0x1770",
+          "confidence": 0.141,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Direct3D_MNE_4ce3cb9d9d5c": {
       "addresses": {
@@ -2895,7 +3067,41 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0x5490"
       },
       "method": "MNE",
-      "index": "MNE:5df2c7f1ec461c378315e6d72308a5a7"
+      "index": "MNE:5df2c7f1ec461c378315e6d72308a5a7",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F881030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F881030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F881122",
+          "rva": "0x1122",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F881030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_5f5a2dadfb6e": {
       "addresses": {
@@ -3005,7 +3211,41 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0x10D50"
       },
       "method": "MNE",
-      "index": "MNE:662566ebcde3842108cf876001e2ae79"
+      "index": "MNE:662566ebcde3842108cf876001e2ae79",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F886170",
+          "rva": "0x6170",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F88F360",
+          "rva": "0xF360",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F887310",
+          "rva": "0x7310",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F888640",
+          "rva": "0x8640",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_6b4ad6d2941b": {
       "addresses": {
@@ -3241,7 +3481,41 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0xF589"
       },
       "method": "MNE",
-      "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831"
+      "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F881B8A",
+          "rva": "0x1B8A",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F881B8A",
+          "rva": "0x1B8A",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F881B8E",
+          "rva": "0x1B8E",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F881B8F",
+          "rva": "0x1B8F",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_76bcdc60e227": {
       "addresses": {
@@ -3431,7 +3705,33 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n __ms_p5_test_fdiv\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:7ae8facd28484655a18ca60b688001a6"
+      "index": "MNE:7ae8facd28484655a18ca60b688001a6",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F84BA3C",
+          "rva": "0xBA3C",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F84B5D5",
+          "rva": "0xB5D5",
+          "confidence": 0.322,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F84B5D5",
+          "rva": "0xB5D5",
+          "confidence": 0.211,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Direct3D_MNE_7af322ad22a8": {
       "addresses": {
@@ -3503,7 +3803,33 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.12a": "0xF370"
       },
       "method": "MNE",
-      "index": "MNE:7eacb573cd71085706874697ed98f2b3"
+      "index": "MNE:7eacb573cd71085706874697ed98f2b3",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F84D817",
+          "rva": "0xD817",
+          "confidence": 0.367,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F84CFDA",
+          "rva": "0xCFDA",
+          "confidence": 0.297,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F84CFDA",
+          "rva": "0xCFDA",
+          "confidence": 0.241,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Direct3D_MNE_7ee678edebf0": {
       "addresses": {
@@ -4079,7 +4405,33 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0x68D0"
       },
       "method": "MNE",
-      "index": "MNE:91f9415ddd7f6350888c599a708b6e29"
+      "index": "MNE:91f9415ddd7f6350888c599a708b6e29",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F881173",
+          "rva": "0x1173",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F881173",
+          "rva": "0x1173",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F881265",
+          "rva": "0x1265",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_9202742c31e7": {
       "addresses": {
@@ -4605,7 +4957,41 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.13d": "0x65B0"
       },
       "method": "MNE",
-      "index": "MNE:a6749eda874702a11d1ce5e82763fb05"
+      "index": "MNE:a6749eda874702a11d1ce5e82763fb05",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F841380",
+          "rva": "0x1380",
+          "confidence": 0.381,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F841380",
+          "rva": "0x1380",
+          "confidence": 0.308,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F841380",
+          "rva": "0x1380",
+          "confidence": 0.202,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F841380",
+          "rva": "0x1380",
+          "confidence": 0.133,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Direct3D_MNE_a7046d73bbd2": {
       "addresses": {
@@ -5183,7 +5569,49 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n ___crtGetEnvironmentStringsA\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:ba896e89d5b4e319d02dcd31648ce3d9"
+      "index": "MNE:ba896e89d5b4e319d02dcd31648ce3d9",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F846480",
+          "rva": "0x6480",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F846560",
+          "rva": "0x6560",
+          "confidence": 0.319,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F846560",
+          "rva": "0x6560",
+          "confidence": 0.209,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F846560",
+          "rva": "0x6560",
+          "confidence": 0.141,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6F8A6560",
+          "rva": "0x6560",
+          "confidence": 0.124,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Direct3D_MNE_bafce56213ce": {
       "addresses": {
@@ -5225,7 +5653,33 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n __SEH_epilog\n\nLibrary: Visual Studio",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b"
+      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F84AFD9",
+          "rva": "0xAFD9",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F84B0C9",
+          "rva": "0xB0C9",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F84B0C9",
+          "rva": "0xB0C9",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Direct3D_MNE_bb871248caca": {
       "addresses": {
@@ -5387,7 +5841,41 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0xECB0"
       },
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4"
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F883960",
+          "rva": "0x3960",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F883960",
+          "rva": "0x3960",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F8835C0",
+          "rva": "0x35C0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F883980",
+          "rva": "0x3980",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_c0a536e0e6da": {
       "addresses": {
@@ -6145,7 +6633,33 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n ___shr_12\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:df39be31c90d40388c4132cbde70d848"
+      "index": "MNE:df39be31c90d40388c4132cbde70d848",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F84E96F",
+          "rva": "0xE96F",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F84D323",
+          "rva": "0xD323",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F84D323",
+          "rva": "0xD323",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Direct3D_MNE_e12afdedf65b": {
       "addresses": {
@@ -6474,7 +6988,17 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.10": "0xB00A"
       },
       "method": "MNE",
-      "index": "MNE:eb17d7abe573793d4b67d9aac794697b"
+      "index": "MNE:eb17d7abe573793d4b67d9aac794697b",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6F88C4A0",
+          "rva": "0xC4A0",
+          "confidence": 0.275,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_MNE_ecc888c56be1": {
       "addresses": {
@@ -7536,7 +8060,49 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.13d": "0x7060"
       },
       "method": "STR",
-      "index": "STR:87da6b7c4786288620b2b260797035ff"
+      "index": "STR:87da6b7c4786288620b2b260797035ff",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6F848830",
+          "rva": "0x8830",
+          "confidence": 0.534,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F848830",
+          "rva": "0x8830",
+          "confidence": 0.338,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.09": {
+          "address": "0x6F848830",
+          "rva": "0x8830",
+          "confidence": 0.395,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.08": {
+          "address": "0x6F8A8830",
+          "rva": "0x8830",
+          "confidence": 0.32,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.07": {
+          "address": "0x6F8A8760",
+          "rva": "0x8760",
+          "confidence": 0.21,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Direct3D_STR_95529d2998eb": {
       "addresses": {
@@ -7828,7 +8394,17 @@ var FUNCTIONS_D2Direct3D_dll = {
       "comment": "Library Function - Single Match\n ___security_error_handler\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:cccf7268e3b6fa8cb2d0ce1f36225ad4"
+      "index": "STR:cccf7268e3b6fa8cb2d0ce1f36225ad4",
+      "candidates": {
+        "LoD/1.07": {
+          "address": "0x6F8A6C40",
+          "rva": "0x6C40",
+          "confidence": 0.855,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "D2Direct3D_STR_d385d171bae3": {
       "addresses": {
@@ -7873,7 +8449,23 @@ var FUNCTIONS_D2Direct3D_dll = {
         "LoD/1.11": {
           "address": "0x6F886800",
           "rva": "0x6800",
-          "confidence": 0.95,
+          "confidence": 0.505,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F8879A0",
+          "rva": "0x79A0",
+          "confidence": 0.505,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F889750",
+          "rva": "0x9750",
+          "confidence": 0.505,
           "method": "unique_string",
           "direction": "forward",
           "source": "LoD/1.10"

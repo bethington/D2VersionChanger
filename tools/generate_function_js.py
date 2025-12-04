@@ -146,11 +146,14 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["index"] = func['index']
         
         # Add candidates for empty cells
+        # Candidates can be stored as dict (new format) or list (old format)
         if func.get('candidates'):
             candidates_by_version = {}
-            for cand in func['candidates']:
-                ver = cand.get('version')
-                if ver:
+            cand_data = func['candidates']
+            
+            # Handle dict format: version -> candidate_data
+            if isinstance(cand_data, dict):
+                for ver, cand in cand_data.items():
                     candidates_by_version[ver] = {
                         'address': cand.get('address'),
                         'rva': cand.get('rva'),
@@ -159,6 +162,20 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
                         'direction': cand.get('direction', 'forward'),
                         'source': cand.get('source_version', '')
                     }
+            # Handle list format: [candidate1, candidate2, ...]
+            elif isinstance(cand_data, list):
+                for cand in cand_data:
+                    ver = cand.get('version')
+                    if ver:
+                        candidates_by_version[ver] = {
+                            'address': cand.get('address'),
+                            'rva': cand.get('rva'),
+                            'confidence': cand.get('confidence', 0),
+                            'method': cand.get('method', ''),
+                            'direction': cand.get('direction', 'forward'),
+                            'source': cand.get('source_version', '')
+                        }
+            
             if candidates_by_version:
                 entry["candidates"] = candidates_by_version
         

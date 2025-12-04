@@ -1,10 +1,10 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 
 var FUNCTION_INDEX_V2 = {
-  "generated": "2025-12-03T17:42:37.484961",
+  "generated": "2025-12-03T18:26:13.185974",
   "source": "function_registry_v2.json",
-  "total_functions": 27375,
+  "total_functions": 27378,
   "total_named": 8861,
   "files": {
     "Binkw32.dll": {
@@ -63,7 +63,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Client.dll": {
-      "count": 3310,
+      "count": 3311,
       "named": 1593,
       "versions": [
         "LoD/1.07",
@@ -80,7 +80,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Common.dll": {
-      "count": 2423,
+      "count": 2425,
       "named": 1447,
       "versions": [
         "LoD/1.07",
@@ -130,7 +130,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Game.dll": {
-      "count": 3976,
+      "count": 3977,
       "named": 287,
       "versions": [
         "LoD/1.07",
@@ -369,7 +369,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Game.exe": {
-      "count": 8803,
+      "count": 8802,
       "named": 658,
       "versions": [
         "LoD/1.07",

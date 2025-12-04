@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 // Functions for D2Sound.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -549,7 +549,41 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined4 Ordinal_10011(undefined4 * param_1)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10011"
+      "index": "EXP:10011",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8770",
+          "rva": "0x8770",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B91D0",
+          "rva": "0x91D0",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B6F30",
+          "rva": "0x6F30",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B6F30",
+          "rva": "0x6F30",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_EXP_10013": {
       "addresses": {
@@ -638,7 +672,41 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined4 Ordinal_10015(int param_1)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10015"
+      "index": "EXP:10015",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B80D0",
+          "rva": "0x80D0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B8A10",
+          "rva": "0x8A10",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B67F0",
+          "rva": "0x67F0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B67F0",
+          "rva": "0x67F0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_EXP_10016": {
       "addresses": {
@@ -750,7 +818,49 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10024(int param_1, undefined4 param_2, int param_3)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10024"
+      "index": "EXP:10024",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8020",
+          "rva": "0x8020",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B87E0",
+          "rva": "0x87E0",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B6B80",
+          "rva": "0x6B80",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B6B80",
+          "rva": "0x6B80",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B7A30",
+          "rva": "0x7A30",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_EXP_10025": {
       "addresses": {
@@ -972,7 +1082,41 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10034(int * param_1, int param_2)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10034"
+      "index": "EXP:10034",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F984050",
+          "rva": "0x4050",
+          "confidence": 0.403,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F984200",
+          "rva": "0x4200",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F984200",
+          "rva": "0x4200",
+          "confidence": 0.193,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6F9E4200",
+          "rva": "0x4200",
+          "confidence": 0.141,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Sound_EXP_10035": {
       "addresses": {
@@ -1377,7 +1521,33 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10057(int * param_1, int * param_2)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10057"
+      "index": "EXP:10057",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8E90",
+          "rva": "0x8E90",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B7650",
+          "rva": "0x7650",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B7650",
+          "rva": "0x7650",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_EXP_10058": {
       "addresses": {
@@ -1532,7 +1702,17 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10062(int * param_1)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10062"
+      "index": "EXP:10062",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6F9B6E20",
+          "rva": "0x6E20",
+          "confidence": 0.296,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_EXP_10063": {
       "addresses": {
@@ -1588,7 +1768,49 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10065(void)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10065"
+      "index": "EXP:10065",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8230",
+          "rva": "0x8230",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B8CB0",
+          "rva": "0x8CB0",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B6950",
+          "rva": "0x6950",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B6950",
+          "rva": "0x6950",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B7C40",
+          "rva": "0x7C40",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_EXP_10066": {
       "addresses": {
@@ -1609,7 +1831,17 @@ var FUNCTIONS_D2Sound_dll = {
       "signature": "undefined Ordinal_10066(undefined4 * param_1, int param_2)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10066"
+      "index": "EXP:10066",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6F984200",
+          "rva": "0x4200",
+          "confidence": 0.327,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_EXP_10067": {
       "addresses": {
@@ -1762,7 +1994,33 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "0x18C5"
       },
       "method": "MNE",
-      "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70"
+      "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F985883",
+          "rva": "0x5883",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F985A3B",
+          "rva": "0x5A3B",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F985A3B",
+          "rva": "0x5A3B",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_03d2d9a1894b": {
       "addresses": {
@@ -2782,7 +3040,33 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n ___onexitinit\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:266baaaf79f230c6a6856a4a53b42d70"
+      "index": "MNE:266baaaf79f230c6a6856a4a53b42d70",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F984020",
+          "rva": "0x4020",
+          "confidence": 0.393,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9841D0",
+          "rva": "0x41D0",
+          "confidence": 0.318,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9841D0",
+          "rva": "0x41D0",
+          "confidence": 0.209,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_28413b8bd9dd": {
       "addresses": {
@@ -2914,7 +3198,49 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0xA440"
       },
       "method": "MNE",
-      "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6"
+      "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B80A0",
+          "rva": "0x80A0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B8860",
+          "rva": "0x8860",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B67C0",
+          "rva": "0x67C0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B67C0",
+          "rva": "0x67C0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B7B10",
+          "rva": "0x7B10",
+          "confidence": 0.139,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_MNE_2b72785c7d09": {
       "addresses": {
@@ -3234,7 +3560,33 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F988400",
+          "rva": "0x8400",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9885C0",
+          "rva": "0x85C0",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9885C0",
+          "rva": "0x85C0",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_38a52ad8d912": {
       "addresses": {
@@ -3632,7 +3984,41 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0xC6BA"
       },
       "method": "MNE",
-      "index": "MNE:4b965c6b568965e3ac70ee94d9ada740"
+      "index": "MNE:4b965c6b568965e3ac70ee94d9ada740",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8D50",
+          "rva": "0x8D50",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B90F0",
+          "rva": "0x90F0",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B7510",
+          "rva": "0x7510",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B8760",
+          "rva": "0x8760",
+          "confidence": 0.103,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        }
+      }
     },
     "D2Sound_MNE_4beef3b29c3b": {
       "addresses": {
@@ -3950,7 +4336,17 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x4F10"
       },
       "method": "MNE",
-      "index": "MNE:59efd19ccb411ffee04aa8b1fd02d072"
+      "index": "MNE:59efd19ccb411ffee04aa8b1fd02d072",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6F9BC8B0",
+          "rva": "0xC8B0",
+          "confidence": 0.301,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_MNE_5b53deeaee2f": {
       "addresses": {
@@ -3972,7 +4368,33 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n __frnd\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:5b53deeaee2f2e36d1b6e935bca6b0ee"
+      "index": "MNE:5b53deeaee2f2e36d1b6e935bca6b0ee",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F9857AD",
+          "rva": "0x57AD",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F985965",
+          "rva": "0x5965",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F985965",
+          "rva": "0x5965",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_5b951ce55cbc": {
       "addresses": {
@@ -4550,7 +4972,41 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x9D2B"
       },
       "method": "MNE",
-      "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831"
+      "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B18CE",
+          "rva": "0x18CE",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B18CE",
+          "rva": "0x18CE",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B147B",
+          "rva": "0x147B",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B18CE",
+          "rva": "0x18CE",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_MNE_76bcdc60e227": {
       "addresses": {
@@ -4692,7 +5148,33 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n __ms_p5_test_fdiv\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:7ae8facd28484655a18ca60b688001a6"
+      "index": "MNE:7ae8facd28484655a18ca60b688001a6",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F986034",
+          "rva": "0x6034",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9861F4",
+          "rva": "0x61F4",
+          "confidence": 0.322,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9861F4",
+          "rva": "0x61F4",
+          "confidence": 0.211,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_7af322ad22a8": {
       "addresses": {
@@ -5219,7 +5701,49 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:8f7df14e6456cd93f8028b09582e6071"
+      "index": "MNE:8f7df14e6456cd93f8028b09582e6071",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F983E10",
+          "rva": "0x3E10",
+          "confidence": 0.389,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F983FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.283,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F983FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F983FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.186,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6F9E3FA0",
+          "rva": "0x3FA0",
+          "confidence": 0.136,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Sound_MNE_8f8d52afaf5c": {
       "addresses": {
@@ -5809,7 +6333,41 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n __cftog\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:a4b2a429e6b93d9fa514b9a34bf44774"
+      "index": "MNE:a4b2a429e6b93d9fa514b9a34bf44774",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F984220",
+          "rva": "0x4220",
+          "confidence": 0.399,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9843D0",
+          "rva": "0x43D0",
+          "confidence": 0.323,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9843D0",
+          "rva": "0x43D0",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F9843D0",
+          "rva": "0x43D0",
+          "confidence": 0.137,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2Sound_MNE_a4fde7ab6624": {
       "addresses": {
@@ -6125,7 +6683,49 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n __mtterm\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a"
+      "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F984910",
+          "rva": "0x4910",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F984AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.289,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F984AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F984AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.19,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6F9E4AC0",
+          "rva": "0x4AC0",
+          "confidence": 0.138,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Sound_MNE_b10e654b1e08": {
       "addresses": {
@@ -6359,7 +6959,17 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:b99d3962c0b26901db87269607fbf85a"
+      "index": "MNE:b99d3962c0b26901db87269607fbf85a",
+      "candidates": {
+        "LoD/1.13c": {
+          "address": "0x6F9B8100",
+          "rva": "0x8100",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_MNE_ba896e89d5b4": {
       "addresses": {
@@ -6586,7 +7196,41 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x9D50"
       },
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4"
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B4220",
+          "rva": "0x4220",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B4220",
+          "rva": "0x4220",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B4250",
+          "rva": "0x4250",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B4250",
+          "rva": "0x4250",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_MNE_c0a536e0e6da": {
       "addresses": {
@@ -6628,7 +7272,33 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0xB5D2"
       },
       "method": "MNE",
-      "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
+      "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B7A70",
+          "rva": "0x7A70",
+          "confidence": 0.278,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B9820",
+          "rva": "0x9820",
+          "confidence": 0.278,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B71B0",
+          "rva": "0x71B0",
+          "confidence": 0.126,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_MNE_c2ccec134924": {
       "addresses": {
@@ -7156,7 +7826,33 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0xAF1C"
       },
       "method": "MNE",
-      "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac"
+      "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B6B20",
+          "rva": "0x6B20",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B6620",
+          "rva": "0x6620",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B7DD0",
+          "rva": "0x7DD0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Sound_MNE_dd1410dc737c": {
       "addresses": {
@@ -7220,7 +7916,33 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n ___shr_12\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:df39be31c90d40388c4132cbde70d848"
+      "index": "MNE:df39be31c90d40388c4132cbde70d848",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F9880C9",
+          "rva": "0x80C9",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F988289",
+          "rva": "0x8289",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F988289",
+          "rva": "0x8289",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_e12afdedf65b": {
       "addresses": {
@@ -7401,7 +8123,33 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "0x16D0"
       },
       "method": "MNE",
-      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1"
+      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F9810D0",
+          "rva": "0x10D0",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F981190",
+          "rva": "0x1190",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F981190",
+          "rva": "0x1190",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Sound_MNE_e78d3e11a492": {
       "addresses": {
@@ -7495,7 +8243,41 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x57DE"
       },
       "method": "MNE",
-      "index": "MNE:eb17d7abe573793d4b67d9aac794697b"
+      "index": "MNE:eb17d7abe573793d4b67d9aac794697b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B65D0",
+          "rva": "0x65D0",
+          "confidence": 0.281,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B7460",
+          "rva": "0x7460",
+          "confidence": 0.281,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B7BC0",
+          "rva": "0x7BC0",
+          "confidence": 0.281,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B7420",
+          "rva": "0x7420",
+          "confidence": 0.135,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_MNE_ecf23adbf69d": {
       "addresses": {
@@ -8224,7 +9006,49 @@ var FUNCTIONS_D2Sound_dll = {
       "comment": "Library Function - Single Match\n __mtinit\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "STR",
-      "index": "STR:304d598e6d0a621c9e3544e6fb22e61e"
+      "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F9842C0",
+          "rva": "0x42C0",
+          "confidence": 0.384,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F984470",
+          "rva": "0x4470",
+          "confidence": 0.311,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F984470",
+          "rva": "0x4470",
+          "confidence": 0.204,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F984470",
+          "rva": "0x4470",
+          "confidence": 0.128,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6F9E4470",
+          "rva": "0x4470",
+          "confidence": 0.12,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Sound_STR_370b8cbe1369": {
       "addresses": {
@@ -8266,7 +9090,49 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x35F0"
       },
       "method": "STR",
-      "index": "STR:468d0bf1c4f663292e563a31586f4cf6"
+      "index": "STR:468d0bf1c4f663292e563a31586f4cf6",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8320",
+          "rva": "0x8320",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B8F40",
+          "rva": "0x8F40",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B6A40",
+          "rva": "0x6A40",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B6A40",
+          "rva": "0x6A40",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B7D30",
+          "rva": "0x7D30",
+          "confidence": 0.139,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_STR_477da5eccddd": {
       "addresses": {
@@ -8348,7 +9214,33 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x2BF0"
       },
       "method": "STR",
-      "index": "STR:6eb488ab76fcbe91b331e6974ea8a489"
+      "index": "STR:6eb488ab76fcbe91b331e6974ea8a489",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6F9B7AA0",
+          "rva": "0x7AA0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B7AA0",
+          "rva": "0x7AA0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B8CF0",
+          "rva": "0x8CF0",
+          "confidence": 0.141,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_STR_8315eedfd35b": {
       "addresses": {
@@ -8430,7 +9322,49 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x32F0"
       },
       "method": "STR",
-      "index": "STR:a1e8834f011a0c89a11eb63807d8b201"
+      "index": "STR:a1e8834f011a0c89a11eb63807d8b201",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F9B8B10",
+          "rva": "0x8B10",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F9B9580",
+          "rva": "0x9580",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F9B72D0",
+          "rva": "0x72D0",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F9B72D0",
+          "rva": "0x72D0",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F9B8520",
+          "rva": "0x8520",
+          "confidence": 0.141,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Sound_STR_a46ee8f2cf1e": {
       "addresses": {

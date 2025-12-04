@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 // Functions for Bnclient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -80,7 +80,41 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x7470"
       },
       "method": "API",
-      "index": "API:05a76bf6a4ea8a1c9b7c5902052c64b7"
+      "index": "API:05a76bf6a4ea8a1c9b7c5902052c64b7",
+      "candidates": {
+        "LoD/1.09": {
+          "address": "0x6FF07330",
+          "rva": "0x7330",
+          "confidence": 0.394,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.08"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF07330",
+          "rva": "0x7330",
+          "confidence": 0.224,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF21070",
+          "rva": "0x1070",
+          "confidence": 0.392,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF26AB0",
+          "rva": "0x6AB0",
+          "confidence": 0.394,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "Bnclient_API_0ed301c8b3b0": {
       "addresses": {
@@ -262,7 +296,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xA9E0"
       },
       "method": "API",
-      "index": "API:2069644e2e2b34cf74f21971aa0cf67d"
+      "index": "API:2069644e2e2b34cf74f21971aa0cf67d",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FF07820",
+          "rva": "0x7820",
+          "confidence": 0.42,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF07820",
+          "rva": "0x7820",
+          "confidence": 0.34,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_API_226b4b45fc7d": {
       "addresses": {
@@ -344,7 +396,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xE650"
       },
       "method": "API",
-      "index": "API:2785a35175c04d6e30e6b72c3991e78e"
+      "index": "API:2785a35175c04d6e30e6b72c3991e78e",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF26800",
+          "rva": "0x6800",
+          "confidence": 0.471,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF267E0",
+          "rva": "0x67E0",
+          "confidence": 0.343,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "Bnclient_API_27b2e27c9374": {
       "addresses": {
@@ -401,8 +471,32 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": {
           "address": "0x6FF071C0",
           "rva": "0x71C0",
-          "confidence": 0.846,
-          "method": "composite",
+          "confidence": 0.57,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF06A80",
+          "rva": "0x6A80",
+          "confidence": 0.461,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF06810",
+          "rva": "0x6810",
+          "confidence": 0.336,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF06810",
+          "rva": "0x6810",
+          "confidence": 0.374,
+          "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         }
@@ -448,7 +542,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xE5B0"
       },
       "method": "API",
-      "index": "API:3c3e6a654119e5a711661a3a21530095"
+      "index": "API:3c3e6a654119e5a711661a3a21530095",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF260D0",
+          "rva": "0x60D0",
+          "confidence": 0.548,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF260B0",
+          "rva": "0x60B0",
+          "confidence": 0.444,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "Bnclient_API_3e42cd412070": {
       "addresses": {
@@ -520,7 +632,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x134E0"
       },
       "method": "API",
-      "index": "API:451e4d87b9a613e8671336fd375f016a"
+      "index": "API:451e4d87b9a613e8671336fd375f016a",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF13D70",
+          "rva": "0x13D70",
+          "confidence": 0.33,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF13770",
+          "rva": "0x13770",
+          "confidence": 0.195,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_API_46e4263294a5": {
       "addresses": {
@@ -1144,7 +1274,41 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x13170"
       },
       "method": "API",
-      "index": "API:b8a70fdeafe78bc6b7f4f1407cba9631"
+      "index": "API:b8a70fdeafe78bc6b7f4f1407cba9631",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF076D0",
+          "rva": "0x76D0",
+          "confidence": 0.366,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF06FE0",
+          "rva": "0x6FE0",
+          "confidence": 0.296,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF06D70",
+          "rva": "0x6D70",
+          "confidence": 0.194,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF06D70",
+          "rva": "0x6D70",
+          "confidence": 0.142,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "Bnclient_API_b97b99733404": {
       "addresses": {
@@ -1509,10 +1673,34 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": {
           "address": "0x6FF2C220",
           "rva": "0xC220",
-          "confidence": 0.773,
+          "confidence": 0.696,
           "method": "minhash",
-          "direction": "forward",
+          "direction": "reverse",
           "source": "LoD/1.13d"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF33990",
+          "rva": "0x13990",
+          "confidence": 0.564,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.13c"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF33E20",
+          "rva": "0x13E20",
+          "confidence": 0.411,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.12a"
+        },
+        "LoD/1.11": {
+          "address": "0x6FF2BBF0",
+          "rva": "0xBBF0",
+          "confidence": 0.27,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11b"
         }
       }
     },
@@ -1848,7 +2036,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x2E4D"
       },
       "method": "MNE",
-      "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70"
+      "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0C752",
+          "rva": "0xC752",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF0C1F2",
+          "rva": "0xC1F2",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF0BEB7",
+          "rva": "0xBEB7",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_0432b5507696": {
       "addresses": {
@@ -1900,7 +2114,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n void __cdecl terminate(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:048fa86b16ba3f4924242f25b953c745"
+      "index": "MNE:048fa86b16ba3f4924242f25b953c745",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FF11391",
+          "rva": "0x11391",
+          "confidence": 0.324,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF110A1",
+          "rva": "0x110A1",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_04f1e6f173a4": {
       "addresses": {
@@ -2358,7 +2590,41 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x8B70"
       },
       "method": "MNE",
-      "index": "MNE:14b13ed976e9fe94acaa123138d5fb4f"
+      "index": "MNE:14b13ed976e9fe94acaa123138d5fb4f",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF21D04",
+          "rva": "0x1D04",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF2147D",
+          "rva": "0x147D",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF21423",
+          "rva": "0x1423",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF21569",
+          "rva": "0x1569",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_1563254ce315": {
       "addresses": {
@@ -2796,7 +3062,41 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Acquire critical section using index-based or direct method based on threshold\n\nAlgorithm:\n\n1. Load lock index parameter from stack\n2. Compare lock index against threshold value 0x14 (20)\n3. If index below threshold: branch to indexed acquisition method\n4. If index at/above threshold: use direct critical section method\n5. For indexed method: add offset 0x1c (28) to index\n6. For indexed method: call AcquireCriticalSectionByIndex with adjusted index\n7. For direct method: calculate CRITICAL_SECTION address (pLockContext + 0x20)\n8. For direct method: call Windows EnterCriticalSection API\n9. Return to caller\n\nParameters:\n\n- nLockIndex: Zero-based index of critical section to acquire\n- pLockContext: Pointer to LockContext structure containing synchronization objects\n\nReturns:\n\n- void (no return value)\n- Function modifies global synchronization state\n\nSpecial Cases:\n\n- Threshold 0x14 (20) determines which acquisition method to use\n- Index adjustment +0x1c (28) applied for indexed acquisition only\n- Offset +0x20 (32) locates CRITICAL_SECTION within LockContext structure\n\nStructure Layout:\n\nLockContext structure:\nOffset  Size  Field Name        Type                 Description\n+0x00   32    data              byte[32]            Reserved data area\n+0x20   24    criticalSection   _RTL_CRITICAL_SECTION Windows sync object\n\nMagic Numbers Reference:\n\n- 0x14 (20): Threshold separating indexed vs direct acquisition methods\n- 0x1c (28): Index offset applied before calling AcquireCriticalSectionByIndex  \n- 0x20 (32): Byte offset to criticalSection field in LockContext structure",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:2221715ad392d22929a667a9021e3f90"
+      "index": "MNE:2221715ad392d22929a667a9021e3f90",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF21304",
+          "rva": "0x1304",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF21927",
+          "rva": "0x1927",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF2176C",
+          "rva": "0x176C",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF21AC7",
+          "rva": "0x1AC7",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_229a1516150c": {
       "addresses": {
@@ -3144,7 +3444,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "private: char * __thiscall BNGatewayAccess::SkipEOL(char *,char *)",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:2f17f14e3f70cc985dc81c835053b4b7"
+      "index": "MNE:2f17f14e3f70cc985dc81c835053b4b7",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0FD39",
+          "rva": "0xFD39",
+          "confidence": 0.365,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF0F74B",
+          "rva": "0xF74B",
+          "confidence": 0.296,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF0E85C",
+          "rva": "0xE85C",
+          "confidence": 0.194,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_30121dcb0e48": {
       "addresses": {
@@ -3318,7 +3644,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x14E50"
       },
       "method": "MNE",
-      "index": "MNE:328852572d3a9f0ab8de60cdc5daa0aa"
+      "index": "MNE:328852572d3a9f0ab8de60cdc5daa0aa",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF065B0",
+          "rva": "0x65B0",
+          "confidence": 0.399,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF063E0",
+          "rva": "0x63E0",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_334e7114a534": {
       "addresses": {
@@ -3334,7 +3678,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x138B0"
       },
       "method": "MNE",
-      "index": "MNE:334e7114a534a7eb51a020a2b3dceeed"
+      "index": "MNE:334e7114a534a7eb51a020a2b3dceeed",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FF34010",
+          "rva": "0x14010",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF2C960",
+          "rva": "0xC960",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FF33C60",
+          "rva": "0x13C60",
+          "confidence": 0.174,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        }
+      }
     },
     "Bnclient_MNE_34dfd362d301": {
       "addresses": {
@@ -3380,7 +3750,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Thread-safe global process ID setter that unconditionally overwrites stored value.\n\nAlgorithm:\n1. Enter critical section to ensure thread safety during global state modification\n2. Store the provided process ID value unconditionally to global storage location  \n3. Leave critical section to release lock for other threads\n4. Return success code to indicate operation completed\n\nParameters:\n- dwProcessId (DWORD): Process ID value to store in global state\n\nReturns:\n- DWORD: Always returns 1 indicating successful storage operation\n\nSpecial Cases:\n- Unlike SetGlobalProcessIdSafe which only sets if value is 0, this function always overwrites the stored value\n- Function uses __fastcall convention with dwProcessId passed in ECX register\n\nMagic Numbers Reference:\n- 0x130: Offset to critical section structure within g_abGlobalStringBuffer\n- 0x14C: Offset to process ID storage location (g_abGlobalStringBuffer._332_4_)  \n- 0x1: Success return value indicating operation completed",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:3545eb0c48f8a1e83d4b209d9e2fc0b1"
+      "index": "MNE:3545eb0c48f8a1e83d4b209d9e2fc0b1",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FF2AFD0",
+          "rva": "0xAFD0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF31320",
+          "rva": "0x11320",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "Bnclient_MNE_3586df3e31dd": {
       "addresses": {
@@ -3448,7 +3836,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF10F20",
+          "rva": "0x10F20",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF10940",
+          "rva": "0x10940",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF10650",
+          "rva": "0x10650",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_37d7c6a4c251": {
       "addresses": {
@@ -3535,10 +3949,18 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": {
           "address": "0x6FF24C90",
           "rva": "0x4C90",
-          "confidence": 0.831,
+          "confidence": 0.748,
           "method": "composite",
           "direction": "reverse",
           "source": "LoD/1.09"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF24C70",
+          "rva": "0x4C70",
+          "confidence": 0.545,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.08"
         }
       }
     },
@@ -3624,7 +4046,41 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Process all environment variable strings from global string table.\n\nAlgorithm:\n1. Load pointer to global environment string table (g_dwEnvironmentInitFlag)\n2. Initialize table pointer for iteration through string array\n3. While current string pointer is not NULL:\n   a. Get required buffer size for wide-to-multibyte conversion\n   b. Allocate buffer for converted string using malloc\n   c. Convert wide character string to multibyte using WideCharToMultiByte\n   d. Process converted string by calling FUN_6ff31e30\n   e. Advance to next string in table (ppwszStringTablePtr[1])\n   f. Update table pointer to next position\n4. Return success (0) when all strings processed or error (-1) on failure\n\nParameters:\n  (none) - Function takes no parameters\n\nReturns:\n  int - 0 on successful processing of all strings\n       -1 (0xffffffff) on allocation failure or conversion error\n\nSpecial Cases:\n  - Empty string table (first pointer is NULL) returns success (0)\n  - Malloc failure during buffer allocation triggers error return\n  - WideCharToMultiByte failure during conversion triggers error return\n  - Uses Windows CP_ACP (1) for multibyte conversion\n\nMagic Numbers:\n  0x1 - Code page CP_ACP for default ANSI conversion\n  -1 - Null-terminated string length indicator\n  0xffffffff - Error return code indicating failure",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:3b6c3d2f2421ca1228631708357a8aa1"
+      "index": "MNE:3b6c3d2f2421ca1228631708357a8aa1",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF23C97",
+          "rva": "0x3C97",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF2349C",
+          "rva": "0x349C",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF22801",
+          "rva": "0x2801",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF2249D",
+          "rva": "0x249D",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_3b865c2f933c": {
       "addresses": {
@@ -3772,7 +4228,17 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Decrements an integer value by 1 and returns the result.\n\nAlgorithm:\n1. Ignore the first parameter (unused placeholder for fastcall convention)\n2. Load the second parameter value into a register\n3. Subtract 1 from the value using LEA instruction\n4. Return the decremented result\n\nParameters:\nnUnused - int: Unused parameter (fastcall ECX register placeholder)\nnValue - int: The integer value to decrement\n\nReturns:\nint: The input value decreased by 1\n\nSpecial Cases:\n- Function ignores the first parameter completely\n- Uses LEA instruction for efficient decrement: LEA EAX,[EDX + -0x1]\n- Contains orphaned POP EBX instruction from compiler optimization\n\nError Handling:\nNone - this is a simple arithmetic helper function",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:3ecdb5e459e29b4117490dc114e98574"
+      "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF22230",
+          "rva": "0x2230",
+          "confidence": 0.365,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.07"
+        }
+      }
     },
     "Bnclient_MNE_3ed9d2d0aadf": {
       "addresses": {
@@ -4221,7 +4687,57 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x83C0"
       },
       "method": "MNE",
-      "index": "MNE:4a81966979e45325610a190ba9a761b5"
+      "index": "MNE:4a81966979e45325610a190ba9a761b5",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF21030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.08": {
+          "address": "0x6FF244E0",
+          "rva": "0x44E0",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF244C0",
+          "rva": "0x44C0",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF21200",
+          "rva": "0x1200",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF21090",
+          "rva": "0x1090",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF21030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_4acad21b2e55": {
       "addresses": {
@@ -4315,7 +4831,17 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Process 8 rounds of encryption algorithm using 16-bit block cipher with subkey array.\n\nAlgorithm:\n1. Load 4 key words (16-bit each) from input key array into working variables\n2. Initialize round counter to 8 for main encryption loop\n3. For each round (8 iterations total):\n   a. Load 6 subkeys from current position in subkey array (48 bytes per round)\n   b. Apply complex multiplication with zero-check and carry propagation\n   c. Perform XOR operations between intermediate values and key data\n   d. Calculate modular arithmetic with bit masking and overflow handling\n   e. Advance subkey pointer by 6 words (12 bytes) for next round\n4. After 8 rounds, process final 4 subkeys for output transformation\n5. Store 4 computed result words into output array\n\nParameters:\npwKey - Pointer to input key array (4 x 16-bit words = 8 bytes)\npsOutput - Pointer to output buffer for encrypted data (4 x 16-bit words = 8 bytes)\npwSubKeys - Pointer to subkey array (52 x 16-bit words = 104 bytes total)\n\nReturns:\nvoid (results written directly to psOutput array)\n\nSpecial Cases:\nZero multiplication values default to (1 - other_operand) to avoid null operations\nOverflow detection using bit masking with 0xffff for 16-bit boundaries\nCarry propagation implemented with comparison and conditional subtraction\n\nMagic Numbers Reference:\n0x8 - Number of encryption rounds in main loop\n0xffff - 16-bit mask for overflow detection and value clamping\n0x10 - Right shift amount for extracting high word from 32-bit multiplication\n0x1 - Default value used when operand is zero to prevent null encryption\n0x6 - Subkey advancement per round (6 x 16-bit words = 12 bytes)\n\nStructure Layout:\nInput Key Array (8 bytes):\nOffset  Size  Field Name    Type      Description\n0x00    2     Key Word 0    ushort    First key component\n0x02    2     Key Word 1    ushort    Second key component  \n0x04    2     Key Word 2    ushort    Third key component\n0x06    2     Key Word 3    ushort    Fourth key component\n\nOutput Array (8 bytes):\nOffset  Size  Field Name    Type      Description\n0x00    2     Result 0      short     First encrypted word\n0x02    2     Result 1      short     Second encrypted word\n0x04    2     Result 2      short     Third encrypted word\n0x06    2     Result 3      short     Fourth encrypted word\n\nSubkey Array (104 bytes):\nEach round uses 6 sequential 16-bit subkeys\nRound 0: offsets 0x00-0x0A (6 words)\nRound 1: offsets 0x0C-0x16 (6 words)\n...\nRound 7: offsets 0x54-0x5E (6 words)\nFinal: offsets 0x60-0x68 (4 words)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:4bfb4adc00fcd8e128d9f826138da6f4"
+      "index": "MNE:4bfb4adc00fcd8e128d9f826138da6f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF2F250",
+          "rva": "0xF250",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_4c053343a65b": {
       "addresses": {
@@ -4859,7 +5385,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n _tolower\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:5812d18894407ef6889050a4bd31c359"
+      "index": "MNE:5812d18894407ef6889050a4bd31c359",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF11910",
+          "rva": "0x11910",
+          "confidence": 0.398,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF113C0",
+          "rva": "0x113C0",
+          "confidence": 0.322,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF110D0",
+          "rva": "0x110D0",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_58ce22034100": {
       "addresses": {
@@ -4873,7 +5425,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09d": "0x13080"
       },
       "method": "MNE",
-      "index": "MNE:58ce2203410037d3ec0fe80792264133"
+      "index": "MNE:58ce2203410037d3ec0fe80792264133",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FF345E0",
+          "rva": "0x145E0",
+          "confidence": 0.322,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "Bnclient_MNE_5918dc16e1bf": {
       "addresses": {
@@ -5009,7 +5571,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09d": "0x13640"
       },
       "method": "MNE",
-      "index": "MNE:5d1fe854962fce87e1cf67d38ccd2ad7"
+      "index": "MNE:5d1fe854962fce87e1cf67d38ccd2ad7",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0C8FF",
+          "rva": "0xC8FF",
+          "confidence": 0.325,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "Bnclient_MNE_5d2d40297dfe": {
       "addresses": {
@@ -5451,7 +6023,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n int __cdecl IsExceptionObjectToBeDestroyed(void *)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:6d6cf4ba189585a4cd2d487202ee7142"
+      "index": "MNE:6d6cf4ba189585a4cd2d487202ee7142",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF05B00",
+          "rva": "0x5B00",
+          "confidence": 0.385,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF05B90",
+          "rva": "0x5B90",
+          "confidence": 0.312,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF05920",
+          "rva": "0x5920",
+          "confidence": 0.204,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_6d6e85748e7c": {
       "addresses": {
@@ -5469,7 +6067,41 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xE3A0"
       },
       "method": "MNE",
-      "index": "MNE:6d6e85748e7c62f71836c8bcb508b315"
+      "index": "MNE:6d6e85748e7c62f71836c8bcb508b315",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF15960",
+          "rva": "0x15960",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF153D0",
+          "rva": "0x153D0",
+          "confidence": 0.295,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF150B0",
+          "rva": "0x150B0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF150B0",
+          "rva": "0x150B0",
+          "confidence": 0.194,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_6dad5d067638": {
       "addresses": {
@@ -5777,7 +6409,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Multiple Matches With Different Base Names\n void __stdcall _CallMemberFunction1(void *,void *,void *)\n void __stdcall _CallMemberFunction2(void *,void *,void *,int)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:772d22c2541e825eefebea33eefd1baf"
+      "index": "MNE:772d22c2541e825eefebea33eefd1baf",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF022B0",
+          "rva": "0x22B0",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF067D0",
+          "rva": "0x67D0",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_777097edea10": {
       "addresses": {
@@ -5801,7 +6451,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Perform cryptographic state scrambling using bit rotation and array manipulation.\n\nAlgorithm:\n\n1. Extract 4-element crypto state from input structure (state0, state1, state2, state3)\n2. Check bDirectStore flag to determine operation mode\n3. If direct store (bDirectStore != 0):\n   a. Calculate global buffer offset: nSlotIndex * 0x68 + 0x208\n   b. Copy 4 crypto state values to global buffer at calculated offset\n   c. Perform 44 iterations of bit rotation scramble on global buffer data\n   d. Each iteration: rotate bits using (next >> 7) | (current << 9) pattern\n   e. Advance buffer pointer by conditional offset (& 8) * 2 every 8th iteration\n4. If local processing (bDirectStore == 0):\n   a. Copy crypto state to local stack buffer starting with state0\n   b. Perform identical 44 iterations of bit rotation on local buffer\n   c. Call ProcessModularInverseArray with local buffer and global buffer as parameters\n5. Return without value\n\nParameters:\n\n- nSlotIndex (ECX): int - Slot index for calculating global buffer offset\n- bDirectStore (EDX): int - Flag determining operation mode (0=local processing, non-zero=direct store)  \n- pCryptoState (Stack+4): CryptoState * - Pointer to 4-element crypto state structure\n\nReturns:\n\n- void - No return value\n\nSpecial Cases:\n\n- Magic number 0x68 (104): Slot stride size in global buffer\n- Magic number 0x208 (520): Base offset in global buffer for crypto slots\n- Magic number 0x2c (44): Number of scrambling iterations\n- Magic number 0xe (14): Offset for result storage in rotation algorithm\n\nStructure Layout:\n\nCryptoState (16 bytes):\nOffset  Size  Field     Type  Description\n0x0     4     dwState0  uint  First crypto state value\n0x4     4     dwState1  uint  Second crypto state value  \n0x8     4     dwState2  uint  Third crypto state value\n0xc     4     dwState3  uint  Fourth crypto state value\n\nBit Rotation Algorithm:\n\nThe scrambling uses a 16-bit rotation pattern over 8-element windows:\n- Index masking: (index + 1) & 7, (index + 2) & 7 create 8-element circular buffer\n- Bit operations: source >> 7 extracts high 9 bits, target << 9 shifts low 7 bits\n- Result combination: (source >> 7) | (target << 9) creates rotated 16-bit value\n- Buffer advancement: pointer += ((index & 8) * 2) advances every 8 iterations",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:777097edea10233e57beefd29b0bf318"
+      "index": "MNE:777097edea10233e57beefd29b0bf318",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FF28650",
+          "rva": "0x8650",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF28630",
+          "rva": "0x8630",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_781017f4d855": {
       "addresses": {
@@ -6439,7 +7107,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x13680"
       },
       "method": "MNE",
-      "index": "MNE:83f6daa31383d30d2e85d94d4d92a01c"
+      "index": "MNE:83f6daa31383d30d2e85d94d4d92a01c",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF2C340",
+          "rva": "0xC340",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_8413e044a8bf": {
       "addresses": {
@@ -6579,7 +7257,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x65E0"
       },
       "method": "MNE",
-      "index": "MNE:856ee0d81ef8d6ab83ba4fd382618f6a"
+      "index": "MNE:856ee0d81ef8d6ab83ba4fd382618f6a",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF32230",
+          "rva": "0x12230",
+          "confidence": 0.399,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF06650",
+          "rva": "0x6650",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_85de0cee1ebe": {
       "addresses": {
@@ -6609,7 +7305,49 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x15720"
       },
       "method": "MNE",
-      "index": "MNE:85e183d110801f4f0aa8b54b7201c2da"
+      "index": "MNE:85e183d110801f4f0aa8b54b7201c2da",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF34640",
+          "rva": "0x14640",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF2C6E0",
+          "rva": "0xC6E0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF2BD40",
+          "rva": "0xBD40",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF2CE60",
+          "rva": "0xCE60",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FF30B80",
+          "rva": "0x10B80",
+          "confidence": 0.172,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        }
+      }
     },
     "Bnclient_MNE_893c0b8891aa": {
       "addresses": {
@@ -6747,7 +7485,41 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xC120"
       },
       "method": "MNE",
-      "index": "MNE:8b6d11914714a660b28813d76863598c"
+      "index": "MNE:8b6d11914714a660b28813d76863598c",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF01000",
+          "rva": "0x1000",
+          "confidence": 0.436,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF01000",
+          "rva": "0x1000",
+          "confidence": 0.353,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF032F0",
+          "rva": "0x32F0",
+          "confidence": 0.318,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF032F0",
+          "rva": "0x32F0",
+          "confidence": 0.209,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_8b97ebec1e2b": {
       "addresses": {
@@ -7621,7 +8393,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x15AD0"
       },
       "method": "MNE",
-      "index": "MNE:9dfbd1c154e276215f386aab8b7799fc"
+      "index": "MNE:9dfbd1c154e276215f386aab8b7799fc",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0D15A",
+          "rva": "0xD15A",
+          "confidence": 0.398,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF0CAB0",
+          "rva": "0xCAB0",
+          "confidence": 0.323,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF0C850",
+          "rva": "0xC850",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_9e01ab6a0c2f": {
       "addresses": {
@@ -8083,7 +8881,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xCE60"
       },
       "method": "MNE",
-      "index": "MNE:a99e2d6eee2857b72fb45bd928e7ab0d"
+      "index": "MNE:a99e2d6eee2857b72fb45bd928e7ab0d",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF057C0",
+          "rva": "0x57C0",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_ab1eb8b21e2b": {
       "addresses": {
@@ -8155,7 +8963,49 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x15950"
       },
       "method": "MNE",
-      "index": "MNE:acd2f1b89e1fada3d5641fb7495ec8ba"
+      "index": "MNE:acd2f1b89e1fada3d5641fb7495ec8ba",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF25E5B",
+          "rva": "0x5E5B",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.08": {
+          "address": "0x6FF2B2B7",
+          "rva": "0xB2B7",
+          "confidence": 0.378,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF24A38",
+          "rva": "0x4A38",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF26CF0",
+          "rva": "0x6CF0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF25C42",
+          "rva": "0x5C42",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_adafedc33ce1": {
       "addresses": {
@@ -8795,7 +9645,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Thread-safe wrapper for stream operations that validates stream index and provides exclusive access.\n\nAlgorithm:\n1. Validate stream index is within bounds (< g_dwStreamCount)\n2. Calculate bucket index (dwStreamIndex >> 5) and within-bucket index (dwStreamIndex & 0x1f)  \n3. Access stream descriptor array g_apStreamDescriptors[bucket][index]\n4. Check if stream is active by testing position flag (bit 0 of nPosition field)\n5. If stream invalid or inactive, jump to error_invalid_stream (0x6ff300bd)\n6. If stream valid and active, proceed to process_valid_stream (0x6ff30098):\n   - Lock stream access via FUN_6ff31601(dwStreamIndex)\n   - Call actual operation FUN_6ff300d5(dwStreamIndex, nParam2, dwParam3)\n   - Store result in dwResult\n   - Unlock stream access via FUN_6ff31660(dwStreamIndex)  \n   - Return dwResult\n7. Error path sets thread context error code to 9, clears extended error, returns -1\n\nParameters:\ndwStreamIndex (uint): Zero-based stream index to operate on, must be < g_dwStreamCount\nnParam2 (int): Second parameter passed to underlying operation (purpose varies by operation)\ndwParam3 (uint): Third parameter passed to underlying operation (purpose varies by operation)\n\nReturns:\nSuccess: Result value from underlying stream operation (varies by operation type)\nFailure: 0xFFFFFFFF (-1) when stream index invalid or stream inactive\n\nSpecial Cases:\nBucket-based indexing supports up to 32 streams per bucket in g_apStreamDescriptors array\nStream active flag is bit 0 of nPosition field in StreamIO structure (offset +4)\nThread context error code 9 indicates invalid stream access attempt\n\nMagic Numbers Reference:\n0x05 (5): Bit shift count for bucket calculation (divide by 32)\n0x1f (31): Mask for within-bucket index (modulo 32) \n0x01 (1): Stream active flag mask for nPosition field\n0x09 (9): Thread context error code for invalid stream access\n0xffffffff (-1): Error return value for invalid/inactive streams\n\nStructure Layout:\nStreamIO structure (36 bytes):\nOffset  Size  Field      Type    Description\n+0x00   4     unknown    uint    Purpose unknown\n+0x04   4     nPosition  uint    Stream position with active flag in bit 0\n+0x08   28    unknown    varies  Additional fields (purpose unknown)\n\nFlag Bits:\nnPosition field bit layout:\nBit 0 (0x01): Stream active flag (1=active, 0=inactive)\nBits 1-31: Actual position value (right shift by 1 to get position)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf"
+      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF2BB80",
+          "rva": "0xBB80",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF2C1B0",
+          "rva": "0xC1B0",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FF32E70",
+          "rva": "0x12E70",
+          "confidence": 0.136,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "Bnclient_MNE_bafce56213ce": {
       "addresses": {
@@ -9017,7 +9893,41 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Copies memory from source to destination buffer with overlap detection and DWORD-optimized transfer.\n\nAlgorithm:\n1. Check for overlapping memory regions (source < dest < source+size)\n2. If overlapping, copy backwards from end to avoid corruption\n3. Check destination alignment for DWORD optimization\n4. If aligned, divide transfer into DWORD chunks and remainder bytes\n5. Use optimized REP MOVSD for bulk 4-byte transfers (7+ DWORDs)\n6. Handle unaligned bytes with individual byte copies\n7. Switch statement handles remainder bytes (0-3) after DWORD transfers\n\nParameters:\n  pDestination - Destination memory buffer pointer (void *)\n  pSource - Source memory buffer pointer (void *)\n  dwSizeBytes - Number of bytes to copy (uint)\n\nReturns:\n  void * - Original destination pointer (pDestination)\n\nSpecial Cases:\n  - Zero byte copy returns immediately\n  - Overlapping regions trigger backward copy mode\n  - Unaligned destination uses byte-wise copy with alignment fixup\n  - Small copies (< 32 bytes) use unrolled switch statements\n\nMagic Numbers Reference:\n  0x03 (3) - Alignment mask for 4-byte boundary check\n  0x04 (4) - DWORD size for pointer arithmetic  \n  0x07 (7) - Minimum DWORD count threshold for REP optimization\n\nError Handling:\n  - No explicit validation (low-level utility function)\n  - Assumes valid non-null pointers and size parameters\n  - Caller responsible for buffer boundary checks",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4"
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF25280",
+          "rva": "0x5280",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF26440",
+          "rva": "0x6440",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF258B0",
+          "rva": "0x58B0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF254F0",
+          "rva": "0x54F0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_c0a536e0e6da": {
       "addresses": {
@@ -9039,7 +9949,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n __freeptd\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:c0a536e0e6dadcb5b945a8303814ecb3"
+      "index": "MNE:c0a536e0e6dadcb5b945a8303814ecb3",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0C99B",
+          "rva": "0xC99B",
+          "confidence": 0.4,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF0C43B",
+          "rva": "0xC43B",
+          "confidence": 0.324,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF0C1DC",
+          "rva": "0xC1DC",
+          "confidence": 0.213,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_c1d05e132bc8": {
       "addresses": {
@@ -9063,7 +9999,17 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Performs locale-aware string mapping with automatic Unicode/ANSI fallback detection.\n\nAlgorithm:\n1. Initialize SEH exception handling frame for safe string operations\n2. Test locale capability on first call by probing LCMapStringW and LCMapStringA\n   - If LCMapStringW succeeds: set g_dwLocaleCapability = 1 (Unicode support)\n   - If LCMapStringA succeeds: set g_dwLocaleCapability = 2 (ANSI fallback)\n   - If both fail: return 0 (no locale support available)\n3. Validate input string length using FUN_6ff31e05() if cchSrc > 0\n4. Route to appropriate mapping function based on detected capability:\n   - Capability 2 (ANSI): Direct call to LCMapStringA with input parameters\n   - Capability 1 (Unicode): Multi-stage Unicode conversion process\n5. For Unicode path (capability 1):\n   a. Use default code page g_dwDefaultCodePage if uCodePage = 0\n   b. Convert ANSI source to Unicode using MultiByteToWideChar\n   c. Allocate stack buffer for Unicode temporary storage\n   d. Perform locale mapping on Unicode string using LCMapStringW\n   e. Handle two output modes based on LCMAP_BYTEREV flag (0x400):\n      - Without LCMAP_BYTEREV: Convert back to ANSI using WideCharToMultiByte\n      - With LCMAP_BYTEREV: Copy Unicode result directly to output buffer\n6. Validate buffer sizes and handle overflow conditions\n7. Clean up SEH frame and return mapped string length\n\nParameters:\nlcid - Locale identifier for string mapping operation\ndwMapFlags - String mapping flags (LCMAP_UPPERCASE, LCMAP_LOWERCASE, etc.)\nlpSrcStr - Source string to be mapped (ANSI format)\ncchSrc - Length of source string in characters (-1 for null-terminated)\nlpDestStr - Destination buffer for mapped string (Unicode or ANSI based on flags)\ncchDest - Size of destination buffer in characters (0 to query required size)\nuCodePage - Code page for ANSI/Unicode conversion (0 uses default from g_dwDefaultCodePage)\ndwFlags - Additional conversion flags for MultiByteToWideChar (affects MB_PRECOMPOSED vs MB_COMPOSITE)\nIMPLICIT dwExceptionState - SEH exception handling state tracking\nIMPLICIT pPrevExceptionRecord - Previous exception handler in SEH chain\n\nReturns:\nSuccess: Length of mapped string in characters (not including null terminator)\nFailure: 0 on error conditions (invalid locale, buffer overflow, conversion failure)\nQuery mode: Required buffer size when cchDest = 0\n\nSpecial Cases:\n- First call detection: Probes both Unicode and ANSI capabilities to set g_dwLocaleCapability\n- Buffer overflow: Returns 0 if output buffer too small for mapped result\n- Stack allocation failure: Returns 0 if StackProbe() detects insufficient stack space\n- Exception handling: Uses SEH to protect against access violations during string operations\n\nMagic Numbers Reference:\n0x100 - LCMAP_LOWERCASE flag for capability testing\n0x180 - Offset into g_abGlobalStringBuffer for ANSI test string  \n0x400 - LCMAP_BYTEREV flag indicating Unicode output mode\n0x220 - WC_NO_BEST_FIT_CHARS flag for WideCharToMultiByte conversion\n0x3c - Stack safety threshold for StackProbe() allocation checks\n1 - Unicode capability indicator in g_dwLocaleCapability\n2 - ANSI capability indicator in g_dwLocaleCapability  \n8 - MB_PRECOMPOSED flag derived from dwFlags parameter\n\nError Handling:\n- Invalid locale: Returns 0 if system doesn't support specified LCID\n- Conversion failures: Returns 0 if MultiByteToWideChar or WideCharToMultiByte fail\n- Buffer validation: Returns 0 if destination buffer insufficient for result\n- Stack overflow: Returns 0 if stack allocation exceeds safety limits\n- Exception propagation: SEH frame protects caller from access violations\n\nNote: Function uses 6 phantom stack variables (local_1c through local_3c) optimized away by decompiler but visible in assembly for temporary calculations and register spills.",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
+      "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF2F4B0",
+          "rva": "0xF4B0",
+          "confidence": 0.28,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_c276c411b75c": {
       "addresses": {
@@ -9193,7 +10139,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x14ED0"
       },
       "method": "MNE",
-      "index": "MNE:c412a852faa374becf00273377c892e9"
+      "index": "MNE:c412a852faa374becf00273377c892e9",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FF25A50",
+          "rva": "0x5A50",
+          "confidence": 0.4,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        },
+        "LoD/1.07": {
+          "address": "0x6FF25A30",
+          "rva": "0x5A30",
+          "confidence": 0.324,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "Bnclient_MNE_c41f2d1f421c": {
       "addresses": {
@@ -9367,7 +10331,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Handles DLL process attach and detach events for critical section management.\n\nAlgorithm:\n1. Compare dwReason against DLL_PROCESS_DETACH (0)\n2. If detach: Call DeleteCriticalSectionCleanup() to cleanup critical sections\n3. If not detach: Compare dwReason against DLL_PROCESS_ATTACH (1)\n4. If attach: Call InitializeGlobalCriticalSection() to setup critical sections\n5. Store hInstance in global storage at g_abGlobalStringBuffer._488_4_\n6. Return TRUE (1) to indicate successful initialization\n\nParameters:\n- hInstance (HINSTANCE): Handle to DLL instance being attached/detached\n- dwReason (DWORD): Reason for DLL entry - 0=DLL_PROCESS_DETACH, 1=DLL_PROCESS_ATTACH\n\nReturns:\n- TRUE (1): Always returns success after handling attach/detach logic\n\nSpecial Cases:\n- Unknown dwReason values (not 0 or 1): Still stores hInstance and returns success\n- Function is __stdcall with 0xC bytes stack cleanup (2 parameters \u00d7 4 bytes + return address)\n\nMagic Numbers Reference:\n- 0x0: DLL_PROCESS_DETACH - Process is detaching from DLL\n- 0x1: DLL_PROCESS_ATTACH - Process is attaching to DLL\n- 0x1: TRUE return value indicating successful DLL initialization",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:c774f4d30918c39af6098008399f2de1"
+      "index": "MNE:c774f4d30918c39af6098008399f2de1",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FF27C75",
+          "rva": "0x7C75",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF27CE7",
+          "rva": "0x7CE7",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_c85f8270e3f1": {
       "addresses": {
@@ -9621,7 +10603,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "public: class BNGatewayAccess & __thiscall BNGatewayAccess::operator=(class BNGatewayAccess const &)",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:cd0285e9441f5e782995c62b7f40a547"
+      "index": "MNE:cd0285e9441f5e782995c62b7f40a547",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FF01000",
+          "rva": "0x1000",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF01000",
+          "rva": "0x1000",
+          "confidence": 0.194,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_cd4ab8e23ed6": {
       "addresses": {
@@ -10571,7 +11571,17 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Retrieve global state value by dereferencing state pointer.\n\nAlgorithm:\n1. Load pointer from global state variable (g_pdwGlobalState)\n2. Dereference pointer to get actual state value\n3. Return state value in EAX register\n\nParameters:\nNone\n\nReturns:\nuint - Current global state value\n       Returns 0 if global state pointer is NULL\n\nSpecial Cases:\nIf g_pdwGlobalState is NULL, attempting to dereference will cause access violation\n\nMagic Numbers Reference:\n0x6ff39bd4 - Address of global state pointer variable",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:e36ce61366f9c3928ce2ccb97d91f009"
+      "index": "MNE:e36ce61366f9c3928ce2ccb97d91f009",
+      "candidates": {
+        "LoD/1.09": {
+          "address": "0x6FF0BEB7",
+          "rva": "0xBEB7",
+          "confidence": 0.138,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "Bnclient_MNE_e3e7225badfc": {
       "addresses": {
@@ -10619,7 +11629,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x8200"
       },
       "method": "MNE",
-      "index": "MNE:e3f73bfbf8288f9afa4340d874a9265e"
+      "index": "MNE:e3f73bfbf8288f9afa4340d874a9265e",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FF35830",
+          "rva": "0x15830",
+          "confidence": 0.371,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.12a"
+        },
+        "LoD/1.11": {
+          "address": "0x6FF2EFA0",
+          "rva": "0xEFA0",
+          "confidence": 0.301,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "Bnclient_MNE_e495bfe56b02": {
       "addresses": {
@@ -10719,7 +11747,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x1858"
       },
       "method": "MNE",
-      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1"
+      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF022E0",
+          "rva": "0x22E0",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF022C0",
+          "rva": "0x22C0",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_e75ee0306c31": {
       "addresses": {
@@ -10786,7 +11832,33 @@ var FUNCTIONS_Bnclient_dll = {
       "signature": "undefined Unwind@6ff37760(void)",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:e83bd76a96c575481d28f5927cfaf30f"
+      "index": "MNE:e83bd76a96c575481d28f5927cfaf30f",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF05050",
+          "rva": "0x5050",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF050C0",
+          "rva": "0x50C0",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF04E40",
+          "rva": "0x4E40",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_e83d10405144": {
       "addresses": {
@@ -10970,7 +12042,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x13CC0"
       },
       "method": "MNE",
-      "index": "MNE:ea32b2bea659c127eea399072d552154"
+      "index": "MNE:ea32b2bea659c127eea399072d552154",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FF06A40",
+          "rva": "0x6A40",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_eb17d7abe573": {
       "addresses": {
@@ -11260,7 +12342,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x1180"
       },
       "method": "MNE",
-      "index": "MNE:ef01624ba1fdf8f67386976d82d63fb9"
+      "index": "MNE:ef01624ba1fdf8f67386976d82d63fb9",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0E2BF",
+          "rva": "0xE2BF",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF0DD59",
+          "rva": "0xDD59",
+          "confidence": 0.325,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF0DA49",
+          "rva": "0xDA49",
+          "confidence": 0.213,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_ef5171f8f748": {
       "addresses": {
@@ -11370,7 +12478,17 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x179FA"
       },
       "method": "MNE",
-      "index": "MNE:f158096e2a8fe13c6f7971757535ec37"
+      "index": "MNE:f158096e2a8fe13c6f7971757535ec37",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0CF5D",
+          "rva": "0xCF5D",
+          "confidence": 0.396,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_f161d272b104": {
       "addresses": {
@@ -11388,7 +12506,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xF450"
       },
       "method": "MNE",
-      "index": "MNE:f161d272b104e72bae714ebbb85febc2"
+      "index": "MNE:f161d272b104e72bae714ebbb85febc2",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF114F0",
+          "rva": "0x114F0",
+          "confidence": 0.387,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF10FA0",
+          "rva": "0x10FA0",
+          "confidence": 0.314,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF10CB0",
+          "rva": "0x10CB0",
+          "confidence": 0.206,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_f16ffb8892aa": {
       "addresses": {
@@ -11684,7 +12828,41 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Selects between two authentication credential values based on character selector.\n\nAlgorithm:\n1. Load primary authentication credential value from global buffer (offset 0x4F4)\n2. Test the credential selector character for null terminator\n3. If selector is null (0x00), load secondary credential value (offset 0x4F8) \n4. Return the selected credential value\n\nParameters:\ncCredentialSelector - Character used to select credential type:\n                     0x00 (null) = Use secondary credential\n                     Any other value = Use primary credential  \n\nReturns:\nAuthentication credential value as dword:\n- Primary credential (g_dwAuthCredentialPrimary) for non-null selector\n- Secondary credential (g_dwAuthCredentialSecondary) for null selector\n\nSpecial Cases:\nOnly two credential values supported; selector is binary choice (null vs non-null)\nNo validation performed on credential values before returning\n\nMagic Numbers Reference:\n0x6ff39be4 - Address of g_dwAuthCredentialPrimary (buffer offset 0x4F4)\n0x6ff39be8 - Address of g_dwAuthCredentialSecondary (buffer offset 0x4F8)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:f9ea1115030daa45b1fe796fa7fd9869"
+      "index": "MNE:f9ea1115030daa45b1fe796fa7fd9869",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF21CF0",
+          "rva": "0x1CF0",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FF21469",
+          "rva": "0x1469",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF2140F",
+          "rva": "0x140F",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF21555",
+          "rva": "0x1555",
+          "confidence": 0.283,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_MNE_fa8972b50a91": {
       "addresses": {
@@ -11728,7 +12906,17 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Library Function - Single Match\n __isatty\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:faa86e79d9b1980bad4d322b9925b87c"
+      "index": "MNE:faa86e79d9b1980bad4d322b9925b87c",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FF0CF34",
+          "rva": "0xCF34",
+          "confidence": 0.399,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "Bnclient_MNE_fab24e5d32bf": {
       "addresses": {
@@ -11895,7 +13083,25 @@ var FUNCTIONS_Bnclient_dll = {
       "signature": "undefined Ordinal_10227(void)",
       "name_source": "LoD/1.09d",
       "method": "MNE",
-      "index": "MNE:fdad073544ac1586678f808b3470f76a"
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FF022F0",
+          "rva": "0x22F0",
+          "confidence": 0.365,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.09": {
+          "address": "0x6FF022F0",
+          "rva": "0x22F0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "Bnclient_MNE_fdd552c17b8c": {
       "addresses": {
@@ -12401,7 +13607,25 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Reads authentication configuration values and sends network authentication packet.\n\nAlgorithm:\n1. Read \"Registration_Version\" configuration value from \"Configuration\" section into 4-byte buffer\n2. Read \"Registration_Authority\" configuration value from \"Configuration\" section into 4-byte buffer  \n3. Read \"Client_ID\" configuration value from \"Configuration\" section into 4-byte buffer\n4. Read \"Client_Token\" configuration value from \"Configuration\" section into 4-byte buffer\n5. Initialize packet flags to zero (bPacketFlag1 = 0, bPacketFlag2 = 0)\n6. Send network authentication packet with validation using collected configuration data\n7. Return success status (1)\n\nParameters:\n   None - Function takes no parameters\n\nReturns:\n   uint - Always returns 1 (success/completion status)\n\nSpecial Cases:\n   - Configuration reading errors are not explicitly handled in this function\n   - Network packet send failures are not explicitly handled in this function\n   - All configuration values are read as 4-byte binary data regardless of actual content\n\nMagic Numbers:\n   0x2 - Configuration value type parameter for Ordinal_423 calls\n   0x1 - Success return value indicating authentication packet sent",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:7bd3c0df134144137ddf075f5de710df"
+      "index": "STR:7bd3c0df134144137ddf075f5de710df",
+      "candidates": {
+        "LoD/1.09": {
+          "address": "0x6FF13450",
+          "rva": "0x13450",
+          "confidence": 0.355,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.08"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF13450",
+          "rva": "0x13450",
+          "confidence": 0.355,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.08"
+        }
+      }
     },
     "Bnclient_STR_819a2fd32709": {
       "addresses": {
@@ -12629,7 +13853,33 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Thread-safely retrieve and copy two global context values to output structure.\n\nAlgorithm:\n1. Validate pOutputValues parameter is not null, exit with error if null\n2. Acquire critical section lock on global buffer synchronization object  \n3. Copy two consecutive ULONG values from global buffer to output structure\n4. Clear 4 bytes at end of global buffer (reset operation flags)\n5. Release critical section lock\n6. Return success status (1)\n\nParameters:\npOutputValues - ValuePair * - Pointer to output structure receiving the two context values\n                              Structure contains dwValue1 and dwValue2 fields (8 bytes total)\n\nReturns:\n1 - Success, context values copied successfully \nFunction does not return on null parameter (calls exit handler)\n\nSpecial Cases:\nNull parameter triggers assertion failure and process termination via FUN_6ff2b29c\nCritical section ensures thread-safe access to global context storage\nBuffer reset operation (zeroing bytes 0x14c-0x14f) clears status flags\n\nMagic Numbers Reference:\n0x130 - Offset to critical section object in global buffer\n0x328 - Offset to second context value (dwValue2) in global buffer  \n0x332 - Offset to first context value (dwValue1) in global buffer\n0x14c-0x14f - Status flag bytes cleared after value retrieval\n0xd6 - Error line number for assertion failure\n0xffffffff - Exit code for process termination\n\nStructure Layout:\nValuePair structure (8 bytes):\nOffset | Size | Field Name | Type  | Description\n-------|------|------------|-------|----------------------------------\n0x00   | 4    | dwValue1   | ULONG | First global context value\n0x04   | 4    | dwValue2   | ULONG | Second global context value",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:a3bfc416695df49da2b2b674038696f4"
+      "index": "STR:a3bfc416695df49da2b2b674038696f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FF2AFE0",
+          "rva": "0xAFE0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FF32F40",
+          "rva": "0x12F40",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FF2B5F0",
+          "rva": "0xB5F0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Bnclient_STR_a5bbf7efb063": {
       "addresses": {

@@ -1,78 +1,83 @@
 #!/usr/bin/env python3
 """
-Candidate Matcher - Generate best-match candidates for empty version cells.
+Candidate Matcher - Generate best-match candidates for ALL empty version cells.
 
-This module extends the function registry with candidate matches:
-1. For each function, find best matches in versions where it has no confirmed address
-2. Bidirectional matching: forward (older→newer) and reverse (newer→older)
-3. One-to-many conflict resolution: highest confidence wins
-4. Generates candidate data for the viewer to display
+This module uses multiple strategies to ensure every function has a candidate
+in every version where the DLL exists:
+
+Strategy 1: Direct Fuzzy Match
+  - Match using API calls, strings, size (existing fuzzy matcher)
+  - Highest confidence matches
+
+Strategy 2: Chain Propagation  
+  - If A→B and B→C exist, propagate A→C with compound confidence
+  - Fills gaps by walking through version chains
+
+Strategy 3: Structural Matching (for featureless functions)
+  - Match by size + basic block count
+  - Used when no API/string features available
 
 Candidates are stored per function per version with:
 - address: The candidate address
-- confidence: Match confidence (0.0-1.0)
-- method: Matching method used (minhash, composite, etc.)
-- direction: 'forward' or 'reverse' 
+- confidence: Match confidence (0.0-1.0)  
+- method: Matching method used
+- direction: 'forward' or 'reverse'
 - source_version: The version the match came from
-
-Scope: Adjacent versions only (1.09d↔1.10, not 1.09d↔1.13d)
-This is more reliable and matches the typical analysis workflow.
+- chain_length: Number of hops if propagated
 """
 
 import json
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict
+from dataclasses import dataclass
 
 from fuzzy_matcher import FuzzyMatcher, HAS_DATASKETCH
 
 
-# Version adjacency - only match between adjacent versions
-VERSION_ADJACENCY = {
-    # LoD versions in order
-    "LoD/1.07": ["LoD/1.08"],
-    "LoD/1.08": ["LoD/1.07", "LoD/1.09"],
-    "LoD/1.09": ["LoD/1.08", "LoD/1.09b"],
-    "LoD/1.09b": ["LoD/1.09", "LoD/1.09d"],
-    "LoD/1.09d": ["LoD/1.09b", "LoD/1.10"],
-    "LoD/1.10": ["LoD/1.09d", "LoD/1.10 Beta 1", "LoD/1.11"],
-    "LoD/1.10 Beta 1": ["LoD/1.10", "LoD/1.10 Beta 2"],
-    "LoD/1.10 Beta 2": ["LoD/1.10 Beta 1"],
-    "LoD/1.11": ["LoD/1.10", "LoD/1.11b"],
-    "LoD/1.11b": ["LoD/1.11", "LoD/1.12a"],
-    "LoD/1.12a": ["LoD/1.11b", "LoD/1.13c"],
-    "LoD/1.13c": ["LoD/1.12a", "LoD/1.13d"],
-    "LoD/1.13d": ["LoD/1.13c", "LoD/1.14a"],
-    "LoD/1.14a": ["LoD/1.13d", "LoD/1.14b"],
-    "LoD/1.14b": ["LoD/1.14a", "LoD/1.14c"],
-    "LoD/1.14c": ["LoD/1.14b", "LoD/1.14d"],
-    "LoD/1.14d": ["LoD/1.14c"],
-    # Classic versions
-    "Classic/1.00": ["Classic/1.01"],
-    "Classic/1.01": ["Classic/1.00", "Classic/1.02"],
-    "Classic/1.02": ["Classic/1.01", "Classic/1.03"],
-    "Classic/1.03": ["Classic/1.02", "Classic/1.04b"],
-    "Classic/1.04b": ["Classic/1.03", "Classic/1.04c"],
-    "Classic/1.04c": ["Classic/1.04b", "Classic/1.05"],
-    "Classic/1.05": ["Classic/1.04c", "Classic/1.05b"],
-    "Classic/1.05b": ["Classic/1.05", "Classic/1.06"],
-    "Classic/1.06": ["Classic/1.05b", "Classic/1.06b"],
-    "Classic/1.06b": ["Classic/1.06", "Classic/1.08"],
-    "Classic/1.08": ["Classic/1.06b", "Classic/1.09"],
-    "Classic/1.09": ["Classic/1.08", "Classic/1.09b"],
-    "Classic/1.09b": ["Classic/1.09", "Classic/1.09d"],
-    "Classic/1.09d": ["Classic/1.09b", "Classic/1.10"],
-    "Classic/1.10": ["Classic/1.09d", "Classic/1.11"],
-    "Classic/1.11": ["Classic/1.10", "Classic/1.11b"],
-    "Classic/1.11b": ["Classic/1.11", "Classic/1.12a"],
-    "Classic/1.12a": ["Classic/1.11b", "Classic/1.13c"],
-    "Classic/1.13c": ["Classic/1.12a", "Classic/1.13d"],
-    "Classic/1.13d": ["Classic/1.13c", "Classic/1.14a"],
-    "Classic/1.14a": ["Classic/1.13d", "Classic/1.14b"],
-    "Classic/1.14b": ["Classic/1.14a", "Classic/1.14c"],
-    "Classic/1.14c": ["Classic/1.14b", "Classic/1.14d"],
-    "Classic/1.14d": ["Classic/1.14c"],
-}
+# Ordered version lists for chain building
+LOD_VERSIONS = [
+    "LoD/1.07", "LoD/1.08", "LoD/1.09", "LoD/1.09b", "LoD/1.09d",
+    "LoD/1.10", "LoD/1.11", "LoD/1.11b", "LoD/1.12a",
+    "LoD/1.13c", "LoD/1.13d", "LoD/1.14a", "LoD/1.14b", "LoD/1.14c", "LoD/1.14d"
+]
+
+CLASSIC_VERSIONS = [
+    "Classic/1.00", "Classic/1.01", "Classic/1.02", "Classic/1.03",
+    "Classic/1.04b", "Classic/1.04c", "Classic/1.05", "Classic/1.05b",
+    "Classic/1.06", "Classic/1.06b", "Classic/1.08", "Classic/1.09",
+    "Classic/1.09b", "Classic/1.09d", "Classic/1.10", "Classic/1.11",
+    "Classic/1.11b", "Classic/1.12a", "Classic/1.13c", "Classic/1.13d",
+    "Classic/1.14a", "Classic/1.14b", "Classic/1.14c", "Classic/1.14d"
+]
+
+ALL_VERSIONS = LOD_VERSIONS + CLASSIC_VERSIONS
+
+
+@dataclass
+class Candidate:
+    """A candidate match for a function in a specific version."""
+    address: str
+    rva: Optional[str]
+    confidence: float
+    method: str
+    direction: str
+    source_version: str
+    chain_length: int = 1
+    
+    def to_dict(self) -> dict:
+        d = {
+            'address': self.address,
+            'confidence': round(self.confidence, 3),
+            'method': self.method,
+            'direction': self.direction,
+            'source_version': self.source_version,
+        }
+        if self.rva:
+            d['rva'] = self.rva
+        if self.chain_length > 1:
+            d['chain_length'] = self.chain_length
+        return d
 
 
 class CandidateMatcher:
@@ -83,14 +88,25 @@ class CandidateMatcher:
         
         # Candidate matching settings
         cand_config = self.config.get('candidate_matching', {})
-        self.min_confidence = cand_config.get('min_confidence', 0.5)
-        self.max_candidates_per_cell = cand_config.get('max_candidates', 1)  # Top N per cell
+        self.min_direct_confidence = cand_config.get('min_direct_confidence', 0.35)
+        self.min_chain_confidence = cand_config.get('min_chain_confidence', 0.10)
+        self.min_structural_confidence = cand_config.get('min_structural_confidence', 0.20)
+        self.chain_decay = cand_config.get('chain_decay', 0.90)  # Confidence multiplier per hop
         
-        # Initialize fuzzy matcher
-        self.fuzzy = FuzzyMatcher(self.config)
+        # Initialize fuzzy matcher with relaxed settings for candidates
+        fuzzy_config = self.config.copy()
+        if 'fuzzy_matching' not in fuzzy_config:
+            fuzzy_config['fuzzy_matching'] = {}
+        fuzzy_config['fuzzy_matching']['min_similarity'] = 0.30  # Lower for candidates
+        fuzzy_config['fuzzy_matching']['min_size_ratio'] = 0.40
+        fuzzy_config['fuzzy_matching']['min_feature_overlap'] = 0.10
+        self.fuzzy = FuzzyMatcher(fuzzy_config)
         
         # Loaded function data per DLL per version
-        self.function_data: Dict[str, Dict[str, List[dict]]] = {}  # dll -> version -> functions
+        self.function_data: Dict[str, Dict[str, List[dict]]] = {}
+        
+        # Address to function lookup per DLL per version
+        self.addr_to_func: Dict[str, Dict[str, Dict[str, dict]]] = {}
         
         # Stats
         self.stats = defaultdict(int)
@@ -121,7 +137,14 @@ class CandidateMatcher:
                         
                         if dll_name not in self.function_data:
                             self.function_data[dll_name] = {}
+                            self.addr_to_func[dll_name] = {}
+                        
                         self.function_data[dll_name][version_key] = functions
+                        
+                        # Build address lookup
+                        self.addr_to_func[dll_name][version_key] = {
+                            f.get('address'): f for f in functions if f.get('address')
+                        }
                         
                         # Build fuzzy index for this version
                         self.fuzzy.build_indexes(dll_name, functions, version_key)
@@ -131,24 +154,240 @@ class CandidateMatcher:
         
         print(f"Loaded function data for {len(self.function_data)} DLLs")
     
-    def generate_candidates(self, registry: dict) -> dict:
+    def _get_version_chain(self, version: str) -> List[str]:
+        """Get the ordered version list that contains this version."""
+        if version.startswith("LoD/"):
+            return LOD_VERSIONS
+        elif version.startswith("Classic/"):
+            return CLASSIC_VERSIONS
+        return []
+    
+    def _get_version_index(self, version: str) -> int:
+        """Get index of version in its ordered list."""
+        chain = self._get_version_chain(version)
+        try:
+            return chain.index(version)
+        except ValueError:
+            return -1
+    
+    def _find_direct_match(self, source_func: dict, dll_name: str, 
+                           target_version: str) -> Optional[Candidate]:
+        """Find a direct fuzzy match for a function in target version."""
+        result = self.fuzzy.find_fuzzy_match(source_func, dll_name, target_version)
+        
+        if result:
+            matched_func, score, method = result
+            if score >= self.min_direct_confidence:
+                return Candidate(
+                    address=matched_func.get('address'),
+                    rva=matched_func.get('rva'),
+                    confidence=score,
+                    method=method,
+                    direction='direct',
+                    source_version=target_version,
+                    chain_length=1
+                )
+        return None
+    
+    def _find_structural_match(self, source_func: dict, dll_name: str,
+                                target_version: str) -> Optional[Candidate]:
         """
-        Generate candidates for empty cells in the registry.
+        Find a structural match based on size and block count.
+        Used for functions without API/string features.
+        """
+        if target_version not in self.function_data.get(dll_name, {}):
+            return None
+        
+        source_size = source_func.get('size', 0)
+        source_blocks = source_func.get('basic_block_count', 0)
+        
+        if source_size <= 0:
+            return None
+        
+        candidates = []
+        target_funcs = self.function_data[dll_name][target_version]
+        
+        for tf in target_funcs:
+            target_size = tf.get('size', 0)
+            target_blocks = tf.get('basic_block_count', 0)
+            
+            if target_size <= 0:
+                continue
+            
+            # Calculate structural similarity
+            size_ratio = min(source_size, target_size) / max(source_size, target_size)
+            
+            if size_ratio < 0.60:  # Must be within 40% size
+                continue
+            
+            # Block count similarity (if available)
+            block_sim = 1.0
+            if source_blocks > 0 and target_blocks > 0:
+                block_sim = min(source_blocks, target_blocks) / max(source_blocks, target_blocks)
+                if block_sim < 0.5:
+                    continue
+            
+            # Combined score - cap at 0.45 for structural matches
+            score = (size_ratio * 0.6 + block_sim * 0.4) * 0.45
+            
+            if score >= self.min_structural_confidence:
+                candidates.append((tf, score))
+        
+        if candidates:
+            # Return best structural match
+            best = max(candidates, key=lambda x: x[1])
+            return Candidate(
+                address=best[0].get('address'),
+                rva=best[0].get('rva'),
+                confidence=best[1],
+                method='structural',
+                direction='direct',
+                source_version=target_version,
+                chain_length=1
+            )
+        
+        return None
+    
+    def _propagate_chain(self, func: dict, dll_name: str, 
+                         confirmed_versions: Dict[str, str],
+                         all_dll_versions: Set[str]) -> Dict[str, Candidate]:
+        """
+        Propagate matches through the version chain from confirmed anchors.
         
         Args:
-            registry: The function_registry_v2.json data
-        
+            func: Registry function entry
+            dll_name: DLL name
+            confirmed_versions: version -> address for confirmed matches
+            all_dll_versions: All versions where this DLL exists
+            
         Returns:
-            Updated registry with candidate data
+            Dict of version -> Candidate for propagated matches
         """
-        print("\nGenerating candidates for empty cells...")
+        propagated: Dict[str, Candidate] = {}
         
-        # Track which addresses are already claimed per version
-        # This is used for one-to-many conflict resolution
-        claimed: Dict[str, Dict[str, str]] = {}  # dll -> version -> addr -> canonical_id
+        # Process each game type's version chain separately
+        for version_chain in [LOD_VERSIONS, CLASSIC_VERSIONS]:
+            # Filter to versions that exist for this DLL
+            available = [v for v in version_chain if v in all_dll_versions]
+            if not available:
+                continue
+            
+            # Find confirmed anchors in this chain
+            anchors = []
+            for i, v in enumerate(available):
+                if v in confirmed_versions:
+                    anchors.append((i, v, confirmed_versions[v]))
+            
+            if not anchors:
+                continue
+            
+            # Propagate from each anchor in both directions
+            for anchor_idx, anchor_ver, anchor_addr in anchors:
+                anchor_func = self.addr_to_func.get(dll_name, {}).get(anchor_ver, {}).get(anchor_addr)
+                if not anchor_func:
+                    continue
+                
+                # === Propagate FORWARD (to newer versions) ===
+                current_func = anchor_func
+                current_confidence = 1.0
+                last_good_version = anchor_ver
+                
+                for i in range(anchor_idx + 1, len(available)):
+                    target_ver = available[i]
+                    
+                    # Skip if this is a confirmed version (it's another anchor)
+                    if target_ver in confirmed_versions:
+                        # Reset chain from this new anchor
+                        new_addr = confirmed_versions[target_ver]
+                        current_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(new_addr)
+                        current_confidence = 1.0
+                        last_good_version = target_ver
+                        continue
+                    
+                    # Already have a higher-confidence candidate?
+                    if target_ver in propagated:
+                        if propagated[target_ver].confidence >= current_confidence * self.chain_decay * 0.3:
+                            continue
+                    
+                    # Try to find match from current position
+                    candidate = self._find_direct_match(current_func, dll_name, target_ver)
+                    if not candidate:
+                        candidate = self._find_structural_match(current_func, dll_name, target_ver)
+                    
+                    if candidate:
+                        # Apply chain decay
+                        hops = i - anchor_idx
+                        chain_confidence = current_confidence * (self.chain_decay ** hops) * candidate.confidence
+                        
+                        if chain_confidence >= self.min_chain_confidence:
+                            candidate.confidence = chain_confidence
+                            candidate.direction = 'forward'
+                            candidate.source_version = last_good_version
+                            candidate.chain_length = hops
+                            propagated[target_ver] = candidate
+                            
+                            # Update for next hop
+                            next_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(candidate.address)
+                            if next_func:
+                                current_func = next_func
+                                current_confidence = chain_confidence
+                                last_good_version = target_ver
+                            # Don't break - keep trying with structural matches
+                    # Even if no match, continue trying next versions with more decay
+                
+                # === Propagate BACKWARD (to older versions) ===
+                current_func = anchor_func
+                current_confidence = 1.0
+                last_good_version = anchor_ver
+                
+                for i in range(anchor_idx - 1, -1, -1):
+                    target_ver = available[i]
+                    
+                    if target_ver in confirmed_versions:
+                        new_addr = confirmed_versions[target_ver]
+                        current_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(new_addr)
+                        current_confidence = 1.0
+                        last_good_version = target_ver
+                        continue
+                    
+                    if target_ver in propagated:
+                        if propagated[target_ver].confidence >= current_confidence * self.chain_decay * 0.3:
+                            continue
+                    
+                    candidate = self._find_direct_match(current_func, dll_name, target_ver)
+                    if not candidate:
+                        candidate = self._find_structural_match(current_func, dll_name, target_ver)
+                    
+                    if candidate:
+                        hops = anchor_idx - i
+                        chain_confidence = current_confidence * (self.chain_decay ** hops) * candidate.confidence
+                        
+                        if chain_confidence >= self.min_chain_confidence:
+                            candidate.confidence = chain_confidence
+                            candidate.direction = 'reverse'
+                            candidate.source_version = last_good_version
+                            candidate.chain_length = hops
+                            propagated[target_ver] = candidate
+                            
+                            next_func = self.addr_to_func.get(dll_name, {}).get(target_ver, {}).get(candidate.address)
+                            if next_func:
+                                current_func = next_func
+                                current_confidence = chain_confidence
+                                last_good_version = target_ver
         
-        # Track candidates before conflict resolution
-        all_candidates: Dict[str, List[dict]] = {}  # canonical_id -> [candidate entries]
+        return propagated
+    
+    def generate_candidates(self, registry: dict) -> dict:
+        """
+        Generate candidates for ALL empty cells in the registry.
+        """
+        print("\nGenerating candidates for empty cells (comprehensive mode)...")
+        
+        # Track all candidates before conflict resolution
+        all_candidates: Dict[str, Dict[str, Candidate]] = {}  # canonical_id -> version -> Candidate
+        
+        # Track which addresses are confirmed per version (for conflict resolution)
+        confirmed_claims: Dict[str, Dict[str, Dict[str, str]]] = {}  # dll -> version -> addr -> canonical_id
         
         for dll_name, functions in registry.get('dlls', {}).items():
             if dll_name not in self.function_data:
@@ -156,208 +395,140 @@ class CandidateMatcher:
             
             print(f"  Processing {dll_name}...")
             
-            # Get all versions for this DLL
-            dll_versions = set()
-            for func in functions:
-                dll_versions.update(func.get('versions', {}).keys())
-            dll_versions = sorted(dll_versions)
+            # Get all versions where this DLL exists
+            dll_versions = set(self.function_data[dll_name].keys())
             
-            # Build claimed map from confirmed addresses
-            if dll_name not in claimed:
-                claimed[dll_name] = {}
-            for version in dll_versions:
-                if version not in claimed[dll_name]:
-                    claimed[dll_name][version] = {}
+            # Initialize confirmed claims
+            if dll_name not in confirmed_claims:
+                confirmed_claims[dll_name] = {v: {} for v in dll_versions}
             
+            # First pass: record all confirmed addresses
             for func in functions:
                 for version, ver_data in func.get('versions', {}).items():
                     addr = ver_data.get('address')
-                    if addr:
-                        claimed[dll_name][version][addr] = func['canonical_id']
+                    if addr and version in confirmed_claims[dll_name]:
+                        confirmed_claims[dll_name][version][addr] = func['canonical_id']
             
-            # Find candidates for each function's missing versions
+            # Second pass: generate candidates for each function
             for func in functions:
                 canonical_id = func['canonical_id']
-                confirmed_versions = set(func.get('versions', {}).keys())
                 
-                # Get the source function data from a confirmed version
-                source_func = None
-                source_version = None
-                for version in confirmed_versions:
-                    if version in self.function_data.get(dll_name, {}):
-                        version_funcs = self.function_data[dll_name][version]
-                        ver_data = func['versions'][version]
-                        target_addr = ver_data.get('address')
-                        for vf in version_funcs:
-                            if vf.get('address') == target_addr:
-                                source_func = vf
-                                source_version = version
-                                break
-                    if source_func:
-                        break
+                # Get confirmed versions for this function
+                confirmed_versions = {}
+                for version, ver_data in func.get('versions', {}).items():
+                    addr = ver_data.get('address')
+                    if addr:
+                        confirmed_versions[version] = addr
                 
-                if not source_func:
+                if not confirmed_versions:
+                    self.stats['no_confirmed'] += 1
                     continue
                 
-                # Find missing adjacent versions
-                missing_versions = []
-                for confirmed_ver in confirmed_versions:
-                    adjacent = VERSION_ADJACENCY.get(confirmed_ver, [])
-                    for adj_ver in adjacent:
-                        if adj_ver not in confirmed_versions and adj_ver in dll_versions:
-                            missing_versions.append((adj_ver, confirmed_ver))
+                # Find missing versions
+                missing = dll_versions - set(confirmed_versions.keys())
+                if not missing:
+                    self.stats['complete_functions'] += 1
+                    continue
                 
-                # Remove duplicates
-                missing_versions = list(set(missing_versions))
+                # Generate candidates using chain propagation
+                candidates = self._propagate_chain(func, dll_name, confirmed_versions, dll_versions)
                 
-                # Find candidates for each missing version
-                if canonical_id not in all_candidates:
-                    all_candidates[canonical_id] = []
-                
-                for target_version, from_version in missing_versions:
-                    if target_version not in self.function_data.get(dll_name, {}):
-                        continue
-                    
-                    # Get the function data from the "from" version
-                    from_func = None
-                    from_ver_data = func['versions'].get(from_version, {})
-                    from_addr = from_ver_data.get('address')
-                    if from_addr and from_version in self.function_data.get(dll_name, {}):
-                        for vf in self.function_data[dll_name][from_version]:
-                            if vf.get('address') == from_addr:
-                                from_func = vf
-                                break
-                    
-                    if not from_func:
-                        from_func = source_func
-                    
-                    # Try fuzzy matching to target version
-                    result = self.fuzzy.find_fuzzy_match(from_func, dll_name, target_version)
-                    
-                    if result:
-                        matched_func, score, method = result
-                        if score >= self.min_confidence:
-                            # Determine direction
-                            direction = 'forward'  # default
-                            from_parts = from_version.split('/')
-                            target_parts = target_version.split('/')
-                            if len(from_parts) >= 2 and len(target_parts) >= 2:
-                                # Compare version numbers
-                                from_v = from_parts[1]
-                                target_v = target_parts[1]
-                                # Simple numeric comparison
-                                try:
-                                    if float(from_v.replace('Beta ', '').replace('a', '.1').replace('b', '.2').replace('c', '.3').replace('d', '.4')) > \
-                                       float(target_v.replace('Beta ', '').replace('a', '.1').replace('b', '.2').replace('c', '.3').replace('d', '.4')):
-                                        direction = 'reverse'
-                                except:
-                                    pass
-                            
-                            candidate = {
-                                'version': target_version,
-                                'address': matched_func.get('address'),
-                                'rva': matched_func.get('rva'),
-                                'confidence': round(score, 3),
-                                'method': method,
-                                'direction': direction,
-                                'source_version': from_version,
-                            }
-                            all_candidates[canonical_id].append(candidate)
-                            self.stats['candidates_found'] += 1
+                if candidates:
+                    all_candidates[canonical_id] = candidates
+                    self.stats['functions_with_candidates'] += 1
+                    self.stats['total_candidates'] += len(candidates)
         
-        # Conflict resolution: for each version, if multiple functions claim same address,
-        # only give it to the highest confidence one
+        # === Conflict Resolution ===
         print("\n  Resolving one-to-many conflicts...")
         
-        # Build conflict map: dll -> version -> addr -> [(canonical_id, confidence)]
-        conflict_map: Dict[str, Dict[str, Dict[str, List[Tuple[str, float]]]]] = {}
+        # Build claims map: dll -> version -> addr -> [(canonical_id, confidence)]
+        claims_map: Dict[str, Dict[str, Dict[str, List[Tuple[str, float]]]]] = {}
         
-        for canonical_id, candidates in all_candidates.items():
-            for cand in candidates:
-                dll_name = None
-                # Find the DLL for this canonical ID
-                for dll, funcs in registry.get('dlls', {}).items():
-                    for f in funcs:
-                        if f['canonical_id'] == canonical_id:
-                            dll_name = dll
-                            break
-                    if dll_name:
-                        break
-                
-                if not dll_name:
-                    continue
-                
-                version = cand['version']
-                addr = cand['address']
-                
-                if dll_name not in conflict_map:
-                    conflict_map[dll_name] = {}
-                if version not in conflict_map[dll_name]:
-                    conflict_map[dll_name][version] = {}
-                if addr not in conflict_map[dll_name][version]:
-                    conflict_map[dll_name][version][addr] = []
-                
-                conflict_map[dll_name][version][addr].append((canonical_id, cand['confidence']))
+        # Map canonical_id to dll for quick lookup
+        id_to_dll = {}
+        for dll_name, functions in registry.get('dlls', {}).items():
+            for func in functions:
+                id_to_dll[func['canonical_id']] = dll_name
         
-        # Find winners for each conflict
-        winners: Dict[str, Dict[str, Dict[str, str]]] = {}  # dll -> version -> addr -> canonical_id
+        for canonical_id, version_candidates in all_candidates.items():
+            dll_name = id_to_dll.get(canonical_id)
+            if not dll_name:
+                continue
+            
+            if dll_name not in claims_map:
+                claims_map[dll_name] = {}
+            
+            for version, candidate in version_candidates.items():
+                if version not in claims_map[dll_name]:
+                    claims_map[dll_name][version] = {}
+                
+                addr = candidate.address
+                if addr not in claims_map[dll_name][version]:
+                    claims_map[dll_name][version][addr] = []
+                
+                claims_map[dll_name][version][addr].append((canonical_id, candidate.confidence))
         
-        for dll_name, versions in conflict_map.items():
-            if dll_name not in winners:
-                winners[dll_name] = {}
+        # Determine winners for each address conflict
+        winners: Dict[str, Dict[str, Dict[str, str]]] = {}  # dll -> version -> addr -> winning_canonical_id
+        
+        for dll_name, versions in claims_map.items():
+            winners[dll_name] = {}
             for version, addrs in versions.items():
-                if version not in winners[dll_name]:
-                    winners[dll_name][version] = {}
+                winners[dll_name][version] = {}
                 for addr, claims in addrs.items():
+                    # Skip if already confirmed
+                    if addr in confirmed_claims.get(dll_name, {}).get(version, {}):
+                        continue
+                    
                     if len(claims) > 1:
                         self.stats['conflicts'] += 1
-                        # Sort by confidence descending, pick winner
                         claims.sort(key=lambda x: x[1], reverse=True)
-                    winners[dll_name][version][addr] = claims[0][0]  # Winner's canonical_id
+                    
+                    winners[dll_name][version][addr] = claims[0][0]
         
-        # Filter candidates to only include winners
-        final_candidates: Dict[str, List[dict]] = {}
+        # Filter candidates to only winners
+        final_candidates: Dict[str, Dict[str, Candidate]] = {}
         
-        for canonical_id, candidates in all_candidates.items():
-            filtered = []
-            for cand in candidates:
-                # Find DLL
-                dll_name = None
-                for dll, funcs in registry.get('dlls', {}).items():
-                    for f in funcs:
-                        if f['canonical_id'] == canonical_id:
-                            dll_name = dll
-                            break
-                    if dll_name:
-                        break
+        for canonical_id, version_candidates in all_candidates.items():
+            dll_name = id_to_dll.get(canonical_id)
+            if not dll_name:
+                continue
+            
+            for version, candidate in version_candidates.items():
+                addr = candidate.address
                 
-                if not dll_name:
+                # Check if this is the winner
+                winner = winners.get(dll_name, {}).get(version, {}).get(addr)
+                if winner != canonical_id:
+                    self.stats['conflicts_lost'] += 1
                     continue
                 
-                version = cand['version']
-                addr = cand['address']
+                # Double check not a confirmed address
+                if addr in confirmed_claims.get(dll_name, {}).get(version, {}):
+                    continue
                 
-                # Check if this candidate is the winner
-                winner = winners.get(dll_name, {}).get(version, {}).get(addr)
-                if winner == canonical_id:
-                    # Also check not already claimed by confirmed match
-                    if addr not in claimed.get(dll_name, {}).get(version, {}):
-                        filtered.append(cand)
-                        self.stats['candidates_kept'] += 1
-            
-            if filtered:
-                final_candidates[canonical_id] = filtered
+                if canonical_id not in final_candidates:
+                    final_candidates[canonical_id] = {}
+                final_candidates[canonical_id][version] = candidate
+                self.stats['candidates_kept'] += 1
         
-        # Add candidates to registry
+        # Add to registry
         for dll_name, functions in registry.get('dlls', {}).items():
             for func in functions:
                 canonical_id = func['canonical_id']
                 if canonical_id in final_candidates:
-                    func['candidates'] = final_candidates[canonical_id]
+                    # Convert to list format expected by viewer
+                    func['candidates'] = {
+                        v: c.to_dict() for v, c in final_candidates[canonical_id].items()
+                    }
         
-        print(f"\n  Candidates found: {self.stats['candidates_found']}")
+        # Stats
+        print(f"\n  Complete functions (no gaps): {self.stats['complete_functions']}")
+        print(f"  Functions with candidates: {self.stats['functions_with_candidates']}")
+        print(f"  Total candidates generated: {self.stats['total_candidates']}")
         print(f"  Conflicts resolved: {self.stats['conflicts']}")
-        print(f"  Candidates kept (after conflict resolution): {self.stats['candidates_kept']}")
+        print(f"  Candidates kept: {self.stats['candidates_kept']}")
+        print(f"  Candidates lost to conflicts: {self.stats['conflicts_lost']}")
         
         return registry
 
@@ -370,25 +541,21 @@ def add_candidates_to_registry(base_path: Path) -> None:
         print(f"Error: Registry not found: {registry_file}")
         return
     
-    # Load registry
     with open(registry_file, 'r', encoding='utf-8') as f:
         registry = json.load(f)
     
     print(f"Loaded registry with {registry.get('total_functions', 0)} functions")
     
-    # Load config
     config_file = base_path / "config" / "function_index.json"
     config = {}
     if config_file.exists():
         with open(config_file, 'r', encoding='utf-8') as f:
             config = json.load(f)
     
-    # Generate candidates
     matcher = CandidateMatcher(config)
     matcher.load_function_data(base_path)
     registry = matcher.generate_candidates(registry)
     
-    # Save updated registry
     with open(registry_file, 'w', encoding='utf-8') as f:
         json.dump(registry, f, indent=2)
     

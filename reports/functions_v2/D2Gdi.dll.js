@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 // Functions for D2Gdi.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -182,7 +182,49 @@ var FUNCTIONS_D2Gdi_dll = {
       "signature": "undefined Ordinal_10001(undefined4 * param_1, undefined4 * param_2)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10001"
+      "index": "EXP:10001",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F8775F0",
+          "rva": "0x75F0",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F876200",
+          "rva": "0x6200",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F876BA0",
+          "rva": "0x6BA0",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F877230",
+          "rva": "0x7230",
+          "confidence": 0.285,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F876C80",
+          "rva": "0x6C80",
+          "confidence": 0.136,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Gdi_EXP_10002": {
       "addresses": {
@@ -235,7 +277,41 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": "0x57D5"
       },
       "method": "MNE",
-      "index": "MNE:0002c858ef3942a0b403454c72674bfe"
+      "index": "MNE:0002c858ef3942a0b403454c72674bfe",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F876DF0",
+          "rva": "0x6DF0",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F877890",
+          "rva": "0x7890",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F877C20",
+          "rva": "0x7C20",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F8764D0",
+          "rva": "0x64D0",
+          "confidence": 0.29,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Gdi_MNE_02783607761b": {
       "addresses": {
@@ -319,7 +395,49 @@ var FUNCTIONS_D2Gdi_dll = {
       "comment": "Library Function - Single Match\n __heap_init\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:057b2070bbbdb5455d8d4d9018467770"
+      "index": "MNE:057b2070bbbdb5455d8d4d9018467770",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F8315D0",
+          "rva": "0x15D0",
+          "confidence": 0.375,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F8315D0",
+          "rva": "0x15D0",
+          "confidence": 0.289,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F8315D0",
+          "rva": "0x15D0",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F8315D0",
+          "rva": "0x15D0",
+          "confidence": 0.179,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6F8915D0",
+          "rva": "0x15D0",
+          "confidence": 0.138,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2Gdi_MNE_059e9bb2efc1": {
       "addresses": {
@@ -1069,7 +1187,33 @@ var FUNCTIONS_D2Gdi_dll = {
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F834960",
+          "rva": "0x4960",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F834930",
+          "rva": "0x4930",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F834930",
+          "rva": "0x4930",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Gdi_MNE_38a52ad8d912": {
       "addresses": {
@@ -1569,7 +1713,41 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": "0x17E0"
       },
       "method": "MNE",
-      "index": "MNE:5df2c7f1ec461c378315e6d72308a5a7"
+      "index": "MNE:5df2c7f1ec461c378315e6d72308a5a7",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F871030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F871030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F871030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F871030",
+          "rva": "0x1030",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Gdi_MNE_5f5a2dadfb6e": {
       "addresses": {
@@ -3009,7 +3187,33 @@ var FUNCTIONS_D2Gdi_dll = {
       "comment": "Library Function - Single Match\n __SEH_epilog\n\nLibrary: Visual Studio",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b"
+      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F833109",
+          "rva": "0x3109",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F8330D9",
+          "rva": "0x30D9",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F8330D9",
+          "rva": "0x30D9",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Gdi_MNE_be05c38d951a": {
       "addresses": {
@@ -3087,7 +3291,41 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": "0x6820"
       },
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4"
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F874200",
+          "rva": "0x4200",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F874200",
+          "rva": "0x4200",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F874230",
+          "rva": "0x4230",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F874230",
+          "rva": "0x4230",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2Gdi_MNE_c0a536e0e6da": {
       "addresses": {
@@ -3708,7 +3946,33 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "0x16AE"
       },
       "method": "MNE",
-      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1"
+      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6F831000",
+          "rva": "0x1000",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F831000",
+          "rva": "0x1000",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F831000",
+          "rva": "0x1000",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2Gdi_MNE_e78177a189d0": {
       "addresses": {
@@ -3728,7 +3992,49 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": "0x20C0"
       },
       "method": "MNE",
-      "index": "MNE:e78177a189d01451abce035b832e32fc"
+      "index": "MNE:e78177a189d01451abce035b832e32fc",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6F875DE0",
+          "rva": "0x5DE0",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6F876AF0",
+          "rva": "0x6AF0",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6F875E50",
+          "rva": "0x5E50",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6F8768D0",
+          "rva": "0x68D0",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6F877720",
+          "rva": "0x7720",
+          "confidence": 0.138,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2Gdi_MNE_e83d10405144": {
       "addresses": {

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T17:42:37.484961
+// Generated: 2025-12-03T18:26:13.185974
 // Functions for D2CMP.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -200,12 +200,20 @@ var FUNCTIONS_D2CMP_dll = {
       "index": "API:3168a85667416d26829e875a7544c949",
       "candidates": {
         "LoD/1.11b": {
-          "address": "0x6FE1E110",
-          "rva": "0xE110",
-          "confidence": 0.773,
-          "method": "composite",
-          "direction": "forward",
+          "address": "0x6FE24640",
+          "rva": "0x14640",
+          "confidence": 0.626,
+          "method": "minhash",
+          "direction": "reverse",
           "source": "LoD/1.12a"
+        },
+        "LoD/1.11": {
+          "address": "0x6FE1D310",
+          "rva": "0xD310",
+          "confidence": 0.337,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11b"
         }
       }
     },
@@ -288,7 +296,33 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined4 Ordinal_10100(int param_1)",
       "name_source": "LoD/1.11",
       "method": "API",
-      "index": "API:3d0b22bf5555ca9918293022dbaf9334"
+      "index": "API:3d0b22bf5555ca9918293022dbaf9334",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FDFE100",
+          "rva": "0xE100",
+          "confidence": 0.278,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDFE100",
+          "rva": "0xE100",
+          "confidence": 0.182,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE1E330",
+          "rva": "0xE330",
+          "confidence": 0.14,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_API_3e1ec135e3c9": {
       "addresses": {
@@ -522,7 +556,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Unlink a list element from its doubly-linked list position.\n\nAlgorithm:\n1. Validate pElement pointer (non-null check, abort if NULL with error log)\n2. If previous link exists (pElement[10]): update previous's next pointer (pElement[10]+0x2c) to point to current's next (pElement[0xb])\n3. If next link exists (pElement[0xb]): update next's previous pointer (pElement[0xb]+0x28) to point to current's previous (pElement[10])\n4. Calculate slot pointer from base array: pSlotPtr = nBaseAddr + 0x800 + pElement[0]*4\n5. If slot points to current element: update slot to point to pElement's next (pElement[0xb])\n6. Log operation to C++ message system with severity 0x37\n\nParameters:\n- dwContext (dword): Unused context/handle parameter\n- nBaseAddr (int): Base address of element array/table (offset to 0x800)\n- pElement (int *): Doubly-linked list element to unlink\n  - pElement[0x28]: Previous element pointer (stored at offset 0x28, read offset at +0x10)\n  - pElement[0x2c]: Next element pointer (stored at offset 0x2c, read offset at +0xb)\n\nReturns:\n- void: No explicit return value\n\nSpecial Cases:\n- NULL pElement: Fatal error, triggers debug assert and process exit (0xffffffff)\n- Element at list head: Slot pointer updated instead of previous element\n- Orphaned element links: Only updates if next/previous pointers are non-NULL\n\nMagic Numbers:\n- 0x800: Offset to element slot array from base address\n- 0x28: Offset to previous element pointer within element structure\n- 0x2c: Offset to next element pointer within element structure\n- 0xa9: Error line number for NULL element assertion\n- 0x37: Debug message severity level for unlink operation",
       "name_source": "LoD/1.07",
       "method": "API",
-      "index": "API:80ddee08131083ffd4d719c45225149f"
+      "index": "API:80ddee08131083ffd4d719c45225149f",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1309D",
+          "rva": "0x309D",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE12EBE",
+          "rva": "0x2EBE",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE12EBE",
+          "rva": "0x2EBE",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE12EBE",
+          "rva": "0x2EBE",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_API_83311ac54b24": {
       "addresses": {
@@ -546,7 +614,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocate and zero-initialize a 512-byte (0x200) buffer for hash table storage.\n\nAlgorithm:\n1. Call Ordinal_10042 with type 0x2a and flags 0 to allocate 512 bytes\n2. Verify allocation succeeded; if NULL, assert with ptHash error string and exit\n3. Clear all 512 bytes (0x80 dwords) using REP STOSD\n4. Return allocated buffer pointer\n\nParameters:\nNone\n\nReturns:\nPointer to newly allocated 512-byte buffer; filled with zeros\nNever returns NULL (asserts and exits on allocation failure)\n\nSpecial Cases:\n- Calls Ordinal_10042 (likely Storm memory allocation)\n- FogAssertFail terminates on allocation failure (no return)\n- Clears exactly 0x200 (512) bytes via REP STOSD loop",
       "name_source": "LoD/1.07",
       "method": "API",
-      "index": "API:83311ac54b246d6943903bb686f0e640"
+      "index": "API:83311ac54b246d6943903bb686f0e640",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FE1F840",
+          "rva": "0xF840",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE259B0",
+          "rva": "0x159B0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1A7C0",
+          "rva": "0xA7C0",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_API_84a4471ec11b": {
       "addresses": {
@@ -585,7 +679,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xB160"
       },
       "method": "API",
-      "index": "API:85213d41be988cba578925bd461e293a"
+      "index": "API:85213d41be988cba578925bd461e293a",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FDFFE60",
+          "rva": "0xFE60",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDFFE60",
+          "rva": "0xFE60",
+          "confidence": 0.187,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE20070",
+          "rva": "0x10070",
+          "confidence": 0.144,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_API_85fcb8b53fed": {
       "addresses": {
@@ -998,7 +1118,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Conditional memory deallocation wrapper for VirtualFree.\n\nAlgorithm:\n1. Check if pMemory is non-NULL\n2. If pMemory is not NULL, call FUN_6fe20acc (VirtualFree wrapper) with pMemory and flags 0x8000 (MEM_RELEASE)\n3. Return to caller\n\nParameters:\npMemory (void*) - Memory block to deallocate. If NULL, function returns without deallocating.\n\nReturns:\nvoid - Always returns successfully\n\nSpecial Cases:\n- NULL pointer is valid input; function returns without error\n- Calls VirtualFree with MEM_RELEASE (0x8000) flag\n- Does not validate memory region validity before deallocation",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10002"
+      "index": "EXP:10002",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1285A",
+          "rva": "0x285A",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE128BC",
+          "rva": "0x28BC",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE128BC",
+          "rva": "0x28BC",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE128BC",
+          "rva": "0x28BC",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10003": {
       "addresses": {
@@ -1022,7 +1176,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "D2Gfx Ordinal 10003 - Wrapper for GetWindowMode to determine windowed vs fullscreen state\n\nAlgorithm:\n  1. Receive nUnused parameter from caller (passed through but not used)\n  2. Call FUN_6fe194c0 to execute actual GetWindowMode implementation\n  3. Return to caller with result\n\nParameters:\n  nUnused (int) - Unused parameter, passed through to implementation function\n\nReturns:\n  void - Actual return value handled by FUN_6fe194c0 implementation\n\nSpecial Cases:\n  This is a simple wrapper function that delegates to the actual implementation.\n  The parameter name suggests it's unused in this ordinal wrapper context.",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10003"
+      "index": "EXP:10003",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20270",
+          "rva": "0x10270",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1AE40",
+          "rva": "0xAE40",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE196E0",
+          "rva": "0x96E0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE19A00",
+          "rva": "0x9A00",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10005": {
       "addresses": {
@@ -1258,7 +1446,25 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined4 Ordinal_10017(int param_1, uint param_2)",
       "name_source": "LoD/1.10",
       "method": "EXP",
-      "index": "EXP:10017"
+      "index": "EXP:10017",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDF3A80",
+          "rva": "0x3A80",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF3A80",
+          "rva": "0x3A80",
+          "confidence": 0.148,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_EXP_10018": {
       "addresses": {
@@ -1303,7 +1509,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Convert direction value to normalized 8-bit direction using lookup tables\n\nAlgorithm:\n1. Validate direction index against bit width (index must be < bit width)\n   - If index >= bit width, raise fatal error with code 0x18e\n2. Select lookup table based on format and variant flags\n   - 8-bit direction: use standard 8-bit table if variant 0x04, or alternate if nUseAlternateTable set\n   - 16-bit direction: use standard 16-bit table if variant 0x08, or alternate if nUseAlternateTable set\n3. Index lookup table with direction index to get normalized byte value\n4. Return the byte value (0-7 representing direction octants)\n5. If neither format matches, raise fatal error with code 0x1a7\n\nParameters:\n- dwDirectionIndex: uint - Index into direction table (0-7 for 8-bit, 0-15 for 16-bit)\n- dwDirectionBits: uint - Direction format width (0x08 for 8-bit, 0x10 for 16-bit directions)\n- nTableVariant: int - Format variant identifier (0x04 for 8-bit, 0x08 for 16-bit table match)\n- nUseAlternateTable: int - Flag to select alternate lookup tables (0=standard, non-0=alternate)\n\nReturns:\n- byte: Normalized 8-bit direction value (0-7) on success\n- Never returns on validation failure: raises fatal error\n\nMagic Numbers:\n- 0x08: 8-bit direction format width\n- 0x10: 16-bit direction format width\n- 0x04: 8-bit table variant identifier\n- 0x18e: Direction index out of range error code\n- 0x1a7: Invalid direction format error code",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10019"
+      "index": "EXP:10019",
+      "candidates": {
+        "LoD/1.13d": {
+          "address": "0x6FE242D0",
+          "rva": "0x142D0",
+          "confidence": 0.155,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_EXP_10020": {
       "addresses": {
@@ -1327,7 +1543,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Validate UI state direction/destination pair mapping (D2Client.GetUIState wrapper).\n\nAlgorithm:\n1. Check if nDirection == 4\n   - If true and nDestination == 8, return 0 (valid combination)\n   - If true but nDestination != 8, fall through to error\n2. Check if nDirection == 8\n   - If true and nDestination == 0x10, return 1 (valid combination)\n   - If true but nDestination != 0x10, fall through to error\n3. If neither direction matched, call error logging function\n\nParameters:\n- nDirection: UI state direction identifier (4 or 8 are valid)\n- nDestination: Destination state value associated with direction (8 or 0x10)\n\nReturns:\n- 0: Valid direction/destination pair (dir=4, dest=8)\n- 1: Valid direction/destination pair (dir=8, dest=0x10)\n- Non-returning: Invalid pair triggers error logging (Fog.LogMessage)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10020"
+      "index": "EXP:10020",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE243E0",
+          "rva": "0x143E0",
+          "confidence": 0.282,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE19DA0",
+          "rva": "0x9DA0",
+          "confidence": 0.282,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE20DC0",
+          "rva": "0x10DC0",
+          "confidence": 0.282,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE24CF0",
+          "rva": "0x14CF0",
+          "confidence": 0.282,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10021": {
       "addresses": {
@@ -1348,7 +1598,41 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined4 Ordinal_10021(int * param_1)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10021"
+      "index": "EXP:10021",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDFDF10",
+          "rva": "0xDF10",
+          "confidence": 0.323,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDFDF10",
+          "rva": "0xDF10",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDFDF10",
+          "rva": "0xDF10",
+          "confidence": 0.139,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE1E120",
+          "rva": "0xE120",
+          "confidence": 0.101,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_EXP_10022": {
       "addresses": {
@@ -1451,7 +1735,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Process 2D array of elements with stride configuration\n\nAlgorithm:\n1. Check if configuration flag 0x04 is set in nConfigPtr[4]\n2. If flag not set, log error and abort with ExitProcess\n3. If flag set, initialize row counter to 0\n4. Check if row count at nConfigPtr[0x10] is > 0\n5. For each row from 0 to row count:\n   6. Load column count from nConfigPtr[0x14]\n   7. Initialize column counter to 0\n   8. For each column from 0 to column count:\n      9. Calculate element index: (row * column_count + column)\n      10. Load element from array at nConfigPtr[0x18 + index*4]\n      11. Call FUN_6fe1bfa0 to process element with nConfigPtr[0xc] as config\n      12. Increment column counter, reload column count\n   13. Increment row counter\n\nParameters:\nnConfigPtr - int pointer to configuration structure with:\n  [0x04] - flags (bit 2 = valid flag)\n  [0x0c] - processing context/config value\n  [0x10] - row count\n  [0x14] - column count\n  [0x18] - start of element array (each element is 4 bytes)\npContext - void * context passed to element processor\n\nReturns:\nvoid - no return value; logs error and exits on flag validation failure",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10026"
+      "index": "EXP:10026",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE133BB",
+          "rva": "0x33BB",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE13D64",
+          "rva": "0x3D64",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE13D2B",
+          "rva": "0x3D2B",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE13D2B",
+          "rva": "0x3D2B",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10027": {
       "addresses": {
@@ -1475,7 +1793,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Validates data pointer and processes conditional flags.\n\nAlgorithm:\n1. Check if pData is NULL\n2. If NULL, log error message with path \"C:\\Projects\\Diablo2\\Source\\D2CMP\" and code 0x404, then terminate\n3. Load flag value from pData[1] (offset 0x4)\n4. Check if flags & 0x03 != 0 (lower 2 bits set)\n5. If yes and flags & 0x02 != 0 (bit 1 set), call Ordinal_10032 to process data\n6. Call Ordinal_10043 to update skill data table (code 0x40b)\n7. Return\n\nParameters:\npData (int *) - Pointer to data structure with flags at offset +4\n\nReturns:\nvoid - No return value on success; terminates on NULL input\n\nSpecial Cases:\n- NULL pointer triggers error logging and abnormal termination\n- Conditional processing depends on bit flags at offset +4\n- Magic number 0x404 = error severity code\n- Magic number 0x40b = skill data update code\n- Magic number 0x03 = flag test mask\n- Magic number 0x02 = conditional processing bit\n\nRelated Functions:\n- Ordinal_10023() - Error reporting (Storm.dll ErrorMsg)\n- Ordinal_10032() - Data processing handler\n- Ordinal_10043() - Skill data table lookup (D2Common.GetSkillData)\n- FUN_6fe21293() - Fatal exit handler",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10027"
+      "index": "EXP:10027",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1A770",
+          "rva": "0xA770",
+          "confidence": 0.285,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1A9F0",
+          "rva": "0xA9F0",
+          "confidence": 0.285,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1B6C0",
+          "rva": "0xB6C0",
+          "confidence": 0.151,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_EXP_10028": {
       "addresses": {
@@ -1499,7 +1843,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "CMP library version validation and initialization routine.\n\nAlgorithm:\n1. Check if dwFlags parameter is zero (initialization check)\n2. If zero: log error message with file reference and error code 0x3f6 to Ordinal_10023\n3. If zero: call Ordinal_10023 to report critical error (does not return)\n4. Call Ordinal_10043 with error code 0x3f7 and parameter 0 (post-initialization check)\n5. Return to caller\n\nParameters:\ndwFlags (uint): Initialization flag (0 = uninitialized state triggering error, non-zero = initialized)\n\nReturns:\nvoid - Function either triggers non-returning error handler or completes normally\n\nSpecial Cases:\n- If dwFlags == 0: executes non-returning Ordinal_10023 call (error handling, does not continue)\n- If dwFlags != 0: completes Ordinal_10043 check and returns normally\n\nMagic Numbers:\n0x3f6 (1014 decimal): Error code for Ordinal_10023 - serialization/file error\n0x3f7 (1015 decimal): Error code for Ordinal_10043 - post-initialization validation\n\nRelated Functions:\n- Ordinal_10023 - Error reporting handler (Storm.dll)\n- Ordinal_10043 - Post-initialization validation (Fog.dll)\n- FUN_6fe21293 - Non-returning failure handler",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10028"
+      "index": "EXP:10028",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FE19B70",
+          "rva": "0x9B70",
+          "confidence": 0.128,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21A80",
+          "rva": "0x11A80",
+          "confidence": 0.142,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_EXP_10029": {
       "addresses": {
@@ -1523,7 +1885,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Validate file handle and trigger fatal error if invalid\n\nAlgorithm:\n1. Check if nFileHandle is zero (invalid handle)\n2. If invalid (zero), call Ordinal_10023 to log error with file path and error code 0x28a\n3. Call FUN_6fe21293 with -0x1 to terminate application with exit code -1\n4. If valid (non-zero), return normally\n\nParameters:\nnFileHandle - File handle value to validate, zero indicates error condition\n\nReturns:\nvoid - Does not return if handle is invalid (terminates via FUN_6fe21293)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10029"
+      "index": "EXP:10029",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE27380",
+          "rva": "0x17380",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE21D80",
+          "rva": "0x11D80",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1D0F0",
+          "rva": "0xD0F0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25240",
+          "rva": "0x15240",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE232B0",
+          "rva": "0x132B0",
+          "confidence": 0.141,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_EXP_10031": {
       "addresses": {
@@ -1547,7 +1951,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "ProcessCelFileData - Iterate through all cells in a CEL file and invoke a callback for each.\n\nAlgorithm:\n1. Validate input pointer pCelFileInfo - if NULL, log error and exit with code 0x41a\n2. Load width from pCelFileInfo->width and height from pCelFileInfo->height\n3. Calculate total cell count by multiplying width * height\n4. If cell count equals zero, skip loop and return immediately\n5. Initialize loop counter dwCelIndex to zero\n6. Enter loop: load table index from pCelFileInfo->tableIndex\n7. Retrieve function pointer from g_pCelFunctionTable indexed by table index\n8. Invoke function pointer for current cell\n9. Increment dwCelIndex, test against total cell count\n10. If dwCelIndex < cell_count, repeat from step 7, else exit loop\n11. Return to caller\n\nParameters:\npCelFileInfo (CelFileInfo *) - Pointer to CEL file structure:\n  tableIndex: Table index for function lookup\n  width: Horizontal dimension (dword)\n  height: Vertical dimension (dword)\n  cellData: Cell data array start\n\nReturns:\nvoid - Returns after processing all cells or error condition\nOn NULL pointer: Error logged and application terminated with code 0x41a\n\nSpecial Cases:\nNULL input pointer triggers error handler chain\nZero cell count causes immediate return without processing",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10031"
+      "index": "EXP:10031",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20630",
+          "rva": "0x10630",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1E240",
+          "rva": "0xE240",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE19AB0",
+          "rva": "0x9AB0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE219C0",
+          "rva": "0x119C0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE23A50",
+          "rva": "0x13A50",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_EXP_10032": {
       "addresses": {
@@ -1663,7 +2109,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Returns field value from CelFileInfo structure; validates pointer and reads at offset +4.\n\nAlgorithm:\n1. Load pCelFile parameter from stack [ESP+4]\n2. Test if pCelFile is NULL\n3. If NULL: Call Ordinal_10023 (D2Common.LogError) with error context (0x55d)\n4. If NULL: Call FUN_6fe21293 with 0xFFFFFFFF (termination call)\n5. If valid: Dereference pCelFile[1] (4-byte read at offset +4)\n6. Return dereferenced value in EAX\n\nParameters:\npCelFile (CelFileInfo *) - Pointer to CelFileInfo structure; cannot be NULL. Function will error and terminate if NULL.\n\nReturns:\nuint - Value read from CelFileInfo at offset +4 (typically field at index 1 of structure)\n\nSpecial Cases:\nFunction terminates process if pCelFile is NULL; does not return normally in error case.\nMagic Numbers: 0x55d = error code context for logging.\n\nRelated Functions:\n- Ordinal_10023 (D2Common.LogError) - Logs error message\n- FUN_6fe21293 - Triggers process termination",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10037"
+      "index": "EXP:10037",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20160",
+          "rva": "0x10160",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1DD70",
+          "rva": "0xDD70",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE195D0",
+          "rva": "0x95D0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE214F0",
+          "rva": "0x114F0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10040": {
       "addresses": {
@@ -1797,7 +2277,49 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined Ordinal_10046(undefined4 param_1, undefined4 param_2, undefined4 param_3, uint param_4)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10046"
+      "index": "EXP:10046",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF1300",
+          "rva": "0x1300",
+          "confidence": 0.398,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF12B0",
+          "rva": "0x12B0",
+          "confidence": 0.323,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF12B0",
+          "rva": "0x12B0",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF14A0",
+          "rva": "0x14A0",
+          "confidence": 0.137,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE112B0",
+          "rva": "0x12B0",
+          "confidence": 0.125,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_EXP_10047": {
       "addresses": {
@@ -2028,7 +2550,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Initiate or update sprite CEL graphics block for a game unit\n\nAlgorithm:\n1. Validate input parameter (pcelFile) - assert if NULL\n2. Check if CEL file already loaded (pcelFile[1] == 0):\n   a. If loaded: call Ordinal_10036 to reinitialize and set pcelFile[0]\n   b. Return 1 (success)\n3. If not loaded (uninitialized CEL file):\n   a. Initialize two 0x104-byte buffers (adGfxDataA, adGfxDataB) with zeros\n   b. Call LoadOrInitializeSpriteCelData to load CEL data into first buffer\n   c. Call FindMatchingTableEntry with hash table 0x6fef2bc0\n   d. If found entry: check flag byte at [entry+0x20][0x20] & 0x01\n      - If set: OR pcelFile[6] with 0x04 (mark as initialized)\n      - Return 1 (success)\n   e. If not found and conditions met (dwHashIndexB > 1 AND dwHashIndexA != 0 AND !(pbUnused & 0x01)):\n      - Calculate scaled CEL index via Ordinal_10019 with unit dimension/64 shift\n      - Adjust dwCelIndex based on CEL data stride (divide by dwCelStride if > 2)\n      - Retry FindMatchingTableEntry with updated index\n      - Assert if not found on retry (triggers Ordinal_10036 == FUN_6fe21293 at 0x69a)\n      - Assert if dwHashIndexA still != 0 (triggers at 0x69b)\n4. Call InitializeSpriteGraphicsBlock to build graphics data structures\n5. Return result from InitializeSpriteGraphicsBlock\n\nParameters:\npcelFile (CelFileInfo *) - CEL file info structure (array with fields indexed by offset: [0]=loaded_data, [1]=init_flag, [3]=dimension, [6]=flags, [7]=layer_flags)\n\nReturns:\n0x01 = Success (entry found in hash table or newly initialized)\n0x00 = Failure (rare, only if InitializeSpriteGraphicsBlock fails)\n\nSpecial Cases:\n- NULL pcelFile triggers assertion at file:0x663\n- Non-zero pcelFile[1] indicates pre-loaded CEL, uses fast path\n- Ordinal_10036 appears to reset/reload CEL file data\n- Ordinal_10019 calculates scaled index for graphics block lookup\n- Magic number 0x6fef2bc0: graphics hash table base address\n- Magic number 0x14: CEL data stride field offset in pbUnused\n- Magic number 0x20: hash entry structure offset + flags field offset\n- Magic number 0x01: CEL initialization/validity flag bit\n- Magic number 0x04: sprite graphics flag to set in pcelFile[6]\n- Magic number 0x06: shift amount for CEL index scaling\n- Magic number 0x40: loop count for buffer initialization (64 dwords)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10056"
+      "index": "EXP:10056",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20970",
+          "rva": "0x10970",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1E600",
+          "rva": "0xE600",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE19DF0",
+          "rva": "0x9DF0",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21D00",
+          "rva": "0x11D00",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE23E10",
+          "rva": "0x13E10",
+          "confidence": 0.137,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_EXP_10058": {
       "addresses": {
@@ -2052,7 +2616,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Search async data list for matching node and validate its state\n\nAlgorithm:\n1. Get head of g_pAsyncDataList global\n2. If list empty, return 0 (not found)\n3. Loop through linked list entries\n4. Get node pointer from list entry offset 0x0\n5. Check if node valid (not NULL)\n6. Check if bit 0 at offset 0x20 is CLEAR\n7. Compare dwId1 against node[0x0]\n8. Compare dwId2 against node[0x4]\n9. Compare dwId3 against node[0x8]\n10. If all three IDs match, check field at offset 0xb0 (handle/resource)\n11. If handle is NULL, assert fail with error code 0xa5f\n12. Call Ordinal_10092 to validate/process node\n13. Return 1 if validation succeeds (non-zero result)\n14. Advance to next list entry via pList[5]\n15. Loop until next pointer is NULL\n16. Return 0 if no matching node found\n\nParameters:\ndwId1 - First identifier field to match against node offset 0x0\ndwId2 - Second identifier field to match against node offset 0x4\ndwId3 - Third identifier field to match against node offset 0x8\n\nReturns:\n1 - Matching node found and validation succeeded\n0 - No matching node found or validation failed\n\nSpecial Cases:\nNode found but handle field (offset 0xb0) is NULL triggers assertion failure\nBit 0 at offset 0x20 must be CLEAR for node to be valid\nFunction does NOT return on assertion failure (calls non-returning function)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10058"
+      "index": "EXP:10058",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20E30",
+          "rva": "0x10E30",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1EAC0",
+          "rva": "0xEAC0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1A2B0",
+          "rva": "0xA2B0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE221C0",
+          "rva": "0x121C0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10059": {
       "addresses": {
@@ -2076,7 +2674,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Thunk wrapper for Ordinal_10103 (context dispatcher).\n\nAlgorithm:\n1. Load ECX with context pointer (0x6fef2bc0)\n2. Jump to Ordinal_10103 implementation\n\nParameters:\n  None\n\nReturns:\n  void - delegates to Ordinal_10103\n\nSpecial Cases:\n  This is a stub/thunk function that acts as an entry point dispatcher. The context pointer (0x6fef2bc0) is likely a global object or singleton state required by Ordinal_10103.\n\nMagic Numbers:\n  0x6fef2bc0 - Context/state pointer address (global data)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10059"
+      "index": "EXP:10059",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE2ABC0",
+          "rva": "0x1ABC0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE2ABB0",
+          "rva": "0x1ABB0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE2ACB0",
+          "rva": "0x1ACB0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE2ACC0",
+          "rva": "0x1ACC0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10060": {
       "addresses": {
@@ -2100,7 +2732,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Retrieves the current queue value while holding the queue critical section lock.\n\nAlgorithm:\n1. Check if g_pQueueCriticalSection is NULL - if so, assertion failure\n2. Enter the critical section (acquire lock)\n3. Read and cache the queue value from g_dwQueueValue\n4. Leave the critical section (release lock)\n5. Return the cached queue value\n\nParameters:\nNone\n\nReturns:\nuint - The current queue value\n\nSpecial Cases:\n- If critical section is NULL, assertion failure with file/line info and fatal exit\n- Returns the queue value atomically under lock protection",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10060"
+      "index": "EXP:10060",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE19AD0",
+          "rva": "0x9AD0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE19C40",
+          "rva": "0x9C40",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1F940",
+          "rva": "0xF940",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1C280",
+          "rva": "0xC280",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_EXP_10061": {
       "addresses": {
@@ -2121,7 +2787,57 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined Ordinal_10061(LPVOID param_1)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10061"
+      "index": "EXP:10061",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF13E0",
+          "rva": "0x13E0",
+          "confidence": 0.395,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF1430",
+          "rva": "0x1430",
+          "confidence": 0.32,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF1430",
+          "rva": "0x1430",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF1430",
+          "rva": "0x1430",
+          "confidence": 0.189,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE11430",
+          "rva": "0x1430",
+          "confidence": 0.153,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        },
+        "LoD/1.07": {
+          "address": "0x6FE11430",
+          "rva": "0x1430",
+          "confidence": 0.1,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "D2CMP_EXP_10065": {
       "addresses": {
@@ -2835,7 +3551,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocates and initializes a 32KB compression buffer slot for the decompression engine.\n\nAlgorithm:\n1. Retrieve context data pointer from pContext[0x10]\n2. Calculate slot index by counting leading zero bits in pContext[0x8] bitmap\n3. Calculate table header size: (nSlot * 0x204 + 0x144) and entry base address\n4. Initialize 64-entry doubly-linked list node pool (8 bytes per node, self-pointing)\n5. Calculate virtual memory address: (nSlot * 0x8000 + pContext[0xc])\n6. Call VirtualAlloc(pAddr, 0x8000, MEM_COMMIT, PAGE_READWRITE)\n7. If allocation fails, return -1 immediately\n8. Initialize free block chain: iterate 0x1000-byte free blocks (7 blocks total)\n   - Each block: prev=-1, next=-1, size=0xff0 (4080 bytes usable)\n   - Link chain: forward/backward pointers connect blocks sequentially\n9. Link buffer into context doubly-linked list at positions [0x1fc] and [0x200]\n10. Update context arrays: zero usage counter, set active flag to 1\n11. Increment global slot counter if first allocation, set context flag 0x01\n12. Clear allocated slot bit in availability bitmap: clear bit (0x80000000 >> nSlot)\n13. Return slot index on success\n\nParameters:\npContext (CompressionContext*) - Compression context structure:\n  [0x4]=dwFlags, [0x8]=dwBitmap (slot availability), [0xc]=pBaseAddr (buffer base)\n\nReturns:\nSlot index (0-63) on success, -1 if VirtualAlloc fails\n\nSpecial Cases:\nMagic Numbers: 0x8000=buffer size, 0x1000=allocation granularity, 0xff0=block size, 0x204=header stride\nStructure offsets: 0x10=data pointer, 0xc=base address, 0x1fc/0x200=list links",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:0002c858ef3942a0b403454c72674bfe"
+      "index": "MNE:0002c858ef3942a0b403454c72674bfe",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE19C90",
+          "rva": "0x9C90",
+          "confidence": 0.282,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE19E00",
+          "rva": "0x9E00",
+          "confidence": 0.282,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1FB00",
+          "rva": "0xFB00",
+          "confidence": 0.282,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25D10",
+          "rva": "0x15D10",
+          "confidence": 0.282,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1A980",
+          "rva": "0xA980",
+          "confidence": 0.135,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_0023dcc08684": {
       "addresses": {
@@ -2963,7 +3721,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": "0x18D38"
       },
       "method": "MNE",
-      "index": "MNE:03455c508a72225478b465bc4da0dc85"
+      "index": "MNE:03455c508a72225478b465bc4da0dc85",
+      "candidates": {
+        "LoD/1.13d": {
+          "address": "0x6FE15FB1",
+          "rva": "0x5FB1",
+          "confidence": 0.363,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.13c"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE15C5A",
+          "rva": "0x5C5A",
+          "confidence": 0.403,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.12a"
+        },
+        "LoD/1.11": {
+          "address": "0x6FE15FB1",
+          "rva": "0x5FB1",
+          "confidence": 0.327,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_03467e8a80b0": {
       "addresses": {
@@ -3055,7 +3839,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n void __cdecl terminate(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:048fa86b16ba3f4924242f25b953c745"
+      "index": "MNE:048fa86b16ba3f4924242f25b953c745",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FE0597A",
+          "rva": "0x1597A",
+          "confidence": 0.4,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FE068E5",
+          "rva": "0x168E5",
+          "confidence": 0.324,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FE068E5",
+          "rva": "0x168E5",
+          "confidence": 0.212,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_04f1e6f173a4": {
       "addresses": {
@@ -3353,7 +4163,49 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x2520"
       },
       "method": "MNE",
-      "index": "MNE:0b3e179c7c81111cf7029d85db64df8b"
+      "index": "MNE:0b3e179c7c81111cf7029d85db64df8b",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF82A0",
+          "rva": "0x82A0",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF8590",
+          "rva": "0x8590",
+          "confidence": 0.325,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF8590",
+          "rva": "0x8590",
+          "confidence": 0.213,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF8590",
+          "rva": "0x8590",
+          "confidence": 0.146,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE187D0",
+          "rva": "0x87D0",
+          "confidence": 0.126,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_0bb5aba840ac": {
       "addresses": {
@@ -3969,7 +4821,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Reset memory allocator state and clear temporary registers\n\nAlgorithm:\n1. Push allocator mode value (9) onto stack as parameter\n2. Call FUN_6fe21cc4 to execute allocator cleanup routine\n3. Pop cleanup result into ECX and discard\n4. Clear EDI register to zero (XOR EDI, EDI)\n5. Return to caller via RET instruction\n\nParameters:\n  None (void function)\n\nReturns:\n  void - Function returns no value, used for side effects only\n\nSpecial Cases:\n  Called within exception handling context during memory reallocation retry loops\n  Used to reset allocator state between successive allocation attempts\n  Executes when DAT_6ff14264 mode is 2 (secondary allocator strategy)\n  Called after failed allocations during the loop retry mechanism\n\nMagic Numbers:\n  9: Allocator mode/context identifier passed to FUN_6fe21cc4\n\nRelated Functions:\n- ReallocateMemoryWithStrategy() - Calls this function during memory reallocation retries\n- FUN_6fe21cc4() - Allocator cleanup handler taking mode parameter",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:15c1391d599afb321981e8dd71ecc926"
+      "index": "MNE:15c1391d599afb321981e8dd71ecc926",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE2ABE0",
+          "rva": "0x1ABE0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE2ABD0",
+          "rva": "0x1ABD0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE2ACD0",
+          "rva": "0x1ACD0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE2ACE0",
+          "rva": "0x1ACE0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_1716f4745fd2": {
       "addresses": {
@@ -4271,7 +5157,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Search for first occurrence of a character within a bounded buffer range with optional count limit.\n\nAlgorithm:\n1. Validate buffer bounds: szEnd must be > szStart (asserts failure and crashes if violated)\n2. Linear search phase: Count matching characters from szStart up to nMaxCount or end of buffer\n3. Determine search result: If count reached limit (nMaxCount) before szEnd, break search early\n4. Handle full-range match: If search continued to szEnd with no partial match found:\n   - Set pnFoundStatus = 1 (complete match found)\n   - Set pnEndFlag = 0 (end-of-range not reached)\n   - Return\n5. Handle partial/no match: If early break occurred:\n   - Set pnFoundStatus = 0 (no match or partial)\n   - Skip remaining characters that match\n   - Set pnEndFlag = 1 if szStart reached szEnd, 0 otherwise\n   - Return\n\nParameters:\n- chSearchChar: Target character to search for\n- szStart: Pointer to start of buffer (must be < szEnd)\n- szEnd: Pointer to end of buffer (exclusive boundary)\n- nMaxCount: Maximum number of matching characters to count before stopping\n- pnFoundStatus: Output flag, 1=match found for full range, 0=no match or partial\n- pnEndFlag: Output flag, 1=buffer completely consumed, 0=stopped by count limit\n\nReturns:\nvoid (Results written to pnFoundStatus and pnEndFlag pointers)\n\nSpecial Cases:\n- Assertion fails if szEnd <= szStart (calls FogAssertFail + FUN_6fe21293 termination)\n- Count overflow: Function does not check for count > 0x7FFFFFFF (signed int range)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:2054b0e4fc53a2ee670e988d804c7342"
+      "index": "MNE:2054b0e4fc53a2ee670e988d804c7342",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE24C10",
+          "rva": "0x14C10",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1DCD0",
+          "rva": "0xDCD0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21450",
+          "rva": "0x11450",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE196C0",
+          "rva": "0x96C0",
+          "confidence": 0.139,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_21ec1ce544b5": {
       "addresses": {
@@ -4565,7 +5485,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Stack probe and frame switch for large allocations.\n\nAlgorithm:\n1. Preserve ECX by pushing on stack\n2. Load stack probe address from return pointer: LEA ECX, [ESP + 0x8]\n3. While in_EAX > 0xFFF (4KB):\n   a. Decrement probe address by 0x1000 (4KB)\n   b. Decrement in_EAX by 0x1000\n   c. Test memory access at [ECX] with EAX (probe stack pages)\n   d. Compare EAX with 0xFFF to check remaining size\n4. After loop, adjust final probe address: SUB ECX, in_EAX\n5. Probe final page: TEST dword ptr [ECX], EAX\n6. Copy return address: Load [ESP] and [ESP+4], push return address\n7. Switch stack frame to new location: MOV ESP, ECX\n8. Load saved ECX (now at new frame): MOV ECX, [EAX]\n9. Load return address: MOV EAX, [EAX + 0x4]\n10. Execute return: PUSH EAX; RET\n\nParameters:\nin_EAX: Size of stack space to allocate (implicit register parameter)\nin_ECX: Current frame pointer (destroyed during execution)\n\nReturns:\nExecution continues at return address in new stack frame\n\nSpecial Cases:\nIf in_EAX <= 0xFFF, no loop iteration occurs, skips directly to final probe\nStack probing ensures all pages are committed before switching\nSwaps return address to new stack frame via PUSH/RET technique\n\nNote: Function uses 3 stack-allocated temporaries optimized away.",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6"
+      "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20280",
+          "rva": "0x10280",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1DE90",
+          "rva": "0xDE90",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE196F0",
+          "rva": "0x96F0",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21610",
+          "rva": "0x11610",
+          "confidence": 0.291,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_2a91e70580e5": {
       "addresses": {
@@ -4675,7 +5629,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _strlen\n\nLibrary: Visual Studio",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:2b72785c7d09e5484d16dae5407e64ce"
+      "index": "MNE:2b72785c7d09e5484d16dae5407e64ce",
+      "candidates": {
+        "LoD/1.08": {
+          "address": "0x6FE12C00",
+          "rva": "0x2C00",
+          "confidence": 0.155,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_2ca3644e033f": {
       "addresses": {
@@ -5031,7 +5995,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Advances bit stream read position by specified number of bits.\n\nAlgorithm:\n1. Calculate: dwOffset = nBitsToAdvance + pStream[0xC] (current bit offset)\n2. Mask to 5 bits: pStream[0xC] = dwOffset & 0x1F (keeps within-dword position, range 0-31)\n3. Handle rounding: Apply signed right shift with adjustment ((dwOffset + (dwOffset >> 31 & 0x1F)) >> 5)\n4. Multiply result by 4 bytes and add to dword pointer: pStream[0x4] += (result * 4)\n5. Return\n\nParameters:\n  pStream (ECX): Pointer to bit stream state - Offset 0x4 = dword pointer, Offset 0xC = bit offset\n  nBitsToAdvance (EDX): Number of bits to advance (magn, can be positive or negative)\n\nReturns: void (modifies pStream in-place)\n\nSpecial Cases:\n  Magic value 0x1F (31 bits): Masks to keep only position within current dword (5 bits = 0-31)\n  Signed rounding: ((x + (x>>31 & 0x1F)) >> 5) divides by 32 with proper rounding for negative values\n  Bit-to-byte conversion: Left shift by 2 = multiply by 4 bytes per dword\n\nStructure Layout:\n  Offset | Size | Field Name | Type | Description\n  0x04   | 4    | pdwCurr    | uint*| Current dword pointer in bit stream buffer\n  0x0C   | 4    | dwBitPos   | uint | Bit offset within current dword (0-31)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:3573f3e74899cfd7b483ab426c7ca494"
+      "index": "MNE:3573f3e74899cfd7b483ab426c7ca494",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF11D0",
+          "rva": "0x11D0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_MNE_3586df3e31dd": {
       "addresses": {
@@ -5071,7 +6045,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x17CA0"
       },
       "method": "MNE",
-      "index": "MNE:35a926809c02214f1c021da8fe53c5e6"
+      "index": "MNE:35a926809c02214f1c021da8fe53c5e6",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF6A60",
+          "rva": "0x6A60",
+          "confidence": 0.397,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF6D40",
+          "rva": "0x6D40",
+          "confidence": 0.322,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF6D40",
+          "rva": "0x6D40",
+          "confidence": 0.211,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_360d303b0ef4": {
       "addresses": {
@@ -5167,7 +6167,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Inserts a doubly-linked list node at head or tail position.\n\nAlgorithm:\n1. Allocate node structure via Ordinal_401 with AUCELL list template and flags (param_3 | 0x8)\n2. Initialize all node fields to 0: offsets +4, +8, +C, +10, +2C, +30, +34\n3. Set node self-reference at offset +30 and inverted hash at offset +34\n4. If nInsertMode != 0 (insertion enabled):\n   a. Calculate list node pointer from nNodeHeader offset or container offset +4\n   b. If node handle exists, unlink from current position using pointer arithmetic\n   c. If nInsertMode != 1 (head insertion):\n      - Link to current head via container offset +4, update container\n   d. If nInsertMode == 1 (tail insertion):\n      - Link to tail metadata at container offset +8, handle negative offsets\n\nParameters:\n  this (void*) - IMPLICIT in ECX (auto-parameter __thiscall); container for doubly-linked list (offsets +4, +8)\n  nInsertMode (int) - 0=head insertion, 1=tail insertion; 0 disables all insertion\n  nNodeHeader (int) - pointer to node structure (Ordinal_401 receives offset +0x38)\n  dwFlags (dword) - allocation flags passed to Ordinal_401 (ORed with 0x8)\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  Ordinal_401 failure (returns 0) - node insertion is skipped, function returns early\n  \nNote: Function uses register-allocated temporaries optimized away by compiler (iVar2, uVar3, piVar1)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:3706dc18d628fcf20ff6252d77e2a882"
+      "index": "MNE:3706dc18d628fcf20ff6252d77e2a882",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1D930",
+          "rva": "0xD930",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1F710",
+          "rva": "0xF710",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1D600",
+          "rva": "0xD600",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE23220",
+          "rva": "0x13220",
+          "confidence": 0.279,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1E1F0",
+          "rva": "0xE1F0",
+          "confidence": 0.133,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_371cf2604575": {
       "addresses": {
@@ -5213,7 +6255,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _memcpy\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FE04C30",
+          "rva": "0x14C30",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FE05130",
+          "rva": "0x15130",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FE05130",
+          "rva": "0x15130",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_38603ed7b3e5": {
       "addresses": {
@@ -5237,7 +6305,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocate a block of virtual memory with specific flags.\n\nAlgorithm:\n1. Call VirtualAlloc with lpAddress=NULL (system chooses), dwSize=cbSize, flAllocType=0x3000 (MEM_COMMIT|MEM_RESERVE), flProtect=0x40 (PAGE_EXECUTE_READWRITE)\n2. Return allocated memory pointer (in EAX)\n\nParameters:\n  cbSize (SIZE_T): Number of bytes to allocate\n\nReturns:\n  void *: Pointer to allocated memory block, or NULL on failure\n\nSpecial Cases:\n  - Memory allocated with execute permission (0x40 = PAGE_EXECUTE_READWRITE)\n  - Used for allocating code/data buffers in image conversion pipeline\n  - Caller must track allocation for cleanup\n\nMagic Numbers:\n  0x3000: MEM_COMMIT (0x1000) | MEM_RESERVE (0x2000) - allocate and commit pages\n  0x40: PAGE_EXECUTE_READWRITE - full read/write/execute access",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:38603ed7b3e553c52008df96c26073b4"
+      "index": "MNE:38603ed7b3e553c52008df96c26073b4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1286E",
+          "rva": "0x286E",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE128D0",
+          "rva": "0x28D0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE128D0",
+          "rva": "0x28D0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE128D0",
+          "rva": "0x28D0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_38a52ad8d912": {
       "addresses": {
@@ -5301,7 +6403,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n public: virtual __thiscall type_info::~type_info(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:3a966d378a126a76a245d88e9b060455"
+      "index": "MNE:3a966d378a126a76a245d88e9b060455",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FE02B23",
+          "rva": "0x12B23",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FE02701",
+          "rva": "0x12701",
+          "confidence": 0.325,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FE02701",
+          "rva": "0x12701",
+          "confidence": 0.213,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_3aac37ada972": {
       "addresses": {
@@ -5636,7 +6764,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Deallocates virtual memory pages from a memory pool and tracks freed pages.\n\nAlgorithm:\n1. Iterate through linked list of pool nodes starting at g_ppPoolTail\n2. For each pool node (if data pointer valid and not -1):\n   a. Initialize offset counter at 0 and bitmap pointer to pool node + 0x2010\n   b. For each memory page in node (iVar3 from 0x3ff000 down by 0x1000):\n      - If bitmap entry equals 0xf0 (free marker):\n        * Call VirtualFree to release memory at [node_data_ptr + iVar3]\n        * On success: set bitmap entry to 0xffffffff, decrement g_dwPoolFreeCount\n        * Update node's minimum free entry if current is lower\n        * Increment freed pages counter, decrement page quota\n        * Exit if page quota reached\n   c. After inner loop, check if any pages were freed and node is fully empty (all entries 0xffffffff)\n   d. If yes, call RemoveLinkedListNode to unlink from pool chain\n3. Move to next pool node (ppvVar4[1])\n4. Exit when all pages freed or reached g_ppPoolTail again\n\nParameters:\n  nPageCount (int) - Number of memory pages to deallocate; function stops after this many\n\nReturns:\n  void - No return value; modifies g_dwPoolFreeCount and pool node structures\n\nSpecial Cases:\n  - If pool node data pointer is -1, skip entire node\n  - If no pages freed in node iteration, do NOT remove node from linked list\n  - Function terminates early if nPageCount reaches 0\n\nMagic Numbers:\n  0xf0 - Bitmap entry value indicating free/available page\n  0xffffffff - Marker for deallocated or unallocated entry\n  0x2010 - Offset to bitmap array within pool node structure\n  0x1000 - Size of single memory page (4096 bytes)\n  0x3ff000 - Starting offset for page iteration (largest page offset)\n  0x400 - Number of pages per pool node (1024 pages)\n  0x4000 - MEM_DECOMMIT flag for VirtualFree\n  0x1000 - Decommit size parameter (4096 bytes)\n\nPool Node Structure Layout:\n  Offset | Size | Field Name | Type | Description\n  0x00   | 4    | reserved   | uint | (unused)\n  0x04   | 4    | pNext      | void*| Next pool node pointer\n  0x0c   | 4    | pMinFree   | void*| Minimum free bitmap entry pointer\n  0x10   | 4    | dwDataPtr  | uint | Base address of virtual memory block or -1\n  0x18   | 4    | bFlags     | uint | Node state flags; 0xffffffff = fully empty\n  0x2010 | 1024 | bitmap[1024]| uint*| Bitmap tracking page allocation status",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:4356a93c484fa354f7841c9d1d714a19"
+      "index": "MNE:4356a93c484fa354f7841c9d1d714a19",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE21850",
+          "rva": "0x11850",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE24C30",
+          "rva": "0x14C30",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE23950",
+          "rva": "0x13950",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE22E60",
+          "rva": "0x12E60",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE200B0",
+          "rva": "0x100B0",
+          "confidence": 0.139,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_43c0a0116a01": {
       "addresses": {
@@ -5705,10 +6875,42 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": {
           "address": "0x6FDF2A60",
           "rva": "0x2A60",
-          "confidence": 0.743,
-          "method": "composite",
+          "confidence": 0.457,
+          "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF2BE0",
+          "rva": "0x2BE0",
+          "confidence": 0.37,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF2BE0",
+          "rva": "0x2BE0",
+          "confidence": 0.333,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF2BE0",
+          "rva": "0x2BE0",
+          "confidence": 0.219,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.07": {
+          "address": "0x6FE12C00",
+          "rva": "0x2C00",
+          "confidence": 0.159,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
         }
       }
     },
@@ -5853,7 +7055,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xBBE0"
       },
       "method": "MNE",
-      "index": "MNE:477a90d39822ce6aad04472822a7e759"
+      "index": "MNE:477a90d39822ce6aad04472822a7e759",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF2E20",
+          "rva": "0x2E20",
+          "confidence": 0.403,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE12F90",
+          "rva": "0x2F90",
+          "confidence": 0.156,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        },
+        "LoD/1.07": {
+          "address": "0x6FE12F90",
+          "rva": "0x2F90",
+          "confidence": 0.102,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "D2CMP_MNE_478855be1acc": {
       "addresses": {
@@ -6291,7 +7519,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Seek file pointer in character table file and clear busy flag.\n\nAlgorithm:\n1. Get file handle from character table slot using nCharIndex\n2. If handle is invalid (-1), get error storage pointer and set error code to 9\n3. Otherwise, call SetFilePointer to seek to nOffset position from nOrigin\n4. If seek fails (returns -1), call GetLastError to get error code\n5. If no error, get character entry flags from character table array\n6. Clear bit 1 (busy flag 0x02) from flags using AND 0xFD mask\n7. Return file position or -1 on error\n\nParameters:\n  nCharIndex (uint): Character table slot index (0-based)\n  nOffset (long): Seek offset in bytes\n  nOrigin (uint): Seek origin (0=start, 1=current, 2=end)\n\nReturns:\n  uint: File position after seek, or -1 (0xFFFFFFFF) on error\n\nSpecial Cases:\n  - Character table is organized as 32-character groups in array\n  - Each character entry is 0x24 bytes (36 bytes)\n  - Busy flag (0x02) is cleared after successful seek\n  - Error code 9 indicates invalid character slot\n\nRelated Functions:\n  - FUN_6fe285de: Gets file handle for character slot\n  - FUN_6fe2854d: Gets error code storage pointer\n  - SetFilePointer: Win32 API for file seeking\n  - GetLastError: Win32 API for last error\n  - FUN_6fe284da: Error handler/logger",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:4f4efd8121d403a870aeab94c4a12f4c"
+      "index": "MNE:4f4efd8121d403a870aeab94c4a12f4c",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE19850",
+          "rva": "0x9850",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE199C0",
+          "rva": "0x99C0",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1F6C0",
+          "rva": "0xF6C0",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25830",
+          "rva": "0x15830",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1A540",
+          "rva": "0xA540",
+          "confidence": 0.137,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_4fab193fe262": {
       "addresses": {
@@ -6620,7 +7890,49 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xDBA0"
       },
       "method": "MNE",
-      "index": "MNE:55474d2bf1ff8f1ac2228c7298d341a5"
+      "index": "MNE:55474d2bf1ff8f1ac2228c7298d341a5",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE203F0",
+          "rva": "0x103F0",
+          "confidence": 0.382,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1E000",
+          "rva": "0xE000",
+          "confidence": 0.309,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDFDFE0",
+          "rva": "0xDFE0",
+          "confidence": 0.387,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDFDFE0",
+          "rva": "0xDFE0",
+          "confidence": 0.228,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDFDFE0",
+          "rva": "0xDFE0",
+          "confidence": 0.166,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_57251327025c": {
       "addresses": {
@@ -6688,7 +8000,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Retrieves the next value from a variadic argument list\n\nAlgorithm:\n1. Increment the vararg pointer by 4 bytes (word boundary alignment for x86)\n2. Read and return the value at pointer-4 (the value at the current argument location)\n\nParameters:\npVarArgPtr (uint *) - Pointer to current position in variadic argument list; incremented on each call\n\nReturns:\nuint - The next argument value from the vararg list\n\nSpecial Cases:\n- Assumes 32-bit argument size (4 bytes per argument)\n- Pointer arithmetic: moves by word size, retrieves previous word's value\n- No validation of pointer validity or null termination",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:57ac66118a20c90490ffe62af18c6499"
+      "index": "MNE:57ac66118a20c90490ffe62af18c6499",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE1CD60",
+          "rva": "0xCD60",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1C9F0",
+          "rva": "0xC9F0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1B920",
+          "rva": "0xB920",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_58ce78ec7b76": {
       "addresses": {
@@ -6860,7 +8198,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Unlink and close a doubly-linked list node, handling both previous and next pointer updates.\n\nAlgorithm:\n1. Store address of head pointer (param_1 + 1)\n2. While list size [param_1 + 2] > 0:\n   a. Load current node at offset [param_1[0]] + [param_1[2]]\n   b. If node value non-zero, unlink from list:\n      - Load next pointer offset [current + 4]\n      - If offset negative, use bitwise NOT to get target address\n      - If offset positive, calculate target as [current + offset - previous_offset]\n      - Copy node value to target address\n      - Update previous node's next pointer\n      - Clear current node value and next pointer\n3. Process head node if present:\n   a. If head [param_1 + 1] non-zero:\n      - Load head offset [param_1 + 2]\n      - Calculate target address (negative offset uses NOT, positive uses offset calc)\n      - Copy head value to target\n      - Update next pointer in target\n      - Clear head value and offset\n\nParameters:\n  pNode (int *): IMPLICIT ECX - Pointer to list structure [0]=data, [1]=head, [2]=size\n\nReturns:\n  void\n\nSpecial Cases:\n  Negative offsets indicate bitwise NOT encoded addresses\n  Handles empty lists (size == 0, no iteration needed)\n\nMagic Numbers Reference:\n  0x0: NULL terminator for node values/pointers\n  Offset calculations: array indexing by field offset from base address",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:5d1c4c20e16b03848e6295cc537b2bab"
+      "index": "MNE:5d1c4c20e16b03848e6295cc537b2bab",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FE269A0",
+          "rva": "0x169A0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE213D0",
+          "rva": "0x113D0",
+          "confidence": 0.174,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_5d2d40297dfe": {
       "addresses": {
@@ -7034,7 +8390,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Exception handler destructor - cleanup and finalize exception context.\n\nAlgorithm:\n1. Set exception handler pointer and mark exception active (state=1)\n2. Loop while child list exists: get child list entry, mark for cleanup\n3. First cleanup pass: iterate array items, move items to new container\n4. Call cleanup handler for each array item\n5. Deallocate main container using Ordinal_403\n6. Second cleanup pass: process remaining list entries\n7. Move final container entry to new location, clear flags\n8. Restore previous exception handler and exit\n\nParameters:\npExceptionRecord (dword *) - Exception record structure pointer, IMPLICIT in EAX\nAlgorithm parameter registers: EBX (implicit), ESI (implicit)\n\nReturns:\nvoid - No return value, modifies exception context in-place\n\nSpecial Cases:\n- Flag test [EBP + 0x8] determines cleanup path\n- Negative size values use bitwise NOT: (~dwSize) for offset calculation\n- Container reallocation occurs when size >= 0\n\nMagic Numbers Reference:\n0x6fe2c8fc - Pointer to PopulateAuctionList (VTable entry)\n0x6fe291c1 - Exception handler label\n0x6fe2e500 - Container type identifier\n0xfffffffe - Special flag for container deletion\n0xffffff00 - Mask for clearing exception flag\n0xc - Container stride (3 dwords per item)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:6064991a2af50651cf2902deed604c79"
+      "index": "MNE:6064991a2af50651cf2902deed604c79",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE25090",
+          "rva": "0x15090",
+          "confidence": 0.287,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE25510",
+          "rva": "0x15510",
+          "confidence": 0.287,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE247A0",
+          "rva": "0x147A0",
+          "confidence": 0.287,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1E860",
+          "rva": "0xE860",
+          "confidence": 0.287,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_60fb4369558c": {
       "addresses": {
@@ -7120,7 +8510,41 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xA9E0"
       },
       "method": "MNE",
-      "index": "MNE:63800afdfca9a8f896d63bc95f5103ce"
+      "index": "MNE:63800afdfca9a8f896d63bc95f5103ce",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE21210",
+          "rva": "0x11210",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1EF10",
+          "rva": "0xEF10",
+          "confidence": 0.324,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1A780",
+          "rva": "0xA780",
+          "confidence": 0.237,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE22790",
+          "rva": "0x12790",
+          "confidence": 0.155,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_63906d1f35f7": {
       "addresses": {
@@ -7190,7 +8614,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x10C35"
       },
       "method": "MNE",
-      "index": "MNE:679e7391cc431bfbfb578a6a70c8d79c"
+      "index": "MNE:679e7391cc431bfbfb578a6a70c8d79c",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE199D0",
+          "rva": "0x99D0",
+          "confidence": 0.365,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE19B40",
+          "rva": "0x9B40",
+          "confidence": 0.295,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25AB0",
+          "rva": "0x15AB0",
+          "confidence": 0.141,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_68391274c47b": {
       "addresses": {
@@ -7230,7 +8680,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Search hash table for matching ID using linked list traversal.\n\nAlgorithm:\n1. Calculate hash index from dwSearchId using modulo operation (dwSearchId & mask at struct+0x24)\n2. Retrieve initial node pointer from hash table array at struct+0x1c + (index * 12) + 4\n3. Validate initial node (must be > 0); if not valid, return NULL\n4. Loop through linked list:\n   a. Test if current node pointer is valid (> 0)\n   b. If invalid, exit loop and return NULL\n   c. Load node ID from node[0] and compare with dwSearchId\n   d. If match found, return pointer to current node\n   e. If no match, calculate next node from offset chain\n   f. Get next pointer from current node offset + 4, repeat loop\n5. Return pointer to matching node or NULL if not found\n\nParameters:\n- IMPLICIT this (ECX): Pointer to hash table structure containing:\n  - Offset 0x1c: Array of hash table entries\n  - Offset 0x24: Hash mask (size - 1)\n- dwSearchId: ID value to search for in hash table\n\nReturns:\n- Pointer to matching entry if found\n- NULL (0x0) if dwSearchId not found in table\n\nSpecial Cases:\n- Empty table: First node validation fails, returns NULL\n- Single entry table: Direct match on first comparison\n- Collision chain: Multiple entries at same hash with linked list traversal\n- Note: Function contains phantom variable optimized by compiler; all visible variables documented\n\nMagic Numbers:\n- 0x1c: Offset to hash table data array within structure\n- 0x24: Offset to hash mask for modulo calculation\n- 0xc (12 bytes): Size of each hash table entry\n- 0x4 (4 bytes): Offset to next pointer field",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:683cde5a0888cc5a45f9222bdf3de1a2"
+      "index": "MNE:683cde5a0888cc5a45f9222bdf3de1a2",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE1D4A0",
+          "rva": "0xD4A0",
+          "confidence": 0.28,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25C10",
+          "rva": "0x15C10",
+          "confidence": 0.166,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_6a83297e71d4": {
       "addresses": {
@@ -7388,7 +8856,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Initialize or retrieve thread-local storage context for exception handling.\n\nAlgorithm:\n1. Preserve current error code (GetLastError) to prevent loss of error state\n2. Query TLS storage via TlsGetValue(g_dwTlsIndex) to check if initialized\n3. If NULL (first call on thread):\n   - Allocate memory block (0x74 bytes) via FUN_6fe25b45(1, 0x74)\n   - Validate allocation success; if failed, terminate via __amsg_exit(0x10)\n   - Associate allocated pointer with TLS index via TlsSetValue\n   - If TlsSetValue fails, terminate via __amsg_exit(0x10)\n   - Invoke FUN_6fe2272e to initialize exception handler structures\n   - Store current thread ID at offset 0x00\n   - Store 0xFFFFFFFF (uninitialized flag) at offset 0x04\n4. Restore original error code (SetLastError) before returning context pointer\n\nParameters: None (uses global g_dwTlsIndex for thread-local access)\n\nReturns: DWORD pointer to TLS context (2-element array)\n  [0] = Thread ID (uint)\n  [1] = Handler state (uint, 0xFFFFFFFF = uninitialized)\n\nSpecial Cases: Memory allocation failure triggers process termination via __amsg_exit(0x10)\n\nMagic Numbers:\n  0x74 (116 decimal): TLS context allocation size (2 DWORDs + headers)\n  0xFFFFFFFF: Uninitialized exception handler state marker\n  0x10: Exit code passed to __amsg_exit on allocation/TLS failure",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:6dad5d06763847d66c3aa4a89105e250"
+      "index": "MNE:6dad5d06763847d66c3aa4a89105e250",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1783F",
+          "rva": "0x783F",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1782F",
+          "rva": "0x782F",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1780F",
+          "rva": "0x780F",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1780F",
+          "rva": "0x780F",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_6db4eec4529d": {
       "addresses": {
@@ -7604,7 +9106,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Retrieves and invokes the appropriate handler function for a given handler ID with thread-local context management.\n\nAlgorithm:\n1. Check if dwHandlerId is 0x2 (direct handler): acquire critical section 1, set fAcquiredLock=true\n2. If dwHandlerId is 0x4, 0x8, or 0xb: call GetTlsContext() to get thread-local storage context\n3. Otherwise, check for valid handler IDs (0xf, 0x15, 0x16) and use their corresponding global pointers\n4. For other IDs, return -1 (0xffffffff - invalid handler)\n5. Retrieve handler function pointer from the handler table or computed offset\n6. If handler pointer is 0x1: release lock if held, return 0 (success)\n7. If handler pointer is 0x0: release lock if held, call __exit(3) (fatal error, process termination)\n8. For IDs 0x4, 0x8, 0xb: save current TLS context values at offsets 0x54, 0x58\n9. If ID is 0x8: iterate through slot entries (0 to g_dwSlotIndex+g_dwSlotCount) and zero them\n10. Call the handler function with appropriate parameters (8, dwSavedValue or dwHandlerId)\n11. Restore saved TLS context values back to original state\n12. Release critical section if previously acquired\n13. Return 0 (success)\n\nParameters:\n  dwHandlerId (uint) - Handler identifier: 0x2=direct critical section, 0x4/0x8/0xb=TLS lookup, 0xf/0x15/0x16=global handler pointers\n\nReturns:\n  0 on success, 0xffffffff (-1) if invalid handler ID\n\nSpecial Cases:\n  - Handler ID 0x2 causes critical section 1 acquisition to prevent concurrent execution\n  - ID 0x8 requires slot initialization/cleanup via iteration loop over g_dwSlotIndex/g_dwSlotCount\n  - IDs 0x4, 0xb, 0x8 temporarily modify TLS context fields 0x54, 0x58 for handler execution\n  - NULL handler (0x0) is fatal error requiring immediate process termination via __exit(3)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:6fd8fa0a9a06bd481e09533e1d62de94"
+      "index": "MNE:6fd8fa0a9a06bd481e09533e1d62de94",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE26A40",
+          "rva": "0x16A40",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1D5D0",
+          "rva": "0xD5D0",
+          "confidence": 0.131,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_70549bcd22ae": {
       "addresses": {
@@ -7998,7 +9518,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x77E0"
       },
       "method": "MNE",
-      "index": "MNE:79d1e455d881af469fdd1f6d403210e9"
+      "index": "MNE:79d1e455d881af469fdd1f6d403210e9",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE25380",
+          "rva": "0x15380",
+          "confidence": 0.389,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_7a09c5a73235": {
       "addresses": {
@@ -8158,7 +9688,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Calculate item address within exception node list using count and base pointer.\n\nAlgorithm:\n1. Load item count into ECX (__fastcall first parameter)\n2. Load first element pointer into EDX (__fastcall second parameter)\n3. Execute LEA EAX, [ECX + EDX*0x1] - compute address as base + count\n4. Return calculated address in EAX register\n\nParameters:\n- nItemCount (int): Item count value in exception node, used as offset multiplier\n- nFirstElement (int): Base pointer to first element in linked list array\n\nReturns:\n- void*: Calculated address of item within exception node (base + count)\n\nSpecial Cases:\n- Single instruction implementation: Optimized by compiler as single LEA\n- No validation: Assumes valid pointers passed by caller",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:7bb69882fe8348945a255bb23cae4c3b"
+      "index": "MNE:7bb69882fe8348945a255bb23cae4c3b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE2AC50",
+          "rva": "0x1AC50",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE2AC40",
+          "rva": "0x1AC40",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE2AD40",
+          "rva": "0x1AD40",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_7d1fa05d5030": {
       "addresses": {
@@ -8414,7 +9970,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Destroy all nodes in hash table and free the table itself.\n\nAlgorithm:\n1. Load node count from [pHashTable + 0x4]\n2. If count > 0:\n   a. Initialize offset counter (EBX=0)\n   b. Calculate node address: [pHashTable + 0x8] + offset\n   c. Call UnlinkAndCloseNode to destroy node\n   d. Increment index, advance offset by 0xc (12 bytes per node)\n   e. Repeat until all nodes processed\n3. Load array pointer from [pHashTable + 0x8]\n4. If pointer non-null:\n   a. Call Ordinal_403 (memory deallocator) with array pointer and flags\n5. Return\n\nParameters:\npHashTable (void*): Generic pointer to hash table structure with fields:\n  - [+0x4]: Node count (dword)\n  - [+0x8]: Pointer to dynamically allocated node array (dword)\n  Note: Specific structure type undetermined; used generically by callers\n\nReturns:\nvoid\n\nSpecial Cases:\n- Early exit if node count is 0 (empty table)\n- NULL pointer guard on array deallocation\n- Node size is 0xc (12) bytes",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:82e05515bca98ac3c5cf6064f3dfcb0d"
+      "index": "MNE:82e05515bca98ac3c5cf6064f3dfcb0d",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE11A50",
+          "rva": "0x1A50",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE11AD0",
+          "rva": "0x1AD0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE11A90",
+          "rva": "0x1A90",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE11AD0",
+          "rva": "0x1AD0",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE11AD0",
+          "rva": "0x1AD0",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_83295157daa3": {
       "addresses": {
@@ -8562,7 +10160,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Copy palette data to global palette flags buffer.\n\nAlgorithm:\n1. Set g_dwPaletteValidFlag to 1 to mark palette as valid\n2. Initialize destination pointer to g_abPaletteUsedFlags array base\n3. Set loop counter to 0x40 (64 iterations)\n4. For each iteration: copy dword from source to destination, advance both pointers\n5. Return after all 64 dwords copied\n\nParameters:\npdwPaletteData (uint *) - Pointer to source palette data array (64 dwords)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Copies exactly 0x40 (64) dwords using REP MOVSD instruction\n- Always sets palette valid flag to 1\n- Destination buffer size must be at least 256 bytes (64 dwords)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:84b05168a8e3aeeea6967d7c1f49f3f4"
+      "index": "MNE:84b05168a8e3aeeea6967d7c1f49f3f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE220E0",
+          "rva": "0x120E0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1AE10",
+          "rva": "0xAE10",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1AAA0",
+          "rva": "0xAAA0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE199D0",
+          "rva": "0x99D0",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_84b493fd8f41": {
       "addresses": {
@@ -8586,7 +10218,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Calculate offset pointer from base address with optional offset parameter.\n\nAlgorithm:\n1. Check if nOffset parameter is non-zero\n2. If offset provided: dereference pThis (get value at address), add nOffset to value, return pointer\n3. If offset is zero: return pointer to pThis + 4 bytes\n\nParameters:\n- pThis: Base address (pointer to data structure)\n- nOffset: Offset to add to dereferenced value, or zero to use default offset (+4)\n\nReturns:\n- Pointer to calculated memory address\n- If nOffset != 0: *(pThis) + nOffset\n- If nOffset == 0: pThis + 0x4\n\nSpecial Cases:\n- Function implements polymorphic offset calculation with default fallback\n- Used by container/collection accessor pattern with variable stride support",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:84b493fd8f41107c7beb464dc42894f6"
+      "index": "MNE:84b493fd8f41107c7beb464dc42894f6",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE11000",
+          "rva": "0x1000",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE11000",
+          "rva": "0x1000",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE11000",
+          "rva": "0x1000",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE11000",
+          "rva": "0x1000",
+          "confidence": 0.273,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE11000",
+          "rva": "0x1000",
+          "confidence": 0.105,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_84f733a34932": {
       "addresses": {
@@ -8724,7 +10398,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Decompresses table-indexed data blocks using implicit byte offsets.\n\nAlgorithm:\n1. Initialize destination line start pointer (pbDestLineStart = pbDestData + nBlockWidth)\n2. For each block (nNumBlocks iterations):\n   a. Read source command byte from pbSrcData\n   b. If byte >= 0x00 (positive): Extract literal count (low 7 bits) and copy count (byte >> 3)\n   c. Process literal run: Copy (low 7 bits) bytes with table lookup\n   d. If byte < 0x00 (negative): Extract copy count (high 5 bits), literal count (low 3 bits)\n   e. Apply switch table (8 cases) to handle unaligned literal runs (1-7 bytes)\n   f. Process 8-byte aligned chunks: Loop copy count times, copying 8-byte blocks\n      - Each byte: load from table via offset + pbSrcData[i]\n      - Store back to pbDestData[i]\n   g. Advance to next block (pbDestData += nBlockWidth)\n3. Return when nNumBlocks exhausted\n\nParameters:\npbSrcData (in ECX) - IMPLICIT: Source buffer pointer\npbDestData (in EDX) - IMPLICIT: Destination buffer start address\nnNumBlocks - Number of 8-byte output blocks to process\nnBlockWidth - Byte stride between block rows (row pitch)\nnTableBase - Base table address for indirect lookup\nnTableOffset - Source data offset into compressed format\n\nReturns:\nvoid (modifies pbDestData in-place)\n\nSpecial Cases:\n- Unaligned literals (1-7 bytes) handled via duff's device switch table at 0x6fe16874\n- Negative command bytes trigger table-based lookup fallback (high 5 bits = copy count)\n- When copy count = 0 after first 7 bytes, skip to next block immediately\n- Table lookup: byte * 0x100 + nTableBase + src[pbSrcData[offset] + nTableOffset]\n\nMagic Numbers:\n- 0x7F: Mask for literal count from command byte\n- 0x3: Shift right 3 bits to extract copy count\n- 0x100 (256): Byte multiplier for table lookup offset\n- 0x8: Block size for aligned processing\n- 0x07: Case selector for unaligned literal switch table",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:89baecb2a477b60ec426467fbc05be49"
+      "index": "MNE:89baecb2a477b60ec426467fbc05be49",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF6130",
+          "rva": "0x6130",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_MNE_89c8ec97483b": {
       "addresses": {
@@ -9254,7 +10938,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n int __cdecl _CallSETranslator(struct EHExceptionRecord *,struct EHRegistrationNode *,void *,void *,struct _s_FuncInfo const *,int,struct EHRegistrationNode *)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:940b36171c849cbdb70fa26527e4a4dd"
+      "index": "MNE:940b36171c849cbdb70fa26527e4a4dd",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDF11D0",
+          "rva": "0x11D0",
+          "confidence": 0.313,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF11D0",
+          "rva": "0x11D0",
+          "confidence": 0.205,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF11D0",
+          "rva": "0x11D0",
+          "confidence": 0.175,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE111D0",
+          "rva": "0x11D0",
+          "confidence": 0.115,
+          "method": "unique_string",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_964be4e5f49e": {
       "addresses": {
@@ -9276,7 +10994,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Builds a combined palette shift string and applies it to the palette data buffer.\n\nAlgorithm:\n1. Get length of global palette extension string\n2. Copy extension string to local buffer (256 bytes)\n3. Append input palette type string to buffer\n4. Append global palette shift source path to buffer\n5. Call FUN_6fe20b5e to load/parse the combined string into dwHandle\n6. If loading succeeds (nResult == 0):\n   - Call Ordinal_10025 (storm library) to clear error state (0x38 bytes)\n   - Zero-fill palette shift buffer (0x540 dwords = 5376 bytes per palette index)\n   - Return\n7. If loading fails (nResult != 0):\n   - Call FUN_6fe20c42 to decode data from loaded file into palette buffer (0x1500 bytes)\n   - Call FUN_6fe20ba6 to cleanup dwHandle\n   - Return\n\nParameters:\nszPaletteType: Palette type string to prepend to shift path\nnPaletteIndex: Palette index to select within g_pPaletteShiftBuffer (base + nPaletteIndex * 0x6900)\n\nReturns:\nvoid - Always succeeds; either initializes palette or applies loaded shift data\n\nStructure Layout:\nPalette Buffer: 0x6900 bytes per palette (16 total)\n- Palette data: 0x1500 bytes (max data)\n- Padding/unused: remaining bytes\n\nMagic Numbers:\n0x1500 (5376) - Palette data size in bytes\n0x540 (1344) - Palette zero-fill size in dwords (0x540 * 4 = 0x1500)\n0x6900 (26880) - Per-palette buffer stride\n0x38 (56) - Storm error buffer clear size\n\nNote: Uses repne scasb loop pattern for string length calculation (optimized strlen equivalent)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:964be4e5f49e5501c820298f2af31bae"
+      "index": "MNE:964be4e5f49e5501c820298f2af31bae",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1F620",
+          "rva": "0xF620",
+          "confidence": 0.623,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE24DF0",
+          "rva": "0x14DF0",
+          "confidence": 0.35,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1CB50",
+          "rva": "0xCB50",
+          "confidence": 0.561,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE24F20",
+          "rva": "0x14F20",
+          "confidence": 0.283,
+          "method": "unique_string",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_966ae3d3931d": {
       "addresses": {
@@ -9300,7 +11052,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Manage game initialization and cleanup lifecycle based on mode parameter.\n\nAlgorithm:\n1. If nGameMode == 1: Initialize game state\n   - Retrieve Windows version via GetVersion() and decompose into major/minor components\n   - Call FUN_6fe23e7d(1) to validate initialization prerequisites\n   - If validation fails, call FUN_6fe23eda() and return 0\n   - Extract and store Windows version components (major in g_byWindowsVersionMajor, minor in g_byWindowsVersionMinor, build in g_dwWindowsVersion >> 16)\n   - Compute combined version word: (minor << 8) | major into g_wWindowsVersionCombo\n   - Call FUN_6fe226bc() to initialize subsystems\n   - If subsystem init fails, call FUN_6fe23eda() and return 0\n   - On success: retrieve command line, initialize resources, execute initializer chain, increment g_dwInitializationCounter, return 1\n\n2. If nGameMode == 0: Cleanup game state\n   - Decrement g_dwInitializationCounter\n   - If counter drops to 0, perform full cleanup: InitializeProcessCleanup(), FUN_6fe2387c(), FUN_6fe22710(), FUN_6fe23eda()\n   - Otherwise call FUN_6fe23eda() only\n\n3. If nGameMode == 3: Special cleanup\n   - Call FUN_6fe227a8(NULL)\n   - Return 1\n\nParameters:\n  pInstanceHandle: Instance handle (unused, reserved)\n  nGameMode: Operation mode (1=initialize, 0=cleanup, 3=special cleanup)\n\nReturns:\n  1 on success (initialization complete or cleanup succeeded)\n  0 on failure or cleanup mode\n\nGlobal Data Modified:\n  g_dwInitializationCounter - Reference counter for init/cleanup pairs\n  g_dwWindowsVersion - Full Windows version dword\n  g_byWindowsVersionMajor - Major version component\n  g_byWindowsVersionMinor - Minor version component\n  g_wWindowsVersionCombo - Combined (minor << 8) | major\n  g_dwGameResourceHandle - Handle to game resources\n  g_szCommandLine - Command line string pointer",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:966ae3d3931d4719f3b38eb61e43e94b"
+      "index": "MNE:966ae3d3931d4719f3b38eb61e43e94b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20730",
+          "rva": "0x10730",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1E340",
+          "rva": "0xE340",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE19BB0",
+          "rva": "0x9BB0",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21AC0",
+          "rva": "0x11AC0",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE23B50",
+          "rva": "0x13B50",
+          "confidence": 0.136,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_9696a1fa07b4": {
       "addresses": {
@@ -9522,7 +11316,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _strrchr\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:99acdabe6d3af6d62646118ba964cdfb"
+      "index": "MNE:99acdabe6d3af6d62646118ba964cdfb",
+      "candidates": {
+        "LoD/1.13d": {
+          "address": "0x6FE11B70",
+          "rva": "0x1B70",
+          "confidence": 0.103,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_99d9d7ab7467": {
       "addresses": {
@@ -9834,7 +11638,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _report_failure\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:9fd359b66679d8b6a2f1c57a264fe596"
+      "index": "MNE:9fd359b66679d8b6a2f1c57a264fe596",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF1A00",
+          "rva": "0x1A00",
+          "confidence": 0.351,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF1B70",
+          "rva": "0x1B70",
+          "confidence": 0.284,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF1B70",
+          "rva": "0x1B70",
+          "confidence": 0.187,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF1B70",
+          "rva": "0x1B70",
+          "confidence": 0.122,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_a0707ad44a57": {
       "addresses": {
@@ -9930,7 +11768,49 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x9DC0"
       },
       "method": "MNE",
-      "index": "MNE:a1995a836549f5d4d052286c552157aa"
+      "index": "MNE:a1995a836549f5d4d052286c552157aa",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDF3F40",
+          "rva": "0x3F40",
+          "confidence": 0.355,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF3F40",
+          "rva": "0x3F40",
+          "confidence": 0.288,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF3F40",
+          "rva": "0x3F40",
+          "confidence": 0.17,
+          "method": "composite",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE13F40",
+          "rva": "0x3F40",
+          "confidence": 0.17,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        },
+        "LoD/1.07": {
+          "address": "0x6FE13F40",
+          "rva": "0x3F40",
+          "confidence": 0.111,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "D2CMP_MNE_a237c65a2ba2": {
       "addresses": {
@@ -10030,7 +11910,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n __cftog\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:a4b2a429e6b93d9fa514b9a34bf44774"
+      "index": "MNE:a4b2a429e6b93d9fa514b9a34bf44774",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FE00390",
+          "rva": "0x10390",
+          "confidence": 0.324,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FE00390",
+          "rva": "0x10390",
+          "confidence": 0.213,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_a51a9a5e7ceb": {
       "addresses": {
@@ -10667,7 +12565,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Flush character entry file buffers and validate character table status\n\nAlgorithm:\n1. Check if character index exceeds table count, set error code 0x09 and return 0xFFFFFFFF if out of bounds\n2. Calculate slot offset: (index & 0x1F) * 0x24 for bit-packed character flags\n3. Check character flags in table array at [base + offset]: bit 0x01 indicates valid/active entry\n4. If invalid before lock, jump to error path and return\n5. Acquire exclusive lock on character table entry\n6. Recheck character valid flag after acquiring lock (double-check pattern)\n7. If valid: obtain file handle from GetCharacterTableEntry()\n8. Call FlushFileBuffers() on handle to flush pending I/O\n9. If flush fails (returns FALSE), retrieve Windows error code via GetLastError()\n10. If error obtained, write to TLS context error offset via GetTlsContextOffsetPointer()\n11. Set global error code 0x09 in TLS context via GetTlsContextOffset8()\n12. Release character table lock and return error code (0x00 success, 0xFFFFFFFF failure)\n\nParameters:\n- nCharacterIndex (dword): Index into character table (0-based); checked against g_dwCharacterTableCount\n\nReturns:\n- 0x00000000: Success, file buffers flushed\n- 0xFFFFFFFF: Failure, invalid index or flush error\n\nSpecial Cases:\n- Index out of bounds: Returns immediately without lock acquisition\n- Character invalid flag: Double-checked before and after lock to prevent race conditions\n- Flush failure: Error code preserved in TLS context for caller inspection\n- Lock always released in both success and failure paths",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:b14dfb771e9c85951130aa7c0ee6e7bc"
+      "index": "MNE:b14dfb771e9c85951130aa7c0ee6e7bc",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE11880",
+          "rva": "0x1880",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE11880",
+          "rva": "0x1880",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE11840",
+          "rva": "0x1840",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE11880",
+          "rva": "0x1880",
+          "confidence": 0.294,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_b1691d6b7b8b": {
       "addresses": {
@@ -10813,7 +12745,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Enqueues an item into a dynamic queue buffer with automatic reallocation.\n\nAlgorithm:\n1. Call FUN_6fe21369 to acquire queue lock/synchronization\n2. Load current write position from g_pQueueEnd\n3. Calculate remaining space: (g_pQueueBegin + 4) - (int)g_pQueueBegin\n4. If written data >= space available:\n   a. Call FUN_6fe219a6 to get buffer metadata (returns offset into buffer)\n   b. Add 0x10 to metadata offset to get expansion size\n   c. Call FUN_6fe21677 with expansion size to reallocate buffer\n   d. If reallocation fails (NULL return), set dwItem = 0 and return\n   e. Update g_pQueueEnd to new write position: pbNewBuffer + old_size\n   f. Update g_pQueueBegin to reallocated buffer address\n5. Write dwItem to current write position at [g_pQueueEnd]\n6. Increment g_pQueueEnd by 4 bytes (dword size)\n7. Call FUN_6fe21372 to release queue lock/synchronization\n8. Return dwItem (or 0 on allocation failure)\n\nParameters:\ndwItem (uint): Item value to enqueue into the queue buffer\n\nReturns:\nundefined4: Original dwItem on success, 0 if buffer reallocation failed\n\nSpecial Cases:\n- Queue uses dynamic buffer reallocation strategy when space exhausted\n- Uses implicit spin-lock or critical section via FUN_6fe21369/FUN_6fe21372\n- Buffer stores dwords (4-byte items)\n- Metadata at offset 0x10 contains size information for expansion\n- Note: Function uses SSA temporaries pbVar2, SVar1 optimized away by compiler",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:b5756233a5a7628ebca8fed8bafffdce"
+      "index": "MNE:b5756233a5a7628ebca8fed8bafffdce",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE11220",
+          "rva": "0x1220",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE11220",
+          "rva": "0x1220",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE111E0",
+          "rva": "0x11E0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE111E0",
+          "rva": "0x11E0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE11100",
+          "rva": "0x1100",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_b5979d0534d5": {
       "addresses": {
@@ -10853,7 +12827,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocate and initialize a new compression buffer slot in the global array.\n\nAlgorithm:\n1. Check if compression buffer array is at capacity (g_dwCompressionBufferCount == g_dwCompressionSlotSize)\n2. If at capacity, reallocate array to 5x size + 0x50 using HeapReAlloc\n3. If realloc failed, return NULL (0x0)\n4. Increment slot size by 0x10 on successful realloc\n5. Calculate pointer to new slot: pCompressionSlot = g_pCompressionBufferArray + (count * 0x14 bytes)\n6. Allocate buffer structure (0x41c4 bytes) with HeapAlloc (flags 0x08)\n7. Store allocated buffer pointer at slot[4]\n8. If buffer allocation failed, return NULL\n9. Allocate virtual memory region (0x100000 bytes, commit + reserve)\n10. Store virtual allocation at slot[3]\n11. If virtual alloc failed, free buffer and return NULL\n12. Initialize slot fields: slot[2] = 0xffffffff, slot[0] = 0, slot[1] = 0\n13. Increment g_dwCompressionBufferCount\n14. Initialize first dword of buffer structure to 0xffffffff\n15. Return pointer to initialized slot\n\nParameters:\n(none) - Uses global g_dwCompressionBufferCount, g_dwCompressionSlotSize, g_pCompressionBufferArray, g_hHeapProcess\n\nReturns:\n- Pointer to initialized compression slot (dword array) on success\n- NULL (0x0) on allocation failure\n\nStructure Layout (Compression Buffer Slot):\nOffset | Size | Field Name | Type | Description\n0x00   | 4    | [0]        | uint | Initialize counter or status\n0x04   | 4    | [1]        | uint | Secondary counter/flags\n0x08   | 4    | [2]        | uint | Bit flags (0xffffffff = initialized)\n0x0c   | 4    | [3]        | void*| Virtual memory buffer (0x100000 bytes)\n0x10   | 4    | [4]        | void*| Heap-allocated structure (0x41c4 bytes)\n\nMagic Numbers:\n- 0x50: Size adjustment for realloc calculation\n- 5: Multiplication factor for realloc (5x current size)\n- 0x41c4: Size of heap-allocated structure (16868 bytes)\n- 0x14: Bytes per slot in array (5 dwords)\n- 0x10: Slot size increment on realloc\n- 0x100000: Virtual memory region size (1 MB)\n- 0x2000: Virtual allocation flags (MEM_RESERVE | MEM_COMMIT)\n- 0x04: Memory page protection (PAGE_READWRITE)\n- 0x08: Heap allocation flags\n- 0xffffffff: Initialization marker",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847"
+      "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1C4D0",
+          "rva": "0xC4D0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE23AF0",
+          "rva": "0x13AF0",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE22810",
+          "rva": "0x12810",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1D250",
+          "rva": "0xD250",
+          "confidence": 0.292,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE21FC0",
+          "rva": "0x11FC0",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_b5aa33b0420f": {
       "addresses": {
@@ -10899,7 +12915,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n __close\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:b5e8d68191f204e2d43adbcf540da123"
+      "index": "MNE:b5e8d68191f204e2d43adbcf540da123",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF2540",
+          "rva": "0x2540",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_b60575fb0b63": {
       "addresses": {
@@ -10909,7 +12935,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x6690"
       },
       "method": "MNE",
-      "index": "MNE:b60575fb0b632c899f7e64512b5136df"
+      "index": "MNE:b60575fb0b632c899f7e64512b5136df",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDF2F90",
+          "rva": "0x2F90",
+          "confidence": 0.395,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF2F90",
+          "rva": "0x2F90",
+          "confidence": 0.32,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF2F90",
+          "rva": "0x2F90",
+          "confidence": 0.233,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_b6144e1868fe": {
       "addresses": {
@@ -11263,7 +13315,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _vsprintf\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:bb6a863b2e5b8acdead7e4874f0310bd"
+      "index": "MNE:bb6a863b2e5b8acdead7e4874f0310bd",
+      "candidates": {
+        "LoD/1.09b": {
+          "address": "0x6FE04B89",
+          "rva": "0x14B89",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FE04B89",
+          "rva": "0x14B89",
+          "confidence": 0.192,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_bb6caf8fa91f": {
       "addresses": {
@@ -11329,7 +13399,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Decompress palettized image data using a lookup table (palette)\n\nAlgorithm:\n1. Initialize line end pointer: pbLineEnd = pbDest + nWidth\n2. Process each line (nLines iterations):\n   a. Read command byte from pbSrc\n   b. If bit 7 clear (signed byte >= 0):\n      - Extract alignment offset (bits 0-2) and block count (bits 3-6)\n      - Process unaligned leading bytes (1-7 bytes) using palette lookup\n      - Process aligned 8-byte blocks in tight loop, each byte: palette[(byte << 8) | dest_byte]\n      - If bit 7 set after masking 0x7F: add offset and repeat from step 2a\n      - Otherwise: move to next line\n   c. If bit 7 set (signed byte < 0):\n      - Extract count (bits 0-6, magnitude when negative)\n      - Sign-extend and advance pbDest pointer\n      - Continue reading next command byte\n3. Return when all lines processed\n\nParameters:\npbSrc (byte *) IMPLICIT ECX - Pointer to compressed source data, command bytes + lookup table indices\npbDest (byte *) IMPLICIT EDX - Pointer to destination decompressed buffer (output image)\nnLines (int) - Number of scanlines to decompress\nnWidth (int) - Width of each scanline in bytes\npPalette (dword) - Base address of lookup table for palette translation\n\nReturns:\nvoid - Modifies pbDest buffer in-place with decompressed scanlines\n\nSpecial Cases:\n- Bit 7 clear in command: alignment mode (process 1-7 unaligned + N*8 aligned bytes)\n- Bit 7 set in command: skip mode (advance pointer by sign-extended low 7 bits)\n- Used in inner loop: switch statement provides unrolled paths for 8 different offsets\n- Table lookup pattern: palette[source_byte << 8 | dest_byte] enables palette translation\n- Note: Function uses 3 register temporaries (EAX, EBX, EBP) optimized away in decompilation\n\nMagic Numbers:\n0x7F - Mask for lower 7 bits (skip count or alignment offset)\n0x7 - Mask for alignment offset (3 bits)\n0x100 - Multiplication factor for palette indexing (shifts source byte left 8 bits)\n0x8 - Block size in alignment mode (8 bytes processed per iteration)\n0x3 - Right shift amount to extract block count from upper bits",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:bd9b8531f4901d8df50571f462c8a2fd"
+      "index": "MNE:bd9b8531f4901d8df50571f462c8a2fd",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE25A80",
+          "rva": "0x15A80",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE24D10",
+          "rva": "0x14D10",
+          "confidence": 0.286,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_MNE_bda1bd8975dd": {
       "addresses": {
@@ -11555,7 +13643,41 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "\nCopy memory with optimized aligned DWORD copying, handling both forward and backward (overlapping) copies.\n\nAlgorithm:\n1. Check if regions overlap and dest < src: use backward copy to avoid corruption\n2. For backward copy: align destination to 4-byte boundary from end, copy DWORDs backward, handle remainder\n3. For forward copy: align destination to 4-byte boundary from start, copy DWORDs forward, handle remainder\n4. Use loop unrolling (8+ DWORDs per iteration) for performance\n5. Handle alignment cases: 0 (dword), 1, 2, 3 byte alignments with byte-by-byte setup\n6. Copy remaining bytes (0-3) after main DWORD loop via switch statement\n\nParameters:\npdwDest: void * - Destination buffer\npdwSrc: void * - Source buffer  \ncbSize: dword - Number of bytes to copy\n\nReturns:\npdwDest - Pointer to destination buffer (always returns destination)\n\nSpecial Cases:\n- Overlapping regions with dest < src: uses backward copy loop\n- Overlapping regions with dest >= src: uses forward copy loop\n- Non-overlapping: uses optimized forward copy\n- Handles all alignment boundaries: destination 0x0, 0x1, 0x2, 0x3 mod 4\n\nMagic Numbers:\n0x03 - Alignment mask (4-byte boundary check)\n7 - Minimum DWORD count for loop unrolling threshold\n3 - Remainder byte mask after DWORD count\n",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4"
+      "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE15C00",
+          "rva": "0x5C00",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE16360",
+          "rva": "0x6360",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE16330",
+          "rva": "0x6330",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE16330",
+          "rva": "0x6330",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_c02fcc39c5eb": {
       "addresses": {
@@ -11789,7 +13911,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n ___sbh_alloc_new_group\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:c41f2d1f421c471451958bea4a10fa66"
+      "index": "MNE:c41f2d1f421c471451958bea4a10fa66",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FDFFE60",
+          "rva": "0xFE60",
+          "confidence": 0.318,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_c43b47bac3ec": {
       "addresses": {
@@ -11929,7 +14061,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Apply palette lookup table transformation to pixel buffer\n\nAlgorithm:\n1. Initialize loop counter nLoopCounter = 0\n2. Load buffer count from pPixelBuffer[1]; if count <= 0, exit immediately\n3. Loop for each pixel in range [0, count):\n   a. Load base address from pPixelBuffer[0]\n   b. Calculate pixel address = base + nLoopCounter (byte offset)\n   c. Load pixel byte value at address\n   d. Add nLookupTable offset to pixel value (palette transformation)\n   e. Store transformed pixel back to original address\n   f. Increment nLoopCounter\n4. Return to caller\n\nParameters:\n- pPixelBuffer (int *): Pointer to structure [int nBaseAddress, int nPixelCount]\n  - pPixelBuffer[0]: Base address of pixel data (byte *)\n  - pPixelBuffer[1]: Number of pixels to process\n- nLookupTable (int): Lookup table base offset or additive palette value\n\nReturns:\n- void\n\nSpecial Cases:\n- Empty buffer: Skipped if nPixelCount (pPixelBuffer[1]) <= 0\n- Single pixel: Processed normally by loop logic\n- Out-of-bounds: Caller responsible for valid buffer bounds\n\nContext:\nCalled from DecompressSpriteFrame() during sprite decompression to apply\ncolor palette transformations to decompressed pixel data",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:c4a609658719de82a27dc1bd2608e87a"
+      "index": "MNE:c4a609658719de82a27dc1bd2608e87a",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE1EA90",
+          "rva": "0xEA90",
+          "confidence": 0.276,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1A280",
+          "rva": "0xA280",
+          "confidence": 0.276,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_c4af741cb377": {
       "addresses": {
@@ -12021,7 +14171,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Thread-safe wrapper for string processing with critical section management\n\nAlgorithm:\n1. Increment global reference count (InterlockedIncrement)\n2. Check if critical section already in use (g_bCriticalSectionInUse)\n3. If in use: decrement reference count, acquire/initialize critical section index 0x13\n4. Delegate string processing to FUN_6fe26bf2(lpszInputString, wcCharacter)\n5. If critical section was active: release critical section index 0x13\n6. Else: decrement reference count\n7. Return processed string pointer\n\nParameters:\nlpszInputString (LPSTR) - Input string to process\nwcCharacter (WCHAR) - Character parameter for processing\n\nReturns:\nLPSTR - Processed string pointer from FUN_6fe26bf2\n\nSpecial Cases:\n- Critical section state prevents reentrant locking\n- Reference counting tracks concurrent access\n- Magic number 0x13 identifies critical section resource",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:c85f8270e3f1487f07a5ecca3d9faf90"
+      "index": "MNE:c85f8270e3f1487f07a5ecca3d9faf90",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1AA30",
+          "rva": "0xAA30",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1ADB0",
+          "rva": "0xADB0",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE208A0",
+          "rva": "0x108A0",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE26C20",
+          "rva": "0x16C20",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1B930",
+          "rva": "0xB930",
+          "confidence": 0.138,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_c884902ad874": {
       "addresses": {
@@ -12517,7 +14709,17 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n __lseek\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:d016b68ecb5da6df87847adf03c73f3a"
+      "index": "MNE:d016b68ecb5da6df87847adf03c73f3a",
+      "candidates": {
+        "LoD/1.09": {
+          "address": "0x6FE00390",
+          "rva": "0x10390",
+          "confidence": 0.136,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_d042c9187450": {
       "addresses": {
@@ -12527,7 +14729,41 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x9BD0"
       },
       "method": "MNE",
-      "index": "MNE:d042c9187450f863b3c65b53a87bdb44"
+      "index": "MNE:d042c9187450f863b3c65b53a87bdb44",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1CF00",
+          "rva": "0xCF00",
+          "confidence": 0.389,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE24230",
+          "rva": "0x14230",
+          "confidence": 0.315,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE22F50",
+          "rva": "0x12F50",
+          "confidence": 0.23,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE1DC80",
+          "rva": "0xDC80",
+          "confidence": 0.151,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.12a"
+        }
+      }
     },
     "D2CMP_MNE_d0e2b07b7895": {
       "addresses": {
@@ -12686,7 +14922,57 @@ var FUNCTIONS_D2CMP_dll = {
       "signature": "undefined Unwind@6fe2ae68(void)",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:d597d5361e6a711909f7b46edd7a975b"
+      "index": "MNE:d597d5361e6a711909f7b46edd7a975b",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDFD7D0",
+          "rva": "0xD7D0",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDFDC90",
+          "rva": "0xDC90",
+          "confidence": 0.328,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDFDC90",
+          "rva": "0xDC90",
+          "confidence": 0.295,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDFDC90",
+          "rva": "0xDC90",
+          "confidence": 0.194,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE1DEB0",
+          "rva": "0xDEB0",
+          "confidence": 0.157,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        },
+        "LoD/1.07": {
+          "address": "0x6FE1DEB0",
+          "rva": "0xDEB0",
+          "confidence": 0.103,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09"
+        }
+      }
     },
     "D2CMP_MNE_d5c8453c3e2b": {
       "addresses": {
@@ -12708,7 +14994,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _free\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:d5c8453c3e2bb4ff6f437d3d747d2c97"
+      "index": "MNE:d5c8453c3e2bb4ff6f437d3d747d2c97",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF3E60",
+          "rva": "0x3E60",
+          "confidence": 0.403,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF40C0",
+          "rva": "0x40C0",
+          "confidence": 0.326,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF40C0",
+          "rva": "0x40C0",
+          "confidence": 0.214,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6FDF40C0",
+          "rva": "0x40C0",
+          "confidence": 0.134,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.08": {
+          "address": "0x6FE140C0",
+          "rva": "0x40C0",
+          "confidence": 0.114,
+          "method": "unique_api",
+          "direction": "reverse",
+          "source": "LoD/1.09b"
+        }
+      }
     },
     "D2CMP_MNE_d7897101f3cb": {
       "addresses": {
@@ -13090,7 +15418,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x2FB0"
       },
       "method": "MNE",
-      "index": "MNE:df0d4da7b593de613ba6b4265ad05a29"
+      "index": "MNE:df0d4da7b593de613ba6b4265ad05a29",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE24B10",
+          "rva": "0x14B10",
+          "confidence": 0.401,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE1DBD0",
+          "rva": "0xDBD0",
+          "confidence": 0.325,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE26A20",
+          "rva": "0x16A20",
+          "confidence": 0.237,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_df39be31c90d": {
       "addresses": {
@@ -13343,7 +15697,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x3950"
       },
       "method": "MNE",
-      "index": "MNE:e52a110114bdc3076402137ced6eaf2b"
+      "index": "MNE:e52a110114bdc3076402137ced6eaf2b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1D170",
+          "rva": "0xD170",
+          "confidence": 0.398,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF6E80",
+          "rva": "0x6E80",
+          "confidence": 0.403,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF6E80",
+          "rva": "0x6E80",
+          "confidence": 0.147,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_MNE_e57f9b957e5f": {
       "addresses": {
@@ -13447,7 +15827,33 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x2979"
       },
       "method": "MNE",
-      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1"
+      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDF2740",
+          "rva": "0x2740",
+          "confidence": 0.405,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FDF28C0",
+          "rva": "0x28C0",
+          "confidence": 0.328,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FDF28C0",
+          "rva": "0x28C0",
+          "confidence": 0.215,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_e75ee0306c31": {
       "addresses": {
@@ -13527,7 +15933,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x95C0"
       },
       "method": "MNE",
-      "index": "MNE:e7ee8a5cfd60c9af4b30c99227dea932"
+      "index": "MNE:e7ee8a5cfd60c9af4b30c99227dea932",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE20800",
+          "rva": "0x10800",
+          "confidence": 0.387,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_e83bd76a96c5": {
       "addresses": {
@@ -13758,7 +16174,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x16610"
       },
       "method": "MNE",
-      "index": "MNE:eb05d65ce5bb476cb5228802aafd72f5"
+      "index": "MNE:eb05d65ce5bb476cb5228802aafd72f5",
+      "candidates": {
+        "LoD/1.10": {
+          "address": "0x6FDFFE70",
+          "rva": "0xFE70",
+          "confidence": 0.393,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2CMP_MNE_eb17d7abe573": {
       "addresses": {
@@ -13792,7 +16218,17 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x75E0"
       },
       "method": "MNE",
-      "index": "MNE:eb7557e0a9a73669d79ec3dac3d3f442"
+      "index": "MNE:eb7557e0a9a73669d79ec3dac3d3f442",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE25600",
+          "rva": "0x15600",
+          "confidence": 0.402,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_MNE_eb7ebe8853ab": {
       "addresses": {
@@ -14499,7 +16935,33 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Insert node into linked list container with state management.\n\nAlgorithm:\n1. Apply dwFlagMask to container state at offset 0x24\n2. If capacity < 0x3ff, adjust index counter (offset 0x10)\n3. Walk node chain from data table, increment counter up to 0xd\n4. On counter overflow, call FUN_6fe13b50 to reset state\n5. Call virtual method [this + 0x4] with data table entry\n6. Unlink existing node if present from doubly-linked list\n7. Link new node at container head, update bidirectional pointers\n8. Store extra data from registers to result offset +0, +5\n\nParameters:\npContainer (void*): Container object, offsets: +0x4=vfunc, +0x8=head, +0x10=counter, +0x1c=table, +0x24=state\ndwFlagMask (uint): Mask applied to state\ndwParam3 (uint): Virtual method param 3\ndwParam4 (uint): Virtual method param 4\n\nReturns:\nvoid: Container modified in-place with new linked node\n\nSpecial Cases:\nVirtual method returns NULL: use container head at offset +8\nNegative offset in link: complements for reverse direction\nCounter reaches 0xd: triggers state reset callback",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:f47ddfa85791e5781642943b61cb534f"
+      "index": "MNE:f47ddfa85791e5781642943b61cb534f",
+      "candidates": {
+        "LoD/1.12a": {
+          "address": "0x6FE19870",
+          "rva": "0x9870",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE21780",
+          "rva": "0x11780",
+          "confidence": 0.293,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE23810",
+          "rva": "0x13810",
+          "confidence": 0.14,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_MNE_f4c484ce90e0": {
       "addresses": {
@@ -14737,7 +17199,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Decompress RLE-encoded data with per-byte translation table lookup.\n\nAlgorithm:\n1. Initialize line position tracking (nLineStart = nCurrentPos + nLineWidth)\n2. For each iteration (nIterations lines to process):\n   a. Read RLE byte value (bRleValue)\n   b. If MSB clear (positive): literal byte count in [0x00..0x7f]\n      - Clamp copy width to valid range [nStartX, nEndX]\n      - Use Duff's device (switch fallthrough) for unrolled 8-byte copy\n      - For each byte: translate via pbTranslationTable[src_byte] -> dest_byte\n   c. If MSB set (negative): repeat next 0x7f bytes (after masking)\n      - Read next byte, translate, advance position\n   d. Advance to next line on iteration end\n3. Return when all iterations complete\n\nParameters:\n  pbData (ECX): RLE-encoded data stream pointer\n  nCurrentPos (EDX): Destination buffer start position\n  nIterations: Line count to decompress\n  nLineWidth: Bytes per line (scanline stride)\n  nYPos: Current Y position tracking\n  nStartX: Minimum valid X column index\n  nEndX: Maximum valid X column index\n  pbTranslationTable (ESI): Byte lookup table for value translation\n\nReturns: void (modifies destination buffer in-place)\n\nSpecial Cases:\n  - Empty range (nStartX >= nEndX): Skip copy, advance buffer pointers\n  - Duff's device optimizes copy for alignment: remainder handled via switch, then 8-byte chunks\n  - RLE value 0x00 marks line end, triggers nIterations decrement\n  - Negative values (MSB=1): masked to 0x7f for repeat count\n\nMagic Numbers:\n  0x80: RLE marker (MSB check for negative/repeat flag)\n  0x7f: RLE mask and max literal/repeat count\n  0x08: Duff's device unroll factor (8-byte chunks)\n  0x07: Remainder mask (modulo 8)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:f8c7a81d81eaaab45678bd489418aacb"
+      "index": "MNE:f8c7a81d81eaaab45678bd489418aacb",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE244A0",
+          "rva": "0x144A0",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE231C0",
+          "rva": "0x131C0",
+          "confidence": 0.289,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.09d"
+        }
+      }
     },
     "D2CMP_MNE_f93a26193b15": {
       "addresses": {
@@ -15486,7 +17966,49 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Load or create tile hash table by name from a linked list, allocating memory as needed.\n\nAlgorithm:\n1. Search global tile hash list (g_pTileHashListHead) for entry with matching tile name\n2. Compare names byte-by-byte using case-sensitive string matching\n3. If found, return existing hash handle and data pointer\n4. If not found: allocate memory buffer (size based on name length), allocate tile hash structure\n5. Zero-fill allocated tile hash structure (0x110 bytes)\n6. Initialize tile projection data and hash table within structure\n7. Allocate tile record buffer (0x110 bytes) and zero-fill\n8. Insert new record at head of linked list, update pointers\n9. Copy tile name to record buffer using REP MOVSD/MOVSB\n\nParameters:\npHashTableHandle (uint *) - Output pointer to receive hash table handle\nszTileName (const char *) - Null-terminated tile name string to search or create\n\nReturns:\nuint - Hash handle ID for successful load/creation, or assertion failure if allocation fails\n\nSpecial Cases:\n- If tile name not found: allocation must succeed or calls FogAssertFail\n- Uses double-pointer linking for linked list traversal\n- Name matching: if first bytes equal, continues; if first bytes differ, uses SBB for comparison value\n- List termination: zero pointer in 0x10c offset terminates search\n\nMagic Numbers:\n0x104 - Offset to hash handle within record\n0x108 - Offset to hash table pointer within record\n0x10c - Offset to next list pointer within record\n0x110 - Size of tile record structure (68 DWORDs)\n\nStructure Layout (TileRecord @ offset 0):\n| Offset | Size | Field Name | Type | Description |\n| 0x000 | 0x104 | tileData | byte[260] | Tile record data area |\n| 0x104 | 0x4 | hashHandle | uint * | Pointer to tile hash handle |\n| 0x108 | 0x4 | hashTablePtr | dword * | Pointer to hash table |\n| 0x10c | 0x4 | nextRecord | TileRecord * | Next record in linked list |\n\nRelated Functions:\n- AllocateAndInitializeResourceBuffer() - Allocates memory for name buffer\n- InitializeTileProjectData() - Sets up projection data within hash\n- InitializeTileHashTable() - Initializes hash table structure",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:63366405376f957779a6e6f70801bb3b"
+      "index": "STR:63366405376f957779a6e6f70801bb3b",
+      "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE19DA0",
+          "rva": "0x9DA0",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.11b": {
+          "address": "0x6FE19F10",
+          "rva": "0x9F10",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE1FC10",
+          "rva": "0xFC10",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13c": {
+          "address": "0x6FE25E20",
+          "rva": "0x15E20",
+          "confidence": 0.288,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.13d": {
+          "address": "0x6FE1AA90",
+          "rva": "0xAA90",
+          "confidence": 0.138,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.11b"
+        }
+      }
     },
     "D2CMP_STR_6449b42aff6e": {
       "addresses": {
@@ -15820,7 +18342,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Compress player buffer data with run-length encoding for efficient storage and transmission.\n\nAlgorithm:\n1. Allocate 0x128 bytes for compressed output buffer via Fog.MemAlloc\n2. Initialize buffer to null bytes (0x16b dwords + 3 bytes = 0x2ac bytes total) via REP STOSD\n3. Loop through source buffer in 0x20-byte blocks:\n   - Call SearchCharInBufferWithLimit to find null terminator (max 0x7f bytes from block start)\n   - If found at block boundary (local_14=0, local_10=0), output block separator (0x00 0x00)\n   - If data found before boundary, encode: (length_byte, character_count, ...character_data)\n   - Increment block counter; when counter reaches 0xf, prepare to flush\n4. Calculate compressed data size via pointer difference\n5. Allocate new buffer of exact compressed size via Fog.MemRealloc\n6. Clear new buffer to null via REP STOSD then REP MOVSB\n7. Copy compressed data to new buffer\n8. Update structure fields: [nStructure+0x8] |= 0x5, [nStructure+0x10] = pNewBuffer, [nStructure+0xa] = dwCompressedSize\n\nParameters:\n- nStructure: Data structure pointer (likely item/player unit); compressed buffer pointer stored at offset 0x10\n- szSourceBuffer: Source buffer to compress (player data, typically 0x2ac bytes)\n\nReturns:\n- void; side effect updates structure fields at nStructure with compressed data pointer and size flag\n\nSpecial Cases:\n- Full blocks (0x20 bytes): encoded as single length byte 0x7f\n- Partial blocks: encoded as (length, character_count, ...data)\n- Empty blocks: separated by double null terminator\n- Buffer exhaustion: asserts compressed size < 0x10000 bytes before reallocation",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:c070d6a77382dbd3472ef58047830617"
+      "index": "STR:c070d6a77382dbd3472ef58047830617",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE1E410",
+          "rva": "0xE410",
+          "confidence": 0.282,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE19C80",
+          "rva": "0x9C80",
+          "confidence": 0.282,
+          "method": "composite",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_STR_c2fe20e91c1e": {
       "addresses": {
@@ -15868,7 +18408,25 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocate and initialize a tile structure with its associated tile data and components.\n\nAlgorithm:\n1. Validate pTileInfo is non-null; assert failure if null\n2. Check pTileInfo[2] (tile count); return error code 0x85200004 if zero\n3. Allocate main tile structure (547 bytes via Ordinal_10042 with size 0x22b)\n4. Clear tile structure to zeros (0x45 dwords, 276 bytes)\n5. Set pTileStruct[0] = 7 (tile type identifier)\n6. Set pTileStruct[1] = 1 if pTileInfo[0] is non-zero (active flag)\n7. Store tile count at pTileStruct[0x10c]\n8. Allocate tile data array (nTileCount * 0x60 bytes via Ordinal_10042 with size 0x237)\n9. Store tile array pointer at pTileStruct[0x110]\n10. Loop through linked list starting at pTileInfo[3]:\n    a. Copy tile metadata (position X/Y, dimensions, flags, etc.)\n    b. Allocate component array if tile has components (nCompCount * 0x14 bytes)\n    c. Copy component list data, zero out source component references\n    d. Validate component count matches stored count; assert if mismatch\n    e. Advance to next tile in linked list via pTileInfo[0x17]\n11. Verify total tiles processed equals pTileInfo[2]; return error if mismatch\n12. Store pointer to allocated tile structure in ppTileData[0]\n13. Return success code 0\n\nParameters:\npTileInfo: Pointer to tile descriptor structure with: [0] = base address, [2] = tile count, [3] = head of tile linked list, [0x10] = tile X offset, [0x14] = tile Y offset, [0x16] = components array, [0x17] = next tile pointer\nppTileData: Output pointer where allocated tile structure address is stored\n\nReturns:\n0 on success\n0x85200004 if tile count is zero or tile array allocation fails\nNever returns on validation failure (asserts and calls FUN_6fe21293)\n\nSpecial Cases:\n- If pTileInfo[0] is zero, tile active flag (offset 0x4) is not set\n- Component allocation is skipped if nCompCount is 0\n- Component data from source is cleared after copying\n- Multiple assertion checks for null allocations and count mismatches\n\nMagic Numbers:\n0x22b (547) - Size in 32-bit units for main tile structure allocation\n0x237 (567) - Size in 32-bit units for tile data array allocation\n0x200 (512) - Size in 32-bit units for component array allocation\n0x7 - Tile type identifier\n0x45 (69 dwords) - Tile structure zero-fill count\n0x60 (96 bytes) - Size of each tile data entry\n0x14 (20 bytes) - Size of each component entry\n0x10c - Offset of tile count in tile structure\n0x110 - Offset of tile array pointer in tile structure\n0x223, 0x22c, 0x201, 0x212, 0x246 - Assertion line numbers\n\nStructure Layout (Tile Structure):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwTileType | uint | Tile type (7)\n0x4    | 4    | dwActive   | uint | Active flag (1 if initialized)\n0x8-0x10b | varies | TileData | mixed | Reserved/untyped data\n0x10c  | 4    | nTileCount | uint | Total number of tiles\n0x110  | 4    | pTileArray | void * | Pointer to tile data array",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925"
+      "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925",
+      "candidates": {
+        "LoD/1.11b": {
+          "address": "0x6FE25800",
+          "rva": "0x15800",
+          "confidence": 0.296,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.12a": {
+          "address": "0x6FE24A90",
+          "rva": "0x14A90",
+          "confidence": 0.296,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "D2CMP_STR_caf0293062c4": {
       "addresses": {
