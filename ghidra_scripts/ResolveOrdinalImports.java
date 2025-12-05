@@ -14,6 +14,7 @@ import ghidra.program.model.mem.*;
 import ghidra.program.model.data.*;
 import ghidra.framework.model.*;
 import ghidra.util.task.TaskMonitor;
+import ghidra.app.cmd.comments.SetCommentCmd;
 import java.util.*;
 
 /**
@@ -160,13 +161,14 @@ public class ResolveOrdinalImports extends GhidraScript {
                                 continue;
                             }
                             
-                            // Rename the external location
-                            loc.setName(loc.getParentNameSpace(), newName, SourceType.USER_DEFINED);
-                            
-                            // Update the address to point to the actual function in the DLL
-                            loc.setAddress(funcAddr);
+                            // Update both name and address together using setLocation
+                            // This properly updates the external location to point to the function
+                            loc.setLocation(newName, funcAddr, SourceType.USER_DEFINED);
                             
                             println("    " + label + " -> " + newName + " @ " + funcAddr);
+                            
+                            // Update references to this external (call sites, pointer labels)
+                            updateReferencesToExternal(loc, newName);
                             
                             // Apply signature if we have a function
                             if (srcFunc != null) {
@@ -181,11 +183,24 @@ public class ResolveOrdinalImports extends GhidraScript {
                             continue;
                         }
                     } else {
-                        // Already named - just look up the function by name for signature
+                        // Already named - look up the function by name for signature AND address
                         srcFunc = nameToFunc.get(label);
                         
-                        // Apply signature if we have a source function
+                        // Apply signature and update address if we have a source function
                         if (srcFunc != null) {
+                            Address srcAddr = srcFunc.getEntryPoint();
+                            
+                            // Update the address to point to correct location in source DLL
+                            try {
+                                loc.setLocation(label, srcAddr, SourceType.USER_DEFINED);
+                                println("    " + label + " @ " + srcAddr);
+                            } catch (Exception e) {
+                                println("    " + label + ": setLocation failed: " + e.getMessage());
+                            }
+                            
+                            // Update references to this external (call sites, pointer labels)
+                            updateReferencesToExternal(loc, label);
+                            
                             applySignatureToExternal(loc, srcFunc, label);
                             totalRenamed++;
                         } else {
@@ -376,6 +391,122 @@ public class ResolveOrdinalImports extends GhidraScript {
             }
         } catch (Exception e) {
             println("    " + label + " sig failed: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Update references to an external location.
+     * 
+     * This handles:
+     * 1. Pointer symbols (PTR_OldName_addr) - renames them to match the external
+     * 2. Call site labels (OldName at call addresses) - renames or removes them
+     * 3. Comments at those locations - removes obsolete comments
+     */
+    private void updateReferencesToExternal(ExternalLocation loc, String newName) {
+        try {
+            // Get the external space address (the fake address in EXTERNAL space)
+            Address extSpaceAddr = loc.getExternalSpaceAddress();
+            
+            if (extSpaceAddr == null) {
+                println("      No external space address");
+                return;
+            }
+            
+            ReferenceManager refMgr = currentProgram.getReferenceManager();
+            SymbolTable symTable = currentProgram.getSymbolTable();
+            Listing listing = currentProgram.getListing();
+            
+            int refsUpdated = 0;
+            
+            // First, find all references TO the external space address
+            // These are typically the import pointers in .idata
+            ReferenceIterator refIter = refMgr.getReferencesTo(extSpaceAddr);
+            
+            while (refIter.hasNext()) {
+                Reference ref = refIter.next();
+                Address ptrAddr = ref.getFromAddress();  // This is the pointer location (e.g., in .idata)
+                
+                // Remove comments at the pointer location
+                listing.setComment(ptrAddr, CodeUnit.PRE_COMMENT, null);
+                listing.setComment(ptrAddr, CodeUnit.PLATE_COMMENT, null);
+                listing.setComment(ptrAddr, CodeUnit.EOL_COMMENT, null);
+                listing.setComment(ptrAddr, CodeUnit.POST_COMMENT, null);
+                listing.setComment(ptrAddr, CodeUnit.REPEATABLE_COMMENT, null);
+                
+                // Rename symbols at the pointer location
+                Symbol[] ptrSymbols = symTable.getSymbols(ptrAddr);
+                for (Symbol sym : ptrSymbols) {
+                    String symName = sym.getName();
+                    if (symName.startsWith("PTR_") || symName.startsWith("Ordinal_")) {
+                        try {
+                            String updatedName = "PTR_" + newName + "_" + ptrAddr.toString().replace(":", "");
+                            sym.setName(updatedName, SourceType.USER_DEFINED);
+                            refsUpdated++;
+                        } catch (Exception e) {
+                            // Rename failed
+                        }
+                    }
+                }
+                
+                // Now find all references TO this pointer (the actual CALL sites)
+                ReferenceIterator callRefs = refMgr.getReferencesTo(ptrAddr);
+                while (callRefs.hasNext()) {
+                    Reference callRef = callRefs.next();
+                    Address callAddr = callRef.getFromAddress();
+                    
+                    // Remove comments at the call site
+                    listing.setComment(callAddr, CodeUnit.PRE_COMMENT, null);
+                    listing.setComment(callAddr, CodeUnit.PLATE_COMMENT, null);
+                    listing.setComment(callAddr, CodeUnit.EOL_COMMENT, null);
+                    listing.setComment(callAddr, CodeUnit.POST_COMMENT, null);
+                    listing.setComment(callAddr, CodeUnit.REPEATABLE_COMMENT, null);
+                    refsUpdated++;
+                    
+                    // Rename any user-defined labels at the call site
+                    Symbol[] callSymbols = symTable.getSymbols(callAddr);
+                    for (Symbol sym : callSymbols) {
+                        String symName = sym.getName();
+                        if (sym.getSource() == SourceType.USER_DEFINED &&
+                            !symName.equals(newName) && 
+                            !symName.startsWith("FUN_") && 
+                            !symName.startsWith("LAB_")) {
+                            try {
+                                sym.setName(newName, SourceType.USER_DEFINED);
+                            } catch (Exception e) {
+                                // Rename failed
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Also check for thunk functions
+            Symbol extSym = loc.getSymbol();
+            if (extSym != null) {
+                Reference[] thunkRefs = extSym.getReferences();
+                for (Reference ref : thunkRefs) {
+                    Address fromAddr = ref.getFromAddress();
+                    Function func = currentProgram.getFunctionManager().getFunctionAt(fromAddr);
+                    if (func != null && func.isThunk()) {
+                        String funcName = func.getName();
+                        if (!funcName.equals(newName)) {
+                            try {
+                                func.setName(newName, SourceType.USER_DEFINED);
+                                refsUpdated++;
+                            } catch (Exception e) {
+                                // Function rename failed
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if (refsUpdated > 0) {
+                println("      Updated " + refsUpdated + " references/comments");
+            }
+            
+        } catch (Exception e) {
+            println("      Error updating references: " + e.getMessage());
         }
     }
 }
