@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2Multi.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -3006,25 +3006,7 @@ var FUNCTIONS_D2Multi_dll = {
       "comment": "Library Function - Single Match\n __heap_term\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:43c0a0116a0179cd961980d35fb0c190",
-      "candidates": {
-        "LoD/1.09b": {
-          "address": "0x6F9A59E0",
-          "rva": "0x59E0",
-          "confidence": 0.294,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09": {
-          "address": "0x6F9A59E0",
-          "rva": "0x59E0",
-          "confidence": 0.193,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:43c0a0116a0179cd961980d35fb0c190"
     },
     "D2Multi_MNE_457ecf3d8055": {
       "addresses": {
@@ -7290,17 +7272,7 @@ var FUNCTIONS_D2Multi_dll = {
         "LoD/1.10": "0x1600B"
       },
       "method": "MNE",
-      "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d",
-      "candidates": {
-        "LoD/1.13d": {
-          "address": "0x6F9D9F40",
-          "rva": "0x9F40",
-          "confidence": 0.136,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
-        }
-      }
+      "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d"
     },
     "D2Multi_MNE_ef5171f8f748": {
       "addresses": {

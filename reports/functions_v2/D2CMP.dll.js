@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2CMP.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -687,33 +687,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0xB160"
       },
       "method": "API",
-      "index": "API:85213d41be988cba578925bd461e293a",
-      "candidates": {
-        "LoD/1.09b": {
-          "address": "0x6FDFFE60",
-          "rva": "0xFE60",
-          "confidence": 0.286,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09": {
-          "address": "0x6FDFFE60",
-          "rva": "0xFE60",
-          "confidence": 0.187,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6FE20070",
-          "rva": "0x10070",
-          "confidence": 0.144,
-          "method": "unique_string",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "API:85213d41be988cba578925bd461e293a"
     },
     "D2CMP_API_85fcb8b53fed": {
       "addresses": {
@@ -1618,16 +1592,24 @@ var FUNCTIONS_D2CMP_dll = {
           "source": "LoD/1.10"
         },
         "LoD/1.12a": {
-          "address": "0x6FE1FAA0",
-          "rva": "0xFAA0",
+          "address": "0x6FE20DC0",
+          "rva": "0x10DC0",
           "confidence": 0.387,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
         },
+        "LoD/1.13c": {
+          "address": "0x6FE25C10",
+          "rva": "0x15C10",
+          "confidence": 0.349,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
         "LoD/1.13d": {
-          "address": "0x6FE1A920",
-          "rva": "0xA920",
+          "address": "0x6FE24CF0",
+          "rva": "0x14CF0",
           "confidence": 0.314,
           "method": "minhash",
           "direction": "forward",
@@ -1843,6 +1825,14 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "EXP",
       "index": "EXP:10027",
       "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE1A770",
+          "rva": "0xA770",
+          "confidence": 0.316,
+          "method": "minhash",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
         "LoD/1.11b": {
           "address": "0x6FE1A9F0",
           "rva": "0xA9F0",
@@ -2624,41 +2614,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Search async data list for matching node and validate its state\n\nAlgorithm:\n1. Get head of g_pAsyncDataList global\n2. If list empty, return 0 (not found)\n3. Loop through linked list entries\n4. Get node pointer from list entry offset 0x0\n5. Check if node valid (not NULL)\n6. Check if bit 0 at offset 0x20 is CLEAR\n7. Compare dwId1 against node[0x0]\n8. Compare dwId2 against node[0x4]\n9. Compare dwId3 against node[0x8]\n10. If all three IDs match, check field at offset 0xb0 (handle/resource)\n11. If handle is NULL, assert fail with error code 0xa5f\n12. Call Ordinal_10092 to validate/process node\n13. Return 1 if validation succeeds (non-zero result)\n14. Advance to next list entry via pList[5]\n15. Loop until next pointer is NULL\n16. Return 0 if no matching node found\n\nParameters:\ndwId1 - First identifier field to match against node offset 0x0\ndwId2 - Second identifier field to match against node offset 0x4\ndwId3 - Third identifier field to match against node offset 0x8\n\nReturns:\n1 - Matching node found and validation succeeded\n0 - No matching node found or validation failed\n\nSpecial Cases:\nNode found but handle field (offset 0xb0) is NULL triggers assertion failure\nBit 0 at offset 0x20 must be CLEAR for node to be valid\nFunction does NOT return on assertion failure (calls non-returning function)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10058",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FE20E30",
-          "rva": "0x10E30",
-          "confidence": 0.291,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FE1EAC0",
-          "rva": "0xEAC0",
-          "confidence": 0.291,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FE1A2B0",
-          "rva": "0xA2B0",
-          "confidence": 0.291,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x6FE221C0",
-          "rva": "0x121C0",
-          "confidence": 0.291,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "EXP:10058"
     },
     "D2CMP_EXP_10059": {
       "addresses": {
@@ -5605,17 +5561,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _strlen\n\nLibrary: Visual Studio",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:2b72785c7d09e5484d16dae5407e64ce",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x6FE12C00",
-          "rva": "0x2C00",
-          "confidence": 0.155,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "MNE:2b72785c7d09e5484d16dae5407e64ce"
     },
     "D2CMP_MNE_2ca3644e033f": {
       "addresses": {
@@ -5863,6 +5809,14 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:30f0fd08cad97c1e8bd24ed371c4d8a2",
       "candidates": {
+        "LoD/1.11": {
+          "address": "0x6FE11A50",
+          "rva": "0x1A50",
+          "confidence": 0.318,
+          "method": "structural",
+          "direction": "forward",
+          "source": "LoD/1.10"
+        },
         "LoD/1.12a": {
           "address": "0x6FE11A90",
           "rva": "0x1A90",
@@ -8160,25 +8114,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Unlink and close a doubly-linked list node, handling both previous and next pointer updates.\n\nAlgorithm:\n1. Store address of head pointer (param_1 + 1)\n2. While list size [param_1 + 2] > 0:\n   a. Load current node at offset [param_1[0]] + [param_1[2]]\n   b. If node value non-zero, unlink from list:\n      - Load next pointer offset [current + 4]\n      - If offset negative, use bitwise NOT to get target address\n      - If offset positive, calculate target as [current + offset - previous_offset]\n      - Copy node value to target address\n      - Update previous node's next pointer\n      - Clear current node value and next pointer\n3. Process head node if present:\n   a. If head [param_1 + 1] non-zero:\n      - Load head offset [param_1 + 2]\n      - Calculate target address (negative offset uses NOT, positive uses offset calc)\n      - Copy head value to target\n      - Update next pointer in target\n      - Clear head value and offset\n\nParameters:\n  pNode (int *): IMPLICIT ECX - Pointer to list structure [0]=data, [1]=head, [2]=size\n\nReturns:\n  void\n\nSpecial Cases:\n  Negative offsets indicate bitwise NOT encoded addresses\n  Handles empty lists (size == 0, no iteration needed)\n\nMagic Numbers Reference:\n  0x0: NULL terminator for node values/pointers\n  Offset calculations: array indexing by field offset from base address",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:5d1c4c20e16b03848e6295cc537b2bab",
-      "candidates": {
-        "LoD/1.12a": {
-          "address": "0x6FE269A0",
-          "rva": "0x169A0",
-          "confidence": 0.295,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.13c": {
-          "address": "0x6FE213D0",
-          "rva": "0x113D0",
-          "confidence": 0.174,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:5d1c4c20e16b03848e6295cc537b2bab"
     },
     "D2CMP_MNE_5d2d40297dfe": {
       "addresses": {
@@ -8576,33 +8512,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x10C35"
       },
       "method": "MNE",
-      "index": "MNE:679e7391cc431bfbfb578a6a70c8d79c",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FE199D0",
-          "rva": "0x99D0",
-          "confidence": 0.365,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FE19B40",
-          "rva": "0x9B40",
-          "confidence": 0.295,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.13c": {
-          "address": "0x6FE25AB0",
-          "rva": "0x15AB0",
-          "confidence": 0.141,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:679e7391cc431bfbfb578a6a70c8d79c"
     },
     "D2CMP_MNE_68391274c47b": {
       "addresses": {
@@ -8642,17 +8552,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Search hash table for matching ID using linked list traversal.\n\nAlgorithm:\n1. Calculate hash index from dwSearchId using modulo operation (dwSearchId & mask at struct+0x24)\n2. Retrieve initial node pointer from hash table array at struct+0x1c + (index * 12) + 4\n3. Validate initial node (must be > 0); if not valid, return NULL\n4. Loop through linked list:\n   a. Test if current node pointer is valid (> 0)\n   b. If invalid, exit loop and return NULL\n   c. Load node ID from node[0] and compare with dwSearchId\n   d. If match found, return pointer to current node\n   e. If no match, calculate next node from offset chain\n   f. Get next pointer from current node offset + 4, repeat loop\n5. Return pointer to matching node or NULL if not found\n\nParameters:\n- IMPLICIT this (ECX): Pointer to hash table structure containing:\n  - Offset 0x1c: Array of hash table entries\n  - Offset 0x24: Hash mask (size - 1)\n- dwSearchId: ID value to search for in hash table\n\nReturns:\n- Pointer to matching entry if found\n- NULL (0x0) if dwSearchId not found in table\n\nSpecial Cases:\n- Empty table: First node validation fails, returns NULL\n- Single entry table: Direct match on first comparison\n- Collision chain: Multiple entries at same hash with linked list traversal\n- Note: Function contains phantom variable optimized by compiler; all visible variables documented\n\nMagic Numbers:\n- 0x1c: Offset to hash table data array within structure\n- 0x24: Offset to hash mask for modulo calculation\n- 0xc (12 bytes): Size of each hash table entry\n- 0x4 (4 bytes): Offset to next pointer field",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:683cde5a0888cc5a45f9222bdf3de1a2",
-      "candidates": {
-        "LoD/1.12a": {
-          "address": "0x6FE20DC0",
-          "rva": "0x10DC0",
-          "confidence": 0.115,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:683cde5a0888cc5a45f9222bdf3de1a2"
     },
     "D2CMP_MNE_6a83297e71d4": {
       "addresses": {
@@ -9950,14 +9850,6 @@ var FUNCTIONS_D2CMP_dll = {
       "method": "MNE",
       "index": "MNE:82e05515bca98ac3c5cf6064f3dfcb0d",
       "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FE11A50",
-          "rva": "0x1A50",
-          "confidence": 0.81,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
         "LoD/1.11b": {
           "address": "0x6FE11AD0",
           "rva": "0x1AD0",
@@ -11262,17 +11154,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n _strrchr\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:99acdabe6d3af6d62646118ba964cdfb",
-      "candidates": {
-        "LoD/1.13d": {
-          "address": "0x6FE11B70",
-          "rva": "0x1B70",
-          "confidence": 0.103,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
-        }
-      }
+      "index": "MNE:99acdabe6d3af6d62646118ba964cdfb"
     },
     "D2CMP_MNE_99d9d7ab7467": {
       "addresses": {
@@ -13353,25 +13235,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Decompress palettized image data using a lookup table (palette)\n\nAlgorithm:\n1. Initialize line end pointer: pbLineEnd = pbDest + nWidth\n2. Process each line (nLines iterations):\n   a. Read command byte from pbSrc\n   b. If bit 7 clear (signed byte >= 0):\n      - Extract alignment offset (bits 0-2) and block count (bits 3-6)\n      - Process unaligned leading bytes (1-7 bytes) using palette lookup\n      - Process aligned 8-byte blocks in tight loop, each byte: palette[(byte << 8) | dest_byte]\n      - If bit 7 set after masking 0x7F: add offset and repeat from step 2a\n      - Otherwise: move to next line\n   c. If bit 7 set (signed byte < 0):\n      - Extract count (bits 0-6, magnitude when negative)\n      - Sign-extend and advance pbDest pointer\n      - Continue reading next command byte\n3. Return when all lines processed\n\nParameters:\npbSrc (byte *) IMPLICIT ECX - Pointer to compressed source data, command bytes + lookup table indices\npbDest (byte *) IMPLICIT EDX - Pointer to destination decompressed buffer (output image)\nnLines (int) - Number of scanlines to decompress\nnWidth (int) - Width of each scanline in bytes\npPalette (dword) - Base address of lookup table for palette translation\n\nReturns:\nvoid - Modifies pbDest buffer in-place with decompressed scanlines\n\nSpecial Cases:\n- Bit 7 clear in command: alignment mode (process 1-7 unaligned + N*8 aligned bytes)\n- Bit 7 set in command: skip mode (advance pointer by sign-extended low 7 bits)\n- Used in inner loop: switch statement provides unrolled paths for 8 different offsets\n- Table lookup pattern: palette[source_byte << 8 | dest_byte] enables palette translation\n- Note: Function uses 3 register temporaries (EAX, EBX, EBP) optimized away in decompilation\n\nMagic Numbers:\n0x7F - Mask for lower 7 bits (skip count or alignment offset)\n0x7 - Mask for alignment offset (3 bits)\n0x100 - Multiplication factor for palette indexing (shifts source byte left 8 bits)\n0x8 - Block size in alignment mode (8 bytes processed per iteration)\n0x3 - Right shift amount to extract block count from upper bits",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:bd9b8531f4901d8df50571f462c8a2fd",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6FE25A80",
-          "rva": "0x15A80",
-          "confidence": 0.286,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FE24D10",
-          "rva": "0x14D10",
-          "confidence": 0.286,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:bd9b8531f4901d8df50571f462c8a2fd"
     },
     "D2CMP_MNE_bda1bd8975dd": {
       "addresses": {
@@ -14671,17 +14535,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Library Function - Single Match\n __lseek\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:d016b68ecb5da6df87847adf03c73f3a",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x6FE00390",
-          "rva": "0x10390",
-          "confidence": 0.136,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "MNE:d016b68ecb5da6df87847adf03c73f3a"
     },
     "D2CMP_MNE_d042c9187450": {
       "addresses": {
@@ -15903,17 +15757,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x95C0"
       },
       "method": "MNE",
-      "index": "MNE:e7ee8a5cfd60c9af4b30c99227dea932",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FE20800",
-          "rva": "0x10800",
-          "confidence": 0.387,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:e7ee8a5cfd60c9af4b30c99227dea932"
     },
     "D2CMP_MNE_e83bd76a96c5": {
       "addresses": {
@@ -17201,25 +17045,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Decompress RLE-encoded data with per-byte translation table lookup.\n\nAlgorithm:\n1. Initialize line position tracking (nLineStart = nCurrentPos + nLineWidth)\n2. For each iteration (nIterations lines to process):\n   a. Read RLE byte value (bRleValue)\n   b. If MSB clear (positive): literal byte count in [0x00..0x7f]\n      - Clamp copy width to valid range [nStartX, nEndX]\n      - Use Duff's device (switch fallthrough) for unrolled 8-byte copy\n      - For each byte: translate via pbTranslationTable[src_byte] -> dest_byte\n   c. If MSB set (negative): repeat next 0x7f bytes (after masking)\n      - Read next byte, translate, advance position\n   d. Advance to next line on iteration end\n3. Return when all iterations complete\n\nParameters:\n  pbData (ECX): RLE-encoded data stream pointer\n  nCurrentPos (EDX): Destination buffer start position\n  nIterations: Line count to decompress\n  nLineWidth: Bytes per line (scanline stride)\n  nYPos: Current Y position tracking\n  nStartX: Minimum valid X column index\n  nEndX: Maximum valid X column index\n  pbTranslationTable (ESI): Byte lookup table for value translation\n\nReturns: void (modifies destination buffer in-place)\n\nSpecial Cases:\n  - Empty range (nStartX >= nEndX): Skip copy, advance buffer pointers\n  - Duff's device optimizes copy for alignment: remainder handled via switch, then 8-byte chunks\n  - RLE value 0x00 marks line end, triggers nIterations decrement\n  - Negative values (MSB=1): masked to 0x7f for repeat count\n\nMagic Numbers:\n  0x80: RLE marker (MSB check for negative/repeat flag)\n  0x7f: RLE mask and max literal/repeat count\n  0x08: Duff's device unroll factor (8-byte chunks)\n  0x07: Remainder mask (modulo 8)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:f8c7a81d81eaaab45678bd489418aacb",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6FE244A0",
-          "rva": "0x144A0",
-          "confidence": 0.289,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FE231C0",
-          "rva": "0x131C0",
-          "confidence": 0.289,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:f8c7a81d81eaaab45678bd489418aacb"
     },
     "D2CMP_MNE_f93a26193b15": {
       "addresses": {
@@ -18410,25 +18236,7 @@ var FUNCTIONS_D2CMP_dll = {
       "comment": "Allocate and initialize a tile structure with its associated tile data and components.\n\nAlgorithm:\n1. Validate pTileInfo is non-null; assert failure if null\n2. Check pTileInfo[2] (tile count); return error code 0x85200004 if zero\n3. Allocate main tile structure (547 bytes via Ordinal_10042 with size 0x22b)\n4. Clear tile structure to zeros (0x45 dwords, 276 bytes)\n5. Set pTileStruct[0] = 7 (tile type identifier)\n6. Set pTileStruct[1] = 1 if pTileInfo[0] is non-zero (active flag)\n7. Store tile count at pTileStruct[0x10c]\n8. Allocate tile data array (nTileCount * 0x60 bytes via Ordinal_10042 with size 0x237)\n9. Store tile array pointer at pTileStruct[0x110]\n10. Loop through linked list starting at pTileInfo[3]:\n    a. Copy tile metadata (position X/Y, dimensions, flags, etc.)\n    b. Allocate component array if tile has components (nCompCount * 0x14 bytes)\n    c. Copy component list data, zero out source component references\n    d. Validate component count matches stored count; assert if mismatch\n    e. Advance to next tile in linked list via pTileInfo[0x17]\n11. Verify total tiles processed equals pTileInfo[2]; return error if mismatch\n12. Store pointer to allocated tile structure in ppTileData[0]\n13. Return success code 0\n\nParameters:\npTileInfo: Pointer to tile descriptor structure with: [0] = base address, [2] = tile count, [3] = head of tile linked list, [0x10] = tile X offset, [0x14] = tile Y offset, [0x16] = components array, [0x17] = next tile pointer\nppTileData: Output pointer where allocated tile structure address is stored\n\nReturns:\n0 on success\n0x85200004 if tile count is zero or tile array allocation fails\nNever returns on validation failure (asserts and calls FUN_6fe21293)\n\nSpecial Cases:\n- If pTileInfo[0] is zero, tile active flag (offset 0x4) is not set\n- Component allocation is skipped if nCompCount is 0\n- Component data from source is cleared after copying\n- Multiple assertion checks for null allocations and count mismatches\n\nMagic Numbers:\n0x22b (547) - Size in 32-bit units for main tile structure allocation\n0x237 (567) - Size in 32-bit units for tile data array allocation\n0x200 (512) - Size in 32-bit units for component array allocation\n0x7 - Tile type identifier\n0x45 (69 dwords) - Tile structure zero-fill count\n0x60 (96 bytes) - Size of each tile data entry\n0x14 (20 bytes) - Size of each component entry\n0x10c - Offset of tile count in tile structure\n0x110 - Offset of tile array pointer in tile structure\n0x223, 0x22c, 0x201, 0x212, 0x246 - Assertion line numbers\n\nStructure Layout (Tile Structure):\nOffset | Size | Field Name | Type | Description\n0x0    | 4    | dwTileType | uint | Tile type (7)\n0x4    | 4    | dwActive   | uint | Active flag (1 if initialized)\n0x8-0x10b | varies | TileData | mixed | Reserved/untyped data\n0x10c  | 4    | nTileCount | uint | Total number of tiles\n0x110  | 4    | pTileArray | void * | Pointer to tile data array",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6FE25800",
-          "rva": "0x15800",
-          "confidence": 0.296,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FE24A90",
-          "rva": "0x14A90",
-          "confidence": 0.296,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925"
     },
     "D2CMP_STR_caf0293062c4": {
       "addresses": {

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2Launch.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -996,33 +996,7 @@ var FUNCTIONS_D2Launch_dll = {
         "LoD/1.10": "0x7B40"
       },
       "method": "API",
-      "index": "API:8a382bc81e2835bd5a1ac247a05ffd6f",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FA56570",
-          "rva": "0x16570",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FA5AC40",
-          "rva": "0x1AC40",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FA59EB0",
-          "rva": "0x19EB0",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "API:8a382bc81e2835bd5a1ac247a05ffd6f"
     },
     "D2Launch_API_8ae7c7447832": {
       "addresses": {
@@ -2186,17 +2160,7 @@ var FUNCTIONS_D2Launch_dll = {
         "LoD/1.07": "0x14B60"
       },
       "method": "MNE",
-      "index": "MNE:07c91129d1827ff4a9259e0f0d611786",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FA41350",
-          "rva": "0x1350",
-          "confidence": 0.219,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.07"
-        }
-      }
+      "index": "MNE:07c91129d1827ff4a9259e0f0d611786"
     },
     "D2Launch_MNE_0ae370e34f83": {
       "addresses": {
@@ -7361,17 +7325,7 @@ var FUNCTIONS_D2Launch_dll = {
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release, Visual Studio 2019 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:cb39780517b1dd8e5312f6fce0a00812",
-      "candidates": {
-        "LoD/1.09d": {
-          "address": "0x6FA1A930",
-          "rva": "0xA930",
-          "confidence": 0.315,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:cb39780517b1dd8e5312f6fce0a00812"
     },
     "D2Launch_MNE_cb7271f23b18": {
       "addresses": {

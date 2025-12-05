@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2Glide.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -1462,25 +1462,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09d": "0x47B0"
       },
       "method": "MNE",
-      "index": "MNE:0c42b4457f86929febbef11951b52ce3",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6F85E69C",
-          "rva": "0xE69C",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.12a": {
-          "address": "0x6F85E6DC",
-          "rva": "0xE6DC",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:0c42b4457f86929febbef11951b52ce3"
     },
     "D2Glide_MNE_0c44e947b1ea": {
       "addresses": {
@@ -2504,17 +2486,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.13d": "0xE0C0"
       },
       "method": "MNE",
-      "index": "MNE:35a926809c02214f1c021da8fe53c5e6",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x6F874220",
-          "rva": "0x4220",
-          "confidence": 0.143,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:35a926809c02214f1c021da8fe53c5e6"
     },
     "D2Glide_MNE_371cf2604575": {
       "addresses": {

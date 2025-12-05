@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2Lang.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -5227,17 +5227,7 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.10": "0x8B4E"
       },
       "method": "MNE",
-      "index": "MNE:b10e654b1e0872dc227e39198444a376",
-      "candidates": {
-        "LoD/1.13d": {
-          "address": "0x6FC09D90",
-          "rva": "0x9D90",
-          "confidence": 0.152,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:b10e654b1e0872dc227e39198444a376"
     },
     "D2Lang_MNE_b14dfb771e9c": {
       "addresses": {
@@ -5577,41 +5567,7 @@ var FUNCTIONS_D2Lang_dll = {
         "LoD/1.10": "0x731A"
       },
       "method": "MNE",
-      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FC09220",
-          "rva": "0x9220",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FC0A0D0",
-          "rva": "0xA0D0",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FC09020",
-          "rva": "0x9020",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FC09740",
-          "rva": "0x9740",
-          "confidence": 0.155,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.11b"
-        }
-      }
+      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf"
     },
     "D2Lang_MNE_bafce56213ce": {
       "addresses": {
@@ -7700,17 +7656,7 @@ var FUNCTIONS_D2Lang_dll = {
       "comment": "public: static struct Unicode * __fastcall Unicode::toUnicode(struct Unicode *,char const *,int)",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:f6e5f7f709dfe606e74c6e124c714cfb",
-      "candidates": {
-        "LoD/1.12a": {
-          "address": "0x6FC09940",
-          "rva": "0x9940",
-          "confidence": 0.29,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:f6e5f7f709dfe606e74c6e124c714cfb"
     },
     "D2Lang_MNE_f70a35b7fba7": {
       "addresses": {

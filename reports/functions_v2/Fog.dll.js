@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for Fog.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -3213,17 +3213,7 @@ var FUNCTIONS_Fog_dll = {
       "signature": "undefined Ordinal_10090(void)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10090",
-      "candidates": {
-        "LoD/1.10": {
-          "address": "0x6FF5C0E0",
-          "rva": "0xC0E0",
-          "confidence": 0.492,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "EXP:10090"
     },
     "Fog_EXP_10091": {
       "addresses": {
@@ -4923,10 +4913,34 @@ var FUNCTIONS_Fog_dll = {
       "method": "EXP",
       "index": "EXP:10161",
       "candidates": {
+        "LoD/1.07": {
+          "address": "0x6FF64BF0",
+          "rva": "0x4BF0",
+          "confidence": 0.656,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.08": {
+          "address": "0x6FF64BF0",
+          "rva": "0x4BF0",
+          "confidence": 0.729,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
         "LoD/1.09b": {
           "address": "0x6FF54C50",
           "rva": "0x4C50",
           "confidence": 0.81,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        },
+        "LoD/1.09d": {
+          "address": "0x6FF54AF0",
+          "rva": "0x4AF0",
+          "confidence": 0.9,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.10"
@@ -5973,25 +5987,7 @@ var FUNCTIONS_Fog_dll = {
       "signature": "undefined Ordinal_10212(uint param_1)",
       "name_source": "LoD/1.07",
       "method": "EXP",
-      "index": "EXP:10212",
-      "candidates": {
-        "LoD/1.09b": {
-          "address": "0x6FF5A400",
-          "rva": "0xA400",
-          "confidence": 0.38,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.08"
-        },
-        "LoD/1.09d": {
-          "address": "0x6FF5AB90",
-          "rva": "0xAB90",
-          "confidence": 0.333,
-          "method": "composite",
-          "direction": "forward",
-          "source": "LoD/1.08"
-        }
-      }
+      "index": "EXP:10212"
     },
     "Fog_EXP_10213": {
       "addresses": {
@@ -6639,14 +6635,6 @@ var FUNCTIONS_Fog_dll = {
           "address": "0x6FF641F0",
           "rva": "0x41F0",
           "confidence": 0.404,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.09d": {
-          "address": "0x6FF54020",
-          "rva": "0x4020",
-          "confidence": 0.499,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.10"
@@ -8414,17 +8402,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x7620"
       },
       "method": "MNE",
-      "index": "MNE:1990c1728c460a96f8fe1dd383614e58",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FF6AA80",
-          "rva": "0x1AA80",
-          "confidence": 0.325,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "MNE:1990c1728c460a96f8fe1dd383614e58"
     },
     "Fog_MNE_19f5db0f80d0": {
       "addresses": {
@@ -9129,33 +9107,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09d": "0x183CA"
       },
       "method": "MNE",
-      "index": "MNE:2a96814eec6650ccf99fd41da6e91b27",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FF5F710",
-          "rva": "0xF710",
-          "confidence": 0.291,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FF6A240",
-          "rva": "0x1A240",
-          "confidence": 0.202,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FF6D1E0",
-          "rva": "0x1D1E0",
-          "confidence": 0.126,
-          "method": "unique_string",
-          "direction": "forward",
-          "source": "LoD/1.11b"
-        }
-      }
+      "index": "MNE:2a96814eec6650ccf99fd41da6e91b27"
     },
     "Fog_MNE_2a9afeb361c7": {
       "addresses": {
@@ -9957,26 +9909,10 @@ var FUNCTIONS_Fog_dll = {
       "method": "MNE",
       "index": "MNE:3a966d378a126a76a245d88e9b060455",
       "candidates": {
-        "LoD/1.07": {
-          "address": "0x6FF67DB0",
-          "rva": "0x7DB0",
-          "confidence": 0.24,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x6FF57E10",
-          "rva": "0x7E10",
-          "confidence": 0.296,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x6FF58FF0",
-          "rva": "0x8FF0",
-          "confidence": 0.366,
+        "LoD/1.09d": {
+          "address": "0x6FF57B40",
+          "rva": "0x7B40",
+          "confidence": 0.329,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -12277,25 +12213,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x1E236"
       },
       "method": "MNE",
-      "index": "MNE:6bb86e2cc8beb9a2c340a0df09e576f1",
-      "candidates": {
-        "LoD/1.13c": {
-          "address": "0x6FF5E010",
-          "rva": "0xE010",
-          "confidence": 0.285,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FF66D90",
-          "rva": "0x16D90",
-          "confidence": 0.151,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:6bb86e2cc8beb9a2c340a0df09e576f1"
     },
     "Fog_MNE_6bbcf292a68b": {
       "addresses": {
@@ -13073,6 +12991,14 @@ var FUNCTIONS_Fog_dll = {
           "address": "0x6FF52070",
           "rva": "0x2070",
           "confidence": 0.231,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6FF58FF0",
+          "rva": "0x8FF0",
+          "confidence": 0.321,
           "method": "structural",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -15010,7 +14936,17 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x4F90"
       },
       "method": "MNE",
-      "index": "MNE:a2fd6df5908c66c8ecc1fd11839451f4"
+      "index": "MNE:a2fd6df5908c66c8ecc1fd11839451f4",
+      "candidates": {
+        "LoD/1.09d": {
+          "address": "0x6FF54020",
+          "rva": "0x4020",
+          "confidence": 0.457,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.10"
+        }
+      }
     },
     "Fog_MNE_a3916ea23e38": {
       "addresses": {
@@ -16457,17 +16393,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x1AD29"
       },
       "method": "MNE",
-      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6FF5DEC0",
-          "rva": "0xDEC0",
-          "confidence": 0.298,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf"
     },
     "Fog_MNE_bafce56213ce": {
       "addresses": {
@@ -16507,25 +16433,7 @@ var FUNCTIONS_Fog_dll = {
       "comment": "Library Function - Single Match\n _vsprintf\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:bb6a863b2e5b8acdead7e4874f0310bd",
-      "candidates": {
-        "LoD/1.09d": {
-          "address": "0x6FF517F0",
-          "rva": "0x17F0",
-          "confidence": 0.326,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.07": {
-          "address": "0x6FF617F0",
-          "rva": "0x17F0",
-          "confidence": 0.156,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "MNE:bb6a863b2e5b8acdead7e4874f0310bd"
     },
     "Fog_MNE_bb6caf8fa91f": {
       "addresses": {
@@ -17684,25 +17592,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x73A0"
       },
       "method": "MNE",
-      "index": "MNE:cfb8e1932a75d40e68c215ca00213e7a",
-      "candidates": {
-        "LoD/1.12a": {
-          "address": "0x6FF619F0",
-          "rva": "0x119F0",
-          "confidence": 0.317,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FF67370",
-          "rva": "0x17370",
-          "confidence": 0.187,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:cfb8e1932a75d40e68c215ca00213e7a"
     },
     "Fog_MNE_d0108701376b": {
       "addresses": {
@@ -20699,17 +20589,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0x152F0"
       },
       "method": "STR",
-      "index": "STR:5c88e429a8671fac2314ef9ae353c881",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x6FF6D820",
-          "rva": "0xD820",
-          "confidence": 0.43,
-          "method": "unique_api",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "STR:5c88e429a8671fac2314ef9ae353c881"
     },
     "Fog_STR_600d3ae033e0": {
       "addresses": {

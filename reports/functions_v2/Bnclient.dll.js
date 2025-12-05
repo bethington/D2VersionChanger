@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for Bnclient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -90,10 +90,10 @@ var FUNCTIONS_Bnclient_dll = {
           "direction": "reverse",
           "source": "LoD/1.08"
         },
-        "LoD/1.11": {
-          "address": "0x6FF210C0",
-          "rva": "0x10C0",
-          "confidence": 0.436,
+        "LoD/1.11b": {
+          "address": "0x6FF21070",
+          "rva": "0x1070",
+          "confidence": 0.392,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -102,22 +102,6 @@ var FUNCTIONS_Bnclient_dll = {
           "address": "0x6FF21120",
           "rva": "0x1120",
           "confidence": 0.353,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x6FF210C0",
-          "rva": "0x10C0",
-          "confidence": 0.318,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FF210C0",
-          "rva": "0x10C0",
-          "confidence": 0.286,
           "method": "minhash",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -1026,17 +1010,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0xE2F0"
       },
       "method": "API",
-      "index": "API:6e7fa7cb7ea15693876bef87cf9df9cb",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x6FF260D0",
-          "rva": "0x60D0",
-          "confidence": 0.672,
-          "method": "composite",
-          "direction": "reverse",
-          "source": "LoD/1.09"
-        }
-      }
+      "index": "API:6e7fa7cb7ea15693876bef87cf9df9cb"
     },
     "Bnclient_API_6fc9ed070965": {
       "addresses": {
@@ -1729,8 +1703,8 @@ var FUNCTIONS_Bnclient_dll = {
       "index": "API:f0a06a107d789a5ba4b1502d9b91f5b4",
       "candidates": {
         "LoD/1.11": {
-          "address": "0x6FF2BBF0",
-          "rva": "0xBBF0",
+          "address": "0x6FF2BB80",
+          "rva": "0xBB80",
           "confidence": 0.507,
           "method": "minhash",
           "direction": "reverse",
@@ -1745,16 +1719,16 @@ var FUNCTIONS_Bnclient_dll = {
           "source": "LoD/1.13d"
         },
         "LoD/1.12a": {
-          "address": "0x6FF33A00",
-          "rva": "0x13A00",
+          "address": "0x6FF33990",
+          "rva": "0x13990",
           "confidence": 0.626,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.13d"
         },
         "LoD/1.13c": {
-          "address": "0x6FF2C1B0",
-          "rva": "0xC1B0",
+          "address": "0x6FF2C220",
+          "rva": "0xC220",
           "confidence": 0.696,
           "method": "minhash",
           "direction": "reverse",
@@ -3736,25 +3710,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0x14E50"
       },
       "method": "MNE",
-      "index": "MNE:328852572d3a9f0ab8de60cdc5daa0aa",
-      "candidates": {
-        "LoD/1.10": {
-          "address": "0x6FF065B0",
-          "rva": "0x65B0",
-          "confidence": 0.399,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x6FF063E0",
-          "rva": "0x63E0",
-          "confidence": 0.212,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:328852572d3a9f0ab8de60cdc5daa0aa"
     },
     "Bnclient_MNE_334e7114a534": {
       "addresses": {
@@ -5541,17 +5497,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09d": "0x13080"
       },
       "method": "MNE",
-      "index": "MNE:58ce2203410037d3ec0fe80792264133",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x6FF345E0",
-          "rva": "0x145E0",
-          "confidence": 0.322,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:58ce2203410037d3ec0fe80792264133"
     },
     "Bnclient_MNE_5918dc16e1bf": {
       "addresses": {
@@ -7223,17 +7169,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "0x13680"
       },
       "method": "MNE",
-      "index": "MNE:83f6daa31383d30d2e85d94d4d92a01c",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FF2C340",
-          "rva": "0xC340",
-          "confidence": 0.397,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:83f6daa31383d30d2e85d94d4d92a01c"
     },
     "Bnclient_MNE_8413e044a8bf": {
       "addresses": {
@@ -7644,25 +7580,41 @@ var FUNCTIONS_Bnclient_dll = {
       "index": "MNE:8b6d11914714a660b28813d76863598c",
       "candidates": {
         "LoD/1.07": {
-          "address": "0x6FF22970",
-          "rva": "0x2970",
+          "address": "0x6FF21000",
+          "rva": "0x1000",
           "confidence": 0.257,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
         "LoD/1.08": {
-          "address": "0x6FF22990",
-          "rva": "0x2990",
+          "address": "0x6FF21000",
+          "rva": "0x1000",
           "confidence": 0.286,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
         },
-        "LoD/1.09d": {
-          "address": "0x6FF01000",
-          "rva": "0x1000",
-          "confidence": 0.392,
+        "LoD/1.09": {
+          "address": "0x6FF032F0",
+          "rva": "0x32F0",
+          "confidence": 0.318,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6FF032F0",
+          "rva": "0x32F0",
+          "confidence": 0.353,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6FF03350",
+          "rva": "0x3350",
+          "confidence": 0.436,
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
@@ -9803,14 +9755,6 @@ var FUNCTIONS_Bnclient_dll = {
       "method": "MNE",
       "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf",
       "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FF2BB80",
-          "rva": "0xBB80",
-          "confidence": 0.313,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
         "LoD/1.11b": {
           "address": "0x6FF33E20",
           "rva": "0x13E20",
@@ -9819,10 +9763,10 @@ var FUNCTIONS_Bnclient_dll = {
           "direction": "forward",
           "source": "LoD/1.10"
         },
-        "LoD/1.12a": {
-          "address": "0x6FF33990",
-          "rva": "0x13990",
-          "confidence": 0.162,
+        "LoD/1.13c": {
+          "address": "0x6FF2C1B0",
+          "rva": "0xC1B0",
+          "confidence": 0.117,
           "method": "structural",
           "direction": "forward",
           "source": "LoD/1.10"
@@ -10785,6 +10729,14 @@ var FUNCTIONS_Bnclient_dll = {
           "direction": "reverse",
           "source": "LoD/1.11"
         },
+        "LoD/1.09d": {
+          "address": "0x6FF01000",
+          "rva": "0x1000",
+          "confidence": 0.233,
+          "method": "structural",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
         "LoD/1.10": {
           "address": "0x6FF01000",
           "rva": "0x1000",
@@ -11743,17 +11695,7 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Retrieve global state value by dereferencing state pointer.\n\nAlgorithm:\n1. Load pointer from global state variable (g_pdwGlobalState)\n2. Dereference pointer to get actual state value\n3. Return state value in EAX register\n\nParameters:\nNone\n\nReturns:\nuint - Current global state value\n       Returns 0 if global state pointer is NULL\n\nSpecial Cases:\nIf g_pdwGlobalState is NULL, attempting to dereference will cause access violation\n\nMagic Numbers Reference:\n0x6ff39bd4 - Address of global state pointer variable",
       "name_source": "LoD/1.07",
       "method": "MNE",
-      "index": "MNE:e36ce61366f9c3928ce2ccb97d91f009",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x6FF0BEB7",
-          "rva": "0xBEB7",
-          "confidence": 0.138,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.08"
-        }
-      }
+      "index": "MNE:e36ce61366f9c3928ce2ccb97d91f009"
     },
     "Bnclient_MNE_e3e7225badfc": {
       "addresses": {
@@ -13591,17 +13533,7 @@ var FUNCTIONS_Bnclient_dll = {
       "comment": "Stores realm list data in the global buffer, replacing any existing data.\n\nAlgorithm:\n1. Check if global realm buffer exists and free it with cleanup logging\n2. Clear the buffer status flags in global string buffer (offsets 0x168-0x16b)\n3. Allocate new buffer using Ordinal_10042 with size 0x162 and store pointer\n4. Log realm storage operation start message\n5. Copy source data to allocated buffer using optimized memory operations\n6. Perform 4-byte aligned copy using REP MOVSD for bulk transfer\n7. Copy remaining 1-3 bytes using REP MOVSB for unaligned remainder\n\nParameters:\npbSourceData (byte *): Pointer to source realm data to be stored\ndwDataSize (uint): Size of source data in bytes\n\nReturns:\nvoid: No return value, operation always succeeds\n\nMagic Numbers Reference:\n0x168-0x16b (360-363): Global buffer status flags in g_abGlobalStringBuffer\n0x193 (403): Error code parameter for cleanup logging\n0x162 (354): Buffer size parameter for allocation\n0x360 (864): Offset to buffer pointer in g_abGlobalStringBuffer\n\nError Handling:\nFunction performs defensive cleanup but has no error return path\nAllocation failure in Ordinal_10042 would cause crash (no bounds checking)\nUses optimized string operations that assume valid source pointer",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:387b004e286adc1b338c859c5673919e",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x6FF06BF0",
-          "rva": "0x6BF0",
-          "confidence": 0.401,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.08"
-        }
-      }
+      "index": "STR:387b004e286adc1b338c859c5673919e"
     },
     "Bnclient_STR_3a86254cd520": {
       "addresses": {

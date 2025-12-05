@@ -1014,7 +1014,7 @@ def build_functions_data(version_folders: List[Tuple[Path, Dict]], sorted_versio
     return functions_data
 
 
-def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dict[str, Path]:
+def generate_viewer_data(base_path: Path = None, output_dir: Path = None, lod_only: bool = True) -> Dict[str, Path]:
     """Generate consolidated viewer data for three-panel viewer."""
     if base_path is None:
         base_path = get_project_root()
@@ -1030,7 +1030,13 @@ def generate_viewer_data(base_path: Path = None, output_dir: Path = None) -> Dic
 
     # Find and scan all version folders
     version_folders = find_version_folders(base_path)
-    print(f"Found {len(version_folders)} version folders")
+    
+    # Filter to LoD only if requested
+    if lod_only:
+        version_folders = [(f, info) for f, info in version_folders if info.get('game_type') == 'LoD']
+        print(f"Found {len(version_folders)} LoD version folders (Classic disabled)")
+    else:
+        print(f"Found {len(version_folders)} version folders")
 
     all_scans = []
     for folder, folder_info in version_folders:

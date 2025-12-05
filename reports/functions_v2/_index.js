@@ -1,11 +1,11 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 
 var FUNCTION_INDEX_V2 = {
-  "generated": "2025-12-03T18:49:55.602495",
+  "generated": "2025-12-04T10:03:24.217259",
   "source": "function_registry_v2.json",
-  "total_functions": 27378,
-  "total_named": 8861,
+  "total_functions": 27700,
+  "total_named": 9205,
   "files": {
     "Binkw32.dll": {
       "count": 309,
@@ -80,7 +80,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Common.dll": {
-      "count": 2425,
+      "count": 2423,
       "named": 1447,
       "versions": [
         "LoD/1.07",
@@ -431,8 +431,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Storm.dll": {
-      "count": 1219,
-      "named": 598,
+      "count": 1543,
+      "named": 926,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",

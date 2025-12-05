@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2Gfx.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -3402,17 +3402,7 @@ var FUNCTIONS_D2Gfx_dll = {
       "comment": "Library Function - Single Match\n public: virtual __thiscall type_info::~type_info(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:3a966d378a126a76a245d88e9b060455",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x6FA74E20",
-          "rva": "0x4E20",
-          "confidence": 0.133,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09d"
-        }
-      }
+      "index": "MNE:3a966d378a126a76a245d88e9b060455"
     },
     "D2Gfx_MNE_3b865c2f933c": {
       "addresses": {
@@ -6140,17 +6130,7 @@ var FUNCTIONS_D2Gfx_dll = {
       "comment": "Library Function - Single Match\n void __cdecl CatchIt(struct EHExceptionRecord *,struct EHRegistrationNode *,struct _CONTEXT *,void *,struct _s_FuncInfo const *,struct _s_HandlerType const *,struct _s_CatchableType const *,struct _s_TryBlockMapEntry const *,int,struct EHRegistrationNode *,unsigned char)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:a2d392fa0db0696e3e245bca3260930f",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x6FAA3FF0",
-          "rva": "0x3FF0",
-          "confidence": 0.126,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.09b"
-        }
-      }
+      "index": "MNE:a2d392fa0db0696e3e245bca3260930f"
     },
     "D2Gfx_MNE_a405a6a1f2a4": {
       "addresses": {
@@ -7583,41 +7563,7 @@ var FUNCTIONS_D2Gfx_dll = {
         "LoD/1.09d": "0x2910"
       },
       "method": "MNE",
-      "index": "MNE:cb5393d0b112c82f8f42d1dd43385f45",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x6FA8B440",
-          "rva": "0xB440",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.11b": {
-          "address": "0x6FA8AC00",
-          "rva": "0xAC00",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.12a": {
-          "address": "0x6FA8B440",
-          "rva": "0xB440",
-          "confidence": 0.293,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.09d"
-        },
-        "LoD/1.13d": {
-          "address": "0x6FA8A220",
-          "rva": "0xA220",
-          "confidence": 0.156,
-          "method": "minhash",
-          "direction": "forward",
-          "source": "LoD/1.12a"
-        }
-      }
+      "index": "MNE:cb5393d0b112c82f8f42d1dd43385f45"
     },
     "D2Gfx_MNE_cb7271f23b18": {
       "addresses": {

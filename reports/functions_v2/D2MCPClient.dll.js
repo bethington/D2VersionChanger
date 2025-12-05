@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-03T18:49:55.602495
+// Generated: 2025-12-04T10:03:24.217259
 // Functions for D2MCPClient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -530,6 +530,22 @@ var FUNCTIONS_D2MCPClient_dll = {
       "method": "EXP",
       "index": "EXP:10022",
       "candidates": {
+        "LoD/1.07": {
+          "address": "0x6FA52740",
+          "rva": "0x2740",
+          "confidence": 0.266,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FA52740",
+          "rva": "0x2740",
+          "confidence": 0.295,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
         "LoD/1.09": {
           "address": "0x6F9F2760",
           "rva": "0x2760",
@@ -553,25 +569,11 @@ var FUNCTIONS_D2MCPClient_dll = {
           "method": "minhash",
           "direction": "reverse",
           "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x6F9F2680",
-          "rva": "0x2680",
-          "confidence": 0.45,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
         }
       }
     },
-    "D2MCPClient_EXP_10024": {
+    "D2MCPClient_EXP_10035": {
       "addresses": {
-        "LoD/1.07": "0x6FA52AF0",
-        "LoD/1.08": "0x6FA52AF0",
-        "LoD/1.09": "0x6F9F2B10",
-        "LoD/1.09b": "0x6F9F2B10",
-        "LoD/1.09d": "0x6F9F2B10",
-        "LoD/1.10": "0x6F9F29F0",
         "LoD/1.11": "0x6FA26550",
         "LoD/1.11b": "0x6FA26CF0",
         "LoD/1.12a": "0x6FA25FD0",
@@ -579,23 +581,67 @@ var FUNCTIONS_D2MCPClient_dll = {
         "LoD/1.13d": "0x6FA26560"
       },
       "rvas": {
-        "LoD/1.07": "0x2AF0",
-        "LoD/1.08": "0x2AF0",
-        "LoD/1.09": "0x2B10",
-        "LoD/1.09b": "0x2B10",
-        "LoD/1.09d": "0x2B10",
-        "LoD/1.10": "0x29F0",
         "LoD/1.11": "0x6550",
         "LoD/1.11b": "0x6CF0",
         "LoD/1.12a": "0x5FD0",
         "LoD/1.13c": "0x6D50",
         "LoD/1.13d": "0x6560"
       },
-      "name": "Ordinal_10024",
-      "signature": "undefined Ordinal_10024(void)",
-      "name_source": "LoD/1.07",
+      "name": "Ordinal_10035",
+      "signature": "undefined Ordinal_10035(byte param_1, undefined2 param_2)",
+      "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10024"
+      "index": "EXP:10035",
+      "candidates": {
+        "LoD/1.07": {
+          "address": "0x6FA529F0",
+          "rva": "0x29F0",
+          "confidence": 0.394,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.08": {
+          "address": "0x6FA529F0",
+          "rva": "0x29F0",
+          "confidence": 0.438,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09": {
+          "address": "0x6F9F2AE0",
+          "rva": "0x2AE0",
+          "confidence": 0.487,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09b": {
+          "address": "0x6F9F2AE0",
+          "rva": "0x2AE0",
+          "confidence": 0.541,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.09d": {
+          "address": "0x6F9F2AE0",
+          "rva": "0x2AE0",
+          "confidence": 0.601,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        },
+        "LoD/1.10": {
+          "address": "0x6F9F28C0",
+          "rva": "0x28C0",
+          "confidence": 0.668,
+          "method": "minhash",
+          "direction": "reverse",
+          "source": "LoD/1.11"
+        }
+      }
     },
     "D2MCPClient_EXP_10036": {
       "addresses": {
@@ -858,57 +904,7 @@ var FUNCTIONS_D2MCPClient_dll = {
       "signature": "undefined Ordinal_10062(void)",
       "name_source": "LoD/1.11",
       "method": "EXP",
-      "index": "EXP:10062",
-      "candidates": {
-        "LoD/1.07": {
-          "address": "0x6FA52A90",
-          "rva": "0x2A90",
-          "confidence": 0.394,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.08": {
-          "address": "0x6FA52A90",
-          "rva": "0x2A90",
-          "confidence": 0.438,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09": {
-          "address": "0x6F9F29E0",
-          "rva": "0x29E0",
-          "confidence": 0.487,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x6F9F29E0",
-          "rva": "0x29E0",
-          "confidence": 0.541,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x6F9F29E0",
-          "rva": "0x29E0",
-          "confidence": 0.601,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x6F9F28F0",
-          "rva": "0x28F0",
-          "confidence": 0.668,
-          "method": "minhash",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "EXP:10062"
     },
     "D2MCPClient_MNE_0002c858ef39": {
       "addresses": {

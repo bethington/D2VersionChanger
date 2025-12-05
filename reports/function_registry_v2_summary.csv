@@ -3,7 +3,7 @@ Binkw32.dll,309,308,99.7%
 Bnclient.dll,580,400,69.0%
 D2CMP.dll,707,530,75.0%
 D2Client.dll,3311,1593,48.1%
-D2Common.dll,2425,1447,59.7%
+D2Common.dll,2423,1447,59.7%
 D2DDraw.dll,290,136,46.9%
 D2Direct3D.dll,375,138,36.8%
 D2Game.dll,3977,287,7.2%
@@ -23,4 +23,4 @@ Fog.dll,889,477,53.7%
 Game.exe,8802,658,7.5%
 Ijl11.dll,323,27,8.4%
 SmackW32.dll,179,81,45.3%
-Storm.dll,1219,598,49.1%
+Storm.dll,1543,926,60.0%
