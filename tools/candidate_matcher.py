@@ -34,6 +34,14 @@ from dataclasses import dataclass
 
 from fuzzy_matcher import FuzzyMatcher, HAS_DATASKETCH
 
+# Try to import tiered matcher
+try:
+    from tiered_matcher import TieredMatcher, MatchResult
+    HAS_TIERED = True
+except ImportError:
+    HAS_TIERED = False
+    print("Note: tiered_matcher not available, using fuzzy matching only")
+
 
 # Ordered version lists for chain building
 LOD_VERSIONS = [
@@ -88,18 +96,23 @@ class CandidateMatcher:
         
         # Candidate matching settings
         cand_config = self.config.get('candidate_matching', {})
-        self.min_direct_confidence = cand_config.get('min_direct_confidence', 0.35)
-        self.min_chain_confidence = cand_config.get('min_chain_confidence', 0.10)
+        # Raised thresholds to reject low-confidence matches
+        self.min_direct_confidence = cand_config.get('min_direct_confidence', 0.50)  # Was 0.35
+        self.min_chain_confidence = cand_config.get('min_chain_confidence', 0.30)   # Was 0.10
         self.min_structural_confidence = cand_config.get('min_structural_confidence', 0.20)
         self.chain_decay = cand_config.get('chain_decay', 0.90)  # Confidence multiplier per hop
         
-        # Initialize fuzzy matcher with relaxed settings for candidates
+        # Use tiered matching as primary (if available)
+        self.use_tiered = HAS_TIERED and cand_config.get('use_tiered_matching', True)
+        self.tiered = TieredMatcher(self.config) if self.use_tiered else None
+        
+        # Initialize fuzzy matcher as fallback
         fuzzy_config = self.config.copy()
         if 'fuzzy_matching' not in fuzzy_config:
             fuzzy_config['fuzzy_matching'] = {}
-        fuzzy_config['fuzzy_matching']['min_similarity'] = 0.30  # Lower for candidates
-        fuzzy_config['fuzzy_matching']['min_size_ratio'] = 0.40
-        fuzzy_config['fuzzy_matching']['min_feature_overlap'] = 0.10
+        fuzzy_config['fuzzy_matching']['min_similarity'] = 0.50  # Raised from 0.30
+        fuzzy_config['fuzzy_matching']['min_size_ratio'] = 0.50  # Raised from 0.40
+        fuzzy_config['fuzzy_matching']['min_feature_overlap'] = 0.20  # Raised from 0.10
         self.fuzzy = FuzzyMatcher(fuzzy_config)
         
         # Loaded function data per DLL per version
@@ -113,6 +126,11 @@ class CandidateMatcher:
     
     def load_function_data(self, base_path: Path) -> None:
         """Load all function index data from disk."""
+        # Load for tiered matcher if available
+        if self.use_tiered and self.tiered:
+            print("Loading data for tiered matcher...")
+            self.tiered.load_function_data(base_path)
+        
         index_path = base_path / "data" / "function_index"
         
         for game_type in ["Classic", "LoD"]:
@@ -146,7 +164,7 @@ class CandidateMatcher:
                             f.get('address'): f for f in functions if f.get('address')
                         }
                         
-                        # Build fuzzy index for this version
+                        # Build fuzzy index for this version (used as fallback)
                         self.fuzzy.build_indexes(dll_name, functions, version_key)
                         
                     except Exception as e:
@@ -172,12 +190,30 @@ class CandidateMatcher:
     
     def _find_direct_match(self, source_func: dict, dll_name: str, 
                            target_version: str) -> Optional[Candidate]:
-        """Find a direct fuzzy match for a function in target version."""
+        """Find a direct match for a function in target version."""
+        
+        # Try tiered matching first (more accurate, identity-based)
+        if self.use_tiered and self.tiered:
+            tiered_result = self.tiered.find_match(source_func, dll_name, target_version)
+            if tiered_result and tiered_result.matched:
+                self.stats['tiered_matches'] += 1
+                return Candidate(
+                    address=tiered_result.matched_address,
+                    rva=tiered_result.matched_rva,
+                    confidence=tiered_result.confidence,
+                    method=f'tiered_{tiered_result.method}',
+                    direction='direct',
+                    source_version=target_version,
+                    chain_length=1
+                )
+        
+        # Fall back to fuzzy matching
         result = self.fuzzy.find_fuzzy_match(source_func, dll_name, target_version)
         
         if result:
             matched_func, score, method = result
             if score >= self.min_direct_confidence:
+                self.stats['fuzzy_matches'] += 1
                 return Candidate(
                     address=matched_func.get('address'),
                     rva=matched_func.get('rva'),
@@ -194,6 +230,10 @@ class CandidateMatcher:
         """
         Find a structural match based on size and block count.
         Used for functions without API/string features.
+        
+        NOTE: This is now deprecated in favor of tiered matching.
+        Structural matching alone is too unreliable for confident matches.
+        It's kept as a last resort with very low confidence.
         """
         if target_version not in self.function_data.get(dll_name, {}):
             return None
@@ -217,18 +257,19 @@ class CandidateMatcher:
             # Calculate structural similarity
             size_ratio = min(source_size, target_size) / max(source_size, target_size)
             
-            if size_ratio < 0.60:  # Must be within 40% size
+            if size_ratio < 0.70:  # Must be within 30% size (stricter than before)
                 continue
             
             # Block count similarity (if available)
             block_sim = 1.0
             if source_blocks > 0 and target_blocks > 0:
                 block_sim = min(source_blocks, target_blocks) / max(source_blocks, target_blocks)
-                if block_sim < 0.5:
+                if block_sim < 0.6:  # Stricter block matching
                     continue
             
-            # Combined score - cap at 0.45 for structural matches
-            score = (size_ratio * 0.6 + block_sim * 0.4) * 0.45
+            # Combined score - cap at 0.25 for structural matches (was 0.45)
+            # Structural matching alone is unreliable - this is just a hint
+            score = (size_ratio * 0.6 + block_sim * 0.4) * 0.25
             
             if score >= self.min_structural_confidence:
                 candidates.append((tf, score))
@@ -236,11 +277,12 @@ class CandidateMatcher:
         if candidates:
             # Return best structural match
             best = max(candidates, key=lambda x: x[1])
+            self.stats['structural_matches'] += 1
             return Candidate(
                 address=best[0].get('address'),
                 rva=best[0].get('rva'),
                 confidence=best[1],
-                method='structural',
+                method='structural_weak',  # Renamed to indicate low confidence
                 direction='direct',
                 source_version=target_version,
                 chain_length=1
@@ -495,9 +537,15 @@ class CandidateMatcher:
         print(f"\n  Complete functions (no gaps): {self.stats['complete_functions']}")
         print(f"  Functions with candidates: {self.stats['functions_with_candidates']}")
         print(f"  Total candidates generated: {self.stats['total_candidates']}")
+        print(f"    - Tiered matches: {self.stats['tiered_matches']}")
+        print(f"    - Fuzzy matches: {self.stats['fuzzy_matches']}")
+        print(f"    - Structural matches: {self.stats['structural_matches']}")
         print(f"  Conflicts resolved: {self.stats['conflicts']}")
         print(f"  Candidates kept: {self.stats['candidates_kept']}")
         print(f"  Candidates lost to conflicts: {self.stats['conflicts_lost']}")
+        
+        if self.use_tiered and self.tiered:
+            self.tiered.print_stats()
         
         return registry
 
