@@ -1,0 +1,11 @@
+{
+  "program_name": "Diablo II.exe",
+  "game_type": "Classic",
+  "version": "1.05b",
+  "image_base": "0x00400000",
+  "total_functions": 0,
+  "named_functions": 0,
+  "export_version": "2.0",
+  "functions": [
+  ]
+}

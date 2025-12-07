@@ -1,0 +1,11 @@
+{
+  "program_name": "Ijl11.dll",
+  "game_type": "Classic",
+  "version": "1.06",
+  "image_base": "0x60000000",
+  "total_functions": 0,
+  "named_functions": 0,
+  "export_version": "2.0",
+  "functions": [
+  ]
+}

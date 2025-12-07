@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-04T10:03:24.217259
+// Generated: 2025-12-07T00:06:03.148473
 // Functions for Diablo II.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -57,6 +57,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x39F3",
         "LoD/1.14d": "0x39F3"
       },
+      "sizes": {
+        "LoD/1.07": 251,
+        "LoD/1.08": 251,
+        "LoD/1.09": 251,
+        "LoD/1.09b": 251,
+        "LoD/1.09d": 251,
+        "LoD/1.10": 251,
+        "LoD/1.11": 251,
+        "LoD/1.11b": 251,
+        "LoD/1.12a": 251,
+        "LoD/1.13c": 251,
+        "LoD/1.13d": 251,
+        "LoD/1.14a": 251,
+        "LoD/1.14b": 251,
+        "LoD/1.14c": 251,
+        "LoD/1.14d": 251
+      },
       "method": "MNE",
       "index": "MNE:0002c858ef3942a0b403454c72674bfe"
     },
@@ -94,6 +111,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2580",
         "LoD/1.14c": "0x2580",
         "LoD/1.14d": "0x2580"
+      },
+      "sizes": {
+        "LoD/1.07": 32,
+        "LoD/1.08": 32,
+        "LoD/1.09": 32,
+        "LoD/1.09b": 32,
+        "LoD/1.09d": 32,
+        "LoD/1.10": 32,
+        "LoD/1.11": 32,
+        "LoD/1.11b": 32,
+        "LoD/1.12a": 32,
+        "LoD/1.13c": 32,
+        "LoD/1.13d": 32,
+        "LoD/1.14a": 32,
+        "LoD/1.14b": 32,
+        "LoD/1.14c": 32,
+        "LoD/1.14d": 32
       },
       "name": "__global_unwind2",
       "signature": "undefined __global_unwind2(PVOID param_1)",
@@ -137,6 +171,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1838",
         "LoD/1.14d": "0x1838"
       },
+      "sizes": {
+        "LoD/1.07": 41,
+        "LoD/1.08": 41,
+        "LoD/1.09": 41,
+        "LoD/1.09b": 41,
+        "LoD/1.09d": 41,
+        "LoD/1.10": 41,
+        "LoD/1.11": 41,
+        "LoD/1.11b": 41,
+        "LoD/1.12a": 41,
+        "LoD/1.13c": 41,
+        "LoD/1.13d": 41,
+        "LoD/1.14a": 41,
+        "LoD/1.14b": 41,
+        "LoD/1.14c": 41,
+        "LoD/1.14d": 41
+      },
       "method": "MNE",
       "index": "MNE:05d3556ba26e52c51954a1255d97c525"
     },
@@ -174,6 +225,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x13B0",
         "LoD/1.14c": "0x13B0",
         "LoD/1.14d": "0x13B0"
+      },
+      "sizes": {
+        "LoD/1.07": 189,
+        "LoD/1.08": 189,
+        "LoD/1.09": 189,
+        "LoD/1.09b": 189,
+        "LoD/1.09d": 189,
+        "LoD/1.10": 189,
+        "LoD/1.11": 189,
+        "LoD/1.11b": 189,
+        "LoD/1.12a": 189,
+        "LoD/1.13c": 189,
+        "LoD/1.13d": 189,
+        "LoD/1.14a": 189,
+        "LoD/1.14b": 189,
+        "LoD/1.14c": 189,
+        "LoD/1.14d": 189
       },
       "method": "MNE",
       "index": "MNE:0ae7612051bc2c351ff4baa78f16b259"
@@ -213,6 +281,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1A02",
         "LoD/1.14d": "0x1A02"
       },
+      "sizes": {
+        "LoD/1.07": 56,
+        "LoD/1.08": 56,
+        "LoD/1.09": 56,
+        "LoD/1.09b": 56,
+        "LoD/1.09d": 56,
+        "LoD/1.10": 56,
+        "LoD/1.11": 56,
+        "LoD/1.11b": 56,
+        "LoD/1.12a": 56,
+        "LoD/1.13c": 56,
+        "LoD/1.13d": 56,
+        "LoD/1.14a": 56,
+        "LoD/1.14b": 56,
+        "LoD/1.14c": 56,
+        "LoD/1.14d": 56
+      },
       "method": "MNE",
       "index": "MNE:0fd63ca178190d07551a06ea40081aaa"
     },
@@ -250,6 +335,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x15D9",
         "LoD/1.14c": "0x15D9",
         "LoD/1.14d": "0x15D9"
+      },
+      "sizes": {
+        "LoD/1.07": 34,
+        "LoD/1.08": 34,
+        "LoD/1.09": 34,
+        "LoD/1.09b": 34,
+        "LoD/1.09d": 34,
+        "LoD/1.10": 34,
+        "LoD/1.11": 34,
+        "LoD/1.11b": 34,
+        "LoD/1.12a": 34,
+        "LoD/1.13c": 34,
+        "LoD/1.13d": 34,
+        "LoD/1.14a": 34,
+        "LoD/1.14b": 34,
+        "LoD/1.14c": 34,
+        "LoD/1.14d": 34
       },
       "method": "MNE",
       "index": "MNE:23111e3d86e48fe171246fbcab7ae60b"
@@ -289,6 +391,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x3C80",
         "LoD/1.14d": "0x3C80"
       },
+      "sizes": {
+        "LoD/1.07": 47,
+        "LoD/1.08": 47,
+        "LoD/1.09": 47,
+        "LoD/1.09b": 47,
+        "LoD/1.09d": 47,
+        "LoD/1.10": 47,
+        "LoD/1.11": 47,
+        "LoD/1.11b": 47,
+        "LoD/1.12a": 47,
+        "LoD/1.13c": 47,
+        "LoD/1.13d": 47,
+        "LoD/1.14a": 47,
+        "LoD/1.14b": 47,
+        "LoD/1.14c": 47,
+        "LoD/1.14d": 47
+      },
       "method": "MNE",
       "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6"
     },
@@ -326,6 +445,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1B80",
         "LoD/1.14c": "0x1B80",
         "LoD/1.14d": "0x1B80"
+      },
+      "sizes": {
+        "LoD/1.07": 123,
+        "LoD/1.08": 123,
+        "LoD/1.09": 123,
+        "LoD/1.09b": 123,
+        "LoD/1.09d": 123,
+        "LoD/1.10": 123,
+        "LoD/1.11": 123,
+        "LoD/1.11b": 123,
+        "LoD/1.12a": 123,
+        "LoD/1.13c": 123,
+        "LoD/1.13d": 123,
+        "LoD/1.14a": 123,
+        "LoD/1.14b": 123,
+        "LoD/1.14c": 123,
+        "LoD/1.14d": 123
       },
       "name": "_strlen",
       "signature": "size_t _strlen(char * _Str)",
@@ -369,6 +505,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2EF0",
         "LoD/1.14d": "0x2EF0"
       },
+      "sizes": {
+        "LoD/1.07": 18,
+        "LoD/1.08": 18,
+        "LoD/1.09": 18,
+        "LoD/1.09b": 18,
+        "LoD/1.09d": 18,
+        "LoD/1.10": 18,
+        "LoD/1.11": 18,
+        "LoD/1.11b": 18,
+        "LoD/1.12a": 18,
+        "LoD/1.13c": 18,
+        "LoD/1.13d": 18,
+        "LoD/1.14a": 18,
+        "LoD/1.14b": 18,
+        "LoD/1.14c": 18,
+        "LoD/1.14d": 18
+      },
       "name": "_malloc",
       "signature": "void * _malloc(size_t _Size)",
       "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release",
@@ -411,6 +564,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1D82",
         "LoD/1.14d": "0x1D82"
       },
+      "sizes": {
+        "LoD/1.07": 321,
+        "LoD/1.08": 321,
+        "LoD/1.09": 321,
+        "LoD/1.09b": 321,
+        "LoD/1.09d": 321,
+        "LoD/1.10": 321,
+        "LoD/1.11": 321,
+        "LoD/1.11b": 321,
+        "LoD/1.12a": 321,
+        "LoD/1.13c": 321,
+        "LoD/1.13d": 321,
+        "LoD/1.14a": 321,
+        "LoD/1.14b": 321,
+        "LoD/1.14c": 321,
+        "LoD/1.14d": 321
+      },
       "method": "MNE",
       "index": "MNE:41f8d80d32bced9021e52454a2115142"
     },
@@ -448,6 +618,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1CCF",
         "LoD/1.14c": "0x1CCF",
         "LoD/1.14d": "0x1CCF"
+      },
+      "sizes": {
+        "LoD/1.07": 153,
+        "LoD/1.08": 153,
+        "LoD/1.09": 153,
+        "LoD/1.09b": 153,
+        "LoD/1.09d": 153,
+        "LoD/1.10": 153,
+        "LoD/1.11": 153,
+        "LoD/1.11b": 153,
+        "LoD/1.12a": 153,
+        "LoD/1.13c": 153,
+        "LoD/1.13d": 153,
+        "LoD/1.14a": 153,
+        "LoD/1.14b": 153,
+        "LoD/1.14c": 153,
+        "LoD/1.14d": 153
       },
       "method": "MNE",
       "index": "MNE:45d9b348a966df89d3a7165f288b5d47"
@@ -487,6 +674,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1622",
         "LoD/1.14d": "0x1622"
       },
+      "sizes": {
+        "LoD/1.07": 409,
+        "LoD/1.08": 409,
+        "LoD/1.09": 409,
+        "LoD/1.09b": 409,
+        "LoD/1.09d": 409,
+        "LoD/1.10": 409,
+        "LoD/1.11": 409,
+        "LoD/1.11b": 409,
+        "LoD/1.12a": 409,
+        "LoD/1.13c": 409,
+        "LoD/1.13d": 409,
+        "LoD/1.14a": 409,
+        "LoD/1.14b": 409,
+        "LoD/1.14c": 409,
+        "LoD/1.14d": 409
+      },
       "method": "MNE",
       "index": "MNE:4a5a68bf41640182f32d03a3c91e5fdc"
     },
@@ -524,6 +728,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2F2E",
         "LoD/1.14c": "0x2F2E",
         "LoD/1.14d": "0x2F2E"
+      },
+      "sizes": {
+        "LoD/1.07": 54,
+        "LoD/1.08": 54,
+        "LoD/1.09": 54,
+        "LoD/1.09b": 54,
+        "LoD/1.09d": 54,
+        "LoD/1.10": 54,
+        "LoD/1.11": 54,
+        "LoD/1.11b": 54,
+        "LoD/1.12a": 54,
+        "LoD/1.13c": 54,
+        "LoD/1.13d": 54,
+        "LoD/1.14a": 54,
+        "LoD/1.14b": 54,
+        "LoD/1.14c": 54,
+        "LoD/1.14d": 54
       },
       "method": "MNE",
       "index": "MNE:4e5e59b9a63f832f54b3dcf90c4a63d7"
@@ -563,6 +784,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x20B0",
         "LoD/1.14d": "0x20B0"
       },
+      "sizes": {
+        "LoD/1.07": 436,
+        "LoD/1.08": 436,
+        "LoD/1.09": 436,
+        "LoD/1.09b": 436,
+        "LoD/1.09d": 436,
+        "LoD/1.10": 436,
+        "LoD/1.11": 436,
+        "LoD/1.11b": 436,
+        "LoD/1.12a": 436,
+        "LoD/1.13c": 436,
+        "LoD/1.13d": 436,
+        "LoD/1.14a": 436,
+        "LoD/1.14b": 436,
+        "LoD/1.14c": 436,
+        "LoD/1.14d": 436
+      },
       "method": "MNE",
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0"
     },
@@ -601,6 +839,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2D9D",
         "LoD/1.14d": "0x2D9D"
       },
+      "sizes": {
+        "LoD/1.07": 49,
+        "LoD/1.08": 49,
+        "LoD/1.09": 49,
+        "LoD/1.09b": 49,
+        "LoD/1.09d": 49,
+        "LoD/1.10": 49,
+        "LoD/1.11": 49,
+        "LoD/1.11b": 49,
+        "LoD/1.12a": 49,
+        "LoD/1.13c": 49,
+        "LoD/1.13d": 49,
+        "LoD/1.14a": 49,
+        "LoD/1.14b": 49,
+        "LoD/1.14c": 49,
+        "LoD/1.14d": 49
+      },
       "method": "MNE",
       "index": "MNE:53a6ac985e66444c6c82f2b7b12d7c09"
     },
@@ -638,6 +893,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x3B80",
         "LoD/1.14c": "0x3B80",
         "LoD/1.14d": "0x3B80"
+      },
+      "sizes": {
+        "LoD/1.07": 254,
+        "LoD/1.08": 254,
+        "LoD/1.09": 254,
+        "LoD/1.09b": 254,
+        "LoD/1.09d": 254,
+        "LoD/1.10": 254,
+        "LoD/1.11": 254,
+        "LoD/1.11b": 254,
+        "LoD/1.12a": 254,
+        "LoD/1.13c": 254,
+        "LoD/1.13d": 254,
+        "LoD/1.14a": 254,
+        "LoD/1.14b": 254,
+        "LoD/1.14c": 254,
+        "LoD/1.14d": 254
       },
       "name": "_strncpy",
       "signature": "char * _strncpy(char * _Dest, char * _Source, size_t _Count)",
@@ -681,6 +953,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1861",
         "LoD/1.14d": "0x1861"
       },
+      "sizes": {
+        "LoD/1.07": 389,
+        "LoD/1.08": 389,
+        "LoD/1.09": 389,
+        "LoD/1.09b": 389,
+        "LoD/1.09d": 389,
+        "LoD/1.10": 389,
+        "LoD/1.11": 389,
+        "LoD/1.11b": 389,
+        "LoD/1.12a": 389,
+        "LoD/1.13c": 389,
+        "LoD/1.13d": 389,
+        "LoD/1.14a": 389,
+        "LoD/1.14b": 389,
+        "LoD/1.14c": 389,
+        "LoD/1.14d": 389
+      },
       "method": "MNE",
       "index": "MNE:63906d1f35f7842042066a6643d2050c"
     },
@@ -718,6 +1007,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2CD6",
         "LoD/1.14c": "0x2CD6",
         "LoD/1.14d": "0x2CD6"
+      },
+      "sizes": {
+        "LoD/1.07": 182,
+        "LoD/1.08": 182,
+        "LoD/1.09": 182,
+        "LoD/1.09b": 182,
+        "LoD/1.09d": 182,
+        "LoD/1.10": 182,
+        "LoD/1.11": 182,
+        "LoD/1.11b": 182,
+        "LoD/1.12a": 182,
+        "LoD/1.13c": 182,
+        "LoD/1.13d": 182,
+        "LoD/1.14a": 182,
+        "LoD/1.14b": 182,
+        "LoD/1.14c": 182,
+        "LoD/1.14d": 182
       },
       "method": "MNE",
       "index": "MNE:69f7deb725db18136e67b38972cf97de"
@@ -757,6 +1063,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1F5E",
         "LoD/1.14d": "0x1F5E"
       },
+      "sizes": {
+        "LoD/1.07": 185,
+        "LoD/1.08": 185,
+        "LoD/1.09": 185,
+        "LoD/1.09b": 185,
+        "LoD/1.09d": 185,
+        "LoD/1.10": 185,
+        "LoD/1.11": 185,
+        "LoD/1.11b": 185,
+        "LoD/1.12a": 185,
+        "LoD/1.13c": 185,
+        "LoD/1.13d": 185,
+        "LoD/1.14a": 185,
+        "LoD/1.14b": 185,
+        "LoD/1.14c": 185,
+        "LoD/1.14d": 185
+      },
       "method": "MNE",
       "index": "MNE:6e538b3bbbeec8f94bef058bdad701fe"
     },
@@ -794,6 +1117,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2E00",
         "LoD/1.14c": "0x2E00",
         "LoD/1.14d": "0x2E00"
+      },
+      "sizes": {
+        "LoD/1.07": 7,
+        "LoD/1.08": 7,
+        "LoD/1.09": 7,
+        "LoD/1.09b": 7,
+        "LoD/1.09d": 7,
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7,
+        "LoD/1.14a": 7,
+        "LoD/1.14b": 7,
+        "LoD/1.14c": 7,
+        "LoD/1.14d": 7
       },
       "method": "MNE",
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8"
@@ -833,6 +1173,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x19E6",
         "LoD/1.14d": "0x19E6"
       },
+      "sizes": {
+        "LoD/1.07": 28,
+        "LoD/1.08": 28,
+        "LoD/1.09": 28,
+        "LoD/1.09b": 28,
+        "LoD/1.09d": 28,
+        "LoD/1.10": 28,
+        "LoD/1.11": 28,
+        "LoD/1.11b": 28,
+        "LoD/1.12a": 28,
+        "LoD/1.13c": 28,
+        "LoD/1.13d": 28,
+        "LoD/1.14a": 28,
+        "LoD/1.14b": 28,
+        "LoD/1.14c": 28,
+        "LoD/1.14d": 28
+      },
       "method": "MNE",
       "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831"
     },
@@ -871,6 +1228,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2017",
         "LoD/1.14d": "0x2017"
       },
+      "sizes": {
+        "LoD/1.07": 153,
+        "LoD/1.08": 153,
+        "LoD/1.09": 153,
+        "LoD/1.09b": 153,
+        "LoD/1.09d": 153,
+        "LoD/1.10": 153,
+        "LoD/1.11": 153,
+        "LoD/1.11b": 153,
+        "LoD/1.12a": 153,
+        "LoD/1.13c": 153,
+        "LoD/1.13d": 153,
+        "LoD/1.14a": 153,
+        "LoD/1.14b": 153,
+        "LoD/1.14c": 153,
+        "LoD/1.14d": 153
+      },
       "method": "MNE",
       "index": "MNE:78c0be793b204c577b78460711bf70fb"
     },
@@ -908,6 +1282,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1A40",
         "LoD/1.14c": "0x1A40",
         "LoD/1.14d": "0x1A40"
+      },
+      "sizes": {
+        "LoD/1.07": 291,
+        "LoD/1.08": 291,
+        "LoD/1.09": 291,
+        "LoD/1.09b": 291,
+        "LoD/1.09d": 291,
+        "LoD/1.10": 291,
+        "LoD/1.11": 291,
+        "LoD/1.11b": 291,
+        "LoD/1.12a": 291,
+        "LoD/1.13c": 291,
+        "LoD/1.13d": 291,
+        "LoD/1.14a": 291,
+        "LoD/1.14b": 291,
+        "LoD/1.14c": 291,
+        "LoD/1.14d": 291
       },
       "name": "_strncat",
       "signature": "char * _strncat(char * _Dest, char * _Source, size_t _Count)",
@@ -951,6 +1342,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2E10",
         "LoD/1.14d": "0x2E10"
       },
+      "sizes": {
+        "LoD/1.07": 224,
+        "LoD/1.08": 224,
+        "LoD/1.09": 224,
+        "LoD/1.09b": 224,
+        "LoD/1.09d": 224,
+        "LoD/1.10": 224,
+        "LoD/1.11": 224,
+        "LoD/1.11b": 224,
+        "LoD/1.12a": 224,
+        "LoD/1.13c": 224,
+        "LoD/1.13d": 224,
+        "LoD/1.14a": 224,
+        "LoD/1.14b": 224,
+        "LoD/1.14c": 224,
+        "LoD/1.14d": 224
+      },
       "method": "MNE",
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6"
     },
@@ -988,6 +1396,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2735",
         "LoD/1.14c": "0x2735",
         "LoD/1.14d": "0x2735"
+      },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27,
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27,
+        "LoD/1.14a": 27,
+        "LoD/1.14b": 27,
+        "LoD/1.14c": 27,
+        "LoD/1.14d": 27
       },
       "method": "MNE",
       "index": "MNE:89d1b619054116ad559c7c543db397fd"
@@ -1027,6 +1452,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1C00",
         "LoD/1.14d": "0x1C00"
       },
+      "sizes": {
+        "LoD/1.07": 133,
+        "LoD/1.08": 133,
+        "LoD/1.09": 133,
+        "LoD/1.09b": 133,
+        "LoD/1.09d": 133,
+        "LoD/1.10": 133,
+        "LoD/1.11": 133,
+        "LoD/1.11b": 133,
+        "LoD/1.12a": 133,
+        "LoD/1.13c": 133,
+        "LoD/1.13d": 133,
+        "LoD/1.14a": 133,
+        "LoD/1.14b": 133,
+        "LoD/1.14c": 133,
+        "LoD/1.14d": 133
+      },
       "method": "MNE",
       "index": "MNE:8cf740ead1ec396b63dfd5a3659dee5d"
     },
@@ -1064,6 +1506,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x17BB",
         "LoD/1.14c": "0x17BB",
         "LoD/1.14d": "0x17BB"
+      },
+      "sizes": {
+        "LoD/1.07": 74,
+        "LoD/1.08": 74,
+        "LoD/1.09": 74,
+        "LoD/1.09b": 74,
+        "LoD/1.09d": 74,
+        "LoD/1.10": 74,
+        "LoD/1.11": 74,
+        "LoD/1.11b": 74,
+        "LoD/1.12a": 74,
+        "LoD/1.13c": 74,
+        "LoD/1.13d": 74,
+        "LoD/1.14a": 74,
+        "LoD/1.14b": 74,
+        "LoD/1.14c": 74,
+        "LoD/1.14d": 74
       },
       "method": "MNE",
       "index": "MNE:8f2a733057dd5a290f0e17d077c53986"
@@ -1103,6 +1562,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1C80",
         "LoD/1.14d": "0x1C80"
       },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45,
+        "LoD/1.11": 45,
+        "LoD/1.11b": 45,
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45,
+        "LoD/1.14a": 45,
+        "LoD/1.14b": 45,
+        "LoD/1.14c": 45,
+        "LoD/1.14d": 45
+      },
       "method": "MNE",
       "index": "MNE:91b5192dddb89e963abc2be4471149da"
     },
@@ -1140,6 +1616,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1F06",
         "LoD/1.14c": "0x1F06",
         "LoD/1.14d": "0x1F06"
+      },
+      "sizes": {
+        "LoD/1.07": 88,
+        "LoD/1.08": 88,
+        "LoD/1.09": 88,
+        "LoD/1.09b": 88,
+        "LoD/1.09d": 88,
+        "LoD/1.10": 88,
+        "LoD/1.11": 88,
+        "LoD/1.11b": 88,
+        "LoD/1.12a": 88,
+        "LoD/1.13c": 88,
+        "LoD/1.13d": 88,
+        "LoD/1.14a": 88,
+        "LoD/1.14b": 88,
+        "LoD/1.14c": 88,
+        "LoD/1.14d": 88
       },
       "method": "MNE",
       "index": "MNE:93c4b717343abad7c0cd6bec07bb1588"
@@ -1179,6 +1672,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x32A5",
         "LoD/1.14d": "0x32A5"
       },
+      "sizes": {
+        "LoD/1.07": 62,
+        "LoD/1.08": 62,
+        "LoD/1.09": 62,
+        "LoD/1.09b": 62,
+        "LoD/1.09d": 62,
+        "LoD/1.10": 62,
+        "LoD/1.11": 62,
+        "LoD/1.11b": 62,
+        "LoD/1.12a": 62,
+        "LoD/1.13c": 62,
+        "LoD/1.13d": 62,
+        "LoD/1.14a": 62,
+        "LoD/1.14b": 62,
+        "LoD/1.14c": 62,
+        "LoD/1.14d": 62
+      },
       "method": "MNE",
       "index": "MNE:9714d3ad2deea30ac943f1376fae33d4"
     },
@@ -1216,6 +1726,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2750",
         "LoD/1.14c": "0x2750",
         "LoD/1.14d": "0x2750"
+      },
+      "sizes": {
+        "LoD/1.07": 57,
+        "LoD/1.08": 57,
+        "LoD/1.09": 57,
+        "LoD/1.09b": 57,
+        "LoD/1.09d": 57,
+        "LoD/1.10": 57,
+        "LoD/1.11": 57,
+        "LoD/1.11b": 57,
+        "LoD/1.12a": 57,
+        "LoD/1.13c": 57,
+        "LoD/1.13d": 57,
+        "LoD/1.14a": 57,
+        "LoD/1.14b": 57,
+        "LoD/1.14c": 57,
+        "LoD/1.14d": 57
       },
       "method": "MNE",
       "index": "MNE:9765460a30498931557fab10cfc0be00"
@@ -1255,6 +1782,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x330E",
         "LoD/1.14d": "0x330E"
       },
+      "sizes": {
+        "LoD/1.07": 811,
+        "LoD/1.08": 811,
+        "LoD/1.09": 811,
+        "LoD/1.09b": 811,
+        "LoD/1.09d": 811,
+        "LoD/1.10": 811,
+        "LoD/1.11": 811,
+        "LoD/1.11b": 811,
+        "LoD/1.12a": 811,
+        "LoD/1.13c": 811,
+        "LoD/1.13d": 811,
+        "LoD/1.14a": 811,
+        "LoD/1.14b": 811,
+        "LoD/1.14c": 811,
+        "LoD/1.14d": 811
+      },
       "method": "MNE",
       "index": "MNE:9bfd98dbbd3e5d7edb553bd7666739e4"
     },
@@ -1292,6 +1836,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1EC3",
         "LoD/1.14c": "0x1EC3",
         "LoD/1.14d": "0x1EC3"
+      },
+      "sizes": {
+        "LoD/1.07": 67,
+        "LoD/1.08": 67,
+        "LoD/1.09": 67,
+        "LoD/1.09b": 67,
+        "LoD/1.09d": 67,
+        "LoD/1.10": 67,
+        "LoD/1.11": 67,
+        "LoD/1.11b": 67,
+        "LoD/1.12a": 67,
+        "LoD/1.13c": 67,
+        "LoD/1.13d": 67,
+        "LoD/1.14a": 67,
+        "LoD/1.14b": 67,
+        "LoD/1.14c": 67,
+        "LoD/1.14d": 67
       },
       "method": "MNE",
       "index": "MNE:a073910011def1e1e9e25496ccd37ec0"
@@ -1331,6 +1892,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2B2B",
         "LoD/1.14d": "0x2B2B"
       },
+      "sizes": {
+        "LoD/1.07": 318,
+        "LoD/1.08": 318,
+        "LoD/1.09": 318,
+        "LoD/1.09b": 318,
+        "LoD/1.09d": 318,
+        "LoD/1.10": 318,
+        "LoD/1.11": 318,
+        "LoD/1.11b": 318,
+        "LoD/1.12a": 318,
+        "LoD/1.13c": 318,
+        "LoD/1.13d": 318,
+        "LoD/1.14a": 318,
+        "LoD/1.14b": 318,
+        "LoD/1.14c": 318,
+        "LoD/1.14d": 318
+      },
       "method": "MNE",
       "index": "MNE:a7046d73bbd286a50d5e7204509858d2"
     },
@@ -1368,6 +1946,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2396",
         "LoD/1.14c": "0x2396",
         "LoD/1.14d": "0x2396"
+      },
+      "sizes": {
+        "LoD/1.07": 427,
+        "LoD/1.08": 427,
+        "LoD/1.09": 427,
+        "LoD/1.09b": 427,
+        "LoD/1.09d": 427,
+        "LoD/1.10": 427,
+        "LoD/1.11": 427,
+        "LoD/1.11b": 427,
+        "LoD/1.12a": 427,
+        "LoD/1.13c": 427,
+        "LoD/1.13d": 427,
+        "LoD/1.14a": 427,
+        "LoD/1.14b": 427,
+        "LoD/1.14c": 427,
+        "LoD/1.14d": 427
       },
       "method": "MNE",
       "index": "MNE:b09f16c0e6a5014f6b150653e76f58a2"
@@ -1407,6 +2002,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2DCE",
         "LoD/1.14d": "0x2DCE"
       },
+      "sizes": {
+        "LoD/1.07": 47,
+        "LoD/1.08": 47,
+        "LoD/1.09": 47,
+        "LoD/1.09b": 47,
+        "LoD/1.09d": 47,
+        "LoD/1.10": 47,
+        "LoD/1.11": 47,
+        "LoD/1.11b": 47,
+        "LoD/1.12a": 47,
+        "LoD/1.13c": 47,
+        "LoD/1.13d": 47,
+        "LoD/1.14a": 47,
+        "LoD/1.14b": 47,
+        "LoD/1.14c": 47,
+        "LoD/1.14d": 47
+      },
       "method": "MNE",
       "index": "MNE:b18de4e8dfaa1ea94be3de3b62f2adf9"
     },
@@ -1444,6 +2056,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2C74",
         "LoD/1.14c": "0x2C74",
         "LoD/1.14d": "0x2C74"
+      },
+      "sizes": {
+        "LoD/1.07": 68,
+        "LoD/1.08": 68,
+        "LoD/1.09": 68,
+        "LoD/1.09b": 68,
+        "LoD/1.09d": 68,
+        "LoD/1.10": 68,
+        "LoD/1.11": 68,
+        "LoD/1.11b": 68,
+        "LoD/1.12a": 68,
+        "LoD/1.13c": 68,
+        "LoD/1.13d": 68,
+        "LoD/1.14a": 68,
+        "LoD/1.14b": 68,
+        "LoD/1.14c": 68,
+        "LoD/1.14d": 68
       },
       "method": "MNE",
       "index": "MNE:b31c4daec36fb36fa3cb9b8ebe073642"
@@ -1483,6 +2112,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x3942",
         "LoD/1.14d": "0x3942"
       },
+      "sizes": {
+        "LoD/1.07": 177,
+        "LoD/1.08": 177,
+        "LoD/1.09": 177,
+        "LoD/1.09b": 177,
+        "LoD/1.09d": 177,
+        "LoD/1.10": 177,
+        "LoD/1.11": 177,
+        "LoD/1.11b": 177,
+        "LoD/1.12a": 177,
+        "LoD/1.13c": 177,
+        "LoD/1.13d": 177,
+        "LoD/1.14a": 177,
+        "LoD/1.14b": 177,
+        "LoD/1.14c": 177,
+        "LoD/1.14d": 177
+      },
       "method": "MNE",
       "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847"
     },
@@ -1520,6 +2166,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x3CB0",
         "LoD/1.14c": "0x3CB0",
         "LoD/1.14d": "0x3CB0"
+      },
+      "sizes": {
+        "LoD/1.07": 88,
+        "LoD/1.08": 88,
+        "LoD/1.09": 88,
+        "LoD/1.09b": 88,
+        "LoD/1.09d": 88,
+        "LoD/1.10": 88,
+        "LoD/1.11": 88,
+        "LoD/1.11b": 88,
+        "LoD/1.12a": 88,
+        "LoD/1.13c": 88,
+        "LoD/1.13d": 88,
+        "LoD/1.14a": 88,
+        "LoD/1.14b": 88,
+        "LoD/1.14c": 88,
+        "LoD/1.14d": 88
       },
       "name": "_memset",
       "signature": "void * _memset(void * _Dst, int _Val, size_t _Size)",
@@ -1563,6 +2226,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2F02",
         "LoD/1.14d": "0x2F02"
       },
+      "sizes": {
+        "LoD/1.07": 44,
+        "LoD/1.08": 44,
+        "LoD/1.09": 44,
+        "LoD/1.09b": 44,
+        "LoD/1.09d": 44,
+        "LoD/1.10": 44,
+        "LoD/1.11": 44,
+        "LoD/1.11b": 44,
+        "LoD/1.12a": 44,
+        "LoD/1.13c": 44,
+        "LoD/1.13d": 44,
+        "LoD/1.14a": 44,
+        "LoD/1.14b": 44,
+        "LoD/1.14c": 44,
+        "LoD/1.14d": 44
+      },
       "name": "__nh_malloc",
       "signature": "void * __nh_malloc(size_t _Size, int _NhFlag)",
       "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release",
@@ -1605,6 +2285,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x3D30",
         "LoD/1.14d": "0x3D30"
       },
+      "sizes": {
+        "LoD/1.07": 664,
+        "LoD/1.08": 664,
+        "LoD/1.09": 664,
+        "LoD/1.09b": 664,
+        "LoD/1.09d": 664,
+        "LoD/1.10": 664,
+        "LoD/1.11": 664,
+        "LoD/1.11b": 664,
+        "LoD/1.12a": 664,
+        "LoD/1.13c": 664,
+        "LoD/1.13d": 664,
+        "LoD/1.14a": 664,
+        "LoD/1.14b": 664,
+        "LoD/1.14c": 664,
+        "LoD/1.14d": 664
+      },
       "method": "MNE",
       "index": "MNE:bff09423b51fd121ea30afec957819f4"
     },
@@ -1642,6 +2339,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x28DC",
         "LoD/1.14c": "0x28DC",
         "LoD/1.14d": "0x28DC"
+      },
+      "sizes": {
+        "LoD/1.07": 511,
+        "LoD/1.08": 511,
+        "LoD/1.09": 511,
+        "LoD/1.09b": 511,
+        "LoD/1.09d": 511,
+        "LoD/1.10": 511,
+        "LoD/1.11": 511,
+        "LoD/1.11b": 511,
+        "LoD/1.12a": 511,
+        "LoD/1.13c": 511,
+        "LoD/1.13d": 511,
+        "LoD/1.14a": 511,
+        "LoD/1.14b": 511,
+        "LoD/1.14c": 511,
+        "LoD/1.14d": 511
       },
       "method": "MNE",
       "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
@@ -1681,6 +2395,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x32E3",
         "LoD/1.14d": "0x32E3"
       },
+      "sizes": {
+        "LoD/1.07": 43,
+        "LoD/1.08": 43,
+        "LoD/1.09": 43,
+        "LoD/1.09b": 43,
+        "LoD/1.09d": 43,
+        "LoD/1.10": 43,
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43,
+        "LoD/1.14a": 43,
+        "LoD/1.14b": 43,
+        "LoD/1.14c": 43,
+        "LoD/1.14d": 43
+      },
       "method": "MNE",
       "index": "MNE:c365f0335b7bc4452623cbc78de16e67"
     },
@@ -1719,6 +2450,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x14E3",
         "LoD/1.14d": "0x14E3"
       },
+      "sizes": {
+        "LoD/1.07": 235,
+        "LoD/1.08": 235,
+        "LoD/1.09": 235,
+        "LoD/1.09b": 235,
+        "LoD/1.09d": 235,
+        "LoD/1.10": 235,
+        "LoD/1.11": 235,
+        "LoD/1.11b": 235,
+        "LoD/1.12a": 235,
+        "LoD/1.13c": 235,
+        "LoD/1.13d": 235,
+        "LoD/1.14a": 235,
+        "LoD/1.14b": 235,
+        "LoD/1.14c": 235,
+        "LoD/1.14d": 235
+      },
       "method": "MNE",
       "index": "MNE:c37fa64bd2f36382e92794cbb2949299"
     },
@@ -1756,6 +2504,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x25C2",
         "LoD/1.14c": "0x25C2",
         "LoD/1.14d": "0x25C2"
+      },
+      "sizes": {
+        "LoD/1.07": 104,
+        "LoD/1.08": 104,
+        "LoD/1.09": 104,
+        "LoD/1.09b": 104,
+        "LoD/1.09d": 104,
+        "LoD/1.10": 104,
+        "LoD/1.11": 104,
+        "LoD/1.11b": 104,
+        "LoD/1.12a": 104,
+        "LoD/1.13c": 104,
+        "LoD/1.13d": 104,
+        "LoD/1.14a": 104,
+        "LoD/1.14b": 104,
+        "LoD/1.14c": 104,
+        "LoD/1.14d": 104
       },
       "name": "__local_unwind2",
       "signature": "undefined __local_unwind2(int param_1, int param_2)",
@@ -1799,6 +2564,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2D8C",
         "LoD/1.14d": "0x2D8C"
       },
+      "sizes": {
+        "LoD/1.07": 17,
+        "LoD/1.08": 17,
+        "LoD/1.09": 17,
+        "LoD/1.09b": 17,
+        "LoD/1.09d": 17,
+        "LoD/1.10": 17,
+        "LoD/1.11": 17,
+        "LoD/1.11b": 17,
+        "LoD/1.12a": 17,
+        "LoD/1.13c": 17,
+        "LoD/1.13d": 17,
+        "LoD/1.14a": 17,
+        "LoD/1.14b": 17,
+        "LoD/1.14c": 17,
+        "LoD/1.14d": 17
+      },
       "name": "__exit",
       "signature": "void __exit(int _Code)",
       "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
@@ -1841,6 +2623,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1B63",
         "LoD/1.14d": "0x1B63"
       },
+      "sizes": {
+        "LoD/1.07": 23,
+        "LoD/1.08": 23,
+        "LoD/1.09": 23,
+        "LoD/1.09b": 23,
+        "LoD/1.09d": 23,
+        "LoD/1.10": 23,
+        "LoD/1.11": 23,
+        "LoD/1.11b": 23,
+        "LoD/1.12a": 23,
+        "LoD/1.13c": 23,
+        "LoD/1.13d": 23,
+        "LoD/1.14a": 23,
+        "LoD/1.14b": 23,
+        "LoD/1.14c": 23,
+        "LoD/1.14d": 23
+      },
       "method": "MNE",
       "index": "MNE:cfea3c92c09904dc7826c9e24e773236"
     },
@@ -1879,6 +2678,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2541",
         "LoD/1.14d": "0x2541"
       },
+      "sizes": {
+        "LoD/1.07": 60,
+        "LoD/1.08": 60,
+        "LoD/1.09": 60,
+        "LoD/1.09b": 60,
+        "LoD/1.09d": 60,
+        "LoD/1.10": 60,
+        "LoD/1.11": 60,
+        "LoD/1.11b": 60,
+        "LoD/1.12a": 60,
+        "LoD/1.13c": 60,
+        "LoD/1.13d": 60,
+        "LoD/1.14a": 60,
+        "LoD/1.14b": 60,
+        "LoD/1.14c": 60,
+        "LoD/1.14d": 60
+      },
       "method": "MNE",
       "index": "MNE:e33a4c6c562d51a2fcc8e07bee94f1d6"
     },
@@ -1916,6 +2732,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x4066",
         "LoD/1.14c": "0x4066",
         "LoD/1.14d": "0x4066"
+      },
+      "sizes": {
+        "LoD/1.07": 6,
+        "LoD/1.08": 6,
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6,
+        "LoD/1.14a": 6,
+        "LoD/1.14b": 6,
+        "LoD/1.14c": 6,
+        "LoD/1.14d": 6
       },
       "name": "RtlUnwind",
       "signature": "void RtlUnwind(PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue)",
@@ -1958,6 +2791,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x146D",
         "LoD/1.14d": "0x146D"
       },
+      "sizes": {
+        "LoD/1.07": 118,
+        "LoD/1.08": 118,
+        "LoD/1.09": 118,
+        "LoD/1.09b": 118,
+        "LoD/1.09d": 118,
+        "LoD/1.10": 118,
+        "LoD/1.11": 118,
+        "LoD/1.11b": 118,
+        "LoD/1.12a": 118,
+        "LoD/1.13c": 118,
+        "LoD/1.13d": 118,
+        "LoD/1.14a": 118,
+        "LoD/1.14b": 118,
+        "LoD/1.14c": 118,
+        "LoD/1.14d": 118
+      },
       "method": "MNE",
       "index": "MNE:e63ed098730a213950e38bf7d491270b"
     },
@@ -1995,6 +2845,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2656",
         "LoD/1.14c": "0x2656",
         "LoD/1.14d": "0x2656"
+      },
+      "sizes": {
+        "LoD/1.07": 24,
+        "LoD/1.08": 24,
+        "LoD/1.09": 24,
+        "LoD/1.09b": 24,
+        "LoD/1.09d": 24,
+        "LoD/1.10": 24,
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24,
+        "LoD/1.14a": 24,
+        "LoD/1.14b": 24,
+        "LoD/1.14c": 24,
+        "LoD/1.14d": 24
       },
       "method": "MNE",
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf"
@@ -2034,6 +2901,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x2264",
         "LoD/1.14d": "0x2264"
       },
+      "sizes": {
+        "LoD/1.07": 306,
+        "LoD/1.08": 306,
+        "LoD/1.09": 306,
+        "LoD/1.09b": 306,
+        "LoD/1.09d": 306,
+        "LoD/1.10": 306,
+        "LoD/1.11": 306,
+        "LoD/1.11b": 306,
+        "LoD/1.12a": 306,
+        "LoD/1.13c": 306,
+        "LoD/1.13d": 306,
+        "LoD/1.14a": 306,
+        "LoD/1.14b": 306,
+        "LoD/1.14c": 306,
+        "LoD/1.14d": 306
+      },
       "method": "MNE",
       "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d"
     },
@@ -2071,6 +2955,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x3D08",
         "LoD/1.14c": "0x3D08",
         "LoD/1.14d": "0x3D08"
+      },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27,
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27,
+        "LoD/1.14a": 27,
+        "LoD/1.14b": 27,
+        "LoD/1.14c": 27,
+        "LoD/1.14d": 27
       },
       "method": "MNE",
       "index": "MNE:ee4facdaccbd6fc5f3297fd5b85b73c2"
@@ -2110,6 +3011,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1D68",
         "LoD/1.14d": "0x1D68"
       },
+      "sizes": {
+        "LoD/1.07": 26,
+        "LoD/1.08": 26,
+        "LoD/1.09": 26,
+        "LoD/1.09b": 26,
+        "LoD/1.09d": 26,
+        "LoD/1.10": 26,
+        "LoD/1.11": 26,
+        "LoD/1.11b": 26,
+        "LoD/1.12a": 26,
+        "LoD/1.13c": 26,
+        "LoD/1.13d": 26,
+        "LoD/1.14a": 26,
+        "LoD/1.14b": 26,
+        "LoD/1.14c": 26,
+        "LoD/1.14d": 26
+      },
       "method": "MNE",
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6"
     },
@@ -2147,6 +3065,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x1805",
         "LoD/1.14c": "0x1805",
         "LoD/1.14d": "0x1805"
+      },
+      "sizes": {
+        "LoD/1.07": 51,
+        "LoD/1.08": 51,
+        "LoD/1.09": 51,
+        "LoD/1.09b": 51,
+        "LoD/1.09d": 51,
+        "LoD/1.10": 51,
+        "LoD/1.11": 51,
+        "LoD/1.11b": 51,
+        "LoD/1.12a": 51,
+        "LoD/1.13c": 51,
+        "LoD/1.13d": 51,
+        "LoD/1.14a": 51,
+        "LoD/1.14b": 51,
+        "LoD/1.14c": 51,
+        "LoD/1.14d": 51
       },
       "method": "MNE",
       "index": "MNE:f31c6439952ca9c3e10694cce3d833df"
@@ -2186,6 +3121,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x15FE",
         "LoD/1.14d": "0x15FE"
       },
+      "sizes": {
+        "LoD/1.07": 35,
+        "LoD/1.08": 35,
+        "LoD/1.09": 35,
+        "LoD/1.09b": 35,
+        "LoD/1.09d": 35,
+        "LoD/1.10": 35,
+        "LoD/1.11": 35,
+        "LoD/1.11b": 35,
+        "LoD/1.12a": 35,
+        "LoD/1.13c": 35,
+        "LoD/1.13d": 35,
+        "LoD/1.14a": 35,
+        "LoD/1.14b": 35,
+        "LoD/1.14c": 35,
+        "LoD/1.14d": 35
+      },
       "method": "MNE",
       "index": "MNE:fa40def9a627b3e96c51f0f9c6833564"
     },
@@ -2223,6 +3175,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x3639",
         "LoD/1.14c": "0x3639",
         "LoD/1.14d": "0x3639"
+      },
+      "sizes": {
+        "LoD/1.07": 777,
+        "LoD/1.08": 777,
+        "LoD/1.09": 777,
+        "LoD/1.09b": 777,
+        "LoD/1.09d": 777,
+        "LoD/1.10": 777,
+        "LoD/1.11": 777,
+        "LoD/1.11b": 777,
+        "LoD/1.12a": 777,
+        "LoD/1.13c": 777,
+        "LoD/1.13d": 777,
+        "LoD/1.14a": 777,
+        "LoD/1.14b": 777,
+        "LoD/1.14c": 777,
+        "LoD/1.14d": 777
       },
       "method": "MNE",
       "index": "MNE:ff64648b3e6e32bc28a5e4bc8d984c1e"
@@ -2262,6 +3231,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x3AEE",
         "LoD/1.14d": "0x3AEE"
       },
+      "sizes": {
+        "LoD/1.07": 137,
+        "LoD/1.08": 137,
+        "LoD/1.09": 137,
+        "LoD/1.09b": 137,
+        "LoD/1.09d": 137,
+        "LoD/1.10": 137,
+        "LoD/1.11": 137,
+        "LoD/1.11b": 137,
+        "LoD/1.12a": 137,
+        "LoD/1.13c": 137,
+        "LoD/1.13d": 137,
+        "LoD/1.14a": 137,
+        "LoD/1.14b": 137,
+        "LoD/1.14c": 137,
+        "LoD/1.14d": 137
+      },
       "method": "STR",
       "index": "STR:1d436b74681e11a9bd214b6331c37f94"
     },
@@ -2300,6 +3286,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": "0x1000",
         "LoD/1.14d": "0x1000"
       },
+      "sizes": {
+        "LoD/1.07": 902,
+        "LoD/1.08": 902,
+        "LoD/1.09": 902,
+        "LoD/1.09b": 902,
+        "LoD/1.09d": 902,
+        "LoD/1.10": 902,
+        "LoD/1.11": 902,
+        "LoD/1.11b": 902,
+        "LoD/1.12a": 902,
+        "LoD/1.13c": 902,
+        "LoD/1.13d": 902,
+        "LoD/1.14a": 902,
+        "LoD/1.14b": 902,
+        "LoD/1.14c": 902,
+        "LoD/1.14d": 902
+      },
       "method": "STR",
       "index": "STR:ce6d908e8553d0cf353c49fe22a3b675"
     },
@@ -2337,6 +3340,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "0x2789",
         "LoD/1.14c": "0x2789",
         "LoD/1.14d": "0x2789"
+      },
+      "sizes": {
+        "LoD/1.07": 339,
+        "LoD/1.08": 339,
+        "LoD/1.09": 339,
+        "LoD/1.09b": 339,
+        "LoD/1.09d": 339,
+        "LoD/1.10": 339,
+        "LoD/1.11": 339,
+        "LoD/1.11b": 339,
+        "LoD/1.12a": 339,
+        "LoD/1.13c": 339,
+        "LoD/1.13d": 339,
+        "LoD/1.14a": 339,
+        "LoD/1.14b": 339,
+        "LoD/1.14c": 339,
+        "LoD/1.14d": 339
       },
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60"

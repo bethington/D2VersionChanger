@@ -4,7 +4,7 @@
   "version": "1.07",
   "image_base": "0x00400000",
   "total_functions": 262,
-  "export_timestamp": "Mon Dec 01 16:39:13 CST 2025",
+  "export_timestamp": "Fri Dec 05 16:21:44 CST 2025",
   "functions": [
     {
       "address": "0x00401000",
@@ -18,13 +18,13 @@
       "indexes": {
         "EXP": null,
         "STR": "869a8cdbfb2409ba470f3157ce7e7152",
-        "API": "67be25a80fc0557d812bfab5bb2a4196",
+        "API": "1980aa0090f324f5e447991d80f56ab7",
         "MNE": "a48c65b07e8bceaf87cd79cc968e14f6",
         "CFG": "ec5eeda9837e4b12d69eaca003c728d8",
         "PRO": "7296b664ca599d4f982aaa079bd3201f"
       },
       "string_refs": ["\"*** DirectX registry version not found!\"", "\"\\tosDetect()\"", "\"...Done Detecting Operating System and DirectX: F...", "\"\\tAutomatically passed NT 4 version %f.\"", "\"\\tValid version of DirectX found. (%d.%d.%d.%d)\"", "...+8 more"],
-      "api_calls": ["Ordinal_10022", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["GetFogStatePtr", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 31
     },
     {
@@ -108,7 +108,7 @@
         "PRO": "5429b27cd7bc4ea121b19567ce8fbad3"
       },
       "string_refs": ["\"No running dialog, can't display updatetext.\""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 3
     },
     {
@@ -123,13 +123,13 @@
       "indexes": {
         "EXP": null,
         "STR": "3144cc6223383eac3e606b36b8f34f25",
-        "API": "a58218b5eac9b6282ebe4fa06072a431",
+        "API": "b71476338559a1a195e035059977e013",
         "MNE": "2961c7aaadf88931725244ac8a85d3ee",
         "CFG": "d6d204fc0821be454b082057be97bbaf",
         "PRO": "2085e2c711e548227e06f2cbf67fca56"
       },
       "string_refs": ["\"Deleted vidtestrequiredflag\"", "\"Running dialog displayed, continuing ...\"", "\"Ready to detect operating system\"", "\"D2VideoTest\"", "\"Failed to display running dialog, trying to conti...", "...+23 more"],
-      "api_calls": ["Ordinal_266", "Ordinal_267", "Ordinal_269", "Ordinal_253", "Ordinal_252", "Ordinal_10019", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+19 more"],
+      "api_calls": ["SFileOpenArchive", "OpenFileWithDefaultArchive", "ReadFileSync", "CloseFileHandle", "SFileCloseArchive", "FogInit", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+19 more"],
       "basic_block_count": 110
     },
     {
@@ -165,13 +165,13 @@
       "indexes": {
         "EXP": null,
         "STR": "4d162f5ba2fb3717be98fa2b2cd7a969",
-        "API": "596c6cd61c795c5235f8c7ed316f354d",
+        "API": "1dcbe6d7fad27f71388a3b047e8fd41d",
         "MNE": "1305043568c2aa62877a948c8b85cd79",
         "CFG": "5937124b2a8830571421681dfc90506f",
         "PRO": "bcbf5095921ec0fd1508963e6aa11c59"
       },
       "string_refs": ["\"Direct3D Enumeration\"", "\"***** Windows NT versions less than 5.0 don't sup...", "\"Detecting boards which support Direct3D...\"", "\"***** Failed to create window for D3D enumeration...", "\"Enumeration Class\"", "...+1 more"],
-      "api_calls": ["Ordinal_10022", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "DirectDrawEnumerateA"],
+      "api_calls": ["GetFogStatePtr", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "DirectDrawEnumerateA"],
       "basic_block_count": 7
     },
     {
@@ -196,7 +196,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Caught a failure in Direct3DDetect ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -211,13 +211,13 @@
       "indexes": {
         "EXP": null,
         "STR": "e9cb671a06f1948c863285a130dcc445",
-        "API": "a9a02944cfa44ba2da83da362aa232e5",
+        "API": "7146ef6b4362d9ac418963d6377f5fe6",
         "MNE": "b69d4e1a7560d5b983531e606881d961",
         "CFG": "93dc1e2eaab83f5281e800a1eec6ef54",
         "PRO": "b08ea30cf87962e149c61b5d3b047a38"
       },
       "string_refs": ["\"Destroyed D3D window.\"", "\"Found no valid Direct3D devices to use!\""],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 9
     },
     {
@@ -232,13 +232,13 @@
       "indexes": {
         "EXP": null,
         "STR": "784353a51d51728d8908009221ea5428",
-        "API": "cb5da41932776f93e5f11a35bc8b80b7",
+        "API": "ca110afda283981b31688d8b21456822",
         "MNE": "3fefd7fb30700090781e8ed41ae4f043",
         "CFG": "80a0b34214578ba6e82b2b31f07edf2b",
         "PRO": "fb8e34fd9b70813889cc008e5bac82db"
       },
       "string_refs": ["\"\\t\\tSupports 24 bit cutscenes.\"", "\"\\t\\tDoesn't support mipmapping.\"", "\"Failed to get D3D device caps\"", "\"\\t\\tDoes not support triangles!\"", "\"\\t\\tVendorID = 0x%08x, DeviceID = 0x%08x\"", "...+42 more"],
-      "api_calls": ["Ordinal_10022", "Ordinal_10029", "DirectDrawCreate", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+18 more"],
+      "api_calls": ["GetFogStatePtr", "QueueLogMessage", "DirectDrawCreate", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+18 more"],
       "basic_block_count": 139
     },
     {
@@ -263,7 +263,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Caught a failure in sEnumerateD3DDevices ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 5
     },
     {
@@ -288,7 +288,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Couldn't clean up sEnumerateD3DDevices ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -330,7 +330,7 @@
         "PRO": "a4770443af87e93f828a9da03f37316b"
       },
       "string_refs": ["\"D3DERR_LIGHTNOTINTHISVIEWPORT\"", "\"D3DERR_TEXTURE_NO_SUPPORT\"", "\"D3DERR_MATERIAL_SETDATA_FAILED\"", "\"D3DERR_NOCURRENTVIEWPORT\"", "\"D3DERR_MATERIAL_DESTROY_FAILED\"", "...+51 more"],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 61
     },
     {
@@ -345,13 +345,13 @@
       "indexes": {
         "EXP": null,
         "STR": "fe2e9ffe8e8574e11b712f0433617a37",
-        "API": "78a94377e96c521b67408298f5b26e4f",
+        "API": "00736d72657e185ba59d256b8e3ecb08",
         "MNE": "cb28e1976df7957541e89a2e897cd4ed",
         "CFG": "9e3fd33fe1538bd23848e69d7bf10cf3",
         "PRO": "8f4f7bc0bac1a835fb9fb07c5e5199bc"
       },
       "string_refs": ["\"Restricted to DirectX 3 support.\"", "\"Found no valid DirectDraw devices to use!\"", "\"***** Failed to create window for DirectDraw enum...", "\"Enumeration Class\"", "\"Detecting boards which support DirectDraw...\"", "...+3 more"],
-      "api_calls": ["Ordinal_10022", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "DirectDrawEnumerateA", "Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["GetFogStatePtr", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "DirectDrawEnumerateA", "QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 14
     },
     {
@@ -376,7 +376,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Caught a failure in DDrawDetect ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -391,13 +391,13 @@
       "indexes": {
         "EXP": null,
         "STR": "c69643978ae0c4854a13e753ac464302",
-        "API": "64afffa224e6e32b00bceddc6206055c",
+        "API": "8db5300668d72c8d0a1cc6ece5cf47ec",
         "MNE": "53b991e2e835e3bd06299fa2eb409312",
         "CFG": "f82f98b2474f79ed33bfaae69477cd47",
         "PRO": "847f0fcd50df977019340806cc36b89c"
       },
       "string_refs": ["\"\\t\\tSupports 32 bit cutscenes.\"", "\"\\t\\tCouldn't find valid display mode for cutscene...", "\"\\tChecking capabilities of %s...\"", "\"\\t\\tSupports 24 bit cutscenes.\"", "\"***** Exceeded Maximum Display Count (%d >= %d)\"", "...+10 more"],
-      "api_calls": ["Ordinal_10029", "DirectDrawCreate", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+1 more"],
+      "api_calls": ["QueueLogMessage", "DirectDrawCreate", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+1 more"],
       "basic_block_count": 65
     },
     {
@@ -422,7 +422,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Caught a failure in sEnumerateDDrawDevices **..."],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 5
     },
     {
@@ -447,7 +447,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Couldn't clean up sEnumerateDDrawDevices ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -483,13 +483,13 @@
       "indexes": {
         "EXP": null,
         "STR": "d8590879298159eccb036d7f8cbea3e3",
-        "API": "d45a06b0c2eb6039e2b10a1e9463003b",
+        "API": "2c008543404508c84bb143ad4ebfff3e",
         "MNE": "ea51a3875ab40ee8e125a85b2b1b1ebb",
         "CFG": "826e01cec6f4f7b362fe65436a3c493b",
         "PRO": "f501da47db0af19311276e539df9e25b"
       },
       "string_refs": ["\"Failed to create primary surface for cutscenes\"", "\"Failed to get back buffer (mode enumeration)!\"", "\"Failed to open window for triple buffering.  Tryi...", "\"SetCooperativeLevel (mode enumeration) failed!\"", "\"Failed to open window for double buffering.  Tryi...", "...+3 more"],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 52
     },
     {
@@ -510,7 +510,7 @@
         "PRO": "5feb46f62ff54751c92091eda760f607"
       },
       "string_refs": ["\"DDERR_EXCEPTION\"", "\"DDERR_SURFACEALREADYDEPENDENT\"", "\"< unknown >\"", "\"DDERR_PRIMARYSURFACEALREADYEXISTS\"", "\"DDERR_CANTCREATEDC\"", "...+104 more"],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 151
     },
     {
@@ -525,13 +525,13 @@
       "indexes": {
         "EXP": null,
         "STR": "0065a15ffea0dbb532576870a2b8edcb",
-        "API": "eea13c71f408ce55db8938478119d76a",
+        "API": "92ed7482e7c3453dae1b0e7d9c2c0d4b",
         "MNE": "3a99f41d4145670329f5c1d62a9f6314",
         "CFG": "858c7142cfdf020c296864ae5591abee",
         "PRO": "0f99010aa90820e3f58e76cf78f7936e"
       },
       "string_refs": ["\"grSstWinClose failed, context= %d\"", "\"3dfx Glide\"", "\"Glide Enumeration\"", "\"\\t\\tDoesn't have enough video memory (3.5 MB) to ...", "\"_grSstWinClose@4\"", "...+23 more"],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+5 more"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+5 more"],
       "basic_block_count": 51
     },
     {
@@ -556,7 +556,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Caught a failure in GlideDetect ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -571,13 +571,13 @@
       "indexes": {
         "EXP": null,
         "STR": "ae5df3ced08ade0274d1d06ba56578bf",
-        "API": "a9a02944cfa44ba2da83da362aa232e5",
+        "API": "7146ef6b4362d9ac418963d6377f5fe6",
         "MNE": "425b086e48855287d0089f0fdd1de4aa",
         "CFG": "e30f73eac0b086dad9bfe0d9c1bab746",
         "PRO": "b526538a9f590e720e08f730f5cd708f"
       },
       "string_refs": ["\"grSstWinClose failed, context= %d\"", "\"Destroyed bad Glide window.\""],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 9
     },
     {
@@ -602,7 +602,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\" ** Couldn't clean up GlideDetect ** \""],
-      "api_calls": ["Ordinal_10029"],
+      "api_calls": ["QueueLogMessage"],
       "basic_block_count": 1
     },
     {
@@ -735,8 +735,8 @@
       "address": "0x00406410",
       "rva": "0x6410",
       "size": 6,
-      "name": "Ordinal_252",
-      "display_name": "Ordinal_252",
+      "name": "SFileCloseArchive",
+      "display_name": "SFileCloseArchive",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -748,10 +748,10 @@
         "CFG": null,
         "PRO": "961533d5996c2282455afc2165fe02ee"
       },
-      "signature": "undefined Ordinal_252(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SFileCloseArchive(void * hArchive)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "hArchive", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -760,8 +760,8 @@
       "address": "0x00406416",
       "rva": "0x6416",
       "size": 6,
-      "name": "Ordinal_253",
-      "display_name": "Ordinal_253",
+      "name": "CloseFileHandle",
+      "display_name": "CloseFileHandle",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -773,10 +773,10 @@
         "CFG": null,
         "PRO": "07e7b1e47c123a4a34462561f11f2d7a"
       },
-      "signature": "undefined Ordinal_253(void)",
-      "calling_convention": "unknown",
+      "signature": "bool CloseFileHandle(uint dwHandle)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "dwHandle", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -785,8 +785,8 @@
       "address": "0x0040641C",
       "rva": "0x641C",
       "size": 6,
-      "name": "Ordinal_269",
-      "display_name": "Ordinal_269",
+      "name": "ReadFileSync",
+      "display_name": "ReadFileSync",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -798,10 +798,10 @@
         "CFG": null,
         "PRO": "22ebfb725b00af8a32e1645c17a8f55c"
       },
-      "signature": "undefined Ordinal_269(void)",
-      "calling_convention": "unknown",
+      "signature": "void ReadFileSync(uint dwFileHandle, uint * pdwBuffer, uint dwBytesToRead, uint * pdwBytesRead, int nAsyncContext)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "dwFileHandle", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "pdwBuffer", "type": "uint *", "storage": "Stack[0x8]:4"}, {"name": "dwBytesToRead", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pdwBytesRead", "type": "uint *", "storage": "Stack[0x10]:4"}, {"name": "nAsyncContext", "type": "int", "storage": "Stack[0x14]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -810,8 +810,8 @@
       "address": "0x00406422",
       "rva": "0x6422",
       "size": 6,
-      "name": "Ordinal_267",
-      "display_name": "Ordinal_267",
+      "name": "OpenFileWithDefaultArchive",
+      "display_name": "OpenFileWithDefaultArchive",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -823,10 +823,10 @@
         "CFG": null,
         "PRO": "242075d3c1506d04975bf42808cef656"
       },
-      "signature": "undefined Ordinal_267(void)",
-      "calling_convention": "unknown",
+      "signature": "void OpenFileWithDefaultArchive(char * szFileName, HANDLE * phFile)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFileName", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "phFile", "type": "HANDLE *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -835,8 +835,8 @@
       "address": "0x00406428",
       "rva": "0x6428",
       "size": 6,
-      "name": "Ordinal_266",
-      "display_name": "Ordinal_266",
+      "name": "SFileOpenArchive",
+      "display_name": "SFileOpenArchive",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -848,10 +848,10 @@
         "CFG": null,
         "PRO": "5e229d45406ae63c061cbaccf0bc947e"
       },
-      "signature": "undefined Ordinal_266(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SFileOpenArchive(char * szFilePath, dword dwPriority, dword dwFlags, HANDLE * phArchive)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFilePath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "dwPriority", "type": "dword", "storage": "Stack[0x8]:4"}, {"name": "dwFlags", "type": "dword", "storage": "Stack[0xc]:4"}, {"name": "phArchive", "type": "HANDLE *", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -986,8 +986,8 @@
       "address": "0x004065B6",
       "rva": "0x65B6",
       "size": 6,
-      "name": "Ordinal_10029",
-      "display_name": "Ordinal_10029",
+      "name": "QueueLogMessage",
+      "display_name": "QueueLogMessage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -999,10 +999,10 @@
         "CFG": null,
         "PRO": "e9c595955b71ec0d9f0c4bd5fa73b4cd"
       },
-      "signature": "undefined Ordinal_10029(void)",
-      "calling_convention": "unknown",
+      "signature": "void QueueLogMessage(char * szFormat)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFormat", "type": "char *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1011,8 +1011,8 @@
       "address": "0x004065BC",
       "rva": "0x65BC",
       "size": 6,
-      "name": "Ordinal_10022",
-      "display_name": "Ordinal_10022",
+      "name": "GetFogStatePtr",
+      "display_name": "GetFogStatePtr",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1024,8 +1024,8 @@
         "CFG": null,
         "PRO": "677f5e519eb6b5df72c4c6cfefe0dffe"
       },
-      "signature": "undefined Ordinal_10022(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetFogStatePtr(void)",
+      "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
       "string_refs": [],
@@ -1036,8 +1036,8 @@
       "address": "0x004065C2",
       "rva": "0x65C2",
       "size": 6,
-      "name": "Ordinal_10019",
-      "display_name": "Ordinal_10019",
+      "name": "FogInit",
+      "display_name": "FogInit",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1049,10 +1049,10 @@
         "CFG": null,
         "PRO": "78adce13f1cd34af3eeff2d2c72774a3"
       },
-      "signature": "undefined Ordinal_10019(void)",
-      "calling_convention": "unknown",
+      "signature": "void FogInit(char * lpszGameName, uint dwParam2, char * lpszFilePath, bool fPrintSysInfo)",
+      "calling_convention": "__fastcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "lpszGameName", "type": "char *", "storage": "ECX:4"}, {"name": "dwParam2", "type": "uint", "storage": "EDX:4"}, {"name": "lpszFilePath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "fPrintSysInfo", "type": "bool", "storage": "Stack[0x8]:1"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1

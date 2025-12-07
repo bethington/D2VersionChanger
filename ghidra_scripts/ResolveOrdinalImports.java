@@ -90,6 +90,15 @@ public class ResolveOrdinalImports extends GhidraScript {
             
             println("  Found: " + libFile.getPathname());
             
+            // Set the external library path to point to the found DLL in the project
+            // This enables navigation from external references to the actual DLL
+            String libPath = libFile.getPathname();
+            String currentPath = extMgr.getExternalLibraryPath(libName);
+            if (currentPath == null || !currentPath.equals(libPath)) {
+                extMgr.setExternalPath(libName, libPath, true);
+                println("  Set library path: " + libPath);
+            }
+            
             // Open the library and process exports with signatures
             Program libProgram = null;
             Object consumer = this;
@@ -217,8 +226,82 @@ public class ResolveOrdinalImports extends GhidraScript {
             }
         }
         
+        // Now process thunk functions that reference external ordinals
+        println("\n--- Processing Thunk Functions ---");
+        int thunksRenamed = 0;
+        
+        FunctionManager funcMgr = currentProgram.getFunctionManager();
+        FunctionIterator funcIter = funcMgr.getFunctions(true);
+        
+        while (funcIter.hasNext() && !monitor.isCancelled()) {
+            Function func = funcIter.next();
+            
+            // Only process thunk functions
+            if (!func.isThunk()) {
+                continue;
+            }
+            
+            String funcName = func.getName();
+            
+            // Check if the thunk has an ordinal name
+            if (!funcName.startsWith("Ordinal_") && !funcName.contains("::Ordinal_")) {
+                continue;
+            }
+            
+            // Get the thunked function (the external it jumps to)
+            Function thunkedFunc = func.getThunkedFunction(true);
+            if (thunkedFunc == null) {
+                continue;
+            }
+            
+            // Check if the thunked function has a proper name now
+            String thunkedName = thunkedFunc.getName();
+            if (thunkedName.startsWith("Ordinal_") || thunkedName.startsWith("FUN_")) {
+                // The external still has ordinal name, skip
+                continue;
+            }
+            
+            // Rename the thunk to match the resolved external function
+            try {
+                func.setName(thunkedName, SourceType.USER_DEFINED);
+                println("  Thunk " + funcName + " -> " + thunkedName);
+                thunksRenamed++;
+                
+                // Also copy the signature from the thunked function
+                func.setReturnType(thunkedFunc.getReturnType(), SourceType.USER_DEFINED);
+                
+                String callingConv = thunkedFunc.getCallingConventionName();
+                if (callingConv != null && !callingConv.equals("unknown")) {
+                    try {
+                        func.setCallingConvention(callingConv);
+                    } catch (Exception e) {
+                        // Ignore
+                    }
+                }
+                
+                Parameter[] params = thunkedFunc.getParameters();
+                if (params.length > 0) {
+                    ArrayList<ParameterImpl> newParams = new ArrayList<>();
+                    for (Parameter p : params) {
+                        ParameterImpl newParam = new ParameterImpl(
+                            p.getName(),
+                            p.getDataType(),
+                            currentProgram
+                        );
+                        newParams.add(newParam);
+                    }
+                    func.replaceParameters(newParams,
+                        FunctionUpdateType.DYNAMIC_STORAGE_ALL_PARAMS,
+                        true, SourceType.USER_DEFINED);
+                }
+                
+            } catch (Exception e) {
+                println("  Thunk " + funcName + ": rename failed - " + e.getMessage());
+            }
+        }
+        
         println("\n========================================");
-        println("Done! Updated " + totalRenamed + " imports, skipped " + totalSkipped);
+        println("Done! Updated " + totalRenamed + " imports, " + thunksRenamed + " thunks, skipped " + totalSkipped);
         println("========================================");
     }
     

@@ -115,11 +115,15 @@ class FunctionMerger:
     def __init__(self, base_path: str):
         self.base_path = Path(base_path)
         self.index_path = self.base_path / "data" / "function_index"
+        self.enhanced_path = self.base_path / "data" / "enhanced"  # Enhanced exports with callees/callers/etc.
         self.output_path = self.base_path / "reports"
         self.config_path = self.base_path / "config" / "function_index.json"
         
         # Load configuration
         self.config = self.load_config()
+        
+        # Enhanced data cache: dll_name -> version_key -> address -> enhanced_data
+        self.enhanced_cache: Dict[str, Dict[str, Dict[str, dict]]] = {}
         
         # Master index: canonical_index -> canonical_id
         self.index_to_canonical: Dict[str, str] = {}
@@ -154,6 +158,108 @@ class FunctionMerger:
         
         print("Using default configuration")
         return DEFAULT_CONFIG
+    
+    def load_enhanced_exports(self):
+        """Load enhanced function exports with callees, callers, strings, instructions.
+        
+        Supports both flat structure (data/enhanced/*.json) and versioned structure
+        (data/enhanced/{GameType}/{Version}/*.json).
+        """
+        if not self.enhanced_path.exists():
+            print(f"No enhanced exports found at: {self.enhanced_path}")
+            return
+        
+        print(f"\nLoading enhanced exports from: {self.enhanced_path}")
+        enhanced_files = 0
+        enhanced_functions = 0
+        
+        def load_json_file(json_file: Path):
+            """Load a single enhanced JSON file."""
+            nonlocal enhanced_files, enhanced_functions
+            
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                
+                # Extract program name
+                program_name = data.get('program_name', json_file.stem)
+                game_type = data.get('game_type', 'Unknown')
+                version = data.get('version', 'Unknown')
+                version_key = f"{game_type}/{version}"
+                
+                # Normalize program name (may include .exe/.dll suffix)
+                if not program_name.endswith(('.dll', '.exe')):
+                    program_name = f"{program_name}.exe"
+                
+                if program_name not in self.enhanced_cache:
+                    self.enhanced_cache[program_name] = {}
+                
+                if version_key not in self.enhanced_cache[program_name]:
+                    self.enhanced_cache[program_name][version_key] = {}
+                
+                # Index by address for quick lookup
+                func_count = 0
+                for func in data.get('functions', []):
+                    address = func.get('address', '')
+                    if address:
+                        self.enhanced_cache[program_name][version_key][address] = {
+                            'callees': func.get('callees', []),
+                            'callers': func.get('callers', []),
+                            'strings': func.get('strings', []),
+                            'instructions': func.get('instructions', []),
+                            'instruction_count': func.get('instruction_count', 0),
+                            'calling_convention': func.get('calling_convention', ''),
+                            'return_type': func.get('return_type', ''),
+                            'local_var_count': func.get('local_var_count', 0),
+                            'param_count': func.get('param_count', 0),
+                            # New enhanced fields for better matching
+                            'stack_frame_size': func.get('stack_frame_size', 0),
+                            'basic_block_count': func.get('basic_block_count', 0),
+                            'loop_count': func.get('loop_count', 0),
+                            'mnemonic_hash': func.get('mnemonic_hash', ''),
+                            'constants': func.get('constants', []),
+                            'globals': func.get('globals', []),
+                        }
+                        enhanced_functions += 1
+                        func_count += 1
+                
+                enhanced_files += 1
+                print(f"  Loaded enhanced data for {program_name} {version_key}: {func_count} functions")
+                
+            except Exception as e:
+                print(f"Error loading enhanced export {json_file}: {e}")
+        
+        # Load flat structure: data/enhanced/*.json
+        for json_file in self.enhanced_path.glob("*.json"):
+            load_json_file(json_file)
+        
+        # Load versioned structure: data/enhanced/{GameType}/{Version}/*.json
+        for game_type_dir in self.enhanced_path.iterdir():
+            if game_type_dir.is_dir() and game_type_dir.name in ["Classic", "LoD"]:
+                for version_dir in game_type_dir.iterdir():
+                    if version_dir.is_dir():
+                        for json_file in version_dir.glob("*.json"):
+                            load_json_file(json_file)
+        
+        if enhanced_files > 0:
+            print(f"  Total: {enhanced_files} enhanced files, {enhanced_functions} functions with callees/callers/strings")
+    
+    def get_enhanced_data(self, dll_name: str, version_key: str, address: str) -> Optional[dict]:
+        """Get enhanced data (callees, callers, strings, instructions) for a function."""
+        # Try exact match first
+        if dll_name in self.enhanced_cache:
+            if version_key in self.enhanced_cache[dll_name]:
+                if address in self.enhanced_cache[dll_name][version_key]:
+                    return self.enhanced_cache[dll_name][version_key][address]
+        
+        # For 1.14+ Game.exe, try mapping from old DLL names
+        # In 1.14+, all DLLs are merged into Game.exe
+        if 'Game.exe' in self.enhanced_cache:
+            if version_key in self.enhanced_cache['Game.exe']:
+                if address in self.enhanced_cache['Game.exe'][version_key]:
+                    return self.enhanced_cache['Game.exe'][version_key][address]
+        
+        return None
     
     def is_version_enabled(self, game_type: str, version: str) -> bool:
         """Check if a specific version is enabled in config."""
@@ -360,6 +466,8 @@ class FunctionMerger:
                 'display_name': func_data.get('display_name', canonical_id),
                 'name_source': None,
                 'signature': None,
+                'calling_convention': None,
+                'return_type': None,
                 'comment': None,
                 'parameters': [],
                 'versions': {},
@@ -370,11 +478,37 @@ class FunctionMerger:
         
         # Add version-specific address
         version_key = f"{game_type}/{version}"
-        entry['versions'][version_key] = {
+        version_entry = {
             'address': func_data.get('address'),
             'rva': func_data.get('rva'),
             'size': func_data.get('size'),
         }
+        
+        # Try to get enhanced data (callees, callers, strings, instructions)
+        enhanced = self.get_enhanced_data(dll_name, version_key, func_data.get('address', ''))
+        if enhanced:
+            version_entry['callees'] = enhanced.get('callees', [])
+            version_entry['callers'] = enhanced.get('callers', [])
+            version_entry['strings'] = enhanced.get('strings', [])
+            version_entry['instructions'] = enhanced.get('instructions', [])
+            version_entry['instruction_count'] = enhanced.get('instruction_count', 0)
+            version_entry['local_var_count'] = enhanced.get('local_var_count', 0)
+            version_entry['param_count'] = enhanced.get('param_count', 0)
+            # New enhanced fields for comparison
+            version_entry['stack_frame_size'] = enhanced.get('stack_frame_size', 0)
+            version_entry['basic_block_count'] = enhanced.get('basic_block_count', 0)
+            version_entry['loop_count'] = enhanced.get('loop_count', 0)
+            version_entry['mnemonic_hash'] = enhanced.get('mnemonic_hash', '')
+            version_entry['constants'] = enhanced.get('constants', [])
+            version_entry['globals'] = enhanced.get('globals', [])
+            
+            # Set calling_convention and return_type at function level (from first version with data)
+            if not entry.get('calling_convention') and enhanced.get('calling_convention'):
+                entry['calling_convention'] = enhanced['calling_convention']
+            if not entry.get('return_type') and enhanced.get('return_type'):
+                entry['return_type'] = enhanced['return_type']
+        
+        entry['versions'][version_key] = version_entry
         entry['version_count'] = len(entry['versions'])
         
         # Handle naming (earliest version wins)
@@ -550,6 +684,9 @@ class FunctionMerger:
         print("\n" + "=" * 70)
         print("MERGING FUNCTION INDEXES")
         print("=" * 70)
+        
+        # Load enhanced exports first (callees, callers, strings, instructions)
+        self.load_enhanced_exports()
         
         # Load all exports
         exports = self.load_exports()

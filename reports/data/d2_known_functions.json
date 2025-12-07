@@ -1,0 +1,1503 @@
+{
+  "metadata": {
+    "source": "d2bs project (blizzhackers/d2bs)",
+    "version": "1.14d",
+    "base_address": "0x400000",
+    "description": "Diablo 2 function database from modding community"
+  },
+  "functions": [
+    {
+      "module": "D2CLIENT",
+      "name": "GetQuestInfo",
+      "offset": 733904,
+      "signature": "void* __stdcall (void)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4928208,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "SubmitItem",
+      "offset": 729968,
+      "signature": "void __fastcall (DWORD dwItemId)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4924272,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "Transmute",
+      "offset": 565456,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4759760,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "FindClientSideUnit",
+      "offset": 407952,
+      "signature": "UnitAny* __fastcall (DWORD dwId, DWORD dwType)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4602256,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "FindServerSideUnit",
+      "offset": 407984,
+      "signature": "UnitAny* __fastcall (DWORD dwId, DWORD dwType)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4602288,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetCurrentInteractingNPC",
+      "offset": 726560,
+      "signature": "UnitAny* __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4920864,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetSelectedUnit",
+      "offset": 424464,
+      "signature": "UnitAny* __stdcall ()",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4618768,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetCursorItem",
+      "offset": 426144,
+      "signature": "UnitAny* __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4620448,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "SetSelectedUnit_I",
+      "offset": 421344,
+      "signature": "void __fastcall (UnitAny* pUnit)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4615648,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetItemName",
+      "offset": 573536,
+      "signature": "BOOL __fastcall (UnitAny* pItem, wchar_t* wBuffer, DWORD dwSize)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4767840,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "LoadItemDesc",
+      "offset": 581008,
+      "signature": "BOOL __stdcall (UnitAny* pItem, int type)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4775312,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetMonsterOwner",
+      "offset": 495952,
+      "signature": "DWORD __fastcall (DWORD nMonsterId)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4690256,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetUnitHPPercent",
+      "offset": 495744,
+      "signature": "DWORD __fastcall (DWORD dwUnitId)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4690048,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "InitInventory",
+      "offset": 542112,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4736416,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "SetUIVar",
+      "offset": 352032,
+      "signature": "DWORD __fastcall (DWORD varno, DWORD howset, DWORD unknown1)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4546336,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetUnitX",
+      "offset": 372208,
+      "signature": "int __fastcall (UnitAny* pUnit)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4566512,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetUnitY",
+      "offset": 372256,
+      "signature": "int __fastcall (UnitAny* pUnit)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4566560,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ShopAction",
+      "offset": 735344,
+      "signature": "void __fastcall (UnitAny* pNpc, UnitAny* pItem, DWORD dwSell, DWORD unk, DWORD dwItemCost, DWORD dwMode, DWORD _2, DWORD _3)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4929648,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CloseNPCInteract",
+      "offset": 737040,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4931344,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CloseInteract",
+      "offset": 313008,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4507312,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetAutomapSize",
+      "offset": 370448,
+      "signature": "DWORD __stdcall (void)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4564752,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "NewAutomapCell",
+      "offset": 359472,
+      "signature": "AutomapCell* __fastcall ()",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4553776,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AddAutomapCell",
+      "offset": 359168,
+      "signature": "void __fastcall (AutomapCell* aCell, AutomapCell** node)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4553472,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "RevealAutomapRoom",
+      "offset": 364352,
+      "signature": "void __stdcall (Room1* pRoom1, DWORD dwClipFlag, AutomapLayer* aLayer)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4558656,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "InitAutomapLayer_I",
+      "offset": 363840,
+      "signature": "AutomapLayer* __fastcall (DWORD nLayerNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4558144,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ClickMap",
+      "offset": 404736,
+      "signature": "void __fastcall (DWORD MouseFlag, DWORD x, DWORD y, DWORD Type)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4599040,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "LeftClickItem_I",
+      "offset": 589792,
+      "signature": "void __stdcall (UnitAny* pPlayer, Inventory* pInventory, int x, int y, DWORD dwClickType, InventoryLayout* pLayout, DWORD Location)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4784096,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetMouseXOffset",
+      "offset": 372672,
+      "signature": "DWORD __fastcall (VOID)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4566976,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetMouseYOffset",
+      "offset": 372656,
+      "signature": "DWORD __fastcall (VOID)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4566960,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "PrintGameString",
+      "offset": 648096,
+      "signature": "void __fastcall (wchar_t* wMessage, int nColor)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4842400,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "PrintPartyString",
+      "offset": 648640,
+      "signature": "void __fastcall (wchar_t* wMessage, int nColor)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4842944,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "LeaveParty",
+      "offset": 499648,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4693952,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AcceptTrade",
+      "offset": 757872,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4952176,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CancelTrade",
+      "offset": 757936,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4952240,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "TradeOK",
+      "offset": 756272,
+      "signature": "void __stdcall (void)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4950576,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetDifficulty",
+      "offset": 318672,
+      "signature": "BYTE __stdcall ()",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4512976,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ExitGame",
+      "offset": 318816,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4513120,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetUiVar_I",
+      "offset": 342224,
+      "signature": "DWORD __fastcall (DWORD dwVarNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4536528,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "DrawRectFrame",
+      "offset": 339536,
+      "signature": "VOID __fastcall (DWORD Rect)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4533840,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "PerformGoldDialogAction",
+      "offset": 344192,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4538496,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetPlayerUnit",
+      "offset": 409040,
+      "signature": "UnitAny* __stdcall ()",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4603344,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ClearScreen",
+      "offset": 738848,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4933152,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CloseNPCTalk",
+      "offset": 661456,
+      "signature": "DWORD __stdcall (void* unk)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 4855760,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "TestPvpFlag",
+      "offset": 902208,
+      "signature": "DWORD __fastcall (DWORD dwUnitId1, DWORD dwUnitId2, DWORD dwFlag)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5096512,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GetGameLanguageCode",
+      "offset": 1200464,
+      "signature": "DWORD __fastcall ()",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5394768,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "InitLevel",
+      "offset": 2368672,
+      "signature": "void __stdcall (Level* pLevel)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6562976,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "UnloadAct",
+      "offset": 2207699,
+      "signature": "unsigned __stdcall (Act* pAct)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6402003,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetObjectTxt",
+      "offset": 2363024,
+      "signature": "ObjectTxt* __stdcall (DWORD objno)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6557328,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "LoadAct",
+      "offset": 2200736,
+      "signature": "Act* __stdcall (DWORD ActNumber, DWORD MapId, DWORD Unk, DWORD Unk_2, DWORD Unk_3, DWORD Unk_4, DWORD TownLevelId, DWORD Func_1, DWORD Func_2)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6395040,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetLevelText",
+      "offset": 2218864,
+      "signature": "LevelTxt* __stdcall (DWORD levelno)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6413168,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemText",
+      "offset": 2307568,
+      "signature": "ItemTxt* __stdcall (DWORD itemno)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6501872,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetLayer",
+      "offset": 2221168,
+      "signature": "AutomapLayer2* __fastcall (DWORD dwLevelNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 6415472,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetLevel",
+      "offset": 2370272,
+      "signature": "Level* __fastcall (ActMisc* pMisc, DWORD dwLevelNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 6564576,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetStatList",
+      "offset": 2250704,
+      "signature": "StatList* __stdcall (UnitAny* pUnit, DWORD dwUnk, DWORD dwMaxEntries)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6445008,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "CopyStatList",
+      "offset": 2251920,
+      "signature": "DWORD __stdcall (StatList* pStatList, Stat* pStatArray, DWORD dwMaxEntries)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6446224,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetUnitStat",
+      "offset": 2249856,
+      "signature": "DWORD __stdcall (UnitAny* pUnit, DWORD dwStat, DWORD dwStat2)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6444160,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetUnitState",
+      "offset": 2334192,
+      "signature": "int __stdcall (UnitAny* pUnit, DWORD dwStateNo)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6528496,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "CheckUnitCollision",
+      "offset": 2239136,
+      "signature": "DWORD __stdcall (UnitAny* pUnitA, UnitAny* pUnitB, DWORD dwBitMask)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6433440,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetRoomFromUnit",
+      "offset": 2231216,
+      "signature": "Room1* __stdcall (UnitAny* ptUnit)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6425520,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetSkillLevel",
+      "offset": 2376352,
+      "signature": "INT __stdcall (UnitAny* pUnit, Skill* pSkill, BOOL bTotal)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6570656,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemLevelRequirement",
+      "offset": 2275936,
+      "signature": "DWORD __stdcall (UnitAny* pItem, UnitAny* pPlayer)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6470240,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemPrice",
+      "offset": 2293184,
+      "signature": "DWORD __stdcall (UnitAny* MyUnit, UnitAny* pItem, DWORD U1_, DWORD U2_, DWORD U3_, DWORD U4_)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6487488,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetRepairCost",
+      "offset": 2293344,
+      "signature": "DWORD __stdcall (DWORD _1, UnitAny* pUnit, DWORD dwNpcId, DWORD dwDifficulty, DWORD dwItemPriceList, DWORD _2)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6487648,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemMagicalMods",
+      "offset": 2309856,
+      "signature": "char* __stdcall (WORD wPrefixNum)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6504160,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemFromInventory",
+      "offset": 2339520,
+      "signature": "UnitAny* __stdcall (Inventory* inv)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6533824,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetNextItemFromInventory",
+      "offset": 2351008,
+      "signature": "UnitAny* __stdcall (UnitAny* pItem)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6545312,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GenerateOverheadMsg",
+      "offset": 2494736,
+      "signature": "OverheadMsg* __stdcall (DWORD dwUnk, CHAR* szMsg, DWORD dwTrigger)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6689040,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "FixOverheadMsg",
+      "offset": 2495024,
+      "signature": "VOID __stdcall (OverheadMsg* pMsg, DWORD dwUnk)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6689328,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "AddRoomData",
+      "offset": 2203760,
+      "signature": "void __stdcall (Act* ptAct, int LevelId, int Xpos, int Ypos, Room1* pRoom)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6398064,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "RemoveRoomData",
+      "offset": 2203840,
+      "signature": "void __stdcall (Act* ptAct, int LevelId, int Xpos, int Ypos, Room1* pRoom)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6398144,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetQuestFlag",
+      "offset": 2474768,
+      "signature": "int __stdcall (void* QuestInfo, DWORD dwAct, DWORD dwQuest)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6669072,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "MapToAbsScreen",
+      "offset": 2372192,
+      "signature": "void __stdcall (long* pX, long* pY)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6566496,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "AbsScreenToMap",
+      "offset": 2372880,
+      "signature": "void __stdcall (long* ptMouseX, long* ptMouseY)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6567184,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "CheckWaypoint",
+      "offset": 2494032,
+      "signature": "DWORD __stdcall (DWORD WaypointTable, DWORD dwLevelId)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6688336,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "IsTownByLevelNo",
+      "offset": 2206448,
+      "signature": "BOOL __stdcall (DWORD dwLevelNo)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6400752,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetLevelNoFromRoom",
+      "offset": 2204080,
+      "signature": "BOOL __stdcall (Room1* pRoom1)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6398384,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "FindRoom1",
+      "offset": 2203043,
+      "signature": "Room1* __stdcall (Act* pAct, int x, int y)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6397347,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetItemPalette",
+      "offset": 2277632,
+      "signature": "int __stdcall (UnitAny* pPlayer, UnitAny* pItem, BYTE* pColor, int nTransType)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6471936,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2COMMON",
+      "name": "GetMissileOwnerUnit",
+      "offset": 408016,
+      "signature": "UnitAny* __fastcall (UnitAny* pMissile)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4602320,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2NET",
+      "name": "SendPacket",
+      "offset": 1224272,
+      "signature": "void __stdcall (size_t aLen, DWORD arg1, BYTE* aPacket)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5418576,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2NET",
+      "name": "ReceivePacket",
+      "offset": 1224368,
+      "signature": "void __fastcall (BYTE* aPacket, DWORD aLen)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5418672,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2NET",
+      "name": "ReceivePacket_I",
+      "offset": 1227040,
+      "signature": "void __fastcall (BYTE* aPacket, DWORD aLen, int* arg3)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5421344,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GFX",
+      "name": "DrawRectangle",
+      "offset": 1008384,
+      "signature": "void __stdcall (int X1, int Y1, int X2, int Y2, DWORD dwColor, DWORD dwTrans)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5202688,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GFX",
+      "name": "DrawLine",
+      "offset": 1008512,
+      "signature": "void __stdcall (int X1, int Y1, int X2, int Y2, DWORD dwColor, DWORD dwUnk)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5202816,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GFX",
+      "name": "DrawAutomapCell2",
+      "offset": 1008768,
+      "signature": "void __stdcall (CellContext* context, DWORD xpos, DWORD ypos, DWORD bright2, DWORD bright, BYTE* coltab)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5203072,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GFX",
+      "name": "GetHwnd",
+      "offset": 1005984,
+      "signature": "HWND __stdcall (void)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5200288,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GFX",
+      "name": "GetScreenSize",
+      "offset": 1003872,
+      "signature": "DWORD __stdcall ()",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5198176,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2MULTI",
+      "name": "DoChat",
+      "offset": 272400,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4466704,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2MULTI",
+      "name": "PrintChannelText_",
+      "offset": 293552,
+      "signature": "void __fastcall (int unused, char* szText, DWORD dwColor)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4487856,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CMP",
+      "name": "InitCellFile",
+      "offset": 2102080,
+      "signature": "VOID __stdcall (LPVOID File, CellFile** Out, LPSTR SourceFile, DWORD Line, DWORD FileVersion, LPSTR Filename)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6296384,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2CMP",
+      "name": "DeleteCellFile",
+      "offset": 2103888,
+      "signature": "void __stdcall (CellFile* File)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 6298192,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2LANG",
+      "name": "GetLocaleText",
+      "offset": 1198640,
+      "signature": "wchar_t* __fastcall (WORD nLocaleTxtNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5392944,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "SetControlText",
+      "offset": 1045920,
+      "signature": "void* __fastcall (Control* box, const wchar_t* txt)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5240224,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "DrawSprites",
+      "offset": 1022064,
+      "signature": "void __fastcall (void)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5216368,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "LoadCellFile",
+      "offset": 1026480,
+      "signature": "CellFile* __fastcall (const char* szFile, int Type)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5220784,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "TakeScreenshot",
+      "offset": 1025952,
+      "signature": "void __fastcall ()",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5220256,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "DrawText",
+      "offset": 1057568,
+      "signature": "void __fastcall (const wchar_t* wStr, int xPos, int yPos, DWORD dwColor, DWORD dwUnk)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5251872,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "GetTextSize",
+      "offset": 1058080,
+      "signature": "DWORD __fastcall (wchar_t* wStr, DWORD* dwWidth, DWORD* dwFileNo)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5252384,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "SetTextSize",
+      "offset": 1060592,
+      "signature": "DWORD __fastcall (DWORD dwSize)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5254896,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "DestroyEditBox",
+      "offset": 1039008,
+      "signature": "DWORD __fastcall (Control* box)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5233312,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "DestroyControl",
+      "offset": 1021376,
+      "signature": "VOID __stdcall (Control* pControl)",
+      "calling_convention": "__stdcall",
+      "version": "1.14d",
+      "absolute_address": 5215680,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "SetEditBoxCallback",
+      "offset": 1039056,
+      "signature": "VOID __fastcall (Control* pControl, BOOL(__stdcall* FunCallBack)(Control*, DWORD, char*))",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5233360,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "SelectEditBoxText",
+      "offset": 1039616,
+      "signature": "void __fastcall (Control* box)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5233920,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2WIN",
+      "name": "InitMPQ",
+      "offset": 1143602,
+      "signature": "DWORD __fastcall (const char* mpqfile, char* mpqname, int v4, int v5)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 5337906,
+      "verified": false,
+      "verification_note": ""
+    },
+    {
+      "module": "D2GAME",
+      "name": "Rand",
+      "offset": 377712,
+      "signature": "DWORD __fastcall (DWORD* seed)",
+      "calling_convention": "__fastcall",
+      "version": "1.14d",
+      "absolute_address": 4572016,
+      "verified": false,
+      "verification_note": ""
+    }
+  ],
+  "globals": [
+    {
+      "module": "D2CLIENT",
+      "name": "ScreenSizeX",
+      "offset": 3216492,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7410796
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ScreenSizeY",
+      "offset": 3216496,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7410800
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CursorHoverX",
+      "offset": 3284556,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7478860
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "CursorHoverY",
+      "offset": 3284560,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7478864
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "MouseY",
+      "offset": 3828396,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8022700
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "MouseX",
+      "offset": 3828400,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8022704
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AutomapOn",
+      "offset": 3811304,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8005608
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AutomapMode",
+      "offset": 3215956,
+      "type_name": "int",
+      "version": "1.14d",
+      "absolute_address": 7410260
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AutomapLayer",
+      "offset": 3821924,
+      "type_name": "AutomapLayer*",
+      "version": "1.14d",
+      "absolute_address": 8016228
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "MercReviveCost",
+      "offset": 3935696,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8130000
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ServerSideUnitHashTables",
+      "offset": 3825264,
+      "type_name": "UnitHashTable",
+      "version": "1.14d",
+      "absolute_address": 8019568
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ClientSideUnitHashTables",
+      "offset": 3822192,
+      "type_name": "UnitHashTable",
+      "version": "1.14d",
+      "absolute_address": 8016496
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GoldDialogAction",
+      "offset": 3811228,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8005532
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GoldDialogAmount",
+      "offset": 3811944,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8006248
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "NPCMenu",
+      "offset": 3304520,
+      "type_name": "NPCMenu*",
+      "version": "1.14d",
+      "absolute_address": 7498824
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "NPCMenuAmount",
+      "offset": 3299956,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7494260
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "Ping",
+      "offset": 3802276,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7996580
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "Skip",
+      "offset": 3802288,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7996592
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "FPS",
+      "offset": 3912592,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8106896
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "Lang",
+      "offset": 3913180,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8107484
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "PlayerUnit",
+      "offset": 3828336,
+      "type_name": "UnitAny*",
+      "version": "1.14d",
+      "absolute_address": 8022640
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "SelectedInvItem",
+      "offset": 3918836,
+      "type_name": "UnitAny*",
+      "version": "1.14d",
+      "absolute_address": 8113140
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "PlayerUnitList",
+      "offset": 3913152,
+      "type_name": "RosterUnit*",
+      "version": "1.14d",
+      "absolute_address": 8107456
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "bWeapSwitch",
+      "offset": 3918924,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8113228
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "bTradeAccepted",
+      "offset": 3919384,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8113688
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "bTradeBlock",
+      "offset": 3919400,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8113704
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "ExpCharFlag",
+      "offset": 3802356,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7996660
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "MapId",
+      "offset": 3802680,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7996984
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "AlwaysRun",
+      "offset": 3802720,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7997024
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "NoPickUp",
+      "offset": 3828368,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8022672
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "GameInfo",
+      "offset": 3802168,
+      "type_name": "GameStructInfo*",
+      "version": "1.14d",
+      "absolute_address": 7996472
+    },
+    {
+      "module": "D2CLIENT",
+      "name": "WaypointTable",
+      "offset": 3928193,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 8122497
+    },
+    {
+      "module": "D2COMMON",
+      "name": "sgptDataTable",
+      "offset": 3425028,
+      "type_name": "DWORD",
+      "version": "1.14d",
+      "absolute_address": 7619332
+    },
+    {
+      "module": "D2WIN",
+      "name": "FirstControl",
+      "offset": 4019644,
+      "type_name": "Control*",
+      "version": "1.14d",
+      "absolute_address": 8213948
+    },
+    {
+      "module": "D2WIN",
+      "name": "FocusedControl",
+      "offset": 4019660,
+      "type_name": "Control*",
+      "version": "1.14d",
+      "absolute_address": 8213964
+    },
+    {
+      "module": "D2MULTI",
+      "name": "ChatBoxMsg",
+      "offset": 3649088,
+      "type_name": "char*",
+      "version": "1.14d",
+      "absolute_address": 7843392
+    },
+    {
+      "module": "D2MULTI",
+      "name": "GameListControl",
+      "offset": 3771328,
+      "type_name": "Control*",
+      "version": "1.14d",
+      "absolute_address": 7965632
+    },
+    {
+      "module": "D2MULTI",
+      "name": "ChatInputBox",
+      "offset": 3771520,
+      "type_name": "DWORD*",
+      "version": "1.14d",
+      "absolute_address": 7965824
+    },
+    {
+      "module": "D2LAUNCH",
+      "name": "BnData",
+      "offset": 3642836,
+      "type_name": "BnetData*",
+      "version": "1.14d",
+      "absolute_address": 7837140
+    },
+    {
+      "module": "BNCLIENT",
+      "name": "ClassicKey",
+      "offset": 4728644,
+      "type_name": "char*",
+      "version": "1.14d",
+      "absolute_address": 8922948
+    },
+    {
+      "module": "BNCLIENT",
+      "name": "XPacKey",
+      "offset": 4728652,
+      "type_name": "char*",
+      "version": "1.14d",
+      "absolute_address": 8922956
+    },
+    {
+      "module": "BNCLIENT",
+      "name": "KeyOwner",
+      "offset": 4728656,
+      "type_name": "char*",
+      "version": "1.14d",
+      "absolute_address": 8922960
+    }
+  ]
+}

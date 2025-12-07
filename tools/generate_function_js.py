@@ -92,8 +92,14 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             "canonical_id": {
                 name: "FunctionName",
                 signature: "void FunctionName(int a)",
+                calling_convention: "__cdecl",
+                return_type: "void",
                 comment: "Does something",
-                addresses: {"LoD/1.07": "0x1234", "LoD/1.08": "0x5678"}
+                addresses: {"LoD/1.07": "0x1234", "LoD/1.08": "0x5678"},
+                callees: {"LoD/1.07": [...], ...},
+                callers: {"LoD/1.07": [...], ...},
+                strings: {"LoD/1.07": [...], ...},
+                instructions: {"LoD/1.07": [...], ...}
             },
             ...
         }
@@ -111,17 +117,60 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
     for func in functions:
         canonical_id = func.get('canonical_id', '')
         
-        # Build addresses dict - include both full address and RVA for toggle
+        # Build per-version data dicts
         addresses = {}
         rvas = {}
+        sizes = {}
+        callees = {}
+        callers = {}
+        strings = {}
+        instructions = {}
+        instruction_counts = {}
+        # New enhanced fields
+        stack_frame_sizes = {}
+        basic_block_counts = {}
+        loop_counts = {}
+        mnemonic_hashes = {}
+        constants = {}
+        globals = {}
+        
         for ver in all_versions:
             ver_data = func.get('versions', {}).get(ver, {})
             addr = ver_data.get('address')
             rva = ver_data.get('rva')
+            size = ver_data.get('size')
+            
             if addr:
                 addresses[ver] = addr
             if rva:
                 rvas[ver] = rva
+            if size:
+                sizes[ver] = size
+            
+            # Enhanced data (per-version since it can vary)
+            if ver_data.get('callees'):
+                callees[ver] = ver_data['callees']
+            if ver_data.get('callers'):
+                callers[ver] = ver_data['callers']
+            if ver_data.get('strings'):
+                strings[ver] = ver_data['strings']
+            if ver_data.get('instructions'):
+                instructions[ver] = ver_data['instructions']
+            if ver_data.get('instruction_count'):
+                instruction_counts[ver] = ver_data['instruction_count']
+            # New enhanced fields
+            if ver_data.get('stack_frame_size'):
+                stack_frame_sizes[ver] = ver_data['stack_frame_size']
+            if ver_data.get('basic_block_count'):
+                basic_block_counts[ver] = ver_data['basic_block_count']
+            if ver_data.get('loop_count') is not None:
+                loop_counts[ver] = ver_data['loop_count']
+            if ver_data.get('mnemonic_hash'):
+                mnemonic_hashes[ver] = ver_data['mnemonic_hash']
+            if ver_data.get('constants'):
+                constants[ver] = ver_data['constants']
+            if ver_data.get('globals'):
+                globals[ver] = ver_data['globals']
         
         entry = {
             "addresses": addresses
@@ -131,11 +180,19 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
         if rvas and rvas != addresses:
             entry["rvas"] = rvas
         
+        # Include sizes
+        if sizes:
+            entry["sizes"] = sizes
+        
         # Add optional fields only if present
         if func.get('name'):
             entry["name"] = func['name']
         if func.get('signature'):
             entry["signature"] = func['signature']
+        if func.get('calling_convention'):
+            entry["calling_convention"] = func['calling_convention']
+        if func.get('return_type'):
+            entry["return_type"] = func['return_type']
         if func.get('comment'):
             entry["comment"] = func['comment']
         if func.get('name_source'):
@@ -144,6 +201,31 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["method"] = func['index_method']
         if func.get('index'):
             entry["index"] = func['index']
+        
+        # Enhanced data (per-version)
+        if callees:
+            entry["callees"] = callees
+        if callers:
+            entry["callers"] = callers
+        if strings:
+            entry["strings"] = strings
+        if instructions:
+            entry["instructions"] = instructions
+        if instruction_counts:
+            entry["instruction_counts"] = instruction_counts
+        # New enhanced fields for comparison
+        if stack_frame_sizes:
+            entry["stack_frame_sizes"] = stack_frame_sizes
+        if basic_block_counts:
+            entry["basic_block_counts"] = basic_block_counts
+        if loop_counts:
+            entry["loop_counts"] = loop_counts
+        if mnemonic_hashes:
+            entry["mnemonic_hashes"] = mnemonic_hashes
+        if constants:
+            entry["constants"] = constants
+        if globals:
+            entry["globals"] = globals
         
         # Add candidates for empty cells
         # Candidates can be stored as dict (new format) or list (old format)

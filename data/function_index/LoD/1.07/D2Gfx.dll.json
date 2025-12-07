@@ -4,7 +4,7 @@
   "version": "1.07",
   "image_base": "0x6FAA0000",
   "total_functions": 286,
-  "export_timestamp": "Mon Dec 01 16:32:54 CST 2025",
+  "export_timestamp": "Fri Dec 05 16:20:15 CST 2025",
   "functions": [
     {
       "address": "0x6FAA1000",
@@ -60,13 +60,13 @@
       "indexes": {
         "EXP": null,
         "STR": "6127f2312a4c9f9a851c2b98d2a82843",
-        "API": "1eb0f494e8e122b51c7fa1b6cd50618e",
+        "API": "45eb20c9a91241172000de294b01b658",
         "MNE": "876af05433f4eeb62d85460d495e1512",
         "CFG": null,
         "PRO": "d7021b59a1fbbd65b82e77a007ee9f5c"
       },
       "string_refs": ["\"Diablo II\"", "\"Gamma\"", "\"Contrast\""],
-      "api_calls": ["Ordinal_423", "Ordinal_10042", "Ordinal_423", "Ordinal_10018"],
+      "api_calls": ["QueryRegistryUlong", "Ordinal_10042", "QueryRegistryUlong", "Ordinal_10018"],
       "basic_block_count": 1
     },
     {
@@ -213,7 +213,7 @@
         "PRO": "6d2c4defeb7661e730c95f8f0927813b"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\CmnSub...", "\"( nVal >> GOURAUD_SHIFT ) == j\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 14
     },
     {
@@ -276,7 +276,7 @@
         "PRO": "fc86819541463d2a1f8bcca1bf3edbd8"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\CmnSub...", "\"gtCmnInfo.pbBuffer\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 33
     },
     {
@@ -297,7 +297,7 @@
         "PRO": "987460147d08e77c66b61548f63d237e"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\CmnSub...", "\"gtCmnInfo.pbBuffer\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 13
     },
     {
@@ -354,7 +354,7 @@
       "indexes": {
         "EXP": "10000",
         "STR": "6bc06a1a120108a0c4bfd0a9b46807ac",
-        "API": "0d3bb7b6e2297eb8da5a768962775864",
+        "API": "3e2282420388a783629244ce2b7c1126",
         "MNE": "a70263910713129155ae8716dace08a8",
         "CFG": "47f3bc4cae589cfb338e0251f0590054",
         "PRO": "b0e7bfbc1434e1223d7efb3cc0c156fc"
@@ -364,7 +364,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "HINSTANCE", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "WNDPROC", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "undefined4", "storage": "Stack[0x10]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\Src\\\\D2gfx....", "\"Diablo II\"", "\"Error 1: Diablo II is unable to proceed.  Please ...", "\"Error interfacing with Gfx DLL #%i\"", "\"Can't find DLL: %s\"", "...+1 more"],
-      "api_calls": ["Ordinal_10029", "Ordinal_10024", "Ordinal_10024", "Ordinal_10028"],
+      "api_calls": ["QueueLogMessage", "FogFatalError", "FogFatalError", "ReportExceptionContext"],
       "basic_block_count": 15
     },
     {
@@ -414,7 +414,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"Error 22: A critical error has occurred while ini...", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\Src\\\\D2gfx....", "\"Diablo II\"", "\"ghLib != NULL\"", "\"Diablo II Critical Error\"", "...+4 more"],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 14
     },
     {
@@ -1525,7 +1525,7 @@
       "indexes": {
         "EXP": "10064",
         "STR": null,
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "5078b0450679ced80bb34df240beacd1",
         "CFG": "5c1435c48f1ce508173e155a33ce41ac",
         "PRO": "d89f40f7603e6e21a808edb5b4b2a111"
@@ -1535,7 +1535,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Scale....", "\"gtGfxSystem.eDispType == DISPLAYTYPE_GLIDE || gtG...", "\"gtGfxOptions.fPerspective\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 8
     },
     {
@@ -1550,7 +1550,7 @@
       "indexes": {
         "EXP": "10065",
         "STR": null,
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "25b56c45c97bcbd58ed26b2e50b36530",
         "CFG": "3091dc13abfeee6b1ef59b66a3ef0a48",
         "PRO": "2857ccbdfbe67ffa73996d18c8cefcb0"
@@ -1560,7 +1560,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Scale....", "\"gtGfxSystem.eDispType == DISPLAYTYPE_GLIDE || gtG...", "\"gtGfxOptions.fPerspective\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 14
     },
     {
@@ -1575,7 +1575,7 @@
       "indexes": {
         "EXP": "10066",
         "STR": "49178f82e0a296f9a154cfd59848c1e5",
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "784a194e3a3afb9503e9134422158770",
         "CFG": "1027f47ccc7ffe8454e507041f8c80e7",
         "PRO": "e7ade394ef8d14903fc4cb623542d696"
@@ -1585,7 +1585,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "undefined4", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "undefined4", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "undefined4", "storage": "Stack[0x14]:4"}],
       "string_refs": ["\"IsDisplayTypeAccelerated(gtGfxSystem.eDispType)\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Scale....", "\"gtGfxOptions.fPerspective\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 5
     },
     {
@@ -1600,7 +1600,7 @@
       "indexes": {
         "EXP": "10067",
         "STR": null,
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "aa325eeaac8b48c84567e161a11568a7",
         "CFG": "545c98544fc13ab908ba27a0e3c81d15",
         "PRO": "93afe9827f173a652b37d1831abc8eac"
@@ -1610,7 +1610,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Scale....", "\"gtGfxSystem.eDispType == DISPLAYTYPE_GLIDE || gtG...", "\"gtGfxOptions.fPerspective\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 8
     },
     {
@@ -1625,7 +1625,7 @@
       "indexes": {
         "EXP": "10068",
         "STR": null,
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "85cd1674bc6e64f6ae0b9b55229f0396",
         "CFG": "a21571b4bdab843baea83f456f4ebed4",
         "PRO": "b653daadd05a8a6d1c65092e193af284"
@@ -1635,7 +1635,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Scale....", "\"gtGfxSystem.eDispType == DISPLAYTYPE_GLIDE || gtG...", "\"gtGfxOptions.fPerspective\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 8
     },
     {
@@ -1925,7 +1925,7 @@
       "indexes": {
         "EXP": "10023",
         "STR": "e9141423604594bb5a4ee05979da5a3e",
-        "API": "fb9d04fded904e047915a6db3591e3ba",
+        "API": "df202a3896b982b4c7b01895b4cd8ec4",
         "MNE": "fa5848935b2bb6f3e52d57dd90236456",
         "CFG": "9b83f733a6c82195897a22a2b23b9661",
         "PRO": "37aaaf82ee7f3291bd3373375388d89a"
@@ -1935,7 +1935,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"Diablo II\"", "\"Only one copy of Diablo II may run at a time.\"", "\"Diablo II Critical Error\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"Unknown resolution %d\"", "...+2 more"],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10018", "Ordinal_10024"],
+      "api_calls": ["FogAssert", "FogAssert", "FormatStringVarArgs", "FogFatalError"],
       "basic_block_count": 46
     },
     {
@@ -1960,7 +1960,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 13
     },
     {
@@ -2000,7 +2000,7 @@
       "indexes": {
         "EXP": "10026",
         "STR": null,
-        "API": "a5cd1f23f90c47bd39ee6c0870bddf48",
+        "API": "285cb6295eebad9ef7933ba1c6e13583",
         "MNE": "bd51a9046e0c4a5d355e19388b5060c5",
         "CFG": "b65a99e043fe711be67beffa7548da5a",
         "PRO": "d849070a004f9dce48a571592a85c199"
@@ -2010,7 +2010,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10039", "Ordinal_10048"],
+      "api_calls": ["FogAssert", "Ordinal_10039", "Ordinal_10048"],
       "basic_block_count": 21
     },
     {
@@ -2060,7 +2060,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2135,7 +2135,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2185,7 +2185,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2210,7 +2210,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "undefined4", "storage": "Stack[0xc]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2235,7 +2235,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2260,7 +2260,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "undefined4", "storage": "Stack[0xc]:4"}],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2285,7 +2285,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2310,7 +2310,7 @@
       "comment": "",
       "parameters": [],
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gfx\\\\SRC\\\\Window...", "\"gpfnGraphics\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
     {
@@ -2472,8 +2472,8 @@
       "address": "0x6FAA5188",
       "rva": "0x5188",
       "size": 6,
-      "name": "Ordinal_10023",
-      "display_name": "Ordinal_10023",
+      "name": "FogAssert",
+      "display_name": "FogAssert",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2485,10 +2485,10 @@
         "CFG": null,
         "PRO": "411dc20b07702d1dc32c9d8d353e6157"
       },
-      "signature": "undefined Ordinal_10023(void)",
-      "calling_convention": "unknown",
+      "signature": "void FogAssert(char * szExpr, char * szFile, int nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szExpr", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2497,8 +2497,8 @@
       "address": "0x6FAA518E",
       "rva": "0x518E",
       "size": 6,
-      "name": "Ordinal_10028",
-      "display_name": "Ordinal_10028",
+      "name": "ReportExceptionContext",
+      "display_name": "ReportExceptionContext",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2510,10 +2510,10 @@
         "CFG": null,
         "PRO": "4c24360ad708f237e5ff07f89f3be742"
       },
-      "signature": "undefined Ordinal_10028(void)",
-      "calling_convention": "unknown",
+      "signature": "void ReportExceptionContext(int nExceptionCode, char * szSource, int nLine, char * szExpression)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nExceptionCode", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "szSource", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "szExpression", "type": "char *", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2522,8 +2522,8 @@
       "address": "0x6FAA5194",
       "rva": "0x5194",
       "size": 6,
-      "name": "Ordinal_10024",
-      "display_name": "Ordinal_10024",
+      "name": "FogFatalError",
+      "display_name": "FogFatalError",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2535,10 +2535,10 @@
         "CFG": null,
         "PRO": "6c9a8d7c75246e061633c3e8d27f6a98"
       },
-      "signature": "undefined Ordinal_10024(void)",
-      "calling_convention": "unknown",
+      "signature": "void FogFatalError(char * szMessage, char * szFile, int nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szMessage", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2547,8 +2547,8 @@
       "address": "0x6FAA519A",
       "rva": "0x519A",
       "size": 6,
-      "name": "Ordinal_10029",
-      "display_name": "Ordinal_10029",
+      "name": "QueueLogMessage",
+      "display_name": "QueueLogMessage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2560,10 +2560,10 @@
         "CFG": null,
         "PRO": "31bacf08d06611ef82e329382009e243"
       },
-      "signature": "undefined Ordinal_10029(void)",
-      "calling_convention": "unknown",
+      "signature": "void QueueLogMessage(char * szFormat)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFormat", "type": "char *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2572,8 +2572,8 @@
       "address": "0x6FAA51A0",
       "rva": "0x51A0",
       "size": 6,
-      "name": "Ordinal_10018",
-      "display_name": "Ordinal_10018",
+      "name": "FormatStringVarArgs",
+      "display_name": "FormatStringVarArgs",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2585,10 +2585,10 @@
         "CFG": null,
         "PRO": "d5f061f1e101134ddedfb695487695b5"
       },
-      "signature": "undefined Ordinal_10018(void)",
-      "calling_convention": "unknown",
+      "signature": "char * FormatStringVarArgs(char * lpszBuffer, char * lpszFormat)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "lpszBuffer", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "lpszFormat", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2597,8 +2597,8 @@
       "address": "0x6FAA51A6",
       "rva": "0x51A6",
       "size": 6,
-      "name": "Ordinal_423",
-      "display_name": "Ordinal_423",
+      "name": "QueryRegistryUlong",
+      "display_name": "QueryRegistryUlong",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2610,10 +2610,10 @@
         "CFG": null,
         "PRO": "0e45b0e97860f008dbe030769d454b1c"
       },
-      "signature": "undefined Ordinal_423(void)",
-      "calling_convention": "unknown",
+      "signature": "uint QueryRegistryUlong(char * szKeyPath, char * szValueName, uint dwFlags, ulong * pdwResult)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szKeyPath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szValueName", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "dwFlags", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pdwResult", "type": "ulong *", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1

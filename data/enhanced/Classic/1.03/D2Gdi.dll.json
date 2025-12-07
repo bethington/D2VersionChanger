@@ -1,0 +1,11 @@
+{
+  "program_name": "D2Gdi.dll",
+  "game_type": "Classic",
+  "version": "1.03",
+  "image_base": "0x10000000",
+  "total_functions": 0,
+  "named_functions": 0,
+  "export_version": "2.0",
+  "functions": [
+  ]
+}

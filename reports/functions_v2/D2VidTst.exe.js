@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-04T10:03:24.217259
+// Generated: 2025-12-07T00:06:03.148473
 // Functions for D2VidTst.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -35,6 +35,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD19E",
         "LoD/1.10": "0xD07E"
       },
+      "sizes": {
+        "LoD/1.07": 251,
+        "LoD/1.08": 251,
+        "LoD/1.09": 251,
+        "LoD/1.09b": 251,
+        "LoD/1.09d": 251,
+        "LoD/1.10": 251
+      },
       "method": "MNE",
       "index": "MNE:0002c858ef3942a0b403454c72674bfe"
     },
@@ -55,6 +63,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB4C9",
         "LoD/1.10": "0xB3A9"
       },
+      "sizes": {
+        "LoD/1.07": 53,
+        "LoD/1.08": 53,
+        "LoD/1.09": 53,
+        "LoD/1.09b": 53,
+        "LoD/1.09d": 53,
+        "LoD/1.10": 53
+      },
       "method": "MNE",
       "index": "MNE:01839c0631f6879602250d0f45268558"
     },
@@ -72,6 +88,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFF3F",
         "LoD/1.13c": "0xFF3F",
         "LoD/1.13d": "0xFE61"
+      },
+      "sizes": {
+        "LoD/1.11": 186,
+        "LoD/1.11b": 186,
+        "LoD/1.12a": 186,
+        "LoD/1.13c": 186,
+        "LoD/1.13d": 186
       },
       "name": "___dtold",
       "signature": "undefined ___dtold(uint * param_1, uint * param_2)",
@@ -107,6 +130,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x4B5E",
         "LoD/1.13d": "0x4AE9"
       },
+      "sizes": {
+        "LoD/1.07": 44,
+        "LoD/1.08": 44,
+        "LoD/1.09": 44,
+        "LoD/1.09b": 44,
+        "LoD/1.09d": 44,
+        "LoD/1.10": 44,
+        "LoD/1.11": 44,
+        "LoD/1.11b": 44,
+        "LoD/1.12a": 44,
+        "LoD/1.13c": 44,
+        "LoD/1.13d": 44
+      },
       "name": "__nh_malloc",
       "signature": "void * __nh_malloc(size_t _Size, int _NhFlag)",
       "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release",
@@ -128,6 +164,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x333B",
         "LoD/1.13c": "0x333B",
         "LoD/1.13d": "0x32CB"
+      },
+      "sizes": {
+        "LoD/1.11": 26,
+        "LoD/1.11b": 26,
+        "LoD/1.12a": 26,
+        "LoD/1.13c": 26,
+        "LoD/1.13d": 26
       },
       "name": "___heap_select",
       "signature": "undefined4 ___heap_select(void)",
@@ -163,6 +206,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1876",
         "LoD/1.13d": "0x174E"
       },
+      "sizes": {
+        "LoD/1.07": 40,
+        "LoD/1.08": 40,
+        "LoD/1.09": 40,
+        "LoD/1.09b": 40,
+        "LoD/1.09d": 40,
+        "LoD/1.10": 40,
+        "LoD/1.11": 40,
+        "LoD/1.11b": 40,
+        "LoD/1.12a": 40,
+        "LoD/1.13c": 40,
+        "LoD/1.13d": 40
+      },
       "name": "___onexitinit",
       "signature": "undefined4 ___onexitinit(void)",
       "comment": "Library Function - Single Match\n ___onexitinit\n\nLibrary: Visual Studio 2003 Release",
@@ -179,34 +235,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF8D9",
         "LoD/1.13c": "0xF8D9"
       },
+      "sizes": {
+        "LoD/1.12a": 159,
+        "LoD/1.13c": 159
+      },
       "method": "MNE",
-      "index": "MNE:03455c508a72225478b465bc4da0dc85",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x004055D1",
-          "rva": "0x55D1",
-          "confidence": 0.232,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
-        },
-        "LoD/1.11b": {
-          "address": "0x004055D1",
-          "rva": "0x55D1",
-          "confidence": 0.323,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
-        },
-        "LoD/1.13d": {
-          "address": "0x004055D1",
-          "rva": "0x55D1",
-          "confidence": 0.323,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.13c"
-        }
-      }
+      "index": "MNE:03455c508a72225478b465bc4da0dc85"
     },
     "D2VidTst_MNE_03ce6e557a60": {
       "addresses": {
@@ -222,6 +256,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x43E8",
         "LoD/1.13c": "0x43E8",
         "LoD/1.13d": "0x4378"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
       },
       "method": "MNE",
       "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70"
@@ -253,6 +294,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x101C3",
         "LoD/1.13d": "0x100D9"
       },
+      "sizes": {
+        "LoD/1.07": 22,
+        "LoD/1.08": 22,
+        "LoD/1.09": 22,
+        "LoD/1.09b": 22,
+        "LoD/1.09d": 22,
+        "LoD/1.10": 22,
+        "LoD/1.11": 22,
+        "LoD/1.11b": 22,
+        "LoD/1.12a": 22,
+        "LoD/1.13c": 22,
+        "LoD/1.13d": 22
+      },
       "name": "__controlfp",
       "signature": "uint __controlfp(uint _NewValue, uint _Mask)",
       "comment": "Library Function - Single Match\n __controlfp\n\nLibrary: Visual Studio 2003 Release",
@@ -275,6 +329,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10C0",
         "LoD/1.13d": "0x10C0"
       },
+      "sizes": {
+        "LoD/1.11": 20,
+        "LoD/1.11b": 20,
+        "LoD/1.12a": 20,
+        "LoD/1.13c": 20,
+        "LoD/1.13d": 20
+      },
       "method": "MNE",
       "index": "MNE:048856172461c49032754d05d85c7662"
     },
@@ -293,46 +354,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF50B",
         "LoD/1.13d": "0xF44B"
       },
+      "sizes": {
+        "LoD/1.11": 46,
+        "LoD/1.11b": 46,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
+      },
       "name": "terminate",
       "signature": "void terminate(void)",
       "comment": "Library Function - Single Match\n void __cdecl terminate(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:048fa86b16ba3f4924242f25b953c745",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x0040AA25",
-          "rva": "0xAA25",
-          "confidence": 0.119,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x0040AA25",
-          "rva": "0xAA25",
-          "confidence": 0.166,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x0040AA25",
-          "rva": "0xAA25",
-          "confidence": 0.23,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x0040A905",
-          "rva": "0xA905",
-          "confidence": 0.32,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:048fa86b16ba3f4924242f25b953c745"
     },
     "D2VidTst_MNE_04d9253d2fe2": {
       "addresses": {
@@ -351,6 +385,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6BCE",
         "LoD/1.10": "0x6AAE"
       },
+      "sizes": {
+        "LoD/1.07": 253,
+        "LoD/1.08": 253,
+        "LoD/1.09": 253,
+        "LoD/1.09b": 253,
+        "LoD/1.09d": 253,
+        "LoD/1.10": 253
+      },
       "method": "MNE",
       "index": "MNE:04d9253d2fe2e020359876c779310577"
     },
@@ -368,6 +410,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x440E",
         "LoD/1.13c": "0x440E",
         "LoD/1.13d": "0x439E"
+      },
+      "sizes": {
+        "LoD/1.11": 113,
+        "LoD/1.11b": 113,
+        "LoD/1.12a": 113,
+        "LoD/1.13c": 113,
+        "LoD/1.13d": 113
       },
       "name": "__getptd",
       "signature": "_ptiddata __getptd(void)",
@@ -390,6 +439,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x3355",
         "LoD/1.13c": "0x3355",
         "LoD/1.13d": "0x32E5"
+      },
+      "sizes": {
+        "LoD/1.11": 81,
+        "LoD/1.11b": 81,
+        "LoD/1.12a": 81,
+        "LoD/1.13c": 81,
+        "LoD/1.13d": 81
       },
       "name": "__heap_init",
       "signature": "int __heap_init(void)",
@@ -425,6 +481,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x61E0",
         "LoD/1.13d": "0x6174"
       },
+      "sizes": {
+        "LoD/1.07": 32,
+        "LoD/1.08": 32,
+        "LoD/1.09": 32,
+        "LoD/1.09b": 32,
+        "LoD/1.09d": 32,
+        "LoD/1.10": 32,
+        "LoD/1.11": 32,
+        "LoD/1.11b": 32,
+        "LoD/1.12a": 32,
+        "LoD/1.13c": 32,
+        "LoD/1.13d": 32
+      },
       "name": "__global_unwind2",
       "signature": "undefined __global_unwind2(PVOID param_1)",
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
@@ -449,6 +518,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xC18E",
         "LoD/1.10": "0xC06E"
       },
+      "sizes": {
+        "LoD/1.07": 41,
+        "LoD/1.08": 41,
+        "LoD/1.09": 41,
+        "LoD/1.09b": 41,
+        "LoD/1.09d": 41,
+        "LoD/1.10": 41
+      },
       "method": "MNE",
       "index": "MNE:05d3556ba26e52c51954a1255d97c525"
     },
@@ -469,6 +546,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB8AF",
         "LoD/1.10": "0xB78F"
       },
+      "sizes": {
+        "LoD/1.07": 12,
+        "LoD/1.08": 12,
+        "LoD/1.09": 12,
+        "LoD/1.09b": 12,
+        "LoD/1.09d": 12,
+        "LoD/1.10": 12
+      },
       "method": "MNE",
       "index": "MNE:06356139b9d27a571ec4e5eae9a16f67"
     },
@@ -479,26 +564,11 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.07": "0xA058"
       },
+      "sizes": {
+        "LoD/1.07": 72
+      },
       "method": "MNE",
-      "index": "MNE:06bc15016173b42561d375e27c16a0ad",
-      "candidates": {
-        "LoD/1.08": {
-          "address": "0x00406220",
-          "rva": "0x6220",
-          "confidence": 0.307,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.07"
-        },
-        "LoD/1.09": {
-          "address": "0x00406240",
-          "rva": "0x6240",
-          "confidence": 0.221,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.07"
-        }
-      }
+      "index": "MNE:06bc15016173b42561d375e27c16a0ad"
     },
     "D2VidTst_MNE_074c58384030": {
       "addresses": {
@@ -517,6 +587,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x65CE",
         "LoD/1.10": "0x64AE"
       },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45
+      },
       "method": "MNE",
       "index": "MNE:074c58384030e677416bb5e3943eefd6"
     },
@@ -530,6 +608,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0xF7AE",
         "LoD/1.11b": "0xF7AE",
         "LoD/1.13d": "0xF7AE"
+      },
+      "sizes": {
+        "LoD/1.11": 98,
+        "LoD/1.11b": 98,
+        "LoD/1.13d": 98
       },
       "name": "__cftof",
       "signature": "errno_t __cftof(double * _Value, char * _Buf, size_t _SizeInBytes, int _Dec)",
@@ -554,6 +637,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xBBCC",
         "LoD/1.09d": "0xBBCC",
         "LoD/1.10": "0xBAAC"
+      },
+      "sizes": {
+        "LoD/1.07": 92,
+        "LoD/1.08": 92,
+        "LoD/1.09": 92,
+        "LoD/1.09b": 92,
+        "LoD/1.09d": 92,
+        "LoD/1.10": 92
       },
       "method": "MNE",
       "index": "MNE:07936634ed8227ea1db3308335da1e5c"
@@ -585,6 +676,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFE28",
         "LoD/1.13d": "0xFD5A"
       },
+      "sizes": {
+        "LoD/1.07": 22,
+        "LoD/1.08": 22,
+        "LoD/1.09": 22,
+        "LoD/1.09b": 22,
+        "LoD/1.09d": 22,
+        "LoD/1.10": 22,
+        "LoD/1.11": 22,
+        "LoD/1.11b": 22,
+        "LoD/1.12a": 22,
+        "LoD/1.13c": 22,
+        "LoD/1.13d": 22
+      },
       "name": "FID_conflict:__ld12tod",
       "signature": "INTRNCVT_STATUS FID_conflict:__ld12tod(_LDBL12 * _Ifp, _CRT_DOUBLE * _D)",
       "comment": "Library Function - Multiple Matches With Different Base Names\n __ld12tod\n __ld12tof\n\nLibrary: Visual Studio 2003 Release",
@@ -609,6 +713,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x64C6",
         "LoD/1.10": "0x63A6"
       },
+      "sizes": {
+        "LoD/1.07": 22,
+        "LoD/1.08": 22,
+        "LoD/1.09": 22,
+        "LoD/1.09b": 22,
+        "LoD/1.09d": 22,
+        "LoD/1.10": 22
+      },
       "method": "MNE",
       "index": "MNE:0a4add535141c050410605cd61c695e5"
     },
@@ -622,6 +734,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x73D3",
         "LoD/1.11b": "0x73D3",
         "LoD/1.13d": "0x73D3"
+      },
+      "sizes": {
+        "LoD/1.11": 396,
+        "LoD/1.11b": 396,
+        "LoD/1.13d": 396
       },
       "name": "setSBUpLow",
       "signature": "undefined setSBUpLow(void)",
@@ -645,6 +762,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6093",
         "LoD/1.13d": "0x5EE5"
       },
+      "sizes": {
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43
+      },
       "name": "_mbtowc",
       "signature": "int _mbtowc(wchar_t * _DstCh, char * _SrcCh, size_t _SrcSizeInBytes)",
       "comment": "Library Function - Single Match\n _mbtowc\n\nLibrary: Visual Studio 2003 Release",
@@ -666,6 +790,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEE00",
         "LoD/1.13c": "0xEE00",
         "LoD/1.13d": "0xED40"
+      },
+      "sizes": {
+        "LoD/1.11": 157,
+        "LoD/1.11b": 157,
+        "LoD/1.12a": 157,
+        "LoD/1.13c": 157,
+        "LoD/1.13d": 157
       },
       "name": "CallCatchBlock",
       "signature": "void * CallCatchBlock(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, _s_FuncInfo * param_4, void * param_5, int param_6, ulong param_7)",
@@ -701,6 +832,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x7D41",
         "LoD/1.13d": "0x7CB2"
       },
+      "sizes": {
+        "LoD/1.07": 46,
+        "LoD/1.08": 46,
+        "LoD/1.09": 46,
+        "LoD/1.09b": 46,
+        "LoD/1.09d": 46,
+        "LoD/1.10": 46,
+        "LoD/1.11": 46,
+        "LoD/1.11b": 46,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
+      },
       "method": "MNE",
       "index": "MNE:0db91ea76f5c7c9fd0bef446c106db61"
     },
@@ -718,6 +862,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xECCE",
         "LoD/1.13c": "0xECCE",
         "LoD/1.13d": "0xEC0E"
+      },
+      "sizes": {
+        "LoD/1.11": 148,
+        "LoD/1.11b": 148,
+        "LoD/1.12a": 148,
+        "LoD/1.13c": 148,
+        "LoD/1.13d": 148
       },
       "name": "___FrameUnwindToState",
       "signature": "undefined ___FrameUnwindToState(int param_1, undefined4 param_2, int param_3, int param_4)",
@@ -743,6 +894,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE43F",
         "LoD/1.10": "0xE31F"
       },
+      "sizes": {
+        "LoD/1.07": 61,
+        "LoD/1.08": 61,
+        "LoD/1.09": 61,
+        "LoD/1.09b": 61,
+        "LoD/1.09d": 61,
+        "LoD/1.10": 61
+      },
       "method": "MNE",
       "index": "MNE:0ee933a53557ccda12e1264093e70d3a"
     },
@@ -761,6 +920,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xDBB3",
         "LoD/1.10": "0xDA93"
       },
+      "sizes": {
+        "LoD/1.08": 169,
+        "LoD/1.09": 169,
+        "LoD/1.09b": 169,
+        "LoD/1.09d": 169,
+        "LoD/1.10": 169
+      },
       "method": "MNE",
       "index": "MNE:11e087e7908f3a852909535618bfa0a6"
     },
@@ -778,6 +944,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5305",
         "LoD/1.13c": "0x5305",
         "LoD/1.13d": "0x528F"
+      },
+      "sizes": {
+        "LoD/1.11": 510,
+        "LoD/1.11b": 510,
+        "LoD/1.12a": 510,
+        "LoD/1.13c": 510,
+        "LoD/1.13d": 510
       },
       "name": "__ioinit",
       "signature": "int __ioinit(void)",
@@ -803,6 +976,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAB22",
         "LoD/1.10": "0xAA02"
       },
+      "sizes": {
+        "LoD/1.07": 105,
+        "LoD/1.08": 105,
+        "LoD/1.09": 105,
+        "LoD/1.09b": 105,
+        "LoD/1.09d": 105,
+        "LoD/1.10": 105
+      },
       "method": "MNE",
       "index": "MNE:12dead7d93dd2763acf5540fd9895c41"
     },
@@ -823,6 +1004,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x98CC",
         "LoD/1.10": "0x97AC"
       },
+      "sizes": {
+        "LoD/1.07": 444,
+        "LoD/1.08": 444,
+        "LoD/1.09": 444,
+        "LoD/1.09b": 444,
+        "LoD/1.09d": 444,
+        "LoD/1.10": 444
+      },
       "method": "MNE",
       "index": "MNE:1352fc0555ea3629db2c9325fd0e6c42"
     },
@@ -836,6 +1025,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x81FB",
         "LoD/1.11b": "0x81FB",
         "LoD/1.13d": "0x81FB"
+      },
+      "sizes": {
+        "LoD/1.11": 67,
+        "LoD/1.11b": 67,
+        "LoD/1.13d": 67
       },
       "name": "___ansicp",
       "signature": "undefined ___ansicp(LCID param_1)",
@@ -852,6 +1046,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x828F",
         "LoD/1.13c": "0x828F"
+      },
+      "sizes": {
+        "LoD/1.12a": 71,
+        "LoD/1.13c": 71
       },
       "method": "MNE",
       "index": "MNE:138cb9be9d7caeaaa6cff721ddf1f5fa"
@@ -872,6 +1070,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xB5A6",
         "LoD/1.09d": "0xB5A6",
         "LoD/1.10": "0xB486"
+      },
+      "sizes": {
+        "LoD/1.07": 137,
+        "LoD/1.08": 137,
+        "LoD/1.09": 137,
+        "LoD/1.09b": 137,
+        "LoD/1.09d": 137,
+        "LoD/1.10": 137
       },
       "method": "MNE",
       "index": "MNE:13aed512c644fb08ccd536c95b2ae182"
@@ -903,6 +1109,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8B81",
         "LoD/1.13d": "0x8AC1"
       },
+      "sizes": {
+        "LoD/1.07": 131,
+        "LoD/1.08": 131,
+        "LoD/1.09": 131,
+        "LoD/1.09b": 131,
+        "LoD/1.09d": 131,
+        "LoD/1.10": 131,
+        "LoD/1.11": 131,
+        "LoD/1.11b": 131,
+        "LoD/1.12a": 131,
+        "LoD/1.13c": 131,
+        "LoD/1.13d": 131
+      },
       "name": "__close_lk",
       "signature": "undefined4 __close_lk(uint param_1)",
       "comment": "Library Function - Single Match\n __close_lk\n\nLibrary: Visual Studio 2003 Release",
@@ -926,6 +1145,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x8ACC",
         "LoD/1.09d": "0x8ACC",
         "LoD/1.10": "0x89AC"
+      },
+      "sizes": {
+        "LoD/1.07": 84,
+        "LoD/1.08": 84,
+        "LoD/1.09": 84,
+        "LoD/1.09b": 84,
+        "LoD/1.09d": 84,
+        "LoD/1.10": 84
       },
       "method": "MNE",
       "index": "MNE:1563254ce315644019ac4e0b71caac74"
@@ -955,6 +1182,18 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x7CE4",
         "LoD/1.13d": "0x7C55"
       },
+      "sizes": {
+        "LoD/1.08": 93,
+        "LoD/1.09": 93,
+        "LoD/1.09b": 93,
+        "LoD/1.09d": 93,
+        "LoD/1.10": 93,
+        "LoD/1.11": 93,
+        "LoD/1.11b": 93,
+        "LoD/1.12a": 93,
+        "LoD/1.13c": 93,
+        "LoD/1.13d": 93
+      },
       "name": "__flush",
       "signature": "int __flush(FILE * _File)",
       "comment": "Library Function - Single Match\n __flush\n\nLibrary: Visual Studio 2003 Release",
@@ -977,42 +1216,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA1A1",
         "LoD/1.10": "0xA081"
       },
+      "sizes": {
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11
+      },
       "method": "MNE",
-      "index": "MNE:15c1391d599afb321981e8dd71ecc926",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x00410E02",
-          "rva": "0x10E02",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x00410E02",
-          "rva": "0x10E02",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x00410F22",
-          "rva": "0x10F22",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x00410F22",
-          "rva": "0x10F22",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:15c1391d599afb321981e8dd71ecc926"
     },
     "D2VidTst_MNE_15ec667135b1": {
       "addresses": {
@@ -1041,6 +1253,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFC0B",
         "LoD/1.13d": "0xFB3D"
       },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27,
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27
+      },
       "name": "__CopyMan",
       "signature": "undefined __CopyMan(int param_1, undefined4 * param_2)",
       "comment": "Library Function - Single Match\n __CopyMan\n\nLibrary: Visual Studio 2003 Release",
@@ -1058,6 +1283,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x24BD",
         "LoD/1.11b": "0x24BD",
         "LoD/1.13d": "0x24B9"
+      },
+      "sizes": {
+        "LoD/1.11": 3387,
+        "LoD/1.11b": 3387,
+        "LoD/1.13d": 3387
       },
       "name": "__input",
       "signature": "undefined __input(FILE * param_1, byte * param_2, undefined4 * param_3)",
@@ -1077,6 +1307,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x10D42",
         "LoD/1.13d": "0x10D42"
       },
+      "sizes": {
+        "LoD/1.11": 134,
+        "LoD/1.11b": 134,
+        "LoD/1.13d": 134
+      },
       "name": "___multtenpow12",
       "signature": "undefined ___multtenpow12(int * param_1, uint param_2, int param_3)",
       "comment": "Library Function - Single Match\n ___multtenpow12\n\nLibrary: Visual Studio 2003 Release",
@@ -1090,6 +1325,9 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0x62B0"
+      },
+      "sizes": {
+        "LoD/1.07": 84
       },
       "method": "MNE",
       "index": "MNE:17386eda7659e886dc9f383732bc50e1"
@@ -1109,6 +1347,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x62F0",
         "LoD/1.10": "0x61D0"
       },
+      "sizes": {
+        "LoD/1.08": 154,
+        "LoD/1.09": 154,
+        "LoD/1.09b": 154,
+        "LoD/1.09d": 154,
+        "LoD/1.10": 154
+      },
       "method": "MNE",
       "index": "MNE:183d1f749c22a2dc6cf54412d3b00105"
     },
@@ -1126,6 +1371,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x2465",
         "LoD/1.13c": "0x2469",
         "LoD/1.13d": "0x24A3"
+      },
+      "sizes": {
+        "LoD/1.11": 22,
+        "LoD/1.11b": 22,
+        "LoD/1.12a": 22,
+        "LoD/1.13c": 22,
+        "LoD/1.13d": 22
       },
       "name": "__inc",
       "signature": "uint __inc(undefined4 param_1, FILE * param_2)",
@@ -1161,6 +1413,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFACE",
         "LoD/1.13d": "0xFA00"
       },
+      "sizes": {
+        "LoD/1.07": 28,
+        "LoD/1.08": 28,
+        "LoD/1.09": 28,
+        "LoD/1.09b": 28,
+        "LoD/1.09d": 28,
+        "LoD/1.10": 28,
+        "LoD/1.11": 28,
+        "LoD/1.11b": 28,
+        "LoD/1.12a": 28,
+        "LoD/1.13c": 28,
+        "LoD/1.13d": 28
+      },
       "name": "`scalar_deleting_destructor'",
       "signature": "void * `scalar_deleting_destructor'(type_info * this, uint param_1)",
       "comment": "Library Function - Single Match\n public: virtual void * __thiscall type_info::`scalar deleting destructor'(unsigned int)\n\nLibrary: Visual Studio 2003 Release",
@@ -1185,6 +1450,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x67C4",
         "LoD/1.10": "0x66A4"
       },
+      "sizes": {
+        "LoD/1.07": 114,
+        "LoD/1.08": 114,
+        "LoD/1.09": 114,
+        "LoD/1.09b": 114,
+        "LoD/1.09d": 114,
+        "LoD/1.10": 114
+      },
       "method": "MNE",
       "index": "MNE:1b0b1e6e79b2a5cc4159cdd97f6ed90f"
     },
@@ -1202,6 +1475,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5EF0",
         "LoD/1.13c": "0x5EF0",
         "LoD/1.13d": "0x5F70"
+      },
+      "sizes": {
+        "LoD/1.11": 227,
+        "LoD/1.11b": 227,
+        "LoD/1.12a": 227,
+        "LoD/1.13c": 227,
+        "LoD/1.13d": 227
       },
       "name": "__resetstkoflw",
       "signature": "int __resetstkoflw(void)",
@@ -1225,6 +1505,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x421C",
         "LoD/1.13d": "0x41AC"
       },
+      "sizes": {
+        "LoD/1.11": 208,
+        "LoD/1.11b": 208,
+        "LoD/1.12a": 208,
+        "LoD/1.13c": 208,
+        "LoD/1.13d": 208
+      },
       "name": "___freetlocinfo",
       "signature": "undefined ___freetlocinfo(void * param_1)",
       "comment": "Library Function - Single Match\n ___freetlocinfo\n\nLibrary: Visual Studio 2003 Release",
@@ -1246,6 +1533,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x72A0",
         "LoD/1.13c": "0x72A0",
         "LoD/1.13d": "0x7240"
+      },
+      "sizes": {
+        "LoD/1.11": 57,
+        "LoD/1.11b": 57,
+        "LoD/1.12a": 57,
+        "LoD/1.13c": 57,
+        "LoD/1.13d": 57
       },
       "name": "_strncmp",
       "signature": "int _strncmp(char * _Str1, char * _Str2, size_t _MaxCount)",
@@ -1270,6 +1564,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x8F40",
         "LoD/1.09d": "0x8F40",
         "LoD/1.10": "0x8E20"
+      },
+      "sizes": {
+        "LoD/1.07": 167,
+        "LoD/1.08": 167,
+        "LoD/1.09": 167,
+        "LoD/1.09b": 167,
+        "LoD/1.09d": 167,
+        "LoD/1.10": 167
       },
       "method": "MNE",
       "index": "MNE:1d26a9e5ce55b73c17db6b9f60fe2994"
@@ -1301,6 +1603,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10F8B",
         "LoD/1.13d": "0x10E6B"
       },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
       "name": "Unwind@0040e7d0",
       "signature": "undefined Unwind@0040e7d0(void)",
       "name_source": "LoD/1.07",
@@ -1318,6 +1633,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0xFDAD",
         "LoD/1.13d": "0xFDAD"
       },
+      "sizes": {
+        "LoD/1.11": 61,
+        "LoD/1.11b": 61,
+        "LoD/1.13d": 61
+      },
       "name": "FID_conflict:__atodbl",
       "signature": "int FID_conflict:__atodbl(_CRT_FLOAT * _Result, char * _Str)",
       "comment": "Library Function - Multiple Matches With Different Base Names\n __atodbl\n __atoflt\n\nLibrary: Visual Studio 2003 Release",
@@ -1333,6 +1653,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x8E39",
         "LoD/1.13c": "0x8E39"
+      },
+      "sizes": {
+        "LoD/1.12a": 175,
+        "LoD/1.13c": 175
       },
       "method": "MNE",
       "index": "MNE:1e8f09031873fd6186bb338abcf18d15"
@@ -1351,6 +1675,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x43AD",
         "LoD/1.13c": "0x43AD",
         "LoD/1.13d": "0x433D"
+      },
+      "sizes": {
+        "LoD/1.11": 50,
+        "LoD/1.11b": 50,
+        "LoD/1.12a": 50,
+        "LoD/1.13c": 50,
+        "LoD/1.13d": 50
       },
       "name": "___updatetlocinfo",
       "signature": "pthreadlocinfo ___updatetlocinfo(void)",
@@ -1373,6 +1704,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF7D6",
         "LoD/1.13c": "0xF7D6",
         "LoD/1.13d": "0xF712"
+      },
+      "sizes": {
+        "LoD/1.11": 156,
+        "LoD/1.11b": 156,
+        "LoD/1.12a": 156,
+        "LoD/1.13c": 156,
+        "LoD/1.13d": 156
       },
       "name": "__cftof2",
       "signature": "undefined1 * __cftof2(undefined1 * param_1, size_t param_2, char param_3)",
@@ -1408,6 +1746,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8AF5",
         "LoD/1.13d": "0x8A3B"
       },
+      "sizes": {
+        "LoD/1.07": 34,
+        "LoD/1.08": 34,
+        "LoD/1.09": 34,
+        "LoD/1.09b": 34,
+        "LoD/1.09d": 34,
+        "LoD/1.10": 34,
+        "LoD/1.11": 34,
+        "LoD/1.11b": 34,
+        "LoD/1.12a": 34,
+        "LoD/1.13c": 34,
+        "LoD/1.13d": 34
+      },
       "name": "__amsg_exit",
       "signature": "void __amsg_exit(int param_1)",
       "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release",
@@ -1430,6 +1781,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA323",
         "LoD/1.10": "0xA203"
       },
+      "sizes": {
+        "LoD/1.08": 231,
+        "LoD/1.09": 231,
+        "LoD/1.09b": 231,
+        "LoD/1.09d": 231,
+        "LoD/1.10": 231
+      },
       "method": "MNE",
       "index": "MNE:2427cd9c654afc2c511ea083018810d8"
     },
@@ -1447,6 +1805,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x17AE",
         "LoD/1.13c": "0x18D6",
         "LoD/1.13d": "0x17AE"
+      },
+      "sizes": {
+        "LoD/1.11": 18,
+        "LoD/1.11b": 18,
+        "LoD/1.12a": 18,
+        "LoD/1.13c": 18,
+        "LoD/1.13d": 18
       },
       "name": "_atexit",
       "signature": "int _atexit(_func_4879 * param_1)",
@@ -1469,6 +1834,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x72E0",
         "LoD/1.13c": "0x72E0",
         "LoD/1.13d": "0x7280"
+      },
+      "sizes": {
+        "LoD/1.11": 64,
+        "LoD/1.11b": 64,
+        "LoD/1.12a": 64,
+        "LoD/1.13c": 64,
+        "LoD/1.13d": 64
       },
       "name": "_strpbrk",
       "signature": "char * _strpbrk(char * _Str, char * _Control)",
@@ -1494,6 +1866,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x659A",
         "LoD/1.10": "0x647A"
       },
+      "sizes": {
+        "LoD/1.07": 52,
+        "LoD/1.08": 52,
+        "LoD/1.09": 52,
+        "LoD/1.09b": 52,
+        "LoD/1.09d": 52,
+        "LoD/1.10": 52
+      },
       "method": "MNE",
       "index": "MNE:26ed18b151fd5d50dc0ff3b0ba0c150f"
     },
@@ -1514,6 +1894,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6DFF",
         "LoD/1.10": "0x6CDF"
       },
+      "sizes": {
+        "LoD/1.07": 280,
+        "LoD/1.08": 280,
+        "LoD/1.09": 280,
+        "LoD/1.09b": 280,
+        "LoD/1.09d": 280,
+        "LoD/1.10": 280
+      },
       "method": "MNE",
       "index": "MNE:28393cf54a38bf1465f92d01d5d4df21"
     },
@@ -1532,38 +1920,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFB4C",
         "LoD/1.13d": "0xFA7E"
       },
+      "sizes": {
+        "LoD/1.11": 77,
+        "LoD/1.11b": 77,
+        "LoD/1.12a": 77,
+        "LoD/1.13c": 77,
+        "LoD/1.13d": 77
+      },
       "name": "__IncMan",
       "signature": "undefined __IncMan(int param_1, int param_2)",
       "comment": "Library Function - Single Match\n __IncMan\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:28413b8bd9ddfb3032353a0938531af3",
-      "candidates": {
-        "LoD/1.09b": {
-          "address": "0x00406240",
-          "rva": "0x6240",
-          "confidence": 0.165,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x00406240",
-          "rva": "0x6240",
-          "confidence": 0.23,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x00406120",
-          "rva": "0x6120",
-          "confidence": 0.319,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:28413b8bd9ddfb3032353a0938531af3"
     },
     "D2VidTst_MNE_28a1cba9ddfd": {
       "addresses": {
@@ -1579,6 +1948,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4900",
         "LoD/1.13c": "0x4900",
         "LoD/1.13d": "0x488B"
+      },
+      "sizes": {
+        "LoD/1.11": 106,
+        "LoD/1.11b": 106,
+        "LoD/1.12a": 106,
+        "LoD/1.13c": 106,
+        "LoD/1.13d": 106
       },
       "name": "__cinit",
       "signature": "int __cinit(int param_1)",
@@ -1614,6 +1990,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x3572",
         "LoD/1.13d": "0x3502"
       },
+      "sizes": {
+        "LoD/1.07": 43,
+        "LoD/1.08": 43,
+        "LoD/1.09": 43,
+        "LoD/1.09b": 43,
+        "LoD/1.09d": 43,
+        "LoD/1.10": 43,
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43
+      },
       "name": "___sbh_find_block",
       "signature": "uint ___sbh_find_block(int param_1)",
       "comment": "Library Function - Single Match\n ___sbh_find_block\n\nLibrary: Visual Studio 2003 Release",
@@ -1638,6 +2027,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6695",
         "LoD/1.10": "0x6575"
       },
+      "sizes": {
+        "LoD/1.07": 84,
+        "LoD/1.08": 84,
+        "LoD/1.09": 84,
+        "LoD/1.09b": 84,
+        "LoD/1.09d": 84,
+        "LoD/1.10": 84
+      },
       "method": "MNE",
       "index": "MNE:2a1e21cd2b9905fd02a4b69e9156a563"
     },
@@ -1658,6 +2055,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x86DF",
         "LoD/1.10": "0x85BF"
       },
+      "sizes": {
+        "LoD/1.07": 165,
+        "LoD/1.08": 165,
+        "LoD/1.09": 165,
+        "LoD/1.09b": 165,
+        "LoD/1.09d": 165,
+        "LoD/1.10": 165
+      },
       "method": "MNE",
       "index": "MNE:2a96814eec6650ccf99fd41da6e91b27"
     },
@@ -1675,6 +2080,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x101D9",
         "LoD/1.13c": "0x101D9",
         "LoD/1.13d": "0x100EF"
+      },
+      "sizes": {
+        "LoD/1.11": 46,
+        "LoD/1.11b": 46,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name": "siglookup",
       "signature": "undefined siglookup(void)",
@@ -1698,6 +2110,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xA9D0",
         "LoD/1.13d": "0xAE90"
       },
+      "sizes": {
+        "LoD/1.11": 107,
+        "LoD/1.11b": 107,
+        "LoD/1.12a": 107,
+        "LoD/1.13c": 107,
+        "LoD/1.13d": 107
+      },
       "method": "MNE",
       "index": "MNE:2b58328e19af452e86e746ca50d2557b"
     },
@@ -1718,6 +2137,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x82F6",
         "LoD/1.10": "0x81D6"
       },
+      "sizes": {
+        "LoD/1.07": 435,
+        "LoD/1.08": 435,
+        "LoD/1.09": 435,
+        "LoD/1.09b": 435,
+        "LoD/1.09d": 435,
+        "LoD/1.10": 435
+      },
       "method": "MNE",
       "index": "MNE:2b681afdb44a9f2bdf49c0adb7703440"
     },
@@ -1735,6 +2162,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x32B0",
         "LoD/1.13c": "0x32B0",
         "LoD/1.13d": "0x3240"
+      },
+      "sizes": {
+        "LoD/1.11": 139,
+        "LoD/1.11b": 139,
+        "LoD/1.12a": 139,
+        "LoD/1.13c": 139,
+        "LoD/1.13d": 139
       },
       "name": "_strlen",
       "signature": "size_t _strlen(char * _Str)",
@@ -1757,6 +2191,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7A00",
         "LoD/1.13c": "0x7A00",
         "LoD/1.13d": "0x7971"
+      },
+      "sizes": {
+        "LoD/1.11": 51,
+        "LoD/1.11b": 51,
+        "LoD/1.12a": 51,
+        "LoD/1.13c": 51,
+        "LoD/1.13d": 51
       },
       "name": "x_ismbbtype",
       "signature": "undefined4 x_ismbbtype(byte param_1, uint param_2, byte param_3)",
@@ -1792,6 +2233,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10071",
         "LoD/1.13d": "0xFF87"
       },
+      "sizes": {
+        "LoD/1.07": 146,
+        "LoD/1.08": 146,
+        "LoD/1.09": 146,
+        "LoD/1.09b": 146,
+        "LoD/1.09d": 146,
+        "LoD/1.10": 146,
+        "LoD/1.11": 146,
+        "LoD/1.11b": 146,
+        "LoD/1.12a": 146,
+        "LoD/1.13c": 146,
+        "LoD/1.13d": 146
+      },
       "name": "__abstract_cw",
       "signature": "uint __abstract_cw(void)",
       "comment": "Library Function - Single Match\n __abstract_cw\n\nLibrary: Visual Studio 2003 Release",
@@ -1816,6 +2270,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAF1B",
         "LoD/1.10": "0xADFB"
       },
+      "sizes": {
+        "LoD/1.07": 110,
+        "LoD/1.08": 110,
+        "LoD/1.09": 110,
+        "LoD/1.09b": 110,
+        "LoD/1.09d": 110,
+        "LoD/1.10": 110
+      },
       "method": "MNE",
       "index": "MNE:2d9183bb1cfcd846f98264f7c720e3c2"
     },
@@ -1829,6 +2291,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x823E",
         "LoD/1.11b": "0x823E",
         "LoD/1.13d": "0x823E"
+      },
+      "sizes": {
+        "LoD/1.11": 434,
+        "LoD/1.11b": 434,
+        "LoD/1.13d": 434
       },
       "name": "___convertcp",
       "signature": "undefined ___convertcp(UINT param_1, UINT param_2, char * param_3, size_t * param_4, LPSTR param_5, int param_6)",
@@ -1854,6 +2321,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x81E0",
         "LoD/1.10": "0x80C0"
       },
+      "sizes": {
+        "LoD/1.07": 123,
+        "LoD/1.08": 123,
+        "LoD/1.09": 123,
+        "LoD/1.09b": 123,
+        "LoD/1.09d": 123,
+        "LoD/1.10": 123
+      },
       "name": "_strlen",
       "signature": "size_t _strlen(char * _Str)",
       "comment": "Library Function - Single Match\n _strlen\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
@@ -1875,6 +2350,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x159C",
         "LoD/1.13c": "0x16C4",
         "LoD/1.13d": "0x159C"
+      },
+      "sizes": {
+        "LoD/1.11": 52,
+        "LoD/1.11b": 52,
+        "LoD/1.12a": 52,
+        "LoD/1.13c": 52,
+        "LoD/1.13d": 52
       },
       "name": "_sscanf",
       "signature": "int _sscanf(char * _Src, char * _Format, ...)",
@@ -1899,6 +2381,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x6D9D",
         "LoD/1.09d": "0x6D9D",
         "LoD/1.10": "0x6C7D"
+      },
+      "sizes": {
+        "LoD/1.07": 18,
+        "LoD/1.08": 18,
+        "LoD/1.09": 18,
+        "LoD/1.09b": 18,
+        "LoD/1.09d": 18,
+        "LoD/1.10": 18
       },
       "method": "MNE",
       "index": "MNE:30121dcb0e48ab1814aec1130583025a"
@@ -1930,6 +2420,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF9C9",
         "LoD/1.13d": "0xF8FB"
       },
+      "sizes": {
+        "LoD/1.07": 18,
+        "LoD/1.08": 18,
+        "LoD/1.09": 18,
+        "LoD/1.09b": 18,
+        "LoD/1.09d": 18,
+        "LoD/1.10": 18,
+        "LoD/1.11": 18,
+        "LoD/1.11b": 18,
+        "LoD/1.12a": 18,
+        "LoD/1.13c": 18,
+        "LoD/1.13d": 18
+      },
       "name": "_malloc",
       "signature": "void * _malloc(size_t _Size)",
       "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release",
@@ -1951,6 +2454,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEBB1",
         "LoD/1.13c": "0xEBB1",
         "LoD/1.13d": "0xEAF1"
+      },
+      "sizes": {
+        "LoD/1.11": 89,
+        "LoD/1.11b": 89,
+        "LoD/1.12a": 89,
+        "LoD/1.13c": 89,
+        "LoD/1.13d": 89
       },
       "name": "_CallCatchBlock2",
       "signature": "void * _CallCatchBlock2(EHRegistrationNode * param_1, _s_FuncInfo * param_2, void * param_3, int param_4, ulong param_5)",
@@ -1976,6 +2486,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xF220",
         "LoD/1.10": "0xF100"
       },
+      "sizes": {
+        "LoD/1.07": 62,
+        "LoD/1.08": 62,
+        "LoD/1.09": 62,
+        "LoD/1.09b": 62,
+        "LoD/1.09d": 62,
+        "LoD/1.10": 62
+      },
       "method": "MNE",
       "index": "MNE:30f0fd08cad97c1e8bd24ed371c4d8a2"
     },
@@ -1996,6 +2514,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE778",
         "LoD/1.10": "0xE658"
       },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45
+      },
       "method": "MNE",
       "index": "MNE:31be27c1480e9c363bab7437010362e2"
     },
@@ -2013,6 +2539,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7426",
         "LoD/1.13c": "0x7426",
         "LoD/1.13d": "0x73AA"
+      },
+      "sizes": {
+        "LoD/1.11": 41,
+        "LoD/1.11b": 41,
+        "LoD/1.12a": 41,
+        "LoD/1.13c": 41,
+        "LoD/1.13d": 41
       },
       "name": "setSBCS",
       "signature": "undefined setSBCS(void)",
@@ -2038,6 +2571,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x64E1",
         "LoD/1.10": "0x63C1"
       },
+      "sizes": {
+        "LoD/1.07": 29,
+        "LoD/1.08": 29,
+        "LoD/1.09": 29,
+        "LoD/1.09b": 29,
+        "LoD/1.09d": 29,
+        "LoD/1.10": 29
+      },
       "method": "MNE",
       "index": "MNE:35a5d69c6aa19996054f7f44d5ee94a0"
     },
@@ -2056,42 +2597,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1100",
         "LoD/1.13d": "0x1100"
       },
+      "sizes": {
+        "LoD/1.11": 67,
+        "LoD/1.11b": 67,
+        "LoD/1.12a": 67,
+        "LoD/1.13c": 67,
+        "LoD/1.13d": 67
+      },
       "method": "MNE",
-      "index": "MNE:361dff683e42703cbb525fc19cb3cac1",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x004061F0",
-          "rva": "0x61F0",
-          "confidence": 0.119,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x004061F0",
-          "rva": "0x61F0",
-          "confidence": 0.165,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x004061F0",
-          "rva": "0x61F0",
-          "confidence": 0.229,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x004060D0",
-          "rva": "0x60D0",
-          "confidence": 0.318,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:361dff683e42703cbb525fc19cb3cac1"
     },
     "D2VidTst_MNE_371cf2604575": {
       "addresses": {
@@ -2107,6 +2621,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xB375",
         "LoD/1.09d": "0xB375",
         "LoD/1.10": "0xB255"
+      },
+      "sizes": {
+        "LoD/1.08": 289,
+        "LoD/1.09": 289,
+        "LoD/1.09b": 289,
+        "LoD/1.09d": 289,
+        "LoD/1.10": 289
       },
       "method": "MNE",
       "index": "MNE:371cf2604575a233020cd5d20fe5277c"
@@ -2126,46 +2647,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6EA0",
         "LoD/1.13d": "0x6E40"
       },
+      "sizes": {
+        "LoD/1.11": 672,
+        "LoD/1.11b": 672,
+        "LoD/1.12a": 672,
+        "LoD/1.13c": 672,
+        "LoD/1.13d": 672
+      },
       "name": "_memmove",
       "signature": "void * _memmove(void * _Dst, void * _Src, size_t _Size)",
       "comment": "Library Function - Single Match\n _memmove\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:378e464c38840f3332fec8fa0fd86d30",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x0040B040",
-          "rva": "0xB040",
-          "confidence": 0.12,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x0040B040",
-          "rva": "0xB040",
-          "confidence": 0.167,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x0040B040",
-          "rva": "0xB040",
-          "confidence": 0.232,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x0040AF20",
-          "rva": "0xAF20",
-          "confidence": 0.322,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:378e464c38840f3332fec8fa0fd86d30"
     },
     "D2VidTst_MNE_37d7c6a4c251": {
       "addresses": {
@@ -2183,6 +2677,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xF260",
         "LoD/1.09d": "0xF260",
         "LoD/1.10": "0xF140"
+      },
+      "sizes": {
+        "LoD/1.07": 58,
+        "LoD/1.08": 58,
+        "LoD/1.09": 58,
+        "LoD/1.09b": 58,
+        "LoD/1.09d": 58,
+        "LoD/1.10": 58
       },
       "method": "MNE",
       "index": "MNE:37d7c6a4c251088612ebbc596a4d3ae9"
@@ -2202,6 +2704,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA4BE",
         "LoD/1.10": "0xA39E"
       },
+      "sizes": {
+        "LoD/1.08": 215,
+        "LoD/1.09": 215,
+        "LoD/1.09b": 215,
+        "LoD/1.09d": 215,
+        "LoD/1.10": 215
+      },
       "method": "MNE",
       "index": "MNE:38a52ad8d9123a0ed65e4de10b1cf943"
     },
@@ -2220,46 +2729,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8EE8",
         "LoD/1.13d": "0x8E24"
       },
+      "sizes": {
+        "LoD/1.11": 61,
+        "LoD/1.11b": 61,
+        "LoD/1.12a": 61,
+        "LoD/1.13c": 61,
+        "LoD/1.13d": 61
+      },
       "name": "~type_info",
       "signature": "void ~type_info(type_info * this)",
       "comment": "Library Function - Single Match\n public: virtual __thiscall type_info::~type_info(void)\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:3a966d378a126a76a245d88e9b060455",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x00408C63",
-          "rva": "0x8C63",
-          "confidence": 0.12,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x00408C63",
-          "rva": "0x8C63",
-          "confidence": 0.166,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x00408C63",
-          "rva": "0x8C63",
-          "confidence": 0.231,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x00408B43",
-          "rva": "0x8B43",
-          "confidence": 0.321,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:3a966d378a126a76a245d88e9b060455"
     },
     "D2VidTst_MNE_3b865c2f933c": {
       "addresses": {
@@ -2269,6 +2751,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x75EA",
         "LoD/1.13c": "0x75EA"
+      },
+      "sizes": {
+        "LoD/1.12a": 404,
+        "LoD/1.13c": 404
       },
       "method": "MNE",
       "index": "MNE:3b865c2f933cac7b684f56d2d74a981a"
@@ -2287,6 +2773,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x17C0",
         "LoD/1.13c": "0x15A0",
         "LoD/1.13d": "0x17C0"
+      },
+      "sizes": {
+        "LoD/1.11": 292,
+        "LoD/1.11b": 292,
+        "LoD/1.12a": 292,
+        "LoD/1.13c": 292,
+        "LoD/1.13d": 292
       },
       "name": "_strncpy",
       "signature": "char * _strncpy(char * _Dest, char * _Source, size_t _Count)",
@@ -2309,6 +2802,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xC990",
         "LoD/1.09d": "0xC990",
         "LoD/1.10": "0xC870"
+      },
+      "sizes": {
+        "LoD/1.08": 128,
+        "LoD/1.09": 128,
+        "LoD/1.09b": 128,
+        "LoD/1.09d": 128,
+        "LoD/1.10": 128
       },
       "name": "_strstr",
       "signature": "char * _strstr(char * _Str, char * _SubStr)",
@@ -2334,6 +2834,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAE3F",
         "LoD/1.10": "0xAD1F"
       },
+      "sizes": {
+        "LoD/1.07": 220,
+        "LoD/1.08": 220,
+        "LoD/1.09": 220,
+        "LoD/1.09b": 220,
+        "LoD/1.09d": 220,
+        "LoD/1.10": 220
+      },
       "method": "MNE",
       "index": "MNE:3d46400d80fc86347a5a9a46265d9d81"
     },
@@ -2351,6 +2859,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x33EF",
         "LoD/1.13c": "0x33EF",
         "LoD/1.13d": "0x337F"
+      },
+      "sizes": {
+        "LoD/1.11": 85,
+        "LoD/1.11b": 85,
+        "LoD/1.12a": 85,
+        "LoD/1.13c": 85,
+        "LoD/1.13d": 85
       },
       "name": "__mtdeletelocks",
       "signature": "void __mtdeletelocks(void)",
@@ -2373,6 +2888,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x777E",
         "LoD/1.13c": "0x777E",
         "LoD/1.13d": "0x76EF"
+      },
+      "sizes": {
+        "LoD/1.11": 327,
+        "LoD/1.11b": 327,
+        "LoD/1.12a": 327,
+        "LoD/1.13c": 327,
+        "LoD/1.13d": 327
       },
       "name": "__setmbcp",
       "signature": "int __setmbcp(int _CodePage)",
@@ -2408,6 +2930,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x628A",
         "LoD/1.13d": "0x621E"
       },
+      "sizes": {
+        "LoD/1.07": 35,
+        "LoD/1.08": 35,
+        "LoD/1.09": 35,
+        "LoD/1.09b": 35,
+        "LoD/1.09d": 35,
+        "LoD/1.10": 35,
+        "LoD/1.11": 35,
+        "LoD/1.11b": 35,
+        "LoD/1.12a": 35,
+        "LoD/1.13c": 35,
+        "LoD/1.13d": 35
+      },
       "name": "__abnormal_termination",
       "signature": "int __abnormal_termination(void)",
       "comment": "Library Function - Single Match\n __abnormal_termination\n\nLibrary: Visual Studio",
@@ -2430,6 +2965,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10FC5",
         "LoD/1.13d": "0x10EA5"
       },
+      "sizes": {
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
+      },
       "name": "Unwind@00410e80",
       "signature": "undefined Unwind@00410e80(void)",
       "name_source": "LoD/1.11",
@@ -2446,6 +2988,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x845E",
         "LoD/1.11b": "0x845E",
         "LoD/1.13d": "0x845E"
+      },
+      "sizes": {
+        "LoD/1.11": 886,
+        "LoD/1.11b": 886,
+        "LoD/1.13d": 886
       },
       "name": "___crtLCMapStringA",
       "signature": "int ___crtLCMapStringA(_locale_t _Plocinfo, LPCWSTR _LocaleName, DWORD _DwMapFlag, LPCSTR _LpSrcStr, int _CchSrc, LPSTR _LpDestStr, int _CchDest, int _Code_page, BOOL _BError)",
@@ -2471,6 +3018,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x85B0",
         "LoD/1.10": "0x8490"
       },
+      "sizes": {
+        "LoD/1.07": 132,
+        "LoD/1.08": 132,
+        "LoD/1.09": 132,
+        "LoD/1.09b": 132,
+        "LoD/1.09d": 132,
+        "LoD/1.10": 132
+      },
       "method": "MNE",
       "index": "MNE:416b2371f2adbf45b25663d159a59cdc"
     },
@@ -2490,6 +3045,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x4F72",
         "LoD/1.09d": "0x4F72",
         "LoD/1.10": "0x4E52"
+      },
+      "sizes": {
+        "LoD/1.07": 24,
+        "LoD/1.08": 24,
+        "LoD/1.09": 24,
+        "LoD/1.09b": 24,
+        "LoD/1.09d": 24,
+        "LoD/1.10": 24
       },
       "method": "MNE",
       "index": "MNE:427e6d3a8903756af986ab6fe3ae8c34"
@@ -2511,6 +3074,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x7713",
         "LoD/1.10": "0x75F3"
       },
+      "sizes": {
+        "LoD/1.07": 14,
+        "LoD/1.08": 14,
+        "LoD/1.09": 14,
+        "LoD/1.09b": 14,
+        "LoD/1.09d": 14,
+        "LoD/1.10": 14
+      },
       "method": "MNE",
       "index": "MNE:42dbe7ade19c5b9c81e427c9077693e7"
     },
@@ -2528,6 +3099,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFC26",
         "LoD/1.13c": "0xFC26",
         "LoD/1.13d": "0xFB58"
+      },
+      "sizes": {
+        "LoD/1.11": 25,
+        "LoD/1.11b": 25,
+        "LoD/1.12a": 25,
+        "LoD/1.13c": 25,
+        "LoD/1.13d": 25
       },
       "name": "__IsZeroMan",
       "signature": "undefined4 __IsZeroMan(int param_1)",
@@ -2551,6 +3129,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD729",
         "LoD/1.10": "0xD609"
       },
+      "sizes": {
+        "LoD/1.08": 194,
+        "LoD/1.09": 194,
+        "LoD/1.09b": 194,
+        "LoD/1.09d": 194,
+        "LoD/1.10": 194
+      },
       "method": "MNE",
       "index": "MNE:4356a93c484fa354f7841c9d1d714a19"
     },
@@ -2569,46 +3154,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5141",
         "LoD/1.13d": "0x50CB"
       },
+      "sizes": {
+        "LoD/1.11": 162,
+        "LoD/1.11b": 162,
+        "LoD/1.12a": 162,
+        "LoD/1.13c": 162,
+        "LoD/1.13d": 162
+      },
       "name": "__setargv",
       "signature": "int __setargv(void)",
       "comment": "Library Function - Single Match\n __setargv\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:457ecf3d8055d8e00a172b3d901a03ca",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x004035D1",
-          "rva": "0x35D1",
-          "confidence": 0.117,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x004035D1",
-          "rva": "0x35D1",
-          "confidence": 0.163,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x004035D1",
-          "rva": "0x35D1",
-          "confidence": 0.226,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x004034C1",
-          "rva": "0x34C1",
-          "confidence": 0.314,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:457ecf3d8055d8e00a172b3d901a03ca"
     },
     "D2VidTst_MNE_45f246afe326": {
       "addresses": {
@@ -2624,6 +3182,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5B82",
         "LoD/1.13c": "0x5B82",
         "LoD/1.13d": "0x5B24"
+      },
+      "sizes": {
+        "LoD/1.11": 39,
+        "LoD/1.11b": 39,
+        "LoD/1.12a": 39,
+        "LoD/1.13c": 39,
+        "LoD/1.13d": 39
       },
       "name": "_wctomb",
       "signature": "int _wctomb(char * _MbCh, wchar_t _WCh)",
@@ -2647,6 +3212,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6BDF",
         "LoD/1.13d": "0x6B7F"
       },
+      "sizes": {
+        "LoD/1.11": 217,
+        "LoD/1.11b": 217,
+        "LoD/1.12a": 217,
+        "LoD/1.13c": 217,
+        "LoD/1.13d": 217
+      },
       "name": "___free_lconv_mon",
       "signature": "undefined ___free_lconv_mon(int param_1)",
       "comment": "Library Function - Single Match\n ___free_lconv_mon\n\nLibrary: Visual Studio 2003 Release",
@@ -2662,6 +3234,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x56EC",
         "LoD/1.13c": "0x56EC"
+      },
+      "sizes": {
+        "LoD/1.12a": 444,
+        "LoD/1.13c": 444
       },
       "method": "MNE",
       "index": "MNE:478855be1acc46abf6139addf3589574"
@@ -2680,6 +3256,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF1A7",
         "LoD/1.13c": "0xF1A7",
         "LoD/1.13d": "0xF0E7"
+      },
+      "sizes": {
+        "LoD/1.11": 190,
+        "LoD/1.11b": 190,
+        "LoD/1.12a": 190,
+        "LoD/1.13c": 190,
+        "LoD/1.13d": 190
       },
       "name": "FindHandlerForForeignException",
       "signature": "void FindHandlerForForeignException(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4, _s_FuncInfo * param_5, int param_6, int param_7, EHRegistrationNode * param_8)",
@@ -2702,6 +3285,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xE82F",
         "LoD/1.13c": "0xE82F",
         "LoD/1.13d": "0xE76F"
+      },
+      "sizes": {
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43
       },
       "name": "_JumpToContinuation",
       "signature": "void _JumpToContinuation(void * param_1, EHRegistrationNode * param_2)",
@@ -2726,6 +3316,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x7658",
         "LoD/1.09d": "0x7658",
         "LoD/1.10": "0x7538"
+      },
+      "sizes": {
+        "LoD/1.07": 53,
+        "LoD/1.08": 53,
+        "LoD/1.09": 53,
+        "LoD/1.09b": 53,
+        "LoD/1.09d": 53,
+        "LoD/1.10": 53
       },
       "method": "MNE",
       "index": "MNE:48de6fa61a4bf40c36c288aa452eb3ad"
@@ -2757,6 +3355,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF65D",
         "LoD/1.13d": "0xF59D"
       },
+      "sizes": {
+        "LoD/1.07": 62,
+        "LoD/1.08": 62,
+        "LoD/1.09": 62,
+        "LoD/1.09b": 62,
+        "LoD/1.09d": 62,
+        "LoD/1.10": 62,
+        "LoD/1.11": 62,
+        "LoD/1.11b": 62,
+        "LoD/1.12a": 62,
+        "LoD/1.13c": 62,
+        "LoD/1.13d": 62
+      },
       "name": "__fassign",
       "signature": "void __fassign(int flag, char * argument, char * number)",
       "comment": "Library Function - Single Match\n __fassign\n\nLibrary: Visual Studio 2003 Release",
@@ -2779,6 +3390,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x496A",
         "LoD/1.13d": "0x48F5"
       },
+      "sizes": {
+        "LoD/1.11": 181,
+        "LoD/1.11b": 181,
+        "LoD/1.12a": 181,
+        "LoD/1.13c": 181,
+        "LoD/1.13d": 181
+      },
       "name": "doexit",
       "signature": "undefined doexit(UINT param_1, int param_2, int param_3)",
       "comment": "Library Function - Single Match\n _doexit\n\nLibrary: Visual Studio 2003 Release",
@@ -2800,6 +3418,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7E56",
         "LoD/1.13c": "0x7E56",
         "LoD/1.13d": "0x7DC7"
+      },
+      "sizes": {
+        "LoD/1.11": 102,
+        "LoD/1.11b": 102,
+        "LoD/1.12a": 102,
+        "LoD/1.13c": 102,
+        "LoD/1.13d": 102
       },
       "name": "___security_init_cookie",
       "signature": "void ___security_init_cookie(void)",
@@ -2825,6 +3450,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xEFD0",
         "LoD/1.10": "0xEEB0"
       },
+      "sizes": {
+        "LoD/1.07": 111,
+        "LoD/1.08": 111,
+        "LoD/1.09": 111,
+        "LoD/1.09b": 111,
+        "LoD/1.09d": 111,
+        "LoD/1.10": 111
+      },
       "method": "MNE",
       "index": "MNE:4b965c6b568965e3ac70ee94d9ada740"
     },
@@ -2844,6 +3477,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xCA10",
         "LoD/1.09d": "0xCA10",
         "LoD/1.10": "0xC8F0"
+      },
+      "sizes": {
+        "LoD/1.07": 56,
+        "LoD/1.08": 56,
+        "LoD/1.09": 56,
+        "LoD/1.09b": 56,
+        "LoD/1.09d": 56,
+        "LoD/1.10": 56
       },
       "name": "_strncmp",
       "signature": "int _strncmp(char * _Str1, char * _Str2, size_t _MaxCount)",
@@ -2869,6 +3510,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xDF76",
         "LoD/1.10": "0xDE56"
       },
+      "sizes": {
+        "LoD/1.07": 92,
+        "LoD/1.08": 92,
+        "LoD/1.09": 92,
+        "LoD/1.09b": 92,
+        "LoD/1.09d": 92,
+        "LoD/1.10": 92
+      },
       "method": "MNE",
       "index": "MNE:4c053343a65baac58fac65c0d3534b2b"
     },
@@ -2889,6 +3538,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xDEA5",
         "LoD/1.10": "0xDD85"
       },
+      "sizes": {
+        "LoD/1.07": 34,
+        "LoD/1.08": 34,
+        "LoD/1.09": 34,
+        "LoD/1.09b": 34,
+        "LoD/1.09d": 34,
+        "LoD/1.10": 34
+      },
       "method": "MNE",
       "index": "MNE:4ebd25a652d48fc0c3275eab0a712286"
     },
@@ -2906,6 +3563,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xDA8F",
         "LoD/1.09d": "0xDA8F",
         "LoD/1.10": "0xD96F"
+      },
+      "sizes": {
+        "LoD/1.08": 292,
+        "LoD/1.09": 292,
+        "LoD/1.09b": 292,
+        "LoD/1.09d": 292,
+        "LoD/1.10": 292
       },
       "method": "MNE",
       "index": "MNE:4f3543287939943021eaf1632a1582f1"
@@ -2926,6 +3590,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA699",
         "LoD/1.09d": "0xA699",
         "LoD/1.10": "0xA579"
+      },
+      "sizes": {
+        "LoD/1.07": 115,
+        "LoD/1.08": 115,
+        "LoD/1.09": 115,
+        "LoD/1.09b": 115,
+        "LoD/1.09d": 115,
+        "LoD/1.10": 115
       },
       "method": "MNE",
       "index": "MNE:4f4efd8121d403a870aeab94c4a12f4c"
@@ -2957,6 +3629,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xE866",
         "LoD/1.13d": "0xE7A6"
       },
+      "sizes": {
+        "LoD/1.07": 79,
+        "LoD/1.08": 79,
+        "LoD/1.09": 79,
+        "LoD/1.09b": 79,
+        "LoD/1.09d": 79,
+        "LoD/1.10": 79,
+        "LoD/1.11": 82,
+        "LoD/1.11b": 82,
+        "LoD/1.12a": 82,
+        "LoD/1.13c": 82,
+        "LoD/1.13d": 82
+      },
       "name": "_UnwindNestedFrames",
       "signature": "void _UnwindNestedFrames(EHRegistrationNode * param_1, EHExceptionRecord * param_2)",
       "comment": "Library Function - Single Match\n void __stdcall _UnwindNestedFrames(struct EHRegistrationNode *,struct EHExceptionRecord *)\n\nLibrary: Visual Studio 2003 Release",
@@ -2981,6 +3666,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x95E6",
         "LoD/1.10": "0x94C6"
       },
+      "sizes": {
+        "LoD/1.07": 436,
+        "LoD/1.08": 436,
+        "LoD/1.09": 436,
+        "LoD/1.09b": 436,
+        "LoD/1.09d": 436,
+        "LoD/1.10": 436
+      },
       "method": "MNE",
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0"
     },
@@ -2992,6 +3685,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x10542",
         "LoD/1.13c": "0x10542"
+      },
+      "sizes": {
+        "LoD/1.12a": 1039,
+        "LoD/1.13c": 1039
       },
       "method": "MNE",
       "index": "MNE:51067a812fadc7d24e800d427a3a129f"
@@ -3010,6 +3707,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4FD5",
         "LoD/1.13c": "0x4FD5",
         "LoD/1.13d": "0x4F5F"
+      },
+      "sizes": {
+        "LoD/1.11": 364,
+        "LoD/1.11b": 364,
+        "LoD/1.12a": 364,
+        "LoD/1.13c": 364,
+        "LoD/1.13d": 364
       },
       "name": "parse_cmdline",
       "signature": "undefined parse_cmdline(undefined4 * param_1, int * param_2)",
@@ -3035,6 +3739,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6A2E",
         "LoD/1.10": "0x690E"
       },
+      "sizes": {
+        "LoD/1.07": 139,
+        "LoD/1.08": 139,
+        "LoD/1.09": 139,
+        "LoD/1.09b": 139,
+        "LoD/1.09d": 139,
+        "LoD/1.10": 139
+      },
       "method": "MNE",
       "index": "MNE:534e7e7fed8d48d41353dab6322de72f"
     },
@@ -3055,6 +3767,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xBF33",
         "LoD/1.10": "0xBE13"
       },
+      "sizes": {
+        "LoD/1.07": 49,
+        "LoD/1.08": 49,
+        "LoD/1.09": 49,
+        "LoD/1.09b": 49,
+        "LoD/1.09d": 49,
+        "LoD/1.10": 49
+      },
       "method": "MNE",
       "index": "MNE:53a6ac985e66444c6c82f2b7b12d7c09"
     },
@@ -3072,6 +3792,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEFC4",
         "LoD/1.13c": "0xEFC4",
         "LoD/1.13d": "0xEF04"
+      },
+      "sizes": {
+        "LoD/1.11": 368,
+        "LoD/1.11b": 368,
+        "LoD/1.12a": 368,
+        "LoD/1.13c": 368,
+        "LoD/1.13d": 368
       },
       "name": "BuildCatchObject",
       "signature": "void BuildCatchObject(EHExceptionRecord * param_1, void * param_2, _s_HandlerType * param_3, _s_CatchableType * param_4)",
@@ -3107,6 +3834,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x33A6",
         "LoD/1.13d": "0x3336"
       },
+      "sizes": {
+        "LoD/1.07": 73,
+        "LoD/1.08": 73,
+        "LoD/1.09": 73,
+        "LoD/1.09b": 73,
+        "LoD/1.09d": 73,
+        "LoD/1.10": 73,
+        "LoD/1.11": 73,
+        "LoD/1.11b": 73,
+        "LoD/1.12a": 73,
+        "LoD/1.13c": 73,
+        "LoD/1.13d": 73
+      },
       "name": "__mtinitlocks",
       "signature": "int __mtinitlocks(void)",
       "comment": "Library Function - Single Match\n __mtinitlocks\n\nLibrary: Visual Studio 2003 Release",
@@ -3141,6 +3881,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF570",
         "LoD/1.13d": "0xF4B0"
       },
+      "sizes": {
+        "LoD/1.07": 76,
+        "LoD/1.08": 76,
+        "LoD/1.09": 76,
+        "LoD/1.09b": 76,
+        "LoD/1.09d": 76,
+        "LoD/1.10": 76,
+        "LoD/1.11": 76,
+        "LoD/1.11b": 76,
+        "LoD/1.12a": 76,
+        "LoD/1.13c": 76,
+        "LoD/1.13d": 76
+      },
       "name": "__CallSettingFrame@12",
       "signature": "undefined __CallSettingFrame@12(undefined4 param_1, undefined4 param_2, int param_3)",
       "comment": "Library Function - Single Match\n __CallSettingFrame@12\n\nLibraries: Visual Studio 2017 Debug, Visual Studio 2017 Release, Visual Studio 2019 Debug, Visual Studio 2019 Release",
@@ -3162,6 +3915,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x10103",
         "LoD/1.13c": "0x10103",
         "LoD/1.13d": "0x10019"
+      },
+      "sizes": {
+        "LoD/1.11": 142,
+        "LoD/1.11b": 142,
+        "LoD/1.12a": 142,
+        "LoD/1.13c": 142,
+        "LoD/1.13d": 142
       },
       "name": "__hw_cw",
       "signature": "uint __hw_cw(void)",
@@ -3187,6 +3947,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x76F6",
         "LoD/1.10": "0x75D6"
       },
+      "sizes": {
+        "LoD/1.07": 13,
+        "LoD/1.08": 13,
+        "LoD/1.09": 13,
+        "LoD/1.09b": 13,
+        "LoD/1.09d": 13,
+        "LoD/1.10": 13
+      },
       "method": "MNE",
       "index": "MNE:57ac66118a20c90490ffe62af18c6499"
     },
@@ -3207,6 +3975,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE74A",
         "LoD/1.10": "0xE62A"
       },
+      "sizes": {
+        "LoD/1.07": 46,
+        "LoD/1.08": 46,
+        "LoD/1.09": 46,
+        "LoD/1.09b": 46,
+        "LoD/1.09d": 46,
+        "LoD/1.10": 46
+      },
       "method": "MNE",
       "index": "MNE:58ce78ec7b76961d09886d9a93b93cae"
     },
@@ -3225,6 +4001,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xF03F",
         "LoD/1.10": "0xEF1F"
       },
+      "sizes": {
+        "LoD/1.08": 204,
+        "LoD/1.09": 204,
+        "LoD/1.09b": 204,
+        "LoD/1.09d": 204,
+        "LoD/1.10": 204
+      },
       "method": "MNE",
       "index": "MNE:5918dc16e1bf74054af7a7988b490678"
     },
@@ -3242,6 +4025,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4EB1",
         "LoD/1.13c": "0x4EB1",
         "LoD/1.13d": "0x4E3B"
+      },
+      "sizes": {
+        "LoD/1.11": 93,
+        "LoD/1.11b": 93,
+        "LoD/1.12a": 93,
+        "LoD/1.13c": 93,
+        "LoD/1.13d": 93
       },
       "name": "__wincmdln",
       "signature": "byte * __wincmdln(void)",
@@ -3267,6 +4057,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA448",
         "LoD/1.10": "0xA328"
       },
+      "sizes": {
+        "LoD/1.07": 97,
+        "LoD/1.08": 97,
+        "LoD/1.09": 97,
+        "LoD/1.09b": 97,
+        "LoD/1.09d": 97,
+        "LoD/1.10": 97
+      },
       "method": "MNE",
       "index": "MNE:5ba7875cbad7a3d5fce31ff25fd40455"
     },
@@ -3285,6 +4083,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x11E0",
         "LoD/1.13d": "0x11E0"
       },
+      "sizes": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
       "method": "MNE",
       "index": "MNE:5c73446e6da2bc552d6d981beccb1347"
     },
@@ -3302,6 +4107,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1776",
         "LoD/1.13c": "0x189E",
         "LoD/1.13d": "0x1776"
+      },
+      "sizes": {
+        "LoD/1.11": 50,
+        "LoD/1.11b": 50,
+        "LoD/1.12a": 50,
+        "LoD/1.13c": 50,
+        "LoD/1.13d": 50
       },
       "name": "__onexit",
       "signature": "_onexit_t __onexit(_onexit_t _Func)",
@@ -3327,6 +4139,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8824",
         "LoD/1.10": "0x8704"
       },
+      "sizes": {
+        "LoD/1.07": 440,
+        "LoD/1.08": 440,
+        "LoD/1.09": 440,
+        "LoD/1.09b": 440,
+        "LoD/1.09d": 440,
+        "LoD/1.10": 440
+      },
       "method": "MNE",
       "index": "MNE:5d9faef2c102c03bf273541fb527de6c"
     },
@@ -3346,6 +4166,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xF4BA",
         "LoD/1.09d": "0xF4BA",
         "LoD/1.10": "0xF39A"
+      },
+      "sizes": {
+        "LoD/1.07": 124,
+        "LoD/1.08": 124,
+        "LoD/1.09": 124,
+        "LoD/1.09b": 124,
+        "LoD/1.09d": 124,
+        "LoD/1.10": 124
       },
       "method": "MNE",
       "index": "MNE:5da54fa8fcd8f9f672e8d39458e0992c"
@@ -3367,42 +4195,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6DE0",
         "LoD/1.10": "0x6CC0"
       },
+      "sizes": {
+        "LoD/1.07": 31,
+        "LoD/1.08": 31,
+        "LoD/1.09": 31,
+        "LoD/1.09b": 31,
+        "LoD/1.09d": 31,
+        "LoD/1.10": 31
+      },
       "method": "MNE",
-      "index": "MNE:5eebfcd0189b5203a29c76a57896a0fd",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x00409905",
-          "rva": "0x9905",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x0040C255",
-          "rva": "0xC255",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x004097A5",
-          "rva": "0x97A5",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x0040C315",
-          "rva": "0xC315",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:5eebfcd0189b5203a29c76a57896a0fd"
     },
     "D2VidTst_MNE_5f0a02e62ada": {
       "addresses": {
@@ -3412,6 +4214,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x247B",
         "LoD/1.13c": "0x247F"
+      },
+      "sizes": {
+        "LoD/1.12a": 3562,
+        "LoD/1.13c": 3562
       },
       "method": "MNE",
       "index": "MNE:5f0a02e62adac2799c8b81b6ee957515"
@@ -3430,6 +4236,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x6DC0",
         "LoD/1.13c": "0x6DC0",
         "LoD/1.13d": "0x6D60"
+      },
+      "sizes": {
+        "LoD/1.11": 70,
+        "LoD/1.11b": 70,
+        "LoD/1.12a": 70,
+        "LoD/1.13c": 70,
+        "LoD/1.13d": 70
       },
       "name": "_strcspn",
       "signature": "size_t _strcspn(char * _Str, char * _Control)",
@@ -3452,6 +4265,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x55CD",
         "LoD/1.13c": "0x55CD",
         "LoD/1.13d": "0x555D"
+      },
+      "sizes": {
+        "LoD/1.11": 116,
+        "LoD/1.11b": 116,
+        "LoD/1.12a": 116,
+        "LoD/1.13c": 116,
+        "LoD/1.13d": 116
       },
       "name": "__lseek_lk",
       "signature": "DWORD __lseek_lk(uint param_1, LONG param_2, DWORD param_3)",
@@ -3477,6 +4297,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6AD0",
         "LoD/1.10": "0x69B0"
       },
+      "sizes": {
+        "LoD/1.07": 254,
+        "LoD/1.08": 254,
+        "LoD/1.09": 254,
+        "LoD/1.09b": 254,
+        "LoD/1.09d": 254,
+        "LoD/1.10": 254
+      },
       "name": "_strncpy",
       "signature": "char * _strncpy(char * _Dest, char * _Source, size_t _Count)",
       "comment": "Library Function - Single Match\n _strncpy\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
@@ -3492,6 +4320,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x46F4",
         "LoD/1.13c": "0x46F4"
+      },
+      "sizes": {
+        "LoD/1.12a": 417,
+        "LoD/1.13c": 417
       },
       "method": "MNE",
       "index": "MNE:630b0e4f3169af3d32abd2ac2d1bf3c9"
@@ -3513,6 +4345,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xC1B7",
         "LoD/1.10": "0xC097"
       },
+      "sizes": {
+        "LoD/1.07": 389,
+        "LoD/1.08": 389,
+        "LoD/1.09": 389,
+        "LoD/1.09b": 389,
+        "LoD/1.09d": 389,
+        "LoD/1.10": 389
+      },
       "method": "MNE",
       "index": "MNE:63906d1f35f7842042066a6643d2050c"
     },
@@ -3524,6 +4364,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0xF766",
         "LoD/1.13c": "0xF766"
+      },
+      "sizes": {
+        "LoD/1.12a": 112,
+        "LoD/1.13c": 112
       },
       "method": "MNE",
       "index": "MNE:6426717c049ff49b2b81b64802cbd366"
@@ -3540,6 +4384,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0xC890",
         "LoD/1.12a": "0xC950",
         "LoD/1.13d": "0xC890"
+      },
+      "sizes": {
+        "LoD/1.11": 153,
+        "LoD/1.11b": 153,
+        "LoD/1.12a": 153,
+        "LoD/1.13d": 153
       },
       "method": "MNE",
       "index": "MNE:65cf290920e9b73d371b08da2d8f3b2d"
@@ -3561,6 +4411,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xF720",
         "LoD/1.10": "0xF600"
       },
+      "sizes": {
+        "LoD/1.07": 257,
+        "LoD/1.08": 257,
+        "LoD/1.09": 257,
+        "LoD/1.09b": 257,
+        "LoD/1.09d": 257,
+        "LoD/1.10": 257
+      },
       "method": "MNE",
       "index": "MNE:662566ebcde3842108cf876001e2ae79"
     },
@@ -3580,6 +4438,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xAC75",
         "LoD/1.09d": "0xAC75",
         "LoD/1.10": "0xAB55"
+      },
+      "sizes": {
+        "LoD/1.07": 93,
+        "LoD/1.08": 93,
+        "LoD/1.09": 93,
+        "LoD/1.09b": 93,
+        "LoD/1.09d": 93,
+        "LoD/1.10": 93
       },
       "method": "MNE",
       "index": "MNE:675bb591e22e0f8ae9a8ce84e04c6a66"
@@ -3601,6 +4467,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6548",
         "LoD/1.10": "0x6428"
       },
+      "sizes": {
+        "LoD/1.07": 82,
+        "LoD/1.08": 82,
+        "LoD/1.09": 82,
+        "LoD/1.09b": 82,
+        "LoD/1.09d": 82,
+        "LoD/1.10": 82
+      },
       "method": "MNE",
       "index": "MNE:679e7391cc431bfbfb578a6a70c8d79c"
     },
@@ -3618,6 +4492,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5E19",
         "LoD/1.13c": "0x5E19",
         "LoD/1.13d": "0x5DB9"
+      },
+      "sizes": {
+        "LoD/1.11": 108,
+        "LoD/1.11b": 108,
+        "LoD/1.12a": 108,
+        "LoD/1.13c": 108,
+        "LoD/1.13d": 108
       },
       "name": "__ungetc_lk",
       "signature": "uint __ungetc_lk(uint param_1, FILE * param_2)",
@@ -3641,6 +4522,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5BF0",
         "LoD/1.13d": "0x5B90"
       },
+      "sizes": {
+        "LoD/1.11": 149,
+        "LoD/1.11b": 149,
+        "LoD/1.12a": 149,
+        "LoD/1.13c": 149,
+        "LoD/1.13d": 149
+      },
       "name": "__aulldvrm",
       "signature": "undefined8 __aulldvrm(uint param_1, uint param_2, uint param_3, uint param_4)",
       "comment": "Library Function - Single Match\n __aulldvrm\n\nLibrary: Visual Studio 2003 Release",
@@ -3663,6 +4551,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x69F0",
         "LoD/1.13d": "0x6990"
       },
+      "sizes": {
+        "LoD/1.11": 400,
+        "LoD/1.11b": 400,
+        "LoD/1.12a": 400,
+        "LoD/1.13c": 400,
+        "LoD/1.13d": 400
+      },
       "name": "___free_lc_time",
       "signature": "undefined ___free_lc_time(undefined4 * param_1)",
       "comment": "Library Function - Single Match\n ___free_lc_time\n\nLibrary: Visual Studio 2003 Release",
@@ -3678,6 +4573,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x10E54",
         "LoD/1.13c": "0x10E54"
+      },
+      "sizes": {
+        "LoD/1.12a": 142,
+        "LoD/1.13c": 142
       },
       "method": "MNE",
       "index": "MNE:6cc300b1da5eeec1802d54785701cebf"
@@ -3696,6 +4595,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEB44",
         "LoD/1.13c": "0xEB44",
         "LoD/1.13d": "0xEA84"
+      },
+      "sizes": {
+        "LoD/1.11": 33,
+        "LoD/1.11b": 33,
+        "LoD/1.12a": 33,
+        "LoD/1.13c": 33,
+        "LoD/1.13d": 33
       },
       "name": "IsExceptionObjectToBeDestroyed",
       "signature": "int IsExceptionObjectToBeDestroyed(void * param_1)",
@@ -3720,6 +4626,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x8B33",
         "LoD/1.09d": "0x8B33",
         "LoD/1.10": "0x8A13"
+      },
+      "sizes": {
+        "LoD/1.07": 103,
+        "LoD/1.08": 103,
+        "LoD/1.09": 103,
+        "LoD/1.09b": 103,
+        "LoD/1.09d": 103,
+        "LoD/1.10": 103
       },
       "method": "MNE",
       "index": "MNE:6dad5d06763847d66c3aa4a89105e250"
@@ -3751,6 +4665,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5953",
         "LoD/1.13d": "0x58F5"
       },
+      "sizes": {
+        "LoD/1.07": 68,
+        "LoD/1.08": 68,
+        "LoD/1.09": 68,
+        "LoD/1.09b": 68,
+        "LoD/1.09d": 68,
+        "LoD/1.10": 68,
+        "LoD/1.11": 68,
+        "LoD/1.11b": 68,
+        "LoD/1.12a": 68,
+        "LoD/1.13c": 68,
+        "LoD/1.13d": 68
+      },
       "name": "__getbuf",
       "signature": "void __getbuf(FILE * _File)",
       "comment": "Library Function - Single Match\n __getbuf\n\nLibrary: Visual Studio 2003 Release",
@@ -3767,6 +4694,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1045A",
         "LoD/1.13c": "0x1045A"
       },
+      "sizes": {
+        "LoD/1.12a": 232,
+        "LoD/1.13c": 232
+      },
       "method": "MNE",
       "index": "MNE:6dd9e098c401c5314529c240c6cfca58"
     },
@@ -3780,6 +4711,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0xFF1B",
         "LoD/1.11b": "0xFF1B",
         "LoD/1.13d": "0xFF1B"
+      },
+      "sizes": {
+        "LoD/1.11": 108,
+        "LoD/1.11b": 108,
+        "LoD/1.13d": 108
       },
       "name": "__fltout2",
       "signature": "STRFLT __fltout2(_CRT_DOUBLE _Dbl, STRFLT _Flt, char * _ResultStr, size_t _SizeInBytes)",
@@ -3805,6 +4741,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x670E",
         "LoD/1.10": "0x65EE"
       },
+      "sizes": {
+        "LoD/1.07": 182,
+        "LoD/1.08": 182,
+        "LoD/1.09": 182,
+        "LoD/1.09b": 182,
+        "LoD/1.09d": 182,
+        "LoD/1.10": 182
+      },
       "method": "MNE",
       "index": "MNE:6e30ba34774d96f56de33b628859ffe5"
     },
@@ -3825,6 +4769,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x9494",
         "LoD/1.10": "0x9374"
       },
+      "sizes": {
+        "LoD/1.07": 185,
+        "LoD/1.08": 185,
+        "LoD/1.09": 185,
+        "LoD/1.09b": 185,
+        "LoD/1.09d": 185,
+        "LoD/1.10": 185
+      },
       "method": "MNE",
       "index": "MNE:6e538b3bbbeec8f94bef058bdad701fe"
     },
@@ -3842,6 +4794,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFB1A",
         "LoD/1.13c": "0xFB1A",
         "LoD/1.13d": "0xFA4C"
+      },
+      "sizes": {
+        "LoD/1.11": 50,
+        "LoD/1.11b": 50,
+        "LoD/1.12a": 50,
+        "LoD/1.13c": 50,
+        "LoD/1.13d": 50
       },
       "name": "__ZeroTail",
       "signature": "undefined4 __ZeroTail(int param_1, int param_2)",
@@ -3866,6 +4825,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xE2BD",
         "LoD/1.09d": "0xE2BD",
         "LoD/1.10": "0xE19D"
+      },
+      "sizes": {
+        "LoD/1.07": 386,
+        "LoD/1.08": 386,
+        "LoD/1.09": 386,
+        "LoD/1.09b": 386,
+        "LoD/1.09d": 386,
+        "LoD/1.10": 386
       },
       "method": "MNE",
       "index": "MNE:6fd8fa0a9a06bd481e09533e1d62de94"
@@ -3897,6 +4864,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6CC0",
         "LoD/1.13d": "0x6C60"
       },
+      "sizes": {
+        "LoD/1.07": 7,
+        "LoD/1.08": 7,
+        "LoD/1.09": 7,
+        "LoD/1.09b": 7,
+        "LoD/1.09d": 7,
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7
+      },
       "method": "MNE",
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8"
     },
@@ -3917,6 +4897,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8EEB",
         "LoD/1.10": "0x8DCB"
       },
+      "sizes": {
+        "LoD/1.07": 85,
+        "LoD/1.08": 85,
+        "LoD/1.09": 85,
+        "LoD/1.09b": 85,
+        "LoD/1.09d": 85,
+        "LoD/1.10": 85
+      },
       "method": "MNE",
       "index": "MNE:7087168427d0bddca2ba323be7c412bf"
     },
@@ -3934,6 +4922,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF265",
         "LoD/1.13c": "0xF265",
         "LoD/1.13d": "0xF1A5"
+      },
+      "sizes": {
+        "LoD/1.11": 516,
+        "LoD/1.11b": 516,
+        "LoD/1.12a": 516,
+        "LoD/1.13c": 516,
+        "LoD/1.13d": 516
       },
       "name": "FindHandler",
       "signature": "void FindHandler(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4, _s_FuncInfo * param_5, uchar param_6, int param_7, EHRegistrationNode * param_8)",
@@ -3956,6 +4951,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x3A72",
         "LoD/1.13c": "0x3A72",
         "LoD/1.13d": "0x3A02"
+      },
+      "sizes": {
+        "LoD/1.11": 735,
+        "LoD/1.11b": 735,
+        "LoD/1.12a": 735,
+        "LoD/1.13c": 735,
+        "LoD/1.13d": 735
       },
       "name": "___sbh_resize_block",
       "signature": "undefined4 ___sbh_resize_block(uint * param_1, int param_2, int param_3)",
@@ -3991,6 +4993,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xCC60",
         "LoD/1.13d": "0xCC40"
       },
+      "sizes": {
+        "LoD/1.07": 546,
+        "LoD/1.08": 520,
+        "LoD/1.09": 520,
+        "LoD/1.09b": 520,
+        "LoD/1.09d": 520,
+        "LoD/1.10": 520,
+        "LoD/1.11": 623,
+        "LoD/1.11b": 623,
+        "LoD/1.12a": 623,
+        "LoD/1.13c": 623,
+        "LoD/1.13d": 623
+      },
       "method": "MNE",
       "index": "MNE:736978bb623debfc404b776f2b08e960"
     },
@@ -4010,6 +5025,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xAE20",
         "LoD/1.09d": "0xAE20",
         "LoD/1.10": "0xAD00"
+      },
+      "sizes": {
+        "LoD/1.07": 31,
+        "LoD/1.08": 31,
+        "LoD/1.09": 31,
+        "LoD/1.09b": 31,
+        "LoD/1.09d": 31,
+        "LoD/1.10": 31
       },
       "name": "__allshl",
       "signature": "longlong __allshl(byte param_1, int param_2)",
@@ -4034,6 +5057,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x8CCA",
         "LoD/1.09d": "0x8CCA",
         "LoD/1.10": "0x8BAA"
+      },
+      "sizes": {
+        "LoD/1.07": 90,
+        "LoD/1.08": 90,
+        "LoD/1.09": 90,
+        "LoD/1.09b": 90,
+        "LoD/1.09d": 90,
+        "LoD/1.10": 90
       },
       "method": "MNE",
       "index": "MNE:76bcdc60e2279c3182537e650d7ffd3e"
@@ -4065,6 +5096,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xE85F",
         "LoD/1.13d": "0xE79F"
       },
+      "sizes": {
+        "LoD/1.07": 7,
+        "LoD/1.08": 7,
+        "LoD/1.09": 7,
+        "LoD/1.09b": 7,
+        "LoD/1.09d": 7,
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7
+      },
       "name": "FID_conflict:_CallMemberFunction1",
       "signature": "undefined FID_conflict:_CallMemberFunction1(undefined4 param_1, undefined * UNRECOVERED_JUMPTABLE)",
       "comment": "Library Function - Multiple Matches With Different Base Names\n void __stdcall _CallMemberFunction1(void *,void *,void *)\n void __stdcall _CallMemberFunction2(void *,void *,void *,int)\n\nLibrary: Visual Studio 2003 Release",
@@ -4086,6 +5130,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1641",
         "LoD/1.13c": "0x1769",
         "LoD/1.13d": "0x1641"
+      },
+      "sizes": {
+        "LoD/1.11": 136,
+        "LoD/1.11b": 136,
+        "LoD/1.12a": 136,
+        "LoD/1.13c": 136,
+        "LoD/1.13d": 136
       },
       "name": "_atol",
       "signature": "long _atol(char * _Str)",
@@ -4111,6 +5162,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x954D",
         "LoD/1.10": "0x942D"
       },
+      "sizes": {
+        "LoD/1.07": 153,
+        "LoD/1.08": 153,
+        "LoD/1.09": 153,
+        "LoD/1.09b": 153,
+        "LoD/1.09d": 153,
+        "LoD/1.10": 153
+      },
       "method": "MNE",
       "index": "MNE:78c0be793b204c577b78460711bf70fb"
     },
@@ -4128,6 +5187,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4D4D",
         "LoD/1.13c": "0x4D4D",
         "LoD/1.13d": "0x4CD7"
+      },
+      "sizes": {
+        "LoD/1.11": 356,
+        "LoD/1.11b": 356,
+        "LoD/1.12a": 356,
+        "LoD/1.13c": 356,
+        "LoD/1.13d": 356
       },
       "name": "__XcptFilter",
       "signature": "int __XcptFilter(ulong _ExceptionNum, _EXCEPTION_POINTERS * _ExceptionPtr)",
@@ -4151,6 +5217,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x17F6",
         "LoD/1.13d": "0x16CE"
       },
+      "sizes": {
+        "LoD/1.11": 128,
+        "LoD/1.11b": 128,
+        "LoD/1.12a": 128,
+        "LoD/1.13c": 128,
+        "LoD/1.13d": 128
+      },
       "name": "__onexit_lk",
       "signature": "undefined __onexit_lk(void)",
       "comment": "Library Function - Single Match\n __onexit_lk\n\nLibrary: Visual Studio 2003 Release",
@@ -4173,6 +5246,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x4A4F",
         "LoD/1.13d": "0x49DA"
       },
+      "sizes": {
+        "LoD/1.11": 15,
+        "LoD/1.11b": 15,
+        "LoD/1.12a": 15,
+        "LoD/1.13c": 15,
+        "LoD/1.13d": 15
+      },
       "name": "__cexit",
       "signature": "void __cexit(void)",
       "comment": "Library Function - Single Match\n __cexit\n\nLibrary: Visual Studio 2003 Release",
@@ -4194,6 +5274,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF9DB",
         "LoD/1.13c": "0xF9DB",
         "LoD/1.13d": "0xF90D"
+      },
+      "sizes": {
+        "LoD/1.11": 64,
+        "LoD/1.11b": 64,
+        "LoD/1.12a": 64,
+        "LoD/1.13c": 64,
+        "LoD/1.13d": 64
       },
       "name": "__ms_p5_test_fdiv",
       "signature": "undefined4 __ms_p5_test_fdiv(void)",
@@ -4219,6 +5306,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB963",
         "LoD/1.10": "0xB843"
       },
+      "sizes": {
+        "LoD/1.07": 364,
+        "LoD/1.08": 364,
+        "LoD/1.09": 364,
+        "LoD/1.09b": 364,
+        "LoD/1.09d": 364,
+        "LoD/1.10": 364
+      },
       "method": "MNE",
       "index": "MNE:7af322ad22a8e231117c7fe6d2adf33c"
     },
@@ -4237,6 +5332,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF5BC",
         "LoD/1.13d": "0xF4FC"
       },
+      "sizes": {
+        "LoD/1.11": 60,
+        "LoD/1.11b": 60,
+        "LoD/1.12a": 60,
+        "LoD/1.13c": 60,
+        "LoD/1.13d": 60
+      },
       "method": "MNE",
       "index": "MNE:7ee678edebf04632b65afdb541cebe3a"
     },
@@ -4254,6 +5356,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFCBA",
         "LoD/1.13c": "0xFCBA",
         "LoD/1.13d": "0xFBEC"
+      },
+      "sizes": {
+        "LoD/1.11": 344,
+        "LoD/1.11b": 344,
+        "LoD/1.12a": 344,
+        "LoD/1.13c": 344,
+        "LoD/1.13d": 344
       },
       "name": "__ld12cvt",
       "signature": "undefined4 __ld12cvt(ushort * param_1, uint * param_2, int * param_3)",
@@ -4279,6 +5388,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB8BB",
         "LoD/1.10": "0xB79B"
       },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27
+      },
       "method": "MNE",
       "index": "MNE:7ef9c351fc7bceec813ab833e5911666"
     },
@@ -4296,6 +5413,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4A6D",
         "LoD/1.13c": "0x4A6D",
         "LoD/1.13d": "0x49F8"
+      },
+      "sizes": {
+        "LoD/1.11": 106,
+        "LoD/1.11b": 106,
+        "LoD/1.12a": 106,
+        "LoD/1.13c": 106,
+        "LoD/1.13d": 106
       },
       "name": "__msize",
       "signature": "size_t __msize(void * _Memory)",
@@ -4321,6 +5445,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xACD2",
         "LoD/1.10": "0xABB2"
       },
+      "sizes": {
+        "LoD/1.07": 201,
+        "LoD/1.08": 201,
+        "LoD/1.09": 201,
+        "LoD/1.09b": 201,
+        "LoD/1.09d": 201,
+        "LoD/1.10": 201
+      },
       "method": "MNE",
       "index": "MNE:80ec585e360a4ba82011b528eedfca83"
     },
@@ -4338,6 +5470,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x660D",
         "LoD/1.13c": "0x660D",
         "LoD/1.13d": "0x65AD"
+      },
+      "sizes": {
+        "LoD/1.11": 553,
+        "LoD/1.11b": 553,
+        "LoD/1.12a": 553,
+        "LoD/1.13c": 553,
+        "LoD/1.13d": 553
       },
       "name": "__ValidateEH3RN",
       "signature": "undefined4 __ValidateEH3RN(void * param_1)",
@@ -4361,6 +5500,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x42EC",
         "LoD/1.13d": "0x427C"
       },
+      "sizes": {
+        "LoD/1.11": 193,
+        "LoD/1.11b": 193,
+        "LoD/1.12a": 193,
+        "LoD/1.13c": 193,
+        "LoD/1.13d": 193
+      },
       "name": "___updatetlocinfo_lk",
       "signature": "int ___updatetlocinfo_lk(void)",
       "comment": "Library Function - Single Match\n ___updatetlocinfo_lk\n\nLibrary: Visual Studio 2003 Release",
@@ -4382,6 +5528,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7AC3",
         "LoD/1.13c": "0x7AC3",
         "LoD/1.13d": "0x7A34"
+      },
+      "sizes": {
+        "LoD/1.11": 65,
+        "LoD/1.11b": 65,
+        "LoD/1.12a": 65,
+        "LoD/1.13c": 65,
+        "LoD/1.13d": 65
       },
       "name": "__get_osfhandle",
       "signature": "intptr_t __get_osfhandle(int _FileHandle)",
@@ -4405,6 +5558,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8971",
         "LoD/1.13d": "0x88B7"
       },
+      "sizes": {
+        "LoD/1.11": 177,
+        "LoD/1.11b": 177,
+        "LoD/1.12a": 177,
+        "LoD/1.13c": 177,
+        "LoD/1.13d": 177
+      },
       "method": "MNE",
       "index": "MNE:843e3db8ac5607bba3d919f4ee9bcace"
     },
@@ -4424,6 +5584,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xBCF0",
         "LoD/1.09d": "0xBCF0",
         "LoD/1.10": "0xBBD0"
+      },
+      "sizes": {
+        "LoD/1.07": 224,
+        "LoD/1.08": 224,
+        "LoD/1.09": 224,
+        "LoD/1.09b": 224,
+        "LoD/1.09d": 224,
+        "LoD/1.10": 224
       },
       "method": "MNE",
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6"
@@ -4445,6 +5613,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x87AC",
         "LoD/1.10": "0x868C"
       },
+      "sizes": {
+        "LoD/1.07": 78,
+        "LoD/1.08": 78,
+        "LoD/1.09": 78,
+        "LoD/1.09b": 78,
+        "LoD/1.09d": 78,
+        "LoD/1.10": 78
+      },
       "method": "MNE",
       "index": "MNE:84f733a34932ba1d84f1e0708b18403c"
     },
@@ -4462,6 +5638,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEDE1",
         "LoD/1.13c": "0xEDE1",
         "LoD/1.13d": "0xED21"
+      },
+      "sizes": {
+        "LoD/1.11": 31,
+        "LoD/1.11b": 31,
+        "LoD/1.12a": 31,
+        "LoD/1.13c": 31,
+        "LoD/1.13d": 31
       },
       "name": "AdjustPointer",
       "signature": "void * AdjustPointer(void * param_1, PMD * param_2)",
@@ -4484,6 +5667,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x8E09",
         "LoD/1.13c": "0x8E09",
         "LoD/1.13d": "0x8D49"
+      },
+      "sizes": {
+        "LoD/1.11": 26,
+        "LoD/1.11b": 26,
+        "LoD/1.12a": 26,
+        "LoD/1.13c": 26,
+        "LoD/1.13d": 26
       },
       "name": "_ATL_BASE_MODULE70",
       "signature": "undefined _ATL_BASE_MODULE70(_ATL_BASE_MODULE70 * this)",
@@ -4508,6 +5698,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xDE46",
         "LoD/1.09d": "0xDE46",
         "LoD/1.10": "0xDD26"
+      },
+      "sizes": {
+        "LoD/1.07": 95,
+        "LoD/1.08": 95,
+        "LoD/1.09": 95,
+        "LoD/1.09b": 95,
+        "LoD/1.09d": 95,
+        "LoD/1.10": 95
       },
       "method": "MNE",
       "index": "MNE:89c8ec97483b3d89b792dc7acc8a9af7"
@@ -4539,6 +5737,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x418A",
         "LoD/1.13d": "0x411A"
       },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27,
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27
+      },
       "method": "MNE",
       "index": "MNE:89d1b619054116ad559c7c543db397fd"
     },
@@ -4556,6 +5767,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEF55",
         "LoD/1.13c": "0xEF55",
         "LoD/1.13d": "0xEE95"
+      },
+      "sizes": {
+        "LoD/1.11": 111,
+        "LoD/1.11b": 111,
+        "LoD/1.12a": 111,
+        "LoD/1.13c": 111,
+        "LoD/1.13d": 111
       },
       "name": "__heap_alloc",
       "signature": "void * __heap_alloc(size_t _Size)",
@@ -4578,6 +5796,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x359D",
         "LoD/1.13c": "0x359D",
         "LoD/1.13d": "0x352D"
+      },
+      "sizes": {
+        "LoD/1.11": 792,
+        "LoD/1.11b": 792,
+        "LoD/1.12a": 792,
+        "LoD/1.13c": 792,
+        "LoD/1.13d": 792
       },
       "name": "___sbh_free_block",
       "signature": "undefined ___sbh_free_block(uint * param_1, int param_2)",
@@ -4603,6 +5828,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xF650",
         "LoD/1.10": "0xF530"
       },
+      "sizes": {
+        "LoD/1.07": 208,
+        "LoD/1.08": 208,
+        "LoD/1.09": 208,
+        "LoD/1.09b": 208,
+        "LoD/1.09d": 208,
+        "LoD/1.10": 208
+      },
       "method": "MNE",
       "index": "MNE:8c1ef08c13327b78f680f81ff5d26364"
     },
@@ -4616,6 +5849,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x4684",
         "LoD/1.11b": "0x4684",
         "LoD/1.13d": "0x4684"
+      },
+      "sizes": {
+        "LoD/1.11": 412,
+        "LoD/1.11b": 412,
+        "LoD/1.13d": 412
       },
       "name": "_realloc",
       "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
@@ -4651,6 +5889,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x103A1",
         "LoD/1.13d": "0x102B7"
       },
+      "sizes": {
+        "LoD/1.07": 94,
+        "LoD/1.08": 94,
+        "LoD/1.09": 94,
+        "LoD/1.09b": 94,
+        "LoD/1.09d": 94,
+        "LoD/1.10": 94,
+        "LoD/1.11": 94,
+        "LoD/1.11b": 94,
+        "LoD/1.12a": 94,
+        "LoD/1.13c": 94,
+        "LoD/1.13d": 94
+      },
       "name": "___add_12",
       "signature": "undefined ___add_12(uint * param_1, uint * param_2)",
       "comment": "Library Function - Single Match\n ___add_12\n\nLibrary: Visual Studio 2003 Release",
@@ -4673,6 +5924,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1230",
         "LoD/1.13d": "0x1230"
       },
+      "sizes": {
+        "LoD/1.11": 107,
+        "LoD/1.11b": 107,
+        "LoD/1.12a": 107,
+        "LoD/1.13c": 107,
+        "LoD/1.13d": 107
+      },
       "method": "MNE",
       "index": "MNE:8f1ca339ad6427a15e24d2eb1e58d366"
     },
@@ -4693,6 +5951,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xC111",
         "LoD/1.10": "0xBFF1"
       },
+      "sizes": {
+        "LoD/1.07": 74,
+        "LoD/1.08": 74,
+        "LoD/1.09": 74,
+        "LoD/1.09b": 74,
+        "LoD/1.09d": 74,
+        "LoD/1.10": 74
+      },
       "method": "MNE",
       "index": "MNE:8f2a733057dd5a290f0e17d077c53986"
     },
@@ -4711,6 +5977,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x38B5",
         "LoD/1.13d": "0x3845"
       },
+      "sizes": {
+        "LoD/1.11": 183,
+        "LoD/1.11b": 183,
+        "LoD/1.12a": 183,
+        "LoD/1.13c": 183,
+        "LoD/1.13d": 183
+      },
       "name": "___sbh_alloc_new_region",
       "signature": "undefined4 * ___sbh_alloc_new_region(void)",
       "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release",
@@ -4728,6 +6001,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x72C0",
         "LoD/1.11b": "0x72C0",
         "LoD/1.13d": "0x72C0"
+      },
+      "sizes": {
+        "LoD/1.11": 175,
+        "LoD/1.11b": 175,
+        "LoD/1.13d": 175
       },
       "name": "_calloc",
       "signature": "void * _calloc(size_t _Count, size_t _Size)",
@@ -4753,6 +6031,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xBB55",
         "LoD/1.10": "0xBA35"
       },
+      "sizes": {
+        "LoD/1.07": 119,
+        "LoD/1.08": 119,
+        "LoD/1.09": 119,
+        "LoD/1.09b": 119,
+        "LoD/1.09d": 119,
+        "LoD/1.10": 119
+      },
       "method": "MNE",
       "index": "MNE:91502dc0968a39359be974ca352b925c"
     },
@@ -4772,6 +6058,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xF29A",
         "LoD/1.09d": "0xF29A",
         "LoD/1.10": "0xF17A"
+      },
+      "sizes": {
+        "LoD/1.07": 544,
+        "LoD/1.08": 544,
+        "LoD/1.09": 544,
+        "LoD/1.09b": 544,
+        "LoD/1.09d": 544,
+        "LoD/1.10": 544
       },
       "method": "MNE",
       "index": "MNE:9164e08642353fc9b6a5a942bb4e12cf"
@@ -4793,6 +6087,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x91A4",
         "LoD/1.10": "0x9084"
       },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45
+      },
       "method": "MNE",
       "index": "MNE:91b5192dddb89e963abc2be4471149da"
     },
@@ -4805,6 +6107,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFFF9",
         "LoD/1.13c": "0xFFF9"
       },
+      "sizes": {
+        "LoD/1.12a": 120,
+        "LoD/1.13c": 120
+      },
       "method": "MNE",
       "index": "MNE:91e85de7f1df15bac4c74b0caf518a31"
     },
@@ -4816,6 +6122,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x84FE",
         "LoD/1.13c": "0x84FE"
+      },
+      "sizes": {
+        "LoD/1.12a": 912,
+        "LoD/1.13c": 912
       },
       "method": "MNE",
       "index": "MNE:9202742c31e7fad9c07478efa934202a"
@@ -4834,6 +6144,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1410",
         "LoD/1.13c": "0x1410",
         "LoD/1.13d": "0x1410"
+      },
+      "sizes": {
+        "LoD/1.11": 54,
+        "LoD/1.11b": 54,
+        "LoD/1.12a": 54,
+        "LoD/1.13c": 54,
+        "LoD/1.13d": 54
       },
       "method": "MNE",
       "index": "MNE:92144b2f5cf531a7090569e6c9590a02"
@@ -4855,6 +6172,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xDE04",
         "LoD/1.10": "0xDCE4"
       },
+      "sizes": {
+        "LoD/1.07": 66,
+        "LoD/1.08": 66,
+        "LoD/1.09": 66,
+        "LoD/1.09b": 66,
+        "LoD/1.09d": 66,
+        "LoD/1.10": 66
+      },
       "method": "MNE",
       "index": "MNE:925a8d581e90d1850e90a2aaf94686cb"
     },
@@ -4875,6 +6200,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x943C",
         "LoD/1.10": "0x931C"
       },
+      "sizes": {
+        "LoD/1.07": 88,
+        "LoD/1.08": 88,
+        "LoD/1.09": 88,
+        "LoD/1.09b": 88,
+        "LoD/1.09d": 88,
+        "LoD/1.10": 88
+      },
       "method": "MNE",
       "index": "MNE:93c4b717343abad7c0cd6bec07bb1588"
     },
@@ -4892,6 +6225,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x41A5",
         "LoD/1.13c": "0x41A5",
         "LoD/1.13d": "0x4135"
+      },
+      "sizes": {
+        "LoD/1.11": 119,
+        "LoD/1.11b": 119,
+        "LoD/1.12a": 119,
+        "LoD/1.13c": 119,
+        "LoD/1.13d": 119
       },
       "name": "___isctype_mt",
       "signature": "uint ___isctype_mt(void * this, int param_1, int param_2, uint param_3)",
@@ -4914,6 +6254,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xE929",
         "LoD/1.13c": "0xE929",
         "LoD/1.13d": "0xE869"
+      },
+      "sizes": {
+        "LoD/1.11": 199,
+        "LoD/1.11b": 199,
+        "LoD/1.12a": 199,
+        "LoD/1.13c": 199,
+        "LoD/1.13d": 199
       },
       "name": "_CallSETranslator",
       "signature": "int _CallSETranslator(EHExceptionRecord * param_1, EHRegistrationNode * param_2, void * param_3, void * param_4, _s_FuncInfo * param_5, int param_6, EHRegistrationNode * param_7)",
@@ -4939,6 +6286,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x7703",
         "LoD/1.10": "0x75E3"
       },
+      "sizes": {
+        "LoD/1.07": 16,
+        "LoD/1.08": 16,
+        "LoD/1.09": 16,
+        "LoD/1.09b": 16,
+        "LoD/1.09d": 16,
+        "LoD/1.10": 16
+      },
       "method": "MNE",
       "index": "MNE:9696a1fa07b46e8a513683c75ff67fe3"
     },
@@ -4956,6 +6311,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7BC6",
         "LoD/1.13c": "0x7BC6",
         "LoD/1.13d": "0x7B37"
+      },
+      "sizes": {
+        "LoD/1.11": 131,
+        "LoD/1.11b": 131,
+        "LoD/1.12a": 131,
+        "LoD/1.13c": 131,
+        "LoD/1.13d": 131
       },
       "name": "__lseeki64_lk",
       "signature": "undefined8 __lseeki64_lk(uint param_1, LONG param_2, LONG param_3, DWORD param_4)",
@@ -4991,6 +6353,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x4D14",
         "LoD/1.13d": "0x4C9E"
       },
+      "sizes": {
+        "LoD/1.07": 57,
+        "LoD/1.08": 57,
+        "LoD/1.09": 57,
+        "LoD/1.09b": 57,
+        "LoD/1.09d": 57,
+        "LoD/1.10": 57,
+        "LoD/1.11": 57,
+        "LoD/1.11b": 57,
+        "LoD/1.12a": 57,
+        "LoD/1.13c": 57,
+        "LoD/1.13d": 57
+      },
       "name": "__FF_MSGBANNER",
       "signature": "void __FF_MSGBANNER(void)",
       "comment": "Library Function - Single Match\n __FF_MSGBANNER\n\nLibrary: Visual Studio 2003 Release",
@@ -5012,6 +6387,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1C1B",
         "LoD/1.13c": "0x1C1F",
         "LoD/1.13d": "0x1C1B"
+      },
+      "sizes": {
+        "LoD/1.11": 51,
+        "LoD/1.11b": 51,
+        "LoD/1.12a": 51,
+        "LoD/1.13c": 51,
+        "LoD/1.13d": 51
       },
       "name": "write_char",
       "signature": "undefined write_char(void)",
@@ -5035,6 +6417,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5503",
         "LoD/1.13d": "0x548D"
       },
+      "sizes": {
+        "LoD/1.11": 61,
+        "LoD/1.11b": 61,
+        "LoD/1.12a": 61,
+        "LoD/1.13c": 61,
+        "LoD/1.13d": 61
+      },
       "name": "__RTC_Initialize",
       "signature": "undefined __RTC_Initialize(void)",
       "comment": "Library Function - Single Match\n __RTC_Initialize\n\nLibrary: Visual Studio 2003 Release",
@@ -5052,6 +6441,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x8D79",
         "LoD/1.11b": "0x8D79",
         "LoD/1.13d": "0x8D79"
+      },
+      "sizes": {
+        "LoD/1.11": 171,
+        "LoD/1.11b": 171,
+        "LoD/1.13d": 171
       },
       "name": "CAtlBaseModule",
       "signature": "undefined CAtlBaseModule(CAtlBaseModule * this)",
@@ -5075,6 +6469,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5CFE",
         "LoD/1.13d": "0x5C9E"
       },
+      "sizes": {
+        "LoD/1.11": 58,
+        "LoD/1.11b": 58,
+        "LoD/1.12a": 58,
+        "LoD/1.13c": 58,
+        "LoD/1.13d": 58
+      },
       "name": "_isdigit",
       "signature": "int _isdigit(int _C)",
       "comment": "Library Function - Single Match\n _isdigit\n\nLibrary: Visual Studio 2003 Release",
@@ -5096,6 +6497,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x48E8",
         "LoD/1.13c": "0x48E8",
         "LoD/1.13d": "0x4873"
+      },
+      "sizes": {
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
       },
       "name": "__initterm",
       "signature": "undefined __initterm(undefined4 * param_1)",
@@ -5119,6 +6527,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1931",
         "LoD/1.13d": "0x192D"
       },
+      "sizes": {
+        "LoD/1.11": 426,
+        "LoD/1.11b": 426,
+        "LoD/1.12a": 426,
+        "LoD/1.13c": 426,
+        "LoD/1.13d": 426
+      },
       "method": "MNE",
       "index": "MNE:9a7404bf9554be1fde377018000a17fc"
     },
@@ -5133,6 +6548,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x7F75",
         "LoD/1.13d": "0x7F75"
       },
+      "sizes": {
+        "LoD/1.11": 475,
+        "LoD/1.11b": 475,
+        "LoD/1.13d": 475
+      },
       "name": "__read_lk",
       "signature": "int __read_lk(uint param_1, char * param_2, char * param_3)",
       "comment": "Library Function - Single Match\n __read_lk\n\nLibrary: Visual Studio 2003 Release",
@@ -5146,6 +6566,9 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0xC13E"
+      },
+      "sizes": {
+        "LoD/1.07": 811
       },
       "method": "MNE",
       "index": "MNE:9bfd98dbbd3e5d7edb553bd7666739e4"
@@ -5165,6 +6588,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10207",
         "LoD/1.13d": "0x1011D"
       },
+      "sizes": {
+        "LoD/1.11": 356,
+        "LoD/1.11b": 356,
+        "LoD/1.12a": 356,
+        "LoD/1.13c": 356,
+        "LoD/1.13d": 356
+      },
       "name": "_raise",
       "signature": "int _raise(int _SigNum)",
       "comment": "Library Function - Single Match\n _raise\n\nLibrary: Visual Studio 2003 Release",
@@ -5182,6 +6612,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x10B10",
         "LoD/1.11b": "0x10B10",
         "LoD/1.13d": "0x10B10"
+      },
+      "sizes": {
+        "LoD/1.11": 562,
+        "LoD/1.11b": 562,
+        "LoD/1.13d": 562
       },
       "name": "___ld12mul",
       "signature": "undefined ___ld12mul(int * param_1, int * param_2)",
@@ -5207,6 +6642,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD842",
         "LoD/1.10": "0xD722"
       },
+      "sizes": {
+        "LoD/1.07": 69,
+        "LoD/1.08": 69,
+        "LoD/1.09": 69,
+        "LoD/1.09b": 69,
+        "LoD/1.09d": 69,
+        "LoD/1.10": 69
+      },
       "method": "MNE",
       "index": "MNE:9d2564a586d4e15d282d9853359a59cf"
     },
@@ -5227,6 +6670,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8DC8",
         "LoD/1.10": "0x8CA8"
       },
+      "sizes": {
+        "LoD/1.07": 97,
+        "LoD/1.08": 97,
+        "LoD/1.09": 97,
+        "LoD/1.09b": 97,
+        "LoD/1.09d": 97,
+        "LoD/1.10": 97
+      },
       "method": "MNE",
       "index": "MNE:9d2a5d769a01e278db09b78de631f581"
     },
@@ -5238,6 +6689,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x744F",
         "LoD/1.13c": "0x744F"
+      },
+      "sizes": {
+        "LoD/1.12a": 411,
+        "LoD/1.13c": 411
       },
       "method": "MNE",
       "index": "MNE:9dba01f3a3f519a348d690b818dfa854"
@@ -5258,6 +6713,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xAB90",
         "LoD/1.09d": "0xAB90",
         "LoD/1.10": "0xAA70"
+      },
+      "sizes": {
+        "LoD/1.07": 104,
+        "LoD/1.08": 104,
+        "LoD/1.09": 104,
+        "LoD/1.09b": 104,
+        "LoD/1.09d": 104,
+        "LoD/1.10": 104
       },
       "name": "__aulldiv",
       "signature": "undefined8 __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
@@ -5281,6 +6744,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xE9F0",
         "LoD/1.13d": "0xE930"
       },
+      "sizes": {
+        "LoD/1.11": 175,
+        "LoD/1.11b": 175,
+        "LoD/1.12a": 175,
+        "LoD/1.13c": 175,
+        "LoD/1.13d": 175
+      },
       "name": "TranslatorGuardHandler",
       "signature": "_EXCEPTION_DISPOSITION TranslatorGuardHandler(EHExceptionRecord * param_1, TranslatorGuardRN * param_2, void * param_3, void * param_4)",
       "comment": "Library Function - Single Match\n enum _EXCEPTION_DISPOSITION __cdecl TranslatorGuardHandler(struct EHExceptionRecord *,struct TranslatorGuardRN *,void *,void *)\n\nLibrary: Visual Studio 2003 Release",
@@ -5298,6 +6768,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x1044E",
         "LoD/1.11b": "0x1044E",
         "LoD/1.13d": "0x1044E"
+      },
+      "sizes": {
+        "LoD/1.11": 1028,
+        "LoD/1.11b": 1028,
+        "LoD/1.13d": 1028
       },
       "name": "___strgtold12",
       "signature": "uint ___strgtold12(_LDBL12 * pld12, char * * p_end_ptr, char * str, int mult12, int scale, int decpt, int implicit_E)",
@@ -5320,6 +6795,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5BA9",
         "LoD/1.13c": "0x5BA9",
         "LoD/1.13d": "0x5B4B"
+      },
+      "sizes": {
+        "LoD/1.11": 41,
+        "LoD/1.11b": 41,
+        "LoD/1.12a": 41,
+        "LoD/1.13c": 41,
+        "LoD/1.13d": 41
       },
       "name": "report_failure",
       "signature": "undefined report_failure(void)",
@@ -5345,42 +6827,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8B20",
         "LoD/1.10": "0x8A00"
       },
+      "sizes": {
+        "LoD/1.07": 19,
+        "LoD/1.08": 19,
+        "LoD/1.09": 19,
+        "LoD/1.09b": 19,
+        "LoD/1.09d": 19,
+        "LoD/1.10": 19
+      },
       "method": "MNE",
-      "index": "MNE:a1900c49d3b847e69ff3bf21a94518de",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x0040ACF2",
-          "rva": "0xACF2",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x0040A4C4",
-          "rva": "0xA4C4",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x0040ADB2",
-          "rva": "0xADB2",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x0040A612",
-          "rva": "0xA612",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:a1900c49d3b847e69ff3bf21a94518de"
     },
     "D2VidTst_MNE_a1fd1f83ab5d": {
       "addresses": {
@@ -5399,6 +6855,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD6D3",
         "LoD/1.10": "0xD5B3"
       },
+      "sizes": {
+        "LoD/1.07": 86,
+        "LoD/1.08": 86,
+        "LoD/1.09": 86,
+        "LoD/1.09b": 86,
+        "LoD/1.09d": 86,
+        "LoD/1.10": 86
+      },
       "method": "MNE",
       "index": "MNE:a1fd1f83ab5d96b4bef4e8817dd3ae88"
     },
@@ -5416,6 +6880,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF140",
         "LoD/1.13c": "0xF140",
         "LoD/1.13d": "0xF080"
+      },
+      "sizes": {
+        "LoD/1.11": 103,
+        "LoD/1.11b": 103,
+        "LoD/1.12a": 103,
+        "LoD/1.13c": 103,
+        "LoD/1.13d": 103
       },
       "name": "CatchIt",
       "signature": "void CatchIt(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4, _s_FuncInfo * param_5, _s_HandlerType * param_6, _s_CatchableType * param_7, _s_TryBlockMapEntry * param_8, int param_9, EHRegistrationNode * param_10, uchar param_11)",
@@ -5439,6 +6910,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x11F0",
         "LoD/1.13d": "0x11F0"
       },
+      "sizes": {
+        "LoD/1.11": 55,
+        "LoD/1.11b": 55,
+        "LoD/1.12a": 55,
+        "LoD/1.13c": 55,
+        "LoD/1.13d": 55
+      },
       "method": "MNE",
       "index": "MNE:a3916ea23e38a520734795fd2a3822db"
     },
@@ -5452,6 +6930,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0xF810",
         "LoD/1.11b": "0xF810",
         "LoD/1.13d": "0xF810"
+      },
+      "sizes": {
+        "LoD/1.11": 154,
+        "LoD/1.11b": 154,
+        "LoD/1.13d": 154
       },
       "name": "__cftog",
       "signature": "undefined __cftog(double * param_1, undefined1 * param_2, size_t param_3, int param_4)",
@@ -5475,6 +6958,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xEC43",
         "LoD/1.13d": "0xEB83"
       },
+      "sizes": {
+        "LoD/1.11": 30,
+        "LoD/1.11b": 30,
+        "LoD/1.12a": 30,
+        "LoD/1.13c": 30,
+        "LoD/1.13d": 30
+      },
       "name": "___initmbctable",
       "signature": "undefined4 ___initmbctable(void)",
       "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release",
@@ -5497,6 +6987,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x12A0",
         "LoD/1.13d": "0x12A0"
       },
+      "sizes": {
+        "LoD/1.11": 120,
+        "LoD/1.11b": 120,
+        "LoD/1.12a": 120,
+        "LoD/1.13c": 120,
+        "LoD/1.13d": 120
+      },
       "method": "MNE",
       "index": "MNE:a4bc3cba703dddfe045785e905b90541"
     },
@@ -5514,6 +7011,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x3459",
         "LoD/1.13c": "0x3459",
         "LoD/1.13d": "0x33E9"
+      },
+      "sizes": {
+        "LoD/1.11": 151,
+        "LoD/1.11b": 151,
+        "LoD/1.12a": 151,
+        "LoD/1.13c": 151,
+        "LoD/1.13d": 151
       },
       "name": "__mtinitlocknum",
       "signature": "int __mtinitlocknum(int _LockNum)",
@@ -5547,22 +7051,24 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x352A",
         "LoD/1.13d": "0x34BA"
       },
+      "sizes": {
+        "LoD/1.08": 72,
+        "LoD/1.09": 72,
+        "LoD/1.09b": 72,
+        "LoD/1.09d": 72,
+        "LoD/1.10": 72,
+        "LoD/1.11": 72,
+        "LoD/1.11b": 72,
+        "LoD/1.12a": 72,
+        "LoD/1.13c": 72,
+        "LoD/1.13d": 72
+      },
       "name": "___sbh_heap_init",
       "signature": "undefined4 ___sbh_heap_init(undefined4 param_1)",
       "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:a57b3ae583e4f6f104245d4da8d3b9fe",
-      "candidates": {
-        "LoD/1.07": {
-          "address": "0x00406260",
-          "rva": "0x6260",
-          "confidence": 0.316,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.08"
-        }
-      }
+      "index": "MNE:a57b3ae583e4f6f104245d4da8d3b9fe"
     },
     "D2VidTst_MNE_a5b5a435a005": {
       "addresses": {
@@ -5578,6 +7084,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7BA4",
         "LoD/1.13c": "0x7BA4",
         "LoD/1.13d": "0x7B15"
+      },
+      "sizes": {
+        "LoD/1.11": 34,
+        "LoD/1.11b": 34,
+        "LoD/1.12a": 34,
+        "LoD/1.13c": 34,
+        "LoD/1.13d": 34
       },
       "method": "MNE",
       "index": "MNE:a5b5a435a00574933ae7bc271f1b0178"
@@ -5599,6 +7112,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xBDD9",
         "LoD/1.10": "0xBCB9"
       },
+      "sizes": {
+        "LoD/1.07": 318,
+        "LoD/1.08": 318,
+        "LoD/1.09": 318,
+        "LoD/1.09b": 318,
+        "LoD/1.09d": 318,
+        "LoD/1.10": 318
+      },
       "method": "MNE",
       "index": "MNE:a7046d73bbd286a50d5e7204509858d2"
     },
@@ -5611,6 +7132,10 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x82D6",
         "LoD/1.13c": "0x82D6"
       },
+      "sizes": {
+        "LoD/1.12a": 451,
+        "LoD/1.13c": 451
+      },
       "method": "MNE",
       "index": "MNE:a82412e86c7e059d3af6ea9d376e2875"
     },
@@ -5620,6 +7145,9 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0xAE65"
+      },
+      "sizes": {
+        "LoD/1.07": 141
       },
       "method": "MNE",
       "index": "MNE:aaa0a1650e002d1d562bd4e996adb154"
@@ -5651,6 +7179,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x190D",
         "LoD/1.13d": "0x1909"
       },
+      "sizes": {
+        "LoD/1.07": 36,
+        "LoD/1.08": 36,
+        "LoD/1.09": 36,
+        "LoD/1.09b": 36,
+        "LoD/1.09d": 36,
+        "LoD/1.10": 36,
+        "LoD/1.11": 36,
+        "LoD/1.11b": 36,
+        "LoD/1.12a": 36,
+        "LoD/1.13c": 36,
+        "LoD/1.13d": 36
+      },
       "name": "fast_error_exit",
       "signature": "undefined fast_error_exit(int param_1)",
       "comment": "Library Function - Single Match\n _fast_error_exit\n\nLibrary: Visual Studio 2003 Release",
@@ -5674,6 +7215,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xE86C",
         "LoD/1.09d": "0xE86C",
         "LoD/1.10": "0xE74C"
+      },
+      "sizes": {
+        "LoD/1.07": 1185,
+        "LoD/1.08": 1185,
+        "LoD/1.09": 1185,
+        "LoD/1.09b": 1185,
+        "LoD/1.09d": 1185,
+        "LoD/1.10": 1185
       },
       "method": "MNE",
       "index": "MNE:ab787578be0f52440df577da55f0ef97"
@@ -5705,6 +7254,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x11000",
         "LoD/1.13d": "0x10EE0"
       },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
       "name": "Unwind@0040e83c",
       "signature": "undefined Unwind@0040e83c(void)",
       "name_source": "LoD/1.07",
@@ -5721,6 +7283,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x755F",
         "LoD/1.11b": "0x755F",
         "LoD/1.13d": "0x755F"
+      },
+      "sizes": {
+        "LoD/1.11": 400,
+        "LoD/1.11b": 400,
+        "LoD/1.13d": 400
       },
       "name": "__setmbcp_lk",
       "signature": "undefined __setmbcp_lk(UINT param_1)",
@@ -5746,6 +7313,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8BFB",
         "LoD/1.10": "0x8ADB"
       },
+      "sizes": {
+        "LoD/1.07": 79,
+        "LoD/1.08": 79,
+        "LoD/1.09": 79,
+        "LoD/1.09b": 79,
+        "LoD/1.09d": 79,
+        "LoD/1.10": 79
+      },
       "method": "MNE",
       "index": "MNE:acf08c90b55418c8321e69465d69c39b"
     },
@@ -5764,6 +7339,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1500",
         "LoD/1.13d": "0x1500"
       },
+      "sizes": {
+        "LoD/1.11": 68,
+        "LoD/1.11b": 68,
+        "LoD/1.12a": 68,
+        "LoD/1.13c": 68,
+        "LoD/1.13d": 68
+      },
       "method": "MNE",
       "index": "MNE:ad0bca5018bb85bedbe4c97b9fabd47c"
     },
@@ -5777,6 +7359,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0xF6A6",
         "LoD/1.11b": "0xF6A6",
         "LoD/1.13d": "0xF6A6"
+      },
+      "sizes": {
+        "LoD/1.11": 108,
+        "LoD/1.11b": 108,
+        "LoD/1.13d": 108
       },
       "name": "__cftoe",
       "signature": "errno_t __cftoe(double * _Value, char * _Buf, size_t _SizeInBytes, int _Dec, int _Caps)",
@@ -5802,6 +7389,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAF89",
         "LoD/1.10": "0xAE69"
       },
+      "sizes": {
+        "LoD/1.07": 70,
+        "LoD/1.08": 70,
+        "LoD/1.09": 70,
+        "LoD/1.09b": 70,
+        "LoD/1.09d": 70,
+        "LoD/1.10": 70
+      },
       "method": "MNE",
       "index": "MNE:ae97885008bdc2ae91cd79843075d856"
     },
@@ -5821,6 +7416,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x6839",
         "LoD/1.09d": "0x6839",
         "LoD/1.10": "0x6719"
+      },
+      "sizes": {
+        "LoD/1.07": 123,
+        "LoD/1.08": 123,
+        "LoD/1.09": 123,
+        "LoD/1.09b": 123,
+        "LoD/1.09d": 123,
+        "LoD/1.10": 123
       },
       "method": "MNE",
       "index": "MNE:aeb6015352f39d3219cf32b63d44a754"
@@ -5852,6 +7455,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1C76",
         "LoD/1.13d": "0x1C72"
       },
+      "sizes": {
+        "LoD/1.07": 55,
+        "LoD/1.08": 55,
+        "LoD/1.09": 55,
+        "LoD/1.09b": 55,
+        "LoD/1.09d": 55,
+        "LoD/1.10": 55,
+        "LoD/1.11": 55,
+        "LoD/1.11b": 55,
+        "LoD/1.12a": 55,
+        "LoD/1.13c": 55,
+        "LoD/1.13d": 55
+      },
       "name": "write_string",
       "signature": "undefined write_string(int param_1)",
       "comment": "Library Function - Single Match\n _write_string\n\nLibrary: Visual Studio 2003 Release",
@@ -5873,6 +7489,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4050",
         "LoD/1.13c": "0x4050",
         "LoD/1.13d": "0x3FE0"
+      },
+      "sizes": {
+        "LoD/1.11": 59,
+        "LoD/1.11b": 59,
+        "LoD/1.12a": 59,
+        "LoD/1.13c": 59,
+        "LoD/1.13d": 59
       },
       "name": "__SEH_prolog",
       "signature": "undefined __SEH_prolog(undefined4 param_1, int param_2)",
@@ -5898,42 +7521,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x76BE",
         "LoD/1.10": "0x759E"
       },
+      "sizes": {
+        "LoD/1.07": 56,
+        "LoD/1.08": 56,
+        "LoD/1.09": 56,
+        "LoD/1.09b": 56,
+        "LoD/1.09d": 56,
+        "LoD/1.10": 56
+      },
       "method": "MNE",
-      "index": "MNE:afc6bf96e31e41127728e4d6585e174f",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x00405C25",
-          "rva": "0x5C25",
-          "confidence": 0.317,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x00405C25",
-          "rva": "0x5C25",
-          "confidence": 0.228,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x00405C85",
-          "rva": "0x5C85",
-          "confidence": 0.164,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x00405C85",
-          "rva": "0x5C85",
-          "confidence": 0.118,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:afc6bf96e31e41127728e4d6585e174f"
     },
     "D2VidTst_MNE_aff5ecc93302": {
       "addresses": {
@@ -5950,46 +7547,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF69B",
         "LoD/1.13d": "0xF5DB"
       },
+      "sizes": {
+        "LoD/1.11": 29,
+        "LoD/1.11b": 29,
+        "LoD/1.12a": 29,
+        "LoD/1.13c": 29,
+        "LoD/1.13d": 29
+      },
       "name": "__mtterm",
       "signature": "void __mtterm(void)",
       "comment": "Library Function - Single Match\n __mtterm\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x0040AFED",
-          "rva": "0xAFED",
-          "confidence": 0.118,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x0040AFED",
-          "rva": "0xAFED",
-          "confidence": 0.164,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x0040AFED",
-          "rva": "0xAFED",
-          "confidence": 0.228,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x0040AECD",
-          "rva": "0xAECD",
-          "confidence": 0.317,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a"
     },
     "D2VidTst_MNE_b10e654b1e08": {
       "addresses": {
@@ -6005,6 +7575,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xD58F",
         "LoD/1.09d": "0xD58F",
         "LoD/1.10": "0xD46F"
+      },
+      "sizes": {
+        "LoD/1.08": 324,
+        "LoD/1.09": 324,
+        "LoD/1.09b": 324,
+        "LoD/1.09d": 324,
+        "LoD/1.10": 324
       },
       "method": "MNE",
       "index": "MNE:b10e654b1e0872dc227e39198444a376"
@@ -6026,6 +7603,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6290",
         "LoD/1.10": "0x6170"
       },
+      "sizes": {
+        "LoD/1.07": 69,
+        "LoD/1.08": 69,
+        "LoD/1.09": 69,
+        "LoD/1.09b": 69,
+        "LoD/1.09d": 69,
+        "LoD/1.10": 69
+      },
       "method": "MNE",
       "index": "MNE:b1428994ed1fcd23873ebdc6385d340a"
     },
@@ -6045,6 +7630,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xF188",
         "LoD/1.09d": "0xF188",
         "LoD/1.10": "0xF068"
+      },
+      "sizes": {
+        "LoD/1.07": 147,
+        "LoD/1.08": 147,
+        "LoD/1.09": 147,
+        "LoD/1.09b": 147,
+        "LoD/1.09d": 147,
+        "LoD/1.10": 147
       },
       "method": "MNE",
       "index": "MNE:b14dfb771e9c85951130aa7c0ee6e7bc"
@@ -6076,6 +7669,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6162",
         "LoD/1.13d": "0x60F7"
       },
+      "sizes": {
+        "LoD/1.07": 9,
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
+        "LoD/1.09d": 9,
+        "LoD/1.10": 9,
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
       "method": "MNE",
       "index": "MNE:b1691d6b7b8ba065c3fc1a089e8db64e"
     },
@@ -6093,6 +7699,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x60BE",
         "LoD/1.13c": "0x60BE",
         "LoD/1.13d": "0x6053"
+      },
+      "sizes": {
+        "LoD/1.11": 16,
+        "LoD/1.11b": 16,
+        "LoD/1.12a": 16,
+        "LoD/1.13c": 16,
+        "LoD/1.13d": 16
       },
       "name": "___crtInitCritSecNoSpinCount@8",
       "signature": "undefined4 ___crtInitCritSecNoSpinCount@8(LPCRITICAL_SECTION param_1)",
@@ -6118,6 +7731,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8553",
         "LoD/1.10": "0x8433"
       },
+      "sizes": {
+        "LoD/1.07": 93,
+        "LoD/1.08": 93,
+        "LoD/1.09": 93,
+        "LoD/1.09b": 93,
+        "LoD/1.09d": 93,
+        "LoD/1.10": 93
+      },
       "method": "MNE",
       "index": "MNE:b32bb6cc9ffd3d673291796bb2774c56"
     },
@@ -6137,6 +7758,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xE7A5",
         "LoD/1.09d": "0xE7A5",
         "LoD/1.10": "0xE685"
+      },
+      "sizes": {
+        "LoD/1.07": 199,
+        "LoD/1.08": 199,
+        "LoD/1.09": 199,
+        "LoD/1.09b": 199,
+        "LoD/1.09d": 199,
+        "LoD/1.10": 199
       },
       "method": "MNE",
       "index": "MNE:b41de5b81e6f5c290111b6d697b33467"
@@ -6158,6 +7787,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6D1F",
         "LoD/1.10": "0x6BFF"
       },
+      "sizes": {
+        "LoD/1.07": 126,
+        "LoD/1.08": 126,
+        "LoD/1.09": 126,
+        "LoD/1.09b": 126,
+        "LoD/1.09d": 126,
+        "LoD/1.10": 126
+      },
       "method": "MNE",
       "index": "MNE:b5756233a5a7628ebca8fed8bafffdce"
     },
@@ -6177,6 +7814,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xD0ED",
         "LoD/1.09d": "0xD0ED",
         "LoD/1.10": "0xCFCD"
+      },
+      "sizes": {
+        "LoD/1.07": 177,
+        "LoD/1.08": 177,
+        "LoD/1.09": 177,
+        "LoD/1.09b": 177,
+        "LoD/1.09d": 177,
+        "LoD/1.10": 177
       },
       "method": "MNE",
       "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847"
@@ -6198,6 +7843,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB8D6",
         "LoD/1.10": "0xB7B6"
       },
+      "sizes": {
+        "LoD/1.07": 141,
+        "LoD/1.08": 141,
+        "LoD/1.09": 141,
+        "LoD/1.09b": 141,
+        "LoD/1.09d": 141,
+        "LoD/1.10": 141
+      },
       "method": "MNE",
       "index": "MNE:b5aa33b0420f2d311658da83496527f7"
     },
@@ -6216,6 +7869,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8C04",
         "LoD/1.13d": "0x8B44"
       },
+      "sizes": {
+        "LoD/1.11": 144,
+        "LoD/1.11b": 144,
+        "LoD/1.12a": 144,
+        "LoD/1.13c": 144,
+        "LoD/1.13d": 144
+      },
       "name": "__close",
       "signature": "int __close(int _FileHandle)",
       "comment": "Library Function - Single Match\n __close\n\nLibrary: Visual Studio 2003 Release",
@@ -6233,6 +7893,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x10370",
         "LoD/1.11b": "0x10370",
         "LoD/1.13d": "0x10370"
+      },
+      "sizes": {
+        "LoD/1.11": 222,
+        "LoD/1.11b": 222,
+        "LoD/1.13d": 222
       },
       "name": "___mtold12",
       "signature": "undefined ___mtold12(char * param_1, int param_2, uint * param_3)",
@@ -6268,6 +7933,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x18E8",
         "LoD/1.13d": "0x18E4"
       },
+      "sizes": {
+        "LoD/1.07": 37,
+        "LoD/1.08": 37,
+        "LoD/1.09": 37,
+        "LoD/1.09b": 37,
+        "LoD/1.09d": 37,
+        "LoD/1.10": 37,
+        "LoD/1.11": 37,
+        "LoD/1.11b": 37,
+        "LoD/1.12a": 37,
+        "LoD/1.13c": 37,
+        "LoD/1.13d": 37
+      },
       "name": "__amsg_exit",
       "signature": "void __amsg_exit(int param_1)",
       "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release",
@@ -6290,6 +7968,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1040",
         "LoD/1.13d": "0x1040"
       },
+      "sizes": {
+        "LoD/1.11": 78,
+        "LoD/1.11b": 78,
+        "LoD/1.12a": 78,
+        "LoD/1.13c": 78,
+        "LoD/1.13d": 78
+      },
       "method": "MNE",
       "index": "MNE:b890e8ab50e9bd5289f0e6da4cc937e2"
     },
@@ -6309,6 +7994,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xADA0",
         "LoD/1.09d": "0xADA0",
         "LoD/1.10": "0xAC80"
+      },
+      "sizes": {
+        "LoD/1.07": 88,
+        "LoD/1.08": 88,
+        "LoD/1.09": 88,
+        "LoD/1.09b": 88,
+        "LoD/1.09d": 88,
+        "LoD/1.10": 88
       },
       "name": "_memset",
       "signature": "void * _memset(void * _Dst, int _Val, size_t _Size)",
@@ -6332,46 +8025,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFB02",
         "LoD/1.13d": "0xFA34"
       },
+      "sizes": {
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
+      },
       "name": "_abort",
       "signature": "void _abort(void)",
       "comment": "Library Function - Single Match\n _abort\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:ba06e624928980d9b2c569e5db716aab",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x004041AC",
-          "rva": "0x41AC",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x004041AC",
-          "rva": "0x41AC",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x004041AC",
-          "rva": "0x41AC",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x0040409C",
-          "rva": "0x409C",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:ba06e624928980d9b2c569e5db716aab"
     },
     "D2VidTst_MNE_ba616fb6ea4f": {
       "addresses": {
@@ -6389,6 +8055,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xBF64",
         "LoD/1.09d": "0xBF64",
         "LoD/1.10": "0xBE44"
+      },
+      "sizes": {
+        "LoD/1.07": 429,
+        "LoD/1.08": 429,
+        "LoD/1.09": 429,
+        "LoD/1.09b": 429,
+        "LoD/1.09d": 429,
+        "LoD/1.10": 429
       },
       "method": "MNE",
       "index": "MNE:ba616fb6ea4f166e16123a36ca0958b1"
@@ -6408,6 +8082,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1150",
         "LoD/1.13d": "0x1150"
       },
+      "sizes": {
+        "LoD/1.11": 87,
+        "LoD/1.11b": 87,
+        "LoD/1.12a": 87,
+        "LoD/1.13c": 87,
+        "LoD/1.13d": 87
+      },
       "method": "MNE",
       "index": "MNE:ba64afb0fda3902e5581ec0c75ecc1cb"
     },
@@ -6425,6 +8106,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x51E3",
         "LoD/1.13c": "0x51E3",
         "LoD/1.13d": "0x516D"
+      },
+      "sizes": {
+        "LoD/1.11": 290,
+        "LoD/1.11b": 290,
+        "LoD/1.12a": 290,
+        "LoD/1.13c": 290,
+        "LoD/1.13d": 290
       },
       "name": "___crtGetEnvironmentStringsA",
       "signature": "LPVOID ___crtGetEnvironmentStringsA(void)",
@@ -6450,6 +8138,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE07F",
         "LoD/1.10": "0xDF5F"
       },
+      "sizes": {
+        "LoD/1.07": 101,
+        "LoD/1.08": 101,
+        "LoD/1.09": 101,
+        "LoD/1.09b": 101,
+        "LoD/1.09d": 101,
+        "LoD/1.10": 101
+      },
       "method": "MNE",
       "index": "MNE:bac569fc88fbfeebd4a5205bbcce1faf"
     },
@@ -6468,46 +8164,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x408B",
         "LoD/1.13d": "0x401B"
       },
+      "sizes": {
+        "LoD/1.11": 17,
+        "LoD/1.11b": 17,
+        "LoD/1.12a": 17,
+        "LoD/1.13c": 17,
+        "LoD/1.13d": 17
+      },
       "name": "__SEH_epilog",
       "signature": "undefined __SEH_epilog(void)",
       "comment": "Library Function - Single Match\n __SEH_epilog\n\nLibrary: Visual Studio",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x004091D1",
-          "rva": "0x91D1",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x004091D1",
-          "rva": "0x91D1",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x004091D1",
-          "rva": "0x91D1",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x004090B1",
-          "rva": "0x90B1",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b"
     },
     "D2VidTst_MNE_bd2e318ad253": {
       "addresses": {
@@ -6523,6 +8192,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEB1C",
         "LoD/1.13c": "0xEB1C",
         "LoD/1.13d": "0xEA5C"
+      },
+      "sizes": {
+        "LoD/1.11": 40,
+        "LoD/1.11b": 40,
+        "LoD/1.12a": 40,
+        "LoD/1.13c": 40,
+        "LoD/1.13d": 40
       },
       "name": "_CreateFrameInfo",
       "signature": "FrameInfo * _CreateFrameInfo(FrameInfo * param_1, void * param_2)",
@@ -6547,6 +8223,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x81E4",
         "LoD/1.13c": "0x81E4",
         "LoD/1.13d": "0x8150"
+      },
+      "sizes": {
+        "LoD/1.07": 160,
+        "LoD/1.11": 160,
+        "LoD/1.11b": 160,
+        "LoD/1.12a": 160,
+        "LoD/1.13c": 160,
+        "LoD/1.13d": 160
       },
       "name": "__lseek",
       "signature": "long __lseek(int _FileHandle, long _Offset, int _Origin)",
@@ -6582,6 +8266,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xEC0B",
         "LoD/1.13d": "0xEB4B"
       },
+      "sizes": {
+        "LoD/1.07": 56,
+        "LoD/1.08": 56,
+        "LoD/1.09": 56,
+        "LoD/1.09b": 56,
+        "LoD/1.09d": 56,
+        "LoD/1.10": 56,
+        "LoD/1.11": 56,
+        "LoD/1.11b": 56,
+        "LoD/1.12a": 56,
+        "LoD/1.13c": 56,
+        "LoD/1.13d": 56
+      },
       "method": "MNE",
       "index": "MNE:bfc3ed25e9152f457419d9112a775bc2"
     },
@@ -6612,6 +8309,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10380",
         "LoD/1.13d": "0x10296"
       },
+      "sizes": {
+        "LoD/1.07": 33,
+        "LoD/1.08": 33,
+        "LoD/1.09": 33,
+        "LoD/1.09b": 33,
+        "LoD/1.09d": 33,
+        "LoD/1.10": 33,
+        "LoD/1.11": 33,
+        "LoD/1.11b": 33,
+        "LoD/1.12a": 33,
+        "LoD/1.13c": 33,
+        "LoD/1.13d": 33
+      },
       "name": "___addl",
       "signature": "undefined4 ___addl(uint param_1, uint param_2, uint * param_3)",
       "comment": "Library Function - Single Match\n ___addl\n\nLibrary: Visual Studio 2003 Release",
@@ -6636,42 +8346,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xC360",
         "LoD/1.10": "0xC240"
       },
+      "sizes": {
+        "LoD/1.07": 664,
+        "LoD/1.08": 664,
+        "LoD/1.09": 664,
+        "LoD/1.09b": 664,
+        "LoD/1.09d": 664,
+        "LoD/1.10": 664
+      },
       "method": "MNE",
-      "index": "MNE:bff09423b51fd121ea30afec957819f4",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x00406270",
-          "rva": "0x6270",
-          "confidence": 0.322,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x00406270",
-          "rva": "0x6270",
-          "confidence": 0.232,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x004062D0",
-          "rva": "0x62D0",
-          "confidence": 0.167,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x004062D0",
-          "rva": "0x62D0",
-          "confidence": 0.12,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:bff09423b51fd121ea30afec957819f4"
     },
     "D2VidTst_MNE_c114525a4c04": {
       "addresses": {
@@ -6690,42 +8374,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8197",
         "LoD/1.10": "0x8077"
       },
+      "sizes": {
+        "LoD/1.07": 23,
+        "LoD/1.08": 23,
+        "LoD/1.09": 23,
+        "LoD/1.09b": 23,
+        "LoD/1.09d": 23,
+        "LoD/1.10": 23
+      },
       "method": "MNE",
-      "index": "MNE:c114525a4c0480a9cc4b16231f40eae1",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x00401000",
-          "rva": "0x1000",
-          "confidence": 0.316,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x00401000",
-          "rva": "0x1000",
-          "confidence": 0.227,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x00401000",
-          "rva": "0x1000",
-          "confidence": 0.164,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x00401000",
-          "rva": "0x1000",
-          "confidence": 0.118,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:c114525a4c0480a9cc4b16231f40eae1"
     },
     "D2VidTst_MNE_c16eee394b98": {
       "addresses": {
@@ -6754,6 +8412,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xC950",
         "LoD/1.13d": "0xC930"
       },
+      "sizes": {
+        "LoD/1.07": 714,
+        "LoD/1.08": 708,
+        "LoD/1.09": 708,
+        "LoD/1.09b": 708,
+        "LoD/1.09d": 708,
+        "LoD/1.10": 708,
+        "LoD/1.11": 777,
+        "LoD/1.11b": 777,
+        "LoD/1.12a": 777,
+        "LoD/1.13c": 777,
+        "LoD/1.13d": 777
+      },
       "method": "MNE",
       "index": "MNE:c16eee394b986a00db595ff72a7c13e5"
     },
@@ -6774,6 +8445,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE47C",
         "LoD/1.10": "0xE35C"
       },
+      "sizes": {
+        "LoD/1.07": 511,
+        "LoD/1.08": 511,
+        "LoD/1.09": 511,
+        "LoD/1.09b": 511,
+        "LoD/1.09d": 511,
+        "LoD/1.10": 511
+      },
       "method": "MNE",
       "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b"
     },
@@ -6793,6 +8472,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x66E9",
         "LoD/1.09d": "0x66E9",
         "LoD/1.10": "0x65C9"
+      },
+      "sizes": {
+        "LoD/1.07": 37,
+        "LoD/1.08": 37,
+        "LoD/1.09": 37,
+        "LoD/1.09b": 37,
+        "LoD/1.09d": 37,
+        "LoD/1.10": 37
       },
       "method": "MNE",
       "index": "MNE:c2154911e6802eec71c70e2bd7fe10b2"
@@ -6824,6 +8511,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x7A44",
         "LoD/1.13d": "0x79B5"
       },
+      "sizes": {
+        "LoD/1.07": 127,
+        "LoD/1.08": 127,
+        "LoD/1.09": 127,
+        "LoD/1.09b": 127,
+        "LoD/1.09d": 127,
+        "LoD/1.10": 127,
+        "LoD/1.11": 127,
+        "LoD/1.11b": 127,
+        "LoD/1.12a": 127,
+        "LoD/1.13c": 127,
+        "LoD/1.13d": 127
+      },
       "name": "__free_osfhnd",
       "signature": "int __free_osfhnd(int param_1)",
       "comment": "Library Function - Single Match\n __free_osfhnd\n\nLibrary: Visual Studio 2003 Release",
@@ -6845,6 +8545,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x8E23",
         "LoD/1.13c": "0x8E23",
         "LoD/1.13d": "0x8D63"
+      },
+      "sizes": {
+        "LoD/1.11": 22,
+        "LoD/1.11b": 22,
+        "LoD/1.12a": 22,
+        "LoD/1.13c": 22,
+        "LoD/1.13d": 22
       },
       "name": "~CAtlBaseModule",
       "signature": "void ~CAtlBaseModule(CAtlBaseModule * this)",
@@ -6880,6 +8587,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xE8B8",
         "LoD/1.13d": "0xE7F8"
       },
+      "sizes": {
+        "LoD/1.07": 54,
+        "LoD/1.08": 54,
+        "LoD/1.09": 54,
+        "LoD/1.09b": 54,
+        "LoD/1.09d": 54,
+        "LoD/1.10": 54,
+        "LoD/1.11": 54,
+        "LoD/1.11b": 54,
+        "LoD/1.12a": 54,
+        "LoD/1.13c": 54,
+        "LoD/1.13d": 54
+      },
       "name": "___CxxFrameHandler",
       "signature": "undefined4 ___CxxFrameHandler(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4)",
       "comment": "Library Function - Single Match\n ___CxxFrameHandler\n\nLibrary: Visual Studio 2003 Release",
@@ -6901,6 +8621,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x396C",
         "LoD/1.13c": "0x396C",
         "LoD/1.13d": "0x38FC"
+      },
+      "sizes": {
+        "LoD/1.11": 262,
+        "LoD/1.11b": 262,
+        "LoD/1.12a": 262,
+        "LoD/1.13c": 262,
+        "LoD/1.13d": 262
       },
       "name": "___sbh_alloc_new_group",
       "signature": "int ___sbh_alloc_new_group(int param_1)",
@@ -6936,6 +8663,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x62AD",
         "LoD/1.13d": "0x6241"
       },
+      "sizes": {
+        "LoD/1.07": 9,
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
+        "LoD/1.09d": 9,
+        "LoD/1.10": 9,
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
       "name": "__NLG_Notify1",
       "signature": "undefined __NLG_Notify1(undefined4 param_1)",
       "comment": "Library Function - Single Match\n __NLG_Notify1\n\nLibraries: Visual Studio 2017 Debug, Visual Studio 2017 Release, Visual Studio 2019 Debug, Visual Studio 2019 Release",
@@ -6957,6 +8697,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1B02",
         "LoD/1.13c": "0x1B06",
         "LoD/1.13d": "0x1B02"
+      },
+      "sizes": {
+        "LoD/1.11": 281,
+        "LoD/1.11b": 281,
+        "LoD/1.12a": 281,
+        "LoD/1.13c": 281,
+        "LoD/1.13d": 281
       },
       "name": "__flsbuf",
       "signature": "int __flsbuf(int _Ch, FILE * _File)",
@@ -6992,6 +8739,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x616B",
         "LoD/1.13d": "0x6100"
       },
+      "sizes": {
+        "LoD/1.07": 115,
+        "LoD/1.08": 115,
+        "LoD/1.09": 115,
+        "LoD/1.09b": 115,
+        "LoD/1.09d": 115,
+        "LoD/1.10": 115,
+        "LoD/1.11": 115,
+        "LoD/1.11b": 115,
+        "LoD/1.12a": 115,
+        "LoD/1.13c": 115,
+        "LoD/1.13d": 115
+      },
       "name": "__dosmaperr",
       "signature": "void __dosmaperr(ulong param_1)",
       "comment": "Library Function - Single Match\n __dosmaperr\n\nLibrary: Visual Studio 2003 Release",
@@ -7005,6 +8765,9 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0x9DB0"
+      },
+      "sizes": {
+        "LoD/1.07": 312
       },
       "method": "MNE",
       "index": "MNE:c51b06786a6ba65d43f5bbd2924dbc21"
@@ -7026,6 +8789,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAAC9",
         "LoD/1.10": "0xA9A9"
       },
+      "sizes": {
+        "LoD/1.07": 89,
+        "LoD/1.08": 89,
+        "LoD/1.09": 89,
+        "LoD/1.09b": 89,
+        "LoD/1.09d": 89,
+        "LoD/1.10": 89
+      },
       "method": "MNE",
       "index": "MNE:c85f8270e3f1487f07a5ecca3d9faf90"
     },
@@ -7046,6 +8817,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA771",
         "LoD/1.10": "0xA651"
       },
+      "sizes": {
+        "LoD/1.07": 395,
+        "LoD/1.08": 395,
+        "LoD/1.09": 395,
+        "LoD/1.09b": 395,
+        "LoD/1.09d": 395,
+        "LoD/1.10": 395
+      },
       "method": "MNE",
       "index": "MNE:c8b59bb5b7eca5aa50d6fe27320b53cd"
     },
@@ -7063,6 +8842,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5CBF",
         "LoD/1.13c": "0x5CBF",
         "LoD/1.13d": "0x5C5F"
+      },
+      "sizes": {
+        "LoD/1.11": 63,
+        "LoD/1.11b": 63,
+        "LoD/1.12a": 63,
+        "LoD/1.13c": 63,
+        "LoD/1.13d": 63
       },
       "name": "_isxdigit",
       "signature": "int _isxdigit(int _C)",
@@ -7085,6 +8871,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEAA2",
         "LoD/1.13c": "0xEAA2",
         "LoD/1.13d": "0xE9E2"
+      },
+      "sizes": {
+        "LoD/1.11": 122,
+        "LoD/1.11b": 122,
+        "LoD/1.12a": 122,
+        "LoD/1.13c": 122,
+        "LoD/1.13d": 122
       },
       "name": "_GetRangeOfTrysToCheck",
       "signature": "_s_TryBlockMapEntry * _GetRangeOfTrysToCheck(_s_FuncInfo * param_1, int param_2, int param_3, uint * param_4, uint * param_5)",
@@ -7110,6 +8903,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x84A9",
         "LoD/1.10": "0x8389"
       },
+      "sizes": {
+        "LoD/1.07": 170,
+        "LoD/1.08": 170,
+        "LoD/1.09": 170,
+        "LoD/1.09b": 170,
+        "LoD/1.09d": 170,
+        "LoD/1.10": 170
+      },
       "method": "MNE",
       "index": "MNE:c99bfad5ccf26df1c5caa351771cc12d"
     },
@@ -7127,6 +8928,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5BDA",
         "LoD/1.13c": "0x5BDA",
         "LoD/1.13d": "0x5B7C"
+      },
+      "sizes": {
+        "LoD/1.11": 14,
+        "LoD/1.11b": 14,
+        "LoD/1.12a": 14,
+        "LoD/1.13c": 14,
+        "LoD/1.13d": 14
       },
       "method": "MNE",
       "index": "MNE:ca7f27832b0deaebe496b377f1c5001a"
@@ -7148,6 +8956,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x68B4",
         "LoD/1.10": "0x6794"
       },
+      "sizes": {
+        "LoD/1.07": 23,
+        "LoD/1.08": 23,
+        "LoD/1.09": 23,
+        "LoD/1.09b": 23,
+        "LoD/1.09d": 23,
+        "LoD/1.10": 23
+      },
       "method": "MNE",
       "index": "MNE:cb09f6b5d9797072e6568a27cb29dcdf"
     },
@@ -7165,6 +8981,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF540",
         "LoD/1.13c": "0xF540",
         "LoD/1.13d": "0xF480"
+      },
+      "sizes": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38,
+        "LoD/1.12a": 38,
+        "LoD/1.13c": 38,
+        "LoD/1.13d": 38
       },
       "name": "_inconsistency",
       "signature": "void _inconsistency(void)",
@@ -7188,6 +9011,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5E90",
         "LoD/1.13d": "0x5F10"
       },
+      "sizes": {
+        "LoD/1.11": 96,
+        "LoD/1.11b": 96,
+        "LoD/1.12a": 96,
+        "LoD/1.13c": 96,
+        "LoD/1.13d": 96
+      },
       "name": "_memset",
       "signature": "void * _memset(void * _Dst, int _Val, size_t _Size)",
       "comment": "Library Function - Single Match\n _memset\n\nLibraries: Visual Studio 2003 Debug, Visual Studio 2003 Release, Visual Studio 2019 Release",
@@ -7209,6 +9039,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x84B0",
         "LoD/1.13c": "0x84B0",
         "LoD/1.13d": "0x8410"
+      },
+      "sizes": {
+        "LoD/1.11": 78,
+        "LoD/1.11b": 78,
+        "LoD/1.12a": 78,
+        "LoD/1.13c": 78,
+        "LoD/1.13d": 78
       },
       "name": "___ascii_stricmp",
       "signature": "int ___ascii_stricmp(char * _Str1, char * _Str2)",
@@ -7237,6 +9074,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.10": "0xB57E",
         "LoD/1.12a": "0x7320",
         "LoD/1.13c": "0x7320"
+      },
+      "sizes": {
+        "LoD/1.07": 203,
+        "LoD/1.08": 203,
+        "LoD/1.09": 203,
+        "LoD/1.09b": 203,
+        "LoD/1.09d": 203,
+        "LoD/1.10": 203,
+        "LoD/1.12a": 203,
+        "LoD/1.13c": 203
       },
       "method": "MNE",
       "index": "MNE:cc0e19248bdb90cb6bf790db102f9ddf"
@@ -7267,6 +9114,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x6222",
         "LoD/1.13c": "0x6222",
         "LoD/1.13d": "0x61B6"
+      },
+      "sizes": {
+        "LoD/1.07": 104,
+        "LoD/1.08": 104,
+        "LoD/1.09": 104,
+        "LoD/1.09b": 104,
+        "LoD/1.09d": 104,
+        "LoD/1.10": 104,
+        "LoD/1.11": 104,
+        "LoD/1.11b": 104,
+        "LoD/1.12a": 104,
+        "LoD/1.13c": 104,
+        "LoD/1.13d": 104
       },
       "name": "__local_unwind2",
       "signature": "undefined __local_unwind2(int param_1, int param_2)",
@@ -7302,6 +9162,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x7A33",
         "LoD/1.13d": "0x79A4"
       },
+      "sizes": {
+        "LoD/1.07": 17,
+        "LoD/1.08": 17,
+        "LoD/1.09": 17,
+        "LoD/1.09b": 17,
+        "LoD/1.09d": 17,
+        "LoD/1.10": 17,
+        "LoD/1.11": 17,
+        "LoD/1.11b": 17,
+        "LoD/1.12a": 17,
+        "LoD/1.13c": 17,
+        "LoD/1.13d": 17
+      },
       "name": "__exit",
       "signature": "void __exit(int _Code)",
       "comment": "Library Function - Single Match\n __exit\n\nLibrary: Visual Studio 2003 Release",
@@ -7324,6 +9197,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10342",
         "LoD/1.13d": "0x10258"
       },
+      "sizes": {
+        "LoD/1.11": 13,
+        "LoD/1.11b": 13,
+        "LoD/1.12a": 13,
+        "LoD/1.13c": 13,
+        "LoD/1.13d": 13
+      },
       "method": "MNE",
       "index": "MNE:ced68f09048890319abe4e844972fc66"
     },
@@ -7341,6 +9221,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xC6AC",
         "LoD/1.09d": "0xC6AC",
         "LoD/1.10": "0xC58C"
+      },
+      "sizes": {
+        "LoD/1.08": 517,
+        "LoD/1.09": 517,
+        "LoD/1.09b": 517,
+        "LoD/1.09d": 517,
+        "LoD/1.10": 517
       },
       "method": "MNE",
       "index": "MNE:cf4bba8373cc6f7fefec3dac17cb97f9"
@@ -7360,6 +9247,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x6E10",
         "LoD/1.13d": "0x6DB0"
       },
+      "sizes": {
+        "LoD/1.11": 135,
+        "LoD/1.11b": 135,
+        "LoD/1.12a": 135,
+        "LoD/1.13c": 135,
+        "LoD/1.13d": 135
+      },
       "name": "_strcmp",
       "signature": "int _strcmp(char * _Str1, char * _Str2)",
       "comment": "Library Function - Single Match\n _strcmp\n\nLibrary: Visual Studio 2003 Release",
@@ -7376,34 +9270,12 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFE83",
         "LoD/1.13c": "0xFE83"
       },
+      "sizes": {
+        "LoD/1.12a": 69,
+        "LoD/1.13c": 69
+      },
       "method": "MNE",
-      "index": "MNE:d0108701376b16ac6499325944a4e45e",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x0040FD70",
-          "rva": "0xFD70",
-          "confidence": 0.217,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
-        },
-        "LoD/1.11b": {
-          "address": "0x0040FD70",
-          "rva": "0xFD70",
-          "confidence": 0.301,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.12a"
-        },
-        "LoD/1.13d": {
-          "address": "0x0040FD70",
-          "rva": "0xFD70",
-          "confidence": 0.301,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.13c"
-        }
-      }
+      "index": "MNE:d0108701376b16ac6499325944a4e45e"
     },
     "D2VidTst_MNE_d020e6e6f383": {
       "addresses": {
@@ -7421,6 +9293,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA940",
         "LoD/1.09d": "0xA940",
         "LoD/1.10": "0xA820"
+      },
+      "sizes": {
+        "LoD/1.07": 41,
+        "LoD/1.08": 41,
+        "LoD/1.09": 41,
+        "LoD/1.09b": 41,
+        "LoD/1.09d": 41,
+        "LoD/1.10": 41
       },
       "method": "MNE",
       "index": "MNE:d020e6e6f383c625d5fd112b88b641eb"
@@ -7442,6 +9322,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x92C4",
         "LoD/1.10": "0x91A4"
       },
+      "sizes": {
+        "LoD/1.07": 318,
+        "LoD/1.08": 318,
+        "LoD/1.09": 318,
+        "LoD/1.09b": 318,
+        "LoD/1.09d": 318,
+        "LoD/1.10": 318
+      },
       "method": "MNE",
       "index": "MNE:d09ab6579f07f3f7e60cd130b4db709e"
     },
@@ -7459,6 +9347,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x10191",
         "LoD/1.13c": "0x10191",
         "LoD/1.13d": "0x100A7"
+      },
+      "sizes": {
+        "LoD/1.11": 50,
+        "LoD/1.11b": 50,
+        "LoD/1.12a": 50,
+        "LoD/1.13c": 50,
+        "LoD/1.13d": 50
       },
       "name": "__control87",
       "signature": "uint __control87(uint _NewValue, uint _Mask)",
@@ -7482,6 +9377,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFB99",
         "LoD/1.13d": "0xFACB"
       },
+      "sizes": {
+        "LoD/1.11": 114,
+        "LoD/1.11b": 114,
+        "LoD/1.12a": 114,
+        "LoD/1.13c": 114,
+        "LoD/1.13d": 114
+      },
       "name": "__RoundMan",
       "signature": "undefined4 __RoundMan(int param_1, int param_2)",
       "comment": "Library Function - Single Match\n __RoundMan\n\nLibrary: Visual Studio 2003 Release",
@@ -7503,6 +9405,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4F0E",
         "LoD/1.13c": "0x4F0E",
         "LoD/1.13d": "0x4E98"
+      },
+      "sizes": {
+        "LoD/1.11": 199,
+        "LoD/1.11b": 199,
+        "LoD/1.12a": 199,
+        "LoD/1.13c": 199,
+        "LoD/1.13d": 199
       },
       "name": "__setenvp",
       "signature": "int __setenvp(void)",
@@ -7526,6 +9435,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFA44",
         "LoD/1.13d": "0xF976"
       },
+      "sizes": {
+        "LoD/1.11": 78,
+        "LoD/1.11b": 78,
+        "LoD/1.12a": 78,
+        "LoD/1.13c": 78,
+        "LoD/1.13d": 78
+      },
       "method": "MNE",
       "index": "MNE:d3fefb7c954cbb3bdf620b064e1026c9"
     },
@@ -7543,6 +9459,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x8C7B",
         "LoD/1.13c": "0x8C7B",
         "LoD/1.13d": "0x8BBB"
+      },
+      "sizes": {
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
       },
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5"
@@ -7574,6 +9497,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x46C0",
         "LoD/1.13d": "0x4650"
       },
+      "sizes": {
+        "LoD/1.07": 52,
+        "LoD/1.08": 52,
+        "LoD/1.09": 52,
+        "LoD/1.09b": 52,
+        "LoD/1.09d": 52,
+        "LoD/1.10": 52,
+        "LoD/1.11": 52,
+        "LoD/1.11b": 52,
+        "LoD/1.12a": 52,
+        "LoD/1.13c": 52,
+        "LoD/1.13d": 52
+      },
       "name": "__allmul",
       "signature": "longlong __allmul(uint param_1, int param_2, uint param_3, int param_4)",
       "comment": "Library Function - Single Match\n __allmul\n\nLibrary: Visual Studio",
@@ -7595,6 +9531,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x15D0",
         "LoD/1.13c": "0x16F8",
         "LoD/1.13d": "0x15D0"
+      },
+      "sizes": {
+        "LoD/1.11": 104,
+        "LoD/1.11b": 104,
+        "LoD/1.12a": 104,
+        "LoD/1.13c": 104,
+        "LoD/1.13d": 104
       },
       "name": "_free",
       "signature": "void _free(void * _Memory)",
@@ -7620,6 +9563,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xBC28",
         "LoD/1.10": "0xBB08"
       },
+      "sizes": {
+        "LoD/1.07": 182,
+        "LoD/1.08": 182,
+        "LoD/1.09": 182,
+        "LoD/1.09b": 182,
+        "LoD/1.09d": 182,
+        "LoD/1.10": 182
+      },
       "method": "MNE",
       "index": "MNE:d7ddf3c1b7f31503b888765ebbb66d57"
     },
@@ -7640,6 +9591,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x90F0",
         "LoD/1.10": "0x8FD0"
       },
+      "sizes": {
+        "LoD/1.07": 117,
+        "LoD/1.08": 117,
+        "LoD/1.09": 117,
+        "LoD/1.09b": 117,
+        "LoD/1.09d": 117,
+        "LoD/1.10": 117
+      },
       "method": "MNE",
       "index": "MNE:d858691b25ff9d68f1965dc04bb2a9aa"
     },
@@ -7658,18 +9617,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x9A88",
         "LoD/1.10": "0x9968"
       },
+      "sizes": {
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45
+      },
       "method": "MNE",
-      "index": "MNE:d8be7433da8984a6d08ceacc3367b90b",
-      "candidates": {
-        "LoD/1.07": {
-          "address": "0x0040A515",
-          "rva": "0xA515",
-          "confidence": 0.316,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.08"
-        }
-      }
+      "index": "MNE:d8be7433da8984a6d08ceacc3367b90b"
     },
     "D2VidTst_MNE_d9739637e22d": {
       "addresses": {
@@ -7685,6 +9641,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xD7EB",
         "LoD/1.09d": "0xD7EB",
         "LoD/1.10": "0xD6CB"
+      },
+      "sizes": {
+        "LoD/1.08": 87,
+        "LoD/1.09": 87,
+        "LoD/1.09b": 87,
+        "LoD/1.09d": 87,
+        "LoD/1.10": 87
       },
       "method": "MNE",
       "index": "MNE:d9739637e22d71ed7283b5bc68a6c4ac"
@@ -7703,6 +9666,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x9EC8",
         "LoD/1.09d": "0x9EC8",
         "LoD/1.10": "0x9DA8"
+      },
+      "sizes": {
+        "LoD/1.08": 781,
+        "LoD/1.09": 781,
+        "LoD/1.09b": 781,
+        "LoD/1.09d": 781,
+        "LoD/1.10": 781
       },
       "method": "MNE",
       "index": "MNE:da9fe63256c776da60d8a55e82f34c74"
@@ -7723,6 +9693,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x8B9A",
         "LoD/1.09d": "0x8B9A",
         "LoD/1.10": "0x8A7A"
+      },
+      "sizes": {
+        "LoD/1.07": 86,
+        "LoD/1.08": 86,
+        "LoD/1.09": 86,
+        "LoD/1.09b": 86,
+        "LoD/1.09d": 86,
+        "LoD/1.10": 86
       },
       "method": "MNE",
       "index": "MNE:db5486806847a3abb9c37b86b3fdc359"
@@ -7754,6 +9732,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFAEA",
         "LoD/1.13d": "0xFA1C"
       },
+      "sizes": {
+        "LoD/1.07": 24,
+        "LoD/1.08": 24,
+        "LoD/1.09": 24,
+        "LoD/1.09b": 24,
+        "LoD/1.09d": 24,
+        "LoD/1.10": 24,
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
+      },
       "name": "_ValidateExecute",
       "signature": "int _ValidateExecute(_func_int * param_1)",
       "comment": "Library Function - Single Match\n int __cdecl _ValidateExecute(int (__stdcall*)(void))\n\nLibrary: Visual Studio 2003 Release",
@@ -7776,6 +9767,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD887",
         "LoD/1.10": "0xD767"
       },
+      "sizes": {
+        "LoD/1.08": 520,
+        "LoD/1.09": 520,
+        "LoD/1.09b": 520,
+        "LoD/1.09d": 520,
+        "LoD/1.10": 520
+      },
       "method": "MNE",
       "index": "MNE:de76025ed2839a23b964285c7e0d5701"
     },
@@ -7793,6 +9791,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEB65",
         "LoD/1.13c": "0xEB65",
         "LoD/1.13d": "0xEAA5"
+      },
+      "sizes": {
+        "LoD/1.11": 76,
+        "LoD/1.11b": 76,
+        "LoD/1.12a": 76,
+        "LoD/1.13c": 76,
+        "LoD/1.13d": 76
       },
       "name": "_FindAndUnlinkFrame",
       "signature": "void _FindAndUnlinkFrame(FrameInfo * param_1)",
@@ -7815,6 +9820,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1042D",
         "LoD/1.13c": "0x1042D",
         "LoD/1.13d": "0x10343"
+      },
+      "sizes": {
+        "LoD/1.11": 45,
+        "LoD/1.11b": 45,
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
       "name": "___shr_12",
       "signature": "undefined ___shr_12(uint * param_1)",
@@ -7850,6 +9862,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFC3F",
         "LoD/1.13d": "0xFB71"
       },
+      "sizes": {
+        "LoD/1.07": 123,
+        "LoD/1.08": 123,
+        "LoD/1.09": 123,
+        "LoD/1.09b": 123,
+        "LoD/1.09d": 123,
+        "LoD/1.10": 123,
+        "LoD/1.11": 123,
+        "LoD/1.11b": 123,
+        "LoD/1.12a": 123,
+        "LoD/1.13c": 123,
+        "LoD/1.13d": 123
+      },
       "name": "__ShrMan",
       "signature": "undefined __ShrMan(int param_1, int param_2)",
       "comment": "Library Function - Single Match\n __ShrMan\n\nLibrary: Visual Studio 2003 Release",
@@ -7871,6 +9896,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x8A2D",
         "LoD/1.13c": "0x8A2D",
         "LoD/1.13d": "0x8973"
+      },
+      "sizes": {
+        "LoD/1.11": 200,
+        "LoD/1.11b": 200,
+        "LoD/1.12a": 200,
+        "LoD/1.13c": 200,
+        "LoD/1.13d": 200
       },
       "name": "___tolower_mt",
       "signature": "uint ___tolower_mt(void * this, int param_1, uint param_2)",
@@ -7896,6 +9928,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA41F",
         "LoD/1.10": "0xA2FF"
       },
+      "sizes": {
+        "LoD/1.07": 41,
+        "LoD/1.08": 41,
+        "LoD/1.09": 41,
+        "LoD/1.09b": 41,
+        "LoD/1.09d": 41,
+        "LoD/1.10": 41
+      },
       "method": "MNE",
       "index": "MNE:e1bb2af96e763a0793e4aabbeb4bef2b"
     },
@@ -7916,42 +9956,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x817D",
         "LoD/1.10": "0x805D"
       },
+      "sizes": {
+        "LoD/1.07": 26,
+        "LoD/1.08": 26,
+        "LoD/1.09": 26,
+        "LoD/1.09b": 26,
+        "LoD/1.09d": 26,
+        "LoD/1.10": 26
+      },
       "method": "MNE",
-      "index": "MNE:e1d180103ac3aa41d411a0053bf626a2",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x0040ECC1",
-          "rva": "0xECC1",
-          "confidence": 0.317,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x0040ECC1",
-          "rva": "0xECC1",
-          "confidence": 0.228,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x0040ED81",
-          "rva": "0xED81",
-          "confidence": 0.164,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x0040ED81",
-          "rva": "0xED81",
-          "confidence": 0.118,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:e1d180103ac3aa41d411a0053bf626a2"
     },
     "D2VidTst_MNE_e318b2efa2b7": {
       "addresses": {
@@ -7970,6 +9984,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAC00",
         "LoD/1.10": "0xAAE0"
       },
+      "sizes": {
+        "LoD/1.07": 117,
+        "LoD/1.08": 117,
+        "LoD/1.09": 117,
+        "LoD/1.09b": 117,
+        "LoD/1.09d": 117,
+        "LoD/1.10": 117
+      },
       "name": "__aullrem",
       "signature": "undefined8 __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
       "comment": "Library Function - Single Match\n __aullrem\n\nLibrary: Visual Studio",
@@ -7983,6 +10005,9 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0x9B08"
+      },
+      "sizes": {
+        "LoD/1.07": 60
       },
       "method": "MNE",
       "index": "MNE:e33a4c6c562d51a2fcc8e07bee94f1d6"
@@ -8014,8 +10039,21 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8F4A",
         "LoD/1.13d": "0x8E86"
       },
-      "name": "Ordinal_252",
-      "signature": "undefined Ordinal_252(void)",
+      "sizes": {
+        "LoD/1.07": 6,
+        "LoD/1.08": 6,
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "SFileCloseArchive",
+      "signature": "bool SFileCloseArchive(void * hArchive)",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a"
@@ -8034,6 +10072,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xC695",
         "LoD/1.09d": "0xC695",
         "LoD/1.10": "0xC575"
+      },
+      "sizes": {
+        "LoD/1.08": 23,
+        "LoD/1.09": 23,
+        "LoD/1.09b": 23,
+        "LoD/1.09d": 23,
+        "LoD/1.10": 23
       },
       "method": "MNE",
       "index": "MNE:e4c337356f231e5baad169a03bc50c48"
@@ -8055,6 +10100,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xD299",
         "LoD/1.10": "0xD179"
       },
+      "sizes": {
+        "LoD/1.07": 758,
+        "LoD/1.08": 758,
+        "LoD/1.09": 758,
+        "LoD/1.09b": 758,
+        "LoD/1.09d": 758,
+        "LoD/1.10": 758
+      },
       "method": "MNE",
       "index": "MNE:e4f799c77acab14c5b1bdda2181c2d46"
     },
@@ -8066,6 +10119,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x10C1E",
         "LoD/1.13c": "0x10C1E"
+      },
+      "sizes": {
+        "LoD/1.12a": 566,
+        "LoD/1.13c": 566
       },
       "method": "MNE",
       "index": "MNE:e57f9b957e5ffdb4b85cc387a6cef2b2"
@@ -8087,6 +10144,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB4B2",
         "LoD/1.10": "0xB392"
       },
+      "sizes": {
+        "LoD/1.07": 23,
+        "LoD/1.08": 23,
+        "LoD/1.09": 23,
+        "LoD/1.09b": 23,
+        "LoD/1.09d": 23,
+        "LoD/1.10": 23
+      },
       "method": "MNE",
       "index": "MNE:e65987029a330b525d706048fc12bba9"
     },
@@ -8105,42 +10170,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x18D0",
         "LoD/1.13d": "0x17A8"
       },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
       "method": "MNE",
-      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x00406390",
-          "rva": "0x6390",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x00406390",
-          "rva": "0x6390",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x00406390",
-          "rva": "0x6390",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x00406270",
-          "rva": "0x6270",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1"
     },
     "D2VidTst_MNE_e75ee0306c31": {
       "addresses": {
@@ -8156,6 +10194,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF469",
         "LoD/1.13c": "0xF469",
         "LoD/1.13d": "0xF3A9"
+      },
+      "sizes": {
+        "LoD/1.11": 162,
+        "LoD/1.11b": 162,
+        "LoD/1.12a": 162,
+        "LoD/1.13c": 162,
+        "LoD/1.13d": 162
       },
       "name": "___InternalCxxFrameHandler",
       "signature": "undefined4 ___InternalCxxFrameHandler(EHExceptionRecord * param_1, EHRegistrationNode * param_2, _CONTEXT * param_3, void * param_4, _s_FuncInfo * param_5, int param_6, EHRegistrationNode * param_7, uchar param_8)",
@@ -8181,6 +10226,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xBB28",
         "LoD/1.10": "0xBA08"
       },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45
+      },
       "method": "MNE",
       "index": "MNE:e78d3e11a4929c0669f2164a27decb87"
     },
@@ -8201,6 +10254,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xDFDB",
         "LoD/1.10": "0xDEBB"
       },
+      "sizes": {
+        "LoD/1.07": 164,
+        "LoD/1.08": 164,
+        "LoD/1.09": 164,
+        "LoD/1.09b": 164,
+        "LoD/1.09d": 164,
+        "LoD/1.10": 164
+      },
       "method": "MNE",
       "index": "MNE:e7b052927c73f8415c227814d8219b82"
     },
@@ -8218,6 +10279,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1020",
         "LoD/1.13c": "0x1020",
         "LoD/1.13d": "0x1020"
+      },
+      "sizes": {
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
       },
       "method": "MNE",
       "index": "MNE:e80fa3cb24ba2fed5472ff5f1df96632"
@@ -8237,6 +10305,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x11B0",
         "LoD/1.13d": "0x11B0"
       },
+      "sizes": {
+        "LoD/1.11": 34,
+        "LoD/1.11b": 34,
+        "LoD/1.12a": 34,
+        "LoD/1.13c": 34,
+        "LoD/1.13d": 34
+      },
       "method": "MNE",
       "index": "MNE:e8197b33d1c540e3dfe6106d99d045c5"
     },
@@ -8254,6 +10329,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x11020",
         "LoD/1.13c": "0x11020",
         "LoD/1.13d": "0x10F00"
+      },
+      "sizes": {
+        "LoD/1.11": 10,
+        "LoD/1.11b": 10,
+        "LoD/1.12a": 10,
+        "LoD/1.13c": 10,
+        "LoD/1.13d": 10
       },
       "name": "Unwind@00410eeb",
       "signature": "undefined Unwind@00410eeb(void)",
@@ -8288,6 +10370,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x3444",
         "LoD/1.13d": "0x33D4"
       },
+      "sizes": {
+        "LoD/1.07": 21,
+        "LoD/1.08": 21,
+        "LoD/1.09": 21,
+        "LoD/1.09b": 21,
+        "LoD/1.09d": 21,
+        "LoD/1.10": 21,
+        "LoD/1.11": 21,
+        "LoD/1.11b": 21,
+        "LoD/1.12a": 21,
+        "LoD/1.13c": 21,
+        "LoD/1.13d": 21
+      },
       "method": "MNE",
       "index": "MNE:e83d104051445238b4510431aa98563d"
     },
@@ -8305,6 +10400,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xEC61",
         "LoD/1.13c": "0xEC61",
         "LoD/1.13d": "0xEBA1"
+      },
+      "sizes": {
+        "LoD/1.11": 79,
+        "LoD/1.11b": 79,
+        "LoD/1.12a": 79,
+        "LoD/1.13c": 79,
+        "LoD/1.13d": 79
       },
       "name": "TypeMatch",
       "signature": "int TypeMatch(_s_HandlerType * param_1, _s_CatchableType * param_2, _s_ThrowInfo * param_3)",
@@ -8327,6 +10429,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xC8D0",
         "LoD/1.09d": "0xC8D0",
         "LoD/1.10": "0xC7B0"
+      },
+      "sizes": {
+        "LoD/1.08": 193,
+        "LoD/1.09": 193,
+        "LoD/1.09b": 193,
+        "LoD/1.09d": 193,
+        "LoD/1.10": 193
       },
       "name": "_strchr",
       "signature": "char * _strchr(char * _Str, int _Val)",
@@ -8362,6 +10471,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x34F9",
         "LoD/1.13d": "0x3489"
       },
+      "sizes": {
+        "LoD/1.07": 49,
+        "LoD/1.08": 49,
+        "LoD/1.09": 49,
+        "LoD/1.09b": 49,
+        "LoD/1.09d": 49,
+        "LoD/1.10": 49,
+        "LoD/1.11": 49,
+        "LoD/1.11b": 49,
+        "LoD/1.12a": 49,
+        "LoD/1.13c": 49,
+        "LoD/1.13d": 49
+      },
       "name": "__lock",
       "signature": "void __lock(int _File)",
       "comment": "Library Function - Single Match\n __lock\n\nLibrary: Visual Studio 2003 Release",
@@ -8385,6 +10507,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x91F3",
         "LoD/1.09d": "0x91F3",
         "LoD/1.10": "0x90D3"
+      },
+      "sizes": {
+        "LoD/1.07": 163,
+        "LoD/1.08": 163,
+        "LoD/1.09": 163,
+        "LoD/1.09b": 163,
+        "LoD/1.09d": 163,
+        "LoD/1.10": 163
       },
       "method": "MNE",
       "index": "MNE:eb17d7abe573793d4b67d9aac794697b"
@@ -8416,6 +10546,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x88D4",
         "LoD/1.13d": "0x881A"
       },
+      "sizes": {
+        "LoD/1.07": 76,
+        "LoD/1.08": 76,
+        "LoD/1.09": 76,
+        "LoD/1.09b": 76,
+        "LoD/1.09d": 76,
+        "LoD/1.10": 76,
+        "LoD/1.11": 76,
+        "LoD/1.11b": 76,
+        "LoD/1.12a": 76,
+        "LoD/1.13c": 76,
+        "LoD/1.13d": 76
+      },
       "name": "__fclose_lk",
       "signature": "undefined4 __fclose_lk(FILE * param_1)",
       "comment": "Library Function - Single Match\n __fclose_lk\n\nLibrary: Visual Studio 2003 Release",
@@ -8431,6 +10574,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0x8007",
         "LoD/1.13c": "0x8007"
+      },
+      "sizes": {
+        "LoD/1.12a": 477,
+        "LoD/1.13c": 477
       },
       "method": "MNE",
       "index": "MNE:ec23b45a2866e232185332d8037b87ff"
@@ -8449,6 +10596,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5B22",
         "LoD/1.13c": "0x5B22",
         "LoD/1.13d": "0x5AC4"
+      },
+      "sizes": {
+        "LoD/1.11": 96,
+        "LoD/1.11b": 96,
+        "LoD/1.12a": 96,
+        "LoD/1.13c": 96,
+        "LoD/1.13d": 96
       },
       "name": "___wctomb_mt",
       "signature": "int ___wctomb_mt(int param_1, LPSTR param_2, WCHAR param_3)",
@@ -8474,6 +10628,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6910",
         "LoD/1.10": "0x67F0"
       },
+      "sizes": {
+        "LoD/1.07": 47,
+        "LoD/1.08": 47,
+        "LoD/1.09": 47,
+        "LoD/1.09b": 47,
+        "LoD/1.09d": 47,
+        "LoD/1.10": 47
+      },
       "method": "MNE",
       "index": "MNE:ec64a5a69630facadc02e3d8f92cfa48"
     },
@@ -8491,6 +10653,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x103FF",
         "LoD/1.13c": "0x103FF",
         "LoD/1.13d": "0x10315"
+      },
+      "sizes": {
+        "LoD/1.11": 46,
+        "LoD/1.11b": 46,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name": "___shl_12",
       "signature": "undefined ___shl_12(uint * param_1)",
@@ -8513,6 +10682,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x8B20",
         "LoD/1.13c": "0x8B20",
         "LoD/1.13d": "0x8A60"
+      },
+      "sizes": {
+        "LoD/1.11": 97,
+        "LoD/1.11b": 97,
+        "LoD/1.12a": 97,
+        "LoD/1.13c": 97,
+        "LoD/1.13d": 97
       },
       "name": "___ascii_strnicmp",
       "signature": "int ___ascii_strnicmp(char * _Str1, char * _Str2, size_t _MaxCount)",
@@ -8548,6 +10724,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x62B6",
         "LoD/1.13d": "0x624A"
       },
+      "sizes": {
+        "LoD/1.07": 24,
+        "LoD/1.08": 24,
+        "LoD/1.09": 24,
+        "LoD/1.09b": 24,
+        "LoD/1.09d": 24,
+        "LoD/1.10": 24,
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
+      },
       "method": "MNE",
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf"
     },
@@ -8568,6 +10757,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xE0E4",
         "LoD/1.10": "0xDFC4"
       },
+      "sizes": {
+        "LoD/1.07": 473,
+        "LoD/1.08": 473,
+        "LoD/1.09": 473,
+        "LoD/1.09b": 473,
+        "LoD/1.09d": 473,
+        "LoD/1.10": 473
+      },
       "method": "MNE",
       "index": "MNE:ed663ef840738cced3344cb47bf34919"
     },
@@ -8587,6 +10784,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x979A",
         "LoD/1.09d": "0x979A",
         "LoD/1.10": "0x967A"
+      },
+      "sizes": {
+        "LoD/1.07": 306,
+        "LoD/1.08": 306,
+        "LoD/1.09": 306,
+        "LoD/1.09b": 306,
+        "LoD/1.09d": 306,
+        "LoD/1.10": 306
       },
       "method": "MNE",
       "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d"
@@ -8618,6 +10823,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x78EC",
         "LoD/1.13d": "0x785D"
       },
+      "sizes": {
+        "LoD/1.07": 27,
+        "LoD/1.08": 27,
+        "LoD/1.09": 27,
+        "LoD/1.09b": 27,
+        "LoD/1.09d": 27,
+        "LoD/1.10": 27,
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27
+      },
       "name": "__callnewh",
       "signature": "int __callnewh(size_t _Size)",
       "comment": "Library Function - Single Match\n __callnewh\n\nLibrary: Visual Studio 2003 Release",
@@ -8640,26 +10858,15 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA1F7",
         "LoD/1.10": "0xA0D7"
       },
+      "sizes": {
+        "LoD/1.08": 214,
+        "LoD/1.09": 214,
+        "LoD/1.09b": 214,
+        "LoD/1.09d": 214,
+        "LoD/1.10": 214
+      },
       "method": "MNE",
-      "index": "MNE:eef5ae1e69543f2ca247fd0a568bf7f0",
-      "candidates": {
-        "LoD/1.11b": {
-          "address": "0x0040BCCB",
-          "rva": "0xBCCB",
-          "confidence": 0.223,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x0040A73B",
-          "rva": "0xA73B",
-          "confidence": 0.116,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:eef5ae1e69543f2ca247fd0a568bf7f0"
     },
     "D2VidTst_MNE_ef5171f8f748": {
       "addresses": {
@@ -8675,6 +10882,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xCABB",
         "LoD/1.09d": "0xCABB",
         "LoD/1.10": "0xC99B"
+      },
+      "sizes": {
+        "LoD/1.08": 809,
+        "LoD/1.09": 809,
+        "LoD/1.09b": 809,
+        "LoD/1.09d": 809,
+        "LoD/1.10": 809
       },
       "method": "MNE",
       "index": "MNE:ef5171f8f7487cff01081036951ae8fa"
@@ -8696,6 +10910,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xB808",
         "LoD/1.10": "0xB6E8"
       },
+      "sizes": {
+        "LoD/1.07": 140,
+        "LoD/1.08": 140,
+        "LoD/1.09": 140,
+        "LoD/1.09b": 140,
+        "LoD/1.09d": 140,
+        "LoD/1.10": 140
+      },
       "method": "MNE",
       "index": "MNE:ef6cff05ab48173ef496ad6dbe48e5ef"
     },
@@ -8713,6 +10935,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x73F7",
         "LoD/1.13c": "0x73F7",
         "LoD/1.13d": "0x737B"
+      },
+      "sizes": {
+        "LoD/1.11": 47,
+        "LoD/1.11b": 47,
+        "LoD/1.12a": 47,
+        "LoD/1.13c": 47,
+        "LoD/1.13d": 47
       },
       "name": "_CPtoLCID",
       "signature": "undefined4 _CPtoLCID(void)",
@@ -8735,6 +10964,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xED9C",
         "LoD/1.13c": "0xED9C",
         "LoD/1.13d": "0xECDC"
+      },
+      "sizes": {
+        "LoD/1.11": 52,
+        "LoD/1.11b": 52,
+        "LoD/1.12a": 52,
+        "LoD/1.13c": 52,
+        "LoD/1.13d": 52
       },
       "name": "___DestructExceptionObject",
       "signature": "undefined ___DestructExceptionObject(int param_1)",
@@ -8760,6 +10996,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x6AB9",
         "LoD/1.10": "0x6999"
       },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11
+      },
       "method": "MNE",
       "index": "MNE:eff39ee6c6791180162228ba1336f5fe"
     },
@@ -8780,6 +11024,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x92AA",
         "LoD/1.10": "0x918A"
       },
+      "sizes": {
+        "LoD/1.07": 26,
+        "LoD/1.08": 26,
+        "LoD/1.09": 26,
+        "LoD/1.09b": 26,
+        "LoD/1.09d": 26,
+        "LoD/1.10": 26
+      },
       "method": "MNE",
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6"
     },
@@ -8797,6 +11049,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5590",
         "LoD/1.13c": "0x5590",
         "LoD/1.13d": "0x5520"
+      },
+      "sizes": {
+        "LoD/1.11": 61,
+        "LoD/1.11b": 61,
+        "LoD/1.12a": 61,
+        "LoD/1.13c": 61,
+        "LoD/1.13d": 61
       },
       "name": "__chkstk",
       "signature": "undefined __chkstk(void)",
@@ -8819,6 +11078,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x6CD0",
         "LoD/1.13c": "0x6CD0",
         "LoD/1.13d": "0x6C70"
+      },
+      "sizes": {
+        "LoD/1.11": 232,
+        "LoD/1.11b": 232,
+        "LoD/1.12a": 232,
+        "LoD/1.13c": 232,
+        "LoD/1.13d": 232
       },
       "method": "MNE",
       "index": "MNE:f1c393de2fac70496494aea734de5675"
@@ -8850,6 +11116,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8F25",
         "LoD/1.13d": "0x8E61"
       },
+      "sizes": {
+        "LoD/1.07": 9,
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
+        "LoD/1.09d": 9,
+        "LoD/1.10": 9,
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0"
     },
@@ -8870,6 +11149,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xC15B",
         "LoD/1.10": "0xC03B"
       },
+      "sizes": {
+        "LoD/1.07": 51,
+        "LoD/1.08": 51,
+        "LoD/1.09": 51,
+        "LoD/1.09b": 51,
+        "LoD/1.09d": 51,
+        "LoD/1.10": 51
+      },
       "method": "MNE",
       "index": "MNE:f31c6439952ca9c3e10694cce3d833df"
     },
@@ -8888,6 +11175,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x5D38",
         "LoD/1.13d": "0x5CD8"
       },
+      "sizes": {
+        "LoD/1.11": 225,
+        "LoD/1.11b": 225,
+        "LoD/1.12a": 225,
+        "LoD/1.13c": 225,
+        "LoD/1.13d": 225
+      },
       "name": "__filbuf",
       "signature": "int __filbuf(FILE * _File)",
       "comment": "Library Function - Single Match\n __filbuf\n\nLibrary: Visual Studio 2003 Release",
@@ -8905,6 +11199,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "0x567C",
         "LoD/1.11b": "0x567C",
         "LoD/1.13d": "0x567C"
+      },
+      "sizes": {
+        "LoD/1.11": 462,
+        "LoD/1.11b": 462,
+        "LoD/1.13d": 462
       },
       "name": "__write_lk",
       "signature": "undefined __write_lk(uint param_1, char * param_2, uint param_3)",
@@ -8940,6 +11239,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x8C9F",
         "LoD/1.13d": "0x8BDF"
       },
+      "sizes": {
+        "LoD/1.07": 43,
+        "LoD/1.08": 43,
+        "LoD/1.09": 43,
+        "LoD/1.09b": 43,
+        "LoD/1.09d": 43,
+        "LoD/1.10": 43,
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43
+      },
       "name": "__freebuf",
       "signature": "void __freebuf(FILE * _File)",
       "comment": "Library Function - Single Match\n __freebuf\n\nLibrary: Visual Studio 2003 Release",
@@ -8964,42 +11276,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x62E0",
         "LoD/1.10": "0x61C0"
       },
+      "sizes": {
+        "LoD/1.07": 9,
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
+        "LoD/1.09d": 9,
+        "LoD/1.10": 9
+      },
       "method": "MNE",
-      "index": "MNE:f3c4c56ea9bbe9c6adb54d69701214e9",
-      "candidates": {
-        "LoD/1.11": {
-          "address": "0x0040174B",
-          "rva": "0x174B",
-          "confidence": 0.324,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.11b": {
-          "address": "0x0040174B",
-          "rva": "0x174B",
-          "confidence": 0.233,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.12a": {
-          "address": "0x00401623",
-          "rva": "0x1623",
-          "confidence": 0.168,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        },
-        "LoD/1.13c": {
-          "address": "0x0040174B",
-          "rva": "0x174B",
-          "confidence": 0.121,
-          "method": "structural",
-          "direction": "forward",
-          "source": "LoD/1.10"
-        }
-      }
+      "index": "MNE:f3c4c56ea9bbe9c6adb54d69701214e9"
     },
     "D2VidTst_MNE_f50494c5982a": {
       "addresses": {
@@ -9028,6 +11314,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xF978",
         "LoD/1.13d": "0xF8AA"
       },
+      "sizes": {
+        "LoD/1.07": 81,
+        "LoD/1.08": 81,
+        "LoD/1.09": 81,
+        "LoD/1.09b": 81,
+        "LoD/1.09d": 81,
+        "LoD/1.10": 81,
+        "LoD/1.11": 81,
+        "LoD/1.11b": 81,
+        "LoD/1.12a": 81,
+        "LoD/1.13c": 81,
+        "LoD/1.13d": 81
+      },
       "name": "__cfltcvt",
       "signature": "errno_t __cfltcvt(double * arg, char * buffer, size_t sizeInBytes, int format, int precision, int caps)",
       "comment": "Library Function - Single Match\n __cfltcvt\n\nLibrary: Visual Studio 2003 Release",
@@ -9052,6 +11351,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xF536",
         "LoD/1.10": "0xF416"
       },
+      "sizes": {
+        "LoD/1.07": 93,
+        "LoD/1.08": 93,
+        "LoD/1.09": 93,
+        "LoD/1.09b": 93,
+        "LoD/1.09d": 93,
+        "LoD/1.10": 93
+      },
       "method": "MNE",
       "index": "MNE:f69087a4d0d613e8eb1a99e63a6b0789"
     },
@@ -9069,6 +11376,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x6B80",
         "LoD/1.13c": "0x6B80",
         "LoD/1.13d": "0x6B20"
+      },
+      "sizes": {
+        "LoD/1.11": 95,
+        "LoD/1.11b": 95,
+        "LoD/1.12a": 95,
+        "LoD/1.13c": 95,
+        "LoD/1.13d": 95
       },
       "name": "___free_lconv_num",
       "signature": "undefined ___free_lconv_num(undefined4 * param_1)",
@@ -9094,6 +11408,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x768D",
         "LoD/1.10": "0x756D"
       },
+      "sizes": {
+        "LoD/1.07": 49,
+        "LoD/1.08": 49,
+        "LoD/1.09": 49,
+        "LoD/1.09b": 49,
+        "LoD/1.09d": 49,
+        "LoD/1.10": 49
+      },
       "method": "MNE",
       "index": "MNE:f7657de81ac8d5d29214c35b4fa6fd17"
     },
@@ -9111,6 +11433,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xFEC8",
         "LoD/1.13c": "0xFEC8",
         "LoD/1.13d": "0xFDEA"
+      },
+      "sizes": {
+        "LoD/1.11": 119,
+        "LoD/1.11b": 119,
+        "LoD/1.12a": 119,
+        "LoD/1.13c": 119,
+        "LoD/1.13d": 119
       },
       "name": "__fptostr",
       "signature": "errno_t __fptostr(char * _Buf, size_t _SizeInBytes, int _Digits, STRFLT _PtFlt)",
@@ -9136,6 +11465,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xA5B0",
         "LoD/1.10": "0xA490"
       },
+      "sizes": {
+        "LoD/1.07": 129,
+        "LoD/1.08": 129,
+        "LoD/1.09": 129,
+        "LoD/1.09b": 129,
+        "LoD/1.09d": 129,
+        "LoD/1.10": 129
+      },
       "name": "_strcmp",
       "signature": "int _strcmp(char * _Str1, char * _Str2)",
       "comment": "Library Function - Single Match\n _strcmp\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
@@ -9160,6 +11497,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x825B",
         "LoD/1.10": "0x813B"
       },
+      "sizes": {
+        "LoD/1.07": 155,
+        "LoD/1.08": 155,
+        "LoD/1.09": 155,
+        "LoD/1.09b": 155,
+        "LoD/1.09d": 155,
+        "LoD/1.10": 155
+      },
       "method": "MNE",
       "index": "MNE:f98e8e4083780c134b0ca50390abeff0"
     },
@@ -9180,6 +11525,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0xAAA6",
         "LoD/1.10": "0xA986"
       },
+      "sizes": {
+        "LoD/1.07": 35,
+        "LoD/1.08": 35,
+        "LoD/1.09": 35,
+        "LoD/1.09b": 35,
+        "LoD/1.09d": 35,
+        "LoD/1.10": 35
+      },
       "method": "MNE",
       "index": "MNE:fa40def9a627b3e96c51f0f9c6833564"
     },
@@ -9198,46 +11551,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x1544",
         "LoD/1.13d": "0x1544"
       },
+      "sizes": {
+        "LoD/1.11": 88,
+        "LoD/1.11b": 88,
+        "LoD/1.12a": 88,
+        "LoD/1.13c": 88,
+        "LoD/1.13d": 88
+      },
       "name": "_sprintf",
       "signature": "int _sprintf(char * _Dest, char * _Format, ...)",
       "comment": "Library Function - Single Match\n _sprintf\n\nLibrary: Visual Studio 2003 Release",
       "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:fa8972b50a91454e34542a6f7b824984",
-      "candidates": {
-        "LoD/1.09": {
-          "address": "0x0040B7B2",
-          "rva": "0xB7B2",
-          "confidence": 0.119,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09b": {
-          "address": "0x0040B7B2",
-          "rva": "0xB7B2",
-          "confidence": 0.166,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.09d": {
-          "address": "0x0040B7B2",
-          "rva": "0xB7B2",
-          "confidence": 0.23,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        },
-        "LoD/1.10": {
-          "address": "0x0040B692",
-          "rva": "0xB692",
-          "confidence": 0.32,
-          "method": "structural",
-          "direction": "reverse",
-          "source": "LoD/1.11"
-        }
-      }
+      "index": "MNE:fa8972b50a91454e34542a6f7b824984"
     },
     "D2VidTst_MNE_faa86e79d9b1": {
       "addresses": {
@@ -9253,6 +11579,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5997",
         "LoD/1.13c": "0x5997",
         "LoD/1.13d": "0x5939"
+      },
+      "sizes": {
+        "LoD/1.11": 42,
+        "LoD/1.11b": 42,
+        "LoD/1.12a": 42,
+        "LoD/1.13c": 42,
+        "LoD/1.13d": 42
       },
       "name": "__isatty",
       "signature": "int __isatty(int _FileHandle)",
@@ -9275,6 +11608,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1C4E",
         "LoD/1.13c": "0x1C52",
         "LoD/1.13d": "0x1C4E"
+      },
+      "sizes": {
+        "LoD/1.11": 36,
+        "LoD/1.11b": 36,
+        "LoD/1.12a": 36,
+        "LoD/1.13c": 36,
+        "LoD/1.13d": 36
       },
       "name": "write_multi_char",
       "signature": "undefined write_multi_char(undefined4 param_1, int param_2)",
@@ -9300,6 +11640,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": "0x8FE7",
         "LoD/1.10": "0x8EC7"
       },
+      "sizes": {
+        "LoD/1.07": 147,
+        "LoD/1.08": 147,
+        "LoD/1.09": 147,
+        "LoD/1.09b": 147,
+        "LoD/1.09d": 147,
+        "LoD/1.10": 147
+      },
       "method": "MNE",
       "index": "MNE:fad3eac2df5559e93c2297970ed0004b"
     },
@@ -9318,6 +11666,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xA8A0",
         "LoD/1.13d": "0xAD60"
       },
+      "sizes": {
+        "LoD/1.11": 191,
+        "LoD/1.11b": 191,
+        "LoD/1.12a": 191,
+        "LoD/1.13c": 191,
+        "LoD/1.13d": 191
+      },
       "method": "MNE",
       "index": "MNE:fb84b7b7b1e3c931ee768b772fccfe0b"
     },
@@ -9329,6 +11684,10 @@ var FUNCTIONS_D2VidTst_exe = {
       "rvas": {
         "LoD/1.12a": "0xF872",
         "LoD/1.13c": "0xF872"
+      },
+      "sizes": {
+        "LoD/1.12a": 103,
+        "LoD/1.13c": 103
       },
       "method": "MNE",
       "index": "MNE:fd5b33dc54aadb52ffc0a2fd4afb6504"
@@ -9347,6 +11706,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7B04",
         "LoD/1.13c": "0x7B04",
         "LoD/1.13d": "0x7A75"
+      },
+      "sizes": {
+        "LoD/1.11": 148,
+        "LoD/1.11b": 148,
+        "LoD/1.12a": 148,
+        "LoD/1.13c": 148,
+        "LoD/1.13d": 148
       },
       "name": "__lock_fhandle",
       "signature": "int __lock_fhandle(int _Filehandle)",
@@ -9382,6 +11748,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x10FC0",
         "LoD/1.13d": "0x10EA0"
       },
+      "sizes": {
+        "LoD/1.07": 5,
+        "LoD/1.08": 5,
+        "LoD/1.09": 5,
+        "LoD/1.09b": 5,
+        "LoD/1.09d": 5,
+        "LoD/1.10": 5,
+        "LoD/1.11": 5,
+        "LoD/1.11b": 5,
+        "LoD/1.12a": 5,
+        "LoD/1.13c": 5,
+        "LoD/1.13d": 5
+      },
       "name": "_atol",
       "signature": "long _atol(char * _Str)",
       "name_source": "LoD/1.11",
@@ -9402,6 +11781,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x3D51",
         "LoD/1.13c": "0x3D51",
         "LoD/1.13d": "0x3CE1"
+      },
+      "sizes": {
+        "LoD/1.11": 764,
+        "LoD/1.11b": 764,
+        "LoD/1.12a": 764,
+        "LoD/1.13c": 764,
+        "LoD/1.13d": 764
       },
       "name": "___sbh_alloc_block",
       "signature": "int * ___sbh_alloc_block(uint * param_1)",
@@ -9424,6 +11810,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x6836",
         "LoD/1.13c": "0x6836",
         "LoD/1.13d": "0x67D6"
+      },
+      "sizes": {
+        "LoD/1.11": 421,
+        "LoD/1.11b": 421,
+        "LoD/1.12a": 421,
+        "LoD/1.13c": 421,
+        "LoD/1.13d": 421
       },
       "name": "___crtGetStringTypeA",
       "signature": "BOOL ___crtGetStringTypeA(_locale_t _Plocinfo, DWORD _DWInfoType, LPCSTR _LpSrcStr, int _CchSrc, LPWORD _LpCharType, int _Code_page, BOOL _BError)",
@@ -9448,6 +11841,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xCDE4",
         "LoD/1.09d": "0xCDE4",
         "LoD/1.10": "0xCCC4"
+      },
+      "sizes": {
+        "LoD/1.07": 777,
+        "LoD/1.08": 777,
+        "LoD/1.09": 777,
+        "LoD/1.09b": 777,
+        "LoD/1.09d": 777,
+        "LoD/1.10": 777
       },
       "method": "MNE",
       "index": "MNE:ff64648b3e6e32bc28a5e4bc8d984c1e"
@@ -9479,6 +11880,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x48A6",
         "LoD/1.13d": "0x4831"
       },
+      "sizes": {
+        "LoD/1.07": 47,
+        "LoD/1.08": 47,
+        "LoD/1.09": 47,
+        "LoD/1.09b": 47,
+        "LoD/1.09d": 47,
+        "LoD/1.10": 47,
+        "LoD/1.11": 47,
+        "LoD/1.11b": 47,
+        "LoD/1.12a": 47,
+        "LoD/1.13c": 47,
+        "LoD/1.13d": 47
+      },
       "name": "___crtExitProcess",
       "signature": "void ___crtExitProcess(int param_1)",
       "comment": "Library Function - Single Match\n ___crtExitProcess\n\nLibrary: Visual Studio 2003 Release",
@@ -9500,6 +11914,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x5FD3",
         "LoD/1.13c": "0x5FD3",
         "LoD/1.13d": "0x5E25"
+      },
+      "sizes": {
+        "LoD/1.11": 192,
+        "LoD/1.11b": 192,
+        "LoD/1.12a": 192,
+        "LoD/1.13c": 192,
+        "LoD/1.13d": 192
       },
       "name": "___mbtowc_mt",
       "signature": "undefined4 ___mbtowc_mt(int param_1, LPWSTR param_2, byte * param_3, uint param_4)",
@@ -9535,6 +11956,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xBE70",
         "LoD/1.13d": "0xA760"
       },
+      "sizes": {
+        "LoD/1.07": 1091,
+        "LoD/1.08": 1042,
+        "LoD/1.09": 1042,
+        "LoD/1.09b": 1042,
+        "LoD/1.09d": 1042,
+        "LoD/1.10": 1042,
+        "LoD/1.11": 1189,
+        "LoD/1.11b": 1189,
+        "LoD/1.12a": 1189,
+        "LoD/1.13c": 1189,
+        "LoD/1.13d": 1189
+      },
       "method": "STR",
       "index": "STR:0065a15ffea0dbb532576870a2b8edcb"
     },
@@ -9552,6 +11986,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xDBD0",
         "LoD/1.13c": "0xDB30",
         "LoD/1.13d": "0xDB10"
+      },
+      "sizes": {
+        "LoD/1.11": 351,
+        "LoD/1.11b": 351,
+        "LoD/1.12a": 351,
+        "LoD/1.13c": 351,
+        "LoD/1.13d": 351
       },
       "method": "STR",
       "index": "STR:0daa74fb268994f796c287e28a689a8e"
@@ -9582,6 +12023,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xF6B8",
         "LoD/1.13c": "0xF6B8",
         "LoD/1.13d": "0xF5F8"
+      },
+      "sizes": {
+        "LoD/1.07": 194,
+        "LoD/1.08": 194,
+        "LoD/1.09": 194,
+        "LoD/1.09b": 194,
+        "LoD/1.09d": 194,
+        "LoD/1.10": 194,
+        "LoD/1.11": 174,
+        "LoD/1.11b": 174,
+        "LoD/1.12a": 174,
+        "LoD/1.13c": 174,
+        "LoD/1.13d": 174
       },
       "name": "__cftoe2",
       "signature": "undefined __cftoe2(int param_1, int param_2, char param_3)",
@@ -9617,6 +12071,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x7907",
         "LoD/1.13d": "0x7878"
       },
+      "sizes": {
+        "LoD/1.07": 137,
+        "LoD/1.08": 137,
+        "LoD/1.09": 137,
+        "LoD/1.09b": 137,
+        "LoD/1.09d": 137,
+        "LoD/1.10": 137,
+        "LoD/1.11": 249,
+        "LoD/1.11b": 249,
+        "LoD/1.12a": 249,
+        "LoD/1.13c": 249,
+        "LoD/1.13d": 249
+      },
       "name": "___crtMessageBoxA",
       "signature": "int ___crtMessageBoxA(LPCSTR _LpText, LPCSTR _LpCaption, UINT _UType)",
       "comment": "Library Function - Single Match\n ___crtMessageBoxA\n\nLibrary: Visual Studio 2003 Release",
@@ -9651,6 +12118,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xFA1B",
         "LoD/1.13d": "0xF94D"
       },
+      "sizes": {
+        "LoD/1.07": 41,
+        "LoD/1.08": 41,
+        "LoD/1.09": 41,
+        "LoD/1.09b": 41,
+        "LoD/1.09d": 41,
+        "LoD/1.10": 41,
+        "LoD/1.11": 41,
+        "LoD/1.11b": 41,
+        "LoD/1.12a": 41,
+        "LoD/1.13c": 41,
+        "LoD/1.13d": 41
+      },
       "name": "__ms_p5_mp_test_fdiv",
       "signature": "undefined __ms_p5_mp_test_fdiv(void)",
       "comment": "Library Function - Single Match\n __ms_p5_mp_test_fdiv\n\nLibrary: Visual Studio 2003 Release",
@@ -9672,6 +12152,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x45C6",
         "LoD/1.13c": "0x45C6",
         "LoD/1.13d": "0x4556"
+      },
+      "sizes": {
+        "LoD/1.11": 239,
+        "LoD/1.11b": 239,
+        "LoD/1.12a": 239,
+        "LoD/1.13c": 239,
+        "LoD/1.13d": 239
       },
       "name": "__mtinit",
       "signature": "int __mtinit(void)",
@@ -9707,6 +12194,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xDD30",
         "LoD/1.13d": "0xDC70"
       },
+      "sizes": {
+        "LoD/1.07": 2778,
+        "LoD/1.08": 2846,
+        "LoD/1.09": 2846,
+        "LoD/1.09b": 2846,
+        "LoD/1.09d": 2846,
+        "LoD/1.10": 2846,
+        "LoD/1.11": 2815,
+        "LoD/1.11b": 2815,
+        "LoD/1.12a": 2815,
+        "LoD/1.13c": 2815,
+        "LoD/1.13d": 2815
+      },
       "method": "STR",
       "index": "STR:3144cc6223383eac3e606b36b8f34f25"
     },
@@ -9737,6 +12237,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x9040",
         "LoD/1.13d": "0x8F80"
       },
+      "sizes": {
+        "LoD/1.07": 121,
+        "LoD/1.08": 121,
+        "LoD/1.09": 110,
+        "LoD/1.09b": 110,
+        "LoD/1.09d": 110,
+        "LoD/1.10": 110,
+        "LoD/1.11": 116,
+        "LoD/1.11b": 116,
+        "LoD/1.12a": 116,
+        "LoD/1.13c": 116,
+        "LoD/1.13d": 116
+      },
       "method": "STR",
       "index": "STR:33bd722168bf830bd5a5faa52b36b420"
     },
@@ -9766,6 +12279,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xC20F",
         "LoD/1.13c": "0xBC8F",
         "LoD/1.13d": "0xC14F"
+      },
+      "sizes": {
+        "LoD/1.07": 53,
+        "LoD/1.08": 53,
+        "LoD/1.09": 53,
+        "LoD/1.09b": 53,
+        "LoD/1.09d": 53,
+        "LoD/1.10": 53,
+        "LoD/1.11": 53,
+        "LoD/1.11b": 54,
+        "LoD/1.12a": 53,
+        "LoD/1.13c": 53,
+        "LoD/1.13d": 53
       },
       "name": "Catch@0040417c",
       "signature": "undefined4 Catch@0040417c(void)",
@@ -9800,6 +12326,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xA630",
         "LoD/1.13d": "0xA570"
       },
+      "sizes": {
+        "LoD/1.07": 249,
+        "LoD/1.08": 249,
+        "LoD/1.09": 249,
+        "LoD/1.09b": 249,
+        "LoD/1.09d": 249,
+        "LoD/1.10": 233,
+        "LoD/1.11": 245,
+        "LoD/1.11b": 245,
+        "LoD/1.12a": 245,
+        "LoD/1.13c": 245,
+        "LoD/1.13d": 245
+      },
       "method": "STR",
       "index": "STR:4d162f5ba2fb3717be98fa2b2cd7a969"
     },
@@ -9830,6 +12369,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x9370",
         "LoD/1.13d": "0x92B0"
       },
+      "sizes": {
+        "LoD/1.07": 601,
+        "LoD/1.08": 601,
+        "LoD/1.09": 601,
+        "LoD/1.09b": 601,
+        "LoD/1.09d": 601,
+        "LoD/1.10": 601,
+        "LoD/1.11": 602,
+        "LoD/1.11b": 602,
+        "LoD/1.12a": 602,
+        "LoD/1.13c": 602,
+        "LoD/1.13d": 602
+      },
       "method": "STR",
       "index": "STR:53cb82bbeba2e669ffa558ac0b842310"
     },
@@ -9847,6 +12399,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x60CE",
         "LoD/1.13c": "0x60CE",
         "LoD/1.13d": "0x6063"
+      },
+      "sizes": {
+        "LoD/1.11": 103,
+        "LoD/1.11b": 103,
+        "LoD/1.12a": 103,
+        "LoD/1.13c": 103,
+        "LoD/1.13d": 103
       },
       "name": "___crtInitCritSecAndSpinCount",
       "signature": "undefined ___crtInitCritSecAndSpinCount(undefined4 param_1, undefined4 param_2)",
@@ -9882,6 +12441,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x9A20",
         "LoD/1.13d": "0x9960"
       },
+      "sizes": {
+        "LoD/1.07": 2892,
+        "LoD/1.08": 2788,
+        "LoD/1.09": 2788,
+        "LoD/1.09b": 2788,
+        "LoD/1.09d": 2788,
+        "LoD/1.10": 2788,
+        "LoD/1.11": 3004,
+        "LoD/1.11b": 3004,
+        "LoD/1.12a": 3004,
+        "LoD/1.13c": 3004,
+        "LoD/1.13d": 3004
+      },
       "method": "STR",
       "index": "STR:784353a51d51728d8908009221ea5428"
     },
@@ -9899,6 +12471,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x9AB5",
         "LoD/1.09d": "0x9AB5",
         "LoD/1.10": "0x9995"
+      },
+      "sizes": {
+        "LoD/1.08": 328,
+        "LoD/1.09": 328,
+        "LoD/1.09b": 328,
+        "LoD/1.09d": 328,
+        "LoD/1.10": 328
       },
       "method": "STR",
       "index": "STR:854e75bd7977160757e99400a787fb69"
@@ -9930,6 +12509,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xC7D0",
         "LoD/1.13d": "0xC330"
       },
+      "sizes": {
+        "LoD/1.07": 153,
+        "LoD/1.08": 153,
+        "LoD/1.09": 153,
+        "LoD/1.09b": 153,
+        "LoD/1.09d": 153,
+        "LoD/1.10": 153,
+        "LoD/1.11": 158,
+        "LoD/1.11b": 158,
+        "LoD/1.12a": 158,
+        "LoD/1.13c": 158,
+        "LoD/1.13d": 158
+      },
       "method": "STR",
       "index": "STR:94392139a94cc5b04be3b1da79c63f48"
     },
@@ -9960,6 +12552,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xC3C9",
         "LoD/1.13d": "0xACB9"
       },
+      "sizes": {
+        "LoD/1.07": 31,
+        "LoD/1.08": 31,
+        "LoD/1.09": 31,
+        "LoD/1.09b": 31,
+        "LoD/1.09d": 31,
+        "LoD/1.10": 31,
+        "LoD/1.11": 31,
+        "LoD/1.11b": 31,
+        "LoD/1.12a": 31,
+        "LoD/1.13c": 31,
+        "LoD/1.13d": 31
+      },
       "name": "Catch@00406123",
       "signature": "undefined * Catch@00406123(void)",
       "name_source": "LoD/1.07",
@@ -9980,6 +12585,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x7EBC",
         "LoD/1.13c": "0x7EBC",
         "LoD/1.13d": "0x7E2D"
+      },
+      "sizes": {
+        "LoD/1.11": 319,
+        "LoD/1.11b": 319,
+        "LoD/1.12a": 322,
+        "LoD/1.13c": 322,
+        "LoD/1.13d": 319
       },
       "name": "___security_error_handler",
       "signature": "undefined ___security_error_handler(int param_1)",
@@ -10015,6 +12627,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xAA40",
         "LoD/1.13d": "0xAF00"
       },
+      "sizes": {
+        "LoD/1.07": 1461,
+        "LoD/1.08": 1461,
+        "LoD/1.09": 1461,
+        "LoD/1.09b": 1461,
+        "LoD/1.09d": 1461,
+        "LoD/1.10": 1461,
+        "LoD/1.11": 1458,
+        "LoD/1.11b": 1458,
+        "LoD/1.12a": 1458,
+        "LoD/1.13c": 1458,
+        "LoD/1.13d": 1458
+      },
       "method": "STR",
       "index": "STR:a6a733874702848c947d4f13dd410c07"
     },
@@ -10034,6 +12659,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x7721",
         "LoD/1.09d": "0x7721",
         "LoD/1.10": "0x7601"
+      },
+      "sizes": {
+        "LoD/1.07": 2597,
+        "LoD/1.08": 2597,
+        "LoD/1.09": 2597,
+        "LoD/1.09b": 2597,
+        "LoD/1.09d": 2597,
+        "LoD/1.10": 2597
       },
       "method": "STR",
       "index": "STR:ad3ba72ec17d8cc667b622e5969bd99c"
@@ -10065,6 +12698,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xD130",
         "LoD/1.13d": "0xD110"
       },
+      "sizes": {
+        "LoD/1.07": 740,
+        "LoD/1.08": 741,
+        "LoD/1.09": 751,
+        "LoD/1.09b": 751,
+        "LoD/1.09d": 751,
+        "LoD/1.10": 637,
+        "LoD/1.11": 634,
+        "LoD/1.11b": 634,
+        "LoD/1.12a": 634,
+        "LoD/1.13c": 634,
+        "LoD/1.13d": 634
+      },
       "method": "STR",
       "index": "STR:b175d582d335db8381f9673a2cff71a2"
     },
@@ -10082,6 +12728,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xC490",
         "LoD/1.13c": "0xC870",
         "LoD/1.13d": "0xC3D0"
+      },
+      "sizes": {
+        "LoD/1.11": 219,
+        "LoD/1.11b": 219,
+        "LoD/1.12a": 219,
+        "LoD/1.13c": 219,
+        "LoD/1.13d": 219
       },
       "method": "STR",
       "index": "STR:b42fd87967b6c285696c5e52ef04e711"
@@ -10112,6 +12765,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x1CA9",
         "LoD/1.13c": "0x1CAD",
         "LoD/1.13d": "0x1CA9"
+      },
+      "sizes": {
+        "LoD/1.07": 1825,
+        "LoD/1.08": 1825,
+        "LoD/1.09": 1825,
+        "LoD/1.09b": 1825,
+        "LoD/1.09d": 1825,
+        "LoD/1.10": 1825,
+        "LoD/1.11": 2010,
+        "LoD/1.11b": 2010,
+        "LoD/1.12a": 1946,
+        "LoD/1.13c": 1946,
+        "LoD/1.13d": 2010
       },
       "name": "__output",
       "signature": "undefined __output(undefined4 param_1, byte * param_2, wchar_t * param_3)",
@@ -10147,6 +12813,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xB740",
         "LoD/1.13d": "0xBC00"
       },
+      "sizes": {
+        "LoD/1.07": 1248,
+        "LoD/1.08": 1194,
+        "LoD/1.09": 1194,
+        "LoD/1.09b": 1194,
+        "LoD/1.09d": 1194,
+        "LoD/1.10": 1194,
+        "LoD/1.11": 1356,
+        "LoD/1.11b": 1356,
+        "LoD/1.12a": 1356,
+        "LoD/1.13c": 1356,
+        "LoD/1.13d": 1356
+      },
       "method": "STR",
       "index": "STR:c69643978ae0c4854a13e753ac464302"
     },
@@ -10176,6 +12855,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x10982",
         "LoD/1.13c": "0x10982",
         "LoD/1.13d": "0x10882"
+      },
+      "sizes": {
+        "LoD/1.07": 659,
+        "LoD/1.08": 659,
+        "LoD/1.09": 659,
+        "LoD/1.09b": 659,
+        "LoD/1.09d": 659,
+        "LoD/1.10": 659,
+        "LoD/1.11": 654,
+        "LoD/1.11b": 654,
+        "LoD/1.12a": 668,
+        "LoD/1.13c": 668,
+        "LoD/1.13d": 654
       },
       "name": "$I10_OUTPUT",
       "signature": "undefined $I10_OUTPUT(int param_1, uint param_2, uint param_3, int param_4, byte param_5, short * param_6)",
@@ -10211,25 +12903,31 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0x9120",
         "LoD/1.13d": "0x9060"
       },
+      "sizes": {
+        "LoD/1.07": 87,
+        "LoD/1.08": 87,
+        "LoD/1.09": 87,
+        "LoD/1.09b": 87,
+        "LoD/1.09d": 87,
+        "LoD/1.10": 87,
+        "LoD/1.11": 92,
+        "LoD/1.11b": 92,
+        "LoD/1.12a": 92,
+        "LoD/1.13c": 92,
+        "LoD/1.13d": 92
+      },
       "method": "STR",
       "index": "STR:d291819b49c738d9b7e42b8a6de9b066"
     },
     "D2VidTst_STR_d85908792981": {
       "addresses": {
-        "LoD/1.07": "0x00404FD0",
-        "LoD/1.11": "0x0040B870",
-        "LoD/1.11b": "0x00409BB0",
-        "LoD/1.12a": "0x0040B930",
-        "LoD/1.13c": "0x0040B3B0",
-        "LoD/1.13d": "0x0040B870"
+        "LoD/1.07": "0x00404FD0"
       },
       "rvas": {
-        "LoD/1.07": "0x4FD0",
-        "LoD/1.11": "0xB870",
-        "LoD/1.11b": "0x9BB0",
-        "LoD/1.12a": "0xB930",
-        "LoD/1.13c": "0xB3B0",
-        "LoD/1.13d": "0xB870"
+        "LoD/1.07": "0x4FD0"
+      },
+      "sizes": {
+        "LoD/1.07": 928
       },
       "method": "STR",
       "index": "STR:d8590879298159eccb036d7f8cbea3e3"
@@ -10261,8 +12959,46 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xCED0",
         "LoD/1.13d": "0xCEB0"
       },
+      "sizes": {
+        "LoD/1.07": 520,
+        "LoD/1.08": 520,
+        "LoD/1.09": 520,
+        "LoD/1.09b": 520,
+        "LoD/1.09d": 520,
+        "LoD/1.10": 520,
+        "LoD/1.11": 604,
+        "LoD/1.11b": 604,
+        "LoD/1.12a": 604,
+        "LoD/1.13c": 604,
+        "LoD/1.13d": 604
+      },
       "method": "STR",
       "index": "STR:db4c5a7be240fa6b4225af373fd21040"
+    },
+    "D2VidTst_STR_dfd8977ee703": {
+      "addresses": {
+        "LoD/1.11": "0x0040B870",
+        "LoD/1.11b": "0x00409BB0",
+        "LoD/1.12a": "0x0040B930",
+        "LoD/1.13c": "0x0040B3B0",
+        "LoD/1.13d": "0x0040B870"
+      },
+      "rvas": {
+        "LoD/1.11": "0xB870",
+        "LoD/1.11b": "0x9BB0",
+        "LoD/1.12a": "0xB930",
+        "LoD/1.13c": "0xB3B0",
+        "LoD/1.13d": "0xB870"
+      },
+      "sizes": {
+        "LoD/1.11": 908,
+        "LoD/1.11b": 908,
+        "LoD/1.12a": 908,
+        "LoD/1.13c": 908,
+        "LoD/1.13d": 908
+      },
+      "method": "STR",
+      "index": "STR:dfd8977ee703b42f070bd75003b4a11f"
     },
     "D2VidTst_STR_e0c64c5b72de": {
       "addresses": {
@@ -10278,6 +13014,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x9EA0",
         "LoD/1.13c": "0x9700",
         "LoD/1.13d": "0x9640"
+      },
+      "sizes": {
+        "LoD/1.11": 799,
+        "LoD/1.11b": 799,
+        "LoD/1.12a": 799,
+        "LoD/1.13c": 799,
+        "LoD/1.13d": 799
       },
       "method": "STR",
       "index": "STR:e0c64c5b72de8a8f4fa39611a7e9d330"
@@ -10309,6 +13052,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xC33D",
         "LoD/1.13d": "0xAC2D"
       },
+      "sizes": {
+        "LoD/1.07": 127,
+        "LoD/1.08": 128,
+        "LoD/1.09": 128,
+        "LoD/1.09b": 128,
+        "LoD/1.09d": 128,
+        "LoD/1.10": 128,
+        "LoD/1.11": 209,
+        "LoD/1.11b": 140,
+        "LoD/1.12a": 209,
+        "LoD/1.13c": 140,
+        "LoD/1.13d": 140
+      },
       "method": "STR",
       "index": "STR:e9cb671a06f1948c863285a130dcc445"
     },
@@ -10326,6 +13082,13 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xD450",
         "LoD/1.13c": "0xD3B0",
         "LoD/1.13d": "0xD390"
+      },
+      "sizes": {
+        "LoD/1.11": 1895,
+        "LoD/1.11b": 1895,
+        "LoD/1.12a": 1895,
+        "LoD/1.13c": 1895,
+        "LoD/1.13d": 1895
       },
       "method": "STR",
       "index": "STR:ebeba6e2d87872206d976c35925dd197"
@@ -10356,6 +13119,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0xC3B5",
         "LoD/1.13c": "0xBE35",
         "LoD/1.13d": "0xC2F5"
+      },
+      "sizes": {
+        "LoD/1.07": 19,
+        "LoD/1.08": 19,
+        "LoD/1.09": 19,
+        "LoD/1.09b": 19,
+        "LoD/1.09d": 19,
+        "LoD/1.10": 19,
+        "LoD/1.11": 19,
+        "LoD/1.11b": 19,
+        "LoD/1.12a": 19,
+        "LoD/1.13c": 19,
+        "LoD/1.13d": 19
       },
       "name": "Catch@00403569",
       "signature": "undefined * Catch@00403569(void)",
@@ -10390,6 +13166,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": "0xBCE0",
         "LoD/1.13d": "0xC1A0"
       },
+      "sizes": {
+        "LoD/1.07": 333,
+        "LoD/1.08": 333,
+        "LoD/1.09": 333,
+        "LoD/1.09b": 333,
+        "LoD/1.09d": 333,
+        "LoD/1.10": 317,
+        "LoD/1.11": 353,
+        "LoD/1.11b": 353,
+        "LoD/1.12a": 353,
+        "LoD/1.13c": 353,
+        "LoD/1.13d": 353
+      },
       "method": "STR",
       "index": "STR:fe2e9ffe8e8574e11b712f0433617a37"
     },
@@ -10419,6 +13208,19 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0x4B9C",
         "LoD/1.13c": "0x4B9C",
         "LoD/1.13d": "0x4B27"
+      },
+      "sizes": {
+        "LoD/1.07": 339,
+        "LoD/1.08": 339,
+        "LoD/1.09": 339,
+        "LoD/1.09b": 339,
+        "LoD/1.09d": 339,
+        "LoD/1.10": 339,
+        "LoD/1.11": 375,
+        "LoD/1.11b": 375,
+        "LoD/1.12a": 376,
+        "LoD/1.13c": 376,
+        "LoD/1.13d": 375
       },
       "name": "__NMSG_WRITE",
       "signature": "void __NMSG_WRITE(int param_1)",

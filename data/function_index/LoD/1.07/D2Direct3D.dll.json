@@ -4,7 +4,7 @@
   "version": "1.07",
   "image_base": "0x6F8A0000",
   "total_functions": 245,
-  "export_timestamp": "Mon Dec 01 16:32:17 CST 2025",
+  "export_timestamp": "Fri Dec 05 16:20:38 CST 2025",
   "functions": [
     {
       "address": "0x6F8A1000",
@@ -64,13 +64,13 @@
       "indexes": {
         "EXP": null,
         "STR": "7deacad456f142b7712ddbb823dae95a",
-        "API": "eb5cde6a454b5a8be1d8215862c23d20",
+        "API": "8d2100ac533821cdef64d56675d96765",
         "MNE": "9e0d555d5c45c00b32681323bc351dda",
         "CFG": "744cd9e33b6c8cf544c0db388b8d39e6",
         "PRO": "ecc9fb3882c00620d3b66fff12d776dd"
       },
       "string_refs": ["\"About to play bink file\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"Direct3DPlayBinkFile: *** Couldn't load Bink movi...", "\"pcsPause\"", "\"BinkOpen failed on '%'.\""],
-      "api_calls": ["Ordinal_10029", "Ordinal_10117", "Ordinal_268", "Ordinal_10029", "Ordinal_10029", "Ordinal_10023", "Ordinal_10027", "Ordinal_10027"],
+      "api_calls": ["QueueLogMessage", "GetExpansionFlag", "SFileOpenFileEx", "QueueLogMessage", "QueueLogMessage", "FogAssert", "Ordinal_10027", "Ordinal_10027"],
       "basic_block_count": 51
     },
     {
@@ -78,20 +78,20 @@
       "rva": "0x1380",
       "size": 110,
       "name": "FUN_6f8a1380",
-      "display_name": "API_088c1739c19ccd31",
+      "display_name": "API_f37eae4b9486cb41",
       "has_human_name": false,
-      "index": "API:088c1739c19ccd3110d53726cb64ac5c",
+      "index": "API:f37eae4b9486cb4175333f44901ab791",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "520b0636534aa3759d95b4eb72fe0d3f",
         "CFG": "a74692ae23d5e72137ac552d6687f5a2",
         "PRO": "f09c09b380b3f7d610e219edc777001b"
       },
       "string_refs": ["\"success\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 5
     },
     {
@@ -127,13 +127,13 @@
       "indexes": {
         "EXP": null,
         "STR": "f4a08de3770c3a05b8e89258886f04ed",
-        "API": "2e8162015aa587e084a7a281490da457",
+        "API": "131f64ea2c43a4d79f11eb96b33af192",
         "MNE": "f81a9d240256743bf909e3a0ad8675cd",
         "CFG": "0ffc8cb38be392f26bd9b55d8b77982f",
         "PRO": "630ee4b9edbb3b553f43dbbbbe1df7a9"
       },
       "string_refs": ["\"ddsd.dwFlags & DDSD_PITCH\"", "\"Failed to lock memory surface\"", "\"pTile->sCacheIndex >= INVALID_HARDWARE_ADDRESS\"", "\"pTile->sCacheIndex-1 >= 0\"", "\"Failed to unlock memory surface\"", "...+2 more"],
-      "api_calls": ["Ordinal_10091", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["AllocateTileProjectBuffer", "FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 45
     },
     {
@@ -148,13 +148,13 @@
       "indexes": {
         "EXP": null,
         "STR": "3b428f516ffab3c9346f95d2ab3569e9",
-        "API": "fa9c84120ef507b8e169c696b00e86da",
+        "API": "449e68050137ffb3d02781b1c2e44b59",
         "MNE": "5b5a219d5ca93ac5836d120b635a160a",
         "CFG": "dc57bb7e0e06ebc7ca6fe2b7a90309fe",
         "PRO": "c531270f92dd1c593bf28a805f413f5d"
       },
       "string_refs": ["\"ptTileComp->sCacheIndex-1 >= 0\"", "\"ddsd.dwFlags & DDSD_PITCH\"", "\"Failed to lock memory surface\"", "\"ptTileComp->sCacheIndex-1 < gtSubtileCache.nMaxNu...", "\"ptTileComp->sCacheIndex >= INVALID_HARDWARE_ADDRE...", "...+2 more"],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 26
     },
     {
@@ -190,13 +190,13 @@
       "indexes": {
         "EXP": null,
         "STR": "af1768c8b2cff56663027d5b13f5d038",
-        "API": "4f2a5003f6363bbb533ccd9e26b49fde",
+        "API": "844e10014f3d65fdc8ab5fe02f83df3b",
         "MNE": "4af3f332e2708ab71da434f45df67c6d",
         "CFG": "6a6101fb99c92c56983ed6c6b83a410e",
         "PRO": "2f648cd5c170f502ab5d78c81f137eeb"
       },
       "string_refs": ["\"Using AGP Memory\"", "\"Failed to create D3D device!\"", "\"Failed to get gamma control interface!\"", "\"SetCooperativeLevel failed!\"", "\"Failed to get available texture memory\"", "...+20 more"],
-      "api_calls": ["Ordinal_10023", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10076", "Ordinal_10029"],
+      "api_calls": ["FogAssert", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "SetGameModeOrdinal", "QueueLogMessage"],
       "basic_block_count": 70
     },
     {
@@ -211,13 +211,13 @@
       "indexes": {
         "EXP": null,
         "STR": "380a93b36a164e2e03ad63556b2b073c",
-        "API": "a9a02944cfa44ba2da83da362aa232e5",
+        "API": "7146ef6b4362d9ac418963d6377f5fe6",
         "MNE": "32612e18c627e8036a45d4b058276639",
         "CFG": "375e37511856e17ab8e48bb9de98d188",
         "PRO": "b0d10f7b59b6c90eaac2cee4d2370dc4"
       },
       "string_refs": ["\"Closing Direct3D window....\"", "\"... Direct3D window closed.\"", "\"Failed to restore original gamma ramp\""],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 21
     },
     {
@@ -442,13 +442,13 @@
       "indexes": {
         "EXP": null,
         "STR": "53cb82bbeba2e669ffa558ac0b842310",
-        "API": "ff504bfb0623f312dd9dffa33dc0bc71",
+        "API": "c3731449202a2c83b2470681e58a9b58",
         "MNE": "a8b68c260da79d69913f4fe77e7a9645",
         "CFG": "942a8585246ee380e39c7bc42e42ec03",
         "PRO": "03735beed66727250194196688c874f7"
       },
       "string_refs": ["\"D3DERR_LIGHTNOTINTHISVIEWPORT\"", "\"D3DERR_TEXTURE_NO_SUPPORT\"", "\"D3DERR_MATERIAL_SETDATA_FAILED\"", "\"D3DERR_NOCURRENTVIEWPORT\"", "\"D3DERR_MATERIAL_DESTROY_FAILED\"", "...+51 more"],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+45 more"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+45 more"],
       "basic_block_count": 60
     },
     {
@@ -463,13 +463,13 @@
       "indexes": {
         "EXP": null,
         "STR": "a6a733874702848c947d4f13dd410c07",
-        "API": "411db47c201cc285d63bb030c69efc87",
+        "API": "2fdb737bd38d702a57ec04e36b3c72c4",
         "MNE": "a74e6d458d112bd925d5d8b06bf648c8",
         "CFG": "be3f106c010403ab55afd9d82cfa16d0",
         "PRO": "993523ea5b6fee98058a0ec341682178"
       },
       "string_refs": ["\"DDERR_EXCEPTION\"", "\"DDERR_SURFACEALREADYDEPENDENT\"", "\"< unknown >\"", "\"DDERR_PRIMARYSURFACEALREADYEXISTS\"", "\"DDERR_CANTCREATEDC\"", "...+104 more"],
-      "api_calls": ["Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "Ordinal_10029", "...+98 more"],
+      "api_calls": ["QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "QueueLogMessage", "...+98 more"],
       "basic_block_count": 150
     },
     {
@@ -490,7 +490,7 @@
         "PRO": "a3a6d6574f5c686aaf450428b19fdfdd"
       },
       "string_refs": ["\"Courier\"", "\"Failed to lock memory surface\"", "\"DISPLAY\"", "\"Failed to unlock memory surface\"", "\"success\"", "...+1 more"],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 19
     },
     {
@@ -553,7 +553,7 @@
         "PRO": "974310e6053daafbe3d04f9eb08bc649"
       },
       "string_refs": ["\"nY2 > nY1\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 21
     },
     {
@@ -666,20 +666,20 @@
       "rva": "0x6430",
       "size": 297,
       "name": "FUN_6f8a6430",
-      "display_name": "API_0a1454d978b7e872",
+      "display_name": "API_3ac252e1b1422c89",
       "has_human_name": false,
-      "index": "API:0a1454d978b7e87243f36a7fc468cb16",
+      "index": "API:3ac252e1b1422c89c748ad3599dd09ad",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "0a1454d978b7e87243f36a7fc468cb16",
+        "API": "3ac252e1b1422c89c748ad3599dd09ad",
         "MNE": "1a37663da406dc9154da246977c9b64d",
         "CFG": "376f586009ce320ad0c00372f763f0c9",
         "PRO": "6078e4f57b2da7a30b02d4aec5db3acc"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"tCache->tItems\"", "\"tCache->nMaxNumItems\""],
-      "api_calls": ["Ordinal_10042", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogMemAlloc", "FogAssert", "FogAssert"],
       "basic_block_count": 17
     },
     {
@@ -687,20 +687,20 @@
       "rva": "0x6560",
       "size": 297,
       "name": "FUN_6f8a6560",
-      "display_name": "API_3267216b35deef63",
+      "display_name": "API_a638ff2ebff5a910",
       "has_human_name": false,
-      "index": "API:3267216b35deef63f1dc99911384afe5",
+      "index": "API:a638ff2ebff5a910cf193955354f10fc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3267216b35deef63f1dc99911384afe5",
+        "API": "a638ff2ebff5a910cf193955354f10fc",
         "MNE": "7e69770d3a6efe879b406c71c71bcb47",
         "CFG": "fb0f9ef0ff919d26a089db67d9febf4c",
         "PRO": "83f6445b1d26755bc19a247005843ec3"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"tCache->nNumItems == 0\"", "\"tCache\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10043"],
+      "api_calls": ["FogAssert", "FogAssert", "ReleasePoolAllocation"],
       "basic_block_count": 31
     },
     {
@@ -729,20 +729,20 @@
       "rva": "0x67A0",
       "size": 255,
       "name": "FUN_6f8a67a0",
-      "display_name": "API_e8f8947ae3916fed",
+      "display_name": "API_186612200c1f95e0",
       "has_human_name": false,
-      "index": "API:e8f8947ae3916fed8d2c939ffd482d1d",
+      "index": "API:186612200c1f95e0120d81b230f64725",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "e8f8947ae3916fed8d2c939ffd482d1d",
+        "API": "186612200c1f95e0120d81b230f64725",
         "MNE": "ebe3db8a6d21d800c9135ace08fc169f",
         "CFG": "4a164a326c02068081c640c654140639",
         "PRO": "8e0d9c8cf1fa1805a3e8db8b0a56ca46"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"nIndex <= tCache->nMaxNumItems\"", "\"nIndex >= 1\"", "\"nIndex!= INVALID_HARDWARE_ADDRESS\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 21
     },
     {
@@ -847,7 +847,7 @@
         "PRO": "7aa353811be0e04e2f6134c982a142f4"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10042"],
+      "api_calls": ["FogMemAlloc"],
       "basic_block_count": 1
     },
     {
@@ -868,7 +868,7 @@
         "PRO": "42adbe74da5c5774628d4483c806a28a"
       },
       "string_refs": ["\"fSuccess\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 5
     },
     {
@@ -889,7 +889,7 @@
         "PRO": "5ec4308c97c2e57e3a4e8ebc49addca9"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10043"],
+      "api_calls": ["ReleasePoolAllocation"],
       "basic_block_count": 3
     },
     {
@@ -1009,13 +1009,13 @@
       "indexes": {
         "EXP": null,
         "STR": "54b4f7dee4e08b39bbdc79ad16cea3c4",
-        "API": "d1f309eb7f4c59303849a5d1ebadfffc",
+        "API": "cb7d31eb2fd41cec0b0ddca8afa043c7",
         "MNE": "f9fe3af33a648e5e77f8e8a166e4eef5",
         "CFG": "17988f45bc26a93a58537c0b1f021a7c",
         "PRO": "4ee13fb78da45ff7f573e51b3ca59510"
       },
       "string_refs": ["\"!sgpbHighlightBuffer\"", "\"!sgpbDecompressionBuffer\"", "\"success\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"CreateVertexBuffer failed!\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10042", "Ordinal_10042", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10044"],
+      "api_calls": ["FogAssert", "FogAssert", "FogMemAlloc", "FogMemAlloc", "FogAssert", "FogAssert", "FogAssert", "SetCelfileCallback"],
       "basic_block_count": 13
     },
     {
@@ -1023,20 +1023,20 @@
       "rva": "0x76D0",
       "size": 146,
       "name": "FUN_6f8a76d0",
-      "display_name": "API_5d12bfe1cdc0255b",
+      "display_name": "API_aafe1ba7c0cb6f9f",
       "has_human_name": false,
-      "index": "API:5d12bfe1cdc0255b6c83051ccc7b3ac6",
+      "index": "API:aafe1ba7c0cb6f9f78ec0353d527e3e5",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "5d12bfe1cdc0255b6c83051ccc7b3ac6",
+        "API": "aafe1ba7c0cb6f9f78ec0353d527e3e5",
         "MNE": "cba5c92af3cfbef5cc6bad8b87a42365",
         "CFG": "182d8626e84f23e115ae6728eee18c70",
         "PRO": "407c31539d1e9a112795f9e0702513c2"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10043", "Ordinal_10043"],
+      "api_calls": ["ReleasePoolAllocation", "ReleasePoolAllocation"],
       "basic_block_count": 13
     },
     {
@@ -1072,13 +1072,13 @@
       "indexes": {
         "EXP": null,
         "STR": "d385d171bae3938a4b924ef5af4fe668",
-        "API": "bcfc2a182742e3a775f264a453c770b6",
+        "API": "896f181846859c1c60817f5a8fcd86aa",
         "MNE": "0a93e387f3e37f66ee987a094b2fa0ec",
         "CFG": "a6d3b6c99315827b9386383a8f26a5ee",
         "PRO": "dea99c7649d2839a59010f551495b71e"
       },
       "string_refs": ["\"tCacheItem->lpddsDeviceSurface\"", "\"sgpbHighlightBuffer\"", "\"tLocation->nIndex-1 < ptWhichCache->nMaxNumItems\"", "\"lptexMemory\"", "\"Failed to unlock memory surface\"", "...+10 more"],
-      "api_calls": ["Ordinal_10023", "Ordinal_10043", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10033", "Ordinal_10033", "...+6 more"],
+      "api_calls": ["FogAssert", "GetSkillData", "FogAssert", "FogAssert", "FogAssert", "FogAssert", "FogAssert", "FogAssert", "D2CMP_DecodeAndDrawCelFrame", "D2CMP_DecodeAndDrawCelFrame", "...+6 more"],
       "basic_block_count": 69
     },
     {
@@ -1107,20 +1107,20 @@
       "rva": "0x8760",
       "size": 357,
       "name": "FUN_6f8a8760",
-      "display_name": "API_3b4a64c3b72818d8",
+      "display_name": "API_735a24b319cd813b",
       "has_human_name": false,
-      "index": "API:3b4a64c3b72818d8588a597112299d91",
+      "index": "API:735a24b319cd813b0fe0bf8df6c28a72",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3b4a64c3b72818d8588a597112299d91",
+        "API": "735a24b319cd813b0fe0bf8df6c28a72",
         "MNE": "2d6837be28e2ceb8a5e06c191d276529",
         "CFG": "120e328aad60fd4dc08330ecb0d6990e",
         "PRO": "c85c3ee3eeb7ae91561d0cf2be8c163b"
       },
       "string_refs": ["\"ptCelContext->hCel\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10055", "Ordinal_10023", "Ordinal_10037", "Ordinal_10039", "Ordinal_10038", "Ordinal_10040"],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "FogAssert", "GetCelFileTableIndex", "GetCelFileInfoHeight", "GetCelModeValue", "GetDWordFromPointerField"],
       "basic_block_count": 22
     },
     {
@@ -1128,20 +1128,20 @@
       "rva": "0x90E0",
       "size": 215,
       "name": "FUN_6f8a90e0",
-      "display_name": "API_3b4a64c3b72818d8",
+      "display_name": "API_735a24b319cd813b",
       "has_human_name": false,
-      "index": "API:3b4a64c3b72818d8588a597112299d91",
+      "index": "API:735a24b319cd813b0fe0bf8df6c28a72",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3b4a64c3b72818d8588a597112299d91",
+        "API": "735a24b319cd813b0fe0bf8df6c28a72",
         "MNE": "1c15185342002073bc1ca08b1b05515d",
         "CFG": "d755cf1f0158d77dbee13f5f0bd65df7",
         "PRO": "a8f0bf9bbcd190919585324bdc911bf4"
       },
       "string_refs": ["\"ptCelContext->hCel\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10055", "Ordinal_10023", "Ordinal_10037", "Ordinal_10039", "Ordinal_10038", "Ordinal_10040"],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "FogAssert", "GetCelFileTableIndex", "GetCelFileInfoHeight", "GetCelModeValue", "GetDWordFromPointerField"],
       "basic_block_count": 6
     },
     {
@@ -1149,20 +1149,20 @@
       "rva": "0x91D0",
       "size": 288,
       "name": "FUN_6f8a91d0",
-      "display_name": "API_0a1454d978b7e872",
+      "display_name": "API_3ac252e1b1422c89",
       "has_human_name": false,
-      "index": "API:0a1454d978b7e87243f36a7fc468cb16",
+      "index": "API:3ac252e1b1422c89c748ad3599dd09ad",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "0a1454d978b7e87243f36a7fc468cb16",
+        "API": "3ac252e1b1422c89c748ad3599dd09ad",
         "MNE": "64e04f046d561b1ae054a4bff4b71578",
         "CFG": "e8c6a46272965fa135a8413f1610774a",
         "PRO": "303f926f7eb73c577727db2947b033c9"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"tCache->tItems\"", "\"tCache->nMaxNumItems\""],
-      "api_calls": ["Ordinal_10042", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogMemAlloc", "FogAssert", "FogAssert"],
       "basic_block_count": 18
     },
     {
@@ -1170,20 +1170,20 @@
       "rva": "0x92F0",
       "size": 297,
       "name": "FUN_6f8a92f0",
-      "display_name": "API_3267216b35deef63",
+      "display_name": "API_a638ff2ebff5a910",
       "has_human_name": false,
-      "index": "API:3267216b35deef63f1dc99911384afe5",
+      "index": "API:a638ff2ebff5a910cf193955354f10fc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3267216b35deef63f1dc99911384afe5",
+        "API": "a638ff2ebff5a910cf193955354f10fc",
         "MNE": "7e69770d3a6efe879b406c71c71bcb47",
         "CFG": "fb0f9ef0ff919d26a089db67d9febf4c",
         "PRO": "83f6445b1d26755bc19a247005843ec3"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"tCache->nNumItems == 0\"", "\"tCache\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10043"],
+      "api_calls": ["FogAssert", "FogAssert", "ReleasePoolAllocation"],
       "basic_block_count": 31
     },
     {
@@ -1212,20 +1212,20 @@
       "rva": "0x9530",
       "size": 255,
       "name": "FUN_6f8a9530",
-      "display_name": "API_e8f8947ae3916fed",
+      "display_name": "API_186612200c1f95e0",
       "has_human_name": false,
-      "index": "API:e8f8947ae3916fed8d2c939ffd482d1d",
+      "index": "API:186612200c1f95e0120d81b230f64725",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "e8f8947ae3916fed8d2c939ffd482d1d",
+        "API": "186612200c1f95e0120d81b230f64725",
         "MNE": "ebe3db8a6d21d800c9135ace08fc169f",
         "CFG": "4a164a326c02068081c640c654140639",
         "PRO": "8e0d9c8cf1fa1805a3e8db8b0a56ca46"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d...", "\"nIndex <= tCache->nMaxNumItems\"", "\"nIndex >= 1\"", "\"nIndex!= INVALID_HARDWARE_ADDRESS\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 21
     },
     {
@@ -1254,20 +1254,20 @@
       "rva": "0x96F0",
       "size": 288,
       "name": "FUN_6f8a96f0",
-      "display_name": "API_83311ac54b246d69",
+      "display_name": "API_0379e315aa90f12f",
       "has_human_name": false,
-      "index": "API:83311ac54b246d6943903bb686f0e640",
+      "index": "API:0379e315aa90f12f42e183c52cb142b8",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "83311ac54b246d6943903bb686f0e640",
+        "API": "0379e315aa90f12f42e183c52cb142b8",
         "MNE": "184cccedf23bc5ef66fe7b92f3af9ad5",
         "CFG": "2bffedf512a1c309f1bfe1580767a1f8",
         "PRO": "8381fe63e7206b511ba2146df43c8826"
       },
       "string_refs": ["\"tCache->nMaxNumItems\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10042", "Ordinal_10023"],
+      "api_calls": ["FogMemAlloc", "FogAssert"],
       "basic_block_count": 16
     },
     {
@@ -1275,20 +1275,20 @@
       "rva": "0x9810",
       "size": 309,
       "name": "FUN_6f8a9810",
-      "display_name": "API_3267216b35deef63",
+      "display_name": "API_a638ff2ebff5a910",
       "has_human_name": false,
-      "index": "API:3267216b35deef63f1dc99911384afe5",
+      "index": "API:a638ff2ebff5a910cf193955354f10fc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3267216b35deef63f1dc99911384afe5",
+        "API": "a638ff2ebff5a910cf193955354f10fc",
         "MNE": "6e93bdc185ee2fcd904c97542e1e6f96",
         "CFG": "126679c2814f04e97fb71d39ffed0618",
         "PRO": "a30e047b775c78b9ba9d8f76f4ed037d"
       },
       "string_refs": ["\"tCache->nNumItems == 0\"", "\"tCache\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10043"],
+      "api_calls": ["FogAssert", "FogAssert", "ReleasePoolAllocation"],
       "basic_block_count": 31
     },
     {
@@ -1303,13 +1303,13 @@
       "indexes": {
         "EXP": null,
         "STR": "7351269ea03607b89dbb5dceb27ca1ae",
-        "API": "fa9c84120ef507b8e169c696b00e86da",
+        "API": "449e68050137ffb3d02781b1c2e44b59",
         "MNE": "2973d9841ea8644a926105137e1a4d85",
         "CFG": "3d39d3961bad7ac6d0de95f43cfcfe8b",
         "PRO": "0be1354641ecd1a19ba2f7220c00fc61"
       },
       "string_refs": ["\"tTempItem->nIndex < tCache->nMaxNumItems\"", "\"tTempItem\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 41
     },
     {
@@ -1317,20 +1317,20 @@
       "rva": "0x9AF0",
       "size": 255,
       "name": "FUN_6f8a9af0",
-      "display_name": "API_e8f8947ae3916fed",
+      "display_name": "API_186612200c1f95e0",
       "has_human_name": false,
-      "index": "API:e8f8947ae3916fed8d2c939ffd482d1d",
+      "index": "API:186612200c1f95e0120d81b230f64725",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "e8f8947ae3916fed8d2c939ffd482d1d",
+        "API": "186612200c1f95e0120d81b230f64725",
         "MNE": "c913174aa3869eef1ecb9dfcd2cd7d30",
         "CFG": "4a164a326c02068081c640c654140639",
         "PRO": "8e0d9c8cf1fa1805a3e8db8b0a56ca46"
       },
       "string_refs": ["\"nIndex <= tCache->nMaxNumItems\"", "\"nIndex >= 1\"", "\"nIndex!= INVALID_HARDWARE_ADDRESS\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 21
     },
     {
@@ -1471,13 +1471,13 @@
       "indexes": {
         "EXP": null,
         "STR": "1d9adacd8b38aed5aeb773726195da6b",
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "90986686f203cc9487d91e8db4286970",
         "CFG": "98d9645354a0dab6275ca3562823c1ad",
         "PRO": "8f338a76812b29d613dfff272cd1c6c9"
       },
       "string_refs": ["\"prClip\"", "\"pnXScrollOffset\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 14
     },
     {
@@ -1513,21 +1513,21 @@
       "indexes": {
         "EXP": null,
         "STR": "fc0dd241154991fd9d04dbc703760dec",
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "9d3bb60f2dbebb8e48671360c7df7fd6",
         "CFG": "741b592e124af688a7e945a6ede29eab",
         "PRO": "fd4d6e28ed30cbbf0d15826910d58cc2"
       },
       "string_refs": ["\"nType >= 0 && nType <NUMBER_OF_SUPPORTED_TILE_TYP...", "\"nOffsetX >= 0 && nOffsetX < 5\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Direct3D\\\\Src\\\\d..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 35
     },
     {
       "address": "0x6F8AAF30",
       "rva": "0xAF30",
       "size": 6,
-      "name": "Ordinal_10091",
-      "display_name": "Ordinal_10091",
+      "name": "AllocateTileProjectBuffer",
+      "display_name": "AllocateTileProjectBuffer",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1539,10 +1539,10 @@
         "CFG": null,
         "PRO": "6bb5d2deefd1c018552986b73a369707"
       },
-      "signature": "undefined Ordinal_10091(void)",
-      "calling_convention": "unknown",
+      "signature": "uint AllocateTileProjectBuffer(TileProject * pTileProject)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pTileProject", "type": "TileProject *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1551,8 +1551,8 @@
       "address": "0x6F8AAF36",
       "rva": "0xAF36",
       "size": 6,
-      "name": "Ordinal_10076",
-      "display_name": "Ordinal_10076",
+      "name": "SetGameModeOrdinal",
+      "display_name": "SetGameModeOrdinal",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1564,10 +1564,10 @@
         "CFG": null,
         "PRO": "0cab51bc67ea662adb9e3625e1690192"
       },
-      "signature": "undefined Ordinal_10076(void)",
-      "calling_convention": "unknown",
+      "signature": "void SetGameModeOrdinal(dword dwGameMode)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "dwGameMode", "type": "dword", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1576,8 +1576,8 @@
       "address": "0x6F8AAF3C",
       "rva": "0xAF3C",
       "size": 6,
-      "name": "Ordinal_10044",
-      "display_name": "Ordinal_10044",
+      "name": "SetCelfileCallback",
+      "display_name": "SetCelfileCallback",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1589,10 +1589,10 @@
         "CFG": null,
         "PRO": "bd27d6951bd19071d1495f3817c7df96"
       },
-      "signature": "undefined Ordinal_10044(void)",
-      "calling_convention": "unknown",
+      "signature": "void SetCelfileCallback(void * pfnCallback)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pfnCallback", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1601,8 +1601,8 @@
       "address": "0x6F8AAF42",
       "rva": "0xAF42",
       "size": 6,
-      "name": "Ordinal_10040",
-      "display_name": "Ordinal_10040",
+      "name": "GetDWordFromPointerField",
+      "display_name": "GetDWordFromPointerField",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1614,10 +1614,10 @@
         "CFG": null,
         "PRO": "2f80ffbc1970e8e9b8f1e1d929ac1e20"
       },
-      "signature": "undefined Ordinal_10040(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetDWordFromPointerField(void * pData)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pData", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1626,8 +1626,8 @@
       "address": "0x6F8AAF48",
       "rva": "0xAF48",
       "size": 6,
-      "name": "Ordinal_10038",
-      "display_name": "Ordinal_10038",
+      "name": "GetCelModeValue",
+      "display_name": "GetCelModeValue",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1639,10 +1639,10 @@
         "CFG": null,
         "PRO": "49f5fbf9c8d3654e5cd174c68e8cbbcc"
       },
-      "signature": "undefined Ordinal_10038(void)",
-      "calling_convention": "unknown",
+      "signature": "int GetCelModeValue(int * pCelModeValue)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelModeValue", "type": "int *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1651,8 +1651,8 @@
       "address": "0x6F8AAF4E",
       "rva": "0xAF4E",
       "size": 6,
-      "name": "Ordinal_10039",
-      "display_name": "Ordinal_10039",
+      "name": "GetCelFileInfoHeight",
+      "display_name": "GetCelFileInfoHeight",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1664,10 +1664,10 @@
         "CFG": null,
         "PRO": "d4514ea5a7347eb0cbb9a6729ccc9769"
       },
-      "signature": "undefined Ordinal_10039(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetCelFileInfoHeight(CelFileInfo * pCelFileInfo)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFileInfo", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1676,8 +1676,8 @@
       "address": "0x6F8AAF54",
       "rva": "0xAF54",
       "size": 6,
-      "name": "Ordinal_10037",
-      "display_name": "Ordinal_10037",
+      "name": "GetCelFileTableIndex",
+      "display_name": "GetCelFileTableIndex",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1689,10 +1689,10 @@
         "CFG": null,
         "PRO": "f6d71bf72b89a5f1a76a6ce4f2438afb"
       },
-      "signature": "undefined Ordinal_10037(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetCelFileTableIndex(CelFileInfo * pCelFile)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFile", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1701,8 +1701,8 @@
       "address": "0x6F8AAF5A",
       "rva": "0xAF5A",
       "size": 6,
-      "name": "Ordinal_10055",
-      "display_name": "Ordinal_10055",
+      "name": "LoadOrRetrieveCelFrameData",
+      "display_name": "LoadOrRetrieveCelFrameData",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1714,10 +1714,10 @@
         "CFG": null,
         "PRO": "9f46708df53ac12d92d986958120b4fd"
       },
-      "signature": "undefined Ordinal_10055(void)",
-      "calling_convention": "unknown",
+      "signature": "uint LoadOrRetrieveCelFrameData(int * pnCelFile, int nIsAsyncLoad, int nFrameIndex)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pnCelFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nIsAsyncLoad", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nFrameIndex", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1726,8 +1726,8 @@
       "address": "0x6F8AAF60",
       "rva": "0xAF60",
       "size": 6,
-      "name": "Ordinal_10033",
-      "display_name": "Ordinal_10033",
+      "name": "D2CMP_DecodeAndDrawCelFrame",
+      "display_name": "D2CMP_DecodeAndDrawCelFrame",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1739,10 +1739,10 @@
         "CFG": null,
         "PRO": "0042396f97fa885eeb3f5548dc4e2fcd"
       },
-      "signature": "undefined Ordinal_10033(void)",
-      "calling_convention": "unknown",
+      "signature": "void D2CMP_DecodeAndDrawCelFrame(CelFile * pCelFile, int nXPos, int nYPos, int nDstX, int nDstY, int nDestSurface, int nMaxWidth, uint dwBlendMode, uint dwParam9, uint dwParam10, uint dwParam11)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFile", "type": "CelFile *", "storage": "Stack[0x4]:4"}, {"name": "nXPos", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nYPos", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nDstX", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nDstY", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "nDestSurface", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "nMaxWidth", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwBlendMode", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "dwParam9", "type": "uint", "storage": "Stack[0x24]:4"}, {"name": "dwParam10", "type": "uint", "storage": "Stack[0x28]:4"}, {"name": "dwParam11", "type": "uint", "storage": "Stack[0x2c]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1751,8 +1751,8 @@
       "address": "0x6F8AAF66",
       "rva": "0xAF66",
       "size": 6,
-      "name": "Ordinal_10043",
-      "display_name": "Ordinal_10043",
+      "name": "GetSkillData",
+      "display_name": "GetSkillData",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1764,10 +1764,10 @@
         "CFG": null,
         "PRO": "ccff022c1bcf9d558c3bef0b585b4d07"
       },
-      "signature": "undefined Ordinal_10043(void)",
-      "calling_convention": "unknown",
+      "signature": "void * GetSkillData(int nSkillId)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nSkillId", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1801,8 +1801,8 @@
       "address": "0x6F8AAF72",
       "rva": "0xAF72",
       "size": 6,
-      "name": "Ordinal_10023",
-      "display_name": "Ordinal_10023",
+      "name": "FogAssert",
+      "display_name": "FogAssert",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1814,10 +1814,10 @@
         "CFG": null,
         "PRO": "7664af5e4717ee0a61f32be0207895ac"
       },
-      "signature": "undefined Ordinal_10023(void)",
-      "calling_convention": "unknown",
+      "signature": "void FogAssert(char * szExpr, char * szFile, int nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szExpr", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1826,8 +1826,8 @@
       "address": "0x6F8AAF78",
       "rva": "0xAF78",
       "size": 6,
-      "name": "Ordinal_10117",
-      "display_name": "Ordinal_10117",
+      "name": "GetExpansionFlag",
+      "display_name": "GetExpansionFlag",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1839,8 +1839,8 @@
         "CFG": null,
         "PRO": "693f1bfb8b1a91488f6e7bdec3e3b7b7"
       },
-      "signature": "undefined Ordinal_10117(void)",
-      "calling_convention": "unknown",
+      "signature": "int GetExpansionFlag(void)",
+      "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
       "string_refs": [],
@@ -1851,8 +1851,8 @@
       "address": "0x6F8AAF7E",
       "rva": "0xAF7E",
       "size": 6,
-      "name": "Ordinal_10029",
-      "display_name": "Ordinal_10029",
+      "name": "QueueLogMessage",
+      "display_name": "QueueLogMessage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1864,10 +1864,10 @@
         "CFG": null,
         "PRO": "ec7ae6bba3ba285ec46d0278de18b223"
       },
-      "signature": "undefined Ordinal_10029(void)",
-      "calling_convention": "unknown",
+      "signature": "void QueueLogMessage(char * szFormat)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFormat", "type": "char *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1876,8 +1876,8 @@
       "address": "0x6F8AAF84",
       "rva": "0xAF84",
       "size": 6,
-      "name": "Ordinal_10022",
-      "display_name": "Ordinal_10022",
+      "name": "GetFogStatePtr",
+      "display_name": "GetFogStatePtr",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1889,8 +1889,8 @@
         "CFG": null,
         "PRO": "af92ff4d91c76d269bcfb94b22a05010"
       },
-      "signature": "undefined Ordinal_10022(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetFogStatePtr(void)",
+      "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
       "string_refs": [],
@@ -1901,8 +1901,8 @@
       "address": "0x6F8AAF8A",
       "rva": "0xAF8A",
       "size": 6,
-      "name": "Ordinal_10042",
-      "display_name": "Ordinal_10042",
+      "name": "FogMemAlloc",
+      "display_name": "FogMemAlloc",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1914,10 +1914,10 @@
         "CFG": null,
         "PRO": "9e5652449c4b3fd7039618a16e2a20c8"
       },
-      "signature": "undefined Ordinal_10042(void)",
-      "calling_convention": "unknown",
+      "signature": "void * FogMemAlloc(dword nSize, char * szFile, int nLine)",
+      "calling_convention": "__fastcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nSize", "type": "dword", "storage": "ECX:4"}, {"name": "szFile", "type": "char *", "storage": "EDX:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1926,8 +1926,8 @@
       "address": "0x6F8AAF90",
       "rva": "0xAF90",
       "size": 6,
-      "name": "Ordinal_10043",
-      "display_name": "Ordinal_10043",
+      "name": "ReleasePoolAllocation",
+      "display_name": "ReleasePoolAllocation",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1939,8 +1939,8 @@
         "CFG": null,
         "PRO": "b8e5f9ade507cd6305b7f133c91cde3c"
       },
-      "signature": "undefined Ordinal_10043(void)",
-      "calling_convention": "unknown",
+      "signature": "int ReleasePoolAllocation(void)",
+      "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
       "string_refs": [],
@@ -1951,8 +1951,8 @@
       "address": "0x6F8AAF96",
       "rva": "0xAF96",
       "size": 6,
-      "name": "Ordinal_10198",
-      "display_name": "Ordinal_10198",
+      "name": "GenerateGammaTable",
+      "display_name": "GenerateGammaTable",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1964,10 +1964,10 @@
         "CFG": null,
         "PRO": "263836cc75bce6a545eb8c6a32407e17"
       },
-      "signature": "undefined Ordinal_10198(void)",
-      "calling_convention": "unknown",
+      "signature": "void GenerateGammaTable(int nGammaValue, void * pOutTable, double dPercentLinear, int nEntrySize, int nEntryCount)",
+      "calling_convention": "__fastcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nGammaValue", "type": "int", "storage": "ECX:4"}, {"name": "pOutTable", "type": "void *", "storage": "EDX:4"}, {"name": "dPercentLinear", "type": "double", "storage": "Stack[0x4]:8"}, {"name": "nEntrySize", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nEntryCount", "type": "int", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1976,8 +1976,8 @@
       "address": "0x6F8AAF9C",
       "rva": "0xAF9C",
       "size": 6,
-      "name": "Ordinal_403",
-      "display_name": "Ordinal_403",
+      "name": "SMemFree",
+      "display_name": "SMemFree",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1989,10 +1989,10 @@
         "CFG": null,
         "PRO": "6f2e0a4f2b33b54216096266b2b1e516"
       },
-      "signature": "undefined Ordinal_403(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SMemFree(void * pMemBlock, char * szFile, uint nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pMemBlock", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "uint", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2001,8 +2001,8 @@
       "address": "0x6F8AAFA2",
       "rva": "0xAFA2",
       "size": 6,
-      "name": "Ordinal_268",
-      "display_name": "Ordinal_268",
+      "name": "SFileOpenFileEx",
+      "display_name": "SFileOpenFileEx",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2014,10 +2014,10 @@
         "CFG": null,
         "PRO": "8fb6c48b992b80afeba989a92b9a8854"
       },
-      "signature": "undefined Ordinal_268(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SFileOpenFileEx(uint hArchive, char * szFileName, byte bySearchScope, uint * phFile)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "hArchive", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "szFileName", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "bySearchScope", "type": "byte", "storage": "Stack[0xc]:1"}, {"name": "phFile", "type": "uint *", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2026,8 +2026,8 @@
       "address": "0x6F8AAFA8",
       "rva": "0xAFA8",
       "size": 6,
-      "name": "Ordinal_421",
-      "display_name": "Ordinal_421",
+      "name": "QueryRegistryValue",
+      "display_name": "QueryRegistryValue",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2039,10 +2039,10 @@
         "CFG": null,
         "PRO": "14f3f9b46779162e93bf561e69863545"
       },
-      "signature": "undefined Ordinal_421(void)",
-      "calling_convention": "unknown",
+      "signature": "uint QueryRegistryValue(char * szSubKey, char * szValueName, uint dwFlags, LPBYTE pbData, DWORD dwDataSize, LPDWORD pdwDataLen)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szSubKey", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szValueName", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "dwFlags", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pbData", "type": "LPBYTE", "storage": "Stack[0x10]:4"}, {"name": "dwDataSize", "type": "DWORD", "storage": "Stack[0x14]:4"}, {"name": "pdwDataLen", "type": "LPDWORD", "storage": "Stack[0x18]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2051,8 +2051,8 @@
       "address": "0x6F8AAFAE",
       "rva": "0xAFAE",
       "size": 6,
-      "name": "Ordinal_423",
-      "display_name": "Ordinal_423",
+      "name": "QueryRegistryUlong",
+      "display_name": "QueryRegistryUlong",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2064,10 +2064,10 @@
         "CFG": null,
         "PRO": "c7e345f2a9df1f5f2dc1329e5788da2a"
       },
-      "signature": "undefined Ordinal_423(void)",
-      "calling_convention": "unknown",
+      "signature": "uint QueryRegistryUlong(char * szKeyPath, char * szValueName, uint dwFlags, ulong * pdwResult)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szKeyPath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szValueName", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "dwFlags", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pdwResult", "type": "ulong *", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2076,8 +2076,8 @@
       "address": "0x6F8AAFB4",
       "rva": "0xAFB4",
       "size": 6,
-      "name": "Ordinal_422",
-      "display_name": "Ordinal_422",
+      "name": "GetRegistryStringValue",
+      "display_name": "GetRegistryStringValue",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2089,10 +2089,10 @@
         "CFG": null,
         "PRO": "25885cd321a486d2ff040c8d496976b7"
       },
-      "signature": "undefined Ordinal_422(void)",
-      "calling_convention": "unknown",
+      "signature": "bool GetRegistryStringValue(char * szValueName, char * szSubKey, uint dwRootKey, LPBYTE pbOutputBuffer, DWORD dwBufferSize)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szValueName", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szSubKey", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "dwRootKey", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pbOutputBuffer", "type": "LPBYTE", "storage": "Stack[0x10]:4"}, {"name": "dwBufferSize", "type": "DWORD", "storage": "Stack[0x14]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2101,8 +2101,8 @@
       "address": "0x6F8AAFBA",
       "rva": "0xAFBA",
       "size": 6,
-      "name": "Ordinal_321",
-      "display_name": "Ordinal_321",
+      "name": "SBmpDecodeImage",
+      "display_name": "SBmpDecodeImage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2114,10 +2114,10 @@
         "CFG": null,
         "PRO": "c2d9a8e1461f82abb6cd944f1435e0e8"
       },
-      "signature": "undefined Ordinal_321(void)",
-      "calling_convention": "unknown",
+      "signature": "uint SBmpDecodeImage(int nImageType, byte * pbSrcData, uint dwSrcSize, uint * pdwPalette, byte * pbDestPixels, uint dwDestSize, uint * pdwWidth, uint * pdwHeight, uint * pdwBitDepth)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nImageType", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "pbSrcData", "type": "byte *", "storage": "Stack[0x8]:4"}, {"name": "dwSrcSize", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pdwPalette", "type": "uint *", "storage": "Stack[0x10]:4"}, {"name": "pbDestPixels", "type": "byte *", "storage": "Stack[0x14]:4"}, {"name": "dwDestSize", "type": "uint", "storage": "Stack[0x18]:4"}, {"name": "pdwWidth", "type": "uint *", "storage": "Stack[0x1c]:4"}, {"name": "pdwHeight", "type": "uint *", "storage": "Stack[0x20]:4"}, {"name": "pdwBitDepth", "type": "uint *", "storage": "Stack[0x24]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2126,8 +2126,8 @@
       "address": "0x6F8AAFC0",
       "rva": "0xAFC0",
       "size": 6,
-      "name": "Ordinal_281",
-      "display_name": "Ordinal_281",
+      "name": "SFileLoadFileWithFlags",
+      "display_name": "SFileLoadFileWithFlags",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -2139,10 +2139,10 @@
         "CFG": null,
         "PRO": "b881c4e210c53e0b2eee20a91a491ba9"
       },
-      "signature": "undefined Ordinal_281(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SFileLoadFileWithFlags(uint dwArchive, uint dwFilePath, int * pnBytesRead, uint * pdwFileBuffer, int nExtraAlloc, uint dwOpenFlags)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "dwArchive", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwFilePath", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "pnBytesRead", "type": "int *", "storage": "Stack[0xc]:4"}, {"name": "pdwFileBuffer", "type": "uint *", "storage": "Stack[0x10]:4"}, {"name": "nExtraAlloc", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "dwOpenFlags", "type": "uint", "storage": "Stack[0x18]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
