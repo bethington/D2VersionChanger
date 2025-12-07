@@ -1367,13 +1367,89 @@
             color: var(--color-set);
             border-color: var(--color-set);
         }
-        
+
         .callee-tag.shared {
             color: var(--color-set);
             border-color: var(--color-set);
             background: rgba(0, 200, 83, 0.1);
         }
-        
+
+        /* Side-by-side callee comparison table */
+        .callee-comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            background: var(--bg-darkest);
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .callee-comparison-table th {
+            background: var(--bg-medium);
+            color: var(--text-muted);
+            padding: 6px 8px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .callee-comparison-table td {
+            padding: 4px 8px;
+            vertical-align: top;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .callee-comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .callee-comparison-table td.match-cell {
+            background: rgba(0, 200, 83, 0.08);
+        }
+
+        .callee-comparison-table td.match-cell span {
+            color: var(--color-set);
+        }
+
+        .callee-comparison-table td.source-only {
+            background: rgba(255, 199, 0, 0.08);
+        }
+
+        .callee-comparison-table td.source-only span {
+            color: var(--color-rare);
+        }
+
+        .callee-comparison-table td.target-only {
+            background: rgba(136, 71, 255, 0.08);
+        }
+
+        .callee-comparison-table td.target-only span {
+            color: var(--color-magic);
+        }
+
+        .callee-comparison-table td.empty-cell {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .callee-comparison-table .status-icon {
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+        }
+
+        .callee-comparison-table .status-icon.match {
+            color: var(--color-set);
+        }
+
+        .callee-comparison-table .status-icon.diff {
+            color: var(--color-crafted);
+        }
+
         .match-badge {
             display: inline-block;
             padding: 1px 6px;
@@ -2972,13 +3048,19 @@
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
 
-                // Find the first confirmed version to use as source for comparisons
-                let sourceVersion = null;
-                for (const group of versionGroups) {
-                    const ver = group.versions[0];
-                    if (func.addresses && func.addresses[ver]) {
-                        sourceVersion = ver;
-                        break;
+                // Use the currently selected version from version panel as source for comparisons
+                // If selectedVersion has an address for this function, use it; otherwise fall back to first available
+                let rowSourceVersion = null;
+                if (selectedVersion && func.addresses && func.addresses[selectedVersion]) {
+                    rowSourceVersion = selectedVersion;
+                } else {
+                    // Fall back: find first version with an address
+                    for (const group of versionGroups) {
+                        const ver = group.versions[0];
+                        if (func.addresses && func.addresses[ver]) {
+                            rowSourceVersion = ver;
+                            break;
+                        }
                     }
                 }
 
@@ -2987,8 +3069,8 @@
                     const version = group.versions[0];
                     const addr = getDisplayAddress(func, version);
 
-                    // For source version tracking: use previous confirmed or first confirmed
-                    const cellSourceVersion = sourceVersion || version;
+                    // For source version tracking: use selected version or first confirmed
+                    const cellSourceVersion = rowSourceVersion || version;
 
                     // Check for candidate if no confirmed address
                     if (!addr && func.candidates && func.candidates[version]) {
@@ -3175,13 +3257,19 @@
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
 
-                // Find the first confirmed version to use as source for comparisons
-                let sourceVersion = null;
-                for (const group of versionGroups) {
-                    const ver = group.versions[0];
-                    if (func.addresses && func.addresses[ver]) {
-                        sourceVersion = ver;
-                        break;
+                // Use the currently selected version from version panel as source for comparisons
+                // If selectedVersion has an address for this function, use it; otherwise fall back to first available
+                let rowSourceVersion = null;
+                if (selectedVersion && func.addresses && func.addresses[selectedVersion]) {
+                    rowSourceVersion = selectedVersion;
+                } else {
+                    // Fall back: find first version with an address
+                    for (const group of versionGroups) {
+                        const ver = group.versions[0];
+                        if (func.addresses && func.addresses[ver]) {
+                            rowSourceVersion = ver;
+                            break;
+                        }
                     }
                 }
 
@@ -3189,7 +3277,7 @@
                 const addrCells = versionGroups.map((group, idx) => {
                     const version = group.versions[0];
                     const addr = getDisplayAddress(func, version);
-                    const cellSourceVersion = sourceVersion || version;
+                    const cellSourceVersion = rowSourceVersion || version;
 
                     // Check for candidate if no confirmed address
                     if (!addr && func.candidates && func.candidates[version]) {
@@ -3554,7 +3642,24 @@
             }
             return { match: matchedMethods.length > 0, methods: matchedMethods };
         }
-        
+
+        // Helper: Parse index string to object
+        // Handles both "METHOD:hash" string format and {METHOD: hash} object format
+        function parseIndexToObject(indexData) {
+            if (!indexData) return {};
+            if (typeof indexData === 'object') return indexData;
+            if (typeof indexData === 'string') {
+                // Parse "METHOD:hash" format
+                const colonIdx = indexData.indexOf(':');
+                if (colonIdx > 0) {
+                    const method = indexData.substring(0, colonIdx).toUpperCase();
+                    const hash = indexData.substring(colonIdx + 1);
+                    return { [method]: hash };
+                }
+            }
+            return {};
+        }
+
         // Helper: Calculate constant similarity (Jaccard index)
         function calculateConstantSimilarity(constants1, constants2) {
             if (!constants1?.length || !constants2?.length) return 0;
@@ -3565,7 +3670,7 @@
             if (union.size === 0) return 100;
             return Math.round((intersection.length / union.size) * 100);
         }
-        
+
         // Helper: Calculate global reference similarity
         function calculateGlobalSimilarity(globals1, globals2) {
             if (!globals1?.length || !globals2?.length) return 0;
@@ -3584,7 +3689,41 @@
             if (union.size === 0) return 100;
             return Math.round((intersection.length / union.size) * 100);
         }
-        
+
+        // Helper: Render indexes side-by-side table
+        function renderIndexComparisonTable(sourceIndexes, targetIndexes, indexMatch) {
+            const methods = ['API', 'EXP', 'STR', 'MNE', 'CFG', 'PRO'];
+            const hasAnyIndex = methods.some(m => sourceIndexes[m] || targetIndexes[m]);
+            
+            if (!hasAnyIndex) {
+                return '<div style="color: var(--text-muted);">No index data available</div>';
+            }
+
+            let html = '<table style="width:100%; font-family: var(--font-mono); font-size: 0.65rem;">';
+            html += '<thead><tr style="color: var(--text-muted);"><th style="text-align:left; padding:2px 4px;">Method</th><th style="text-align:left; padding:2px 4px;">Source Hash</th><th style="text-align:left; padding:2px 4px;">Target Hash</th><th></th></tr></thead>';
+            html += '<tbody>';
+
+            methods.forEach(method => {
+                const sourceHash = sourceIndexes[method];
+                const targetHash = targetIndexes[method];
+                if (!sourceHash && !targetHash) return;
+
+                const isMatch = sourceHash && targetHash && sourceHash === targetHash;
+                const rowClass = isMatch ? 'style="background: rgba(0,200,83,0.1);"' : '';
+                const matchIcon = isMatch ? '<span style="color: var(--color-set);">✓</span>' : (sourceHash && targetHash ? '<span style="color: var(--color-crafted);">✗</span>' : '');
+                
+                html += `<tr ${rowClass}>
+                    <td style="padding:2px 4px; font-weight:500; color: var(--color-magic);">${method}</td>
+                    <td style="padding:2px 4px; word-break:break-all; color: ${isMatch ? 'var(--color-set)' : 'var(--text-secondary)'};">${sourceHash ? sourceHash.substring(0, 16) + '...' : '—'}</td>
+                    <td style="padding:2px 4px; word-break:break-all; color: ${isMatch ? 'var(--color-set)' : 'var(--text-secondary)'};">${targetHash ? targetHash.substring(0, 16) + '...' : '—'}</td>
+                    <td style="padding:2px 4px; text-align:center;">${matchIcon}</td>
+                </tr>`;
+            });
+
+            html += '</tbody></table>';
+            return html;
+        }
+
         // Helper: Render constants as tags
         function renderConstantTags(constants, otherConstants) {
             if (!constants || constants.length === 0) {
@@ -3597,7 +3736,7 @@
                 return `<span class="callee-tag ${isShared ? 'shared' : ''}" title="${c} (${hexVal})">${hexVal}</span>`;
             }).join('') + (constants.length > 15 ? `<span class="callee-tag">+${constants.length - 15} more</span>` : '');
         }
-        
+
         // Helper: Render globals as list
         function renderGlobalRefs(globals) {
             if (!globals || globals.length === 0) {
@@ -3637,6 +3776,123 @@
                 else if (isKnown) classes.push('known');
                 return `<span class="${classes.join(' ')}">${name}</span>`;
             }).join('') + (callees.length > 20 ? `<span class="callee-tag">+${callees.length - 20} more</span>` : '');
+        }
+
+        // Helper: Render side-by-side callee comparison table
+        function renderCalleeComparisonTable(sourceCallees, targetCallees, sourceVersion, targetVersion) {
+            if ((!sourceCallees || sourceCallees.length === 0) && (!targetCallees || targetCallees.length === 0)) {
+                return '<div style="color: var(--text-muted); font-style: italic;">No callees in either version</div>';
+            }
+
+            // Normalize callee names
+            const getCalleeName = (c) => c.name || c;
+
+            // Create lookup sets
+            const sourceNames = new Set(sourceCallees.map(getCalleeName));
+            const targetNames = new Set(targetCallees.map(getCalleeName));
+
+            // Build rows: matched first, then source-only, then target-only
+            const rows = [];
+
+            // Matched callees (in both)
+            const matched = sourceCallees.filter(c => targetNames.has(getCalleeName(c)));
+            matched.forEach(callee => {
+                const name = getCalleeName(callee);
+                const targetCallee = targetCallees.find(c => getCalleeName(c) === name);
+                rows.push({
+                    type: 'match',
+                    sourceName: name,
+                    sourceAddr: callee.address || '',
+                    targetName: name,
+                    targetAddr: targetCallee?.address || ''
+                });
+            });
+
+            // Source-only callees
+            const sourceOnly = sourceCallees.filter(c => !targetNames.has(getCalleeName(c)));
+            sourceOnly.forEach(callee => {
+                const name = getCalleeName(callee);
+                rows.push({
+                    type: 'source-only',
+                    sourceName: name,
+                    sourceAddr: callee.address || '',
+                    targetName: '',
+                    targetAddr: ''
+                });
+            });
+
+            // Target-only callees
+            const targetOnly = targetCallees.filter(c => !sourceNames.has(getCalleeName(c)));
+            targetOnly.forEach(callee => {
+                const name = getCalleeName(callee);
+                rows.push({
+                    type: 'target-only',
+                    sourceName: '',
+                    sourceAddr: '',
+                    targetName: name,
+                    targetAddr: callee.address || ''
+                });
+            });
+
+            // Limit displayed rows
+            const maxRows = 25;
+            const displayRows = rows.slice(0, maxRows);
+            const remaining = rows.length - maxRows;
+
+            // Build HTML table
+            let html = `<table class="callee-comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20px;"></th>
+                        <th>Source (${sourceVersion?.split('/')[1] || 'Source'})</th>
+                        <th>Target (${targetVersion?.split('/')[1] || 'Target'})</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            displayRows.forEach(row => {
+                let statusIcon = '';
+                let sourceTdClass = '';
+                let targetTdClass = '';
+
+                if (row.type === 'match') {
+                    statusIcon = '<span class="status-icon match">✓</span>';
+                    sourceTdClass = 'match-cell';
+                    targetTdClass = 'match-cell';
+                } else if (row.type === 'source-only') {
+                    statusIcon = '<span class="status-icon diff">←</span>';
+                    sourceTdClass = 'source-only';
+                    targetTdClass = 'empty-cell';
+                } else {
+                    statusIcon = '<span class="status-icon diff">→</span>';
+                    sourceTdClass = 'empty-cell';
+                    targetTdClass = 'target-only';
+                }
+
+                html += `<tr>
+                    <td>${statusIcon}</td>
+                    <td class="${sourceTdClass}">${row.sourceName ? `<span>${row.sourceName}</span>` : '—'}</td>
+                    <td class="${targetTdClass}">${row.targetName ? `<span>${row.targetName}</span>` : '—'}</td>
+                </tr>`;
+            });
+
+            html += '</tbody></table>';
+
+            if (remaining > 0) {
+                html += `<div style="color: var(--text-muted); font-size: 0.65rem; margin-top: 4px;">+${remaining} more callees</div>`;
+            }
+
+            // Summary stats
+            const matchCount = matched.length;
+            const totalUnique = sourceNames.size + targetNames.size - matchCount;
+            const matchPct = totalUnique > 0 ? Math.round((matchCount / Math.max(sourceNames.size, targetNames.size)) * 100) : 0;
+
+            return `<div style="margin-bottom: 8px; font-size: 0.7rem;">
+                <span style="color: var(--color-set);">✓ ${matchCount} matched</span> · 
+                <span style="color: var(--color-rare);">${sourceOnly.length} source-only</span> · 
+                <span style="color: var(--color-magic);">${targetOnly.length} target-only</span>
+                ${matchPct > 0 ? `<span class="match-badge" style="margin-left: 8px;">${matchPct}% overlap</span>` : ''}
+            </div>` + html;
         }
 
         // Helper: Render string references
@@ -3702,26 +3958,28 @@
             const sourceStrings = funcData.strings?.[sourceVersion] || [];
             const targetStrings = candidate?.strings || funcData.strings?.[version] || [];
 
-            // Get indexes/hashes
-            const sourceIndexes = funcData.indexes || {};
-            const targetIndexes = candidate?.indexes || {};
-            
+            // Get indexes/hashes - parse from string format "METHOD:hash" if needed
+            // funcData.indexes (plural) is the object format, funcData.index (singular) is the string format
+            const sourceIndexes = funcData.indexes || parseIndexToObject(funcData.index);
+            const targetIndexes = candidate?.indexes || parseIndexToObject(candidate?.index) || 
+                                  funcData.indexes || parseIndexToObject(funcData.index);
+
             // New enhanced comparison fields
             const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
             const targetStackFrame = candidate?.stack_frame_size || funcData.stack_frame_sizes?.[version] || 0;
-            
+
             const sourceBasicBlocks = funcData.basic_block_counts?.[sourceVersion] || 0;
             const targetBasicBlocks = candidate?.basic_block_count || funcData.basic_block_counts?.[version] || 0;
-            
+
             const sourceLoops = funcData.loop_counts?.[sourceVersion] ?? null;
             const targetLoops = candidate?.loop_count ?? funcData.loop_counts?.[version] ?? null;
-            
+
             const sourceMnemonicHash = funcData.mnemonic_hashes?.[sourceVersion] || '';
             const targetMnemonicHash = candidate?.mnemonic_hash || funcData.mnemonic_hashes?.[version] || '';
-            
+
             const sourceConstants = funcData.constants?.[sourceVersion] || [];
             const targetConstants = candidate?.constants || funcData.constants?.[version] || [];
-            
+
             const sourceGlobals = funcData.globals?.[sourceVersion] || [];
             const targetGlobals = candidate?.globals || funcData.globals?.[version] || [];
 
@@ -3734,10 +3992,10 @@
             // Instruction similarity (simplified - based on count similarity for now)
             const instrSimilarity = sourceInstructions.length && targetInstructions.length ?
                 calculateSizeSimilarity(sourceInstructions.length, targetInstructions.length) : 0;
-            
+
             // Additional similarity calculations
             const blockSimilarity = calculateSizeSimilarity(sourceBasicBlocks, targetBasicBlocks);
-            const stackSimilarity = sourceStackFrame && targetStackFrame ? 
+            const stackSimilarity = sourceStackFrame && targetStackFrame ?
                 calculateSizeSimilarity(sourceStackFrame, targetStackFrame) : 0;
             const loopMatch = sourceLoops !== null && targetLoops !== null && sourceLoops === targetLoops;
             const mnemonicHashMatch = sourceMnemonicHash && targetMnemonicHash && sourceMnemonicHash === targetMnemonicHash;
@@ -3901,12 +4159,6 @@
                     <div class="comparison-section-title">Global References (${sourceGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
                     <div class="string-list">${renderGlobalRefs(sourceGlobals)}</div>
                 </div>
-
-                <!-- Hash/Index -->
-                <div class="comparison-section comparison-hash">
-                    <div class="comparison-section-title">Function Index (${funcData.index_method || 'API'})</div>
-                    <div class="hash-value ${indexMatch.match ? 'match' : ''}">${funcData.index || '—'}</div>
-                </div>
             `;
 
             // Build target details HTML
@@ -3983,16 +4235,31 @@
                     <div class="comparison-section-title">Global References (${targetGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
                     <div class="string-list">${renderGlobalRefs(targetGlobals)}</div>
                 </div>
-
-                <!-- Hash/Index -->
-                <div class="comparison-section comparison-hash">
-                    <div class="comparison-section-title">Function Index${indexMatch.match ? ` (✓ ${indexMatch.methods.join(', ')})` : ''}</div>
-                    <div class="hash-value ${indexMatch.match ? 'match' : ''}">${candidate?.index || funcData.index || '—'}</div>
-                </div>
             `;
 
             document.getElementById('sourceDetails').innerHTML = sourceDetailsHtml;
             document.getElementById('targetDetails').innerHTML = targetDetailsHtml;
+
+            // Populate the full-width callee comparison section
+            const calleeComparisonContent = document.getElementById('calleeComparisonContent');
+            if (calleeComparisonContent) {
+                calleeComparisonContent.innerHTML = renderCalleeComparisonTable(
+                    sourceCallees,
+                    targetCallees,
+                    sourceVersion,
+                    version
+                );
+            }
+
+            // Populate the full-width index comparison section
+            const indexComparisonContent = document.getElementById('indexComparisonContent');
+            if (indexComparisonContent) {
+                indexComparisonContent.innerHTML = renderIndexComparisonTable(
+                    sourceIndexes,
+                    targetIndexes,
+                    indexMatch
+                );
+            }
 
             // Show/hide action buttons based on whether it's a candidate
             const confirmBtn = document.getElementById('confirmMatchBtn');
@@ -4165,6 +4432,18 @@
                     <div id="targetSideHeader" class="comparison-side-header">Target</div>
                     <div id="targetDetails"></div>
                 </div>
+            </div>
+
+            <!-- Full-width Callee Comparison Section -->
+            <div id="calleeComparisonSection" class="comparison-section" style="margin: 0 1rem 1rem 1rem; padding: 0.8rem; background: var(--bg-medium); border-radius: 6px;">
+                <div class="comparison-section-title" style="margin-bottom: 8px;">Callee Comparison (Call Graph)</div>
+                <div id="calleeComparisonContent"></div>
+            </div>
+
+            <!-- Full-width Function Index Comparison Section -->
+            <div id="indexComparisonSection" class="comparison-section" style="margin: 0 1rem 1rem 1rem; padding: 0.8rem; background: var(--bg-medium); border-radius: 6px;">
+                <div class="comparison-section-title" style="margin-bottom: 8px;">Function Index (Hash Comparison)</div>
+                <div id="indexComparisonContent"></div>
             </div>
 
             <div class="comparison-actions">
