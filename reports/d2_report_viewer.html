@@ -1614,6 +1614,23 @@
             color: var(--color-crafted);
         }
 
+        .similarity-score.definitive {
+            color: var(--color-unique);
+            text-shadow: 0 0 10px rgba(175, 135, 80, 0.5);
+            border-left: 3px solid var(--color-unique);
+            padding-left: 0.5rem;
+        }
+
+        .match-warning {
+            background: rgba(255, 200, 100, 0.1);
+            border: 1px solid rgba(255, 200, 100, 0.3);
+            border-radius: 4px;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.75rem;
+            color: var(--color-rare);
+            margin-bottom: 0.25rem;
+        }
+
         .similarity-breakdown {
             flex: 1;
         }
@@ -2127,6 +2144,304 @@
         let tableSortColumn = 'function';  // 'function' or version group index (0, 1, 2, ...)
         let tableSortDirection = 'asc';    // 'asc' or 'desc'
         let currentVersionGroups = [];     // Store version groups for sorting
+
+        // Rarity index for identity matching
+        let rarityIndex = null;  // { callees: Map, strings: Map, constants: Map }
+
+        // Build rarity index from function data
+        // Counts how often each callee/string/constant appears across all functions
+        function buildRarityIndex(funcData) {
+            const calleeCount = new Map();
+            const stringCount = new Map();
+            const constantCount = new Map();
+            const totalFunctions = Object.keys(funcData.functions).length;
+
+            for (const [key, func] of Object.entries(funcData.functions)) {
+                // Count callees across all versions
+                if (func.callees) {
+                    const seenCallees = new Set();
+                    for (const version of Object.keys(func.callees)) {
+                        for (const callee of func.callees[version]) {
+                            const name = callee.name || callee;
+                            if (!seenCallees.has(name)) {
+                                seenCallees.add(name);
+                                calleeCount.set(name, (calleeCount.get(name) || 0) + 1);
+                            }
+                        }
+                    }
+                }
+
+                // Count strings across all versions
+                if (func.strings) {
+                    const seenStrings = new Set();
+                    for (const version of Object.keys(func.strings)) {
+                        for (const str of func.strings[version]) {
+                            if (!seenStrings.has(str)) {
+                                seenStrings.add(str);
+                                stringCount.set(str, (stringCount.get(str) || 0) + 1);
+                            }
+                        }
+                    }
+                }
+
+                // Count constants across all versions
+                if (func.constants) {
+                    const seenConstants = new Set();
+                    for (const version of Object.keys(func.constants)) {
+                        for (const c of func.constants[version]) {
+                            if (!seenConstants.has(c)) {
+                                seenConstants.add(c);
+                                constantCount.set(c, (constantCount.get(c) || 0) + 1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Convert to rarity scores: 1 / log(count + 1)
+            // Lower count = higher rarity = higher score
+            const calleeRarity = new Map();
+            const stringRarity = new Map();
+            const constantRarity = new Map();
+
+            for (const [name, count] of calleeCount) {
+                calleeRarity.set(name, 1 / Math.log2(count + 1));
+            }
+            for (const [str, count] of stringCount) {
+                stringRarity.set(str, 1 / Math.log2(count + 1));
+            }
+            for (const [c, count] of constantCount) {
+                // Filter out very common constants (0, 1, 2, 4, 8, etc.)
+                if (count > totalFunctions * 0.5) {
+                    constantRarity.set(c, 0.01); // Very low rarity for ubiquitous constants
+                } else {
+                    constantRarity.set(c, 1 / Math.log2(count + 1));
+                }
+            }
+
+            return {
+                callees: calleeRarity,
+                strings: stringRarity,
+                constants: constantRarity,
+                totalFunctions
+            };
+        }
+
+        // Calculate tiered identity match
+        // Returns { tier, confidence, breakdown, warnings }
+        function calculateTieredMatch(sourceData, targetData, sourceVersion, targetVersion, rarityIdx) {
+            const result = {
+                tier: 0,
+                confidence: 0,
+                breakdown: {
+                    tier1: { matched: false, reason: null },
+                    tier2: { score: 0, matchedItems: [], totalRarity: 0 },
+                    tier3: { plausible: true, warnings: [] }
+                },
+                warnings: []
+            };
+
+            // Extract data for comparison
+            const sourceCallees = sourceData.callees?.[sourceVersion] || [];
+            const targetCallees = targetData.callees?.[targetVersion] || [];
+            const sourceStrings = sourceData.strings?.[sourceVersion] || [];
+            const targetStrings = targetData.strings?.[targetVersion] || [];
+            const sourceConstants = sourceData.constants?.[sourceVersion] || [];
+            const targetConstants = targetData.constants?.[targetVersion] || [];
+            const sourceSize = sourceData.sizes?.[sourceVersion] || 0;
+            const targetSize = targetData.sizes?.[targetVersion] || 0;
+            const sourceMnemonicHash = sourceData.mnemonic_hashes?.[sourceVersion] || '';
+            const targetMnemonicHash = targetData.mnemonic_hashes?.[targetVersion] || '';
+            const sourceIndex = sourceData.index || '';
+            const targetIndex = targetData.index || '';
+
+            // ========== TIER 1: Definitive Matches ==========
+            // Mnemonic hash match - identical opcode sequence
+            if (sourceMnemonicHash && targetMnemonicHash && sourceMnemonicHash === targetMnemonicHash) {
+                result.tier = 1;
+                result.confidence = 100;
+                result.breakdown.tier1 = { matched: true, reason: 'Mnemonic hash match (identical opcodes)' };
+                return result;
+            }
+
+            // Index hash match (API/EXP/STR signature)
+            if (sourceIndex && targetIndex && sourceIndex === targetIndex) {
+                result.tier = 1;
+                result.confidence = 98;
+                result.breakdown.tier1 = { matched: true, reason: `Index hash match (${sourceIndex.split(':')[0]})` };
+                return result;
+            }
+
+            // Exact callee set + exact size match
+            if (sourceCallees.length > 2 && sourceCallees.length === targetCallees.length && sourceSize === targetSize) {
+                const sourceNames = new Set(sourceCallees.map(c => c.name || c));
+                const targetNames = new Set(targetCallees.map(c => c.name || c));
+                if (sourceNames.size === targetNames.size && [...sourceNames].every(n => targetNames.has(n))) {
+                    result.tier = 1;
+                    result.confidence = 95;
+                    result.breakdown.tier1 = { matched: true, reason: 'Exact callee set + size match' };
+                    return result;
+                }
+            }
+
+            // ========== TIER 2: Rarity-Weighted Identity ==========
+            const getCalleeName = c => c.name || c;
+            const sourceCalleeNames = new Set(sourceCallees.map(getCalleeName));
+            const targetCalleeNames = new Set(targetCallees.map(getCalleeName));
+            const sourceStringSet = new Set(sourceStrings);
+            const targetStringSet = new Set(targetStrings);
+            const sourceConstantSet = new Set(sourceConstants);
+            const targetConstantSet = new Set(sourceConstants);
+
+            let matchedRarity = 0;
+            let totalSourceRarity = 0;
+            const matchedItems = [];
+
+            // Score callee matches by rarity
+            for (const name of sourceCalleeNames) {
+                const rarity = rarityIdx?.callees?.get(name) || 0.1;
+                totalSourceRarity += rarity;
+                if (targetCalleeNames.has(name)) {
+                    matchedRarity += rarity;
+                    if (rarity > 0.5) {  // Only track rare matches
+                        matchedItems.push({ type: 'callee', name, rarity: rarity.toFixed(2) });
+                    }
+                }
+            }
+
+            // Score string matches by rarity (strings are usually rare and valuable)
+            for (const str of sourceStringSet) {
+                const rarity = rarityIdx?.strings?.get(str) || 0.8;  // Strings default to high rarity
+                totalSourceRarity += rarity * 2;  // Weight strings higher
+                if (targetStringSet.has(str)) {
+                    matchedRarity += rarity * 2;
+                    matchedItems.push({ type: 'string', name: str.substring(0, 30), rarity: rarity.toFixed(2) });
+                }
+            }
+
+            // Score constant matches by rarity
+            for (const c of sourceConstantSet) {
+                const rarity = rarityIdx?.constants?.get(c) || 0.1;
+                totalSourceRarity += rarity * 0.5;  // Weight constants lower
+                if (targetConstantSet.has(c)) {
+                    matchedRarity += rarity * 0.5;
+                }
+            }
+
+            // Calculate tier 2 score
+            const tier2Score = totalSourceRarity > 0 ? (matchedRarity / totalSourceRarity) * 100 : 0;
+            result.breakdown.tier2 = {
+                score: Math.round(tier2Score),
+                matchedItems: matchedItems.slice(0, 5),  // Top 5 rare matches
+                matchedRarity: matchedRarity.toFixed(2),
+                totalRarity: totalSourceRarity.toFixed(2)
+            };
+
+            // ========== TIER 3: Structural Validation ==========
+            // Check if structure is plausible
+            if (sourceSize > 0 && targetSize > 0) {
+                const sizeRatio = Math.min(sourceSize, targetSize) / Math.max(sourceSize, targetSize);
+                if (sizeRatio < 0.5) {
+                    result.breakdown.tier3.plausible = false;
+                    result.breakdown.tier3.warnings.push(`Size mismatch: ${sourceSize} vs ${targetSize} (${Math.round(sizeRatio * 100)}%)`);
+                    result.warnings.push('⚠️ Size differs by >50%');
+                } else if (sizeRatio < 0.8) {
+                    result.breakdown.tier3.warnings.push(`Size differs: ${sourceSize} vs ${targetSize} (${Math.round(sizeRatio * 100)}%)`);
+                    result.warnings.push('Size differs by >20%');
+                }
+            }
+
+            // Check callee count plausibility
+            if (sourceCallees.length > 0 && targetCallees.length > 0) {
+                const calleeRatio = Math.min(sourceCallees.length, targetCallees.length) /
+                    Math.max(sourceCallees.length, targetCallees.length);
+                if (calleeRatio < 0.5) {
+                    result.breakdown.tier3.warnings.push(`Callee count mismatch: ${sourceCallees.length} vs ${targetCallees.length}`);
+                }
+            }
+
+            // ========== Final Scoring ==========
+            // Apply tier 3 penalties
+            let finalScore = tier2Score;
+            if (!result.breakdown.tier3.plausible) {
+                finalScore *= 0.5;  // Heavy penalty for implausible structure
+            } else if (result.breakdown.tier3.warnings.length > 0) {
+                finalScore *= 0.85;  // Minor penalty for structural differences
+            }
+
+            // Determine tier based on final score
+            if (finalScore >= 70) {
+                result.tier = 2;
+                result.confidence = Math.min(90, Math.round(finalScore));
+            } else if (finalScore >= 40) {
+                result.tier = 2;
+                result.confidence = Math.round(finalScore);
+            } else {
+                result.tier = 3;
+                result.confidence = Math.round(finalScore);
+            }
+
+            return result;
+        }
+
+        // Wrapper function that adapts calculateTieredMatch to the expected interface
+        // Expected by openComparisonModal: { score, tier, tierName, details, warnings }
+        function calculateIdentityMatch(sourceObj, targetObj, sourceVersion, targetVersion) {
+            // Transform flat objects to the nested structure expected by calculateTieredMatch
+            const sourceData = {
+                callees: { [sourceVersion]: sourceObj.callees || [] },
+                strings: { [sourceVersion]: sourceObj.strings || [] },
+                constants: { [sourceVersion]: sourceObj.constants || [] },
+                sizes: { [sourceVersion]: sourceObj.size || 0 },
+                mnemonic_hashes: { [sourceVersion]: sourceObj.mnemonic_hash || '' },
+                index: sourceObj.indexes ? 
+                    (Object.entries(sourceObj.indexes).find(([k,v]) => v)?.[0] + ':' + 
+                     Object.entries(sourceObj.indexes).find(([k,v]) => v)?.[1]) : ''
+            };
+            
+            const targetData = {
+                callees: { [targetVersion]: targetObj.callees || [] },
+                strings: { [targetVersion]: targetObj.strings || [] },
+                constants: { [targetVersion]: targetObj.constants || [] },
+                sizes: { [targetVersion]: targetObj.size || 0 },
+                mnemonic_hashes: { [targetVersion]: targetObj.mnemonic_hash || '' },
+                index: targetObj.indexes ? 
+                    (Object.entries(targetObj.indexes).find(([k,v]) => v)?.[0] + ':' + 
+                     Object.entries(targetObj.indexes).find(([k,v]) => v)?.[1]) : ''
+            };
+            
+            // Call the tiered match function
+            const tieredResult = calculateTieredMatch(sourceData, targetData, sourceVersion, targetVersion, rarityIndex);
+            
+            // Map tier number to tier name
+            const tierNames = {
+                1: 'Tier 1: Definitive',
+                2: 'Tier 2: Strong Fingerprint',
+                3: 'Tier 3: Structural'
+            };
+            
+            // Check for mnemonic/index matches from tier 1 breakdown
+            const mnemonicMatch = tieredResult.breakdown.tier1.matched && 
+                tieredResult.breakdown.tier1.reason?.includes('Mnemonic');
+            const indexMatch = tieredResult.breakdown.tier1.matched && 
+                tieredResult.breakdown.tier1.reason?.includes('Index');
+            
+            // Transform to expected format
+            return {
+                score: tieredResult.confidence,
+                tier: tieredResult.tier,
+                tierName: tierNames[tieredResult.tier] || 'Unknown',
+                details: {
+                    calleeScore: tieredResult.breakdown.tier2.score || 0,
+                    mnemonicMatch: mnemonicMatch,
+                    indexMatch: indexMatch,
+                    matchedItems: tieredResult.breakdown.tier2.matchedItems || [],
+                    tier1Reason: tieredResult.breakdown.tier1.reason,
+                    plausible: tieredResult.breakdown.tier3.plausible
+                },
+                warnings: tieredResult.warnings || []
+            };
+        }
 
         // Function data cache (loaded on demand) - keyed by "filename.group"
         const loadedFunctionData = {};
@@ -3162,6 +3477,9 @@
             currentFuncData = funcData;
             currentFuncBaseName = baseName;
 
+            // Build rarity index for identity matching
+            rarityIndex = buildRarityIndex(funcData);
+
             // Reset filters and sort when switching files
             funcSearchFilter = '';
             showOnlyNamed = false;
@@ -3771,7 +4089,7 @@
         function renderIndexInline(indexes, otherIndexes, indexMatch) {
             const methods = ['API', 'EXP', 'STR', 'MNE', 'CFG', 'PRO'];
             const hasAnyIndex = methods.some(m => indexes[m]);
-            
+
             if (!hasAnyIndex) {
                 return '<div style="color: var(--text-muted); font-style: italic;">No index data</div>';
             }
@@ -3782,7 +4100,7 @@
                 const isMatch = hash && otherHash && hash === otherHash;
                 const shortHash = hash.substring(0, 20) + '...';
                 const matchIcon = isMatch ? ' <span style="color: var(--color-set);">✓</span>' : '';
-                
+
                 return `<div class="index-row" style="margin-bottom: 4px;">
                     <span class="callee-tag ${isMatch ? 'match' : ''}" style="font-weight: 500;">${method}</span>
                     <span style="font-family: var(--font-mono); font-size: 0.6rem; color: ${isMatch ? 'var(--color-set)' : 'var(--text-muted)'}; word-break: break-all;">${shortHash}${matchIcon}</span>
@@ -3832,14 +4150,14 @@
         // Helper: Render callee tags with split row display (matched vs unique)
         function renderCalleeSplitTags(callees, otherCallees = [], isSource = true) {
             if (!callees || callees.length === 0) return '<div class="callee-row"><span class="callee-tag" style="color: var(--text-muted);">No callees</span></div>';
-            
+
             const getCalleeName = (c) => c.name || c;
             const otherNames = new Set(otherCallees.map(getCalleeName));
-            
+
             // Split into matched and unique
             const matched = callees.filter(c => otherNames.has(getCalleeName(c)));
             const unique = callees.filter(c => !otherNames.has(getCalleeName(c)));
-            
+
             // Render matched callees row
             let matchedHtml = '';
             if (matched.length > 0) {
@@ -3854,7 +4172,7 @@
                     <div class="callee-row-tags">${matchedTags}${moreCount}</div>
                 </div>`;
             }
-            
+
             // Render unique callees row
             let uniqueHtml = '';
             if (unique.length > 0) {
@@ -3871,14 +4189,14 @@
                     <div class="callee-row-tags">${uniqueTags}${moreCount}</div>
                 </div>`;
             }
-            
+
             // If no matched, show a note
             if (matched.length === 0 && unique.length > 0) {
                 matchedHtml = `<div class="callee-row callee-row-matched">
                     <span class="callee-row-label" style="color: var(--text-muted);">No matching callees</span>
                 </div>`;
             }
-            
+
             return matchedHtml + uniqueHtml;
         }
 
@@ -4103,7 +4421,7 @@
             const sourceGlobals = funcData.globals?.[sourceVersion] || [];
             const targetGlobals = candidate?.globals || funcData.globals?.[version] || [];
 
-            // Calculate similarity scores
+            // Calculate similarity scores (legacy, for display bars)
             const sizeSimilarity = calculateSizeSimilarity(sourceSize, targetSize);
             const callSimilarity = calculateCallSimilarity(sourceCallees, targetCallees);
             const indexMatch = checkIndexMatch(sourceIndexes, targetIndexes);
@@ -4122,30 +4440,37 @@
             const constantSimilarity = calculateConstantSimilarity(sourceConstants, targetConstants);
             const globalSimilarity = calculateGlobalSimilarity(sourceGlobals, targetGlobals);
 
-            // Overall similarity score (weighted average with enhanced metrics)
-            // Mnemonic hash is the strongest signal - if it matches, functions are almost certainly identical
-            let overallSimilarity;
-            if (mnemonicHashMatch) {
-                // Mnemonic hash match = 95%+ baseline, minor adjustments for other factors
-                overallSimilarity = 95 + Math.round(
-                    (sizeSimilarity >= 100 ? 2 : 0) +
-                    (callSimilarity >= 80 ? 2 : 0) +
-                    (loopMatch ? 1 : 0)
-                );
-                overallSimilarity = Math.min(100, overallSimilarity);
-            } else {
-                // No hash match - use weighted combination of all signals
-                overallSimilarity = Math.round(
-                    (sizeSimilarity * 0.15) +
-                    (callSimilarity * 0.25) +
-                    (instrSimilarity * 0.10) +
-                    (blockSimilarity * 0.10) +
-                    (constantSimilarity * 0.15) +
-                    (globalSimilarity * 0.10) +
-                    (loopMatch ? 10 : 0) +
-                    (hashSimilarity * 0.05)
-                );
-            }
+            // Build source and target objects for identity matching
+            const sourceObj = {
+                size: sourceSize,
+                callees: sourceCallees,
+                strings: sourceStrings,
+                constants: sourceConstants,
+                globals: sourceGlobals,
+                mnemonic_hash: sourceMnemonicHash,
+                indexes: sourceIndexes,
+                basic_blocks: sourceBasicBlocks,
+                loop_count: sourceLoops,
+                stack_frame: sourceStackFrame,
+                instructions: sourceInstructions
+            };
+            const targetObj = {
+                size: targetSize,
+                callees: targetCallees,
+                strings: targetStrings,
+                constants: targetConstants,
+                globals: targetGlobals,
+                mnemonic_hash: targetMnemonicHash,
+                indexes: targetIndexes,
+                basic_blocks: targetBasicBlocks,
+                loop_count: targetLoops,
+                stack_frame: targetStackFrame,
+                instructions: targetInstructions
+            };
+
+            // Calculate tiered identity match
+            const identityMatch = calculateIdentityMatch(sourceObj, targetObj, sourceVersion, version);
+            const overallSimilarity = identityMatch.score;
 
             // Update modal content
             const title = document.getElementById('comparisonTitle');
@@ -4165,14 +4490,57 @@
             const similaritySection = document.getElementById('similaritySection');
             const similarityScore = document.getElementById('similarityScore');
             similaritySection.style.display = 'flex';
-            similarityScore.textContent = `${overallSimilarity}%`;
-            similarityScore.className = 'similarity-score ' +
-                (overallSimilarity >= 80 ? 'high' : overallSimilarity >= 50 ? 'medium' : 'low');
 
+            // Display tiered match information
+            const tierColors = {
+                1: 'var(--color-unique)',    // Gold for definitive
+                2: 'var(--color-set)',       // Green for strong fingerprint
+                3: 'var(--color-rare)'       // Yellow for structural
+            };
+            const tierIcon = {
+                1: '🔒',  // Lock = definitive/certain
+                2: '🎯',  // Target = high confidence
+                3: '⚖️'   // Scale = heuristic/uncertain
+            };
+
+            similarityScore.innerHTML = `<span title="${identityMatch.tierName}">${tierIcon[identityMatch.tier] || ''}</span> ${overallSimilarity}%`;
+            similarityScore.className = 'similarity-score ' +
+                (identityMatch.tier === 1 ? 'definitive' :
+                    overallSimilarity >= 80 ? 'high' :
+                        overallSimilarity >= 50 ? 'medium' : 'low');
+            similarityScore.style.borderColor = tierColors[identityMatch.tier] || '';
+
+            // Update tier label
+            const tierLabel = document.getElementById('tierLabel');
+            if (tierLabel) {
+                tierLabel.textContent = identityMatch.tierName;
+                tierLabel.style.color = tierColors[identityMatch.tier] || 'var(--text-secondary)';
+            }
+
+            // Update breakdown bars with rarity-weighted info
             document.getElementById('sizeSimilarity').style.width = `${sizeSimilarity}%`;
-            document.getElementById('callSimilarity').style.width = `${callSimilarity}%`;
+            document.getElementById('callSimilarity').style.width = `${identityMatch.details.calleeScore}%`;
             document.getElementById('instrSimilarity').style.width = `${instrSimilarity}%`;
-            document.getElementById('hashSimilarity').style.width = `${hashSimilarity}%`;
+            document.getElementById('hashSimilarity').style.width = `${identityMatch.details.mnemonicMatch ? 100 : (identityMatch.details.indexMatch ? 100 : 0)}%`;
+
+            // Update labels with rarity info if available
+            const callLabel = document.querySelector('.similarity-item:nth-child(2) .similarity-item-label');
+            if (callLabel && identityMatch.details.calleeScore > 0) {
+                callLabel.innerHTML = `Call graph: <span style="color: var(--text-muted); font-size: 0.7rem;">(rarity-weighted)</span>`;
+            }
+
+            // Show warnings if any
+            const warningsContainer = document.getElementById('matchWarnings');
+            if (warningsContainer) {
+                if (identityMatch.warnings && identityMatch.warnings.length > 0) {
+                    warningsContainer.innerHTML = identityMatch.warnings.map(w =>
+                        `<div class="match-warning">⚠️ ${w}</div>`
+                    ).join('');
+                    warningsContainer.style.display = 'block';
+                } else {
+                    warningsContainer.style.display = 'none';
+                }
+            }
 
             // Confidence section (only for candidates)
             const confidenceSection = document.getElementById('confidenceSection');
@@ -4494,9 +4862,12 @@
                 <span id="knownNameBadge" class="known-name-badge"></span>
             </div>
 
-            <!-- Overall similarity score -->
+            <!-- Overall similarity score with tier info -->
             <div id="similaritySection" class="comparison-similarity" style="margin: 1rem;">
-                <div id="similarityScore" class="similarity-score">—</div>
+                <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                    <div id="similarityScore" class="similarity-score">—</div>
+                    <div id="tierLabel" style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; white-space: nowrap;">—</div>
+                </div>
                 <div class="similarity-breakdown">
                     <div class="similarity-item">
                         <span class="similarity-item-label">Size match:</span>
@@ -4523,6 +4894,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Warnings container -->
+            <div id="matchWarnings" style="display: none; padding: 0 1rem; margin-bottom: 0.5rem;">
             </div>
 
             <div id="confidenceSection" class="comparison-confidence" style="margin: 0 1rem 1rem 1rem;">
