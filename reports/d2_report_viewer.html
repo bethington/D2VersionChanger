@@ -1450,6 +1450,49 @@
             color: var(--color-crafted);
         }
 
+        /* Split row callee display */
+        .callee-row {
+            margin-bottom: 6px;
+        }
+
+        .callee-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .callee-row-label {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .callee-row-matched .callee-row-label {
+            color: var(--color-set);
+        }
+
+        .callee-row-unique .callee-row-label {
+            color: var(--color-rare);
+        }
+
+        .callee-row-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+
+        .callee-tag.source-unique {
+            color: var(--color-rare);
+            border-color: var(--color-rare);
+            background: rgba(255, 199, 0, 0.1);
+        }
+
+        .callee-tag.target-unique {
+            color: var(--color-magic);
+            border-color: var(--color-magic);
+            background: rgba(136, 71, 255, 0.1);
+        }
+
         .match-badge {
             display: inline-block;
             padding: 1px 6px;
@@ -3694,7 +3737,7 @@
         function renderIndexComparisonTable(sourceIndexes, targetIndexes, indexMatch) {
             const methods = ['API', 'EXP', 'STR', 'MNE', 'CFG', 'PRO'];
             const hasAnyIndex = methods.some(m => sourceIndexes[m] || targetIndexes[m]);
-            
+
             if (!hasAnyIndex) {
                 return '<div style="color: var(--text-muted);">No index data available</div>';
             }
@@ -3711,7 +3754,7 @@
                 const isMatch = sourceHash && targetHash && sourceHash === targetHash;
                 const rowClass = isMatch ? 'style="background: rgba(0,200,83,0.1);"' : '';
                 const matchIcon = isMatch ? '<span style="color: var(--color-set);">✓</span>' : (sourceHash && targetHash ? '<span style="color: var(--color-crafted);">✗</span>' : '');
-                
+
                 html += `<tr ${rowClass}>
                     <td style="padding:2px 4px; font-weight:500; color: var(--color-magic);">${method}</td>
                     <td style="padding:2px 4px; word-break:break-all; color: ${isMatch ? 'var(--color-set)' : 'var(--text-secondary)'};">${sourceHash ? sourceHash.substring(0, 16) + '...' : '—'}</td>
@@ -3763,7 +3806,60 @@
             </div>`;
         }
 
-        // Helper: Render callee tags
+        // Helper: Render callee tags with split row display (matched vs unique)
+        function renderCalleeSplitTags(callees, otherCallees = [], isSource = true) {
+            if (!callees || callees.length === 0) return '<div class="callee-row"><span class="callee-tag" style="color: var(--text-muted);">No callees</span></div>';
+            
+            const getCalleeName = (c) => c.name || c;
+            const otherNames = new Set(otherCallees.map(getCalleeName));
+            
+            // Split into matched and unique
+            const matched = callees.filter(c => otherNames.has(getCalleeName(c)));
+            const unique = callees.filter(c => !otherNames.has(getCalleeName(c)));
+            
+            // Render matched callees row
+            let matchedHtml = '';
+            if (matched.length > 0) {
+                const matchedTags = matched.slice(0, 12).map(c => {
+                    const name = getCalleeName(c);
+                    const isKnown = !name.startsWith('FUN_') && !name.startsWith('LAB_');
+                    return `<span class="callee-tag match">${name}</span>`;
+                }).join('');
+                const moreCount = matched.length > 12 ? `<span class="callee-tag" style="color: var(--text-muted);">+${matched.length - 12}</span>` : '';
+                matchedHtml = `<div class="callee-row callee-row-matched">
+                    <span class="callee-row-label">✓ Matched (${matched.length}):</span>
+                    <div class="callee-row-tags">${matchedTags}${moreCount}</div>
+                </div>`;
+            }
+            
+            // Render unique callees row
+            let uniqueHtml = '';
+            if (unique.length > 0) {
+                const uniqueTags = unique.slice(0, 8).map(c => {
+                    const name = getCalleeName(c);
+                    const isKnown = !name.startsWith('FUN_') && !name.startsWith('LAB_');
+                    const tagClass = isSource ? 'callee-tag source-unique' : 'callee-tag target-unique';
+                    return `<span class="${tagClass}">${name}</span>`;
+                }).join('');
+                const moreCount = unique.length > 8 ? `<span class="callee-tag" style="color: var(--text-muted);">+${unique.length - 8}</span>` : '';
+                const label = isSource ? '← Only here' : '→ Only here';
+                uniqueHtml = `<div class="callee-row callee-row-unique">
+                    <span class="callee-row-label">${label} (${unique.length}):</span>
+                    <div class="callee-row-tags">${uniqueTags}${moreCount}</div>
+                </div>`;
+            }
+            
+            // If no matched, show a note
+            if (matched.length === 0 && unique.length > 0) {
+                matchedHtml = `<div class="callee-row callee-row-matched">
+                    <span class="callee-row-label" style="color: var(--text-muted);">No matching callees</span>
+                </div>`;
+            }
+            
+            return matchedHtml + uniqueHtml;
+        }
+
+        // Legacy: Render callee tags (simple version for backward compatibility)
         function renderCalleeTags(callees, matchingCallees = []) {
             if (!callees || callees.length === 0) return '<span class="callee-tag">No callees</span>';
             const matchSet = new Set(matchingCallees.map(c => c.name || c));
@@ -3777,6 +3873,7 @@
                 return `<span class="${classes.join(' ')}">${name}</span>`;
             }).join('') + (callees.length > 20 ? `<span class="callee-tag">+${callees.length - 20} more</span>` : '');
         }
+
 
         // Helper: Render side-by-side callee comparison table
         function renderCalleeComparisonTable(sourceCallees, targetCallees, sourceVersion, targetVersion) {
@@ -3961,8 +4058,8 @@
             // Get indexes/hashes - parse from string format "METHOD:hash" if needed
             // funcData.indexes (plural) is the object format, funcData.index (singular) is the string format
             const sourceIndexes = funcData.indexes || parseIndexToObject(funcData.index);
-            const targetIndexes = candidate?.indexes || parseIndexToObject(candidate?.index) || 
-                                  funcData.indexes || parseIndexToObject(funcData.index);
+            const targetIndexes = candidate?.indexes || parseIndexToObject(candidate?.index) ||
+                funcData.indexes || parseIndexToObject(funcData.index);
 
             // New enhanced comparison fields
             const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
@@ -4128,10 +4225,10 @@
                     ${funcData.return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${funcData.return_type}</span></div>` : ''}
                 </div>
 
-                <!-- Callees (Call Graph) -->
+                <!-- Callees (Call Graph) - Split Row Display -->
                 <div class="comparison-section comparison-callees">
-                    <div class="comparison-section-title">Callees (${sourceCallees.length})</div>
-                    <div class="callee-list">${renderCalleeTags(sourceCallees, targetCallees)}</div>
+                    <div class="comparison-section-title">Callees (${sourceCallees.length}) ${callSimilarity >= 50 ? `<span class="match-badge">${callSimilarity}%</span>` : ''}</div>
+                    <div class="callee-list">${renderCalleeSplitTags(sourceCallees, targetCallees, true)}</div>
                 </div>
 
                 <!-- String References -->
@@ -4204,10 +4301,10 @@
                     ${funcData.return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${funcData.return_type}</span></div>` : ''}
                 </div>
 
-                <!-- Callees (Call Graph) -->
+                <!-- Callees (Call Graph) - Split Row Display -->
                 <div class="comparison-section comparison-callees">
-                    <div class="comparison-section-title">Callees (${targetCallees.length})</div>
-                    <div class="callee-list">${renderCalleeTags(targetCallees, sourceCallees)}</div>
+                    <div class="comparison-section-title">Callees (${targetCallees.length}) ${callSimilarity >= 50 ? `<span class="match-badge">${callSimilarity}%</span>` : ''}</div>
+                    <div class="callee-list">${renderCalleeSplitTags(targetCallees, sourceCallees, false)}</div>
                 </div>
 
                 <!-- String References -->
@@ -4239,17 +4336,6 @@
 
             document.getElementById('sourceDetails').innerHTML = sourceDetailsHtml;
             document.getElementById('targetDetails').innerHTML = targetDetailsHtml;
-
-            // Populate the full-width callee comparison section
-            const calleeComparisonContent = document.getElementById('calleeComparisonContent');
-            if (calleeComparisonContent) {
-                calleeComparisonContent.innerHTML = renderCalleeComparisonTable(
-                    sourceCallees,
-                    targetCallees,
-                    sourceVersion,
-                    version
-                );
-            }
 
             // Populate the full-width index comparison section
             const indexComparisonContent = document.getElementById('indexComparisonContent');
@@ -4432,12 +4518,6 @@
                     <div id="targetSideHeader" class="comparison-side-header">Target</div>
                     <div id="targetDetails"></div>
                 </div>
-            </div>
-
-            <!-- Full-width Callee Comparison Section -->
-            <div id="calleeComparisonSection" class="comparison-section" style="margin: 0 1rem 1rem 1rem; padding: 0.8rem; background: var(--bg-medium); border-radius: 6px;">
-                <div class="comparison-section-title" style="margin-bottom: 8px;">Callee Comparison (Call Graph)</div>
-                <div id="calleeComparisonContent"></div>
             </div>
 
             <!-- Full-width Function Index Comparison Section -->
