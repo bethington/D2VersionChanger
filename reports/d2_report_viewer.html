@@ -3767,6 +3767,29 @@
             return html;
         }
 
+        // Helper: Render index inline for a single column
+        function renderIndexInline(indexes, otherIndexes, indexMatch) {
+            const methods = ['API', 'EXP', 'STR', 'MNE', 'CFG', 'PRO'];
+            const hasAnyIndex = methods.some(m => indexes[m]);
+            
+            if (!hasAnyIndex) {
+                return '<div style="color: var(--text-muted); font-style: italic;">No index data</div>';
+            }
+
+            return methods.filter(m => indexes[m]).map(method => {
+                const hash = indexes[method];
+                const otherHash = otherIndexes?.[method];
+                const isMatch = hash && otherHash && hash === otherHash;
+                const shortHash = hash.substring(0, 20) + '...';
+                const matchIcon = isMatch ? ' <span style="color: var(--color-set);">✓</span>' : '';
+                
+                return `<div class="index-row" style="margin-bottom: 4px;">
+                    <span class="callee-tag ${isMatch ? 'match' : ''}" style="font-weight: 500;">${method}</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.6rem; color: ${isMatch ? 'var(--color-set)' : 'var(--text-muted)'}; word-break: break-all;">${shortHash}${matchIcon}</span>
+                </div>`;
+            }).join('');
+        }
+
         // Helper: Render constants as tags
         function renderConstantTags(constants, otherConstants) {
             if (!constants || constants.length === 0) {
@@ -4256,6 +4279,12 @@
                     <div class="comparison-section-title">Global References (${sourceGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
                     <div class="string-list">${renderGlobalRefs(sourceGlobals)}</div>
                 </div>
+
+                <!-- Function Index -->
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Function Index ${indexMatch.match ? `<span class="match-badge">✓ ${indexMatch.methods.join(', ')}</span>` : ''}</div>
+                    <div class="index-list">${renderIndexInline(sourceIndexes, targetIndexes, indexMatch)}</div>
+                </div>
             `;
 
             // Build target details HTML
@@ -4332,20 +4361,16 @@
                     <div class="comparison-section-title">Global References (${targetGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
                     <div class="string-list">${renderGlobalRefs(targetGlobals)}</div>
                 </div>
+
+                <!-- Function Index -->
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Function Index ${indexMatch.match ? `<span class="match-badge">✓ ${indexMatch.methods.join(', ')}</span>` : ''}</div>
+                    <div class="index-list">${renderIndexInline(targetIndexes, sourceIndexes, indexMatch)}</div>
+                </div>
             `;
 
             document.getElementById('sourceDetails').innerHTML = sourceDetailsHtml;
             document.getElementById('targetDetails').innerHTML = targetDetailsHtml;
-
-            // Populate the full-width index comparison section
-            const indexComparisonContent = document.getElementById('indexComparisonContent');
-            if (indexComparisonContent) {
-                indexComparisonContent.innerHTML = renderIndexComparisonTable(
-                    sourceIndexes,
-                    targetIndexes,
-                    indexMatch
-                );
-            }
 
             // Show/hide action buttons based on whether it's a candidate
             const confirmBtn = document.getElementById('confirmMatchBtn');
@@ -4518,12 +4543,6 @@
                     <div id="targetSideHeader" class="comparison-side-header">Target</div>
                     <div id="targetDetails"></div>
                 </div>
-            </div>
-
-            <!-- Full-width Function Index Comparison Section -->
-            <div id="indexComparisonSection" class="comparison-section" style="margin: 0 1rem 1rem 1rem; padding: 0.8rem; background: var(--bg-medium); border-radius: 6px;">
-                <div class="comparison-section-title" style="margin-bottom: 8px;">Function Index (Hash Comparison)</div>
-                <div id="indexComparisonContent"></div>
             </div>
 
             <div class="comparison-actions">
