@@ -951,6 +951,116 @@
             color: var(--color-set);
         }
 
+        /* Category filter dropdown */
+        .category-filter {
+            padding: 0.25rem 0.4rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 3px;
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            cursor: pointer;
+        }
+
+        .category-filter:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        /* Category badge in function name */
+        .fn-category-badge {
+            display: inline-block;
+            padding: 0.1rem 0.3rem;
+            border-radius: 2px;
+            font-size: 0.55rem;
+            font-weight: 600;
+            margin-left: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .fn-category-game {
+            background-color: rgba(0, 255, 0, 0.2);
+            color: var(--color-set);
+        }
+
+        .fn-category-crt {
+            background-color: rgba(139, 32, 32, 0.3);
+            color: #ff6b6b;
+        }
+
+        .fn-category-exception {
+            background-color: rgba(255, 102, 0, 0.2);
+            color: var(--color-crafted);
+        }
+
+        .fn-category-import {
+            background-color: rgba(105, 105, 255, 0.2);
+            color: var(--color-magic);
+        }
+
+        .fn-category-other {
+            background-color: rgba(128, 128, 128, 0.2);
+            color: var(--text-muted);
+        }
+
+        /* Tier-colored address cells */
+        .exports-table .addr-cell.tier-1-match {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .exports-table .addr-cell.tier-2-match {
+            color: var(--color-set);
+        }
+
+        .exports-table .addr-cell.tier-3-match {
+            color: var(--color-magic);
+        }
+
+        .exports-table .addr-cell.tier-4-match {
+            color: var(--color-crafted);
+        }
+
+        /* Duplicate function indicator */
+        .fn-duplicate-indicator {
+            color: var(--color-rare);
+            font-size: 0.6rem;
+            margin-left: 0.3rem;
+            cursor: help;
+        }
+
+        /* Compiler boundary indicator */
+        .addr-cell.compiler-boundary {
+            border-left: 2px solid var(--accent-red);
+        }
+
+        /* Gap pattern indicators */
+        .fn-name-cell.has-gaps {
+            position: relative;
+        }
+
+        .fn-gap-indicator {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-left: 0.3rem;
+            cursor: help;
+        }
+
+        .fn-gap-indicator.gap-post110 {
+            background-color: var(--accent-red);
+        }
+
+        .fn-gap-indicator.gap-pre110 {
+            background-color: var(--color-crafted);
+        }
+
+        .fn-gap-indicator.gap-sporadic {
+            background-color: var(--color-rare);
+        }
+
         .exports-table-wrapper {
             flex: 1;
             overflow: auto;
@@ -2137,8 +2247,159 @@
         let funcSearchFilter = '';
         let showOnlyNamed = false;
         let showRVA = false;  // false = full address (default), true = RVA
+        let showGapsOnly = false;  // show only functions with coverage gaps
         let currentFuncData = null;
         let currentFuncBaseName = null;
+        let categoryFilter = 'all';  // 'all', 'game_logic', 'crt_runtime', 'import_thunk', 'exception', 'other'
+
+        // Compiler boundary versions (major toolchain changes)
+        const COMPILER_BOUNDARY_VERSIONS = [
+            'LoD/1.10',      // CRT/compiler changed significantly at 1.10
+            'Classic/1.10'
+        ];
+
+        // Pre-1.10 versions (before compiler boundary)
+        const PRE_110_VERSIONS = [
+            'LoD/1.07', 'LoD/1.08', 'LoD/1.09', 'LoD/1.09b', 'LoD/1.09d',
+            'Classic/1.00', 'Classic/1.01', 'Classic/1.02', 'Classic/1.03',
+            'Classic/1.04b', 'Classic/1.04c', 'Classic/1.05', 'Classic/1.05b',
+            'Classic/1.06', 'Classic/1.06b', 'Classic/1.08', 'Classic/1.09',
+            'Classic/1.09b', 'Classic/1.09d'
+        ];
+
+        // Detect function category based on name patterns
+        function getFunctionCategory(name) {
+            if (!name) return 'other';
+
+            // CRT/Runtime library functions
+            if (name.startsWith('___') || name.startsWith('__crt') || name.startsWith('__sbh') ||
+                name.startsWith('__seh') || name.startsWith('_amsg') || name.startsWith('_except') ||
+                name.match(/^_[a-z]/) || name.startsWith('__ansi') || name.startsWith('__convert') ||
+                name.startsWith('__initm') || name.startsWith('__heap') || name.startsWith('__free') ||
+                name.startsWith('__mt') || name.startsWith('__ld') || name.startsWith('__mul')) {
+                return 'crt';
+            }
+
+            // Exception handling functions
+            if (name.includes('Exception') || name.includes('FrameHandler') ||
+                name.includes('Unwind') || name.includes('CxxThrow') ||
+                name.includes('__CxxFrameHandler') || name.includes('SEH')) {
+                return 'exception';
+            }
+
+            // Import thunks (usually ordinal references)
+            if (name.startsWith('Ordinal_') || name.match(/^_imp__/) ||
+                name.match(/^thunk_/) || name.match(/^j_/)) {
+                return 'import';
+            }
+
+            // Game logic functions (have descriptive names)
+            if (name.match(/^[A-Z][a-z]/) && name.length > 5 &&
+                !name.startsWith('FUN_') && !name.startsWith('sub_')) {
+                return 'game';
+            }
+
+            return 'other';
+        }
+
+        // Get category display info
+        function getCategoryInfo(category) {
+            const info = {
+                game: { label: 'Game', class: 'fn-category-game', title: 'Game Logic Function' },
+                crt: { label: 'CRT', class: 'fn-category-crt', title: 'C Runtime Library Function' },
+                exception: { label: 'EH', class: 'fn-category-exception', title: 'Exception Handling Function' },
+                import: { label: 'IMP', class: 'fn-category-import', title: 'Import/Thunk Function' },
+                other: { label: 'Other', class: 'fn-category-other', title: 'Uncategorized Function' }
+            };
+            return info[category] || info.other;
+        }
+
+        // Analyze function gap patterns
+        function analyzeGapPattern(func, versionGroups) {
+            // Extract all version strings from version groups
+            const versions = [];
+            for (const group of versionGroups) {
+                if (group.versions) {
+                    versions.push(...group.versions);
+                } else if (typeof group === 'string') {
+                    versions.push(group);
+                }
+            }
+
+            if (versions.length === 0) return null;
+
+            // Check how many versions have addresses
+            let hasAddress = 0;
+            let noAddress = 0;
+
+            for (const v of versions) {
+                if (func.addresses && func.addresses[v]) {
+                    hasAddress++;
+                } else {
+                    noAddress++;
+                }
+            }
+
+            // If function only exists in some versions (gaps exist)
+            if (hasAddress > 0 && noAddress > 0) {
+                const coverage = hasAddress / versions.length;
+
+                // Significant gaps (less than 70% coverage or missing in multiple versions)
+                if (coverage < 0.7 || noAddress >= 2) {
+                    return { type: 'sporadic', title: `Gaps in version coverage (${hasAddress}/${versions.length} versions)` };
+                }
+            }
+
+            // Check for pre/post 1.10 boundary patterns
+            const pre110Addresses = [];
+            const post110Addresses = [];
+
+            for (const v of versions) {
+                const hasAddr = func.addresses && func.addresses[v];
+                if (PRE_110_VERSIONS.includes(v)) {
+                    pre110Addresses.push(hasAddr ? v : null);
+                } else {
+                    post110Addresses.push(hasAddr ? v : null);
+                }
+            }
+
+            const pre110Count = pre110Addresses.filter(Boolean).length;
+            const post110Count = post110Addresses.filter(Boolean).length;
+
+            // Only post-1.10 (likely CRT/compiler-specific)
+            if (pre110Count === 0 && post110Count > 0 && pre110Addresses.length > 0) {
+                return { type: 'post110', title: 'Only exists in 1.10+ (likely compiler-specific)' };
+            }
+
+            // Only pre-1.10 (disappeared after compiler change)
+            if (pre110Count > 0 && post110Count === 0 && post110Addresses.length > 0) {
+                return { type: 'pre110', title: 'Only exists in pre-1.10 (removed/replaced after compiler change)' };
+            }
+
+            return null;  // No significant gap pattern
+        }
+
+        // Detect duplicate function names
+        function findDuplicateFunctions(funcData) {
+            const nameCount = {};
+            const duplicates = new Set();
+
+            for (const [key, func] of Object.entries(funcData.functions)) {
+                const name = func.name || key;
+                if (!nameCount[name]) {
+                    nameCount[name] = [];
+                }
+                nameCount[name].push(key);
+            }
+
+            for (const [name, keys] of Object.entries(nameCount)) {
+                if (keys.length > 1) {
+                    keys.forEach(k => duplicates.add(k));
+                }
+            }
+
+            return duplicates;
+        }
 
         // Table sort state
         let tableSortColumn = 'function';  // 'function' or version group index (0, 1, 2, ...)
@@ -2394,38 +2655,38 @@
                 constants: { [sourceVersion]: sourceObj.constants || [] },
                 sizes: { [sourceVersion]: sourceObj.size || 0 },
                 mnemonic_hashes: { [sourceVersion]: sourceObj.mnemonic_hash || '' },
-                index: sourceObj.indexes ? 
-                    (Object.entries(sourceObj.indexes).find(([k,v]) => v)?.[0] + ':' + 
-                     Object.entries(sourceObj.indexes).find(([k,v]) => v)?.[1]) : ''
+                index: sourceObj.indexes ?
+                    (Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[0] + ':' +
+                        Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[1]) : ''
             };
-            
+
             const targetData = {
                 callees: { [targetVersion]: targetObj.callees || [] },
                 strings: { [targetVersion]: targetObj.strings || [] },
                 constants: { [targetVersion]: targetObj.constants || [] },
                 sizes: { [targetVersion]: targetObj.size || 0 },
                 mnemonic_hashes: { [targetVersion]: targetObj.mnemonic_hash || '' },
-                index: targetObj.indexes ? 
-                    (Object.entries(targetObj.indexes).find(([k,v]) => v)?.[0] + ':' + 
-                     Object.entries(targetObj.indexes).find(([k,v]) => v)?.[1]) : ''
+                index: targetObj.indexes ?
+                    (Object.entries(targetObj.indexes).find(([k, v]) => v)?.[0] + ':' +
+                        Object.entries(targetObj.indexes).find(([k, v]) => v)?.[1]) : ''
             };
-            
+
             // Call the tiered match function
             const tieredResult = calculateTieredMatch(sourceData, targetData, sourceVersion, targetVersion, rarityIndex);
-            
+
             // Map tier number to tier name
             const tierNames = {
                 1: 'Tier 1: Definitive',
                 2: 'Tier 2: Strong Fingerprint',
                 3: 'Tier 3: Structural'
             };
-            
+
             // Check for mnemonic/index matches from tier 1 breakdown
-            const mnemonicMatch = tieredResult.breakdown.tier1.matched && 
+            const mnemonicMatch = tieredResult.breakdown.tier1.matched &&
                 tieredResult.breakdown.tier1.reason?.includes('Mnemonic');
-            const indexMatch = tieredResult.breakdown.tier1.matched && 
+            const indexMatch = tieredResult.breakdown.tier1.matched &&
                 tieredResult.breakdown.tier1.reason?.includes('Index');
-            
+
             // Transform to expected format
             return {
                 score: tieredResult.confidence,
@@ -3308,12 +3569,32 @@
             }
         }
 
+        // Handler for category filter change
+        function onCategoryFilterChange(value) {
+            categoryFilter = value;
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
         // Handler for "Show RVA" toggle
         function toggleRVA() {
             showRVA = !showRVA;
             const btn = document.getElementById('rvaToggle');
             if (btn) {
                 btn.classList.toggle('active', showRVA);
+            }
+            if (currentFuncData && currentFuncBaseName) {
+                updateFunctionsTableBody();
+            }
+        }
+
+        // Handler for "Gaps Only" toggle
+        function toggleGapsOnly() {
+            showGapsOnly = !showGapsOnly;
+            const btn = document.getElementById('gapsOnlyToggle');
+            if (btn) {
+                btn.classList.toggle('active', showGapsOnly);
             }
             if (currentFuncData && currentFuncBaseName) {
                 updateFunctionsTableBody();
@@ -3366,14 +3647,27 @@
 
             // Filter and sort function keys
             let funcKeys = Object.keys(funcData.functions);
+
+            // Filter by selected version FIRST (if a version is selected)
+            if (selectedVersion) {
+                funcKeys = funcKeys.filter(key => {
+                    const func = funcData.functions[key];
+                    // Include ONLY if function has a confirmed address in selected version
+                    return func.addresses && func.addresses[selectedVersion];
+                });
+            }
+
             let namedCount = 0;
 
-            // Count named functions
+            // Count named functions (from the version-filtered set)
             funcKeys.forEach(key => {
                 if (isNamedFunction(funcData.functions[key], key)) namedCount++;
             });
 
-            // Apply filters
+            // Build duplicate set for this data
+            const duplicates = findDuplicateFunctions(funcData);
+
+            // Apply additional filters
             funcKeys = funcKeys.filter(key => {
                 const func = funcData.functions[key];
                 const name = func.name || key;
@@ -3384,17 +3678,37 @@
                 // Search filter
                 if (funcSearchFilter && !name.toLowerCase().includes(funcSearchFilter)) return false;
 
+                // Category filter
+                if (categoryFilter !== 'all') {
+                    const category = getFunctionCategory(name);
+                    if (category !== categoryFilter) return false;
+                }
+
+                // Gaps only filter - show functions that have gaps in version coverage
+                if (showGapsOnly) {
+                    const gapInfo = analyzeGapPattern(func, versionGroups);
+                    if (!gapInfo) return false;  // Skip functions with no gap pattern (fully/mostly covered)
+                }
+
                 return true;
             });
 
             // Sort using current sort settings
             funcKeys = sortFunctionKeys(funcKeys, funcData, versionGroups);
 
-            // Update stats
+            // Update stats with category info
             if (statsEl) {
                 const totalCount = Object.keys(funcData.functions).length;
-                statsEl.innerHTML = `Showing ${funcKeys.length} of ${totalCount} (<span class="named-count">${namedCount} named</span>)`;
+                const dupCount = duplicates.size;
+                let statsHtml = `Showing ${funcKeys.length} of ${totalCount} (<span class="named-count">${namedCount} named</span>)`;
+                if (dupCount > 0) {
+                    statsHtml += ` <span style="color: var(--color-rare);">(${dupCount} duplicates)</span>`;
+                }
+                statsEl.innerHTML = statsHtml;
             }
+
+            // Get all versions for gap analysis
+            const allVersions = funcData.versions || [];
 
             // Render rows
             tbody.innerHTML = funcKeys.map(key => {
@@ -3405,6 +3719,16 @@
                 const tier = func.tier || 0;
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
+
+                // Get function category
+                const category = getFunctionCategory(displayName);
+                const catInfo = getCategoryInfo(category);
+
+                // Check for duplicates
+                const isDuplicate = duplicates.has(key);
+
+                // Analyze gap pattern
+                const gapPattern = analyzeGapPattern(func, allVersions);
 
                 // Use the currently selected version from version panel as source for comparisons
                 // If selectedVersion has an address for this function, use it; otherwise fall back to first available
@@ -3423,12 +3747,17 @@
                 }
 
                 let prevAddr = null;
+                let prevVersion = null;
                 const addrCells = versionGroups.map((group, idx) => {
                     const version = group.versions[0];
                     const addr = getDisplayAddress(func, version);
 
                     // For source version tracking: use selected version or first confirmed
                     const cellSourceVersion = rowSourceVersion || version;
+
+                    // Detect compiler boundary crossing
+                    const isBoundary = prevVersion && !PRE_110_VERSIONS.includes(version) && PRE_110_VERSIONS.includes(prevVersion);
+                    const boundaryClass = isBoundary ? ' compiler-boundary' : '';
 
                     // Check for candidate if no confirmed address
                     if (!addr && func.candidates && func.candidates[version]) {
@@ -3437,11 +3766,11 @@
                         const candAddr = showRVA && candidate.rva ? candidate.rva : candidate.address;
                         const confidence = candidate.confidence || 0;
 
-                        let cellClass = 'addr-cell candidate';
+                        let cellClass = 'addr-cell candidate' + boundaryClass;
                         if (status === 'confirmed') {
-                            cellClass = 'addr-cell confirmed';
+                            cellClass = 'addr-cell confirmed' + boundaryClass;
                         } else if (status === 'rejected') {
-                            cellClass = 'addr-cell rejected';
+                            cellClass = 'addr-cell rejected' + boundaryClass;
                         } else if (confidence >= 0.8) {
                             cellClass += ' candidate-high';
                         } else if (confidence < 0.6) {
@@ -3452,22 +3781,37 @@
                         const srcVer = candidate.source || cellSourceVersion;
 
                         prevAddr = candAddr;
+                        prevVersion = version;
                         return `<td class="${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${srcVer}', true)" title="${confidenceTitle}">${candAddr}</td>`;
                     }
 
                     const isChanged = prevAddr !== null && addr !== prevAddr && addr;
-                    const cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
+                    let cellClass = !addr ? 'missing' : (isChanged ? 'changed' : '');
+
+                    // Add tier-based coloring for confirmed addresses
+                    if (addr && tier > 0) {
+                        cellClass += ' tier-' + tier + '-match';
+                    }
+
+                    cellClass += boundaryClass;
                     prevAddr = addr || prevAddr;
+                    prevVersion = version;
 
                     if (addr) {
                         // Clickable confirmed address
-                        return `<td class="addr-cell ${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${cellSourceVersion}', false)" style="cursor:pointer" title="Click to compare">${addr}</td>`;
+                        const tierMatchTitle = tier > 0 ? tierTitle + ' - Click to compare' : 'Click to compare';
+                        return `<td class="addr-cell ${cellClass}" onclick="openComparisonModal('${key}', '${version}', '${cellSourceVersion}', false)" style="cursor:pointer" title="${tierMatchTitle}">${addr}</td>`;
                     }
                     return '<td class="addr-cell ' + cellClass + '">—</td>';
                 }).join('');
 
+                // Build name cell with category badge, duplicate indicator, and gap indicator
                 const tierIndicator = tier > 0 ? '<span class="tier-indicator ' + tierClass + '" title="' + tierTitle + '">' + tier + '</span>' : '';
-                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + tierIndicator + '<span class="fn-name-text">' + displayName + '</span></td>' + addrCells + '</tr>';
+                const categoryBadge = category !== 'other' ? `<span class="fn-category-badge ${catInfo.class}" title="${catInfo.title}">${catInfo.label}</span>` : '';
+                const duplicateIndicator = isDuplicate ? `<span class="fn-duplicate-indicator" title="Duplicate function name">⚠</span>` : '';
+                const gapIndicator = gapPattern ? `<span class="fn-gap-indicator gap-${gapPattern.type}" title="${gapPattern.title}"></span>` : '';
+
+                return '<tr><td class="fn-name-cell ' + nameClass + '" title="' + displayName + '">' + tierIndicator + '<span class="fn-name-text">' + displayName + '</span>' + categoryBadge + duplicateIndicator + gapIndicator + '</td>' + addrCells + '</tr>';
             }).join('');
         }
 
@@ -3490,16 +3834,30 @@
             const history = FILE_HISTORY_DATA[baseName];
             const variantCount = history?.variant_count || 1;
 
-            // Sort function keys - handle both address format (0x...) and ordinal format
-            const funcKeys = Object.keys(funcData.functions).sort((a, b) => {
-                // Handle hex addresses
-                if (a.startsWith('0x') && b.startsWith('0x')) {
-                    return parseInt(a, 16) - parseInt(b, 16);
-                }
-                // Handle ordinals
-                return parseInt(a) - parseInt(b);
-            });
             const allVersions = funcData.versions;
+
+            // Filter functions to only those present in the selected version
+            let funcKeys;
+            if (selectedVersion) {
+                funcKeys = Object.keys(funcData.functions).filter(key => {
+                    const func = funcData.functions[key];
+                    // Include ONLY if function has a confirmed address in selected version
+                    // (not just a candidate - candidates don't mean the function exists there)
+                    return func.addresses && func.addresses[selectedVersion];
+                });
+            } else {
+                // If no version selected, show all functions
+                funcKeys = Object.keys(funcData.functions);
+            }
+
+            // Sort by function name alphabetically (case-insensitive)
+            funcKeys.sort((a, b) => {
+                const funcA = funcData.functions[a];
+                const funcB = funcData.functions[b];
+                const nameA = (funcA.name || a).toLowerCase();
+                const nameB = (funcB.name || b).toLowerCase();
+                return nameA.localeCompare(nameB);
+            });
 
             // Count named functions
             let namedCount = 0;
@@ -3563,11 +3921,16 @@
                 ? ` <span style="color: var(--accent-gold); font-size: 0.7rem;">[${activeNames.join('+')}]</span>`
                 : '';
 
+            // Build version indicator for header
+            const versionIndicator = selectedVersion
+                ? ` <span style="color: var(--accent-gold); font-size: 0.8rem;">[${selectedVersion.split('/')[1] || selectedVersion}]</span>`
+                : '';
+
             let html = `
                 <div class="exports-container">
                     <div class="exports-header">
-                        <div class="exports-header-title">${baseName} - Functions${filterIndicator}</div>
-                        <div class="exports-header-info">${funcKeys.length} functions across ${versionGroups.length} variant${versionGroups.length !== 1 ? 's' : ''}</div>
+                        <div class="exports-header-title">${baseName} - Functions${versionIndicator}${filterIndicator}</div>
+                        <div class="exports-header-info">${funcKeys.length} function${funcKeys.length !== 1 ? 's' : ''}${selectedVersion ? ' in this version' : ' across ' + versionGroups.length + ' variant' + (versionGroups.length !== 1 ? 's' : '')}</div>
                     </div>
                     <div class="exports-toolbar">
                         <input type="text" class="exports-search" id="funcSearchInput"
@@ -3580,6 +3943,18 @@
                         <button class="exports-toggle" id="rvaToggle" onclick="toggleRVA()">
                             <span class="exports-toggle-indicator"></span>
                             <span>Show RVA</span>
+                        </button>
+                        <select class="category-filter" id="categoryFilter" onchange="onCategoryFilterChange(this.value)">
+                            <option value="all">All Categories</option>
+                            <option value="game">Game Logic</option>
+                            <option value="crt">CRT/Runtime</option>
+                            <option value="import">Import Thunks</option>
+                            <option value="exception">Exception Handling</option>
+                            <option value="other">Other/Unknown</option>
+                        </select>
+                        <button class="exports-toggle" id="gapsOnlyToggle" onclick="toggleGapsOnly()">
+                            <span class="exports-toggle-indicator"></span>
+                            <span>Gaps Only</span>
                         </button>
                         <span class="exports-stats" id="funcFilterStats">
                             Showing ${funcKeys.length} of ${funcKeys.length} (<span class="named-count">${namedCount} named</span>)
@@ -3636,8 +4011,21 @@
 
                 let prevAddr = null;
                 const addrCells = versionGroups.map((group, idx) => {
-                    const version = group.versions[0];
-                    const addr = getDisplayAddress(func, version);
+                    // Check all versions in the group to find if function exists in any of them
+                    let version = group.versions[0];
+                    let addr = getDisplayAddress(func, version);
+
+                    // If not found in first version, check other versions in group
+                    if (!addr && group.versions.length > 1) {
+                        for (const v of group.versions) {
+                            addr = getDisplayAddress(func, v);
+                            if (addr) {
+                                version = v;
+                                break;
+                            }
+                        }
+                    }
+
                     const cellSourceVersion = rowSourceVersion || version;
 
                     // Check for candidate if no confirmed address
@@ -4513,7 +4901,16 @@
             // Update tier label
             const tierLabel = document.getElementById('tierLabel');
             if (tierLabel) {
-                tierLabel.textContent = identityMatch.tierName;
+                // Show tier name and match method/reason
+                let tierText = identityMatch.tierName;
+                if (identityMatch.tier === 1 && identityMatch.details.tier1Reason) {
+                    // For Tier 1, show the specific reason (e.g., "Mnemonic hash match")
+                    tierText += ` - ${identityMatch.details.tier1Reason}`;
+                } else if (identityMatch.tier === 2) {
+                    // For Tier 2, show that it's rarity-weighted
+                    tierText += ' - Rarity-weighted identity';
+                }
+                tierLabel.textContent = tierText;
                 tierLabel.style.color = tierColors[identityMatch.tier] || 'var(--text-secondary)';
             }
 
@@ -4544,6 +4941,8 @@
 
             // Confidence section (only for candidates)
             const confidenceSection = document.getElementById('confidenceSection');
+            const matchDetailsSection = document.getElementById('matchDetailsSection');
+
             if (candidate) {
                 confidenceSection.style.display = 'flex';
                 const confidence = candidate.confidence || 0;
@@ -4557,10 +4956,58 @@
                 confidenceValue.style.color = confidence >= 0.8 ? 'var(--color-set)' :
                     confidence >= 0.6 ? 'var(--color-rare)' : 'var(--color-crafted)';
 
-                document.getElementById('matchMethod').textContent =
-                    `Method: ${candidate.method || 'unknown'} | Direction: ${candidate.direction || 'forward'}`;
+                // Enhanced method display with better formatting
+                const method = candidate.method || 'unknown';
+                const direction = candidate.direction || 'forward';
+                const sourceVer = candidate.source_version || '';
+                const chainLen = candidate.chain_length || 1;
+
+                let methodText = `Match Method: <strong>${method}</strong>`;
+                if (chainLen > 1) {
+                    methodText += ` | Propagated: ${chainLen} versions (${direction})`;
+                } else if (direction !== 'direct') {
+                    methodText += ` | Direction: ${direction}`;
+                }
+                if (sourceVer) {
+                    methodText += ` | From: ${sourceVer}`;
+                }
+
+                document.getElementById('matchMethod').innerHTML = methodText;
+
+                // Populate match details section with tier-specific information
+                matchDetailsSection.style.display = 'block';
+                const matchDetailsContent = document.getElementById('matchDetailsContent');
+
+                let detailsHtml = `<strong>${method}</strong>`;
+
+                // Add tier-specific details if identity match
+                if (identityMatch && identityMatch.details) {
+                    const details = identityMatch.details;
+                    if (details.tier === 1 && details.tier1Reason) {
+                        detailsHtml += ` – ${details.tier1Reason}`;
+                    } else if (details.tier === 2 && details.matchedItems) {
+                        detailsHtml += ` (${details.matchedItems.join(', ')})`;
+                    } else if (details.tier === 3) {
+                        detailsHtml += ` – Structural validation only`;
+                        if (!details.plausible) {
+                            detailsHtml += ` ⚠️`;
+                        }
+                    }
+                }
+
+                // Add propagation info
+                if (chainLen > 1) {
+                    detailsHtml += `<br><span style="color: var(--text-secondary); font-size: 0.85em;">Propagated through ${chainLen} versions (${direction})`;
+                    if (sourceVer) {
+                        detailsHtml += ` from ${sourceVer}`;
+                    }
+                    detailsHtml += `</span>`;
+                }
+
+                matchDetailsContent.innerHTML = detailsHtml;
             } else {
                 confidenceSection.style.display = 'none';
+                matchDetailsSection.style.display = 'none';
             }
 
             // Update side headers
@@ -4898,6 +5345,12 @@
 
             <!-- Warnings container -->
             <div id="matchWarnings" style="display: none; padding: 0 1rem; margin-bottom: 0.5rem;">
+            </div>
+
+            <!-- Match Details section -->
+            <div id="matchDetailsSection" class="comparison-metadata" style="display: none; margin: 0 1rem 1rem 1rem; padding: 0.5rem; background: rgba(66, 184, 131, 0.1); border-radius: 4px; border-left: 3px solid var(--color-success);">
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Match Method:</div>
+                <div id="matchDetailsContent" style="font-size: 0.85rem; color: var(--text-primary);"></div>
             </div>
 
             <div id="confidenceSection" class="comparison-confidence" style="margin: 0 1rem 1rem 1rem;">
