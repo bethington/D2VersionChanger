@@ -1,0 +1,165 @@
+{
+  "timestamp": "2025-12-13T03:17:03.084337",
+  "statistics": {
+    "versions": 11,
+    "modules": 6,
+    "total_unique_functions": 66864,
+    "total_named_functions": 17251
+  },
+  "by_module": {
+    "D2Game": {
+      "total_functions": 28869,
+      "named_functions": 2595,
+      "consistency_distribution": {}
+    },
+    "D2Client": {
+      "total_functions": 21589,
+      "named_functions": 5621,
+      "consistency_distribution": {}
+    },
+    "D2Common": {
+      "total_functions": 9705,
+      "named_functions": 3919,
+      "consistency_distribution": {}
+    },
+    "D2Win": {
+      "total_functions": 1933,
+      "named_functions": 1158,
+      "consistency_distribution": {}
+    },
+    "Storm": {
+      "total_functions": 2833,
+      "named_functions": 2216,
+      "consistency_distribution": {}
+    },
+    "Fog": {
+      "total_functions": 1935,
+      "named_functions": 1742,
+      "consistency_distribution": {}
+    }
+  },
+  "most_consistent": {
+    "D2Game": {
+      "functions_in_all_versions": 84,
+      "sample": [
+        "ClearBitInArray",
+        "ClearField0x20",
+        "ClearImageDimensions",
+        "CreatePoolObject",
+        "ExtractAndClearValue"
+      ]
+    },
+    "D2Client": {
+      "functions_in_all_versions": 225,
+      "sample": [
+        "AutomapPlayerIconLine_SetField24",
+        "BackupKeyBindingsAndReinitialize",
+        "CTRL_SetUpdateFlag",
+        "CacheMarkSmsCategoriesForCopy",
+        "CalculateMenuPanelYPosition"
+      ]
+    },
+    "D2Common": {
+      "functions_in_all_versions": 93,
+      "sample": [
+        "AllocPoolMemoryTracked",
+        "AndDwordValue",
+        "ApplyTileAttributePattern",
+        "BinarySearchTable",
+        "ClearBitFlags"
+      ]
+    },
+    "D2Win": {
+      "functions_in_all_versions": 58,
+      "sample": [
+        "ClearCelGraphicsCache",
+        "ConvertCharToUnicodeAndProcess",
+        "ConvertCharToUnicodeAndSetEditData",
+        "CreateFileWrapper",
+        "DisplayRuntimeError"
+      ]
+    },
+    "Storm": {
+      "functions_in_all_versions": 52,
+      "sample": [
+        "AcquireGlobalLock",
+        "AullDiv",
+        "ClosePaletteWindow",
+        "CompareMemoryBytes",
+        "CopyMemoryBuffer"
+      ]
+    },
+    "Fog": {
+      "functions_in_all_versions": 60,
+      "sample": [
+        "AtomicExchange64",
+        "AtomicRead64",
+        "ClearBitInArray",
+        "CloseHandleWrapper",
+        "CompareStringsIgnoreCase"
+      ]
+    }
+  },
+  "least_consistent": {
+    "D2Game": {
+      "version_specific_functions": 18809,
+      "sample": [
+        "AddInventoryCoordNode",
+        "AddInventoryDeltaNode",
+        "ApplyItemModifications",
+        "ApplyRandomQualityMod",
+        "ApplySetItemModifications"
+      ]
+    },
+    "D2Client": {
+      "version_specific_functions": 14151,
+      "sample": [
+        "AcquireStreamPropertyTableLock",
+        "ActivateCacheNodeForObjectType15",
+        "ActivateCacheNodeWithInit",
+        "ActivateCacheObjectAndNotifyUI",
+        "ActivateShrineEffect"
+      ]
+    },
+    "D2Common": {
+      "version_specific_functions": 6083,
+      "sample": [
+        "AccumulateLightingContribution",
+        "ActivateAndApplySkillPropertyEffects",
+        "AddGuildMemberBytes",
+        "AddGuildTimestamp",
+        "AddInventoryCoordNode"
+      ]
+    },
+    "D2Win": {
+      "version_specific_functions": 893,
+      "sample": [
+        "AcquireCriticalSectionIfValid",
+        "AcquireCriticalSectionIndex",
+        "AcquireExitHandlerLock",
+        "AcquireFileLock",
+        "AllocMemoryWithCleanup"
+      ]
+    },
+    "Storm": {
+      "version_specific_functions": 970,
+      "sample": [
+        "AckMessageSequence",
+        "AcquirePoolSlotLock",
+        "ActivateConnectionById",
+        "AddAudioInstanceExprNode",
+        "AdpcmDecodeLoop"
+      ]
+    },
+    "Fog": {
+      "version_specific_functions": 582,
+      "sample": [
+        "AddWithCarry",
+        "AllocAndZeroBuffer16",
+        "AllocHeapArena",
+        "AllocaStackProbe",
+        "AllocateFileDescriptor"
+      ]
+    }
+  }
+}
