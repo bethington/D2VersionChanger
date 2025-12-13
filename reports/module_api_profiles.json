@@ -1,0 +1,1061 @@
+{
+  "D2Game": {
+    "module": "D2Game",
+    "title": "Game Engine Module",
+    "purpose": "Core game logic, monster behavior, item management, quest system",
+    "responsibility": "Primary game mechanics and state management",
+    "stability": "HIGH - Core engine code",
+    "dependencies": [
+      "D2Common",
+      "Storm"
+    ],
+    "api_statistics": {
+      "total_functions": 84,
+      "by_category": {
+        "Bit Operations": {
+          "count": 9,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "Memory Management": {
+          "count": 6,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "Utility": {
+          "count": 48,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "Game Logic": {
+          "count": 9,
+          "description": "Core game logic and mechanics functions",
+          "importance": "HIGH"
+        },
+        "Data Structures": {
+          "count": 2,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Math Operations": {
+          "count": 5,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        },
+        "File I/O": {
+          "count": 1,
+          "description": "File reading, writing, and management",
+          "importance": "MEDIUM"
+        },
+        "String Operations": {
+          "count": 4,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 84
+      },
+      "confidence_distribution": {
+        "medium": 76,
+        "high": 8
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "CreatePoolObject",
+        "FreePoolMemory",
+        "FreeTrackedPoolAllocation",
+        "InitRngSeed",
+        "InitTimerState",
+        "SMemFree",
+        "__nh_malloc",
+        "_malloc"
+      ],
+      "internal": [
+        "ClearBitInArray",
+        "ClearField0x20",
+        "ClearImageDimensions",
+        "ExtractAndClearValue",
+        "FUN_6fd23263",
+        "FUN_6fd23386",
+        "FUN_6fd23482",
+        "GetItemDataByCode",
+        "GetItemRandSeed",
+        "GetParsedItemCountPtr",
+        "GetPathPointData",
+        "GetPathTargetUnit",
+        "GetRoomNext",
+        "GetRosterUnitXPos",
+        "GetStatListOwnerType",
+        "GetUnitField91",
+        "GetUnitFlags",
+        "GetUnitGfxUnk",
+        "GetUnitMode",
+        "GetUnitStatList",
+        "MultiplyValuesBy5",
+        "Ordinal_10002",
+        "Ordinal_10003",
+        "Ordinal_10004",
+        "Ordinal_10008",
+        "Ordinal_10010",
+        "Ordinal_10011",
+        "Ordinal_10012",
+        "Ordinal_10014",
+        "Ordinal_10015",
+        "Ordinal_10016",
+        "Ordinal_10017",
+        "Ordinal_10018",
+        "Ordinal_10019",
+        "Ordinal_10021",
+        "Ordinal_10022",
+        "Ordinal_10024",
+        "Ordinal_10027",
+        "Ordinal_10028",
+        "Ordinal_10029",
+        "Ordinal_10033",
+        "Ordinal_10037",
+        "Ordinal_10038",
+        "Ordinal_10039",
+        "Ordinal_10040",
+        "Ordinal_10042",
+        "Ordinal_10043",
+        "Ordinal_10044",
+        "Ordinal_10045",
+        "Ordinal_10047",
+        "Ordinal_10048",
+        "Ordinal_10050",
+        "Ordinal_10052",
+        "Ordinal_10056",
+        "PATH_GetDirection",
+        "RtlUnwind",
+        "SetBitInArray",
+        "StubReturnsZero",
+        "UNITS_GetField08",
+        "UNITS_SetGfxSelected",
+        "__CallSettingFrame@12",
+        "__NLG_Notify1",
+        "___add_12",
+        "__abnormal_termination",
+        "__alldiv",
+        "__allmul",
+        "__cfltcvt",
+        "__exit",
+        "__fassign",
+        "__fclose_lk",
+        "__fptrap",
+        "__strrev",
+        "_memset",
+        "_strlen",
+        "_strncmp",
+        "_strncpy"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "Only 8/84 functions have high confidence - recommend validating calling conventions against actual assembly",
+      "Most functions have medium confidence - validate parameter types and return types from Ghidra decompilation",
+      "This module depends on: D2Common, Storm - ensure those are documented first",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  },
+  "D2Client": {
+    "module": "D2Client",
+    "title": "Client/UI Module",
+    "purpose": "User interface, screen rendering, input handling, game display",
+    "responsibility": "Display layer and user interaction",
+    "stability": "HIGH - Most stable module (225 all-version functions)",
+    "dependencies": [
+      "D2Common",
+      "D2Win",
+      "Fog"
+    ],
+    "api_statistics": {
+      "total_functions": 225,
+      "by_category": {
+        "Bit Operations": {
+          "count": 38,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "Utility": {
+          "count": 94,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "String Operations": {
+          "count": 18,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        },
+        "Math Operations": {
+          "count": 8,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        },
+        "Graphics/Rendering": {
+          "count": 5,
+          "description": "Graphics rendering and visual effects",
+          "importance": "MEDIUM"
+        },
+        "Memory Management": {
+          "count": 12,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "UI/Windows": {
+          "count": 13,
+          "description": "User interface and window management",
+          "importance": "MEDIUM"
+        },
+        "Data Structures": {
+          "count": 10,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Game Logic": {
+          "count": 22,
+          "description": "Core game logic and mechanics functions",
+          "importance": "HIGH"
+        },
+        "File I/O": {
+          "count": 5,
+          "description": "File reading, writing, and management",
+          "importance": "MEDIUM"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 214,
+        "simple": 10,
+        "moderate": 1
+      },
+      "confidence_distribution": {
+        "medium": 175,
+        "high": 50
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "BackupKeyBindingsAndReinitialize",
+        "CheckValueAndProcessData",
+        "CreateFileWrapper",
+        "CreatePoolObject",
+        "CreateWaypointData",
+        "EnableVideoInitialization",
+        "ExceptionHandlerLogAndCleanup",
+        "FreePoolMemory",
+        "FreeTrackedPoolAllocation",
+        "GetInitFlag",
+        "GetQuestSystemInitialized",
+        "InitRngSeed",
+        "InitTimerState",
+        "InitializeCharacterInventoryDialog",
+        "InitializeDialogBox",
+        "InitializeGameMode",
+        "InitializeGameObjectState",
+        "InitializeGameStateFlags",
+        "InitializeGameUIState",
+        "InitializeGameViewportConfig",
+        "InitializeGlobalCounters",
+        "InitializeGlobalStateFlags",
+        "InitializeInventorySlotCounters",
+        "InitializeLanguageSupport",
+        "InitializeMenuState",
+        "InitializeMouseButtonCallbacks",
+        "InitializePlayerStatistics",
+        "InitializeQuestClassTable",
+        "InitializeRandomSeed",
+        "InitializeServerDialogStateHandler",
+        "InitializeServerSocketDialog",
+        "InitializeSliderCursor",
+        "InitializeStructureFields",
+        "InitializeUIDialogConfig",
+        "InitializeViewportWindow",
+        "InitializeVtablePointer",
+        "IsVideoInitializationEnabled",
+        "ProcessCompressionObjects",
+        "ProcessInventoryItem",
+        "ProcessInventoryItemWrapper",
+        "ProcessUIStateChange",
+        "ProcessUnitCoordinateData",
+        "ProcessUnitStats",
+        "RenderUnicodeTextWithLineHeight",
+        "SMemFree",
+        "SetUnitAllocatedFlag",
+        "SetupExceptionHandler",
+        "ShutdownAutomapRendering",
+        "__nh_malloc",
+        "_malloc"
+      ],
+      "internal": [
+        "AutomapPlayerIconLine_SetField24",
+        "CTRL_SetUpdateFlag",
+        "CacheMarkSmsCategoriesForCopy",
+        "CalculateMenuPanelYPosition",
+        "CalculateWindowBorders",
+        "CancelScreenFade",
+        "CheckTimeoutElapsed50ms",
+        "CleanupAndDelete",
+        "CleanupPlayerSlots",
+        "CleanupPlayerSlotsWrapper",
+        "ClearGameState",
+        "ClearItemSlots",
+        "ClearPopupDialogResult",
+        "ClearResetFlags",
+        "ClearTargetingState",
+        "ClearUnitSelectionState",
+        "DecrementObjectCounter",
+        "DecrementWindowBorderY",
+        "DeleteFile",
+        "DestroyDataArray",
+        "DestructorWithCleanup",
+        "DispatchJumpTableEntry",
+        "DispatchVtableMethod34",
+        "ExceptionCleanupAndExit",
+        "ExecuteInventoryCallback",
+        "FindPaletteIndexForColor",
+        "ForceCalculateWindowBorders",
+        "GameDataCollectionDestructor",
+        "GetCurrentFontProperty",
+        "GetDefaultCameraScale",
+        "GetGameContextUnitStat",
+        "GetGameModeFlag",
+        "GetGameState",
+        "GetItemAffixLevelRequirementWrapper",
+        "GetItemRandSeed",
+        "GetMissileTargetY",
+        "GetPathTargetUnit",
+        "GetPathX",
+        "GetRoomNext",
+        "GetRosterUnitXPos",
+        "GetStatListOwnerType",
+        "GetStringIdFromSlotIndex",
+        "GetStructFlag0x20",
+        "GetUnitField91",
+        "GetUnitFlags",
+        "GetUnitStatList",
+        "GetUnitX",
+        "GetViewportFieldAt12DF8",
+        "GetViewportYOffsetAdjusted",
+        "GetWindowModeIfExpansion",
+        "ImmGetCandidateListA",
+        "ImmGetCandidateListCountA",
+        "ImmGetCompositionStringA",
+        "ImmGetContext",
+        "ImmGetConversionStatus",
+        "ImmGetOpenStatus",
+        "ImmIsIME",
+        "ImmReleaseContext",
+        "ImmSetConversionStatus",
+        "ImmSetOpenStatus",
+        "ImmSimulateHotKey",
+        "IncreaseWindowBorderY",
+        "IsDSoundWaveEnabled",
+        "IsGameModeInPlayableState",
+        "IsInventoryOpen",
+        "IsMonsterBossType",
+        "IsObjectTypeMonster",
+        "IsObjectTypeValid",
+        "IsRemoteSessionHandlingReady",
+        "IsRemoteSessionSupported",
+        "IsStateLevelFourOrHigher",
+        "IsTargetingEnabled",
+        "IsValidRemoteDesktopSession",
+        "IsValidUnitType",
+        "LB_DelegateVtbl13",
+        "ListboxDelegateInnerVtableMethod14",
+        "LoadBlendedShadowsSetting",
+        "Ordinal_10000",
+        "Ordinal_10001",
+        "Ordinal_10002",
+        "Ordinal_10004",
+        "Ordinal_10005",
+        "Ordinal_10006",
+        "Ordinal_10007",
+        "Ordinal_10008",
+        "Ordinal_10010",
+        "Ordinal_10014",
+        "Ordinal_10018",
+        "Ordinal_10019",
+        "Ordinal_10020",
+        "Ordinal_10023",
+        "Ordinal_10024",
+        "Ordinal_10026",
+        "Ordinal_10028",
+        "Ordinal_10029",
+        "Ordinal_10034",
+        "Ordinal_10036",
+        "Ordinal_10046",
+        "Ordinal_10050",
+        "Ordinal_10057",
+        "Ordinal_10060",
+        "Ordinal_10064",
+        "Ordinal_10067",
+        "Ordinal_10070",
+        "Ordinal_10074",
+        "Ordinal_10082",
+        "PATH_GetDirection",
+        "PlayVideoAndConfigureGraphics",
+        "PlayVideoFromStructure",
+        "QueryRegistryUlong",
+        "RegisterCmdDef",
+        "ResetGameModeFlag",
+        "RtlUnwind",
+        "SafeDelete",
+        "SaveDefaultCommandLineToRegistry",
+        "SetAutomapCentersEnabled",
+        "SetAutomapUpdateThrottle",
+        "SetBlendedShadowsMode",
+        "SetCancelConfirmedFlag",
+        "SetCharacterInventoryDialogState",
+        "SetFilePointerWrapper",
+        "SetGameMode",
+        "SetGlobalState4",
+        "SetGlobalState6",
+        "SetMissileDataField2C",
+        "SetRegistryDword",
+        "SetRegistryStringValue",
+        "SetSliderControlWidth",
+        "SetStateLevelFive",
+        "SetStateLevelSeven",
+        "SetTimeout500Ms",
+        "SetUnitFlag0x20",
+        "SetWindowVisibility",
+        "ShutdownCompressionService",
+        "ShutdownLanguageManager",
+        "StubReturnZero",
+        "SumCharacterValues",
+        "TEXT_ClearSelectionState",
+        "UNITS_GetField08",
+        "UNITS_GetRoom",
+        "UnlinkListNode",
+        "Unwind@6fba41fe",
+        "Unwind@6fba4368",
+        "Unwind@6fba4400",
+        "UpdateTimeoutValue",
+        "WriteErrorMessage",
+        "__CallSettingFrame@12",
+        "__NLG_Notify1",
+        "___add_12",
+        "__abnormal_termination",
+        "__allmul",
+        "__amsg_exit",
+        "__cfltcvt",
+        "__exit",
+        "__fassign",
+        "__fclose_lk",
+        "__fptrap",
+        "__seh_longjmp_unwind@4",
+        "__strrev",
+        "_memset",
+        "_strcmp",
+        "_strlen",
+        "_strncmp",
+        "_strncpy",
+        "caseD_1",
+        "caseD_10",
+        "caseD_11",
+        "caseD_2",
+        "caseD_3",
+        "caseD_4",
+        "caseD_6",
+        "caseD_7",
+        "caseD_9",
+        "caseD_a",
+        "caseD_d"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "This module depends on: D2Common, D2Win, Fog - ensure those are documented first",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  },
+  "D2Common": {
+    "module": "D2Common",
+    "title": "Common Utilities Module",
+    "purpose": "Shared utilities, data structures, memory management, string operations",
+    "responsibility": "Foundation layer - shared by all modules",
+    "stability": "CRITICAL - Used by all other modules",
+    "dependencies": [
+      "Storm"
+    ],
+    "api_statistics": {
+      "total_functions": 93,
+      "by_category": {
+        "Memory Management": {
+          "count": 8,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "Utility": {
+          "count": 27,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "Data Structures": {
+          "count": 5,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Bit Operations": {
+          "count": 23,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "String Operations": {
+          "count": 8,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        },
+        "Game Logic": {
+          "count": 15,
+          "description": "Core game logic and mechanics functions",
+          "importance": "HIGH"
+        },
+        "Math Operations": {
+          "count": 3,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        },
+        "File I/O": {
+          "count": 4,
+          "description": "File reading, writing, and management",
+          "importance": "MEDIUM"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 93
+      },
+      "confidence_distribution": {
+        "high": 10,
+        "medium": 83
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "AllocPoolMemoryTracked",
+        "CreatePoolObject",
+        "FreePoolMemory",
+        "FreePoolMemoryTracked",
+        "FreeTrackedPoolAllocation",
+        "InitRngSeed",
+        "InitTimerState",
+        "SetUnitAllocatedFlag",
+        "__nh_malloc",
+        "_malloc"
+      ],
+      "internal": [
+        "AndDwordValue",
+        "ApplyTileAttributePattern",
+        "BinarySearchTable",
+        "ClearBitFlags",
+        "ClearBitInArray",
+        "ClearField0x20",
+        "ClearImageDimensions",
+        "ClearMapCellFlagRadius",
+        "CompareStringsIgnoreCase",
+        "ComputeLinearIndex",
+        "ComputeScaledAttribute",
+        "CoordToMapIndex",
+        "EnterCriticalSectionWrapper",
+        "ExtractAndClearValue",
+        "ExtractBitFields32",
+        "GetD2ComState",
+        "GetDirectionIndexFromCoords",
+        "GetGameStateAndResult",
+        "GetItemAffixLevelRequirement",
+        "GetItemAffixLevelRequirementWrapper",
+        "GetItemDataByCode",
+        "GetItemRandSeed",
+        "GetObjectDataPtr",
+        "GetPathPointData",
+        "GetPathTargetUnit",
+        "GetPathX",
+        "GetPrimaryDir8FromDeltas",
+        "GetRoomNext",
+        "GetRosterUnitXPos",
+        "GetSeedHi",
+        "GetStatListBaseStatValue",
+        "GetStatListFlag4",
+        "GetStatListOwnerType",
+        "GetStringIdFromSlotIndex",
+        "GetStructField54",
+        "GetStructFlag0x20",
+        "GetUnitField88",
+        "GetUnitField91",
+        "GetUnitFlag2",
+        "GetUnitFlags",
+        "GetUnitGfxUnk",
+        "GetUnitMode",
+        "GetUnitSeedHi",
+        "GetUnitStatList",
+        "IsValidUnitType",
+        "ModifyTileAttributesFlags",
+        "MultiplyValuesBy5",
+        "OpenFileReadShare",
+        "OpenFileWithPermissions",
+        "PATH_GetDirection",
+        "RtlUnwind",
+        "STATLIST_GetRoom",
+        "SetBitInArray",
+        "SetCoordPair",
+        "SetDwordValue",
+        "SetFlagsOnValue",
+        "SetGlobalValue11103",
+        "SetUnitAnimData",
+        "SetUnitFlag0x20",
+        "SetUnitFlag4",
+        "SetValueIfEmpty",
+        "ShutdownLogFile",
+        "StubNoOp",
+        "StubReturnZero",
+        "UNITS_GetField08",
+        "UNITS_GetUnitStat84",
+        "UNITS_SetGfxSelected",
+        "UnpackBitFields",
+        "UnpackStatIdentifier",
+        "ValidateStringId",
+        "XorDwordInPlace",
+        "___add_12",
+        "__allmul",
+        "__cfltcvt",
+        "__exit",
+        "__fassign",
+        "__fclose_lk",
+        "__fptrap",
+        "__seh_longjmp_unwind@4",
+        "_memset",
+        "_strlen",
+        "_strncmp",
+        "_strncpy"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "Only 10/93 functions have high confidence - recommend validating calling conventions against actual assembly",
+      "Most functions have medium confidence - validate parameter types and return types from Ghidra decompilation",
+      "This module depends on: Storm - ensure those are documented first",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  },
+  "D2Win": {
+    "module": "D2Win",
+    "title": "Window Management Module",
+    "purpose": "Windows API wrapper, window creation, message handling, event routing",
+    "responsibility": "Low-level window system abstraction",
+    "stability": "HIGH - System interface layer",
+    "dependencies": [
+      "D2Common"
+    ],
+    "api_statistics": {
+      "total_functions": 58,
+      "by_category": {
+        "Bit Operations": {
+          "count": 9,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "Utility": {
+          "count": 27,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "Memory Management": {
+          "count": 4,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "String Operations": {
+          "count": 5,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        },
+        "Graphics/Rendering": {
+          "count": 4,
+          "description": "Graphics rendering and visual effects",
+          "importance": "MEDIUM"
+        },
+        "Data Structures": {
+          "count": 3,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Game Logic": {
+          "count": 3,
+          "description": "Core game logic and mechanics functions",
+          "importance": "HIGH"
+        },
+        "Math Operations": {
+          "count": 2,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        },
+        "UI/Windows": {
+          "count": 1,
+          "description": "User interface and window management",
+          "importance": "MEDIUM"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 55,
+        "simple": 3
+      },
+      "confidence_distribution": {
+        "medium": 44,
+        "high": 14
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "ConvertCharToUnicodeAndProcess",
+        "CreateFileWrapper",
+        "GetInitFlag",
+        "GetInitializedState",
+        "InitializeAndCleanupQueues",
+        "InitializeCompressedGameData",
+        "InitializeGameEngine",
+        "InitializeGraphics",
+        "InitializeGraphicsSystem",
+        "ProcessAudioQueue",
+        "ReleasePoolAllocation",
+        "ResetInitMode",
+        "__nh_malloc",
+        "_malloc"
+      ],
+      "internal": [
+        "ClearCelGraphicsCache",
+        "ConvertCharToUnicodeAndSetEditData",
+        "DisplayRuntimeError",
+        "EditData_SetString",
+        "GetCelFrameCount",
+        "GetDataTableEntry",
+        "GetGameState",
+        "GetGameStructureSelector",
+        "GetMusicOptions",
+        "IsCharAlpha",
+        "IsCharDigit",
+        "IsPointInRect",
+        "ListAddItem",
+        "Ordinal_10006",
+        "Ordinal_10024",
+        "Ordinal_10028",
+        "Ordinal_10030",
+        "Ordinal_10032",
+        "Ordinal_10033",
+        "Ordinal_10034",
+        "Ordinal_10036",
+        "Ordinal_10038",
+        "Ordinal_10046",
+        "Ordinal_10047",
+        "Ordinal_10052",
+        "ReleaseCelFile",
+        "RtlUnwind",
+        "SafeDereferencePointer",
+        "SetCelGlobals",
+        "SetGlobalValue",
+        "SetLastInventoryItem",
+        "SetMusicVolume",
+        "ShowInsertExpansionDiscDialog",
+        "StopMessageLoop",
+        "UpdateMusicStateFromOptions",
+        "___add_12",
+        "__cfltcvt",
+        "__exit",
+        "__fassign",
+        "__fptrap",
+        "_memset",
+        "_strlen",
+        "_strncmp",
+        "_strncpy"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "This module depends on: D2Common - ensure those are documented first",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  },
+  "Storm": {
+    "module": "Storm",
+    "title": "Blizzard Engine Core",
+    "purpose": "System library, file I/O, memory allocation, threading, networking",
+    "responsibility": "Low-level system operations and hardware abstraction",
+    "stability": "CRITICAL - Foundation for all modules",
+    "dependencies": [],
+    "api_statistics": {
+      "total_functions": 52,
+      "by_category": {
+        "Memory Management": {
+          "count": 6,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "Math Operations": {
+          "count": 2,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        },
+        "Graphics/Rendering": {
+          "count": 4,
+          "description": "Graphics rendering and visual effects",
+          "importance": "MEDIUM"
+        },
+        "UI/Windows": {
+          "count": 4,
+          "description": "User interface and window management",
+          "importance": "MEDIUM"
+        },
+        "Utility": {
+          "count": 12,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "Bit Operations": {
+          "count": 7,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "File I/O": {
+          "count": 4,
+          "description": "File reading, writing, and management",
+          "importance": "MEDIUM"
+        },
+        "String Operations": {
+          "count": 6,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        },
+        "Data Structures": {
+          "count": 5,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Threading": {
+          "count": 1,
+          "description": "Thread management and synchronization",
+          "importance": "LOW"
+        },
+        "Game Logic": {
+          "count": 1,
+          "description": "Core game logic and mechanics functions",
+          "importance": "HIGH"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 50,
+        "simple": 2
+      },
+      "confidence_distribution": {
+        "high": 10,
+        "medium": 42
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "AcquireGlobalLock",
+        "GetDirectDrawInterfaces",
+        "InitCommandLineParsing",
+        "InitCompressContext",
+        "InitializeVtablePointer",
+        "InitializeWorkerThread",
+        "IsHandleInCodecList",
+        "RegisterEventHandler",
+        "ReportHandleLeak",
+        "SMemFree"
+      ],
+      "internal": [
+        "AullDiv",
+        "ClosePaletteWindow",
+        "CompareMemoryBytes",
+        "CopyMemoryBuffer",
+        "EndDialogWithResult",
+        "FillMemoryWithByte",
+        "FindLongestMatch",
+        "FlushBitWriteBuffer",
+        "FlushFileWriteBuffer",
+        "GameDataCollectionDestructor",
+        "GetDebugReturnStringEnd",
+        "GetEntryValueById",
+        "GetExecutableDirectoryPath",
+        "GetFileVersionInfoSizeA",
+        "GetLastError",
+        "HasEntryById",
+        "ImplodeBuildSortTable",
+        "ImplodeEncodeBlock",
+        "MoveMemory",
+        "ParseCommandLineArgs",
+        "ReadArchiveFile",
+        "RegisterDialogClasses",
+        "RegisterExceptionFilter",
+        "SStrCopy",
+        "SetErrorHandlingDisabled",
+        "SetGlobalConfigByte2",
+        "SetGlobalUshortConfig",
+        "SetLocale",
+        "ShutdownStubNoOp",
+        "StoreVersionFromContext",
+        "StringToUpper",
+        "StubNoOp",
+        "UnlinkListNode",
+        "UpdatePaletteAndMarkRealized",
+        "UpdatePaletteAndRealize",
+        "WriteBitsToBuffer",
+        "WriteBitsToStream",
+        "__allmul",
+        "__break",
+        "_strupr",
+        "memmove",
+        "setlocale"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "Only 10/52 functions have high confidence - recommend validating calling conventions against actual assembly",
+      "Most functions have medium confidence - validate parameter types and return types from Ghidra decompilation",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  },
+  "Fog": {
+    "module": "Fog",
+    "title": "Graphics Rendering Engine",
+    "purpose": "Sprite rendering, palette management, animation, visual effects",
+    "responsibility": "Graphics rendering layer",
+    "stability": "MEDIUM - Implementation varies across versions",
+    "dependencies": [
+      "D2Common",
+      "Storm"
+    ],
+    "api_statistics": {
+      "total_functions": 60,
+      "by_category": {
+        "Utility": {
+          "count": 22,
+          "description": "General utility and helper functions",
+          "importance": "MEDIUM"
+        },
+        "File I/O": {
+          "count": 8,
+          "description": "File reading, writing, and management",
+          "importance": "MEDIUM"
+        },
+        "Bit Operations": {
+          "count": 9,
+          "description": "Functions for bit manipulation and flag handling",
+          "importance": "HIGH"
+        },
+        "String Operations": {
+          "count": 7,
+          "description": "Functions for string manipulation and formatting",
+          "importance": "CRITICAL"
+        },
+        "Memory Management": {
+          "count": 8,
+          "description": "Functions for allocating, freeing, and managing memory",
+          "importance": "CRITICAL"
+        },
+        "Data Structures": {
+          "count": 1,
+          "description": "Data structure manipulation and management",
+          "importance": "MEDIUM"
+        },
+        "Network": {
+          "count": 2,
+          "description": "Network communication and protocols",
+          "importance": "LOW"
+        },
+        "Math Operations": {
+          "count": 3,
+          "description": "Mathematical calculations and numeric operations",
+          "importance": "MEDIUM"
+        }
+      },
+      "complexity_distribution": {
+        "trivial": 60
+      },
+      "confidence_distribution": {
+        "medium": 49,
+        "high": 11
+      }
+    },
+    "interface_tiers": {
+      "public": [
+        "CloseHandleWrapper",
+        "CreateFileWrapper",
+        "CreateStormThread",
+        "CreateTcpConnection",
+        "IffCreate",
+        "InitializeLogManager",
+        "SMemAlloc",
+        "SMemFree",
+        "SetAsyncFileHandle",
+        "__nh_malloc",
+        "_malloc"
+      ],
+      "internal": [
+        "AtomicExchange64",
+        "AtomicRead64",
+        "ClearBitInArray",
+        "CompareStringsIgnoreCase",
+        "EncodeVarInt2Byte",
+        "EnterCriticalSectionWrapper",
+        "GetCosineFromTable",
+        "GetField0x110",
+        "GetField880",
+        "GetFogStatePtr",
+        "GetSineValue",
+        "GetTickCount",
+        "IffDestroy",
+        "LeaveSocketCriticalSection",
+        "LogMessage",
+        "OpenFileWithDefaultArchive",
+        "ReadArchiveFile",
+        "ReadFileAsync",
+        "RegisterExceptionFilter",
+        "ResetPerformanceAccumulators",
+        "RtlUnwind",
+        "SendSocketData",
+        "SetBitInArray",
+        "SetFilePointerWrapper",
+        "SetFilePosition",
+        "SetFpuControlWord",
+        "StubNoOp",
+        "StubOrdinal10183",
+        "TitleCaseString",
+        "ValidateCriticalSection",
+        "WSACleanup",
+        "WriteFileWrapper",
+        "WriteStringToBuffer",
+        "__WSAFDIsSet",
+        "___add_12",
+        "__alldiv",
+        "__allmul",
+        "__cfltcvt",
+        "__exit",
+        "__fassign",
+        "__fclose_lk",
+        "__fload_withFB",
+        "__fptrap",
+        "__frnd",
+        "__startOneArgErrorHandling",
+        "_memset",
+        "_strlen",
+        "_strncmp",
+        "_strncpy"
+      ],
+      "deprecated": []
+    },
+    "recommendations": [
+      "Only 11/60 functions have high confidence - recommend validating calling conventions against actual assembly",
+      "Most functions have medium confidence - validate parameter types and return types from Ghidra decompilation",
+      "This module depends on: D2Common, Storm - ensure those are documented first",
+      "Export function signatures from Ghidra for type validation",
+      "Create Ghidra script to verify inferred calling conventions"
+    ]
+  }
+}
