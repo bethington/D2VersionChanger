@@ -1,0 +1,457 @@
+{
+  "timestamp": "2025-12-13T03:16:21.991561",
+  "baseline_version": "1.10",
+  "propagations": [
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDA6790",
+      "new_name": "MONSTERS_ApplyClassicScaling",
+      "versions": {
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "MONSTERS_ApplyClassicScaling"
+        }
+      },
+      "summary": {
+        "total_versions": 1,
+        "successful": 1,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDAC270",
+      "new_name": "PATH_ComputePathOrSlideAlongObstacles",
+      "versions": {
+        "1.07": {
+          "status": "success",
+          "address": "0x6FDBECD0",
+          "message": "BuildStraightLinePath -> PATH_ComputePathOrSlideAlongObstacles"
+        },
+        "1.08": {
+          "status": "success",
+          "address": "0x6FDBE120",
+          "message": "BuildStraightLinePath -> PATH_ComputePathOrSlideAlongObstacles"
+        },
+        "1.09": {
+          "status": "success",
+          "address": "0x6FD9E700",
+          "message": "BuildStraightLinePath -> PATH_ComputePathOrSlideAlongObstacles"
+        },
+        "1.09b": {
+          "status": "success",
+          "address": "0x6FD9E700",
+          "message": "BuildStraightLinePath -> PATH_ComputePathOrSlideAlongObstacles"
+        },
+        "1.09d": {
+          "status": "success",
+          "address": "0x6FD9E760",
+          "message": "BuildStraightLinePath -> PATH_ComputePathOrSlideAlongObstacles"
+        },
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "PATH_ComputePathOrSlideAlongObstacles"
+        }
+      },
+      "summary": {
+        "total_versions": 6,
+        "successful": 6,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDABAC0",
+      "new_name": "PATH_FindSubpathWithoutObstacles",
+      "versions": {
+        "1.07": {
+          "status": "success",
+          "address": "0x6FDBE500",
+          "message": "FindAlternatePathAroundObstacle -> PATH_FindSubpathWithoutObstacles"
+        },
+        "1.08": {
+          "status": "success",
+          "address": "0x6FDBD950",
+          "message": "FindAlternatePathAroundObstacle -> PATH_FindSubpathWithoutObstacles"
+        },
+        "1.09": {
+          "status": "success",
+          "address": "0x6FD9DF30",
+          "message": "FindAlternatePathAroundObstacle -> PATH_FindSubpathWithoutObstacles"
+        },
+        "1.09b": {
+          "status": "success",
+          "address": "0x6FD9DF30",
+          "message": "FindAlternatePathAroundObstacle -> PATH_FindSubpathWithoutObstacles"
+        },
+        "1.09d": {
+          "status": "success",
+          "address": "0x6FD9DF90",
+          "message": "FindAlternatePathAroundObstacle -> PATH_FindSubpathWithoutObstacles"
+        },
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "PATH_FindSubpathWithoutObstacles"
+        }
+      },
+      "summary": {
+        "total_versions": 6,
+        "successful": 6,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDAC170",
+      "new_name": "PATH_SimplifyToLines",
+      "versions": {
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "PATH_SimplifyToLines"
+        }
+      },
+      "summary": {
+        "total_versions": 1,
+        "successful": 1,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD5DDC0",
+      "new_name": "D2Common_10231_Impl",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD5DDC0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD51250",
+      "new_name": "DATATBLS_GetSkillsTxtRecord",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD51250"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDA3780",
+      "new_name": "DATATBLS_NewTreasureClassEx",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDA3780"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDA4430",
+      "new_name": "DATATBLS_ParseTreasureClassItem",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDA4430"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDCB220",
+      "new_name": "PATH_AStar_PopBestScoreForVisit",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDCB220"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDCB2C0",
+      "new_name": "PATH_AStar_TargetLocationHasEnoughRoom",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDCB2C0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDC0650",
+      "new_name": "PATH_IDAStar_FlushNodeToDynamicPath",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDC0650"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDC0BB0",
+      "new_name": "PATH_IdaStar_ComputePathWithRooms",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDC0BB0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD85E00",
+      "new_name": "PATH_PreparePathTargetForPathUpdate",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD85E00"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD5DC80",
+      "new_name": "PATH_StopMovement",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD5DC80"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD7FAC0",
+      "new_name": "UNITS_AnimModeAllowsAnimSpeed",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD7FAC0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD80BD0",
+      "new_name": "UNITS_CanAnimModeUseAttackRate",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD80BD0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD7EF90",
+      "new_name": "UNITS_IsAnimModeBlocking",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD7EF90"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD7EFC0",
+      "new_name": "UNITS_IsAnimModeGetHit",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD7EFC0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD7F010",
+      "new_name": "UNITS_IsAnimModeKnockBack",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD7F010"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD80B80",
+      "new_name": "UNITS_IsSeqAnimSpeedModulatedByFCR",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD80B80"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD5CEB0",
+      "new_name": "sub_6FD5CEB0",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD5CEB0"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FD5DB70",
+      "new_name": "sub_6FD5DB70",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FD5DB70"
+    },
+    {
+      "module": "D2Common",
+      "v110_address": "0x6FDC0840",
+      "new_name": "sub_6FDC0840",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FDC0840"
+    },
+    {
+      "module": "D2Game",
+      "v110_address": "0x6FC34A80",
+      "new_name": "EVENT_FreeEventQueue",
+      "versions": {
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "EVENT_FreeEventQueue"
+        }
+      },
+      "summary": {
+        "total_versions": 1,
+        "successful": 1,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Game",
+      "v110_address": "0x6FC36280",
+      "new_name": "GAME_ReceiveDatabaseCharacter",
+      "versions": {
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "GAME_ReceiveDatabaseCharacter"
+        }
+      },
+      "summary": {
+        "total_versions": 1,
+        "successful": 1,
+        "failed": 0
+      }
+    },
+    {
+      "module": "D2Game",
+      "v110_address": "0x6FCAE540",
+      "new_name": "EVENT_AllocateTimer",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FCAE540"
+    },
+    {
+      "module": "D2Game",
+      "v110_address": "0x6FC89B00",
+      "new_name": "OBJMODE_GetToHitPercentage",
+      "versions": {},
+      "summary": {
+        "total_versions": 0,
+        "successful": 0,
+        "failed": 0
+      },
+      "error": "Function not found at 0x6FC89B00"
+    },
+    {
+      "module": "D2Win",
+      "v110_address": "0x6F8AFDC0",
+      "new_name": "D2Win_10043_TEXTBOX_Destroy",
+      "versions": {
+        "1.07": {
+          "status": "success",
+          "address": "0x6F911740",
+          "message": "ProcessTextData -> D2Win_10043_TEXTBOX_Destroy"
+        },
+        "1.08": {
+          "status": "success",
+          "address": "0x6F9117F0",
+          "message": "ProcessTextData -> D2Win_10043_TEXTBOX_Destroy"
+        },
+        "1.09": {
+          "status": "success",
+          "address": "0x6F8B19E0",
+          "message": "ProcessTextData -> D2Win_10043_TEXTBOX_Destroy"
+        },
+        "1.09b": {
+          "status": "success",
+          "address": "0x6F8B19E0",
+          "message": "ProcessTextData -> D2Win_10043_TEXTBOX_Destroy"
+        },
+        "1.09d": {
+          "status": "success",
+          "address": "0x6F8B19E0",
+          "message": "ProcessTextData -> D2Win_10043_TEXTBOX_Destroy"
+        },
+        "1.10": {
+          "status": "source_baseline",
+          "new_name": "D2Win_10043_TEXTBOX_Destroy"
+        }
+      },
+      "summary": {
+        "total_versions": 6,
+        "successful": 6,
+        "failed": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_renames": 28,
+    "successful_renames": 7,
+    "failed_renames": 21,
+    "versions_affected": [
+      "1.07",
+      "1.08",
+      "1.09",
+      "1.09b",
+      "1.09d"
+    ]
+  }
+}
