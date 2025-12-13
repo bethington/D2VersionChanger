@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.10",
   "image_base": "0x00400000",
-  "total_functions": 64,
-  "export_timestamp": "Tue Dec 02 00:06:08 CST 2025",
+  "total_functions": 65,
+  "export_timestamp": "Wed Dec 10 16:14:14 CST 2025",
   "functions": [
     {
       "address": "0x00401000",
@@ -94,9 +94,9 @@
       "address": "0x004015D9",
       "rva": "0x15D9",
       "size": 34,
-      "name": "FUN_004015d9",
-      "display_name": "MNE_23111e3d86e48fe1",
-      "has_human_name": false,
+      "name": "AmsgExit",
+      "display_name": "AmsgExit",
+      "has_human_name": true,
       "index": "MNE:23111e3d86e48fe171246fbcab7ae60b",
       "index_method": "MNE",
       "indexes": {
@@ -107,6 +107,10 @@
         "CFG": "28d68ef41469e49f60578a0ac553bdfd",
         "PRO": "d50b0d0648e43516997f810ba73a3fa5"
       },
+      "signature": "void AmsgExit(int param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __amsg_exit\n\nLibrary: Visual Studio 2003 Release",
+      "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -136,9 +140,9 @@
       "address": "0x00401622",
       "rva": "0x1622",
       "size": 409,
-      "name": "FUN_00401622",
-      "display_name": "MNE_4a5a68bf41640182",
-      "has_human_name": false,
+      "name": "InitializeCodePageLocale",
+      "display_name": "InitializeCodePageLocale",
+      "has_human_name": true,
       "index": "MNE:4a5a68bf41640182f32d03a3c91e5fdc",
       "index_method": "MNE",
       "indexes": {
@@ -149,6 +153,10 @@
         "CFG": "da0462ea55550245cf015bf9a272785d",
         "PRO": "fccb21a6a871c7122e2713f7dcd5a6af"
       },
+      "signature": "int InitializeCodePageLocale(uint dwCodePage)",
+      "calling_convention": "__cdecl",
+      "comment": "Initializes system code page locale settings and character classification tables\n\nAlgorithm:\n1. Validate and retrieve code page ID through FUN_10021596()\n2. Check if requested code page is already active (early return if same)\n3. Search predefined code page table (0x1002eac8) for supported code pages\n4. If found in table: Initialize from hardcoded character classification data\n   a. Clear 256-byte character table at 0x1003cbc0\n   b. Load character range data from table offset (iVar11 * 0x30 + 0x1002ead8)\n   c. Process 4 character type classification loops\n   d. Set character flags using OR operations with type-specific bit masks\n   e. Copy locale data from table (0x1002eacc + offset) to globals 0x1003cab0-cab8\n5. If not in table: Query Windows API via GetCPInfo() for system code page\n   a. Call GetCPInfo() to populate _cpinfo structure\n   b. Clear character classification table at 0x1003cbc0\n   c. Process multi-byte character lead byte ranges from _cpinfo.LeadByte[]\n   d. Set lead byte flag (0x04) for DBCS ranges\n   e. Set trail byte flag (0x08) for bytes 0x01-0xFE\n6. Update global state: current code page ID, locale flags, character table\n7. Call cleanup functions FUN_10021613() and FUN_1002163c()\n\nParameters:\nnCodePage - Windows code page identifier (e.g., 932 for Shift-JIS, 1252 for Latin-1)\n\nReturns:\n0 - Success, code page initialized\n-1 - Failure, invalid code page or system error\n\nSpecial Cases:\n- Returns 0 immediately if requested code page already active\n- Handles both predefined code pages (faster lookup) and system code pages (API call)\n- DBCS code pages process lead/trail byte ranges for multi-byte character support\n- Single-byte code pages skip lead byte processing\n\nMagic Numbers Reference:\n0x30 (48) - Size of each code page table entry\n0x40 (64) - Size of character classification table in DWORDs (256 bytes total)\n0x04 - Lead byte flag for DBCS characters\n0x08 - Trail byte flag for DBCS characters  \n0xFF (255) - Maximum single-byte character value\n0x1002eac8 - Base address of predefined code page table\n0x1002ead8 - Base address of character classification data\n0x1002eacc - Base address of locale information data\n0x1003caa4 - Global: Current active code page ID\n0x1003cabc - Global: Locale initialization flag\n0x1003cbc0 - Global: 256-byte character classification table\n0x1003cab0 - Global: Locale data copied from table\n0x1003ccc4 - Global: Result from FUN_100215e0() locale processing\n\nStructure Layout:\n_cpinfo (20 bytes):\nOffset  Size  Field Name     Type    Description\n0x00    4     MaxCharSize    UINT    Maximum character size in bytes\n0x04    12    DefaultChar    BYTE[2] Default character for unmappable chars  \n0x06    12    LeadByte       BYTE[12] Lead byte ranges for DBCS (pairs of start/end)",
+      "parameters": [{"name": "dwCodePage", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 34
@@ -157,9 +165,9 @@
       "address": "0x004017BB",
       "rva": "0x17BB",
       "size": 74,
-      "name": "FUN_004017bb",
-      "display_name": "MNE_8f2a733057dd5a29",
-      "has_human_name": false,
+      "name": "ResolveCodePageIdentifier",
+      "display_name": "ResolveCodePageIdentifier",
+      "has_human_name": true,
       "index": "MNE:8f2a733057dd5a290f0e17d077c53986",
       "index_method": "MNE",
       "indexes": {
@@ -170,6 +178,10 @@
         "CFG": "bec558cea24edd749490288e03df1fe4",
         "PRO": "932b89934961eeda54cd9a9e50ce4be1"
       },
+      "signature": "uint ResolveCodePageIdentifier(int nCodePageSelector)",
+      "calling_convention": "__cdecl",
+      "comment": "Resolves code page identifiers to actual Windows code page numbers.\n\nAlgorithm:\n1. Clear initialization flag g_dwCodePageInitialized to 0\n2. Check if nCodePageSelector equals -2 (CP_OEMCP constant)\n   - Set g_dwCodePageInitialized = 1 to mark operation performed\n   - Call GetOEMCP() API to retrieve OEM code page\n   - Return OEM code page number\n3. Check if nCodePageSelector equals -3 (CP_ACP constant)  \n   - Set g_dwCodePageInitialized = 1 to mark operation performed\n   - Call GetACP() API to retrieve ANSI code page\n   - Return ANSI code page number\n4. Check if nCodePageSelector equals -4 (CP_THREAD_ACP constant)\n   - Retrieve stored thread locale code page from g_dwThreadLocaleCodePage\n   - Set g_dwCodePageInitialized = 1 to mark operation performed\n   - Return thread locale code page value\n5. For any other value (explicit code page number)\n   - Keep g_dwCodePageInitialized = 0 (no API call needed)\n   - Return nCodePageSelector unchanged\n\nParameters:\nnCodePageSelector (int): Code page selector constant or explicit code page number\n  -2 (CP_OEMCP): Request OEM code page via GetOEMCP()\n  -3 (CP_ACP): Request ANSI code page via GetACP()  \n  -4 (CP_THREAD_ACP): Request thread locale code page from global storage\n  Other: Explicit Windows code page number (1252, 65001, etc.)\n\nReturns:\nuint: Resolved Windows code page number\n  Success: Valid code page number (437, 1252, 65001, etc.)\n  Error: Original nCodePageSelector value if no resolution needed\n\nSpecial Cases:\n- Indirect jumps at 0x100215b0 and 0x100215c5 call GetOEMCP/GetACP via function pointers\n- Thread locale code page (-4) uses pre-stored value, not live API call\n- Global flag g_dwCodePageInitialized tracks whether API resolution was performed\n- Function handles both symbolic constants and explicit numeric code page values\n\nMagic Numbers Reference:\n-2 (0xFFFFFFFE): CP_OEMCP - OEM code page constant\n-3 (0xFFFFFFFD): CP_ACP - ANSI code page constant  \n-4 (0xFFFFFFFC): CP_THREAD_ACP - Thread locale code page constant\n0x1003ca88: Address of g_dwCodePageInitialized flag\n0x1003c8e4: Address of g_dwThreadLocaleCodePage storage\n0x100230b0: Function pointer to GetOEMCP API\n0x100230ac: Function pointer to GetACP API",
+      "parameters": [{"name": "nCodePageSelector", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 7
@@ -178,9 +190,9 @@
       "address": "0x00401805",
       "rva": "0x1805",
       "size": 51,
-      "name": "FUN_00401805",
-      "display_name": "MNE_f31c6439952ca9c3",
-      "has_human_name": false,
+      "name": "MapCodePageIdentifier",
+      "display_name": "MapCodePageIdentifier",
+      "has_human_name": true,
       "index": "MNE:f31c6439952ca9c3e10694cce3d833df",
       "index_method": "MNE",
       "indexes": {
@@ -191,6 +203,10 @@
         "CFG": "a69d19b675e647b533e35dc736d86ba6",
         "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8"
       },
+      "signature": "uint MapCodePageIdentifier(uint dwInputCodePage)",
+      "calling_convention": "__cdecl",
+      "comment": "Maps input code page identifiers to corresponding output code page identifiers for locale initialization.\n\nAlgorithm:\n1. Check if input code page matches 0x3a4 (932 - Japanese Shift_JIS)\n2. If match, return 0x411 (1041 - Japanese Japan)\n3. Check if input code page matches 0x3a8 (936 - Chinese Simplified GBK) \n4. If match, return 0x804 (2052 - Chinese People's Republic)\n5. Check if input code page matches 0x3b5 (949 - Korean)\n6. If match, return 0x412 (1042 - Korean)\n7. Check if input code page matches 0x3b6 (950 - Chinese Traditional Big5)\n8. If match, return 0x404 (1028 - Chinese Taiwan)\n9. If no matches found, return 0 (invalid/unsupported code page)\n\nParameters:\n  dwInputCodePage (uint): Input code page identifier to map\n\nReturns:\n  uint: Corresponding locale identifier (LCID) if supported, 0 if unsupported\n\nMagic Numbers Reference:\n  0x3a4 (932): Japanese Shift_JIS code page\n  0x3a8 (936): Chinese Simplified GBK code page\n  0x3b5 (949): Korean code page  \n  0x3b6 (950): Chinese Traditional Big5 code page\n  0x411 (1041): Japanese Japan LCID\n  0x804 (2052): Chinese People's Republic LCID\n  0x412 (1042): Korean LCID\n  0x404 (1028): Chinese Taiwan LCID",
+      "parameters": [{"name": "dwInputCodePage", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
@@ -199,9 +215,9 @@
       "address": "0x00401838",
       "rva": "0x1838",
       "size": 41,
-      "name": "FUN_00401838",
-      "display_name": "MNE_05d3556ba26e52c5",
-      "has_human_name": false,
+      "name": "InitializeLocaleDataBuffers",
+      "display_name": "InitializeLocaleDataBuffers",
+      "has_human_name": true,
       "index": "MNE:05d3556ba26e52c51954a1255d97c525",
       "index_method": "MNE",
       "indexes": {
@@ -212,6 +228,10 @@
         "CFG": null,
         "PRO": "705230914eb290d5ec2051144eb14d62"
       },
+      "signature": "void InitializeLocaleDataBuffers(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes locale-related data buffers by zeroing memory regions and global variables.\n\nAlgorithm:\n1. Initialize pointer to start of buffer at 0x1003cbc0\n2. Set loop counter to 0x40 (64 iterations)\n3. For each iteration, store zero at current pointer location and increment pointer\n4. After loop, store additional zero byte at final pointer location\n5. Zero individual global variables at specific addresses\n\nParameters:\nNone\n\nReturns:\nvoid\n\nMagic Numbers Reference:\n0x40 (64 decimal) - Number of DWORDs to zero in main buffer\n0x1003cbc0 - Start address of main buffer to be zeroed\n0x1003caa4 - Global variable address\n0x1003cabc - Global variable address  \n0x1003ccc4 - Global variable address\n0x1003cab0 - Global variable address\n0x1003cab4 - Global variable address\n0x1003cab8 - Global variable address\n\nSpecial Cases:\nEnsures complete buffer initialization by storing extra zero byte after REP STOSD\nClears 256 bytes total (64 DWORDs * 4 bytes + 1 additional byte)",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -220,9 +240,9 @@
       "address": "0x00401861",
       "rva": "0x1861",
       "size": 389,
-      "name": "FUN_00401861",
-      "display_name": "MNE_63906d1f35f78420",
-      "has_human_name": false,
+      "name": "InitializeCharacterTables",
+      "display_name": "InitializeCharacterTables",
+      "has_human_name": true,
       "index": "MNE:63906d1f35f7842042066a6643d2050c",
       "index_method": "MNE",
       "indexes": {
@@ -233,6 +253,10 @@
         "CFG": "2cea2c98520640c920f622d3daaf885f",
         "PRO": "9f903305dac24c951f3cebb45cf66933"
       },
+      "signature": "void InitializeCharacterTables(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initializes character lookup tables and locale-specific character mappings for the current code page.\n\nAlgorithm:\n1. Retrieve code page information using GetCPInfo() with the global code page identifier\n2. If code page info valid, initialize base character table with identity mapping (0-255)\n3. Set character at index 0 to space character for proper handling\n4. Process multi-byte character lead byte ranges to mark them as spaces in character table\n5. Call FUN_10021c9e to generate character type flags for the character set\n6. Generate uppercase mappings using LocaleMapStringWithConversion with flag 0x100\n7. Generate lowercase mappings using LocaleMapStringWithConversion with flag 0x200\n8. Iterate through all 256 characters and populate global character tables:\n   - If character type flag & 0x1 (uppercase): set flag 0x10, use lowercase mapping\n   - If character type flag & 0x2 (lowercase): set flag 0x20, use uppercase mapping\n   - Otherwise: clear character mapping entry\n9. If code page info invalid, fall back to ASCII-only mappings:\n   - For A-Z (0x41-0x5A): set flag 0x10, add 0x20 for lowercase\n   - For a-z (0x61-0x7A): set flag 0x20, subtract 0x20 for uppercase\n   - For all other characters: clear mapping entry\n\nParameters:\nNone\n\nReturns:\nvoid - Function operates on global character tables DAT_1003cac0 and DAT_1003cbc0\n\nSpecial Cases:\n- Character 0 is always mapped to space (0x20) for proper null character handling\n- Lead bytes in multi-byte character sets are marked as spaces to prevent misinterpretation\n- Falls back to basic ASCII case mapping if code page information unavailable\n\nMagic Numbers:\n0x100 - LCMAP_UPPERCASE flag for LocaleMapStringWithConversion\n0x200 - LCMAP_LOWERCASE flag for LocaleMapStringWithConversion  \n0x10 - Character flag indicating uppercase letter\n0x20 - Character flag indicating lowercase letter\n0x1 - Character type flag for uppercase character\n0x2 - Character type flag for lowercase character\n0x41-0x5A - ASCII range for uppercase letters A-Z\n0x61-0x7A - ASCII range for lowercase letters a-z\n\nError Handling:\n- GetCPInfo failure triggers fallback to ASCII-only character mappings\n- Lead byte processing handles ranges safely with bounds checking\n- Character table initialization ensures all 256 entries are properly set\n\nStructure Layout:\n_cpinfo structure (18 bytes):\nOffset  Size  Field Name    Type    Description\n0x0     4     MaxCharSize   UINT    Maximum character size in bytes\n0x4     12    DefaultChar   BYTE[2] Default replacement character \n0x6     12    LeadByte      BYTE[12] Lead byte ranges for MBCS",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 29
@@ -241,9 +265,9 @@
       "address": "0x004019E6",
       "rva": "0x19E6",
       "size": 28,
-      "name": "FUN_004019e6",
-      "display_name": "MNE_750c71b47c1aaa7e",
-      "has_human_name": false,
+      "name": "InitializeCodePageOnce",
+      "display_name": "InitializeCodePageOnce",
+      "has_human_name": true,
       "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831",
       "index_method": "MNE",
       "indexes": {
@@ -254,6 +278,10 @@
         "CFG": "e67ee52de705150869e2ef2baa9939af",
         "PRO": "a50a456766e4f98144ab970dbc0ce16b"
       },
+      "signature": "void InitializeCodePageOnce(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Ensures code page locale initialization occurs only once during program execution.\n\nAlgorithm:\n1. Check initialization flag g_fCodePageInitialized for zero (uninitialized state)\n2. If uninitialized, call InitializeCodePageLocale(-3) to set up system locale\n3. Set initialization flag g_fCodePageInitialized to true (1) to prevent re-initialization\n4. Return immediately if already initialized (early exit optimization)\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, initialization is fire-and-forget\n\nSpecial Cases:\n- Thread-safe one-time initialization using simple boolean flag\n- Early return optimization prevents redundant initialization calls\n- Flag remains set for program lifetime once initialization completes\n\nMagic Numbers Reference:\n0xfffffffd (-3) - Special code page identifier passed to InitializeCodePageLocale\n                  Likely represents CP_THREAD_ACP (thread's current ANSI code page)\n\nError Handling:\n- No explicit error handling; relies on InitializeCodePageLocale for error management\n- Boolean flag ensures initialization attempts happen only once regardless of success/failure",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -353,31 +381,35 @@
     {
       "address": "0x00401C00",
       "rva": "0x1C00",
-      "size": 133,
-      "name": "FUN_00401c00",
-      "display_name": "MNE_8cf740ead1ec396b",
-      "has_human_name": false,
-      "index": "MNE:8cf740ead1ec396b63dfd5a3659dee5d",
+      "size": 128,
+      "name": "_strstr",
+      "display_name": "_strstr",
+      "has_human_name": true,
+      "index": "MNE:3c60546d8cfb6e92d20e0cc9dd281ae9",
       "index_method": "MNE",
       "indexes": {
         "EXP": null,
         "STR": null,
         "API": null,
-        "MNE": "8cf740ead1ec396b63dfd5a3659dee5d",
-        "CFG": "dbd2a867dd7d8886d5a6155629373d58",
-        "PRO": "34afa7d74dd6b64746d7b43ea3ed9c2b"
+        "MNE": "3c60546d8cfb6e92d20e0cc9dd281ae9",
+        "CFG": "e280e9f6b999989fd4ced7bf251d246b",
+        "PRO": "858f2f80185d26d23fec7b662bab6b38"
       },
+      "signature": "char * _strstr(char * _Str, char * _SubStr)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _strstr\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
+      "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_SubStr", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
-      "basic_block_count": 19
+      "basic_block_count": 18
     },
     {
       "address": "0x00401C80",
       "rva": "0x1C80",
       "size": 45,
-      "name": "FUN_00401c80",
-      "display_name": "MNE_91b5192dddb89e96",
-      "has_human_name": false,
+      "name": "InitializeGlobalConstructors",
+      "display_name": "InitializeGlobalConstructors",
+      "has_human_name": true,
       "index": "MNE:91b5192dddb89e963abc2be4471149da",
       "index_method": "MNE",
       "indexes": {
@@ -388,6 +420,10 @@
         "CFG": "7db700d6fea6bf8bb6e1c45f4f727c0d",
         "PRO": "fba0e24939e8722376e743b66770e3ea"
       },
+      "signature": "undefined InitializeGlobalConstructors(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize global constructors and destructors during DLL loading.\n\nAlgorithm:\n1. Check if optional InitializeSubsystem function pointer exists (0x1002e468)\n2. If present, call the InitializeSubsystem function\n3. Call constructor array iterator with constructor table range (0x1002a008 to 0x1002a010)\n4. Call destructor array iterator with destructor table range (0x1002a000 to 0x1002a004)\n5. Return to caller (DllMain)\n\nParameters:\nNone\n\nReturns:\nvoid - No return value, initialization always completes\n\nSpecial Cases:\n- If g_pfnInitializeSubsystem is NULL, step 2 is skipped safely\n- Constructor/destructor arrays may be empty (start == end), iterator handles gracefully\n- Function called during DLL_PROCESS_ATTACH in DllMain\n\nMagic Numbers Reference:\n0x1002e468 - g_pfnInitializeSubsystem function pointer storage\n0x1002a008 - g_ppfnStaticCtorsStart (constructor array beginning)\n0x1002a010 - g_ppfnStaticCtorsEnd (constructor array end)\n0x1002a000 - g_ppfnStaticDtorsStart (destructor array beginning) \n0x1002a004 - g_ppfnStaticDtorsEnd (destructor array end)",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -396,9 +432,9 @@
       "address": "0x00401CAD",
       "rva": "0x1CAD",
       "size": 17,
-      "name": "FUN_00401cad",
-      "display_name": "MNE_cd85d17a6b193c95",
-      "has_human_name": false,
+      "name": "ReportError",
+      "display_name": "ReportError",
+      "has_human_name": true,
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
       "index_method": "MNE",
       "indexes": {
@@ -409,6 +445,10 @@
         "CFG": null,
         "PRO": "b275099b8b97a883fb7870f620754373"
       },
+      "signature": "void ReportError(uint dwErrorCode)",
+      "calling_convention": "__cdecl",
+      "comment": "Simple error reporting wrapper that forwards error codes with default parameters.\n\nAlgorithm:\n1. Accept the error code parameter from the caller\n2. Forward the error code to FUN_6ff2b2cd along with two zero parameters\n3. Return immediately after the function call\n\nParameters:\ndwErrorCode (uint) - Error code to be reported or logged\n\nReturns:\nvoid - No return value (noreturn function based on callers)",
+      "parameters": [{"name": "dwErrorCode", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -442,9 +482,9 @@
       "address": "0x00401CCF",
       "rva": "0x1CCF",
       "size": 153,
-      "name": "FUN_00401ccf",
-      "display_name": "MNE_45d9b348a966df89",
-      "has_human_name": false,
+      "name": "ProcessTerminationHandler",
+      "display_name": "ProcessTerminationHandler",
+      "has_human_name": true,
       "index": "MNE:45d9b348a966df89d3a7165f288b5d47",
       "index_method": "MNE",
       "indexes": {
@@ -455,6 +495,10 @@
         "CFG": "db86e88b5de96a6ab28e7fdec3ceb078",
         "PRO": "740da805cb7379a963f118613cdee827"
       },
+      "signature": "void ProcessTerminationHandler(uint dwExitCode, int nCleanupMode, int nDeferExit)",
+      "calling_convention": "__cdecl",
+      "comment": "Process termination handler with optional cleanup and deferred exit capability\n\nAlgorithm:\n1. Check immediate termination flag (DAT_1003c944) - if set, terminate process immediately using TerminateProcess\n2. Set termination active flag (DAT_1003c940 = 1) to indicate termination is in progress\n3. Store defer exit flag in global state (DAT_1003c93c) as byte value from nDeferExit parameter\n4. If cleanup mode is enabled (nCleanupMode == 0), execute cleanup sequence:\n   a. Check if cleanup function pointer array exists (DAT_1003cdf0 != NULL)\n   b. Calculate start position at end of array (DAT_1003cdec - 4) for LIFO iteration\n   c. Iterate backwards through function pointer array calling each non-null cleanup function\n   d. Call RunConstructorArray for address range 0x1002a014 to 0x1002a018\n5. Always call RunConstructorArray for address range 0x1002a01c to 0x1002a020 regardless of cleanup mode\n6. Check defer exit flag - if nDeferExit is non-zero, return without exiting process\n7. Set final termination flag (DAT_1003c944 = 1) and call ExitProcess with specified exit code\n\nParameters:\nuExitCode - Process exit code to pass to Windows ExitProcess API (type: uint)\nnCleanupMode - Cleanup execution control (0 = run cleanup functions, non-zero = skip cleanup)\nnDeferExit - Exit deferral control (0 = exit immediately after cleanup, non-zero = return without exiting)\n\nReturns:\nvoid - Function does not return when nDeferExit is 0 (calls ExitProcess which terminates process)",
+      "parameters": [{"name": "dwExitCode", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "nCleanupMode", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nDeferExit", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 13
@@ -463,9 +507,9 @@
       "address": "0x00401D68",
       "rva": "0x1D68",
       "size": 26,
-      "name": "FUN_00401d68",
-      "display_name": "MNE_f1060dff4c8b86b7",
-      "has_human_name": false,
+      "name": "RunConstructorArray",
+      "display_name": "RunConstructorArray",
+      "has_human_name": true,
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6",
       "index_method": "MNE",
       "indexes": {
@@ -476,6 +520,10 @@
         "CFG": "2309c89059e850b3f32783d1996e55e2",
         "PRO": "c5843f3db205987ea5094c55a1bdaf18"
       },
+      "signature": "void RunConstructorArray(void * * ppfnStart, void * * ppfnEnd)",
+      "calling_convention": "__cdecl",
+      "comment": "Executes an array of constructor or initialization function pointers in sequence.\n\nAlgorithm:\n1. Iterate through function pointer array from ppfnStart to ppfnEnd (exclusive)\n2. For each 4-byte aligned function pointer entry:\n   a. Load the function pointer value into EAX\n   b. Test if pointer is non-null (TEST EAX,EAX) \n   c. Skip null pointers (JZ to increment)\n   d. Call the function pointer (CALL EAX) with no parameters\n3. Advance to next function pointer (ADD ESI,0x4)\n4. Continue until reaching end pointer (CMP ESI,[ESP+0xc])\n5. Return when all valid function pointers have been executed\n\nParameters:\n- ppfnStart (void * *): Pointer to start of function pointer array\n- ppfnEnd (void * *): Pointer to end of function pointer array (exclusive)\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- Null function pointers are safely skipped without error\n- Empty array (ppfnStart == ppfnEnd) exits immediately\n- No parameter validation - assumes valid array bounds\n\nError Handling:\n- No explicit error handling\n- Relies on caller to provide valid array bounds\n- Function calls are made with no error checking",
+      "parameters": [{"name": "ppfnStart", "type": "void * *", "storage": "Stack[0x4]:4"}, {"name": "ppfnEnd", "type": "void * *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -547,9 +595,9 @@
       "address": "0x00401F5E",
       "rva": "0x1F5E",
       "size": 185,
-      "name": "FUN_00401f5e",
-      "display_name": "MNE_6e538b3bbbeec8f9",
-      "has_human_name": false,
+      "name": "InitializeEnvironmentVariables",
+      "display_name": "InitializeEnvironmentVariables",
+      "has_human_name": true,
       "index": "MNE:6e538b3bbbeec8f94bef058bdad701fe",
       "index_method": "MNE",
       "indexes": {
@@ -560,6 +608,10 @@
         "CFG": "82e6bf6fe5f93091b52c7108ac84fcae",
         "PRO": "5be54e361757f77c0c474905030db3e7"
       },
+      "signature": "void InitializeEnvironmentVariables(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize environment variables by parsing command line arguments or environment data.\n\nAlgorithm:\n1. Check if initialization flag (DAT_1003cde8) is zero and call FUN_100217c1() if needed\n2. Count non-assignment entries by iterating through string array at DAT_1003c8b4\n3. Skip entries containing '=' character (assignment operators)\n4. Allocate memory for pointer array to hold (count + 1) string pointers\n5. Store allocated array pointer in global _DAT_1003c924\n6. Validate allocation succeeded, exit with error code 9 if failed\n7. Iterate through string array again, copying non-assignment entries\n8. For each valid entry, allocate buffer and copy string using FUN_10020190\n9. Increment array pointer after each successful copy\n10. Free original string data at DAT_1003c8b4 and set to NULL\n11. Null-terminate the new pointer array\n12. Set completion flag _DAT_1003cde4 to 1\n\nParameters:\nNone\n\nReturns:\nvoid - Function performs initialization and exits on allocation failure\n\nSpecial Cases:\n- Exit with AmsgExit(9) if memory allocation fails\n- Skip entries containing '=' character (environment variable assignments)\n- DAT_1003c8b4 contains original string data, freed after processing\n- _DAT_1003c924 stores the resulting array of string pointers\n- _DAT_1003cde4 flag indicates completion status\n\nMagic Numbers:\n0x9 (9) - Error exit code for memory allocation failure\n0x3D (61) - ASCII value for '=' character used to filter assignments",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 18
@@ -568,9 +620,9 @@
       "address": "0x00402017",
       "rva": "0x2017",
       "size": 153,
-      "name": "FUN_00402017",
-      "display_name": "MNE_78c0be793b204c57",
-      "has_human_name": false,
+      "name": "InitializeModuleData",
+      "display_name": "InitializeModuleData",
+      "has_human_name": true,
       "index": "MNE:78c0be793b204c577b78460711bf70fb",
       "index_method": "MNE",
       "indexes": {
@@ -581,6 +633,10 @@
         "CFG": "cea6ce415732f40bbae9c1758ccf2bd8",
         "PRO": "daf0572913365e2e4b855eef8c8036f5"
       },
+      "signature": "void InitializeModuleData(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize module data structures and process filename to create dynamic table\n\nAlgorithm:\n1. Check global initialization flag (DAT_1003cde8); call FUN_100217c1() if uninitialized\n2. Get current module filename using GetModuleFileNameA into 260-byte global buffer\n3. Store filename pointer in global variable _DAT_1003c934 for future reference\n4. Select filename source: use override from DAT_1003ce10 if available, otherwise use module filename\n5. Call FUN_1001f501 first time with null pointers to query table size requirements\n6. Allocate memory: dwCount * 4 bytes for main table + dwDataSize bytes for auxiliary data\n7. Validate allocation success; exit with code 8 if malloc fails\n8. Call FUN_1001f501 second time to populate allocated table and auxiliary data\n9. Store table pointer in global _DAT_1003c91c and adjusted count in _DAT_1003c918\n\nParameters:\nNone - function called during DLL initialization\n\nReturns:\nvoid - sets global variables _DAT_1003c91c (table pointer) and _DAT_1003c918 (count-1)\n\nSpecial Cases:\n- Exit code 8: Memory allocation failure\n- Override filename: DAT_1003ce10 takes precedence if first byte non-zero\n- Count adjustment: _DAT_1003c918 stores count decremented by 1\n\nMagic Numbers Reference:\n0x104 (260 decimal): Maximum path length for GetModuleFileNameA buffer\n0x8: Exit code for memory allocation failure\n0x4: Size multiplier for table entries (DWORD/uint size)",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 7
@@ -589,9 +645,9 @@
       "address": "0x004020B0",
       "rva": "0x20B0",
       "size": 436,
-      "name": "FUN_004020b0",
-      "display_name": "MNE_50cd6b6fd69b78c0",
-      "has_human_name": false,
+      "name": "ParseCommandLineArguments",
+      "display_name": "ParseCommandLineArguments",
+      "has_human_name": true,
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0",
       "index_method": "MNE",
       "indexes": {
@@ -602,6 +658,10 @@
         "CFG": "f08d38f517d0743528d28dbfcaa47ea4",
         "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3"
       },
+      "signature": "void ParseCommandLineArguments(char * lpszCmdLine, char * * lpszArgv, char * szOutputBuffer, int * pnArgc, int * pnTotalChars)",
+      "calling_convention": "__cdecl",
+      "comment": "Parses command line string into individual arguments with quote and escape handling\n\nAlgorithm:\n1. Initialize output counters: set argc=1, totalChars=0\n2. Store first argument pointer in argv[0] if argv provided\n3. Check if command line starts with quote (0x22):\n   a. If quoted: Parse until closing quote, handle escape sequences\n   b. If unquoted: Parse until space (0x20) or tab (0x09)\n4. Use character lookup table at 0x1003cbc0 bit 4 to identify escapable chars\n5. Skip whitespace between arguments using space/tab delimiters\n6. For each argument found:\n   a. Store argument pointer in argv array if provided\n   b. Increment argc counter\n   c. Handle backslash escape sequences (\\\\ becomes \\)\n   d. Toggle quote mode on unescaped quotes, handle doubled quotes (\"\")\n   e. Copy characters to output buffer if provided\n   f. Null-terminate argument in output buffer\n7. Null-terminate argv array and increment argc for final count\n\nParameters:\n- cmdLine: Input command line string to parse\n- argv: Array to store pointers to parsed arguments (NULL = count only)\n- outputBuffer: Buffer to store null-terminated argument strings (NULL = count only)\n- argc: Pointer to receive argument count (includes program name)\n- totalChars: Pointer to receive total characters needed for all arguments\n\nReturns:\n- void (results returned through output parameters)\n\nSpecial Cases:\n- If argv is NULL: Only counts arguments without storing pointers\n- If outputBuffer is NULL: Only counts characters without copying\n- Empty quotes \"\" create empty argument\n- Backslash at end of line becomes literal backslash\n- Doubled quotes (\"\") inside quoted string become single quote\n\nMagic Numbers Reference:\n- 0x22 (34): Double quote character for argument quoting\n- 0x20 (32): Space character - argument delimiter\n- 0x09 (9): Tab character - argument delimiter  \n- 0x5C (92): Backslash character for escape sequences\n- 0x1003cbc0: Character classification table base address\n- 0x4: Bit mask for escapable character flag in lookup table\n\nCharacter Classification Table:\nThe lookup table at 0x1003cbc0 contains character class flags where\nbit 4 (value 0x4) indicates characters that require escape handling.\nThis typically includes characters like quotes, backslashes, and \nother shell metacharacters that need special processing.",
+      "parameters": [{"name": "lpszCmdLine", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "lpszArgv", "type": "char * *", "storage": "Stack[0x8]:4"}, {"name": "szOutputBuffer", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "pnArgc", "type": "int *", "storage": "Stack[0x10]:4"}, {"name": "pnTotalChars", "type": "int *", "storage": "Stack[0x14]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 71
@@ -610,9 +670,9 @@
       "address": "0x00402264",
       "rva": "0x2264",
       "size": 306,
-      "name": "FUN_00402264",
-      "display_name": "MNE_ee22dcb18299b51e",
-      "has_human_name": false,
+      "name": "GetEnvironmentStringsConverted",
+      "display_name": "GetEnvironmentStringsConverted",
+      "has_human_name": true,
       "index": "MNE:ee22dcb18299b51eb994a57f32a5df1d",
       "index_method": "MNE",
       "indexes": {
@@ -623,6 +683,10 @@
         "CFG": "251ad66a10e4d45c7bcd5b4f701e532d",
         "PRO": "c7f518b4d872ec71f7909c60ecc4d10e"
       },
+      "signature": "char * GetEnvironmentStringsConverted(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves and converts environment strings to ANSI format with automatic Unicode/ANSI detection.\n\nAlgorithm:\n1. Check global state flag DAT_1003ca4c for preferred string format\n2. If state is 0 (uninitialized), attempt Unicode path first via GetEnvironmentStringsW()\n3. If Unicode strings available, set state to 1 (Unicode mode) and process wide strings\n4. If Unicode fails, fall back to ANSI path via GetEnvironmentStrings() and set state to 2\n5. For Unicode processing: iterate through null-terminated string array to calculate total length\n6. Convert wide character count to byte count and call WideCharToMultiByte() for size estimation\n7. Allocate buffer using malloc() with required size\n8. Perform actual conversion using WideCharToMultiByte() to allocated buffer\n9. If conversion fails, free buffer and return NULL\n10. For ANSI processing: iterate through ANSI string array to calculate total length\n11. Allocate buffer and copy strings using FUN_100217e0 (memory copy function)\n12. Free original environment strings using appropriate API (W or A version)\n13. Return allocated buffer containing converted environment strings\n\nParameters:\nNone - function takes no parameters\n\nReturns:\nchar * - Pointer to allocated buffer containing environment strings in ANSI format\nNULL - If environment strings unavailable or memory allocation/conversion fails\n\nSpecial Cases:\nState flag values: 0 = uninitialized, 1 = Unicode mode, 2 = ANSI mode\nReturns NULL for invalid state values or API failures\nCaller responsible for freeing returned buffer\n\nMagic Numbers Reference:\n0x1003ca4c - Global state flag for environment string format preference\n0 - Uninitialized state\n1 - Unicode (wide character) mode  \n2 - ANSI (multibyte character) mode\n\nError Handling:\nGetEnvironmentStringsW() failure - Falls back to ANSI mode\nGetEnvironmentStrings() failure - Returns NULL immediately\nmalloc() failure - Returns NULL  \nWideCharToMultiByte() failure - Frees allocated buffer and returns NULL\nInvalid state flag - Returns NULL",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 29
@@ -631,9 +695,9 @@
       "address": "0x00402396",
       "rva": "0x2396",
       "size": 427,
-      "name": "FUN_00402396",
-      "display_name": "MNE_b09f16c0e6a5014f",
-      "has_human_name": false,
+      "name": "InitializeFileDescriptors",
+      "display_name": "InitializeFileDescriptors",
+      "has_human_name": true,
       "index": "MNE:b09f16c0e6a5014f6b150653e76f58a2",
       "index_method": "MNE",
       "indexes": {
@@ -644,6 +708,10 @@
         "CFG": "dbd056a7491ee7a8893ba932b320d4b9",
         "PRO": "6c41876e91c62a56cd32f233706cb037"
       },
+      "signature": "void InitializeFileDescriptors(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize C Runtime Library file descriptor table and standard handles (stdin/stdout/stderr).\n\nAlgorithm:\n1. Allocate initial file descriptor array (32 entries) with 0x100 bytes\n2. Initialize all entries with INVALID_HANDLE_VALUE (0xFFFFFFFF) and default flags\n3. Set line buffering mode (0x0A) for all entries\n4. Retrieve startup information to check for inherited handles\n5. If inherited handles present, expand descriptor table to accommodate them\n6. Process inherited handle array from startup info:\n   - Validate each handle is not INVALID_HANDLE_VALUE\n   - Check handle has FOPEN flag (0x01) set\n   - Verify handle is device or has valid file type\n   - Copy valid handles to appropriate descriptor table entries\n7. Initialize standard handles (stdin=0, stdout=1, stderr=2):\n   - Set INUSE flag (0x81) for uninitialized standard slots\n   - Get standard handle using GetStdHandle with appropriate STD_*_HANDLE\n   - Set file type flags based on GetFileType result:\n     - FILE_TYPE_CHAR (0x02): Set TEXT flag (0x40)\n     - FILE_TYPE_PIPE (0x03): Set PIPE flag (0x08)\n   - Mark inherited handles with INHERIT flag (0x80)\n8. Call SetHandleCount to inform system of maximum handle count\n\nParameters:\nNone - function takes no parameters\n\nReturns:\nvoid - no return value, exits process on allocation failure\n\nSpecial Cases:\n- If malloc fails during initial allocation, calls AmsgExit(0x1b) to terminate\n- If inherited handle count exceeds 2047 (0x7FF), caps at 2048 (0x800)\n- Handles file descriptor table expansion by allocating additional 256-byte blocks\n- Process handles bucket addressing: slot = (index >> 5), offset = (index & 0x1F) * 8\n\nStructure Layout:\nFileDescriptor (8 bytes):\nOffset | Size | Field Name | Type | Description\n-------|------|------------|------|------------\n0x00   | 4    | hFile      | void*| File handle or INVALID_HANDLE_VALUE\n0x04   | 1    | bFlags     | byte | File flags (FOPEN=0x01, PIPE=0x08, TEXT=0x40, INUSE=0x81)\n0x05   | 1    | bLineMode  | byte | Line buffering mode (0x0A = LF)\n0x06   | 2    | bPadding   | byte[2] | Padding bytes\n\nFlag Bits:\n0x01 - FOPEN: File is open and available\n0x08 - PIPE: File is a pipe device\n0x40 - TEXT: Character device (console)\n0x80 - INHERIT: Handle inherited from parent process\n\nMagic Numbers:\n0x100 - Allocation size for each file descriptor block (256 bytes)\n0x20 - Number of file descriptors per allocation (32 entries)\n0x1b - Exit code for memory allocation failure\n0x7FF - Maximum inherited handle count before capping (2047)\n0xFFFFFFF6 - STD_INPUT_HANDLE constant (-10)\n0xFFFFFFF5 - STD_OUTPUT_HANDLE constant (-11)\n0xFFFFFFF4 - STD_ERROR_HANDLE constant (-12)",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 39
@@ -652,9 +720,9 @@
       "address": "0x00402541",
       "rva": "0x2541",
       "size": 60,
-      "name": "FUN_00402541",
-      "display_name": "MNE_e33a4c6c562d51a2",
-      "has_human_name": false,
+      "name": "InitializeDllHeapAndResources",
+      "display_name": "InitializeDllHeapAndResources",
+      "has_human_name": true,
       "index": "MNE:e33a4c6c562d51a2fcc8e07bee94f1d6",
       "index_method": "MNE",
       "indexes": {
@@ -665,6 +733,10 @@
         "CFG": "f1047210fa60a432b10cb2f8654e209b",
         "PRO": "16847fa79110f65f85652b26f0a066ad"
       },
+      "signature": "int InitializeDllHeapAndResources(int nSerializationFlag)",
+      "calling_convention": "__cdecl",
+      "comment": "Initialize DLL heap and core resources during process attachment.\n\nAlgorithm:\n1. Create global heap with serialization based on attachment context\n2. Configure heap flags: serialized if nSerializationFlag is 0, non-serialized otherwise  \n3. Set initial heap size to 4096 bytes (0x1000) with unlimited growth\n4. Store heap handle in global variable g_hHeap for DLL lifetime management\n5. Call initialization function FUN_1001d4d1() to set up additional resources\n6. On initialization failure, clean up by destroying the created heap\n7. Return success (1) only if both heap creation and resource initialization succeed\n\nParameters:\nnSerializationFlag (int): Process attachment context flag\n  - 0: Enable heap serialization for thread-safe access\n  - Non-zero: Disable serialization for single-threaded or externally synchronized access\n\nReturns:\n1: Successfully created heap and initialized all DLL resources\n0: Failure in heap creation or resource initialization\n\nSpecial Cases:\n- If HeapCreate fails, immediately returns 0 without cleanup\n- If FUN_1001d4d1() fails, destroys heap before returning 0\n- Global g_hHeap remains NULL on any failure path\n\nMagic Numbers Reference:\n0x1000 (4096): Initial heap size in bytes, allows small initial allocations\n0: Unlimited maximum heap size, heap can grow as needed",
+      "parameters": [{"name": "nSerializationFlag", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 5
@@ -673,8 +745,8 @@
       "address": "0x00402580",
       "rva": "0x2580",
       "size": 32,
-      "name": "__global_unwind2",
-      "display_name": "__global_unwind2",
+      "name": "GlobalUnwind2",
+      "display_name": "GlobalUnwind2",
       "has_human_name": true,
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
       "index_method": "MNE",
@@ -686,10 +758,10 @@
         "CFG": null,
         "PRO": "56b2c198681b74637b7f6d69d46bf35f"
       },
-      "signature": "undefined __global_unwind2(PVOID param_1)",
+      "signature": "void GlobalUnwind2(void * pTargetFrame)",
       "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
-      "parameters": [{"name": "param_1", "type": "PVOID", "storage": "Stack[0x4]:4"}],
+      "comment": "Performs global stack unwinding to a specified frame using Windows RtlUnwind API.\n\nAlgorithm:\n1. Validate input parameter (target frame pointer)\n2. Save all non-volatile registers (EBX, ESI, EDI, EBP) to preserve caller state\n3. Prepare RtlUnwind parameters:\n   - TargetFrame: Caller-specified frame to unwind to\n   - TargetIp: Fixed continuation address (0x1001cdf0) for post-unwind execution\n   - ExceptionRecord: NULL (no exception context)\n   - ReturnValue: NULL (no specific return value)\n4. Call Windows RtlUnwind API to perform structured exception unwinding\n5. Restore all saved registers maintaining calling convention\n6. Return to caller with stack properly unwound\n\nParameters:\npTargetFrame (void*): Target stack frame pointer to unwind to. Must be valid frame \n                     pointer from current call chain. NULL terminates unwinding at \n                     top-level exception handler.\n\nReturns:\nvoid: Function does not return value. Unwind operation modifies stack state and \n      control flow continues at TargetIp (0x1001cdf0) after unwinding completes.\n\nSpecial Cases:\n- Magic Number 0x1001cdf0: Hardcoded continuation address where execution resumes \n  after unwinding. Points to register restoration sequence (POP EBP instruction).\n- NULL pTargetFrame: Unwinds entire stack to process termination handler\n- Invalid frame pointer: RtlUnwind handles validation and may terminate process\n\nError Handling:\nRtlUnwind handles all error conditions including invalid frame pointers, corrupted \nstack, and access violations. Function acts as thin wrapper without additional \nvalidation or error recovery.",
+      "parameters": [{"name": "pTargetFrame", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": ["RtlUnwind"],
       "basic_block_count": 1
@@ -698,8 +770,8 @@
       "address": "0x004025C2",
       "rva": "0x25C2",
       "size": 104,
-      "name": "__local_unwind2",
-      "display_name": "__local_unwind2",
+      "name": "LocalUnwindTwo",
+      "display_name": "LocalUnwindTwo",
       "has_human_name": true,
       "index": "MNE:cd4ab8e23ed6997cd2e2434b8d375458",
       "index_method": "MNE",
@@ -711,10 +783,10 @@
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "6119d20752442d876f4a746c02156711"
       },
-      "signature": "undefined __local_unwind2(int param_1, int param_2)",
+      "signature": "void LocalUnwindTwo(SehFrame * pSehFrame, int nTargetLevel)",
       "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n __local_unwind2\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release",
-      "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
+      "comment": "Performs structured exception handling (SEH) local unwinding to a target level.\n\nAlgorithm:\n1. Setup exception registration frame with current exception list\n2. Enter loop to process each unwind level from current to target\n3. Load unwind table pointer from SEH frame at offset +8\n4. Load current level from SEH frame at offset +12  \n5. Check termination conditions: level -1 (end) or target level reached\n6. Calculate unwind record index using current level * 12 bytes\n7. Load previous level from unwind table entry at offset +0\n8. Update SEH frame current level to previous level\n9. Check exception filter flag at unwind table offset +4\n10. If filter flag is 0, call exception filter function and cleanup handler\n11. Continue loop until target level or end reached\n12. Restore previous exception list and return\n\nParameters:\npSehFrame (SehFrame *): Pointer to SEH frame containing unwind table and current level\nnTargetLevel (int): Target unwind level to stop unwinding at (-1 means unwind all)\n\nReturns:\nvoid: No return value, modifies SEH frame state directly\n\nSpecial Cases:\n- If current level is -1, unwinding is already complete\n- If target level equals current level, no unwinding needed  \n- Filter flag 0x00000000 indicates active exception handler that needs cleanup\n\nStructure Layout:\nSehFrame (16 bytes):\nOffset Size Field Name      Type              Description\n0x00   4    pExceptionRecord void*            Pointer to exception record\n0x04   4    dwCurrentLevel   uint             Current exception nesting level  \n0x08   4    pUnwindTable     SehUnwindRecord* Pointer to unwind table array\n0x0C   4    dwTryLevel       uint             Current try block level\n\nSehUnwindRecord (12 bytes):\nOffset Size Field Name      Type              Description  \n0x00   4    dwPrevLevel     uint             Previous exception level in chain\n0x04   4    dwFlags         uint             Exception filter flags (0=active)\n0x08   4    pfnHandler      void*            Exception handler function pointer\n\nMagic Numbers Reference:\n0x08 (8): Offset to unwind table pointer in SEH frame\n0x0C (12): Offset to current level in SEH frame, also stride of unwind records\n0x04 (4): Offset to flags field in unwind record\n0x08 (8): Offset to handler function in unwind record\n0xFFFFFFFF (-1): End-of-chain marker for exception levels",
+      "parameters": [{"name": "pSehFrame", "type": "SehFrame *", "storage": "Stack[0x4]:4"}, {"name": "nTargetLevel", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 7
@@ -723,9 +795,9 @@
       "address": "0x00402656",
       "rva": "0x2656",
       "size": 24,
-      "name": "FUN_00402656",
-      "display_name": "MNE_ed17ad9d511f6e33",
-      "has_human_name": false,
+      "name": "StoreSehContext",
+      "display_name": "StoreSehContext",
+      "has_human_name": true,
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf",
       "index_method": "MNE",
       "indexes": {
@@ -736,6 +808,10 @@
         "CFG": null,
         "PRO": "63222adeb34f4a3aa53c9dd3f54ccff5"
       },
+      "signature": "void StoreSehContext(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Stores exception handling context for SEH frame setup.\n\nAlgorithm:\n1. Load static exception frame structure pointer into EBX\n2. Write return address from stack [EBP+8] to frame offset +8\n3. Write exception context (EAX) to frame offset +4\n4. Write current frame pointer (EBP) to frame offset +C (12)\n5. Return with stack cleanup (RET 0x4)\n\nParameters:\n- dwExceptionContext (EAX): Exception context value to store\n\nReturns:\n- void\n\nRelated Functions:\n- Called by __local_unwind2 exception unwinding handler",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -744,9 +820,9 @@
       "address": "0x00402735",
       "rva": "0x2735",
       "size": 27,
-      "name": "FUN_00402735",
-      "display_name": "MNE_89d1b619054116ad",
-      "has_human_name": false,
+      "name": "__seh_longjmp_unwind@4",
+      "display_name": "__seh_longjmp_unwind@4",
+      "has_human_name": true,
       "index": "MNE:89d1b619054116ad559c7c543db397fd",
       "index_method": "MNE",
       "indexes": {
@@ -757,6 +833,10 @@
         "CFG": null,
         "PRO": "204649768cb6aa7c9bb671be8e047b74"
       },
+      "signature": "void __seh_longjmp_unwind@4(SehFrame * pSehFrame)",
+      "calling_convention": "__stdcall",
+      "comment": "Performs structured exception handling longjmp stack unwinding operations.\n\nAlgorithm:\n1. Extract the target SEH frame pointer from pSehFrame->pNext (offset 0x18)\n2. Extract the target instruction offset from pSehFrame->dwTargetOffset (offset 0x1c) \n3. Call LocalUnwindTwo to perform actual stack unwinding with extracted parameters\n4. Return after unwinding completes\n\nParameters:\npSehFrame (SehFrame *): Pointer to SEH frame containing unwinding parameters\n  - Offset 0x18: pNext - Target SEH frame for unwinding\n  - Offset 0x1c: dwTargetOffset - Target instruction offset for longjmp\n\nReturns:\nvoid - Function performs unwinding and returns to caller\n\nSpecial Cases:\nThis function is a thin wrapper around LocalUnwindTwo for longjmp operations.\nCalled during structured exception handling when executing longjmp.",
+      "parameters": [{"name": "pSehFrame", "type": "SehFrame *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -765,9 +845,9 @@
       "address": "0x00402750",
       "rva": "0x2750",
       "size": 57,
-      "name": "FUN_00402750",
-      "display_name": "MNE_9765460a30498931",
-      "has_human_name": false,
+      "name": "CleanupConsoleOutput",
+      "display_name": "CleanupConsoleOutput",
+      "has_human_name": true,
       "index": "MNE:9765460a30498931557fab10cfc0be00",
       "index_method": "MNE",
       "indexes": {
@@ -778,6 +858,10 @@
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "cd7946af48d94ccd57eeabbf5a2f87ba"
       },
+      "signature": "void CleanupConsoleOutput(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Performs console output cleanup and shutdown operations based on display flags.\n\nAlgorithm:\n\n1. Check if console display is enabled (g_dwConsoleDisplayFlag == 1)\n2. OR if display flag is disabled but debug flag is set (g_dwConsoleDisplayFlag == 0 AND g_dwConsoleDebugFlag == 1)\n3. If either condition true, execute cleanup sequence:\n   - Send pre-cleanup signal via FUN_1001f820(0xFC)\n   - Call registered cleanup callback if available (g_pfnCleanupCallback)\n   - Send final cleanup signal via FUN_1001f820(0xFF)\n4. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nIf neither console display nor debug mode are active, function exits immediately without cleanup\n\nMagic Numbers Reference:\n0xFC (252) - Pre-cleanup signal code passed to FUN_1001f820\n0xFF (255) - Final cleanup signal code passed to FUN_1001f820",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 7
@@ -786,9 +870,9 @@
       "address": "0x00402789",
       "rva": "0x2789",
       "size": 339,
-      "name": "FUN_00402789",
-      "display_name": "STR_ff7880d11813b11b",
-      "has_human_name": false,
+      "name": "DisplayRuntimeError",
+      "display_name": "DisplayRuntimeError",
+      "has_human_name": true,
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
       "index_method": "STR",
       "indexes": {
@@ -799,6 +883,10 @@
         "CFG": "e9e3238573fb8758cb6dacb6540ea203",
         "PRO": "a25d5a579a50e7c9f3f039e8e97080f6"
       },
+      "signature": "void DisplayRuntimeError(uint dwErrorCode)",
+      "calling_convention": "__cdecl",
+      "comment": "Displays runtime error messages either to console or as message box dialog\n\nAlgorithm:\n1. Search error lookup table at 0x1002e678 for matching error code\n2. Iterate through (error_code, string_pointer) pairs until match found or table end (0x1002e708)\n3. If error code found in table, determine display method:\n   a. If console display enabled (g_dwConsoleDisplayFlag == 1), write to stdout\n   b. If console disabled but alternate flag set (DAT_1003c8c0 == 1), write to stdout  \n   c. Otherwise show message box (except for error code 0xfc which is suppressed)\n4. For console output: Get error message string, write to stdout handle using WriteFile\n5. For message box: Build formatted error message with program name and error text\n6. Get module filename using GetModuleFileNameA, truncate if longer than 60 characters\n7. Concatenate \"Runtime Error!\" + program name + newlines + error message text\n8. Display message box using Microsoft Visual C++ Runtime Library title\n\nParameters:\ndwErrorCode - Runtime error code to display (DWORD values from error table)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Error code 0xfc is suppressed (no dialog or console output)\n- Module name truncated with \"...\" if path exceeds 60 characters\n- Falls back to \"<program name unknown>\" if GetModuleFileNameA fails\n- Console output bypasses message box formatting\n\nMagic Numbers Reference:\n0x1002e678 - Base address of error lookup table (error_code, string_pointer pairs)\n0x1002e708 - End address of error lookup table \n0x1002e67c - Base address of error message string pointers (offset +4 from codes)\n0xfc - Special error code that suppresses all output\n0xfffffff4 - STD_OUTPUT_HANDLE constant for GetStdHandle\n0x12010 - Message box flags (MB_ICONHAND | MB_SETFOREGROUND | MB_TASKMODAL)\n0x3c - Maximum characters (60) before truncating program name\n0x104 - Buffer size (260) for module filename\n60 - Character limit for program name display\n\nError Handling:\n- GetModuleFileNameA failure: Use fallback \"<program name unknown>\"\n- String length overflow: Truncate with \"...\" suffix\n- Table search failure: Function returns without action\n\nStructure Layout:\nError Table Entry (8 bytes):\nOffset | Size | Field Name    | Type | Description\n0x00   | 4    | dwErrorCode   | uint | Runtime error identifier  \n0x04   | 4    | pszMessage    | char*| Pointer to error message string",
+      "parameters": [{"name": "dwErrorCode", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": ["\"Runtime Error!\\n\\nProgram: \"", "\"Microsoft Visual C++ Runtime Library\"", "\"R6009\\r\\n- not enough space for environment\\r\\n\"", "\"<program name unknown>\""],
       "api_calls": [],
       "basic_block_count": 15
@@ -807,9 +895,9 @@
       "address": "0x004028DC",
       "rva": "0x28DC",
       "size": 511,
-      "name": "FUN_004028dc",
-      "display_name": "MNE_c1d05e132bc8c3bc",
-      "has_human_name": false,
+      "name": "LocaleMapStringWithConversion",
+      "display_name": "LocaleMapStringWithConversion",
+      "has_human_name": true,
       "index": "MNE:c1d05e132bc8c3bc87e7a971916e9b9b",
       "index_method": "MNE",
       "indexes": {
@@ -820,6 +908,10 @@
         "CFG": "e11983a12b3e9705a8ffe4031d94ba0c",
         "PRO": "8cdd37d52b857df0da76bdb271ca9544"
       },
+      "signature": "int LocaleMapStringWithConversion(uint dwLcid, uint dwMapFlags, char * lpszSrcStr, int nSrcLen, char * lpszDestStr, int nDestLen, uint dwCodePage, int nFlags)",
+      "calling_convention": "__cdecl",
+      "comment": "Performs locale-aware string mapping with automatic character encoding conversion.\n\nAlgorithm:\n1. Set up structured exception handling (SEH) frame\n2. Initialize Unicode support detection if not already done\n   a. Test LCMapStringW with empty string to detect Unicode support\n   b. If Unicode fails, test LCMapStringA for ANSI support\n   c. Set global flag (1=Unicode, 2=ANSI) based on results\n3. Validate source string length using FUN_1001fb97 if positive length\n4. Branch based on detected encoding support:\n   - If ANSI mode (flag=2): Call LCMapStringA directly and return result\n   - If Unicode mode (flag=1): Perform conversion sequence\n5. Unicode conversion sequence:\n   a. Use default code page if dwCodePage is 0\n   b. Calculate required wide character buffer size with MultiByteToWideChar\n   c. Allocate stack space for wide character conversion buffer\n   d. Convert source string from multibyte to wide character\n   e. Get required output buffer size with LCMapStringW\n   f. If LCMAP_SORTKEY flag (0x400) is set:\n      - Return required size if output buffer is NULL\n      - Validate output buffer size and perform mapping directly\n   g. If normal mapping:\n      - Allocate second stack buffer for wide character output\n      - Perform LCMapStringW mapping to wide character buffer\n      - Convert result back to multibyte using WideCharToMultiByte\n6. Clean up SEH frame and return result\n\nParameters:\ndwLcid (uint): Locale identifier for mapping operation\ndwMapFlags (uint): Mapping flags controlling case conversion and sorting\nlpszSrcStr (char *): Source string in multibyte encoding\nnSrcLen (int): Length of source string (-1 for null-terminated)\nlpszDestStr (char *): Output buffer for mapped string\nnDestLen (int): Size of output buffer in characters\ndwCodePage (uint): Code page for character conversion (0 = default)\nnFlags (int): Additional conversion flags for MultiByteToWideChar\n\nReturns:\nNumber of characters written to output buffer on success\n0 on failure (insufficient buffer, conversion error, or unsupported operation)\n\nSpecial Cases:\nIf lpszDestStr is NULL, returns required buffer size\nLCMAP_SORTKEY flag (0x400) returns sort key instead of mapped string\nAutomatic fallback from Unicode to ANSI if Unicode APIs unavailable\n\nMagic Numbers Reference:\n0x100 - LCMAP_LOWERCASE flag for case conversion test\n0x400 - LCMAP_SORTKEY flag for sort key generation\n0x220 - WC_NO_BEST_FIT_CHARS | WC_COMPOSITECHECK flags\n0x1003ca54 - Global Unicode support flag (1=Unicode, 2=ANSI)\n0x1003c8e4 - Default code page storage\n\nError Handling:\nReturns 0 for all error conditions including:\n- Unsupported locale or mapping flags\n- Insufficient output buffer space\n- Character conversion failures\n- Stack allocation failures",
+      "parameters": [{"name": "dwLcid", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwMapFlags", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "lpszSrcStr", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "nSrcLen", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "lpszDestStr", "type": "char *", "storage": "Stack[0x14]:4"}, {"name": "nDestLen", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "dwCodePage", "type": "uint", "storage": "Stack[0x1c]:4"}, {"name": "nFlags", "type": "int", "storage": "Stack[0x20]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 31
@@ -828,9 +920,9 @@
       "address": "0x00402B00",
       "rva": "0x2B00",
       "size": 43,
-      "name": "FUN_00402b00",
-      "display_name": "MNE_c365f0335b7bc445",
-      "has_human_name": false,
+      "name": "CalculateStringLengthWithLimit",
+      "display_name": "CalculateStringLengthWithLimit",
+      "has_human_name": true,
       "index": "MNE:c365f0335b7bc4452623cbc78de16e67",
       "index_method": "MNE",
       "indexes": {
@@ -841,6 +933,10 @@
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "44eb51cb2190f284eca0a4e49c8cfa09"
       },
+      "signature": "int CalculateStringLengthWithLimit(char * lpszString, int nMaxLength)",
+      "calling_convention": "__cdecl",
+      "comment": "Calculate the length of a null-terminated string with maximum limit.\n\nAlgorithm:\n1. Initialize current pointer to start of string and remaining counter to max length\n2. If max length is zero, skip to step 5\n3. Loop while remaining length > 0:\n   a. Decrement remaining length counter\n   b. Check if current character is null terminator, if so break loop\n   c. Advance current pointer to next character\n4. Continue loop until null terminator found or max length reached\n5. Check if null terminator was found:\n   a. If found: return actual string length (current pointer - original pointer)\n   b. If not found: return max length parameter (string exceeds limit)\n\nParameters:\nlpszString (char *): Pointer to null-terminated string buffer to measure\nnMaxLength (int): Maximum number of characters to examine before stopping\n\nReturns:\nint: Actual string length if null terminator found within limit\n     Maximum length parameter if string exceeds specified limit\n     Zero if maximum length parameter is zero\n\nSpecial Cases:\n- Returns 0 if nMaxLength is 0 (no characters to examine)\n- Returns nMaxLength if no null terminator found within limit\n- Handles empty string (immediate null terminator) correctly by returning 0",
+      "parameters": [{"name": "lpszString", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "nMaxLength", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -849,9 +945,9 @@
       "address": "0x00402B2B",
       "rva": "0x2B2B",
       "size": 318,
-      "name": "FUN_00402b2b",
-      "display_name": "MNE_a7046d73bbd286a5",
-      "has_human_name": false,
+      "name": "GetCharacterTypeInfo",
+      "display_name": "GetCharacterTypeInfo",
+      "has_human_name": true,
       "index": "MNE:a7046d73bbd286a50d5e7204509858d2",
       "index_method": "MNE",
       "indexes": {
@@ -862,6 +958,10 @@
         "CFG": "488c9ff4d35a922f107782c17c43c710",
         "PRO": "dcf290709e10ba1c807848e5f8e01997"
       },
+      "signature": "BOOL GetCharacterTypeInfo(DWORD dwInfoType, LPCSTR lpszString, int nStringLength, LPWORD lpwCharType, UINT uiCodePage, LCID dwLocaleId, int nConversionFlags)",
+      "calling_convention": "__cdecl",
+      "comment": "Retrieves character type information for a string using either Unicode or ANSI APIs based on system capability detection.\n\nAlgorithm:\n1. Set up structured exception handling frame with stack-based exception list\n2. Initialize global character type detection state (DAT_1003ca98) on first call\n3. Test Unicode capability by calling GetStringTypeW with empty string\n4. Fall back to ANSI mode if Unicode fails by calling GetStringTypeA  \n5. Store detected capability (1=Unicode, 2=ANSI) in global state for subsequent calls\n6. Branch execution based on detected character handling mode:\n   - Unicode mode (1): Convert ANSI input to Unicode then call GetStringTypeW\n   - ANSI mode (2): Call GetStringTypeA directly with input parameters\n7. Apply default locale if codepage/locale parameters are zero\n8. Restore exception handling state and return API result\n\nParameters:\ndwInfoType - Character type flags (CT_CTYPE1, CT_CTYPE2, CT_CTYPE3)\nlpszString - Input string to analyze for character types\ncchString - Length of input string in characters, or -1 for null-terminated\nlpwCharType - Output buffer receiving character type information per character\nuiCodePage - Code page for Unicode conversion, 0 uses thread default\ndwLocaleId - Locale identifier for character analysis, 0 uses system default\ndwFlags - Conversion flags affecting MultiByteToWideChar behavior\n\nReturns:\nTRUE on successful character type analysis\nFALSE on failure (invalid parameters, conversion errors, or unsupported locale)\n\nSpecial Cases:\nMagic number 0xffffffff indicates exception handling state marker\nGlobal DAT_1003ca98 stores capability: 0=uninitialized, 1=Unicode, 2=ANSI only\nDynamic stack allocation used for Unicode conversion buffer sizing\nException handler DAT_10028758 protects against conversion failures\n\nError Handling:\nUnicode detection failure falls back to ANSI mode automatically\nZero codepage/locale parameters use system defaults (g_dwThreadLocaleCodePage, g_dwLocaleFlags)\nMultiByteToWideChar failure returns FALSE without character analysis\nStack allocation failure detected via null pointer check",
+      "parameters": [{"name": "dwInfoType", "type": "DWORD", "storage": "Stack[0x4]:4"}, {"name": "lpszString", "type": "LPCSTR", "storage": "Stack[0x8]:4"}, {"name": "nStringLength", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "lpwCharType", "type": "LPWORD", "storage": "Stack[0x10]:4"}, {"name": "uiCodePage", "type": "UINT", "storage": "Stack[0x14]:4"}, {"name": "dwLocaleId", "type": "LCID", "storage": "Stack[0x18]:4"}, {"name": "nConversionFlags", "type": "int", "storage": "Stack[0x1c]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 20
@@ -886,6 +986,31 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 8
+    },
+    {
+      "address": "0x00402CC0",
+      "rva": "0x2CC0",
+      "size": 5,
+      "name": "DecrementValue",
+      "display_name": "DecrementValue",
+      "has_human_name": true,
+      "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3ecdb5e459e29b4117490dc114e98574",
+        "CFG": null,
+        "PRO": "c81df70c1b97172a537e995055b0c6bd"
+      },
+      "signature": "int DecrementValue(int nUnused, int nValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Decrements an integer value by 1 and returns the result.\n\nAlgorithm:\n1. Ignore the first parameter (unused placeholder for fastcall convention)\n2. Load the second parameter value into a register\n3. Subtract 1 from the value using LEA instruction\n4. Return the decremented result\n\nParameters:\nnUnused - int: Unused parameter (fastcall ECX register placeholder)\nnValue - int: The integer value to decrement\n\nReturns:\nint: The input value decreased by 1\n\nSpecial Cases:\n- Function ignores the first parameter completely\n- Uses LEA instruction for efficient decrement: LEA EAX,[EDX + -0x1]\n- Contains orphaned POP EBX instruction from compiler optimization\n\nError Handling:\nNone - this is a simple arithmetic helper function",
+      "parameters": [{"name": "nUnused", "type": "int", "storage": "ECX:4"}, {"name": "nValue", "type": "int", "storage": "EDX:4"}],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x00402CD6",
@@ -954,9 +1079,9 @@
       "address": "0x00402DCE",
       "rva": "0x2DCE",
       "size": 47,
-      "name": "FUN_00402dce",
-      "display_name": "MNE_b18de4e8dfaa1ea9",
-      "has_human_name": false,
+      "name": "SmartFree",
+      "display_name": "SmartFree",
+      "has_human_name": true,
       "index": "MNE:b18de4e8dfaa1ea94be3de3b62f2adf9",
       "index_method": "MNE",
       "indexes": {
@@ -967,6 +1092,10 @@
         "CFG": "4e847b889984c71922568191fca6fba0",
         "PRO": "21841d7cd76f33fea673861ccbc8c236"
       },
+      "signature": "void SmartFree(void * pMemory)",
+      "calling_convention": "__cdecl",
+      "comment": "Smart memory deallocation function with managed pool fallback to system heap\n\nAlgorithm:\n1. Check if memory pointer is not null (early return if null)\n2. Call FUN_1001d50f to get control block for managed memory allocation\n3. If control block exists, call FUN_1001d53a for managed deallocation\n4. If no control block found, fallback to system HeapFree with global heap handle\n5. Return without value (void function)\n\nParameters:\n  pMemory - void* pointer to memory block to deallocate (may be null)\n\nReturns:\n  void (no return value)\n\nSpecial Cases:\n  - Null pointer: function returns immediately without action\n  - Memory not in managed pool: falls back to HeapFree\n  - Uses global heap handle g_hHeap for system memory deallocation\n\nError Handling:\n  - Graceful handling of null pointer input\n  - Fallback mechanism when managed deallocation unavailable\n  - No explicit error return codes (void function)",
+      "parameters": [{"name": "pMemory", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 5
@@ -975,9 +1104,9 @@
       "address": "0x00402E00",
       "rva": "0x2E00",
       "size": 7,
-      "name": "FUN_00402e00",
-      "display_name": "MNE_70593f43ea0b0d76",
-      "has_human_name": false,
+      "name": "CopyStringOptimized",
+      "display_name": "CopyStringOptimized",
+      "has_human_name": true,
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8",
       "index_method": "MNE",
       "indexes": {
@@ -988,6 +1117,10 @@
         "CFG": null,
         "PRO": "0893ef4135ff92704b4a57726c2e8b67"
       },
+      "signature": "char * CopyStringOptimized(char * szDestination, char * szSource)",
+      "calling_convention": "__cdecl",
+      "comment": "Optimized string copy function that efficiently copies null-terminated strings\nusing word-aligned memory operations and bitwise null detection for maximum\nperformance on x86 architecture.\n\nAlgorithm:\n1. Check source pointer alignment against 4-byte boundary (szSource & 3)\n2. Copy bytes individually until source reaches word alignment\n3. Check each copied byte for null terminator, exit early if found\n4. Begin optimized word-level copying once aligned\n5. Load 32-bit words from source and apply null detection algorithm\n6. Use magic constant 0x7efefeff to detect null bytes within words\n7. When null detected, determine exact byte position using bit masks\n8. Copy final bytes and null terminator based on detected position\n9. Return original destination pointer\n\nParameters:\nszDestination (char*): Destination buffer where string will be copied\nszSource (char*): Source null-terminated string to copy\n\nReturns:\nchar*: Returns szDestination (original destination buffer address)\n\nSpecial Cases:\nEmpty string (first byte is null) handled correctly by early exit\nSource and destination buffers must not overlap (undefined behavior)\nDestination buffer must be large enough to hold entire source string\n\nMagic Numbers:\n0x7efefeff: Magic constant for fast null byte detection in 32-bit words\n0x81010100: Bit mask for isolating overflow bits from null detection\n0xffffffff: XOR mask component of null detection algorithm  \n0x3: Bit mask for checking 4-byte memory alignment",
+      "parameters": [{"name": "szDestination", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szSource", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -996,9 +1129,9 @@
       "address": "0x00402E10",
       "rva": "0x2E10",
       "size": 224,
-      "name": "FUN_00402e10",
-      "display_name": "MNE_845fc5044ff181fe",
-      "has_human_name": false,
+      "name": "OptimizedStringCopy",
+      "display_name": "OptimizedStringCopy",
+      "has_human_name": true,
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6",
       "index_method": "MNE",
       "indexes": {
@@ -1009,6 +1142,10 @@
         "CFG": "aeb55b4783665a2e303e9caef603a1f6",
         "PRO": "91a93f07a9ad6d3f1f33172e65653a41"
       },
+      "signature": "char * OptimizedStringCopy(char * lpszDestination, char * lpszSource)",
+      "calling_convention": "__cdecl",
+      "comment": "Performs optimized string copying using word-aligned memory access and null-byte detection.\nThis function implements a high-performance strcpy equivalent using x86 alignment optimization.\nUses magic constants to detect null terminators within 32-bit words for maximum throughput.\nHandles both aligned and unaligned source/destination buffers gracefully.\n\nAlgorithm:\n1. Check destination pointer alignment against 4-byte word boundary\n2. Copy unaligned bytes one-by-one until destination reaches word alignment  \n3. Enter optimized loop processing 4-byte words from aligned destination\n4. Apply magic constant 0x7EFEFEFF to detect null bytes within words\n5. Use mask 0x81010100 to isolate carry bits indicating null presence\n6. When null detected in word, determine exact byte position and handle\n7. Switch to source processing with similar alignment optimization\n8. Copy source bytes individually until source is word-aligned\n9. Process aligned source words until null terminator found\n10. Terminate destination string with null and return original pointer\n\nParameters:\nlpszDestination - Pointer to destination buffer with sufficient space allocated\nlpcszSource - Pointer to source null-terminated string to be copied\n\nReturns:\nReturns lpszDestination pointer for function chaining operations\n\nMagic Numbers Reference:\n0x7EFEFEFF (2130640639) - Magic additive constant for null detection algorithm\n0x81010100 (2164391168) - Bit mask to isolate null detection carry flags  \n0x3 (3) - Alignment mask for checking 4-byte word boundaries\n0xFF0000 (16711680) - Third byte mask for null position detection\n0xFF000000 (4278190080) - Fourth byte mask for null position detection\n\nSpecial Cases:\nEmpty source string copies only null terminator to destination\nOverlapping memory regions produce undefined behavior per C standard\nDestination buffer must accommodate source length plus null terminator\nAlgorithm assumes little-endian x86 architecture for bit manipulation",
+      "parameters": [{"name": "lpszDestination", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "lpszSource", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 28
@@ -1032,7 +1169,7 @@
       },
       "signature": "void * _malloc(size_t _Size)",
       "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _malloc\n\nLibrary: Visual Studio 2003 Release",
+      "comment": "Allocates memory block from the heap using the new handler mechanism.\n\nAlgorithm:\n1. Call internal __nh_malloc function with requested size and global new handler flag\n2. Return allocated memory pointer or NULL on failure\n\nParameters:\n_Size (size_t): Number of bytes to allocate from the heap\n\nReturns:\nvoid *: Pointer to allocated memory block on success\nNULL: If allocation fails or size is 0\n\nSpecial Cases:\n- Uses g_dwNewHandlerFlag (0x0) for new handler behavior configuration\n- Delegates actual allocation to __nh_malloc internal implementation\n- Standard C runtime library wrapper function\n\nError Handling:\n- Memory allocation failure returns NULL pointer\n- No exception throwing, relies on new handler mechanism",
       "parameters": [{"name": "_Size", "type": "size_t", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
@@ -1057,7 +1194,7 @@
       },
       "signature": "void * __nh_malloc(size_t _Size, int _NhFlag)",
       "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n __nh_malloc\n\nLibrary: Visual Studio 2003 Release",
+      "comment": "Memory allocation with new handler support\n\nAlgorithm:\n1. Validate size parameter against maximum limit (0xffffffe1 = SIZE_MAX - 31)\n2. Enter allocation retry loop\n3. Attempt memory allocation via FUN_1001c99e (primary allocator)\n4. If allocation succeeds, return pointer to allocated memory\n5. If allocation fails and new handler flag is disabled, return NULL\n6. If allocation fails and new handler flag is enabled, call new handler FUN_1001d405\n7. If new handler returns non-zero (success), retry allocation from step 3\n8. If new handler returns zero (failure), exit loop and return NULL\n\nParameters:\n_Size - size_t: Number of bytes to allocate\n_NhFlag - int: New handler flag (0=disabled, non-zero=enabled)\n\nReturns:\nvoid* - Pointer to allocated memory on success, NULL on failure\n\nSpecial Cases:\nSize >= 0xffffffe1 bytes immediately returns NULL (size limit exceeded)\nNew handler disabled (_NhFlag=0) returns NULL on first allocation failure\nNew handler enabled retries allocation until handler indicates stop",
       "parameters": [{"name": "_Size", "type": "size_t", "storage": "Stack[0x4]:4"}, {"name": "_NhFlag", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
@@ -1067,9 +1204,9 @@
       "address": "0x00402F2E",
       "rva": "0x2F2E",
       "size": 54,
-      "name": "FUN_00402f2e",
-      "display_name": "MNE_4e5e59b9a63f832f",
-      "has_human_name": false,
+      "name": "AllocateMemoryWithCache",
+      "display_name": "AllocateMemoryWithCache",
+      "has_human_name": true,
       "index": "MNE:4e5e59b9a63f832f54b3dcf90c4a63d7",
       "index_method": "MNE",
       "indexes": {
@@ -1080,6 +1217,10 @@
         "CFG": "92278232420090a1495e8a6ef63d1827",
         "PRO": "7c2798772733d12aa5a4d0ccd50b453d"
       },
+      "signature": "void * AllocateMemoryWithCache(uint dwRequestedSize)",
+      "calling_convention": "__cdecl",
+      "comment": "Memory allocation wrapper with cache optimization for heap management.\n\nAlgorithm:\n\n1. Check if requested size is within cache limit (dwRequestedSize <= g_dwCacheSizeLimit)\n2. If within limit, attempt cache lookup via FUN_1001d865(dwRequestedSize)\n3. If cache hit (pCachedMemory != NULL), return early with cached memory\n4. If cache miss or size exceeds limit, proceed to heap allocation\n5. Validate parameter: if dwRequestedSize is NULL, default to 1 byte minimum\n6. Round up allocation size to 16-byte boundary alignment: (dwRequestedSize + 0xF) & 0xFFFFFFF0\n7. Call HeapAlloc(g_hHeap, 0, alignedSize) to allocate from process heap\n8. Return allocated memory pointer or NULL on failure\n\nParameters:\n\ndwRequestedSize (uint) - Size in bytes to allocate, 0 defaults to 1 byte minimum\n\nReturns:\n\nvoid* - Pointer to allocated memory block (16-byte aligned)\nNULL - Allocation failed or cache returned valid pointer\n\nSpecial Cases:\n\nSize 0: Converted to 1 byte minimum allocation to prevent zero-size requests\nCache hit: Early return bypasses heap allocation for performance optimization\nAlignment: All allocations rounded up to 16-byte boundaries for SIMD compatibility\n\nMagic Numbers Reference:\n\n0xF (15) - Alignment mask addition for rounding up to next 16-byte boundary\n0xFFFFFFF0 - Bitwise AND mask to clear lower 4 bits, enforcing 16-byte alignment\n\nError Handling:\n\nNull parameter validation converts 0-size requests to 1-byte minimum\nHeapAlloc failure returns NULL, propagated to caller for error handling\nCache lookup failure triggers fallback to heap allocation path",
+      "parameters": [{"name": "dwRequestedSize", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -1088,9 +1229,9 @@
       "address": "0x00402F70",
       "rva": "0x2F70",
       "size": 664,
-      "name": "FUN_00402f70",
-      "display_name": "MNE_bff09423b51fd121",
-      "has_human_name": false,
+      "name": "OptimizedMemoryMove",
+      "display_name": "OptimizedMemoryMove",
+      "has_human_name": true,
       "index": "MNE:bff09423b51fd121ea30afec957819f4",
       "index_method": "MNE",
       "indexes": {
@@ -1101,6 +1242,10 @@
         "CFG": "e3583a7412375a12c6d70512808d7344",
         "PRO": "ff38c497c82643f818ac8c3950b7223d"
       },
+      "signature": "void * OptimizedMemoryMove(void * pDestination, void * pSource, uint dwByteCount)",
+      "calling_convention": "__cdecl",
+      "comment": "Optimized memory move implementation with overlap detection and alignment optimization.\n\nAlgorithm:\n1. Check for overlapping memory regions (source and destination ranges overlap)\n2. If overlapping regions detected, copy backwards from end to start to avoid corruption\n3. If no overlap, copy forwards from start to end for better cache performance\n4. For both directions, optimize copying using 4-byte aligned transfers when possible\n5. Handle misaligned data by copying individual bytes first to reach alignment\n6. Perform bulk 4-byte transfers in optimized loop (unroll threshold of 8 iterations)\n7. Copy remaining bytes (0-3) using individual byte transfers\n\nParameters:\npDestination - Destination memory buffer to copy data to\npSource - Source memory buffer to copy data from  \ndwByteCount - Number of bytes to copy between buffers\n\nReturns:\nvoid * - Returns original destination pointer (pDestination) for function chaining\n\nSpecial Cases:\nZero byte count - Returns immediately without any memory operations\nMisaligned pointers - Falls back to byte-by-byte copying with alignment handling\nLarge transfers - Uses optimized 4-byte transfers with loop unrolling for performance\n\nMagic Numbers Reference:\n0x4 (4) - Alignment boundary and 4-byte transfer size\n0x3 (3) - Alignment mask to check 4-byte boundary alignment  \n0x7 (7) - Loop unrolling threshold for optimized bulk transfer\n\nError Handling:\nNo explicit error checking - assumes valid memory regions and non-null pointers\nOverlap detection prevents memory corruption during overlapping copies\nAlignment optimization ensures optimal performance on x86 architecture",
+      "parameters": [{"name": "pDestination", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "pSource", "type": "void *", "storage": "Stack[0x8]:4"}, {"name": "dwByteCount", "type": "uint", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 63
@@ -1109,9 +1254,9 @@
       "address": "0x004032A5",
       "rva": "0x32A5",
       "size": 62,
-      "name": "FUN_004032a5",
-      "display_name": "MNE_9714d3ad2deea30a",
-      "has_human_name": false,
+      "name": "InitializeBufferManager",
+      "display_name": "InitializeBufferManager",
+      "has_human_name": true,
       "index": "MNE:9714d3ad2deea30ac943f1376fae33d4",
       "index_method": "MNE",
       "indexes": {
@@ -1122,6 +1267,10 @@
         "CFG": "ad60745e7a538a03b6fca85abc2d64ca",
         "PRO": "a1b9fb36e2d9d764f2ab02021d9a5d11"
       },
+      "signature": "int InitializeBufferManager(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize buffer management system by allocating memory and setting up global state\n\nAlgorithm:\n1. Allocate 0x140 (320) bytes from process heap using HeapAlloc\n2. Verify allocation succeeded, return 0 on failure\n3. Initialize read index to 0 (g_dwBufferReadIndex)\n4. Initialize write index to 0 (g_dwBufferWriteIndex)\n5. Set base pointer to allocated buffer (g_pBufferBasePointer)\n6. Set element size to 0x10 (16) bytes (g_dwBufferElementSize)\n7. Return 1 for success\n\nParameters:\nNone - function takes no parameters\n\nReturns:\n1: Success - buffer manager initialized successfully\n0: Failure - heap allocation failed (out of memory)\n\nSpecial Cases:\nIf HeapAlloc returns NULL (out of memory), function returns immediately without initializing global state\nBuffer allocation size 0x140 (320 bytes) suggests space for 20 elements of 16 bytes each\n\nMagic Numbers Reference:\n0x140: Buffer allocation size in bytes (320 decimal)\n0x10: Element size in bytes (16 decimal)\n\nGlobal Buffer Manager Structure:\nOffset  Variable                Type     Description\n0x1003cdf4  g_dwBufferElementSize   uint     Element size (16 bytes)\n0x1003cdfc  g_pBufferBasePointer    void*    Base pointer to allocated buffer\n0x1003ce00  g_dwBufferReadIndex     uint     Current read index\n0x1003ce04  g_dwBufferWriteIndex    uint     Current write index\n0x1003ce08  g_pAllocatedBuffer      void*    Pointer returned by HeapAlloc\n0x1003ce0c  g_hHeap                 void*    Process heap handle",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -1130,9 +1279,9 @@
       "address": "0x004032E3",
       "rva": "0x32E3",
       "size": 43,
-      "name": "FUN_004032e3",
-      "display_name": "MNE_2a0dd1f395da0f8e",
-      "has_human_name": false,
+      "name": "FindMemoryDescriptorByAddress",
+      "display_name": "FindMemoryDescriptorByAddress",
+      "has_human_name": true,
       "index": "MNE:2a0dd1f395da0f8e13609d337843c676",
       "index_method": "MNE",
       "indexes": {
@@ -1143,6 +1292,10 @@
         "CFG": "dc0623423d93fb21da8f1c1461d32590",
         "PRO": "ea54e4b4b6d11783843fb018aafdb15a"
       },
+      "signature": "MemoryDescriptor * FindMemoryDescriptorByAddress(uint dwTargetAddress)",
+      "calling_convention": "__cdecl",
+      "comment": "Searches for a MemoryDescriptor entry containing a target address within a 1MB range.\n\nAlgorithm:\n1. Initialize iterator to start of MemoryDescriptor array (PTR_1003ce08)\n2. Calculate array end boundary using count (INT_1003ce04) * 20-byte element size\n3. Loop through array until end boundary reached:\n   a. Calculate address difference from target to descriptor base address (offset 0xc)\n   b. Check if difference is within 0x100000 (1MB) range using unsigned comparison\n   c. If match found, return pointer to current MemoryDescriptor\n   d. Otherwise advance iterator by 20 bytes (0x14) to next descriptor\n4. Return 0 if no matching descriptor found\n\nParameters:\n- nTargetAddress (int): Target address to locate within memory descriptors\n\nReturns:\n- MemoryDescriptor *: Pointer to descriptor containing target address\n- 0: No descriptor found containing target address within 1MB range\n\nSpecial Cases:\n- Empty array (count = 0): Returns 0 immediately\n- Target address beyond all descriptors: Returns 0 after full iteration\n\nMagic Numbers Reference:\n- 0x14 (20): MemoryDescriptor structure size in bytes\n- 0xc (12): Offset to base address field within MemoryDescriptor\n- 0x100000 (1048576): Maximum address range tolerance (1MB)\n\nStructure Layout:\nOffset | Size | Field Name       | Type | Description\n-------|------|------------------|------|------------------\n+0x00  | ?    | [Unknown fields] | ?    | Structure prefix\n+0x0c  | 4    | dwBaseAddress    | uint | Base memory address\n+0x10  | ?    | [Unknown fields] | ?    | Additional data\nTotal: 20 bytes (0x14)",
+      "parameters": [{"name": "dwTargetAddress", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -1151,9 +1304,9 @@
       "address": "0x0040330E",
       "rva": "0x330E",
       "size": 811,
-      "name": "FUN_0040330e",
-      "display_name": "MNE_9bfd98dbbd3e5d7e",
-      "has_human_name": false,
+      "name": "FreeMemoryBlockWithLinkedListCleanup",
+      "display_name": "FreeMemoryBlockWithLinkedListCleanup",
+      "has_human_name": true,
       "index": "MNE:9bfd98dbbd3e5d7edb553bd7666739e4",
       "index_method": "MNE",
       "indexes": {
@@ -1164,6 +1317,10 @@
         "CFG": "b0c977cba6daa99c8a216043b57a2ddc",
         "PRO": "00e2fa60d81eb194d407fbc1353f620d"
       },
+      "signature": "void FreeMemoryBlockWithLinkedListCleanup(MemoryDescriptor * pDescriptor, uint dwBlockAddress)",
+      "calling_convention": "__cdecl",
+      "comment": "Frees a memory block and performs associated linked list cleanup and bit mask management.\n\nAlgorithm:\n1. Extract memory descriptor base address from pDescriptor[4]\n2. Get original block size from memory header at (dwBlockAddress - 4)\n3. Calculate slot index using (dwBlockAddress - pDescriptor[3]) >> 15\n4. Get previous block info from (dwBlockAddress - 8)\n5. Adjust block size by subtracting 1 from original size\n6. Calculate free list head pointer using slot index * 516 + 324 + descriptor base\n7. Read current block info from adjusted position\n8. If current block is not marked as allocated (bit 0 clear):\n   a. Extract block index from bits 4-31, clamp to maximum 63\n   b. If linked list pointers are equal (empty list):\n      - Clear corresponding bit in bit mask arrays at offsets 0x44/0xC4\n      - Decrement reference counter at descriptor base + block index + 4\n      - If counter reaches 0, clear bit in main descriptor bit mask\n   c. Update linked list forward/backward pointers\n   d. Add current block size to adjusted size\n9. Calculate new block index from adjusted size, clamp to maximum 63\n10. If previous block exists and is not allocated:\n   a. Extract previous block index, clamp to maximum 63\n   b. Add previous block size to total adjusted size\n   c. Recalculate new block index, clamp to maximum 63\n   d. If indices differ, perform same bit mask and linked list operations as step 8\n   e. Update linked list pointers for previous block\n11. If conditions require re-linking or previous block was allocated:\n   a. Link current block into free list at new block index\n   b. Update forward and backward pointers in linked list\n   c. If linking into empty list:\n      - Increment reference counter\n      - Set corresponding bit in bit mask arrays\n      - If counter was 0, set bit in main descriptor bit mask\n12. Store final adjusted size in block header and size field\n13. Decrement free list head reference count\n14. If reference count reaches 0 and global descriptor exists:\n   a. Free virtual memory using VirtualFree with 0x8000 size and 0x4000 type\n   b. Update global bit masks and counters\n   c. If all bits cleared (0xFFFFFFFF), perform full cleanup:\n      - Free entire virtual memory region\n      - Free heap memory for descriptor\n      - Compact descriptor array using OptimizedMemoryMove\n      - Update global counters and pointers\n      - Adjust function parameter pointer if necessary\n\nParameters:\npDescriptor (MemoryDescriptor *): Pointer to memory descriptor containing virtual memory base, heap memory base, and management data\ndwBlockAddress (uint): Address within allocated memory block to be freed\n\nReturns:\nvoid\n\nSpecial Cases:\n- Block index clamped to maximum 63 (0x3F) to prevent array bounds overflow\n- Bit operations split between two 32-bit masks for indices 0-31 and 32-63\n- Empty linked lists trigger bit mask updates and reference counting\n- Global cleanup only occurs when all blocks in a descriptor are freed\n\nMagic Numbers Reference:\n0x0F: Shift amount for 32KB (0x8000) block alignment calculation\n0x204: Size of free list management structure (516 bytes)\n0x144: Offset to free list head array within descriptor (324 bytes)\n0x44: Offset to lower 32-bit mask array (68 bytes)\n0xC4: Offset to upper 32-bit mask array (196 bytes)\n0x43: Offset to reference counter (67 bytes)\n0x20: Boundary between lower and upper bit mask arrays\n0x80000000: Base bit pattern for mask calculations\n0x8000: Virtual memory allocation unit size (32KB)\n0x4000: VirtualFree MEM_DECOMMIT flag\n0x1F: Bit position mask for 32-bit operations\n0x3F: Maximum block index (63)\n0xFFFFFFFF: All bits set condition for complete cleanup\n\nStructure Layout:\nMemoryDescriptor (20 bytes):\nOffset | Size | Field Name    | Type    | Description\n-------|------|---------------|---------|--------------------\n0x00   | 4    | pVirtualMemory| void *  | Base virtual memory address\n0x04   | 4    | pHeapMemory   | void *  | Heap-allocated management data\n0x08   | 4    | dwReserved1   | uint    | Reserved field 1\n0x0C   | 4    | dwReserved2   | uint    | Reserved field 2\n0x10   | 4    | dwReserved3   | uint    | Reserved field 3\n\nBlock Header Layout (8 bytes before user data):\nOffset | Size | Description\n-------|------|------------------------------------------\n-8     | 4    | Previous block size and allocation flags\n-4     | 4    | Current block size and allocation flags\n\nFree List Node Layout (12 bytes):\nOffset | Size | Description\n-------|------|---------------------------\n0x00   | 4    | Block size with flags\n0x04   | 4    | Forward pointer to next free block\n0x08   | 4    | Backward pointer to previous free block\n\nBit Mask Management:\n- Two 32-bit arrays handle 64 possible block size indices\n- Array at offset 0x44: handles indices 0-31\n- Array at offset 0xC4: handles indices 32-63\n- Each bit represents whether blocks of that size index exist\n- Main descriptor masks track which descriptors have free blocks",
+      "parameters": [{"name": "pDescriptor", "type": "MemoryDescriptor *", "storage": "Stack[0x4]:4"}, {"name": "dwBlockAddress", "type": "uint", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 48
@@ -1172,9 +1329,9 @@
       "address": "0x00403639",
       "rva": "0x3639",
       "size": 777,
-      "name": "FUN_00403639",
-      "display_name": "MNE_ff64648b3e6e32bc",
-      "has_human_name": false,
+      "name": "AllocateMemoryDescriptorBlock",
+      "display_name": "AllocateMemoryDescriptorBlock",
+      "has_human_name": true,
       "index": "MNE:ff64648b3e6e32bc28a5e4bc8d984c1e",
       "index_method": "MNE",
       "indexes": {
@@ -1185,6 +1342,10 @@
         "CFG": "91327e3377db4c940b43e6e18151efdf",
         "PRO": "74548a597b2dbd13776d58d1d4d74bdf"
       },
+      "signature": "void * AllocateMemoryDescriptorBlock(uint dwRequestedSize)",
+      "calling_convention": "__cdecl",
+      "comment": "Allocates memory block from descriptor-based allocator with size-class free lists\n\nAlgorithm:\n1. Align requested size to 16-byte boundary and calculate size class index\n2. Generate bitmasks for free block tracking based on size class (splits at 32-bit boundary)\n3. Search descriptor array for available descriptor with matching free blocks\n4. If no descriptor found, search from beginning for any available descriptor\n5. If still no descriptor, search for descriptor with zero reserved field\n6. If no descriptor available, call allocation expansion function (FUN_1001db6e)\n7. If expansion fails, initialize new descriptor with FUN_1001dc1f\n8. Locate appropriate free list and find block of suitable size\n9. Calculate bit position for free block tracking within size class\n10. Remove block from free list by unlinking (doubly-linked list operations)\n11. If block larger than needed, split block and reinsert remainder into appropriate size class\n12. Update bit tracking arrays and reference counts for block allocation\n13. Set block headers with size information for boundary tag system\n14. Update global state if this was the last block in descriptor\n15. Return pointer to allocated memory (block pointer + 4 for header skip)\n\nParameters:\n- nRequestedSize (uint): Size in bytes to allocate, will be aligned to 16-byte boundary\n\nReturns:\n- void*: Pointer to allocated memory block, or NULL if allocation fails\n\nSpecial Cases:\n- Sizes are rounded up to next 16-byte boundary (add 0x17, mask with 0xfffffff0)\n- Free blocks tracked using dual bitmask system (low 32 bits, high 32 bits)\n- Size classes use bit positions 0-63 for different allocation sizes\n- Block splitting occurs when allocated block significantly larger than request\n- Boundary tag system maintains size at block start and end for coalescing\n\nMagic Numbers Reference:\n- 0x17 (23): Alignment padding for 16-byte boundaries\n- 0xfffffff0: Mask for 16-byte alignment\n- 0x20 (32): Bit boundary for high/low bitmask split\n- 0x3f (63): Maximum size class index\n- 0x81 (129): Stride for free list array access (129 dwords per size class)\n- 0x51 (81): Base offset for free list pointers in allocator data\n- 0x31 (49): Offset to high bitmask in allocator data\n- 0x11 (17): Offset to low bitmask in allocator data\n- 0x80000000: High bit mask for bit manipulation operations\n\nStructure Layout:\nOffset | Size | Field Name    | Type              | Description\n-------|------|---------------|-------------------|---------------------------\n0x00   | 4    | pHeapMemory   | void*             | Pointer to heap memory base\n0x04   | 4    | pVirtualMemory| void*             | Pointer to virtual memory\n0x08   | 4    | dwReserved1   | uint              | Reserved field, 0=available\n0x0C   | 4    | dwFlags       | uint              | Descriptor flags/status\n0x10   | 4    | pAllocatorData| AllocatorData*    | Pointer to allocator metadata\n\nError Handling:\n- Returns NULL if expansion function (FUN_1001db6e) fails to provide new descriptor\n- Returns NULL if descriptor initialization (FUN_1001dc1f) returns -1\n- Gracefully handles empty free lists by searching alternate size classes\n- Validates descriptor boundaries before proceeding with allocation",
+      "parameters": [{"name": "dwRequestedSize", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 65
@@ -1193,9 +1354,9 @@
       "address": "0x00403942",
       "rva": "0x3942",
       "size": 177,
-      "name": "FUN_00403942",
-      "display_name": "MNE_b59a8a7d2c8fdcc2",
-      "has_human_name": false,
+      "name": "AllocateMemoryDescriptor",
+      "display_name": "AllocateMemoryDescriptor",
+      "has_human_name": true,
       "index": "MNE:b59a8a7d2c8fdcc2aac183f01f99a847",
       "index_method": "MNE",
       "indexes": {
@@ -1206,6 +1367,10 @@
         "CFG": "72afefb82939fd195fb2c24c9e65a427",
         "PRO": "30c72037c3458611ecf2fcd89dd1352a"
       },
+      "signature": "undefined4 * AllocateMemoryDescriptor(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Allocates a new memory descriptor with associated heap and virtual memory buffers.\n\nAlgorithm:\n1. Check if descriptor array is full (g_nDescriptorCount == g_dwBufferElementSize)\n2. If full, reallocate descriptor array with space for 16 more entries using HeapReAlloc\n3. Update g_dwBufferElementSize by adding 0x10 and store new array pointer in g_pDescriptorArray\n4. Calculate pointer to next available descriptor (g_pDescriptorArray + g_nDescriptorCount)\n5. Allocate 0x41c4 bytes of heap memory using HeapAlloc with HEAP_ZERO_MEMORY flag (0x8)\n6. Store heap allocation pointer in descriptor dwReserved3 field\n7. Allocate 1MB (0x100000) of virtual memory using VirtualAlloc with MEM_RESERVE flag (0x2000)\n8. Store virtual allocation pointer in descriptor dwReserved2 field\n9. Initialize descriptor fields: dwReserved1 = 0xffffffff, clear pVirtualMemory and pHeapMemory\n10. Increment global descriptor count (g_nDescriptorCount)\n11. Set first DWORD of heap memory to 0xffffffff as initialization marker\n12. Return pointer to pVirtualMemory field of the new descriptor\n\nParameters:\nNone\n\nReturns:\nvoid * - Pointer to pVirtualMemory field of allocated descriptor on success\nNULL - If descriptor array reallocation fails, heap allocation fails, or virtual memory allocation fails\n\nSpecial Cases:\nIf heap allocation succeeds but virtual memory allocation fails, the heap memory is freed to prevent leaks before returning NULL\n\nMagic Numbers Reference:\n0x10 (16) - Descriptor array growth increment\n0x41c4 (16836) - Size of heap allocation per descriptor\n0x100000 (1048576) - Virtual memory allocation size (1MB)\n0x2000 (8192) - MEM_RESERVE flag for VirtualAlloc\n0x8 (8) - HEAP_ZERO_MEMORY flag for HeapAlloc\n0xffffffff (-1) - Initialization value for dwReserved1 and heap memory marker\n\nStructure Layout:\nMemoryDescriptor (20 bytes total):\nOffset | Size | Field Name      | Type    | Description\n0x00   | 4    | pVirtualMemory  | void *  | Pointer to virtual memory allocation\n0x04   | 4    | pHeapMemory     | void *  | Pointer to heap memory allocation\n0x08   | 4    | dwReserved1     | uint    | Status/flags field, initialized to 0xffffffff\n0x0C   | 4    | dwReserved2     | uint    | Stores virtual memory allocation pointer\n0x10   | 4    | dwReserved3     | uint    | Stores heap memory allocation pointer\n\nError Handling:\nArray reallocation failure returns NULL immediately without cleanup\nHeap allocation failure returns NULL immediately\nVirtual allocation failure after successful heap allocation frees heap memory before returning NULL",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
@@ -1214,9 +1379,9 @@
       "address": "0x004039F3",
       "rva": "0x39F3",
       "size": 251,
-      "name": "FUN_004039f3",
-      "display_name": "MNE_0002c858ef3942a0",
-      "has_human_name": false,
+      "name": "AllocateMemorySlot",
+      "display_name": "AllocateMemorySlot",
+      "has_human_name": true,
       "index": "MNE:0002c858ef3942a0b403454c72674bfe",
       "index_method": "MNE",
       "indexes": {
@@ -1227,6 +1392,10 @@
         "CFG": "0873db65ef325ecc5461a3fcb04c7d32",
         "PRO": "dea8c343a18f51e1084181af8b8e840f"
       },
+      "signature": "int AllocateMemorySlot(MemoryDescriptor * pMemoryDescriptor)",
+      "calling_convention": "__cdecl",
+      "comment": "Allocates a memory slot in the memory descriptor system and initializes linked list structures.\n\nAlgorithm:\n1. Extract base offset from memory descriptor (offset 0x10)\n2. Find next available slot by counting leading set bits in allocation mask (offset 0x8)\n3. Calculate descriptor offset: slot_index * 0x204 + 0x144 + base_offset\n4. Initialize 64 linked list node pairs (0x3f iterations) with self-referencing pointers\n5. Calculate memory base address: slot_index * 0x8000 + base_address (offset 0xc)\n6. Allocate 32KB (0x8000 bytes) of virtual memory with VirtualAlloc\n7. If allocation fails, return -1\n8. Initialize memory block as doubly-linked list with 1024-byte (0x400) stride\n9. Set up forward and backward pointers for each node in the allocated block\n10. Link descriptor to allocated memory at specific offsets (0x1fc, 0x200)\n11. Clear slot status flag at base_offset + 0x44 + slot_index * 4\n12. Set slot allocation flag at base_offset + 0xc4 + slot_index * 4\n13. Increment allocation counter at base_offset + 0x43\n14. If counter wraps to 0, set overflow flag (bit 0) in descriptor flags (offset 0x4)\n15. Clear allocated bit in allocation mask using bit manipulation\n\nParameters:\npMemoryDescriptor - Pointer to MemoryDescriptor structure containing allocation state\n\nReturns:\nSlot index (0-31) on successful allocation\n-1 on VirtualAlloc failure\n\nSpecial Cases:\nMagic Numbers Reference:\n0x204 (516) - Descriptor block size per slot\n0x144 (324) - Base descriptor offset \n0x8000 (32768) - Memory block size (32KB)\n0x1000 (4096) - VirtualAlloc MEM_COMMIT flag\n0x3f (63) - Loop counter for 64 node pairs\n0x400 (1024) - Node stride in memory block\n0xff0 (4080) - Node size/offset marker\n0x1c00 (7168) - Memory block boundary check\n\nStructure Layout:\nOffset | Size | Field Name    | Type | Description\n0x4    | 4    | dwFlags       | uint | Status flags (bit 0 = overflow)\n0x8    | 4    | dwAllocMask   | uint | Allocation bitmask (bit per slot)  \n0xc    | 4    | pBaseMemory   | int* | Base address for memory blocks\n0x10   | 4    | nBaseOffset   | int  | Base offset for descriptor blocks\n\nError Handling:\nVirtualAlloc failure returns -1 without modifying descriptor state\nSlot index calculation assumes valid input parameters",
+      "parameters": [{"name": "pMemoryDescriptor", "type": "MemoryDescriptor *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 14
@@ -1235,9 +1404,9 @@
       "address": "0x00403AEE",
       "rva": "0x3AEE",
       "size": 137,
-      "name": "FUN_00403aee",
-      "display_name": "STR_1d436b74681e11a9",
-      "has_human_name": false,
+      "name": "ShowMessageBoxWithActiveWindow",
+      "display_name": "ShowMessageBoxWithActiveWindow",
+      "has_human_name": true,
       "index": "STR:1d436b74681e11a9bd214b6331c37f94",
       "index_method": "STR",
       "indexes": {
@@ -1248,6 +1417,10 @@
         "CFG": "a667fa7e4ef51e6c972e43d39bb1aee4",
         "PRO": "e0ac0c93da57517ada9568fe18581bfb"
       },
+      "signature": "int ShowMessageBoxWithActiveWindow(char * lpszText, char * lpszCaption, int nType)",
+      "calling_convention": "__cdecl",
+      "comment": "Displays a message box using dynamic loading of user32.dll functions with active window detection.\n\nAlgorithm:\n\n1. Check if MessageBoxA function pointer is already loaded (DAT_1003ca8c)\n2. If not loaded, dynamically load user32.dll using LoadLibraryA\n3. Get function pointers for MessageBoxA, GetActiveWindow, and GetLastActivePopup\n4. Store function pointers in global variables (DAT_1003ca8c, DAT_1003ca90, DAT_1003ca94)\n5. If GetActiveWindow is available, call it to get active window handle\n6. If active window exists and GetLastActivePopup is available, get last active popup\n7. Call MessageBoxA with detected window handle and provided text, caption, and type\n8. Return the result from MessageBoxA\n\nParameters:\n\nlpszText - Pointer to null-terminated string containing message text to display\nlpszCaption - Pointer to null-terminated string containing dialog caption/title\nnType - Message box type flags controlling buttons and icon (MB_OK, MB_ICONERROR, etc.)\n\nReturns:\n\nInteger result from MessageBoxA indicating which button was pressed:\n- IDOK (1) if OK button clicked\n- IDCANCEL (2) if Cancel button clicked  \n- IDABORT (3) if Abort button clicked\n- IDRETRY (4) if Retry button clicked\n- IDIGNORE (5) if Ignore button clicked\n- IDYES (6) if Yes button clicked\n- IDNO (7) if No button clicked\n- 0 if function initialization failed\n\nSpecial Cases:\n\nIf user32.dll cannot be loaded or required functions cannot be found, returns 0.\nUses lazy loading pattern - initializes function pointers only on first call.\nWindow handle detection provides proper message box parenting for modal behavior.\n\nGlobal Variables:\n\nDAT_1003ca8c - Function pointer to MessageBoxA (FARPROC)\nDAT_1003ca90 - Function pointer to GetActiveWindow (FARPROC) \nDAT_1003ca94 - Function pointer to GetLastActivePopup (FARPROC)",
+      "parameters": [{"name": "lpszText", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "lpszCaption", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nType", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": ["\"GetLastActivePopup\"", "\"user32.dll\"", "\"MessageBoxA\"", "\"GetActiveWindow\""],
       "api_calls": [],
       "basic_block_count": 11
@@ -1281,9 +1454,9 @@
       "address": "0x00403C80",
       "rva": "0x3C80",
       "size": 47,
-      "name": "FUN_00403c80",
-      "display_name": "MNE_2a518bd4b0b93e6c",
-      "has_human_name": false,
+      "name": "AllocateStackSpace",
+      "display_name": "AllocateStackSpace",
+      "has_human_name": true,
       "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
       "index_method": "MNE",
       "indexes": {
@@ -1294,6 +1467,10 @@
         "CFG": "923e6334bb823311e192653c3d161b0a",
         "PRO": "c71205845eb17fcc2718f716924d07ee"
       },
+      "signature": "void AllocateStackSpace(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Dynamically allocates stack space with page probing to ensure proper memory commitment.\n\nAlgorithm:\n1. Initialize stack pointer to current position plus 8 bytes (beyond return address and saved ECX)\n2. Check if requested allocation size exceeds one page (0x1000 bytes)\n3. If multi-page allocation needed, enter probing loop:\n   - Subtract one page (0x1000 bytes) from stack pointer\n   - Subtract one page from remaining allocation size\n   - Touch memory at stack pointer to trigger page commitment\n   - Repeat until remaining size is less than one page\n4. Subtract final remaining bytes from stack pointer\n5. Touch memory at final stack position to commit last page\n6. Update ESP register to new stack pointer position\n7. Restore original ECX and return address from saved stack frame\n8. Return to caller with stack space allocated and committed\n\nParameters:\ndwStackSize (uint) - Number of bytes to allocate on stack\n\nReturns:\nvoid - No return value, modifies stack pointer directly\n\nSpecial Cases:\n- Single page allocations (≤ 0xFFF bytes) skip the probing loop\n- Memory touches use TEST instruction to trigger page faults for uncommitted pages\n- Stack grows downward, so allocation decreases stack pointer\n- Function preserves ECX register across call\n\nMagic Numbers Reference:\n0x1000 (4096) - Windows page size for stack probing\n0xFFF (4095) - Maximum single-page allocation without probing\n\nError Handling:\n- No explicit error handling - relies on Windows page fault mechanism\n- Invalid memory access triggers system page fault handler\n- Stack overflow protection handled by system guard pages",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -1327,9 +1504,9 @@
       "address": "0x00403D08",
       "rva": "0x3D08",
       "size": 27,
-      "name": "FUN_00403d08",
-      "display_name": "MNE_ee4facdaccbd6fc5",
-      "has_human_name": false,
+      "name": "InvokeCallbackHandler",
+      "display_name": "InvokeCallbackHandler",
+      "has_human_name": true,
       "index": "MNE:ee4facdaccbd6fc5f3297fd5b85b73c2",
       "index_method": "MNE",
       "indexes": {
@@ -1340,6 +1517,10 @@
         "CFG": "c514545fcce289b8241e149ad12d442a",
         "PRO": "eba25aa4a7ad5f2a92814c91aa869f28"
       },
+      "signature": "int InvokeCallbackHandler(int nParameter)",
+      "calling_convention": "__cdecl",
+      "comment": "Setting prototype: int InvokeCallbackHandler(int nParameter)",
+      "parameters": [{"name": "nParameter", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 4
@@ -1348,9 +1529,9 @@
       "address": "0x00403D30",
       "rva": "0x3D30",
       "size": 664,
-      "name": "FUN_00403d30",
-      "display_name": "MNE_bff09423b51fd121",
-      "has_human_name": false,
+      "name": "OptimizedMemoryMove",
+      "display_name": "OptimizedMemoryMove",
+      "has_human_name": true,
       "index": "MNE:bff09423b51fd121ea30afec957819f4",
       "index_method": "MNE",
       "indexes": {
@@ -1361,6 +1542,10 @@
         "CFG": "e3583a7412375a12c6d70512808d7344",
         "PRO": "ff38c497c82643f818ac8c3950b7223d"
       },
+      "signature": "void * OptimizedMemoryMove(void * pDestination, void * pSource, uint dwByteCount)",
+      "calling_convention": "__cdecl",
+      "comment": "Optimized memory move implementation with overlap detection and alignment optimization.\n\nAlgorithm:\n1. Check for overlapping memory regions (source and destination ranges overlap)\n2. If overlapping regions detected, copy backwards from end to start to avoid corruption\n3. If no overlap, copy forwards from start to end for better cache performance\n4. For both directions, optimize copying using 4-byte aligned transfers when possible\n5. Handle misaligned data by copying individual bytes first to reach alignment\n6. Perform bulk 4-byte transfers in optimized loop (unroll threshold of 8 iterations)\n7. Copy remaining bytes (0-3) using individual byte transfers\n\nParameters:\npDestination - Destination memory buffer to copy data to\npSource - Source memory buffer to copy data from  \ndwByteCount - Number of bytes to copy between buffers\n\nReturns:\nvoid * - Returns original destination pointer (pDestination) for function chaining\n\nSpecial Cases:\nZero byte count - Returns immediately without any memory operations\nMisaligned pointers - Falls back to byte-by-byte copying with alignment handling\nLarge transfers - Uses optimized 4-byte transfers with loop unrolling for performance\n\nMagic Numbers Reference:\n0x4 (4) - Alignment boundary and 4-byte transfer size\n0x3 (3) - Alignment mask to check 4-byte boundary alignment  \n0x7 (7) - Loop unrolling threshold for optimized bulk transfer\n\nError Handling:\nNo explicit error checking - assumes valid memory regions and non-null pointers\nOverlap detection prevents memory corruption during overlapping copies\nAlignment optimization ensures optimal performance on x86 architecture",
+      "parameters": [{"name": "pDestination", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "pSource", "type": "void *", "storage": "Stack[0x8]:4"}, {"name": "dwByteCount", "type": "uint", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 63

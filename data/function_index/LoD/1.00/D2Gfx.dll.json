@@ -1,0 +1,10 @@
+{
+  "program_name": "D2Gfx.dll",
+  "game_type": "LoD",
+  "version": "1.00",
+  "image_base": "0x10000000",
+  "total_functions": 0,
+  "export_timestamp": "Tue Dec 09 18:53:05 CST 2025",
+  "functions": [
+  ]
+}

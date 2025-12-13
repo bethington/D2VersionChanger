@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x6FF20000",
-  "total_functions": 348,
-  "export_timestamp": "Fri Dec 05 16:19:12 CST 2025",
+  "total_functions": 404,
+  "export_timestamp": "Wed Dec 10 16:12:48 CST 2025",
   "functions": [
     {
       "address": "0x6FF21000",
@@ -29,6 +29,48 @@
       "parameters": [{"name": "dwDataLength", "type": "uint", "storage": "ECX:4"}],
       "string_refs": [],
       "api_calls": ["SStrCopy"],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF21020",
+      "rva": "0x1020",
+      "size": 1,
+      "name": "FUN_6ff21020",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF21030",
+      "rva": "0x1030",
+      "size": 1,
+      "name": "FUN_6ff21030",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
       "basic_block_count": 1
     },
     {
@@ -107,6 +149,27 @@
       "basic_block_count": 5
     },
     {
+      "address": "0x6FF21910",
+      "rva": "0x1910",
+      "size": 1,
+      "name": "FUN_6ff21910",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF21920",
       "rva": "0x1920",
       "size": 101,
@@ -155,6 +218,27 @@
       "string_refs": ["\"Diablo II\"", "\"querying gateway %s\"", "\"   failed to get server list\"", "\"BattleConnectFastest()\"", "\"BNETIP\"", "...+1 more"],
       "api_calls": ["?Load@BNGatewayAccess@@QAGXXZ", "?DNS@BNGatewayAccess@@QAGPADH@Z", "SStrCopy", "GetRegistryStringValue", "SStrCopy", "StartWinsockService"],
       "basic_block_count": 15
+    },
+    {
+      "address": "0x6FF21B80",
+      "rva": "0x1B80",
+      "size": 1,
+      "name": "FUN_6ff21b80",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "32d833f348ce377c8cc3291cc5202137"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF21CD0",
@@ -307,6 +391,48 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6FF21E10",
+      "rva": "0x1E10",
+      "size": 1,
+      "name": "FUN_6ff21e10",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF21E20",
+      "rva": "0x1E20",
+      "size": 1,
+      "name": "FUN_6ff21e20",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF21EF0",
       "rva": "0x1EF0",
       "size": 153,
@@ -357,6 +483,27 @@
       "basic_block_count": 8
     },
     {
+      "address": "0x6FF22000",
+      "rva": "0x2000",
+      "size": 1,
+      "name": "FUN_6ff22000",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF22180",
       "rva": "0x2180",
       "size": 24,
@@ -380,6 +527,48 @@
       "string_refs": [],
       "api_calls": ["GetPeerName"],
       "basic_block_count": 3
+    },
+    {
+      "address": "0x6FF221A0",
+      "rva": "0x21A0",
+      "size": 1,
+      "name": "FUN_6ff221a0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF221B0",
+      "rva": "0x21B0",
+      "size": 1,
+      "name": "FUN_6ff221b0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF221F0",
@@ -632,6 +821,195 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x6FF22350",
+      "rva": "0x2350",
+      "size": 1,
+      "name": "FUN_6ff22350",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22370",
+      "rva": "0x2370",
+      "size": 1,
+      "name": "FUN_6ff22370",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF223A0",
+      "rva": "0x23A0",
+      "size": 1,
+      "name": "FUN_6ff223a0",
+      "display_name": "MNE_94528e42d0870c14",
+      "has_human_name": false,
+      "index": "MNE:94528e42d0870c14b60d21e63e3d0bd6",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "94528e42d0870c14b60d21e63e3d0bd6",
+        "CFG": null,
+        "PRO": "64fd578aad9d3898ed7d8e51ef2c6bb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22450",
+      "rva": "0x2450",
+      "size": 1,
+      "name": "FUN_6ff22450",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22460",
+      "rva": "0x2460",
+      "size": 1,
+      "name": "FUN_6ff22460",
+      "display_name": "MNE_5c22dede0f74ae8b",
+      "has_human_name": false,
+      "index": "MNE:5c22dede0f74ae8b02dbfc7aae0ebe58",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c22dede0f74ae8b02dbfc7aae0ebe58",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF224B0",
+      "rva": "0x24B0",
+      "size": 1,
+      "name": "FUN_6ff224b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF224D0",
+      "rva": "0x24D0",
+      "size": 1,
+      "name": "FUN_6ff224d0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22660",
+      "rva": "0x2660",
+      "size": 1,
+      "name": "FUN_6ff22660",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF226B0",
+      "rva": "0x26B0",
+      "size": 1,
+      "name": "FUN_6ff226b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF226D0",
       "rva": "0x26D0",
       "size": 150,
@@ -657,6 +1035,69 @@
       "basic_block_count": 8
     },
     {
+      "address": "0x6FF227B0",
+      "rva": "0x27B0",
+      "size": 1,
+      "name": "FUN_6ff227b0",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF227C0",
+      "rva": "0x27C0",
+      "size": 1,
+      "name": "FUN_6ff227c0",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF227D0",
+      "rva": "0x27D0",
+      "size": 1,
+      "name": "FUN_6ff227d0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF227E0",
       "rva": "0x27E0",
       "size": 29,
@@ -677,6 +1118,132 @@
       "calling_convention": "__fastcall",
       "comment": "Processes data value through sequential pipeline and copies to global buffer.\n\nAlgorithm:\n\n1. Register data value with type identifier 0x02 via FUN_6ff258a0\n2. Copy processed data value to global buffer via CopyToGlobalBuffer\n3. Return success status (1) to indicate completion\n\nParameters:\n\nnDataValue (int) - Data value to process and copy to global buffer\n\nReturns:\n\n1 - Operation completed successfully\n\nSpecial Cases:\n\nThe hardcoded type identifier 0x02 suggests this function handles a specific\ndata type or category within a larger processing system.\n\nMagic Numbers Reference:\n\n0x02 (2) - Data type identifier passed to registration function",
       "parameters": [{"name": "nDataValue", "type": "int", "storage": "ECX:4"}],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22800",
+      "rva": "0x2800",
+      "size": 1,
+      "name": "FUN_6ff22800",
+      "display_name": "MNE_f270bd4ea9353a0e",
+      "has_human_name": false,
+      "index": "MNE:f270bd4ea9353a0eb6c1909a1eb635e5",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f270bd4ea9353a0eb6c1909a1eb635e5",
+        "CFG": null,
+        "PRO": "1fb513840eadb184867eee033275bd99"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22880",
+      "rva": "0x2880",
+      "size": 1,
+      "name": "FUN_6ff22880",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22890",
+      "rva": "0x2890",
+      "size": 1,
+      "name": "FUN_6ff22890",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF228A0",
+      "rva": "0x28A0",
+      "size": 1,
+      "name": "FUN_6ff228a0",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF228B0",
+      "rva": "0x28B0",
+      "size": 1,
+      "name": "FUN_6ff228b0",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF228C0",
+      "rva": "0x28C0",
+      "size": 1,
+      "name": "FUN_6ff228c0",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -705,6 +1272,48 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 5
+    },
+    {
+      "address": "0x6FF22910",
+      "rva": "0x2910",
+      "size": 1,
+      "name": "FUN_6ff22910",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF22930",
+      "rva": "0x2930",
+      "size": 1,
+      "name": "FUN_6ff22930",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF22940",
@@ -952,6 +1561,48 @@
       "calling_convention": "__stdcall",
       "comment": "Clears packet handler state by resetting flags and nulling the active packet handler.\n\nAlgorithm:\n1. Enter critical section for thread-safe packet handler access\n2. Clear first packet flag at g_apfnPacketHandlers[0xf5] byte 0\n3. Clear second packet flag at g_apfnPacketHandlers[0xf5] byte 1  \n4. Set packet handler pointer at g_apfnPacketHandlers[0xac] to NULL\n5. Leave critical section to release synchronization lock\n\nParameters:\n  None\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  Thread synchronization handled via critical section g_PacketCriticalSection\n\nMagic Numbers Reference:\n  0xf5 (245) - Index into packet handlers array for flag storage\n  0xac (172) - Index into packet handlers array for active handler pointer\n  0xad (173) - Offset to critical section structure (g_apfnPacketHandlers + 0xad)\n\nError Handling:\n  No explicit error handling - critical section operations assumed to succeed\n\nStructure Layout:\n  g_apfnPacketHandlers array layout (relevant offsets):\n  Offset   Size  Field Name              Type      Description\n  0xac*4   4     ActiveHandler          uint*     Currently active packet handler pointer\n  0xf5*4   1     PacketFlag1            byte      First packet processing flag  \n  0xf5*4+1 1     PacketFlag2            byte      Second packet processing flag\n  0xad*4   24    CriticalSection        CRITICAL_SECTION  Thread synchronization",
       "parameters": [],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF24240",
+      "rva": "0x4240",
+      "size": 1,
+      "name": "FUN_6ff24240",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF24280",
+      "rva": "0x4280",
+      "size": 1,
+      "name": "FUN_6ff24280",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1657,6 +2308,27 @@
       "basic_block_count": 6
     },
     {
+      "address": "0x6FF25950",
+      "rva": "0x5950",
+      "size": 1,
+      "name": "FUN_6ff25950",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF259E0",
       "rva": "0x59E0",
       "size": 77,
@@ -1855,6 +2527,27 @@
       "string_refs": [],
       "api_calls": ["SStrCopy", "SStrCopy", "SStrCopy", "SStrCopy"],
       "basic_block_count": 28
+    },
+    {
+      "address": "0x6FF25FA0",
+      "rva": "0x5FA0",
+      "size": 1,
+      "name": "FUN_6ff25fa0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF26000",
@@ -2057,6 +2750,48 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6FF26530",
+      "rva": "0x6530",
+      "size": 1,
+      "name": "FUN_6ff26530",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF265D0",
+      "rva": "0x65D0",
+      "size": 1,
+      "name": "FUN_6ff265d0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF26660",
       "rva": "0x6660",
       "size": 90,
@@ -2105,6 +2840,27 @@
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."],
       "api_calls": ["ReleasePoolAllocation"],
       "basic_block_count": 3
+    },
+    {
+      "address": "0x6FF266F0",
+      "rva": "0x66F0",
+      "size": 1,
+      "name": "FUN_6ff266f0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "32d833f348ce377c8cc3291cc5202137"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF26740",
@@ -2182,6 +2938,48 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x6FF268D0",
+      "rva": "0x68D0",
+      "size": 1,
+      "name": "FUN_6ff268d0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF26910",
+      "rva": "0x6910",
+      "size": 1,
+      "name": "FUN_6ff26910",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF26960",
       "rva": "0x6960",
       "size": 81,
@@ -2202,6 +3000,48 @@
       "calling_convention": "__stdcall",
       "comment": "Sends a heartbeat packet to Battle.net gateway to maintain connection status.\n\nAlgorithm:\n1. Retrieve current global state value to determine connection status\n2. Convert state result to boolean condition using NEG/SBB operation\n3. Calculate conditional offset based on state (0x13fa if disconnected, 0 if connected)\n4. Add base magic value 0x44324456 to create packet identifier\n5. Load gateway configuration from global address 0x6ff397c0\n6. Initialize packet buffer with header magic 0x49583836\n7. Set packet type to 0xe (heartbeat command)\n8. Configure packet data fields with calculated values\n9. Initialize status flags to zero (bytes at offsets 0x10-0x11)\n10. Send packet via SendNetworkPacketWithValidation with prepared buffer\n11. Return success status (1) regardless of transmission result\n\nParameters:\nNone\n\nReturns:\ndword - Always returns 1 indicating heartbeat was sent (success)\n\nMagic Numbers Reference:\n0x49583836 - Battle.net packet header magic (connection validation)\n0x44324456 - Base packet identifier for heartbeat messages\n0x13fa - Disconnected state offset modifier (5114 decimal)\n0xe - Heartbeat packet type identifier\n0x50c - Stack buffer size (1292 bytes for packet construction)\n0x6ff397c0 - Global gateway configuration data address",
       "parameters": [],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF269C0",
+      "rva": "0x69C0",
+      "size": 1,
+      "name": "FUN_6ff269c0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF26A70",
+      "rva": "0x6A70",
+      "size": 1,
+      "name": "FUN_6ff26a70",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "08243666f926aa4e5b884b8ef1fc3b93"
+      },
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2282,6 +3122,48 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6FF26B40",
+      "rva": "0x6B40",
+      "size": 1,
+      "name": "FUN_6ff26b40",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF26BF0",
+      "rva": "0x6BF0",
+      "size": 1,
+      "name": "FUN_6ff26bf0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF26C60",
       "rva": "0x6C60",
       "size": 135,
@@ -2305,6 +3187,27 @@
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."],
       "api_calls": ["ReleasePoolAllocation", "FogMemAlloc"],
       "basic_block_count": 6
+    },
+    {
+      "address": "0x6FF26CF0",
+      "rva": "0x6CF0",
+      "size": 1,
+      "name": "FUN_6ff26cf0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF26DA0",
@@ -2332,6 +3235,69 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6FF26E00",
+      "rva": "0x6E00",
+      "size": 1,
+      "name": "FUN_6ff26e00",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF26E60",
+      "rva": "0x6E60",
+      "size": 1,
+      "name": "FUN_6ff26e60",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF26ED0",
+      "rva": "0x6ED0",
+      "size": 1,
+      "name": "FUN_6ff26ed0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6FF26F10",
       "rva": "0x6F10",
       "size": 297,
@@ -2352,6 +3318,48 @@
       "calling_convention": "__stdcall",
       "comment": "Collects system locale and time zone information and sends it via network packet.\n\nAlgorithm:\n1. Initialize TIME_ZONE_INFORMATION structure by zeroing memory\n2. Get current time zone information from system\n3. Get system time (UTC) and local time\n4. Convert both time values to FILETIME format for storage\n5. Extract time zone bias for local/UTC time difference calculation\n6. Get system default and user default locale identifiers\n7. Get user default language identifier and cast to DWORD\n8. Initialize 128-byte locale info buffer with null terminator\n9. Get locale info string for LOCALE_SLANGUAGE (0x3) - language name\n10. Calculate string length using REPNE SCASB instruction\n11. Append locale info string for LOCALE_SCOUNTRY (0x5) - country name\n12. Calculate length again and append next locale string\n13. Append locale info string for LOCALE_SENGLANGUAGE (0x7) - English language name\n14. Calculate length and append final locale string for LOCALE_SENGCOUNTRY (0x1002) - English country name\n15. Calculate total locale string buffer size used\n16. Send collected locale and time information via SendNetworkPacketWithValidation\n\nParameters:\nNone - function operates on system state only\n\nReturns:\nvoid - function does not return values but sends data via network\n\nSpecial Cases:\nNetwork packet sending may fail silently - no error handling for SendNetworkPacketWithValidation\nLocale string buffer limited to 128 bytes total - overflow not checked\nMultiple REPNE SCASB operations use manual string length calculation\n\nMagic Numbers Reference:\n0x16c (364) - Total stack frame size for all local variables\n0x2b (43) - Initialization loop count for TIME_ZONE_INFORMATION structure (172 bytes / 4 = 43 DWORDs)\n0x400 (1024) - LOCALE_SYSTEM_DEFAULT constant for GetLocaleInfoA calls\n0x3 (3) - LOCALE_SLANGUAGE constant for language name\n0x5 (5) - LOCALE_SCOUNTRY constant for country name  \n0x7 (7) - LOCALE_SENGLANGUAGE constant for English language name\n0x1002 (4098) - LOCALE_SENGCOUNTRY constant for English country name\n0x40 (64) - Maximum buffer size per locale string\n0xffffffff - Initial value for string length calculation (will become 0 after NOT operation)",
       "parameters": [],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF27040",
+      "rva": "0x7040",
+      "size": 1,
+      "name": "FUN_6ff27040",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF27070",
+      "rva": "0x7070",
+      "size": 1,
+      "name": "FUN_6ff27070",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2380,6 +3388,69 @@
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."],
       "api_calls": ["ReleasePoolAllocation", "FogMemAlloc"],
       "basic_block_count": 3
+    },
+    {
+      "address": "0x6FF272A0",
+      "rva": "0x72A0",
+      "size": 1,
+      "name": "FUN_6ff272a0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "316ca0efda6296d8f2c11d1e20890d22"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF27340",
+      "rva": "0x7340",
+      "size": 1,
+      "name": "FUN_6ff27340",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF27360",
+      "rva": "0x7360",
+      "size": 1,
+      "name": "FUN_6ff27360",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF27370",
@@ -2555,6 +3626,111 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 20
+    },
+    {
+      "address": "0x6FF29500",
+      "rva": "0x9500",
+      "size": 1,
+      "name": "FUN_6ff29500",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "3db07e485d45f7517b4010dec7d0dcb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF29510",
+      "rva": "0x9510",
+      "size": 1,
+      "name": "FUN_6ff29510",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF29530",
+      "rva": "0x9530",
+      "size": 1,
+      "name": "FUN_6ff29530",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF29540",
+      "rva": "0x9540",
+      "size": 1,
+      "name": "FUN_6ff29540",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6FF29560",
+      "rva": "0x9560",
+      "size": 1,
+      "name": "FUN_6ff29560",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6FF29570",

@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x6F890000",
-  "total_functions": 132,
-  "export_timestamp": "Mon Dec 01 16:32:42 CST 2025",
+  "total_functions": 164,
+  "export_timestamp": "Wed Dec 10 16:12:47 CST 2025",
   "functions": [
     {
       "address": "0x6F891000",
@@ -57,6 +57,90 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x6F891020",
+      "rva": "0x1020",
+      "size": 1,
+      "name": "FUN_6f891020",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891030",
+      "rva": "0x1030",
+      "size": 1,
+      "name": "FUN_6f891030",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "3db07e485d45f7517b4010dec7d0dcb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891070",
+      "rva": "0x1070",
+      "size": 1,
+      "name": "FUN_6f891070",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8910B0",
+      "rva": "0x10B0",
+      "size": 1,
+      "name": "FUN_6f8910b0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F891120",
       "rva": "0x1120",
       "size": 287,
@@ -68,14 +152,161 @@
       "indexes": {
         "EXP": null,
         "STR": "edaa14afba4583ccecdf883d17f48f04",
-        "API": "5af01c9a0943ba109b7a504edec4221f",
+        "API": "551d03973ab971d45563c5b46a7cf658",
         "MNE": "9e0f28661f2aec657f335fd603440651",
         "CFG": "1b4ecc49af804e4fb36793237986da42",
         "PRO": "2d26c12b573af8378db6a6ea23c24fa9"
       },
       "string_refs": ["\"Opening GDI window at 640x480...\"", "\"Opening GDI window at Preset's resolution...\"", "\"Opening GDI window at 800x600...\"", "\"gpbOffscreenBuffer == NULL\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10029"],
+      "api_calls": ["FogAssert", "QueueLogMessage"],
       "basic_block_count": 8
+    },
+    {
+      "address": "0x6F891250",
+      "rva": "0x1250",
+      "size": 1,
+      "name": "FUN_6f891250",
+      "display_name": "MNE_5c73446e6da2bc55",
+      "has_human_name": false,
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c73446e6da2bc552d6d981beccb1347",
+        "CFG": null,
+        "PRO": "9d83756fb87373f3575a28afc67dccef"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891260",
+      "rva": "0x1260",
+      "size": 1,
+      "name": "FUN_6f891260",
+      "display_name": "MNE_f9a61880c017be62",
+      "has_human_name": false,
+      "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": null,
+        "PRO": "e19e31124392e42cce51062db314af55"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8912E0",
+      "rva": "0x12E0",
+      "size": 1,
+      "name": "FUN_6f8912e0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891350",
+      "rva": "0x1350",
+      "size": 1,
+      "name": "FUN_6f891350",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891390",
+      "rva": "0x1390",
+      "size": 1,
+      "name": "FUN_6f891390",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891430",
+      "rva": "0x1430",
+      "size": 1,
+      "name": "FUN_6f891430",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "32d833f348ce377c8cc3291cc5202137"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8914C0",
+      "rva": "0x14C0",
+      "size": 1,
+      "name": "FUN_6f8914c0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F8914D0",
@@ -141,6 +372,69 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x6F891570",
+      "rva": "0x1570",
+      "size": 1,
+      "name": "FUN_6f891570",
+      "display_name": "MNE_5c73446e6da2bc55",
+      "has_human_name": false,
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c73446e6da2bc552d6d981beccb1347",
+        "CFG": null,
+        "PRO": "9d83756fb87373f3575a28afc67dccef"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891580",
+      "rva": "0x1580",
+      "size": 1,
+      "name": "FUN_6f891580",
+      "display_name": "MNE_5c73446e6da2bc55",
+      "has_human_name": false,
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c73446e6da2bc552d6d981beccb1347",
+        "CFG": null,
+        "PRO": "9d83756fb87373f3575a28afc67dccef"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891590",
+      "rva": "0x1590",
+      "size": 1,
+      "name": "FUN_6f891590",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F8915D0",
       "rva": "0x15D0",
       "size": 82,
@@ -152,7 +446,7 @@
       "indexes": {
         "EXP": "10001",
         "STR": "fdf169e3b126ce3847f31acbcd1093c7",
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "c92e79a457c7896c9ed3538db812ed8b",
         "CFG": "efdcac5106e651328f20ba0241c5154b",
         "PRO": "66f105f81fa149587dfe2041b5408b14"
@@ -162,7 +456,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4 *", "storage": "ECX:4"}, {"name": "param_2", "type": "undefined4 *", "storage": "EDX:4"}],
       "string_refs": ["\"pptPal\"", "\"phPal\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor..."],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 5
     },
     {
@@ -177,7 +471,7 @@
       "indexes": {
         "EXP": "10002",
         "STR": "2019b2aa1250bb92a2e599c8a7fab70b",
-        "API": "e8f8947ae3916fed8d2c939ffd482d1d",
+        "API": "186612200c1f95e0120d81b230f64725",
         "MNE": "136020b2dd86a7519e1e5f35648c23ae",
         "CFG": "296c973b6099cf5e37a1afccb008c828",
         "PRO": "e3dc4c958dee64c1b1b2cce1d925eeba"
@@ -187,7 +481,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "undefined4 *", "storage": "ECX:4"}, {"name": "param_2", "type": "undefined4 *", "storage": "EDX:4"}, {"name": "param_3", "type": "undefined4 *", "storage": "Stack[0x4]:4"}],
       "string_refs": ["\"ppbBuffer\"", "\"pnWidth\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor...", "\"pnHeight\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 7
     },
     {
@@ -258,6 +552,27 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x6F891710",
+      "rva": "0x1710",
+      "size": 1,
+      "name": "FUN_6f891710",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F8917E0",
       "rva": "0x17E0",
       "size": 9,
@@ -296,8 +611,71 @@
         "PRO": "6cd6b2145d031ce7417eee0550803a84"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...", "\"nY2 > nY1\""],
-      "api_calls": ["Ordinal_10023"],
+      "api_calls": ["FogAssert"],
       "basic_block_count": 35
+    },
+    {
+      "address": "0x6F8919B0",
+      "rva": "0x19B0",
+      "size": 1,
+      "name": "FUN_6f8919b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "e06f19e21a4ef3afe4f5e201950bf0e4"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891A00",
+      "rva": "0x1A00",
+      "size": 1,
+      "name": "FUN_6f891a00",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "32d833f348ce377c8cc3291cc5202137"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F891B30",
+      "rva": "0x1B30",
+      "size": 1,
+      "name": "FUN_6f891b30",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F891C00",
@@ -321,6 +699,27 @@
       "basic_block_count": 35
     },
     {
+      "address": "0x6F891DE0",
+      "rva": "0x1DE0",
+      "size": 1,
+      "name": "FUN_6f891de0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F891EB0",
       "rva": "0x1EB0",
       "size": 288,
@@ -332,14 +731,35 @@
       "indexes": {
         "EXP": null,
         "STR": "660b70fb93d7a717da5d6826022cc00d",
-        "API": "088c1739c19ccd3110d53726cb64ac5c",
+        "API": "f37eae4b9486cb4175333f44901ab791",
         "MNE": "30f0899fae04ae5dd58a3fc478b5a148",
         "CFG": "c0c99681d09e7c34d5a692debca03443",
         "PRO": "ee92600bff2eb79f69acf8cf64f98f57"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...", "\"prc->top <= prc->bottom\"", "\"prc->left <= prc->right\""],
-      "api_calls": ["Ordinal_10023", "Ordinal_10023"],
+      "api_calls": ["FogAssert", "FogAssert"],
       "basic_block_count": 24
+    },
+    {
+      "address": "0x6F892030",
+      "rva": "0x2030",
+      "size": 1,
+      "name": "FUN_6f892030",
+      "display_name": "MNE_94528e42d0870c14",
+      "has_human_name": false,
+      "index": "MNE:94528e42d0870c14b60d21e63e3d0bd6",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "94528e42d0870c14b60d21e63e3d0bd6",
+        "CFG": null,
+        "PRO": "64fd578aad9d3898ed7d8e51ef2c6bb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F892070",
@@ -380,8 +800,29 @@
         "PRO": "4f94b2b5987d73fcff8079bd01fd05e2"
       },
       "string_refs": [],
-      "api_calls": ["Ordinal_10091"],
+      "api_calls": ["AllocateTileProjectBuffer"],
       "basic_block_count": 8
+    },
+    {
+      "address": "0x6F892300",
+      "rva": "0x2300",
+      "size": 1,
+      "name": "FUN_6f892300",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "32d833f348ce377c8cc3291cc5202137"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F8924D0",
@@ -401,7 +842,7 @@
         "PRO": "0e63ed919797fc13f8a45b32facb598e"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiSma..."],
-      "api_calls": ["Ordinal_10043"],
+      "api_calls": ["ReleasePoolAllocation"],
       "basic_block_count": 6
     },
     {
@@ -447,32 +888,179 @@
       "basic_block_count": 5
     },
     {
+      "address": "0x6F8925E0",
+      "rva": "0x25E0",
+      "size": 1,
+      "name": "FUN_6f8925e0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F892600",
       "rva": "0x2600",
       "size": 274,
       "name": "FUN_6f892600",
-      "display_name": "API_bf55da6e373d760b",
+      "display_name": "API_8ed48f8ed7b3b4ba",
       "has_human_name": false,
-      "index": "API:bf55da6e373d760b953410b8cfb666d3",
+      "index": "API:8ed48f8ed7b3b4ba9d7594e730dff888",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "bf55da6e373d760b953410b8cfb666d3",
+        "API": "8ed48f8ed7b3b4ba9d7594e730dff888",
         "MNE": "5dca67ee9642d200e9138ca364db8084",
         "CFG": "6d0cf7c1901d122e8fc62b3de5c56248",
         "PRO": "a8bb436068029485ead9a3b59b68ee11"
       },
       "string_refs": [],
-      "api_calls": ["Ordinal_10055", "Ordinal_10037", "Ordinal_10038", "Ordinal_10039", "Ordinal_10040", "Ordinal_10033"],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "GetCelFileTableIndex", "GetCelModeValue", "GetCelFileInfoHeight", "GetDWordFromPointerField", "D2CMP_DecodeAndDrawCelFrame"],
       "basic_block_count": 21
+    },
+    {
+      "address": "0x6F8929A0",
+      "rva": "0x29A0",
+      "size": 426,
+      "name": "FUN_6f8929a0",
+      "display_name": "STR_ce4e6d542faa18d3",
+      "has_human_name": false,
+      "index": "STR:ce4e6d542faa18d3febf5c08e647ddc3",
+      "index_method": "STR",
+      "indexes": {
+        "EXP": null,
+        "STR": "ce4e6d542faa18d3febf5c08e647ddc3",
+        "API": "f322974cba7a690210217ab1386eacd3",
+        "MNE": "8a99859af974ec06e26d3f59c299746d",
+        "CFG": "af53b8d26dacc2012adda31fb6205a71",
+        "PRO": "8e9196d8a370f72a01e878b5d500542f"
+      },
+      "string_refs": ["\"ptClipRect->bottom > 0\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiSpr..."],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "GetCelFileTableIndex", "GetCelModeValue", "GetCelFileInfoHeight", "GetDWordFromPointerField", "FogAssert", "DecodeCelFrame"],
+      "basic_block_count": 30
+    },
+    {
+      "address": "0x6F892B70",
+      "rva": "0x2B70",
+      "size": 191,
+      "name": "FUN_6f892b70",
+      "display_name": "API_7ec5ca8f54f8dc04",
+      "has_human_name": false,
+      "index": "API:7ec5ca8f54f8dc04fa4be4bf81c6b50e",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7ec5ca8f54f8dc04fa4be4bf81c6b50e",
+        "MNE": "91bd0b1bc567db9b19435e6f4223adb1",
+        "CFG": "a05e6f5794e2bb8f7f3cde604d2a2c94",
+        "PRO": "2dad6f7cb714234138712c96d0a30197"
+      },
+      "string_refs": [],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "GetCelFileTableIndex", "GetCelModeValue", "GetCelFileInfoHeight", "GetDWordFromPointerField", "BlitScaledCmpFrameClipped"],
+      "basic_block_count": 9
+    },
+    {
+      "address": "0x6F892C40",
+      "rva": "0x2C40",
+      "size": 1,
+      "name": "FUN_6f892c40",
+      "display_name": "MNE_94528e42d0870c14",
+      "has_human_name": false,
+      "index": "MNE:94528e42d0870c14b60d21e63e3d0bd6",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "94528e42d0870c14b60d21e63e3d0bd6",
+        "CFG": null,
+        "PRO": "64fd578aad9d3898ed7d8e51ef2c6bb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F892CC0",
+      "rva": "0x2CC0",
+      "size": 283,
+      "name": "FUN_6f892cc0",
+      "display_name": "MNE_764ba89d955cb283",
+      "has_human_name": false,
+      "index": "MNE:764ba89d955cb2837e70da8f85d4f96c",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "764ba89d955cb2837e70da8f85d4f96c",
+        "CFG": "89b86b74880d0843c5e4e6c46fdf4b0f",
+        "PRO": "c90541f299dd10ef4462f663c70148e2"
+      },
+      "string_refs": [],
+      "api_calls": ["AllocateTileProjectBuffer"],
+      "basic_block_count": 17
+    },
+    {
+      "address": "0x6F892DE0",
+      "rva": "0x2DE0",
+      "size": 1,
+      "name": "FUN_6f892de0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F892F10",
+      "rva": "0x2F10",
+      "size": 1,
+      "name": "FUN_6f892f10",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F893040",
       "rva": "0x3040",
       "size": 6,
-      "name": "Ordinal_10091",
-      "display_name": "Ordinal_10091",
+      "name": "AllocateTileProjectBuffer",
+      "display_name": "AllocateTileProjectBuffer",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -484,10 +1072,10 @@
         "CFG": null,
         "PRO": "28ef09e618bb9c4f305494690beb6643"
       },
-      "signature": "undefined Ordinal_10091(void)",
-      "calling_convention": "unknown",
+      "signature": "uint AllocateTileProjectBuffer(TileProject * pTileProject)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pTileProject", "type": "TileProject *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -496,8 +1084,8 @@
       "address": "0x6F893046",
       "rva": "0x3046",
       "size": 6,
-      "name": "Ordinal_10004",
-      "display_name": "Ordinal_10004",
+      "name": "FindClosestColorMatch",
+      "display_name": "FindClosestColorMatch",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -509,10 +1097,10 @@
         "CFG": null,
         "PRO": "d74767c87df4eeadb609e2ac240cca4c"
       },
-      "signature": "undefined Ordinal_10004(void)",
-      "calling_convention": "unknown",
+      "signature": "uint FindClosestColorMatch(byte * pbPalette, uint dwEntries, byte bSearchRed, byte bSearchGreen, byte bSearchBlue)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pbPalette", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "dwEntries", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "bSearchRed", "type": "byte", "storage": "Stack[0xc]:1"}, {"name": "bSearchGreen", "type": "byte", "storage": "Stack[0x10]:1"}, {"name": "bSearchBlue", "type": "byte", "storage": "Stack[0x14]:1"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -521,8 +1109,8 @@
       "address": "0x6F89304C",
       "rva": "0x304C",
       "size": 6,
-      "name": "Ordinal_10033",
-      "display_name": "Ordinal_10033",
+      "name": "D2CMP_DecodeAndDrawCelFrame",
+      "display_name": "D2CMP_DecodeAndDrawCelFrame",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -534,10 +1122,10 @@
         "CFG": null,
         "PRO": "f82032ad5eb683f11f8e9c028e4555d1"
       },
-      "signature": "undefined Ordinal_10033(void)",
-      "calling_convention": "unknown",
+      "signature": "void D2CMP_DecodeAndDrawCelFrame(CelFile * pCelFile, int nXPos, int nYPos, int nDstX, int nDstY, int nDestSurface, int nMaxWidth, uint dwBlendMode, uint dwParam9, uint dwParam10, uint dwParam11)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFile", "type": "CelFile *", "storage": "Stack[0x4]:4"}, {"name": "nXPos", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nYPos", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nDstX", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nDstY", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "nDestSurface", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "nMaxWidth", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwBlendMode", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "dwParam9", "type": "uint", "storage": "Stack[0x24]:4"}, {"name": "dwParam10", "type": "uint", "storage": "Stack[0x28]:4"}, {"name": "dwParam11", "type": "uint", "storage": "Stack[0x2c]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -546,8 +1134,8 @@
       "address": "0x6F893052",
       "rva": "0x3052",
       "size": 6,
-      "name": "Ordinal_10040",
-      "display_name": "Ordinal_10040",
+      "name": "GetDWordFromPointerField",
+      "display_name": "GetDWordFromPointerField",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -559,10 +1147,10 @@
         "CFG": null,
         "PRO": "eb3ba912451f9f8d73f86ae1cf7367e4"
       },
-      "signature": "undefined Ordinal_10040(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetDWordFromPointerField(void * pData)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pData", "type": "void *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -571,8 +1159,8 @@
       "address": "0x6F893058",
       "rva": "0x3058",
       "size": 6,
-      "name": "Ordinal_10039",
-      "display_name": "Ordinal_10039",
+      "name": "GetCelFileInfoHeight",
+      "display_name": "GetCelFileInfoHeight",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -584,10 +1172,10 @@
         "CFG": null,
         "PRO": "45b9634fc947afdb2cf1262a21a2921a"
       },
-      "signature": "undefined Ordinal_10039(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetCelFileInfoHeight(CelFileInfo * pCelFileInfo)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFileInfo", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -596,8 +1184,8 @@
       "address": "0x6F89305E",
       "rva": "0x305E",
       "size": 6,
-      "name": "Ordinal_10038",
-      "display_name": "Ordinal_10038",
+      "name": "GetCelModeValue",
+      "display_name": "GetCelModeValue",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -609,10 +1197,10 @@
         "CFG": null,
         "PRO": "07156d4837fd467fd8059e43fc7f318d"
       },
-      "signature": "undefined Ordinal_10038(void)",
-      "calling_convention": "unknown",
+      "signature": "int GetCelModeValue(int * pCelModeValue)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelModeValue", "type": "int *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -621,8 +1209,8 @@
       "address": "0x6F893064",
       "rva": "0x3064",
       "size": 6,
-      "name": "Ordinal_10037",
-      "display_name": "Ordinal_10037",
+      "name": "GetCelFileTableIndex",
+      "display_name": "GetCelFileTableIndex",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -634,10 +1222,10 @@
         "CFG": null,
         "PRO": "aa7ea3e23319afb7d55f8c4e33565a49"
       },
-      "signature": "undefined Ordinal_10037(void)",
-      "calling_convention": "unknown",
+      "signature": "uint GetCelFileTableIndex(CelFileInfo * pCelFile)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFile", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -646,8 +1234,8 @@
       "address": "0x6F89306A",
       "rva": "0x306A",
       "size": 6,
-      "name": "Ordinal_10055",
-      "display_name": "Ordinal_10055",
+      "name": "LoadOrRetrieveCelFrameData",
+      "display_name": "LoadOrRetrieveCelFrameData",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -659,10 +1247,10 @@
         "CFG": null,
         "PRO": "c64fc1a0d8c7a4671d5ebebc0a9fa417"
       },
-      "signature": "undefined Ordinal_10055(void)",
-      "calling_convention": "unknown",
+      "signature": "uint LoadOrRetrieveCelFrameData(int * pnCelFile, int nIsAsyncLoad, int nFrameIndex)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pnCelFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nIsAsyncLoad", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nFrameIndex", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -671,8 +1259,8 @@
       "address": "0x6F893070",
       "rva": "0x3070",
       "size": 6,
-      "name": "Ordinal_10034",
-      "display_name": "Ordinal_10034",
+      "name": "DecodeCelFrame",
+      "display_name": "DecodeCelFrame",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -684,10 +1272,10 @@
         "CFG": null,
         "PRO": "629fa747a186e2c96084b4e16d0b7435"
       },
-      "signature": "undefined Ordinal_10034(void)",
-      "calling_convention": "unknown",
+      "signature": "void DecodeCelFrame(int * pCelFile, int nBufferOffset, int nY, void * pRGB, void * pAlpha, void * pDestSurface, int nHeight, uint dwTranslationOffset, uint dwFrameIndex, void * pOutputBuffer, int nYOffset, int nHeightClamp, uint dwFlags)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCelFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nBufferOffset", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nY", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "pRGB", "type": "void *", "storage": "Stack[0x10]:4"}, {"name": "pAlpha", "type": "void *", "storage": "Stack[0x14]:4"}, {"name": "pDestSurface", "type": "void *", "storage": "Stack[0x18]:4"}, {"name": "nHeight", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwTranslationOffset", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "dwFrameIndex", "type": "uint", "storage": "Stack[0x24]:4"}, {"name": "pOutputBuffer", "type": "void *", "storage": "Stack[0x28]:4"}, {"name": "nYOffset", "type": "int", "storage": "Stack[0x2c]:4"}, {"name": "nHeightClamp", "type": "int", "storage": "Stack[0x30]:4"}, {"name": "dwFlags", "type": "uint", "storage": "Stack[0x34]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -696,8 +1284,8 @@
       "address": "0x6F893076",
       "rva": "0x3076",
       "size": 6,
-      "name": "Ordinal_10035",
-      "display_name": "Ordinal_10035",
+      "name": "BlitScaledCmpFrameClipped",
+      "display_name": "BlitScaledCmpFrameClipped",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -709,10 +1297,10 @@
         "CFG": null,
         "PRO": "be2e4687f954790738d41d9cef4af802"
       },
-      "signature": "undefined Ordinal_10035(void)",
-      "calling_convention": "unknown",
+      "signature": "void BlitScaledCmpFrameClipped(int * pCmpFile, int nXOffset, int nYOffset, int nDestX, int nDestY, byte * pDestSurface, int nMaxY, uint dwPitch, int nPaletteIndex, byte bTransparency)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pCmpFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nXOffset", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nYOffset", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nDestX", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nDestY", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "pDestSurface", "type": "byte *", "storage": "Stack[0x18]:4"}, {"name": "nMaxY", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwPitch", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "nPaletteIndex", "type": "int", "storage": "Stack[0x24]:4"}, {"name": "bTransparency", "type": "byte", "storage": "Stack[0x28]:1"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -721,8 +1309,8 @@
       "address": "0x6F893082",
       "rva": "0x3082",
       "size": 6,
-      "name": "Ordinal_10042",
-      "display_name": "Ordinal_10042",
+      "name": "FogMemAlloc",
+      "display_name": "FogMemAlloc",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -734,10 +1322,10 @@
         "CFG": null,
         "PRO": "96ca40b160f5cf4866c5a2b0e88ed7cb"
       },
-      "signature": "undefined Ordinal_10042(void)",
-      "calling_convention": "unknown",
+      "signature": "void * FogMemAlloc(dword nSize, char * szFile, int nLine)",
+      "calling_convention": "__fastcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nSize", "type": "dword", "storage": "ECX:4"}, {"name": "szFile", "type": "char *", "storage": "EDX:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -746,8 +1334,8 @@
       "address": "0x6F893088",
       "rva": "0x3088",
       "size": 6,
-      "name": "Ordinal_10043",
-      "display_name": "Ordinal_10043",
+      "name": "ReleasePoolAllocation",
+      "display_name": "ReleasePoolAllocation",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -759,8 +1347,8 @@
         "CFG": null,
         "PRO": "4544bec957a75ee98e442cacfd97dc90"
       },
-      "signature": "undefined Ordinal_10043(void)",
-      "calling_convention": "unknown",
+      "signature": "int ReleasePoolAllocation(void)",
+      "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
       "string_refs": [],
@@ -771,8 +1359,8 @@
       "address": "0x6F89308E",
       "rva": "0x308E",
       "size": 6,
-      "name": "Ordinal_10029",
-      "display_name": "Ordinal_10029",
+      "name": "QueueLogMessage",
+      "display_name": "QueueLogMessage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -784,10 +1372,10 @@
         "CFG": null,
         "PRO": "dba12c55de1d938a8bf3d66e5d656bcb"
       },
-      "signature": "undefined Ordinal_10029(void)",
-      "calling_convention": "unknown",
+      "signature": "void QueueLogMessage(char * szFormat)",
+      "calling_convention": "__cdecl",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szFormat", "type": "char *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -796,8 +1384,8 @@
       "address": "0x6F893094",
       "rva": "0x3094",
       "size": 6,
-      "name": "Ordinal_10023",
-      "display_name": "Ordinal_10023",
+      "name": "FogAssert",
+      "display_name": "FogAssert",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -809,10 +1397,10 @@
         "CFG": null,
         "PRO": "42168d513f10ab7af6d7f36addc53c79"
       },
-      "signature": "undefined Ordinal_10023(void)",
-      "calling_convention": "unknown",
+      "signature": "void FogAssert(char * szExpr, char * szFile, int nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "szExpr", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -821,8 +1409,8 @@
       "address": "0x6F89309A",
       "rva": "0x309A",
       "size": 6,
-      "name": "Ordinal_403",
-      "display_name": "Ordinal_403",
+      "name": "SMemFree",
+      "display_name": "SMemFree",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -834,10 +1422,10 @@
         "CFG": null,
         "PRO": "2e5398d87b78fb6481e2fa258336a362"
       },
-      "signature": "undefined Ordinal_403(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SMemFree(void * pMemBlock, char * szFile, uint nLine)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "pMemBlock", "type": "void *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "uint", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -846,8 +1434,8 @@
       "address": "0x6F8930A0",
       "rva": "0x30A0",
       "size": 6,
-      "name": "Ordinal_321",
-      "display_name": "Ordinal_321",
+      "name": "SBmpDecodeImage",
+      "display_name": "SBmpDecodeImage",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -859,10 +1447,10 @@
         "CFG": null,
         "PRO": "48ae2829f1d814b267e987594c148f68"
       },
-      "signature": "undefined Ordinal_321(void)",
-      "calling_convention": "unknown",
+      "signature": "uint SBmpDecodeImage(int nImageType, byte * pbSrcData, uint dwSrcSize, uint * pdwPalette, byte * pbDestPixels, uint dwDestSize, uint * pdwWidth, uint * pdwHeight, uint * pdwBitDepth)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nImageType", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "pbSrcData", "type": "byte *", "storage": "Stack[0x8]:4"}, {"name": "dwSrcSize", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "pdwPalette", "type": "uint *", "storage": "Stack[0x10]:4"}, {"name": "pbDestPixels", "type": "byte *", "storage": "Stack[0x14]:4"}, {"name": "dwDestSize", "type": "uint", "storage": "Stack[0x18]:4"}, {"name": "pdwWidth", "type": "uint *", "storage": "Stack[0x1c]:4"}, {"name": "pdwHeight", "type": "uint *", "storage": "Stack[0x20]:4"}, {"name": "pdwBitDepth", "type": "uint *", "storage": "Stack[0x24]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -871,8 +1459,8 @@
       "address": "0x6F8930A6",
       "rva": "0x30A6",
       "size": 6,
-      "name": "Ordinal_281",
-      "display_name": "Ordinal_281",
+      "name": "SFileLoadFileWithFlags",
+      "display_name": "SFileLoadFileWithFlags",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -884,10 +1472,10 @@
         "CFG": null,
         "PRO": "a34caa10bd6ae820690775216a783a8d"
       },
-      "signature": "undefined Ordinal_281(void)",
-      "calling_convention": "unknown",
+      "signature": "bool SFileLoadFileWithFlags(uint dwArchive, uint dwFilePath, int * pnBytesRead, uint * pdwFileBuffer, int nExtraAlloc, uint dwOpenFlags)",
+      "calling_convention": "__stdcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "dwArchive", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwFilePath", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "pnBytesRead", "type": "int *", "storage": "Stack[0xc]:4"}, {"name": "pdwFileBuffer", "type": "uint *", "storage": "Stack[0x10]:4"}, {"name": "nExtraAlloc", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "dwOpenFlags", "type": "uint", "storage": "Stack[0x18]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -2068,21 +2656,42 @@
       "basic_block_count": 65
     },
     {
-      "address": "0x6F894EA0",
-      "rva": "0x4EA0",
-      "size": 193,
-      "name": "_strchr",
-      "display_name": "_strchr",
-      "has_human_name": true,
-      "index": "MNE:e8d820fe0ad4443eff596f9c063b1159",
+      "address": "0x6F894E90",
+      "rva": "0x4E90",
+      "size": 5,
+      "name": "FUN_6f894e90",
+      "display_name": "MNE_3ecdb5e459e29b41",
+      "has_human_name": false,
+      "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
       "index_method": "MNE",
       "indexes": {
         "EXP": null,
         "STR": null,
         "API": null,
-        "MNE": "e8d820fe0ad4443eff596f9c063b1159",
-        "CFG": "bf67bbb6ef32da453084cb00b3120b87",
-        "PRO": "e1167e5700de83c67c90065001097c53"
+        "MNE": "3ecdb5e459e29b4117490dc114e98574",
+        "CFG": null,
+        "PRO": "c81df70c1b97172a537e995055b0c6bd"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F894EA0",
+      "rva": "0x4EA0",
+      "size": 188,
+      "name": "_strchr",
+      "display_name": "_strchr",
+      "has_human_name": true,
+      "index": "MNE:85de0cee1ebe7ed32270da528f819b99",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "85de0cee1ebe7ed32270da528f819b99",
+        "CFG": "85ff81d3ec854f352e54bf7038401fe6",
+        "PRO": "16dababd665bf8fb855079aa1cbeb9e9"
       },
       "signature": "char * _strchr(char * _Str, int _Val)",
       "calling_convention": "__cdecl",
@@ -2090,7 +2699,7 @@
       "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Val", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
-      "basic_block_count": 26
+      "basic_block_count": 25
     },
     {
       "address": "0x6F894F60",
@@ -2789,6 +3398,27 @@
       "basic_block_count": 63
     },
     {
+      "address": "0x6F896B30",
+      "rva": "0x6B30",
+      "size": 1,
+      "name": "FUN_6f896b30",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F896BC0",
       "rva": "0x6BC0",
       "size": 62,
@@ -2871,6 +3501,48 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 31
+    },
+    {
+      "address": "0x6F896E20",
+      "rva": "0x6E20",
+      "size": 1,
+      "name": "FUN_6f896e20",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F896E90",
+      "rva": "0x6E90",
+      "size": 1,
+      "name": "FUN_6f896e90",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F896F05",

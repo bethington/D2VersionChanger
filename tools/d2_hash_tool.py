@@ -677,7 +677,7 @@ def parse_folder_name(folder_name: str) -> Dict[str, str]:
         "is_lod": None,
     }
     
-    # Check for version-only format (e.g., "1.14d", "1.09b", "1.10 Beta 1")
+    # Check for version-only format (e.g., "1.14d", "1.09b")
     version_pattern = r'^(\d+\.\d+[a-z]?)(\s+Beta\s+\d+)?$'
     match = re.match(version_pattern, folder_name)
     if match:

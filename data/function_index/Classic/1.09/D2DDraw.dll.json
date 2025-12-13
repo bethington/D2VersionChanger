@@ -1,0 +1,10 @@
+{
+  "program_name": "D2DDraw.dll",
+  "game_type": "Classic",
+  "version": "1.09",
+  "image_base": "0x6F880000",
+  "total_functions": 0,
+  "export_timestamp": "Wed Dec 10 16:12:43 CST 2025",
+  "functions": [
+  ]
+}

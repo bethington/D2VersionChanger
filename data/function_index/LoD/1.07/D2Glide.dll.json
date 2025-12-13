@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x6F870000",
-  "total_functions": 276,
-  "export_timestamp": "Fri Dec 05 16:21:09 CST 2025",
+  "total_functions": 319,
+  "export_timestamp": "Wed Dec 10 16:12:47 CST 2025",
   "functions": [
     {
       "address": "0x6F871000",
@@ -57,20 +57,20 @@
       "rva": "0x1020",
       "size": 816,
       "name": "FUN_6f871020",
-      "display_name": "STR_9b31ac9daba040e3",
+      "display_name": "STR_cf8a8fd5c1f27bc0",
       "has_human_name": false,
-      "index": "STR:9b31ac9daba040e304ea5b26980fb3c3",
+      "index": "STR:cf8a8fd5c1f27bc02b36121e2aa04a49",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "9b31ac9daba040e304ea5b26980fb3c3",
-        "API": "b7ea28687dcfebd9cfd1baecc1f1eee3",
+        "STR": "cf8a8fd5c1f27bc02b36121e2aa04a49",
+        "API": "264d183555c1cb5795c80e44e5338159",
         "MNE": "fc54a4e12220d776140ef5e3b55f8668",
         "CFG": "33afcfffdf144a6ea64d30d2adf5de57",
         "PRO": "77da14232ce58a802c8cad1e76dc929e"
       },
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glBi...", "\"GlidePlayBinkFile: *** Couldn't load Bink movie \\...", "\"pcsPause\"", "\"BinkOpen failed on '%'.\""],
-      "api_calls": ["GetExpansionFlag", "SFileOpenFileEx", "QueueLogMessage", "QueueLogMessage", "grLfbLock", "grLfbUnlock", "Ordinal_10027", "Ordinal_10027", "FogAssert"],
+      "api_calls": ["GetExpansionFlag", "SFileOpenFileEx", "QueueLogMessage", "QueueLogMessage", "grLfbLock", "grLfbUnlock", "SetSoundVolume", "SetSoundVolume", "FogAssert"],
       "basic_block_count": 49
     },
     {
@@ -179,17 +179,101 @@
       "basic_block_count": 9
     },
     {
+      "address": "0x6F871870",
+      "rva": "0x1870",
+      "size": 1,
+      "name": "FUN_6f871870",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "33112ee14ee469c3eb52fe90322ec81d"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8718B0",
+      "rva": "0x18B0",
+      "size": 1,
+      "name": "FUN_6f8718b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F871A40",
+      "rva": "0x1A40",
+      "size": 1,
+      "name": "FUN_6f871a40",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F871AD0",
+      "rva": "0x1AD0",
+      "size": 1,
+      "name": "FUN_6f871ad0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F871B20",
       "rva": "0x1B20",
       "size": 1792,
       "name": "FUN_6f871b20",
-      "display_name": "STR_c03d6b3ee8d16cb6",
+      "display_name": "STR_c57b6c3ff200d385",
       "has_human_name": false,
-      "index": "STR:c03d6b3ee8d16cb6609687d68dd307be",
+      "index": "STR:c57b6c3ff200d385dcd71e0c960b80e5",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "c03d6b3ee8d16cb6609687d68dd307be",
+        "STR": "c57b6c3ff200d385dcd71e0c960b80e5",
         "API": "73682ac42697b53c44ade91a0d74c1a6",
         "MNE": "4145da283c1eef6db32aeab47b55778b",
         "CFG": "53d335682ac784dd750642578827b0e6",
@@ -219,6 +303,237 @@
       "string_refs": ["\"Closing Glide window....\"", "\"grSstWinClose failed 100 times, context= %d\"", "\"... Glide window closed.\""],
       "api_calls": ["QueueLogMessage", "grFinish", "grSstWinClose", "QueueLogMessage", "QueueLogMessage"],
       "basic_block_count": 12
+    },
+    {
+      "address": "0x6F872310",
+      "rva": "0x2310",
+      "size": 1,
+      "name": "FUN_6f872310",
+      "display_name": "MNE_a4d363ea7abc28ea",
+      "has_human_name": false,
+      "index": "MNE:a4d363ea7abc28ea70d3cbb1b9fd3326",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a4d363ea7abc28ea70d3cbb1b9fd3326",
+        "CFG": null,
+        "PRO": "eb1e33e8a81b697b75855af6bfcdbcbf"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F872350",
+      "rva": "0x2350",
+      "size": 177,
+      "name": "FUN_6f872350",
+      "display_name": "API_d5dc25dbe3ea203b",
+      "has_human_name": false,
+      "index": "API:d5dc25dbe3ea203b351269a206fccd0c",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d5dc25dbe3ea203b351269a206fccd0c",
+        "MNE": "b2256f7f2584fc0a5636e28352ecae30",
+        "CFG": "bedb886d443d8d1fb752920eaa49bc77",
+        "PRO": "2cd82dd64bde3bf501cf86ac8f5eabae"
+      },
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo...", "\"pcsPause\""],
+      "api_calls": ["FogAssert", "grBufferClear", "grBufferSwap"],
+      "basic_block_count": 11
+    },
+    {
+      "address": "0x6F872410",
+      "rva": "0x2410",
+      "size": 1,
+      "name": "FUN_6f872410",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F872550",
+      "rva": "0x2550",
+      "size": 1,
+      "name": "FUN_6f872550",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8725B0",
+      "rva": "0x25B0",
+      "size": 1,
+      "name": "FUN_6f8725b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8725C0",
+      "rva": "0x25C0",
+      "size": 1,
+      "name": "FUN_6f8725c0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F872690",
+      "rva": "0x2690",
+      "size": 1,
+      "name": "FUN_6f872690",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "3db07e485d45f7517b4010dec7d0dcb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8726A0",
+      "rva": "0x26A0",
+      "size": 1,
+      "name": "FUN_6f8726a0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F872780",
+      "rva": "0x2780",
+      "size": 1,
+      "name": "FUN_6f872780",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8727F0",
+      "rva": "0x27F0",
+      "size": 1,
+      "name": "FUN_6f8727f0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8728B0",
+      "rva": "0x28B0",
+      "size": 1,
+      "name": "FUN_6f8728b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F872910",
@@ -257,6 +572,69 @@
         "MNE": "123e4e5d4b2315b8f7204bb9886e6a98",
         "CFG": null,
         "PRO": "601e3edcc4e61326b58a9775313c1b1a"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F872940",
+      "rva": "0x2940",
+      "size": 1,
+      "name": "FUN_6f872940",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8729A0",
+      "rva": "0x29A0",
+      "size": 1,
+      "name": "FUN_6f8729a0",
+      "display_name": "MNE_a4d363ea7abc28ea",
+      "has_human_name": false,
+      "index": "MNE:a4d363ea7abc28ea70d3cbb1b9fd3326",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a4d363ea7abc28ea70d3cbb1b9fd3326",
+        "CFG": null,
+        "PRO": "eb1e33e8a81b697b75855af6bfcdbcbf"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8729B0",
+      "rva": "0x29B0",
+      "size": 1,
+      "name": "FUN_6f8729b0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
       },
       "string_refs": [],
       "api_calls": [],
@@ -347,6 +725,27 @@
       "basic_block_count": 10
     },
     {
+      "address": "0x6F872BC0",
+      "rva": "0x2BC0",
+      "size": 1,
+      "name": "FUN_6f872bc0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "81843f8a9d43a196d85037f0b6455b81"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F872BD0",
       "rva": "0x2BD0",
       "size": 6,
@@ -431,6 +830,27 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6F872F60",
+      "rva": "0x2F60",
+      "size": 1,
+      "name": "FUN_6f872f60",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F8730F0",
       "rva": "0x30F0",
       "size": 329,
@@ -450,6 +870,27 @@
       "string_refs": [],
       "api_calls": ["grColorCombine", "grChromakeyMode", "grConstantColorValue", "grDrawPoint", "grConstantColorValue", "grDrawPoint", "grColorCombine", "grChromakeyMode"],
       "basic_block_count": 13
+    },
+    {
+      "address": "0x6F873240",
+      "rva": "0x3240",
+      "size": 1,
+      "name": "FUN_6f873240",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F873280",
@@ -494,6 +935,27 @@
       "basic_block_count": 21
     },
     {
+      "address": "0x6F873460",
+      "rva": "0x3460",
+      "size": 1,
+      "name": "FUN_6f873460",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F873610",
       "rva": "0x3610",
       "size": 361,
@@ -513,6 +975,90 @@
       "string_refs": [],
       "api_calls": ["grChromakeyMode", "grConstantColorValue", "grDrawPoint", "grChromakeyMode", "grDrawLine", "grChromakeyMode"],
       "basic_block_count": 16
+    },
+    {
+      "address": "0x6F873780",
+      "rva": "0x3780",
+      "size": 1,
+      "name": "FUN_6f873780",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8739C0",
+      "rva": "0x39C0",
+      "size": 1,
+      "name": "FUN_6f8739c0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F873A30",
+      "rva": "0x3A30",
+      "size": 1,
+      "name": "FUN_6f873a30",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F873AA0",
+      "rva": "0x3AA0",
+      "size": 1,
+      "name": "FUN_6f873aa0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "08243666f926aa4e5b884b8ef1fc3b93"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F873AB0",
@@ -746,6 +1292,27 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6F8744C0",
+      "rva": "0x44C0",
+      "size": 1,
+      "name": "FUN_6f8744c0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "3db07e485d45f7517b4010dec7d0dcb8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F8744D0",
       "rva": "0x44D0",
       "size": 217,
@@ -761,6 +1328,48 @@
         "MNE": "37778b0c3525a69a4f6f3282bc390055",
         "CFG": null,
         "PRO": "d3a788411a72e30a8dc7bd37dfe5cdda"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8745B0",
+      "rva": "0x45B0",
+      "size": 1,
+      "name": "FUN_6f8745b0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8746D0",
+      "rva": "0x46D0",
+      "size": 1,
+      "name": "FUN_6f8746d0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "826d19352ecde8132602cc260035efad"
       },
       "string_refs": [],
       "api_calls": [],
@@ -845,6 +1454,27 @@
         "MNE": "5c73446e6da2bc552d6d981beccb1347",
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F874810",
+      "rva": "0x4810",
+      "size": 1,
+      "name": "FUN_6f874810",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "d3a05c66c0b191c8779b87996852b071"
       },
       "string_refs": [],
       "api_calls": [],
@@ -977,6 +1607,48 @@
       "basic_block_count": 5
     },
     {
+      "address": "0x6F875070",
+      "rva": "0x5070",
+      "size": 1,
+      "name": "FUN_6f875070",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8750B0",
+      "rva": "0x50B0",
+      "size": 1,
+      "name": "FUN_6f8750b0",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F8755A0",
       "rva": "0x55A0",
       "size": 384,
@@ -1019,6 +1691,27 @@
       "basic_block_count": 45
     },
     {
+      "address": "0x6F875B00",
+      "rva": "0x5B00",
+      "size": 407,
+      "name": "FUN_6f875b00",
+      "display_name": "API_73404cee225ff0df",
+      "has_human_name": false,
+      "index": "API:73404cee225ff0df3c4c9b065174c2fd",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "73404cee225ff0df3c4c9b065174c2fd",
+        "MNE": "0ecd59b5f962311820eec7b3435881fd",
+        "CFG": "f8fba0b195739504272a32f3a85faf21",
+        "PRO": "52c1d7119f80b4568a2fa8b72ef1bec8"
+      },
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...", "\"ptCelContext->hCel\""],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "FogAssert", "GetCelFileTableIndex", "GetCelFileInfoHeight", "GetCelModeValue", "GetDWordFromPointerField", "grConstantColorValue", "grDitherMode", "grDitherMode", "grConstantColorValue"],
+      "basic_block_count": 27
+    },
+    {
       "address": "0x6F875CB0",
       "rva": "0x5CB0",
       "size": 604,
@@ -1038,6 +1731,90 @@
       "string_refs": [],
       "api_calls": ["grDrawVertexArrayContiguous", "grDitherMode"],
       "basic_block_count": 11
+    },
+    {
+      "address": "0x6F875F10",
+      "rva": "0x5F10",
+      "size": 1,
+      "name": "FUN_6f875f10",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F8760A0",
+      "rva": "0x60A0",
+      "size": 553,
+      "name": "FUN_6f8760a0",
+      "display_name": "API_8a8bfdfe2538c819",
+      "has_human_name": false,
+      "index": "API:8a8bfdfe2538c8193ca7bf54acdd998a",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8a8bfdfe2538c8193ca7bf54acdd998a",
+        "MNE": "d53269616e199abe6b0cee4d9879cd10",
+        "CFG": "44cc4e1c6557ed070c8d7cf328b5fe39",
+        "PRO": "595e2247ea5888a1ddd8b669eaae6671"
+      },
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...", "\"ptCelContext->hCel\""],
+      "api_calls": ["grConstantColorValue", "grDitherMode", "grDitherMode", "grConstantColorValue", "LoadOrRetrieveCelFrameData", "FogAssert", "GetCelFileTableIndex", "GetCelFileInfoHeight", "GetCelModeValue", "GetDWordFromPointerField"],
+      "basic_block_count": 27
+    },
+    {
+      "address": "0x6F876690",
+      "rva": "0x6690",
+      "size": 707,
+      "name": "FUN_6f876690",
+      "display_name": "API_9822dde5f57205a8",
+      "has_human_name": false,
+      "index": "API:9822dde5f57205a85e14a4826bca9dc1",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9822dde5f57205a85e14a4826bca9dc1",
+        "MNE": "0a90a961f33da1179e9acccd6faf37cf",
+        "CFG": "e8ed54d4f1306c95ebfd64077160839b",
+        "PRO": "3eba88356a7eac0bda1074e0e885fac5"
+      },
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...", "\"ptCelContext->hCel\""],
+      "api_calls": ["LoadOrRetrieveCelFrameData", "FogAssert", "GetCelFileTableIndex", "GetCelFileInfoHeight", "GetCelModeValue", "GetDWordFromPointerField", "grConstantColorValue", "grDrawVertexArrayContiguous"],
+      "basic_block_count": 16
+    },
+    {
+      "address": "0x6F876960",
+      "rva": "0x6960",
+      "size": 1,
+      "name": "FUN_6f876960",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F876A50",
@@ -1460,9 +2237,30 @@
       "basic_block_count": 27
     },
     {
+      "address": "0x6F877D70",
+      "rva": "0x7D70",
+      "size": 1,
+      "name": "FUN_6f877d70",
+      "display_name": "MNE_1de091de38a0c810",
+      "has_human_name": false,
+      "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": null,
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x6F877F80",
       "rva": "0x7F80",
-      "size": 1871,
+      "size": 1392,
       "name": "FUN_6f877f80",
       "display_name": "STR_fc0dd241154991fd",
       "has_human_name": false,
@@ -1471,14 +2269,35 @@
       "indexes": {
         "EXP": null,
         "STR": "fc0dd241154991fd9d04dbc703760dec",
-        "API": "0bc8b3cfd8c03bce97b3ecd027621a07",
-        "MNE": "9fa90f91eba65ed29d17c74e9bc85f03",
-        "CFG": "cf4bb68f7d10e3e580864bdbd52f1603",
-        "PRO": "a65e1edca208295ab734b9f8d42f223d"
+        "API": "aae8648870cf64b2e37170ab335c0d0f",
+        "MNE": "b8076acf83489d9e9b7edce969fe76f7",
+        "CFG": "370204646e90fc9a4a813d2c11443cdb",
+        "PRO": "f2991d38f779d4e6b0062b6f94ff5d1b"
       },
       "string_refs": ["\"nType >= 0 && nType <NUMBER_OF_SUPPORTED_TILE_TYP...", "\"nOffsetX >= 0 && nOffsetX < 5\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glWa..."],
-      "api_calls": ["grDrawVertexArray", "grDrawVertexArray", "FogAssert", "FogAssert", "AllocateTileProjectBuffer", "grDrawVertexArrayContiguous"],
-      "basic_block_count": 49
+      "api_calls": ["grDrawVertexArray", "grDrawVertexArray", "FogAssert", "FogAssert"],
+      "basic_block_count": 35
+    },
+    {
+      "address": "0x6F8784F0",
+      "rva": "0x84F0",
+      "size": 479,
+      "name": "FUN_6f8784f0",
+      "display_name": "API_715cad697f6f117e",
+      "has_human_name": false,
+      "index": "API:715cad697f6f117eee3ec8db23e063bf",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "715cad697f6f117eee3ec8db23e063bf",
+        "MNE": "11191e639f6cd88c2a56a5c90134532c",
+        "CFG": "03bfd18f3ef5e4aa71a7a26a1e09673e",
+        "PRO": "9332ee29caa10329bbcb438d93ad65c3"
+      },
+      "string_refs": [],
+      "api_calls": ["AllocateTileProjectBuffer", "grDrawVertexArrayContiguous"],
+      "basic_block_count": 14
     },
     {
       "address": "0x6F8786D0",
@@ -1734,8 +2553,8 @@
       "address": "0x6F87870C",
       "rva": "0x870C",
       "size": 6,
-      "name": "Ordinal_10027",
-      "display_name": "Ordinal_10027",
+      "name": "SetSoundVolume",
+      "display_name": "SetSoundVolume",
       "has_human_name": true,
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
       "index_method": "MNE",
@@ -1747,10 +2566,10 @@
         "CFG": null,
         "PRO": "7d225471200aa7a3fa919a9e9ef15723"
       },
-      "signature": "undefined Ordinal_10027(void)",
-      "calling_convention": "unknown",
+      "signature": "void SetSoundVolume(int nVolume)",
+      "calling_convention": "__fastcall",
       "comment": "",
-      "parameters": [],
+      "parameters": [{"name": "nVolume", "type": "int", "storage": "ECX:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -5537,21 +6356,42 @@
       "basic_block_count": 65
     },
     {
-      "address": "0x6F87D060",
-      "rva": "0xD060",
-      "size": 193,
-      "name": "_strchr",
-      "display_name": "_strchr",
-      "has_human_name": true,
-      "index": "MNE:e8d820fe0ad4443eff596f9c063b1159",
+      "address": "0x6F87D050",
+      "rva": "0xD050",
+      "size": 5,
+      "name": "FUN_6f87d050",
+      "display_name": "MNE_3ecdb5e459e29b41",
+      "has_human_name": false,
+      "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
       "index_method": "MNE",
       "indexes": {
         "EXP": null,
         "STR": null,
         "API": null,
-        "MNE": "e8d820fe0ad4443eff596f9c063b1159",
-        "CFG": "bf67bbb6ef32da453084cb00b3120b87",
-        "PRO": "e1167e5700de83c67c90065001097c53"
+        "MNE": "3ecdb5e459e29b4117490dc114e98574",
+        "CFG": null,
+        "PRO": "c81df70c1b97172a537e995055b0c6bd"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F87D060",
+      "rva": "0xD060",
+      "size": 188,
+      "name": "_strchr",
+      "display_name": "_strchr",
+      "has_human_name": true,
+      "index": "MNE:85de0cee1ebe7ed32270da528f819b99",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "85de0cee1ebe7ed32270da528f819b99",
+        "CFG": "85ff81d3ec854f352e54bf7038401fe6",
+        "PRO": "16dababd665bf8fb855079aa1cbeb9e9"
       },
       "signature": "char * _strchr(char * _Str, int _Val)",
       "calling_convention": "__cdecl",
@@ -5559,7 +6399,7 @@
       "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Val", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
-      "basic_block_count": 26
+      "basic_block_count": 25
     },
     {
       "address": "0x6F87D120",
@@ -6080,6 +6920,69 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 31
+    },
+    {
+      "address": "0x6F87E710",
+      "rva": "0xE710",
+      "size": 1,
+      "name": "FUN_6f87e710",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F87E780",
+      "rva": "0xE780",
+      "size": 1,
+      "name": "FUN_6f87e780",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x6F87E800",
+      "rva": "0xE800",
+      "size": 1,
+      "name": "FUN_6f87e800",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x6F87E834",

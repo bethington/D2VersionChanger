@@ -20,7 +20,7 @@
       "local_var_count": 1,
       "param_count": 3,
       "instructions": ["0x1000|SUB|ESP, 0x680", "0x1006|PUSH|ESI", "0x1007|PUSH|EDI", "0x1008|XOR|ESI, ESI", "0x100A|PUSH|0x406038", "0x100F|PUSH|ESI", "0x1010|PUSH|ESI", "0x1011|PUSH|ESI", "0x1012|MOV|dword ptr [ESP + 0x18], ESI", "0x1016|XOR|EDI, EDI", "0x1018|CALL|dword ptr [0x00405018]", "0x101E|MOV|dword ptr [ESP + 0xc], EAX", "0x1022|CALL|dword ptr [0x00405014]", "0x1028|CMP|EAX, 0xb7", "0x102D|JNZ|0x00401034"],
-      "callees": [{"name":"CreateProcessA","address":"0x4"},{"name":"WaitForMultipleObjects","address":"0x3"},{"name":"FUN_0040146d","address":"0x40146D"},{"name":"MessageBoxA","address":"0x2B"},{"name":"CloseHandle","address":"0x17"},{"name":"FUN_004013b0","address":"0x4013B0"},{"name":"CreateEventA","address":"0x7"},{"name":"GetLastError","address":"0x6"},{"name":"LoadStringA","address":"0x2C"},{"name":"GetCommandLineA","address":"0x5"},{"name":"GetExitCodeProcess","address":"0x2"}],
+      "callees": [{"name":"LoadStringA","address":"0x2C"},{"name":"FUN_004013b0","address":"0x4013B0"},{"name":"CreateEventA","address":"0x7"},{"name":"GetLastError","address":"0x6"},{"name":"WaitForMultipleObjects","address":"0x3"},{"name":"GetCommandLineA","address":"0x5"},{"name":"GetExitCodeProcess","address":"0x2"},{"name":"CloseHandle","address":"0x17"},{"name":"FUN_0040146d","address":"0x40146D"},{"name":"MessageBoxA","address":"0x2B"},{"name":"CreateProcessA","address":"0x4"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": ["DIABLO_II_OK", "u\"Game.exe\"", "u\"Diablo II.exe\"", "u\"CD-ROM drive error.\"", "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"", "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"", "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"", "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"", "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"", "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""],
       "parameters": [{"name":"param_1","type":"HINSTANCE","storage":"Stack[0x4]:4"},{"name":"param_2","type":"undefined4","storage":"Stack[0x8]:4"},{"name":"param_3","type":"char *","storage":"Stack[0xc]:4"}]
@@ -38,7 +38,7 @@
       "local_var_count": 0,
       "param_count": 3,
       "instructions": ["0x13B0|PUSH|EBP", "0x13B1|MOV|EBP, ESP", "0x13B3|PUSH|EBX", "0x13B4|PUSH|EDI", "0x13B5|MOV|EDI, dword ptr [EBP + 0x10]", "0x13B8|XOR|EBX, EBX", "0x13BA|CMP|EDI, EBX", "0x13BC|JNZ|0x004013c6", "0x13BE|MOV|EAX, dword ptr [EBP + 0x8]", "0x13C1|JMP|0x00401469", "0x13C6|CMP|dword ptr [0x004067ac], EBX", "0x13CC|JNZ|0x004013e2", "0x13CE|PUSH|EDI", "0x13CF|PUSH|dword ptr [EBP + 0xc]", "0x13D2|PUSH|dword ptr [EBP + 0x8]"],
-      "callees": [{"name":"FUN_00401a02","address":"0x401A02"},{"name":"_strncat","address":"0x401A40"}],
+      "callees": [{"name":"_strncat","address":"0x401A40"},{"name":"FUN_00401a02","address":"0x401A02"}],
       "callers": [{"name":"FUN_00401000","address":"0x401000"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"byte *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"byte *","storage":"Stack[0x8]:4"},{"name":"param_3","type":"size_t","storage":"Stack[0xc]:4"}]
@@ -56,7 +56,7 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x146D|PUSH|EBP", "0x146E|MOV|EBP, ESP", "0x1470|PUSH|EBX", "0x1471|XOR|EBX, EBX", "0x1473|CMP|dword ptr [0x004067ac], EBX", "0x1479|PUSH|ESI", "0x147A|PUSH|EDI", "0x147B|JNZ|0x0040148c", "0x147D|PUSH|dword ptr [EBP + 0xc]", "0x1480|PUSH|dword ptr [EBP + 0x8]", "0x1483|CALL|0x00401c00", "0x1488|POP|ECX", "0x1489|POP|ECX", "0x148A|JMP|0x004014de", "0x148C|PUSH|dword ptr [EBP + 0xc]"],
-      "callees": [{"name":"FUN_00401b63","address":"0x401B63"},{"name":"FUN_00401c00","address":"0x401C00"},{"name":"_strlen","address":"0x401B80"}],
+      "callees": [{"name":"FUN_00401c00","address":"0x401C00"},{"name":"FUN_00401b63","address":"0x401B63"},{"name":"_strlen","address":"0x401B80"}],
       "callers": [{"name":"FUN_00401000","address":"0x401000"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"char *","storage":"Stack[0x8]:4"}]
@@ -74,7 +74,7 @@
       "local_var_count": 9,
       "param_count": 0,
       "instructions": ["0x14E3|PUSH|EBP", "0x14E4|MOV|EBP, ESP", "0x14E6|PUSH|-0x1", "0x14E8|PUSH|0x4050b8", "0x14ED|PUSH|0x402678", "0x14F2|MOV|EAX, FS:[0x0]", "0x14F8|PUSH|EAX", "0x14F9|MOV|dword ptr FS:[0x0], ESP", "0x1500|SUB|ESP, 0x58", "0x1503|PUSH|EBX", "0x1504|PUSH|ESI", "0x1505|PUSH|EDI", "0x1506|MOV|dword ptr [EBP + -0x18], ESP", "0x1509|CALL|dword ptr [0x00405030]", "0x150F|XOR|EDX, EDX"],
-      "callees": [{"name":"FUN_00401d82","address":"0x401D82"},{"name":"FUN_00402017","address":"0x402017"},{"name":"FUN_00402396","address":"0x402396"},{"name":"GetModuleHandleA","address":"0xB"},{"name":"FUN_00401f06","address":"0x401F06"},{"name":"GetVersion","address":"0xD"},{"name":"GetCommandLineA","address":"0x5"},{"name":"FUN_00402264","address":"0x402264"},{"name":"GetStartupInfoA","address":"0xC"},{"name":"FUN_004015fe","address":"0x4015FE"},{"name":"FUN_00401000","address":"0x401000"},{"name":"FUN_00401cad","address":"0x401CAD"},{"name":"FUN_00401c80","address":"0x401C80"},{"name":"FUN_00402541","address":"0x402541"},{"name":"FUN_00401f5e","address":"0x401F5E"}],
+      "callees": [{"name":"FUN_00401c80","address":"0x401C80"},{"name":"GetCommandLineA","address":"0x5"},{"name":"GetModuleHandleA","address":"0xB"},{"name":"FUN_00401d82","address":"0x401D82"},{"name":"FUN_00401000","address":"0x401000"},{"name":"GetVersion","address":"0xD"},{"name":"FUN_00402541","address":"0x402541"},{"name":"FUN_00401f5e","address":"0x401F5E"},{"name":"GetStartupInfoA","address":"0xC"},{"name":"FUN_00401cad","address":"0x401CAD"},{"name":"FUN_00402017","address":"0x402017"},{"name":"FUN_00402396","address":"0x402396"},{"name":"FUN_00402264","address":"0x402264"},{"name":"FUN_004015fe","address":"0x4015FE"},{"name":"FUN_00401f06","address":"0x401F06"}],
       "callers": [],
       "strings": [],
       "parameters": []
@@ -92,7 +92,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x15D9|CMP|dword ptr [0x004064bc], 0x1", "0x15E0|JNZ|0x004015e7", "0x15E2|CALL|0x00402750", "0x15E7|PUSH|dword ptr [ESP + 0x4]", "0x15EB|CALL|0x00402789", "0x15F0|PUSH|0xff", "0x15F5|CALL|dword ptr [0x00406048]"],
-      "callees": [{"name":"FUN_00402750","address":"0x402750"},{"name":"__exit","address":"0x401CBE"},{"name":"FUN_00402789","address":"0x402789"}],
+      "callees": [{"name":"FUN_00402789","address":"0x402789"},{"name":"__exit","address":"0x401CBE"},{"name":"FUN_00402750","address":"0x402750"}],
       "callers": [{"name":"FUN_00402017","address":"0x402017"},{"name":"FUN_00402396","address":"0x402396"},{"name":"FUN_00401f5e","address":"0x401F5E"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"DWORD","storage":"Stack[0x4]:4"}]
@@ -110,7 +110,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x15FE|CMP|dword ptr [0x004064bc], 0x1", "0x1605|JNZ|0x0040160c", "0x1607|CALL|0x00402750", "0x160C|PUSH|dword ptr [ESP + 0x4]", "0x1610|CALL|0x00402789", "0x1615|POP|ECX", "0x1616|PUSH|0xff", "0x161B|CALL|dword ptr [0x00405034]"],
-      "callees": [{"name":"FUN_00402750","address":"0x402750"},{"name":"ExitProcess","address":"0xE"},{"name":"FUN_00402789","address":"0x402789"}],
+      "callees": [{"name":"ExitProcess","address":"0xE"},{"name":"FUN_00402789","address":"0x402789"},{"name":"FUN_00402750","address":"0x402750"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"DWORD","storage":"Stack[0x4]:4"}]
@@ -128,7 +128,7 @@
       "local_var_count": 5,
       "param_count": 1,
       "instructions": ["0x1622|PUSH|EBP", "0x1623|MOV|EBP, ESP", "0x1625|SUB|ESP, 0x18", "0x1628|PUSH|EBX", "0x1629|PUSH|ESI", "0x162A|PUSH|EDI", "0x162B|PUSH|dword ptr [EBP + 0x8]", "0x162E|CALL|0x004017bb", "0x1633|MOV|ESI, EAX", "0x1635|POP|ECX", "0x1636|CMP|ESI, dword ptr [0x00406798]", "0x163C|MOV|dword ptr [EBP + 0x8], ESI", "0x163F|JZ|0x004017af", "0x1645|XOR|EBX, EBX", "0x1647|CMP|ESI, EBX"],
-      "callees": [{"name":"FUN_004017bb","address":"0x4017BB"},{"name":"GetCPInfo","address":"0xF"},{"name":"FUN_00401805","address":"0x401805"},{"name":"FUN_00401861","address":"0x401861"},{"name":"FUN_00401838","address":"0x401838"}],
+      "callees": [{"name":"FUN_004017bb","address":"0x4017BB"},{"name":"GetCPInfo","address":"0xF"},{"name":"FUN_00401838","address":"0x401838"},{"name":"FUN_00401861","address":"0x401861"},{"name":"FUN_00401805","address":"0x401805"}],
       "callers": [{"name":"FUN_004019e6","address":"0x4019E6"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"}]
@@ -200,7 +200,7 @@
       "local_var_count": 11,
       "param_count": 0,
       "instructions": ["0x1861|PUSH|EBP", "0x1862|MOV|EBP, ESP", "0x1864|SUB|ESP, 0x514", "0x186A|LEA|EAX, [EBP + -0x14]", "0x186D|PUSH|ESI", "0x186E|PUSH|EAX", "0x186F|PUSH|dword ptr [0x00406798]", "0x1875|CALL|dword ptr [0x00405038]", "0x187B|CMP|EAX, 0x1", "0x187E|JNZ|0x0040199a", "0x1884|XOR|EAX, EAX", "0x1886|MOV|ESI, 0x100", "0x188B|MOV|byte ptr [EBP + EAX*0x1 + 0xfffffeec], AL", "0x1892|INC|EAX", "0x1893|CMP|EAX, ESI"],
-      "callees": [{"name":"GetCPInfo","address":"0xF"},{"name":"FUN_004028dc","address":"0x4028DC"},{"name":"FUN_00402b2b","address":"0x402B2B"}],
+      "callees": [{"name":"GetCPInfo","address":"0xF"},{"name":"FUN_00402b2b","address":"0x402B2B"},{"name":"FUN_004028dc","address":"0x4028DC"}],
       "callers": [{"name":"FUN_00401622","address":"0x401622"}],
       "strings": [],
       "parameters": []
@@ -291,7 +291,7 @@
       "param_count": 1,
       "instructions": ["0x1B80|MOV|ECX, dword ptr [ESP + 0x4]", "0x1B84|TEST|ECX, 0x3", "0x1B8A|JZ|0x00401ba0", "0x1B8C|MOV|AL, byte ptr [ECX]", "0x1B8E|INC|ECX", "0x1B8F|TEST|AL, AL", "0x1B91|JZ|0x00401bd3", "0x1B93|TEST|ECX, 0x3", "0x1B99|JNZ|0x00401b8c", "0x1B9B|ADD|EAX, 0x0", "0x1BA0|MOV|EAX, dword ptr [ECX]", "0x1BA2|MOV|EDX, 0x7efefeff", "0x1BA7|ADD|EDX, EAX", "0x1BA9|XOR|EAX, 0xffffffff", "0x1BAC|XOR|EAX, EDX"],
       "callees": [],
-      "callers": [{"name":"FUN_0040146d","address":"0x40146D"},{"name":"FUN_00401f5e","address":"0x401F5E"},{"name":"FUN_00402789","address":"0x402789"}],
+      "callers": [{"name":"FUN_00402789","address":"0x402789"},{"name":"FUN_0040146d","address":"0x40146D"},{"name":"FUN_00401f5e","address":"0x401F5E"}],
       "strings": [],
       "parameters": [{"name":"_Str","type":"char *","storage":"Stack[0x4]:4"}]
     },
@@ -380,7 +380,7 @@
       "local_var_count": 0,
       "param_count": 3,
       "instructions": ["0x1CCF|PUSH|EDI", "0x1CD0|PUSH|0x1", "0x1CD2|POP|EDI", "0x1CD3|CMP|dword ptr [0x0040650c], EDI", "0x1CD9|JNZ|0x00401cec", "0x1CDB|PUSH|dword ptr [ESP + 0x8]", "0x1CDF|CALL|dword ptr [0x00405048]", "0x1CE5|PUSH|EAX", "0x1CE6|CALL|dword ptr [0x00405044]", "0x1CEC|CMP|dword ptr [ESP + 0xc], 0x0", "0x1CF1|PUSH|EBX", "0x1CF2|MOV|EBX, dword ptr [ESP + 0x14]", "0x1CF6|MOV|dword ptr [0x00406508], EDI", "0x1CFC|MOV|byte ptr [0x00406504], BL", "0x1D02|JNZ|0x00401d40"],
-      "callees": [{"name":"FUN_00401d68","address":"0x401D68"},{"name":"ExitProcess","address":"0xE"},{"name":"GetCurrentProcess","address":"0x13"},{"name":"TerminateProcess","address":"0x12"}],
+      "callees": [{"name":"ExitProcess","address":"0xE"},{"name":"GetCurrentProcess","address":"0x13"},{"name":"TerminateProcess","address":"0x12"},{"name":"FUN_00401d68","address":"0x401D68"}],
       "callers": [{"name":"FUN_00401cad","address":"0x401CAD"},{"name":"__exit","address":"0x401CBE"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"UINT","storage":"Stack[0x4]:4"},{"name":"param_2","type":"int","storage":"Stack[0x8]:4"},{"name":"param_3","type":"int","storage":"Stack[0xc]:4"}]
@@ -416,7 +416,7 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x1D82|PUSH|EBP", "0x1D83|MOV|EBP, ESP", "0x1D85|PUSH|EBX", "0x1D86|PUSH|dword ptr [EBP + 0x8]", "0x1D89|CALL|0x00401ec3", "0x1D8E|TEST|EAX, EAX", "0x1D90|POP|ECX", "0x1D91|JZ|0x00401eb7", "0x1D97|MOV|EBX, dword ptr [EAX + 0x8]", "0x1D9A|TEST|EBX, EBX", "0x1D9C|JZ|0x00401eb7", "0x1DA2|CMP|EBX, 0x5", "0x1DA5|JNZ|0x00401db3", "0x1DA7|AND|dword ptr [EAX + 0x8], 0x0", "0x1DAB|PUSH|0x1"],
-      "callees": [{"name":"UnhandledExceptionFilter","address":"0x14"},{"name":"FUN_00401ec3","address":"0x401EC3"}],
+      "callees": [{"name":"FUN_00401ec3","address":"0x401EC3"},{"name":"UnhandledExceptionFilter","address":"0x14"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"},{"name":"param_2","type":"_EXCEPTION_POINTERS *","storage":"Stack[0x8]:4"}]
@@ -470,7 +470,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1F5E|PUSH|EBX", "0x1F5F|XOR|EBX, EBX", "0x1F61|CMP|dword ptr [0x00406788], EBX", "0x1F67|PUSH|ESI", "0x1F68|PUSH|EDI", "0x1F69|JNZ|0x00401f70", "0x1F6B|CALL|0x004019e6", "0x1F70|MOV|ESI, dword ptr [0x004064b4]", "0x1F76|XOR|EDI, EDI", "0x1F78|MOV|AL, byte ptr [ESI]", "0x1F7A|CMP|AL, BL", "0x1F7C|JZ|0x00401f90", "0x1F7E|CMP|AL, 0x3d", "0x1F80|JZ|0x00401f83", "0x1F82|INC|EDI"],
-      "callees": [{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_00402dce","address":"0x402DCE"},{"name":"FUN_004019e6","address":"0x4019E6"},{"name":"_malloc","address":"0x402EF0"},{"name":"FUN_00402e00","address":"0x402E00"},{"name":"_strlen","address":"0x401B80"}],
+      "callees": [{"name":"_malloc","address":"0x402EF0"},{"name":"FUN_00402dce","address":"0x402DCE"},{"name":"FUN_004019e6","address":"0x4019E6"},{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_00402e00","address":"0x402E00"},{"name":"_strlen","address":"0x401B80"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": []
@@ -488,7 +488,7 @@
       "local_var_count": 2,
       "param_count": 0,
       "instructions": ["0x2017|PUSH|EBP", "0x2018|MOV|EBP, ESP", "0x201A|PUSH|ECX", "0x201B|PUSH|ECX", "0x201C|PUSH|EBX", "0x201D|XOR|EBX, EBX", "0x201F|CMP|dword ptr [0x00406788], EBX", "0x2025|PUSH|ESI", "0x2026|PUSH|EDI", "0x2027|JNZ|0x0040202e", "0x2029|CALL|0x004019e6", "0x202E|MOV|ESI, 0x406514", "0x2033|PUSH|0x104", "0x2038|PUSH|ESI", "0x2039|PUSH|EBX"],
-      "callees": [{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_004019e6","address":"0x4019E6"},{"name":"GetModuleFileNameA","address":"0x15"},{"name":"_malloc","address":"0x402EF0"},{"name":"FUN_004020b0","address":"0x4020B0"}],
+      "callees": [{"name":"GetModuleFileNameA","address":"0x15"},{"name":"_malloc","address":"0x402EF0"},{"name":"FUN_004019e6","address":"0x4019E6"},{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_004020b0","address":"0x4020B0"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": []
@@ -524,7 +524,7 @@
       "local_var_count": 2,
       "param_count": 0,
       "instructions": ["0x2264|PUSH|ECX", "0x2265|PUSH|ECX", "0x2266|MOV|EAX, [0x00406618]", "0x226B|PUSH|EBX", "0x226C|PUSH|EBP", "0x226D|MOV|EBP, dword ptr [0x00405064]", "0x2273|PUSH|ESI", "0x2274|PUSH|EDI", "0x2275|XOR|EBX, EBX", "0x2277|XOR|ESI, ESI", "0x2279|XOR|EDI, EDI", "0x227B|CMP|EAX, EBX", "0x227D|JNZ|0x004022b2", "0x227F|CALL|EBP", "0x2281|MOV|ESI, EAX"],
-      "callees": [{"name":"GetEnvironmentStringsW","address":"0x1A"},{"name":"FUN_00402f70","address":"0x402F70"},{"name":"FUN_00402dce","address":"0x402DCE"},{"name":"FreeEnvironmentStringsA","address":"0x16"},{"name":"_malloc","address":"0x402EF0"},{"name":"FreeEnvironmentStringsW","address":"0x1"},{"name":"GetEnvironmentStrings","address":"0x19"},{"name":"WideCharToMultiByte","address":"0x18"}],
+      "callees": [{"name":"_malloc","address":"0x402EF0"},{"name":"FreeEnvironmentStringsA","address":"0x16"},{"name":"FUN_00402dce","address":"0x402DCE"},{"name":"GetEnvironmentStrings","address":"0x19"},{"name":"FUN_00402f70","address":"0x402F70"},{"name":"WideCharToMultiByte","address":"0x18"},{"name":"GetEnvironmentStringsW","address":"0x1A"},{"name":"FreeEnvironmentStringsW","address":"0x1"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": []
@@ -542,7 +542,7 @@
       "local_var_count": 1,
       "param_count": 0,
       "instructions": ["0x2396|SUB|ESP, 0x44", "0x2399|PUSH|EBX", "0x239A|PUSH|EBP", "0x239B|PUSH|ESI", "0x239C|PUSH|EDI", "0x239D|PUSH|0x100", "0x23A2|CALL|0x00402ef0", "0x23A7|MOV|ESI, EAX", "0x23A9|POP|ECX", "0x23AA|TEST|ESI, ESI", "0x23AC|JNZ|0x004023b6", "0x23AE|PUSH|0x1b", "0x23B0|CALL|0x004015d9", "0x23B5|POP|ECX", "0x23B6|MOV|dword ptr [0x00406680], ESI"],
-      "callees": [{"name":"GetStdHandle","address":"0x9"},{"name":"GetStartupInfoA","address":"0xC"},{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"GetFileType","address":"0x1C"},{"name":"SetHandleCount","address":"0x8"},{"name":"_malloc","address":"0x402EF0"}],
+      "callees": [{"name":"_malloc","address":"0x402EF0"},{"name":"GetFileType","address":"0x1C"},{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"GetStdHandle","address":"0x9"},{"name":"SetHandleCount","address":"0x8"},{"name":"GetStartupInfoA","address":"0xC"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": []
@@ -560,7 +560,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x2541|XOR|EAX, EAX", "0x2543|PUSH|0x0", "0x2545|CMP|dword ptr [ESP + 0x8], EAX", "0x2549|PUSH|0x1000", "0x254E|SETZ|AL", "0x2551|PUSH|EAX", "0x2552|CALL|dword ptr [0x00405074]", "0x2558|TEST|EAX, EAX", "0x255A|MOV|[0x00406674], EAX", "0x255F|JZ|0x00402576", "0x2561|CALL|0x004032a5", "0x2566|TEST|EAX, EAX", "0x2568|JNZ|0x00402579", "0x256A|PUSH|dword ptr [0x00406674]", "0x2570|CALL|dword ptr [0x00405070]"],
-      "callees": [{"name":"HeapDestroy","address":"0x1D"},{"name":"HeapCreate","address":"0x1E"},{"name":"FUN_004032a5","address":"0x4032A5"}],
+      "callees": [{"name":"HeapCreate","address":"0x1E"},{"name":"FUN_004032a5","address":"0x4032A5"},{"name":"HeapDestroy","address":"0x1D"}],
       "callers": [{"name":"entry","address":"0x4014E3"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"}]
@@ -651,7 +651,7 @@
       "param_count": 0,
       "instructions": ["0x2750|MOV|EAX, [0x004064bc]", "0x2755|CMP|EAX, 0x1", "0x2758|JZ|0x00402767", "0x275A|TEST|EAX, EAX", "0x275C|JNZ|0x00402788", "0x275E|CMP|dword ptr [0x0040604c], 0x1", "0x2765|JNZ|0x00402788", "0x2767|PUSH|0xfc", "0x276C|CALL|0x00402789", "0x2771|MOV|EAX, [0x0040661c]", "0x2776|POP|ECX", "0x2777|TEST|EAX, EAX", "0x2779|JZ|0x0040277d", "0x277B|CALL|EAX", "0x277D|PUSH|0xff"],
       "callees": [{"name":"FUN_00402789","address":"0x402789"}],
-      "callers": [{"name":"FUN_004015fe","address":"0x4015FE"},{"name":"FUN_004015d9","address":"0x4015D9"}],
+      "callers": [{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_004015fe","address":"0x4015FE"}],
       "strings": [],
       "parameters": []
     },
@@ -668,8 +668,8 @@
       "local_var_count": 2,
       "param_count": 1,
       "instructions": ["0x2789|PUSH|EBP", "0x278A|MOV|EBP, ESP", "0x278C|SUB|ESP, 0x1a4", "0x2792|MOV|EDX, dword ptr [EBP + 0x8]", "0x2795|XOR|ECX, ECX", "0x2797|MOV|EAX, 0x4061f8", "0x279C|CMP|EDX, dword ptr [EAX]", "0x279E|JZ|0x004027ab", "0x27A0|ADD|EAX, 0x8", "0x27A3|INC|ECX", "0x27A4|CMP|EAX, 0x406288", "0x27A9|JL|0x0040279c", "0x27AB|PUSH|ESI", "0x27AC|MOV|ESI, ECX", "0x27AE|SHL|ESI, 0x3"],
-      "callees": [{"name":"GetStdHandle","address":"0x9"},{"name":"FUN_00402e10","address":"0x402E10"},{"name":"FUN_00403aee","address":"0x403AEE"},{"name":"GetModuleFileNameA","address":"0x15"},{"name":"_strncpy","address":"0x403B80"},{"name":"WriteFile","address":"0x22"},{"name":"FUN_00402e00","address":"0x402E00"},{"name":"_strlen","address":"0x401B80"}],
-      "callers": [{"name":"FUN_004015fe","address":"0x4015FE"},{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_00402750","address":"0x402750"}],
+      "callees": [{"name":"GetModuleFileNameA","address":"0x15"},{"name":"FUN_00403aee","address":"0x403AEE"},{"name":"GetStdHandle","address":"0x9"},{"name":"WriteFile","address":"0x22"},{"name":"_strncpy","address":"0x403B80"},{"name":"FUN_00402e10","address":"0x402E10"},{"name":"FUN_00402e00","address":"0x402E00"},{"name":"_strlen","address":"0x401B80"}],
+      "callers": [{"name":"FUN_004015d9","address":"0x4015D9"},{"name":"FUN_004015fe","address":"0x4015FE"},{"name":"FUN_00402750","address":"0x402750"}],
       "strings": ["<program name unknown>", "Runtime Error!\\n\\nProgram: ", "R6009\\r\\n- not enough space for environment\\r\\n", "Microsoft Visual C++ Runtime Library"],
       "parameters": [{"name":"param_1","type":"DWORD","storage":"Stack[0x4]:4"}]
     },
@@ -686,7 +686,7 @@
       "local_var_count": 8,
       "param_count": 8,
       "instructions": ["0x28DC|PUSH|EBP", "0x28DD|MOV|EBP, ESP", "0x28DF|PUSH|-0x1", "0x28E1|PUSH|0x4053c0", "0x28E6|PUSH|0x402678", "0x28EB|MOV|EAX, FS:[0x0]", "0x28F1|PUSH|EAX", "0x28F2|MOV|dword ptr FS:[0x0], ESP", "0x28F9|SUB|ESP, 0x1c", "0x28FC|PUSH|EBX", "0x28FD|PUSH|ESI", "0x28FE|PUSH|EDI", "0x28FF|MOV|dword ptr [EBP + -0x18], ESP", "0x2902|XOR|EDI, EDI", "0x2904|CMP|dword ptr [0x00406640], EDI"],
-      "callees": [{"name":"FUN_00402b00","address":"0x402B00"},{"name":"LCMapStringW","address":"0x25"},{"name":"FUN_00403c80","address":"0x403C80"},{"name":"LCMapStringA","address":"0x24"},{"name":"MultiByteToWideChar","address":"0x23"},{"name":"WideCharToMultiByte","address":"0x18"}],
+      "callees": [{"name":"MultiByteToWideChar","address":"0x23"},{"name":"LCMapStringW","address":"0x25"},{"name":"FUN_00403c80","address":"0x403C80"},{"name":"LCMapStringA","address":"0x24"},{"name":"FUN_00402b00","address":"0x402B00"},{"name":"WideCharToMultiByte","address":"0x18"}],
       "callers": [{"name":"FUN_00401861","address":"0x401861"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"LCID","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"},{"name":"param_3","type":"char *","storage":"Stack[0xc]:4"},{"name":"param_4","type":"int","storage":"Stack[0x10]:4"},{"name":"param_5","type":"LPWSTR","storage":"Stack[0x14]:4"},{"name":"param_6","type":"int","storage":"Stack[0x18]:4"},{"name":"param_7","type":"UINT","storage":"Stack[0x1c]:4"},{"name":"param_8","type":"int","storage":"Stack[0x20]:4"}]
@@ -722,7 +722,7 @@
       "local_var_count": 7,
       "param_count": 7,
       "instructions": ["0x2B2B|PUSH|EBP", "0x2B2C|MOV|EBP, ESP", "0x2B2E|PUSH|-0x1", "0x2B30|PUSH|0x4053d8", "0x2B35|PUSH|0x402678", "0x2B3A|MOV|EAX, FS:[0x0]", "0x2B40|PUSH|EAX", "0x2B41|MOV|dword ptr FS:[0x0], ESP", "0x2B48|SUB|ESP, 0x18", "0x2B4B|PUSH|EBX", "0x2B4C|PUSH|ESI", "0x2B4D|PUSH|EDI", "0x2B4E|MOV|dword ptr [EBP + -0x18], ESP", "0x2B51|MOV|EAX, [0x00406644]", "0x2B56|XOR|EBX, EBX"],
-      "callees": [{"name":"GetStringTypeA","address":"0x26"},{"name":"FUN_00403c80","address":"0x403C80"},{"name":"GetStringTypeW","address":"0x27"},{"name":"MultiByteToWideChar","address":"0x23"},{"name":"_memset","address":"0x403CB0"}],
+      "callees": [{"name":"MultiByteToWideChar","address":"0x23"},{"name":"FUN_00403c80","address":"0x403C80"},{"name":"GetStringTypeW","address":"0x27"},{"name":"GetStringTypeA","address":"0x26"},{"name":"_memset","address":"0x403CB0"}],
       "callers": [{"name":"FUN_00401861","address":"0x401861"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"DWORD","storage":"Stack[0x4]:4"},{"name":"param_2","type":"LPCSTR","storage":"Stack[0x8]:4"},{"name":"param_3","type":"int","storage":"Stack[0xc]:4"},{"name":"param_4","type":"LPWORD","storage":"Stack[0x10]:4"},{"name":"param_5","type":"UINT","storage":"Stack[0x14]:4"},{"name":"param_6","type":"LCID","storage":"Stack[0x18]:4"},{"name":"param_7","type":"int","storage":"Stack[0x1c]:4"}]
@@ -831,7 +831,7 @@
       "param_count": 2,
       "instructions": ["0x2E00|PUSH|EDI", "0x2E01|MOV|EDI, dword ptr [ESP + 0x8]", "0x2E05|JMP|0x00402e71"],
       "callees": [],
-      "callers": [{"name":"FUN_00401f5e","address":"0x401F5E"},{"name":"FUN_00402789","address":"0x402789"}],
+      "callers": [{"name":"FUN_00402789","address":"0x402789"},{"name":"FUN_00401f5e","address":"0x401F5E"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint *","storage":"Stack[0x8]:4"}]
     },
@@ -1010,7 +1010,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x3942|MOV|EAX, [0x0040666c]", "0x3947|MOV|ECX, dword ptr [0x0040665c]", "0x394D|PUSH|ESI", "0x394E|PUSH|EDI", "0x394F|XOR|EDI, EDI", "0x3951|CMP|EAX, ECX", "0x3953|JNZ|0x00403985", "0x3955|LEA|EAX, [ECX + ECX*0x4 + 0x50]", "0x3959|SHL|EAX, 0x2", "0x395C|PUSH|EAX", "0x395D|PUSH|dword ptr [0x00406670]", "0x3963|PUSH|EDI", "0x3964|PUSH|dword ptr [0x00406674]", "0x396A|CALL|dword ptr [0x004050a4]", "0x3970|CMP|EAX, EDI"],
-      "callees": [{"name":"HeapReAlloc","address":"0x2A"},{"name":"HeapAlloc","address":"0x28"},{"name":"VirtualAlloc","address":"0x29"},{"name":"HeapFree","address":"0x20"}],
+      "callees": [{"name":"VirtualAlloc","address":"0x29"},{"name":"HeapReAlloc","address":"0x2A"},{"name":"HeapFree","address":"0x20"},{"name":"HeapAlloc","address":"0x28"}],
       "callers": [{"name":"FUN_00403639","address":"0x403639"}],
       "strings": [],
       "parameters": []
@@ -1083,7 +1083,7 @@
       "param_count": 0,
       "instructions": ["0x3C80|PUSH|ECX", "0x3C81|CMP|EAX, 0x1000", "0x3C86|LEA|ECX, [ESP + 0x8]", "0x3C8A|JC|0x00403ca0", "0x3C8C|SUB|ECX, 0x1000", "0x3C92|SUB|EAX, 0x1000", "0x3C97|TEST|dword ptr [ECX], EAX", "0x3C99|CMP|EAX, 0x1000", "0x3C9E|JNC|0x00403c8c", "0x3CA0|SUB|ECX, EAX", "0x3CA2|MOV|EAX, ESP", "0x3CA4|TEST|dword ptr [ECX], EAX", "0x3CA6|MOV|ESP, ECX", "0x3CA8|MOV|ECX, dword ptr [EAX]", "0x3CAA|MOV|EAX, dword ptr [EAX + 0x4]"],
       "callees": [],
-      "callers": [{"name":"FUN_004028dc","address":"0x4028DC"},{"name":"FUN_00402b2b","address":"0x402B2B"}],
+      "callers": [{"name":"FUN_00402b2b","address":"0x402B2B"},{"name":"FUN_004028dc","address":"0x4028DC"}],
       "strings": [],
       "parameters": []
     },

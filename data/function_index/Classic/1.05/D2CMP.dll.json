@@ -1,0 +1,10 @@
+{
+  "program_name": "D2CMP.dll",
+  "game_type": "Classic",
+  "version": "1.05",
+  "image_base": "0x6FE10000",
+  "total_functions": 0,
+  "export_timestamp": "Wed Dec 10 16:12:42 CST 2025",
+  "functions": [
+  ]
+}

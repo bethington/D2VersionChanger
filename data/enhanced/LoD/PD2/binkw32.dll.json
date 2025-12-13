@@ -21,7 +21,7 @@
       "param_count": 1,
       "instructions": ["0x1000|MOV|EAX, dword ptr [ESP + 0x4]", "0x1004|TEST|EAX, EAX", "0x1006|JZ|0x0382103c", "0x1008|CMP|EAX, -0x1", "0x100B|JZ|0x0382103c", "0x100D|ADD|EAX, 0x20", "0x1010|PUSH|EAX", "0x1011|CALL|0x0383c960", "0x1016|ADD|ESP, 0x4", "0x1019|TEST|EAX, EAX", "0x101B|JZ|0x0382103c", "0x101D|MOV|DL, AL", "0x101F|AND|DL, 0x1f", "0x1022|MOV|CL, 0x20", "0x1024|SUB|CL, DL"],
       "callees": [{"name":"_malloc","address":"0x383C960"}],
-      "callers": [{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"AllocateYuvBuffer","address":"0x382CAB0"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"AllocateAndInitializeAudioBuffer","address":"0x3839DB0"},{"name":"_BinkOpenTrack@8","address":"0x382A6D0"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"AllocateYuvBuffer","address":"0x382CAB0"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"AllocateAndInitializeAudioBuffer","address":"0x3839DB0"},{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"_BinkOpenTrack@8","address":"0x382A6D0"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint","storage":"Stack[0x4]:4"}]
     },
@@ -39,7 +39,7 @@
       "param_count": 1,
       "instructions": ["0x1050|MOV|EAX, dword ptr [ESP + 0x4]", "0x1054|TEST|EAX, EAX", "0x1056|JZ|0x03821066", "0x1058|XOR|ECX, ECX", "0x105A|MOV|CL, byte ptr [EAX + -0x1]", "0x105D|SUB|EAX, ECX", "0x105F|PUSH|EAX", "0x1060|CALL|0x0383c9d4", "0x1065|POP|ECX", "0x1066|RET|0x4"],
       "callees": [{"name":"FreeMemoryBlock","address":"0x383C9D4"}],
-      "callers": [{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"_BinkClose@4","address":"0x3829940"},{"name":"FreeRadMemory","address":"0x383A500"},{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkBufferClose@4","address":"0x3826F90"},{"name":"AllocateYuvBuffer","address":"0x382CAB0"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"CleanupBinkHandle","address":"0x382AB00"},{"name":"_BinkCloseTrack@4","address":"0x382A7B0"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"AllocateYuvBuffer","address":"0x382CAB0"},{"name":"_BinkClose@4","address":"0x3829940"},{"name":"CleanupBinkHandle","address":"0x382AB00"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"FreeRadMemory","address":"0x383A500"},{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"_BinkCloseTrack@4","address":"0x382A7B0"},{"name":"_BinkBufferClose@4","address":"0x3826F90"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"}]
     },
@@ -56,7 +56,7 @@
       "local_var_count": 3,
       "param_count": 2,
       "instructions": ["0x1070|MOV|EAX, dword ptr [ESP + 0x8]", "0x1074|SUB|ESP, 0x100", "0x107A|CMP|EAX, 0x1", "0x107D|JNZ|0x03821134", "0x1083|MOV|EAX, dword ptr [ESP + 0x104]", "0x108A|PUSH|EDI", "0x108B|PUSH|0x7f", "0x108D|LEA|ECX, [ESP + 0x8]", "0x1091|PUSH|ECX", "0x1092|PUSH|EAX", "0x1093|MOV|[0x0385caa0], EAX", "0x1098|CALL|dword ptr [0x038430e0]", "0x109E|OR|ECX, 0xffffffff", "0x10A1|XOR|EAX, EAX", "0x10A3|LEA|EDI, [ESP + 0x4]"],
-      "callees": [{"name":"MessageBoxA","address":"0x3D"},{"name":"GetModuleFileNameA","address":"0x2C"},{"name":"GetWindowsDirectoryA","address":"0x2A"},{"name":"__strcmpi","address":"0x383CA10"},{"name":"GetSystemDirectoryA","address":"0x21"}],
+      "callees": [{"name":"MessageBoxA","address":"0x3D"},{"name":"GetSystemDirectoryA","address":"0x21"},{"name":"GetWindowsDirectoryA","address":"0x2A"},{"name":"__strcmpi","address":"0x383CA10"},{"name":"GetModuleFileNameA","address":"0x2C"}],
       "callers": [{"name":"entry","address":"0x383D335"}],
       "strings": ["Smacker Error", "The BinkW32.DLL file is incorrectly installed in the Windows or Windows system directory."],
       "parameters": [{"name":"hModule","type":"HMODULE","storage":"Stack[0x4]:4"},{"name":"nReason","type":"int","storage":"Stack[0x8]:4"}]
@@ -92,7 +92,7 @@
       "local_var_count": 1,
       "param_count": 4,
       "instructions": ["0x1210|PUSH|EBP", "0x1211|MOV|EBP, ESP", "0x1213|PUSH|ECX", "0x1214|PUSH|EBX", "0x1215|PUSH|ESI", "0x1216|MOV|ESI, dword ptr [EBP + 0x8]", "0x1219|LEA|EBX, [ESI + 0x5c]", "0x121C|PUSH|EDI", "0x121D|MOV|dword ptr [EBP + -0x4], EBX", "0x1220|MOV|EAX, dword ptr [EBP + -0x4]", "0x1223|INC.LOCK|byte ptr [EAX]", "0x1226|MOV|EAX, dword ptr [ESI + 0x60]", "0x1229|TEST|EAX, EAX", "0x122B|JZ|0x03821247", "0x122D|MOV|EDI, dword ptr [0x038430d0]"],
-      "callees": [{"name":"Sleep","address":"0x28"},{"name":"ReadFile","address":"0x29"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"SetFilePointer","address":"0x27"}],
+      "callees": [{"name":"SetFilePointer","address":"0x27"},{"name":"ReadFile","address":"0x29"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pFileContext","type":"BinkFile *","storage":"Stack[0x4]:4"},{"name":"filePosition","type":"int","storage":"Stack[0x8]:4"},{"name":"pBuffer","type":"LPVOID","storage":"Stack[0xc]:4"},{"name":"bytesToRead","type":"DWORD","storage":"Stack[0x10]:4"}]
@@ -110,7 +110,7 @@
       "local_var_count": 4,
       "param_count": 5,
       "instructions": ["0x12C0|PUSH|EBP", "0x12C1|MOV|EBP, ESP", "0x12C3|SUB|ESP, 0x10", "0x12C6|PUSH|EBX", "0x12C7|PUSH|ESI", "0x12C8|MOV|dword ptr [EBP + -0xc], 0x0", "0x12CF|MOV|dword ptr [EBP + -0x8], 0x0", "0x12D6|CALL|dword ptr [0x03843164]", "0x12DC|MOV|ESI, dword ptr [EBP + 0x10]", "0x12DF|CMP|ESI, -0x1", "0x12E2|MOV|EBX, dword ptr [EBP + 0x8]", "0x12E5|MOV|dword ptr [EBP + -0x10], EAX", "0x12E8|JZ|0x0382139a", "0x12EE|CMP|dword ptr [EBX + 0x50], ESI", "0x12F1|JZ|0x0382139a"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"Sleep","address":"0x28"},{"name":"ReadFile","address":"0x29"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"SetFilePointer","address":"0x27"}],
+      "callees": [{"name":"SetFilePointer","address":"0x27"},{"name":"timeGetTime","address":"0x4B"},{"name":"ReadFile","address":"0x29"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pFileContext","type":"int","storage":"Stack[0x4]:4"},{"name":"unused1","type":"undefined4","storage":"Stack[0x8]:4"},{"name":"seekPosition","type":"uint","storage":"Stack[0xc]:4"},{"name":"pOutputBuffer","type":"undefined4 *","storage":"Stack[0x10]:4"},{"name":"readSize","type":"DWORD","storage":"Stack[0x14]:4"}]
@@ -128,7 +128,7 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x1580|PUSH|EBP", "0x1581|MOV|EBP, ESP", "0x1583|PUSH|EBX", "0x1584|PUSH|ESI", "0x1585|MOV|ESI, dword ptr [EBP + 0x8]", "0x1588|LEA|EBX, [ESI + 0x5c]", "0x158B|MOV|dword ptr [EBP + 0x8], EBX", "0x158E|MOV|EAX, dword ptr [EBP + 0x8]", "0x1591|INC.LOCK|byte ptr [EAX]", "0x1594|MOV|EAX, dword ptr [ESI + 0x60]", "0x1597|TEST|EAX, EAX", "0x1599|JZ|0x038215b7", "0x159B|PUSH|EDI", "0x159C|MOV|EDI, dword ptr [0x038430d0]", "0x15A2|PUSH|0x0"],
-      "callees": [{"name":"Sleep","address":"0x28"},{"name":"_BinkService@4","address":"0x382A5E0"}],
+      "callees": [{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pBinkFile","type":"BinkFile *","storage":"Stack[0x4]:4"},{"name":"dwOffset","type":"uint","storage":"Stack[0x8]:4"}]
@@ -146,7 +146,7 @@
       "local_var_count": 0,
       "param_count": 5,
       "instructions": ["0x15E0|PUSH|EBP", "0x15E1|MOV|EBP, ESP", "0x15E3|PUSH|ESI", "0x15E4|MOV|ESI, dword ptr [EBP + 0x8]", "0x15E7|PUSH|EDI", "0x15E8|LEA|EDI, [ESI + 0x5c]", "0x15EB|MOV|dword ptr [EBP + 0x8], EDI", "0x15EE|MOV|EAX, dword ptr [EBP + 0x8]", "0x15F1|INC.LOCK|byte ptr [EAX]", "0x15F4|MOV|EAX, dword ptr [ESI + 0x60]", "0x15F7|TEST|EAX, EAX", "0x15F9|JZ|0x03821617", "0x15FB|PUSH|EBX", "0x15FC|MOV|EBX, dword ptr [0x038430d0]", "0x1602|PUSH|0x0"],
-      "callees": [{"name":"Sleep","address":"0x28"},{"name":"_BinkService@4","address":"0x382A5E0"}],
+      "callees": [{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pBinkFile","type":"BinkFile *","storage":"Stack[0x4]:4"},{"name":"baseAddress","type":"uint","storage":"Stack[0x8]:4"},{"name":"pageSize","type":"uint","storage":"Stack[0xc]:4"},{"name":"param4","type":"undefined4","storage":"Stack[0x10]:4"},{"name":"param5","type":"undefined4","storage":"Stack[0x14]:4"}]
@@ -164,7 +164,7 @@
       "local_var_count": 2,
       "param_count": 1,
       "instructions": ["0x1660|PUSH|EBP", "0x1661|MOV|EBP, ESP", "0x1663|PUSH|EBX", "0x1664|PUSH|ESI", "0x1665|MOV|ESI, dword ptr [EBP + 0x8]", "0x1668|LEA|EBX, [ESI + 0x5c]", "0x166B|MOV|dword ptr [EBP + 0x8], EBX", "0x166E|MOV|EAX, dword ptr [EBP + 0x8]", "0x1671|INC.LOCK|byte ptr [EAX]", "0x1674|MOV|EAX, dword ptr [ESI + 0x60]", "0x1677|TEST|EAX, EAX", "0x1679|JZ|0x03821697", "0x167B|PUSH|EDI", "0x167C|MOV|EDI, dword ptr [0x038430d0]", "0x1682|PUSH|0x0"],
-      "callees": [{"name":"CloseHandle","address":"0x24"},{"name":"Sleep","address":"0x28"},{"name":"_BinkService@4","address":"0x382A5E0"}],
+      "callees": [{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"CloseHandle","address":"0x24"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pBinkContext","type":"int *","storage":"Stack[0x4]:4"}]
@@ -182,7 +182,7 @@
       "local_var_count": 7,
       "param_count": 1,
       "instructions": ["0x16C0|PUSH|EBP", "0x16C1|MOV|EBP, ESP", "0x16C3|SUB|ESP, 0x1c", "0x16C6|XOR|EAX, EAX", "0x16C8|PUSH|ESI", "0x16C9|MOV|ESI, dword ptr [EBP + 0x8]", "0x16CC|PUSH|EDI", "0x16CD|MOV|dword ptr [EBP + -0xc], EAX", "0x16D0|MOV|dword ptr [EBP + -0x4], EAX", "0x16D3|MOV|EAX, dword ptr [ESI + 0x24]", "0x16D6|LEA|EDI, [ESI + 0x60]", "0x16D9|MOV|dword ptr [EBP + -0x1c], EAX", "0x16DC|MOV|dword ptr [EBP + -0x18], EDI", "0x16DF|MOV|dword ptr [EBP + 0x8], EDI", "0x16E2|MOV|EAX, dword ptr [EBP + 0x8]"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"Sleep","address":"0x28"},{"name":"ReadFile","address":"0x29"}],
+      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"ReadFile","address":"0x29"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pFileIOState","type":"int *","storage":"Stack[0x4]:4"}]
@@ -326,7 +326,7 @@
       "local_var_count": 54,
       "param_count": 11,
       "instructions": ["0x2610|SUB|ESP, 0x460", "0x2616|PUSH|EBX", "0x2617|PUSH|EBP", "0x2618|PUSH|ESI", "0x2619|MOV|ESI, dword ptr [ESP + 0x480]", "0x2620|PUSH|EDI", "0x2621|MOV|EDI, dword ptr [ESP + 0x47c]", "0x2628|LEA|EAX, [ESI*0x8 + 0x0]", "0x262F|SUB|EAX, EDI", "0x2631|MOV|dword ptr [ESP + 0xb8], EAX", "0x2638|MOV|EAX, dword ptr [ESP + 0x490]", "0x263F|MOV|dword ptr [ESP + 0x44], EAX", "0x2643|XOR|EDX, EDX", "0x2645|MOV|EAX, 0x10", "0x264A|DIV|dword ptr [ESP + 0x494]"],
-      "callees": [{"name":"DecodeHuffmanPlane","address":"0x3824EB0"},{"name":"IDCTProcess8x8Block","address":"0x38220F0"},{"name":"DecodeHuffmanSymbols","address":"0x3824CC0"},{"name":"DecodeBitstreamSymbol","address":"0x3825110"},{"name":"DecodeImagePlaneBlock","address":"0x383BAD0"},{"name":"DecompressBitstream","address":"0x3824AC0"},{"name":"ApplyDCTTransformBlock","address":"0x3821C50"},{"name":"DecodeHuffmanAlphabets","address":"0x38241F0"},{"name":"DecodePlaneData","address":"0x38247E0"},{"name":"ExpandPlaneCell","address":"0x3823BE0"},{"name":"ExpandBitstreamLiteral","address":"0x3824250"},{"name":"DecodeBitstreamData","address":"0x3823C90"},{"name":"DecompressPlaneData","address":"0x383ABC0"}],
+      "callees": [{"name":"ExpandBitstreamLiteral","address":"0x3824250"},{"name":"DecodeHuffmanSymbols","address":"0x3824CC0"},{"name":"IDCTProcess8x8Block","address":"0x38220F0"},{"name":"DecodeHuffmanPlane","address":"0x3824EB0"},{"name":"DecompressBitstream","address":"0x3824AC0"},{"name":"DecodePlaneData","address":"0x38247E0"},{"name":"DecodeBitstreamSymbol","address":"0x3825110"},{"name":"ApplyDCTTransformBlock","address":"0x3821C50"},{"name":"DecodeBitstreamData","address":"0x3823C90"},{"name":"DecodeHuffmanAlphabets","address":"0x38241F0"},{"name":"ExpandPlaneCell","address":"0x3823BE0"},{"name":"DecompressPlaneData","address":"0x383ABC0"},{"name":"DecodeImagePlaneBlock","address":"0x383BAD0"}],
       "callers": [{"name":"_ExpandBink@56","address":"0x3825440"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint *","storage":"Stack[0x8]:4"},{"name":"param_3","type":"uint","storage":"Stack[0xc]:4"},{"name":"param_4","type":"uint","storage":"Stack[0x10]:4"},{"name":"param_5","type":"uint","storage":"Stack[0x14]:4"},{"name":"param_6","type":"uint *","storage":"Stack[0x18]:4"},{"name":"param_7","type":"undefined4","storage":"Stack[0x1c]:4"},{"name":"param_8","type":"int","storage":"Stack[0x20]:4"},{"name":"param_9","type":"uint","storage":"Stack[0x24]:4"},{"name":"param_10","type":"undefined4 *","storage":"Stack[0x28]:4"},{"name":"param_11","type":"uint","storage":"Stack[0x2c]:4"}]
@@ -381,7 +381,7 @@
       "param_count": 4,
       "instructions": ["0x3CB0|SUB|ESP, 0x30", "0x3CB3|MOV|ECX, dword ptr [ESP + 0x34]", "0x3CB7|PUSH|EBX", "0x3CB8|PUSH|EBP", "0x3CB9|PUSH|ESI", "0x3CBA|PUSH|EDI", "0x3CBB|MOV|EDI, dword ptr [ECX]", "0x3CBD|MOV|EDX, dword ptr [ECX + 0x4]", "0x3CC0|MOV|EAX, dword ptr [ECX + 0x8]", "0x3CC3|MOV|ESI, dword ptr [ECX + 0xc]", "0x3CC6|CMP|ESI, 0x4", "0x3CC9|MOV|dword ptr [ESP + 0x10], EDI", "0x3CCD|MOV|dword ptr [ESP + 0x14], EDX", "0x3CD1|MOV|dword ptr [ESP + 0x18], EAX", "0x3CD5|MOV|dword ptr [ESP + 0x1c], ESI"],
       "callees": [{"name":"DecodeBitStreamBytes","address":"0x3824130"}],
-      "callers": [{"name":"DecodeHuffmanAlphabets","address":"0x38241F0"},{"name":"DecodeBitstreamData","address":"0x3823C90"}],
+      "callers": [{"name":"DecodeBitstreamData","address":"0x3823C90"},{"name":"DecodeHuffmanAlphabets","address":"0x38241F0"}],
       "strings": [],
       "parameters": [{"name":"pBitstreamReader","type":"int *","storage":"Stack[0x4]:4"},{"name":"pOutputTable","type":"undefined4 *","storage":"Stack[0x8]:4"},{"name":"pSymbolCounts","type":"uint *","storage":"Stack[0xc]:4"},{"name":"pAlphabetTable","type":"undefined1 *","storage":"Stack[0x10]:4"}]
     },
@@ -578,7 +578,7 @@
       "local_var_count": 1,
       "param_count": 0,
       "instructions": ["0x5600|SUB|ESP, 0x15c", "0x5606|PUSH|EBX", "0x5607|PUSH|ESI", "0x5608|PUSH|EDI", "0x5609|XOR|EAX, EAX", "0x560B|PUSH|0x0", "0x560D|MOV|ECX, 0x4f", "0x5612|LEA|EDI, [ESP + 0x30]", "0x5616|STOSD.REP|ES:EDI", "0x5618|MOV|EAX, [0x0384f124]", "0x561D|LEA|EDX, [ESP + 0x30]", "0x5621|PUSH|EDX", "0x5622|MOV|dword ptr [ESP + 0x34], 0x13c", "0x562A|MOV|ECX, dword ptr [EAX]", "0x562C|PUSH|EAX"],
-      "callees": [{"name":"GetDC","address":"0x49"},{"name":"GetSystemMetrics","address":"0x48"},{"name":"FilterBitsByMask","address":"0x38257F0"},{"name":"ReleaseDC","address":"0x4A"},{"name":"GetDeviceCaps","address":"0x4E"}],
+      "callees": [{"name":"GetSystemMetrics","address":"0x48"},{"name":"FilterBitsByMask","address":"0x38257F0"},{"name":"GetDeviceCaps","address":"0x4E"},{"name":"ReleaseDC","address":"0x4A"},{"name":"GetDC","address":"0x49"}],
       "callers": [{"name":"InitializeGraphicsDisplay","address":"0x3826740"},{"name":"_BinkBufferSetDirectDraw@8","address":"0x38255B0"}],
       "strings": [],
       "parameters": []
@@ -614,7 +614,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x58A0|SUB|ESP, 0xcc", "0x58A6|PUSH|EBX", "0x58A7|PUSH|EBP", "0x58A8|PUSH|ESI", "0x58A9|PUSH|EDI", "0x58AA|PUSH|0x13", "0x58AC|CALL|dword ptr [0x03843154]", "0x58B2|TEST|EAX, EAX", "0x58B4|JZ|0x03825bb2", "0x58BA|MOV|ESI, dword ptr [ESP + 0xe0]", "0x58C1|XOR|EAX, EAX", "0x58C3|XOR|EBP, EBP", "0x58C5|PUSH|EBP", "0x58C6|MOV|ECX, 0x1b", "0x58CB|LEA|EDI, [ESP + 0x58]"],
-      "callees": [{"name":"UnregisterClassA","address":"0x3F"},{"name":"GetModuleHandleA","address":"0x26"},{"name":"GetSystemMetrics","address":"0x48"},{"name":"GetCursorPos","address":"0x30"},{"name":"DestroyWindow","address":"0x44"},{"name":"SetPixel","address":"0x4C"},{"name":"ReleaseDC","address":"0x4A"},{"name":"CreateWindowExA","address":"0x3E"},{"name":"SetCursor","address":"0x43"},{"name":"ScreenToClient","address":"0x41"},{"name":"GetDC","address":"0x49"},{"name":"GetPixel","address":"0x4D"},{"name":"RegisterClassA","address":"0x31"},{"name":"PeekMessageA","address":"0x40"},{"name":"ShowCursor","address":"0x42"}],
+      "callees": [{"name":"ShowCursor","address":"0x42"},{"name":"GetCursorPos","address":"0x30"},{"name":"SetPixel","address":"0x4C"},{"name":"ScreenToClient","address":"0x41"},{"name":"GetPixel","address":"0x4D"},{"name":"ReleaseDC","address":"0x4A"},{"name":"SetCursor","address":"0x43"},{"name":"PeekMessageA","address":"0x40"},{"name":"UnregisterClassA","address":"0x3F"},{"name":"DestroyWindow","address":"0x44"},{"name":"GetSystemMetrics","address":"0x48"},{"name":"GetModuleHandleA","address":"0x26"},{"name":"RegisterClassA","address":"0x31"},{"name":"CreateWindowExA","address":"0x3E"},{"name":"GetDC","address":"0x49"}],
       "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
       "strings": ["MouseTypeWind"],
       "parameters": [{"name":"param_1","type":"HCURSOR","storage":"Stack[0x4]:4"}]
@@ -632,7 +632,7 @@
       "local_var_count": 3,
       "param_count": 5,
       "instructions": ["0x5BD0|MOV|EAX, [0x0384f160]", "0x5BD5|SUB|ESP, 0x10", "0x5BD8|PUSH|ESI", "0x5BD9|PUSH|EDI", "0x5BDA|XOR|EDI, EDI", "0x5BDC|TEST|EAX, EAX", "0x5BDE|JNZ|0x03825bf8", "0x5BE0|MOV|ESI, dword ptr [0x03843154]", "0x5BE6|PUSH|0xd", "0x5BE8|CALL|ESI", "0x5BEA|PUSH|0xe", "0x5BEC|MOV|[0x0384f160], EAX", "0x5BF1|CALL|ESI", "0x5BF3|MOV|[0x0384f11c], EAX", "0x5BF8|MOV|EAX, dword ptr [ESP + 0x20]"],
-      "callees": [{"name":"GetSystemMetrics","address":"0x48"},{"name":"GetCursorPos","address":"0x30"},{"name":"ClientToScreen","address":"0x32"},{"name":"ShowCursor","address":"0x42"}],
+      "callees": [{"name":"ShowCursor","address":"0x42"},{"name":"GetCursorPos","address":"0x30"},{"name":"ClientToScreen","address":"0x32"},{"name":"GetSystemMetrics","address":"0x48"}],
       "callers": [{"name":"_BinkBufferLock@4","address":"0x3827040"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"HWND","storage":"Stack[0x4]:4"},{"name":"param_2","type":"int","storage":"Stack[0x8]:4"},{"name":"param_3","type":"int","storage":"Stack[0xc]:4"},{"name":"param_4","type":"int","storage":"Stack[0x10]:4"},{"name":"param_5","type":"int","storage":"Stack[0x14]:4"}]
@@ -704,7 +704,7 @@
       "local_var_count": 2,
       "param_count": 3,
       "instructions": ["0x5D80|SUB|ESP, 0x8", "0x5D83|PUSH|ESI", "0x5D84|MOV|ESI, dword ptr [ESP + 0x10]", "0x5D88|TEST|ESI, ESI", "0x5D8A|JNZ|0x03825d95", "0x5D8C|XOR|EAX, EAX", "0x5D8E|POP|ESI", "0x5D8F|ADD|ESP, 0x8", "0x5D92|RET|0xc", "0x5D95|MOV|ECX, dword ptr [ESI + 0x60]", "0x5D98|LEA|EAX, [ESP + 0x4]", "0x5D9C|PUSH|EAX", "0x5D9D|PUSH|ECX", "0x5D9E|MOV|dword ptr [ESP + 0x10], 0x0", "0x5DA6|MOV|dword ptr [ESP + 0xc], 0x0"],
-      "callees": [{"name":"UpdateRenderSurfaceWithClipping","address":"0x3825E00"},{"name":"ClientToScreen","address":"0x32"}],
+      "callees": [{"name":"ClientToScreen","address":"0x32"},{"name":"UpdateRenderSurfaceWithClipping","address":"0x3825E00"}],
       "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"int","storage":"Stack[0x8]:4"},{"name":"param_3","type":"int","storage":"Stack[0xc]:4"}]
@@ -723,7 +723,7 @@
       "param_count": 2,
       "instructions": ["0x5E00|SUB|ESP, 0x58", "0x5E03|PUSH|EBX", "0x5E04|PUSH|ESI", "0x5E05|MOV|ESI, dword ptr [ESP + 0x64]", "0x5E09|MOV|EAX, dword ptr [ESI + 0x64]", "0x5E0C|XOR|EBX, EBX", "0x5E0E|CMP|EAX, EBX", "0x5E10|JZ|0x03825f62", "0x5E16|MOV|EAX, dword ptr [ESI + 0x60]", "0x5E19|PUSH|EAX", "0x5E1A|CALL|dword ptr [0x03843100]", "0x5E20|TEST|EAX, EAX", "0x5E22|JZ|0x03825f44", "0x5E28|MOV|ECX, dword ptr [ESI]", "0x5E2A|MOV|EDX, dword ptr [ESI + 0x4]"],
       "callees": [],
-      "callers": [{"name":"_BinkBufferUnlock@4","address":"0x3827170"},{"name":"_BinkBufferSetOffset@12","address":"0x3825D80"}],
+      "callers": [{"name":"_BinkBufferSetOffset@12","address":"0x3825D80"},{"name":"_BinkBufferUnlock@4","address":"0x3827170"}],
       "strings": [],
       "parameters": [{"name":"pRenderSurface","type":"int *","storage":"Stack[0x4]:4"},{"name":"nUpdateMode","type":"int","storage":"Stack[0x8]:4"}]
     },
@@ -740,7 +740,7 @@
       "local_var_count": 17,
       "param_count": 4,
       "instructions": ["0x5F70|SUB|ESP, 0x54", "0x5F73|MOV|EAX, dword ptr [ESP + 0x64]", "0x5F77|MOV|ECX, dword ptr [ESP + 0x5c]", "0x5F7B|PUSH|EBX", "0x5F7C|PUSH|EBP", "0x5F7D|PUSH|ESI", "0x5F7E|XOR|ESI, ESI", "0x5F80|PUSH|EDI", "0x5F81|MOV|EDI, EAX", "0x5F83|AND|EDI, 0xff000000", "0x5F89|XOR|EBP, EBP", "0x5F8B|XOR|EBX, EBX", "0x5F8D|CMP|ECX, ESI", "0x5F8F|MOV|dword ptr [ESP + 0x3c], ESI", "0x5F93|MOV|dword ptr [ESP + 0x1c], ESI"],
-      "callees": [{"name":"radfree","address":"0x3821050"},{"name":"_BinkIsSoftwareCursor@8","address":"0x38258A0"},{"name":"_BinkBufferSetScale@12","address":"0x3827560"},{"name":"GetClassLongA","address":"0x36"},{"name":"InitializeBinkVideoBuffer","address":"0x3826D80"},{"name":"ReleaseDC","address":"0x4A"},{"name":"radmalloc","address":"0x3821000"},{"name":"DeleteDC","address":"0x4F"},{"name":"_BinkDDSurfaceType@4","address":"0x3827860"},{"name":"DecrementBinkBufferRefCount","address":"0x38268E0"},{"name":"GetDC","address":"0x49"},{"name":"DecrementDisplaySettingRefCount","address":"0x3826A70"},{"name":"InitializeDisplayMetrics","address":"0x3826910"},{"name":"InitializeGraphicsDisplay","address":"0x3826740"},{"name":"CreateDIBSection","address":"0x50"},{"name":"SelectObject","address":"0x51"},{"name":"CreateCompatibleDC","address":"0x54"},{"name":"DetectDeviceContextColorFormat","address":"0x3826E80"},{"name":"ClientToScreen","address":"0x32"},{"name":"GetWindowRect","address":"0x35"},{"name":"GetClientRect","address":"0x34"},{"name":"_BinkBufferSetOffset@12","address":"0x3825D80"},{"name":"InitializeBinkBuffer","address":"0x3826AA0"}],
+      "callees": [{"name":"GetClientRect","address":"0x34"},{"name":"ClientToScreen","address":"0x32"},{"name":"DecrementDisplaySettingRefCount","address":"0x3826A70"},{"name":"DeleteDC","address":"0x4F"},{"name":"_BinkBufferSetOffset@12","address":"0x3825D80"},{"name":"InitializeGraphicsDisplay","address":"0x3826740"},{"name":"InitializeDisplayMetrics","address":"0x3826910"},{"name":"_BinkBufferSetScale@12","address":"0x3827560"},{"name":"radfree","address":"0x3821050"},{"name":"InitializeBinkBuffer","address":"0x3826AA0"},{"name":"ReleaseDC","address":"0x4A"},{"name":"DetectDeviceContextColorFormat","address":"0x3826E80"},{"name":"CreateCompatibleDC","address":"0x54"},{"name":"radmalloc","address":"0x3821000"},{"name":"InitializeBinkVideoBuffer","address":"0x3826D80"},{"name":"DecrementBinkBufferRefCount","address":"0x38268E0"},{"name":"GetWindowRect","address":"0x35"},{"name":"_BinkIsSoftwareCursor@8","address":"0x38258A0"},{"name":"SelectObject","address":"0x51"},{"name":"CreateDIBSection","address":"0x50"},{"name":"_BinkDDSurfaceType@4","address":"0x3827860"},{"name":"GetClassLongA","address":"0x36"},{"name":"GetDC","address":"0x49"}],
       "callers": [],
       "strings": ["Video mode not supported.", "Error opening capable DirectDraw surface.", "No capable blitting style available.", "DirectDraw is not available"],
       "parameters": [{"name":"param_1","type":"HWND","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"},{"name":"param_3","type":"uint","storage":"Stack[0xc]:4"},{"name":"param_4","type":"uint","storage":"Stack[0x10]:4"}]
@@ -758,7 +758,7 @@
       "local_var_count": 7,
       "param_count": 0,
       "instructions": ["0x6740|MOV|EAX, [0x0384f120]", "0x6745|SUB|ESP, 0x6c", "0x6748|TEST|EAX, EAX", "0x674A|PUSH|ESI", "0x674B|JNZ|0x03826866", "0x6751|MOV|EAX, [0x0384f140]", "0x6756|TEST|EAX, EAX", "0x6758|JNZ|0x0382675f", "0x675A|CALL|0x03826880", "0x675F|CMP|dword ptr [0x0384f140], 0x20", "0x6766|JC|0x0382686c", "0x676C|PUSH|0x0", "0x676E|PUSH|0x384f124", "0x6773|PUSH|0x0", "0x6775|CALL|dword ptr [0x0384f13c]"],
-      "callees": [{"name":"InitializeDisplayCapabilities","address":"0x3825600"},{"name":"InitializeDirectDrawLibrary","address":"0x3826880"}],
+      "callees": [{"name":"InitializeDirectDrawLibrary","address":"0x3826880"},{"name":"InitializeDisplayCapabilities","address":"0x3825600"}],
       "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
       "strings": [],
       "parameters": []
@@ -776,7 +776,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x6880|PUSH|ESI", "0x6881|MOV|ESI, dword ptr [0x03843078]", "0x6887|PUSH|EDI", "0x6888|PUSH|0x8000", "0x688D|CALL|ESI", "0x688F|PUSH|0x3847b30", "0x6894|MOV|EDI, EAX", "0x6896|CALL|dword ptr [0x038430bc]", "0x689C|PUSH|EDI", "0x689D|MOV|[0x0384f140], EAX", "0x68A2|CALL|ESI", "0x68A4|MOV|EAX, [0x0384f140]", "0x68A9|CMP|EAX, 0x20", "0x68AC|POP|EDI", "0x68AD|POP|ESI"],
-      "callees": [{"name":"LoadLibraryA","address":"0x23"},{"name":"FreeLibrary","address":"0x25"},{"name":"GetProcAddress","address":"0x11"},{"name":"SetErrorMode","address":"0x12"}],
+      "callees": [{"name":"SetErrorMode","address":"0x12"},{"name":"FreeLibrary","address":"0x25"},{"name":"LoadLibraryA","address":"0x23"},{"name":"GetProcAddress","address":"0x11"}],
       "callers": [{"name":"InitializeGraphicsDisplay","address":"0x3826740"}],
       "strings": ["DDRAW.DLL", "DirectDrawCreate"],
       "parameters": []
@@ -795,7 +795,7 @@
       "param_count": 0,
       "instructions": ["0x68E0|DEC|dword ptr [0x0384f120]", "0x68E6|JNZ|0x0382690a", "0x68E8|MOV|EAX, [0x0384f128]", "0x68ED|MOV|ECX, dword ptr [EAX]", "0x68EF|PUSH|EAX", "0x68F0|CALL|dword ptr [ECX + 0x8]", "0x68F3|MOV|EAX, [0x0384f124]", "0x68F8|MOV|EDX, dword ptr [EAX]", "0x68FA|PUSH|EAX", "0x68FB|CALL|dword ptr [EDX + 0x8]", "0x68FE|XOR|EAX, EAX", "0x6900|MOV|[0x0384f124], EAX", "0x6905|MOV|[0x0384f128], EAX", "0x690A|RET|"],
       "callees": [],
-      "callers": [{"name":"_BinkBufferClose@4","address":"0x3826F90"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
+      "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"_BinkBufferClose@4","address":"0x3826F90"}],
       "strings": [],
       "parameters": []
     },
@@ -812,7 +812,7 @@
       "local_var_count": 9,
       "param_count": 2,
       "instructions": ["0x6910|MOV|EAX, [0x0384f120]", "0x6915|SUB|ESP, 0x98", "0x691B|PUSH|EBX", "0x691C|XOR|EBX, EBX", "0x691E|CMP|EAX, EBX", "0x6920|JZ|0x0382692c", "0x6922|XOR|EAX, EAX", "0x6924|POP|EBX", "0x6925|ADD|ESP, 0x98", "0x692B|RET|", "0x692C|CMP|dword ptr [ESP + 0xa4], EBX", "0x6933|PUSH|ESI", "0x6934|PUSH|EDI", "0x6935|JZ|0x038269eb", "0x693B|MOV|EDX, dword ptr [0x0384f12c]"],
-      "callees": [{"name":"ChangeDisplaySettingsA","address":"0x37"},{"name":"GetSystemMetrics","address":"0x48"},{"name":"ReleaseDC","address":"0x4A"},{"name":"GetDeviceCaps","address":"0x4E"}],
+      "callees": [{"name":"ChangeDisplaySettingsA","address":"0x37"},{"name":"GetSystemMetrics","address":"0x48"},{"name":"GetDeviceCaps","address":"0x4E"},{"name":"ReleaseDC","address":"0x4A"}],
       "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
       "strings": [],
       "parameters": [{"name":"hWindow","type":"HWND","storage":"Stack[0x4]:4"},{"name":"displayMode","type":"int","storage":"Stack[0x8]:4"}]
@@ -831,7 +831,7 @@
       "param_count": 0,
       "instructions": ["0x6A70|DEC|dword ptr [0x0384f150]", "0x6A76|JNZ|0x03826a95", "0x6A78|MOV|EAX, [0x0384f14c]", "0x6A7D|TEST|EAX, EAX", "0x6A7F|JZ|0x03826a95", "0x6A81|PUSH|0x4", "0x6A83|PUSH|0x0", "0x6A85|MOV|dword ptr [0x0384f14c], 0x0", "0x6A8F|CALL|dword ptr [0x03843110]", "0x6A95|RET|"],
       "callees": [{"name":"ChangeDisplaySettingsA","address":"0x37"}],
-      "callers": [{"name":"_BinkBufferClose@4","address":"0x3826F90"},{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
+      "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"},{"name":"_BinkBufferClose@4","address":"0x3826F90"}],
       "strings": [],
       "parameters": []
     },
@@ -902,7 +902,7 @@
       "local_var_count": 3,
       "param_count": 2,
       "instructions": ["0x6E80|MOV|ECX, dword ptr [0x0384f138]", "0x6E86|SUB|ESP, 0x428", "0x6E8C|CMP|ECX, 0x2", "0x6E8F|PUSH|ESI", "0x6E90|PUSH|EDI", "0x6E91|JLE|0x03826ec0", "0x6E93|MOV|EAX, dword ptr [ESP + 0x438]", "0x6E9A|MOV|dword ptr [EAX], 0xff0000", "0x6EA0|MOV|dword ptr [EAX + 0x4], 0xff00", "0x6EA7|MOV|dword ptr [EAX + 0x8], 0xff", "0x6EAE|XOR|EAX, EAX", "0x6EB0|CMP|ECX, 0x3", "0x6EB3|SETNZ|AL", "0x6EB6|POP|EDI", "0x6EB7|POP|ESI"],
-      "callees": [{"name":"DeleteObject","address":"0x52"},{"name":"GetDIBits","address":"0x53"}],
+      "callees": [{"name":"GetDIBits","address":"0x53"},{"name":"DeleteObject","address":"0x52"}],
       "callers": [{"name":"_BinkBufferOpen@16","address":"0x3825F70"}],
       "strings": [],
       "parameters": [{"name":"hdc","type":"HDC","storage":"Stack[0x4]:4"},{"name":"pColorMasks","type":"uint *","storage":"Stack[0x8]:4"}]
@@ -920,7 +920,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x6F90|PUSH|ESI", "0x6F91|MOV|ESI, dword ptr [ESP + 0x8]", "0x6F95|TEST|ESI, ESI", "0x6F97|JZ|0x0382703a", "0x6F9D|CMP|dword ptr [ESI], 0x0", "0x6FA0|JZ|0x0382703a", "0x6FA6|MOV|EAX, dword ptr [ESI + 0x64]", "0x6FA9|TEST|EAX, EAX", "0x6FAB|PUSH|EDI", "0x6FAC|JZ|0x03826fd2", "0x6FAE|MOV|ECX, dword ptr [0x0384f128]", "0x6FB4|MOV|EDI, dword ptr [ESI + 0x48]", "0x6FB7|MOV|EAX, dword ptr [EDI]", "0x6FB9|PUSH|0x0", "0x6FBB|PUSH|0x200"],
-      "callees": [{"name":"radfree","address":"0x3821050"},{"name":"DecrementBinkBufferRefCount","address":"0x38268E0"},{"name":"DecrementDisplaySettingRefCount","address":"0x3826A70"},{"name":"SelectObject","address":"0x51"},{"name":"DeleteObject","address":"0x52"},{"name":"DeleteDC","address":"0x4F"}],
+      "callees": [{"name":"DecrementBinkBufferRefCount","address":"0x38268E0"},{"name":"DecrementDisplaySettingRefCount","address":"0x3826A70"},{"name":"SelectObject","address":"0x51"},{"name":"DeleteDC","address":"0x4F"},{"name":"radfree","address":"0x3821050"},{"name":"DeleteObject","address":"0x52"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -938,7 +938,7 @@
       "local_var_count": 1,
       "param_count": 1,
       "instructions": ["0x7040|SUB|ESP, 0x6c", "0x7043|PUSH|EBX", "0x7044|PUSH|EBP", "0x7045|PUSH|ESI", "0x7046|MOV|ESI, dword ptr [ESP + 0x7c]", "0x704A|TEST|ESI, ESI", "0x704C|PUSH|EDI", "0x704D|JNZ|0x0382705b", "0x704F|POP|EDI", "0x7050|POP|ESI", "0x7051|POP|EBP", "0x7052|XOR|EAX, EAX", "0x7054|POP|EBX", "0x7055|ADD|ESP, 0x6c", "0x7058|RET|0x4"],
-      "callees": [{"name":"_BinkCheckCursor@20","address":"0x3825BD0"},{"name":"_BinkRestoreCursor@4","address":"0x3825C80"}],
+      "callees": [{"name":"_BinkRestoreCursor@4","address":"0x3825C80"},{"name":"_BinkCheckCursor@20","address":"0x3825BD0"}],
       "callers": [{"name":"_BinkBufferClear@8","address":"0x3827810"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -956,7 +956,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x7170|PUSH|ESI", "0x7171|MOV|ESI, dword ptr [ESP + 0x8]", "0x7175|PUSH|EDI", "0x7176|XOR|EDI, EDI", "0x7178|CMP|ESI, EDI", "0x717A|JNZ|0x03827183", "0x717C|POP|EDI", "0x717D|XOR|EAX, EAX", "0x717F|POP|ESI", "0x7180|RET|0x4", "0x7183|MOV|EAX, dword ptr [ESI + 0x48]", "0x7186|CMP|EAX, EDI", "0x7188|JZ|0x038271b8", "0x718A|MOV|EDX, dword ptr [ESI + 0x78]", "0x718D|MOV|ECX, dword ptr [EAX]"],
-      "callees": [{"name":"UpdateRenderSurfaceWithClipping","address":"0x3825E00"},{"name":"_BinkRestoreCursor@4","address":"0x3825C80"}],
+      "callees": [{"name":"_BinkRestoreCursor@4","address":"0x3825C80"},{"name":"UpdateRenderSurfaceWithClipping","address":"0x3825E00"}],
       "callers": [{"name":"_BinkBufferClear@8","address":"0x3827810"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -974,7 +974,7 @@
       "local_var_count": 14,
       "param_count": 3,
       "instructions": ["0x71E0|PUSH|EBP", "0x71E1|MOV|EBP, ESP", "0x71E3|SUB|ESP, 0x94", "0x71E9|PUSH|EBX", "0x71EA|PUSH|ESI", "0x71EB|MOV|ESI, dword ptr [EBP + 0x8]", "0x71EE|XOR|EBX, EBX", "0x71F0|CMP|ESI, EBX", "0x71F2|PUSH|EDI", "0x71F3|JZ|0x03827553", "0x71F9|CMP|dword ptr [EBP + 0x10], EBX", "0x71FC|JZ|0x03827553", "0x7202|CMP|dword ptr [ESI + 0x64], EBX", "0x7205|JZ|0x038272c1", "0x720B|MOV|EDX, dword ptr [ESI + 0x4c]"],
-      "callees": [{"name":"GetDC","address":"0x49"},{"name":"StretchBlt","address":"0x55"},{"name":"ReleaseDC","address":"0x4A"},{"name":"SetStretchBltMode","address":"0x56"}],
+      "callees": [{"name":"SetStretchBltMode","address":"0x56"},{"name":"StretchBlt","address":"0x55"},{"name":"ReleaseDC","address":"0x4A"},{"name":"GetDC","address":"0x49"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"int","storage":"Stack[0x8]:4"},{"name":"param_3","type":"uint","storage":"Stack[0xc]:4"}]
@@ -1101,7 +1101,7 @@
       "param_count": 2,
       "instructions": ["0x7990|MOV|EAX, dword ptr [ESP + 0x8]", "0x7994|MOV|ECX, dword ptr [0x0384f668]", "0x799A|ADD|EAX, 0xf", "0x799D|AND|EAX, 0xfffffff0", "0x79A0|PUSH|ESI", "0x79A1|MOV|EDX, EAX", "0x79A3|MOV|ESI, ECX", "0x79A5|SHR|ESI, 0x5", "0x79A8|SHR|EDX, 0x5", "0x79AB|AND|EDX, 0x1f", "0x79AE|SUB|ESI, EDX", "0x79B0|INC|ESI", "0x79B1|AND|ESI, 0x1f", "0x79B4|SHL|ESI, 0x5", "0x79B7|ADD|EAX, ESI"],
       "callees": [],
-      "callers": [{"name":"_BinkOpen@8","address":"0x3827B50"},{"name":"InitializeBinkPlayback","address":"0x382823F"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkOpen@8","address":"0x3827B50"}],
       "strings": [],
       "parameters": [{"name":"allocationSize","type":"dword","storage":"Stack[0x4]:4"},{"name":"unused","type":"int","storage":"Stack[0x8]:4"}]
     },
@@ -1119,7 +1119,7 @@
       "param_count": 2,
       "instructions": ["0x79F0|MOV|EAX, dword ptr [ESP + 0x8]", "0x79F4|MOV|ECX, dword ptr [0x0384f668]", "0x79FA|PUSH|ESI", "0x79FB|LEA|ESI, [EAX + 0xf]", "0x79FE|MOV|EAX, dword ptr [ESP + 0x8]", "0x7A02|MOV|EDX, dword ptr [EAX + 0x234]", "0x7A08|AND|ESI, 0xfffffff0", "0x7A0B|ADD|ECX, ESI", "0x7A0D|ADD|EDX, ECX", "0x7A0F|MOV|dword ptr [EAX + 0x234], EDX", "0x7A15|MOV|EDX, dword ptr [0x0384f668]", "0x7A1B|PUSH|EDI", "0x7A1C|ADD|EDX, ESI", "0x7A1E|PUSH|EDX", "0x7A1F|CALL|0x03821000"],
       "callees": [{"name":"radmalloc","address":"0x3821000"}],
-      "callers": [{"name":"_BinkOpen@8","address":"0x3827B50"},{"name":"InitializeBinkPlayback","address":"0x382823F"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkOpen@8","address":"0x3827B50"}],
       "strings": [],
       "parameters": [{"name":"basePointer","type":"int","storage":"Stack[0x4]:4"},{"name":"bufferSize","type":"int","storage":"Stack[0x8]:4"}]
     },
@@ -1137,7 +1137,7 @@
       "param_count": 1,
       "instructions": ["0x7A70|PUSH|ESI", "0x7A71|PUSH|EDI", "0x7A72|MOV|EDI, dword ptr [ESP + 0xc]", "0x7A76|OR|ECX, 0xffffffff", "0x7A79|XOR|EAX, EAX", "0x7A7B|SCASB.REPNE|ES:EDI", "0x7A7D|NOT|ECX", "0x7A7F|SUB|EDI, ECX", "0x7A81|MOV|EAX, ECX", "0x7A83|MOV|ESI, EDI", "0x7A85|SHR|ECX, 0x2", "0x7A88|MOV|EDI, 0x384f568", "0x7A8D|MOVSD.REP|ES:EDI, ESI", "0x7A8F|MOV|ECX, EAX", "0x7A91|AND|ECX, 0x3"],
       "callees": [],
-      "callers": [{"name":"_BinkOpen@8","address":"0x3827B50"},{"name":"InitializeBinkPlayback","address":"0x382823F"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkOpen@8","address":"0x3827B50"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"char *","storage":"Stack[0x4]:4"}]
     },
@@ -1262,7 +1262,7 @@
       "local_var_count": 64,
       "param_count": 2,
       "instructions": ["0x7B50|PUSH|EBP", "0x7B51|MOV|EBP, ESP", "0x7B53|SUB|ESP, 0x3d0", "0x7B59|PUSH|EBX", "0x7B5A|PUSH|ESI", "0x7B5B|PUSH|EDI", "0x7B5C|XOR|EAX, EAX", "0x7B5E|MOV|ECX, 0xe7", "0x7B63|LEA|EDI, [EBP + 0xfffffc30]", "0x7B69|STOSD.REP|ES:EDI", "0x7B6B|CALL|dword ptr [0x03843164]", "0x7B71|MOV|EBX, dword ptr [EBP + 0xc]", "0x7B74|MOV|dword ptr [EBP + 0xfffffe74], EAX", "0x7B7A|MOV|EAX, EBX", "0x7B7C|AND|EAX, 0x4000000"],
-      "callees": [{"name":"_ExpandBundleSizes@8","address":"0x3822510"},{"name":"timeGetTime","address":"0x4B"},{"name":"ComputeArrayElementDifferences","address":"0x3828A60"},{"name":"_BinkSetError@4","address":"0x3827A70"},{"name":"InitializeBinkFile","address":"0x3821150"},{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"RecordBinkAllocation","address":"0x3827990"}],
+      "callees": [{"name":"_BinkSetError@4","address":"0x3827A70"},{"name":"_ExpandBundleSizes@8","address":"0x3822510"},{"name":"InitializeBinkFile","address":"0x3821150"},{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"ComputeArrayElementDifferences","address":"0x3828A60"},{"name":"timeGetTime","address":"0x4B"},{"name":"RecordBinkAllocation","address":"0x3827990"}],
       "callers": [],
       "strings": ["Error opening file.", "Not a Bink file.", "The file doesn't contain any compressed frames yet."],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"}]
@@ -1280,7 +1280,7 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x823F|MUL|EDX", "0x8241|SHR|EDX, 0x3", "0x8244|CMP|ECX, EDX", "0x8246|MOV|EAX, 0x2000", "0x824B|JC|0x0382825d", "0x824D|MOV|EDX, dword ptr [EBP + 0xc]", "0x8250|MOV|ECX, dword ptr [EBX + 0x20]", "0x8253|OR|EDX, EAX", "0x8255|OR|ECX, EAX", "0x8257|MOV|dword ptr [EBP + 0xc], EDX", "0x825A|MOV|dword ptr [EBX + 0x20], ECX", "0x825D|TEST|dword ptr [EBP + 0xc], EAX", "0x8260|JZ|0x03828303", "0x8266|MOV|EAX, dword ptr [EBX + 0x10c]", "0x826C|MOV|ECX, dword ptr [EAX]"],
-      "callees": [{"name":"_BinkClose@4","address":"0x3829940"},{"name":"AllocateAndInitializeAudioBuffer","address":"0x3839DB0"},{"name":"radfree","address":"0x3821050"},{"name":"timeGetTime","address":"0x4B"},{"name":"_BinkSetError@4","address":"0x3827A70"},{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"RecordBinkAllocation","address":"0x3827990"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"radmalloc","address":"0x3821000"}],
+      "callees": [{"name":"_BinkSetError@4","address":"0x3827A70"},{"name":"_BinkClose@4","address":"0x3829940"},{"name":"AllocateAndInitializeAudioBuffer","address":"0x3839DB0"},{"name":"InitializeBinkMemoryBuffers","address":"0x38279F0"},{"name":"CreateThreadWithPackedParameters","address":"0x382AA80"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"timeGetTime","address":"0x4B"},{"name":"radfree","address":"0x3821050"},{"name":"RecordBinkAllocation","address":"0x3827990"},{"name":"radmalloc","address":"0x3821000"}],
       "callers": [],
       "strings": ["Out of memory."],
       "parameters": [{"name":"maxWidth","type":"uint","storage":"ECX:4"},{"name":"maxHeight","type":"uint","storage":"EDX:4"}]
@@ -1299,7 +1299,7 @@
       "param_count": 2,
       "instructions": ["0x86B0|PUSH|ESI", "0x86B1|PUSH|EDI", "0x86B2|MOV|EDI, dword ptr [ESP + 0x10]", "0x86B6|TEST|EDI, EDI", "0x86B8|JZ|0x038286bb", "0x86BA|DEC|EDI", "0x86BB|MOV|ESI, dword ptr [ESP + 0xc]", "0x86BF|CMP|dword ptr [ESI + 0x1e8], -0x1", "0x86C6|JZ|0x038286ce", "0x86C8|PUSH|ESI", "0x86C9|CALL|0x03828770", "0x86CE|TEST|EDI, EDI", "0x86D0|MOV|EAX, dword ptr [ESI + 0xc]", "0x86D3|MOV|dword ptr [ESI + 0x10], EAX", "0x86D6|JNZ|0x038286fb"],
       "callees": [{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"_BinkSetSoundOnOff@8","address":"0x382A920"}],
-      "callers": [{"name":"_BinkGoto@12","address":"0x3829880"},{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkNextFrame@4","address":"0x3829720"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkGoto@12","address":"0x3829880"},{"name":"_BinkNextFrame@4","address":"0x3829720"}],
       "strings": [],
       "parameters": [{"name":"pBinkHandle","type":"void *","storage":"Stack[0x4]:4"},{"name":"frameIndex","type":"uint","storage":"Stack[0x8]:4"}]
     },
@@ -1316,8 +1316,8 @@
       "local_var_count": 3,
       "param_count": 1,
       "instructions": ["0x8770|PUSH|EBP", "0x8771|MOV|EBP, ESP", "0x8773|SUB|ESP, 0xc", "0x8776|PUSH|EBX", "0x8777|MOV|EBX, dword ptr [EBP + 0x8]", "0x877A|PUSH|ESI", "0x877B|LEA|ESI, [EBX + 0x29c]", "0x8781|PUSH|EDI", "0x8782|MOV|dword ptr [EBP + -0xc], ESI", "0x8785|MOV|dword ptr [EBP + 0x8], ESI", "0x8788|MOV|EAX, dword ptr [EBP + 0x8]", "0x878B|INC.LOCK|byte ptr [EAX]", "0x878E|CMP|dword ptr [ESI], 0x1", "0x8791|JNZ|0x0382898c", "0x8797|MOV|EAX, dword ptr [EBX + 0x2a4]"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"FillBufferWithZeros","address":"0x38289D0"},{"name":"Convert16BitSamplesToUnsigned8Bit","address":"0x38289A0"}],
-      "callers": [{"name":"ProcessBinkVideoPlayback","address":"0x3828AD0"},{"name":"_BinkWait@4","address":"0x3829A10"},{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"_BinkDoFrame@4","address":"0x3829240"},{"name":"_BinkPause@8","address":"0x3829BE0"}],
+      "callees": [{"name":"FillBufferWithZeros","address":"0x38289D0"},{"name":"Convert16BitSamplesToUnsigned8Bit","address":"0x38289A0"},{"name":"timeGetTime","address":"0x4B"}],
+      "callers": [{"name":"ProcessBinkVideoPlayback","address":"0x3828AD0"},{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"_BinkService@4","address":"0x382A5E0"},{"name":"_BinkDoFrame@4","address":"0x3829240"},{"name":"_BinkWait@4","address":"0x3829A10"}],
       "strings": [],
       "parameters": [{"name":"hBink","type":"int *","storage":"Stack[0x4]:4"}]
     },
@@ -1406,7 +1406,7 @@
       "local_var_count": 2,
       "param_count": 7,
       "instructions": ["0x8B80|PUSH|EBP", "0x8B81|MOV|EBP, ESP", "0x8B83|SUB|ESP, 0x8", "0x8B86|PUSH|EBX", "0x8B87|PUSH|ESI", "0x8B88|MOV|ESI, dword ptr [EBP + 0x8]", "0x8B8B|TEST|ESI, ESI", "0x8B8D|PUSH|EDI", "0x8B8E|JNZ|0x03828b9b", "0x8B90|POP|EDI", "0x8B91|POP|ESI", "0x8B92|XOR|EAX, EAX", "0x8B94|POP|EBX", "0x8B95|MOV|ESP, EBP", "0x8B97|POP|EBP"],
-      "callees": [{"name":"_YUV_blit_YUY2@48","address":"0x382FAE0"},{"name":"timeGetTime","address":"0x4B"},{"name":"_YUV_blit_16bpp@48","address":"0x382EF60"},{"name":"_YUV_blit_24bpp_mask@48","address":"0x38311B0"},{"name":"_YUV_blit_32bpp@48","address":"0x382BEA0"},{"name":"_YUV_blit_24bpp@48","address":"0x382E1D0"},{"name":"_YUV_init@4","address":"0x382AB20"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_YUV_blit_YV12@52","address":"0x38307B0"},{"name":"_YUV_blit_UYVY@48","address":"0x3830720"},{"name":"_YUV_blit_UYVY_mask@48","address":"0x38312A0"},{"name":"_YUV_blit_YUY2_mask@48","address":"0x3831250"},{"name":"FillBufferWithZeros","address":"0x38289D0"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"_YUV_blit_16bpp_mask@48","address":"0x3831200"},{"name":"InitializeBinkTiming","address":"0x3829210"},{"name":"Sleep","address":"0x28"},{"name":"_YUV_blit_32bpp_mask@48","address":"0x3830A60"}],
+      "callees": [{"name":"_YUV_init@4","address":"0x382AB20"},{"name":"_YUV_blit_YV12@52","address":"0x38307B0"},{"name":"_YUV_blit_16bpp_mask@48","address":"0x3831200"},{"name":"_YUV_blit_UYVY_mask@48","address":"0x38312A0"},{"name":"timeGetTime","address":"0x4B"},{"name":"_YUV_blit_UYVY@48","address":"0x3830720"},{"name":"_YUV_blit_32bpp@48","address":"0x382BEA0"},{"name":"Sleep","address":"0x28"},{"name":"_YUV_blit_24bpp@48","address":"0x382E1D0"},{"name":"_YUV_blit_16bpp@48","address":"0x382EF60"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"FillBufferWithZeros","address":"0x38289D0"},{"name":"_YUV_blit_YUY2_mask@48","address":"0x3831250"},{"name":"_YUV_blit_32bpp_mask@48","address":"0x3830A60"},{"name":"_YUV_blit_YUY2@48","address":"0x382FAE0"},{"name":"_YUV_blit_24bpp_mask@48","address":"0x38311B0"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"InitializeBinkTiming","address":"0x3829210"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"},{"name":"param_3","type":"uint","storage":"Stack[0xc]:4"},{"name":"param_4","type":"int","storage":"Stack[0x10]:4"},{"name":"param_5","type":"uint","storage":"Stack[0x14]:4"},{"name":"param_6","type":"uint","storage":"Stack[0x18]:4"},{"name":"param_7","type":"uint","storage":"Stack[0x1c]:4"}]
@@ -1425,7 +1425,7 @@
       "param_count": 1,
       "instructions": ["0x9210|PUSH|ESI", "0x9211|MOV|ESI, dword ptr [ESP + 0x8]", "0x9215|MOV|EAX, dword ptr [ESI + 0x20c]", "0x921B|TEST|EAX, EAX", "0x921D|JNZ|0x03829238", "0x921F|CALL|dword ptr [0x03843164]", "0x9225|MOV|dword ptr [ESI + 0x20c], EAX", "0x922B|MOV|EAX, dword ptr [ESI + 0x1fc]", "0x9231|DEC|EAX", "0x9232|MOV|dword ptr [ESI + 0x210], EAX", "0x9238|POP|ESI", "0x9239|RET|"],
       "callees": [],
-      "callers": [{"name":"_BinkWait@4","address":"0x3829A10"},{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"},{"name":"_BinkDoFrame@4","address":"0x3829240"}],
+      "callers": [{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"},{"name":"_BinkDoFrame@4","address":"0x3829240"},{"name":"_BinkWait@4","address":"0x3829A10"}],
       "strings": [],
       "parameters": [{"name":"pBinkHandle","type":"void *","storage":"Stack[0x4]:4"}]
     },
@@ -1442,7 +1442,7 @@
       "local_var_count": 6,
       "param_count": 1,
       "instructions": ["0x9240|PUSH|EBP", "0x9241|MOV|EBP, ESP", "0x9243|SUB|ESP, 0x18", "0x9246|PUSH|EBX", "0x9247|MOV|EBX, dword ptr [EBP + 0x8]", "0x924A|PUSH|EDI", "0x924B|XOR|EDI, EDI", "0x924D|CMP|EBX, EDI", "0x924F|JNZ|0x0382925b", "0x9251|POP|EDI", "0x9252|XOR|EAX, EAX", "0x9254|POP|EBX", "0x9255|MOV|ESP, EBP", "0x9257|POP|EBP", "0x9258|RET|0x4"],
-      "callees": [{"name":"_ExpandBink@56","address":"0x3825440"},{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"InitializeBinkTiming","address":"0x3829210"},{"name":"Memmove","address":"0x383CAA0"},{"name":"Sleep","address":"0x28"},{"name":"ProcessBinkAudioFrame","address":"0x3839ED0"}],
+      "callees": [{"name":"Memmove","address":"0x383CAA0"},{"name":"_ExpandBink@56","address":"0x3825440"},{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"Sleep","address":"0x28"},{"name":"ProcessBinkAudioFrame","address":"0x3839ED0"},{"name":"InitializeBinkTiming","address":"0x3829210"}],
       "callers": [{"name":"_BinkGoto@12","address":"0x3829880"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -1460,7 +1460,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x9720|PUSH|ESI", "0x9721|MOV|ESI, dword ptr [ESP + 0x8]", "0x9725|TEST|ESI, ESI", "0x9727|JZ|0x03829769", "0x9729|MOV|dword ptr [ESI + 0x134], 0x1", "0x9733|CALL|dword ptr [0x03843164]", "0x9739|PUSH|EAX", "0x973A|PUSH|ESI", "0x973B|CALL|0x03829770", "0x9740|MOV|EAX, dword ptr [ESI + 0xc]", "0x9743|MOV|ECX, dword ptr [ESI + 0x8]", "0x9746|ADD|ESP, 0x8", "0x9749|CMP|EAX, ECX", "0x974B|JC|0x03829754", "0x974D|MOV|EAX, 0x1"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"}],
+      "callees": [{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"timeGetTime","address":"0x4B"}],
       "callers": [{"name":"_BinkGoto@12","address":"0x3829880"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -1479,7 +1479,7 @@
       "param_count": 2,
       "instructions": ["0x9770|MOV|EAX, dword ptr [ESP + 0x4]", "0x9774|MOV|ECX, dword ptr [EAX + 0x208]", "0x977A|TEST|ECX, ECX", "0x977C|JZ|0x03829794", "0x977E|MOV|EDX, dword ptr [ESP + 0x8]", "0x9782|SUB|EDX, ECX", "0x9784|ADD|dword ptr [EAX + 0x240], EDX", "0x978A|MOV|dword ptr [EAX + 0x208], 0x0", "0x9794|RET|"],
       "callees": [],
-      "callers": [{"name":"_BinkWait@4","address":"0x3829A10"},{"name":"_BinkGetRealtime@12","address":"0x3829E20"},{"name":"_BinkGetSummary@8","address":"0x3829C70"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_BinkNextFrame@4","address":"0x3829720"}],
+      "callers": [{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_BinkNextFrame@4","address":"0x3829720"},{"name":"_BinkGetRealtime@12","address":"0x3829E20"},{"name":"_BinkGetSummary@8","address":"0x3829C70"},{"name":"_BinkWait@4","address":"0x3829A10"}],
       "strings": [],
       "parameters": [{"name":"pBinkHandle","type":"int *","storage":"Stack[0x4]:4"},{"name":"currentTime","type":"DWORD","storage":"Stack[0x8]:4"}]
     },
@@ -1514,7 +1514,7 @@
       "local_var_count": 0,
       "param_count": 3,
       "instructions": ["0x9880|PUSH|EBP", "0x9881|PUSH|ESI", "0x9882|MOV|ESI, dword ptr [ESP + 0xc]", "0x9886|TEST|ESI, ESI", "0x9888|PUSH|EDI", "0x9889|JZ|0x03829937", "0x988F|MOV|dword ptr [ESI + 0x134], 0x1", "0x9899|MOV|EAX, dword ptr [ESI + 0x8]", "0x989C|MOV|EDI, dword ptr [ESP + 0x14]", "0x98A0|CMP|EDI, EAX", "0x98A2|JBE|0x038298a6", "0x98A4|MOV|EDI, EAX", "0x98A6|TEST|byte ptr [ESP + 0x18], 0x1", "0x98AB|JNZ|0x03829923", "0x98AD|CMP|dword ptr [ESI + 0xc], EDI"],
-      "callees": [{"name":"_BinkGetKeyFrame@12","address":"0x38297A0"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"_BinkDoFrame@4","address":"0x3829240"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_BinkNextFrame@4","address":"0x3829720"}],
+      "callees": [{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_BinkNextFrame@4","address":"0x3829720"},{"name":"ProcessBinkVideoFrame","address":"0x38286B0"},{"name":"_BinkGetKeyFrame@12","address":"0x38297A0"},{"name":"_BinkDoFrame@4","address":"0x3829240"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"},{"name":"param_3","type":"byte","storage":"Stack[0xc]:1"}]
@@ -1532,7 +1532,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x9940|PUSH|ESI", "0x9941|MOV|ESI, dword ptr [ESP + 0x8]", "0x9945|TEST|ESI, ESI", "0x9947|JZ|0x03829a09", "0x994D|PUSH|EDI", "0x994E|PUSH|0x1", "0x9950|PUSH|ESI", "0x9951|CALL|0x03829be0", "0x9956|CMP|dword ptr [ESI + 0x250], 0x1", "0x995D|JNZ|0x03829987", "0x995F|MOV|dword ptr [ESI + 0x250], 0x0", "0x9969|MOV|EAX, dword ptr [ESI + 0x250]", "0x996F|TEST|EAX, EAX", "0x9971|JNZ|0x03829987", "0x9973|MOV|EDI, dword ptr [0x038430d0]"],
-      "callees": [{"name":"FreeRadMemory","address":"0x383A500"},{"name":"radfree","address":"0x3821050"},{"name":"CleanupBinkHandle","address":"0x382AB00"},{"name":"Sleep","address":"0x28"},{"name":"_BinkPause@8","address":"0x3829BE0"}],
+      "callees": [{"name":"CleanupBinkHandle","address":"0x382AB00"},{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"FreeRadMemory","address":"0x383A500"},{"name":"radfree","address":"0x3821050"},{"name":"Sleep","address":"0x28"}],
       "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -1550,7 +1550,7 @@
       "local_var_count": 2,
       "param_count": 1,
       "instructions": ["0x9A10|PUSH|EBP", "0x9A11|MOV|EBP, ESP", "0x9A13|SUB|ESP, 0x8", "0x9A16|PUSH|EBX", "0x9A17|PUSH|ESI", "0x9A18|MOV|ESI, dword ptr [EBP + 0x8]", "0x9A1B|TEST|ESI, ESI", "0x9A1D|PUSH|EDI", "0x9A1E|JNZ|0x03829a2b", "0x9A20|POP|EDI", "0x9A21|POP|ESI", "0x9A22|XOR|EAX, EAX", "0x9A24|POP|EBX", "0x9A25|MOV|ESP, EBP", "0x9A27|POP|EBP"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"InitializeBinkTiming","address":"0x3829210"},{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"Sleep","address":"0x28"}],
+      "callees": [{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"InitializeBinkTiming","address":"0x3829210"},{"name":"Sleep","address":"0x28"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
@@ -1569,7 +1569,7 @@
       "param_count": 2,
       "instructions": ["0x9B70|MOV|EAX, dword ptr [ESP + 0x4]", "0x9B74|MOV|EDX, dword ptr [EAX + 0x218]", "0x9B7A|TEST|EDX, EDX", "0x9B7C|JZ|0x03829bd1", "0x9B7E|MOV|ECX, dword ptr [ESP + 0x8]", "0x9B82|SUB|ECX, EDX", "0x9B84|MOV|EDX, dword ptr [EAX + 0x21c]", "0x9B8A|CMP|ECX, EDX", "0x9B8C|MOV|dword ptr [EAX + 0x218], 0x0", "0x9B96|JBE|0x03829bba", "0x9B98|MOV|dword ptr [EAX + 0x224], EDX", "0x9B9E|MOV|EDX, dword ptr [EAX + 0x220]", "0x9BA4|MOV|dword ptr [EAX + 0x21c], ECX", "0x9BAA|MOV|ECX, dword ptr [EAX + 0xc]", "0x9BAD|MOV|dword ptr [EAX + 0x228], EDX"],
       "callees": [],
-      "callers": [{"name":"_BinkWait@4","address":"0x3829A10"},{"name":"_BinkGetRealtime@12","address":"0x3829E20"},{"name":"_BinkGetSummary@8","address":"0x3829C70"},{"name":"_BinkPause@8","address":"0x3829BE0"}],
+      "callers": [{"name":"_BinkPause@8","address":"0x3829BE0"},{"name":"_BinkGetRealtime@12","address":"0x3829E20"},{"name":"_BinkGetSummary@8","address":"0x3829C70"},{"name":"_BinkWait@4","address":"0x3829A10"}],
       "strings": [],
       "parameters": [{"name":"pContext","type":"void *","storage":"Stack[0x4]:4"},{"name":"timestamp","type":"uint","storage":"Stack[0x8]:4"}]
     },
@@ -1586,8 +1586,8 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x9BE0|PUSH|ESI", "0x9BE1|MOV|ESI, dword ptr [ESP + 0x8]", "0x9BE5|TEST|ESI, ESI", "0x9BE7|JNZ|0x03829bef", "0x9BE9|XOR|EAX, EAX", "0x9BEB|POP|ESI", "0x9BEC|RET|0x8", "0x9BEF|PUSH|EDI", "0x9BF0|CALL|dword ptr [0x03843164]", "0x9BF6|MOV|EDI, EAX", "0x9BF8|PUSH|EDI", "0x9BF9|PUSH|ESI", "0x9BFA|CALL|0x03829770", "0x9BFF|PUSH|EDI", "0x9C00|PUSH|ESI"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"UpdateBinkFrameTiming","address":"0x3829770"}],
-      "callers": [{"name":"_BinkClose@4","address":"0x3829940"},{"name":"_BinkGoto@12","address":"0x3829880"},{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"}],
+      "callees": [{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"timeGetTime","address":"0x4B"},{"name":"ProcessBinkFrameBuffer","address":"0x3828770"}],
+      "callers": [{"name":"_BinkClose@4","address":"0x3829940"},{"name":"_BinkCopyToBuffer@28","address":"0x3828B80"},{"name":"_BinkGoto@12","address":"0x3829880"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"int","storage":"Stack[0x8]:4"}]
     },
@@ -1604,7 +1604,7 @@
       "local_var_count": 1,
       "param_count": 2,
       "instructions": ["0x9C70|PUSH|EBP", "0x9C71|MOV|EBP, ESP", "0x9C73|PUSH|ECX", "0x9C74|PUSH|EBX", "0x9C75|PUSH|ESI", "0x9C76|MOV|ESI, dword ptr [EBP + 0x8]", "0x9C79|TEST|ESI, ESI", "0x9C7B|JZ|0x03829e16", "0x9C81|MOV|EBX, dword ptr [EBP + 0xc]", "0x9C84|TEST|EBX, EBX", "0x9C86|JZ|0x03829e16", "0x9C8C|PUSH|EDI", "0x9C8D|CALL|dword ptr [0x03843164]", "0x9C93|MOV|EDI, EAX", "0x9C95|PUSH|EDI"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"UpdateBinkFrameTiming","address":"0x3829770"}],
+      "callees": [{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"timeGetTime","address":"0x4B"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"undefined4 *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"undefined4 *","storage":"Stack[0x8]:4"}]
@@ -1622,7 +1622,7 @@
       "local_var_count": 0,
       "param_count": 3,
       "instructions": ["0x9E20|PUSH|EBP", "0x9E21|MOV|EBP, ESP", "0x9E23|PUSH|EBX", "0x9E24|PUSH|ESI", "0x9E25|PUSH|EDI", "0x9E26|CALL|dword ptr [0x03843164]", "0x9E2C|MOV|ESI, dword ptr [EBP + 0x8]", "0x9E2F|MOV|EDI, EAX", "0x9E31|PUSH|EDI", "0x9E32|PUSH|ESI", "0x9E33|CALL|0x03829770", "0x9E38|PUSH|EDI", "0x9E39|PUSH|ESI", "0x9E3A|CALL|0x03829b70", "0x9E3F|MOV|EBX, dword ptr [EBP + 0x10]"],
-      "callees": [{"name":"timeGetTime","address":"0x4B"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"UpdateBinkFrameTiming","address":"0x3829770"}],
+      "callees": [{"name":"UpdateBinkFrameTiming","address":"0x3829770"},{"name":"UpdateRealtimeMetrics","address":"0x3829B70"},{"name":"timeGetTime","address":"0x4B"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"},{"name":"param_2","type":"undefined4 *","storage":"Stack[0x8]:4"},{"name":"param_3","type":"uint","storage":"Stack[0xc]:4"}]
@@ -1640,7 +1640,7 @@
       "local_var_count": 16,
       "param_count": 2,
       "instructions": ["0x9F50|SUB|ESP, 0x1ac", "0x9F56|PUSH|EBX", "0x9F57|MOV|EBX, dword ptr [ESP + 0x1b8]", "0x9F5E|TEST|EBX, 0x4000000", "0x9F64|PUSH|ESI", "0x9F65|JZ|0x03829f74", "0x9F67|POP|ESI", "0x9F68|XOR|EAX, EAX", "0x9F6A|POP|EBX", "0x9F6B|ADD|ESP, 0x1ac", "0x9F71|RET|0x8", "0x9F74|TEST|EBX, 0x80000", "0x9F7A|MOV|ESI, dword ptr [ESP + 0x1b8]", "0x9F81|JNZ|0x03829fa3", "0x9F83|TEST|dword ptr [ESI + 0x20], 0x80000"],
-      "callees": [{"name":"FindLargestNonZeroRect","address":"0x382A2D0"},{"name":"FindOptimalRectangleSplit","address":"0x382A430"}],
+      "callees": [{"name":"FindOptimalRectangleSplit","address":"0x382A430"},{"name":"FindLargestNonZeroRect","address":"0x382A2D0"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint","storage":"Stack[0x8]:4"}]
@@ -1659,7 +1659,7 @@
       "param_count": 4,
       "instructions": ["0xA2D0|PUSH|EBX", "0xA2D1|PUSH|EBP", "0xA2D2|MOV|EBP, dword ptr [ESP + 0x14]", "0xA2D6|PUSH|ESI", "0xA2D7|MOV|ESI, dword ptr [ESP + 0x1c]", "0xA2DB|MOV|EAX, dword ptr [ESI + 0x4]", "0xA2DE|CDQ|", "0xA2DF|AND|EDX, 0xf", "0xA2E2|ADD|EAX, EDX", "0xA2E4|MOV|ECX, EAX", "0xA2E6|MOV|EAX, dword ptr [ESI]", "0xA2E8|CDQ|", "0xA2E9|SAR|ECX, 0x4", "0xA2EC|IMUL|ECX, EBP", "0xA2EF|AND|EDX, 0xf"],
       "callees": [],
-      "callers": [{"name":"_BinkGetRects@8","address":"0x3829F50"},{"name":"FindOptimalRectangleSplit","address":"0x382A430"}],
+      "callers": [{"name":"FindOptimalRectangleSplit","address":"0x382A430"},{"name":"_BinkGetRects@8","address":"0x3829F50"}],
       "strings": [],
       "parameters": [{"name":"pOutRect","type":"int *","storage":"Stack[0x4]:4"},{"name":"stride","type":"int","storage":"Stack[0x8]:4"},{"name":"height","type":"int","storage":"Stack[0xc]:4"},{"name":"pInRect","type":"int *","storage":"Stack[0x10]:4"}]
     },
@@ -1695,7 +1695,7 @@
       "param_count": 1,
       "instructions": ["0xA5E0|MOV|EAX, dword ptr [ESP + 0x4]", "0xA5E4|CMP|dword ptr [EAX + 0x1e8], -0x1", "0xA5EB|JZ|0x0382a5f3", "0xA5ED|PUSH|EAX", "0xA5EE|CALL|0x03828770", "0xA5F3|RET|0x4"],
       "callees": [{"name":"ProcessBinkFrameBuffer","address":"0x3828770"}],
-      "callers": [{"name":"WaitForBinkFileAccess","address":"0x3821580"},{"name":"ReadFileWithBufferManagement","address":"0x38212C0"},{"name":"BinkServiceCleanup","address":"0x3821660"},{"name":"ReadFileWithLocking","address":"0x3821210"},{"name":"InitializeBinkFile","address":"0x38215E0"}],
+      "callers": [{"name":"InitializeBinkFile","address":"0x38215E0"},{"name":"ReadFileWithLocking","address":"0x3821210"},{"name":"WaitForBinkFileAccess","address":"0x3821580"},{"name":"ReadFileWithBufferManagement","address":"0x38212C0"},{"name":"BinkServiceCleanup","address":"0x3821660"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"int *","storage":"Stack[0x4]:4"}]
     },
@@ -2037,7 +2037,7 @@
       "param_count": 13,
       "instructions": ["0xBEF0|PUSH|ECX", "0xBEF1|MOV|EAX, dword ptr [ESP + 0x34]", "0xBEF5|PUSH|EBX", "0xBEF6|PUSH|EBP", "0xBEF7|AND|EAX, 0x70000000", "0xBEFC|CMP|EAX, 0x60000000", "0xBF01|PUSH|ESI", "0xBF02|PUSH|EDI", "0xBF03|MOV|EDI, dword ptr [ESP + 0x24]", "0xBF07|MOV|dword ptr [ESP + 0x10], EAX", "0xBF0B|JNZ|0x0382bf3b", "0xBF0D|MOV|ECX, dword ptr [ESP + 0x38]", "0xBF11|MOV|EDX, dword ptr [ESP + 0x30]", "0xBF15|MOV|ESI, dword ptr [ESP + 0x40]", "0xBF19|SHR|ECX, 0x1"],
       "callees": [{"name":"ConfigureYuvBlitParameters","address":"0x382C2D0"},{"name":"UpdateFrameRateFromTiming","address":"0x382D050"},{"name":"GetYuvBlitTimestamp","address":"0x382D000"},{"name":"ClearMMXState","address":"0x382C2C0"}],
-      "callers": [{"name":"_YUV_blit_YUY2@48","address":"0x382FAE0"},{"name":"_YUV_blit_UYVY@48","address":"0x3830720"},{"name":"_YUV_blit_16bpp@48","address":"0x382EF60"},{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"},{"name":"_YUV_blit_32bpp@48","address":"0x382BEA0"},{"name":"_YUV_blit_24bpp@48","address":"0x382E1D0"}],
+      "callers": [{"name":"_YUV_blit_16bpp@48","address":"0x382EF60"},{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"},{"name":"_YUV_blit_YUY2@48","address":"0x382FAE0"},{"name":"_YUV_blit_UYVY@48","address":"0x3830720"},{"name":"_YUV_blit_32bpp@48","address":"0x382BEA0"},{"name":"_YUV_blit_24bpp@48","address":"0x382E1D0"}],
       "strings": [],
       "parameters": [{"name":"srcX","type":"uint","storage":"Stack[0x4]:4"},{"name":"srcY","type":"uint","storage":"Stack[0x8]:4"},{"name":"srcPitch","type":"int","storage":"Stack[0xc]:4"},{"name":"destPitch","type":"uint","storage":"Stack[0x10]:4"},{"name":"uvBaseOffset","type":"uint","storage":"Stack[0x14]:4"},{"name":"uvHeight","type":"uint","storage":"Stack[0x18]:4"},{"name":"destHeight","type":"uint","storage":"Stack[0x1c]:4"},{"name":"destWidth","type":"uint","storage":"Stack[0x20]:4"},{"name":"srcWidth","type":"uint","storage":"Stack[0x24]:4"},{"name":"uvPitch","type":"uint","storage":"Stack[0x28]:4"},{"name":"srcLineSkip","type":"uint","storage":"Stack[0x2c]:4"},{"name":"formatFlags","type":"uint","storage":"Stack[0x30]:4"},{"name":"pFormatType","type":"int *","storage":"Stack[0x34]:4"}]
     },
@@ -2055,7 +2055,7 @@
       "param_count": 0,
       "instructions": ["0xC2C0|EMMS|", "0xC2C2|RET|"],
       "callees": [],
-      "callers": [{"name":"YuvBlitHelper","address":"0x382BEF0"},{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"}],
+      "callers": [{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"},{"name":"YuvBlitHelper","address":"0x382BEF0"}],
       "strings": [],
       "parameters": []
     },
@@ -2073,7 +2073,7 @@
       "param_count": 6,
       "instructions": ["0xC2D0|PUSH|EBX", "0xC2D1|MOV|EBX, dword ptr [ESP + 0xc]", "0xC2D5|PUSH|EBP", "0xC2D6|MOV|EBP, dword ptr [ESP + 0xc]", "0xC2DA|XOR|EAX, EAX", "0xC2DC|TEST|EBP, 0x10000", "0xC2E2|MOV|[0x03856348], EAX", "0xC2E7|MOV|ECX, dword ptr [EBX]", "0xC2E9|PUSH|ESI", "0xC2EA|PUSH|EDI", "0xC2EB|MOV|dword ptr [0x0385331c], ECX", "0xC2F1|JZ|0x0382c398", "0xC2F7|MOV|EDX, dword ptr [0x0385c808]", "0xC2FD|MOV|ECX, 0x1", "0xC302|CMP|EDX, ECX"],
       "callees": [{"name":"AllocateYuvBuffer","address":"0x382CAB0"},{"name":"ComputeDimensionShift","address":"0x382CB10"}],
-      "callers": [{"name":"YuvBlitHelper","address":"0x382BEF0"},{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"}],
+      "callers": [{"name":"ProcessYuvBlitMaskedRegion","address":"0x3830AB0"},{"name":"YuvBlitHelper","address":"0x382BEF0"}],
       "strings": [],
       "parameters": [{"name":"blitFlags","type":"uint","storage":"Stack[0x4]:4"},{"name":"pPitchOrStride","type":"int *","storage":"Stack[0x8]:4"},{"name":"width","type":"int","storage":"Stack[0xc]:4"},{"name":"height","type":"int","storage":"Stack[0x10]:4"},{"name":"pSurfaceFormat","type":"int *","storage":"Stack[0x14]:4"},{"name":"pOutputOffset","type":"int *","storage":"Stack[0x18]:4"}]
     },
@@ -2523,7 +2523,7 @@
       "param_count": 13,
       "instructions": ["0x10AB0|PUSH|EBP", "0x10AB1|MOV|EBP, ESP", "0x10AB3|SUB|ESP, 0x90", "0x10AB9|MOV|EAX, dword ptr [EBP + 0x28]", "0x10ABC|MOV|ECX, dword ptr [EBP + 0x14]", "0x10ABF|PUSH|EBX", "0x10AC0|MOV|EBX, dword ptr [EBP + 0x2c]", "0x10AC3|PUSH|ESI", "0x10AC4|MOV|ESI, dword ptr [EBP + 0x30]", "0x10AC7|PUSH|EDI", "0x10AC8|MOV|EDI, dword ptr [EBP + 0x34]", "0x10ACB|AND|EDI, 0x70000000", "0x10AD1|CMP|EDI, 0x60000000", "0x10AD7|MOV|dword ptr [EBP + -0x18], EAX", "0x10ADA|MOV|dword ptr [EBP + -0x34], ESI"],
       "callees": [{"name":"ConfigureYuvBlitParameters","address":"0x382C2D0"},{"name":"YuvBlitHelper","address":"0x382BEF0"},{"name":"ClearMMXState","address":"0x382C2C0"}],
-      "callers": [{"name":"_YUV_blit_UYVY_mask@48","address":"0x38312A0"},{"name":"_YUV_blit_YUY2_mask@48","address":"0x3831250"},{"name":"_YUV_blit_24bpp_mask@48","address":"0x38311B0"},{"name":"_YUV_blit_16bpp_mask@48","address":"0x3831200"},{"name":"_YUV_blit_32bpp_mask@48","address":"0x3830A60"}],
+      "callers": [{"name":"_YUV_blit_16bpp_mask@48","address":"0x3831200"},{"name":"_YUV_blit_YUY2_mask@48","address":"0x3831250"},{"name":"_YUV_blit_32bpp_mask@48","address":"0x3830A60"},{"name":"_YUV_blit_UYVY_mask@48","address":"0x38312A0"},{"name":"_YUV_blit_24bpp_mask@48","address":"0x38311B0"}],
       "strings": [],
       "parameters": [{"name":"destOffset","type":"uint","storage":"Stack[0x4]:4"},{"name":"destStride","type":"uint","storage":"Stack[0x8]:4"},{"name":"srcY","type":"int","storage":"Stack[0xc]:4"},{"name":"srcX","type":"uint","storage":"Stack[0x10]:4"},{"name":"pSourceMask","type":"byte *","storage":"Stack[0x14]:4"},{"name":"maskPitch","type":"int","storage":"Stack[0x18]:4"},{"name":"destBasePtr","type":"uint","storage":"Stack[0x1c]:4"},{"name":"srcUOffset","type":"uint","storage":"Stack[0x20]:4"},{"name":"srcVOffset","type":"uint","storage":"Stack[0x24]:4"},{"name":"pChromaMask","type":"byte *","storage":"Stack[0x28]:4"},{"name":"chromaPitch","type":"uint","storage":"Stack[0x2c]:4"},{"name":"formatFlags","type":"uint","storage":"Stack[0x30]:4"},{"name":"pWidth","type":"int *","storage":"Stack[0x34]:4"}]
     },
@@ -3170,7 +3170,7 @@
       "local_var_count": 0,
       "param_count": 5,
       "instructions": ["0x17DB0|PUSH|EBX", "0x17DB1|MOV|EBX, dword ptr [ESP + 0x18]", "0x17DB5|PUSH|EBP", "0x17DB6|PUSH|ESI", "0x17DB7|MOV|ESI, dword ptr [ESP + 0x10]", "0x17DBB|PUSH|EDI", "0x17DBC|MOV|EDI, dword ptr [ESP + 0x20]", "0x17DC0|MOV|EAX, dword ptr [EDI]", "0x17DC2|SHL|EAX, 0x2", "0x17DC5|CMP|ESI, EAX", "0x17DC7|JLE|0x03837dd9", "0x17DC9|PUSH|EBX", "0x17DCA|MOV|ECX, ESI", "0x17DCC|SAR|ECX, 0x2", "0x17DCF|PUSH|EDI"],
-      "callees": [{"name":"InitializeFourierLookupTable","address":"0x3837E40"},{"name":"ApplyFFTButterflyOperations","address":"0x3838480"},{"name":"BitReversalPermutation","address":"0x3837F20"},{"name":"ComputeFFTTransform","address":"0x38380E0"},{"name":"FFTStockhamAlgorithm","address":"0x3838300"}],
+      "callees": [{"name":"InitializeFourierLookupTable","address":"0x3837E40"},{"name":"BitReversalPermutation","address":"0x3837F20"},{"name":"ComputeFFTTransform","address":"0x38380E0"},{"name":"ApplyFFTButterflyOperations","address":"0x3838480"},{"name":"FFTStockhamAlgorithm","address":"0x3838300"}],
       "callers": [{"name":"DecodeBinkAudioSamples","address":"0x3839FD0"}],
       "strings": [],
       "parameters": [{"name":"dataSize","type":"int","storage":"Stack[0x4]:4"},{"name":"signFlag","type":"int","storage":"Stack[0x8]:4"},{"name":"sourceArray","type":"float *","storage":"Stack[0xc]:4"},{"name":"capacityPtr","type":"int *","storage":"Stack[0x10]:4"},{"name":"destArray","type":"float *","storage":"Stack[0x14]:4"}]
@@ -3315,7 +3315,7 @@
       "param_count": 3,
       "instructions": ["0x19DB0|MOV|EAX, dword ptr [ESP + 0xc]", "0x19DB4|SUB|ESP, 0x8", "0x19DB7|PUSH|EBX", "0x19DB8|PUSH|EBP", "0x19DB9|MOV|EBP, dword ptr [ESP + 0x14]", "0x19DBD|NOT|EAX", "0x19DBF|MOV|EBX, EBP", "0x19DC1|IMUL|EBX, dword ptr [ESP + 0x18]", "0x19DC6|AND|EAX, 0x1", "0x19DC9|SHL|EAX, 0x1", "0x19DCB|OR|EAX, 0x1", "0x19DCE|SHL|EAX, 0xd", "0x19DD1|PUSH|ESI", "0x19DD2|ADD|EAX, 0x2688", "0x19DD7|INC|EBX"],
       "callees": [{"name":"radmalloc","address":"0x3821000"}],
-      "callers": [{"name":"_BinkOpenTrack@8","address":"0x382A6D0"},{"name":"InitializeBinkPlayback","address":"0x382823F"}],
+      "callers": [{"name":"InitializeBinkPlayback","address":"0x382823F"},{"name":"_BinkOpenTrack@8","address":"0x382A6D0"}],
       "strings": [],
       "parameters": [{"name":"bufferWidth","type":"uint","storage":"Stack[0x4]:4"},{"name":"bufferHeight","type":"uint","storage":"Stack[0x8]:4"},{"name":"compressionFlag","type":"uint","storage":"Stack[0xc]:4"}]
     },
@@ -3350,7 +3350,7 @@
       "local_var_count": 1,
       "param_count": 8,
       "instructions": ["0x19FD0|MOV|EAX, 0xa084", "0x19FD5|CALL|0x0383d000", "0x19FDA|PUSH|EBX", "0x19FDB|PUSH|EBP", "0x19FDC|MOV|EBP, dword ptr [ESP + 0xa0a4]", "0x19FE3|PUSH|ESI", "0x19FE4|PUSH|EDI", "0x19FE5|MOV|EDI, dword ptr [ESP + 0xa098]", "0x19FEC|MOV|EAX, EDI", "0x19FEE|SHR|EAX, 0x1", "0x19FF0|MOV|dword ptr [ESP + 0x1c], EAX", "0x19FF4|MOV|EAX, dword ptr [EBP]", "0x19FF7|MOV|ECX, EAX", "0x19FF9|AND|ECX, 0x1fffffff", "0x19FFF|SHR|EAX, 0x1d"],
-      "callees": [{"name":"DecodeBinkAudioSample","address":"0x383A3F0"},{"name":"ConvertFloatSamplesToPCM","address":"0x383A430"},{"name":"ProcessVectorWithCapacity","address":"0x3837DB0"},{"name":"StackProbe","address":"0x383D000"},{"name":"ComputeAudioCoefficientLogarithm","address":"0x383D060"}],
+      "callees": [{"name":"StackProbe","address":"0x383D000"},{"name":"DecodeBinkAudioSample","address":"0x383A3F0"},{"name":"ComputeAudioCoefficientLogarithm","address":"0x383D060"},{"name":"ProcessVectorWithCapacity","address":"0x3837DB0"},{"name":"ConvertFloatSamplesToPCM","address":"0x383A430"}],
       "callers": [{"name":"ProcessBinkAudioFrame","address":"0x3839ED0"}],
       "strings": [],
       "parameters": [{"name":"pBitStream","type":"uint *","storage":"Stack[0x4]:4"},{"name":"bitOffset","type":"uint","storage":"Stack[0x8]:4"},{"name":"pOutputAudio","type":"float *","storage":"Stack[0xc]:4"},{"name":"pChannelRanges","type":"int *","storage":"Stack[0x10]:4"},{"name":"pChannelScales","type":"float *","storage":"Stack[0x14]:4"},{"name":"pAudioIndices","type":"short *","storage":"Stack[0x18]:4"},{"name":"numChannels","type":"int","storage":"Stack[0x1c]:4"},{"name":"pChannelConfig","type":"uint *","storage":"Stack[0x20]:4"}]
@@ -3422,7 +3422,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x1A510|MOV|EAX, dword ptr [ESP + 0x4]", "0x1A514|TEST|EAX, EAX", "0x1A516|JNZ|0x0383a51b", "0x1A518|RET|0x4", "0x1A51B|MOV|ECX, dword ptr [0x0384e308]", "0x1A521|CMP|ECX, -0x1", "0x1A524|JZ|0x0383a538", "0x1A526|CMP|ECX, EAX", "0x1A528|JZ|0x0383a53d", "0x1A52A|MOV|ECX, dword ptr [0x0385c87c]", "0x1A530|TEST|ECX, ECX", "0x1A532|JNZ|0x0383a771", "0x1A538|MOV|[0x0384e308], EAX", "0x1A53D|MOV|EAX, [0x0385c880]", "0x1A542|TEST|EAX, EAX"],
-      "callees": [{"name":"LoadLibraryA","address":"0x23"},{"name":"GetProcAddress","address":"0x11"},{"name":"SetErrorMode","address":"0x12"}],
+      "callees": [{"name":"SetErrorMode","address":"0x12"},{"name":"LoadLibraryA","address":"0x23"},{"name":"GetProcAddress","address":"0x11"}],
       "callers": [],
       "strings": ["MSS32.DLL", "_AIL_minimum_sample_buffer_size@12", "_AIL_allocate_sample_handle@4", "_AIL_init_sample@4", "_AIL_stop_sample@4", "_AIL_resume_sample@4", "_AIL_set_sample_type@12", "_AIL_set_sample_playback_rate@8", "_AIL_set_sample_user_data@12", "_AIL_set_sample_volume@8", "_AIL_set_sample_pan@8", "_AIL_serve@0", "_AIL_sample_buffer_ready@4", "_AIL_load_sample_buffer@16", "_AIL_end_sample@4", "_AIL_release_sample_handle@4", "_AIL_sample_status@4", "_AIL_sample_buffer_info@20", "_AIL_mem_alloc_lock@4", "_AIL_mem_free_lock@4"],
       "parameters": [{"name":"param_1","type":"undefined1 *","storage":"Stack[0x4]:4"}]
@@ -3620,7 +3620,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1BE10|SUB|ESP, 0x8", "0x1BE13|PUSH|EBP", "0x1BE14|CALL|dword ptr [0x03843034]", "0x1BE1A|PUSH|0x0", "0x1BE1C|MOV|dword ptr [ESP + 0x8], EAX", "0x1BE20|CALL|dword ptr [0x038430c8]", "0x1BE26|MOV|EBP, EAX", "0x1BE28|MOV|EAX, [0x0385c884]", "0x1BE2D|TEST|EAX, EAX", "0x1BE2F|JNZ|0x0383beaf", "0x1BE31|PUSH|ESI", "0x1BE32|PUSH|EAX", "0x1BE33|CALL|dword ptr [0x03843124]", "0x1BE39|MOV|ESI, EAX", "0x1BE3B|TEST|ESI, ESI"],
-      "callees": [{"name":"GetModuleHandleA","address":"0x26"},{"name":"GetWindow","address":"0x3B"},{"name":"GetTopWindow","address":"0x3C"},{"name":"GetCurrentProcessId","address":"0x1"},{"name":"GetWindowLongA","address":"0x3A"},{"name":"GetActiveWindow","address":"0x38"},{"name":"GetWindowThreadProcessId","address":"0x39"}],
+      "callees": [{"name":"GetCurrentProcessId","address":"0x1"},{"name":"GetWindow","address":"0x3B"},{"name":"GetTopWindow","address":"0x3C"},{"name":"GetModuleHandleA","address":"0x26"},{"name":"GetWindowThreadProcessId","address":"0x39"},{"name":"GetWindowLongA","address":"0x3A"},{"name":"GetActiveWindow","address":"0x38"}],
       "callers": [{"name":"InitializeDirectSoundDevice","address":"0x383BF90"}],
       "strings": [],
       "parameters": []
@@ -3638,7 +3638,7 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x1BEC0|MOV|EAX, [0x0384e34c]", "0x1BEC5|CMP|EAX, -0x1", "0x1BEC8|JNZ|0x0383bed0", "0x1BECA|MOV|EAX, dword ptr [ESP + 0x4]", "0x1BECE|JMP|0x0383bee3", "0x1BED0|MOV|ECX, dword ptr [ESP + 0x4]", "0x1BED4|CMP|EAX, ECX", "0x1BED6|JZ|0x0383bee8", "0x1BED8|MOV|EAX, [0x0385c88c]", "0x1BEDD|TEST|EAX, EAX", "0x1BEDF|JNZ|0x0383bf09", "0x1BEE1|MOV|EAX, ECX", "0x1BEE3|MOV|[0x0384e34c], EAX", "0x1BEE8|TEST|EAX, EAX", "0x1BEEA|JZ|0x0383bf0e"],
-      "callees": [{"name":"LoadLibraryA","address":"0x23"},{"name":"GetProcAddress","address":"0x11"},{"name":"InitializeDirectSoundDevice","address":"0x383BF90"},{"name":"SetErrorMode","address":"0x12"},{"name":"ReleaseDirectSoundOnRefCountZero","address":"0x383C050"}],
+      "callees": [{"name":"SetErrorMode","address":"0x12"},{"name":"InitializeDirectSoundDevice","address":"0x383BF90"},{"name":"LoadLibraryA","address":"0x23"},{"name":"ReleaseDirectSoundOnRefCountZero","address":"0x383C050"},{"name":"GetProcAddress","address":"0x11"}],
       "callers": [],
       "strings": ["DSOUND.DLL", "DirectSoundCreate"],
       "parameters": [{"name":"param_1","type":"int","storage":"Stack[0x4]:4"}]
@@ -3657,7 +3657,7 @@
       "param_count": 0,
       "instructions": ["0x1BF90|MOV|ECX, dword ptr [0x0385c894]", "0x1BF96|SUB|ESP, 0x60", "0x1BF99|TEST|ECX, ECX", "0x1BF9B|JNZ|0x0383bfa3", "0x1BF9D|XOR|EAX, EAX", "0x1BF9F|ADD|ESP, 0x60", "0x1BFA2|RET|", "0x1BFA3|MOV|EAX, [0x0385c8a4]", "0x1BFA8|INC|EAX", "0x1BFA9|CMP|EAX, 0x1", "0x1BFAC|MOV|[0x0385c8a4], EAX", "0x1BFB1|JNZ|0x0383c042", "0x1BFB7|MOV|EAX, [0x0385c888]", "0x1BFBC|TEST|EAX, EAX", "0x1BFBE|JZ|0x0383c003"],
       "callees": [{"name":"FindApplicationWindow","address":"0x383BE10"}],
-      "callers": [{"name":"_BinkOpenDirectSound@4","address":"0x383BEC0"},{"name":"InitializeAudioSystem","address":"0x383C080"}],
+      "callers": [{"name":"InitializeAudioSystem","address":"0x383C080"},{"name":"_BinkOpenDirectSound@4","address":"0x383BEC0"}],
       "strings": [],
       "parameters": []
     },
@@ -3692,7 +3692,7 @@
       "local_var_count": 17,
       "param_count": 4,
       "instructions": ["0x1C080|PUSH|EBP", "0x1C081|MOV|EBP, ESP", "0x1C083|SUB|ESP, 0x3c", "0x1C086|PUSH|EBX", "0x1C087|PUSH|ESI", "0x1C088|MOV|ESI, dword ptr [EBP + 0x8]", "0x1C08B|PUSH|EDI", "0x1C08C|XOR|EAX, EAX", "0x1C08E|MOV|ECX, 0x2f", "0x1C093|MOV|EDI, ESI", "0x1C095|STOSD.REP|ES:EDI", "0x1C097|CALL|0x0383bf90", "0x1C09C|TEST|EAX, EAX", "0x1C09E|JNZ|0x0383c0a9", "0x1C0A0|POP|EDI"],
-      "callees": [{"name":"InitializeDirectSoundDevice","address":"0x383BF90"},{"name":"InitializeAudioBuffer","address":"0x383C390"},{"name":"ApplySoundFrequencyModulation","address":"0x383C2C0"}],
+      "callees": [{"name":"InitializeAudioBuffer","address":"0x383C390"},{"name":"InitializeDirectSoundDevice","address":"0x383BF90"},{"name":"ApplySoundFrequencyModulation","address":"0x383C2C0"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"pAudioStructure","type":"void *","storage":"Stack[0x4]:4"},{"name":"sampleRate","type":"int","storage":"Stack[0x8]:4"},{"name":"bitDepth","type":"int","storage":"Stack[0xc]:4"},{"name":"channels","type":"uint","storage":"Stack[0x10]:4"}]
@@ -3890,7 +3890,7 @@
       "local_var_count": 0,
       "param_count": 2,
       "instructions": ["0x1C972|CMP|dword ptr [ESP + 0x4], -0x20", "0x1C977|JA|0x0383c99b", "0x1C979|PUSH|dword ptr [ESP + 0x4]", "0x1C97D|CALL|0x0383c99e", "0x1C982|TEST|EAX, EAX", "0x1C984|POP|ECX", "0x1C985|JNZ|0x0383c99d", "0x1C987|CMP|dword ptr [ESP + 0x8], EAX", "0x1C98B|JZ|0x0383c99d", "0x1C98D|PUSH|dword ptr [ESP + 0x4]", "0x1C991|CALL|0x0383d405", "0x1C996|TEST|EAX, EAX", "0x1C998|POP|ECX", "0x1C999|JNZ|0x0383c979", "0x1C99B|XOR|EAX, EAX"],
-      "callees": [{"name":"AllocateMemoryFallback","address":"0x383C99E"},{"name":"CallConditionalCallback","address":"0x383D405"}],
+      "callees": [{"name":"CallConditionalCallback","address":"0x383D405"},{"name":"AllocateMemoryFallback","address":"0x383C99E"}],
       "callers": [{"name":"_malloc","address":"0x383C960"}],
       "strings": [],
       "parameters": [{"name":"_Size","type":"size_t","storage":"Stack[0x4]:4"},{"name":"_NhFlag","type":"int","storage":"Stack[0x8]:4"}]
@@ -3908,7 +3908,7 @@
       "local_var_count": 1,
       "param_count": 1,
       "instructions": ["0x1C99E|PUSH|ESI", "0x1C99F|MOV|ESI, dword ptr [ESP + 0x8]", "0x1C9A3|CMP|ESI, dword ptr [0x0384e494]", "0x1C9A9|JA|0x0383c9b6", "0x1C9AB|PUSH|ESI", "0x1C9AC|CALL|0x0383d865", "0x1C9B1|TEST|EAX, EAX", "0x1C9B3|POP|ECX", "0x1C9B4|JNZ|0x0383c9d2", "0x1C9B6|TEST|ESI, ESI", "0x1C9B8|JNZ|0x0383c9bd", "0x1C9BA|PUSH|0x1", "0x1C9BC|POP|ESI", "0x1C9BD|ADD|ESI, 0xf", "0x1C9C0|AND|ESI, 0xfffffff0"],
-      "callees": [{"name":"AllocateFromMemoryPool","address":"0x383D865"},{"name":"HeapAlloc","address":"0x2"}],
+      "callees": [{"name":"HeapAlloc","address":"0x2"},{"name":"AllocateFromMemoryPool","address":"0x383D865"}],
       "callers": [{"name":"__nh_malloc","address":"0x383C972"}],
       "strings": [],
       "parameters": [{"name":"allocationSize","type":"uint","storage":"Stack[0x4]:4"}]
@@ -3926,8 +3926,8 @@
       "local_var_count": 0,
       "param_count": 1,
       "instructions": ["0x1C9D4|PUSH|ESI", "0x1C9D5|MOV|ESI, dword ptr [ESP + 0x8]", "0x1C9D9|TEST|ESI, ESI", "0x1C9DB|JZ|0x0383ca01", "0x1C9DD|PUSH|ESI", "0x1C9DE|CALL|0x0383d50f", "0x1C9E3|POP|ECX", "0x1C9E4|TEST|EAX, EAX", "0x1C9E6|PUSH|ESI", "0x1C9E7|JZ|0x0383c9f3", "0x1C9E9|PUSH|EAX", "0x1C9EA|CALL|0x0383d53a", "0x1C9EF|POP|ECX", "0x1C9F0|POP|ECX", "0x1C9F1|POP|ESI"],
-      "callees": [{"name":"FindAllocatorPoolEntry","address":"0x383D50F"},{"name":"HeapFree","address":"0x4"},{"name":"DeallocateMemoryBlock","address":"0x383D53A"}],
-      "callers": [{"name":"radfree","address":"0x3821050"},{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"GetEnvironmentStringsCached","address":"0x383F6B5"},{"name":"CleanupGlobalPointerArray","address":"0x383F38C"}],
+      "callees": [{"name":"HeapFree","address":"0x4"},{"name":"FindAllocatorPoolEntry","address":"0x383D50F"},{"name":"DeallocateMemoryBlock","address":"0x383D53A"}],
+      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"GetEnvironmentStringsCached","address":"0x383F6B5"},{"name":"CleanupGlobalPointerArray","address":"0x383F38C"},{"name":"radfree","address":"0x3821050"}],
       "strings": [],
       "parameters": [{"name":"pMemory","type":"void *","storage":"Stack[0x4]:4"}]
     },
@@ -3963,7 +3963,7 @@
       "param_count": 3,
       "instructions": ["0x1CAA0|PUSH|EBP", "0x1CAA1|MOV|EBP, ESP", "0x1CAA3|PUSH|EDI", "0x1CAA4|PUSH|ESI", "0x1CAA5|MOV|ESI, dword ptr [EBP + 0xc]", "0x1CAA8|MOV|ECX, dword ptr [EBP + 0x10]", "0x1CAAB|MOV|EDI, dword ptr [EBP + 0x8]", "0x1CAAE|MOV|EAX, ECX", "0x1CAB0|MOV|EDX, ECX", "0x1CAB2|ADD|EAX, ESI", "0x1CAB4|CMP|EDI, ESI", "0x1CAB6|JBE|0x0383cac0", "0x1CAB8|CMP|EDI, EAX", "0x1CABA|JC|0x0383cc38", "0x1CAC0|TEST|EDI, 0x3"],
       "callees": [],
-      "callers": [{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"},{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"DeallocateMemoryBlock","address":"0x383D53A"},{"name":"_BinkDoFrame@4","address":"0x3829240"}],
+      "callers": [{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"DeallocateMemoryBlock","address":"0x383D53A"},{"name":"_BinkDoFrame@4","address":"0x3829240"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"}],
       "strings": [],
       "parameters": [{"name":"dest","type":"void *","storage":"Stack[0x4]:4"},{"name":"src","type":"void *","storage":"Stack[0x8]:4"},{"name":"count","type":"uint","storage":"Stack[0xc]:4"}]
     },
@@ -4052,7 +4052,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1CFA8|CALL|0x0383cfc0", "0x1CFAD|CALL|0x0383de35", "0x1CFB2|MOV|[0x0385c8ac], EAX", "0x1CFB7|CALL|0x0383dde5", "0x1CFBC|FNCLEX|", "0x1CFBE|RET|"],
-      "callees": [{"name":"InitializeFunctionPointers","address":"0x383CFC0"},{"name":"LoadAndCallIsProcessorFeaturePresent","address":"0x383DE35"},{"name":"ClearFlagsMaskWrapper","address":"0x383DDE5"}],
+      "callees": [{"name":"ClearFlagsMaskWrapper","address":"0x383DDE5"},{"name":"InitializeFunctionPointers","address":"0x383CFC0"},{"name":"LoadAndCallIsProcessorFeaturePresent","address":"0x383DE35"}],
       "callers": [{"name":"ExecuteInitializationHandlers","address":"0x383F0E1"}],
       "strings": [],
       "parameters": []
@@ -4089,7 +4089,7 @@
       "param_count": 0,
       "instructions": ["0x1D000|PUSH|ECX", "0x1D001|CMP|EAX, 0x1000", "0x1D006|LEA|ECX, [ESP + 0x8]", "0x1D00A|JC|0x0383d020", "0x1D00C|SUB|ECX, 0x1000", "0x1D012|SUB|EAX, 0x1000", "0x1D017|TEST|dword ptr [ECX], EAX", "0x1D019|CMP|EAX, 0x1000", "0x1D01E|JNC|0x0383d00c", "0x1D020|SUB|ECX, EAX", "0x1D022|MOV|EAX, ESP", "0x1D024|TEST|dword ptr [ECX], EAX", "0x1D026|MOV|ESP, ECX", "0x1D028|MOV|ECX, dword ptr [EAX]", "0x1D02A|MOV|EAX, dword ptr [EAX + 0x4]"],
       "callees": [],
-      "callers": [{"name":"DecodeBinkAudioSamples","address":"0x3839FD0"},{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"},{"name":"ApplyLocaleStringMapping","address":"0x383F973"}],
+      "callers": [{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"},{"name":"ApplyLocaleStringMapping","address":"0x383F973"},{"name":"DecodeBinkAudioSamples","address":"0x3839FD0"}],
       "strings": [],
       "parameters": []
     },
@@ -4142,7 +4142,7 @@
       "local_var_count": 5,
       "param_count": 4,
       "instructions": ["0x1D082|MOV|ECX, EAX", "0x1D084|PUSH|EAX", "0x1D085|FSTCW|word ptr [ESP]", "0x1D089|CMP|word ptr [ESP], 0x27f", "0x1D08F|JZ|0x0383d096", "0x1D091|CALL|0x0383edd5", "0x1D096|AND|ECX, 0x7ff00000", "0x1D09C|LEA|EDX, [ESP + 0x8]", "0x1D0A0|CMP|ECX, 0x7ff00000", "0x1D0A6|JZ|0x0383d149", "0x1D0AC|CALL|0x0383ee05", "0x1D0B1|JZ|0x0383d145", "0x1D0B7|TEST|EAX, 0x7ff00000", "0x1D0BC|JZ|0x0383d1b8", "0x1D0C2|MOV|CL, byte ptr [ESP + 0xf]"],
-      "callees": [{"name":"RestoreFPUControlWord","address":"0x383EE5E"},{"name":"ComputePowerWithSpecialCases","address":"0x383EF4C"},{"name":"CountFractionalDigits","address":"0x383D255"},{"name":"__fload_withFB","address":"0x383EE05"},{"name":"HandleFPUException_Type0x1d","address":"0x383ED60"},{"name":"SetFPUControlWord","address":"0x383EDD5"},{"name":"HandleFPUException","address":"0x383EEA9"},{"name":"Pow2","address":"0x383EDC0"}],
+      "callees": [{"name":"__fload_withFB","address":"0x383EE05"},{"name":"Pow2","address":"0x383EDC0"},{"name":"RestoreFPUControlWord","address":"0x383EE5E"},{"name":"SetFPUControlWord","address":"0x383EDD5"},{"name":"HandleFPUException_Type0x1d","address":"0x383ED60"},{"name":"CountFractionalDigits","address":"0x383D255"},{"name":"ComputePowerWithSpecialCases","address":"0x383EF4C"},{"name":"HandleFPUException","address":"0x383EEA9"}],
       "callers": [{"name":"ComputeAudioCoefficientLogarithm","address":"0x383D060"}],
       "strings": [],
       "parameters": [{"name":"baseValue","type":"double","storage":"Stack[0x4]:8"},{"name":"baseBits","type":"uint","storage":"Stack[0xc]:4"},{"name":"exponentValue","type":"double","storage":"Stack[0x14]:8"},{"name":"exponentBits","type":"uint","storage":"Stack[0x1c]:4"}]
@@ -4178,7 +4178,7 @@
       "local_var_count": 1,
       "param_count": 2,
       "instructions": ["0x1D27D|CMP|dword ptr [ESP + 0x8], 0x1", "0x1D282|JNZ|0x0383d302", "0x1D284|CALL|dword ptr [0x0384304c]", "0x1D28A|PUSH|0x0", "0x1D28C|MOV|[0x0385c908], EAX", "0x1D291|CALL|0x0383d420", "0x1D296|TEST|EAX, EAX", "0x1D298|POP|ECX", "0x1D299|JZ|0x0383d331", "0x1D29F|MOV|EAX, [0x0385c908]", "0x1D2A4|XOR|ECX, ECX", "0x1D2A6|MOV|CL, byte ptr [0x0385c909]", "0x1D2AC|AND|EAX, 0xff", "0x1D2B1|SHR|dword ptr [0x0385c908], 0x10", "0x1D2B8|MOV|[0x0385c910], EAX"],
-      "callees": [{"name":"InitializeMemoryHeap","address":"0x383D420"},{"name":"GetVersion","address":"0x7"},{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"GetCommandLineA","address":"0x6"},{"name":"GetEnvironmentStringsCached","address":"0x383F6B5"},{"name":"InitializeApplicationArguments","address":"0x383F468"},{"name":"CleanupGlobalPointerArray","address":"0x383F38C"},{"name":"InitializeHandleTable","address":"0x383F1E1"},{"name":"CleanupMemoryAllocations","address":"0x383D45C"},{"name":"ExecuteInitializationHandlers","address":"0x383F0E1"},{"name":"ExecuteCleanupHandlers","address":"0x383F11F"}],
+      "callees": [{"name":"ExecuteInitializationHandlers","address":"0x383F0E1"},{"name":"GetCommandLineA","address":"0x6"},{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"GetVersion","address":"0x7"},{"name":"InitializeApplicationArguments","address":"0x383F468"},{"name":"ExecuteCleanupHandlers","address":"0x383F11F"},{"name":"CleanupMemoryAllocations","address":"0x383D45C"},{"name":"InitializeMemoryHeap","address":"0x383D420"},{"name":"GetEnvironmentStringsCached","address":"0x383F6B5"},{"name":"CleanupGlobalPointerArray","address":"0x383F38C"},{"name":"InitializeHandleTable","address":"0x383F1E1"}],
       "callers": [{"name":"entry","address":"0x383D335"}],
       "strings": [],
       "parameters": [{"name":"dllHandle","type":"int","storage":"Stack[0x4]:4"},{"name":"initializationCode","type":"int","storage":"Stack[0x8]:4"}]
@@ -4250,7 +4250,7 @@
       "local_var_count": 1,
       "param_count": 1,
       "instructions": ["0x1D420|XOR|EAX, EAX", "0x1D422|PUSH|0x0", "0x1D424|CMP|dword ptr [ESP + 0x8], EAX", "0x1D428|PUSH|0x1000", "0x1D42D|SETZ|AL", "0x1D430|PUSH|EAX", "0x1D431|CALL|dword ptr [0x03843054]", "0x1D437|TEST|EAX, EAX", "0x1D439|MOV|[0x0385ce0c], EAX", "0x1D43E|JZ|0x0383d455", "0x1D440|CALL|0x0383d4d1", "0x1D445|TEST|EAX, EAX", "0x1D447|JNZ|0x0383d458", "0x1D449|PUSH|dword ptr [0x0385ce0c]", "0x1D44F|CALL|dword ptr [0x03843050]"],
-      "callees": [{"name":"HeapCreate","address":"0x9"},{"name":"HeapDestroy","address":"0x8"},{"name":"InitializeMemoryBuffer","address":"0x383D4D1"}],
+      "callees": [{"name":"InitializeMemoryBuffer","address":"0x383D4D1"},{"name":"HeapCreate","address":"0x9"},{"name":"HeapDestroy","address":"0x8"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": [{"name":"heapFlags","type":"int","storage":"Stack[0x4]:4"}]
@@ -4268,7 +4268,7 @@
       "local_var_count": 1,
       "param_count": 0,
       "instructions": ["0x1D45C|PUSH|EBX", "0x1D45D|XOR|EBX, EBX", "0x1D45F|CMP|dword ptr [0x0385ce04], EBX", "0x1D465|PUSH|EBP", "0x1D466|MOV|EBP, dword ptr [0x03843040]", "0x1D46C|JLE|0x0383d4b2", "0x1D46E|MOV|EAX, [0x0385ce08]", "0x1D473|PUSH|ESI", "0x1D474|PUSH|EDI", "0x1D475|MOV|EDI, dword ptr [0x03843058]", "0x1D47B|LEA|ESI, [EAX + 0xc]", "0x1D47E|PUSH|0x4000", "0x1D483|PUSH|0x100000", "0x1D488|PUSH|dword ptr [ESI]", "0x1D48A|CALL|EDI"],
-      "callees": [{"name":"HeapDestroy","address":"0x8"},{"name":"HeapFree","address":"0x4"},{"name":"VirtualFree","address":"0xA"}],
+      "callees": [{"name":"HeapFree","address":"0x4"},{"name":"VirtualFree","address":"0xA"},{"name":"HeapDestroy","address":"0x8"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": []
@@ -4322,7 +4322,7 @@
       "local_var_count": 5,
       "param_count": 2,
       "instructions": ["0x1D53A|PUSH|EBP", "0x1D53B|MOV|EBP, ESP", "0x1D53D|SUB|ESP, 0x14", "0x1D540|MOV|EDX, dword ptr [EBP + 0xc]", "0x1D543|MOV|ECX, dword ptr [EBP + 0x8]", "0x1D546|PUSH|EBX", "0x1D547|PUSH|ESI", "0x1D548|MOV|EAX, dword ptr [ECX + 0x10]", "0x1D54B|MOV|ESI, EDX", "0x1D54D|SUB|ESI, dword ptr [ECX + 0xc]", "0x1D550|MOV|EBX, dword ptr [EDX + -0x4]", "0x1D553|ADD|EDX, -0x4", "0x1D556|PUSH|EDI", "0x1D557|SHR|ESI, 0xf", "0x1D55A|MOV|ECX, ESI"],
-      "callees": [{"name":"HeapFree","address":"0x4"},{"name":"VirtualFree","address":"0xA"},{"name":"Memmove","address":"0x383CAA0"}],
+      "callees": [{"name":"Memmove","address":"0x383CAA0"},{"name":"HeapFree","address":"0x4"},{"name":"VirtualFree","address":"0xA"}],
       "callers": [{"name":"FreeMemoryBlock","address":"0x383C9D4"}],
       "strings": [],
       "parameters": [{"name":"pAllocator","type":"uint *","storage":"Stack[0x4]:4"},{"name":"blockAddress","type":"uint","storage":"Stack[0x8]:4"}]
@@ -4340,7 +4340,7 @@
       "local_var_count": 5,
       "param_count": 1,
       "instructions": ["0x1D865|PUSH|EBP", "0x1D866|MOV|EBP, ESP", "0x1D868|SUB|ESP, 0x14", "0x1D86B|MOV|EAX, [0x0385ce04]", "0x1D870|MOV|EDX, dword ptr [0x0385ce08]", "0x1D876|PUSH|EBX", "0x1D877|PUSH|ESI", "0x1D878|LEA|EAX, [EAX + EAX*0x4]", "0x1D87B|PUSH|EDI", "0x1D87C|LEA|EDI, [EDX + EAX*0x4]", "0x1D87F|MOV|EAX, dword ptr [EBP + 0x8]", "0x1D882|MOV|dword ptr [EBP + -0x4], EDI", "0x1D885|LEA|ECX, [EAX + 0x17]", "0x1D888|AND|ECX, 0xfffffff0", "0x1D88B|MOV|dword ptr [EBP + -0x10], ECX"],
-      "callees": [{"name":"AllocateMemoryPool","address":"0x383DC1F"},{"name":"AllocateGameObject","address":"0x383DB6E"}],
+      "callees": [{"name":"AllocateGameObject","address":"0x383DB6E"},{"name":"AllocateMemoryPool","address":"0x383DC1F"}],
       "callers": [{"name":"AllocateMemoryFallback","address":"0x383C99E"}],
       "strings": [],
       "parameters": [{"name":"allocationSize","type":"uint","storage":"Stack[0x4]:4"}]
@@ -4358,7 +4358,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1DB6E|MOV|EAX, [0x0385ce04]", "0x1DB73|MOV|ECX, dword ptr [0x0385cdf4]", "0x1DB79|PUSH|ESI", "0x1DB7A|PUSH|EDI", "0x1DB7B|XOR|EDI, EDI", "0x1DB7D|CMP|EAX, ECX", "0x1DB7F|JNZ|0x0383dbb1", "0x1DB81|LEA|EAX, [ECX + ECX*0x4 + 0x50]", "0x1DB85|SHL|EAX, 0x2", "0x1DB88|PUSH|EAX", "0x1DB89|PUSH|dword ptr [0x0385ce08]", "0x1DB8F|PUSH|EDI", "0x1DB90|PUSH|dword ptr [0x0385ce0c]", "0x1DB96|CALL|dword ptr [0x03843060]", "0x1DB9C|CMP|EAX, EDI"],
-      "callees": [{"name":"VirtualAlloc","address":"0xB"},{"name":"HeapFree","address":"0x4"},{"name":"HeapAlloc","address":"0x2"},{"name":"HeapReAlloc","address":"0xC"}],
+      "callees": [{"name":"HeapReAlloc","address":"0xC"},{"name":"VirtualAlloc","address":"0xB"},{"name":"HeapAlloc","address":"0x2"},{"name":"HeapFree","address":"0x4"}],
       "callers": [{"name":"AllocateFromMemoryPool","address":"0x383D865"}],
       "strings": [],
       "parameters": []
@@ -4394,7 +4394,7 @@
       "local_var_count": 2,
       "param_count": 3,
       "instructions": ["0x1DD1A|PUSH|EBP", "0x1DD1B|MOV|EBP, ESP", "0x1DD1D|PUSH|ECX", "0x1DD1E|CMP|dword ptr [0x0385c8d4], 0x0", "0x1DD25|PUSH|EBX", "0x1DD26|PUSH|ESI", "0x1DD27|PUSH|EDI", "0x1DD28|JNZ|0x0383dd47", "0x1DD2A|MOV|EAX, dword ptr [EBP + 0x8]", "0x1DD2D|CMP|EAX, 0x41", "0x1DD30|JL|0x0383dde0", "0x1DD36|CMP|EAX, 0x5a", "0x1DD39|JG|0x0383dde0", "0x1DD3F|ADD|EAX, 0x20", "0x1DD42|JMP|0x0383dde0"],
-      "callees": [{"name":"GetCharacterClassAttribute","address":"0x383FBC2"},{"name":"ApplyLocaleStringMapping","address":"0x383F973"}],
+      "callees": [{"name":"ApplyLocaleStringMapping","address":"0x383F973"},{"name":"GetCharacterClassAttribute","address":"0x383FBC2"}],
       "callers": [{"name":"RotateStringCharacters","address":"0x383DE5E"},{"name":"__strcmpi","address":"0x383CA10"}],
       "strings": [],
       "parameters": [{"name":"this","type":"void *","storage":"ECX:4 (auto)"},{"name":"pThis","type":"void *","storage":"Stack[0x4]:4"},{"name":"inputCharacter","type":"uint","storage":"Stack[0x8]:4"}]
@@ -4448,7 +4448,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1DE35|PUSH|0x38482f4", "0x1DE3A|CALL|dword ptr [0x038430c8]", "0x1DE40|TEST|EAX, EAX", "0x1DE42|JZ|0x0383de59", "0x1DE44|PUSH|0x38482d8", "0x1DE49|PUSH|EAX", "0x1DE4A|CALL|dword ptr [0x03843074]", "0x1DE50|TEST|EAX, EAX", "0x1DE52|JZ|0x0383de59", "0x1DE54|PUSH|0x0", "0x1DE56|CALL|EAX", "0x1DE58|RET|", "0x1DE59|JMP|0x0383ddf7"],
-      "callees": [{"name":"GetModuleHandleA","address":"0x26"},{"name":"CheckModuloCondition","address":"0x383DDF7"},{"name":"GetProcAddress","address":"0x11"}],
+      "callees": [{"name":"CheckModuloCondition","address":"0x383DDF7"},{"name":"GetModuleHandleA","address":"0x26"},{"name":"GetProcAddress","address":"0x11"}],
       "callers": [{"name":"InitializeProcessorAndFlags","address":"0x383CFA8"}],
       "strings": ["KERNEL32"],
       "parameters": []
@@ -4502,8 +4502,8 @@
       "local_var_count": 2,
       "param_count": 4,
       "instructions": ["0x1DF5C|PUSH|EBP", "0x1DF5D|MOV|EBP, ESP", "0x1DF5F|CMP|byte ptr [0x0385c8f0], 0x0", "0x1DF66|PUSH|EBX", "0x1DF67|PUSH|ESI", "0x1DF68|JZ|0x0383df91", "0x1DF6A|MOV|EBX, dword ptr [EBP + 0x10]", "0x1DF6D|MOV|EAX, [0x0385c8ec]", "0x1DF72|XOR|ECX, ECX", "0x1DF74|MOV|ESI, EAX", "0x1DF76|TEST|EBX, EBX", "0x1DF78|SETG|CL", "0x1DF7B|PUSH|ECX", "0x1DF7C|XOR|ECX, ECX", "0x1DF7E|CMP|dword ptr [EAX], 0x2d"],
-      "callees": [{"name":"strcpy","address":"0x3840190"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"},{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"InitializeFloatFormatState","address":"0x38402F7"}],
-      "callers": [{"name":"FormatFloatWithReentrancyGuard","address":"0x383E1D9"},{"name":"__cfltcvt","address":"0x383E223"}],
+      "callees": [{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"strcpy","address":"0x3840190"},{"name":"InitializeFloatFormatState","address":"0x38402F7"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"}],
+      "callers": [{"name":"__cfltcvt","address":"0x383E223"},{"name":"FormatFloatWithReentrancyGuard","address":"0x383E1D9"}],
       "strings": ["e+000"],
       "parameters": [{"name":"dValue","type":"double","storage":"Stack[0x4]:8"},{"name":"pBuffer","type":"char *","storage":"Stack[0xc]:4"},{"name":"nPrecision","type":"int","storage":"Stack[0x10]:4"},{"name":"bUseLowerE","type":"int","storage":"Stack[0x14]:4"}]
     },
@@ -4520,7 +4520,7 @@
       "local_var_count": 1,
       "param_count": 3,
       "instructions": ["0x1E060|CMP|byte ptr [0x0385c8f0], 0x0", "0x1E067|PUSH|EBX", "0x1E068|PUSH|EBP", "0x1E069|MOV|EBP, dword ptr [ESP + 0x10]", "0x1E06D|PUSH|ESI", "0x1E06E|PUSH|EDI", "0x1E06F|JZ|0x0383e09b", "0x1E071|MOV|EAX, [0x0385c8f4]", "0x1E076|MOV|EBX, dword ptr [ESP + 0x1c]", "0x1E07A|MOV|ESI, dword ptr [0x0385c8ec]", "0x1E080|CMP|EAX, EBX", "0x1E082|JNZ|0x0383e0cb", "0x1E084|XOR|ECX, ECX", "0x1E086|CMP|dword ptr [ESI], 0x2d", "0x1E089|SETZ|CL"],
-      "callees": [{"name":"_memset","address":"0x3840420"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"},{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"InitializeFloatFormatState","address":"0x38402F7"}],
+      "callees": [{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"InitializeFloatFormatState","address":"0x38402F7"},{"name":"_memset","address":"0x3840420"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"}],
       "callers": [{"name":"FormatFloatWithReentrancyGuard","address":"0x383E200"},{"name":"__cfltcvt","address":"0x383E223"}],
       "strings": [],
       "parameters": [{"name":"floatContext","type":"undefined4","storage":"Stack[0x4]:4"},{"name":"outputBuffer","type":"char *","storage":"Stack[0x8]:4"},{"name":"decimalPrecision","type":"size_t","storage":"Stack[0xc]:4"}]
@@ -4538,7 +4538,7 @@
       "local_var_count": 1,
       "param_count": 4,
       "instructions": ["0x1E13E|PUSH|EBP", "0x1E13F|MOV|EBP, ESP", "0x1E141|PUSH|EBX", "0x1E142|PUSH|ESI", "0x1E143|PUSH|EDI", "0x1E144|MOV|EDI, dword ptr [EBP + 0x8]", "0x1E147|PUSH|ECX", "0x1E148|PUSH|ECX", "0x1E149|FLD|double ptr [EDI]", "0x1E14B|FSTP|double ptr [ESP]", "0x1E14E|CALL|0x038402f7", "0x1E153|MOV|[0x0385c8ec], EAX", "0x1E158|MOV|ECX, dword ptr [EAX + 0x4]", "0x1E15B|DEC|ECX", "0x1E15C|MOV|EBX, dword ptr [EBP + 0x10]"],
-      "callees": [{"name":"FormatFloatWithReentrancyGuard","address":"0x383E1D9"},{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"InitializeFloatFormatState","address":"0x38402F7"}],
+      "callees": [{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"FormatFloatWithReentrancyGuard","address":"0x383E200"},{"name":"InitializeFloatFormatState","address":"0x38402F7"}],
       "callers": [{"name":"__cfltcvt","address":"0x383E223"}],
       "strings": [],
       "parameters": [{"name":"floatValue","type":"double","storage":"Stack[0x4]:8"},{"name":"pBuffer","type":"char *","storage":"Stack[0xc]:4"},{"name":"bufferSize","type":"size_t","storage":"Stack[0x10]:4"},{"name":"formatFlags","type":"int","storage":"Stack[0x14]:4"}]
@@ -4592,7 +4592,7 @@
       "local_var_count": 0,
       "param_count": 6,
       "instructions": ["0x1E223|PUSH|EBP", "0x1E224|MOV|EBP, ESP", "0x1E226|CMP|dword ptr [EBP + 0x10], 0x65", "0x1E22A|JZ|0x0383e25e", "0x1E22C|CMP|dword ptr [EBP + 0x10], 0x45", "0x1E230|JZ|0x0383e25e", "0x1E232|CMP|dword ptr [EBP + 0x10], 0x66", "0x1E236|JNZ|0x0383e24b", "0x1E238|PUSH|dword ptr [EBP + 0x14]", "0x1E23B|PUSH|dword ptr [EBP + 0xc]", "0x1E23E|PUSH|dword ptr [EBP + 0x8]", "0x1E241|CALL|0x0383e060", "0x1E246|ADD|ESP, 0xc", "0x1E249|POP|EBP", "0x1E24A|RET|"],
-      "callees": [{"name":"FormatFloatStringWithValidation","address":"0x383E13E"},{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"}],
+      "callees": [{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"},{"name":"FormatFloatStringWithValidation","address":"0x383E13E"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"arg","type":"double *","storage":"Stack[0x4]:4"},{"name":"buffer","type":"char *","storage":"Stack[0x8]:4"},{"name":"sizeInBytes","type":"size_t","storage":"Stack[0xc]:4"},{"name":"format","type":"int","storage":"Stack[0x10]:4"},{"name":"precision","type":"int","storage":"Stack[0x14]:4"},{"name":"caps","type":"int","storage":"Stack[0x18]:4"}]
@@ -4610,7 +4610,7 @@
       "local_var_count": 1,
       "param_count": 2,
       "instructions": ["0x1E274|PUSH|EDI", "0x1E275|MOV|EDI, dword ptr [ESP + 0xc]", "0x1E279|TEST|EDI, EDI", "0x1E27B|JZ|0x0383e297", "0x1E27D|PUSH|ESI", "0x1E27E|MOV|ESI, dword ptr [ESP + 0xc]", "0x1E282|PUSH|ESI", "0x1E283|CALL|0x03840480", "0x1E288|INC|EAX", "0x1E289|PUSH|EAX", "0x1E28A|PUSH|ESI", "0x1E28B|ADD|ESI, EDI", "0x1E28D|PUSH|ESI", "0x1E28E|CALL|0x0383caa0", "0x1E293|ADD|ESP, 0x10"],
-      "callees": [{"name":"_strlen","address":"0x3840480"},{"name":"Memmove","address":"0x383CAA0"}],
+      "callees": [{"name":"Memmove","address":"0x383CAA0"},{"name":"_strlen","address":"0x3840480"}],
       "callers": [{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"}],
       "strings": [],
       "parameters": [{"name":"pSourceString","type":"char *","storage":"Stack[0x4]:4"},{"name":"offsetToInsert","type":"int","storage":"Stack[0x8]:4"}]
@@ -4628,7 +4628,7 @@
       "local_var_count": 0,
       "param_count": 6,
       "instructions": ["0x1E299|PUSH|EBP", "0x1E29A|MOV|EBP, ESP", "0x1E29C|MOV|ECX, dword ptr [EBP + 0x8]", "0x1E29F|XOR|EAX, EAX", "0x1E2A1|PUSH|EBX", "0x1E2A2|PUSH|ESI", "0x1E2A3|MOV|dword ptr [ECX + 0x4], EAX", "0x1E2A6|MOV|ECX, dword ptr [EBP + 0x8]", "0x1E2A9|PUSH|EDI", "0x1E2AA|PUSH|0x1", "0x1E2AC|MOV|dword ptr [ECX + 0x8], EAX", "0x1E2AF|MOV|ECX, dword ptr [EBP + 0x8]", "0x1E2B2|POP|EBX", "0x1E2B3|MOV|dword ptr [ECX + 0xc], EAX", "0x1E2B6|MOV|CL, byte ptr [EBP + 0x10]"],
-      "callees": [{"name":"GetFPUStatusWord","address":"0x383E8DF"},{"name":"GetAndClearFPUStatus","address":"0x383E8ED"},{"name":"RaiseException","address":"0xD"}],
+      "callees": [{"name":"RaiseException","address":"0xD"},{"name":"GetAndClearFPUStatus","address":"0x383E8ED"},{"name":"GetFPUStatusWord","address":"0x383E8DF"}],
       "callers": [{"name":"ProcessExceptionInfo","address":"0x384129B"}],
       "strings": [],
       "parameters": [{"name":"pExceptionRecord","type":"EXCEPTION_RECORD *","storage":"Stack[0x4]:4"},{"name":"pFloatingPointStatus","type":"uint *","storage":"Stack[0x8]:4"},{"name":"exceptionCode","type":"uint","storage":"Stack[0xc]:4"},{"name":"exceptionType","type":"uint","storage":"Stack[0x10]:4"},{"name":"pExceptionData1","type":"undefined8 *","storage":"Stack[0x14]:4"},{"name":"pExceptionData2","type":"undefined8 *","storage":"Stack[0x18]:4"}]
@@ -4826,7 +4826,7 @@
       "local_var_count": 1,
       "param_count": 2,
       "instructions": ["0x1E980|MOV|byte ptr [EBP + 0xffffff70], 0xfe", "0x1E987|OR|CH, CH", "0x1E989|JNZ|0x0383e9d6", "0x1E98B|FXCH|", "0x1E98D|FYL2X|", "0x1E98F|JMP|0x0383e99e", "0x1E99E|CALL|0x0383eade", "0x1E9A3|FLD1|", "0x1E9A5|FADDP|", "0x1E9A7|TEST|byte ptr [EBP + 0xffffff61], 0x1", "0x1E9AE|JZ|0x0383e9c4", "0x1E9B0|FLD1|", "0x1E9B2|CMP|dword ptr [0x0385c8ac], 0x1", "0x1E9B9|JZ|0x0383e9bf", "0x1E9BB|FDIVRP|"],
-      "callees": [{"name":"FloatUnpackWrapper","address":"0x3840D01"},{"name":"ValidateFloatModularCongruence","address":"0x383EB21"},{"name":"PopFPUStack","address":"0x383EC88"},{"name":"FloatPowModExp","address":"0x383EADE"},{"name":"ReturnFatalErrorValue","address":"0x383ED36"}],
+      "callees": [{"name":"ReturnFatalErrorValue","address":"0x383ED36"},{"name":"FloatUnpackWrapper","address":"0x3840D01"},{"name":"PopFPUStack","address":"0x383EC88"},{"name":"FloatPowModExp","address":"0x383EADE"},{"name":"ValidateFloatModularCongruence","address":"0x383EB21"}],
       "callers": [],
       "strings": [],
       "parameters": [{"name":"mantissaAndExponent","type":"uint","storage":"ECX:4"},{"name":"flags","type":"byte","storage":"DL:1"}]
@@ -5078,7 +5078,7 @@
       "local_var_count": 5,
       "param_count": 7,
       "instructions": ["0x1EEA9|SUB|ESP, 0x8", "0x1EEAC|FST|double ptr [ESP]", "0x1EEAF|MOV|EAX, dword ptr [ESP + 0x4]", "0x1EEB3|ADD|ESP, 0x8", "0x1EEB6|AND|EAX, 0x7ff00000", "0x1EEBB|JZ|0x0383eefa", "0x1EEBD|CMP|EAX, 0x7ff00000", "0x1EEC2|JZ|0x0383ef23", "0x1EEC4|MOV|AX, word ptr [ESP]", "0x1EEC8|CMP|AX, 0x27f", "0x1EECC|JZ|0x0383eef8", "0x1EECE|AND|AX, 0x20", "0x1EED2|JNZ|0x0383eef5", "0x1EED4|FSTSW|AX", "0x1EED7|AND|AX, 0x20"],
-      "callees": [{"name":"HandleFPUException_Type0x1d","address":"0x383ED60"},{"name":"__startOneArgErrorHandling","address":"0x383ED77"}],
+      "callees": [{"name":"__startOneArgErrorHandling","address":"0x383ED77"},{"name":"HandleFPUException_Type0x1d","address":"0x383ED60"}],
       "callers": [{"name":"ComputeLogarithm","address":"0x383D082"}],
       "strings": [],
       "parameters": [{"name":"exceptionCode","type":"int","storage":"ECX:4"},{"name":"exceptionFlags","type":"uint","storage":"EDX:4"},{"name":"param3","type":"int","storage":"Stack[0x4]:4"},{"name":"param4","type":"int","storage":"Stack[0x8]:4"},{"name":"param5","type":"int","storage":"Stack[0xc]:4"},{"name":"param6","type":"int","storage":"Stack[0x10]:4"},{"name":"param7","type":"int","storage":"Stack[0x14]:4"}]
@@ -5132,7 +5132,7 @@
       "local_var_count": 0,
       "param_count": 0,
       "instructions": ["0x1F0E1|MOV|EAX, [0x0384e468]", "0x1F0E6|TEST|EAX, EAX", "0x1F0E8|JZ|0x0383f0ec", "0x1F0EA|CALL|EAX", "0x1F0EC|PUSH|0x384a010", "0x1F0F1|PUSH|0x384a008", "0x1F0F6|CALL|0x0383f1c7", "0x1F0FB|PUSH|0x384a004", "0x1F100|PUSH|0x384a000", "0x1F105|CALL|0x0383f1c7", "0x1F10A|ADD|ESP, 0x10", "0x1F10D|RET|"],
-      "callees": [{"name":"CallFunctionArray","address":"0x383F1C7"},{"name":"InitializeProcessorAndFlags","address":"0x383CFA8"}],
+      "callees": [{"name":"InitializeProcessorAndFlags","address":"0x383CFA8"},{"name":"CallFunctionArray","address":"0x383F1C7"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": []
@@ -5186,7 +5186,7 @@
       "local_var_count": 0,
       "param_count": 3,
       "instructions": ["0x1F12E|PUSH|EDI", "0x1F12F|PUSH|0x1", "0x1F131|POP|EDI", "0x1F132|CMP|dword ptr [0x0385c944], EDI", "0x1F138|JNZ|0x0383f14b", "0x1F13A|PUSH|dword ptr [ESP + 0x8]", "0x1F13E|CALL|dword ptr [0x03843070]", "0x1F144|PUSH|EAX", "0x1F145|CALL|dword ptr [0x0384306c]", "0x1F14B|CMP|dword ptr [ESP + 0xc], 0x0", "0x1F150|PUSH|EBX", "0x1F151|MOV|EBX, dword ptr [ESP + 0x14]", "0x1F155|MOV|dword ptr [0x0385c940], EDI", "0x1F15B|MOV|byte ptr [0x0385c93c], BL", "0x1F161|JNZ|0x0383f19f"],
-      "callees": [{"name":"CallFunctionArray","address":"0x383F1C7"},{"name":"ExitProcess","address":"0xE"},{"name":"GetCurrentProcess","address":"0x10"},{"name":"TerminateProcess","address":"0xF"}],
+      "callees": [{"name":"ExitProcess","address":"0xE"},{"name":"CallFunctionArray","address":"0x383F1C7"},{"name":"TerminateProcess","address":"0xF"},{"name":"GetCurrentProcess","address":"0x10"}],
       "callers": [{"name":"__exit","address":"0x383F10E"},{"name":"ExecuteCleanupHandlers","address":"0x383F11F"}],
       "strings": [],
       "parameters": [{"name":"exitCode","type":"UINT","storage":"Stack[0x4]:4"},{"name":"callDynamicAtExitHandlers","type":"int","storage":"Stack[0x8]:4"},{"name":"promptForDebugger","type":"int","storage":"Stack[0xc]:4"}]
@@ -5205,7 +5205,7 @@
       "param_count": 2,
       "instructions": ["0x1F1C7|PUSH|ESI", "0x1F1C8|MOV|ESI, dword ptr [ESP + 0x8]", "0x1F1CC|CMP|ESI, dword ptr [ESP + 0xc]", "0x1F1D0|JNC|0x0383f1df", "0x1F1D2|MOV|EAX, dword ptr [ESI]", "0x1F1D4|TEST|EAX, EAX", "0x1F1D6|JZ|0x0383f1da", "0x1F1D8|CALL|EAX", "0x1F1DA|ADD|ESI, 0x4", "0x1F1DD|JMP|0x0383f1cc", "0x1F1DF|POP|ESI", "0x1F1E0|RET|"],
       "callees": [],
-      "callers": [{"name":"ExecuteExitHandlers","address":"0x383F12E"},{"name":"ExecuteInitializationHandlers","address":"0x383F0E1"}],
+      "callers": [{"name":"ExecuteInitializationHandlers","address":"0x383F0E1"},{"name":"ExecuteExitHandlers","address":"0x383F12E"}],
       "strings": [],
       "parameters": [{"name":"pCallbackArrayStart","type":"pointer","storage":"Stack[0x4]:4"},{"name":"pCallbackArrayEnd","type":"pointer","storage":"Stack[0x8]:4"}]
     },
@@ -5222,7 +5222,7 @@
       "local_var_count": 1,
       "param_count": 0,
       "instructions": ["0x1F1E1|SUB|ESP, 0x44", "0x1F1E4|PUSH|EBX", "0x1F1E5|PUSH|EBP", "0x1F1E6|PUSH|ESI", "0x1F1E7|PUSH|EDI", "0x1F1E8|PUSH|0x100", "0x1F1ED|CALL|0x0383c960", "0x1F1F2|MOV|ESI, EAX", "0x1F1F4|POP|ECX", "0x1F1F5|TEST|ESI, ESI", "0x1F1F7|JNZ|0x0383f201", "0x1F1F9|PUSH|0x1b", "0x1F1FB|CALL|0x0383d3d2", "0x1F200|POP|ECX", "0x1F201|MOV|dword ptr [0x0385cce0], ESI"],
-      "callees": [{"name":"_malloc","address":"0x383C960"},{"name":"GetStdHandle","address":"0x2E"},{"name":"GetStartupInfoA","address":"0x14"},{"name":"SetHandleCount","address":"0x2D"},{"name":"GetFileType","address":"0x13"},{"name":"__amsg_exit","address":"0x383D3D2"}],
+      "callees": [{"name":"GetStartupInfoA","address":"0x14"},{"name":"GetStdHandle","address":"0x2E"},{"name":"__amsg_exit","address":"0x383D3D2"},{"name":"GetFileType","address":"0x13"},{"name":"SetHandleCount","address":"0x2D"},{"name":"_malloc","address":"0x383C960"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": []
@@ -5258,7 +5258,7 @@
       "local_var_count": 1,
       "param_count": 0,
       "instructions": ["0x1F3AF|PUSH|EBX", "0x1F3B0|XOR|EBX, EBX", "0x1F3B2|CMP|dword ptr [0x0385cde8], EBX", "0x1F3B8|PUSH|ESI", "0x1F3B9|PUSH|EDI", "0x1F3BA|JNZ|0x0383f3c1", "0x1F3BC|CALL|0x038417c1", "0x1F3C1|MOV|ESI, dword ptr [0x0385c8b4]", "0x1F3C7|XOR|EDI, EDI", "0x1F3C9|MOV|AL, byte ptr [ESI]", "0x1F3CB|CMP|AL, BL", "0x1F3CD|JZ|0x0383f3e1", "0x1F3CF|CMP|AL, 0x3d", "0x1F3D1|JZ|0x0383f3d4", "0x1F3D3|INC|EDI"],
-      "callees": [{"name":"_malloc","address":"0x383C960"},{"name":"FreeMemoryBlock","address":"0x383C9D4"},{"name":"InitializeGlobalOnce","address":"0x38417C1"},{"name":"strcpy","address":"0x3840190"},{"name":"_strlen","address":"0x3840480"},{"name":"__amsg_exit","address":"0x383D3D2"}],
+      "callees": [{"name":"__amsg_exit","address":"0x383D3D2"},{"name":"InitializeGlobalOnce","address":"0x38417C1"},{"name":"_strlen","address":"0x3840480"},{"name":"strcpy","address":"0x3840190"},{"name":"FreeMemoryBlock","address":"0x383C9D4"},{"name":"_malloc","address":"0x383C960"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": []
@@ -5276,7 +5276,7 @@
       "local_var_count": 2,
       "param_count": 0,
       "instructions": ["0x1F468|PUSH|EBP", "0x1F469|MOV|EBP, ESP", "0x1F46B|PUSH|ECX", "0x1F46C|PUSH|ECX", "0x1F46D|PUSH|EBX", "0x1F46E|XOR|EBX, EBX", "0x1F470|CMP|dword ptr [0x0385cde8], EBX", "0x1F476|PUSH|ESI", "0x1F477|PUSH|EDI", "0x1F478|JNZ|0x0383f47f", "0x1F47A|CALL|0x038417c1", "0x1F47F|MOV|ESI, 0x385c948", "0x1F484|PUSH|0x104", "0x1F489|PUSH|ESI", "0x1F48A|PUSH|EBX"],
-      "callees": [{"name":"_malloc","address":"0x383C960"},{"name":"InitializeGlobalOnce","address":"0x38417C1"},{"name":"GetModuleFileNameA","address":"0x2C"},{"name":"ParseCommandLineArguments","address":"0x383F501"},{"name":"__amsg_exit","address":"0x383D3D2"}],
+      "callees": [{"name":"__amsg_exit","address":"0x383D3D2"},{"name":"ParseCommandLineArguments","address":"0x383F501"},{"name":"InitializeGlobalOnce","address":"0x38417C1"},{"name":"GetModuleFileNameA","address":"0x2C"},{"name":"_malloc","address":"0x383C960"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": ["C:\\\\Diablo2Project\\\\ProjectD2\\\\Game.exe"],
       "parameters": []
@@ -5312,7 +5312,7 @@
       "local_var_count": 11,
       "param_count": 0,
       "instructions": ["0x1F6B5|PUSH|ECX", "0x1F6B6|PUSH|ECX", "0x1F6B7|MOV|EAX, [0x0385ca4c]", "0x1F6BC|PUSH|EBX", "0x1F6BD|PUSH|EBP", "0x1F6BE|MOV|EBP, dword ptr [0x03843094]", "0x1F6C4|PUSH|ESI", "0x1F6C5|PUSH|EDI", "0x1F6C6|XOR|EBX, EBX", "0x1F6C8|XOR|ESI, ESI", "0x1F6CA|XOR|EDI, EDI", "0x1F6CC|CMP|EAX, EBX", "0x1F6CE|JNZ|0x0383f703", "0x1F6D0|CALL|EBP", "0x1F6D2|MOV|ESI, EAX"],
-      "callees": [{"name":"_malloc","address":"0x383C960"},{"name":"FreeMemoryBlock","address":"0x383C9D4"},{"name":"WideCharToMultiByte","address":"0x17"},{"name":"GetEnvironmentStringsW","address":"0x19"},{"name":"MemMove","address":"0x38417E0"},{"name":"GetEnvironmentStrings","address":"0x18"},{"name":"FreeEnvironmentStringsW","address":"0x16"},{"name":"FreeEnvironmentStringsA","address":"0x15"}],
+      "callees": [{"name":"GetEnvironmentStrings","address":"0x18"},{"name":"MemMove","address":"0x38417E0"},{"name":"GetEnvironmentStringsW","address":"0x19"},{"name":"WideCharToMultiByte","address":"0x17"},{"name":"FreeEnvironmentStringsW","address":"0x16"},{"name":"FreeMemoryBlock","address":"0x383C9D4"},{"name":"FreeEnvironmentStringsA","address":"0x15"},{"name":"_malloc","address":"0x383C960"}],
       "callers": [{"name":"DllInitialization","address":"0x383D27D"}],
       "strings": [],
       "parameters": []
@@ -5348,7 +5348,7 @@
       "local_var_count": 9,
       "param_count": 1,
       "instructions": ["0x1F820|PUSH|EBP", "0x1F821|MOV|EBP, ESP", "0x1F823|SUB|ESP, 0x1a4", "0x1F829|MOV|EDX, dword ptr [EBP + 0x8]", "0x1F82C|XOR|ECX, ECX", "0x1F82E|MOV|EAX, 0x384e678", "0x1F833|CMP|EDX, dword ptr [EAX]", "0x1F835|JZ|0x0383f842", "0x1F837|ADD|EAX, 0x8", "0x1F83A|INC|ECX", "0x1F83B|CMP|EAX, 0x384e708", "0x1F840|JL|0x0383f833", "0x1F842|PUSH|ESI", "0x1F843|MOV|ESI, ECX", "0x1F845|SHL|ESI, 0x3"],
-      "callees": [{"name":"_strncpy","address":"0x3841BA0"},{"name":"DynamicMessageBoxA","address":"0x3841B15"},{"name":"strcpy","address":"0x3840190"},{"name":"WriteFile","address":"0x1A"},{"name":"CopyStringAligned","address":"0x38401A0"},{"name":"GetModuleFileNameA","address":"0x2C"},{"name":"_strlen","address":"0x3840480"}],
+      "callees": [{"name":"DynamicMessageBoxA","address":"0x3841B15"},{"name":"_strlen","address":"0x3840480"},{"name":"WriteFile","address":"0x1A"},{"name":"GetModuleFileNameA","address":"0x2C"},{"name":"strcpy","address":"0x3840190"},{"name":"CopyStringAligned","address":"0x38401A0"},{"name":"_strncpy","address":"0x3841BA0"}],
       "callers": [{"name":"HandleRuntimeErrorCleanup","address":"0x383F7E7"},{"name":"__amsg_exit","address":"0x383D3D2"}],
       "strings": ["<program name unknown>", "Runtime Error!\\n\\nProgram: ", "R6009\\r\\n- not enough space for environment\\r\\n", "Microsoft Visual C++ Runtime Library"],
       "parameters": [{"name":"errorCode","type":"DWORD","storage":"Stack[0x4]:4"}]
@@ -5366,8 +5366,8 @@
       "local_var_count": 9,
       "param_count": 8,
       "instructions": ["0x1F973|PUSH|EBP", "0x1F974|MOV|EBP, ESP", "0x1F976|PUSH|-0x1", "0x1F978|PUSH|0x3848700", "0x1F97D|PUSH|0x383ced0", "0x1F982|MOV|EAX, FS:[0x0]", "0x1F988|PUSH|EAX", "0x1F989|MOV|dword ptr FS:[0x0], ESP", "0x1F990|SUB|ESP, 0x1c", "0x1F993|PUSH|EBX", "0x1F994|PUSH|ESI", "0x1F995|PUSH|EDI", "0x1F996|MOV|dword ptr [EBP + -0x18], ESP", "0x1F999|XOR|EDI, EDI", "0x1F99B|CMP|dword ptr [0x0385ca54], EDI"],
-      "callees": [{"name":"LCMapStringA","address":"0x1C"},{"name":"MultiByteToWideChar","address":"0x1B"},{"name":"WideCharToMultiByte","address":"0x17"},{"name":"LCMapStringW","address":"0x1D"},{"name":"StackProbe","address":"0x383D000"},{"name":"ComputeBoundedStringLength","address":"0x383FB97"}],
-      "callers": [{"name":"ApplyCharacterLocaleTransform","address":"0x383DD1A"},{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"}],
+      "callees": [{"name":"LCMapStringA","address":"0x1C"},{"name":"MultiByteToWideChar","address":"0x1B"},{"name":"LCMapStringW","address":"0x1D"},{"name":"StackProbe","address":"0x383D000"},{"name":"WideCharToMultiByte","address":"0x17"},{"name":"ComputeBoundedStringLength","address":"0x383FB97"}],
+      "callers": [{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"},{"name":"ApplyCharacterLocaleTransform","address":"0x383DD1A"}],
       "strings": [],
       "parameters": [{"name":"locale","type":"LCID","storage":"Stack[0x4]:4"},{"name":"mappingFlags","type":"uint","storage":"Stack[0x8]:4"},{"name":"sourceAnsi","type":"char *","storage":"Stack[0xc]:4"},{"name":"sourceLength","type":"int","storage":"Stack[0x10]:4"},{"name":"destBuffer","type":"LPWSTR","storage":"Stack[0x14]:4"},{"name":"destSize","type":"int","storage":"Stack[0x18]:4"},{"name":"codePage","type":"UINT","storage":"Stack[0x1c]:4"},{"name":"useCodePageFlags","type":"int","storage":"Stack[0x20]:4"}]
     },
@@ -5403,7 +5403,7 @@
       "param_count": 4,
       "instructions": ["0x1FBC2|PUSH|EBP", "0x1FBC3|MOV|EBP, ESP", "0x1FBC5|PUSH|ECX", "0x1FBC6|MOV|EAX, dword ptr [EBP + 0x8]", "0x1FBC9|LEA|ECX, [EAX + 0x1]", "0x1FBCC|CMP|ECX, 0x100", "0x1FBD2|JA|0x0383fbe0", "0x1FBD4|MOV|ECX, dword ptr [0x0384e708]", "0x1FBDA|MOVZX|EAX, word ptr [ECX + EAX*0x2]", "0x1FBDE|JMP|0x0383fc32", "0x1FBE0|MOV|ECX, EAX", "0x1FBE2|PUSH|ESI", "0x1FBE3|MOV|ESI, dword ptr [0x0384e708]", "0x1FBE9|SAR|ECX, 0x8", "0x1FBEC|MOVZX|EDX, CL"],
       "callees": [{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"}],
-      "callers": [{"name":"ApplyCharacterLocaleTransform","address":"0x383DD1A"},{"name":"RotateStringCharacters","address":"0x383DE5E"},{"name":"ParseDecimalString","address":"0x3841F88"}],
+      "callers": [{"name":"RotateStringCharacters","address":"0x383DE5E"},{"name":"ParseDecimalString","address":"0x3841F88"},{"name":"ApplyCharacterLocaleTransform","address":"0x383DD1A"}],
       "strings": [],
       "parameters": [{"name":"this","type":"void *","storage":"ECX:4 (auto)"},{"name":"pCharTypeTable","type":"void *","storage":"Stack[0x4]:4"},{"name":"charValue","type":"int","storage":"Stack[0x8]:4"},{"name":"attributeMask","type":"uint","storage":"Stack[0xc]:4"}]
     },
@@ -5618,7 +5618,7 @@
       "local_var_count": 5,
       "param_count": 3,
       "instructions": ["0x1FF97|PUSH|EBP", "0x1FF98|MOV|EBP, ESP", "0x1FF9A|SUB|ESP, 0x18", "0x1FF9D|MOV|EAX, dword ptr [EBP + 0x8]", "0x1FFA0|PUSH|EBX", "0x1FFA1|PUSH|ESI", "0x1FFA2|PUSH|EDI", "0x1FFA3|MOVZX|ECX, word ptr [EAX + 0xa]", "0x1FFA7|MOV|EBX, ECX", "0x1FFA9|AND|ECX, 0x8000", "0x1FFAF|MOV|dword ptr [EBP + 0x8], ECX", "0x1FFB2|MOV|ECX, dword ptr [EAX + 0x6]", "0x1FFB5|MOV|dword ptr [EBP + -0xc], ECX", "0x1FFB8|MOV|ECX, dword ptr [EAX + 0x2]", "0x1FFBB|MOVZX|EAX, word ptr [EAX]"],
-      "callees": [{"name":"ClearDecimalWorkingBuffer","address":"0x383FEE3"},{"name":"CopyDecimalBuffer","address":"0x383FEC8"},{"name":"ClearBitAndPropagate","address":"0x383FE3C"},{"name":"ShiftBitArrayRight","address":"0x383FF0A"},{"name":"ValidateAllComponentsZero","address":"0x383FEEF"}],
+      "callees": [{"name":"CopyDecimalBuffer","address":"0x383FEC8"},{"name":"ValidateAllComponentsZero","address":"0x383FEEF"},{"name":"ShiftBitArrayRight","address":"0x383FF0A"},{"name":"ClearDecimalWorkingBuffer","address":"0x383FEE3"},{"name":"ClearBitAndPropagate","address":"0x383FE3C"}],
       "callers": [{"name":"ConvertDecimalBufferToUint","address":"0x3840103"},{"name":"ApplyDecimalComponents","address":"0x3840119"}],
       "strings": [],
       "parameters": [{"name":"pDecimalBuffer","type":"ushort *","storage":"Stack[0x4]:4"},{"name":"pOutputBuffer","type":"uint *","storage":"Stack[0x8]:4"},{"name":"pExponentConfig","type":"int *","storage":"Stack[0xc]:4"}]
@@ -5690,7 +5690,7 @@
       "local_var_count": 1,
       "param_count": 3,
       "instructions": ["0x2015C|PUSH|EBP", "0x2015D|MOV|EBP, ESP", "0x2015F|SUB|ESP, 0xc", "0x20162|XOR|EAX, EAX", "0x20164|PUSH|EAX", "0x20165|PUSH|EAX", "0x20166|PUSH|EAX", "0x20167|PUSH|EAX", "0x20168|PUSH|dword ptr [EBP + 0xc]", "0x2016B|LEA|EAX, [EBP + 0xc]", "0x2016E|PUSH|EAX", "0x2016F|LEA|EAX, [EBP + -0xc]", "0x20172|PUSH|EAX", "0x20173|CALL|0x03841f88", "0x20178|PUSH|dword ptr [EBP + 0x8]"],
-      "callees": [{"name":"ApplyDecimalComponents","address":"0x3840119"},{"name":"ParseDecimalString","address":"0x3841F88"}],
+      "callees": [{"name":"ParseDecimalString","address":"0x3841F88"},{"name":"ApplyDecimalComponents","address":"0x3840119"}],
       "callers": [{"name":"__fassign","address":"0x383DF1E"}],
       "strings": [],
       "parameters": [{"name":"this","type":"void *","storage":"ECX:4 (auto)"},{"name":"pOutputMantissa","type":"uint *","storage":"Stack[0x4]:4"},{"name":"pInputString","type":"byte *","storage":"Stack[0x8]:4"}]
@@ -5709,7 +5709,7 @@
       "param_count": 2,
       "instructions": ["0x20190|PUSH|EDI", "0x20191|MOV|EDI, dword ptr [ESP + 0x8]", "0x20195|JMP|0x03840201"],
       "callees": [],
-      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"ProcessRuntimeError","address":"0x383F820"},{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"FormatScientificNotationString","address":"0x383DF5C"}],
+      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"ProcessRuntimeError","address":"0x383F820"},{"name":"FormatScientificNotationString","address":"0x383DF5C"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
       "strings": [],
       "parameters": [{"name":"pDestination","type":"char *","storage":"Stack[0x4]:4"},{"name":"pSource","type":"char *","storage":"Stack[0x8]:4"}]
     },
@@ -5744,8 +5744,8 @@
       "local_var_count": 2,
       "param_count": 3,
       "instructions": ["0x20280|PUSH|EBP", "0x20281|MOV|EBP, ESP", "0x20283|MOV|EDX, dword ptr [EBP + 0x10]", "0x20286|PUSH|EBX", "0x20287|MOV|EBX, dword ptr [EBP + 0xc]", "0x2028A|PUSH|ESI", "0x2028B|MOV|ESI, dword ptr [EBP + 0x8]", "0x2028E|MOV|ECX, dword ptr [EDX + 0xc]", "0x20291|PUSH|EDI", "0x20292|LEA|EDI, [ESI + 0x1]", "0x20295|MOV|byte ptr [ESI], 0x30", "0x20298|TEST|EBX, EBX", "0x2029A|MOV|EAX, EDI", "0x2029C|JLE|0x038402bd", "0x2029E|MOV|dword ptr [EBP + 0x8], EBX"],
-      "callees": [{"name":"_strlen","address":"0x3840480"},{"name":"Memmove","address":"0x383CAA0"}],
-      "callers": [{"name":"FormatFloatStringWithValidation","address":"0x383E13E"},{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"}],
+      "callees": [{"name":"Memmove","address":"0x383CAA0"},{"name":"_strlen","address":"0x3840480"}],
+      "callers": [{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"},{"name":"FormatFloatStringWithValidation","address":"0x383E13E"}],
       "strings": [],
       "parameters": [{"name":"pBuffer","type":"char *","storage":"Stack[0x4]:4"},{"name":"nMaxDigits","type":"int","storage":"Stack[0x8]:4"},{"name":"pContext","type":"int *","storage":"Stack[0xc]:4"}]
     },
@@ -5763,7 +5763,7 @@
       "param_count": 0,
       "instructions": ["0x202F7|PUSH|EBP", "0x202F8|MOV|EBP, ESP", "0x202FA|SUB|ESP, 0xc", "0x202FD|PUSH|ESI", "0x202FE|LEA|EAX, [EBP + 0x8]", "0x20301|PUSH|EDI", "0x20302|PUSH|EAX", "0x20303|LEA|EAX, [EBP + -0xc]", "0x20306|PUSH|EAX", "0x20307|CALL|0x0384035b", "0x2030C|POP|ECX", "0x2030D|LEA|ESI, [EBP + -0xc]", "0x20310|POP|ECX", "0x20311|PUSH|0x385ca58", "0x20316|PUSH|0x0"],
       "callees": [{"name":"ConvertDoubleToExtended","address":"0x384035B"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
-      "callers": [{"name":"FormatFloatStringWithValidation","address":"0x383E13E"},{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"}],
+      "callers": [{"name":"FormatDecimalString","address":"0x383E060"},{"name":"FormatScientificNotationString","address":"0x383DF5C"},{"name":"FormatFloatStringWithValidation","address":"0x383E13E"}],
       "strings": [],
       "parameters": []
     },
@@ -5799,7 +5799,7 @@
       "param_count": 3,
       "instructions": ["0x20420|MOV|EDX, dword ptr [ESP + 0xc]", "0x20424|MOV|ECX, dword ptr [ESP + 0x4]", "0x20428|TEST|EDX, EDX", "0x2042A|JZ|0x03840473", "0x2042C|XOR|EAX, EAX", "0x2042E|MOV|AL, byte ptr [ESP + 0x8]", "0x20432|PUSH|EDI", "0x20433|MOV|EDI, ECX", "0x20435|CMP|EDX, 0x4", "0x20438|JC|0x03840467", "0x2043A|NEG|ECX", "0x2043C|AND|ECX, 0x3", "0x2043F|JZ|0x03840449", "0x20441|SUB|EDX, ECX", "0x20443|MOV|byte ptr [EDI], AL"],
       "callees": [],
-      "callers": [{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"},{"name":"FormatDecimalString","address":"0x383E060"}],
+      "callers": [{"name":"FormatDecimalString","address":"0x383E060"},{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"}],
       "strings": [],
       "parameters": [{"name":"_Dst","type":"void *","storage":"Stack[0x4]:4"},{"name":"_Val","type":"int","storage":"Stack[0x8]:4"},{"name":"_Size","type":"size_t","storage":"Stack[0xc]:4"}]
     },
@@ -5817,7 +5817,7 @@
       "param_count": 1,
       "instructions": ["0x20480|MOV|ECX, dword ptr [ESP + 0x4]", "0x20484|TEST|ECX, 0x3", "0x2048A|JZ|0x038404a0", "0x2048C|MOV|AL, byte ptr [ECX]", "0x2048E|INC|ECX", "0x2048F|TEST|AL, AL", "0x20491|JZ|0x038404d3", "0x20493|TEST|ECX, 0x3", "0x20499|JNZ|0x0384048c", "0x2049B|ADD|EAX, 0x0", "0x204A0|MOV|EAX, dword ptr [ECX]", "0x204A2|MOV|EDX, 0x7efefeff", "0x204A7|ADD|EDX, EAX", "0x204A9|XOR|EAX, 0xffffffff", "0x204AC|XOR|EAX, EDX"],
       "callees": [],
-      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"ProcessRuntimeError","address":"0x383F820"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"},{"name":"IncrementDecimalString","address":"0x3840280"}],
+      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"ProcessRuntimeError","address":"0x383F820"},{"name":"IncrementDecimalString","address":"0x3840280"},{"name":"InsertNullTerminatorAtOffset","address":"0x383E274"}],
       "strings": [],
       "parameters": [{"name":"_Str","type":"char *","storage":"Stack[0x4]:4"}]
     },
@@ -5853,7 +5853,7 @@
       "param_count": 6,
       "instructions": ["0x20510|FLD|extended double ptr [ESP + 0x10]", "0x20514|FLD|extended double ptr [ESP + 0x4]", "0x20518|MOV|EAX, dword ptr [ESP + 0x8]", "0x2051C|ADD|EAX, EAX", "0x2051E|JNC|0x038405aa", "0x20524|XOR|EAX, 0xe000000", "0x20529|TEST|EAX, 0xe000000", "0x2052E|JZ|0x03840533", "0x20530|FDIVP|", "0x20532|RET|", "0x20533|SHR|EAX, 0x1c", "0x20536|CMP|byte ptr [EAX + 0x384e960], 0x0", "0x2053D|JNZ|0x03840542", "0x2053F|FDIVP|", "0x20541|RET|"],
       "callees": [],
-      "callers": [{"name":"DivideExtendedFloatsWrapper","address":"0x3840AD9"},{"name":"FloatUnpackWrapper","address":"0x3840D01"}],
+      "callers": [{"name":"FloatUnpackWrapper","address":"0x3840D01"},{"name":"DivideExtendedFloatsWrapper","address":"0x3840AC6"}],
       "strings": [],
       "parameters": [{"name":"dividendLow","type":"int","storage":"Stack[0x4]:4"},{"name":"dividendMid","type":"uint","storage":"Stack[0x8]:4"},{"name":"dividendHigh","type":"ushort","storage":"Stack[0xc]:2"},{"name":"divisorLow","type":"int","storage":"Stack[0x10]:4"},{"name":"divisorMid","type":"uint","storage":"Stack[0x14]:4"},{"name":"divisorHigh","type":"ushort","storage":"Stack[0x18]:2"}]
     },
@@ -5889,7 +5889,7 @@
       "param_count": 0,
       "instructions": ["0x20AD9|SUB|ESP, 0x2c", "0x20ADC|FSTP|extended double ptr [ESP + 0xc]", "0x20AE0|FSTP|extended double ptr [ESP]", "0x20AE3|CALL|0x03840510", "0x20AE8|ADD|ESP, 0x2c", "0x20AEB|RET|"],
       "callees": [{"name":"DivideExtendedFloats","address":"0x3840510"}],
-      "callers": [{"name":"CheckFloatingPointValue","address":"0x3840C38"},{"name":"HandleFloatDivisionWithExceptionCheck","address":"0x3840BEC"}],
+      "callers": [{"name":"HandleFloatDivisionWithExceptionCheck","address":"0x3840BEC"},{"name":"CheckFloatingPointValue","address":"0x3840C38"}],
       "strings": [],
       "parameters": []
     },
@@ -6068,7 +6068,7 @@
       "local_var_count": 5,
       "param_count": 3,
       "instructions": ["0x2129B|PUSH|EBP", "0x2129C|MOV|EBP, ESP", "0x2129E|SUB|ESP, 0x58", "0x212A1|MOV|EAX, dword ptr [EBP + 0x10]", "0x212A4|PUSH|EBX", "0x212A5|PUSH|ESI", "0x212A6|MOV|ESI, dword ptr [EBP + 0xc]", "0x212A9|MOVZX|ECX, word ptr [EAX]", "0x212AC|MOV|EAX, dword ptr [ESI]", "0x212AE|PUSH|EDI", "0x212AF|DEC|EAX", "0x212B0|MOV|dword ptr [EBP + 0x10], ECX", "0x212B3|JZ|0x038412e0", "0x212B5|DEC|EAX", "0x212B6|JZ|0x038412dc"],
-      "callees": [{"name":"SetFPUControlWordBits","address":"0x383E8FC"},{"name":"ValidateAndHandleFloatingPointException","address":"0x383E54C"},{"name":"CheckEventStatus","address":"0x3840504"},{"name":"PrepareFPUExceptionRecord","address":"0x383E299"},{"name":"SetExceptionHandlingState","address":"0x383E763"}],
+      "callees": [{"name":"PrepareFPUExceptionRecord","address":"0x383E299"},{"name":"SetFPUControlWordBits","address":"0x383E8FC"},{"name":"SetExceptionHandlingState","address":"0x383E763"},{"name":"CheckEventStatus","address":"0x3840504"},{"name":"ValidateAndHandleFloatingPointException","address":"0x383E54C"}],
       "callers": [{"name":"__startOneArgErrorHandling","address":"0x383ED77"}],
       "strings": [],
       "parameters": [{"name":"exceptionType","type":"uint","storage":"Stack[0x4]:4"},{"name":"pExceptionData","type":"int *","storage":"Stack[0x8]:4"},{"name":"pExceptionCode","type":"ushort *","storage":"Stack[0xc]:4"}]
@@ -6104,7 +6104,7 @@
       "local_var_count": 9,
       "param_count": 1,
       "instructions": ["0x213FD|PUSH|EBP", "0x213FE|MOV|EBP, ESP", "0x21400|SUB|ESP, 0x18", "0x21403|PUSH|EBX", "0x21404|PUSH|ESI", "0x21405|PUSH|EDI", "0x21406|PUSH|dword ptr [EBP + 0x8]", "0x21409|CALL|0x03841596", "0x2140E|MOV|ESI, EAX", "0x21410|POP|ECX", "0x21411|CMP|ESI, dword ptr [0x0385caa4]", "0x21417|MOV|dword ptr [EBP + 0x8], ESI", "0x2141A|JZ|0x0384158a", "0x21420|XOR|EBX, EBX", "0x21422|CMP|ESI, EBX"],
-      "callees": [{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"},{"name":"InitializeGameMemory","address":"0x3841613"},{"name":"GetCPInfo","address":"0x1E"},{"name":"GetCodePageForLocaleFlag","address":"0x3841596"},{"name":"MapCodePageToIdentifier","address":"0x38415E0"}],
+      "callees": [{"name":"GetCodePageForLocaleFlag","address":"0x3841596"},{"name":"MapCodePageToIdentifier","address":"0x38415E0"},{"name":"GetCPInfo","address":"0x1E"},{"name":"InitializeGameMemory","address":"0x3841613"},{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"}],
       "callers": [{"name":"InitializeGlobalOnce","address":"0x38417C1"}],
       "strings": [],
       "parameters": [{"name":"localeFlag","type":"int","storage":"Stack[0x4]:4"}]
@@ -6176,7 +6176,7 @@
       "local_var_count": 5,
       "param_count": 0,
       "instructions": ["0x2163C|PUSH|EBP", "0x2163D|MOV|EBP, ESP", "0x2163F|SUB|ESP, 0x514", "0x21645|LEA|EAX, [EBP + -0x14]", "0x21648|PUSH|ESI", "0x21649|PUSH|EAX", "0x2164A|PUSH|dword ptr [0x0385caa4]", "0x21650|CALL|dword ptr [0x038430a8]", "0x21656|CMP|EAX, 0x1", "0x21659|JNZ|0x03841775", "0x2165F|XOR|EAX, EAX", "0x21661|MOV|ESI, 0x100", "0x21666|MOV|byte ptr [EBP + EAX*0x1 + 0xfffffeec], AL", "0x2166D|INC|EAX", "0x2166E|CMP|EAX, ESI"],
-      "callees": [{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"},{"name":"ApplyLocaleStringMapping","address":"0x383F973"},{"name":"GetCPInfo","address":"0x1E"}],
+      "callees": [{"name":"GetStringTypeWithEncodingDetection","address":"0x3841C9E"},{"name":"GetCPInfo","address":"0x1E"},{"name":"ApplyLocaleStringMapping","address":"0x383F973"}],
       "callers": [{"name":"InitializeCodePageCharacterTables","address":"0x38413FD"}],
       "strings": [],
       "parameters": []
@@ -6195,7 +6195,7 @@
       "param_count": 0,
       "instructions": ["0x217C1|CMP|dword ptr [0x0385cde8], 0x0", "0x217C8|JNZ|0x038417dc", "0x217CA|PUSH|-0x3", "0x217CC|CALL|0x038413fd", "0x217D1|POP|ECX", "0x217D2|MOV|dword ptr [0x0385cde8], 0x1", "0x217DC|RET|"],
       "callees": [{"name":"InitializeCodePageCharacterTables","address":"0x38413FD"}],
-      "callers": [{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"},{"name":"InitializeApplicationArguments","address":"0x383F468"}],
+      "callers": [{"name":"InitializeApplicationArguments","address":"0x383F468"},{"name":"InitializeEnvironmentStringArray","address":"0x383F3AF"}],
       "strings": [],
       "parameters": []
     },
@@ -6266,8 +6266,8 @@
       "local_var_count": 7,
       "param_count": 7,
       "instructions": ["0x21C9E|PUSH|EBP", "0x21C9F|MOV|EBP, ESP", "0x21CA1|PUSH|-0x1", "0x21CA3|PUSH|0x3848758", "0x21CA8|PUSH|0x383ced0", "0x21CAD|MOV|EAX, FS:[0x0]", "0x21CB3|PUSH|EAX", "0x21CB4|MOV|dword ptr FS:[0x0], ESP", "0x21CBB|SUB|ESP, 0x18", "0x21CBE|PUSH|EBX", "0x21CBF|PUSH|ESI", "0x21CC0|PUSH|EDI", "0x21CC1|MOV|dword ptr [EBP + -0x18], ESP", "0x21CC4|MOV|EAX, [0x0385ca98]", "0x21CC9|XOR|EBX, EBX"],
-      "callees": [{"name":"_memset","address":"0x3840420"},{"name":"MultiByteToWideChar","address":"0x1B"},{"name":"GetStringTypeW","address":"0x22"},{"name":"GetStringTypeA","address":"0x2F"},{"name":"StackProbe","address":"0x383D000"}],
-      "callers": [{"name":"GetCharacterClassAttribute","address":"0x383FBC2"},{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"}],
+      "callees": [{"name":"StackProbe","address":"0x383D000"},{"name":"GetStringTypeA","address":"0x2F"},{"name":"MultiByteToWideChar","address":"0x1B"},{"name":"GetStringTypeW","address":"0x22"},{"name":"_memset","address":"0x3840420"}],
+      "callers": [{"name":"InitializeCharacterCaseConversionTables","address":"0x384163C"},{"name":"GetCharacterClassAttribute","address":"0x383FBC2"}],
       "strings": [],
       "parameters": [{"name":"dwInfoType","type":"DWORD","storage":"Stack[0x4]:4"},{"name":"lpSrcStr","type":"LPCSTR","storage":"Stack[0x8]:4"},{"name":"cchSrc","type":"int","storage":"Stack[0xc]:4"},{"name":"lpCharType","type":"LPWORD","storage":"Stack[0x10]:4"},{"name":"CodePage","type":"UINT","storage":"Stack[0x14]:4"},{"name":"Locale","type":"LCID","storage":"Stack[0x18]:4"},{"name":"dwFlags","type":"int","storage":"Stack[0x1c]:4"}]
     },
@@ -6285,7 +6285,7 @@
       "param_count": 3,
       "instructions": ["0x21DE7|MOV|EDX, dword ptr [ESP + 0x4]", "0x21DEB|PUSH|ESI", "0x21DEC|MOV|ESI, dword ptr [ESP + 0xc]", "0x21DF0|XOR|EAX, EAX", "0x21DF2|LEA|ECX, [EDX + ESI*0x1]", "0x21DF5|CMP|ECX, EDX", "0x21DF7|JC|0x03841dfd", "0x21DF9|CMP|ECX, ESI", "0x21DFB|JNC|0x03841e00", "0x21DFD|PUSH|0x1", "0x21DFF|POP|EAX", "0x21E00|MOV|EDX, dword ptr [ESP + 0x10]", "0x21E04|POP|ESI", "0x21E05|MOV|dword ptr [EDX], ECX", "0x21E07|RET|"],
       "callees": [],
-      "callers": [{"name":"___add_12","address":"0x3841E08"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"},{"name":"PropagateCarryBit","address":"0x383FDE6"}],
+      "callers": [{"name":"___add_12","address":"0x3841E08"},{"name":"PropagateCarryBit","address":"0x383FDE6"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"}],
       "strings": [],
       "parameters": [{"name":"operandA","type":"uint","storage":"Stack[0x4]:4"},{"name":"operandB","type":"uint","storage":"Stack[0x8]:4"},{"name":"pResult","type":"uint *","storage":"Stack[0xc]:4"}]
     },
@@ -6303,7 +6303,7 @@
       "param_count": 2,
       "instructions": ["0x21E08|PUSH|ESI", "0x21E09|MOV|ESI, dword ptr [ESP + 0x8]", "0x21E0D|PUSH|EDI", "0x21E0E|MOV|EDI, dword ptr [ESP + 0x10]", "0x21E12|PUSH|ESI", "0x21E13|PUSH|dword ptr [EDI]", "0x21E15|PUSH|dword ptr [ESI]", "0x21E17|CALL|0x03841de7", "0x21E1C|ADD|ESP, 0xc", "0x21E1F|TEST|EAX, EAX", "0x21E21|JZ|0x03841e3a", "0x21E23|LEA|EAX, [ESI + 0x4]", "0x21E26|PUSH|EAX", "0x21E27|PUSH|0x1", "0x21E29|PUSH|dword ptr [EAX]"],
       "callees": [{"name":"CheckAdditionOverflow","address":"0x3841DE7"}],
-      "callers": [{"name":"ConvertMantissa","address":"0x3841EC1"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
+      "callers": [{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"ConvertMantissa","address":"0x3841EC1"}],
       "strings": [],
       "parameters": [{"name":"param_1","type":"uint *","storage":"Stack[0x4]:4"},{"name":"param_2","type":"uint *","storage":"Stack[0x8]:4"}]
     },
@@ -6321,7 +6321,7 @@
       "param_count": 1,
       "instructions": ["0x21E66|MOV|EAX, dword ptr [ESP + 0x4]", "0x21E6A|PUSH|ESI", "0x21E6B|PUSH|EDI", "0x21E6C|MOV|ESI, dword ptr [EAX]", "0x21E6E|MOV|EDI, dword ptr [EAX + 0x4]", "0x21E71|MOV|ECX, ESI", "0x21E73|ADD|ESI, ESI", "0x21E75|MOV|dword ptr [EAX], ESI", "0x21E77|LEA|ESI, [EDI + EDI*0x1]", "0x21E7A|SHR|ECX, 0x1f", "0x21E7D|OR|ESI, ECX", "0x21E7F|MOV|ECX, dword ptr [EAX + 0x8]", "0x21E82|MOV|EDX, EDI", "0x21E84|MOV|dword ptr [EAX + 0x4], ESI", "0x21E87|SHR|EDX, 0x1f"],
       "callees": [],
-      "callers": [{"name":"ConvertMantissa","address":"0x3841EC1"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
+      "callers": [{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"ConvertMantissa","address":"0x3841EC1"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"}],
       "strings": [],
       "parameters": [{"name":"pValue","type":"uint *","storage":"Stack[0x4]:4"}]
     },
@@ -6339,7 +6339,7 @@
       "param_count": 1,
       "instructions": ["0x21E94|MOV|EAX, dword ptr [ESP + 0x4]", "0x21E98|PUSH|ESI", "0x21E99|PUSH|EDI", "0x21E9A|MOV|EDX, dword ptr [EAX + 0x8]", "0x21E9D|MOV|ECX, dword ptr [EAX + 0x4]", "0x21EA0|MOV|ESI, EDX", "0x21EA2|MOV|EDI, ECX", "0x21EA4|SHL|ESI, 0x1f", "0x21EA7|SHR|ECX, 0x1", "0x21EA9|OR|ECX, ESI", "0x21EAB|MOV|dword ptr [EAX + 0x4], ECX", "0x21EAE|MOV|ECX, dword ptr [EAX]", "0x21EB0|SHL|EDI, 0x1f", "0x21EB3|SHR|ECX, 0x1", "0x21EB5|SHR|EDX, 0x1"],
       "callees": [],
-      "callers": [{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
+      "callers": [{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"}],
       "strings": [],
       "parameters": [{"name":"pMantissa","type":"uint *","storage":"Stack[0x4]:4"}]
     },
@@ -6374,8 +6374,8 @@
       "local_var_count": 19,
       "param_count": 9,
       "instructions": ["0x21F88|PUSH|EBP", "0x21F89|MOV|EBP, ESP", "0x21F8B|SUB|ESP, 0x5c", "0x21F8E|PUSH|EBX", "0x21F8F|PUSH|ESI", "0x21F90|PUSH|EDI", "0x21F91|MOV|EDI, dword ptr [EBP + 0x10]", "0x21F94|LEA|EAX, [EBP + -0x5c]", "0x21F97|PUSH|0x1", "0x21F99|MOV|dword ptr [EBP + -0xc], EAX", "0x21F9C|XOR|EAX, EAX", "0x21F9E|POP|EDX", "0x21F9F|MOV|dword ptr [EBP + -0x28], EAX", "0x21FA2|MOV|dword ptr [EBP + -0x18], EDX", "0x21FA5|MOV|dword ptr [EBP + -0x4], EAX"],
-      "callees": [{"name":"GetCharacterClassAttribute","address":"0x383FBC2"},{"name":"ConvertMantissa","address":"0x3841EC1"},{"name":"ApplyExponentToMantissa","address":"0x384290C"}],
-      "callers": [{"name":"ParseAndApplyDecimalComponents","address":"0x384015C"},{"name":"ParseAndAssignDecimal","address":"0x384012F"}],
+      "callees": [{"name":"ApplyExponentToMantissa","address":"0x384290C"},{"name":"GetCharacterClassAttribute","address":"0x383FBC2"},{"name":"ConvertMantissa","address":"0x3841EC1"}],
+      "callers": [{"name":"ParseAndAssignDecimal","address":"0x384012F"},{"name":"ParseAndApplyDecimalComponents","address":"0x384015C"}],
       "strings": [],
       "parameters": [{"name":"this","type":"void *","storage":"ECX:4 (auto)"},{"name":"pThis","type":"void *","storage":"Stack[0x4]:4"},{"name":"pOutputComponents","type":"ushort *","storage":"Stack[0x8]:4"},{"name":"pEndPos","type":"int *","storage":"Stack[0xc]:4"},{"name":"pInputString","type":"byte *","storage":"Stack[0x10]:4"},{"name":"precision","type":"int","storage":"Stack[0x14]:4"},{"name":"minExponent","type":"int","storage":"Stack[0x18]:4"},{"name":"maxExponent","type":"int","storage":"Stack[0x1c]:4"},{"name":"allowExponent","type":"int","storage":"Stack[0x20]:4"}]
     },
@@ -6392,7 +6392,7 @@
       "local_var_count": 19,
       "param_count": 6,
       "instructions": ["0x22459|PUSH|EBP", "0x2245A|MOV|EBP, ESP", "0x2245C|SUB|ESP, 0x1c", "0x2245F|MOV|EAX, dword ptr [EBP + 0x10]", "0x22462|PUSH|EBX", "0x22463|MOV|EBX, dword ptr [EBP + 0x1c]", "0x22466|PUSH|ESI", "0x22467|MOV|ECX, EAX", "0x22469|MOV|ESI, 0x7fff", "0x2246E|AND|ECX, 0x8000", "0x22474|AND|EAX, ESI", "0x22476|TEST|CX, CX", "0x22479|PUSH|EDI", "0x2247A|MOV|byte ptr [EBP + -0x1c], 0xcc", "0x2247E|MOV|byte ptr [EBP + -0x1b], 0xcc"],
-      "callees": [{"name":"strcpy","address":"0x3840190"},{"name":"___add_12","address":"0x3841E08"},{"name":"LeftShiftLarge96Bit","address":"0x3841E66"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"},{"name":"RotateMantissaRight","address":"0x3841E94"},{"name":"ApplyExponentToMantissa","address":"0x384290C"}],
+      "callees": [{"name":"___add_12","address":"0x3841E08"},{"name":"ApplyExponentToMantissa","address":"0x384290C"},{"name":"RotateMantissaRight","address":"0x3841E94"},{"name":"strcpy","address":"0x3840190"},{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"},{"name":"LeftShiftLarge96Bit","address":"0x3841E66"}],
       "callers": [{"name":"InitializeFloatFormatState","address":"0x38402F7"}],
       "strings": ["1#SNAN", "1#IND", "1#INF", "1#QNAN"],
       "parameters": [{"name":"mantissaLow","type":"uint","storage":"Stack[0x4]:4"},{"name":"mantissaHigh","type":"uint","storage":"Stack[0x8]:4"},{"name":"exponentField","type":"uint","storage":"Stack[0xc]:4"},{"name":"precision","type":"int","storage":"Stack[0x10]:4"},{"name":"formatFlags","type":"byte","storage":"Stack[0x14]:1"},{"name":"pResultBuffer","type":"char *","storage":"Stack[0x18]:4"}]
@@ -6410,7 +6410,7 @@
       "local_var_count": 9,
       "param_count": 2,
       "instructions": ["0x226EC|PUSH|EBP", "0x226ED|MOV|EBP, ESP", "0x226EF|SUB|ESP, 0x24", "0x226F2|PUSH|EBX", "0x226F3|MOV|EBX, dword ptr [EBP + 0xc]", "0x226F6|PUSH|ESI", "0x226F7|MOV|ESI, dword ptr [EBP + 0x8]", "0x226FA|MOV|CX, word ptr [EBX + 0xa]", "0x226FE|XOR|EAX, EAX", "0x22700|PUSH|EDI", "0x22701|MOV|dword ptr [EBP + -0x14], EAX", "0x22704|MOV|dword ptr [EBP + -0x24], EAX", "0x22707|MOV|dword ptr [EBP + -0x20], EAX", "0x2270A|MOV|dword ptr [EBP + -0x1c], EAX", "0x2270D|MOV|AX, word ptr [ESI + 0xa]"],
-      "callees": [{"name":"CheckAdditionOverflow","address":"0x3841DE7"},{"name":"LeftShiftLarge96Bit","address":"0x3841E66"},{"name":"RotateMantissaRight","address":"0x3841E94"}],
+      "callees": [{"name":"CheckAdditionOverflow","address":"0x3841DE7"},{"name":"RotateMantissaRight","address":"0x3841E94"},{"name":"LeftShiftLarge96Bit","address":"0x3841E66"}],
       "callers": [{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"ApplyExponentToMantissa","address":"0x384290C"}],
       "strings": [],
       "parameters": [{"name":"pFirstNumber","type":"int *","storage":"Stack[0x4]:4"},{"name":"pSecondNumber","type":"int *","storage":"Stack[0x8]:4"}]
@@ -6429,7 +6429,7 @@
       "param_count": 3,
       "instructions": ["0x2290C|PUSH|EBP", "0x2290D|MOV|EBP, ESP", "0x2290F|SUB|ESP, 0xc", "0x22912|PUSH|EBX", "0x22913|MOV|EBX, 0x384ec48", "0x22918|XOR|ECX, ECX", "0x2291A|SUB|EBX, 0x60", "0x2291D|CMP|dword ptr [EBP + 0xc], ECX", "0x22920|JZ|0x03842985", "0x22922|JGE|0x03842934", "0x22924|MOV|EAX, dword ptr [EBP + 0xc]", "0x22927|MOV|EBX, 0x384eda8", "0x2292C|NEG|EAX", "0x2292E|MOV|dword ptr [EBP + 0xc], EAX", "0x22931|SUB|EBX, 0x60"],
       "callees": [{"name":"MultiplyCustomFloatNumbers","address":"0x38426EC"}],
-      "callers": [{"name":"ParseDecimalString","address":"0x3841F88"},{"name":"FormatCustomFloatToString","address":"0x3842459"}],
+      "callers": [{"name":"FormatCustomFloatToString","address":"0x3842459"},{"name":"ParseDecimalString","address":"0x3841F88"}],
       "strings": [],
       "parameters": [{"name":"pMantissaDigits","type":"int *","storage":"Stack[0x4]:4"},{"name":"exponent","type":"uint","storage":"Stack[0x8]:4"},{"name":"shouldRound","type":"int","storage":"Stack[0xc]:4"}]
     },

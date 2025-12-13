@@ -4,7 +4,7 @@
   "version": "1.07",
   "image_base": "0x6FC40000",
   "total_functions": 244,
-  "export_timestamp": "Fri Dec 05 16:18:24 CST 2025",
+  "export_timestamp": "Wed Dec 10 16:12:55 CST 2025",
   "functions": [
     {
       "address": "0x6FC41000",
@@ -48,7 +48,7 @@
         "CFG": null,
         "PRO": "1593f0783ff62110ea1a058aba9bc0d9"
       },
-      "signature": "undefined Unicode(Unicode * this, ushort param_1)",
+      "signature": "void Unicode(Unicode * this, ushort param_1)",
       "calling_convention": "__thiscall",
       "comment": "public: __thiscall Unicode::Unicode(unsigned short)",
       "parameters": [{"name": "this", "type": "Unicode *", "storage": "ECX:4 (auto)"}, {"name": "param_1", "type": "ushort", "storage": "Stack[0x4]:2"}],
@@ -348,10 +348,10 @@
         "CFG": null,
         "PRO": "a6d35151773e131f5511718d9515e306"
       },
-      "signature": "int strcoll(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "int strcoll(char * _Str1, char * _Str2)",
+      "calling_convention": "__cdecl",
       "comment": "public: static int __fastcall Unicode::strcoll(struct Unicode const *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Str1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": ["?strncoll@Unicode@@SIHPBU1@0H@Z"],
       "basic_block_count": 1
@@ -423,10 +423,10 @@
         "CFG": "98d31f844d6ebf65d9486a5fb57cfd7f",
         "PRO": "dd244711ccc1a895f688767b9e39592b"
       },
-      "signature": "int strcmp(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "int strcmp(char * _Str1, char * _Str2)",
+      "calling_convention": "__cdecl",
       "comment": "public: static int __fastcall Unicode::strcmp(struct Unicode const *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Str1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 7
@@ -448,10 +448,10 @@
         "CFG": "b95b38ad09671356cd21aa88b7497243",
         "PRO": "c2b1cdef007a16161b4f2d932a961742"
       },
-      "signature": "int stricmp(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "int stricmp(char * _Str1, char * _Str2)",
+      "calling_convention": "__cdecl",
       "comment": "public: static int __fastcall Unicode::stricmp(struct Unicode const *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Str1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Str2", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 12
@@ -473,10 +473,10 @@
         "CFG": "4f7195f536cb26daa887eb8a3134588a",
         "PRO": "b5db463dfc4ec6e067fd29464c182bce"
       },
-      "signature": "int strnicmp(Unicode * param_1, Unicode * param_2, uint param_3)",
-      "calling_convention": "__fastcall",
+      "signature": "int strnicmp(char * _Str1, char * _Str, size_t _MaxCount)",
+      "calling_convention": "__cdecl",
       "comment": "public: static int __fastcall Unicode::strnicmp(struct Unicode const *,struct Unicode const *,unsigned int)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0x4]:4"}],
+      "parameters": [{"name": "_Str1", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Str", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "_MaxCount", "type": "size_t", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 18
@@ -498,10 +498,10 @@
         "CFG": "67537552a138cf2c61942c08f10ccb48",
         "PRO": "ef5cce255cd2b8a4d34dbe8ac275c3fd"
       },
-      "signature": "Unicode * strchr(Unicode * param_1, Unicode param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strchr(char * _Str, int _Val)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strchr(struct Unicode const *,struct Unicode)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode", "storage": "<UNASSIGNED>"}],
+      "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Val", "type": "int", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 5
@@ -523,10 +523,10 @@
         "CFG": "ea03c6407b4d091868dce8d0baf95212",
         "PRO": "3d641caed68b9edee6f2e7993308a78c"
       },
-      "signature": "Unicode * strcat(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strcat(char * _Dest, char * _Source)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strcat(struct Unicode *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Dest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Source", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 4
@@ -548,10 +548,10 @@
         "CFG": "d88ad4fd190e65fc3b89c41b36615b62",
         "PRO": "3c764407c4d47ed1753b88e71919d933"
       },
-      "signature": "Unicode * strncat(Unicode * param_1, Unicode * param_2, int param_3)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strncat(char * _Dest, char * _Source, size_t _Count)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strncat(struct Unicode *,struct Unicode const *,int)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0x4]:4"}],
+      "parameters": [{"name": "_Dest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Source", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "_Count", "type": "size_t", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -573,10 +573,10 @@
         "CFG": "dfed70108de23c8b59558196fdc2451c",
         "PRO": "45e589df75d55729cac8c629548b31b6"
       },
-      "signature": "Unicode * strncpy(Unicode * param_1, Unicode * param_2, int param_3)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strncpy(char * _Dest, char * _Source, size_t _Count)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strncpy(struct Unicode *,struct Unicode const *,int)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0x4]:4"}],
+      "parameters": [{"name": "_Dest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Source", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "_Count", "type": "size_t", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 6
@@ -598,10 +598,10 @@
         "CFG": "e67ee52de705150869e2ef2baa9939af",
         "PRO": "1dfa005ef65300cdf5f503593e533a54"
       },
-      "signature": "Unicode * strcpy(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strcpy(char * _Dest, char * _Source)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strcpy(struct Unicode *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Dest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Source", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -623,10 +623,10 @@
         "CFG": "c8b2c10b1a428d31cc06d2116a66fa61",
         "PRO": "18cda54433f49bc633dedc34816fa71d"
       },
-      "signature": "int strlen(Unicode * param_1)",
-      "calling_convention": "__fastcall",
+      "signature": "size_t strlen(char * _Str)",
+      "calling_convention": "__cdecl",
       "comment": "public: static int __fastcall Unicode::strlen(struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}],
+      "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 5
@@ -673,10 +673,10 @@
         "CFG": "0be63b0b9d3f50362c83ccbde491d861",
         "PRO": "c959fcbe7cb83b512eacebfbad354393"
       },
-      "signature": "Unicode * strstr(Unicode * param_1, Unicode * param_2)",
-      "calling_convention": "__fastcall",
+      "signature": "char * strstr(char * _Str, char * _SubStr)",
+      "calling_convention": "__cdecl",
       "comment": "public: static struct Unicode * __fastcall Unicode::strstr(struct Unicode const *,struct Unicode const *)",
-      "parameters": [{"name": "param_1", "type": "Unicode *", "storage": "ECX:4"}, {"name": "param_2", "type": "Unicode *", "storage": "EDX:4"}],
+      "parameters": [{"name": "_Str", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_SubStr", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 16
@@ -698,10 +698,10 @@
         "CFG": "68e0d9aa9d7c95afbd7a9dff4fb54279",
         "PRO": "65295bdd83393b2a4658ff8e0c8bea9a"
       },
-      "signature": "void sprintf(int param_1, Unicode * param_2, Unicode * param_3, ...)",
+      "signature": "int sprintf(char * _Dest, char * _Format, ...)",
       "calling_convention": "__cdecl",
       "comment": "public: static void __cdecl Unicode::sprintf(int,struct Unicode *,struct Unicode const *,...)",
-      "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "Unicode *", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "Unicode *", "storage": "Stack[0xc]:4"}],
+      "parameters": [{"name": "_Dest", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "_Format", "type": "char *", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"Unknown format specifier in Unicode::sprintf\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Lang\\\\Unicode\\\\S...", "\"puCurrent\""],
       "api_calls": ["?strstr@Unicode@@SIPAU1@PBU1@0@Z", "?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z", "FogAssert", "FogFatalError"],
       "basic_block_count": 57
@@ -1248,7 +1248,7 @@
         "CFG": null,
         "PRO": "17fe1eea40682d48d467081426cbfc40"
       },
-      "signature": "undefined SetDefaultKiloSuffix(void)",
+      "signature": "void SetDefaultKiloSuffix(void)",
       "calling_convention": "__stdcall",
       "comment": "Sets the thousands (kilo) magnitude suffix character to default 'K' (0x4B).\n\nAlgorithm:\n1. Store 0x4B ('K') to global g_wKiloSuffix\n\nParameters:\n- None\n\nReturns:\n- void\n\nRelated Functions:\n- Ordinal_10000: Initializes all magnitude suffixes (K, M, B, T)\n- Ordinal_10012: Uses suffixes for formatted number output",
       "parameters": [],
@@ -1298,7 +1298,7 @@
         "CFG": null,
         "PRO": "1f133210ff874ce0c7e3cc581b38717f"
       },
-      "signature": "undefined SetDefaultBillionsSuffix(void)",
+      "signature": "void SetDefaultBillionsSuffix(void)",
       "calling_convention": "__stdcall",
       "comment": "Sets the default billions suffix character to 'B' (0x42).\n\nAlgorithm:\n1. Store value 0x42 to g_wBillionsSuffix global\n\nParameters:\n- None\n\nReturns:\n- void\n\nMagic Numbers:\n- 0x42 (66): ASCII 'B' for billions suffix\n\nRelated Functions:\n- Ordinal_10000: Initializes suffix from string table, falls back to 'B'\n- Ordinal_10012: Uses suffix when formatting large numbers",
       "parameters": [],
@@ -1388,11 +1388,11 @@
       "name": "InitStringTables",
       "display_name": "InitStringTables",
       "has_human_name": true,
-      "index": "STR:04fce3bfb09c6d2744408ffb62117483",
+      "index": "STR:61011ce89a54cfce14505cc0e87c698f",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "04fce3bfb09c6d2744408ffb62117483",
+        "STR": "61011ce89a54cfce14505cc0e87c698f",
         "API": "0749a03f3b5f62ad54e09313665de214",
         "MNE": "829115515c1f391ce4d545ad8ebc32c5",
         "CFG": "34de5474b84c7bea551abae9ac497a1d",
@@ -1402,7 +1402,7 @@
       "calling_convention": "__fastcall",
       "comment": "Initializes the game's string tables for localization.\n\nAlgorithm:\n1. If already initialized (g_pStringTable != NULL), increment ref count and return\n2. Determine locale path (use szPath if provided, else get from registry)\n3. Detect character set (CJK, Cyrillic, Latin2, Latin) based on locale\n4. Load font system map from data\\local\\font\\%s\\default.map\n5. Load main string table from data\\local\\lng\\%s\\string.tbl\n6. Allocate and populate string pointer array (g_ppwszStrings)\n7. Convert strings to Unicode (g_pwszStringData)\n8. Load patch string table (patchstring.tbl), allocate g_ppwszPatchStrings\n9. If fLoadExp, load expansion string table (expansionstring.tbl)\n10. Initialize number formatting suffixes (K=Kilo, M=Million, B=Billion, T=Trillion)\n\nParameters:\n- fLoadExp (int): If non-zero, load expansion string table\n- szPath (char*): Locale path override (NULL to use registry)\n\nReturns:\n- 1 on success\n- 0 if main string table fails to load\n\nMagic Numbers:\n- 0x11 (17): String entry stride in table\n- 0x15 (21): Header size before string entries\n- 0x14d0-0x14d3: String IDs for K/M/B/T suffixes\n- 0x3fffffff: Mask for hash count (30-bit value)",
       "parameters": [{"name": "fLoadExpansion", "type": "int", "storage": "ECX:4"}, {"name": "szLocalePath", "type": "char *", "storage": "EDX:4"}],
-      "string_refs": ["\"data\\\\local\\\\font\\\\%s\\\\default.map\"", "\"data\\\\local\\\\lng\\\\%s\\\\string.tbl\"", "\"sghPatchStringTable != NULL\"", "\"data\\\\local\\\\lng\\\\%s\\\\expansionstring.tbl\"", "\"sghStringTable != NULL\"", "...+5 more"],
+      "string_refs": ["\"data\\\\local\\\\font\\\\%s\\\\default.map\"", "\"sghPatchStringTable != NULL\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Lang\\\\StrTable\\\\...", "\"RUS\"", "\"data\\\\local\\\\lng\\\\%s\\\\string.tbl\"", "...+10 more"],
       "api_calls": ["GetLocaleString", "?loadSysMap@Unicode@@SIHPAUHD2ARCHIVE__@@PBD@Z", "FogMemAlloc", "?unicodeWidth@Unicode@@SIKPBDH@Z", "FogMemAlloc", "?unicodeWidth@Unicode@@SIKPBDH@Z", "?toUnicode@Unicode@@SIPAU1@PAU1@PBDH@Z", "FogAssert", "FogMemAlloc", "?unicodeWidth@Unicode@@SIKPBDH@Z", "...+17 more"],
       "basic_block_count": 63
     },
@@ -1473,7 +1473,7 @@
         "CFG": "098e6382713017ee9106b4445bfc052d",
         "PRO": "4a92998b2b0fc5bd9f4ee5cb04567808"
       },
-      "signature": "undefined4 GetOrCreateUntranslatedString(byte * pbKey)",
+      "signature": "void GetOrCreateUntranslatedString(byte * pbKey)",
       "calling_convention": "__fastcall",
       "comment": "Returns a cached Unicode string for an untranslated key, creating one if not found.\n\nAlgorithm:\n1. Search linked list cache (g_pUntranslatedCache) for matching key\n2. If found, return cached Unicode pointer\n3. If not found, allocate new cache node via Ordinal_10042\n4. Copy key string and append \" - not xlated call ken w\" suffix\n5. Convert concatenated string to Unicode via Unicode::toUnicode\n6. Store in cache and return new Unicode pointer\n\nParameters:\n- pbKey (byte*): Null-terminated string key to look up\n\nReturns:\n- Unicode pointer to cached/created untranslated string\n\nStructure Layout (cache node):\n| Offset | Type   | Field      |\n|--------|--------|------------|\n| 0x00   | ptr    | pUnicode   |\n| 0x04   | ptr    | szKeyCopy  |\n| 0x08   | ptr    | pNext      |\n\nMagic Numbers:\n- 0x272 (626): Fog allocation size for cache node (12 bytes)\n- 0x27d (637): Fog allocation for key copy buffer\n- 0x285 (645): Fog allocation for concatenated string\n- 0x28a (650): Fog allocation for Unicode buffer\n- 0x290 (656): Fog deallocation for temp buffer\n\nRelated Functions:\n- Ordinal_10013: Caller that uses this for missing translations",
       "parameters": [{"name": "pbKey", "type": "byte *", "storage": "ECX:4"}],
@@ -1573,7 +1573,7 @@
         "CFG": "085fb06a2e1ac760c229c8da2e8ebf88",
         "PRO": "75f9ed8252e339b7a075dc34e9cf6b15"
       },
-      "signature": "undefined UnloadStringTable(void)",
+      "signature": "void UnloadStringTable(void)",
       "calling_convention": "__stdcall",
       "comment": "Decrements string table reference count and frees all resources when zero.\n\nAlgorithm:\n1. Check if base string table is loaded, exit early if not\n2. Decrement reference count; exit if still in use\n3. Free base hash table (0x340) and string data (0x345)\n4. Free base string table (0x12d)\n5. Free patch hash table (0x353) and string data (0x358)\n6. Free patch string table (0x12d)\n7. Free expansion hash table (0x361) and string data (0x366)\n8. Free expansion string table (0x12d)\n9. Walk and free untranslated cache linked list (0x3a0, 0x3a1, 0x3a2 per node)\n10. Call unloadSysMap to release system character mapping\n\nParameters:\n- None\n\nReturns:\n- void\n\nMagic Numbers:\n- 0x12d (301): String table pool ID\n- 0x340 (832): Base hash table pool ID\n- 0x345 (837): Base string data pool ID\n- 0x353 (851): Patch hash table pool ID\n- 0x358 (856): Patch string data pool ID\n- 0x361 (865): Expansion hash table pool ID\n- 0x366 (870): Expansion string data pool ID\n- 0x3a0 (928): Untranslated cache string pool ID\n- 0x3a1 (929): Untranslated cache data pool ID\n- 0x3a2 (930): Untranslated cache node pool ID",
       "parameters": [],
@@ -1638,11 +1638,11 @@
       "name": "GetSystemLanguageId",
       "display_name": "GetSystemLanguageId",
       "has_human_name": true,
-      "index": "STR:f74d021bb77698f02974a7b1cf08d9cd",
+      "index": "STR:9dbaa261c1c5315c9834a06093c054e1",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "f74d021bb77698f02974a7b1cf08d9cd",
+        "STR": "9dbaa261c1c5315c9834a06093c054e1",
         "API": null,
         "MNE": "f65e73a3865e251a870fc78965608666",
         "CFG": "dd679a63e59ea18c4ac31e3ef56d4d1d",
@@ -1652,7 +1652,7 @@
       "calling_convention": "__stdcall",
       "comment": "Retrieves the system language identifier based on OS platform.\n\nAlgorithm:\n1. Call GetVersionExA to determine Windows platform type\n2. For Win9x (platform ID 1): Read sLanguage from win.ini [Intl] section\n3. For Win NT (platform ID 2): Read sLanguage from registry HKCU\\Control Panel\\International\n4. Validate registry value length (< 4 chars required)\n5. Compare language code against g_pLangCodeTable (20-byte stride entries)\n6. Return matching language ID from g_adwLangIdTable\n\nParameters:\n- None (no parameters)\n\nReturns:\n- Language identifier (uint) from lookup table on success\n- 0 if OS detection fails, language not found, or registry error\n\nMagic Numbers:\n- 0x94 (148): sizeof(OSVERSIONINFOA)\n- 0x14 (20): Language table entry stride\n- 0x20019: KEY_QUERY_VALUE | KEY_ENUMERATE_SUB_KEYS | KEY_NOTIFY\n- 0x80000001: HKEY_CURRENT_USER",
       "parameters": [],
-      "string_refs": ["\"Control Panel\\\\International\"", "\"sLanguage\""],
+      "string_refs": ["\"RUS\"", "\"Control Panel\\\\International\"", "\"sLanguage\"", "\"Intl\""],
       "api_calls": [],
       "basic_block_count": 16
     },
@@ -2248,7 +2248,7 @@
         "CFG": "7db700d6fea6bf8bb6e1c45f4f727c0d",
         "PRO": "b781e18a71d28d9c971e448d093bf0d8"
       },
-      "signature": "undefined RunCRTInitializers(void)",
+      "signature": "void RunCRTInitializers(void)",
       "calling_convention": "__stdcall",
       "comment": "Executes C runtime initialization routines during DLL startup.\n\nAlgorithm:\n1. Call optional pre-initialization callback if registered\n2. Iterate C initializer table (g_apfnCInitializers to g_apfnCInitializersEnd)\n3. Iterate C++ initializer table (g_apfnCppInitializers to g_apfnCppInitializersEnd)\n\nParameters:\n- None\n\nReturns:\n- void\n\nRelated Functions:\n- FUN_6fc44b01: Iterates function pointer array calling each non-null entry\n- FUN_6fc450ef: DllMain handler that calls this during DLL_PROCESS_ATTACH",
       "parameters": [],
@@ -2373,7 +2373,7 @@
         "CFG": null,
         "PRO": "ba447c43ce1ce3171b30cd3084b53060"
       },
-      "signature": "undefined LockExitCriticalSection(void)",
+      "signature": "void LockExitCriticalSection(void)",
       "calling_convention": "__stdcall",
       "comment": "Acquires the exit-related critical section (index 0xd).\n\nAlgorithm:\n1. Call FUN_6fc453d1 with index 0xd to enter critical section\n2. Return to caller with lock held\n\nParameters:\n- None\n\nReturns:\n- void (caller must call FUN_6fc44af8 to release lock)\n\nRelated Functions:\n- FUN_6fc44af8: Unlocks this same critical section\n- FUN_6fc453d1: Generic critical section lock (by index)\n- FUN_6fc45432: Generic critical section unlock (by index)",
       "parameters": [],
@@ -3019,7 +3019,7 @@
         "CFG": "7248c67bf0c1d301014e8cfd788302b1",
         "PRO": "50191f5215650d57388859f136860675"
       },
-      "signature": "undefined8 __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aulldiv\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -3044,7 +3044,7 @@
         "CFG": "b2617940305b6e1d0cf3c25e221e2cae",
         "PRO": "a307baf3b5662fd4c99a1c389c60a66a"
       },
-      "signature": "undefined8 __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aullrem\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -3544,7 +3544,7 @@
         "CFG": null,
         "PRO": "ae7d98185567cd095757b404a4cec110"
       },
-      "signature": "undefined UnlockSmallBlockCriticalSection(void)",
+      "signature": "void UnlockSmallBlockCriticalSection(void)",
       "calling_convention": "__stdcall",
       "comment": "Unlocks CRT critical section 9 used for small block heap operations.\n\nAlgorithm:\n1. Push critical section index 9 onto stack\n2. Call UnlockCrtCriticalSection to release the lock\n3. Clean up stack and return\n\nParameters:\n- None (void function)\n\nReturns:\n- void\n\nRelated Functions:\n- LockCrtCriticalSection: Acquires the same critical section\n- GetHeapBlockSize: Caller that uses this for small block size queries",
       "parameters": [],
@@ -3919,7 +3919,7 @@
         "CFG": "90d9a613ae7971252c0dba5fac5a6486",
         "PRO": "3a1392424fe856c1ff14031a79612389"
       },
-      "signature": "undefined CleanupCrtHeap(void)",
+      "signature": "void CleanupCrtHeap(void)",
       "calling_convention": "__stdcall",
       "comment": "Cleans up CRT heap resources during DLL detach.\n\nAlgorithm:\n1. If g_dwHeapMode == 3 (virtual alloc mode):\n   - Loop through heap block array entries\n   - Decommit each block with VirtualFree(MEM_DECOMMIT)\n   - Release each block with VirtualFree(MEM_RELEASE)\n   - Free tracking structure via HeapFree\n   - Free heap block array itself\n2. If g_dwHeapMode == 2 (linked list mode):\n   - Walk circular linked list starting at PTR_LOOP\n   - VirtualFree each allocated region\n3. Destroy the CRT heap handle via HeapDestroy\n\nParameters:\n- None (void function)\n\nReturns:\n- void\n\nMagic Numbers:\n- 0x4000: MEM_DECOMMIT flag\n- 0x8000: MEM_RELEASE flag\n- 0x100000: Block size (1MB) for decommit\n- 0x14 (20): Stride of heap block entries\n- 0x10 (16): Offset to allocation pointer in list node",
       "parameters": [],
@@ -3944,8 +3944,8 @@
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "21188bdaca830cfd90115aebe6f86326"
       },
-      "signature": "undefined _FF_MSGBANNER(void)",
-      "calling_convention": "__stdcall",
+      "signature": "void _FF_MSGBANNER(void)",
+      "calling_convention": "__cdecl",
       "comment": "Displays runtime error message banner for fatal CRT errors.\n\nAlgorithm:\n1. Check if app type is console (1) OR (app type is 0 AND error mode is 1)\n2. If conditions met, call message handler with 0xFC (pre-message signal)\n3. If user handler (g_pfnUserMsgHandler) is registered, invoke it\n4. Call message handler with 0xFF (post-message signal)\n\nParameters:\n- None (void function)\n\nReturns:\n- void\n\nMagic Numbers:\n- 0xFC (252): Pre-message banner signal to _NMSG_WRITE\n- 0xFF (255): Post-message banner signal to _NMSG_WRITE\n- 1: Console application type / error mode enabled\n\nRelated Functions:\n- __amsg_exit: Caller that terminates after message display\n- FUN_6fc46f00: _NMSG_WRITE - writes actual error messages",
       "parameters": [],
       "string_refs": [],
@@ -3959,11 +3959,11 @@
       "name": "DisplayRuntimeError",
       "display_name": "DisplayRuntimeError",
       "has_human_name": true,
-      "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "index": "STR:819a2fd327090a03519f87cf5b9aee0d",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "STR": "819a2fd327090a03519f87cf5b9aee0d",
         "API": null,
         "MNE": "da32166b3f0e7e0948a175245c62ec51",
         "CFG": "e9e3238573fb8758cb6dacb6540ea203",
@@ -3973,7 +3973,7 @@
       "calling_convention": "__cdecl",
       "comment": "Displays a CRT runtime error message based on error code.\n\nAlgorithm:\n1. Search error table at g_adwRuntimeErrorTable for matching error code\n2. If found and console app (g_dwAppType==1) or error mode is stderr:\n   - Write error string directly to stderr via WriteFile\n3. Else if GUI app and code != 0xFC:\n   - Get module filename (truncate to 60 chars if needed)\n   - Build message: \"Runtime Error!\n\nProgram: <path>\n\n<error msg>\"\n   - Display via FUN_6fc49d1f (MessageBox wrapper)\n\nParameters:\n- dwErrorCode (uint): CRT error code (R6xxx series)\n\nReturns:\n- void (no return value)\n\nMagic Numbers:\n- 0xFFFFFFFF4 (-12): STD_ERROR_HANDLE\n- 0x104 (260): MAX_PATH\n- 0x3C (60): Max display length for module path\n- 0xFC (252): Special error code that skips GUI display\n- 0x12010: MB_OK | MB_ICONHAND | MB_TASKMODAL\n\nRelated Functions:\n- FUN_6fc47ab0: String copy helper\n- FUN_6fc47ac0: String concatenate helper\n- FUN_6fc49d1f: MessageBox wrapper",
       "parameters": [{"name": "dwErrorCode", "type": "uint", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"Runtime Error!\\n\\nProgram: \"", "\"Microsoft Visual C++ Runtime Library\"", "\"R6009\\r\\n- not enough space for environment\\r\\n\"", "\"<program name unknown>\""],
+      "string_refs": ["\"Runtime Error!\\n\\nProgram: \"", "\"Microsoft Visual C++ Runtime Library\"", "\"\\n\\n\"", "\"R6009\\r\\n- not enough space for environment\\r\\n\"", "\"<program name unknown>\""],
       "api_calls": [],
       "basic_block_count": 15
     },
@@ -5119,7 +5119,7 @@
         "CFG": null,
         "PRO": "3186c69b213917775d3062b770caa9dc"
       },
-      "signature": "undefined __global_unwind2(PVOID param_1)",
+      "signature": "void __global_unwind2(PVOID param_1)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "PVOID", "storage": "Stack[0x4]:4"}],
@@ -5144,7 +5144,7 @@
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "c118d5af3ce43c20a86a03e0cb3ac068"
       },
-      "signature": "undefined __local_unwind2(int param_1, int param_2)",
+      "signature": "void __local_unwind2(int param_1, int param_2)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __local_unwind2\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
@@ -5944,7 +5944,7 @@
         "CFG": "9ee740eae2758b00f904633bf0c5e501",
         "PRO": "59cc5e5d7e9efa61c62c9b0e2b890a3a"
       },
-      "signature": "undefined4 __fclose_lk(FILE * param_1)",
+      "signature": "int __fclose_lk(FILE * param_1)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __fclose_lk\n\nLibrary: Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "FILE *", "storage": "Stack[0x4]:4"}],

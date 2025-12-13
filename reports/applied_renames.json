@@ -1,0 +1,280 @@
+{
+  "summary": {
+    "total_renames": 30,
+    "verified_candidates": 29,
+    "modules": 3,
+    "versions": 3
+  },
+  "renames": [
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD5DDC0",
+      "old_name": "D2Common_10231_Impl",
+      "new_name": "D2Common_10231_Impl",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Win",
+      "address": "0x6F8AFDC0",
+      "old_name": "D2Win_10043_TEXTBOX_Destroy",
+      "new_name": "D2Win_10043_TEXTBOX_Destroy",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD51250",
+      "old_name": "DATATBLS_GetSkillsTxtRecord",
+      "new_name": "DATATBLS_GetSkillsTxtRecord",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDA3780",
+      "old_name": "DATATBLS_NewTreasureClassEx",
+      "new_name": "DATATBLS_NewTreasureClassEx",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDA4430",
+      "old_name": "DATATBLS_ParseTreasureClassItem",
+      "new_name": "DATATBLS_ParseTreasureClassItem",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Game",
+      "address": "0x6FCAE540",
+      "old_name": "EVENT_AllocateTimer",
+      "new_name": "EVENT_AllocateTimer",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Game",
+      "address": "0x6FC34A80",
+      "old_name": "EVENT_FreeEventQueue",
+      "new_name": "EVENT_FreeEventQueue",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "Classic",
+      "version": "1.00",
+      "module": "D2Game",
+      "address": "0x100056D0",
+      "old_name": "GAME_ReceiveDatabaseCharacter",
+      "new_name": "GAME_ReceiveDatabaseCharacter",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Game",
+      "address": "0x6FC36280",
+      "old_name": "GAME_ReceiveDatabaseCharacter",
+      "new_name": "GAME_ReceiveDatabaseCharacter",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Common",
+      "address": "0x6FDA6790",
+      "old_name": "MONSTERS_ApplyClassicScaling",
+      "new_name": "MONSTERS_ApplyClassicScaling",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Game",
+      "address": "0x6FC89B00",
+      "old_name": "OBJMODE_GetToHitPercentage",
+      "new_name": "OBJMODE_GetToHitPercentage",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDCB220",
+      "old_name": "PATH_AStar_PopBestScoreForVisit",
+      "new_name": "PATH_AStar_PopBestScoreForVisit",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDCB2C0",
+      "old_name": "PATH_AStar_TargetLocationHasEnoughRoom",
+      "new_name": "PATH_AStar_TargetLocationHasEnoughRoom",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Common",
+      "address": "0x6FDAC270",
+      "old_name": "PATH_ComputePathOrSlideAlongObstacles",
+      "new_name": "PATH_ComputePathOrSlideAlongObstacles",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Common",
+      "address": "0x6FDABAC0",
+      "old_name": "PATH_FindSubpathWithoutObstacles",
+      "new_name": "PATH_FindSubpathWithoutObstacles",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDC0650",
+      "old_name": "PATH_IDAStar_FlushNodeToDynamicPath",
+      "new_name": "PATH_IDAStar_FlushNodeToDynamicPath",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDC0BB0",
+      "old_name": "PATH_IdaStar_ComputePathWithRooms",
+      "new_name": "PATH_IdaStar_ComputePathWithRooms",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD85E00",
+      "old_name": "PATH_PreparePathTargetForPathUpdate",
+      "new_name": "PATH_PreparePathTargetForPathUpdate",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.10",
+      "module": "D2Common",
+      "address": "0x6FDAC170",
+      "old_name": "PATH_SimplifyToLines",
+      "new_name": "PATH_SimplifyToLines",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD5DC80",
+      "old_name": "PATH_StopMovement",
+      "new_name": "PATH_StopMovement",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD7FAC0",
+      "old_name": "UNITS_AnimModeAllowsAnimSpeed",
+      "new_name": "UNITS_AnimModeAllowsAnimSpeed",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD80BD0",
+      "old_name": "UNITS_CanAnimModeUseVelocityModifier",
+      "new_name": "UNITS_CanAnimModeUseAttackRate",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD80BD0",
+      "old_name": "UNITS_CanAnimModeUseAttackRate",
+      "new_name": "UNITS_CanAnimModeUseVelocityModifier",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD7EF90",
+      "old_name": "UNITS_IsAnimModeBlocking",
+      "new_name": "UNITS_IsAnimModeBlocking",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD7EFC0",
+      "old_name": "UNITS_IsAnimModeGetHit",
+      "new_name": "UNITS_IsAnimModeGetHit",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD7F010",
+      "old_name": "UNITS_IsAnimModeKnockBack",
+      "new_name": "UNITS_IsAnimModeKnockBack",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD80B80",
+      "old_name": "UNITS_IsSeqAnimSpeedModulatedByFCR",
+      "new_name": "UNITS_IsSeqAnimSpeedModulatedByFCR",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD5CEB0",
+      "old_name": "sub_6FD5CEB0",
+      "new_name": "sub_6FD5CEB0",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FD5DB70",
+      "old_name": "sub_6FD5DB70",
+      "new_name": "sub_6FD5DB70",
+      "status": "RENAMED"
+    },
+    {
+      "game_type": "LoD",
+      "version": "1.13c",
+      "module": "D2Common",
+      "address": "0x6FDC0840",
+      "old_name": "sub_6FDC0840",
+      "new_name": "sub_6FDC0840",
+      "status": "RENAMED"
+    }
+  ]
+}

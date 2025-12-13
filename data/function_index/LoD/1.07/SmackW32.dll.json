@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x10000000",
-  "total_functions": 187,
-  "export_timestamp": "Fri Dec 05 16:22:14 CST 2025",
+  "total_functions": 201,
+  "export_timestamp": "Wed Dec 10 16:12:43 CST 2025",
   "functions": [
     {
       "address": "0x10001000",
@@ -105,6 +105,48 @@
       "string_refs": ["\"DIBSection\"", "\" with accelerated blitting (\""],
       "api_calls": ["_SmackBlitString@8"],
       "basic_block_count": 10
+    },
+    {
+      "address": "0x10001160",
+      "rva": "0x1160",
+      "size": 1,
+      "name": "FUN_10001160",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x100011C0",
+      "rva": "0x11C0",
+      "size": 1,
+      "name": "FUN_100011c0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x100012C0",
@@ -598,6 +640,27 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 11
+    },
+    {
+      "address": "0x10003F10",
+      "rva": "0x3F10",
+      "size": 1,
+      "name": "FUN_10003f10",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10003F90",
@@ -1599,6 +1662,48 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x10007F60",
+      "rva": "0x7F60",
+      "size": 1,
+      "name": "FUN_10007f60",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x10007FF0",
+      "rva": "0x7FF0",
+      "size": 1,
+      "name": "FUN_10007ff0",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x10008090",
       "rva": "0x8090",
       "size": 531,
@@ -1645,6 +1750,27 @@
       "basic_block_count": 6
     },
     {
+      "address": "0x100083B0",
+      "rva": "0x83B0",
+      "size": 1,
+      "name": "FUN_100083b0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x10008430",
       "rva": "0x8430",
       "size": 98,
@@ -1685,6 +1811,27 @@
       "string_refs": ["\"DiamondWare Digitized\\n\""],
       "api_calls": [],
       "basic_block_count": 18
+    },
+    {
+      "address": "0x10008660",
+      "rva": "0x8660",
+      "size": 1,
+      "name": "FUN_10008660",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10008690",
@@ -1836,6 +1983,48 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 4
+    },
+    {
+      "address": "0x10008C10",
+      "rva": "0x8C10",
+      "size": 1,
+      "name": "FUN_10008c10",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x10008C80",
+      "rva": "0x8C80",
+      "size": 1,
+      "name": "FUN_10008c80",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10008CA0",
@@ -2022,6 +2211,27 @@
       "basic_block_count": 13
     },
     {
+      "address": "0x10009630",
+      "rva": "0x9630",
+      "size": 1,
+      "name": "FUN_10009630",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x10009770",
       "rva": "0x9770",
       "size": 405,
@@ -2085,6 +2295,48 @@
       "basic_block_count": 14
     },
     {
+      "address": "0x100099F0",
+      "rva": "0x99F0",
+      "size": 1,
+      "name": "FUN_100099f0",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
+      "address": "0x10009A60",
+      "rva": "0x9A60",
+      "size": 1,
+      "name": "FUN_10009a60",
+      "display_name": "MNE_546c17e22a38a8e1",
+      "has_human_name": false,
+      "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": null,
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x10009A90",
       "rva": "0x9A90",
       "size": 78,
@@ -2146,6 +2398,27 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
+    },
+    {
+      "address": "0x10009B90",
+      "rva": "0x9B90",
+      "size": 1,
+      "name": "FUN_10009b90",
+      "display_name": "MNE_2043487ec0ce2238",
+      "has_human_name": false,
+      "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": null,
+        "PRO": "3696ad59777e09d5f2daacb544022d43"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10009C30",
@@ -2486,6 +2759,27 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
+    },
+    {
+      "address": "0x1000A960",
+      "rva": "0xA960",
+      "size": 1,
+      "name": "FUN_1000a960",
+      "display_name": "MNE_a4d363ea7abc28ea",
+      "has_human_name": false,
+      "index": "MNE:a4d363ea7abc28ea70d3cbb1b9fd3326",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a4d363ea7abc28ea70d3cbb1b9fd3326",
+        "CFG": null,
+        "PRO": "eb1e33e8a81b697b75855af6bfcdbcbf"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x1000A980",

@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x6FF60000",
-  "total_functions": 635,
-  "export_timestamp": "Fri Dec 05 16:18:31 CST 2025",
+  "total_functions": 638,
+  "export_timestamp": "Wed Dec 10 16:12:58 CST 2025",
   "functions": [
     {
       "address": "0x6FF61000",
@@ -305,6 +305,31 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
+    },
+    {
+      "address": "0x6FF61510",
+      "rva": "0x1510",
+      "size": 475,
+      "name": "SocketReceiverThreadProc",
+      "display_name": "SocketReceiverThreadProc",
+      "has_human_name": true,
+      "index": "API:3516c03dd7271f02fbb96a90e5644103",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3516c03dd7271f02fbb96a90e5644103",
+        "MNE": "4127de4a878727b8f327beb94da4788e",
+        "CFG": "42d9a90c587a05ae7f306c3ec4656a9e",
+        "PRO": "c469e611614bc8b66d1064d6ff5de3c7"
+      },
+      "signature": "dword SocketReceiverThreadProc(void * pWorkerCtx)",
+      "calling_convention": "__stdcall",
+      "comment": "Socket receiver worker thread procedure.\n\nAlgorithm:\n1. Allocate 8KB stack buffer for receive data via AllocaStackProbe\n2. Wait for socket handle at pWorkerCtx+0x110 to become valid, yielding with Sleep(0)\n3. Enter main receive loop, checking shutdown flag at pWorkerCtx+0x120\n4. Validate socket context: non-null, connected (offset 0x0!=0), no error state (0x2c==0, 0x30==0)\n5. Call CheckSocketReadReady to poll for incoming data with 100ms timeout\n6. If data ready and not shutting down, receive into stack buffer via ReceiveSocketData\n7. Call GetStructPositionXY to retrieve error state into stack locals\n8. On receive success (bytes > 0), call ProcessSocketPackets to dispatch received data\n9. Continue receiving while buffer fills (received >= buffer space) and not shutdown\n10. On error/shutdown, close socket with proper critical section synchronization\n11. Clear socket handle and connection flag, return 0\n\nParameters:\n- pWorkerCtx (void*): Worker context structure passed from SpawnStormWorkerThread\n  +0x110: SocketContext* pointer to socket connection state\n  +0x120: int shutdown flag (non-zero signals thread exit)\n\nReturns:\n- 0: Always returns 0 on thread exit\n\nSocket Context Fields (at pWorkerCtx+0x110):\n  +0x00: int fConnected - connection valid flag\n  +0x08: SOCKET hSocket - Winsock socket handle\n  +0x0C: CRITICAL_SECTION critSec - synchronization for socket ops\n  +0x2C: int fClosing - socket closing flag\n  +0x30: int nErrorState - error state flag\n  +0x34: int nErrorCode - WSA error code\n\nStack Layout:\n  ESP+0x00: uint dwPosX - X coordinate output from GetStructPositionXY\n  ESP+0x04: uint dwPosY - Y coordinate output from GetStructPositionXY  \n  ESP+0x08: byte[0x2000] abRecvBuffer - 8KB receive buffer\n\nMagic Numbers:\n- 0x200c (8204): Total stack allocation for buffer + locals\n- 0x2000 (8192): Maximum receive buffer size per iteration\n- 0x110: Offset to socket context pointer in worker context\n- 0x120: Offset to shutdown flag in worker context",
+      "parameters": [{"name": "pWorkerCtx", "type": "void *", "storage": "Stack[0x4]:4"}],
+      "string_refs": [],
+      "api_calls": ["CheckSocketReadReady", "ReceiveSocketData", "GetStructPositionXY", "EnterCriticalSectionWrapper", "closesocket", "EnterCriticalSectionWrapper", "closesocket"],
+      "basic_block_count": 30
     },
     {
       "address": "0x6FF616F0",
@@ -698,7 +723,7 @@
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
-      "signature": "undefined StubNoOp(void)",
+      "signature": "void StubNoOp(void)",
       "calling_convention": "__stdcall",
       "comment": "No-op stub function for reserved/unimplemented ordinals.\n\nAlgorithm:\n1. Immediately returns without any action\n\nParameters:\n- None (void parameter list)\n\nExports:\n- Ordinal 10048, 10049, 10053, 10054, 10082, 10146\n- Ordinal 10194, 10195, 10196, 10197\n- Ordinal 10220, 10221, 10225\n\nReturns:\n- void (no return value)\n\nRelated Functions:\n- Called after CreateThread in network initialization\n- Called before error logging in deadlock detection\n- Provides placeholder for callback/hook points",
       "parameters": [],
@@ -1423,7 +1448,7 @@
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
-      "signature": "undefined NullStubProc(void)",
+      "signature": "void NullStubProc(void)",
       "calling_convention": "__stdcall",
       "comment": "Empty stub function that immediately returns.\n\nAlgorithm:\n1. Return immediately (no-op)\n\nParameters:\n- None\n\nReturns:\n- void\n\nNotes:\n- Used as placeholder callback/function pointer when no action needed\n- Called from 69 locations throughout the module",
       "parameters": [],
@@ -1948,7 +1973,7 @@
         "CFG": "07b93d6a9c8804a9a0a239ea18753eca",
         "PRO": "b886ca14ead20ea815ab20d670fb6c4f"
       },
-      "signature": "undefined4 CheckConnectionRateLimit(void * pServer, int * pnConnectionId)",
+      "signature": "void CheckConnectionRateLimit(void * pServer, int * pnConnectionId)",
       "calling_convention": "__fastcall",
       "comment": "Checks if connection from given ID exceeds rate limit.\n\nAlgorithm:\n1. Return success if rate limiting disabled (offset 0x884 <= 0)\n2. Get current time and rate limit threshold\n3. Lock critical section and purge stale entries (>15000ms old)\n4. Search linked list for existing record matching connection ID\n5. If found within window: increment count, reject if > (limit*2+3)\n6. If not found or expired: create/reset record with count=1\n7. Return 1 (allowed) or 0 (rate limited)\n\nParameters:\n- pServer (void*): Server context containing rate limit config and record list\n- pnConnectionId (int*): Pointer to connection identifier\n\nReturns:\n- 1: Connection allowed\n- 0: Connection rate limited (exceeded limit*2+3 attempts in 15 seconds)\n\nMagic Numbers:\n- 0x884: Rate limit threshold field offset\n- 0x84c: Head of rate record linked list\n- 0x850: Tail of rate record linked list\n- 0x854: Critical section offset\n- 15000 (0x3A98): Rate window in milliseconds\n- 0x10: Size of rate record structure (16 bytes)",
       "parameters": [{"name": "pServer", "type": "void *", "storage": "ECX:4"}, {"name": "pnConnectionId", "type": "int *", "storage": "EDX:4"}],
@@ -2573,7 +2598,7 @@
         "CFG": null,
         "PRO": "e6cd3b593b7e6f7a3efe7499505efe12"
       },
-      "signature": "undefined NoOpStub(void)",
+      "signature": "void NoOpStub(void)",
       "calling_convention": "__stdcall",
       "comment": "Empty stub function that immediately returns.\n\nAlgorithm:\n1. Return immediately with no operations\n\nParameters:\n- None\n\nExports:\n- Ordinal 10179\n- Ordinal 10193\n\nReturns:\n- void (no return value)",
       "parameters": [],
@@ -2832,6 +2857,31 @@
       "basic_block_count": 3
     },
     {
+      "address": "0x6FF66560",
+      "rva": "0x6560",
+      "size": 1400,
+      "name": "ServerListenerThread",
+      "display_name": "ServerListenerThread",
+      "has_human_name": true,
+      "index": "STR:36f78b1ac2fe1a5b1ed3c4490e4cc96e",
+      "index_method": "STR",
+      "indexes": {
+        "EXP": null,
+        "STR": "36f78b1ac2fe1a5b1ed3c4490e4cc96e",
+        "API": "71bfedd34aa147576a4e94deffdbbe58",
+        "MNE": "627da88619ff47f0ec7aae4f76f7f739",
+        "CFG": "1022f26b67e0291fe5382b7224253f7d",
+        "PRO": "d30c8e6da0ea0121208c8be501bcf975"
+      },
+      "signature": "void ServerListenerThread(FogHashTable * pServerContext)",
+      "calling_convention": "__stdcall",
+      "comment": "Server Listener Thread - Main network I/O loop for accepting new connections and receiving client data\n\nAlgorithm:\n1. Initialize bucket tracking state (dwBucketIndex=0, nBucketOffset=0)\n2. Enter infinite server loop\n3. Call ProcessTimerTick to handle time-based events\n4. Initialize fdReadSet and fdExceptSet fd_sets with count=0\n5. Lock server critical section (param_1+0x854)\n6. Add listener socket (param_1+0xb90) to both fd_sets if not already present (max 64)\n7. Iterate through client hash table (up to 64 clients per select cycle):\n   a. Navigate to current bucket position using nBucketOffset skip count\n   b. For each client entry, lock client critical section (entry+0x2c)\n   c. Add client socket (entry+0x10) to read and except fd_sets\n   d. Advance to next entry in linked list (entry+0x4)\n8. Calculate select timeout: tv_usec = 100000 / ((clientCount / 64) + 1)\n9. Release server critical section\n10. Call select() with readfds, NULL writefds, exceptfds, and timeout\n11. On timeout (select returns 0):\n    a. Check shutdown flag (param_1+0xbf8), if set call ExitThread\n12. On success (select returns > 0):\n    a. Process exception fd_set (currently just decrements count)\n    b. Process read fd_set from end to beginning:\n       - Listener socket: Accept new connection\n         * Validate IP against cache (RefreshCacheEntryTimer)\n         * Check connection threshold (HashTableCheckEntryThreshold)\n         * Check rate limit (CheckConnectionRateLimit)\n         * If all pass, add client via QSrvAddClient\n         * Otherwise reject and close socket\n       - Client socket: Receive data\n         * Find client in hash table (FindHashTableEntryById)\n         * Read into client buffer at offset pClient[0x22]\n         * On error/disconnect: call DisconnectClient\n         * On success: update buffer size, ProcessClientMessages, signal event\n13. Loop forever until shutdown\n\nParameters:\n  pServerContext (FogHashTable *): Server state structure containing:\n    - ppBuckets: Hash table buckets for client tracking\n    - dwUnknown18: Number of hash buckets\n    - +0x854: Critical section for server synchronization\n    - +0x880: Total connected client count\n    - +0xb90: Listener socket handle\n    - +0xbc4: Optional callback function pointer\n    - +0xbd4: Event handle for signaling\n    - +0xbf8: Shutdown flag\n\nReturns:\n  void - Function runs indefinitely until ExitThread called\n\nSpecial Cases:\n  - EWOULDBLOCK (0x2733): Accept retry up to 100 times\n  - Accept failure: FogFatalError then ExitWithCode(-1)\n  - Buffer bounds check: nSize in [0, 0x5b3] or assert failure\n  - Invalid client: recv to temp buffer and log warning\n\nMagic Numbers:\n  - 0x40 (64): Max sockets per fd_set (FD_SETSIZE)\n  - 0x5b4 (1460): Read buffer size (TCP MTU)\n  - 0x90 (144): Offset to client read buffer\n  - 0x88 (136): Offset to client buffer size field\n  - 0x10b (267): Block reason code\n  - 0x2733 (10035): WSAEWOULDBLOCK",
+      "parameters": [{"name": "pServerContext", "type": "FogHashTable *", "storage": "Stack[0x4]:4"}],
+      "string_refs": ["\"[HACKLIST] sServerThread(spamming server with rec...", "\"[sServeThread]  Socket %d has no connection (recv...", "\"Server thread close #1\\n\"", "\"Accept failed.  Error %d\"", "\"nSize >= 0 && nSize < READ_BUFFER_SIZE\"", "...+2 more"],
+      "api_calls": ["EnterCriticalSectionWrapper", "EnterCriticalSectionWrapper", "LeaveFogCriticalSection", "EnterCriticalSectionWrapper", "EnterCriticalSectionWrapper", "closesocket", "closesocket", "closesocket", "EnterCriticalSectionWrapper", "EnterCriticalSectionWrapper", "...+8 more"],
+      "basic_block_count": 78
+    },
+    {
       "address": "0x6FF66AE0",
       "rva": "0x6AE0",
       "size": 71,
@@ -2955,6 +3005,31 @@
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."],
       "api_calls": ["EnterCriticalSectionWrapper", "GetUptimeSeconds", "FogMemAlloc", "LeaveFogCriticalSection", "LeaveFogCriticalSection", "FogMemAlloc", "LeaveFogCriticalSection"],
       "basic_block_count": 20
+    },
+    {
+      "address": "0x6FF67510",
+      "rva": "0x7510",
+      "size": 161,
+      "name": "ReadThreadProc",
+      "display_name": "ReadThreadProc",
+      "has_human_name": true,
+      "index": "STR:64f600ff9e6f214968779303716669ff",
+      "index_method": "STR",
+      "indexes": {
+        "EXP": null,
+        "STR": "64f600ff9e6f214968779303716669ff",
+        "API": "90222dc46ddc3413e60e51081a36c008",
+        "MNE": "54ff63d18791546fe1cfb4047e9cca53",
+        "CFG": "d84e188c2a84c6b9df6709a48518ab55",
+        "PRO": "e08beb656f4ec2646cedf9307f9be04a"
+      },
+      "signature": "dword ReadThreadProc(ReadThreadContext * pThreadContext)",
+      "calling_convention": "__stdcall",
+      "comment": "Read thread procedure for processing I/O completion port events.\n\nClassification: Callback/Handler - thread entry point invoked by CreateThread\n\nAlgorithm:\n1. Extract pServer and nChannelIdx from thread context structure\n2. Free the thread context allocation (no longer needed after extraction)\n3. Assert readInThread flag is enabled at offset 0xC18 in server struct\n4. Log thread startup message with channel index\n5. Loop while shutdown flag at offset 0xC3C + nChannelIdx*4 is 0:\n   - Call ProcessCompletionPortEvents with 50ms timeout to handle I/O\n6. Enter critical section at server offset 0x854\n7. Clear shutdown flag to 0 to acknowledge termination request\n8. Leave critical section\n9. Return 1 indicating successful completion\n\nParameters:\n- pThreadContext (ReadThreadContext*): Pointer to 8-byte context structure:\n  - pServer (void*): Server context pointer at offset 0x00\n  - nChannelIdx (int): Channel index 0-3 at offset 0x04\n\nReturns:\n- 1: Always returns success after clean shutdown\n\nMagic Numbers:\n- 0x29B: Source line number for ReleasePoolAllocation call\n- 0x29C: Source line number for readInThread assertion\n- 0x2A3: Source line number for EnterCriticalSection call\n- 0x32 (50): Timeout in milliseconds for ProcessCompletionPortEvents\n- 0x854: Offset to critical section in server structure\n- 0xC18: Offset to readInThread enable flag in server structure\n- 0xC3C: Offset to per-channel shutdown flags array in server\n\nThread Lifecycle:\n- Created by CreateListenSocket when readInThread flag is set in server config\n- Runs continuously until shutdown flag is set by another thread\n- Complements AcceptConnectionsThreadProc for asynchronous network I/O\n- Uses IOCP for efficient overlapped I/O event processing",
+      "parameters": [{"name": "pThreadContext", "type": "ReadThreadContext *", "storage": "Stack[0x4]:4"}],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...", "\"ptServer->readInThread\"", "\"Started sReadThread:conn=%d\""],
+      "api_calls": ["ReleasePoolAllocation", "FogAssert", "QueueLogMessage", "EnterCriticalSectionWrapper", "StubNoOp"],
+      "basic_block_count": 6
     },
     {
       "address": "0x6FF675C0",
@@ -3660,20 +3735,20 @@
       "address": "0x6FF69420",
       "rva": "0x9420",
       "size": 6,
-      "name": "Ordinal_10059",
-      "display_name": "Ordinal_10059",
+      "name": "GetTickCount",
+      "display_name": "GetTickCount",
       "has_human_name": true,
-      "index": "EXP:10059",
-      "index_method": "EXP",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "index_method": "MNE",
       "indexes": {
-        "EXP": "10059",
+        "EXP": null,
         "STR": null,
         "API": null,
         "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
         "CFG": null,
         "PRO": "8eee884dcd58adbe1307e1e66a7e262b"
       },
-      "signature": "DWORD Ordinal_10059(void)",
+      "signature": "DWORD GetTickCount(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -5043,7 +5118,7 @@
       "indexes": {
         "EXP": null,
         "STR": "e727c8dc688ebb9fadb5f64a8c47cad7",
-        "API": "e7103c0031f60230f2e6e5fea2710906",
+        "API": "513dc8d720ec2b3d4f4acbd2e910cb99",
         "MNE": "e4cd1f584ec9802c2ec96073ee49ba41",
         "CFG": "f7adaf7df723bdf2810577faf1420b6c",
         "PRO": "3bcdb096fe65283d4c5c883bd4409dbe"
@@ -5053,7 +5128,7 @@
       "comment": "Validates critical section structure integrity for debug builds.\n\nAlgorithm:\n1. If debug flag (DAT_6ffa0708) disabled, return immediately\n2. Check DebugInfo pointer (pCritSect[0]): non-null, aligned, valid range\n3. Check LockCount (pCritSect[1]): <= 10 or -1 (unlocked)\n4. Check RecursionCount (pCritSect[2]): <= 10\n5. Verify OwningThread matches, LockSemaphore and SpinCount valid\n6. If any check fails, log error and terminate process\n\nParameters:\n- pCritSect (uint*): Pointer to CRITICAL_SECTION structure\n\nReturns:\n- void (terminates process on validation failure)\n\nMagic Numbers:\n- 0x7fffffff: Maximum valid pointer address\n- 0x3: Pointer alignment mask (must be 0)\n- 10: Maximum reasonable lock/recursion count\n- 0x18: Size of validation data logged\n- 0x20: Size of debug info logged",
       "parameters": [{"name": "pCritSect", "type": "uint *", "storage": "ECX:4"}],
       "string_refs": ["\"FogValidateCriticalSection(%d) - bad critical sec...", "\"!\\\"FogValidateCriticalSection - bad critical sect...", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\ErrorMan...", "\"FogValidateCriticalSection - bad critical section..."],
-      "api_calls": ["LogAppendFormat", "QueueLogEntry", "QueueLogEntry", "Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["LogAppendFormat", "QueueLogEntry", "QueueLogEntry", "WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 17
     },
     {
@@ -5260,20 +5335,20 @@
       "address": "0x6FF6CC10",
       "rva": "0xCC10",
       "size": 5,
-      "name": "Ordinal_10021",
-      "display_name": "Ordinal_10021",
+      "name": "BuildLogFilePath",
+      "display_name": "BuildLogFilePath",
       "has_human_name": true,
-      "index": "EXP:10021",
-      "index_method": "EXP",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "index_method": "MNE",
       "indexes": {
-        "EXP": "10021",
+        "EXP": null,
         "STR": null,
         "API": null,
         "MNE": "fdad073544ac1586678f808b3470f76a",
         "CFG": null,
         "PRO": "afe68377dcfc89e2583569a0b313bb9d"
       },
-      "signature": "void Ordinal_10021(char * szFilename)",
+      "signature": "void BuildLogFilePath(char * szFilename)",
       "calling_convention": "__fastcall",
       "comment": "",
       "parameters": [{"name": "szFilename", "type": "char *", "storage": "ECX:4"}],
@@ -5293,7 +5368,7 @@
       "indexes": {
         "EXP": null,
         "STR": "eda2dddb19532dbef96c0177836d81ec",
-        "API": "0fe78021fbf37ca307eac588236b01b9",
+        "API": "782512ff8a8deba5556e5c14c21d57bf",
         "MNE": "ac1ab51b2f31f172dd4fbff19419c3c9",
         "CFG": "f09b3aa8147c0dd568c4388354163f5b",
         "PRO": "72b0e8ffe0bf35c3012cedaa656c42da"
@@ -5303,7 +5378,7 @@
       "comment": "Initializes the Fog library subsystems.\n\nAlgorithm:\n1. Copy game name and optional file path to globals\n2. If already initialized, optionally print system info and return\n3. Initialize critical sections and interlock system\n4. Set up memory pool and unhandled exception filter\n5. Validate gdwBitMasks/gdwInvBitMasks lookup tables\n6. Query OS version and set g_dwPlatformType enum\n7. Get physical memory size and system info\n8. Set g_fFogInitialized flag and complete init\n\nParameters:\n- lpszGameName (char*): Game name string (e.g. \"Diablo II\")\n- dwParam2 (uint): Stored to g_dwFogParam2\n- lpszFilePath (char*): Optional file path, copied to g_szFilePath\n- fPrintSysInfo (bool): If true, calls PrintSystemInfo\n\nReturns:\n- void\n\nMagic Numbers:\n- 0x104 (260): MAX_PATH buffer size\n- 0x94 (148): sizeof(OSVERSIONINFOA)\n- 0x40000: Memory pool size\n- 0x8000: Memory pool reserve\n- 0x20 (32): Bit mask table size\n\nPlatform Types (g_dwPlatformType):\n- 0: Unknown/other\n- 1: Windows 95\n- 2: Windows 98/ME\n- 3: Windows NT\n- 4: Windows 2000/XP",
       "parameters": [{"name": "lpszGameName", "type": "char *", "storage": "ECX:4"}, {"name": "dwParam2", "type": "uint", "storage": "EDX:4"}, {"name": "lpszFilePath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "fPrintSysInfo", "type": "bool", "storage": "Stack[0x8]:1"}],
       "string_refs": ["\"Diablo II\"", "\"TraceUnfreedMemory\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\ErrorMan...", "\"gdwBitMasks[i] == (DWORD)(1 << i)\"", "\"Global Pool System\"", "...+1 more"],
-      "api_calls": ["SStrCopy", "SStrCopy", "IsWindowsNT", "QueryRegistryUlong", "InitializeMemoryPool", "Ordinal_10002", "ReportExceptionContext", "Ordinal_10040", "Ordinal_10002", "ReportExceptionContext", "...+1 more"],
+      "api_calls": ["SStrCopy", "SStrCopy", "IsWindowsNT", "QueryRegistryUlong", "InitializeMemoryPool", "WSACleanup", "ReportExceptionContext", "ShutdownLogFiles", "WSACleanup", "ReportExceptionContext", "...+1 more"],
       "basic_block_count": 25
     },
     {
@@ -5418,7 +5493,7 @@
       "indexes": {
         "EXP": null,
         "STR": "4de3b80db0a5833c3b0778fc2e7a52ec",
-        "API": "94c81fe519b5f65b001ac8ecb1cc5fb8",
+        "API": "f9f00e77b568063aecbfdd72f61e22fe",
         "MNE": "9ec701112f7ea4df47c005ad05c300be",
         "CFG": "0b0e44a99908ab0fefd9814fd79372ce",
         "PRO": "e09bda9a68a251090eb17c333be760a0"
@@ -5438,12 +5513,12 @@
       "name": "FogAssert",
       "display_name": "FogAssert",
       "has_human_name": true,
-      "index": "API:3ad7915d92f97003d179c0e2c87fdf83",
+      "index": "API:35b8ac74843397f20bd6b7067f1510cc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3ad7915d92f97003d179c0e2c87fdf83",
+        "API": "35b8ac74843397f20bd6b7067f1510cc",
         "MNE": "25f435b93c7e273a8d2edad730fdedf4",
         "CFG": null,
         "PRO": "8f8bf504a841d705faa4732dcc51b4a6"
@@ -5453,7 +5528,7 @@
       "comment": "Handles fatal assertion failures by logging error and cleaning up.\n\nAlgorithm:\n1. Call WSACleanup to release Winsock resources (Ordinal_10002)\n2. Log assertion failure with severity 5 via error handler (Ordinal_10028)\n3. Flush logs and cleanup resources (Ordinal_10040)\n\nParameters:\n- param_1 (char*): Expression string that failed assertion\n- param_2 (char*): Source filename where assertion occurred\n- param_3 (int): Line number in source file\n\nReturns:\n- void (function does not return normally - process may terminate)\n\nRelated Functions:\n- Ordinal_10002: WSACleanup wrapper\n- Ordinal_10028: Error logging/crash handler\n- Ordinal_10040: Log flush and cleanup",
       "parameters": [{"name": "szExpr", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
-      "api_calls": ["Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5463,12 +5538,12 @@
       "name": "FogFatalError",
       "display_name": "FogFatalError",
       "has_human_name": true,
-      "index": "API:3ad7915d92f97003d179c0e2c87fdf83",
+      "index": "API:35b8ac74843397f20bd6b7067f1510cc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3ad7915d92f97003d179c0e2c87fdf83",
+        "API": "35b8ac74843397f20bd6b7067f1510cc",
         "MNE": "25f435b93c7e273a8d2edad730fdedf4",
         "CFG": null,
         "PRO": "e537262791a9fb472ca0957732c58603"
@@ -5478,7 +5553,7 @@
       "comment": "Handles fatal errors by cleaning up Winsock, logging context, and flushing logs.\n\nAlgorithm:\n1. Call Ordinal_10002 (WSACleanup) to release Winsock resources\n2. Call Ordinal_10028 (LogErrorWithContext) with level 6 for fatal error\n3. Call Ordinal_10040 (FlushLogFiles) to ensure error is written\n4. Function does not return - process terminates after logging\n\nParameters:\n- szMessage (char*): Error message string to log\n- szFile (char*): Source file path where error occurred\n- nLine (int): Line number in source file\n\nReturns:\n- void (does not return - terminates process)\n\nMagic Numbers:\n- 6: Fatal error logging level passed to Ordinal_10028",
       "parameters": [{"name": "szMessage", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "szFile", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
-      "api_calls": ["Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5488,12 +5563,12 @@
       "name": "LogPoolWarning",
       "display_name": "LogPoolWarning",
       "has_human_name": true,
-      "index": "API:3ad7915d92f97003d179c0e2c87fdf83",
+      "index": "API:35b8ac74843397f20bd6b7067f1510cc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3ad7915d92f97003d179c0e2c87fdf83",
+        "API": "35b8ac74843397f20bd6b7067f1510cc",
         "MNE": "25f435b93c7e273a8d2edad730fdedf4",
         "CFG": null,
         "PRO": "078920a9f2b4ebda3aa8af27d4eb7cce"
@@ -5503,7 +5578,7 @@
       "comment": "Logs pool-related warning message with severity level 7.\n\nAlgorithm:\n1. Acquires logging critical section via Ordinal_10002\n2. Formats and outputs message via Ordinal_10028 at level 7\n3. Flushes all log buffers via Ordinal_10040\n\nParameters:\n- szMessage (char*): Format string for warning message\n- dwParam1 (uint): First format parameter value\n- dwParam2 (uint): Second format parameter value\n\nReturns:\n- void\n\nRelated Functions:\n- Ordinal_10002: Acquire logging lock\n- Ordinal_10028: Core log message handler\n- Ordinal_10040: Flush log buffers to disk",
       "parameters": [{"name": "szMessage", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "dwParam1", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "dwParam2", "type": "uint", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
-      "api_calls": ["Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5518,7 +5593,7 @@
       "indexes": {
         "EXP": null,
         "STR": "b2329d032dd2724b1efd4761c29015f0",
-        "API": "3ad7915d92f97003d179c0e2c87fdf83",
+        "API": "35b8ac74843397f20bd6b7067f1510cc",
         "MNE": "78ccb0c4a0920bd79b22297dc1977f13",
         "CFG": null,
         "PRO": "d607c4e8803229ae767287ac98c11d74"
@@ -5528,7 +5603,7 @@
       "comment": "Reports a thread deadlock condition to the error logging system.\n\nAlgorithm:\n1. Acquire global lock via Ordinal_10002\n2. Call Ordinal_10028 with error code 10 (deadlock), passing thread handle and format string\n3. Flush log via Ordinal_10040\n\nParameters:\n- hThread (dword): Thread handle that is deadlocked\n\nReturns:\n- void\n\nMagic Numbers:\n- 10: Error code for deadlock condition\n- 0x66a (1642): Line number in source file",
       "parameters": [{"name": "hThread", "type": "dword", "storage": "Stack[0x4]:4"}],
       "string_refs": ["\"Deadlocked in thread %X for %d ticks\""],
-      "api_calls": ["Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5538,12 +5613,12 @@
       "name": "FogAssertWithHandle",
       "display_name": "FogAssertWithHandle",
       "has_human_name": true,
-      "index": "API:3ad7915d92f97003d179c0e2c87fdf83",
+      "index": "API:35b8ac74843397f20bd6b7067f1510cc",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "3ad7915d92f97003d179c0e2c87fdf83",
+        "API": "35b8ac74843397f20bd6b7067f1510cc",
         "MNE": "82881eee6f9cc6a12b334443b30de284",
         "CFG": null,
         "PRO": "ebe7e8ab056d3761c70e4ac33142e4dc"
@@ -5553,7 +5628,7 @@
       "comment": "Assert handler with file handle context for error logging.\n\nAlgorithm:\n1. Enter critical section via Ordinal_10002\n2. Log assertion to Ordinal_10028 with type, path, line, handle\n3. Flush logs via Ordinal_10040\n\nParameters:\n- nAssertType (int): Assertion type (3=file operation error)\n- dwHandle (uint): File/resource handle for error context\n- szSourceFile (char*): Source file path string\n- dwLineNum (uint): Source line number\n\nReturns:\n- void",
       "parameters": [{"name": "nAssertType", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "dwHandle", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "szSourceFile", "type": "char *", "storage": "Stack[0xc]:4"}, {"name": "dwLineNum", "type": "uint", "storage": "Stack[0x10]:4"}],
       "string_refs": [],
-      "api_calls": ["Ordinal_10002", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["WSACleanup", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5593,7 +5668,7 @@
       "indexes": {
         "EXP": null,
         "STR": "dbf5b745bb0b04927e74b2f845c6f89d",
-        "API": "60dd79e533216099fee4fe3c260860d7",
+        "API": "b01e18a4dda0fe38ffc0d366b80399f8",
         "MNE": "1ab042dcdd36336eccc422f166fbc07f",
         "CFG": "0013906581dd67ee6ce8f075f0b4a05e",
         "PRO": "e4664d2dbd1924f546c5a35ac1aff429"
@@ -5603,7 +5678,7 @@
       "comment": "Displays an error message dialog box with formatted error details.\n\nAlgorithm:\n1. Allocate 0x3100 bytes of stack space for message buffers\n2. Write log header entry\n3. If no format string, assert error and terminate\n4. Format the error message with vsprintf into buffer\n5. Copy formatted message to intermediate buffer\n6. Build window title with error type prefix\n7. Append newline suffix to message\n8. Log message to context\n9. Show MessageBoxA with MB_ICONEXCLAMATION (0x30)\n\nParameters:\n- pbFormat (byte*): Format string for error message (via stack at 0x3108)\n- pdwFormatArgs (dword*): Varargs pointer for format (via stack at 0x310c)\n- IMPLICIT: ECX contains error type index used for title lookup\n- IMPLICIT: EDX contains flag indicating extended error info\n\nReturns:\n- void (does not return value)\n\nMagic Numbers:\n- 0x3100: Total stack allocation for message buffers\n- 0x1000: Individual buffer size (4KB)\n- 0x30: MB_ICONEXCLAMATION flag for MessageBoxA\n- 0x6c0 (1728): Line number in ErrorManager.cpp\n\nRelated Functions:\n- Ordinal_10028 (ReportExceptionContext): Primary caller\n- FUN_6ff72fbe: vsprintf variant for formatting",
       "parameters": [{"name": "pbFormat", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "pdwFormatArgs", "type": "dword *", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"--------  FILE: %s    LINE: %d  --------\\n\\n\"", "\"szFormat != NULL\"", "\"Diablo II\"", "\"%s\\nLocation : %s, line #%d\\nExpression : %s\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\ErrorMan...", "...+1 more"],
-      "api_calls": ["WriteLogHeader", "FormatString", "Ordinal_10002", "ReportExceptionContext", "Ordinal_10040", "FormatString", "FormatString", "Ordinal_10040"],
+      "api_calls": ["WriteLogHeader", "FormatString", "WSACleanup", "ReportExceptionContext", "ShutdownLogFiles", "FormatString", "FormatString", "ShutdownLogFiles"],
       "basic_block_count": 8
     },
     {
@@ -5618,7 +5693,7 @@
       "indexes": {
         "EXP": null,
         "STR": "6db969fbda71b50a6ff527afa487b79a",
-        "API": "0417b5ece0c35ce03720493259efb125",
+        "API": "c19ba48e2dfe28b7b60940e21866cf71",
         "MNE": "140b3c66c23e7f418273422f8432857d",
         "CFG": "72fe0ffdb1095a35412ac31b1652639c",
         "PRO": "8a0cbc352eb15d52a356109f84182aad"
@@ -5628,7 +5703,7 @@
       "comment": "Reports exception context for error handling and diagnostics.\n\nAlgorithm:\n1. Check if exception code is 10 (thread context) - save thread handle\n2. Call CheckExceptionReentrance to prevent nested exception handling\n3. If not reentrant, set g_fExceptionActive flag\n4. Call DisplayErrorMessageBox with error info\n5. Zero 0xB3 dwords of CONTEXT structure at g_threadContext\n6. Set context flags to 0x10007 (CONTEXT_FULL)\n7. If thread handle provided, call GetThreadContext\n8. Else capture current thread context via inline assembly trick\n9. For codes 2,5,6,7,10: log stack (0x1000 bytes) and code (0x20 bytes)\n10. Call optional callback g_dwFogParam2 if registered\n11. Format and flush log output\n12. Clear g_fExceptionActive unless code is 2,5,6 (persistent errors)\n\nParameters:\n- nExceptionCode (int): Error type (2=memory, 5=assert, 6=assert+handle, 7=warning, 10=thread)\n- szSource (char*): Source file string, or thread HANDLE when code=10\n- nLine (int): Source line number\n- szExpression (char*): Error message or assert expression\n\nReturns:\n- void\n\nMagic Numbers:\n- 0x10007: CONTEXT_FULL (control+integer+segments+debug regs)\n- 0xB3 (179): CONTEXT structure size in dwords (716 bytes)\n- 0x1000: Stack dump size (4KB)\n- 0x20: Code dump size (32 bytes)",
       "parameters": [{"name": "nExceptionCode", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "szSource", "type": "char *", "storage": "Stack[0x8]:4"}, {"name": "nLine", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "szExpression", "type": "char *", "storage": "Stack[0x10]:4"}],
       "string_refs": ["\"Code bytes:\"", "\"---finished error callback---\\n\"", "\"<no reason given>\"", "\"Stack bytes:\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\ErrorMan..."],
-      "api_calls": ["LogAppendFormat", "QueueLogEntry", "LogAppendFormat", "QueueLogEntry", "Ordinal_10040", "Ordinal_10040"],
+      "api_calls": ["LogAppendFormat", "QueueLogEntry", "LogAppendFormat", "QueueLogEntry", "ShutdownLogFiles", "ShutdownLogFiles"],
       "basic_block_count": 23
     },
     {
@@ -5793,7 +5868,7 @@
       "indexes": {
         "EXP": null,
         "STR": "15b60ccef21997e5075845b2c60a9328",
-        "API": "a60453c522f99c9ec754dbcb71a2356f",
+        "API": "17e19acf49a1b98c7999cb067324e23e",
         "MNE": "33d53eabbc5510cda4d30d8283c2d4d4",
         "CFG": null,
         "PRO": "cc8fc52a744d541cab157f7245451da6"
@@ -5803,7 +5878,7 @@
       "comment": "Dumps thread context and memory regions for debugging.\n\nAlgorithm:\n1. Logs debug header via Ordinal_10030\n2. Zeroes out CONTEXT structure (0xB3 dwords = 716 bytes)\n3. Sets ContextFlags to CONTEXT_FULL (0x10007)\n4. Retrieves thread context via GetThreadContext\n5. Logs 0x1000 bytes around ESP (stack region)\n6. Logs 0x20 bytes around EIP (code region)\n7. Triggers full stack dump via TriggerStackDump\n8. Calls Ordinal_10040 for cleanup/finalization\n\nParameters:\n- hThread (HANDLE): Handle to target thread\n\nReturns:\n- void\n\nMagic Numbers:\n- 0xB3 (179): CONTEXT size in DWORDs (716 bytes)\n- 0x10007: CONTEXT_FULL flag\n- 0x1000: Stack dump size (4KB)\n- 0x20: Code dump size (32 bytes)",
       "parameters": [{"name": "hThread", "type": "HANDLE", "storage": "ECX:4"}],
       "string_refs": ["\"Dumping stack for thread handle: %08x\"", "\"Code bytes:\\n\"", "\"Stack bytes:\\n\""],
-      "api_calls": ["LogAppendFormat", "StubNoOp", "QueueLogEntry", "QueueLogEntry", "Ordinal_10040"],
+      "api_calls": ["LogAppendFormat", "StubNoOp", "QueueLogEntry", "QueueLogEntry", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5818,7 +5893,7 @@
       "indexes": {
         "EXP": null,
         "STR": "4386dc625e7ad5109b20243a477dd73d",
-        "API": "ca2fa2615ca66a7fe2a47c75178bcaa6",
+        "API": "b58eb49ecaefec8f45fd285442f572f1",
         "MNE": "919ff9370fed074234f2ce302d970857",
         "CFG": null,
         "PRO": "b502c59f3890e4c67a9b912a13958302"
@@ -5828,7 +5903,7 @@
       "comment": "Handles deadlock detection by logging and dumping thread state.\n\nAlgorithm:\n1. Log deadlock context via Ordinal_10030\n2. Call StubNoOp (placeholder for future deadlock handling)\n3. Report exception with code 1 and \"Deadlock_Detected\" message\n4. Trigger stack dump on the blocking thread\n5. Flush logs via Ordinal_10040\n\nParameters:\n- hThread (HANDLE): Thread that caused/detected the deadlock\n\nReturns:\n- void (tail-calls Ordinal_10040)\n\nMagic Numbers:\n- 0x233 (563): Source line number in Fog_Subs.cpp",
       "parameters": [{"name": "hThread", "type": "HANDLE", "storage": "ECX:4"}],
       "string_refs": ["\"Dumping stack for thread handle: %08x\"", "\"Deadlock Detected\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Exceptio..."],
-      "api_calls": ["LogAppendFormat", "StubNoOp", "ReportExceptionContext", "Ordinal_10040"],
+      "api_calls": ["LogAppendFormat", "StubNoOp", "ReportExceptionContext", "ShutdownLogFiles"],
       "basic_block_count": 1
     },
     {
@@ -5893,7 +5968,7 @@
       "indexes": {
         "EXP": null,
         "STR": "638e05a88b468490de3624ecf1666266",
-        "API": "08541075a761ea0abebba2afef053975",
+        "API": "6313ae07813e60fad35f18675bf2d9a6",
         "MNE": "5513b2841fc51d31e8cc30ccc26fd13b",
         "CFG": "119ed549fa52c79d4282330c6416ce38",
         "PRO": "433fd510f83f690cc95956496edd1978"
@@ -6673,7 +6748,7 @@
         "CFG": null,
         "PRO": "d57e092b1a2565470a6a6ce614b8d960"
       },
-      "signature": "undefined CleanupLogFilesSync(void)",
+      "signature": "void CleanupLogFilesSync(void)",
       "calling_convention": "__stdcall",
       "comment": "Cleanup callback for log files critical section.\n\nRegistered as an atexit handler by InitLogFilesSync to ensure\nthe critical section is properly deleted during process termination.\n\nAlgorithm:\n1. Delete the g_csLogFiles critical section via DeleteCriticalSection\n\nParameters:\n- None (void function registered via atexit)\n\nReturns:\n- void\n\nRelated Functions:\n- InitLogFilesSync: Initializes g_csLogFiles and registers this callback",
       "parameters": [],
@@ -6985,20 +7060,20 @@
       "address": "0x6FF70210",
       "rva": "0x10210",
       "size": 5,
-      "name": "Ordinal_10040",
-      "display_name": "Ordinal_10040",
+      "name": "ShutdownLogFiles",
+      "display_name": "ShutdownLogFiles",
       "has_human_name": true,
-      "index": "EXP:10040",
-      "index_method": "EXP",
+      "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "index_method": "MNE",
       "indexes": {
-        "EXP": "10040",
+        "EXP": null,
         "STR": null,
         "API": null,
         "MNE": "fdad073544ac1586678f808b3470f76a",
         "CFG": null,
         "PRO": "8335ca48ee85c5492cd7e7f75b7683ef"
       },
-      "signature": "void Ordinal_10040(void)",
+      "signature": "void ShutdownLogFiles(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -7360,20 +7435,20 @@
       "address": "0x6FF71010",
       "rva": "0x11010",
       "size": 6,
-      "name": "Ordinal_10002",
-      "display_name": "Ordinal_10002",
+      "name": "WSACleanup",
+      "display_name": "WSACleanup",
       "has_human_name": true,
-      "index": "EXP:10002",
-      "index_method": "EXP",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "index_method": "MNE",
       "indexes": {
-        "EXP": "10002",
+        "EXP": null,
         "STR": null,
         "API": null,
         "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
         "CFG": null,
         "PRO": "c6d46aec9018de81d53c901c4eb8a008"
       },
-      "signature": "int Ordinal_10002(void)",
+      "signature": "int WSACleanup(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -7598,7 +7673,7 @@
         "CFG": "2bab19192d14bd36a4d314755f338b52",
         "PRO": "df199b2bf74bc7f04019125c5ea08c17"
       },
-      "signature": "undefined4 CheckSocketReadReady(int * pSocket)",
+      "signature": "void CheckSocketReadReady(int * pSocket)",
       "calling_convention": "__fastcall",
       "comment": "Checks if a socket is ready for reading or has exception/error.\n\nAlgorithm:\n1. Validate socket pointer and check connection state (offset 0x2c=0, offset 0x0!=0)\n2. Set up fd_set for both read and exception monitoring with 100ms timeout\n3. Call select() to check socket status\n4. If select error (-1), store WSA error and set state to 4\n5. Check if socket is in exception set (return 1)\n6. Check if socket is in read set (return 1)\n7. Return 0 if no activity\n\nParameters:\n- pSocket (int*): Socket context structure\n  - [0x0]: Connection valid flag\n  - [0x8]: Socket handle (SOCKET)\n  - [0x2c]: Closing flag\n  - [0x30]: Error state\n  - [0x34]: WSA error code\n\nReturns:\n- 1: Socket ready for read or has error condition\n- 0: Socket not ready or invalid\n\nMagic Numbers:\n- 0x186a0 (100000): 100ms timeout in microseconds\n- 0x4: Error state indicating WSA failure",
       "parameters": [{"name": "pSocket", "type": "int *", "storage": "ECX:4"}],
@@ -8548,7 +8623,7 @@
         "CFG": "7db700d6fea6bf8bb6e1c45f4f727c0d",
         "PRO": "a9be84b2d98eec1f4e800bbf5ddbc556"
       },
-      "signature": "undefined CallStaticInitializers(void)",
+      "signature": "void CallStaticInitializers(void)",
       "calling_convention": "__stdcall",
       "comment": "Invokes CRT static initializers during DLL process attach.\n\nAlgorithm:\n1. Call optional pre-initialization callback if set\n2. Iterate C initializer table (.CRT$XC*) and call each function\n3. Iterate C++ initializer table (.CRT$XI*) and call each function\n\nParameters:\n- None (void function)\n\nReturns:\n- None (void function)\n\nRelated Functions:\n- FUN_6ff71d89: Iterator that calls function pointers in range\n- FUN_6ff734ef: DLL entry point that calls this during attach",
       "parameters": [],
@@ -8698,7 +8773,7 @@
         "CFG": null,
         "PRO": "df5f5b7acef28ee34214ec043a319536"
       },
-      "signature": "undefined UnlockExitHandler(void)",
+      "signature": "void UnlockExitHandler(void)",
       "calling_convention": "__stdcall",
       "comment": "Releases the exit handler critical section lock (index 0xD).\n\nAlgorithm:\n1. Calls LeaveLock(0xD) to release critical section 13\n\nReturns:\n- void\n\nRelated Functions:\n- LockExitHandler: Acquires this lock\n- ExecuteExitHandlers: Uses this lock for thread-safe exit processing",
       "parameters": [],
@@ -8798,7 +8873,7 @@
         "CFG": null,
         "PRO": "076fc9a36c1974c39ecbe91cea06a3d4"
       },
-      "signature": "undefined InitFloatingPointTrapHandlers(void)",
+      "signature": "void InitFloatingPointTrapHandlers(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes CRT floating-point trap handler function pointers.\n\nAlgorithm:\n1. Sets g_pfnFptrapHandler1 to LAB_6ff73876\n2. Sets g_pfnCfltcvt1 and g_pfnCfltcvt2 to __cfltcvt (0x6ff73bcc)\n3. Sets g_pfnFassign to __fassign\n4. Sets g_pfnFptrapHandler2 to FUN_6ff7381c\n5. Sets g_pfnFptrapHandler3 to LAB_6ff738c4\n\nParameters:\n- None (void function)\n\nReturns:\n- void (no return value)\n\nRelated Functions:\n- Called by FUN_6ff71ddf during CRT initialization",
       "parameters": [],
@@ -9023,7 +9098,7 @@
         "CFG": "7602618c96604ca3686ab48465552414",
         "PRO": "9f207fab383c00a9b93510999c2833be"
       },
-      "signature": "undefined8 __alldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __alldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __alldiv\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -9048,7 +9123,7 @@
         "CFG": "1e14a4cf1835ff808bd8458925a42b5a",
         "PRO": "d6f03c7977d78485acfd344b1dbf3211"
       },
-      "signature": "undefined8 __allrem(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __allrem(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __allrem\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -9798,7 +9873,7 @@
         "CFG": "9ee740eae2758b00f904633bf0c5e501",
         "PRO": "59cc5e5d7e9efa61c62c9b0e2b890a3a"
       },
-      "signature": "undefined4 __fclose_lk(FILE * param_1)",
+      "signature": "int __fclose_lk(FILE * param_1)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __fclose_lk\n\nLibrary: Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "FILE *", "storage": "Stack[0x4]:4"}],
@@ -9994,7 +10069,7 @@
         "CFG": null,
         "PRO": "79baba03a091a89019c9d38f1929e0f8"
       },
-      "signature": "undefined InitStaticCriticalSections(void)",
+      "signature": "void InitStaticCriticalSections(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes four static CRITICAL_SECTION structures for thread synchronization.\n\nAlgorithm:\n1. Load InitializeCriticalSection address into ESI\n2. Initialize g_pCritSect1 through g_pCritSect4 in sequence\n\nParameters:\n- None\n\nReturns:\n- void\n\nRelated Functions:\n- FUN_6ff736c1: Cleanup function that deletes these critical sections",
       "parameters": [],
@@ -11544,7 +11619,7 @@
         "CFG": null,
         "PRO": "9ac816396386274c7ff5b37c32bb51e0"
       },
-      "signature": "undefined __global_unwind2(PVOID param_1)",
+      "signature": "void __global_unwind2(PVOID param_1)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "PVOID", "storage": "Stack[0x4]:4"}],
@@ -11569,7 +11644,7 @@
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "b21847835ad849e3f0968ed0b40a36d2"
       },
-      "signature": "undefined __local_unwind2(int param_1, int param_2)",
+      "signature": "void __local_unwind2(int param_1, int param_2)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __local_unwind2\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
@@ -11994,7 +12069,7 @@
         "CFG": null,
         "PRO": "f6f22c060c4b1417c8101f7cdb4d7ff2"
       },
-      "signature": "undefined UnlockSmallBlockHeap(void)",
+      "signature": "void UnlockSmallBlockHeap(void)",
       "calling_convention": "__stdcall",
       "comment": "Releases small block heap critical section (index 9).\n\nAlgorithm:\n1. Push critical section index 9 onto stack\n2. Call LeaveCriticalSectionByIndex to release lock\n3. Clean up stack and return\n\nParameters:\n- None (void function)\n\nReturns:\n- void (no return value)\n\nRelated Functions:\n- LockCriticalSectionByIndex: Acquires the critical section\n- FindSmallBlockHeapEntry: Searches heap while lock held",
       "parameters": [],
@@ -12069,7 +12144,7 @@
         "CFG": "1abbbed88598ab76171d956e8b753f75",
         "PRO": "a9d0a4e0864b2d4bb075818593aed675"
       },
-      "signature": "undefined CleanupCRTTlsResources(void)",
+      "signature": "void CleanupCRTTlsResources(void)",
       "calling_convention": "__stdcall",
       "comment": "Cleans up CRT thread-local storage resources during DLL unload.\n\nAlgorithm:\n1. Destroy CRT critical section array\n2. If TLS index is valid (!= -1), free it via TlsFree\n3. Reset g_dwTlsIndex to -1 (0xFFFFFFFF)\n\nParameters:\n- None (void)\n\nReturns:\n- void\n\nCalled From:\n- CRTDllMain during DLL_PROCESS_DETACH\n\nRelated Functions:\n- DestroyCriticalSectionArray: Releases critical section resources\n- TlsFree: Windows API to release TLS slot",
       "parameters": [],
@@ -12169,7 +12244,7 @@
         "CFG": "8a3afe40ade373cd806ed794a856af32",
         "PRO": "6691748fc10c4bbf212c20982b676d83"
       },
-      "signature": "undefined InvokeTlsCallbackAndExit(void)",
+      "signature": "void InvokeTlsCallbackAndExit(void)",
       "calling_convention": "__stdcall",
       "comment": "Invokes TLS callback and terminates with runtime error.\n\nAlgorithm:\n1. Sets up SEH frame for exception handling\n2. Gets TLS data via GetOrAllocTlsData()\n3. If TLS callback at offset 0x60 exists, invokes it\n4. Calls FUN_6ff7b9f2 which shows runtime error 10 and exits\n\nParameters:\n- None\n\nMagic Numbers:\n- 0x60: TLS callback function pointer offset (0x18 * 4)\n- -1/0xFFFFFFFF: SEH cleanup state marker\n\nReturns:\n- Does not return; terminates via __exit(3)",
       "parameters": [],
@@ -12369,7 +12444,7 @@
         "CFG": null,
         "PRO": "1614af6455436f70365333aff0edd7a0"
       },
-      "signature": "DWORD * GetTlsOsErrorPtr(void)",
+      "signature": "dword * GetTlsOsErrorPtr(void)",
       "calling_convention": "__stdcall",
       "comment": "Returns pointer to OS error code in thread-local storage.\n\nAlgorithm:\n1. Get TLS data via GetOrAllocTlsData()\n2. Return pointer to offset 0xC (dword index 3)\n\nParameters:\n- None\n\nReturns:\n- DWORD* to TLS OS error field (offset 0xC in TLS structure)\n\nMagic Numbers:\n- 0xC (12): Offset to OS error code in TLS data structure",
       "parameters": [],
@@ -12394,7 +12469,7 @@
         "CFG": "1557de4dac6fcc15726b49bc3d750e6d",
         "PRO": "130048872f3b4b7dbd4ed8164e5412cf"
       },
-      "signature": "undefined InitializeStdioFileTable(void)",
+      "signature": "void InitializeStdioFileTable(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes the CRT standard I/O file handle table.\n\nAlgorithm:\n1. Allocate initial file table (0x480 bytes for 32 entries, 0x24 bytes each)\n2. Initialize each file entry with handle=-1, flags=0, mode=10 (text)\n3. If startup info has inherited handles (cbReserved2/lpReserved2):\n   a. Expand file table if needed (up to 0x800 max handles)\n   b. Copy valid inherited handles with flags to file table\n4. Initialize stdin/stdout/stderr (indices 0-2):\n   a. Get standard handles via GetStdHandle\n   b. Set flags: 0x81=open, 0x40=device, 0x08=pipe, 0x80=inherited\n\nParameters:\n- None (void function)\n\nReturns:\n- void (modifies global g_apFileTable and g_nMaxFileHandles)\n\nMagic Numbers:\n- 0x480: File table size (32 entries * 0x24 bytes)\n- 0x24 (36): Size of each file entry structure\n- 0x20: Initial max file handles (32)\n- 0x800: Maximum handle count limit (2048)\n- 0xfffffff6 (-10): STD_INPUT_HANDLE\n- 0xfffffff5 (-11): STD_OUTPUT_HANDLE\n- 0xfffffff4 (-12): STD_ERROR_HANDLE\n- 0x81: FOPEN flag (file is open)\n- 0x40: FDEV flag (file is device)\n- 0x08: FPIPE flag (file is pipe)\n- 0x80: FINHRT flag (inherited handle)\n\nRelated Functions: CRTDllMain, SetHandleCount, GetStartupInfoA",
       "parameters": [],
@@ -13044,7 +13119,7 @@
         "CFG": "cea6ce415732f40bbae9c1758ccf2bd8",
         "PRO": "4701d18e5ee2a314e1ba239b03def90b"
       },
-      "signature": "undefined InitCommandLineArgv(void)",
+      "signature": "void InitCommandLineArgv(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes the CRT command line argument array (__argv).\n\nAlgorithm:\n1. Calls subsystem initialization if not already done\n2. Gets module filename via GetModuleFileNameA\n3. Uses command line or module path as argv[0] source\n4. Calls FUN_6ff78fad to count args and calculate buffer size\n5. Allocates memory for argv array + string storage\n6. Calls FUN_6ff78fad again to populate arrays\n7. Stores argv pointer and argc-1 in globals\n\nParameters:\n- None (void)\n\nReturns:\n- void (sets g_pArgv=argv, g_nArgc=argc-1)\n\nMagic Numbers:\n- 0x104 (260): MAX_PATH buffer size\n- 0x8: __amsg_exit error code for memory allocation failure",
       "parameters": [],
@@ -13119,7 +13194,7 @@
         "CFG": "285d09a7e9b985b0b82a1cfce0632509",
         "PRO": "f15c17f97a56392a8cb949455b4063e9"
       },
-      "signature": "undefined NotifyRuntimeExit(void)",
+      "signature": "void NotifyRuntimeExit(void)",
       "calling_convention": "__stdcall",
       "comment": "Invokes pre-exit notification before runtime error display.\n\nAlgorithm:\n1. Check if app is console (g_dwAppType==1) or GUI with msgbox enabled\n2. Call runtime error display with pre-message code (0xfc)\n3. Call custom exit handler if registered\n4. Call runtime error display with post-message code (0xff)\n\nParameters:\n- None\n\nReturns:\n- void\n\nMagic Numbers:\n- 0xfc (252): Pre-error message notification code\n- 0xff (255): Post-error message notification code\n- 1: Console application type\n\nRelated Functions:\n- __amsg_exit: Caller that handles runtime errors\n- FUN_6ff792cc: Runtime error message display",
       "parameters": [],
@@ -13944,7 +14019,7 @@
         "CFG": "fa4f6b901d2c4b42a9cd8692b2f1a3c1",
         "PRO": "a69a7d0355f70bc5a84a52904bc4615c"
       },
-      "signature": "undefined4 ComputeExtendedFloatRemainder(uint dwMantissaLo, uint dwMantissaHi, ushort wExponent)",
+      "signature": "void ComputeExtendedFloatRemainder(uint dwMantissaLo, uint dwMantissaHi, ushort wExponent)",
       "calling_convention": "__cdecl",
       "comment": "Computes IEEE floating-point remainder for 80-bit extended precision floats.\n\nAlgorithm:\n1. Validates operand exponents via lookup table at DAT_6ff8686c\n2. Checks for special cases (infinity, denormals, zero divisor)\n3. If exponent difference > 63, uses iterative subtraction with scaling\n4. Otherwise uses hardware FPREM instruction directly\n5. Applies sign correction based on dividend sign bit\n\nParameters:\n- dwMantissaLo (uint): Low 32 bits of dividend mantissa\n- dwMantissaHi (uint): High 32 bits with exponent in upper word\n- wExponent (ushort): Exponent/sign word of dividend\n- IMPLICIT: Divisor passed via caller stack frame at [ESP+0x28]\n\nReturns:\n- Result in EAX (passthrough from input), FPU ST0 contains remainder\n\nMagic Numbers:\n- 0x7fff: Exponent mask (15-bit biased exponent)\n- 0x8000: Sign bit mask\n- 0x700: Exponent validation bits\n- 0x3f (63): Maximum single-step exponent difference\n- DAT_6ff8689c: Scaling factor (0.5) for iterative reduction",
       "parameters": [{"name": "dwMantissaLo", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwMantissaHi", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "wExponent", "type": "ushort", "storage": "Stack[0xc]:2"}],
@@ -14294,7 +14369,7 @@
         "CFG": "7248c67bf0c1d301014e8cfd788302b1",
         "PRO": "50191f5215650d57388859f136860675"
       },
-      "signature": "undefined8 __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aulldiv\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -14319,7 +14394,7 @@
         "CFG": "b2617940305b6e1d0cf3c25e221e2cae",
         "PRO": "a307baf3b5662fd4c99a1c389c60a66a"
       },
-      "signature": "undefined8 __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aullrem\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -14494,7 +14569,7 @@
         "CFG": "8e7d8f26e013c6a1aee8d7dc3586bfa4",
         "PRO": "d061df305b457a4547beeb0e9d2b3134"
       },
-      "signature": "undefined InitializeTimezoneData(void)",
+      "signature": "void InitializeTimezoneData(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes timezone data from TZ environment variable or Windows API.\n\nAlgorithm:\n1. Lock critical section 0xC\n2. Reset timezone cache flags to -1 (invalid)\n3. Check TZ environment variable via FUN_6ff7d37c(\"TZ\")\n4. If TZ not set:\n   a. Call GetTimeZoneInformation Windows API\n   b. Calculate g_nTimezoneOffset = Bias * 60 seconds\n   c. Add StandardBias if applicable\n   d. Set g_fDstEnabled and _g_nDstOffset from DST info\n   e. Convert wide timezone names to multibyte via WideCharToMultiByte\n5. If TZ set:\n   a. Cache TZ string in DAT_6ffa18c4\n   b. Parse format: \"STD[+|-]offset[:minutes[:seconds]][DST]\"\n   c. Extract standard timezone name (3 chars)\n   d. Parse hours (multiply by 0xE10 = 3600 seconds)\n   e. Parse optional minutes (multiply by 0x3C = 60)\n   f. Parse optional seconds\n   g. Negate if minus sign prefix\n   h. Extract DST name if present\n\nParameters:\n- None (void function)\n\nReturns:\n- void (no return value)\n\nMagic Numbers:\n- 0xC: Critical section index for timezone data\n- 0x3C (60): Seconds per minute\n- 0xE10 (3600): Seconds per hour\n- 0x220: WC_NO_BEST_FIT_CHARS | WC_COMPOSITECHECK\n- 0x3F (63): Max timezone name length\n- 0x2D (45): ASCII '-' minus sign\n- 0x3A (58): ASCII ':' colon separator",
       "parameters": [],
@@ -14669,7 +14744,7 @@
         "CFG": null,
         "PRO": "f303149c53d51c5598e401b692d34cd1"
       },
-      "signature": "undefined UnlockSbhNodesCriticalSection(void)",
+      "signature": "void UnlockSbhNodesCriticalSection(void)",
       "calling_convention": "__stdcall",
       "comment": "Unlocks the critical section (index 9) used for small-block heap node allocation.\n\nAlgorithm:\n1. Push critical section index 9 onto stack\n2. Call LeaveCriticalSectionByIndex to release lock\n3. Clean up stack and return\n\nParameters:\n- None (void function)\n\nReturns:\n- void (no return value)\n\nRelated Functions:\n- LockCriticalSectionByIndex: Acquires the same critical section\n- SbhAllocFromNodes: Node-based allocation protected by this lock\n- CallocHeapAlloc: Primary caller for heap mode 2 allocations\n- UnlockSbhCriticalSection: Similar unlock for heap mode 3",
       "parameters": [],
@@ -15119,7 +15194,7 @@
         "CFG": null,
         "PRO": "762b0ce235d367da4a07243a22652368"
       },
-      "signature": "undefined ClearCharTypeTable(void)",
+      "signature": "void ClearCharTypeTable(void)",
       "calling_convention": "__stdcall",
       "comment": "Clears the multibyte character type table and resets code page state.\n\nAlgorithm:\n1. Zero-fill g_abCharTypeTable (0x40 dwords + 1 byte = 257 bytes)\n2. Clear cached code page identifier\n3. Clear multibyte flag\n4. Clear locale ID\n5. Clear code page data fields (1-3)\n\nParameters:\n- None (void function)\n\nReturns:\n- void\n\nCalled when:\n- Code page is 0 (invalid/none)\n- GetCPInfo fails and g_fCodePageIsSpecial is set",
       "parameters": [],
@@ -15294,7 +15369,7 @@
         "CFG": "8de88aa5a2ff6c2a27fe35242cac67b4",
         "PRO": "592cde8777105acd14104e1a687e5fa8"
       },
-      "signature": "undefined ___add_12(uint * param_1, uint * param_2)",
+      "signature": "void ___add_12(uint * param_1, uint * param_2)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n ___add_12\n\nLibrary: Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "storage": "Stack[0x8]:4"}],

@@ -26,6 +26,8 @@ not a sliding scale. Low-confidence matches indicate uncertainty, not similarity
 
 import json
 import math
+import re
+import os
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict
@@ -70,12 +72,14 @@ class RarityIndex:
     def __init__(self):
         self.callee_counts: Dict[str, int] = defaultdict(int)
         self.string_counts: Dict[str, int] = defaultdict(int)
+        self.normalized_path_counts: Dict[str, int] = defaultdict(int)
         self.constant_counts: Dict[int, int] = defaultdict(int)
         self.total_functions = 0
         
         # Cached rarity scores
         self._callee_rarity: Dict[str, float] = {}
         self._string_rarity: Dict[str, float] = {}
+        self._normalized_path_rarity: Dict[str, float] = {}
         self._constant_rarity: Dict[int, float] = {}
         self._built = False
     
@@ -91,12 +95,19 @@ class RarityIndex:
                 seen_callees.add(name)
                 self.callee_counts[name] += 1
         
-        # Count strings
+        # Count strings and normalized paths
         seen_strings = set()
+        seen_paths = set()
         for s in func.get('strings', []) or func.get('string_refs', []):
             if s and s not in seen_strings:
                 seen_strings.add(s)
                 self.string_counts[s] += 1
+                
+                # If it looks like a path, also count normalized version
+                norm_path = self._normalize_path(s)
+                if norm_path and norm_path not in seen_paths:
+                    seen_paths.add(norm_path)
+                    self.normalized_path_counts[norm_path] += 1
         
         # Count constants
         seen_constants = set()
@@ -115,6 +126,10 @@ class RarityIndex:
         for s, count in self.string_counts.items():
             self._string_rarity[s] = 1.0 / math.log2(count + 1)
         
+        # Normalized paths - high rarity for source file paths
+        for path, count in self.normalized_path_counts.items():
+            self._normalized_path_rarity[path] = 1.0 / math.log2(count + 1)
+        
         # Constants - filter out very common ones
         half_total = self.total_functions * 0.5
         for c, count in self.constant_counts.items():
@@ -131,8 +146,50 @@ class RarityIndex:
     def get_string_rarity(self, s: str) -> float:
         return self._string_rarity.get(s, 0.8)  # Default high for unknown strings
     
+    def get_normalized_path_rarity(self, path: str) -> float:
+        return self._normalized_path_rarity.get(path, 0.9)  # Default very high for unknown paths
+    
     def get_constant_rarity(self, c: int) -> float:
         return self._constant_rarity.get(c, 0.1)
+    
+    @staticmethod
+    def _normalize_path(s: str) -> Optional[str]:
+        """
+        Normalize a path string for matching.
+        
+        Extracts just the meaningful parts of source file paths:
+        - "D:\\D2\\3rdParty\\STORM\\SOURCE\\SVID.CPP" -> "STORM/SOURCE/SVID.CPP"
+        - "C:\\projects\\D2\\head\\Diablo2\\3rdParty\\STORM\\SOURCE\\SVID.CPP" -> "STORM/SOURCE/SVID.CPP"
+        
+        Returns None if string doesn't look like a path.
+        """
+        # Check if it looks like a file path (has \ or / and ends with extension)
+        if not (('\\' in s or '/' in s) and '.' in s):
+            return None
+        
+        # Normalize separators
+        normalized = s.replace('\\', '/')
+        
+        # Split into parts
+        parts = normalized.split('/')
+        
+        # Find meaningful components (skip drive letters, generic folder names)
+        skip_tokens = {'c:', 'd:', 'e:', 'projects', 'dev', 'src', 'source', 'code', 
+                      'build', 'release', 'debug', 'x86', 'x64', 'win32', 'diablo', 
+                      'diablo2', 'd2', 'head', 'main', 'trunk', 'branch'}
+        
+        # Extract meaningful path suffix (last 3-4 components usually)
+        meaningful_parts = []
+        for part in parts:
+            part_lower = part.lower()
+            if part_lower not in skip_tokens and part:
+                meaningful_parts.append(part)
+        
+        # Return last 3 components (e.g., "STORM/SOURCE/SVID.CPP")
+        if len(meaningful_parts) >= 2:
+            return '/'.join(meaningful_parts[-3:]) if len(meaningful_parts) >= 3 else '/'.join(meaningful_parts)
+        
+        return None
 
 
 class TieredMatcher:
@@ -338,16 +395,39 @@ class TieredMatcher:
                     })
         
         # Score strings (weight 2x - strings are valuable)
+        # Also check for normalized path matches (weight 3x - paths are very reliable)
+        matched_strings = set()
         for s in source_strings:
             rarity = rarity_idx.get_string_rarity(s) * 2.0
             total_source_rarity += rarity
+            
+            # Exact string match
             if s in target_strings:
                 matched_rarity += rarity
+                matched_strings.add(s)
                 matched_items.append({
                     'type': 'string',
                     'name': s[:40],
                     'rarity': round(rarity / 2, 2)
                 })
+            else:
+                # Try normalized path match
+                norm_path = RarityIndex._normalize_path(s)
+                if norm_path:
+                    for t in target_strings:
+                        if t not in matched_strings:
+                            target_norm = RarityIndex._normalize_path(t)
+                            if target_norm and norm_path == target_norm:
+                                # Path match gets higher weight (3x base)
+                                path_rarity = rarity_idx.get_normalized_path_rarity(norm_path) * 3.0
+                                matched_rarity += path_rarity
+                                matched_strings.add(s)
+                                matched_items.append({
+                                    'type': 'path',
+                                    'name': norm_path,
+                                    'rarity': round(path_rarity / 3, 2)
+                                })
+                                break
         
         # Score constants (weight 0.5x - constants are weak signal)
         for c in source_constants:

@@ -86,8 +86,6 @@ VERSION_ORDER = [
     ("LoD", "1.09b"),
     ("LoD", "1.09d"),
     ("LoD", "1.10"),
-    ("LoD", "1.10 Beta 1"),
-    ("LoD", "1.10 Beta 2"),
     ("LoD", "1.11"),
     ("LoD", "1.11b"),
     ("LoD", "1.12a"),
@@ -332,7 +330,7 @@ class FunctionMerger:
         
         return exports
     
-    def match_function(self, func_data: dict, dll_name: str) -> Optional[str]:
+    def match_function(self, func_data: dict, dll_name: str, game_type: str = None, version: str = None) -> Optional[str]:
         """
         Find or create canonical ID for a function.
         
@@ -340,12 +338,20 @@ class FunctionMerger:
         
         Matching strategy:
         1. Try primary index if method is enabled
-        2. Try alternate indexes in priority order
+        2. Try alternate indexes in priority order (with collision detection)
         3. For EXP (if in verified_methods), try EXP + verify with secondary index
+        
+        Args:
+            func_data: Function data dictionary
+            dll_name: Name of the DLL
+            game_type: Game type (Classic/LoD) for collision detection
+            version: Version string for collision detection
         """
         index = func_data.get('index', '')
         if not index:
             return None
+        
+        address = func_data.get('address', '')
         
         # Get config settings
         disabled_methods = set(self.config.get('disabled_methods', []))
@@ -370,7 +376,25 @@ class FunctionMerger:
                 if alt_key in self.index_to_canonical:
                     # Found match via alternate index
                     canonical_id = self.index_to_canonical[alt_key]
-                    # Also register the primary index (if method is enabled and not verified-only)
+                    
+                    # COLLISION DETECTION: Check if this would create a same-version-different-address conflict
+                    if game_type and version and address:
+                        existing_func = self.functions.get(canonical_id)
+                        if existing_func:
+                            version_key = f"{game_type}/{version}"
+                            existing_version_data = existing_func.get('versions', {}).get(version_key)
+                            if existing_version_data:
+                                existing_addr = existing_version_data.get('address', '')
+                                if existing_addr and existing_addr != address:
+                                    # HASH COLLISION: Same version, different address
+                                    # This is a false match - these are different functions
+                                    print(f"  WARNING: Hash collision detected for {method}:{idx_value[:12]}...")
+                                    print(f"    Existing: {canonical_id} at {existing_addr}")
+                                    print(f"    New:      {func_data.get('name', 'unnamed')} at {address}")
+                                    print(f"    Creating separate canonical ID to avoid merge")
+                                    continue  # Don't use this match, try next method
+                    
+                    # Valid match - also register the primary index (if method is enabled and not verified-only)
                     if index_method not in disabled_methods and index_method not in verified_methods:
                         self.index_to_canonical[full_key] = canonical_id
                     return canonical_id
@@ -566,7 +590,7 @@ class FunctionMerger:
                 self.fuzzy_matcher.build_indexes(dll_name, functions, version_key)
             
             for func in functions:
-                canonical_id = self.match_function(func, dll_name)
+                canonical_id = self.match_function(func, dll_name, game_type, version)
                 if canonical_id:
                     self.merge_function_data(canonical_id, func, game_type, version, dll_name)
                     version_func_map[version_key][func.get('address')] = (func, canonical_id)

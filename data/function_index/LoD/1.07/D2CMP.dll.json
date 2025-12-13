@@ -3,16 +3,16 @@
   "game_type": "LoD",
   "version": "1.07",
   "image_base": "0x6FE10000",
-  "total_functions": 539,
-  "export_timestamp": "Fri Dec 05 16:18:51 CST 2025",
+  "total_functions": 541,
+  "export_timestamp": "Wed Dec 10 16:12:55 CST 2025",
   "functions": [
     {
       "address": "0x6FE11000",
       "rva": "0x1000",
       "size": 22,
-      "name": "FUN_6fe11000",
-      "display_name": "MNE_1a6f096a43043a44",
-      "has_human_name": false,
+      "name": "InitializeCelContainerGlobal",
+      "display_name": "InitializeCelContainerGlobal",
+      "has_human_name": true,
       "index": "MNE:1a6f096a43043a448da9d0f12d2c069d",
       "index_method": "MNE",
       "indexes": {
@@ -23,6 +23,10 @@
         "CFG": null,
         "PRO": "69bacecb44e1e956ae3eacdfba36ed08"
       },
+      "signature": "void InitializeCelContainerGlobal(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Static initializer for global CelContainer hash table manager.\n\nAlgorithm:\n1. Initialize g_CelContainer object using InitializeDiabloObject\n2. Register DestroyCelContainer as cleanup callback via BoolToInt/atexit\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Called automatically during module static initialization (DATA xrefs from init tables)\n- Registers DestroyCelContainer (0x6fe11020) for cleanup at module unload\n- g_CelContainer at 0x6fe33b58 is used by CreateCelerationEntry and DestroyDataItem\n\nRelated Functions:\n- InitializeDiabloObject: Object initialization with vtables and SEH\n- DestroyCelContainer: Cleanup thunk calling DestroyHashTableManager\n- BoolToInt: Atexit-like registration function",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -94,7 +98,7 @@
         "CFG": "d0bcbddd71b7c291837d2a6cd5878018",
         "PRO": "7cb67a87ec5357592abbbd00e43357a9"
       },
-      "signature": "int GetDirectionTableEntry(uint dwStartIndex, uint dwDirection)",
+      "signature": "uint GetDirectionTableEntry(uint dwStartIndex, uint dwDirection)",
       "calling_convention": "__stdcall",
       "comment": "Retrieve direction-specific entry from lookup table with validation\n\nAlgorithm:\n1. Validate dwDirection > dwStartIndex (order validation)\n2. Call GetFirstBitPos(dwDirection) to get bit position, must be <= 7\n3. Perform bitcount validation using parallel bit manipulation (0x77777777, 0x33333333, 0x11111111 masks)\n4. Verify dwDirection has exactly 1 bit set via bitcount modulo 0xFF == 1 check\n5. Call GetFirstBitPos(dwDirection) again to get final direction index\n6. Calculate table offset: (nDirectionIndex * 0x20 + dwStartIndex) * 4\n7. Return uint from g_adDirectionIndexTable at calculated offset\n\nParameters:\n- dwStartIndex (uint): Base index within direction table (0-31 expected)\n- dwDirection (uint): Direction bitmask, must be power-of-2 (0x1, 0x2, 0x4, 0x8, 0x10, 0x20, 0x40, 0x80)\n\nReturns:\n- uint: Entry from g_adDirectionIndexTable, typically encoding direction-relative data\n\nMagic Numbers:\n- 0x77777777: Parallel bit shift mask for bitcount step 1\n- 0x33333333: Parallel bit shift mask for bitcount step 2  \n- 0x11111111: Parallel bit shift mask for bitcount step 3\n- 0xf0f0f0f: Final bitcount mask before modulo\n- 0xff: Modulo divisor for bitcount validation\n- 0x20: Stride multiplier (8 directions * 4 bytes per entry)\n- 7: Maximum valid bit position for 8-directional encoding",
       "parameters": [{"name": "dwStartIndex", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "dwDirection", "type": "uint", "storage": "Stack[0x8]:4"}],
@@ -276,6 +280,31 @@
       "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"format < NUM_CELFORMATS\"", "\"BITCOUNT( dwNumDirections ) == 1\"", "\"dwNumDirections <= 32\"", "\".?AUTCELENTRY@@\""],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "SMemFree"],
       "basic_block_count": 18
+    },
+    {
+      "address": "0x6FE117E0",
+      "rva": "0x17E0",
+      "size": 364,
+      "name": "CELFILE_AddImageFrameToCel",
+      "display_name": "CELFILE_AddImageFrameToCel",
+      "has_human_name": true,
+      "index": "STR:0c460fc605e65171b22bb8e8275690ca",
+      "index_method": "STR",
+      "indexes": {
+        "EXP": null,
+        "STR": "0c460fc605e65171b22bb8e8275690ca",
+        "API": "0cfc69076ce25824c436860cb8f47943",
+        "MNE": "f7b60403485638c0ef172a814304f4c9",
+        "CFG": "c952a5f8c407c9b2ca094f175b8314a6",
+        "PRO": "a47a97ae993c33d56e82408d3c084569"
+      },
+      "signature": "void CELFILE_AddImageFrameToCel(dword dwCelKey, byte * pbImageData, dword dwImageByteStride, dword dwPixelWidth, dword dwPixelHeight, dword dwUserParam1, dword dwUserParam2, dword dwUserParam3)",
+      "calling_convention": "__stdcall",
+      "comment": "Adds an image frame to a cel/sprite entry in the cel data hash table.\n\nAlgorithm:\n1. Validate dwPixelWidth and dwPixelHeight are non-zero (assert on failure)\n2. Validate dwImageByteStride >= dwPixelHeight (assert on failure)\n3. Enter g_CelCriticalSection for thread-safe access\n4. Compute hash bucket index: g_dwCelTableMask & dwCelKey\n5. Look up cel entry in g_pCelDataTable at bucket * 0xC offset\n6. Search linked list for matching dwCelKey\n7. If no match found, leave critical section early (iVar3 = 0)\n8. If match found, create new frame node via InsertListNodeLinked\n9. Increment frame count at pCelEntry[9]\n10. Store frame metadata in new node:\n    - Offset +0x10: dwPixelWidth\n    - Offset +0x14: dwPixelWidth * dwPixelHeight (total pixels)\n    - Offset +0x0C: dwPixelHeight\n    - Offset +0x18: dwUserParam1\n    - Offset +0x1C: dwUserParam2\n    - Offset +0x08: dwUserParam3\n11. Check RGB mode flag (pCelEntry[6] & 0x4): if set, multiply height by 3\n12. Allocate destination buffer via FogMemAlloc(width * height)\n13. Store buffer pointer at frame node +0x20\n14. Copy image data via CopyMemoryWithStride with stride support\n15. If search was successful (iVar3 != 0), leave critical section\n\nParameters:\n  dwCelKey         - Hash key identifying the cel entry in table\n  pbImageData      - Source image pixel data buffer\n  dwImageByteStride - Byte stride/pitch of source image (row width in bytes)\n  dwPixelWidth     - Width of image in pixels\n  dwPixelHeight    - Height of image in pixels/rows\n  dwUserParam1     - User-defined parameter stored at frame +0x18\n  dwUserParam2     - User-defined parameter stored at frame +0x1C\n  dwUserParam3     - User-defined parameter stored at frame +0x08\n\nReturns:\n  void - No return value\n\nSpecial Cases:\n  - RGB mode (flag 0x4): Height multiplied by 3 for RGB channel separation\n  - Hash collision: Searches linked list for exact dwCelKey match\n  - Missing entry: Leaves critical section without adding frame\n\nStructure Layout (Cel Entry, 0xC byte stride):\n  Offset  Size  Field         Description\n  +0x00   4     dwKey         Cel key identifier\n  +0x04   4     pNext         Next entry in collision chain\n  +0x08   4     pFrameList    Pointer to frame linked list\n\nStructure Layout (Frame Node):\n  Offset  Size  Field         Description\n  +0x08   4     dwUserParam3  User parameter 3\n  +0x0C   4     dwPixelHeight Pixel height\n  +0x10   4     dwPixelWidth  Pixel width\n  +0x14   4     dwTotalPixels Width * Height\n  +0x18   4     dwUserParam1  User parameter 1\n  +0x1C   4     dwUserParam2  User parameter 2\n  +0x20   4     pbPixelData   Allocated pixel buffer\n\nMagic Numbers:\n  0x217 - Assert line for dimension validation\n  0x218 - Assert line for stride validation\n  0x227 - Line number for FogMemAlloc call\n  0x4   - RGB mode flag in cel entry flags\n  0xC   - Stride of cel table entries (12 bytes)\n  0x2C  - Offset to frame list in cel entry (pThis + 0xB dwords)",
+      "parameters": [{"name": "dwCelKey", "type": "dword", "storage": "Stack[0x4]:4"}, {"name": "pbImageData", "type": "byte *", "storage": "Stack[0x8]:4"}, {"name": "dwImageByteStride", "type": "dword", "storage": "Stack[0xc]:4"}, {"name": "dwPixelWidth", "type": "dword", "storage": "Stack[0x10]:4"}, {"name": "dwPixelHeight", "type": "dword", "storage": "Stack[0x14]:4"}, {"name": "dwUserParam1", "type": "dword", "storage": "Stack[0x18]:4"}, {"name": "dwUserParam2", "type": "dword", "storage": "Stack[0x1c]:4"}, {"name": "dwUserParam3", "type": "dword", "storage": "Stack[0x20]:4"}],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"dwImageByteStride >= dwPixelWidth\"", "\"dwPixelHeight && dwPixelWidth\""],
+      "api_calls": ["FogAssert", "FogMemAlloc", "FogAssert"],
+      "basic_block_count": 17
     },
     {
       "address": "0x6FE11950",
@@ -469,7 +498,7 @@
         "CFG": "83c161d031c1190987dbf44b080a8e25",
         "PRO": "f1869943ab27c894a30ed7f6b2b8afe6"
       },
-      "signature": "undefined AllocateCelImageData(uint * pCelFile, uint * * ppCelImage, uint dwUnused1, uint dwUnused2, int nVersion)",
+      "signature": "void AllocateCelImageData(uint * pCelFile, uint * * ppCelImage, uint dwUnused1, uint dwUnused2, int nVersion)",
       "calling_convention": "__stdcall",
       "comment": "Allocate and initialize CEL image data array from CEL file header. Validates version and flags before allocation.\n\nAlgorithm:\n1. Validate pCelFile pointer is not NULL, fail with error 0x379 if invalid\n2. Validate CELFILE_SERIALIZED flag (0x01) is set in dwFlags, fail with error 0x382 if not\n3. If nVersion is -1, verify CEL version field equals 6, fail with error 0x385 if mismatch\n4. If nVersion is not -1, verify CEL version field matches nVersion parameter, fail with error 0x387 if mismatch\n5. If flag 0x02 already set, exit (image data already allocated)\n6. Set flag 0x02 in dwFlags to mark initialization in progress\n7. Calculate total allocation size: (nWidth * nHeight * 0x2c bytes) with alignment\n8. Call Ordinal_10042(0x392, 0) to allocate memory, get pointer to allocation\n9. Zero-fill entire allocated buffer using STOSD/STOSB for efficiency\n10. Iterate through nWidth*nHeight image entries, set each offset field and link to image data\n11. Set output ppCelImage to pCelFile address\n\nParameters:\n  pCelFile (uint *) - Pointer to CEL file structure, field [0]=version, [1]=flags, [4]=width, [5]=height\n  ppCelImage (uint **) - Pointer to output CEL image pointer (will be set to pCelFile)\n  dwUnused1 (uint) - Unused parameter\n  dwUnused2 (uint) - Unused parameter\n  nVersion (int) - Expected CEL version (-1 to skip version check, or specific version like 6)\n\nReturns:\n  void - On success outputs pCelFile via ppCelImage\n  Never returns on validation failure - calls exit function\n\nSpecial Cases:\n  - If pCelFile is NULL, calls debug error handler then exit\n  - If SERIALIZED flag not set, calls debug error handler then exit\n  - If version mismatch, calls debug error handler then exit\n  - If flag 0x02 already set, returns without reallocation (idempotent)\n  - Uses Ordinal_10042 (Fog.MemAlloc) to allocate buffer\n\nMagic Numbers:\n  0x01 - CELFILE_SERIALIZED flag (must be set)\n  0x02 - CELFILE_IMAGEDATA_ALLOCATED flag (set after allocation)\n  0x2c - Size in bytes per image entry (44 bytes)\n  0x18 - Offset to image data pointer field within entry\n  0xb - Increment for next image data block (11 dwords = 44 bytes)\n  0x392 - Allocation request ID/code passed to Ordinal_10042\n  0x379, 0x382, 0x385, 0x387 - Error codes for different validation failures",
       "parameters": [{"name": "pCelFile", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "ppCelImage", "type": "uint * *", "storage": "Stack[0x8]:4"}, {"name": "dwUnused1", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "dwUnused2", "type": "uint", "storage": "Stack[0x10]:4"}, {"name": "nVersion", "type": "int", "storage": "Stack[0x14]:4"}],
@@ -573,7 +602,7 @@
       "calling_convention": "__stdcall",
       "comment": "Decode and render CEL frame with blending to destination surface.\n\nAlgorithm:\n1. Verify pCelFile pointer is non-NULL, abort if NULL with error 0x442\n2. If pCelFile provided, check dwVersion field equals 6, else abort with error 0x43b\n3. If pCelFile provided, verify dwFlags & 0x04 equals 0, else abort with error 0x43c\n4. Verify pDestSurface handle is non-NULL, abort if NULL with error 0x43f\n5. Load CEL data pointer from pCelFile->pCelData\n6. Extract header dimensions: pCelFile->nTopOffset, nLeftOffset, nFrameHeight\n7. Calculate frame bounds: nCalcX = nXPos + nLeftOffset, nCalcY = nYPos + nFrameHeight\n8. Adjust nCalcY for negative height: if delta < 0 then use original frame bottom\n9. Validate resulting height > 0, skip rendering if failed\n10. Apply nMaxWidth constraint: clamp rendered height if frame exceeds width limit\n11. Validate coordinate conditions: nDstX, nMaxWidth, or override flags must allow rendering\n12. Look up pixel decoder function: PTR_LAB_6fe2a1b4[pCelFile->dwFormat]\n13. Validate decoder function pointer is non-NULL, abort if NULL with error 0x46a\n14. Call decoder with adjusted offsets, blend mode, and surface parameters\n\nParameters:\npCelFile (CelFile *) - CEL file header with pixel data and dimension metadata\nnXPos (int) - Source X offset within CEL frame\nnYPos (int) - Source Y offset within CEL frame\nnDstX (int) - Destination surface X coordinate for rendered output\nnDstY (int) - Destination surface Y coordinate for rendered output\nnDestSurface (int) - Destination video surface handle/pointer\nnMaxWidth (int) - Maximum rendering width constraint in pixels\ndwBlendMode (uint) - Pixel blending operation index for decoder\ndwParam9 (uint) - Format-specific parameter passed to decoder\ndwParam10 (uint) - Format-specific parameter passed to decoder\ndwParam11 (uint) - Format-specific parameter passed to decoder\n\nReturns:\nvoid - Function returns void, terminates process on validation failure",
       "parameters": [{"name": "pCelFile", "type": "CelFile *", "storage": "Stack[0x4]:4"}, {"name": "nXPos", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nYPos", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nDstX", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nDstY", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "nDestSurface", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "nMaxWidth", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwBlendMode", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "dwParam9", "type": "uint", "storage": "Stack[0x24]:4"}, {"name": "dwParam10", "type": "uint", "storage": "Stack[0x28]:4"}, {"name": "dwParam11", "type": "uint", "storage": "Stack[0x2c]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pDestSurface\"", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"sgpfnDecodeFunc[eFormat]\"", "\"!( pCelFile->dwFlags & CELFILE_24BIT )\""],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"sgpfnDecodeFunc[eFormat]\"", "\"pCel\""],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 25
     },
@@ -623,7 +652,7 @@
       "calling_convention": "__stdcall",
       "comment": "Decode and render a CEL frame to destination surface with coordinate/height validation and optional transformation.\n\nAlgorithm:\n1. Validate pCelFile pointer and check dwVersion == 6\n2. Validate dwFlags & 0x4 == 0\n3. Validate pDestSurface != NULL\n4. Load pCelFile.dwData and validate != NULL\n5. Calculate nFrameYEnd = nY + pCelFile.dwCelHeight\n6. Calculate nClipStartY = nFrameYEnd - nYOffset, nClipEndY = nClipStartY - nHeightClamp\n7. Clamp Y values: if nClipStartY < 0 set to 0; if nClipEndY >= nHeight set to nHeight - 1\n8. Calculate render height = nClipEndY - nClipStartY (skip if <= 0)\n9. Lookup decoder function from table using pCelFile.dwFormat as index\n10. Validate decoder != NULL\n11. Call decoder with frame offset, stride, height, and format parameters\n\nParameters:\n  pCelFile (int *) - Pointer to CELFILE structure with version, flags, format, width, height, data\n  nBufferOffset (int) - Byte offset into frame data\n  nY (int) - Y coordinate for frame placement\n  pRGB (void *) - RGB palette or color translation buffer\n  pAlpha (void *) - Alpha/transparency buffer\n  pDestSurface (void *) - Destination surface pointer (must not be NULL)\n  nHeight (int) - Height limit for clipping\n  dwTranslationOffset (uint) - Offset within translation table\n  dwFrameIndex (uint) - Frame index selector\n  pOutputBuffer (void *) - Output/intermediate buffer for decoded frame data\n  nYOffset (int) - Y offset for vertical positioning\n  nHeightClamp (int) - Height clamp value\n  dwFlags (uint) - Format/behavior flags (bit 0x4 validated)\n\nReturns:\n  void (always succeeds or terminates with assertion failure on invalid input)",
       "parameters": [{"name": "pCelFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nBufferOffset", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nY", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "pRGB", "type": "void *", "storage": "Stack[0x10]:4"}, {"name": "pAlpha", "type": "void *", "storage": "Stack[0x14]:4"}, {"name": "pDestSurface", "type": "void *", "storage": "Stack[0x18]:4"}, {"name": "nHeight", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwTranslationOffset", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "dwFrameIndex", "type": "uint", "storage": "Stack[0x24]:4"}, {"name": "pOutputBuffer", "type": "void *", "storage": "Stack[0x28]:4"}, {"name": "nYOffset", "type": "int", "storage": "Stack[0x2c]:4"}, {"name": "nHeightClamp", "type": "int", "storage": "Stack[0x30]:4"}, {"name": "dwFlags", "type": "uint", "storage": "Stack[0x34]:4"}],
-      "string_refs": ["\"sgpfnDecodeFunc[pCelFile->format]\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pDestSurface\"", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"!( pCelFile->dwFlags & CELFILE_24BIT )\""],
+      "string_refs": ["\"sgpfnDecodeFunc[pCelFile->format]\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"pCel\""],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 20
     },
@@ -648,7 +677,7 @@
       "calling_convention": "__stdcall",
       "comment": "Blit scaled CMP frame with vertical clipping to destination surface.\n\nAlgorithm:\n1. Validate CMP file pointer and CEL data exists (pCmpFile[1])\n2. Verify CEL version is 6 (standard D2 CMP format)\n3. Verify CEL flags do not have 0x4 set (unsupported compression)\n4. Validate destination surface is non-NULL\n5. Retrieve CMP dimensions from header (width at +0x4, height at +0x8)\n6. Calculate nHalfWidth = frame_offset_y / 2 (center baseline)\n7. Calculate nScaledY = nYOffset + nHalfWidth\n8. Calculate nRowsToDraw = frame_height / 2 (scaled height)\n9. If nScaledY < nRowsToDraw, clamp: nRowsToDraw = nScaledY + 1\n10. Skip if nRowsToDraw <= 0 (entirely above viewport)\n11. If nScaledY > nMaxY, apply bottom clipping and adjust row count\n12. Call DecompressCelData with clipped parameters\n\nParameters:\n- pCmpFile (int*): CMP file structure [0]=pCelData, [1]=pCelHeader\n- nXOffset (int): Source X offset into frame\n- nYOffset (int): Source Y offset into frame\n- nDestX (int): Destination X coordinate\n- nDestY (int): Destination Y coordinate\n- pDestSurface (byte*): Destination surface buffer\n- nMaxY (int): Maximum Y coordinate (clipping boundary)\n- dwPitch (uint): Surface pitch in bytes per scanline\n- nPaletteIndex (int): Palette offset for color remapping\n- bTransparency (byte): Transparency/blitting mode flags\n\nReturns:\n- void (modifies destination surface in-place)\n\nMagic Numbers:\n- 0x6: Expected CEL version for CMP compatibility\n- 0x4: CEL flag mask for unsupported compression\n- 0x4f6, 0x4f7, 0x4fa, 0x4fd: Source line numbers for assertions",
       "parameters": [{"name": "pCmpFile", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "nXOffset", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nYOffset", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nDestX", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nDestY", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "pDestSurface", "type": "byte *", "storage": "Stack[0x18]:4"}, {"name": "nMaxY", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "dwPitch", "type": "uint", "storage": "Stack[0x20]:4"}, {"name": "nPaletteIndex", "type": "int", "storage": "Stack[0x24]:4"}, {"name": "bTransparency", "type": "byte", "storage": "Stack[0x28]:1"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pDestSurface\"", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"!( pCelFile->dwFlags & CELFILE_24BIT )\""],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCelFile->dwVersion == CELFILE_VERSION\"", "\"pCel\""],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 17
     },
@@ -698,7 +727,7 @@
       "calling_convention": "__stdcall",
       "comment": "Returns the tableIndex field from a CelFileInfo structure.\n\nAlgorithm:\n1. Validate pCelFile pointer is not NULL\n2. If NULL: Log error via FogAssertFail and terminate process\n3. Return pCelFile->tableIndex (offset +4)\n\nParameters:\n- pCelFile (CelFileInfo*): Pointer to CelFileInfo structure; must not be NULL\n\nReturns:\n- uint: The tableIndex field value from the CelFileInfo structure\n\nMagic Numbers:\n- 0x55d (1373): Error code/line number for assert failure logging\n- 0xFFFFFFFF (-1): Termination exit code",
       "parameters": [{"name": "pCelFile", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCel\""],
       "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
@@ -723,7 +752,7 @@
       "calling_convention": "__stdcall",
       "comment": "Validate and retrieve CelMode value at offset +8.\n\nAlgorithm:\n1. Validate pCelModeValue is not NULL\n2. If NULL, call FogAssertFail with error code 0x56b and terminate\n3. Return DWORD at offset +8 (pCelModeValue[2])\n\nParameters:\n- pCelModeValue (int*): Pointer to CelMode structure\n\nReturns:\n- DWORD value from CelMode structure at offset +8\n\nSpecial Cases:\n- NULL pointer triggers assertion failure and process termination\n- Error code 0x56b (1387) indicates invalid CelMode pointer",
       "parameters": [{"name": "pCelModeValue", "type": "int *", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCel\""],
       "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
@@ -748,7 +777,7 @@
       "calling_convention": "__stdcall",
       "comment": "Returns the height field from a CelFileInfo structure.\n\nAlgorithm:\n1. Validate pCelFileInfo pointer is not NULL\n2. If NULL: Log error via FogAssertFail and terminate process\n3. Return pCelFileInfo->height (offset 0xc)\n\nParameters:\n- pCelFileInfo (CelFileInfo*): Pointer to CelFileInfo structure; must not be NULL\n\nReturns:\n- uint: The height field value from the CelFileInfo structure\n\nMagic Numbers:\n- 0x579 (1401): Error code/line number for assert failure logging\n- 0xFFFFFFFF (-1): Termination exit code",
       "parameters": [{"name": "pCelFileInfo", "type": "CelFileInfo *", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCel\""],
       "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
@@ -773,7 +802,7 @@
       "calling_convention": "__stdcall",
       "comment": "Validates pointer and returns field value at offset 0x10.\n\nAlgorithm:\n1. Load parameter pData from stack [ESP + 0x4]\n2. Test pData for NULL value\n3. If pData is NULL (zero), trigger fatal error:\n   - Push error code 0x587\n   - Push error message string pointer (0x6fe2e094)\n   - Push global error context (0x6fe2e3d8)\n   - Call Ordinal_10023 (Fog.ErrorMsg) to display error\n   - Call FUN_6fe21293(0xffffffff) to terminate\n4. If pData is valid (non-NULL):\n   - Load DWORD from [pData + 0x10]\n   - Return value in EAX\n5. Stack cleanup: Caller pops 4-byte parameter\n\nParameters:\n  pData (void *) - Pointer to structure; must be non-NULL or function terminates\n\nReturns:\n  uint - Value at offset 0x10 of pData structure (success)\n  Does not return if pData is NULL (calls exit handler)\n\nSpecial Cases:\n  - NULL pointer triggers fatal error with code 0x587\n  - Error message reference: s_C__Projects_Diablo2_Source_D2CMP_6fe2e094\n  - Function never returns if validation fails\n  - Assumes 4-byte aligned DWORD field at offset 0x10\n\nRelated Functions:\n  - Ordinal_10023 - Fog.ErrorMsg (error reporting)\n  - FUN_6fe21293 - Exit/termination handler",
       "parameters": [{"name": "pData", "type": "void *", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."],
+      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...", "\"pCel\""],
       "api_calls": ["FogAssert"],
       "basic_block_count": 3
     },
@@ -2119,7 +2148,7 @@
         "CFG": "d7c4999e577577ccbc6428f046e05544",
         "PRO": "19e847c17746cfbd3d40d83c0d0bcf1e"
       },
-      "signature": "undefined * DecompressSpriteFrame(uint * pBuffer, undefined * pUnknown1, int nDataSize, int * pSpriteData, int nFrameOffset, int nStartDir, int nEndDir, int * pPixelCount, int dwHandle)",
+      "signature": "void DecompressSpriteFrame(uint * pBuffer, undefined * pUnknown1, int nDataSize, int * pSpriteData, int nFrameOffset, int nStartDir, int nEndDir, int * pPixelCount, int dwHandle)",
       "calling_convention": "__fastcall",
       "comment": "Decompress sprite frame from bit-packed buffer into pixel data.\n\nAlgorithm:\n1. Lock critical section for sprite decompression atomicity\n2. Read sprite frame metadata (width, height, cell count, direction info)\n3. Initialize palette lookup tables from control bits in input\n4. For each direction in range [nStartDir, nEndDir):\n   a. Read palette index bytes (4-bit fields) and control flags\n   b. Resolve palette entries to cell properties (position, size)\n   c. Call DecompressSpriteRow to decompress pixel data for each cell\n   d. Validate frame bounds and error flags\n   e. Accumulate total pixels via pPixelCount\n5. Copy final frame to output and unlock critical section\n\nParameters:\n- pBuffer: Input bitstream buffer (uint *, ECX-fastcall) - source sprite data\n- pUnknown1: Unknown context (undefined *, EDX-fastcall)\n- nDataSize: Size of input in uint32 units (int)\n- pSpriteData: Sprite metadata (int *) - frame cell descriptions\n- nFrameOffset: Offset within sprite (int)\n- nStartDir: Starting direction (int)\n- nEndDir: Ending direction (int)\n- pPixelCount: Output pixel accumulator (int *) - incremented per frame\n- dwHandle: Error context handle (undefined4)\n\nReturns:\n- undefined *: Decompressed sprite frame data pointer\n\nSpecial Cases:\n- Buffer underflow: Asserts prevent reading past end\n- Empty palettes: Skipped if cell count is zero\n- Direction ordering: Must satisfy nStartDir < nEndDir",
       "parameters": [{"name": "pBuffer", "type": "uint *", "storage": "ECX:4"}, {"name": "pUnknown1", "type": "undefined *", "storage": "EDX:4"}, {"name": "nDataSize", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "pSpriteData", "type": "int *", "storage": "Stack[0x8]:4"}, {"name": "nFrameOffset", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "nStartDir", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "nEndDir", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "pPixelCount", "type": "int *", "storage": "Stack[0x18]:4"}, {"name": "dwHandle", "type": "int", "storage": "Stack[0x1c]:4"}],
@@ -2369,7 +2398,7 @@
         "CFG": "ebedb8faf55908534e596ba5d47d40c7",
         "PRO": "658854ddf07fa8e9f33ead6ae67e7e32"
       },
-      "signature": "undefined InitializeSpriteDecompressionLock(void)",
+      "signature": "void InitializeSpriteDecompressionLock(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes the sprite decompression critical section on first call.\n\nAlgorithm:\n1. Load initialization flag g_dwSpriteDecompressionLockInitialized\n2. Check if flag is 0 (not yet initialized)\n3. If not initialized, call InitializeCriticalSection for g_hSpriteDecompressionLock\n4. Set flag to 1 to prevent re-initialization\n5. Return\n\nParameters:\n(none)\n\nReturns:\nvoid\n\nSpecial Cases:\n- Function is idempotent: multiple calls safe due to flag check\n- Uses Windows critical section for thread synchronization\n- Flag value: 0 = not initialized, 1 = initialized",
       "parameters": [],
@@ -2494,7 +2523,7 @@
         "CFG": null,
         "PRO": "f2715adc6ba6377266918519727fa91f"
       },
-      "signature": "int InitializeDefaults(void)",
+      "signature": "void InitializeDefaults(void)",
       "calling_convention": "__stdcall",
       "comment": "Initialize default configuration or state. Called unconditionally during DLL attachment.\n\nAlgorithm:\n1. Return success status (1) indicating initialization complete\n\nParameters:\n(none)\n\nReturns:\n1 - Success, initialization completed",
       "parameters": [],
@@ -2919,7 +2948,7 @@
         "CFG": null,
         "PRO": "7c73925a5bc6cf3fbea5111623e113ae"
       },
-      "signature": "undefined ToggleGameRunningState(void)",
+      "signature": "void ToggleGameRunningState(void)",
       "calling_convention": "__stdcall",
       "comment": "Toggle/check game running flag\n\nAlgorithm:\n1. Load current game running flag (g_dwGameRunning)\n2. Clear EAX register\n3. Test if flag is zero (game not running)\n4. Set AL to 1 if flag is zero, 0 otherwise (inverted check)\n5. Store result back to g_dwGameRunning\n6. Return inverted state\n\nParameters:\n(none)\n\nReturns:\nvoid (result stored in g_dwGameRunning global)\n\nSpecial Cases:\n- Function toggles the flag state on each call\n- Used as a simple game state check mechanism\n\nMagic Numbers:\n- 0x00 = game not running state\n- 0x01 = game running state",
       "parameters": [],
@@ -3019,7 +3048,7 @@
         "CFG": "d01e5563fdbdd888c84d483857608197",
         "PRO": "6e727d8184e77a3d691ad97ac530e083"
       },
-      "signature": "int * AllocateAndClearBuffer(void)",
+      "signature": "void * AllocateAndClearBuffer(void)",
       "calling_convention": "__stdcall",
       "comment": "Allocate and zero-initialize a 512-byte (0x200) buffer for hash table storage.\n\nAlgorithm:\n1. Call Ordinal_10042 with type 0x2a and flags 0 to allocate 512 bytes\n2. Verify allocation succeeded; if NULL, assert with ptHash error string and exit\n3. Clear all 512 bytes (0x80 dwords) using REP STOSD\n4. Return allocated buffer pointer\n\nParameters:\nNone\n\nReturns:\nPointer to newly allocated 512-byte buffer; filled with zeros\nNever returns NULL (asserts and exits on allocation failure)\n\nSpecial Cases:\n- Calls Ordinal_10042 (likely Storm memory allocation)\n- FogAssertFail terminates on allocation failure (no return)\n- Clears exactly 0x200 (512) bytes via REP STOSD loop",
       "parameters": [],
@@ -3169,10 +3198,10 @@
         "CFG": "9d95d0d72ba3d0f8ca13ab2ea583953f",
         "PRO": "a8bdb26100bd0f11cfcd2a2c95838f27"
       },
-      "signature": "uint ComputeResourceHash(int nResourceId, byte * pbData, uint * pdwHashResult, uint * pdwExtra)",
+      "signature": "uint ComputeResourceHash(int nResourceId, byte * pbData, int * pdwHashResult, dword * pdwExtra)",
       "calling_convention": "__fastcall",
       "comment": "Compute hash value for resource based on type and data offsets.\n\nAlgorithm:\n1. Call FUN_6fe18fb0 with resource ID and data pointer to compute initial hash\n2. Store initial hash in output parameter\n3. Read resource type from offset 0x20\n4. If type=6 with flag 0x02 set, OR type=3, OR type=4:\n   a. Verify resource context pointer at offset 0x44 is non-null\n   b. If null, assert failure (non-returning)\n   c. Call Ordinal_502 (Storm.dll cache function) with context and flags (1, 0)\n   d. Retrieve stored hash from output parameter\n5. Otherwise, sum offsets 0x30, 0x34, 0x38, 0x3c, 0x40 from resource ID\n6. Add summed offsets to hash value\n7. Apply XOR-based mixing: extract bits and XOR with rotated values\n8. Return final mixed hash\n\nParameters:\nnResourceId (int) - Resource ID or pointer to resource structure\npbData (byte*) - Pointer to resource data buffer\npdwHashResult (uint*) - Output pointer for computed hash value\npdwExtra (uint*) - IMPLICIT (in EDX) - Extra parameter or context\n\nReturns:\nuint - Final mixed hash value (used for cache lookups or validation)\n\nSpecial Cases:\n- Type 6 requires 0x02 flag set to trigger cache lookup\n- Assertion failure with non-returning FUN_6fe21293 on null context\n- Hash mixing uses 13-bit shifted XOR patterns (0x1fff masks)\n\nMagic Numbers:\n- 0x20, 0x1c, 0x44, 0x40, 0x3c, 0x38, 0x34, 0x30 - Offsets in resource structure\n- 0x02 - Flag mask for type 6 check\n- 0x1fff0000, 0x1fff00, 0x1fff - XOR mixing masks\n- 0x1, 0x0 - Parameters to Ordinal_502",
-      "parameters": [{"name": "nResourceId", "type": "int", "storage": "ECX:4"}, {"name": "pbData", "type": "byte *", "storage": "EDX:4"}, {"name": "pdwHashResult", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "pdwExtra", "type": "uint *", "storage": "Stack[0x8]:4"}],
+      "parameters": [{"name": "nResourceId", "type": "int", "storage": "ECX:4"}, {"name": "pbData", "type": "byte *", "storage": "EDX:4"}, {"name": "pdwHashResult", "type": "int *", "storage": "Stack[0x4]:4"}, {"name": "pdwExtra", "type": "dword *", "storage": "Stack[0x8]:4"}],
       "string_refs": ["\"ptCelContext->tUnitInfo.pszFileName\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\GfxHas..."],
       "api_calls": ["FogAssert", "ComputeStringHash"],
       "basic_block_count": 9
@@ -3434,11 +3463,11 @@
       "name": "ConvertAndQuantizeRGBImage",
       "display_name": "ConvertAndQuantizeRGBImage",
       "has_human_name": true,
-      "index": "STR:a2cf870690873ed905d5709695ebd5fc",
+      "index": "STR:4d18c45a204f5477d249e3cc7981ef6a",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "a2cf870690873ed905d5709695ebd5fc",
+        "STR": "4d18c45a204f5477d249e3cc7981ef6a",
         "API": "f7af0434fc3f066da6880f5d7cbf3d84",
         "MNE": "7ba7707b66101acf773831ee16339680",
         "CFG": "75a7c126c9ed85e27aebdac7b54be569",
@@ -3448,7 +3477,7 @@
       "calling_convention": "__stdcall",
       "comment": "Convert RGB image to HSL color space and quantize palette\n\nAlgorithm:\n1. Validate source palette pointer is not NULL\n2. Allocate 0x6c327 bytes for output image buffer\n3. Copy source palette (0x100 entries) to output buffer\n4. For each RGB pixel in source (0x100 total):\n   - Convert RGB triplet to HSL (Hue, Saturation, Lightness) components\n   - Store HSL triplet in output HSL buffer\n5. For 3 color plane iterations (quantization levels):\n   - Calculate quantization parameters based on current plane\n   - Perform cross-plane color interpolation/blending\n   - Generate quantized palette indices using Ordinal_10004\n6. Generate grayscale ramp palette (32 levels)\n7. Post-process with QuantizePaletteImage\n8. Return pointer to converted and quantized image data\n\nParameters:\nIMPLICIT: EBP + 0x8 - source palette pointer (undefined4 *)\n\nReturns:\nEAX - pointer to quantized image buffer (byte *)\n\nMagic Numbers:\n0x6c327 - image buffer allocation size (442151 bytes)\n0x100 - palette entry count (256 colors)\n0xff - maximum RGB/HSL component value\n0x80 - bit flag for color channel operations\n0x20 - grayscale ramp level count (32 levels)\n0x3500 - intermediate buffer offset\n0x6b600 - final palette offset within buffer",
       "parameters": [],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Palett...", "\"dHue >= 0.0f && dHue < 360.0f\"", "\"dLum >= 0.0f && dLum <= 1.0f\"", "\"dSat >= 0.0f && dSat <= 1.0f\""],
+      "string_refs": ["\"pPal\"", "\"dHue >= 0.0f && dHue < 360.0f\"", "\"dLum >= 0.0f && dLum <= 1.0f\"", "\"dSat >= 0.0f && dSat <= 1.0f\""],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert", "FindClosestColorMatch", "FindClosestColorMatch"],
       "basic_block_count": 57
     },
@@ -3759,11 +3788,11 @@
       "name": "LoadPaletteFromFile",
       "display_name": "LoadPaletteFromFile",
       "has_human_name": true,
-      "index": "STR:66891ee071f81664f2a88e9f3ef2b225",
+      "index": "STR:88957becc3b3eea02560eb67886ae150",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "66891ee071f81664f2a88e9f3ef2b225",
+        "STR": "88957becc3b3eea02560eb67886ae150",
         "API": "449e68050137ffb3d02781b1c2e44b59",
         "MNE": "94de2dec4ef363e042c9c418e14158ac",
         "CFG": "408bda0aa7091cae5cc43fba3b726ad4",
@@ -3773,7 +3802,7 @@
       "calling_convention": "__stdcall",
       "comment": "Load palette from standard 768-byte file or legacy PAL header format.\n\nAlgorithm:\n1. Validate input: lpszFilePath != NULL, 0 <= nStartEntry <= nEndEntry <= 0xFF (assert on failure)\n2. Store nEndEntry into g_dwPaletteEndIndex; set g_dwPaletteStartIndex=1\n3. Build distance lookup table: loop from -256 to 0, store i*i into g_anPaletteDistanceLookup[i+256]\n4. Get length of lpszFilePath via lstrlenA\n5. If length == 0: initialize g_paPaletteTable with bytes 0-255, set g_dwPaletteValidFlag=1, return 1\n6. CreateFileA(lpszFilePath, 0x80000000, 1, NULL, 3, 0, NULL) - open file for reading\n7. If INVALID_HANDLE_VALUE: output 3 debug strings (error, path, newline), return 0\n8. GetFileSize(hFile) - check if standard 0x300 (768) bytes\n9. If size == 0x300: standard palette\n   - ReadFile into g_abPaletteData at offset 0x300 bytes\n   - If read 0x300 bytes: copy to g_paPaletteTable via byte-swapping loop, set flag=1, close, return 1\n   - Else: set flag=0, close, return 0\n10. Else: legacy format with header\n   - Close handle, reopen same file\n   - If INVALID_HANDLE_VALUE: same error output, return 0\n   - Clear 0x80 bytes (0x20 dwords) to zero at [ESP+0x1C]\n   - ReadFile first 0x80 bytes into cStack_384\n   - Validate header: bytes[0]==0x0A, bytes[1]==0x05, bytes[3]==0x08\n   - If valid: clear 0x301-byte buffer (acStack_304)\n     * SetFilePointer(hFile, -0x301, NULL, 2) - seek to end-0x301\n     * ReadFile final 0x301 bytes into acStack_304\n     * If read 0x301 bytes AND acStack_304[0]==0x0C: copy palette via 3-byte stride, return 1\n     * Else: output \"Unable to extract palette...\" error, return 0\n   - Else: output \"File is not valid 256-color...\" error, return 0\n11. On any error path: set g_dwPaletteValidFlag=0, close handle, return 0\n\nParameters:\nlpszFilePath - File path to load (ASSERT if NULL); supports relative/absolute paths\nnStartEntry - Palette start index, must be 0-255 (ASSERT on violation)\nnEndEntry - Palette end index, must be 0-255 and >= nStartEntry (ASSERT on violation)\n\nReturns:\n1 (success) - palette loaded and initialized, g_dwPaletteValidFlag set\n0 (failure) - file error, validation failed, or read failed; g_dwPaletteValidFlag cleared\n\nMagic Numbers:\n0x300 - Standard palette size (256 colors * 3 bytes RGB = 768 bytes)\n0x80 - Header size for legacy format (128 bytes)\n0x301 - Legacy palette size with trailer (768 + 1 byte trailer)\n0x0A, 0x05, 0x08 - Legacy PAL header magic bytes [0], [1], [3]\n0x0C - Legacy palette trailer marker (form feed char)\n-0x256 to 0 - Distance lookup table range for color matching\n0x80000000 - GENERIC_READ flag for CreateFileA",
       "parameters": [{"name": "lpszFilePath", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "nStartEntry", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "nEndEntry", "type": "int", "storage": "Stack[0xc]:4"}],
-      "string_refs": ["\"PaletteStartEntry <= PaletteEndEntry\"", "\"PaletteEndEntry < NUMBER_PALETTE_ENTRIES\"", "\"Unable to open \"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Palett...", "\"PaletteStartEntry >= 0\"", "...+3 more"],
+      "string_refs": ["\"PaletteStartEntry <= PaletteEndEntry\"", "\"PaletteEndEntry < NUMBER_PALETTE_ENTRIES\"", "\"Unable to open \"", "\"PaletteStartEntry >= 0\"", "\"pszPalette != NULL\"", "...+2 more"],
       "api_calls": ["FogAssert", "FogAssert", "FogAssert", "FogAssert"],
       "basic_block_count": 36
     },
@@ -3819,7 +3848,7 @@
         "CFG": "f4436ce98642dc122ca65250aa1ce429",
         "PRO": "79159e4d0c402375779f0dcb3e5935f4"
       },
-      "signature": "int FindNearestPaletteColor(byte byRedComponent, byte byGreenComponent, uint dwBlueComponent)",
+      "signature": "void FindNearestPaletteColor(byte byRedComponent, byte byGreenComponent, uint dwBlueComponent)",
       "calling_convention": "__stdcall",
       "comment": "Find closest palette color match using RGB distance calculation.\n\nAlgorithm:\n1. Validate palette range: return 0 if end_index < start_index\n2. Initialize minimum distance to 0x7fffffff, best index to 0\n3. Iterate through palette entries from start_index to end_index:\n   a. Check if palette validation disabled (g_dwPaletteValidFlag == 0) OR palette entry used\n   b. Skip if game state active (g_dwGameStateFlag != 0) AND RGB already matches g_dwByteSwapResult\n   c. Calculate distance = abs(param_1 - entry[1]) + abs(param_3 - entry[-1]) + abs(param_2 - entry[0])\n   d. If distance < current minimum, update minimum and best_index\n4. Return best_index in AL, end_index in upper bytes\n\nParameters:\n   byRedComponent (byte): Red component value (0-255)\n   byGreenComponent (byte): Green component value (0-255)\n   dwBlueComponent (uint): Blue component value (0-255) in lower byte\n\nReturns:\n   AL: Best matching palette index (0-255)\n   Upper bytes: Palette end index (typically 0x0000XX00 format)\n\nSpecial Cases:\n   - Returns 0 if palette range invalid\n   - Skips palette entries if validation flag disabled OR entry marked as used\n   - Short-circuits if exact match found in cached g_dwByteSwapResult\n\nStructure Layout (Palette Entry - 4 bytes):\n   Offset | Size | Field | Type | Description\n   0      | 1    | [0]   | byte | G component\n   -1     | 1    | [-1]  | byte | R component\n   1      | 1    | [1]   | byte | B component\n   2      | 1    | [2]   | byte | Reserved/Padding\n\nMagic Numbers:\n   0x7fffffff: Initial minimum distance (max int32)\n   0xff: Component mask for extracting low byte\n   0x8: Parameter stack offset adjustment\n\nRelated Functions:\n   - g_dwPaletteValidFlag: Controls palette validation logic\n   - g_adDistanceLookupTable: Precomputed distance lookup",
       "parameters": [{"name": "byRedComponent", "type": "byte", "storage": "Stack[0x4]:1"}, {"name": "byGreenComponent", "type": "byte", "storage": "Stack[0x8]:1"}, {"name": "dwBlueComponent", "type": "uint", "storage": "Stack[0xc]:4"}],
@@ -3909,21 +3938,21 @@
       "name": "InitializeGlobalPalettes",
       "display_name": "InitializeGlobalPalettes",
       "has_human_name": true,
-      "index": "STR:459033560aaab950255c3937ceb2fcc9",
+      "index": "STR:da39e7d640689a46694749b911daf5ad",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "459033560aaab950255c3937ceb2fcc9",
+        "STR": "da39e7d640689a46694749b911daf5ad",
         "API": "3b29475da57d25edfe39a1a0ffeecf12",
         "MNE": "dee881113f3e8b7abd4c642e3d35d071",
         "CFG": "b4d1317792112e0d5b3642b4ebf8b310",
         "PRO": "e994716341e3d01d882487bf75759193"
       },
-      "signature": "undefined InitializeGlobalPalettes(void)",
+      "signature": "void InitializeGlobalPalettes(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes six global palette buffers from configuration files.\n\nAlgorithm:\n1. For each palette configuration (white, grey, brown variants):\n   a. Build path string: base path + subpath + extension\n   b. Call InitializeResourceAndLock to open palette file\n   c. On success: ReadAndValidateFileData loads 0x1500 bytes to palette buffer\n   d. On failure: Zero-fill buffer (0x540 dwords = 5376 bytes)\n2. Call BuildAndApplyPaletteShift for invgrey2 (id=7) and invgreybrown (id=8)\n\nParameters:\n(void) - No parameters\n\nReturns:\n(void) - No return value\n\nMagic Numbers:\n- 0xFFFFFFFF: SCASB string length counter init\n- 0x540: Palette buffer size in dwords (5376 bytes)\n- 0x1500: Palette data size in bytes (5376)\n- 0x38: Error path copy size (56 bytes)\n- 7, 8: Palette shift resource IDs (invgrey2, invgreybrown)\n\nGlobal Data:\n| Address | Buffer |\n|---------|--------|\n| 0x6febd3c0 | g_abPaletteBuffer1 |\n| 0x6fec3cc0 | g_abPaletteBuffer2 |\n| 0x6feca5c0 | g_abPaletteBuffer3 |\n| 0x6fed0ec0 | g_abPaletteBuffer4 |\n| 0x6fed77c0 | g_abPaletteBuffer5 |\n| 0x6fede0c0 | g_abPaletteBuffer6 |",
       "parameters": [],
-      "string_refs": ["\"Data\\\\Global\\\\Items\\\\Palette\\\\\"", "\"invgrey2\"", "\"brown\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\PalShi...", "\"greybrown\"", "...+2 more"],
+      "string_refs": ["\"Data\\\\Global\\\\Items\\\\Palette\\\\\"", "\"invgrey2\"", "\"grey\"", "\"invgrey\"", "\".dat\"", "...+1 more"],
       "api_calls": ["LogPoolWarning", "LogPoolWarning", "LogPoolWarning", "LogPoolWarning", "LogPoolWarning", "LogPoolWarning"],
       "basic_block_count": 19
     },
@@ -3948,7 +3977,7 @@
       "calling_convention": "__fastcall",
       "comment": "Builds a combined palette shift string and applies it to the palette data buffer.\n\nAlgorithm:\n1. Get length of global palette extension string\n2. Copy extension string to local buffer (256 bytes)\n3. Append input palette type string to buffer\n4. Append global palette shift source path to buffer\n5. Call FUN_6fe20b5e to load/parse the combined string into dwHandle\n6. If loading succeeds (nResult == 0):\n   - Call Ordinal_10025 (storm library) to clear error state (0x38 bytes)\n   - Zero-fill palette shift buffer (0x540 dwords = 5376 bytes per palette index)\n   - Return\n7. If loading fails (nResult != 0):\n   - Call FUN_6fe20c42 to decode data from loaded file into palette buffer (0x1500 bytes)\n   - Call FUN_6fe20ba6 to cleanup dwHandle\n   - Return\n\nParameters:\nszPaletteType: Palette type string to prepend to shift path\nnPaletteIndex: Palette index to select within g_pPaletteShiftBuffer (base + nPaletteIndex * 0x6900)\n\nReturns:\nvoid - Always succeeds; either initializes palette or applies loaded shift data\n\nStructure Layout:\nPalette Buffer: 0x6900 bytes per palette (16 total)\n- Palette data: 0x1500 bytes (max data)\n- Padding/unused: remaining bytes\n\nMagic Numbers:\n0x1500 (5376) - Palette data size in bytes\n0x540 (1344) - Palette zero-fill size in dwords (0x540 * 4 = 0x1500)\n0x6900 (26880) - Per-palette buffer stride\n0x38 (56) - Storm error buffer clear size\n\nNote: Uses repne scasb loop pattern for string length calculation (optimized strlen equivalent)",
       "parameters": [{"name": "szPaletteType", "type": "char *", "storage": "ECX:4"}, {"name": "nPaletteIndex", "type": "int", "storage": "EDX:4"}],
-      "string_refs": ["\"Data\\\\Global\\\\Items\\\\Palette\\\\\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\PalShi..."],
+      "string_refs": ["\"Data\\\\Global\\\\Items\\\\Palette\\\\\"", "\".dat\""],
       "api_calls": ["LogPoolWarning"],
       "basic_block_count": 3
     },
@@ -3969,10 +3998,10 @@
         "CFG": "1282fe4045feaaaaaa32677f4f613d48",
         "PRO": "961ac80550c4220f4f46be60c1c045fd"
       },
-      "signature": "undefined SetGameMode(int nMode)",
+      "signature": "void SetGameMode(uint nMode)",
       "calling_convention": "__stdcall",
       "comment": "Set global game mode if value is valid (1-5 range)\n\nAlgorithm:\n1. Load nMode parameter from stack\n2. Test if nMode > 0\n3. If not, return without modification\n4. Compare if nMode > 5\n5. If yes, return without modification\n6. Store nMode to g_nGameMode global\n7. Return to caller\n\nParameters:\nnMode (int) - New game mode value to set (valid range: 1-5)\n\nReturns:\nvoid - No return value, modifies global state only\n\nSpecial Cases:\n- Values <= 0 are rejected silently\n- Values > 5 are rejected silently\n- Only values 1-5 inclusive are accepted\n- Global g_nGameMode is only modified on valid input\n\nMagic Numbers:\n0x05 - Maximum valid mode value (exclusive upper bound)",
-      "parameters": [{"name": "nMode", "type": "int", "storage": "Stack[0x4]:4"}],
+      "parameters": [{"name": "nMode", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 4
@@ -3998,7 +4027,7 @@
       "calling_convention": "__stdcall",
       "comment": "Get palette shift buffer pointer for armor class and transformation index.\n\nAlgorithm:\n1. Validate nClass is in range [0, 8] and nTransformation is in range [0, 20]\n2. If either parameter exceeds limit, assert and call exit handler with -1\n3. If nClass is 0 or in range [3, 4] (invalid class indices), return NULL\n4. Calculate offset: nClass*105 + nTransformation (0x69 = 105 decimal)\n5. Add to base g_pPaletteShiftBuffer and shift left 8 bits (multiply by 0x100)\n6. Return pointer to palette data for the requested class/transformation pair\n\nParameters:\n  nClass (int) - Armor/corpse class index (0-8)\n  nTransformation (int) - Palette transformation index (0-20)\n\nReturns:\n  Pointer to palette shift buffer for the class/transformation pair, or NULL if invalid\n\nSpecial Cases:\n  - Class 0 and classes 3-4 return NULL (invalid class indices)\n  - Classes 1, 2, 5, 6, 7, 8 are valid and return palette pointer\n  - Out-of-range parameters trigger assertion failure\n\nMagic Numbers Reference:\n  0x9 (9) - Maximum valid class index + 1\n  0x15 (21) - Maximum valid transformation index + 1\n  0x69 (105) - Bytes per class section in palette buffer\n  0x100 (256) - Palette entry size (shift left 8 bits)",
       "parameters": [{"name": "nClass", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "nTransformation", "type": "int", "storage": "Stack[0x8]:4"}],
-      "string_refs": ["\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\PalShi...", "\"eClass < NUM_ICLASSES && eTransform < NUM_ITRANSF..."],
+      "string_refs": ["\"eClass < NUM_ICLASSES && eTransform < NUM_ITRANSF..."],
       "api_calls": ["FogAssert"],
       "basic_block_count": 8
     },
@@ -4069,7 +4098,7 @@
         "CFG": "96866a4ce8b4f0299246ba15185965f9",
         "PRO": "5e49aecc4fbff3b15e474b043981649a"
       },
-      "signature": "undefined * GetGameStructureSelector(int nGameIndex)",
+      "signature": "void GetGameStructureSelector(int nGameIndex)",
       "calling_convention": "__stdcall",
       "comment": "Returns one of two global game structure pointers based on input parameter\n\nAlgorithm:\n1. Load game index parameter from stack\n2. Test if game index is zero\n3. If zero OR game structure is NULL, use fallback pointer\n4. Otherwise use default game pointer\n5. Return selected pointer in EAX\n\nParameters:\nnGameIndex - Game index to validate (0 = invalid)\n\nReturns:\nvoid * - Pointer to game structure (either default or fallback)\n         NULL/0 if both pointers are invalid\n\nSpecial Cases:\n- Returns fallback pointer if index is 0\n- Returns fallback pointer if default structure is NULL\n- Both globals should be set before calling this function\n\nStructure Layout:\nReturns pointer to game structure containing:\n  [offset 0x00+] - Game state/data\n  [offset 0x04+] - Player/unit data references\n  [offset 0x08+] - World/map state",
       "parameters": [{"name": "nGameIndex", "type": "int", "storage": "Stack[0x4]:4"}],
@@ -4309,11 +4338,11 @@
       "name": "CreateUnitFilePath",
       "display_name": "CreateUnitFilePath",
       "has_human_name": true,
-      "index": "STR:dd842af969ac922174f22256a263b3cc",
+      "index": "STR:c38e962e6b5e8e2f55b11e4aca2336f8",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "dd842af969ac922174f22256a263b3cc",
+        "STR": "c38e962e6b5e8e2f55b11e4aca2336f8",
         "API": "73d2bc92b304a443dfc70af260c8ac98",
         "MNE": "0c7ce2c7ab390fb200c379b0f9f2714e",
         "CFG": "f27cdae3844b4d242ec354a25a8beff3",
@@ -4323,7 +4352,7 @@
       "calling_convention": "__fastcall",
       "comment": "Constructs a Diablo II unit graphics file path based on unit type and attributes.\n\nAlgorithm:\n1. Load unit type from pUnitInfo[0x20], check if type is valid (3-6)\n2. Check unit class bits (pUnitInfo[0x1c] & 0x02) to determine processing path\n3. For types 3, 4, 6: Copy base cel filename from pUnitInfo[0x44] to szOutputPath\n4. If type=3: Build path from component strings (DATA_GLOBAL_CHARS/MONSTERS/OBJECTS/MISSILES)\n5. Build filenames by copying: base_filename + class_string + dir_string + equipment_string\n6. Concatenate components separated by path separators from pUnitInfo offsets 0x30-0x42\n7. For remaining types: Use default path with DATA_GLOBAL_OVERLAYS or DATA_GLOBAL_MISSILES\n8. Set unit status flag (pUnitInfo[0x18] |= 1) to mark filename resolved\n\nParameters:\npUnitInfo - Pointer to unit structure (offset-based field access 0x18-0x44)\nszOutputPath - Output buffer for constructed filename path (256+ bytes recommended)\npbBaseFilename - Base filename component to prepend to generated path\n\nReturns:\nvoid - No direct return value; output written to szOutputPath buffer\n\nSpecial Cases:\nType 6 + class 0x02: Always uses DATA_GLOBAL_OVERLAYS path\nType 4: Uses format s_%s_items_%s.dc6 with DATA_GLOBAL_MONSTERS, DATA_GLOBAL variants\nType 3: Complex multi-component path building for character/monster classes\nInvalid types: Triggers FogAssertFail() and calls FUN_6fe21293(-1)\nNULL pUnitInfo[0x44]: Triggers assertion, non-returning error handler\n\nMagic Numbers:\n0x20 - Unit type field offset (byte [0=CHAR, 1=MONSTER, 2=OBJECT, 3=MISSILE, 4=ITEM, 5=?, 6=OVERLAY])\n0x1c - Unit class flags offset\n0x02 - Class flag mask for special processing\n0x44 - Pointer to cel filename string offset\n0x30-0x42 - Component flag offsets (0x20=skip flag, else use component)\n0x18 - Unit status flags offset (bit 0=filename resolved)\n0xffffffff - Loop counter initialization (string length search)\n0x20 - Skip flag constant (space character)",
       "parameters": [{"name": "pUnitInfo", "type": "int", "storage": "ECX:4"}, {"name": "pOutputPath", "type": "char *", "storage": "EDX:4"}, {"name": "pBaseFilename", "type": "byte *", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"DATA\\\\GLOBAL\\\\MISSILES\"", "\"DATA\\\\GLOBAL\\\\CHARS\"", "\"DATA\\\\GLOBAL\\\\OVERLAYS\"", "\"DATA\\\\GLOBAL\"", "\"[sCreateItemFileName] This should never happen.\\n...", "...+8 more"],
+      "string_refs": ["\"DATA\\\\GLOBAL\\\\MISSILES\"", "\"DATA\\\\GLOBAL\\\\CHARS\"", "\".DCC\"", "\"DATA\\\\GLOBAL\\\\OVERLAYS\"", "\"DATA\\\\GLOBAL\"", "...+11 more"],
       "api_calls": ["FogAssert", "FogAssert", "FogFatalError", "FogAssert", "FogFatalError"],
       "basic_block_count": 47
     },
@@ -4344,7 +4373,7 @@
         "CFG": "8f8d3155fb78d7dbc976ee3496fb986d",
         "PRO": "d8915539169cacf32109a3f52f1e60dc"
       },
-      "signature": "undefined InitializeHardwareCelData(byte * pbCelData, int nCelContext, int nGfxNode)",
+      "signature": "void InitializeHardwareCelData(byte * pbCelData, int nCelContext, int nGfxNode)",
       "calling_convention": "__fastcall",
       "comment": "Initialize hardware cel data for a gfx node.\n\nNote: Function uses multiple stack-allocated temporaries optimized away by compiler (iVar4, iVar5, uVar2, puVar6, puVar1). These SSA variables cannot be renamed.\n\nAlgorithm:\n1. Validate input parameters: nCelContext non-zero, nGfxNode non-zero\n2. Validate CelData flags: pbCelData & 0x01 == 0 (not in-use flag)\n3. Validate GfxNode state: fHardwareCelData not yet allocated (offset 0x28 == 0)\n4. Calculate total allocation: (bWidth * bHeight * 44 bytes) per cel\n5. Allocate memory block via Ordinal_10045 (Storm allocation)\n6. Zero-initialize allocated memory using REP STOSD/STOSB\n7. Get base data pointer via Ordinal_10094\n8. Iterate through each cel (bWidth * bHeight iterations):\n   a. Check validity: cel data non-null, dimensions <= 0x100\n   b. If invalid: construct error paths and log via Ordinal_10018/Ordinal_10024\n   c. If valid: link cel to allocation, advance pointer by 44 bytes\n9. Set fHardwareCelData flag = 1 to mark initialization complete\n\nParameters:\npbCelData: CelData structure pointer (checked for CELDATAFLAG_HW flag)\nnCelContext: Cel context ID for error reporting\nnGfxNode: GfxNode structure pointer containing width/height/allocation info\n\nReturns:\nvoid (terminating failures via Ordinal_10024)",
       "parameters": [{"name": "pbCelData", "type": "byte *", "storage": "ECX:4"}, {"name": "nCelContext", "type": "int", "storage": "EDX:4"}, {"name": "nGfxNode", "type": "int", "storage": "Stack[0x4]:4"}],
@@ -4494,7 +4523,7 @@
         "CFG": null,
         "PRO": "a1cf88b7d11b51ffe3ffc998c0a5c7ff"
       },
-      "signature": "undefined DispatchContextA(void)",
+      "signature": "void DispatchContextA(void)",
       "calling_convention": "__stdcall",
       "comment": "Thunk wrapper for ContextDispatcherStub.\n\nAlgorithm:\n1. Load ECX with context pointer (0x6fef2bc0)\n2. Jump to ContextDispatcherStub implementation\n\nParameters:\n- None\n\nReturns:\n- void - delegates to ContextDispatcherStub\n\nMagic Numbers:\n- 0x6fef2bc0: Context/state pointer address (global data)",
       "parameters": [],
@@ -4569,7 +4598,7 @@
         "CFG": null,
         "PRO": "2ad81840afccb88203d6b1fe55ef602f"
       },
-      "signature": "undefined DispatchGraphicsContext(void)",
+      "signature": "void DispatchGraphicsContext(void)",
       "calling_convention": "__stdcall",
       "comment": "Tail-call wrapper to Ordinal_10103 with ECX parameter.\n\nAlgorithm:\n1. Load ECX register with data pointer (0x6fef1bc0)\n2. Jump to Ordinal_10103 with ECX set as IMPLICIT parameter\n\nParameters:\nNone (IMPLICIT: ECX = 0x6fef1bc0)\n\nReturns:\nVoid (transfers control to Ordinal_10103)",
       "parameters": [],
@@ -4828,6 +4857,31 @@
       "basic_block_count": 15
     },
     {
+      "address": "0x6FE1E5B0",
+      "rva": "0xE5B0",
+      "size": 90,
+      "name": "CountPendingAsyncOperations",
+      "display_name": "CountPendingAsyncOperations",
+      "has_human_name": true,
+      "index": "API:403127533ac2523dedf20ab85f6f0449",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "403127533ac2523dedf20ab85f6f0449",
+        "MNE": "2cf8735a4f27d6be12c1a90b47334352",
+        "CFG": "0771fbf39accc9045a54d2927d61fd33",
+        "PRO": "666575c9e4568c2db0f3f4a368b0c86f"
+      },
+      "signature": "int CountPendingAsyncOperations(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Count the number of pending asynchronous sprite cache operations.\n\nAlgorithm:\n1. Initialize pending count to 0\n2. Load head of global async data linked list (g_pAsyncDataList)\n3. If list is NULL, return 0 immediately\n4. For each node in the linked list:\n   a. Dereference node to get async item pointer\n   b. If item pointer is NULL, skip to next node\n   c. Check status flags at item+0x20; if bit 0 is set (completed), skip\n   d. Get async operation handle at item+0xB0\n   e. If handle is NULL, assert failure and terminate\n   f. Call PollAsyncOperationStatus to check if operation is still pending\n   g. If poll returns 0 (still pending), increment pending count\n   h. Advance to next node via link at offset 0x14\n5. Return total count of pending operations\n\nParameters:\nNone\n\nReturns:\nint - Number of async operations still pending (not yet completed)\n\nSpecial Cases:\n- Returns 0 if async data list is empty\n- Asserts and terminates if async item exists but has NULL operation handle\n- Skips items with completion flag (bit 0 at offset 0x20) already set\n\nStructure Layout (AsyncDataNode):\nOffset  Size  Field              Description\n0x00    4     pAsyncItem         Pointer to async item data\n0x14    4     pNext              Next node in linked list\n\nStructure Layout (AsyncItem):\nOffset  Size  Field              Description\n0x20    1     bStatusFlags       Status flags (bit 0 = completed)\n0xB0    4     pAsyncOpHandle     Handle to async operation\n\nSource File: SpriteCache.cpp line 0xA3F (2623)",
+      "parameters": [],
+      "string_refs": ["\"hAsyncData\"", "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Sprite..."],
+      "api_calls": ["PollAsyncOperationStatus", "FogAssert"],
+      "basic_block_count": 9
+    },
+    {
       "address": "0x6FE1E610",
       "rva": "0xE610",
       "size": 131,
@@ -4869,7 +4923,7 @@
         "CFG": "872df5e804b40f6897362396a43cb386",
         "PRO": "01f2b658d11d5e06915d8d8cf8de4029"
       },
-      "signature": "undefined ProcessAsyncDataListCleanup(void)",
+      "signature": "void ProcessAsyncDataListCleanup(void)",
       "calling_convention": "__stdcall",
       "comment": "Process asynchronous data list items, calling cleanup handlers on each item.\n\nAlgorithm:\n1. Load first async data item from global g_pAsyncDataList\n2. If list is NULL, return immediately\n3. For each item in linked list:\n   a. Load item pointer from [pItem]\n   b. If item pointer is NULL, skip to next\n   c. Load field at [pItem + 0xB0]\n   d. If field is NULL, skip to next\n   e. Call Ordinal_10092 with field (check/validate operation)\n   f. If Ordinal_10092 returns TRUE (non-zero), skip to next\n   g. Call Ordinal_10097 with field (cleanup/processing operation)\n   h. Clear field at [pItem + 0xB0] to NULL\n   i. Continue to next item via [pItem + 0x14]\n\nParameters:\nNone\n\nReturns:\nvoid - No return value. Operations performed on global state.\n\nSpecial Cases:\n- Handles NULL item pointers gracefully with JZ skip\n- Clears processed field after cleanup\n- Continues iteration even if Ordinal_10092 returns TRUE (field remains)",
       "parameters": [],
@@ -4994,7 +5048,7 @@
         "CFG": "e1f1663984cc38727d9368447703de65",
         "PRO": "e5f084e5832fe3d786f8df42d4e54b60"
       },
-      "signature": "undefined InitializeGridStructure(int pGridNode, int pSourceData)",
+      "signature": "void InitializeGridStructure(int pGridNode, int pSourceData)",
       "calling_convention": "__fastcall",
       "comment": "Initialize a 256-byte grid structure by copying rows from source data in a pyramid pattern.\n\nAlgorithm:\n1. Allocate 256-byte buffer (0x185 = 261 bytes) via Ordinal_10042\n2. Zero-fill the entire buffer (64 dwords) using REP STOSD\n3. Copy rows from source data into grid in a specific pattern for 15 rows (0xf)\n4. Row pattern: offset starts at 0xe, stride starts at 4 bytes\n5. For rows 0-7: decrease offset by 2 bytes, increase stride by 4 bytes\n6. For rows 8-14: increase offset by 2 bytes, decrease stride by 4 bytes\n7. Each row copied using REP MOVSD (dword copy) then REP MOVSB (remaining bytes)\n8. Set result structure fields: offset 0x8 = 1, offset 0xa = 0x100, offset 0x10 = buffer pointer\n\nParameters:\n- pGridNode (ECX, int): Grid node structure pointer to update with results\n- pSourceData (EDX, const void*): Source data pointer containing rows to copy\n\nReturns: void\n\nSpecial Cases:\n- Assertion failure if memory allocation fails (Ordinal_10042 returns NULL)\n- Row copying pattern creates a pyramid-shaped data layout in memory\n- Stride pattern: 4, 8, 12, 16, 20, 24, 28, 28, 24, 20, 16, 12, 8, 4, 0\n\nMagic Numbers:\n- 0x185 (261): buffer allocation size in bytes\n- 0x40 (64): number of dwords to zero-fill\n- 0xe (14): starting row offset in source data\n- 0x20 (32): offset increment between rows in source\n- 0x8, 0xa, 0x10: offsets into result structure to store dimensions and pointer\n\nRelated Functions:\n- ScanGridForNullTerminator() - Calls this to initialize grid after validation\n- Ordinal_10042 - Allocates memory (Storm.dll ordinal)\n- FogAssertFail() - Assertion handler",
       "parameters": [{"name": "pGridNode", "type": "int", "storage": "ECX:4"}, {"name": "pSourceData", "type": "int", "storage": "EDX:4"}],
@@ -5169,7 +5223,7 @@
         "CFG": null,
         "PRO": "44b09b74125d3e99860443d4d94ba593"
       },
-      "signature": "undefined ClearResetFlags(void)",
+      "signature": "void ClearResetFlags(void)",
       "calling_convention": "__stdcall",
       "comment": "Reset D2Common global state flags to zero.\n\nAlgorithm:\n1. Clear g_dwResetFlag1 by loading 0 into EAX and writing to memory\n2. Clear g_dwResetFlag2 by writing the same zero value to memory\n3. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nCalled during D2Common initialization/reset sequence. Both global flags are cleared atomically.",
       "parameters": [],
@@ -5194,7 +5248,7 @@
         "CFG": null,
         "PRO": "ca4bbcad5063b2b36dbddfaa909f3932"
       },
-      "signature": "undefined ProcessQueueAndLeaveCriticalSection(void)",
+      "signature": "void ProcessQueueAndLeaveCriticalSection(void)",
       "calling_convention": "__stdcall",
       "comment": "Fog.LeaveCriticalSection wrapper - Release thread synchronization lock\n\nReleases a critical section lock to allow other threads to access protected data.\nThis is a thin wrapper around the Fog.dll LeaveCriticalSection that processes\npending queue items before releasing the lock.\n\nAlgorithm:\n1. Call ProcessAndClearQueueItems to drain any pending items from g_LinkedListHead\n2. Return (the actual LeaveCriticalSection is handled via thunk tail call)\n\nParameters:\n- None (void signature, uses global g_LinkedListHead)\n\nReturns:\n- void\n\nRelated Functions:\n- ProcessAndClearQueueItems: Drains the pending item queue\n- Fog.EnterCriticalSection: Corresponding lock acquisition function",
       "parameters": [],
@@ -5244,7 +5298,7 @@
         "CFG": null,
         "PRO": "e1ef49ce6ed8909600367da1748e3fa9"
       },
-      "signature": "undefined ContextDispatcherStub(void)",
+      "signature": "void ContextDispatcherStub(void)",
       "calling_convention": "__stdcall",
       "comment": "Ordinal_10103 - Context dispatcher/stub (likely Fog.dll or thread management related)\n\nAlgorithm:\n1. Receives implicit ECX register parameter (context/state pointer)\n2. Used by wrapper functions Ordinal_10059 and Ordinal_10062 as dispatch target\n3. Acts as delegation point for context-aware operations\n\nParameters:\nIMPLICIT: ECX - Context/state pointer (passed by caller)\n\nReturns:\nvoid - No explicit return value\n\nSpecial Cases:\nThis is a stub dispatcher function that serves as a target for tail-call optimization wrappers.\nMultiple entry points (Ordinal_10059, Ordinal_10062) set different ECX values before jumping here.\nThe actual implementation may be optimized away or inlined by the compiler.\n\nRelated Functions:\n- Ordinal_10059 - Wrapper setting context 0x6fef2bc0\n- Ordinal_10062 - Wrapper setting context 0x6fef1bc0\n- Ordinal_10101 (EnterCriticalSection) - Thread lock entry\n- Ordinal_10102 (LeaveCriticalSection) - Thread lock exit",
       "parameters": [],
@@ -5269,7 +5323,7 @@
         "CFG": null,
         "PRO": "c83e7b120dbdd53f11ece02a70abdc25"
       },
-      "signature": "undefined StubNoOp_10105(void)",
+      "signature": "void StubNoOp_10105(void)",
       "calling_convention": "__stdcall",
       "comment": "Stub function - no operation, immediate return.\n\nAlgorithm:\n1. Return immediately to caller\n\nParameters:\nTwo dword-sized arguments passed via stack (consumed by RET 0x8)\n\nReturns:\nvoid - no return value\n\nNote:\nThis is a stub or placeholder function with no implementation. Exact parameter types unknown due to lack of usage context. Function returns immediately without performing any operations.",
       "parameters": [],
@@ -5394,7 +5448,7 @@
         "CFG": "27c4b65af61a99cc3f43c883b499e24d",
         "PRO": "a2ad24629450e47bac6a14623ad97328"
       },
-      "signature": "undefined BuildTileDisplayGraphics(uint * pTile, int nBaseOffset)",
+      "signature": "void BuildTileDisplayGraphics(uint * pTile, int nBaseOffset)",
       "calling_convention": "__stdcall",
       "comment": "Builds tile display graphics by iterating coordinate list, allocating square buffers, and filling with pixel data.\n\nAlgorithm:\n1. Validate pTile and nBaseOffset (assert failures terminate)\n2. For each coordinate in g_pawTileCoordinateList:\n   a. Allocate 0x600-byte square buffer via AllocClientMemory\n   b. Zero-fill buffer (0x180 dwords)\n   c. Extract 3-byte RGB from pTile[0xd], fill 0x200 pixels\n   d. Copy pixel data from source (15 rows with variable width)\n   e. Verify pixels match expected color; flag errors with 0x2001\n   f. Register square via UpdatePaletteIndex or link error component\n3. Reset pTile viewport: [0]=0, [1]=0, [2]=0xa0, [3]=0xffffff80\n\nParameters:\n- pTile (uint*): Tile structure with image data at [0xd], component list at [0x16]\n- nBaseOffset (int): Base offset for source tile image buffer\n\nReturns:\n- void: Modifies pTile in-place\n\nMagic Numbers:\n- 0x600: Square buffer size (0x180 dwords = 0x200 3-byte pixels)\n- 0x153, 0x1a6: Memory allocator codes\n- 0x185: Palette registration code\n- 0x2001: Error flag for pixel mismatch",
       "parameters": [{"name": "pTile", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "nBaseOffset", "type": "int", "storage": "Stack[0x8]:4"}],
@@ -6019,7 +6073,7 @@
         "CFG": "0259240c37ec798eb4c331e322458380",
         "PRO": "1fc3890fce05468bb2378d9cddae5361"
       },
-      "signature": "undefined CleanupProjectNodes(void)",
+      "signature": "void CleanupProjectNodes(void)",
       "calling_convention": "__stdcall",
       "comment": "Cleanup Project Nodes - Traverse and deallocate linked list of project structures\n\nAlgorithm:\n1. Load first project node from global g_pTileHashListHead\n2. If list is empty (NULL), set global to NULL and return\n3. For each node in the linked list:\n   a. Save next node pointer (offset 0x10c) before deallocation\n   b. Call ClearTileProjectData to cleanup TileProject at offset 0x104\n   c. Clear TileProject pointer to NULL\n   d. Call ClearHashTableBuckets to deallocate hash table at offset 0x108\n   e. Clear hash table pointer to NULL\n   f. Call UpdatePaletteIndex(0x29, 0) to trigger cleanup event\n   g. Move to next node and continue loop until end of list (NULL)\n4. Set global g_pTileHashListHead to NULL to mark list as cleaned\n\nParameters:\n   None\n\nReturns:\n   void\n\nMagic Numbers:\n   - 0x29: Cleanup event code\n   - 0x104: TileProject pointer offset in ProjectNode\n   - 0x108: Hash table pointer offset in ProjectNode\n   - 0x10c: Next node pointer offset in ProjectNode\n\nRelated Functions:\n   - ClearTileProjectData() - TileProject cleanup\n   - ClearHashTableBuckets() - Hash table deallocation\n   - UpdatePaletteIndex() - Cleanup event handler",
       "parameters": [],
@@ -6994,7 +7048,7 @@
         "CFG": "f792c90d3df0a2ae84eb1466505be4f5",
         "PRO": "1d01aa7da6511e223b0ba1dc0e9cf423"
       },
-      "signature": "undefined DestroyCompressionContext(void * pContext)",
+      "signature": "void DestroyCompressionContext(void * pContext)",
       "calling_convention": "__fastcall",
       "comment": "Destructor for compression context. Initializes vtable, triggers pre-cleanup (0x1b), conditionally deallocates secondary structure at offset +0x04, and triggers post-cleanup (0x1b).\n\nAlgorithm:\n1. Initialize vtable pointer at context base\n2. Call FUN_6fe21c63(0x1b) for pre-cleanup operations\n3. Load value at context+0x04 into temp register\n4. If temp is non-zero, call FUN_6fe21cd9 with temp as argument\n5. Call FUN_6fe21cc4(0x1b) for post-cleanup operations\n6. Return to caller\n\nParameters:\npContext (void *): Pointer to compression context structure, receives at ECX register (__fastcall)\n\nReturns:\nvoid\n\nNotes:\nCleanup magic number 0x1b (27 decimal) likely encodes cleanup stage or type identifier. Conditional deallocation at offset +0x04 suggests structure contains optional pointer to secondary allocation.",
       "parameters": [{"name": "pContext", "type": "void *", "storage": "ECX:4"}],
@@ -7294,7 +7348,7 @@
         "CFG": null,
         "PRO": "72bb810343ef337e6635b084c10e581a"
       },
-      "signature": "undefined __global_unwind2(PVOID param_1)",
+      "signature": "void __global_unwind2(PVOID param_1)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __global_unwind2\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "PVOID", "storage": "Stack[0x4]:4"}],
@@ -7319,7 +7373,7 @@
         "CFG": "d7e92aa36e4ea61ef8903512dfbaf1bc",
         "PRO": "8fdd836e27b803db7b78b7b70b2dd399"
       },
-      "signature": "undefined __local_unwind2(int param_1, int param_2)",
+      "signature": "void __local_unwind2(int param_1, int param_2)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n __local_unwind2\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release, Visual Studio 2003 Debug, Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}],
@@ -7369,7 +7423,7 @@
         "CFG": null,
         "PRO": "dbcae85018a69f3ffba65979340d95d9"
       },
-      "signature": "undefined __NLG_Notify1(int param_1)",
+      "signature": "void __NLG_Notify1(int param_1)",
       "calling_convention": "__fastcall",
       "comment": "Library Function - Single Match\n __NLG_Notify1\n\nLibraries: Visual Studio 2017 Debug, Visual Studio 2017 Release, Visual Studio 2019 Debug, Visual Studio 2019 Release",
       "parameters": [{"name": "param_1", "type": "int", "storage": "ECX:4"}],
@@ -7619,7 +7673,7 @@
         "CFG": null,
         "PRO": "e18be22ea86093e4773a2392d9f295c5"
       },
-      "signature": "undefined InitializeFloatingPointAndCPU(void)",
+      "signature": "void InitializeFloatingPointAndCPU(void)",
       "calling_convention": "__stdcall",
       "comment": "Initialize floating point hardware and CPU feature detection.\n\nAlgorithm:\n1. Set up floating point trap handler function pointers and conversion routines\n2. Query Windows Kernel32 module for IsProcessorFeaturePresent function\n3. If available, call IsProcessorFeaturePresent(0) to test processor features\n4. Store processor feature detection result to global variable g_dwProcessorFeature\n5. If IsProcessorFeaturePresent not available, call FUN_6fe22911 (fallback detection)\n6. Clear FPU exception flags with FNCLEX\n7. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- GetModuleHandleA may fail if Kernel32 not found (rare)\n- IsProcessorFeaturePresent may not be available on older Windows versions\n- Fallback FUN_6fe22911 handles alternative processor feature detection",
       "parameters": [],
@@ -7940,7 +7994,7 @@
         "CFG": null,
         "PRO": "2ea2178d45ea3da08f3f389db7d27410"
       },
-      "signature": "undefined ReleaseCriticalSectionIndex9(void)",
+      "signature": "void ReleaseCriticalSectionIndex9(void)",
       "calling_convention": "__stdcall",
       "comment": "Release critical section at index 9 (synchronization primitive cleanup).\n\nAlgorithm:\n1. Push constant 9 onto stack\n2. Call FUN_6fe21cc4 to release critical section at array index 9\n3. Return\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\nThis is a thin wrapper function that always operates on index 9. Used in exception handling cleanup paths to ensure critical section is released regardless of error conditions.",
       "parameters": [],
@@ -8115,7 +8169,7 @@
         "CFG": null,
         "PRO": "c4b85b56aa9a0c5f1efb39f3714d250d"
       },
-      "signature": "undefined InitializeCriticalSections(void)",
+      "signature": "void InitializeCriticalSections(void)",
       "calling_convention": "__stdcall",
       "comment": "Initialize game engine critical sections for thread synchronization.\n\nAlgorithm:\n1. Initialize critical section for g_pGameCriticalSection1\n2. Initialize critical section for g_pGameCriticalSection2\n3. Initialize critical section for g_pGameCriticalSection3\n4. Initialize critical section for g_pGameCriticalSection4\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\nCritical sections are initialized for synchronizing access to shared game engine resources.\n\nRelated Functions:\n- InitializeCriticalSection (Windows API) - Initialize each critical section\n- Called from FUN_6fe226bc - Main initialization routine",
       "parameters": [],
@@ -8265,7 +8319,7 @@
         "CFG": null,
         "PRO": "27f3a4acf5fffc03a99b0a443810abe8"
       },
-      "signature": "undefined LeaveCriticalSection9(void)",
+      "signature": "void LeaveCriticalSection9(void)",
       "calling_convention": "__stdcall",
       "comment": "Leave critical section 9, used for compression mode synchronization.\n\nAlgorithm:\n1. Push argument 9 onto stack\n2. Call LeaveCriticalSectionIndex with index 9\n3. Pop return address cleanup\n4. Return to caller\n\nParameters:\n(none)\n\nReturns:\nvoid\n\nSpecial Cases:\nThis is a dedicated wrapper for critical section 9 that coordinates access during compression mode operations.",
       "parameters": [],
@@ -8390,7 +8444,7 @@
         "CFG": "aad6cc7b89f49d42aff28fe10564d538",
         "PRO": "9b06a643f746aad6263af5088fb2e71f"
       },
-      "signature": "int CompareObjectsWithFlagValidation(byte * pbObj1, byte * pbObj2, uint * pdwFlags)",
+      "signature": "uint CompareObjectsWithFlagValidation(byte * pbObj1, byte * pbObj2, uint * pdwFlags)",
       "calling_convention": "__cdecl",
       "comment": "Compares two objects by name and validates compatibility flags.\n\nAlgorithm:\n1. Load name pointer from object 1 at offset +4\n2. If name pointer is NULL or name at +8 is empty string, return 1 (success)\n3. If name pointers match exactly, proceed to flag validation\n4. If pointers differ, compare names using strcmp(name1+8, name2+8)\n5. If strcmp returns 0 (names equal), proceed to flag validation\n6. If names differ, return 0 (mismatch)\n7. Flag validation: Check object 2 flag 0x2, object 1 flags 0x8, and params 0x1/0x2\n8. If all flag conditions met, return 1 (success), else return 0 (mismatch)\n\nParameters:\npbObj1 (byte *) - First object pointer, flag field at offset 0, name ptr at offset 4\npbObj2 (byte *) - Second object pointer, flag field at offset 0, name ptr at offset 4\npdwFlags (uint *) - Flags dword pointer for compatibility validation\n\nReturns:\n1 - Objects match (same/empty name and flags validate)\n0 - Objects don't match (different names or flag mismatch)\n\nSpecial Cases:\n- Empty names (NULL or empty string at offset +8) considered success\n- Flag 0x2 on obj2 blocks success unless obj1 has flag 0x8\n- Flag bits in pdwFlags control validation: 0x1 requires obj1 flag 0x1, 0x2 requires obj1 flag 0x2\n\nRelated Functions:\n- ProcessCppException() - Caller, validates exception objects\n- _strcmp() - Compares name strings when pointers differ",
       "parameters": [{"name": "pbObj1", "type": "byte *", "storage": "Stack[0x4]:4"}, {"name": "pbObj2", "type": "byte *", "storage": "Stack[0x8]:4"}, {"name": "pdwFlags", "type": "uint *", "storage": "Stack[0xc]:4"}],
@@ -8590,10 +8644,10 @@
         "CFG": "64f001e958cb75886bced722d66d85ff",
         "PRO": "b98277cef56d8b14e8e694472ff0dddd"
       },
-      "signature": "undefined __CallSettingFrame@12(int param_1, int param_2, int param_3)",
+      "signature": "void __CallSettingFrame@12(undefined4 param_1, undefined4 param_2, int param_3)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __CallSettingFrame@12\n\nLibraries: Visual Studio 2017 Debug, Visual Studio 2017 Release, Visual Studio 2019 Debug, Visual Studio 2019 Release",
-      "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
+      "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "undefined4", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 3
@@ -9065,7 +9119,7 @@
         "CFG": "dc31fd8ae2ce6da459435b7f021fe995",
         "PRO": "9eadceaeb70106b350bf4863bfe68181"
       },
-      "signature": "undefined CopyStringToOffset(char * szSource, int nOffset)",
+      "signature": "void CopyStringToOffset(char * szSource, int nOffset)",
       "calling_convention": "__cdecl",
       "comment": "Copies a string to a destination offset in memory.\n\nAlgorithm:\n1. Check if nOffset is non-zero (validation)\n2. If offset is zero, return early (no-op)\n3. Calculate string length via strlen()\n4. Call FUN_6fe25810 to copy bytes from szSource to (szSource + nOffset)\n5. Copy length is calculated as strlen(szSource) + 1 (includes null terminator)\n\nParameters:\n- szSource: Pointer to null-terminated string to copy\n- nOffset: Offset value determining destination address within same buffer\n\nReturns:\n- void (no return value)\n\nSpecial Cases:\n- If nOffset is 0, function returns without performing copy\n- String length includes null terminator in copy operation\n\nRelated Functions:\n- _strlen() - Calculate string length\n- FUN_6fe25810() - Perform actual memory copy",
       "parameters": [{"name": "szSource", "type": "char *", "storage": "Stack[0x4]:4"}, {"name": "nOffset", "type": "int", "storage": "Stack[0x8]:4"}],
@@ -9555,11 +9609,11 @@
       "name": "DisplayRuntimeError",
       "display_name": "DisplayRuntimeError",
       "has_human_name": true,
-      "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "index": "STR:dc4f611f55f850b5d4105d9192e20526",
       "index_method": "STR",
       "indexes": {
         "EXP": null,
-        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "STR": "dc4f611f55f850b5d4105d9192e20526",
         "API": null,
         "MNE": "da32166b3f0e7e0948a175245c62ec51",
         "CFG": "e9e3238573fb8758cb6dacb6540ea203",
@@ -9569,7 +9623,7 @@
       "calling_convention": "__cdecl",
       "comment": "Display runtime error dialog or exit message.\n\nSearches error code lookup table to determine if this is a special exit code,\nthen either displays an exit message or constructs and shows a runtime error dialog.\n\nAlgorithm:\n1. Search g_aExitCodeTable for matching error code (linear scan, stride=8 bytes)\n2. If found and exit initialized flag set, write simple exit message to stdout\n3. If found but exit NOT initialized, construct detailed error message:\n   a. Get module filename via GetModuleFileNameA\n   b. Truncate path to 60 chars if needed, append \"...\"\n   c. Build message: \"Runtime Error!\\\n\\\nProgram: [path]\\\n[error message]\"\n   d. Display message box via FUN_6fe274e8\n4. If error code not found (0xfc), no action taken\n\nParameters:\n  dwErrorCode (uint) - Exit/error code to display\n\nReturns:\n  void - Function performs side effects (I/O or dialog display)\n\nSpecial Cases:\n  - Code 0xfc treated as no-op (returns immediately)\n  - Module name \"unknown\" shown if GetModuleFileNameA fails (returns 0)\n  - Path truncation: names longer than 60 chars get \"...\" appended\n  - Message construction uses helper functions FUN_6fe26530 (init), FUN_6fe26540 (append)\n\nMagic Numbers:\n  0x3c (60) - Max path length before truncation\n  0x104 (260) - MAX_PATH for GetModuleFileNameA buffer\n  0xfc - Special error code meaning \"no operation\"\n  0x12010 - Message box flags (title centered, info icon)\n\nNote: Function contains 3 compiler-optimized register temporaries (pdwErrorMessage, ppErrorTable, abyPathTruncMarker) that cannot be fully typed due to SSA optimization.",
       "parameters": [{"name": "dwErrorCode", "type": "uint", "storage": "Stack[0x4]:4"}],
-      "string_refs": ["\"Runtime Error!\\n\\nProgram: \"", "\"Microsoft Visual C++ Runtime Library\"", "\"R6009\\r\\n- not enough space for environment\\r\\n\"", "\"<program name unknown>\""],
+      "string_refs": ["\"Microsoft Visual C++ Runtime Library\"", "\"\\n\\n\"", "\"R6009\\r\\n- not enough space for environment\\r\\n\"", "\"<program name unknown>\""],
       "api_calls": [],
       "basic_block_count": 15
     },
@@ -10065,10 +10119,10 @@
         "CFG": "0c16994fbe10fa28ca4c05c763f97fe7",
         "PRO": "c76324fb9562b24989b5fc42b6b8d59e"
       },
-      "signature": "int ValidateAndDispatchException(int * pExceptionRecord)",
+      "signature": "int ValidateAndDispatchException(undefined4 * pExceptionRecord)",
       "calling_convention": "__stdcall",
       "comment": "Validates exception record and dispatches to registered handler or default handler.\n\nAlgorithm:\n1. Extract exception structure pointer from pExceptionRecord\n2. Validate exception magic signature (0xe06d7363) at offset 0\n3. Check exception handler type at offset 4 == 3\n4. Verify exception flags at offset 5 == 0x19930520\n5. If all checks pass, call RegisterExceptionHandler() and return\n6. Check if global exception handler g_pfnExceptionHandler is registered\n7. Call FUN_6fe257f4(g_pfnExceptionHandler) to validate handler readiness\n8. If handler ready, call registered handler with exception record pointer\n9. Return handler result, or 0 if no handler available\n\nParameters:\npExceptionRecord (int *): Pointer to exception structure containing:\n  - [0]: magic signature (0xe06d7363)\n  - [4]: handler type (3 = standard exception handler)\n  - [5]: exception flags (0x19930520)\n\nReturns:\nint: Handler function result if executed, 0 if no custom handler available\n\nSpecial Cases:\n- Magic signature must be exactly 0xe06d7363 (C++ exception signature)\n- Handler type field at offset 4 must equal 3\n- Exception flags at offset 5 must equal 0x19930520\n- If g_pfnExceptionHandler is NULL, returns 0 (no handler)\n- If FUN_6fe257f4 validation fails, returns 0\n\nNote: Function uses 3 stack-allocated temporaries optimized away (iVar2, bVar1, extraout_var)",
-      "parameters": [{"name": "pExceptionRecord", "type": "int *", "storage": "Stack[0x4]:4"}],
+      "parameters": [{"name": "pExceptionRecord", "type": "undefined4 *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
@@ -10640,7 +10694,7 @@
         "CFG": "ade70882ac03ce3f609657714a7f6db8",
         "PRO": "0b059f9828ad4bc5476b0b06b812187c"
       },
-      "signature": "int NormalizeDoubleValue(ushort * pwValue, uint * pdwOutput, int * pnConfig)",
+      "signature": "uint NormalizeDoubleValue(ushort * pwValue, uint * pdwOutput, int * pnConfig)",
       "calling_convention": "__cdecl",
       "comment": "Normalize IEEE 754 double precision number with exponent and bitfield manipulation.\n\nAlgorithm:\n1. Extract exponent bits (bits 10-14) from high word and mask to 15 bits\n2. Calculate exponent offset (subtract 0x3FFF)\n3. If normalized (exponent == 0): check if mantissa is zero, clear to zero if so\n4. Else if denormalized: copy mantissa, clear bitfield range at param_3[2], recalculate exponent\n5. Apply conditional sign bit manipulation based on original sign flag (bit 15)\n6. Output to param_2 based on config param_3[4]: 0x40 = both words, 0x20 = high word only\n7. Return: 0 = success/zero, 1 = overflow, 2 = default result\n\nParameters:\n  pwValue: Pointer to IEEE 754 double high word (exponent + sign)\n  pdwOutput: Output buffer for normalized result (1-2 dwords)\n  pnConfig: Configuration array [0]=exponent_min, [1]=range_max, [2]=clear_bits, [3]=rotate_count, [4]=output_format, [5]=exponent_base\n\nReturns:\n  0 - Normalized successfully\n  1 - Overflow condition detected\n  2 - Default mantissa configuration applied\n\nMagic Numbers:\n  0x3FFF - Exponent bias for normalization\n  0x7FFF - Exponent mask (15 bits)\n  0x8000 - Sign bit mask\n  0x80000000 - Sign extension mask",
       "parameters": [{"name": "pwValue", "type": "ushort *", "storage": "Stack[0x4]:4"}, {"name": "pdwOutput", "type": "uint *", "storage": "Stack[0x8]:4"}, {"name": "pnConfig", "type": "int *", "storage": "Stack[0xc]:4"}],
@@ -10665,7 +10719,7 @@
         "CFG": null,
         "PRO": "362151cd1273aac3c9ac4fd7b554c3b4"
       },
-      "signature": "undefined ProcessExponentValue(ushort * pwExponentFields, uint * pdwOutputResult)",
+      "signature": "void ProcessExponentValue(ushort * pwExponentFields, uint * pdwOutputResult)",
       "calling_convention": "__cdecl",
       "comment": "Wrapper to process exponent value with configuration table.\n\nAlgorithm:\n1. Extract exponent fields from input array (pwExponentFields)\n2. Push configuration table pointer (g_adExponentConfigTable)\n3. Call ProcessExponentValue with array and result pointer\n4. Return result in pdwOutputResult\n\nParameters:\n- pwExponentFields: ushort* - Array of 6 exponent field values\n- pdwOutputResult: uint* - Output result buffer (2 dwords for 32-bit or 64-bit result)\n\nReturns:\n- undefined4: Result code (0=success, 1=overflow, 2=underflow)\n\nSpecial Cases:\n- Magic numbers: 0x3fff, 0x7fff, 0x8000 used for exponent range validation\n- Function handles floating-point exponent normalization",
       "parameters": [{"name": "pwExponentFields", "type": "ushort *", "storage": "Stack[0x4]:4"}, {"name": "pdwOutputResult", "type": "uint *", "storage": "Stack[0x8]:4"}],
@@ -11265,7 +11319,7 @@
         "CFG": "7248c67bf0c1d301014e8cfd788302b1",
         "PRO": "50191f5215650d57388859f136860675"
       },
-      "signature": "undefined8 __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aulldiv(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aulldiv\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -11290,7 +11344,7 @@
         "CFG": "b2617940305b6e1d0cf3c25e221e2cae",
         "PRO": "a307baf3b5662fd4c99a1c389c60a66a"
       },
-      "signature": "undefined8 __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
+      "signature": "void __aullrem(uint param_1, uint param_2, uint param_3, uint param_4)",
       "calling_convention": "__stdcall",
       "comment": "Library Function - Single Match\n __aullrem\n\nLibrary: Visual Studio",
       "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "uint", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "uint", "storage": "Stack[0x10]:4"}],
@@ -11415,7 +11469,7 @@
         "CFG": "2cea2c98520640c920f622d3daaf885f",
         "PRO": "9f903305dac24c951f3cebb45cf66933"
       },
-      "signature": "undefined InitializeCharacterTypeTable(void)",
+      "signature": "void InitializeCharacterTypeTable(void)",
       "calling_convention": "__stdcall",
       "comment": "Initializes character type and case conversion tables for multi-byte and single-byte character sets.\n\nAlgorithm:\n1. Call GetCPInfo to retrieve code page lead byte information\n2. If successful (multi-byte encoding):\n   a. Initialize ANSI character table [0x00-0xFF] with character values\n   b. Set position 0x00 to space (0x20) for control character handling\n   c. Iterate through LeadByte ranges and fill positions with spaces (0x20)\n   d. Call FUN_6fe2783d to calculate character type flags for each character\n   e. Call FUN_6fe27986 twice with modes 0x100 and 0x200 to populate case conversion tables (WCHAR)\n   f. Iterate 0x100 times: for each character type flag, set appropriate flags (0x10 for uppercase, 0x20 for lowercase) in g_abCharTypeTable offset+1, and store corresponding case conversion character in g_abCaseConversionTable\n3. If GetCPInfo fails (single-byte ASCII):\n   a. For characters 0x41-0x5A (uppercase A-Z): set flag 0x10, conversion = char + 0x20 (to lowercase)\n   b. For characters 0x61-0x7A (lowercase a-z): set flag 0x20, conversion = char - 0x20 (to uppercase)\n   c. For all other characters: set conversion = 0x00\n\nParameters:\nNone - function uses globals g_dwCharTypeFlags, g_dwCharTypeMode, g_abCharTypeTable, g_abCaseConversionTable\n\nReturns:\nvoid\n\nSpecial Cases:\n- If code page information unavailable, falls back to ASCII-only character classification\n- LeadByte ranges filled with spaces for multi-byte encoding support\n- g_abCharTypeTable flag operations preserve existing flags with OR (0x10 | 0x20)\n\nMagic Numbers Reference:\n0x100: Character set size (256 ASCII values 0x00-0xFF)\n0x01: Type flag bit for uppercase character class (from FUN_6fe2783d output)\n0x02: Type flag bit for lowercase character class (from FUN_6fe2783d output)\n0x10: Uppercase flag to set in g_abCharTypeTable (position+1)\n0x20: Space character value, and lowercase flag to set in g_abCharTypeTable (position+1)\n0x41-0x5A: ASCII uppercase letter range A-Z\n0x60-0x7B: ASCII lowercase letter range a-z\n0x200: Mode for second FUN_6fe27986 call (uppercase conversion)\n\nStructure Layout:\nOffset | Size | Field Name | Type | Description\n0      | 256  | g_abCaseConversionTable | byte[256] | Case conversion character lookup table\n1+N    | 1    | g_abCharTypeTable[N+1] | byte | Character type flags (bits 0x10=uppercase, 0x20=lowercase)\n\nRelated Functions:\n- GetCPInfo (Windows API) - Retrieve code page information\n- FUN_6fe2783d - Calculate character type flags for entire character set\n- FUN_6fe27986 - Generate case conversion tables from ANSI input\n- InitializeCharacterTypeTable - Initializes lookup tables at startup",
       "parameters": [],
@@ -11815,7 +11869,7 @@
         "CFG": "8de88aa5a2ff6c2a27fe35242cac67b4",
         "PRO": "592cde8777105acd14104e1a687e5fa8"
       },
-      "signature": "undefined ___add_12(uint * param_1, uint * param_2)",
+      "signature": "void ___add_12(uint * param_1, uint * param_2)",
       "calling_convention": "__cdecl",
       "comment": "Library Function - Single Match\n ___add_12\n\nLibrary: Visual Studio 2003 Release",
       "parameters": [{"name": "param_1", "type": "uint *", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "uint *", "storage": "Stack[0x8]:4"}],
@@ -11990,7 +12044,7 @@
         "CFG": null,
         "PRO": "245b75f85022a874afa1cce57748da74"
       },
-      "signature": "DWORD * GetTlsContextOffset8(void)",
+      "signature": "int GetTlsContextOffset8(void)",
       "calling_convention": "__stdcall",
       "comment": "Get TLS context and return pointer to offset +8.\n\nAlgorithm:\n1. Call GetTlsContext() to retrieve TLS context structure pointer\n2. Add 0x8 (8 bytes) to pointer\n3. Return modified pointer\n\nParameters:\n(none)\n\nReturns:\nPointer to TLS context structure + 8 bytes offset",
       "parameters": [],
@@ -12015,7 +12069,7 @@
         "CFG": null,
         "PRO": "387eff99dbdbd80260e3fc8c570df5f5"
       },
-      "signature": "DWORD * GetTlsContextOffsetPointer(void)",
+      "signature": "dword * GetTlsContextOffsetPointer(void)",
       "calling_convention": "__stdcall",
       "comment": "Retrieve TLS context pointer with offset adjustment\n\nAlgorithm:\n1. Call GetTlsContext() to retrieve current thread's TLS context base pointer\n2. Add offset of 3 DWORDs (12 bytes = 0xC) to the base pointer\n3. Return the adjusted pointer targeting a specific TLS context field\n\nParameters:\nNone\n\nReturns:\nDWORD* - Pointer to TLS context structure adjusted by 3 DWORDs offset\n\nSpecial Cases:\n- GetTlsContext() assumed to never return NULL\n- Fixed offset of 3 DWORDs represents a stable field position within TLS structure\n- Used by multiple character processing functions to access TLS data\n\nMagic Numbers:\n- 3: Offset in DWORDs to target field (0xC bytes from base pointer)",
       "parameters": [],
@@ -12615,7 +12669,7 @@
         "CFG": null,
         "PRO": "0fd23f6a00f1d88c1d15d34a441c1a79"
       },
-      "signature": "undefined Unwind@6fe290f0(void)",
+      "signature": "void Unwind@6fe290f0(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12640,7 +12694,7 @@
         "CFG": null,
         "PRO": "dcd4eddf4ce42b0566809696b8e1dff0"
       },
-      "signature": "undefined Unwind@6fe290f8(void)",
+      "signature": "void Unwind@6fe290f8(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12665,7 +12719,7 @@
         "CFG": null,
         "PRO": "7b366a4be7da595c147c179d159258f1"
       },
-      "signature": "undefined Unwind@6fe29103(void)",
+      "signature": "void Unwind@6fe29103(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12690,7 +12744,7 @@
         "CFG": null,
         "PRO": "5b1a31f2e7f3b5920f619d7114246479"
       },
-      "signature": "undefined Unwind@6fe2910e(void)",
+      "signature": "void Unwind@6fe2910e(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12715,7 +12769,7 @@
         "CFG": null,
         "PRO": "a21994e33168dbbbe0097fcaf6babd97"
       },
-      "signature": "undefined Unwind@6fe29119(void)",
+      "signature": "void Unwind@6fe29119(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12740,7 +12794,7 @@
         "CFG": null,
         "PRO": "7721ceef44ea1da628713090da9feaa0"
       },
-      "signature": "undefined Unwind@6fe29124(void)",
+      "signature": "void Unwind@6fe29124(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12765,7 +12819,7 @@
         "CFG": null,
         "PRO": "6eacb5f8ac0e6fa80fcd60626bcd654d"
       },
-      "signature": "undefined Unwind@6fe2912f(void)",
+      "signature": "void Unwind@6fe2912f(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12790,7 +12844,7 @@
         "CFG": null,
         "PRO": "71645f2108e5eb31817d7071f8bfc9ad"
       },
-      "signature": "undefined Unwind@6fe2913a(void)",
+      "signature": "void Unwind@6fe2913a(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12815,7 +12869,7 @@
         "CFG": null,
         "PRO": "c004045168637af6a71650e476ba0fd1"
       },
-      "signature": "undefined Unwind@6fe29150(void)",
+      "signature": "void Unwind@6fe29150(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12840,7 +12894,7 @@
         "CFG": null,
         "PRO": "90d904e5350a8917f7e012baca5bc89b"
       },
-      "signature": "undefined Unwind@6fe2915b(void)",
+      "signature": "void Unwind@6fe2915b(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12865,7 +12919,7 @@
         "CFG": null,
         "PRO": "4c22bf8752da3932ebc21cb6eaeaf3a9"
       },
-      "signature": "undefined Unwind@6fe29166(void)",
+      "signature": "void Unwind@6fe29166(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12890,7 +12944,7 @@
         "CFG": null,
         "PRO": "b38f1192809fd6073db8f62a747fc150"
       },
-      "signature": "undefined Unwind@6fe2916e(void)",
+      "signature": "void Unwind@6fe2916e(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12915,7 +12969,7 @@
         "CFG": null,
         "PRO": "4b60a362fc3064ddb58cd84727e25fb9"
       },
-      "signature": "undefined Unwind@6fe29176(void)",
+      "signature": "void Unwind@6fe29176(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12940,7 +12994,7 @@
         "CFG": null,
         "PRO": "18ea64217fce6e5e5f74be94576272c8"
       },
-      "signature": "undefined Unwind@6fe29181(void)",
+      "signature": "void Unwind@6fe29181(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12965,7 +13019,7 @@
         "CFG": null,
         "PRO": "3e9b747001ecfdabd0f1a23537fed0a6"
       },
-      "signature": "undefined Unwind@6fe29189(void)",
+      "signature": "void Unwind@6fe29189(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -12990,7 +13044,7 @@
         "CFG": null,
         "PRO": "f138aff316f7bc635f39364da87648a1"
       },
-      "signature": "undefined Unwind@6fe291a0(void)",
+      "signature": "void Unwind@6fe291a0(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13015,7 +13069,7 @@
         "CFG": null,
         "PRO": "c885de48dbee2824b07c39d14a103e3b"
       },
-      "signature": "undefined Unwind@6fe291ab(void)",
+      "signature": "void Unwind@6fe291ab(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13040,7 +13094,7 @@
         "CFG": null,
         "PRO": "ba5e61e417eb03e8a8d4e4da39446b61"
       },
-      "signature": "undefined Unwind@6fe291b6(void)",
+      "signature": "void Unwind@6fe291b6(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13065,7 +13119,7 @@
         "CFG": null,
         "PRO": "788a2c58b36bc81296179276a350c50f"
       },
-      "signature": "undefined Unwind@6fe291d0(void)",
+      "signature": "void Unwind@6fe291d0(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13090,7 +13144,7 @@
         "CFG": null,
         "PRO": "c63ee4c588cfeb53fa0173d29acdf572"
       },
-      "signature": "undefined Unwind@6fe291d8(void)",
+      "signature": "void Unwind@6fe291d8(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13115,7 +13169,7 @@
         "CFG": null,
         "PRO": "2c4936ba8171d6b97f7e38b9b2e7b871"
       },
-      "signature": "undefined Unwind@6fe291e3(void)",
+      "signature": "void Unwind@6fe291e3(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13140,7 +13194,7 @@
         "CFG": null,
         "PRO": "f4b8f9aa4aaabba94bbc52d70bc6f610"
       },
-      "signature": "undefined Unwind@6fe291ee(void)",
+      "signature": "void Unwind@6fe291ee(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13165,7 +13219,7 @@
         "CFG": null,
         "PRO": "9b04d3fd841e51eec5ad5b02debc4a1d"
       },
-      "signature": "undefined Unwind@6fe291f9(void)",
+      "signature": "void Unwind@6fe291f9(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13190,7 +13244,7 @@
         "CFG": null,
         "PRO": "8d70f6564774dc56851d60135126c1d4"
       },
-      "signature": "undefined Unwind@6fe29204(void)",
+      "signature": "void Unwind@6fe29204(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13215,7 +13269,7 @@
         "CFG": null,
         "PRO": "9e0023e2f97928d55aedd1f5282e4b1d"
       },
-      "signature": "undefined Unwind@6fe2920f(void)",
+      "signature": "void Unwind@6fe2920f(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13240,7 +13294,7 @@
         "CFG": null,
         "PRO": "3abf9bb2ddd49b878fed175b53321718"
       },
-      "signature": "undefined Unwind@6fe2921a(void)",
+      "signature": "void Unwind@6fe2921a(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13265,7 +13319,7 @@
         "CFG": null,
         "PRO": "5965f3ce2e586261477949c03e6486ce"
       },
-      "signature": "undefined Unwind@6fe29230(void)",
+      "signature": "void Unwind@6fe29230(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13290,7 +13344,7 @@
         "CFG": null,
         "PRO": "f3a34f0efc3ea80e5d33a99e4bb24e48"
       },
-      "signature": "undefined Unwind@6fe29250(void)",
+      "signature": "void Unwind@6fe29250(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13315,7 +13369,7 @@
         "CFG": null,
         "PRO": "3201bce5a7d7537d83fe14f1a5d8f15f"
       },
-      "signature": "undefined Unwind@6fe29258(void)",
+      "signature": "void Unwind@6fe29258(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13340,7 +13394,7 @@
         "CFG": null,
         "PRO": "6a53136deeed502b397076d0d0337194"
       },
-      "signature": "undefined Unwind@6fe29263(void)",
+      "signature": "void Unwind@6fe29263(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13365,7 +13419,7 @@
         "CFG": null,
         "PRO": "7f4535d878223357a8ec335072e81ad7"
       },
-      "signature": "undefined Unwind@6fe2926e(void)",
+      "signature": "void Unwind@6fe2926e(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13390,7 +13444,7 @@
         "CFG": null,
         "PRO": "d700a686b3028a40ef948b30b3e8d3d0"
       },
-      "signature": "undefined Unwind@6fe29279(void)",
+      "signature": "void Unwind@6fe29279(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13415,7 +13469,7 @@
         "CFG": null,
         "PRO": "79e71a8c0d548c073a13e967509caaef"
       },
-      "signature": "undefined Unwind@6fe29290(void)",
+      "signature": "void Unwind@6fe29290(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13440,7 +13494,7 @@
         "CFG": null,
         "PRO": "c3e8b2ebdbd9fcd0acd126ef21028f71"
       },
-      "signature": "undefined Unwind@6fe292b0(void)",
+      "signature": "void Unwind@6fe292b0(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],
@@ -13465,7 +13519,7 @@
         "CFG": null,
         "PRO": "5b83ebe7e25c6bb92e98ea3bbb292af0"
       },
-      "signature": "undefined Unwind@6fe292b8(void)",
+      "signature": "void Unwind@6fe292b8(void)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [],

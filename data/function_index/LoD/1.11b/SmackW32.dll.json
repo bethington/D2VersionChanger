@@ -3,8 +3,8 @@
   "game_type": "LoD",
   "version": "1.11b",
   "image_base": "0x10000000",
-  "total_functions": 187,
-  "export_timestamp": "Tue Dec 02 00:33:23 CST 2025",
+  "total_functions": 201,
+  "export_timestamp": "Wed Dec 10 16:14:35 CST 2025",
   "functions": [
     {
       "address": "0x10001000",
@@ -35,8 +35,8 @@
       "address": "0x10001040",
       "rva": "0x1040",
       "size": 27,
-      "name": "radfree",
-      "display_name": "radfree",
+      "name": "ApplyPresetUnitTileAttributes",
+      "display_name": "ApplyPresetUnitTileAttributes",
       "has_human_name": true,
       "index": "MNE:ab6d355946f3306b3f72ee5d76ad7ff5",
       "index_method": "MNE",
@@ -48,7 +48,7 @@
         "CFG": "f09da8ab2298e4bafedfaee404f68269",
         "PRO": "159fb33d4a77508d4b2dc1d771fa8653"
       },
-      "signature": "undefined radfree(int param_1)",
+      "signature": "undefined ApplyPresetUnitTileAttributes(int param_1)",
       "calling_convention": "__stdcall",
       "comment": "__stdcall radfree,4",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
@@ -105,6 +105,48 @@
       "string_refs": ["\"DIBSection\"", "\" with accelerated blitting (\""],
       "api_calls": ["_SmackBlitString@8"],
       "basic_block_count": 10
+    },
+    {
+      "address": "0x10001160",
+      "rva": "0x1160",
+      "size": 90,
+      "name": "FUN_10001160",
+      "display_name": "MNE_0350630a586f7639",
+      "has_human_name": false,
+      "index": "MNE:0350630a586f7639bbf1f8285ccc3813",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0350630a586f7639bbf1f8285ccc3813",
+        "CFG": "45c082db15319d6d5d141ed8bd55204c",
+        "PRO": "a0b03d5b6788b5e056efc153a10a6602"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 4
+    },
+    {
+      "address": "0x100011C0",
+      "rva": "0x11C0",
+      "size": 252,
+      "name": "FUN_100011c0",
+      "display_name": "MNE_7226ab076497d690",
+      "has_human_name": false,
+      "index": "MNE:7226ab076497d6900f6fb389c1c36289",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7226ab076497d6900f6fb389c1c36289",
+        "CFG": "858d642eb0499a84b3d1071d317d6bfc",
+        "PRO": "7d7dc61a2f62b16f962b7194a04a2ce6"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 9
     },
     {
       "address": "0x100012C0",
@@ -431,12 +473,12 @@
       "name": "_SmackBufferClose@4",
       "display_name": "_SmackBufferClose@4",
       "has_human_name": true,
-      "index": "API:0818ccc2434f3370ab6a8959e09b9ab5",
+      "index": "API:9f54da0d2c9b2b951fcb103164bc831b",
       "index_method": "API",
       "indexes": {
         "EXP": null,
         "STR": null,
-        "API": "0818ccc2434f3370ab6a8959e09b9ab5",
+        "API": "9f54da0d2c9b2b951fcb103164bc831b",
         "MNE": "5ea2f86e891ada0627b3615dd65df412",
         "CFG": "b850a5c4f45cb4c8b3ba34790248c48f",
         "PRO": "811451509c5b7a13409dbef74994cfa4"
@@ -446,7 +488,7 @@
       "comment": "",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
-      "api_calls": ["_radfree@4", "_radfree@4", "_SmackBlitClose@4", "_radfree@4", "_radfree@4"],
+      "api_calls": ["_radfree@4", "_radfree@4", "ApplyPresetUnitTileAttributesSafe", "_radfree@4", "_radfree@4"],
       "basic_block_count": 24
     },
     {
@@ -598,6 +640,27 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 11
+    },
+    {
+      "address": "0x10003F10",
+      "rva": "0x3F10",
+      "size": 128,
+      "name": "FUN_10003f10",
+      "display_name": "MNE_86c22c131d4e6f8e",
+      "has_human_name": false,
+      "index": "MNE:86c22c131d4e6f8edb517a917c1fed15",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "86c22c131d4e6f8edb517a917c1fed15",
+        "CFG": "833dd2b2958695689b3c401989f44f23",
+        "PRO": "bb26a9799bdc1eee303f404c381f051f"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 7
     },
     {
       "address": "0x10003F90",
@@ -871,8 +934,8 @@
       "address": "0x100058B0",
       "rva": "0x58B0",
       "size": 12,
-      "name": "_SmackSimulate@4",
-      "display_name": "_SmackSimulate@4",
+      "name": "SetErrorHandlingDisabled",
+      "display_name": "SetErrorHandlingDisabled",
       "has_human_name": true,
       "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
       "index_method": "MNE",
@@ -884,10 +947,10 @@
         "CFG": null,
         "PRO": "fd2a874d5fe17e3944bc7c5c05ecf2e3"
       },
-      "signature": "undefined _SmackSimulate@4(undefined4 param_1)",
+      "signature": "void SetErrorHandlingDisabled(uint dwDisable)",
       "calling_convention": "__stdcall",
-      "comment": "",
-      "parameters": [{"name": "param_1", "type": "undefined4", "storage": "Stack[0x4]:4"}],
+      "comment": "Sets the error handling disabled flag.\n\nAlgorithm:\n1. Store dwDisable value to g_fErrorHandlingDisabled global\n\nWhen enabled (dwDisable != 0), DisplayCriticalError returns\nimmediately without showing dialogs or terminating the process.\nCalled with 1 during process termination in DisplayCriticalError.\n\nParameters:\n- dwDisable (uint): Non-zero to disable error handling\n\nReturns:\n- void",
+      "parameters": [{"name": "dwDisable", "type": "uint", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -1599,6 +1662,48 @@
       "basic_block_count": 1
     },
     {
+      "address": "0x10007F60",
+      "rva": "0x7F60",
+      "size": 134,
+      "name": "FUN_10007f60",
+      "display_name": "MNE_b773363931f4cac9",
+      "has_human_name": false,
+      "index": "MNE:b773363931f4cac90a3a3977e08b8dba",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b773363931f4cac90a3a3977e08b8dba",
+        "CFG": "671604d04112667648946b8cbd957bb7",
+        "PRO": "2dae5df1b982ec2ad4142e78f94da3b7"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 10
+    },
+    {
+      "address": "0x10007FF0",
+      "rva": "0x7FF0",
+      "size": 154,
+      "name": "FUN_10007ff0",
+      "display_name": "MNE_33f17554de32e7be",
+      "has_human_name": false,
+      "index": "MNE:33f17554de32e7be7c7d01c984d4e6b5",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "33f17554de32e7be7c7d01c984d4e6b5",
+        "CFG": "54b2c6a194042d1c1c99260799ecf903",
+        "PRO": "0ec2f2b02d3dd4b2d6db42c33bf332db"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 3
+    },
+    {
       "address": "0x10008090",
       "rva": "0x8090",
       "size": 531,
@@ -1645,6 +1750,27 @@
       "basic_block_count": 6
     },
     {
+      "address": "0x100083B0",
+      "rva": "0x83B0",
+      "size": 119,
+      "name": "FUN_100083b0",
+      "display_name": "API_7ea41d38c3be5dbc",
+      "has_human_name": false,
+      "index": "API:7ea41d38c3be5dbcf086509c906678ea",
+      "index_method": "API",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7ea41d38c3be5dbcf086509c906678ea",
+        "MNE": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
+        "CFG": "51588d0c9c146b475f15ba9a14fbf169",
+        "PRO": "b025fa342a8cb550eb3a99e5408a5e4a"
+      },
+      "string_refs": [],
+      "api_calls": ["_radfree@4", "_radfree@4"],
+      "basic_block_count": 10
+    },
+    {
       "address": "0x10008430",
       "rva": "0x8430",
       "size": 98,
@@ -1685,6 +1811,27 @@
       "string_refs": ["\"DiamondWare Digitized\\n\""],
       "api_calls": [],
       "basic_block_count": 18
+    },
+    {
+      "address": "0x10008660",
+      "rva": "0x8660",
+      "size": 39,
+      "name": "FUN_10008660",
+      "display_name": "MNE_455c457ca19c618a",
+      "has_human_name": false,
+      "index": "MNE:455c457ca19c618a114fc77692823cde",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "455c457ca19c618a114fc77692823cde",
+        "CFG": null,
+        "PRO": "38aa7f1180698fdee449b20733317e08"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10008690",
@@ -1778,7 +1925,7 @@
       "address": "0x100089D0",
       "rva": "0x89D0",
       "size": 95,
-      "name": "FUN_100089d0",
+      "name": "FUN_10012a1f",
       "display_name": "MNE_39066d2a193f67db",
       "has_human_name": false,
       "index": "MNE:39066d2a193f67db6e1968503dacb3e7",
@@ -1836,6 +1983,52 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 4
+    },
+    {
+      "address": "0x10008C10",
+      "rva": "0x8C10",
+      "size": 100,
+      "name": "FUN_10008c10",
+      "display_name": "MNE_06ffa3da065379b7",
+      "has_human_name": false,
+      "index": "MNE:06ffa3da065379b7064deb0c67302897",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "06ffa3da065379b7064deb0c67302897",
+        "CFG": "906dd4e9f5debc2f16dec1e89e077058",
+        "PRO": "349ce0cec15a4f8eda2303d11590ad4e"
+      },
+      "string_refs": [],
+      "api_calls": ["_radfree@4"],
+      "basic_block_count": 10
+    },
+    {
+      "address": "0x10008C80",
+      "rva": "0x8C80",
+      "size": 16,
+      "name": "_SmackUseMMX@4",
+      "display_name": "_SmackUseMMX@4",
+      "has_human_name": true,
+      "index": "MNE:82a4681e028ce912ff418ce451dc2dfa",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "82a4681e028ce912ff418ce451dc2dfa",
+        "CFG": null,
+        "PRO": "3956d7a16aaa41f5cc2fbf211ae4ae41"
+      },
+      "signature": "undefined _SmackUseMMX@4(uint param_1)",
+      "calling_convention": "__stdcall",
+      "comment": "",
+      "parameters": [{"name": "param_1", "type": "uint", "storage": "Stack[0x4]:4"}],
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
     },
     {
       "address": "0x10008CA0",
@@ -2022,6 +2215,27 @@
       "basic_block_count": 13
     },
     {
+      "address": "0x10009630",
+      "rva": "0x9630",
+      "size": 305,
+      "name": "FUN_10009630",
+      "display_name": "STR_6530e056d467056f",
+      "has_human_name": false,
+      "index": "STR:6530e056d467056fd22748c81705d6ba",
+      "index_method": "STR",
+      "indexes": {
+        "EXP": null,
+        "STR": "6530e056d467056fd22748c81705d6ba",
+        "API": null,
+        "MNE": "4eccb294c91d8dfe02c9d753b4b8e155",
+        "CFG": "84aa0648708131cbf0a2ac3fba212ea7",
+        "PRO": "a55524fc6f390b8bbb2389ca1c5095b7"
+      },
+      "string_refs": ["\"Using DirectSound under MSS\"", "\"Using DirectSound\\r\\n\""],
+      "api_calls": [],
+      "basic_block_count": 19
+    },
+    {
       "address": "0x10009770",
       "rva": "0x9770",
       "size": 405,
@@ -2085,6 +2299,48 @@
       "basic_block_count": 14
     },
     {
+      "address": "0x100099F0",
+      "rva": "0x99F0",
+      "size": 105,
+      "name": "FUN_100099f0",
+      "display_name": "MNE_fbaf211a5c73cd4b",
+      "has_human_name": false,
+      "index": "MNE:fbaf211a5c73cd4bfaec8356030b7f0b",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fbaf211a5c73cd4bfaec8356030b7f0b",
+        "CFG": "10a7799c2071ad9f40506ede640b79e0",
+        "PRO": "e89b6e887b4630040615c898934a91fd"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 6
+    },
+    {
+      "address": "0x10009A60",
+      "rva": "0x9A60",
+      "size": 37,
+      "name": "FUN_10009a60",
+      "display_name": "MNE_c17db03910b537e5",
+      "has_human_name": false,
+      "index": "MNE:c17db03910b537e529966a14193985bb",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c17db03910b537e529966a14193985bb",
+        "CFG": "a9c729cc86b83c7c1ad73572a77516e6",
+        "PRO": "d1e394a998abae4eb66ea3d580f9d0a9"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 4
+    },
+    {
       "address": "0x10009A90",
       "rva": "0x9A90",
       "size": 78,
@@ -2146,6 +2402,27 @@
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 9
+    },
+    {
+      "address": "0x10009B90",
+      "rva": "0x9B90",
+      "size": 151,
+      "name": "FUN_10009b90",
+      "display_name": "MNE_25761c37e8f287df",
+      "has_human_name": false,
+      "index": "MNE:25761c37e8f287dfa86bb97b0e168d59",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "25761c37e8f287dfa86bb97b0e168d59",
+        "CFG": "06d137ee39b9980449903db9bb04e9f2",
+        "PRO": "f75c73734746b22f9d22fed1ec868795"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 16
     },
     {
       "address": "0x10009C30",
@@ -2488,6 +2765,27 @@
       "basic_block_count": 9
     },
     {
+      "address": "0x1000A960",
+      "rva": "0xA960",
+      "size": 21,
+      "name": "FUN_1000a960",
+      "display_name": "MNE_11dc0860db265ae0",
+      "has_human_name": false,
+      "index": "MNE:11dc0860db265ae0050c94d5c9a4cb88",
+      "index_method": "MNE",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "11dc0860db265ae0050c94d5c9a4cb88",
+        "CFG": null,
+        "PRO": "e1baa62184e9e4ba784141faf2712c49"
+      },
+      "string_refs": [],
+      "api_calls": [],
+      "basic_block_count": 1
+    },
+    {
       "address": "0x1000A980",
       "rva": "0xA980",
       "size": 525,
@@ -2683,8 +2981,8 @@
       "address": "0x1000B310",
       "rva": "0xB310",
       "size": 108,
-      "name": "_SmackBlitMerge@52",
-      "display_name": "_SmackBlitMerge@52",
+      "name": "_SmackBlitMask@52",
+      "display_name": "_SmackBlitMask@52",
       "has_human_name": true,
       "index": "MNE:20ccb1fb6d4d5fc23f375917b3073ed8",
       "index_method": "MNE",
@@ -2696,7 +2994,7 @@
         "CFG": "609ab8bb6c98403069dad13173b5c42b",
         "PRO": "4fd1b8ad43b57f4fd6e0e458ad58bc5b"
       },
-      "signature": "undefined _SmackBlitMerge@52(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, uint param_10, int param_11, char param_12, int param_13)",
+      "signature": "undefined _SmackBlitMask@52(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, uint param_10, int param_11, char param_12, int param_13)",
       "calling_convention": "__stdcall",
       "comment": "",
       "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}, {"name": "param_4", "type": "int", "storage": "Stack[0x10]:4"}, {"name": "param_5", "type": "int", "storage": "Stack[0x14]:4"}, {"name": "param_6", "type": "int", "storage": "Stack[0x18]:4"}, {"name": "param_7", "type": "int", "storage": "Stack[0x1c]:4"}, {"name": "param_8", "type": "int", "storage": "Stack[0x20]:4"}, {"name": "param_9", "type": "int", "storage": "Stack[0x24]:4"}, {"name": "param_10", "type": "uint", "storage": "Stack[0x28]:4"}, {"name": "param_11", "type": "int", "storage": "Stack[0x2c]:4"}, {"name": "param_12", "type": "char", "storage": "Stack[0x30]:1"}, {"name": "param_13", "type": "int", "storage": "Stack[0x34]:4"}],
@@ -2733,8 +3031,8 @@
       "address": "0x1000B480",
       "rva": "0xB480",
       "size": 17,
-      "name": "_SmackBlitClose@4",
-      "display_name": "_SmackBlitClose@4",
+      "name": "ApplyPresetUnitTileAttributesSafe",
+      "display_name": "ApplyPresetUnitTileAttributesSafe",
       "has_human_name": true,
       "index": "MNE:cffa9ff338088808bf5749ca49298e21",
       "index_method": "MNE",
@@ -2746,10 +3044,10 @@
         "CFG": "7d127f70b80059b420a06b3f952a19a3",
         "PRO": "1ce457c492c42035d43ca2bc4e355d50"
       },
-      "signature": "undefined _SmackBlitClose@4(int param_1)",
+      "signature": "void ApplyPresetUnitTileAttributesSafe(int * pPresetUnit)",
       "calling_convention": "__stdcall",
-      "comment": "",
-      "parameters": [{"name": "param_1", "type": "int", "storage": "Stack[0x4]:4"}],
+      "comment": "Null-safe wrapper for ApplyPresetUnitTileAttributes.\n\nAlgorithm:\n1. Check if pPresetUnit is NULL\n2. If valid, call ApplyPresetUnitTileAttributes to process tile flags\n\nParameters:\n- pPresetUnit (int*): Preset unit structure containing tile attribute data\n\nReturns:\n- void\n\nRelated Functions:\n- ApplyPresetUnitTileAttributes: Core implementation (Ordinal_10222)",
+      "parameters": [{"name": "pPresetUnit", "type": "int *", "storage": "Stack[0x4]:4"}],
       "string_refs": [],
       "api_calls": ["_radfree@4"],
       "basic_block_count": 3
@@ -3314,9 +3612,9 @@
       "address": "0x1000C1B0",
       "rva": "0xC1B0",
       "size": 15,
-      "name": "FUN_1000c1b0",
-      "display_name": "MNE_7a5e6ed384be3109",
-      "has_human_name": false,
+      "name": "InitializeCleanupSequence",
+      "display_name": "InitializeCleanupSequence",
+      "has_human_name": true,
       "index": "MNE:7a5e6ed384be31095abb7960c9f1d6d0",
       "index_method": "MNE",
       "indexes": {
@@ -3327,6 +3625,10 @@
         "CFG": null,
         "PRO": "533cf0fb888ded1279fa8d2b55d5a7d9"
       },
+      "signature": "void InitializeCleanupSequence(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Initialize cleanup sequence during DLL detach operation.\n\nAlgorithm:\n1. Call FUN_1001f12e with parameters (0, 0, 1) to start cleanup sequence\n2. Return immediately after cleanup initialization\n\nParameters:\nNone - Function takes no parameters\n\nReturns:\nvoid - No return value (cleanup initialization is fire-and-forget)\n\nSpecial Cases:\nCalled only during DLL_PROCESS_DETACH when DAT_1003c940 cleanup flag is clear\nPart of orderly shutdown sequence before main cleanup functions execute\n\nMagic Numbers Reference:\n0x0 - First parameter to FUN_1001f12e (cleanup mode indicator)\n0x0 - Second parameter to FUN_1001f12e (flags/options)  \n0x1 - Third parameter to FUN_1001f12e (initialization phase identifier)",
+      "parameters": [],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 1
@@ -3335,9 +3637,9 @@
       "address": "0x1000C1C0",
       "rva": "0xC1C0",
       "size": 163,
-      "name": "FUN_1000c1c0",
-      "display_name": "MNE_7def578eb41a0313",
-      "has_human_name": false,
+      "name": "ProcessTerminationHandler",
+      "display_name": "ProcessTerminationHandler",
+      "has_human_name": true,
       "index": "MNE:7def578eb41a0313652a979b112e32fe",
       "index_method": "MNE",
       "indexes": {
@@ -3348,6 +3650,10 @@
         "CFG": "883c07df79128186715908bf3e6e4c3d",
         "PRO": "b80ee7ddc488ba1940429cbad0cddbe4"
       },
+      "signature": "undefined ProcessTerminationHandler(UINT param_1, int param_2, int param_3)",
+      "calling_convention": "__cdecl",
+      "comment": "",
+      "parameters": [{"name": "param_1", "type": "UINT", "storage": "Stack[0x4]:4"}, {"name": "param_2", "type": "int", "storage": "Stack[0x8]:4"}, {"name": "param_3", "type": "int", "storage": "Stack[0xc]:4"}],
       "string_refs": [],
       "api_calls": [],
       "basic_block_count": 12
