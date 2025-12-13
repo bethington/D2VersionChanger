@@ -1,0 +1,1030 @@
+{
+  "Storm": {
+    "total_functions": 52,
+    "top_priority": [
+      {
+        "name": "AcquireGlobalLock",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "CompareMemoryBytes",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "CopyMemoryBuffer",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "FillMemoryWithByte",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "FlushBitWriteBuffer",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "GameDataCollectionDestructor",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "GetDebugReturnStringEnd",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "SMemFree",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "SStrCopy",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "WriteBitsToBuffer",
+        "category": "Bit Operations",
+        "priority": 18
+      }
+    ],
+    "by_category": {
+      "Memory Management": [
+        "AcquireGlobalLock",
+        "CompareMemoryBytes",
+        "CopyMemoryBuffer",
+        "FillMemoryWithByte",
+        "SMemFree",
+        "MoveMemory"
+      ],
+      "Bit Operations": [
+        "FlushBitWriteBuffer",
+        "WriteBitsToBuffer",
+        "setlocale",
+        "SetErrorHandlingDisabled",
+        "SetGlobalConfigByte2",
+        "SetGlobalUshortConfig",
+        "SetLocale"
+      ],
+      "String Operations": [
+        "GameDataCollectionDestructor",
+        "GetDebugReturnStringEnd",
+        "SStrCopy",
+        "WriteBitsToStream",
+        "_strupr",
+        "StringToUpper"
+      ],
+      "Math Operations": [
+        "AullDiv",
+        "__allmul"
+      ],
+      "Graphics/Rendering": [
+        "ClosePaletteWindow",
+        "GetDirectDrawInterfaces",
+        "UpdatePaletteAndRealize",
+        "UpdatePaletteAndMarkRealized"
+      ],
+      "Utility": [
+        "FindLongestMatch",
+        "GetEntryValueById",
+        "ParseCommandLineArgs",
+        "memmove",
+        "GetLastError",
+        "HasEntryById",
+        "InitCommandLineParsing",
+        "RegisterExceptionFilter",
+        "ReportHandleLeak",
+        "ShutdownStubNoOp",
+        "StubNoOp",
+        "__break"
+      ],
+      "File I/O": [
+        "FlushFileWriteBuffer",
+        "InitializeWorkerThread",
+        "ReadArchiveFile",
+        "GetFileVersionInfoSizeA"
+      ],
+      "Data Structures": [
+        "GetExecutableDirectoryPath",
+        "ImplodeBuildSortTable",
+        "IsHandleInCodecList",
+        "UnlinkListNode",
+        "InitializeVtablePointer"
+      ],
+      "Threading": [
+        "ImplodeEncodeBlock"
+      ],
+      "UI/Windows": [
+        "InitCompressContext",
+        "RegisterDialogClasses",
+        "EndDialogWithResult",
+        "StoreVersionFromContext"
+      ],
+      "Game Logic": [
+        "RegisterEventHandler"
+      ]
+    },
+    "recommended_first_pass": 52
+  },
+  "D2Common": {
+    "total_functions": 93,
+    "top_priority": [
+      {
+        "name": "ClearMapCellFlagRadius",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "CompareStringsIgnoreCase",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "FreePoolMemory",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "FreePoolMemoryTracked",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "FreeTrackedPoolAllocation",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "GetStringIdFromSlotIndex",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "GetUnitFlags",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "ModifyTileAttributesFlags",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "SetUnitFlag0x20",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "SetUnitFlag4",
+        "category": "Bit Operations",
+        "priority": 18
+      }
+    ],
+    "by_category": {
+      "Bit Operations": [
+        "ClearMapCellFlagRadius",
+        "GetUnitFlags",
+        "ModifyTileAttributesFlags",
+        "SetUnitFlag0x20",
+        "SetUnitFlag4",
+        "SetValueIfEmpty",
+        "UNITS_SetGfxSelected",
+        "_memset",
+        "ClearBitFlags",
+        "ClearBitInArray",
+        "ClearField0x20",
+        "ClearImageDimensions",
+        "ExtractAndClearValue",
+        "ExtractBitFields32",
+        "GetStatListFlag4",
+        "GetUnitFlag2",
+        "SetBitInArray",
+        "SetCoordPair",
+        "SetDwordValue",
+        "SetFlagsOnValue",
+        "SetGlobalValue11103",
+        "SetUnitAnimData",
+        "UnpackBitFields"
+      ],
+      "String Operations": [
+        "CompareStringsIgnoreCase",
+        "GetStringIdFromSlotIndex",
+        "_strlen",
+        "_strncmp",
+        "_strncpy",
+        "GetStructField54",
+        "GetStructFlag0x20",
+        "ValidateStringId"
+      ],
+      "Memory Management": [
+        "FreePoolMemory",
+        "FreePoolMemoryTracked",
+        "FreeTrackedPoolAllocation",
+        "__nh_malloc",
+        "AllocPoolMemoryTracked",
+        "CreatePoolObject",
+        "SetUnitAllocatedFlag",
+        "_malloc"
+      ],
+      "Utility": [
+        "ApplyTileAttributePattern",
+        "GetDirectionIndexFromCoords",
+        "GetObjectDataPtr",
+        "GetPathX",
+        "__cfltcvt",
+        "__fassign",
+        "AndDwordValue",
+        "ComputeLinearIndex",
+        "ComputeScaledAttribute",
+        "CoordToMapIndex",
+        "EnterCriticalSectionWrapper",
+        "GetD2ComState",
+        "GetPathPointData",
+        "GetPrimaryDir8FromDeltas",
+        "GetRoomNext",
+        "GetSeedHi",
+        "InitRngSeed",
+        "InitTimerState",
+        "PATH_GetDirection",
+        "RtlUnwind",
+        "StubNoOp",
+        "StubReturnZero",
+        "UnpackStatIdentifier",
+        "XorDwordInPlace",
+        "__exit",
+        "__fptrap",
+        "__seh_longjmp_unwind@4"
+      ],
+      "Game Logic": [
+        "GetItemAffixLevelRequirement",
+        "IsValidUnitType",
+        "GetGameStateAndResult",
+        "GetItemAffixLevelRequirementWrapper",
+        "GetItemDataByCode",
+        "GetItemRandSeed",
+        "GetPathTargetUnit",
+        "GetRosterUnitXPos",
+        "GetUnitField88",
+        "GetUnitField91",
+        "GetUnitGfxUnk",
+        "GetUnitMode",
+        "GetUnitSeedHi",
+        "UNITS_GetField08",
+        "UNITS_GetUnitStat84"
+      ],
+      "Data Structures": [
+        "GetStatListOwnerType",
+        "BinarySearchTable",
+        "GetStatListBaseStatValue",
+        "GetUnitStatList",
+        "STATLIST_GetRoom"
+      ],
+      "File I/O": [
+        "OpenFileWithPermissions",
+        "ShutdownLogFile",
+        "__fclose_lk",
+        "OpenFileReadShare"
+      ],
+      "Math Operations": [
+        "___add_12",
+        "__allmul",
+        "MultiplyValuesBy5"
+      ]
+    },
+    "recommended_first_pass": 93
+  },
+  "Fog": {
+    "total_functions": 60,
+    "top_priority": [
+      {
+        "name": "CompareStringsIgnoreCase",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "CreateTcpConnection",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "ResetPerformanceAccumulators",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "TitleCaseString",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "WriteStringToBuffer",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "__nh_malloc",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "_memset",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strlen",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncmp",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncpy",
+        "category": "String Operations",
+        "priority": 18
+      }
+    ],
+    "by_category": {
+      "String Operations": [
+        "CompareStringsIgnoreCase",
+        "TitleCaseString",
+        "WriteStringToBuffer",
+        "_strlen",
+        "_strncmp",
+        "_strncpy",
+        "IffDestroy"
+      ],
+      "Memory Management": [
+        "CreateTcpConnection",
+        "__nh_malloc",
+        "CreateFileWrapper",
+        "CreateStormThread",
+        "IffCreate",
+        "SMemAlloc",
+        "SMemFree",
+        "_malloc"
+      ],
+      "Bit Operations": [
+        "ResetPerformanceAccumulators",
+        "_memset",
+        "ClearBitInArray",
+        "SetAsyncFileHandle",
+        "SetBitInArray",
+        "SetFilePointerWrapper",
+        "SetFilePosition",
+        "SetFpuControlWord",
+        "__WSAFDIsSet"
+      ],
+      "Utility": [
+        "AtomicExchange64",
+        "GetField0x110",
+        "GetField880",
+        "ValidateCriticalSection",
+        "__cfltcvt",
+        "__fassign",
+        "__startOneArgErrorHandling",
+        "EncodeVarInt2Byte",
+        "EnterCriticalSectionWrapper",
+        "GetFogStatePtr",
+        "GetSineValue",
+        "GetTickCount",
+        "InitializeLogManager",
+        "LogMessage",
+        "RegisterExceptionFilter",
+        "RtlUnwind",
+        "StubNoOp",
+        "StubOrdinal10183",
+        "WSACleanup",
+        "__exit",
+        "__fptrap",
+        "__frnd"
+      ],
+      "File I/O": [
+        "ReadFileAsync",
+        "__fclose_lk",
+        "__fload_withFB",
+        "AtomicRead64",
+        "CloseHandleWrapper",
+        "OpenFileWithDefaultArchive",
+        "ReadArchiveFile",
+        "WriteFileWrapper"
+      ],
+      "Network": [
+        "SendSocketData",
+        "LeaveSocketCriticalSection"
+      ],
+      "Math Operations": [
+        "___add_12",
+        "__alldiv",
+        "__allmul"
+      ],
+      "Data Structures": [
+        "GetCosineFromTable"
+      ]
+    },
+    "recommended_first_pass": 60
+  },
+  "D2Client": {
+    "total_functions": 225,
+    "top_priority": [
+      {
+        "name": "CleanupAndDelete",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "ClearGameState",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "DestructorWithCleanup",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "GameDataCollectionDestructor",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "GetGameModeFlag",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "GetInitFlag",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "InitializeStructureFields",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "LoadBlendedShadowsSetting",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "PlayVideoFromStructure",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "ResetGameModeFlag",
+        "category": "Bit Operations",
+        "priority": 18
+      }
+    ],
+    "by_category": {
+      "Memory Management": [
+        "CleanupAndDelete",
+        "SafeDelete",
+        "__nh_malloc",
+        "CreateFileWrapper",
+        "CreatePoolObject",
+        "CreateWaypointData",
+        "DeleteFile",
+        "FreePoolMemory",
+        "FreeTrackedPoolAllocation",
+        "SMemFree",
+        "SetUnitAllocatedFlag",
+        "_malloc"
+      ],
+      "Bit Operations": [
+        "ClearGameState",
+        "GetGameModeFlag",
+        "GetInitFlag",
+        "LoadBlendedShadowsSetting",
+        "ResetGameModeFlag",
+        "SetBlendedShadowsMode",
+        "SetupExceptionHandler",
+        "TEXT_ClearSelectionState",
+        "__CallSettingFrame@12",
+        "_memset",
+        "AutomapPlayerIconLine_SetField24",
+        "CTRL_SetUpdateFlag",
+        "ClearItemSlots",
+        "ClearPopupDialogResult",
+        "ClearResetFlags",
+        "ClearTargetingState",
+        "ClearUnitSelectionState",
+        "GetUnitFlags",
+        "GetViewportYOffsetAdjusted",
+        "ImmSetConversionStatus",
+        "ImmSetOpenStatus",
+        "InitializeGameStateFlags",
+        "InitializeGlobalStateFlags",
+        "SetAutomapCentersEnabled",
+        "SetAutomapUpdateThrottle",
+        "SetCancelConfirmedFlag",
+        "SetCharacterInventoryDialogState",
+        "SetFilePointerWrapper",
+        "SetGameMode",
+        "SetGlobalState4",
+        "SetGlobalState6",
+        "SetMissileDataField2C",
+        "SetSliderControlWidth",
+        "SetStateLevelFive",
+        "SetStateLevelSeven",
+        "SetTimeout500Ms",
+        "SetUnitFlag0x20",
+        "SetWindowVisibility"
+      ],
+      "String Operations": [
+        "DestructorWithCleanup",
+        "GameDataCollectionDestructor",
+        "InitializeStructureFields",
+        "PlayVideoFromStructure",
+        "__strrev",
+        "_strcmp",
+        "_strlen",
+        "_strncmp",
+        "_strncpy",
+        "CacheMarkSmsCategoriesForCopy",
+        "DestroyDataArray",
+        "GetStringIdFromSlotIndex",
+        "GetStructFlag0x20",
+        "ImmGetCompositionStringA",
+        "QueryRegistryUlong",
+        "SaveDefaultCommandLineToRegistry",
+        "SetRegistryDword",
+        "SetRegistryStringValue"
+      ],
+      "Math Operations": [
+        "CalculateWindowBorders",
+        "___add_12",
+        "__abnormal_termination",
+        "__allmul",
+        "CalculateMenuPanelYPosition",
+        "ForceCalculateWindowBorders",
+        "GetQuestSystemInitialized",
+        "ImmSimulateHotKey"
+      ],
+      "Utility": [
+        "CheckTimeoutElapsed50ms",
+        "CheckValueAndProcessData",
+        "CleanupPlayerSlots",
+        "DecrementObjectCounter",
+        "ExceptionHandlerLogAndCleanup",
+        "ExecuteInventoryCallback",
+        "IsObjectTypeValid",
+        "IsRemoteSessionSupported",
+        "IsValidRemoteDesktopSession",
+        "Ordinal_10002",
+        "ProcessCompressionObjects",
+        "ProcessUIStateChange",
+        "ShutdownCompressionService",
+        "ShutdownLanguageManager",
+        "UpdateTimeoutValue",
+        "__amsg_exit",
+        "__cfltcvt",
+        "__fassign",
+        "caseD_1",
+        "caseD_10",
+        "caseD_11",
+        "caseD_2",
+        "caseD_3",
+        "caseD_4",
+        "caseD_6",
+        "caseD_7",
+        "caseD_9",
+        "caseD_a",
+        "caseD_d",
+        "BackupKeyBindingsAndReinitialize",
+        "CleanupPlayerSlotsWrapper",
+        "EnableVideoInitialization",
+        "ExceptionCleanupAndExit",
+        "GetCurrentFontProperty",
+        "GetDefaultCameraScale",
+        "GetMissileTargetY",
+        "GetPathX",
+        "GetRoomNext",
+        "GetViewportFieldAt12DF8",
+        "ImmGetConversionStatus",
+        "ImmIsIME",
+        "InitRngSeed",
+        "InitTimerState",
+        "InitializeGlobalCounters",
+        "InitializeInventorySlotCounters",
+        "InitializeLanguageSupport",
+        "InitializePlayerStatistics",
+        "InitializeRandomSeed",
+        "InitializeSliderCursor",
+        "IsDSoundWaveEnabled",
+        "IsStateLevelFourOrHigher",
+        "IsTargetingEnabled",
+        "IsVideoInitializationEnabled",
+        "LB_DelegateVtbl13",
+        "Ordinal_10000",
+        "Ordinal_10001",
+        "Ordinal_10004",
+        "Ordinal_10005",
+        "Ordinal_10006",
+        "Ordinal_10007",
+        "Ordinal_10008",
+        "Ordinal_10010",
+        "Ordinal_10014",
+        "Ordinal_10018",
+        "Ordinal_10019",
+        "Ordinal_10020",
+        "Ordinal_10023",
+        "Ordinal_10024",
+        "Ordinal_10026",
+        "Ordinal_10028",
+        "Ordinal_10029",
+        "Ordinal_10034",
+        "Ordinal_10036",
+        "Ordinal_10046",
+        "Ordinal_10050",
+        "Ordinal_10057",
+        "Ordinal_10060",
+        "Ordinal_10064",
+        "Ordinal_10067",
+        "Ordinal_10070",
+        "Ordinal_10074",
+        "Ordinal_10082",
+        "PATH_GetDirection",
+        "RegisterCmdDef",
+        "RtlUnwind",
+        "StubReturnZero",
+        "SumCharacterValues",
+        "Unwind@6fba41fe",
+        "Unwind@6fba4368",
+        "Unwind@6fba4400",
+        "__NLG_Notify1",
+        "__exit",
+        "__fptrap",
+        "__seh_longjmp_unwind@4"
+      ],
+      "Game Logic": [
+        "GetGameContextUnitStat",
+        "GetGameState",
+        "InitializeGameMode",
+        "InitializeGameUIState",
+        "IsGameModeInPlayableState",
+        "ProcessInventoryItem",
+        "ProcessUnitStats",
+        "GetItemAffixLevelRequirementWrapper",
+        "GetItemRandSeed",
+        "GetPathTargetUnit",
+        "GetRosterUnitXPos",
+        "GetUnitField91",
+        "GetUnitX",
+        "InitializeGameObjectState",
+        "InitializeGameViewportConfig",
+        "IsMonsterBossType",
+        "IsObjectTypeMonster",
+        "IsValidUnitType",
+        "ProcessInventoryItemWrapper",
+        "ProcessUnitCoordinateData",
+        "UNITS_GetField08",
+        "UNITS_GetRoom"
+      ],
+      "UI/Windows": [
+        "GetWindowModeIfExpansion",
+        "InitializeCharacterInventoryDialog",
+        "InitializeMenuState",
+        "InitializeMouseButtonCallbacks",
+        "InitializeViewportWindow",
+        "DecrementWindowBorderY",
+        "ImmGetContext",
+        "ImmReleaseContext",
+        "IncreaseWindowBorderY",
+        "InitializeDialogBox",
+        "InitializeServerDialogStateHandler",
+        "InitializeServerSocketDialog",
+        "InitializeUIDialogConfig"
+      ],
+      "Data Structures": [
+        "InitializeVtablePointer",
+        "UnlinkListNode",
+        "DispatchJumpTableEntry",
+        "DispatchVtableMethod34",
+        "GetStatListOwnerType",
+        "GetUnitStatList",
+        "ImmGetCandidateListA",
+        "ImmGetCandidateListCountA",
+        "InitializeQuestClassTable",
+        "ListboxDelegateInnerVtableMethod14"
+      ],
+      "File I/O": [
+        "IsRemoteSessionHandlingReady",
+        "WriteErrorMessage",
+        "__fclose_lk",
+        "ImmGetOpenStatus",
+        "IsInventoryOpen"
+      ],
+      "Graphics/Rendering": [
+        "ShutdownAutomapRendering",
+        "CancelScreenFade",
+        "FindPaletteIndexForColor",
+        "PlayVideoAndConfigureGraphics",
+        "RenderUnicodeTextWithLineHeight"
+      ]
+    },
+    "recommended_first_pass": 225
+  },
+  "D2Game": {
+    "total_functions": 84,
+    "top_priority": [
+      {
+        "name": "__CallSettingFrame@12",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "__nh_malloc",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "__strrev",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_memset",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strlen",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncmp",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncpy",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "ClearBitInArray",
+        "category": "Bit Operations",
+        "priority": 17
+      },
+      {
+        "name": "ClearField0x20",
+        "category": "Bit Operations",
+        "priority": 17
+      },
+      {
+        "name": "ClearImageDimensions",
+        "category": "Bit Operations",
+        "priority": 17
+      }
+    ],
+    "by_category": {
+      "Bit Operations": [
+        "__CallSettingFrame@12",
+        "_memset",
+        "ClearBitInArray",
+        "ClearField0x20",
+        "ClearImageDimensions",
+        "ExtractAndClearValue",
+        "GetUnitFlags",
+        "SetBitInArray",
+        "UNITS_SetGfxSelected"
+      ],
+      "Memory Management": [
+        "__nh_malloc",
+        "CreatePoolObject",
+        "FreePoolMemory",
+        "FreeTrackedPoolAllocation",
+        "SMemFree",
+        "_malloc"
+      ],
+      "String Operations": [
+        "__strrev",
+        "_strlen",
+        "_strncmp",
+        "_strncpy"
+      ],
+      "Utility": [
+        "Ordinal_10002",
+        "Ordinal_10003",
+        "Ordinal_10004",
+        "Ordinal_10008",
+        "Ordinal_10010",
+        "Ordinal_10011",
+        "Ordinal_10012",
+        "Ordinal_10014",
+        "Ordinal_10015",
+        "Ordinal_10016",
+        "Ordinal_10017",
+        "Ordinal_10018",
+        "Ordinal_10019",
+        "Ordinal_10021",
+        "Ordinal_10022",
+        "Ordinal_10024",
+        "Ordinal_10027",
+        "Ordinal_10028",
+        "Ordinal_10029",
+        "Ordinal_10033",
+        "Ordinal_10037",
+        "Ordinal_10038",
+        "Ordinal_10039",
+        "Ordinal_10040",
+        "Ordinal_10042",
+        "Ordinal_10043",
+        "Ordinal_10044",
+        "Ordinal_10045",
+        "Ordinal_10047",
+        "Ordinal_10048",
+        "Ordinal_10050",
+        "Ordinal_10052",
+        "Ordinal_10056",
+        "__cfltcvt",
+        "__fassign",
+        "GetPathPointData",
+        "GetRoomNext",
+        "InitRngSeed",
+        "InitTimerState",
+        "PATH_GetDirection",
+        "RtlUnwind",
+        "StubReturnsZero",
+        "__NLG_Notify1",
+        "__exit",
+        "__fptrap",
+        "FUN_6fd23482",
+        "FUN_6fd23263",
+        "FUN_6fd23386"
+      ],
+      "Math Operations": [
+        "___add_12",
+        "__abnormal_termination",
+        "__alldiv",
+        "__allmul",
+        "MultiplyValuesBy5"
+      ],
+      "File I/O": [
+        "__fclose_lk"
+      ],
+      "Game Logic": [
+        "GetItemDataByCode",
+        "GetItemRandSeed",
+        "GetParsedItemCountPtr",
+        "GetPathTargetUnit",
+        "GetRosterUnitXPos",
+        "GetUnitField91",
+        "GetUnitGfxUnk",
+        "GetUnitMode",
+        "UNITS_GetField08"
+      ],
+      "Data Structures": [
+        "GetStatListOwnerType",
+        "GetUnitStatList"
+      ]
+    },
+    "recommended_first_pass": 81
+  },
+  "D2Win": {
+    "total_functions": 58,
+    "top_priority": [
+      {
+        "name": "ConvertCharToUnicodeAndSetEditData",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "EditData_SetString",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "SetCelGlobals",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "__nh_malloc",
+        "category": "Memory Management",
+        "priority": 18
+      },
+      {
+        "name": "_memset",
+        "category": "Bit Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strlen",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncmp",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "_strncpy",
+        "category": "String Operations",
+        "priority": 18
+      },
+      {
+        "name": "ClearCelGraphicsCache",
+        "category": "Bit Operations",
+        "priority": 17
+      },
+      {
+        "name": "CreateFileWrapper",
+        "category": "Memory Management",
+        "priority": 17
+      }
+    ],
+    "by_category": {
+      "Bit Operations": [
+        "ConvertCharToUnicodeAndSetEditData",
+        "SetCelGlobals",
+        "_memset",
+        "ClearCelGraphicsCache",
+        "GetInitFlag",
+        "ResetInitMode",
+        "SetGlobalValue",
+        "SetLastInventoryItem",
+        "SetMusicVolume"
+      ],
+      "String Operations": [
+        "EditData_SetString",
+        "_strlen",
+        "_strncmp",
+        "_strncpy",
+        "GetGameStructureSelector"
+      ],
+      "Memory Management": [
+        "__nh_malloc",
+        "CreateFileWrapper",
+        "ReleasePoolAllocation",
+        "_malloc"
+      ],
+      "Utility": [
+        "ConvertCharToUnicodeAndProcess",
+        "DisplayRuntimeError",
+        "IsCharAlpha",
+        "IsCharDigit",
+        "Ordinal_10006",
+        "Ordinal_10024",
+        "Ordinal_10028",
+        "Ordinal_10030",
+        "Ordinal_10032",
+        "Ordinal_10033",
+        "Ordinal_10034",
+        "Ordinal_10036",
+        "Ordinal_10038",
+        "Ordinal_10046",
+        "Ordinal_10047",
+        "Ordinal_10052",
+        "SafeDereferencePointer",
+        "UpdateMusicStateFromOptions",
+        "__cfltcvt",
+        "__fassign",
+        "GetInitializedState",
+        "GetMusicOptions",
+        "IsPointInRect",
+        "RtlUnwind",
+        "StopMessageLoop",
+        "__exit",
+        "__fptrap"
+      ],
+      "Game Logic": [
+        "InitializeGameEngine",
+        "GetGameState",
+        "InitializeCompressedGameData"
+      ],
+      "Graphics/Rendering": [
+        "InitializeGraphics",
+        "ReleaseCelFile",
+        "GetCelFrameCount",
+        "InitializeGraphicsSystem"
+      ],
+      "Math Operations": [
+        "ListAddItem",
+        "___add_12"
+      ],
+      "UI/Windows": [
+        "ShowInsertExpansionDiscDialog"
+      ],
+      "Data Structures": [
+        "GetDataTableEntry",
+        "InitializeAndCleanupQueues",
+        "ProcessAudioQueue"
+      ]
+    },
+    "recommended_first_pass": 58
+  }
+}

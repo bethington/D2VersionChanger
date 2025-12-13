@@ -1,0 +1,1476 @@
+{
+  "1.07_to_1.08": {
+    "from_version": "1.07",
+    "to_version": "1.08",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3229,
+          "examples": [
+            "AcquireCriticalSectionByIndex",
+            "AcquireCriticalSectionForAddress",
+            "AcquireDynamicBufferLock",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex"
+          ]
+        },
+        "removed_functions": {
+          "count": 3312,
+          "examples": [
+            "AddInventoryCoordNode",
+            "AddInventoryDeltaNode",
+            "ApplyItemModifications",
+            "ApplyRandomQualityMod",
+            "ApplySetItemModifications"
+          ]
+        },
+        "stable_functions": 830,
+        "stability_ratio": 0.20038628681796233
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 576,
+          "examples": [
+            "AcquireCriticalSectionByIndex",
+            "AcquireDynamicBufferLock",
+            "AcquireStreamCriticalSection",
+            "AddToDynamicBuffer",
+            "AddToDynamicBufferWithErrorCode"
+          ]
+        },
+        "removed_functions": {
+          "count": 939,
+          "examples": [
+            "AcquireCriticalSectionLock",
+            "AcquireStreamPropertyTableLock",
+            "ActivateCacheNodeForObjectType15",
+            "ActivateCacheNodeWithInit",
+            "ActivateCacheObjectAndNotifyUI"
+          ]
+        },
+        "stable_functions": 3118,
+        "stability_ratio": 0.76854818831649
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 527,
+          "examples": [
+            "AcquireCriticalSectionByIndex",
+            "AcquireCriticalSectionForAddress",
+            "AcquireDynamicBufferLock",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex"
+          ]
+        },
+        "removed_functions": {
+          "count": 666,
+          "examples": [
+            "AccumulateLightingContribution",
+            "ActivateAndApplySkillPropertyEffects",
+            "AddGuildMemberBytes",
+            "AddGuildTimestamp",
+            "AddInventoryCoordNode"
+          ]
+        },
+        "stable_functions": 1434,
+        "stability_ratio": 0.6828571428571428
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 176,
+          "examples": [
+            "AcquireCriticalSectionByIndex",
+            "AcquireCriticalSectionConditional",
+            "AcquireCriticalSectionForAddress",
+            "AcquireDynamicBufferLock",
+            "AcquireStreamCriticalSection"
+          ]
+        },
+        "removed_functions": {
+          "count": 187,
+          "examples": [
+            "AcquireCriticalSectionIfValid",
+            "AcquireCriticalSectionIndex",
+            "AcquireExitHandlerLock",
+            "AcquireFileLock",
+            "AllocMemoryWithCleanup"
+          ]
+        },
+        "stable_functions": 406,
+        "stability_ratio": 0.684654300168634
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 466,
+          "examples": [
+            "AllocateMemoryFromPool",
+            "BuildHuffmanDecodingTable",
+            "ClearCollectionLinkedPointers",
+            "ClearListNodeState",
+            "ConsumeBitsFromStream"
+          ]
+        },
+        "removed_functions": {
+          "count": 571,
+          "examples": [
+            "AckMessageSequence",
+            "ActivateConnectionById",
+            "AddAudioInstanceExprNode",
+            "AdpcmDecodeLoop",
+            "AdvanceAudioStreamList"
+          ]
+        },
+        "stable_functions": 306,
+        "stability_ratio": 0.34891676168757124
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 252,
+          "examples": [
+            "AcquireCriticalSectionByIndex",
+            "AcquireCriticalSectionForAddress",
+            "AcquireDynamicBufferLock",
+            "AcquireInitializationLockAndProcess",
+            "AcquireStreamCriticalSection"
+          ]
+        },
+        "removed_functions": {
+          "count": 292,
+          "examples": [
+            "AddWithCarry",
+            "AllocAndZeroBuffer16",
+            "AllocHeapArena",
+            "AllocaStackProbe",
+            "AllocateFileDescriptor"
+          ]
+        },
+        "stable_functions": 339,
+        "stability_ratio": 0.5372424722662441
+      }
+    },
+    "summary": {
+      "total_new_functions": 5226,
+      "total_removed_functions": 5967,
+      "total_stable_functions": 6433,
+      "total_modified_functions": 0
+    }
+  },
+  "1.08_to_1.09": {
+    "from_version": "1.08",
+    "to_version": "1.09",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3013,
+          "examples": [
+            "AllocateStackSpace",
+            "AmsgExit",
+            "CalculateAndSetCalendarDateTime",
+            "CheckDaylightSavingTime",
+            "CheckDaylightSavingTransition"
+          ]
+        },
+        "removed_functions": {
+          "count": 2978,
+          "examples": [
+            "ACT_GetField10",
+            "AddItemToInventory",
+            "AddMinionDamageBonus",
+            "AddUnitSkill",
+            "AddUnitSkillBonus"
+          ]
+        },
+        "stable_functions": 1081,
+        "stability_ratio": 0.26632175412663217
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 563,
+          "examples": [
+            "AcquireCriticalSectionLock",
+            "BigIntAddOne",
+            "FUN_6faa13b0",
+            "FUN_6faa2890",
+            "FUN_6faa8d30"
+          ]
+        },
+        "removed_functions": {
+          "count": 565,
+          "examples": [
+            "AI_ExecuteMonsterSkill0x126",
+            "AccessResourceType249",
+            "AcquireCriticalSectionByIndex",
+            "AddItemToInventory",
+            "AddMinionDamageBonus"
+          ]
+        },
+        "stable_functions": 3129,
+        "stability_ratio": 0.8470492690850027
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 262,
+          "examples": [
+            "BigIntAddScalar",
+            "FUN_6fd49130",
+            "FUN_6fd4a710",
+            "FUN_6fd4cc00",
+            "FUN_6fd4ed10"
+          ]
+        },
+        "removed_functions": {
+          "count": 277,
+          "examples": [
+            "ACT_GetField08",
+            "ACT_GetField10",
+            "AddItemToInventory",
+            "AddMinionDamageBonus",
+            "AddStatsFromStatListChain"
+          ]
+        },
+        "stable_functions": 1684,
+        "stability_ratio": 0.858745537990821
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 60,
+          "examples": [
+            "CallFunctionOnRange",
+            "FUN_6f8a2cb0",
+            "FUN_6f8a2e50",
+            "FUN_6f8a4d30",
+            "FUN_6f8a4de0"
+          ]
+        },
+        "removed_functions": {
+          "count": 61,
+          "examples": [
+            "AddTextLines",
+            "AllocAndZeroBuffer16",
+            "CalculateTextBoxLineCount",
+            "CallFunctionOnArrayElements",
+            "CreateCompositeUnit"
+          ]
+        },
+        "stable_functions": 521,
+        "stability_ratio": 0.8951890034364262
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 1,
+          "examples": [
+            "ToggleDialogUIState"
+          ]
+        },
+        "removed_functions": {
+          "count": 5,
+          "examples": [
+            "FUN_6ffc3fa0",
+            "Ordinal_276",
+            "Ordinal_377",
+            "Ordinal_574",
+            "Ordinal_643"
+          ]
+        },
+        "stable_functions": 767,
+        "stability_ratio": 0.9935233160621761
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 14,
+          "examples": [
+            "FUN_6ff58050",
+            "FUN_6ff585c0",
+            "FUN_6ff5a460",
+            "FUN_6ff5a830",
+            "FUN_6ff5ca30"
+          ]
+        },
+        "removed_functions": {
+          "count": 10,
+          "examples": [
+            "CheckExpansionMpqExists",
+            "FUN_6ff67fe0",
+            "FUN_6ff68550",
+            "FUN_6ff6a430",
+            "FUN_6ff6a800"
+          ]
+        },
+        "stable_functions": 581,
+        "stability_ratio": 0.9830795262267343
+      }
+    },
+    "summary": {
+      "total_new_functions": 3913,
+      "total_removed_functions": 3896,
+      "total_stable_functions": 7763,
+      "total_modified_functions": 0
+    }
+  },
+  "1.09_to_1.09b": {
+    "from_version": "1.09",
+    "to_version": "1.09b",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 4094,
+        "stability_ratio": 1.0
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 3692,
+        "stability_ratio": 1.0
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 1946,
+        "stability_ratio": 1.0
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 581,
+        "stability_ratio": 1.0
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 768,
+        "stability_ratio": 1.0
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "stable_functions": 595,
+        "stability_ratio": 1.0
+      }
+    },
+    "summary": {
+      "total_new_functions": 0,
+      "total_removed_functions": 0,
+      "total_stable_functions": 11676,
+      "total_modified_functions": 0
+    }
+  },
+  "1.09b_to_1.09d": {
+    "from_version": "1.09b",
+    "to_version": "1.09d",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 2791,
+          "examples": [
+            "DecrementValue",
+            "FUN_6fc32430",
+            "FUN_6fc32660",
+            "FUN_6fc32800",
+            "FUN_6fc32df0"
+          ]
+        },
+        "removed_functions": {
+          "count": 2783,
+          "examples": [
+            "FUN_6fc32400",
+            "FUN_6fc32620",
+            "FUN_6fc327c0",
+            "FUN_6fc32d70",
+            "FUN_6fc32da0"
+          ]
+        },
+        "stable_functions": 1311,
+        "stability_ratio": 0.3202247191011236
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 372,
+          "examples": [
+            "FUN_6faa8b50",
+            "FUN_6faa8d20",
+            "FUN_6faa8f10",
+            "FUN_6faa9c50",
+            "FUN_6faaa220"
+          ]
+        },
+        "removed_functions": {
+          "count": 371,
+          "examples": [
+            "ActivateHelpMenuIfInBounds",
+            "CalculateCharacterTitleTier",
+            "CheckLevelDefHasType",
+            "CopyGameStringField",
+            "FUN_6faa8d30"
+          ]
+        },
+        "stable_functions": 3321,
+        "stability_ratio": 0.8995124593716143
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 114,
+          "examples": [
+            "FUN_6fd4cc10",
+            "FUN_6fd4ed20",
+            "FUN_6fd4ee90",
+            "FUN_6fd4f700",
+            "FUN_6fd4f790"
+          ]
+        },
+        "removed_functions": {
+          "count": 108,
+          "examples": [
+            "FUN_6fd4cc00",
+            "FUN_6fd4ed10",
+            "FUN_6fd4ee80",
+            "FUN_6fd4f6f0",
+            "FUN_6fd4f780"
+          ]
+        },
+        "stable_functions": 1838,
+        "stability_ratio": 0.9445015416238438
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 0,
+          "examples": []
+        },
+        "removed_functions": {
+          "count": 1,
+          "examples": [
+            "InitActPalette"
+          ]
+        },
+        "stable_functions": 580,
+        "stability_ratio": 0.9982788296041308
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 78,
+          "examples": [
+            "FUN_6ffbd6e0",
+            "FUN_6ffbd7c0",
+            "FUN_6ffbdff0",
+            "FUN_6ffbe2f0",
+            "FUN_6ffbe620"
+          ]
+        },
+        "removed_functions": {
+          "count": 78,
+          "examples": [
+            "FUN_6ffbd6a0",
+            "FUN_6ffbd780",
+            "FUN_6ffbdfb0",
+            "FUN_6ffbe2b0",
+            "FUN_6ffbe5e0"
+          ]
+        },
+        "stable_functions": 690,
+        "stability_ratio": 0.8984375
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 127,
+          "examples": [
+            "CalculateOffsetValue",
+            "CallSettingFrameWithExceptionHandler",
+            "CppExceptionFilter",
+            "CppExceptionFilterForUnitActions",
+            "DispatchExceptionHandler"
+          ]
+        },
+        "removed_functions": {
+          "count": 77,
+          "examples": [
+            "AcceptConnectionsThreadProc",
+            "AddIpToBlockCache",
+            "BeginClientRead",
+            "BroadcastDataToAllSockets",
+            "BuildModuleList"
+          ]
+        },
+        "stable_functions": 518,
+        "stability_ratio": 0.8705882352941177
+      }
+    },
+    "summary": {
+      "total_new_functions": 3482,
+      "total_removed_functions": 3418,
+      "total_stable_functions": 8258,
+      "total_modified_functions": 0
+    }
+  },
+  "1.09d_to_1.10": {
+    "from_version": "1.09d",
+    "to_version": "1.10",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3063,
+          "examples": [
+            "BinkBufferGetError",
+            "BnetAdHandler_StubReturnTrue",
+            "CloseHandleWrapper",
+            "CopyMemoryBuffer",
+            "DoNothingStub"
+          ]
+        },
+        "removed_functions": {
+          "count": 3167,
+          "examples": [
+            "ACT_GetField04",
+            "AddCoordNodeToDungeon",
+            "AddStatToStatList",
+            "AllArrayElementsHaveFlag",
+            "AllocPoolMemoryTracked"
+          ]
+        },
+        "stable_functions": 935,
+        "stability_ratio": 0.22793759141882008
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 2019,
+          "examples": [
+            "BigIntNormalizeAndIsUnity",
+            "BigIntShiftLeft_Thunk",
+            "DoNothingStub",
+            "EntityExistsWithId",
+            "ExitWithCode"
+          ]
+        },
+        "removed_functions": {
+          "count": 2272,
+          "examples": [
+            "ACT_GetField04",
+            "ACT_GetField08",
+            "ActivateSecondaryWeaponSlot",
+            "ActivateSoundSlot",
+            "ActivateUIMenuWidget"
+          ]
+        },
+        "stable_functions": 1421,
+        "stability_ratio": 0.38478202003790957
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1053,
+          "examples": [
+            "BigIntShiftLeft",
+            "BigIntShiftLeft_Thunk",
+            "BigIntTrimLeadingZerosAndCheckUnity",
+            "FUN_6fd41000",
+            "FUN_6fd411f0"
+          ]
+        },
+        "removed_functions": {
+          "count": 957,
+          "examples": [
+            "ACT_GetField04",
+            "AccumulateProfilingTime",
+            "AddCoordNodeToDungeon",
+            "AddStatToStatList",
+            "AdjustRotationAngle"
+          ]
+        },
+        "stable_functions": 995,
+        "stability_ratio": 0.5097336065573771
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 112,
+          "examples": [
+            "BinkBufferGetError",
+            "DeleteFile",
+            "DestroyCompressionBuffer",
+            "FUN_6f8a1000",
+            "FUN_6f8a1250"
+          ]
+        },
+        "removed_functions": {
+          "count": 152,
+          "examples": [
+            "AcquireCriticalSectionForAddress",
+            "AdjustFileBufferBounds",
+            "AllocPoolMemoryTracked",
+            "AllocateCelImageData",
+            "AmsgExit"
+          ]
+        },
+        "stable_functions": 428,
+        "stability_ratio": 0.7379310344827587
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 250,
+          "examples": [
+            "FUN_6ffb16e0",
+            "FUN_6ffb1a30",
+            "FUN_6ffb1ad0",
+            "FUN_6ffb1be0",
+            "FUN_6ffb1d60"
+          ]
+        },
+        "removed_functions": {
+          "count": 237,
+          "examples": [
+            "AllocateCacheListNode",
+            "AllocateMemoryFromPool",
+            "BigIntResizeCapacity",
+            "ClearCollectionLinkedPointers",
+            "ClearListNodeState"
+          ]
+        },
+        "stable_functions": 531,
+        "stability_ratio": 0.69140625
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 173,
+          "examples": [
+            "CalculateStreamLineCount",
+            "CompareMemory",
+            "CopyMemoryBuffer",
+            "ExchangeStructArrayValue",
+            "ExtractArrayElementAndProcessCharacter"
+          ]
+        },
+        "removed_functions": {
+          "count": 178,
+          "examples": [
+            "AddLogMessage",
+            "AddTableEntry",
+            "AllocPoolMemoryTracked",
+            "AllocateLogMessage",
+            "AsyncDataSetBuffer"
+          ]
+        },
+        "stable_functions": 467,
+        "stability_ratio": 0.724031007751938
+      }
+    },
+    "summary": {
+      "total_new_functions": 6670,
+      "total_removed_functions": 6963,
+      "total_stable_functions": 4777,
+      "total_modified_functions": 0
+    }
+  },
+  "1.10_to_1.11": {
+    "from_version": "1.10",
+    "to_version": "1.11",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 4039,
+          "examples": [
+            "$I10_OUTPUT",
+            "AcquireFileHandleLock8",
+            "AcquireStreamLock",
+            "AcquireSynchronizationLock",
+            "AdjustPointer"
+          ]
+        },
+        "removed_functions": {
+          "count": 3337,
+          "examples": [
+            "AcquireCriticalSectionForAddress",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex",
+            "AddLinkedListNode",
+            "AddToDynamicBuffer"
+          ]
+        },
+        "stable_functions": 661,
+        "stability_ratio": 0.1653326663331666
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 3707,
+          "examples": [
+            "$I10_OUTPUT",
+            "AcquireCriticalSectionByIndex",
+            "AcquireFileHandleLock8",
+            "AcquireStreamLock",
+            "AcquireSynchronizationLock"
+          ]
+        },
+        "removed_functions": {
+          "count": 2786,
+          "examples": [
+            "AcquireCriticalSectionForAddress",
+            "AcquireCriticalSectionLock",
+            "AcquireInitializationLockAndProcess",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex"
+          ]
+        },
+        "stable_functions": 654,
+        "stability_ratio": 0.19011627906976744
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1594,
+          "examples": [
+            "$I10_OUTPUT",
+            "AcquireFileHandleLock8",
+            "AcquireStreamLock",
+            "AcquireSynchronizationLock",
+            "AllocateConditionalResource"
+          ]
+        },
+        "removed_functions": {
+          "count": 1135,
+          "examples": [
+            "AcquireCriticalSectionForAddress",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex",
+            "AddLinkedListNode",
+            "AddUintWithOverflowCheck"
+          ]
+        },
+        "stable_functions": 913,
+        "stability_ratio": 0.44580078125
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 414,
+          "examples": [
+            "$I10_OUTPUT",
+            "AcquireFileHandleLock8",
+            "AllocateMemoryFromArena",
+            "AllocateMemoryWithCache",
+            "AllocateTlsSlot"
+          ]
+        },
+        "removed_functions": {
+          "count": 368,
+          "examples": [
+            "AccountInsertName",
+            "AcquireCriticalSectionConditional",
+            "AcquireStreamCriticalSection",
+            "AddUintWithOverflowCheck",
+            "AllocateAndInitializeObject"
+          ]
+        },
+        "stable_functions": 172,
+        "stability_ratio": 0.31851851851851853
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 1070,
+          "examples": [
+            "$I10_OUTPUT",
+            "AccumulateCharacterStatistics",
+            "AccumulateVectorElements",
+            "AcquireCriticalSectionByIndex",
+            "AcquireDynamicBufferLock"
+          ]
+        },
+        "removed_functions": {
+          "count": 697,
+          "examples": [
+            "AddAtExitCallback",
+            "AddAuHandlerToList",
+            "AddIntegers",
+            "AddRectangle",
+            "AddRectangleFromInts"
+          ]
+        },
+        "stable_functions": 84,
+        "stability_ratio": 0.10755441741357234
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 652,
+          "examples": [
+            "$I10_OUTPUT",
+            "AcceptAndInitializeConnectionSocket",
+            "AcquireFileHandleLock8",
+            "AcquireStreamLock",
+            "AcquireSynchronizationLock"
+          ]
+        },
+        "removed_functions": {
+          "count": 499,
+          "examples": [
+            "AcquireCriticalSectionForAddress",
+            "AcquireInitializationLockAndProcess",
+            "AcquireStreamCriticalSection",
+            "AcquireStructureCriticalSectionByIndex",
+            "AddBufferEntry"
+          ]
+        },
+        "stable_functions": 141,
+        "stability_ratio": 0.2203125
+      }
+    },
+    "summary": {
+      "total_new_functions": 11476,
+      "total_removed_functions": 8822,
+      "total_stable_functions": 2625,
+      "total_modified_functions": 0
+    }
+  },
+  "1.11_to_1.11b": {
+    "from_version": "1.11",
+    "to_version": "1.11b",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3698,
+          "examples": [
+            "AllocateAndValidateResourceSlot",
+            "AllocateMemoryWithTracking",
+            "FUN_6fc210c0",
+            "FUN_6fc21110",
+            "FUN_6fc21180"
+          ]
+        },
+        "removed_functions": {
+          "count": 3700,
+          "examples": [
+            "FUN_6fc21130",
+            "FUN_6fc21160",
+            "FUN_6fc211d0",
+            "FUN_6fc21240",
+            "FUN_6fc21260"
+          ]
+        },
+        "stable_functions": 1000,
+        "stability_ratio": 0.2127659574468085
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 3221,
+          "examples": [
+            "AllocateAndInitializeDataArray",
+            "AllocateAndValidateResourceSlot",
+            "AllocateMemoryWithTracking",
+            "DestroyGameDataCollection",
+            "EnableUIScreen31"
+          ]
+        },
+        "removed_functions": {
+          "count": 3199,
+          "examples": [
+            "AddAtExitCallback",
+            "ApplyPaletteFromAudioContext",
+            "FID_conflict:__fwrite_lk",
+            "FUN_6fab1050",
+            "FUN_6fab10a0"
+          ]
+        },
+        "stable_functions": 1162,
+        "stability_ratio": 0.2664526484751204
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1167,
+          "examples": [
+            "AllocateAndInitializePoolSlot",
+            "AllocateMemoryWithTracking",
+            "FUN_6fd51100",
+            "FUN_6fd51170",
+            "FUN_6fd511a0"
+          ]
+        },
+        "removed_functions": {
+          "count": 1163,
+          "examples": [
+            "FUN_6fd510c0",
+            "FUN_6fd510f0",
+            "FUN_6fd51120",
+            "FUN_6fd51150",
+            "FUN_6fd511c0"
+          ]
+        },
+        "stable_functions": 1344,
+        "stability_ratio": 0.5360989230155564
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 166,
+          "examples": [
+            "AllocateAndInitializePoolSlot",
+            "AllocateAndValidateResourceSlot",
+            "AllocateMemoryWithTracking",
+            "FUN_6f8e7e10",
+            "FUN_6f8e7ea0"
+          ]
+        },
+        "removed_functions": {
+          "count": 159,
+          "examples": [
+            "FUN_6f8e7e50",
+            "FUN_6f8e8000",
+            "FUN_6f8e81d0",
+            "FUN_6f8e82e0",
+            "FUN_6f8e83c0"
+          ]
+        },
+        "stable_functions": 427,
+        "stability_ratio": 0.7286689419795221
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 19,
+          "examples": [
+            "ComputeCRC32",
+            "FUN_6fbf3cd0",
+            "FUN_6fc00020",
+            "FUN_6fc05430",
+            "FUN_6fc09700"
+          ]
+        },
+        "removed_functions": {
+          "count": 20,
+          "examples": [
+            "FUN_6fbf3030",
+            "FUN_6fc07060",
+            "FUN_6fc09e70",
+            "FUN_6fc0b980",
+            "FUN_6fc14220"
+          ]
+        },
+        "stable_functions": 1134,
+        "stability_ratio": 0.9826689774696707
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 34,
+          "examples": [
+            "AllocateAndInitializeDataArray",
+            "AllocateAndInitializePoolSlot",
+            "AllocateAndInitializeResourceBuffer",
+            "AllocateAndValidateResourceSlot",
+            "AllocateMemorySlotFromPool"
+          ]
+        },
+        "removed_functions": {
+          "count": 35,
+          "examples": [
+            "FUN_6ff5e0c0",
+            "FUN_6ff5e2a0",
+            "FUN_6ff5ea90",
+            "FUN_6ff5f320",
+            "FUN_6ff5f6d0"
+          ]
+        },
+        "stable_functions": 758,
+        "stability_ratio": 0.9558638083228247
+      }
+    },
+    "summary": {
+      "total_new_functions": 8305,
+      "total_removed_functions": 8276,
+      "total_stable_functions": 5825,
+      "total_modified_functions": 0
+    }
+  },
+  "1.11b_to_1.12a": {
+    "from_version": "1.11b",
+    "to_version": "1.12a",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3710,
+          "examples": [
+            "AllocateAndInsertEntityNode",
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString"
+          ]
+        },
+        "removed_functions": {
+          "count": 3710,
+          "examples": [
+            "$I10_OUTPUT",
+            "FID_conflict:__atodbl",
+            "FUN_6fc21040",
+            "FUN_6fc21090",
+            "FUN_6fc210c0"
+          ]
+        },
+        "stable_functions": 988,
+        "stability_ratio": 0.21030225627926777
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 3210,
+          "examples": [
+            "AddAtExitCallback",
+            "AllocateMemory",
+            "ApplyPaletteFromAudioContext",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents"
+          ]
+        },
+        "removed_functions": {
+          "count": 3218,
+          "examples": [
+            "$I10_OUTPUT",
+            "CalculateDistanceSquared",
+            "DestroyGameDataCollection",
+            "FID_conflict:__atodbl",
+            "FUN_6fab1040"
+          ]
+        },
+        "stable_functions": 1165,
+        "stability_ratio": 0.2657996805840748
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1183,
+          "examples": [
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString",
+            "ConvertStringBetweenCodePages"
+          ]
+        },
+        "removed_functions": {
+          "count": 1182,
+          "examples": [
+            "$I10_OUTPUT",
+            "CountMatchingListItems",
+            "DecrementValue",
+            "FID_conflict:__atodbl",
+            "FUN_6fd51100"
+          ]
+        },
+        "stable_functions": 1329,
+        "stability_ratio": 0.5292712066905615
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 184,
+          "examples": [
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString",
+            "ConvertStringBetweenCodePages"
+          ]
+        },
+        "removed_functions": {
+          "count": 184,
+          "examples": [
+            "$I10_OUTPUT",
+            "FID_conflict:__atodbl",
+            "FUN_6f8e78a0",
+            "FUN_6f8e78c0",
+            "FUN_6f8e78f0"
+          ]
+        },
+        "stable_functions": 409,
+        "stability_ratio": 0.6897133220910624
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 54,
+          "examples": [
+            "AcquirePoolSlotLock",
+            "AllocateAndInsertEntityNode",
+            "AllocateMemory",
+            "ApplyLocaleConfiguration",
+            "ConvertDecimalStringToLargeNumber"
+          ]
+        },
+        "removed_functions": {
+          "count": 56,
+          "examples": [
+            "$I10_OUTPUT",
+            "AppendCRLFTerminatorToBuffer",
+            "CompareFpuExtendedValues",
+            "DecrementValue",
+            "FID_conflict:__atodbl"
+          ]
+        },
+        "stable_functions": 1097,
+        "stability_ratio": 0.9514310494362532
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 53,
+          "examples": [
+            "AcquireDataStructureLock",
+            "AllocateMemory",
+            "CloseNetworkSocket",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents"
+          ]
+        },
+        "removed_functions": {
+          "count": 51,
+          "examples": [
+            "$I10_OUTPUT",
+            "DecrementValue",
+            "DivideRoundedUp",
+            "FID_conflict:__atodbl",
+            "FUN_6ff5db00"
+          ]
+        },
+        "stable_functions": 741,
+        "stability_ratio": 0.9356060606060606
+      }
+    },
+    "summary": {
+      "total_new_functions": 8394,
+      "total_removed_functions": 8401,
+      "total_stable_functions": 5729,
+      "total_modified_functions": 0
+    }
+  },
+  "1.12a_to_1.13c": {
+    "from_version": "1.12a",
+    "to_version": "1.13c",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3724,
+          "examples": [
+            "EVENT_AllocateTimer",
+            "FUN_6fc21040",
+            "FUN_6fc21100",
+            "FUN_6fc21130",
+            "FUN_6fc21160"
+          ]
+        },
+        "removed_functions": {
+          "count": 3716,
+          "examples": [
+            "FUN_6fc21050",
+            "FUN_6fc21080",
+            "FUN_6fc210f0",
+            "FUN_6fc21140",
+            "FUN_6fc211a0"
+          ]
+        },
+        "stable_functions": 982,
+        "stability_ratio": 0.20902511707109409
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 3206,
+          "examples": [
+            "AllocateAndInitializeGameObject",
+            "CalculateDistanceSquared",
+            "CheckInitializationAndSetGlobalState",
+            "EnablePacketHandler171",
+            "FID_conflict:_iscntrl"
+          ]
+        },
+        "removed_functions": {
+          "count": 3194,
+          "examples": [
+            "CalculateViewportHeight",
+            "CheckAndInvokeCleanupCallback",
+            "CheckFlagAndGetUIState",
+            "DrawScreenRectIfSet",
+            "EnableLoggingIfFlagSet"
+          ]
+        },
+        "stable_functions": 1181,
+        "stability_ratio": 0.26994285714285715
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1165,
+          "examples": [
+            "D2Common_10231_Impl",
+            "DATATBLS_GetSkillsTxtRecord",
+            "DATATBLS_NewTreasureClassEx",
+            "DATATBLS_ParseTreasureClassItem",
+            "DecrementValue"
+          ]
+        },
+        "removed_functions": {
+          "count": 1163,
+          "examples": [
+            "FUN_6fd510a0",
+            "FUN_6fd51110",
+            "FUN_6fd51140",
+            "FUN_6fd51170",
+            "FUN_6fd511c0"
+          ]
+        },
+        "stable_functions": 1349,
+        "stability_ratio": 0.5370222929936306
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 172,
+          "examples": [
+            "FUN_6f8e78f0",
+            "FUN_6f8e7920",
+            "FUN_6f8e7970",
+            "FUN_6f8e79f0",
+            "FUN_6f8e7a60"
+          ]
+        },
+        "removed_functions": {
+          "count": 171,
+          "examples": [
+            "FUN_6f8e7900",
+            "FUN_6f8e7950",
+            "FUN_6f8e79d0",
+            "FUN_6f8e7a40",
+            "FUN_6f8e7aa0"
+          ]
+        },
+        "stable_functions": 422,
+        "stability_ratio": 0.7116357504215851
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 19,
+          "examples": [
+            "AppendCRLFTerminatorToBuffer",
+            "FUN_6fc06e70",
+            "FUN_6fc0a550",
+            "FUN_6fc0bdd0",
+            "FUN_6fc0c0c0"
+          ]
+        },
+        "removed_functions": {
+          "count": 20,
+          "examples": [
+            "AcquirePoolSlotLock",
+            "FUN_6fc00b70",
+            "FUN_6fc00eb0",
+            "FUN_6fc03fc0",
+            "FUN_6fc12580"
+          ]
+        },
+        "stable_functions": 1131,
+        "stability_ratio": 0.9826238053866203
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 6,
+          "examples": [
+            "DivideRoundedUp",
+            "LoadAndIndexCrashDumpEntries",
+            "LogAppendFormat",
+            "Unwind@6ff749d0",
+            "Unwind@6ff74a40"
+          ]
+        },
+        "removed_functions": {
+          "count": 6,
+          "examples": [
+            "FUN_6ff5ec10",
+            "FUN_6ff5ec60",
+            "NullStubProc",
+            "Ordinal_10263",
+            "Unwind@6ff749c0"
+          ]
+        },
+        "stable_functions": 788,
+        "stability_ratio": 0.9924433249370277
+      }
+    },
+    "summary": {
+      "total_new_functions": 8292,
+      "total_removed_functions": 8270,
+      "total_stable_functions": 5853,
+      "total_modified_functions": 0
+    }
+  },
+  "1.13c_to_1.13d": {
+    "from_version": "1.13c",
+    "to_version": "1.13d",
+    "modules": {
+      "D2Game": {
+        "new_functions": {
+          "count": 3731,
+          "examples": [
+            "$I10_OUTPUT",
+            "FID_conflict:__atodbl",
+            "FUN_6fc21050",
+            "FUN_6fc21070",
+            "FUN_6fc210c0"
+          ]
+        },
+        "removed_functions": {
+          "count": 3727,
+          "examples": [
+            "AllocateAndInsertEntityNode",
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString"
+          ]
+        },
+        "stable_functions": 979,
+        "stability_ratio": 0.2080322991925202
+      },
+      "D2Client": {
+        "new_functions": {
+          "count": 3244,
+          "examples": [
+            "$I10_OUTPUT",
+            "CalculateViewportHeight",
+            "FID_conflict:__atodbl",
+            "FUN_6fab1020",
+            "FUN_6fab1040"
+          ]
+        },
+        "removed_functions": {
+          "count": 3229,
+          "examples": [
+            "AddAtExitCallback",
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString"
+          ]
+        },
+        "stable_functions": 1158,
+        "stability_ratio": 0.2639617050376111
+      },
+      "D2Common": {
+        "new_functions": {
+          "count": 1351,
+          "examples": [
+            "$I10_OUTPUT",
+            "AdjustPointer",
+            "AllocateAndCopyData",
+            "AllocateMemoryFromArena",
+            "AllocateOrReallocateMemory"
+          ]
+        },
+        "removed_functions": {
+          "count": 1204,
+          "examples": [
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString",
+            "ConvertStringBetweenCodePages"
+          ]
+        },
+        "stable_functions": 1310,
+        "stability_ratio": 0.5210819411296739
+      },
+      "D2Win": {
+        "new_functions": {
+          "count": 185,
+          "examples": [
+            "$I10_OUTPUT",
+            "FID_conflict:__atodbl",
+            "FUN_6f8e78c0",
+            "FUN_6f8e78e0",
+            "FUN_6f8e7910"
+          ]
+        },
+        "removed_functions": {
+          "count": 188,
+          "examples": [
+            "AllocateMemory",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString",
+            "ConvertStringBetweenCodePages"
+          ]
+        },
+        "stable_functions": 406,
+        "stability_ratio": 0.6835016835016835
+      },
+      "Storm": {
+        "new_functions": {
+          "count": 54,
+          "examples": [
+            "$I10_OUTPUT",
+            "CompareFpuExtendedValues",
+            "DecrementValue",
+            "FID_conflict:__atodbl",
+            "FUN_6fbf29f0"
+          ]
+        },
+        "removed_functions": {
+          "count": 53,
+          "examples": [
+            "AllocateAndInsertEntityNode",
+            "AllocateMemory",
+            "AppendCRLFTerminatorToBuffer",
+            "ApplyLocaleConfiguration",
+            "ComputeCRC32"
+          ]
+        },
+        "stable_functions": 1097,
+        "stability_ratio": 0.9539130434782609
+      },
+      "Fog": {
+        "new_functions": {
+          "count": 48,
+          "examples": [
+            "$I10_OUTPUT",
+            "DecrementValue",
+            "FID_conflict:__atodbl",
+            "FUN_6ff5dc90",
+            "FUN_6ff5e470"
+          ]
+        },
+        "removed_functions": {
+          "count": 42,
+          "examples": [
+            "AllocateMemory",
+            "CleanupCriticalSection",
+            "ConvertDecimalStringToLargeNumber",
+            "ConvertFloatToStringComponents",
+            "ConvertFloatingPointToDecimalString"
+          ]
+        },
+        "stable_functions": 752,
+        "stability_ratio": 0.947103274559194
+      }
+    },
+    "summary": {
+      "total_new_functions": 8613,
+      "total_removed_functions": 8443,
+      "total_stable_functions": 5702,
+      "total_modified_functions": 0
+    }
+  }
+}

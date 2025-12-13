@@ -1,0 +1,1363 @@
+{
+  "1.07": {
+    "version": "1.07",
+    "release_date": "2000-06-27",
+    "major_changes": [
+      "Initial release",
+      "Base D2 classic content"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4142,
+        "named_functions": 876,
+        "unique_functions": 4142,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "ACT_GetField04",
+          "ACT_GetField10",
+          "AddCoordNodeToDungeon",
+          "AddInventoryCoordNode",
+          "AddInventoryDeltaNode",
+          "AddItemToInventory",
+          "AddLinkedListNode",
+          "AddMinionDamageBonus",
+          "AddStatToStatList",
+          "AddUnitSkill"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4057,
+        "named_functions": 3862,
+        "unique_functions": 4057,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "ACT_GetField04",
+          "ACT_GetField08",
+          "AI_ExecuteMonsterSkill0x126",
+          "AccessResourceType249",
+          "AcquireCriticalSectionForAddress",
+          "AcquireCriticalSectionLock",
+          "AcquireInitializationLockAndProcess",
+          "AcquireStreamPropertyTableLock",
+          "AcquireStructureCriticalSectionByIndex",
+          "ActivateCacheNodeForObjectType15"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2100,
+        "named_functions": 2099,
+        "unique_functions": 2100,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "ACT_GetField04",
+          "ACT_GetField08",
+          "ACT_GetField10",
+          "AccumulateLightingContribution",
+          "AccumulateProfilingTime",
+          "ActivateAndApplySkillPropertyEffects",
+          "AddCoordNodeToDungeon",
+          "AddGuildMemberBytes",
+          "AddGuildTimestamp",
+          "AddInventoryCoordNode"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 593,
+        "named_functions": 592,
+        "unique_functions": 593,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "AccountInsertName",
+          "AcquireCriticalSectionIfValid",
+          "AcquireCriticalSectionIndex",
+          "AcquireExitHandlerLock",
+          "AcquireFileLock",
+          "AddTextLines",
+          "AllocAndZeroBuffer16",
+          "AllocMemoryWithCleanup",
+          "AllocPoolMemoryTracked",
+          "AllocateAndInitializeObject"
+        ]
+      },
+      "Storm": {
+        "total_functions": 877,
+        "named_functions": 876,
+        "unique_functions": 877,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "AckMessageSequence",
+          "AcquireGlobalLock",
+          "ActivateConnectionById",
+          "AddAtExitCallback",
+          "AddAuHandlerToList",
+          "AddAudioInstanceExprNode",
+          "AddIntegers",
+          "AddRectangle",
+          "AddRectangleFromInts",
+          "AdpcmDecodeLoop"
+        ]
+      },
+      "Fog": {
+        "total_functions": 631,
+        "named_functions": 630,
+        "unique_functions": 631,
+        "stable_functions": 0,
+        "removed_functions": 0,
+        "top_new_functions": [
+          "AcceptConnectionsThreadProc",
+          "AddBufferEntry",
+          "AddIpToBlockCache",
+          "AddLogMessage",
+          "AddTableEntry",
+          "AddUniqueKeyValuePair",
+          "AddWithCarry",
+          "AllocAndZeroBuffer16",
+          "AllocAsyncEvent",
+          "AllocDataArrayEntry"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 12400,
+      "named_functions": 8935,
+      "unique_functions": 12400,
+      "functions_from_previous": 0,
+      "functions_new": 12400,
+      "functions_removed": 0
+    }
+  },
+  "1.08": {
+    "version": "1.08",
+    "release_date": "2001-03-13",
+    "major_changes": [
+      "Bug fixes",
+      "Balance adjustments"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4059,
+        "named_functions": 1054,
+        "unique_functions": 3229,
+        "stable_functions": 830,
+        "removed_functions": 3312,
+        "top_new_functions": [
+          "AcquireCriticalSectionByIndex",
+          "AcquireCriticalSectionForAddress",
+          "AcquireDynamicBufferLock",
+          "AcquireStreamCriticalSection",
+          "AcquireStructureCriticalSectionByIndex",
+          "AddToDynamicBuffer",
+          "AddToDynamicBufferWithErrorCode",
+          "AddUintWithOverflowCheck",
+          "AdjustFileBufferBounds",
+          "AdjustValueWithBitOps"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 3694,
+        "named_functions": 3346,
+        "unique_functions": 576,
+        "stable_functions": 3118,
+        "removed_functions": 939,
+        "top_new_functions": [
+          "AcquireCriticalSectionByIndex",
+          "AcquireDynamicBufferLock",
+          "AcquireStreamCriticalSection",
+          "AddToDynamicBuffer",
+          "AddToDynamicBufferWithErrorCode",
+          "AddUintWithOverflowCheck",
+          "AdjustFileBufferBounds",
+          "AdjustValueWithBitOps",
+          "AllocateBufferSpace",
+          "AllocateMemoryBlock"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 1961,
+        "named_functions": 1890,
+        "unique_functions": 527,
+        "stable_functions": 1434,
+        "removed_functions": 666,
+        "top_new_functions": [
+          "AcquireCriticalSectionByIndex",
+          "AcquireCriticalSectionForAddress",
+          "AcquireDynamicBufferLock",
+          "AcquireStreamCriticalSection",
+          "AcquireStructureCriticalSectionByIndex",
+          "AddUintWithOverflowCheck",
+          "AdjustFileBufferBounds",
+          "AdjustValueWithBitOps",
+          "AllocateBufferSpace",
+          "AllocateMemoryByStrategy"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 582,
+        "named_functions": 578,
+        "unique_functions": 176,
+        "stable_functions": 406,
+        "removed_functions": 187,
+        "top_new_functions": [
+          "AcquireCriticalSectionByIndex",
+          "AcquireCriticalSectionConditional",
+          "AcquireCriticalSectionForAddress",
+          "AcquireDynamicBufferLock",
+          "AcquireStreamCriticalSection",
+          "AddUintWithOverflowCheck",
+          "AdjustFileBufferBounds",
+          "AdjustValueWithBitOps",
+          "AllocateBufferSpace",
+          "AllocateMemoryByStrategy"
+        ]
+      },
+      "Storm": {
+        "total_functions": 772,
+        "named_functions": 521,
+        "unique_functions": 466,
+        "stable_functions": 306,
+        "removed_functions": 571,
+        "top_new_functions": [
+          "AllocateMemoryFromPool",
+          "BuildHuffmanDecodingTable",
+          "ClearCollectionLinkedPointers",
+          "ClearListNodeState",
+          "ConsumeBitsFromStream",
+          "CopyMemoryThreadSafe",
+          "DecompressDataStream",
+          "DecompressNextSymbol",
+          "ExtractBitsFromDecompStream",
+          "ExtractFileToMemory"
+        ]
+      },
+      "Fog": {
+        "total_functions": 591,
+        "named_functions": 583,
+        "unique_functions": 252,
+        "stable_functions": 339,
+        "removed_functions": 292,
+        "top_new_functions": [
+          "AcquireCriticalSectionByIndex",
+          "AcquireCriticalSectionForAddress",
+          "AcquireDynamicBufferLock",
+          "AcquireInitializationLockAndProcess",
+          "AcquireStreamCriticalSection",
+          "AcquireStructureCriticalSectionByIndex",
+          "AddToDynamicBuffer",
+          "AddToDynamicBufferWithErrorCode",
+          "AddUintWithOverflowCheck",
+          "AdjustFileBufferBounds"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 11659,
+      "named_functions": 7972,
+      "unique_functions": 5226,
+      "functions_from_previous": 6433,
+      "functions_new": 0,
+      "functions_removed": 5967
+    }
+  },
+  "1.09": {
+    "version": "1.09",
+    "release_date": "2001-07-10",
+    "major_changes": [
+      "Lord of Destruction expansion content",
+      "New areas, monsters, items",
+      "Runes and jewels system"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4094,
+        "named_functions": 1068,
+        "unique_functions": 3013,
+        "stable_functions": 1081,
+        "removed_functions": 2978,
+        "top_new_functions": [
+          "AllocateStackSpace",
+          "AmsgExit",
+          "CalculateAndSetCalendarDateTime",
+          "CheckDaylightSavingTime",
+          "CheckDaylightSavingTransition",
+          "CompareMultiByteStringsLocaleSupport",
+          "ConvertDateTimeToTimestamp",
+          "DeallocateMemory",
+          "DuplicateStringArray",
+          "DuplicateStringBuffer"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 3692,
+        "named_functions": 3216,
+        "unique_functions": 563,
+        "stable_functions": 3129,
+        "removed_functions": 565,
+        "top_new_functions": [
+          "AcquireCriticalSectionLock",
+          "BigIntAddOne",
+          "FUN_6faa13b0",
+          "FUN_6faa2890",
+          "FUN_6faa8d30",
+          "FUN_6faa8f20",
+          "FUN_6faa9c60",
+          "FUN_6faaac40",
+          "FUN_6faab4c0",
+          "FUN_6faac460"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 1946,
+        "named_functions": 1846,
+        "unique_functions": 262,
+        "stable_functions": 1684,
+        "removed_functions": 277,
+        "top_new_functions": [
+          "BigIntAddScalar",
+          "FUN_6fd49130",
+          "FUN_6fd4a710",
+          "FUN_6fd4cc00",
+          "FUN_6fd4ed10",
+          "FUN_6fd4ee80",
+          "FUN_6fd4f6f0",
+          "FUN_6fd4f780",
+          "FUN_6fd4fad0",
+          "FUN_6fd53640"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 581,
+        "named_functions": 561,
+        "unique_functions": 60,
+        "stable_functions": 521,
+        "removed_functions": 61,
+        "top_new_functions": [
+          "CallFunctionOnRange",
+          "FUN_6f8a2cb0",
+          "FUN_6f8a2e50",
+          "FUN_6f8a4d30",
+          "FUN_6f8a4de0",
+          "FUN_6f8a50e0",
+          "FUN_6f8a5210",
+          "FUN_6f8a5970",
+          "FUN_6f8a5b80",
+          "FUN_6f8a67b0"
+        ]
+      },
+      "Storm": {
+        "total_functions": 768,
+        "named_functions": 518,
+        "unique_functions": 1,
+        "stable_functions": 767,
+        "removed_functions": 5,
+        "top_new_functions": [
+          "ToggleDialogUIState"
+        ]
+      },
+      "Fog": {
+        "total_functions": 595,
+        "named_functions": 585,
+        "unique_functions": 14,
+        "stable_functions": 581,
+        "removed_functions": 10,
+        "top_new_functions": [
+          "FUN_6ff58050",
+          "FUN_6ff585c0",
+          "FUN_6ff5a460",
+          "FUN_6ff5a830",
+          "FUN_6ff5ca30",
+          "FUN_6ff5d110",
+          "Ordinal_10019",
+          "Ordinal_10027",
+          "Ordinal_10052",
+          "Ordinal_10142"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 11676,
+      "named_functions": 7794,
+      "unique_functions": 3913,
+      "functions_from_previous": 7763,
+      "functions_new": 0,
+      "functions_removed": 3896
+    }
+  },
+  "1.09b": {
+    "version": "1.09b",
+    "release_date": "2001-10-11",
+    "major_changes": [
+      "Balance patches"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4094,
+        "named_functions": 1068,
+        "unique_functions": 0,
+        "stable_functions": 4094,
+        "removed_functions": 0,
+        "top_new_functions": []
+      },
+      "D2Client": {
+        "total_functions": 3692,
+        "named_functions": 3216,
+        "unique_functions": 0,
+        "stable_functions": 3692,
+        "removed_functions": 0,
+        "top_new_functions": []
+      },
+      "D2Common": {
+        "total_functions": 1946,
+        "named_functions": 1846,
+        "unique_functions": 0,
+        "stable_functions": 1946,
+        "removed_functions": 0,
+        "top_new_functions": []
+      },
+      "D2Win": {
+        "total_functions": 581,
+        "named_functions": 561,
+        "unique_functions": 0,
+        "stable_functions": 581,
+        "removed_functions": 0,
+        "top_new_functions": []
+      },
+      "Storm": {
+        "total_functions": 768,
+        "named_functions": 518,
+        "unique_functions": 0,
+        "stable_functions": 768,
+        "removed_functions": 0,
+        "top_new_functions": []
+      },
+      "Fog": {
+        "total_functions": 595,
+        "named_functions": 585,
+        "unique_functions": 0,
+        "stable_functions": 595,
+        "removed_functions": 0,
+        "top_new_functions": []
+      }
+    },
+    "statistics": {
+      "total_functions": 11676,
+      "named_functions": 7794,
+      "unique_functions": 0,
+      "functions_from_previous": 11676,
+      "functions_new": 0,
+      "functions_removed": 0
+    }
+  },
+  "1.09d": {
+    "version": "1.09d",
+    "release_date": "2002-05-03",
+    "major_changes": [
+      "Final pre-patch adjustments"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4102,
+        "named_functions": 1071,
+        "unique_functions": 2791,
+        "stable_functions": 1311,
+        "removed_functions": 2783,
+        "top_new_functions": [
+          "DecrementValue",
+          "FUN_6fc32430",
+          "FUN_6fc32660",
+          "FUN_6fc32800",
+          "FUN_6fc32df0",
+          "FUN_6fc32e30",
+          "FUN_6fc33050",
+          "FUN_6fc33390",
+          "FUN_6fc33500",
+          "FUN_6fc33530"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 3693,
+        "named_functions": 3201,
+        "unique_functions": 372,
+        "stable_functions": 3321,
+        "removed_functions": 371,
+        "top_new_functions": [
+          "FUN_6faa8b50",
+          "FUN_6faa8d20",
+          "FUN_6faa8f10",
+          "FUN_6faa9c50",
+          "FUN_6faaa220",
+          "FUN_6faaac30",
+          "FUN_6faab4b0",
+          "FUN_6faac450",
+          "FUN_6faacef0",
+          "FUN_6fab1b60"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 1952,
+        "named_functions": 1849,
+        "unique_functions": 114,
+        "stable_functions": 1838,
+        "removed_functions": 108,
+        "top_new_functions": [
+          "FUN_6fd4cc10",
+          "FUN_6fd4ed20",
+          "FUN_6fd4ee90",
+          "FUN_6fd4f700",
+          "FUN_6fd4f790",
+          "FUN_6fd4fae0",
+          "FUN_6fd53650",
+          "FUN_6fd53ef0",
+          "FUN_6fd54320",
+          "FUN_6fd549c0"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 580,
+        "named_functions": 560,
+        "unique_functions": 0,
+        "stable_functions": 580,
+        "removed_functions": 1,
+        "top_new_functions": []
+      },
+      "Storm": {
+        "total_functions": 768,
+        "named_functions": 518,
+        "unique_functions": 78,
+        "stable_functions": 690,
+        "removed_functions": 78,
+        "top_new_functions": [
+          "FUN_6ffbd6e0",
+          "FUN_6ffbd7c0",
+          "FUN_6ffbdff0",
+          "FUN_6ffbe2f0",
+          "FUN_6ffbe620",
+          "FUN_6ffbe9a0",
+          "FUN_6ffbec60",
+          "FUN_6ffbed00",
+          "FUN_6ffbfaa0",
+          "FUN_6ffbfdd0"
+        ]
+      },
+      "Fog": {
+        "total_functions": 645,
+        "named_functions": 586,
+        "unique_functions": 127,
+        "stable_functions": 518,
+        "removed_functions": 77,
+        "top_new_functions": [
+          "CalculateOffsetValue",
+          "CallSettingFrameWithExceptionHandler",
+          "CppExceptionFilter",
+          "CppExceptionFilterForUnitActions",
+          "DispatchExceptionHandler",
+          "DispatchJumpTableEntry",
+          "ExceptionFilterDispatcher",
+          "ExceptionHandler_UnpackContext",
+          "ExceptionHandler_Wrapper",
+          "ExceptionUnwindHandler"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 11740,
+      "named_functions": 7785,
+      "unique_functions": 3482,
+      "functions_from_previous": 8258,
+      "functions_new": 0,
+      "functions_removed": 3418
+    }
+  },
+  "1.10": {
+    "version": "1.10",
+    "release_date": "2003-10-27",
+    "major_changes": [
+      "Major balance overhaul",
+      "Immunities refactored",
+      "More ubering support"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 3998,
+        "named_functions": 1028,
+        "unique_functions": 3063,
+        "stable_functions": 935,
+        "removed_functions": 3167,
+        "top_new_functions": [
+          "BinkBufferGetError",
+          "BnetAdHandler_StubReturnTrue",
+          "CloseHandleWrapper",
+          "CopyMemoryBuffer",
+          "DoNothingStub",
+          "EVENT_FreeEventQueue",
+          "EncodeValueAsSignedBytes",
+          "EntityExistsWithId",
+          "FUN_6fc31110",
+          "FUN_6fc31160"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 3440,
+        "named_functions": 1805,
+        "unique_functions": 2019,
+        "stable_functions": 1421,
+        "removed_functions": 2272,
+        "top_new_functions": [
+          "BigIntNormalizeAndIsUnity",
+          "BigIntShiftLeft_Thunk",
+          "DoNothingStub",
+          "EntityExistsWithId",
+          "ExitWithCode",
+          "FUN_6faa10a0",
+          "FUN_6faa13a0",
+          "FUN_6faa1510",
+          "FUN_6faa1ea0",
+          "FUN_6faa1f80"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2048,
+        "named_functions": 1528,
+        "unique_functions": 1053,
+        "stable_functions": 995,
+        "removed_functions": 957,
+        "top_new_functions": [
+          "BigIntShiftLeft",
+          "BigIntShiftLeft_Thunk",
+          "BigIntTrimLeadingZerosAndCheckUnity",
+          "FUN_6fd41000",
+          "FUN_6fd411f0",
+          "FUN_6fd412c0",
+          "FUN_6fd413e0",
+          "FUN_6fd41610",
+          "FUN_6fd41b40",
+          "FUN_6fd41be0"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 540,
+        "named_functions": 485,
+        "unique_functions": 112,
+        "stable_functions": 428,
+        "removed_functions": 152,
+        "top_new_functions": [
+          "BinkBufferGetError",
+          "DeleteFile",
+          "DestroyCompressionBuffer",
+          "FUN_6f8a1000",
+          "FUN_6f8a1250",
+          "FUN_6f8a15e0",
+          "FUN_6f8a1890",
+          "FUN_6f8a1d10",
+          "FUN_6f8a2070",
+          "FUN_6f8a2ce0"
+        ]
+      },
+      "Storm": {
+        "total_functions": 781,
+        "named_functions": 497,
+        "unique_functions": 250,
+        "stable_functions": 531,
+        "removed_functions": 237,
+        "top_new_functions": [
+          "FUN_6ffb16e0",
+          "FUN_6ffb1a30",
+          "FUN_6ffb1ad0",
+          "FUN_6ffb1be0",
+          "FUN_6ffb1d60",
+          "FUN_6ffb2b30",
+          "FUN_6ffb3400",
+          "FUN_6ffb4780",
+          "FUN_6ffb4c60",
+          "FUN_6ffb4d70"
+        ]
+      },
+      "Fog": {
+        "total_functions": 640,
+        "named_functions": 564,
+        "unique_functions": 173,
+        "stable_functions": 467,
+        "removed_functions": 178,
+        "top_new_functions": [
+          "CalculateStreamLineCount",
+          "CompareMemory",
+          "CopyMemoryBuffer",
+          "ExchangeStructArrayValue",
+          "ExtractArrayElementAndProcessCharacter",
+          "FUN_6ff51160",
+          "FUN_6ff51430",
+          "FUN_6ff515e0",
+          "FUN_6ff517c0",
+          "FUN_6ff524b0"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 11447,
+      "named_functions": 5907,
+      "unique_functions": 6670,
+      "functions_from_previous": 4777,
+      "functions_new": 0,
+      "functions_removed": 6963
+    }
+  },
+  "1.11": {
+    "version": "1.11",
+    "release_date": "2003-11-04",
+    "major_changes": [
+      "Experience and monster balance",
+      "Synergies added",
+      "Ladder resets"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4700,
+        "named_functions": 1057,
+        "unique_functions": 4039,
+        "stable_functions": 661,
+        "removed_functions": 3337,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AcquireFileHandleLock8",
+          "AcquireStreamLock",
+          "AcquireSynchronizationLock",
+          "AdjustPointer",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryWithCache",
+          "AllocateOrReallocateMemory",
+          "AllocateTlsSlot",
+          "BinarySearchInSortedArray"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4361,
+        "named_functions": 1246,
+        "unique_functions": 3707,
+        "stable_functions": 654,
+        "removed_functions": 2786,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AcquireCriticalSectionByIndex",
+          "AcquireFileHandleLock8",
+          "AcquireStreamLock",
+          "AcquireSynchronizationLock",
+          "AddAtExitCallback",
+          "AdjustPointer",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryWithCache",
+          "AllocateOrReallocateMemory"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2507,
+        "named_functions": 1404,
+        "unique_functions": 1594,
+        "stable_functions": 913,
+        "removed_functions": 1135,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AcquireFileHandleLock8",
+          "AcquireStreamLock",
+          "AcquireSynchronizationLock",
+          "AllocateConditionalResource",
+          "AllocateMemoryWithCache",
+          "AllocateTlsSlot",
+          "BindSocketToPortWrapper",
+          "BuildProjectPathThunk",
+          "CheckAndInitializeResourceLock"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 586,
+        "named_functions": 430,
+        "unique_functions": 414,
+        "stable_functions": 172,
+        "removed_functions": 368,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AcquireFileHandleLock8",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryWithCache",
+          "AllocateTlsSlot",
+          "BindSocketToPortWrapper",
+          "BuildProjectPathThunk",
+          "CleanupAndAbort",
+          "ConvertFloatingPointTo64BitInteger",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
+      "Storm": {
+        "total_functions": 1154,
+        "named_functions": 1135,
+        "unique_functions": 1070,
+        "stable_functions": 84,
+        "removed_functions": 697,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AccumulateCharacterStatistics",
+          "AccumulateVectorElements",
+          "AcquireCriticalSectionByIndex",
+          "AcquireDynamicBufferLock",
+          "AcquireFileHandleLock8",
+          "Add64BitWithOverflowDetection",
+          "AddElementToDynamicArray",
+          "AddToSlotIndexedArray",
+          "AddVectorElementsWithResize"
+        ]
+      },
+      "Fog": {
+        "total_functions": 793,
+        "named_functions": 768,
+        "unique_functions": 652,
+        "stable_functions": 141,
+        "removed_functions": 499,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AcceptAndInitializeConnectionSocket",
+          "AcquireFileHandleLock8",
+          "AcquireStreamLock",
+          "AcquireSynchronizationLock",
+          "AddHashedStringEntryToCollection",
+          "AdjustPointer",
+          "AllocateConditionalResource",
+          "AllocateEventHandleSlot",
+          "AllocateGameBuffer"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 14101,
+      "named_functions": 6040,
+      "unique_functions": 11476,
+      "functions_from_previous": 2625,
+      "functions_new": 0,
+      "functions_removed": 8822
+    }
+  },
+  "1.11b": {
+    "version": "1.11b",
+    "release_date": "2004-01-06",
+    "major_changes": [
+      "Bug fixes"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4698,
+        "named_functions": 1057,
+        "unique_functions": 3698,
+        "stable_functions": 1000,
+        "removed_functions": 3700,
+        "top_new_functions": [
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking",
+          "FUN_6fc210c0",
+          "FUN_6fc21110",
+          "FUN_6fc21180",
+          "FUN_6fc21230",
+          "FUN_6fc21250",
+          "FUN_6fc21310",
+          "FUN_6fc21340",
+          "FUN_6fc21370"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4383,
+        "named_functions": 1260,
+        "unique_functions": 3221,
+        "stable_functions": 1162,
+        "removed_functions": 3199,
+        "top_new_functions": [
+          "AllocateAndInitializeDataArray",
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking",
+          "DestroyGameDataCollection",
+          "EnableUIScreen31",
+          "FUN_6fab1040",
+          "FUN_6fab1090",
+          "FUN_6fab10e0",
+          "FUN_6fab10f0",
+          "FUN_6fab1140"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2511,
+        "named_functions": 1406,
+        "unique_functions": 1167,
+        "stable_functions": 1344,
+        "removed_functions": 1163,
+        "top_new_functions": [
+          "AllocateAndInitializePoolSlot",
+          "AllocateMemoryWithTracking",
+          "FUN_6fd51100",
+          "FUN_6fd51170",
+          "FUN_6fd511a0",
+          "FUN_6fd511d0",
+          "FUN_6fd51250",
+          "FUN_6fd51280",
+          "FUN_6fd512c0",
+          "FUN_6fd512f0"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 593,
+        "named_functions": 437,
+        "unique_functions": 166,
+        "stable_functions": 427,
+        "removed_functions": 159,
+        "top_new_functions": [
+          "AllocateAndInitializePoolSlot",
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking",
+          "FUN_6f8e7e10",
+          "FUN_6f8e7ea0",
+          "FUN_6f8e7f10",
+          "FUN_6f8e7f80",
+          "FUN_6f8e84f0",
+          "FUN_6f8e8750",
+          "FUN_6f8e89f0"
+        ]
+      },
+      "Storm": {
+        "total_functions": 1153,
+        "named_functions": 1134,
+        "unique_functions": 19,
+        "stable_functions": 1134,
+        "removed_functions": 20,
+        "top_new_functions": [
+          "ComputeCRC32",
+          "FUN_6fbf3cd0",
+          "FUN_6fc00020",
+          "FUN_6fc05430",
+          "FUN_6fc09700",
+          "FUN_6fc0a140",
+          "FUN_6fc0a190",
+          "FUN_6fc0c220",
+          "FUN_6fc14c80",
+          "FUN_6fc18400"
+        ]
+      },
+      "Fog": {
+        "total_functions": 792,
+        "named_functions": 777,
+        "unique_functions": 34,
+        "stable_functions": 758,
+        "removed_functions": 35,
+        "top_new_functions": [
+          "AllocateAndInitializeDataArray",
+          "AllocateAndInitializePoolSlot",
+          "AllocateAndInitializeResourceBuffer",
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemorySlotFromPool",
+          "AllocateMemoryWithTracking",
+          "EnqueuePacketToQueue",
+          "EnqueueSocketDataBuffer",
+          "FUN_6ff5db00",
+          "FUN_6ff5eaf0"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 14130,
+      "named_functions": 6071,
+      "unique_functions": 8305,
+      "functions_from_previous": 5825,
+      "functions_new": 0,
+      "functions_removed": 8276
+    }
+  },
+  "1.12a": {
+    "version": "1.12a",
+    "release_date": "2005-12-29",
+    "major_changes": [
+      "Ladder reset",
+      "Minor adjustments"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4698,
+        "named_functions": 1054,
+        "unique_functions": 3710,
+        "stable_functions": 988,
+        "removed_functions": 3710,
+        "top_new_functions": [
+          "AllocateAndInsertEntityNode",
+          "AllocateMemory",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "DecimalStringToDouble",
+          "DisplaySecurityErrorDialog",
+          "ExtendFileWithZeros",
+          "FUN_6fc21050"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4375,
+        "named_functions": 1251,
+        "unique_functions": 3210,
+        "stable_functions": 1165,
+        "removed_functions": 3218,
+        "top_new_functions": [
+          "AddAtExitCallback",
+          "AllocateMemory",
+          "ApplyPaletteFromAudioContext",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "DecimalStringToDouble",
+          "DisplaySecurityErrorDialog",
+          "ExtendFileWithZeros"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2512,
+        "named_functions": 1401,
+        "unique_functions": 1183,
+        "stable_functions": 1329,
+        "removed_functions": 1182,
+        "top_new_functions": [
+          "AllocateMemory",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "DecimalStringToDouble",
+          "DisplaySecurityErrorDialog",
+          "ExtendFileWithZeros",
+          "FID_conflict:_wprintf",
+          "FUN_6fd51110"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 593,
+        "named_functions": 435,
+        "unique_functions": 184,
+        "stable_functions": 409,
+        "removed_functions": 184,
+        "top_new_functions": [
+          "AllocateMemory",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "DecimalStringToDouble",
+          "DisplaySecurityErrorDialog",
+          "FUN_6f8e78d0",
+          "FUN_6f8e7900",
+          "FUN_6f8e7950"
+        ]
+      },
+      "Storm": {
+        "total_functions": 1151,
+        "named_functions": 1132,
+        "unique_functions": 54,
+        "stable_functions": 1097,
+        "removed_functions": 56,
+        "top_new_functions": [
+          "AcquirePoolSlotLock",
+          "AllocateAndInsertEntityNode",
+          "AllocateMemory",
+          "ApplyLocaleConfiguration",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "ConvertWideStringToMultibyte",
+          "DecimalStringToDouble"
+        ]
+      },
+      "Fog": {
+        "total_functions": 794,
+        "named_functions": 788,
+        "unique_functions": 53,
+        "stable_functions": 741,
+        "removed_functions": 51,
+        "top_new_functions": [
+          "AcquireDataStructureLock",
+          "AllocateMemory",
+          "CloseNetworkSocket",
+          "ConvertDecimalStringToLargeNumber",
+          "ConvertFloatToStringComponents",
+          "ConvertFloatingPointToDecimalString",
+          "ConvertStringBetweenCodePages",
+          "CreateAndInitializeSocket",
+          "DeallocateModuleListChain",
+          "DecimalStringToDouble"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 14123,
+      "named_functions": 6061,
+      "unique_functions": 8394,
+      "functions_from_previous": 5729,
+      "functions_new": 0,
+      "functions_removed": 8401
+    }
+  },
+  "1.13c": {
+    "version": "1.13c",
+    "release_date": "2010-11-04",
+    "major_changes": [
+      "Final patch with PvP improvements"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4706,
+        "named_functions": 1059,
+        "unique_functions": 3724,
+        "stable_functions": 982,
+        "removed_functions": 3716,
+        "top_new_functions": [
+          "EVENT_AllocateTimer",
+          "FUN_6fc21040",
+          "FUN_6fc21100",
+          "FUN_6fc21130",
+          "FUN_6fc21160",
+          "FUN_6fc21180",
+          "FUN_6fc211d0",
+          "FUN_6fc21220",
+          "FUN_6fc21250",
+          "FUN_6fc21280"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4387,
+        "named_functions": 1246,
+        "unique_functions": 3206,
+        "stable_functions": 1181,
+        "removed_functions": 3194,
+        "top_new_functions": [
+          "AllocateAndInitializeGameObject",
+          "CalculateDistanceSquared",
+          "CheckInitializationAndSetGlobalState",
+          "EnablePacketHandler171",
+          "FID_conflict:_iscntrl",
+          "FUN_6fab1230",
+          "FUN_6fab1260",
+          "FUN_6fab12b0",
+          "FUN_6fab12e0",
+          "FUN_6fab1300"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2514,
+        "named_functions": 1424,
+        "unique_functions": 1165,
+        "stable_functions": 1349,
+        "removed_functions": 1163,
+        "top_new_functions": [
+          "D2Common_10231_Impl",
+          "DATATBLS_GetSkillsTxtRecord",
+          "DATATBLS_NewTreasureClassEx",
+          "DATATBLS_ParseTreasureClassItem",
+          "DecrementValue",
+          "FUN_6fd51080",
+          "FUN_6fd510b0",
+          "FUN_6fd51100",
+          "FUN_6fd51150",
+          "FUN_6fd51180"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 594,
+        "named_functions": 437,
+        "unique_functions": 172,
+        "stable_functions": 422,
+        "removed_functions": 171,
+        "top_new_functions": [
+          "FUN_6f8e78f0",
+          "FUN_6f8e7920",
+          "FUN_6f8e7970",
+          "FUN_6f8e79f0",
+          "FUN_6f8e7a60",
+          "FUN_6f8e7ac0",
+          "FUN_6f8e7af0",
+          "FUN_6f8e7b30",
+          "FUN_6f8e7c60",
+          "FUN_6f8e7dc0"
+        ]
+      },
+      "Storm": {
+        "total_functions": 1150,
+        "named_functions": 1135,
+        "unique_functions": 19,
+        "stable_functions": 1131,
+        "removed_functions": 20,
+        "top_new_functions": [
+          "AppendCRLFTerminatorToBuffer",
+          "FUN_6fc06e70",
+          "FUN_6fc0a550",
+          "FUN_6fc0bdd0",
+          "FUN_6fc0c0c0",
+          "FUN_6fc15b70",
+          "FUN_6fc19f60",
+          "FUN_6fc1fcf0",
+          "FUN_6fc1fd40",
+          "FUN_6fc247b0"
+        ]
+      },
+      "Fog": {
+        "total_functions": 794,
+        "named_functions": 790,
+        "unique_functions": 6,
+        "stable_functions": 788,
+        "removed_functions": 6,
+        "top_new_functions": [
+          "DivideRoundedUp",
+          "LoadAndIndexCrashDumpEntries",
+          "LogAppendFormat",
+          "Unwind@6ff749d0",
+          "Unwind@6ff74a40",
+          "_memcmp"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 14145,
+      "named_functions": 6091,
+      "unique_functions": 8292,
+      "functions_from_previous": 5853,
+      "functions_new": 0,
+      "functions_removed": 8270
+    }
+  },
+  "1.13d": {
+    "version": "1.13d",
+    "release_date": "2011-12-21",
+    "major_changes": [
+      "Final patch",
+      "Security and bug fixes"
+    ],
+    "modules": {
+      "D2Game": {
+        "total_functions": 4710,
+        "named_functions": 1058,
+        "unique_functions": 3731,
+        "stable_functions": 979,
+        "removed_functions": 3727,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "FID_conflict:__atodbl",
+          "FUN_6fc21050",
+          "FUN_6fc21070",
+          "FUN_6fc210c0",
+          "FUN_6fc210f0",
+          "FUN_6fc21120",
+          "FUN_6fc21150",
+          "FUN_6fc211f0",
+          "FUN_6fc21210"
+        ]
+      },
+      "D2Client": {
+        "total_functions": 4402,
+        "named_functions": 1261,
+        "unique_functions": 3244,
+        "stable_functions": 1158,
+        "removed_functions": 3229,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "CalculateViewportHeight",
+          "FID_conflict:__atodbl",
+          "FUN_6fab1020",
+          "FUN_6fab1040",
+          "FUN_6fab10d0",
+          "FUN_6fab1120",
+          "FUN_6fab1160",
+          "FUN_6fab1180",
+          "FUN_6fab11b0"
+        ]
+      },
+      "D2Common": {
+        "total_functions": 2661,
+        "named_functions": 1519,
+        "unique_functions": 1351,
+        "stable_functions": 1310,
+        "removed_functions": 1204,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "AdjustPointer",
+          "AllocateAndCopyData",
+          "AllocateMemoryFromArena",
+          "AllocateOrReallocateMemory",
+          "BuildCatchObject",
+          "CalculateNextValidCapacity",
+          "CalculateStringLength",
+          "CatchIt",
+          "CleanupAndDelete"
+        ]
+      },
+      "D2Win": {
+        "total_functions": 591,
+        "named_functions": 435,
+        "unique_functions": 185,
+        "stable_functions": 406,
+        "removed_functions": 188,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "FID_conflict:__atodbl",
+          "FUN_6f8e78c0",
+          "FUN_6f8e78e0",
+          "FUN_6f8e7910",
+          "FUN_6f8e7960",
+          "FUN_6f8e79e0",
+          "FUN_6f8e7a50",
+          "FUN_6f8e7ab0",
+          "FUN_6f8e7ae0"
+        ]
+      },
+      "Storm": {
+        "total_functions": 1151,
+        "named_functions": 1131,
+        "unique_functions": 54,
+        "stable_functions": 1097,
+        "removed_functions": 53,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "CompareFpuExtendedValues",
+          "DecrementValue",
+          "FID_conflict:__atodbl",
+          "FUN_6fbf29f0",
+          "FUN_6fbfff50",
+          "FUN_6fc01d90",
+          "FUN_6fc01fd0",
+          "FUN_6fc02020",
+          "FUN_6fc0dfe0"
+        ]
+      },
+      "Fog": {
+        "total_functions": 800,
+        "named_functions": 779,
+        "unique_functions": 48,
+        "stable_functions": 752,
+        "removed_functions": 42,
+        "top_new_functions": [
+          "$I10_OUTPUT",
+          "DecrementValue",
+          "FID_conflict:__atodbl",
+          "FUN_6ff5dc90",
+          "FUN_6ff5e470",
+          "FUN_6ff604c0",
+          "FUN_6ff62400",
+          "FUN_6ff64000",
+          "FUN_6ff641e0",
+          "FUN_6ff64500"
+        ]
+      }
+    },
+    "statistics": {
+      "total_functions": 14315,
+      "named_functions": 6183,
+      "unique_functions": 8613,
+      "functions_from_previous": 5702,
+      "functions_new": 0,
+      "functions_removed": 8443
+    }
+  }
+}

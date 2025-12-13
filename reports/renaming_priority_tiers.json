@@ -1,0 +1,3449 @@
+{
+  "tier_1_critical": [
+    {
+      "name": "AcquireGlobalLock",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "CleanupAndDelete",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "ClearGameState",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "ClearMapCellFlagRadius",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "CompareMemoryBytes",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "CompareStringsIgnoreCase",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "CompareStringsIgnoreCase",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "ConvertCharToUnicodeAndSetEditData",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "CopyMemoryBuffer",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "CreateTcpConnection",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "DestructorWithCleanup",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "EditData_SetString",
+      "module": "D2Win",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "FillMemoryWithByte",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "FlushBitWriteBuffer",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "FreePoolMemory",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "FreePoolMemoryTracked",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "FreeTrackedPoolAllocation",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "GameDataCollectionDestructor",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "GameDataCollectionDestructor",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "GetDebugReturnStringEnd",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "GetGameModeFlag",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "GetInitFlag",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "GetStringIdFromSlotIndex",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "GetUnitFlags",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "InitializeStructureFields",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "LoadBlendedShadowsSetting",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "ModifyTileAttributesFlags",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "PlayVideoFromStructure",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "ResetGameModeFlag",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "ResetPerformanceAccumulators",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SMemFree",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "SStrCopy",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "SafeDelete",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "SetBlendedShadowsMode",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SetCelGlobals",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SetUnitFlag0x20",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SetUnitFlag4",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SetValueIfEmpty",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "SetupExceptionHandler",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "TEXT_ClearSelectionState",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "TitleCaseString",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "UNITS_SetGfxSelected",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "WriteBitsToBuffer",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "WriteBitsToStream",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "WriteStringToBuffer",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "__CallSettingFrame@12",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "__CallSettingFrame@12",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "__nh_malloc",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "__nh_malloc",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "__nh_malloc",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "__nh_malloc",
+      "module": "D2Win",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "__nh_malloc",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 18
+    },
+    {
+      "name": "__strrev",
+      "module": "D2Game",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "__strrev",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_memset",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "_memset",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "_memset",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "_memset",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "_memset",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strcmp",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strlen",
+      "module": "D2Game",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strlen",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strlen",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strlen",
+      "module": "D2Win",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strlen",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncmp",
+      "module": "D2Game",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncmp",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncmp",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncmp",
+      "module": "D2Win",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncmp",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncpy",
+      "module": "D2Game",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncpy",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncpy",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncpy",
+      "module": "D2Win",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strncpy",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "_strupr",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 18
+    },
+    {
+      "name": "setlocale",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 18
+    },
+    {
+      "name": "AllocPoolMemoryTracked",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "AutomapPlayerIconLine_SetField24",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "CTRL_SetUpdateFlag",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "CacheMarkSmsCategoriesForCopy",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearBitFlags",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearBitInArray",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearBitInArray",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearBitInArray",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearCelGraphicsCache",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearField0x20",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearField0x20",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearImageDimensions",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearImageDimensions",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearItemSlots",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearPopupDialogResult",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearResetFlags",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearTargetingState",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ClearUnitSelectionState",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "CreateFileWrapper",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreateFileWrapper",
+      "module": "D2Win",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreateFileWrapper",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreatePoolObject",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreatePoolObject",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreatePoolObject",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreateStormThread",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "CreateWaypointData",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "DeleteFile",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "DestroyDataArray",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "ExtractAndClearValue",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ExtractAndClearValue",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ExtractBitFields32",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "FreePoolMemory",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "FreePoolMemory",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "FreeTrackedPoolAllocation",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "FreeTrackedPoolAllocation",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "GetGameStructureSelector",
+      "module": "D2Win",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetInitFlag",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetStatListFlag4",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetStringIdFromSlotIndex",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetStructField54",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetStructFlag0x20",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetStructFlag0x20",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetUnitFlag2",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetUnitFlags",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetUnitFlags",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "GetViewportYOffsetAdjusted",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "IffCreate",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "IffDestroy",
+      "module": "Fog",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "ImmGetCompositionStringA",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "ImmSetConversionStatus",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ImmSetOpenStatus",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "InitializeGameStateFlags",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "InitializeGlobalStateFlags",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "MoveMemory",
+      "module": "Storm",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "QueryRegistryUlong",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "ReleasePoolAllocation",
+      "module": "D2Win",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "ResetInitMode",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SMemAlloc",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SMemFree",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SMemFree",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SMemFree",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SaveDefaultCommandLineToRegistry",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetAsyncFileHandle",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetAutomapCentersEnabled",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetAutomapUpdateThrottle",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetBitInArray",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetBitInArray",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetBitInArray",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetCancelConfirmedFlag",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetCharacterInventoryDialogState",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetCoordPair",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetDwordValue",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetErrorHandlingDisabled",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetFilePointerWrapper",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetFilePointerWrapper",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetFilePosition",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetFlagsOnValue",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetFpuControlWord",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGameMode",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalConfigByte2",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalState4",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalState6",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalUshortConfig",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalValue",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetGlobalValue11103",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetLastInventoryItem",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetLocale",
+      "module": "Storm",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetMissileDataField2C",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetMusicVolume",
+      "module": "D2Win",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetRegistryDword",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetRegistryStringValue",
+      "module": "D2Client",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetSliderControlWidth",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetStateLevelFive",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetStateLevelSeven",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetTimeout500Ms",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetUnitAllocatedFlag",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SetUnitAllocatedFlag",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "SetUnitAnimData",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetUnitFlag0x20",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "SetWindowVisibility",
+      "module": "D2Client",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "StringToUpper",
+      "module": "Storm",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "UNITS_SetGfxSelected",
+      "module": "D2Game",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "UnpackBitFields",
+      "module": "D2Common",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "ValidateStringId",
+      "module": "D2Common",
+      "category": "String Operations",
+      "priority": 17
+    },
+    {
+      "name": "__WSAFDIsSet",
+      "module": "Fog",
+      "category": "Bit Operations",
+      "priority": 17
+    },
+    {
+      "name": "_malloc",
+      "module": "D2Game",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "_malloc",
+      "module": "D2Client",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "_malloc",
+      "module": "D2Common",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "_malloc",
+      "module": "D2Win",
+      "category": "Memory Management",
+      "priority": 17
+    },
+    {
+      "name": "_malloc",
+      "module": "Fog",
+      "category": "Memory Management",
+      "priority": 17
+    }
+  ],
+  "tier_2_high": [
+    {
+      "name": "ApplyTileAttributePattern",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "AtomicExchange64",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "AullDiv",
+      "module": "Storm",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "CalculateWindowBorders",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "CheckTimeoutElapsed50ms",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "CheckValueAndProcessData",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "CleanupPlayerSlots",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ClosePaletteWindow",
+      "module": "Storm",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "ConvertCharToUnicodeAndProcess",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "DecrementObjectCounter",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "DisplayRuntimeError",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ExceptionHandlerLogAndCleanup",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ExecuteInventoryCallback",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "FindLongestMatch",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "FlushFileWriteBuffer",
+      "module": "Storm",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "GetDirectDrawInterfaces",
+      "module": "Storm",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "GetDirectionIndexFromCoords",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetEntryValueById",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetExecutableDirectoryPath",
+      "module": "Storm",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "GetField0x110",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetField880",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetGameContextUnitStat",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "GetGameState",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "GetItemAffixLevelRequirement",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "GetObjectDataPtr",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetPathX",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "GetStatListOwnerType",
+      "module": "D2Common",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "GetWindowModeIfExpansion",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "ImplodeBuildSortTable",
+      "module": "Storm",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "ImplodeEncodeBlock",
+      "module": "Storm",
+      "category": "Threading",
+      "priority": 13
+    },
+    {
+      "name": "InitCompressContext",
+      "module": "Storm",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "InitializeCharacterInventoryDialog",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "InitializeGameEngine",
+      "module": "D2Win",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "InitializeGameMode",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "InitializeGameUIState",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "InitializeGraphics",
+      "module": "D2Win",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "InitializeMenuState",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "InitializeMouseButtonCallbacks",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "InitializeViewportWindow",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "InitializeVtablePointer",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "InitializeWorkerThread",
+      "module": "Storm",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "IsCharAlpha",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "IsCharDigit",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "IsGameModeInPlayableState",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "IsHandleInCodecList",
+      "module": "Storm",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "IsObjectTypeValid",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "IsRemoteSessionHandlingReady",
+      "module": "D2Client",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "IsRemoteSessionSupported",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "IsValidRemoteDesktopSession",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "IsValidUnitType",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "ListAddItem",
+      "module": "D2Win",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "OpenFileWithPermissions",
+      "module": "D2Common",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10002",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10002",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10003",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10004",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10006",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10008",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10010",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10011",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10012",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10014",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10015",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10016",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10017",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10018",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10019",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10021",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10022",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10024",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10024",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10027",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10028",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10028",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10029",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10030",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10032",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10033",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10033",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10034",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10036",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10037",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10038",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10038",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10039",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10040",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10042",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10043",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10044",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10045",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10046",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10047",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10047",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10048",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10050",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10052",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10052",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "Ordinal_10056",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ParseCommandLineArgs",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ProcessCompressionObjects",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ProcessInventoryItem",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "ProcessUIStateChange",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ProcessUnitStats",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "ReadArchiveFile",
+      "module": "Storm",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "ReadFileAsync",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "RegisterDialogClasses",
+      "module": "Storm",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "RegisterEventHandler",
+      "module": "Storm",
+      "category": "Game Logic",
+      "priority": 13
+    },
+    {
+      "name": "ReleaseCelFile",
+      "module": "D2Win",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "SafeDereferencePointer",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "SendSocketData",
+      "module": "Fog",
+      "category": "Network",
+      "priority": 13
+    },
+    {
+      "name": "ShowInsertExpansionDiscDialog",
+      "module": "D2Win",
+      "category": "UI/Windows",
+      "priority": 13
+    },
+    {
+      "name": "ShutdownAutomapRendering",
+      "module": "D2Client",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "ShutdownCompressionService",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ShutdownLanguageManager",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ShutdownLogFile",
+      "module": "D2Common",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "UnlinkListNode",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "UnlinkListNode",
+      "module": "Storm",
+      "category": "Data Structures",
+      "priority": 13
+    },
+    {
+      "name": "UpdateMusicStateFromOptions",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "UpdatePaletteAndRealize",
+      "module": "Storm",
+      "category": "Graphics/Rendering",
+      "priority": 13
+    },
+    {
+      "name": "UpdateTimeoutValue",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "ValidateCriticalSection",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "WriteErrorMessage",
+      "module": "D2Client",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "___add_12",
+      "module": "D2Game",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "___add_12",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "___add_12",
+      "module": "D2Common",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "___add_12",
+      "module": "D2Win",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "___add_12",
+      "module": "Fog",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__abnormal_termination",
+      "module": "D2Game",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__abnormal_termination",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__alldiv",
+      "module": "D2Game",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__alldiv",
+      "module": "Fog",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__allmul",
+      "module": "D2Game",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__allmul",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__allmul",
+      "module": "D2Common",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__allmul",
+      "module": "Storm",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__allmul",
+      "module": "Fog",
+      "category": "Math Operations",
+      "priority": 13
+    },
+    {
+      "name": "__amsg_exit",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__cfltcvt",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__cfltcvt",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__cfltcvt",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__cfltcvt",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__cfltcvt",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fassign",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fassign",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fassign",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fassign",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fassign",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "__fclose_lk",
+      "module": "D2Game",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "__fclose_lk",
+      "module": "D2Client",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "__fclose_lk",
+      "module": "D2Common",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "__fclose_lk",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "__fload_withFB",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 13
+    },
+    {
+      "name": "__startOneArgErrorHandling",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_1",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_10",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_11",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_2",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_3",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_4",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_6",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_7",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_9",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_a",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "caseD_d",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "memmove",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 13
+    },
+    {
+      "name": "AndDwordValue",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "AtomicRead64",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "BackupKeyBindingsAndReinitialize",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "BinarySearchTable",
+      "module": "D2Common",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "CalculateMenuPanelYPosition",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "CancelScreenFade",
+      "module": "D2Client",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "CleanupPlayerSlotsWrapper",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "CloseHandleWrapper",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "ComputeLinearIndex",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "ComputeScaledAttribute",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "CoordToMapIndex",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "DecrementWindowBorderY",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "DispatchJumpTableEntry",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "DispatchVtableMethod34",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "EnableVideoInitialization",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "EncodeVarInt2Byte",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "EndDialogWithResult",
+      "module": "Storm",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "EnterCriticalSectionWrapper",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "EnterCriticalSectionWrapper",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "ExceptionCleanupAndExit",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "FindPaletteIndexForColor",
+      "module": "D2Client",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "ForceCalculateWindowBorders",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "GetCelFrameCount",
+      "module": "D2Win",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "GetCosineFromTable",
+      "module": "Fog",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetCurrentFontProperty",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetD2ComState",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetDataTableEntry",
+      "module": "D2Win",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetDefaultCameraScale",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetFileVersionInfoSizeA",
+      "module": "Storm",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "GetFogStatePtr",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetGameState",
+      "module": "D2Win",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetGameStateAndResult",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetInitializedState",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetItemAffixLevelRequirementWrapper",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemAffixLevelRequirementWrapper",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemDataByCode",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemDataByCode",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemRandSeed",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemRandSeed",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetItemRandSeed",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetLastError",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetMissileTargetY",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetMusicOptions",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetParsedItemCountPtr",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetPathPointData",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetPathPointData",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetPathTargetUnit",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetPathTargetUnit",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetPathTargetUnit",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetPathX",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetPrimaryDir8FromDeltas",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetQuestSystemInitialized",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "GetRoomNext",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetRoomNext",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetRoomNext",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetRosterUnitXPos",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetRosterUnitXPos",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetRosterUnitXPos",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetSeedHi",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetSineValue",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetStatListBaseStatValue",
+      "module": "D2Common",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetStatListOwnerType",
+      "module": "D2Game",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetStatListOwnerType",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetTickCount",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitField88",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitField91",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitField91",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitField91",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitGfxUnk",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitGfxUnk",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitMode",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitMode",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitSeedHi",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitStatList",
+      "module": "D2Game",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitStatList",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitStatList",
+      "module": "D2Common",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "GetUnitX",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "GetViewportFieldAt12DF8",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "HasEntryById",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "ImmGetCandidateListA",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "ImmGetCandidateListCountA",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "ImmGetContext",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "ImmGetConversionStatus",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "ImmGetOpenStatus",
+      "module": "D2Client",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "ImmIsIME",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "ImmReleaseContext",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "ImmSimulateHotKey",
+      "module": "D2Client",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "IncreaseWindowBorderY",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "InitCommandLineParsing",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitRngSeed",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitRngSeed",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitRngSeed",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitTimerState",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitTimerState",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitTimerState",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeAndCleanupQueues",
+      "module": "D2Win",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "InitializeCompressedGameData",
+      "module": "D2Win",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "InitializeDialogBox",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "InitializeGameObjectState",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "InitializeGameViewportConfig",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "InitializeGlobalCounters",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeGraphicsSystem",
+      "module": "D2Win",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "InitializeInventorySlotCounters",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeLanguageSupport",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeLogManager",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializePlayerStatistics",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeQuestClassTable",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "InitializeRandomSeed",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeServerDialogStateHandler",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "InitializeServerSocketDialog",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "InitializeSliderCursor",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "InitializeUIDialogConfig",
+      "module": "D2Client",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "InitializeVtablePointer",
+      "module": "Storm",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "IsDSoundWaveEnabled",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "IsInventoryOpen",
+      "module": "D2Client",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "IsMonsterBossType",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "IsObjectTypeMonster",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "IsPointInRect",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "IsStateLevelFourOrHigher",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "IsTargetingEnabled",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "IsValidUnitType",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "IsVideoInitializationEnabled",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "LB_DelegateVtbl13",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "LeaveSocketCriticalSection",
+      "module": "Fog",
+      "category": "Network",
+      "priority": 12
+    },
+    {
+      "name": "ListboxDelegateInnerVtableMethod14",
+      "module": "D2Client",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "LogMessage",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "MultiplyValuesBy5",
+      "module": "D2Game",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "MultiplyValuesBy5",
+      "module": "D2Common",
+      "category": "Math Operations",
+      "priority": 12
+    },
+    {
+      "name": "OpenFileReadShare",
+      "module": "D2Common",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "OpenFileWithDefaultArchive",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10000",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10001",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10004",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10005",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10006",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10007",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10008",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10010",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10014",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10018",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10019",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10020",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10023",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10024",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10026",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10028",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10029",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10034",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10036",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10046",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10050",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10057",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10060",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10064",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10067",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10070",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10074",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Ordinal_10082",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "PATH_GetDirection",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "PATH_GetDirection",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "PATH_GetDirection",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "PlayVideoAndConfigureGraphics",
+      "module": "D2Client",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "ProcessAudioQueue",
+      "module": "D2Win",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "ProcessInventoryItemWrapper",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "ProcessUnitCoordinateData",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "ReadArchiveFile",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "RegisterCmdDef",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RegisterExceptionFilter",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RegisterExceptionFilter",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RenderUnicodeTextWithLineHeight",
+      "module": "D2Client",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "ReportHandleLeak",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RtlUnwind",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RtlUnwind",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RtlUnwind",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RtlUnwind",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "RtlUnwind",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "STATLIST_GetRoom",
+      "module": "D2Common",
+      "category": "Data Structures",
+      "priority": 12
+    },
+    {
+      "name": "ShutdownStubNoOp",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StopMessageLoop",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StoreVersionFromContext",
+      "module": "Storm",
+      "category": "UI/Windows",
+      "priority": 12
+    },
+    {
+      "name": "StubNoOp",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubNoOp",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubNoOp",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubOrdinal10183",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubReturnZero",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubReturnZero",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "StubReturnsZero",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "SumCharacterValues",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "UNITS_GetField08",
+      "module": "D2Game",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "UNITS_GetField08",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "UNITS_GetField08",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "UNITS_GetRoom",
+      "module": "D2Client",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "UNITS_GetUnitStat84",
+      "module": "D2Common",
+      "category": "Game Logic",
+      "priority": 12
+    },
+    {
+      "name": "UnpackStatIdentifier",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Unwind@6fba41fe",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Unwind@6fba4368",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "Unwind@6fba4400",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "UpdatePaletteAndMarkRealized",
+      "module": "Storm",
+      "category": "Graphics/Rendering",
+      "priority": 12
+    },
+    {
+      "name": "WSACleanup",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "WriteFileWrapper",
+      "module": "Fog",
+      "category": "File I/O",
+      "priority": 12
+    },
+    {
+      "name": "XorDwordInPlace",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__NLG_Notify1",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__NLG_Notify1",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__break",
+      "module": "Storm",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__exit",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__exit",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__exit",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__exit",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__exit",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__fptrap",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__fptrap",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__fptrap",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__fptrap",
+      "module": "D2Win",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__fptrap",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__frnd",
+      "module": "Fog",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__seh_longjmp_unwind@4",
+      "module": "D2Client",
+      "category": "Utility",
+      "priority": 12
+    },
+    {
+      "name": "__seh_longjmp_unwind@4",
+      "module": "D2Common",
+      "category": "Utility",
+      "priority": 12
+    }
+  ],
+  "tier_3_medium": [],
+  "tier_4_low": [
+    {
+      "name": "FUN_6fd23482",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 3
+    },
+    {
+      "name": "FUN_6fd23263",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 2
+    },
+    {
+      "name": "FUN_6fd23386",
+      "module": "D2Game",
+      "category": "Utility",
+      "priority": 2
+    }
+  ],
+  "tier_5_utility": [],
+  "summary": {
+    "tier_1_critical": 187,
+    "tier_2_high": 382,
+    "tier_3_medium": 0,
+    "tier_4_low": 3,
+    "tier_5_utility": 0
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "title": "Diablo 2 LoD Version Timeline",
+  "versions": [
+    {
+      "version": "1.07",
+      "release_date": "2000-06-27",
+      "major_changes": [
+        "Initial release",
+        "Base D2 classic content"
+      ]
+    },
+    {
+      "version": "1.08",
+      "release_date": "2001-03-13",
+      "major_changes": [
+        "Bug fixes",
+        "Balance adjustments"
+      ]
+    },
+    {
+      "version": "1.09",
+      "release_date": "2001-07-10",
+      "major_changes": [
+        "Lord of Destruction expansion content",
+        "New areas, monsters, items",
+        "Runes and jewels system"
+      ]
+    },
+    {
+      "version": "1.09b",
+      "release_date": "2001-10-11",
+      "major_changes": [
+        "Balance patches"
+      ]
+    },
+    {
+      "version": "1.09d",
+      "release_date": "2002-05-03",
+      "major_changes": [
+        "Final pre-patch adjustments"
+      ]
+    },
+    {
+      "version": "1.10",
+      "release_date": "2003-10-27",
+      "major_changes": [
+        "Major balance overhaul",
+        "Immunities refactored",
+        "More ubering support"
+      ]
+    },
+    {
+      "version": "1.11",
+      "release_date": "2003-11-04",
+      "major_changes": [
+        "Experience and monster balance",
+        "Synergies added",
+        "Ladder resets"
+      ]
+    },
+    {
+      "version": "1.11b",
+      "release_date": "2004-01-06",
+      "major_changes": [
+        "Bug fixes"
+      ]
+    },
+    {
+      "version": "1.12a",
+      "release_date": "2005-12-29",
+      "major_changes": [
+        "Ladder reset",
+        "Minor adjustments"
+      ]
+    },
+    {
+      "version": "1.13c",
+      "release_date": "2010-11-04",
+      "major_changes": [
+        "Final patch with PvP improvements"
+      ]
+    },
+    {
+      "version": "1.13d",
+      "release_date": "2011-12-21",
+      "major_changes": [
+        "Final patch",
+        "Security and bug fixes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "timestamp": "2025-12-13T03:21:53.162391",
+  "scripts": [
+    {
+      "module": "D2Game",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameD2Game_1_07.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameD2Game_1_08.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameD2Game_1_09.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameD2Game_1_09b.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameD2Game_1_09d.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameD2Game_1_10.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameD2Game_1_11.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameD2Game_1_11b.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameD2Game_1_12a.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameD2Game_1_13c.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Game",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameD2Game_1_13d.java",
+      "renames": 84
+    },
+    {
+      "module": "D2Client",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameD2Client_1_07.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameD2Client_1_08.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameD2Client_1_09.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameD2Client_1_09b.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameD2Client_1_09d.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameD2Client_1_10.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameD2Client_1_11.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameD2Client_1_11b.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameD2Client_1_12a.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameD2Client_1_13c.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Client",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameD2Client_1_13d.java",
+      "renames": 225
+    },
+    {
+      "module": "D2Common",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameD2Common_1_07.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameD2Common_1_08.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameD2Common_1_09.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameD2Common_1_09b.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameD2Common_1_09d.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameD2Common_1_10.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameD2Common_1_11.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameD2Common_1_11b.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameD2Common_1_12a.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameD2Common_1_13c.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Common",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameD2Common_1_13d.java",
+      "renames": 93
+    },
+    {
+      "module": "D2Win",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameD2Win_1_07.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameD2Win_1_08.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameD2Win_1_09.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameD2Win_1_09b.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameD2Win_1_09d.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameD2Win_1_10.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameD2Win_1_11.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameD2Win_1_11b.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameD2Win_1_12a.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameD2Win_1_13c.java",
+      "renames": 58
+    },
+    {
+      "module": "D2Win",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameD2Win_1_13d.java",
+      "renames": 58
+    },
+    {
+      "module": "Storm",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameStorm_1_07.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameStorm_1_08.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameStorm_1_09.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameStorm_1_09b.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameStorm_1_09d.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameStorm_1_10.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameStorm_1_11.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameStorm_1_11b.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameStorm_1_12a.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameStorm_1_13c.java",
+      "renames": 52
+    },
+    {
+      "module": "Storm",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameStorm_1_13d.java",
+      "renames": 52
+    },
+    {
+      "module": "Fog",
+      "version": "1.07",
+      "script_file": "D2VersionChanger_RenameFog_1_07.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.08",
+      "script_file": "D2VersionChanger_RenameFog_1_08.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.09",
+      "script_file": "D2VersionChanger_RenameFog_1_09.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.09b",
+      "script_file": "D2VersionChanger_RenameFog_1_09b.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.09d",
+      "script_file": "D2VersionChanger_RenameFog_1_09d.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.10",
+      "script_file": "D2VersionChanger_RenameFog_1_10.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.11",
+      "script_file": "D2VersionChanger_RenameFog_1_11.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.11b",
+      "script_file": "D2VersionChanger_RenameFog_1_11b.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.12a",
+      "script_file": "D2VersionChanger_RenameFog_1_12a.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.13c",
+      "script_file": "D2VersionChanger_RenameFog_1_13c.java",
+      "renames": 60
+    },
+    {
+      "module": "Fog",
+      "version": "1.13d",
+      "script_file": "D2VersionChanger_RenameFog_1_13d.java",
+      "renames": 60
+    }
+  ],
+  "summary": {
+    "total_scripts": 66,
+    "total_renames": 6292,
+    "by_module": {
+      "D2Game": {
+        "scripts": 11,
+        "total_renames": 924
+      },
+      "D2Client": {
+        "scripts": 11,
+        "total_renames": 2475
+      },
+      "D2Common": {
+        "scripts": 11,
+        "total_renames": 1023
+      },
+      "D2Win": {
+        "scripts": 11,
+        "total_renames": 638
+      },
+      "Storm": {
+        "scripts": 11,
+        "total_renames": 572
+      },
+      "Fog": {
+        "scripts": 11,
+        "total_renames": 660
+      }
+    }
+  }
+}
