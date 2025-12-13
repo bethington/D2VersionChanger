@@ -3627,6 +3627,54 @@
             }
         }
 
+        // Check if a string looks like an address (hex pattern)
+        function isAddressSearch(searchTerm) {
+            // Match patterns like: 0x6fb12345, 6fb12345, 0x1234, 12345 (4+ hex chars)
+            return /^(0x)?[0-9a-f]{4,}$/i.test(searchTerm.trim());
+        }
+
+        // Check if function matches address search across all versions
+        function matchesAddressSearch(func, searchTerm) {
+            const normalizedSearch = searchTerm.replace(/^0x/i, '').toLowerCase();
+
+            // Check confirmed addresses
+            if (func.addresses) {
+                for (const version in func.addresses) {
+                    const addr = func.addresses[version];
+                    if (addr && addr.toLowerCase().replace(/^0x/i, '').includes(normalizedSearch)) {
+                        return true;
+                    }
+                }
+            }
+
+            // Check RVAs
+            if (func.rvas) {
+                for (const version in func.rvas) {
+                    const rva = func.rvas[version];
+                    if (rva && rva.toLowerCase().replace(/^0x/i, '').includes(normalizedSearch)) {
+                        return true;
+                    }
+                }
+            }
+
+            // Check candidate addresses
+            if (func.candidates) {
+                for (const version in func.candidates) {
+                    const candidate = func.candidates[version];
+                    if (candidate && candidate.address &&
+                        candidate.address.toLowerCase().replace(/^0x/i, '').includes(normalizedSearch)) {
+                        return true;
+                    }
+                    if (candidate && candidate.rva &&
+                        candidate.rva.toLowerCase().replace(/^0x/i, '').includes(normalizedSearch)) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         // Handler for "Named Only" toggle
         function toggleNamedOnly() {
             showOnlyNamed = !showOnlyNamed;
@@ -3745,8 +3793,16 @@
                 // Named only filter
                 if (showOnlyNamed && !isNamedFunction(func, key)) return false;
 
-                // Search filter
-                if (funcSearchFilter && !name.toLowerCase().includes(funcSearchFilter)) return false;
+                // Search filter - check addresses if search looks like an address
+                if (funcSearchFilter) {
+                    if (isAddressSearch(funcSearchFilter)) {
+                        // Address search - check all address columns
+                        if (!matchesAddressSearch(func, funcSearchFilter)) return false;
+                    } else {
+                        // Name search - check function name
+                        if (!name.toLowerCase().includes(funcSearchFilter)) return false;
+                    }
+                }
 
                 // Category filter
                 if (categoryFilter !== 'all') {
@@ -4005,7 +4061,7 @@
                     <div class="exports-toolbar">
                         <div class="exports-toolbar-row">
                             <input type="text" class="exports-search" id="funcSearchInput"
-                                   placeholder="Search..."
+                                   placeholder="Search name or address..."
                                    oninput="onFuncSearchInput(this.value)">
                             <div class="exports-toolbar-separator"></div>
                             <button class="exports-toggle" id="namedOnlyToggle" onclick="toggleNamedOnly()" title="Show only named functions">

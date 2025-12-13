@@ -1,11 +1,11 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 
 var FUNCTION_INDEX_V2 = {
-  "generated": "2025-12-10T17:53:10.150962",
+  "generated": "2025-12-13T00:30:31.404426",
   "source": "function_registry_v2.json",
-  "total_functions": 62665,
-  "total_named": 23325,
+  "total_functions": 62208,
+  "total_named": 23131,
   "files": {
     "Binkw32.dll": {
       "count": 408,
@@ -29,7 +29,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Bnclient.dll": {
-      "count": 1048,
+      "count": 1042,
       "named": 623,
       "versions": [
         "LoD/1.07",
@@ -46,8 +46,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Client.dll": {
-      "count": 8592,
-      "named": 4395,
+      "count": 8538,
+      "named": 4390,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -63,8 +63,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2CMP.dll": {
-      "count": 1114,
-      "named": 862,
+      "count": 1103,
+      "named": 851,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -80,8 +80,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Common.dll": {
-      "count": 5508,
-      "named": 3703,
+      "count": 5337,
+      "named": 3582,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -131,8 +131,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Game.dll": {
-      "count": 10335,
-      "named": 1255,
+      "count": 10202,
+      "named": 1247,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -149,7 +149,7 @@ var FUNCTION_INDEX_V2 = {
     },
     "D2Gdi.dll": {
       "count": 321,
-      "named": 153,
+      "named": 152,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -165,8 +165,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Gfx.dll": {
-      "count": 756,
-      "named": 685,
+      "count": 747,
+      "named": 676,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -182,8 +182,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Glide.dll": {
-      "count": 574,
-      "named": 227,
+      "count": 572,
+      "named": 228,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -200,7 +200,7 @@ var FUNCTION_INDEX_V2 = {
     },
     "D2Lang.dll": {
       "count": 426,
-      "named": 395,
+      "named": 394,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -216,8 +216,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Launch.dll": {
-      "count": 951,
-      "named": 420,
+      "count": 941,
+      "named": 421,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -233,8 +233,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2MCPClient.dll": {
-      "count": 358,
-      "named": 226,
+      "count": 355,
+      "named": 223,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -250,7 +250,7 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Multi.dll": {
-      "count": 808,
+      "count": 802,
       "named": 593,
       "versions": [
         "LoD/1.07",
@@ -284,8 +284,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Sound.dll": {
-      "count": 774,
-      "named": 689,
+      "count": 770,
+      "named": 687,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -318,8 +318,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Win.dll": {
-      "count": 1101,
-      "named": 923,
+      "count": 1071,
+      "named": 899,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -356,8 +356,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Fog.dll": {
-      "count": 1470,
-      "named": 1373,
+      "count": 1465,
+      "named": 1369,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -373,8 +373,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Game.exe": {
-      "count": 22675,
-      "named": 2809,
+      "count": 22673,
+      "named": 2804,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -436,8 +436,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Storm.dll": {
-      "count": 2842,
-      "named": 2467,
+      "count": 2831,
+      "named": 2465,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for Fog.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -152,6 +152,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b971a7136b1dcd60f532df35ec55e166",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -346,6 +381,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c49e429976faabc43d86aeeceef72c20",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\D2QSQueu..."
@@ -423,6 +484,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0c30fb893d873b458071e83ff6067b80",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\D2QSQueu...",
@@ -506,6 +599,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c49e429976faabc43d86aeeceef72c20",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\D2QSQueu..."
@@ -644,21 +763,30 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF61210",
         "LoD/1.09": "0x6FF51210",
         "LoD/1.09b": "0x6FF51210",
-        "LoD/1.09d": "0x6FF51210"
+        "LoD/1.09d": "0x6FF51210",
+        "LoD/1.10": "0x6FF51210",
+        "LoD/1.11": "0x6FF6F3F0",
+        "LoD/1.11b": "0x6FF68910"
       },
       "rvas": {
         "LoD/1.07": "0x1210",
         "LoD/1.08": "0x1210",
         "LoD/1.09": "0x1210",
         "LoD/1.09b": "0x1210",
-        "LoD/1.09d": "0x1210"
+        "LoD/1.09d": "0x1210",
+        "LoD/1.10": "0x1210",
+        "LoD/1.11": "0x1F3F0",
+        "LoD/1.11b": "0x18910"
       },
       "sizes": {
         "LoD/1.07": 214,
         "LoD/1.08": 214,
         "LoD/1.09": 214,
         "LoD/1.09b": 214,
-        "LoD/1.09d": 214
+        "LoD/1.09d": 214,
+        "LoD/1.10": 372,
+        "LoD/1.11": 327,
+        "LoD/1.11b": 327
       },
       "name": "SendNetworkMessage",
       "signature": "bool SendNetworkMessage(void * pConnection, void * pMsgData, ushort wMsgSize)",
@@ -667,6 +795,65 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:625dc749c531342f5725a70af086fe5f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SMemCopy",
+          "SMemCopy",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.10": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "FogAssert",
+          "FogAssert",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tMsg.wBytes < MAXBUFFERSIZE\"",
@@ -687,6 +874,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09d": [
           "\"tMsg.wBytes < MAXBUFFERSIZE\"",
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\D2QSSocket.cp..."
+        ],
+        "LoD/1.10": [
+          "\"lpData != NULL && wBytes > 0 && wBytes < MAXBUFFE...",
+          "\"tMsg.wBytes < MAXBUFFERSIZE\"",
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
         ]
       },
       "basic_block_counts": {
@@ -694,21 +886,30 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": 12,
         "LoD/1.09": 12,
         "LoD/1.09b": 12,
-        "LoD/1.09d": 12
+        "LoD/1.09d": 12,
+        "LoD/1.10": 19,
+        "LoD/1.11": 20,
+        "LoD/1.11b": 20
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "a84d5b6a57f02dc9409bc8e3e2a529ad",
         "LoD/1.08": "a84d5b6a57f02dc9409bc8e3e2a529ad",
         "LoD/1.09": "a84d5b6a57f02dc9409bc8e3e2a529ad",
         "LoD/1.09b": "a84d5b6a57f02dc9409bc8e3e2a529ad",
-        "LoD/1.09d": "a84d5b6a57f02dc9409bc8e3e2a529ad"
+        "LoD/1.09d": "a84d5b6a57f02dc9409bc8e3e2a529ad",
+        "LoD/1.10": "60c24a9496ce3e3c8359783de0fb01b5",
+        "LoD/1.11": "ef29a29ad1b7f5e4485f3ddefbc3c1af",
+        "LoD/1.11b": "ef29a29ad1b7f5e4485f3ddefbc3c1af"
       }
     },
     "fog.dll_SendNetworkData": {
@@ -758,6 +959,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6438ea326207bf36201e5c75a920a94c",
+      "callees": {
+        "LoD/1.07": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.08": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.09": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.09b": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.09d": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.10": [
+          "EnterSocketCriticalSection",
+          "TransmitSocketData",
+          "LeaveSocketCriticalSection"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -806,11 +1054,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF51360",
         "LoD/1.09d": "0x6FF51360",
         "LoD/1.10": "0x6FF51400",
-        "LoD/1.11": "0x6FF52B28",
+        "LoD/1.11": "0x6FF52C13",
         "LoD/1.11b": "0x6FF51CDF",
         "LoD/1.12a": "0x6FF52C12",
         "LoD/1.13c": "0x6FF51915",
-        "LoD/1.13d": "0x6FF52D7D"
+        "LoD/1.13d": "0x6FF52E68"
       },
       "rvas": {
         "LoD/1.07": "0x1360",
@@ -819,11 +1067,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x1360",
         "LoD/1.09d": "0x1360",
         "LoD/1.10": "0x1400",
-        "LoD/1.11": "0x2B28",
+        "LoD/1.11": "0x2C13",
         "LoD/1.11b": "0x1CDF",
         "LoD/1.12a": "0x2C12",
         "LoD/1.13c": "0x1915",
-        "LoD/1.13d": "0x2D7D"
+        "LoD/1.13d": "0x2E68"
       },
       "sizes": {
         "LoD/1.07": 34,
@@ -917,6 +1165,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4295246be1e013152171e6d30abec394",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pSocket->fpDispatcher\"",
@@ -1057,6 +1331,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3516c03dd7271f02fbb96a90e5644103",
+      "callees": {
+        "LoD/1.07": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "EnterCriticalSectionWrapper",
+          "closesocket"
+        ],
+        "LoD/1.08": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper"
+        ],
+        "LoD/1.09": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper"
+        ],
+        "LoD/1.09b": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper"
+        ],
+        "LoD/1.09d": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper"
+        ],
+        "LoD/1.10": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "GetStructPositionXY",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 30,
         "LoD/1.08": 30,
@@ -1114,6 +1444,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:45f8278d4793f584374af0eff592aabd",
+      "callees": {
+        "LoD/1.07": [
+          "CreateStormThread"
+        ],
+        "LoD/1.08": [
+          "CreateStormThread"
+        ],
+        "LoD/1.09": [
+          "CreateStormThread"
+        ],
+        "LoD/1.09b": [
+          "CreateStormThread"
+        ],
+        "LoD/1.09d": [
+          "CreateStormThread"
+        ],
+        "LoD/1.10": [
+          "CreateStormThread"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -1282,6 +1632,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:51f8009166fe50f5c3997c85f48724b6",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -1351,6 +1718,105 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e3c4a05af0f3529cb343cbf6e19a0ef7",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"UNKNOWN\"",
@@ -1501,6 +1967,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0efba2de28bd5f233a5dd8d2e8872c6b",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "CleanupNetworkContext",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.11b": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.12a": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13c": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13d": [
+          "CloseNetworkResource"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\D2QSSock..."
@@ -1773,11 +2286,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF560D0",
         "LoD/1.09d": "0x6FF51A40",
         "LoD/1.10": "0x6FF57410",
-        "LoD/1.11": "0x6FF629E0",
-        "LoD/1.11b": "0x6FF68FC0",
+        "LoD/1.11": "0x6FF629B0",
+        "LoD/1.11b": "0x6FF64F50",
         "LoD/1.12a": "0x6FF6C800",
-        "LoD/1.13c": "0x6FF6CCA0",
-        "LoD/1.13d": "0x6FF609A0"
+        "LoD/1.13c": "0x6FF5CF90",
+        "LoD/1.13d": "0x6FF664F0"
       },
       "rvas": {
         "LoD/1.07": "0x6070",
@@ -1786,11 +2299,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x60D0",
         "LoD/1.09d": "0x1A40",
         "LoD/1.10": "0x7410",
-        "LoD/1.11": "0x129E0",
-        "LoD/1.11b": "0x18FC0",
+        "LoD/1.11": "0x129B0",
+        "LoD/1.11b": "0x14F50",
         "LoD/1.12a": "0x1C800",
-        "LoD/1.13c": "0x1CCA0",
-        "LoD/1.13d": "0x109A0"
+        "LoD/1.13c": "0xCF90",
+        "LoD/1.13d": "0x164F0"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -2136,6 +2649,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4a8c6ca953028ae60bcdd378131aa1d4",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"(flPercentLinear >= 0.0) && (flPercentLinear <= 1...",
@@ -2207,11 +2752,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF51D00",
         "LoD/1.09d": "0x6FF52EF0",
         "LoD/1.10": "0x6FF51DE0",
-        "LoD/1.11": "0x6FF5E4D0",
-        "LoD/1.11b": "0x6FF5CD80",
-        "LoD/1.12a": "0x6FF6C780",
+        "LoD/1.11": "0x6FF6CA20",
+        "LoD/1.11b": "0x6FF5CEC0",
+        "LoD/1.12a": "0x6FF6C680",
         "LoD/1.13c": "0x6FF6F540",
-        "LoD/1.13d": "0x6FF6B4A0"
+        "LoD/1.13d": "0x6FF5CE60"
       },
       "rvas": {
         "LoD/1.07": "0x1D00",
@@ -2220,11 +2765,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x1D00",
         "LoD/1.09d": "0x2EF0",
         "LoD/1.10": "0x1DE0",
-        "LoD/1.11": "0xE4D0",
-        "LoD/1.11b": "0xCD80",
-        "LoD/1.12a": "0x1C780",
+        "LoD/1.11": "0x1CA20",
+        "LoD/1.11b": "0xCEC0",
+        "LoD/1.12a": "0x1C680",
         "LoD/1.13c": "0x1F540",
-        "LoD/1.13d": "0x1B4A0"
+        "LoD/1.13d": "0xCE60"
       },
       "sizes": {
         "LoD/1.07": 1,
@@ -2999,6 +3544,46 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1407b3b3ef2ebb2155ab164bbb3b33df",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "inet_ntoa",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\BitManip...",
@@ -3088,11 +3673,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF520D0",
         "LoD/1.09d": "0x6FF520C0",
         "LoD/1.10": "0x6FF536A0",
-        "LoD/1.11": "0x6FF6E980",
-        "LoD/1.11b": "0x6FF6E3C0",
-        "LoD/1.12a": "0x6FF6BA00",
-        "LoD/1.13c": "0x6FF63D80",
-        "LoD/1.13d": "0x6FF6EC40"
+        "LoD/1.11": "0x6FF6F140",
+        "LoD/1.11b": "0x6FF68AC0",
+        "LoD/1.12a": "0x6FF5DEE0",
+        "LoD/1.13c": "0x6FF6E9A0",
+        "LoD/1.13d": "0x6FF60BF0"
       },
       "rvas": {
         "LoD/1.07": "0x20D0",
@@ -3101,11 +3686,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x20D0",
         "LoD/1.09d": "0x20C0",
         "LoD/1.10": "0x36A0",
-        "LoD/1.11": "0x1E980",
-        "LoD/1.11b": "0x1E3C0",
-        "LoD/1.12a": "0x1BA00",
-        "LoD/1.13c": "0x13D80",
-        "LoD/1.13d": "0x1EC40"
+        "LoD/1.11": "0x1F140",
+        "LoD/1.11b": "0x18AC0",
+        "LoD/1.12a": "0xDEE0",
+        "LoD/1.13c": "0x1E9A0",
+        "LoD/1.13d": "0x10BF0"
       },
       "sizes": {
         "LoD/1.07": 18,
@@ -3160,11 +3745,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "e2d5f3f1c2600fd7bfca53d2fe115ad4",
         "LoD/1.09d": "e2d5f3f1c2600fd7bfca53d2fe115ad4",
         "LoD/1.10": "e2d5f3f1c2600fd7bfca53d2fe115ad4",
-        "LoD/1.11": "fddb14ab818d7855c2d9f4103a8015c1",
-        "LoD/1.11b": "fddb14ab818d7855c2d9f4103a8015c1",
-        "LoD/1.12a": "fddb14ab818d7855c2d9f4103a8015c1",
-        "LoD/1.13c": "fddb14ab818d7855c2d9f4103a8015c1",
-        "LoD/1.13d": "fddb14ab818d7855c2d9f4103a8015c1"
+        "LoD/1.11": "e17f684dc6776367a14c1fb520e4546d",
+        "LoD/1.11b": "e17f684dc6776367a14c1fb520e4546d",
+        "LoD/1.12a": "e17f684dc6776367a14c1fb520e4546d",
+        "LoD/1.13c": "e17f684dc6776367a14c1fb520e4546d",
+        "LoD/1.13d": "e17f684dc6776367a14c1fb520e4546d"
       }
     },
     "fog.dll_WriteBitsToBuffer": {
@@ -3196,6 +3781,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c8aa079ad81409defe944a23e69d8ec2",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\BitManip...",
@@ -3269,6 +3871,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9878c3132e3616bb6cb52a5bd878cec3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\BitManip...",
@@ -3342,6 +3961,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9a55adc590e329f5e8acb4244f4d89dc",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\BitManip...",
@@ -3502,6 +4138,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7967e43886053f819d3e7cf89183e54f",
+      "callees": {
+        "LoD/1.07": [
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.08": [
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09": [
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09b": [
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09d": [
+          "WriteBitsToBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -3613,6 +4266,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d231bcc7cb242ca4ab20206d4b353270",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pStrPack\"",
@@ -3714,6 +4405,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:aec2395dc44f2705e2c97e819c3c6f42",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "WriteBitsToBuffer",
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "WriteBitsToBuffer",
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "WriteBitsToBuffer",
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "WriteBitsToBuffer",
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "WriteBitsToBuffer",
+          "WriteBitsToBuffer"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10126",
+          "Ordinal_10128",
+          "Ordinal_10128"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pStrPack->nPackedBits\"",
@@ -3830,6 +4577,56 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a304e4ebac09e8c3d40d1e9a88c5f5e3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "ReadBitsFromBuffer"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "ReadBitsFromBuffer"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "ReadBitsFromBuffer"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "ReadBitsFromBuffer"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitBitBuffer",
+          "ReadBitsFromBuffer"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10126",
+          "Ordinal_10130"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pStrPack->nPackedBits\"",
@@ -3961,6 +4758,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8a6bba5da2bcc917b9f9cae5543c9bca",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -4048,6 +4872,51 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4b4062bd8c3ecb93ca419fdaa59cda43",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nCount < 1024\"",
@@ -4263,6 +5132,104 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:68360cb7734ed344625693d3017d4d17",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FormatString",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FormatString",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FormatString",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FormatString",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_578",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_578",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dst - destbuf <= (int) destsize\"",
@@ -4528,6 +5495,134 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c93db9f0d11901e64c08efa8e2104b21",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "IsWindowsNT"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "WSAStartup",
+          "WSAStartup"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "WSAStartup",
+          "WSAStartup"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "WSAStartup",
+          "WSAStartup"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "WSAStartup",
+          "WSAStartup"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "WSAStartup",
+          "WSAStartup"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -4617,11 +5712,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF53A60",
         "LoD/1.09d": "0x6FF5D5D0",
         "LoD/1.10": "0x6FF54F20",
-        "LoD/1.11": "0x6FF51020",
+        "LoD/1.11": "0x6FF6CB40",
         "LoD/1.11b": "0x6FF68FA0",
-        "LoD/1.12a": "0x6FF5F9C0",
-        "LoD/1.13c": "0x6FF6CC60",
-        "LoD/1.13d": "0x6FF69320"
+        "LoD/1.12a": "0x6FF603C0",
+        "LoD/1.13c": "0x6FF5FC30",
+        "LoD/1.13d": "0x6FF6AC50"
       },
       "rvas": {
         "LoD/1.07": "0x2EA0",
@@ -4630,11 +5725,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x3A60",
         "LoD/1.09d": "0xD5D0",
         "LoD/1.10": "0x4F20",
-        "LoD/1.11": "0x1020",
+        "LoD/1.11": "0x1CB40",
         "LoD/1.11b": "0x18FA0",
-        "LoD/1.12a": "0xF9C0",
-        "LoD/1.13c": "0x1CC60",
-        "LoD/1.13d": "0x19320"
+        "LoD/1.12a": "0x103C0",
+        "LoD/1.13c": "0xFC30",
+        "LoD/1.13d": "0x1AC50"
       },
       "sizes": {
         "LoD/1.07": 1,
@@ -4725,6 +5820,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:8ba550a74e02f58b018219b9c8741a6e",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -4863,6 +5975,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ac2d4ebf860950c4d1a53a2f37e76698",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "closesocket",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+12 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+12 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+12 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+12 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+12 more"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+13 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -4955,6 +6147,47 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c49e429976faabc43d86aeeceef72c20",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -5221,6 +6454,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a97e76fdf7d31fee67fe16bdc5546c98",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -5293,6 +6546,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d4ab01ee635abc1957a0f72e8f2f859f",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -5401,6 +6674,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b284caf23ebca917b3364405a45ca876",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -5477,6 +6806,60 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f5e37dfb3d28b057a7d8456dae158076",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+6 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+6 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+6 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -5559,6 +6942,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:30b726d4e1cd72a83329227082b69591",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -5610,6 +7010,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b8f045212565f1196ece20bcd94f5a88",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -5745,6 +7162,60 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4da2a2e783cb16041bc638c183c02e0a",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -5827,6 +7298,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:44e1de2e8adb85b98c05499e3a65ec6f",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"[HACKLIST]  Hacklist size is %d\""
@@ -5898,6 +7386,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:53c710c5da23a3716925ba302b233e2c",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -5954,21 +7468,39 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF64100",
         "LoD/1.09": "0x6FF54160",
         "LoD/1.09b": "0x6FF54160",
-        "LoD/1.09d": "0x6FF53F30"
+        "LoD/1.09d": "0x6FF53F30",
+        "LoD/1.10": "0x6FF56680",
+        "LoD/1.11": "0x6FF65810",
+        "LoD/1.11b": "0x6FF63280",
+        "LoD/1.12a": "0x6FF68BB0",
+        "LoD/1.13c": "0x6FF68340",
+        "LoD/1.13d": "0x6FF61670"
       },
       "rvas": {
         "LoD/1.07": "0x4100",
         "LoD/1.08": "0x4100",
         "LoD/1.09": "0x4160",
         "LoD/1.09b": "0x4160",
-        "LoD/1.09d": "0x3F30"
+        "LoD/1.09d": "0x3F30",
+        "LoD/1.10": "0x6680",
+        "LoD/1.11": "0x15810",
+        "LoD/1.11b": "0x13280",
+        "LoD/1.12a": "0x18BB0",
+        "LoD/1.13c": "0x18340",
+        "LoD/1.13d": "0x11670"
       },
       "sizes": {
         "LoD/1.07": 230,
         "LoD/1.08": 230,
         "LoD/1.09": 230,
         "LoD/1.09b": 230,
-        "LoD/1.09d": 230
+        "LoD/1.09d": 230,
+        "LoD/1.10": 90,
+        "LoD/1.11": 90,
+        "LoD/1.11b": 90,
+        "LoD/1.12a": 90,
+        "LoD/1.13c": 90,
+        "LoD/1.13d": 90
       },
       "name": "RemoveHashTableEntry",
       "signature": "void RemoveHashTableEntry(void * this, uint dwKey)",
@@ -5977,6 +7509,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6001c666c614f65aec3a9835e3619bfa",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -5997,6 +7561,29 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
           "\"[HACKLIST]  Hacklist size is %d\""
+        ],
+        "LoD/1.10": [
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
+        ],
+        "LoD/1.11": [
+          "\"-------------------------------------------------...",
+          "\"%s %04d-%02d-%02d\\n\""
+        ],
+        "LoD/1.11b": [
+          "\"-------------------------------------------------...",
+          "\"%s %04d-%02d-%02d\\n\""
+        ],
+        "LoD/1.12a": [
+          "\"-------------------------------------------------...",
+          "\"%s %04d-%02d-%02d\\n\""
+        ],
+        "LoD/1.13c": [
+          "\"-------------------------------------------------...",
+          "\"%s %04d-%02d-%02d\\n\""
+        ],
+        "LoD/1.13d": [
+          "\"-------------------------------------------------...",
+          "\"%s %04d-%02d-%02d\\n\""
         ]
       },
       "basic_block_counts": {
@@ -6004,21 +7591,39 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": 13,
         "LoD/1.09": 13,
         "LoD/1.09b": 13,
-        "LoD/1.09d": 13
+        "LoD/1.09d": 13,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "67449d73465d7e523ae597ee38eca7a8",
         "LoD/1.08": "67449d73465d7e523ae597ee38eca7a8",
         "LoD/1.09": "67449d73465d7e523ae597ee38eca7a8",
         "LoD/1.09b": "67449d73465d7e523ae597ee38eca7a8",
-        "LoD/1.09d": "67449d73465d7e523ae597ee38eca7a8"
+        "LoD/1.09d": "67449d73465d7e523ae597ee38eca7a8",
+        "LoD/1.10": "537c517818a372a9f3a4340bacf04698",
+        "LoD/1.11": "42a9f8862fd7fe3c8e3cecb496c3e60d",
+        "LoD/1.11b": "42a9f8862fd7fe3c8e3cecb496c3e60d",
+        "LoD/1.12a": "42a9f8862fd7fe3c8e3cecb496c3e60d",
+        "LoD/1.13c": "42a9f8862fd7fe3c8e3cecb496c3e60d",
+        "LoD/1.13d": "42a9f8862fd7fe3c8e3cecb496c3e60d"
       }
     },
     "fog.dll_RefreshCacheEntryTimer": {
@@ -6050,6 +7655,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:de5ac3f14f0082dc1233abb34fdc3558",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -6119,6 +7741,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2d7104a677f9f64119021c1f5071a537",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -6191,6 +7833,50 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff9485e356131ebbe4592c2667c1eb94",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -6265,6 +7951,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:aaea9cdf27c54d43dbe2680acc41f722",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -6356,6 +8059,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6a26c50fdb3a81c07b0eab162a1bb02c",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -6428,6 +8151,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:01ea08240fc2c95f093f1cac50e874e3",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -6482,6 +8231,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7a89453dd6fe97364e7da8728e2e0d73",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+7 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+7 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+7 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+7 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -6631,6 +8447,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:61e36053586c0253da3652fc7fc3509a",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 14,
         "LoD/1.08": 14,
@@ -6688,6 +8524,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:e04bc0e9567c1498af87fcdc382c4ea7",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -6719,16 +8581,16 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF64BF0",
         "LoD/1.09": "0x6FF54C50",
         "LoD/1.09b": "0x6FF54C50",
-        "LoD/1.09d": "0x6FF54BF0",
-        "LoD/1.10": "0x6FF56310"
+        "LoD/1.09d": "0x6FF54AF0",
+        "LoD/1.10": "0x6FF56210"
       },
       "rvas": {
         "LoD/1.07": "0x4BF0",
         "LoD/1.08": "0x4BF0",
         "LoD/1.09": "0x4C50",
         "LoD/1.09b": "0x4C50",
-        "LoD/1.09d": "0x4BF0",
-        "LoD/1.10": "0x6310"
+        "LoD/1.09d": "0x4AF0",
+        "LoD/1.10": "0x6210"
       },
       "sizes": {
         "LoD/1.07": 104,
@@ -6736,7 +8598,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 104,
         "LoD/1.09b": 104,
         "LoD/1.09d": 104,
-        "LoD/1.10": 105
+        "LoD/1.10": 104
       },
       "name": "HashTableLookupValue",
       "signature": "uint HashTableLookupValue(void * pHashTable, uint dwKey)",
@@ -6745,6 +8607,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:19e79fce3bf4f9091a071625e6ec1289",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -6767,7 +8649,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "19e79fce3bf4f9091a071625e6ec1289",
         "LoD/1.09b": "19e79fce3bf4f9091a071625e6ec1289",
         "LoD/1.09d": "19e79fce3bf4f9091a071625e6ec1289",
-        "LoD/1.10": "ec4a49c93faf2bd500a8a85e2713253d"
+        "LoD/1.10": "19e79fce3bf4f9091a071625e6ec1289"
       }
     },
     "fog.dll_GetSocketPeerAddress": {
@@ -6817,6 +8699,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b6a1b9c6ef7ef149cb77f49888cc4420",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"GenuineIntel\"",
@@ -6890,16 +8792,16 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF64CF0",
         "LoD/1.09": "0x6FF54D50",
         "LoD/1.09b": "0x6FF54D50",
-        "LoD/1.09d": "0x6FF54AF0",
-        "LoD/1.10": "0x6FF56210"
+        "LoD/1.09d": "0x6FF54BF0",
+        "LoD/1.10": "0x6FF56310"
       },
       "rvas": {
         "LoD/1.07": "0x4CF0",
         "LoD/1.08": "0x4CF0",
         "LoD/1.09": "0x4D50",
         "LoD/1.09b": "0x4D50",
-        "LoD/1.09d": "0x4AF0",
-        "LoD/1.10": "0x6210"
+        "LoD/1.09d": "0x4BF0",
+        "LoD/1.10": "0x6310"
       },
       "sizes": {
         "LoD/1.07": 104,
@@ -6907,7 +8809,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 104,
         "LoD/1.09b": 104,
         "LoD/1.09d": 104,
-        "LoD/1.10": 104
+        "LoD/1.10": 105
       },
       "name": "LookupHashValue",
       "signature": "uint LookupHashValue(FogHashTable * pHashTable, uint dwKey)",
@@ -6916,6 +8818,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:19e79fce3bf4f9091a071625e6ec1289",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -6938,7 +8860,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "19e79fce3bf4f9091a071625e6ec1289",
         "LoD/1.09b": "19e79fce3bf4f9091a071625e6ec1289",
         "LoD/1.09d": "19e79fce3bf4f9091a071625e6ec1289",
-        "LoD/1.10": "19e79fce3bf4f9091a071625e6ec1289"
+        "LoD/1.10": "ec4a49c93faf2bd500a8a85e2713253d"
       }
     },
     "fog.dll_DisconnectClientAndBlock": {
@@ -6973,6 +8895,79 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4db6d0b5f34902d3c119b6cc1b7804da",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7069,6 +9064,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6001c666c614f65aec3a9835e3619bfa",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7146,6 +9163,79 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e06d368537b03ba9d686ce24b340d779",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7390,6 +9480,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:78a29e45353d87cc3b392439ed5dc0ec",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7492,6 +9662,79 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:586f226a596790b3404c338f439c28ea",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7639,6 +9882,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d5f224e081f46a3a9d179af80e63b550",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7698,11 +9961,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF55C30",
         "LoD/1.09d": "0x6FF55600",
         "LoD/1.10": "0x6FF575A0",
-        "LoD/1.11": "0x6FF62A80",
-        "LoD/1.11b": "0x6FF64F60",
-        "LoD/1.12a": "0x6FF618F0",
-        "LoD/1.13c": "0x6FF5CFA0",
-        "LoD/1.13d": "0x6FF66530"
+        "LoD/1.11": "0x6FF629C0",
+        "LoD/1.11b": "0x6FF64F30",
+        "LoD/1.12a": "0x6FF618C0",
+        "LoD/1.13c": "0x6FF5CF70",
+        "LoD/1.13d": "0x6FF66500"
       },
       "rvas": {
         "LoD/1.07": "0x5BD0",
@@ -7711,11 +9974,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x5C30",
         "LoD/1.09d": "0x5600",
         "LoD/1.10": "0x75A0",
-        "LoD/1.11": "0x12A80",
-        "LoD/1.11b": "0x14F60",
-        "LoD/1.12a": "0x118F0",
-        "LoD/1.13c": "0xCFA0",
-        "LoD/1.13d": "0x16530"
+        "LoD/1.11": "0x129C0",
+        "LoD/1.11b": "0x14F30",
+        "LoD/1.12a": "0x118C0",
+        "LoD/1.13c": "0xCF70",
+        "LoD/1.13d": "0x16500"
       },
       "sizes": {
         "LoD/1.07": 17,
@@ -7809,6 +10072,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bd392003760ca4f373d40d82bc5d215c",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -7866,6 +10149,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dfbf0d5fd2609e484f247831dfccf34c",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -7917,6 +10220,60 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:1eca7fb0c4a625dfdc94191eb7b74017",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -7996,6 +10353,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cfb8e1932a75d40e68c215ca00213e7a",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -8076,6 +10447,74 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b850d2d4521ed789fb21fd9bfb49d4d3",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -8159,11 +10598,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF56260",
         "LoD/1.09d": "0x6FF55240",
         "LoD/1.10": "0x6FF56FB0",
-        "LoD/1.11": "0x6FF629C0",
-        "LoD/1.11b": "0x6FF64F30",
-        "LoD/1.12a": "0x6FF618C0",
-        "LoD/1.13c": "0x6FF5CF70",
-        "LoD/1.13d": "0x6FF66500"
+        "LoD/1.11": "0x6FF62A80",
+        "LoD/1.11b": "0x6FF64F60",
+        "LoD/1.12a": "0x6FF618F0",
+        "LoD/1.13c": "0x6FF5CFA0",
+        "LoD/1.13d": "0x6FF66530"
       },
       "rvas": {
         "LoD/1.07": "0x6200",
@@ -8172,11 +10611,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6260",
         "LoD/1.09d": "0x5240",
         "LoD/1.10": "0x6FB0",
-        "LoD/1.11": "0x129C0",
-        "LoD/1.11b": "0x14F30",
-        "LoD/1.12a": "0x118C0",
-        "LoD/1.13c": "0xCF70",
-        "LoD/1.13d": "0x16500"
+        "LoD/1.11": "0x12A80",
+        "LoD/1.11b": "0x14F60",
+        "LoD/1.12a": "0x118F0",
+        "LoD/1.13c": "0xCFA0",
+        "LoD/1.13d": "0x16530"
       },
       "sizes": {
         "LoD/1.07": 17,
@@ -8270,6 +10709,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5cb66c65c1b97227c8865da57263da43",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -8307,7 +10766,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "0x6FF64F10",
         "LoD/1.12a": "0x6FF5FA60",
         "LoD/1.13c": "0x6FF5FCD0",
-        "LoD/1.13d": "0x6FF5CE20"
+        "LoD/1.13d": "0x6FF664E0"
       },
       "rvas": {
         "LoD/1.07": "0x6280",
@@ -8320,7 +10779,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "0x14F10",
         "LoD/1.12a": "0xFA60",
         "LoD/1.13c": "0xFCD0",
-        "LoD/1.13d": "0xCE20"
+        "LoD/1.13d": "0x164E0"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -8522,6 +10981,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1e120d35822f3a26010d4033d2101986",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -8573,6 +11046,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:dea117cd6b6323762c26511ce9165a87",
+      "callees": {
+        "LoD/1.07": [
+          "closesocket",
+          "closesocket",
+          "StubNoOp"
+        ],
+        "LoD/1.08": [
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09": [
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09b": [
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09d": [
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.10": [
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "ShutdownStubNoOp"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 8,
@@ -8630,6 +11135,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2c57d9ba4c1678c3f2307a71bc581e6",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -8759,6 +11284,151 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:36f78b1ac2fe1a5b1ed3c4490e4cc96e",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "closesocket",
+          "closesocket",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "select",
+          "ValidateCriticalSection",
+          "WSASetLastError",
+          "ValidateCriticalSection",
+          "accept",
+          "WSAGetLastError",
+          "closesocket",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "select",
+          "ValidateCriticalSection",
+          "WSASetLastError",
+          "ValidateCriticalSection",
+          "accept",
+          "WSAGetLastError",
+          "closesocket",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "select",
+          "ValidateCriticalSection",
+          "WSASetLastError",
+          "ValidateCriticalSection",
+          "accept",
+          "WSAGetLastError",
+          "closesocket",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "select",
+          "ValidateCriticalSection",
+          "WSASetLastError",
+          "ValidateCriticalSection",
+          "accept",
+          "WSAGetLastError",
+          "closesocket",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "select",
+          "ValidateCriticalSection",
+          "WSASetLastError",
+          "ValidateCriticalSection",
+          "accept",
+          "WSAGetLastError",
+          "closesocket",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"[HACKLIST] sServerThread(spamming server with rec...",
@@ -8970,6 +11640,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:14494f4f58f5e2c7031485d950098613",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "closesocket",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "CloseHandleWrapper",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "CloseHandleWrapper",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "CloseHandleWrapper",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "StubNoOp",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ShutdownStubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "ShutdownStubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "ShutdownStubNoOp",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"[SERVER]  QSNTInit failed on listen() - err=%d\"",
@@ -9059,6 +11791,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ada4934be1b87612dfd59fc302b932f9",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 17,
         "LoD/1.08": 17,
@@ -9104,6 +11850,60 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f9ada23809aaebf49fcb1059f9376529",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "StubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "closesocket",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "StubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "StubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "StubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"user on hack list\"",
@@ -9189,6 +11989,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:93c21a554e08f053fd263fd253f8db00",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "FogMemAlloc",
+          "LeaveFogCriticalSection"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\..."
@@ -9266,6 +12122,50 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:64f600ff9e6f214968779303716669ff",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "StubNoOp"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "ShutdownStubNoOp"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\...",
@@ -9400,6 +12300,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:855761004b4ca98432395fc960fe4a58",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "LeaveFogCriticalSection",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "LeaveFogCriticalSection",
+          "NoOpStub",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "NoOpStub",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "NoOpStub",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "NoOpStub",
+          "...+3 more"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "QueueLogMessage",
+          "...+2 more"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "QueueLogMessage",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"GQCS1 client %d refcount=%d\"",
@@ -9504,6 +12484,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1dcaea40b9d99bd66628a5912bf0bf83",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "FogAssert",
+          "LogAppendFormat",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!ptClient->tReadOverlapped.hEvent\"",
@@ -9600,6 +12637,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:fb0ebcabbf75a393ef4ff4727cdbd46f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"QW1 client %d refcount=%d\"",
@@ -9801,6 +12864,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f91ad661a0954fc291a8cef163c6f456",
+      "callees": {
+        "LoD/1.07": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.08": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09b": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09d": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.10": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -9945,6 +13043,46 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3c7d5e1b0abd674f2da3efcf32beec3d",
+      "callees": {
+        "LoD/1.07": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.08": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09b": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09d": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.10": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.11": [
+          "StripSourcePathPrefix",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "StripSourcePathPrefix",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "StripSourcePathPrefix",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "StripSourcePathPrefix",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "StripSourcePathPrefix",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"\\n***** ENCOUNTERED ERROR DURING ERROR HANDLING!!..."
@@ -10037,6 +13175,29 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:71af069b8a98675066c3dfb7b6844cb1",
+      "callees": {
+        "LoD/1.07": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.08": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09b": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09d": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.10": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -10169,6 +13330,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3eb2f4d5df97cafe0e974ec88b8ede82",
+      "callees": {
+        "LoD/1.07": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.08": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09b": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.09d": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.10": [
+          "ReportExceptionContext"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -10256,6 +13452,151 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:30d20bcb5ae96378c7deb9abd9fa1b63",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "LogAppendFormat",
+          "FormatInt64WithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10141",
+          "LogAppendFormat",
+          "Ordinal_10141",
+          "LogAppendFormat",
+          "Ordinal_10141",
+          "LogAppendFormat",
+          "Ordinal_10141",
+          "...+6 more"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "LogAppendFormat",
+          "FormatNumberWithCommas",
+          "...+6 more"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "NullStubProc",
+          "FormatNumberWithCommas",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"-------------------------------------------------...",
@@ -10403,6 +13744,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c620bdceae5c103035f37b50b375055a",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8
       },
@@ -10430,6 +13777,14 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8be7550a9ab4a57dee4841cf85b154a9",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 10
       },
@@ -10472,6 +13827,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1d90f190d6c54308df7c4fc6d8b6fc96",
+      "callees": {
+        "LoD/1.07": [
+          "InitializeMemoryPool",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "FogFatalError",
+          "FogAssert",
+          "LeaveFogCriticalSection",
+          "LogPoolWarning",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "InitializeMemoryPool",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogAssert",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10142",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogAssert",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10142",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogAssert",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10142",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogAssert",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10142",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogAssert",
+          "FogAssert",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pPool->pTail\"",
@@ -10645,6 +14080,84 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ed2fc4fac6240c40419be60e93ac9032",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogFatalError",
+          "LeaveFogCriticalSection"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Mem\\\\mem...",
@@ -10780,6 +14293,16 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:97eee2c04a3bf183fc814c962aadcd55",
+      "callees": {
+        "LoD/1.07": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "FogFatalError",
+          "LeaveFogCriticalSection",
+          "FogFatalError"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"MEMORY ERROR: Pool Blocks Overflowed\"",
@@ -10817,6 +14340,15 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a6657ef2b5152fc1e513f9c07ca37927",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 27
       },
@@ -10859,6 +14391,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e9e3d143748a076d75352645a0c76ae0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+4 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Failure to reallocate memory\"",
@@ -10948,6 +14560,77 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a4ea5823c61770a8fbd474c895fd359f",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "LogPoolWarning",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection",
+          "LeaveFogCriticalSection"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "LogPoolWarning",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Mem\\\\mem...",
@@ -11041,6 +14724,54 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:76fc04bc1a6df020e9349917b52f9900",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 18,
         "LoD/1.08": 19,
@@ -11113,6 +14844,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c1822e3997ce3fa84368daf76070724c",
+      "callees": {
+        "LoD/1.07": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "SStrCopy",
+          "FogAssert",
+          "LeaveFogCriticalSection",
+          "FogFatalError"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501",
+          "FogAssert",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501",
+          "FogAssert",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501",
+          "FogAssert",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501",
+          "FogAssert",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "Ordinal_501",
+          "FogAssert",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"(5). Pool Blocks overflowed at %d\"",
@@ -11224,6 +15035,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c620bdceae5c103035f37b50b375055a",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5
       },
@@ -11251,6 +15068,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c620bdceae5c103035f37b50b375055a",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "LeaveFogCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3
       },
@@ -11495,28 +15318,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF69430",
         "LoD/1.08": "0x6FF693F0",
-        "LoD/1.09": "0x6FF6B962",
+        "LoD/1.09": "0x6FF5B3C0",
         "LoD/1.09b": "0x6FF5B3C0",
-        "LoD/1.09d": "0x6FF5B0F0",
+        "LoD/1.09d": "0x6FF6CCC2",
         "LoD/1.10": "0x6FF6E522",
-        "LoD/1.11": "0x6FF655C0",
-        "LoD/1.11b": "0x6FF6EAD0",
-        "LoD/1.12a": "0x6FF6C7A0",
-        "LoD/1.13c": "0x6FF5A5AC",
-        "LoD/1.13d": "0x6FF6AC40"
+        "LoD/1.11": "0x6FF6BC00",
+        "LoD/1.11b": "0x6FF5A4E4",
+        "LoD/1.12a": "0x6FF64D50",
+        "LoD/1.13c": "0x6FF6D730",
+        "LoD/1.13d": "0x6FF6CAF0"
       },
       "rvas": {
         "LoD/1.07": "0x9430",
         "LoD/1.08": "0x93F0",
-        "LoD/1.09": "0x1B962",
+        "LoD/1.09": "0xB3C0",
         "LoD/1.09b": "0xB3C0",
-        "LoD/1.09d": "0xB0F0",
+        "LoD/1.09d": "0x1CCC2",
         "LoD/1.10": "0x1E522",
-        "LoD/1.11": "0x155C0",
-        "LoD/1.11b": "0x1EAD0",
-        "LoD/1.12a": "0x1C7A0",
-        "LoD/1.13c": "0xA5AC",
-        "LoD/1.13d": "0x1AC40"
+        "LoD/1.11": "0x1BC00",
+        "LoD/1.11b": "0xA4E4",
+        "LoD/1.12a": "0x14D50",
+        "LoD/1.13c": "0x1D730",
+        "LoD/1.13d": "0x1CAF0"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -11610,6 +15433,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1f5279705411283fd2a015c5706f2225",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!\\\"OsInterlockedRead/OsInterlockedWrite failed!\\\"...",
@@ -11698,6 +15541,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f7f4f0400e056def9b685111fd156f20",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -12031,6 +15894,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:15d5448f67d211ccd91694c33f3cbe79",
+      "callees": {
+        "LoD/1.07": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.08": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.09": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.09b": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.09d": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.10": [
+          "GetSaveDirectoryPath"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10115"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10115"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10115"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10115"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10115"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"kernel32.dll\"",
@@ -12182,10 +16080,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF59700",
         "LoD/1.09d": "0x6FF59430",
         "LoD/1.10": "0x6FF5A860",
-        "LoD/1.11": "0x6FF51700",
-        "LoD/1.11b": "0x6FF513B0",
+        "LoD/1.11": "0x6FF516B0",
+        "LoD/1.11b": "0x6FF51360",
         "LoD/1.12a": "0x6FF516B0",
-        "LoD/1.13c": "0x6FF51700",
+        "LoD/1.13c": "0x6FF516B0",
         "LoD/1.13d": "0x6FF516B0"
       },
       "rvas": {
@@ -12195,10 +16093,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x9700",
         "LoD/1.09d": "0x9430",
         "LoD/1.10": "0xA860",
-        "LoD/1.11": "0x1700",
-        "LoD/1.11b": "0x13B0",
+        "LoD/1.11": "0x16B0",
+        "LoD/1.11b": "0x1360",
         "LoD/1.12a": "0x16B0",
-        "LoD/1.13c": "0x1700",
+        "LoD/1.13c": "0x16B0",
         "LoD/1.13d": "0x16B0"
       },
       "sizes": {
@@ -12308,6 +16206,133 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ad934869f83d794df2909b624f0ec244",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "SMemCopy",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "CopyMemoryBuffer",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "CopyMemoryBuffer",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "CopyMemoryBuffer",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "CopyMemoryBuffer",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked",
+          "FogAssert",
+          "SCompareN",
+          "CopyMemoryBuffer",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CompareStringsIgnoreCase",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CompareStringsIgnoreCase",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CompareStringsIgnoreCase",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CompareStringsIgnoreCase",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CompareStringsIgnoreCase",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"*data == SYM_EOL\"",
@@ -12443,6 +16468,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:faeded7945c171d0e7baede4722388f7",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Excel\\\\E..."
@@ -12607,6 +16658,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:acc7371fce8f32d259aa53b1e90d787a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "ComputeStringHash",
+          "FogAssert",
+          "FogAssert",
+          "ComputeStringHash",
+          "SStrCmpNI",
+          "InsertSortedIndexEntry",
+          "AllocPoolMemoryTracked",
+          "...+9 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "Ordinal_502",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_502",
+          "SCompareN",
+          "Ordinal_10215",
+          "AllocPoolMemoryTracked",
+          "...+9 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "Ordinal_502",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_502",
+          "SCompareN",
+          "Ordinal_10215",
+          "AllocPoolMemoryTracked",
+          "...+9 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "Ordinal_502",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_502",
+          "SCompareN",
+          "Ordinal_10215",
+          "AllocPoolMemoryTracked",
+          "...+9 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "Ordinal_502",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_502",
+          "SCompareN",
+          "Ordinal_10215",
+          "AllocPoolMemoryTracked",
+          "...+9 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "SMemZero",
+          "Ordinal_502",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_502",
+          "SCompareN",
+          "Ordinal_10215",
+          "Ordinal_10045",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nIndex <= USHRT_MAX\"",
@@ -12729,6 +16860,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cf96c94f61677e1c1057021957705d32",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Excel\\\\E..."
@@ -12818,6 +16984,35 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:11453ff0754b5bb7244cfaee2a241de8",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hIndex\"",
@@ -12912,6 +17107,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fa12eaa84afc8286ba7e060aab7434e5",
+      "callees": {
+        "LoD/1.07": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Excel\\\\E..."
@@ -13004,6 +17219,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:83c9de5142c0b6251687e9a705dcbef3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hIndex\"",
@@ -13092,6 +17333,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7a3e92bb1ccd15cb5f6e968d7cc628cc",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hIndex\"",
@@ -13176,6 +17444,39 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:941853da555b971cf52faa0c08a41654",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "PoolReallocateTracked",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!ptIndex->pStrTbl\"",
@@ -13266,6 +17567,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:92801ec8e8fb1ee8115b5a09450e8f33",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SStrCopy",
+          "ToUpperInPlace",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FogAssert",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!ptIndex->nSize || pNode\"",
@@ -13352,6 +17691,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5213c9ce85fbc58f3d6507d41552cd4c",
+      "callees": {
+        "LoD/1.07": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Excel\\\\E..."
@@ -13438,6 +17794,107 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:72fcb3fe5bf6a8a4f1aab4fc95795eef",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "SStrCopy",
+          "ToUpperInPlace",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10045",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "QueueLogMessage",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!ptIndex->pTbl\"",
@@ -13563,6 +18020,50 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e25bde900b9dbc51c6b11fa6045267dc",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetSampleRate",
+          "SetStreamBufferSize",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "SetFrameDivisor",
+          "SetStreamBufferSize",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "SetFrameDivisor",
+          "SetStreamBufferSize",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "SetFrameDivisor",
+          "SetStreamBufferSize",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "SetFrameDivisor",
+          "SetStreamBufferSize",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "SetFrameDivisor",
+          "Ordinal_285",
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"sgptAsyncEventArray\"",
@@ -13652,6 +18153,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2c9b12ce451c202a36ee74a6ba72b62",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\AsyncDat..."
@@ -13729,6 +18250,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:eddd6eed858758d904d5110099a85329",
+      "callees": {
+        "LoD/1.07": [
+          "CloseFileHandle",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\AsyncDat..."
@@ -13860,6 +18407,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ceb55c7eed45e1faf6764837503cd14a",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked",
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "GetFileSize",
+          "CloseFileHandle",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked",
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "SetAsyncFileHandle",
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked",
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "SetAsyncFileHandle",
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked",
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "SetAsyncFileHandle",
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked",
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "SetAsyncFileHandle",
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\AsyncDat..."
@@ -13928,6 +18542,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData\"",
@@ -14009,6 +18645,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ebf8263767f74d7cfbfaef530c13a3f3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "SetAsyncPriority"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData\"",
@@ -14104,6 +18778,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a3e0982a31ceb36c885b53d021003e89",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetAsyncPriority"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_282"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_282"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"sgnPostponedPriorityChanges > 0\"",
@@ -14187,6 +18887,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3d27acf7c1968bc464b00e82b81896c9",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "SetAsyncPriority",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_282",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dwRet == WAIT_OBJECT_0\"",
@@ -14282,6 +19020,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:24f7c043355d30c993eb2fa37ae61113",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "WaitForAsyncCompletion",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "WaitForAsyncCompletion",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "WaitForAsyncCompletion",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "WaitForAsyncCompletion",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "WaitForAsyncCompletion",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10093",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData\"",
@@ -14377,6 +19153,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData\"",
@@ -14466,6 +19268,44 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8d876320afcadc3fd14f3b44348c2f4c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData\"",
@@ -14561,6 +19401,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b2656e274b09d50daa13f49c9806d032",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "SNetCancelRequest",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_283",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_283",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_283",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_283",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_283",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptAsyncData->ptBuffer\"",
@@ -14704,6 +19600,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b4e33503cb1a3bb16592cddcd84cf6d3",
+      "callees": {
+        "LoD/1.07": [
+          "BuildHuffmanDecodeTables"
+        ],
+        "LoD/1.08": [
+          "BuildHuffmanDecodeTables"
+        ],
+        "LoD/1.09": [
+          "BuildHuffmanDecodeTables"
+        ],
+        "LoD/1.09b": [
+          "BuildHuffmanDecodeTables"
+        ],
+        "LoD/1.09d": [
+          "BuildHuffmanDecodeTables"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -14911,6 +19824,50 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:15e8f2d08bf64dc0e4d34aad46ddd028",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"m486DX4 or Am5x86\"",
@@ -15156,6 +20113,65 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7bed0b28198f816609f8549e3656a59e",
+      "callees": {
+        "LoD/1.07": [
+          "GetInstallPath",
+          "SStrCat",
+          "SStrCopy",
+          "GetExpansionFlag"
+        ],
+        "LoD/1.08": [
+          "GetInstallPath",
+          "Ordinal_503",
+          "Ordinal_501",
+          "GetLastError"
+        ],
+        "LoD/1.09": [
+          "GetInstallPath",
+          "Ordinal_503",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "GetInstallPath",
+          "Ordinal_503",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "GetInstallPath",
+          "Ordinal_503",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10116",
+          "Ordinal_503",
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"d2exp.mpq\""
@@ -15260,6 +20276,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b40be42abbdb64b51045590d8a107371",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\DataArra..."
@@ -15331,6 +20364,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:238a4371d0db4cbc2ab529fc31868b45",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\DataArra..."
@@ -15480,6 +20533,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5eb0168a988ac2e288fe6cd77a0b35d1",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"lptDataArray->fValid\"",
@@ -15578,6 +20651,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c26fc268ff8d8e0702f5d6531fad60c3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"lptDataArray->fValid\"",
@@ -15661,6 +20754,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:661b7de790810885cc154e260c1878bf",
+      "callees": {
+        "LoD/1.07": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\DataArra...",
@@ -15744,6 +20869,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ce33f66dd10dd91853f47a8234e69b89",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"lptDataArray->fValid\"",
@@ -15833,6 +20990,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:661b7de790810885cc154e260c1878bf",
+      "callees": {
+        "LoD/1.07": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "DataArrayGetEntry",
+          "FormatStringVarArgs",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\DataArra...",
@@ -15887,28 +21076,28 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_EnterCriticalSectionWrapper": {
       "addresses": {
         "LoD/1.07": "0x6FF6C730",
-        "LoD/1.08": "0x6FF6C6F0",
-        "LoD/1.09": "0x6FF5C750",
-        "LoD/1.09b": "0x6FF5C750",
+        "LoD/1.08": "0x6FF6C710",
+        "LoD/1.09": "0x6FF5C730",
+        "LoD/1.09b": "0x6FF5C730",
         "LoD/1.09d": "0x6FF5C550",
-        "LoD/1.10": "0x6FF5DC40",
-        "LoD/1.11": "0x6FF6D450",
-        "LoD/1.11b": "0x6FF5E590",
+        "LoD/1.10": "0x6FF5DC20",
+        "LoD/1.11": "0x6FF6E210",
+        "LoD/1.11b": "0x6FF5D7A0",
         "LoD/1.12a": "0x6FF603D0",
-        "LoD/1.13c": "0x6FF60640",
+        "LoD/1.13c": "0x6FF617C0",
         "LoD/1.13d": "0x6FF5DC30"
       },
       "rvas": {
         "LoD/1.07": "0xC730",
-        "LoD/1.08": "0xC6F0",
-        "LoD/1.09": "0xC750",
-        "LoD/1.09b": "0xC750",
+        "LoD/1.08": "0xC710",
+        "LoD/1.09": "0xC730",
+        "LoD/1.09b": "0xC730",
         "LoD/1.09d": "0xC550",
-        "LoD/1.10": "0xDC40",
-        "LoD/1.11": "0x1D450",
-        "LoD/1.11b": "0xE590",
+        "LoD/1.10": "0xDC20",
+        "LoD/1.11": "0x1E210",
+        "LoD/1.11b": "0xD7A0",
         "LoD/1.12a": "0x103D0",
-        "LoD/1.13c": "0x10640",
+        "LoD/1.13c": "0x117C0",
         "LoD/1.13d": "0xDC30"
       },
       "sizes": {
@@ -15931,6 +21120,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d6cc16481d945a1ab1623ff2fa794b48",
+      "callees": {
+        "LoD/1.10": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -15974,28 +21183,28 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_LeaveFogCriticalSection": {
       "addresses": {
         "LoD/1.07": "0x6FF6C750",
-        "LoD/1.08": "0x6FF6C710",
-        "LoD/1.09": "0x6FF5C730",
-        "LoD/1.09b": "0x6FF5C730",
+        "LoD/1.08": "0x6FF6C6F0",
+        "LoD/1.09": "0x6FF5C750",
+        "LoD/1.09b": "0x6FF5C750",
         "LoD/1.09d": "0x6FF5C570",
-        "LoD/1.10": "0x6FF5DC20",
-        "LoD/1.11": "0x6FF6E210",
-        "LoD/1.11b": "0x6FF5D7A0",
+        "LoD/1.10": "0x6FF5DC40",
+        "LoD/1.11": "0x6FF6D450",
+        "LoD/1.11b": "0x6FF5E590",
         "LoD/1.12a": "0x6FF61550",
-        "LoD/1.13c": "0x6FF617C0",
+        "LoD/1.13c": "0x6FF60640",
         "LoD/1.13d": "0x6FF5DC10"
       },
       "rvas": {
         "LoD/1.07": "0xC750",
-        "LoD/1.08": "0xC710",
-        "LoD/1.09": "0xC730",
-        "LoD/1.09b": "0xC730",
+        "LoD/1.08": "0xC6F0",
+        "LoD/1.09": "0xC750",
+        "LoD/1.09b": "0xC750",
         "LoD/1.09d": "0xC570",
-        "LoD/1.10": "0xDC20",
-        "LoD/1.11": "0x1E210",
-        "LoD/1.11b": "0xD7A0",
+        "LoD/1.10": "0xDC40",
+        "LoD/1.11": "0x1D450",
+        "LoD/1.11b": "0xE590",
         "LoD/1.12a": "0x11550",
-        "LoD/1.13c": "0x117C0",
+        "LoD/1.13c": "0x10640",
         "LoD/1.13d": "0xDC10"
       },
       "sizes": {
@@ -16018,6 +21227,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d6cc16481d945a1ab1623ff2fa794b48",
+      "callees": {
+        "LoD/1.10": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -16105,6 +21334,96 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e727c8dc688ebb9fadb5f64a8c47cad7",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "Ordinal_10032",
+          "Ordinal_10032",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "EnqueueLogMessage",
+          "EnqueueLogMessage",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "EnqueueLogMessage",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "EnqueueLogMessage",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "EnqueueLogMessage",
+          "EnqueueLogMessage",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "EnqueueLogMessage",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"FogValidateCriticalSection(%d) - bad critical sec...",
@@ -16363,6 +21682,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7991fff2abb235d5650f8dd3147b79bb",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10238"
+        ],
+        "LoD/1.11": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndInitializeNetworkConfig"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%02d:%02d:%02d.%03d    \""
@@ -16743,6 +22082,151 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a8cd7f565ef5a06fd20eef39f1e08772",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "PrintCpuInfo",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "PrintCpuInfo",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "PrintCpuInfo",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "PrintCpuInfo",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10190",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10190",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetLocalIPAddress",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "PrintCpuVendorAndVersion",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "RetrieveLocalIPAddress",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "PrintCpuVendorAndVersion",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "RetrieveLocalIPAddress",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "PrintCpuVendorAndVersion",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "RetrieveLocalIPAddress",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "PrintCpuVendorAndVersion",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "RetrieveLocalIPAddress",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "PrintCpuVendorAndVersion",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "RetrieveLocalIPAddress",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Windows 2000\"",
@@ -16920,6 +22404,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7697719a2acdc7db445912709434cfcf",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCat",
+          "CreateDirectoryRecursive",
+          "FormatString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 1,
@@ -16992,6 +22483,86 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:eda2dddb19532dbef96c0177836d81ec",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrCopy",
+          "IsWindowsNT",
+          "QueryRegistryUlong",
+          "InitializeMemoryPool",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "IsWindowsNT",
+          "Ordinal_423",
+          "InitializeMemoryPool",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "IsWindowsNT",
+          "Ordinal_423",
+          "Ordinal_10142",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "IsWindowsNT",
+          "Ordinal_423",
+          "Ordinal_10142",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "IsWindowsNT",
+          "Ordinal_423",
+          "Ordinal_10142",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "IsWindowsNT",
+          "Ordinal_423",
+          "Ordinal_10142",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -17071,27 +22642,27 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF6CE80",
         "LoD/1.08": "0x6FF6FCE0",
-        "LoD/1.09": "0x6FF5FDB0",
-        "LoD/1.09b": "0x6FF5FDB0",
-        "LoD/1.09d": "0x6FF60580",
+        "LoD/1.09": "0x6FF5FD80",
+        "LoD/1.09b": "0x6FF5FD80",
+        "LoD/1.09d": "0x6FF60550",
         "LoD/1.10": "0x6FF61C70",
-        "LoD/1.11": "0x6FF6E0D0",
+        "LoD/1.11": "0x6FF74840",
         "LoD/1.11b": "0x6FF748A0",
         "LoD/1.12a": "0x6FF61130",
-        "LoD/1.13c": "0x6FF74BA0",
+        "LoD/1.13c": "0x6FF74BB0",
         "LoD/1.13d": "0x6FF74CD0"
       },
       "rvas": {
         "LoD/1.07": "0xCE80",
         "LoD/1.08": "0xFCE0",
-        "LoD/1.09": "0xFDB0",
-        "LoD/1.09b": "0xFDB0",
-        "LoD/1.09d": "0x10580",
+        "LoD/1.09": "0xFD80",
+        "LoD/1.09b": "0xFD80",
+        "LoD/1.09d": "0x10550",
         "LoD/1.10": "0x11C70",
-        "LoD/1.11": "0x1E0D0",
+        "LoD/1.11": "0x24840",
         "LoD/1.11b": "0x248A0",
         "LoD/1.12a": "0x11130",
-        "LoD/1.13c": "0x24BA0",
+        "LoD/1.13c": "0x24BB0",
         "LoD/1.13d": "0x24CD0"
       },
       "sizes": {
@@ -17201,6 +22772,57 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff86cb6a3fcf523bf293ceba21801daf",
+      "callees": {
+        "LoD/1.07": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.08": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.09": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.09b": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.09d": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.10": [
+          "ShutdownAsyncData",
+          "DestroyMemPool"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -17305,6 +22927,113 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:97123af7ad61d15849ffb855bd5ba8e0",
+      "callees": {
+        "LoD/1.07": [
+          "FormatString",
+          "SStrCopy",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.08": [
+          "FormatString",
+          "Ordinal_501",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09": [
+          "FormatString",
+          "Ordinal_501",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09b": [
+          "FormatString",
+          "Ordinal_501",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_578",
+          "Ordinal_501",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578"
+        ],
+        "LoD/1.10": [
+          "Ordinal_578",
+          "Ordinal_501",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578"
+        ],
+        "LoD/1.11": [
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -17482,6 +23211,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef675d372e610e1409cbf7a6c91b8d36",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -17569,6 +23333,151 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4de3b80db0a5833c3b0778fc2e7a52ec",
+      "callees": {
+        "LoD/1.07": [
+          "WriteLogHeader",
+          "LogAppendFormat",
+          "SStrCopy",
+          "SStrCopy",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "...+5 more"
+        ],
+        "LoD/1.08": [
+          "WriteLogHeader",
+          "LogAppendFormat",
+          "Ordinal_501",
+          "Ordinal_501",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "...+5 more"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "LogAppendFormat",
+          "Ordinal_501",
+          "Ordinal_501",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+8 more"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "LogAppendFormat",
+          "Ordinal_501",
+          "Ordinal_501",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+8 more"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "LogAppendFormat",
+          "Ordinal_501",
+          "Ordinal_501",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+8 more"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "LogAppendFormat",
+          "Ordinal_501",
+          "Ordinal_501",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+8 more"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatStringBuffer",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatStringBuffer",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatStringBuffer",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FormatStringBuffer",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "FormatStringBuffer",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"*unknown*\"",
@@ -17731,6 +23640,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:35b8ac74843397f20bd6b7067f1510cc",
+      "callees": {
+        "LoD/1.07": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -17788,6 +23729,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:35b8ac74843397f20bd6b7067f1510cc",
+      "callees": {
+        "LoD/1.07": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -17845,6 +23818,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:35b8ac74843397f20bd6b7067f1510cc",
+      "callees": {
+        "LoD/1.07": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -17917,6 +23922,58 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b2329d032dd2724b1efd4761c29015f0",
+      "callees": {
+        "LoD/1.07": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.11": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Deadlocked in thread %X for %d ticks\""
@@ -18024,6 +24081,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:35b8ac74843397f20bd6b7067f1510cc",
+      "callees": {
+        "LoD/1.07": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -18096,6 +24185,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:844098b4d5362957b0a3957c82bb63c4",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\n***** ENCOUNTERED ERROR DURING ERROR HANDLING!!..."
@@ -18192,6 +24307,80 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dbf5b745bb0b04927e74b2f845c6f89d",
+      "callees": {
+        "LoD/1.07": [
+          "WriteLogHeader",
+          "FormatString",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "FormatString",
+          "FormatString",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "WriteLogHeader",
+          "FormatString",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "FormatString",
+          "FormatString",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "FormatString",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "FormatString",
+          "FormatString",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "FormatString",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "ShutdownLogFiles",
+          "FormatString",
+          "FormatString",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_578",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+7 more"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10226",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_578",
+          "WSACleanup",
+          "ReportExceptionContext",
+          "...+8 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"--------  FILE: %s    LINE: %d  --------\\n\\n\"",
@@ -18314,6 +24503,72 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:6db969fbda71b50a6ff527afa487b79a",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "ShutdownLogFiles",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "ShutdownLogFiles",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "ShutdownLogFiles",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "ShutdownLogFiles",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "LogAppendFormat",
+          "QueueLogEntry",
+          "ShutdownLogFiles",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "Ordinal_10032",
+          "LogAppendFormat",
+          "Ordinal_10032",
+          "ShutdownLogFiles",
+          "Ordinal_10238",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.11": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndInitializeNetworkConfig"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Code bytes:\"",
@@ -18431,10 +24686,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF5DC80",
         "LoD/1.09d": "0x6FF5DB80",
         "LoD/1.10": "0x6FF61A10",
-        "LoD/1.11": "0x6FF6CA90",
-        "LoD/1.11b": "0x6FF5CE10",
+        "LoD/1.11": "0x6FF68230",
+        "LoD/1.11b": "0x6FF6BD40",
         "LoD/1.12a": "0x6FF6ECC0",
-        "LoD/1.13c": "0x6FF5FCC0",
+        "LoD/1.13c": "0x6FF67BC0",
         "LoD/1.13d": "0x6FF5CE10"
       },
       "rvas": {
@@ -18444,10 +24699,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0xDC80",
         "LoD/1.09d": "0xDB80",
         "LoD/1.10": "0x11A10",
-        "LoD/1.11": "0x1CA90",
-        "LoD/1.11b": "0xCE10",
+        "LoD/1.11": "0x18230",
+        "LoD/1.11b": "0x1BD40",
         "LoD/1.12a": "0x1ECC0",
-        "LoD/1.13c": "0xFCC0",
+        "LoD/1.13c": "0x17BC0",
         "LoD/1.13d": "0xCE10"
       },
       "sizes": {
@@ -18542,6 +24797,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f9da012ecb8f5cb7e445898df39e2e07",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ExceptionHandler: imagehlp.dll not loaded\""
@@ -18634,6 +24909,84 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3460c5c5a6f9115494b11d0ef4a1cdca",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"[StackWalkThread]: GetThreadContext() err = %lu\"",
@@ -18795,6 +25148,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:79caaeff9cc2c6d097d65139d84b4789",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"SymGetModuleBase\"",
@@ -19023,6 +25433,107 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:139a590dbbb86d4fa09130703cc88a31",
+      "callees": {
+        "LoD/1.07": [
+          "QueryRegistryUlong",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11": [
+          "ParseConfigurationValue",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ParseConfigurationValue",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"NoStackDump\"",
@@ -19200,6 +25711,82 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:15b60ccef21997e5075845b2c60a9328",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "ShutdownStubNoOp",
+          "QueueLogEntry",
+          "QueueLogEntry",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "ShutdownStubNoOp",
+          "Ordinal_10238",
+          "Ordinal_10032",
+          "Ordinal_10238",
+          "Ordinal_10032",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.11": [
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage",
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage",
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage",
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage",
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage",
+          "ValidateAndInitializeNetworkConfig",
+          "EnqueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Dumping stack for thread handle: %08x\"",
@@ -19339,6 +25926,64 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4386dc625e7ad5109b20243a477dd73d",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "StubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "ShutdownStubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "ShutdownStubNoOp",
+          "ReportExceptionContext",
+          "ShutdownLogFiles"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Dumping stack for thread handle: %08x\"",
@@ -19573,6 +26218,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:638e05a88b468490de3624ecf1666266",
+      "callees": {
+        "LoD/1.07": [
+          "QueryRegistryUlong",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+19 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+19 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+19 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+19 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "...+19 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"NoStackDump\"",
@@ -19666,6 +26378,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:830e00ebde3185a128193750cdc503ad",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tlhelp32.dll\"",
@@ -19777,6 +26521,103 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:6ce20c24ac6c785d91126d8859782809",
+      "callees": {
+        "LoD/1.07": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10042",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "AllocateMemoryWithTracking",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "AllocateMemoryWithTracking",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "AllocateMemoryWithTracking",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "AllocateMemoryWithTracking",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\nEnumerate modules...\"",
@@ -19939,6 +26780,62 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8f810ac026fac99a5881a1f57440fb1a",
+      "callees": {
+        "LoD/1.07": [
+          "SetExecutableBasePath",
+          "SetAudioStreamFlags",
+          "SetFileErrorHandler",
+          "SetOptimizeSeeks",
+          "SetGlobalOption",
+          "SetGlobalOption",
+          "SetGlobalOption"
+        ],
+        "LoD/1.08": [
+          "Ordinal_270",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "Ordinal_304",
+          "Ordinal_304",
+          "Ordinal_304"
+        ],
+        "LoD/1.09": [
+          "Ordinal_270",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "Ordinal_304",
+          "Ordinal_304",
+          "Ordinal_304"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_270",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "Ordinal_304",
+          "Ordinal_304",
+          "Ordinal_304"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_270",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "Ordinal_304",
+          "Ordinal_304",
+          "Ordinal_304"
+        ],
+        "LoD/1.10": [
+          "Ordinal_270",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "Ordinal_304",
+          "Ordinal_304",
+          "Ordinal_304"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -19971,10 +26868,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF5F770",
         "LoD/1.09b": "0x6FF5F770",
         "LoD/1.09d": "0x6FF5F7D0",
-        "LoD/1.10": "0x6FF61600",
-        "LoD/1.11": "0x6FF684B0",
-        "LoD/1.11b": "0x6FF6BFC0",
-        "LoD/1.12a": "0x6FF6EEF0",
+        "LoD/1.10": "0x6FF61650",
+        "LoD/1.11": "0x6FF68460",
+        "LoD/1.11b": "0x6FF6BF70",
+        "LoD/1.12a": "0x6FF6EF40",
         "LoD/1.13c": "0x6FF67E40",
         "LoD/1.13d": "0x6FF6DFB0"
       },
@@ -19984,10 +26881,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0xF770",
         "LoD/1.09b": "0xF770",
         "LoD/1.09d": "0xF7D0",
-        "LoD/1.10": "0x11600",
-        "LoD/1.11": "0x184B0",
-        "LoD/1.11b": "0x1BFC0",
-        "LoD/1.12a": "0x1EEF0",
+        "LoD/1.10": "0x11650",
+        "LoD/1.11": "0x18460",
+        "LoD/1.11b": "0x1BF70",
+        "LoD/1.12a": "0x1EF40",
         "LoD/1.13c": "0x17E40",
         "LoD/1.13d": "0x1DFB0"
       },
@@ -20011,6 +26908,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:acd2f1b89e1fada3d5641fb7495ec8ba",
+      "callees": {
+        "LoD/1.07": [
+          "OpenFileWithDefaultArchive"
+        ],
+        "LoD/1.08": [
+          "Ordinal_267"
+        ],
+        "LoD/1.09": [
+          "Ordinal_267"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_267"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_265"
+        ],
+        "LoD/1.10": [
+          "Ordinal_265"
+        ],
+        "LoD/1.11": [
+          "GetStreamFileSize"
+        ],
+        "LoD/1.11b": [
+          "GetStreamFileSize"
+        ],
+        "LoD/1.12a": [
+          "OpenAndProcessFile"
+        ],
+        "LoD/1.13c": [
+          "OpenAndProcessFile"
+        ],
+        "LoD/1.13d": [
+          "GetStreamFileSize"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -20061,9 +26993,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x6FF6445A",
         "LoD/1.11": "0x6FF5CC7A",
         "LoD/1.11b": "0x6FF5D9E0",
-        "LoD/1.12a": "0x6FF6EF30",
-        "LoD/1.13c": "0x6FF66920",
-        "LoD/1.13d": "0x6FF5D920"
+        "LoD/1.12a": "0x6FF5D090",
+        "LoD/1.13c": "0x6FF60810",
+        "LoD/1.13d": "0x6FF6A480"
       },
       "rvas": {
         "LoD/1.07": "0x11C44",
@@ -20074,9 +27006,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x1445A",
         "LoD/1.11": "0xCC7A",
         "LoD/1.11b": "0xD9E0",
-        "LoD/1.12a": "0x1EF30",
-        "LoD/1.13c": "0x16920",
-        "LoD/1.13d": "0xD920"
+        "LoD/1.12a": "0xD090",
+        "LoD/1.13c": "0x10810",
+        "LoD/1.13d": "0x1A480"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20097,6 +27029,14 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "callees": {
+        "LoD/1.12a": [
+          "closesocket"
+        ],
+        "LoD/1.13d": [
+          "closesocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -20184,6 +27124,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9b900271e04b0e0c5102b0fff841044c",
+      "callees": {
+        "LoD/1.07": [
+          "ReadArchiveFile"
+        ],
+        "LoD/1.08": [
+          "Ordinal_289"
+        ],
+        "LoD/1.09": [
+          "Ordinal_289"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_289"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_289"
+        ],
+        "LoD/1.10": [
+          "Ordinal_289"
+        ],
+        "LoD/1.11": [
+          "ReadDataToBuffer"
+        ],
+        "LoD/1.11b": [
+          "ReadDataToBuffer"
+        ],
+        "LoD/1.12a": [
+          "ReadDataToBuffer"
+        ],
+        "LoD/1.13c": [
+          "ReadDataToBuffer"
+        ],
+        "LoD/1.13d": [
+          "ReadDataToBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 2,
@@ -20231,10 +27206,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF5F7C0",
         "LoD/1.09b": "0x6FF5F7C0",
         "LoD/1.09d": "0x6FF5F780",
-        "LoD/1.10": "0x6FF61650",
-        "LoD/1.11": "0x6FF68460",
-        "LoD/1.11b": "0x6FF6BF70",
-        "LoD/1.12a": "0x6FF6EF40",
+        "LoD/1.10": "0x6FF61600",
+        "LoD/1.11": "0x6FF684B0",
+        "LoD/1.11b": "0x6FF6BFC0",
+        "LoD/1.12a": "0x6FF6EEF0",
         "LoD/1.13c": "0x6FF67DF0",
         "LoD/1.13d": "0x6FF6E000"
       },
@@ -20244,10 +27219,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0xF7C0",
         "LoD/1.09b": "0xF7C0",
         "LoD/1.09d": "0xF780",
-        "LoD/1.10": "0x11650",
-        "LoD/1.11": "0x18460",
-        "LoD/1.11b": "0x1BF70",
-        "LoD/1.12a": "0x1EF40",
+        "LoD/1.10": "0x11600",
+        "LoD/1.11": "0x184B0",
+        "LoD/1.11b": "0x1BFC0",
+        "LoD/1.12a": "0x1EEF0",
         "LoD/1.13c": "0x17DF0",
         "LoD/1.13d": "0x1E000"
       },
@@ -20271,6 +27246,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:acd2f1b89e1fada3d5641fb7495ec8ba",
+      "callees": {
+        "LoD/1.07": [
+          "GetFileSizeFromHandle"
+        ],
+        "LoD/1.08": [
+          "Ordinal_265"
+        ],
+        "LoD/1.09": [
+          "Ordinal_265"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_265"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_267"
+        ],
+        "LoD/1.10": [
+          "Ordinal_267"
+        ],
+        "LoD/1.11": [
+          "OpenAndProcessFile"
+        ],
+        "LoD/1.11b": [
+          "OpenAndProcessFile"
+        ],
+        "LoD/1.12a": [
+          "GetStreamFileSize"
+        ],
+        "LoD/1.13c": [
+          "GetStreamFileSize"
+        ],
+        "LoD/1.13d": [
+          "OpenAndProcessFile"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -20357,6 +27367,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "callees": {
+        "LoD/1.11b": [
+          "SeekInMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "SeekInMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "SeekInMemoryBuffer"
+        ],
+        "LoD/1.13d": [
+          "SeekInMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -20490,26 +27514,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF6F750",
         "LoD/1.09": "0x6FF5F830",
         "LoD/1.09b": "0x6FF5F830",
-        "LoD/1.09d": "0x6FF61830",
-        "LoD/1.10": "0x6FF616B0",
+        "LoD/1.09d": "0x6FF5F840",
+        "LoD/1.10": "0x6FF616C0",
         "LoD/1.11": "0x6FF683F0",
         "LoD/1.11b": "0x6FF6BF10",
         "LoD/1.12a": "0x6FF6EE90",
-        "LoD/1.13c": "0x6FF67D90",
-        "LoD/1.13d": "0x6FF6DF50"
+        "LoD/1.13c": "0x6FF67D80",
+        "LoD/1.13d": "0x6FF6DF40"
       },
       "rvas": {
         "LoD/1.07": "0xF790",
         "LoD/1.08": "0xF750",
         "LoD/1.09": "0xF830",
         "LoD/1.09b": "0xF830",
-        "LoD/1.09d": "0x11830",
-        "LoD/1.10": "0x116B0",
+        "LoD/1.09d": "0xF840",
+        "LoD/1.10": "0x116C0",
         "LoD/1.11": "0x183F0",
         "LoD/1.11b": "0x1BF10",
         "LoD/1.12a": "0x1EE90",
-        "LoD/1.13c": "0x17D90",
-        "LoD/1.13d": "0x1DF50"
+        "LoD/1.13c": "0x17D80",
+        "LoD/1.13d": "0x1DF40"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -20575,28 +27599,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF6F7A0",
         "LoD/1.08": "0x6FF6F760",
-        "LoD/1.09": "0x6FF61060",
-        "LoD/1.09b": "0x6FF61060",
+        "LoD/1.09": "0x6FF5F820",
+        "LoD/1.09b": "0x6FF5F820",
         "LoD/1.09d": "0x6FF5F830",
-        "LoD/1.10": "0x6FF616C0",
-        "LoD/1.11": "0x6FF68400",
-        "LoD/1.11b": "0x6FF6BF00",
-        "LoD/1.12a": "0x6FF6EE80",
-        "LoD/1.13c": "0x6FF67D80",
-        "LoD/1.13d": "0x6FF6DF40"
+        "LoD/1.10": "0x6FF63280",
+        "LoD/1.11": "0x6FF51030",
+        "LoD/1.11b": "0x6FF512D0",
+        "LoD/1.12a": "0x6FF51030",
+        "LoD/1.13c": "0x6FF51030",
+        "LoD/1.13d": "0x6FF51030"
       },
       "rvas": {
         "LoD/1.07": "0xF7A0",
         "LoD/1.08": "0xF760",
-        "LoD/1.09": "0x11060",
-        "LoD/1.09b": "0x11060",
+        "LoD/1.09": "0xF820",
+        "LoD/1.09b": "0xF820",
         "LoD/1.09d": "0xF830",
-        "LoD/1.10": "0x116C0",
-        "LoD/1.11": "0x18400",
-        "LoD/1.11b": "0x1BF00",
-        "LoD/1.12a": "0x1EE80",
-        "LoD/1.13c": "0x17D80",
-        "LoD/1.13d": "0x1DF40"
+        "LoD/1.10": "0x13280",
+        "LoD/1.11": "0x1030",
+        "LoD/1.11b": "0x12D0",
+        "LoD/1.12a": "0x1030",
+        "LoD/1.13c": "0x1030",
+        "LoD/1.13d": "0x1030"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -20661,27 +27685,27 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ReadFileWrapper": {
       "addresses": {
         "LoD/1.07": "0x6FF6F7B0",
-        "LoD/1.08": "0x6FF6F790",
-        "LoD/1.09": "0x6FF5F860",
-        "LoD/1.09b": "0x6FF5F860",
-        "LoD/1.09d": "0x6FF5F850",
-        "LoD/1.10": "0x6FF616F0",
+        "LoD/1.08": "0x6FF6F770",
+        "LoD/1.09": "0x6FF5F840",
+        "LoD/1.09b": "0x6FF5F840",
+        "LoD/1.09d": "0x6FF5F870",
+        "LoD/1.10": "0x6FF616D0",
         "LoD/1.11": "0x6FF683D0",
-        "LoD/1.11b": "0x6FF6BEC0",
-        "LoD/1.12a": "0x6FF6EE40",
+        "LoD/1.11b": "0x6FF6BEE0",
+        "LoD/1.12a": "0x6FF6EE60",
         "LoD/1.13c": "0x6FF67D40",
         "LoD/1.13d": "0x6FF6DF00"
       },
       "rvas": {
         "LoD/1.07": "0xF7B0",
-        "LoD/1.08": "0xF790",
-        "LoD/1.09": "0xF860",
-        "LoD/1.09b": "0xF860",
-        "LoD/1.09d": "0xF850",
-        "LoD/1.10": "0x116F0",
+        "LoD/1.08": "0xF770",
+        "LoD/1.09": "0xF840",
+        "LoD/1.09b": "0xF840",
+        "LoD/1.09d": "0xF870",
+        "LoD/1.10": "0x116D0",
         "LoD/1.11": "0x183D0",
-        "LoD/1.11b": "0x1BEC0",
-        "LoD/1.12a": "0x1EE40",
+        "LoD/1.11b": "0x1BEE0",
+        "LoD/1.12a": "0x1EE60",
         "LoD/1.13c": "0x17D40",
         "LoD/1.13d": "0x1DF00"
       },
@@ -20748,27 +27772,27 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_WriteFileWrapper": {
       "addresses": {
         "LoD/1.07": "0x6FF6F7D0",
-        "LoD/1.08": "0x6FF6F770",
-        "LoD/1.09": "0x6FF5F840",
-        "LoD/1.09b": "0x6FF5F840",
-        "LoD/1.09d": "0x6FF5F870",
-        "LoD/1.10": "0x6FF616D0",
+        "LoD/1.08": "0x6FF6F790",
+        "LoD/1.09": "0x6FF5F860",
+        "LoD/1.09b": "0x6FF5F860",
+        "LoD/1.09d": "0x6FF5F850",
+        "LoD/1.10": "0x6FF616F0",
         "LoD/1.11": "0x6FF683B0",
-        "LoD/1.11b": "0x6FF6BEE0",
-        "LoD/1.12a": "0x6FF6EE60",
+        "LoD/1.11b": "0x6FF6BEC0",
+        "LoD/1.12a": "0x6FF6EE40",
         "LoD/1.13c": "0x6FF67D60",
         "LoD/1.13d": "0x6FF6DF20"
       },
       "rvas": {
         "LoD/1.07": "0xF7D0",
-        "LoD/1.08": "0xF770",
-        "LoD/1.09": "0xF840",
-        "LoD/1.09b": "0xF840",
-        "LoD/1.09d": "0xF870",
-        "LoD/1.10": "0x116D0",
+        "LoD/1.08": "0xF790",
+        "LoD/1.09": "0xF860",
+        "LoD/1.09b": "0xF860",
+        "LoD/1.09d": "0xF850",
+        "LoD/1.10": "0x116F0",
         "LoD/1.11": "0x183B0",
-        "LoD/1.11b": "0x1BEE0",
-        "LoD/1.12a": "0x1EE60",
+        "LoD/1.11b": "0x1BEC0",
+        "LoD/1.12a": "0x1EE40",
         "LoD/1.13c": "0x17D60",
         "LoD/1.13d": "0x1DF20"
       },
@@ -20951,6 +27975,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:193494287a541132cda222c2191f6680",
+      "callees": {
+        "LoD/1.07": [
+          "strchr",
+          "strchr"
+        ],
+        "LoD/1.08": [
+          "strchr",
+          "strchr"
+        ],
+        "LoD/1.09": [
+          "strchr",
+          "strchr"
+        ],
+        "LoD/1.09b": [
+          "strchr",
+          "strchr"
+        ],
+        "LoD/1.09d": [
+          "strchr",
+          "strchr"
+        ],
+        "LoD/1.10": [
+          "strchr",
+          "strchr"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 13,
         "LoD/1.08": 13,
@@ -21023,6 +28073,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:044bb31668c1c443ff2e85256cc3de38",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -21110,6 +28195,74 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b77fc61723ec2cdad999ab02ee9f6ac3",
+      "callees": {
+        "LoD/1.07": [
+          "GetRegistryStringValue",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "QueryRegistryData",
+          "FindLastCharInString",
+          "SetRegistryValue",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "QueryRegistryData",
+          "FindLastCharInString",
+          "SetRegistryValue",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "QueryRegistryData",
+          "FindLastCharInString",
+          "SetRegistryValue",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "QueryRegistryData",
+          "FindLastCharInString",
+          "SetRegistryValue",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "QueryRegistryData",
+          "FindLastCharInString",
+          "SetRegistryValue",
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -21243,6 +28396,114 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c3908b01344b38a65d1f8bd1a2aee78f",
+      "callees": {
+        "LoD/1.07": [
+          "GetRegistryStringValue",
+          "GetRegistryStringValue",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "SStrCat",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.08": [
+          "Ordinal_422",
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "Ordinal_503",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.09": [
+          "Ordinal_422",
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "Ordinal_503",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_422",
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "Ordinal_503",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_422",
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "Ordinal_503",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.10": [
+          "Ordinal_422",
+          "Ordinal_422",
+          "FindLastChar",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "Ordinal_503",
+          "SetRegistryStringValue",
+          "SStrLen",
+          "CreateDirectoryRecursive"
+        ],
+        "LoD/1.11": [
+          "QueryRegistryData",
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "SetRegistryValue",
+          "CalculateStringLength",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.11b": [
+          "QueryRegistryData",
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "SetRegistryValue",
+          "CalculateStringLength",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.12a": [
+          "QueryRegistryData",
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "SetRegistryValue",
+          "CalculateStringLength",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13c": [
+          "QueryRegistryData",
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "SetRegistryValue",
+          "CalculateStringLength",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13d": [
+          "QueryRegistryData",
+          "Ordinal_10116",
+          "CopyStringBounded",
+          "SetRegistryValue",
+          "CalculateStringLength",
+          "CreateDirectoryPathRecursive"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Save Path\"",
@@ -21354,10 +28615,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF5FB50",
         "LoD/1.09d": "0x6FF5FB60",
         "LoD/1.10": "0x6FF5F2A0",
-        "LoD/1.11": "0x6FF68230",
-        "LoD/1.11b": "0x6FF6BD40",
+        "LoD/1.11": "0x6FF6CA90",
+        "LoD/1.11b": "0x6FF5CE10",
         "LoD/1.12a": "0x6FF5FA50",
-        "LoD/1.13c": "0x6FF67BC0",
+        "LoD/1.13c": "0x6FF5FCC0",
         "LoD/1.13d": "0x6FF6DD80"
       },
       "rvas": {
@@ -21367,10 +28628,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0xFB50",
         "LoD/1.09d": "0xFB60",
         "LoD/1.10": "0xF2A0",
-        "LoD/1.11": "0x18230",
-        "LoD/1.11b": "0x1BD40",
+        "LoD/1.11": "0x1CA90",
+        "LoD/1.11b": "0xCE10",
         "LoD/1.12a": "0xFA50",
-        "LoD/1.13c": "0x17BC0",
+        "LoD/1.13c": "0xFCC0",
         "LoD/1.13d": "0x1DD80"
       },
       "sizes": {
@@ -21537,6 +28798,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:98bdfe7bf3456ecf7de9da5a9bd0c97a",
+      "callees": {
+        "LoD/1.07": [
+          "SMemAlloc"
+        ],
+        "LoD/1.08": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401"
+        ],
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\IFF.cpp\""
@@ -21713,6 +29009,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cff8745d62487c91ead568f18a63f4c9",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\IFF.cpp\""
@@ -21919,6 +29250,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6229e6765a3b711cfdfcf04039df45dc",
+      "callees": {
+        "LoD/1.07": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.08": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_502"
+        ],
+        "LoD/1.10": [
+          "Ordinal_502"
+        ],
+        "LoD/1.11": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "ComputeStringHash"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -22048,6 +29414,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6b33dbbe39fb72291022720cd8aa103e",
+      "callees": {
+        "LoD/1.07": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.08": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_502"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_502"
+        ],
+        "LoD/1.10": [
+          "Ordinal_502"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -22076,19 +29462,29 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_InitializeLogManager": {
       "addresses": {
         "LoD/1.07": "0x6FF6FCD0",
-        "LoD/1.08": "0x6FF6FC90",
-        "LoD/1.09": "0x6FF5FD60",
-        "LoD/1.09b": "0x6FF5FD60",
-        "LoD/1.09d": "0x6FF60560",
-        "LoD/1.10": "0x6FF61C50"
+        "LoD/1.08": "0x6FF6FCC0",
+        "LoD/1.09": "0x6FF5FD90",
+        "LoD/1.09b": "0x6FF5FD90",
+        "LoD/1.09d": "0x6FF60530",
+        "LoD/1.10": "0x6FF61C20",
+        "LoD/1.11": "0x6FF747F0",
+        "LoD/1.11b": "0x6FF74860",
+        "LoD/1.12a": "0x6FF74B50",
+        "LoD/1.13c": "0x6FF74B60",
+        "LoD/1.13d": "0x6FF74C80"
       },
       "rvas": {
         "LoD/1.07": "0xFCD0",
-        "LoD/1.08": "0xFC90",
-        "LoD/1.09": "0xFD60",
-        "LoD/1.09b": "0xFD60",
-        "LoD/1.09d": "0x10560",
-        "LoD/1.10": "0x11C50"
+        "LoD/1.08": "0xFCC0",
+        "LoD/1.09": "0xFD90",
+        "LoD/1.09b": "0xFD90",
+        "LoD/1.09d": "0x10530",
+        "LoD/1.10": "0x11C20",
+        "LoD/1.11": "0x247F0",
+        "LoD/1.11b": "0x24860",
+        "LoD/1.12a": "0x24B50",
+        "LoD/1.13c": "0x24B60",
+        "LoD/1.13d": "0x24C80"
       },
       "sizes": {
         "LoD/1.07": 23,
@@ -22096,7 +29492,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 23,
         "LoD/1.09b": 23,
         "LoD/1.09d": 23,
-        "LoD/1.10": 23
+        "LoD/1.10": 23,
+        "LoD/1.11": 23,
+        "LoD/1.11b": 23,
+        "LoD/1.12a": 23,
+        "LoD/1.13c": 23,
+        "LoD/1.13d": 23
       },
       "name": "InitializeLogManager",
       "signature": "void InitializeLogManager(void)",
@@ -22111,7 +29512,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -22119,7 +29525,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "643b5f0268002aaf234971c52586fcdd",
@@ -22127,34 +29538,39 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "643b5f0268002aaf234971c52586fcdd",
         "LoD/1.09b": "643b5f0268002aaf234971c52586fcdd",
         "LoD/1.09d": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.10": "643b5f0268002aaf234971c52586fcdd"
+        "LoD/1.10": "643b5f0268002aaf234971c52586fcdd",
+        "LoD/1.11": "643b5f0268002aaf234971c52586fcdd",
+        "LoD/1.11b": "643b5f0268002aaf234971c52586fcdd",
+        "LoD/1.12a": "643b5f0268002aaf234971c52586fcdd",
+        "LoD/1.13c": "643b5f0268002aaf234971c52586fcdd",
+        "LoD/1.13d": "643b5f0268002aaf234971c52586fcdd"
       }
     },
     "fog.dll_CleanupLogManagerCriticalSecti": {
       "addresses": {
         "LoD/1.07": "0x6FF6FCF0",
-        "LoD/1.08": "0x6FF6CE40",
+        "LoD/1.08": "0x6FF6FCB0",
         "LoD/1.09": "0x6FF5CEE0",
         "LoD/1.09b": "0x6FF5CEE0",
-        "LoD/1.09d": "0x6FF60550",
+        "LoD/1.09d": "0x6FF5CD00",
         "LoD/1.10": "0x6FF5E440",
-        "LoD/1.11": "0x6FF74840",
+        "LoD/1.11": "0x6FF74830",
         "LoD/1.11b": "0x6FF5E450",
         "LoD/1.12a": "0x6FF74B90",
-        "LoD/1.13c": "0x6FF613A0",
+        "LoD/1.13c": "0x6FF74BA0",
         "LoD/1.13d": "0x6FF5E230"
       },
       "rvas": {
         "LoD/1.07": "0xFCF0",
-        "LoD/1.08": "0xCE40",
+        "LoD/1.08": "0xFCB0",
         "LoD/1.09": "0xCEE0",
         "LoD/1.09b": "0xCEE0",
-        "LoD/1.09d": "0x10550",
+        "LoD/1.09d": "0xCD00",
         "LoD/1.10": "0xE440",
-        "LoD/1.11": "0x24840",
+        "LoD/1.11": "0x24830",
         "LoD/1.11b": "0xE450",
         "LoD/1.12a": "0x24B90",
-        "LoD/1.13c": "0x113A0",
+        "LoD/1.13c": "0x24BA0",
         "LoD/1.13d": "0xE230"
       },
       "sizes": {
@@ -22220,29 +29636,19 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_InitLogFilesSync": {
       "addresses": {
         "LoD/1.07": "0x6FF6FD00",
-        "LoD/1.08": "0x6FF6FCC0",
-        "LoD/1.09": "0x6FF5FD90",
-        "LoD/1.09b": "0x6FF5FD90",
-        "LoD/1.09d": "0x6FF60530",
-        "LoD/1.10": "0x6FF61C20",
-        "LoD/1.11": "0x6FF747F0",
-        "LoD/1.11b": "0x6FF74860",
-        "LoD/1.12a": "0x6FF74B50",
-        "LoD/1.13c": "0x6FF74B60",
-        "LoD/1.13d": "0x6FF74C80"
+        "LoD/1.08": "0x6FF6FC90",
+        "LoD/1.09": "0x6FF5FD60",
+        "LoD/1.09b": "0x6FF5FD60",
+        "LoD/1.09d": "0x6FF60560",
+        "LoD/1.10": "0x6FF61C50"
       },
       "rvas": {
         "LoD/1.07": "0xFD00",
-        "LoD/1.08": "0xFCC0",
-        "LoD/1.09": "0xFD90",
-        "LoD/1.09b": "0xFD90",
-        "LoD/1.09d": "0x10530",
-        "LoD/1.10": "0x11C20",
-        "LoD/1.11": "0x247F0",
-        "LoD/1.11b": "0x24860",
-        "LoD/1.12a": "0x24B50",
-        "LoD/1.13c": "0x24B60",
-        "LoD/1.13d": "0x24C80"
+        "LoD/1.08": "0xFC90",
+        "LoD/1.09": "0xFD60",
+        "LoD/1.09b": "0xFD60",
+        "LoD/1.09d": "0x10560",
+        "LoD/1.10": "0x11C50"
       },
       "sizes": {
         "LoD/1.07": 23,
@@ -22250,12 +29656,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 23,
         "LoD/1.09b": 23,
         "LoD/1.09d": 23,
-        "LoD/1.10": 23,
-        "LoD/1.11": 23,
-        "LoD/1.11b": 23,
-        "LoD/1.12a": 23,
-        "LoD/1.13c": 23,
-        "LoD/1.13d": 23
+        "LoD/1.10": 23
       },
       "name": "InitLogFilesSync",
       "signature": "void InitLogFilesSync(void)",
@@ -22270,12 +29671,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -22283,12 +29679,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "643b5f0268002aaf234971c52586fcdd",
@@ -22296,39 +29687,34 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "643b5f0268002aaf234971c52586fcdd",
         "LoD/1.09b": "643b5f0268002aaf234971c52586fcdd",
         "LoD/1.09d": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.10": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.11": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.11b": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.12a": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.13c": "643b5f0268002aaf234971c52586fcdd",
-        "LoD/1.13d": "643b5f0268002aaf234971c52586fcdd"
+        "LoD/1.10": "643b5f0268002aaf234971c52586fcdd"
       }
     },
     "fog.dll_CleanupLogFilesSync": {
       "addresses": {
         "LoD/1.07": "0x6FF6FD20",
-        "LoD/1.08": "0x6FF6FCB0",
-        "LoD/1.09": "0x6FF5FD80",
-        "LoD/1.09b": "0x6FF5FD80",
-        "LoD/1.09d": "0x6FF5CD00",
+        "LoD/1.08": "0x6FF6CE40",
+        "LoD/1.09": "0x6FF5FDB0",
+        "LoD/1.09b": "0x6FF5FDB0",
+        "LoD/1.09d": "0x6FF60580",
         "LoD/1.10": "0x6FF61C40",
-        "LoD/1.11": "0x6FF74830",
+        "LoD/1.11": "0x6FF6E0D0",
         "LoD/1.11b": "0x6FF748B0",
         "LoD/1.12a": "0x6FF74BA0",
-        "LoD/1.13c": "0x6FF74BB0",
+        "LoD/1.13c": "0x6FF613A0",
         "LoD/1.13d": "0x6FF74CC0"
       },
       "rvas": {
         "LoD/1.07": "0xFD20",
-        "LoD/1.08": "0xFCB0",
-        "LoD/1.09": "0xFD80",
-        "LoD/1.09b": "0xFD80",
-        "LoD/1.09d": "0xCD00",
+        "LoD/1.08": "0xCE40",
+        "LoD/1.09": "0xFDB0",
+        "LoD/1.09b": "0xFDB0",
+        "LoD/1.09d": "0x10580",
         "LoD/1.10": "0x11C40",
-        "LoD/1.11": "0x24830",
+        "LoD/1.11": "0x1E0D0",
         "LoD/1.11b": "0x248B0",
         "LoD/1.12a": "0x24BA0",
-        "LoD/1.13c": "0x24BB0",
+        "LoD/1.13c": "0x113A0",
         "LoD/1.13d": "0x24CC0"
       },
       "sizes": {
@@ -22585,6 +29971,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0415c6ffebcf5dd20e1a8c3df7d2a9f7",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AUMessage@LogManager@@\""
@@ -22656,6 +30059,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8ff31c92d3d8c006b1c874f23fb62110",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\LogManag...",
@@ -22739,6 +30162,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2326e56c8738aff6dc8eee0eeeb06237",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\LogManag...",
@@ -22822,6 +30265,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ab901a928b8057cf1363009853a56b7d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\LogManag...",
@@ -22905,6 +30368,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4279baccaa444b2190cd01fc4406125d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\LogManag...",
@@ -22985,6 +30468,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b4c6bd2c3bc3dfd158cf08c56490c129",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -23015,11 +30525,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF602A0",
         "LoD/1.09d": "0x6FF60A70",
         "LoD/1.10": "0x6FF623A0",
-        "LoD/1.11": "0x6FF74660",
-        "LoD/1.11b": "0x6FF74740",
-        "LoD/1.12a": "0x6FF74A30",
-        "LoD/1.13c": "0x6FF74A40",
-        "LoD/1.13d": "0x6FF74B60"
+        "LoD/1.11": "0x6FF65F50",
+        "LoD/1.11b": "0x6FF638B0",
+        "LoD/1.12a": "0x6FF691E0",
+        "LoD/1.13c": "0x6FF68940",
+        "LoD/1.13d": "0x6FF61CA0"
       },
       "rvas": {
         "LoD/1.07": "0x10210",
@@ -23028,11 +30538,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x102A0",
         "LoD/1.09d": "0x10A70",
         "LoD/1.10": "0x123A0",
-        "LoD/1.11": "0x24660",
-        "LoD/1.11b": "0x24740",
-        "LoD/1.12a": "0x24A30",
-        "LoD/1.13c": "0x24A40",
-        "LoD/1.13d": "0x24B60"
+        "LoD/1.11": "0x15F50",
+        "LoD/1.11b": "0x138B0",
+        "LoD/1.12a": "0x191E0",
+        "LoD/1.13c": "0x18940",
+        "LoD/1.13d": "0x11CA0"
       },
       "sizes": {
         "LoD/1.07": 5,
@@ -23053,6 +30563,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -23128,6 +30643,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8456623db6801c659531157e2028b8db",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%02d:%02d:%02d.%03d  \"",
@@ -23229,21 +30766,24 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF70400",
         "LoD/1.09": "0x6FF604D0",
         "LoD/1.09b": "0x6FF604D0",
-        "LoD/1.09d": "0x6FF60CA0"
+        "LoD/1.09d": "0x6FF60CA0",
+        "LoD/1.10": "0x6FF62210"
       },
       "rvas": {
         "LoD/1.07": "0x10440",
         "LoD/1.08": "0x10400",
         "LoD/1.09": "0x104D0",
         "LoD/1.09b": "0x104D0",
-        "LoD/1.09d": "0x10CA0"
+        "LoD/1.09d": "0x10CA0",
+        "LoD/1.10": "0x12210"
       },
       "sizes": {
         "LoD/1.07": 377,
         "LoD/1.08": 377,
         "LoD/1.09": 377,
         "LoD/1.09b": 377,
-        "LoD/1.09d": 377
+        "LoD/1.09d": 377,
+        "LoD/1.10": 400
       },
       "name": "QueueFormattedLogMessage",
       "signature": "void QueueFormattedLogMessage(void)",
@@ -23252,26 +30792,67 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:07b5dcabd3278342b7711a8aedc6c39e",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrCopy",
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 13,
         "LoD/1.08": 14,
         "LoD/1.09": 13,
         "LoD/1.09b": 13,
-        "LoD/1.09d": 13
+        "LoD/1.09d": 13,
+        "LoD/1.10": 16
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "04701fbe14d25d32fd17169ecd2391ba",
         "LoD/1.08": "04701fbe14d25d32fd17169ecd2391ba",
         "LoD/1.09": "04701fbe14d25d32fd17169ecd2391ba",
         "LoD/1.09b": "04701fbe14d25d32fd17169ecd2391ba",
-        "LoD/1.09d": "04701fbe14d25d32fd17169ecd2391ba"
+        "LoD/1.09d": "04701fbe14d25d32fd17169ecd2391ba",
+        "LoD/1.10": "d28e62347534484a714fe30d927ac13a"
       }
     },
     "fog.dll_OpenOrGetLogFile": {
@@ -23303,6 +30884,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f0fcc2d54e80c59b36a1f4b16c5eee75",
+      "callees": {
+        "LoD/1.07": [
+          "FormatString"
+        ],
+        "LoD/1.08": [
+          "FormatString"
+        ],
+        "LoD/1.09": [
+          "FormatString"
+        ],
+        "LoD/1.09b": [
+          "FormatString"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_578"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%s%s%02d%02d%02d.txt\""
@@ -23389,6 +30987,113 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:744c65e40de802c8e02230642f7eca2e",
+      "callees": {
+        "LoD/1.07": [
+          "FormatString",
+          "SStrCopy",
+          "SStrCopy",
+          "FormatString",
+          "SStrCat"
+        ],
+        "LoD/1.08": [
+          "FormatString",
+          "Ordinal_501",
+          "Ordinal_501",
+          "FormatString",
+          "Ordinal_503"
+        ],
+        "LoD/1.09": [
+          "FormatString",
+          "Ordinal_501",
+          "Ordinal_501",
+          "FormatString",
+          "Ordinal_503"
+        ],
+        "LoD/1.09b": [
+          "FormatString",
+          "Ordinal_501",
+          "Ordinal_501",
+          "FormatString",
+          "Ordinal_503"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_578",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_578",
+          "Ordinal_503"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_578",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_578",
+          "Ordinal_503"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "CopyStringBounded"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "CopyStringBounded"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "CopyStringBounded"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "CopyStringBounded"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "FormatStringBuffer",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FormatStringBuffer",
+          "CopyStringBounded"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%02d:%02d:%02d.%03d  \"",
@@ -23548,6 +31253,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:fe23139a5c2289e43745fa903a3b7ac4",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCat",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.08": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578",
+          "Ordinal_578"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%s\\\\%s\"",
@@ -23649,6 +31401,74 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:327e0267579fee63b26f69ddc69193a4",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCat",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.08": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "FormatString",
+          "FormatString"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "Ordinal_578",
+          "Ordinal_578"
+        ],
+        "LoD/1.10": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive",
+          "Ordinal_578",
+          "Ordinal_578"
+        ],
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer",
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%sd2*.txt\""
@@ -23756,6 +31576,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dba0c01f87159fff3b268de3f7945557",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%2d%2d%2d\"",
@@ -23947,6 +31793,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ca6c3d77b5f569f55ab4bf56002c41f1",
+      "callees": {
+        "LoD/1.07": [
+          "SMemAlloc"
+        ],
+        "LoD/1.08": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AUMessage@LogManager@@\""
@@ -24083,28 +31949,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF70FD0",
         "LoD/1.08": "0x6FF70F90",
-        "LoD/1.09": "0x6FF5F820",
-        "LoD/1.09b": "0x6FF5F820",
-        "LoD/1.09d": "0x6FF5F840",
-        "LoD/1.10": "0x6FF63280",
-        "LoD/1.11": "0x6FF51030",
-        "LoD/1.11b": "0x6FF512D0",
-        "LoD/1.12a": "0x6FF51030",
-        "LoD/1.13c": "0x6FF51030",
-        "LoD/1.13d": "0x6FF51030"
+        "LoD/1.09": "0x6FF61060",
+        "LoD/1.09b": "0x6FF61060",
+        "LoD/1.09d": "0x6FF61830",
+        "LoD/1.10": "0x6FF616B0",
+        "LoD/1.11": "0x6FF68400",
+        "LoD/1.11b": "0x6FF6BF00",
+        "LoD/1.12a": "0x6FF6EE80",
+        "LoD/1.13c": "0x6FF67D90",
+        "LoD/1.13d": "0x6FF6DF50"
       },
       "rvas": {
         "LoD/1.07": "0x10FD0",
         "LoD/1.08": "0x10F90",
-        "LoD/1.09": "0xF820",
-        "LoD/1.09b": "0xF820",
-        "LoD/1.09d": "0xF840",
-        "LoD/1.10": "0x13280",
-        "LoD/1.11": "0x1030",
-        "LoD/1.11b": "0x12D0",
-        "LoD/1.12a": "0x1030",
-        "LoD/1.13c": "0x1030",
-        "LoD/1.13d": "0x1030"
+        "LoD/1.09": "0x11060",
+        "LoD/1.09b": "0x11060",
+        "LoD/1.09d": "0x11830",
+        "LoD/1.10": "0x116B0",
+        "LoD/1.11": "0x18400",
+        "LoD/1.11b": "0x1BF00",
+        "LoD/1.12a": "0x1EE80",
+        "LoD/1.13c": "0x17D90",
+        "LoD/1.13d": "0x1DF50"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -24356,6 +32222,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:95d2da70c4223262a2fb39ffd4332fe7",
+      "callees": {
+        "LoD/1.07": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.08": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.09": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.09b": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.09d": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.10": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.11": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.11b": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.12a": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.13c": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.13d": [
+          "CreateTcpConnection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -24443,6 +32344,115 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:40286c69938f347754c8ad91656fec69",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "SStrCopy",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "WSAStartup",
+          "socket",
+          "WSAGetLastError",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "...+6 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "WSAStartup",
+          "socket",
+          "WSAGetLastError",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "...+6 more"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "WSAStartup",
+          "socket",
+          "WSAGetLastError",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "...+6 more"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "WSAStartup",
+          "socket",
+          "WSAGetLastError",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "...+6 more"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "WSAStartup",
+          "socket",
+          "WSAGetLastError",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"UNKNOWN\"",
@@ -24561,6 +32571,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8dc01fa56ef517c34348c3a2cfde10e6",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\Safesock..."
@@ -24638,6 +32680,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef1fc064392fbc5f4e727409aae03040",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -24695,6 +32757,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4b96d4e4d8a6ef551c935747fac66f68",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 7,
@@ -24767,6 +32849,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a49f54849f1906bef898b616243e65db",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.11": [
+          "WSAStartup"
+        ],
+        "LoD/1.11b": [
+          "WSAStartup"
+        ],
+        "LoD/1.12a": [
+          "WSAStartup"
+        ],
+        "LoD/1.13c": [
+          "WSAStartup"
+        ],
+        "LoD/1.13d": [
+          "WSAStartup"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ERROR: Disconnecting socket due to WSAETIMEDOUT\\n..."
@@ -24859,6 +32976,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8f8a2a1d72d36a8fdff86fa64f2ed8fa",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -25003,6 +33140,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4ca49daac4eedb103111f2311fced028",
+      "callees": {
+        "LoD/1.07": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ],
+        "LoD/1.08": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ],
+        "LoD/1.09": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ],
+        "LoD/1.09b": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ],
+        "LoD/1.09d": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ],
+        "LoD/1.10": [
+          "__WSAFDIsSet",
+          "__WSAFDIsSet"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 12,
         "LoD/1.08": 12,
@@ -25057,6 +33220,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f688adca76f54d371b640fb25c5f82b1",
+      "callees": {
+        "LoD/1.07": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -25126,6 +33306,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dedd5e7d6b97389e5ec7731123bdb92e",
+      "callees": {
+        "LoD/1.11": [
+          "WSAStartup",
+          "gethostname",
+          "gethostbyname",
+          "socket",
+          "htons",
+          "inet_addr",
+          "connect",
+          "getsockname",
+          "closesocket",
+          "WSACleanup"
+        ],
+        "LoD/1.11b": [
+          "WSAStartup",
+          "gethostname",
+          "gethostbyname",
+          "socket",
+          "htons",
+          "inet_addr",
+          "connect",
+          "getsockname",
+          "closesocket",
+          "WSACleanup"
+        ],
+        "LoD/1.12a": [
+          "WSAStartup",
+          "gethostname",
+          "gethostbyname",
+          "socket",
+          "htons",
+          "inet_addr",
+          "connect",
+          "getsockname",
+          "closesocket",
+          "WSACleanup"
+        ],
+        "LoD/1.13c": [
+          "WSAStartup",
+          "gethostname",
+          "gethostbyname",
+          "socket",
+          "htons",
+          "inet_addr",
+          "connect",
+          "getsockname",
+          "closesocket",
+          "WSACleanup"
+        ],
+        "LoD/1.13d": [
+          "WSAStartup",
+          "gethostname",
+          "gethostbyname",
+          "socket",
+          "htons",
+          "inet_addr",
+          "connect",
+          "getsockname",
+          "closesocket",
+          "WSACleanup"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"209.67.136.168\"",
@@ -25397,6 +33639,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f6713193e90712d7811ce53d69b41c2e",
+      "callees": {
+        "LoD/1.11": [
+          "gethostbyname",
+          "WSAGetLastError",
+          "WSAStartup",
+          "gethostbyname",
+          "inet_ntoa",
+          "WSACleanup",
+          "WSACleanup"
+        ],
+        "LoD/1.11b": [
+          "gethostbyname",
+          "WSAGetLastError",
+          "WSAStartup",
+          "gethostbyname",
+          "inet_ntoa",
+          "WSACleanup",
+          "WSACleanup"
+        ],
+        "LoD/1.12a": [
+          "gethostbyname",
+          "WSAGetLastError",
+          "WSAStartup",
+          "gethostbyname",
+          "inet_ntoa",
+          "WSACleanup",
+          "WSACleanup"
+        ],
+        "LoD/1.13c": [
+          "gethostbyname",
+          "WSAGetLastError",
+          "WSAStartup",
+          "gethostbyname",
+          "inet_ntoa",
+          "WSACleanup",
+          "WSACleanup"
+        ],
+        "LoD/1.13d": [
+          "gethostbyname",
+          "WSAGetLastError",
+          "WSAStartup",
+          "gethostbyname",
+          "inet_ntoa",
+          "WSACleanup",
+          "WSACleanup"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%d.%d.%d.%d\""
@@ -25753,12 +34042,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61C5C",
         "LoD/1.09b": "0x6FF61C5C",
         "LoD/1.09d": "0x6FF6242C",
-        "LoD/1.10": "0x6FF64430",
-        "LoD/1.11": "0x6FF5CD58",
-        "LoD/1.11b": "0x6FF5CD34",
-        "LoD/1.12a": "0x6FF5CE26",
-        "LoD/1.13c": "0x6FF5CE60",
-        "LoD/1.13d": "0x6FF5CD3A"
+        "LoD/1.10": "0x6FF6444E",
+        "LoD/1.11": "0x6FF5CCF2",
+        "LoD/1.11b": "0x6FF5CD4C",
+        "LoD/1.12a": "0x6FF5CE44",
+        "LoD/1.13c": "0x6FF5CE78",
+        "LoD/1.13d": "0x6FF5CCB0"
       },
       "rvas": {
         "LoD/1.07": "0x11BCC",
@@ -25766,12 +34055,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11C5C",
         "LoD/1.09b": "0x11C5C",
         "LoD/1.09d": "0x1242C",
-        "LoD/1.10": "0x14430",
-        "LoD/1.11": "0xCD58",
-        "LoD/1.11b": "0xCD34",
-        "LoD/1.12a": "0xCE26",
-        "LoD/1.13c": "0xCE60",
-        "LoD/1.13d": "0xCD3A"
+        "LoD/1.10": "0x1444E",
+        "LoD/1.11": "0xCCF2",
+        "LoD/1.11b": "0xCD4C",
+        "LoD/1.12a": "0xCE44",
+        "LoD/1.13c": "0xCE78",
+        "LoD/1.13d": "0xCCB0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -25839,12 +34128,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61C62",
         "LoD/1.09b": "0x6FF61C62",
         "LoD/1.09d": "0x6FF62432",
-        "LoD/1.10": "0x6FF64400",
-        "LoD/1.11": "0x6FF5CC6E",
-        "LoD/1.11b": "0x6FF5CC32",
-        "LoD/1.12a": "0x6FF5CD72",
-        "LoD/1.13c": "0x6FF5CDB8",
-        "LoD/1.13d": "0x6FF5CC62"
+        "LoD/1.10": "0x6FF64436",
+        "LoD/1.11": "0x6FF5CD28",
+        "LoD/1.11b": "0x6FF5CCFE",
+        "LoD/1.12a": "0x6FF5CDF0",
+        "LoD/1.13c": "0x6FF5CE2A",
+        "LoD/1.13d": "0x6FF5CCE6"
       },
       "rvas": {
         "LoD/1.07": "0x11BD2",
@@ -25852,12 +34141,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11C62",
         "LoD/1.09b": "0x11C62",
         "LoD/1.09d": "0x12432",
-        "LoD/1.10": "0x14400",
-        "LoD/1.11": "0xCC6E",
-        "LoD/1.11b": "0xCC32",
-        "LoD/1.12a": "0xCD72",
-        "LoD/1.13c": "0xCDB8",
-        "LoD/1.13d": "0xCC62"
+        "LoD/1.10": "0x14436",
+        "LoD/1.11": "0xCD28",
+        "LoD/1.11b": "0xCCFE",
+        "LoD/1.12a": "0xCDF0",
+        "LoD/1.13c": "0xCE2A",
+        "LoD/1.13d": "0xCCE6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -25926,11 +34215,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61C68",
         "LoD/1.09d": "0x6FF62438",
         "LoD/1.10": "0x6FF643E8",
-        "LoD/1.11": "0x6FF5CD16",
-        "LoD/1.11b": "0x6FF5CCE6",
-        "LoD/1.12a": "0x6FF5CDD8",
-        "LoD/1.13c": "0x6FF5CE18",
-        "LoD/1.13d": "0x6FF5CCCE"
+        "LoD/1.11": "0x6FF5CCC8",
+        "LoD/1.11b": "0x6FF5CD10",
+        "LoD/1.12a": "0x6FF5CE02",
+        "LoD/1.13c": "0x6FF5CE00",
+        "LoD/1.13d": "0x6FF5CCF8"
       },
       "rvas": {
         "LoD/1.07": "0x11BD8",
@@ -25939,11 +34228,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11C68",
         "LoD/1.09d": "0x12438",
         "LoD/1.10": "0x143E8",
-        "LoD/1.11": "0xCD16",
-        "LoD/1.11b": "0xCCE6",
-        "LoD/1.12a": "0xCDD8",
-        "LoD/1.13c": "0xCE18",
-        "LoD/1.13d": "0xCCCE"
+        "LoD/1.11": "0xCCC8",
+        "LoD/1.11b": "0xCD10",
+        "LoD/1.12a": "0xCE02",
+        "LoD/1.13c": "0xCE00",
+        "LoD/1.13d": "0xCCF8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26008,28 +34297,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF71BDE",
         "LoD/1.08": "0x6FF71B9E",
-        "LoD/1.09": "0x6FF61C6E",
-        "LoD/1.09b": "0x6FF61C6E",
+        "LoD/1.09": "0x6FF61C74",
+        "LoD/1.09b": "0x6FF61C74",
         "LoD/1.09d": "0x6FF62444",
-        "LoD/1.10": "0x6FF643F4",
-        "LoD/1.11": "0x6FF5CCDA",
-        "LoD/1.11b": "0x6FF5CCB0",
-        "LoD/1.12a": "0x6FF5CE56",
-        "LoD/1.13c": "0x6FF5CDE2",
-        "LoD/1.13d": "0x6FF5CD1C"
+        "LoD/1.10": "0x6FF643FA",
+        "LoD/1.11": "0x6FF5CCC2",
+        "LoD/1.11b": "0x6FF5CD3A",
+        "LoD/1.12a": "0x6FF5CE2C",
+        "LoD/1.13c": "0x6FF5CE66",
+        "LoD/1.13d": "0x6FF5CD40"
       },
       "rvas": {
         "LoD/1.07": "0x11BDE",
         "LoD/1.08": "0x11B9E",
-        "LoD/1.09": "0x11C6E",
-        "LoD/1.09b": "0x11C6E",
+        "LoD/1.09": "0x11C74",
+        "LoD/1.09b": "0x11C74",
         "LoD/1.09d": "0x12444",
-        "LoD/1.10": "0x143F4",
-        "LoD/1.11": "0xCCDA",
-        "LoD/1.11b": "0xCCB0",
-        "LoD/1.12a": "0xCE56",
-        "LoD/1.13c": "0xCDE2",
-        "LoD/1.13d": "0xCD1C"
+        "LoD/1.10": "0x143FA",
+        "LoD/1.11": "0xCCC2",
+        "LoD/1.11b": "0xCD3A",
+        "LoD/1.12a": "0xCE2C",
+        "LoD/1.13c": "0xCE66",
+        "LoD/1.13d": "0xCD40"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26094,28 +34383,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF71BE4",
         "LoD/1.08": "0x6FF71BA4",
-        "LoD/1.09": "0x6FF61C74",
-        "LoD/1.09b": "0x6FF61C74",
+        "LoD/1.09": "0x6FF61C6E",
+        "LoD/1.09b": "0x6FF61C6E",
         "LoD/1.09d": "0x6FF6243E",
-        "LoD/1.10": "0x6FF643FA",
-        "LoD/1.11": "0x6FF5CC38",
-        "LoD/1.11b": "0x6FF5CC56",
-        "LoD/1.12a": "0x6FF5CD8A",
-        "LoD/1.13c": "0x6FF5CD5E",
-        "LoD/1.13d": "0x6FF5CC6E"
+        "LoD/1.10": "0x6FF643F4",
+        "LoD/1.11": "0x6FF5CD16",
+        "LoD/1.11b": "0x6FF5CCE6",
+        "LoD/1.12a": "0x6FF5CDD8",
+        "LoD/1.13c": "0x6FF5CE18",
+        "LoD/1.13d": "0x6FF5CCCE"
       },
       "rvas": {
         "LoD/1.07": "0x11BE4",
         "LoD/1.08": "0x11BA4",
-        "LoD/1.09": "0x11C74",
-        "LoD/1.09b": "0x11C74",
+        "LoD/1.09": "0x11C6E",
+        "LoD/1.09b": "0x11C6E",
         "LoD/1.09d": "0x1243E",
-        "LoD/1.10": "0x143FA",
-        "LoD/1.11": "0xCC38",
-        "LoD/1.11b": "0xCC56",
-        "LoD/1.12a": "0xCD8A",
-        "LoD/1.13c": "0xCD5E",
-        "LoD/1.13d": "0xCC6E"
+        "LoD/1.10": "0x143F4",
+        "LoD/1.11": "0xCD16",
+        "LoD/1.11b": "0xCCE6",
+        "LoD/1.12a": "0xCDD8",
+        "LoD/1.13c": "0xCE18",
+        "LoD/1.13d": "0xCCCE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26183,12 +34472,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61C7A",
         "LoD/1.09b": "0x6FF61C7A",
         "LoD/1.09d": "0x6FF6244A",
-        "LoD/1.10": "0x6FF643E2",
-        "LoD/1.11": "0x6FF5CC20",
-        "LoD/1.11b": "0x6FF5CC38",
-        "LoD/1.12a": "0x6FF5CD30",
-        "LoD/1.13c": "0x6FF5CD34",
-        "LoD/1.13d": "0x6FF5CC20"
+        "LoD/1.10": "0x6FF64448",
+        "LoD/1.11": "0x6FF5CD40",
+        "LoD/1.11b": "0x6FF5CD1C",
+        "LoD/1.12a": "0x6FF5CE0E",
+        "LoD/1.13c": "0x6FF5CE42",
+        "LoD/1.13d": "0x6FF5CD04"
       },
       "rvas": {
         "LoD/1.07": "0x11BEA",
@@ -26196,12 +34485,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11C7A",
         "LoD/1.09b": "0x11C7A",
         "LoD/1.09d": "0x1244A",
-        "LoD/1.10": "0x143E2",
-        "LoD/1.11": "0xCC20",
-        "LoD/1.11b": "0xCC38",
-        "LoD/1.12a": "0xCD30",
-        "LoD/1.13c": "0xCD34",
-        "LoD/1.13d": "0xCC20"
+        "LoD/1.10": "0x14448",
+        "LoD/1.11": "0xCD40",
+        "LoD/1.11b": "0xCD1C",
+        "LoD/1.12a": "0xCE0E",
+        "LoD/1.13c": "0xCE42",
+        "LoD/1.13d": "0xCD04"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26270,11 +34559,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61C80",
         "LoD/1.09d": "0x6FF62450",
         "LoD/1.10": "0x6FF643EE",
-        "LoD/1.11": "0x6FF5CCD4",
-        "LoD/1.11b": "0x6FF5CD52",
-        "LoD/1.12a": "0x6FF5CDC0",
-        "LoD/1.13c": "0x6FF5CE5A",
-        "LoD/1.13d": "0x6FF5CCB6"
+        "LoD/1.11": "0x6FF5CC3E",
+        "LoD/1.11b": "0x6FF5CC5C",
+        "LoD/1.12a": "0x6FF5CD42",
+        "LoD/1.13c": "0x6FF5CD64",
+        "LoD/1.13d": "0x6FF5CC32"
       },
       "rvas": {
         "LoD/1.07": "0x11BF0",
@@ -26283,11 +34572,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11C80",
         "LoD/1.09d": "0x12450",
         "LoD/1.10": "0x143EE",
-        "LoD/1.11": "0xCCD4",
-        "LoD/1.11b": "0xCD52",
-        "LoD/1.12a": "0xCDC0",
-        "LoD/1.13c": "0xCE5A",
-        "LoD/1.13d": "0xCCB6"
+        "LoD/1.11": "0xCC3E",
+        "LoD/1.11b": "0xCC5C",
+        "LoD/1.12a": "0xCD42",
+        "LoD/1.13c": "0xCD64",
+        "LoD/1.13d": "0xCC32"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26356,11 +34645,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61C86",
         "LoD/1.09d": "0x6FF62456",
         "LoD/1.10": "0x6FF64406",
-        "LoD/1.11": "0x6FF5CCEC",
-        "LoD/1.11b": "0x6FF5CCC2",
-        "LoD/1.12a": "0x6FF5CE68",
-        "LoD/1.13c": "0x6FF5CDF4",
-        "LoD/1.13d": "0x6FF5CD2E"
+        "LoD/1.11": "0x6FF5CCF8",
+        "LoD/1.11b": "0x6FF5CD5E",
+        "LoD/1.12a": "0x6FF5CE50",
+        "LoD/1.13c": "0x6FF5CE72",
+        "LoD/1.13d": "0x6FF5CD58"
       },
       "rvas": {
         "LoD/1.07": "0x11BF6",
@@ -26369,11 +34658,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11C86",
         "LoD/1.09d": "0x12456",
         "LoD/1.10": "0x14406",
-        "LoD/1.11": "0xCCEC",
-        "LoD/1.11b": "0xCCC2",
-        "LoD/1.12a": "0xCE68",
-        "LoD/1.13c": "0xCDF4",
-        "LoD/1.13d": "0xCD2E"
+        "LoD/1.11": "0xCCF8",
+        "LoD/1.11b": "0xCD5E",
+        "LoD/1.12a": "0xCE50",
+        "LoD/1.13c": "0xCE72",
+        "LoD/1.13d": "0xCD58"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26527,12 +34816,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61C92",
         "LoD/1.09b": "0x6FF61C92",
         "LoD/1.09d": "0x6FF62462",
-        "LoD/1.10": "0x6FF643DC",
-        "LoD/1.11": "0x6FF5CCB0",
-        "LoD/1.11b": "0x6FF5CD40",
-        "LoD/1.12a": "0x6FF5CE38",
-        "LoD/1.13c": "0x6FF5CDD6",
-        "LoD/1.13d": "0x6FF5CD4C"
+        "LoD/1.10": "0x6FF643E2",
+        "LoD/1.11": "0x6FF5CC98",
+        "LoD/1.11b": "0x6FF5CC80",
+        "LoD/1.12a": "0x6FF5CDAE",
+        "LoD/1.13c": "0x6FF5CDB2",
+        "LoD/1.13d": "0x6FF5CC98"
       },
       "rvas": {
         "LoD/1.07": "0x11C02",
@@ -26540,12 +34829,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11C92",
         "LoD/1.09b": "0x11C92",
         "LoD/1.09d": "0x12462",
-        "LoD/1.10": "0x143DC",
-        "LoD/1.11": "0xCCB0",
-        "LoD/1.11b": "0xCD40",
-        "LoD/1.12a": "0xCE38",
-        "LoD/1.13c": "0xCDD6",
-        "LoD/1.13d": "0xCD4C"
+        "LoD/1.10": "0x143E2",
+        "LoD/1.11": "0xCC98",
+        "LoD/1.11b": "0xCC80",
+        "LoD/1.12a": "0xCDAE",
+        "LoD/1.13c": "0xCDB2",
+        "LoD/1.13d": "0xCC98"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26613,12 +34902,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61C98",
         "LoD/1.09b": "0x6FF61C98",
         "LoD/1.09d": "0x6FF62468",
-        "LoD/1.10": "0x6FF6444E",
-        "LoD/1.11": "0x6FF5CCB6",
-        "LoD/1.11b": "0x6FF5CCCE",
-        "LoD/1.12a": "0x6FF5CE3E",
-        "LoD/1.13c": "0x6FF5CDDC",
-        "LoD/1.13d": "0x6FF5CD34"
+        "LoD/1.10": "0x6FF64418",
+        "LoD/1.11": "0x6FF5CC8C",
+        "LoD/1.11b": "0x6FF5CC74",
+        "LoD/1.12a": "0x6FF5CDA2",
+        "LoD/1.13c": "0x6FF5CD9A",
+        "LoD/1.13d": "0x6FF5CC8C"
       },
       "rvas": {
         "LoD/1.07": "0x11C08",
@@ -26626,12 +34915,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11C98",
         "LoD/1.09b": "0x11C98",
         "LoD/1.09d": "0x12468",
-        "LoD/1.10": "0x1444E",
-        "LoD/1.11": "0xCCB6",
-        "LoD/1.11b": "0xCCCE",
-        "LoD/1.12a": "0xCE3E",
-        "LoD/1.13c": "0xCDDC",
-        "LoD/1.13d": "0xCD34"
+        "LoD/1.10": "0x14418",
+        "LoD/1.11": "0xCC8C",
+        "LoD/1.11b": "0xCC74",
+        "LoD/1.12a": "0xCDA2",
+        "LoD/1.13c": "0xCD9A",
+        "LoD/1.13d": "0xCC8C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26700,11 +34989,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61C9E",
         "LoD/1.09d": "0x6FF6246E",
         "LoD/1.10": "0x6FF6441E",
-        "LoD/1.11": "0x6FF5CC3E",
-        "LoD/1.11b": "0x6FF5CC5C",
-        "LoD/1.12a": "0x6FF5CD42",
-        "LoD/1.13c": "0x6FF5CD64",
-        "LoD/1.13d": "0x6FF5CC32"
+        "LoD/1.11": "0x6FF5CC14",
+        "LoD/1.11b": "0x6FF5CC8C",
+        "LoD/1.12a": "0x6FF5CD24",
+        "LoD/1.13c": "0x6FF5CD40",
+        "LoD/1.13d": "0x6FF5CC14"
       },
       "rvas": {
         "LoD/1.07": "0x11C0E",
@@ -26713,11 +35002,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11C9E",
         "LoD/1.09d": "0x1246E",
         "LoD/1.10": "0x1441E",
-        "LoD/1.11": "0xCC3E",
-        "LoD/1.11b": "0xCC5C",
-        "LoD/1.12a": "0xCD42",
-        "LoD/1.13c": "0xCD64",
-        "LoD/1.13d": "0xCC32"
+        "LoD/1.11": "0xCC14",
+        "LoD/1.11b": "0xCC8C",
+        "LoD/1.12a": "0xCD24",
+        "LoD/1.13c": "0xCD40",
+        "LoD/1.13d": "0xCC14"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26784,26 +35073,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF71BD4",
         "LoD/1.09": "0x6FF61CA4",
         "LoD/1.09b": "0x6FF61CA4",
-        "LoD/1.09d": "0x6FF624D4",
-        "LoD/1.10": "0x6FF64442",
-        "LoD/1.11": "0x6FF5CD10",
-        "LoD/1.11b": "0x6FF5CCE0",
-        "LoD/1.12a": "0x6FF5CDD2",
-        "LoD/1.13c": "0x6FF5CE12",
-        "LoD/1.13d": "0x6FF5CCC8"
+        "LoD/1.09d": "0x6FF62474",
+        "LoD/1.10": "0x6FF64424",
+        "LoD/1.11": "0x6FF5CC9E",
+        "LoD/1.11b": "0x6FF5CC1A",
+        "LoD/1.12a": "0x6FF5CD7E",
+        "LoD/1.13c": "0x6FF5CDBE",
+        "LoD/1.13d": "0x6FF5CC9E"
       },
       "rvas": {
         "LoD/1.07": "0x11C14",
         "LoD/1.08": "0x11BD4",
         "LoD/1.09": "0x11CA4",
         "LoD/1.09b": "0x11CA4",
-        "LoD/1.09d": "0x124D4",
-        "LoD/1.10": "0x14442",
-        "LoD/1.11": "0xCD10",
-        "LoD/1.11b": "0xCCE0",
-        "LoD/1.12a": "0xCDD2",
-        "LoD/1.13c": "0xCE12",
-        "LoD/1.13d": "0xCCC8"
+        "LoD/1.09d": "0x12474",
+        "LoD/1.10": "0x14424",
+        "LoD/1.11": "0xCC9E",
+        "LoD/1.11b": "0xCC1A",
+        "LoD/1.12a": "0xCD7E",
+        "LoD/1.13c": "0xCDBE",
+        "LoD/1.13d": "0xCC9E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26872,11 +35161,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61CAA",
         "LoD/1.09d": "0x6FF6247A",
         "LoD/1.10": "0x6FF6442A",
-        "LoD/1.11": "0x6FF5CC74",
-        "LoD/1.11b": "0x6FF5CC3E",
-        "LoD/1.12a": "0x6FF5CD90",
-        "LoD/1.13c": "0x6FF5CD7C",
-        "LoD/1.13d": "0x6FF5CC74"
+        "LoD/1.11": "0x6FF5CCB6",
+        "LoD/1.11b": "0x6FF5CCCE",
+        "LoD/1.12a": "0x6FF5CE3E",
+        "LoD/1.13c": "0x6FF5CDDC",
+        "LoD/1.13d": "0x6FF5CD34"
       },
       "rvas": {
         "LoD/1.07": "0x11C1A",
@@ -26885,11 +35174,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11CAA",
         "LoD/1.09d": "0x1247A",
         "LoD/1.10": "0x1442A",
-        "LoD/1.11": "0xCC74",
-        "LoD/1.11b": "0xCC3E",
-        "LoD/1.12a": "0xCD90",
-        "LoD/1.13c": "0xCD7C",
-        "LoD/1.13d": "0xCC74"
+        "LoD/1.11": "0xCCB6",
+        "LoD/1.11b": "0xCCCE",
+        "LoD/1.12a": "0xCE3E",
+        "LoD/1.13c": "0xCDDC",
+        "LoD/1.13d": "0xCD34"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -26957,12 +35246,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CB0",
         "LoD/1.09b": "0x6FF61CB0",
         "LoD/1.09d": "0x6FF62480",
-        "LoD/1.10": "0x6FF64484",
-        "LoD/1.11": "0x6FF5CD1C",
-        "LoD/1.11b": "0x6FF5CCF2",
-        "LoD/1.12a": "0x6FF5CDE4",
-        "LoD/1.13c": "0x6FF5CE1E",
-        "LoD/1.13d": "0x6FF5CCDA"
+        "LoD/1.10": "0x6FF64442",
+        "LoD/1.11": "0x6FF5CD10",
+        "LoD/1.11b": "0x6FF5CCE0",
+        "LoD/1.12a": "0x6FF5CDD2",
+        "LoD/1.13c": "0x6FF5CE12",
+        "LoD/1.13d": "0x6FF5CCC8"
       },
       "rvas": {
         "LoD/1.07": "0x11C20",
@@ -26970,12 +35259,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CB0",
         "LoD/1.09b": "0x11CB0",
         "LoD/1.09d": "0x12480",
-        "LoD/1.10": "0x14484",
-        "LoD/1.11": "0xCD1C",
-        "LoD/1.11b": "0xCCF2",
-        "LoD/1.12a": "0xCDE4",
-        "LoD/1.13c": "0xCE1E",
-        "LoD/1.13d": "0xCCDA"
+        "LoD/1.10": "0x14442",
+        "LoD/1.11": "0xCD10",
+        "LoD/1.11b": "0xCCE0",
+        "LoD/1.12a": "0xCDD2",
+        "LoD/1.13c": "0xCE12",
+        "LoD/1.13d": "0xCCC8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27043,12 +35332,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CB6",
         "LoD/1.09b": "0x6FF61CB6",
         "LoD/1.09d": "0x6FF62486",
-        "LoD/1.10": "0x6FF64418",
-        "LoD/1.11": "0x6FF5CC5C",
-        "LoD/1.11b": "0x6FF5CC62",
-        "LoD/1.12a": "0x6FF5CD48",
-        "LoD/1.13c": "0x6FF5CD94",
-        "LoD/1.13d": "0x6FF5CC38"
+        "LoD/1.10": "0x6FF64412",
+        "LoD/1.11": "0x6FF5CC38",
+        "LoD/1.11b": "0x6FF5CC56",
+        "LoD/1.12a": "0x6FF5CD8A",
+        "LoD/1.13c": "0x6FF5CD5E",
+        "LoD/1.13d": "0x6FF5CC6E"
       },
       "rvas": {
         "LoD/1.07": "0x11C26",
@@ -27056,12 +35345,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CB6",
         "LoD/1.09b": "0x11CB6",
         "LoD/1.09d": "0x12486",
-        "LoD/1.10": "0x14418",
-        "LoD/1.11": "0xCC5C",
-        "LoD/1.11b": "0xCC62",
-        "LoD/1.12a": "0xCD48",
-        "LoD/1.13c": "0xCD94",
-        "LoD/1.13d": "0xCC38"
+        "LoD/1.10": "0x14412",
+        "LoD/1.11": "0xCC38",
+        "LoD/1.11b": "0xCC56",
+        "LoD/1.12a": "0xCD8A",
+        "LoD/1.13c": "0xCD5E",
+        "LoD/1.13d": "0xCC6E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27129,12 +35418,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CBC",
         "LoD/1.09b": "0x6FF61CBC",
         "LoD/1.09d": "0x6FF6248C",
-        "LoD/1.10": "0x6FF64436",
-        "LoD/1.11": "0x6FF5CC68",
-        "LoD/1.11b": "0x6FF5CC2C",
-        "LoD/1.12a": "0x6FF5CD66",
-        "LoD/1.13c": "0x6FF5CDA6",
-        "LoD/1.13d": "0x6FF5CC56"
+        "LoD/1.10": "0x6FF64430",
+        "LoD/1.11": "0x6FF5CD58",
+        "LoD/1.11b": "0x6FF5CD34",
+        "LoD/1.12a": "0x6FF5CE26",
+        "LoD/1.13c": "0x6FF5CE60",
+        "LoD/1.13d": "0x6FF5CD3A"
       },
       "rvas": {
         "LoD/1.07": "0x11C2C",
@@ -27142,12 +35431,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CBC",
         "LoD/1.09b": "0x11CBC",
         "LoD/1.09d": "0x1248C",
-        "LoD/1.10": "0x14436",
-        "LoD/1.11": "0xCC68",
-        "LoD/1.11b": "0xCC2C",
-        "LoD/1.12a": "0xCD66",
-        "LoD/1.13c": "0xCDA6",
-        "LoD/1.13d": "0xCC56"
+        "LoD/1.10": "0x14430",
+        "LoD/1.11": "0xCD58",
+        "LoD/1.11b": "0xCD34",
+        "LoD/1.12a": "0xCE26",
+        "LoD/1.13c": "0xCE60",
+        "LoD/1.13d": "0xCD3A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27215,12 +35504,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CC2",
         "LoD/1.09b": "0x6FF61CC2",
         "LoD/1.09d": "0x6FF62492",
-        "LoD/1.10": "0x6FF6443C",
-        "LoD/1.11": "0x6FF5CCE0",
-        "LoD/1.11b": "0x6FF5CCB6",
-        "LoD/1.12a": "0x6FF5CE5C",
-        "LoD/1.13c": "0x6FF5CDE8",
-        "LoD/1.13d": "0x6FF5CD10"
+        "LoD/1.10": "0x6FF643DC",
+        "LoD/1.11": "0x6FF5CCB0",
+        "LoD/1.11b": "0x6FF5CD40",
+        "LoD/1.12a": "0x6FF5CE38",
+        "LoD/1.13c": "0x6FF5CDD6",
+        "LoD/1.13d": "0x6FF5CD4C"
       },
       "rvas": {
         "LoD/1.07": "0x11C32",
@@ -27228,12 +35517,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CC2",
         "LoD/1.09b": "0x11CC2",
         "LoD/1.09d": "0x12492",
-        "LoD/1.10": "0x1443C",
-        "LoD/1.11": "0xCCE0",
-        "LoD/1.11b": "0xCCB6",
-        "LoD/1.12a": "0xCE5C",
-        "LoD/1.13c": "0xCDE8",
-        "LoD/1.13d": "0xCD10"
+        "LoD/1.10": "0x143DC",
+        "LoD/1.11": "0xCCB0",
+        "LoD/1.11b": "0xCD40",
+        "LoD/1.12a": "0xCE38",
+        "LoD/1.13c": "0xCDD6",
+        "LoD/1.13d": "0xCD4C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27301,12 +35590,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CC8",
         "LoD/1.09b": "0x6FF61CC8",
         "LoD/1.09d": "0x6FF62498",
-        "LoD/1.10": "0x6FF64448",
-        "LoD/1.11": "0x6FF5CD40",
-        "LoD/1.11b": "0x6FF5CD1C",
-        "LoD/1.12a": "0x6FF5CE0E",
-        "LoD/1.13c": "0x6FF5CE42",
-        "LoD/1.13d": "0x6FF5CD04"
+        "LoD/1.10": "0x6FF6443C",
+        "LoD/1.11": "0x6FF5CCE0",
+        "LoD/1.11b": "0x6FF5CCB6",
+        "LoD/1.12a": "0x6FF5CE5C",
+        "LoD/1.13c": "0x6FF5CDE8",
+        "LoD/1.13d": "0x6FF5CD10"
       },
       "rvas": {
         "LoD/1.07": "0x11C38",
@@ -27314,12 +35603,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CC8",
         "LoD/1.09b": "0x11CC8",
         "LoD/1.09d": "0x12498",
-        "LoD/1.10": "0x14448",
-        "LoD/1.11": "0xCD40",
-        "LoD/1.11b": "0xCD1C",
-        "LoD/1.12a": "0xCE0E",
-        "LoD/1.13c": "0xCE42",
-        "LoD/1.13d": "0xCD04"
+        "LoD/1.10": "0x1443C",
+        "LoD/1.11": "0xCCE0",
+        "LoD/1.11b": "0xCCB6",
+        "LoD/1.12a": "0xCE5C",
+        "LoD/1.13c": "0xCDE8",
+        "LoD/1.13d": "0xCD10"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27384,8 +35673,8 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF71C3E",
         "LoD/1.08": "0x6FF71BFE",
-        "LoD/1.09": "0x6FF61CE0",
-        "LoD/1.09b": "0x6FF61CE0",
+        "LoD/1.09": "0x6FF61CCE",
+        "LoD/1.09b": "0x6FF61CCE",
         "LoD/1.09d": "0x6FF624B0",
         "LoD/1.10": "0x6FF64466",
         "LoD/1.11": "0x6FF5CD22",
@@ -27397,8 +35686,8 @@ var FUNCTIONS_Fog_dll = {
       "rvas": {
         "LoD/1.07": "0x11C3E",
         "LoD/1.08": "0x11BFE",
-        "LoD/1.09": "0x11CE0",
-        "LoD/1.09b": "0x11CE0",
+        "LoD/1.09": "0x11CCE",
+        "LoD/1.09b": "0x11CCE",
         "LoD/1.09d": "0x124B0",
         "LoD/1.10": "0x14466",
         "LoD/1.11": "0xCD22",
@@ -27556,8 +35845,8 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF71C50",
         "LoD/1.08": "0x6FF71C10",
-        "LoD/1.09": "0x6FF61CCE",
-        "LoD/1.09b": "0x6FF61CCE",
+        "LoD/1.09": "0x6FF61CE0",
+        "LoD/1.09b": "0x6FF61CE0",
         "LoD/1.09d": "0x6FF6249E",
         "LoD/1.10": "0x6FF64454",
         "LoD/1.11": "0x6FF5CD34",
@@ -27569,8 +35858,8 @@ var FUNCTIONS_Fog_dll = {
       "rvas": {
         "LoD/1.07": "0x11C50",
         "LoD/1.08": "0x11C10",
-        "LoD/1.09": "0x11CCE",
-        "LoD/1.09b": "0x11CCE",
+        "LoD/1.09": "0x11CE0",
+        "LoD/1.09b": "0x11CE0",
         "LoD/1.09d": "0x1249E",
         "LoD/1.10": "0x14454",
         "LoD/1.11": "0xCD34",
@@ -27646,11 +35935,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61CEC",
         "LoD/1.09d": "0x6FF624BC",
         "LoD/1.10": "0x6FF64472",
-        "LoD/1.11": "0x6FF5CCCE",
-        "LoD/1.11b": "0x6FF5CCC8",
-        "LoD/1.12a": "0x6FF5CE32",
-        "LoD/1.13c": "0x6FF5CDD0",
-        "LoD/1.13d": "0x6FF5CD46"
+        "LoD/1.11": "0x6FF5CC92",
+        "LoD/1.11b": "0x6FF5CC7A",
+        "LoD/1.12a": "0x6FF5CDA8",
+        "LoD/1.13c": "0x6FF5CDAC",
+        "LoD/1.13d": "0x6FF5CC92"
       },
       "rvas": {
         "LoD/1.07": "0x11C5C",
@@ -27659,11 +35948,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11CEC",
         "LoD/1.09d": "0x124BC",
         "LoD/1.10": "0x14472",
-        "LoD/1.11": "0xCCCE",
-        "LoD/1.11b": "0xCCC8",
-        "LoD/1.12a": "0xCE32",
-        "LoD/1.13c": "0xCDD0",
-        "LoD/1.13d": "0xCD46"
+        "LoD/1.11": "0xCC92",
+        "LoD/1.11b": "0xCC7A",
+        "LoD/1.12a": "0xCDA8",
+        "LoD/1.13c": "0xCDAC",
+        "LoD/1.13d": "0xCC92"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27732,11 +36021,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61CF2",
         "LoD/1.09d": "0x6FF624C2",
         "LoD/1.10": "0x6FF64478",
-        "LoD/1.11": "0x6FF5CC9E",
-        "LoD/1.11b": "0x6FF5CC1A",
-        "LoD/1.12a": "0x6FF5CD7E",
-        "LoD/1.13c": "0x6FF5CDBE",
-        "LoD/1.13d": "0x6FF5CC9E"
+        "LoD/1.11": "0x6FF5CC26",
+        "LoD/1.11b": "0x6FF5CC98",
+        "LoD/1.12a": "0x6FF5CD84",
+        "LoD/1.13c": "0x6FF5CD4C",
+        "LoD/1.13d": "0x6FF5CC68"
       },
       "rvas": {
         "LoD/1.07": "0x11C62",
@@ -27745,11 +36034,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11CF2",
         "LoD/1.09d": "0x124C2",
         "LoD/1.10": "0x14478",
-        "LoD/1.11": "0xCC9E",
-        "LoD/1.11b": "0xCC1A",
-        "LoD/1.12a": "0xCD7E",
-        "LoD/1.13c": "0xCDBE",
-        "LoD/1.13d": "0xCC9E"
+        "LoD/1.11": "0xCC26",
+        "LoD/1.11b": "0xCC98",
+        "LoD/1.12a": "0xCD84",
+        "LoD/1.13c": "0xCD4C",
+        "LoD/1.13d": "0xCC68"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27818,11 +36107,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61CF8",
         "LoD/1.09d": "0x6FF624C8",
         "LoD/1.10": "0x6FF6447E",
-        "LoD/1.11": "0x6FF5CCF8",
-        "LoD/1.11b": "0x6FF5CD58",
-        "LoD/1.12a": "0x6FF5CE4A",
-        "LoD/1.13c": "0x6FF5CE72",
-        "LoD/1.13d": "0x6FF5CD5E"
+        "LoD/1.11": "0x6FF5CC74",
+        "LoD/1.11b": "0x6FF5CC3E",
+        "LoD/1.12a": "0x6FF5CD90",
+        "LoD/1.13c": "0x6FF5CD7C",
+        "LoD/1.13d": "0x6FF5CC74"
       },
       "rvas": {
         "LoD/1.07": "0x11C68",
@@ -27831,11 +36120,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11CF8",
         "LoD/1.09d": "0x124C8",
         "LoD/1.10": "0x1447E",
-        "LoD/1.11": "0xCCF8",
-        "LoD/1.11b": "0xCD58",
-        "LoD/1.12a": "0xCE4A",
-        "LoD/1.13c": "0xCE72",
-        "LoD/1.13d": "0xCD5E"
+        "LoD/1.11": "0xCC74",
+        "LoD/1.11b": "0xCC3E",
+        "LoD/1.12a": "0xCD90",
+        "LoD/1.13c": "0xCD7C",
+        "LoD/1.13d": "0xCC74"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -27903,12 +36192,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF61CFE",
         "LoD/1.09b": "0x6FF61CFE",
         "LoD/1.09d": "0x6FF624CE",
-        "LoD/1.10": "0x6FF64412",
-        "LoD/1.11": "0x6FF5CC14",
-        "LoD/1.11b": "0x6FF5CC8C",
-        "LoD/1.12a": "0x6FF5CD24",
-        "LoD/1.13c": "0x6FF5CD40",
-        "LoD/1.13d": "0x6FF5CC14"
+        "LoD/1.10": "0x6FF64484",
+        "LoD/1.11": "0x6FF5CD52",
+        "LoD/1.11b": "0x6FF5CD2E",
+        "LoD/1.12a": "0x6FF5CE20",
+        "LoD/1.13c": "0x6FF5CE54",
+        "LoD/1.13d": "0x6FF5CD16"
       },
       "rvas": {
         "LoD/1.07": "0x11C6E",
@@ -27916,12 +36205,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x11CFE",
         "LoD/1.09b": "0x11CFE",
         "LoD/1.09d": "0x124CE",
-        "LoD/1.10": "0x14412",
-        "LoD/1.11": "0xCC14",
-        "LoD/1.11b": "0xCC8C",
-        "LoD/1.12a": "0xCD24",
-        "LoD/1.13c": "0xCD40",
-        "LoD/1.13d": "0xCC14"
+        "LoD/1.10": "0x14484",
+        "LoD/1.11": "0xCD52",
+        "LoD/1.11b": "0xCD2E",
+        "LoD/1.12a": "0xCE20",
+        "LoD/1.13c": "0xCE54",
+        "LoD/1.13d": "0xCD16"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -28367,8 +36656,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x6FF6458D",
         "LoD/1.11": "0x6FF59339",
         "LoD/1.11b": "0x6FF53D98",
-        "LoD/1.12a": "0x6FF539C6",
-        "LoD/1.13c": "0x6FF596FC",
+        "LoD/1.12a": "0x6FF596AE",
+        "LoD/1.13c": "0x6FF53A6E",
         "LoD/1.13d": "0x6FF56156"
       },
       "rvas": {
@@ -28380,8 +36669,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "0x1458D",
         "LoD/1.11": "0x9339",
         "LoD/1.11b": "0x3D98",
-        "LoD/1.12a": "0x39C6",
-        "LoD/1.13c": "0x96FC",
+        "LoD/1.12a": "0x96AE",
+        "LoD/1.13c": "0x3A6E",
         "LoD/1.13d": "0x6156"
       },
       "sizes": {
@@ -28452,11 +36741,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF61E10",
         "LoD/1.09d": "0x6FF625E6",
         "LoD/1.10": "0x6FF64596",
-        "LoD/1.11": "0x6FF52DE4",
-        "LoD/1.11b": "0x6FF57E51",
-        "LoD/1.12a": "0x6FF57438",
-        "LoD/1.13c": "0x6FF52000",
-        "LoD/1.13d": "0x6FF57E52"
+        "LoD/1.11": "0x6FF5299E",
+        "LoD/1.11b": "0x6FF52A86",
+        "LoD/1.12a": "0x6FF529E0",
+        "LoD/1.13c": "0x6FF52B9A",
+        "LoD/1.13d": "0x6FF52C90"
       },
       "rvas": {
         "LoD/1.07": "0x11D80",
@@ -28465,11 +36754,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x11E10",
         "LoD/1.09d": "0x125E6",
         "LoD/1.10": "0x14596",
-        "LoD/1.11": "0x2DE4",
-        "LoD/1.11b": "0x7E51",
-        "LoD/1.12a": "0x7438",
-        "LoD/1.13c": "0x2000",
-        "LoD/1.13d": "0x7E52"
+        "LoD/1.11": "0x299E",
+        "LoD/1.11b": "0x2A86",
+        "LoD/1.12a": "0x29E0",
+        "LoD/1.13c": "0x2B9A",
+        "LoD/1.13d": "0x2C90"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -29422,19 +37711,19 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_MoveMemory": {
       "addresses": {
         "LoD/1.07": "0x6FF72470",
-        "LoD/1.08": "0x6FF765B0",
-        "LoD/1.09": "0x6FF666A0",
-        "LoD/1.09b": "0x6FF666A0",
-        "LoD/1.09d": "0x6FF67140",
-        "LoD/1.10": "0x6FF69200"
+        "LoD/1.08": "0x6FF72430",
+        "LoD/1.09": "0x6FF62500",
+        "LoD/1.09b": "0x6FF62500",
+        "LoD/1.09d": "0x6FF62CD0",
+        "LoD/1.10": "0x6FF64D20"
       },
       "rvas": {
         "LoD/1.07": "0x12470",
-        "LoD/1.08": "0x165B0",
-        "LoD/1.09": "0x166A0",
-        "LoD/1.09b": "0x166A0",
-        "LoD/1.09d": "0x17140",
-        "LoD/1.10": "0x19200"
+        "LoD/1.08": "0x12430",
+        "LoD/1.09": "0x12500",
+        "LoD/1.09b": "0x12500",
+        "LoD/1.09d": "0x12CD0",
+        "LoD/1.10": "0x14D20"
       },
       "sizes": {
         "LoD/1.07": 664,
@@ -29798,28 +38087,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF7712F",
         "LoD/1.08": "0x6FF770EF",
-        "LoD/1.09": "0x6FF6B9FE",
-        "LoD/1.09b": "0x6FF6B9FE",
-        "LoD/1.09d": "0x6FF632CD",
-        "LoD/1.10": "0x6FF6529C",
-        "LoD/1.11": "0x6FF5369B",
-        "LoD/1.11b": "0x6FF57888",
-        "LoD/1.12a": "0x6FF57EEC",
-        "LoD/1.13c": "0x6FF57F07",
-        "LoD/1.13d": "0x6FF520BF"
+        "LoD/1.09": "0x6FF6725A",
+        "LoD/1.09b": "0x6FF6725A",
+        "LoD/1.09d": "0x6FF63627",
+        "LoD/1.10": "0x6FF6E5BE",
+        "LoD/1.11": "0x6FF54533",
+        "LoD/1.11b": "0x6FF5A16B",
+        "LoD/1.12a": "0x6FF59D5E",
+        "LoD/1.13c": "0x6FF5A435",
+        "LoD/1.13d": "0x6FF59FF4"
       },
       "rvas": {
         "LoD/1.07": "0x1712F",
         "LoD/1.08": "0x170EF",
-        "LoD/1.09": "0x1B9FE",
-        "LoD/1.09b": "0x1B9FE",
-        "LoD/1.09d": "0x132CD",
-        "LoD/1.10": "0x1529C",
-        "LoD/1.11": "0x369B",
-        "LoD/1.11b": "0x7888",
-        "LoD/1.12a": "0x7EEC",
-        "LoD/1.13c": "0x7F07",
-        "LoD/1.13d": "0x20BF"
+        "LoD/1.09": "0x1725A",
+        "LoD/1.09b": "0x1725A",
+        "LoD/1.09d": "0x13627",
+        "LoD/1.10": "0x1E5BE",
+        "LoD/1.11": "0x4533",
+        "LoD/1.11b": "0xA16B",
+        "LoD/1.12a": "0x9D5E",
+        "LoD/1.13c": "0xA435",
+        "LoD/1.13d": "0x9FF4"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -29887,26 +38176,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF728BB",
         "LoD/1.09": "0x6FF6298B",
         "LoD/1.09b": "0x6FF6298B",
-        "LoD/1.09d": "0x6FF6CD5E",
-        "LoD/1.10": "0x6FF69D3F",
-        "LoD/1.11": "0x6FF519B7",
-        "LoD/1.11b": "0x6FF519AD",
-        "LoD/1.12a": "0x6FF51886",
-        "LoD/1.13c": "0x6FF51A5B",
-        "LoD/1.13d": "0x6FF51886"
+        "LoD/1.09d": "0x6FF6332C",
+        "LoD/1.10": "0x6FF6529C",
+        "LoD/1.11": "0x6FF5A9E2",
+        "LoD/1.11b": "0x6FF5A067",
+        "LoD/1.12a": "0x6FF59E62",
+        "LoD/1.13c": "0x6FF5A331",
+        "LoD/1.13d": "0x6FF5A0F8"
       },
       "rvas": {
         "LoD/1.07": "0x128FB",
         "LoD/1.08": "0x128BB",
         "LoD/1.09": "0x1298B",
         "LoD/1.09b": "0x1298B",
-        "LoD/1.09d": "0x1CD5E",
-        "LoD/1.10": "0x19D3F",
-        "LoD/1.11": "0x19B7",
-        "LoD/1.11b": "0x19AD",
-        "LoD/1.12a": "0x1886",
-        "LoD/1.13c": "0x1A5B",
-        "LoD/1.13d": "0x1886"
+        "LoD/1.09d": "0x1332C",
+        "LoD/1.10": "0x1529C",
+        "LoD/1.11": "0xA9E2",
+        "LoD/1.11b": "0xA067",
+        "LoD/1.12a": "0x9E62",
+        "LoD/1.13c": "0xA331",
+        "LoD/1.13d": "0xA0F8"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -30088,26 +38377,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF729AC",
         "LoD/1.09": "0x6FF62A7C",
         "LoD/1.09b": "0x6FF62A7C",
-        "LoD/1.09d": "0x6FF67CFA",
-        "LoD/1.10": "0x6FF651AB",
-        "LoD/1.11": "0x6FF57E62",
-        "LoD/1.11b": "0x6FF5232F",
-        "LoD/1.12a": "0x6FF524B0",
-        "LoD/1.13c": "0x6FF52090",
-        "LoD/1.13d": "0x6FF51F10"
+        "LoD/1.09d": "0x6FF6CDE7",
+        "LoD/1.10": "0x6FF6514C",
+        "LoD/1.11": "0x6FF534AA",
+        "LoD/1.11b": "0x6FF53BB3",
+        "LoD/1.12a": "0x6FF539D2",
+        "LoD/1.13c": "0x6FF53A7A",
+        "LoD/1.13d": "0x6FF56162"
       },
       "rvas": {
         "LoD/1.07": "0x129EC",
         "LoD/1.08": "0x129AC",
         "LoD/1.09": "0x12A7C",
         "LoD/1.09b": "0x12A7C",
-        "LoD/1.09d": "0x17CFA",
-        "LoD/1.10": "0x151AB",
-        "LoD/1.11": "0x7E62",
-        "LoD/1.11b": "0x232F",
-        "LoD/1.12a": "0x24B0",
-        "LoD/1.13c": "0x2090",
-        "LoD/1.13d": "0x1F10"
+        "LoD/1.09d": "0x1CDE7",
+        "LoD/1.10": "0x1514C",
+        "LoD/1.11": "0x34AA",
+        "LoD/1.11b": "0x3BB3",
+        "LoD/1.12a": "0x39D2",
+        "LoD/1.13c": "0x3A7A",
+        "LoD/1.13d": "0x6162"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -30175,26 +38464,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF72A04",
         "LoD/1.09": "0x6FF62AD4",
         "LoD/1.09b": "0x6FF62AD4",
-        "LoD/1.09d": "0x6FF63627",
-        "LoD/1.10": "0x6FF652F4",
-        "LoD/1.11": "0x6FF5390C",
-        "LoD/1.11b": "0x6FF533A3",
-        "LoD/1.12a": "0x6FF533AB",
-        "LoD/1.13c": "0x6FF53CEB",
-        "LoD/1.13d": "0x6FF533A3"
+        "LoD/1.09d": "0x6FF63475",
+        "LoD/1.10": "0x6FF6E647",
+        "LoD/1.11": "0x6FF55C92",
+        "LoD/1.11b": "0x6FF55CF7",
+        "LoD/1.12a": "0x6FF53FC2",
+        "LoD/1.13c": "0x6FF56BF8",
+        "LoD/1.13d": "0x6FF56752"
       },
       "rvas": {
         "LoD/1.07": "0x12A44",
         "LoD/1.08": "0x12A04",
         "LoD/1.09": "0x12AD4",
         "LoD/1.09b": "0x12AD4",
-        "LoD/1.09d": "0x13627",
-        "LoD/1.10": "0x152F4",
-        "LoD/1.11": "0x390C",
-        "LoD/1.11b": "0x33A3",
-        "LoD/1.12a": "0x33AB",
-        "LoD/1.13c": "0x3CEB",
-        "LoD/1.13d": "0x33A3"
+        "LoD/1.09d": "0x13475",
+        "LoD/1.10": "0x1E647",
+        "LoD/1.11": "0x5C92",
+        "LoD/1.11b": "0x5CF7",
+        "LoD/1.12a": "0x3FC2",
+        "LoD/1.13c": "0x6BF8",
+        "LoD/1.13d": "0x6752"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -30319,26 +38608,26 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.08": "0x6FF72BB6",
         "LoD/1.09": "0x6FF62C86",
         "LoD/1.09b": "0x6FF62C86",
-        "LoD/1.09d": "0x6FF6341D",
-        "LoD/1.10": "0x6FF6E647",
-        "LoD/1.11": "0x6FF52D54",
-        "LoD/1.11b": "0x6FF52180",
-        "LoD/1.12a": "0x6FF526EF",
-        "LoD/1.13c": "0x6FF56788",
-        "LoD/1.13d": "0x6FF5743A"
+        "LoD/1.09d": "0x6FF632CD",
+        "LoD/1.10": "0x6FF654A6",
+        "LoD/1.11": "0x6FF519AE",
+        "LoD/1.11b": "0x6FF519AD",
+        "LoD/1.12a": "0x6FF5187D",
+        "LoD/1.13c": "0x6FF51A52",
+        "LoD/1.13d": "0x6FF51886"
       },
       "rvas": {
         "LoD/1.07": "0x12BF6",
         "LoD/1.08": "0x12BB6",
         "LoD/1.09": "0x12C86",
         "LoD/1.09b": "0x12C86",
-        "LoD/1.09d": "0x1341D",
-        "LoD/1.10": "0x1E647",
-        "LoD/1.11": "0x2D54",
-        "LoD/1.11b": "0x2180",
-        "LoD/1.12a": "0x26EF",
-        "LoD/1.13c": "0x6788",
-        "LoD/1.13d": "0x743A"
+        "LoD/1.09d": "0x132CD",
+        "LoD/1.10": "0x154A6",
+        "LoD/1.11": "0x19AE",
+        "LoD/1.11b": "0x19AD",
+        "LoD/1.12a": "0x187D",
+        "LoD/1.13c": "0x1A52",
+        "LoD/1.13d": "0x1886"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -31586,7 +39875,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF633D6",
         "LoD/1.09b": "0x6FF633D6",
         "LoD/1.09d": "0x6FF64065",
-        "LoD/1.10": "0x6FF65B64"
+        "LoD/1.10": "0x6FF65CE1"
       },
       "rvas": {
         "LoD/1.07": "0x13346",
@@ -31594,7 +39883,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x133D6",
         "LoD/1.09b": "0x133D6",
         "LoD/1.09d": "0x14065",
-        "LoD/1.10": "0x15B64"
+        "LoD/1.10": "0x15CE1"
       },
       "sizes": {
         "LoD/1.07": 47,
@@ -35481,11 +43770,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF652BC",
         "LoD/1.09d": "0x6FF65F21",
         "LoD/1.10": "0x6FF67F0C",
-        "LoD/1.11": "0x6FF62BF0",
-        "LoD/1.11b": "0x6FF65160",
-        "LoD/1.12a": "0x6FF61AF0",
-        "LoD/1.13c": "0x6FF5D1A0",
-        "LoD/1.13d": "0x6FF67D00"
+        "LoD/1.11": "0x6FF5727A",
+        "LoD/1.11b": "0x6FF54956",
+        "LoD/1.12a": "0x6FF5594C",
+        "LoD/1.13c": "0x6FF549C5",
+        "LoD/1.13d": "0x6FF540B3"
       },
       "rvas": {
         "LoD/1.07": "0x15201",
@@ -35494,11 +43783,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x152BC",
         "LoD/1.09d": "0x15F21",
         "LoD/1.10": "0x17F0C",
-        "LoD/1.11": "0x12BF0",
-        "LoD/1.11b": "0x15160",
-        "LoD/1.12a": "0x11AF0",
-        "LoD/1.13c": "0xD1A0",
-        "LoD/1.13d": "0x17D00"
+        "LoD/1.11": "0x727A",
+        "LoD/1.11b": "0x4956",
+        "LoD/1.12a": "0x594C",
+        "LoD/1.13c": "0x49C5",
+        "LoD/1.13d": "0x40B3"
       },
       "sizes": {
         "LoD/1.07": 72,
@@ -35520,23 +43809,6 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a57b3ae583e4f6f104245d4da8d3b9fe",
-      "strings": {
-        "LoD/1.11": [
-          "\"Unrecoverable internal error %08x\""
-        ],
-        "LoD/1.11b": [
-          "\"Unrecoverable internal error %08x\""
-        ],
-        "LoD/1.12a": [
-          "\"Unrecoverable internal error %08x\""
-        ],
-        "LoD/1.13c": [
-          "\"Unrecoverable internal error %08x\""
-        ],
-        "LoD/1.13d": [
-          "\"Unrecoverable internal error %08x\""
-        ]
-      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -35570,11 +43842,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "a57b3ae583e4f6f104245d4da8d3b9fe",
         "LoD/1.09d": "a57b3ae583e4f6f104245d4da8d3b9fe",
         "LoD/1.10": "a57b3ae583e4f6f104245d4da8d3b9fe",
-        "LoD/1.11": "fdccc5bd44ab71d723a9244e8464fcd0",
-        "LoD/1.11b": "fdccc5bd44ab71d723a9244e8464fcd0",
-        "LoD/1.12a": "fdccc5bd44ab71d723a9244e8464fcd0",
-        "LoD/1.13c": "fdccc5bd44ab71d723a9244e8464fcd0",
-        "LoD/1.13d": "fdccc5bd44ab71d723a9244e8464fcd0"
+        "LoD/1.11": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.11b": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.12a": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.13c": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.13d": "288a4a209e4706fee9d14eabda44517a"
       }
     },
     "fog.dll_FindSmallBlockHeapEntry": {
@@ -36422,6 +44694,41 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -36726,19 +45033,19 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_MoveMemoryOverlap": {
       "addresses": {
         "LoD/1.07": "0x6FF765F0",
-        "LoD/1.08": "0x6FF72430",
-        "LoD/1.09": "0x6FF62500",
-        "LoD/1.09b": "0x6FF62500",
-        "LoD/1.09d": "0x6FF62CD0",
-        "LoD/1.10": "0x6FF64D20"
+        "LoD/1.08": "0x6FF765B0",
+        "LoD/1.09": "0x6FF666A0",
+        "LoD/1.09b": "0x6FF666A0",
+        "LoD/1.09d": "0x6FF67140",
+        "LoD/1.10": "0x6FF69200"
       },
       "rvas": {
         "LoD/1.07": "0x165F0",
-        "LoD/1.08": "0x12430",
-        "LoD/1.09": "0x12500",
-        "LoD/1.09b": "0x12500",
-        "LoD/1.09d": "0x12CD0",
-        "LoD/1.10": "0x14D20"
+        "LoD/1.08": "0x165B0",
+        "LoD/1.09": "0x166A0",
+        "LoD/1.09b": "0x166A0",
+        "LoD/1.09d": "0x17140",
+        "LoD/1.10": "0x19200"
       },
       "sizes": {
         "LoD/1.07": 664,
@@ -37615,28 +45922,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF771AA",
         "LoD/1.08": "0x6FF7716A",
-        "LoD/1.09": "0x6FF671DF",
-        "LoD/1.09b": "0x6FF671DF",
-        "LoD/1.09d": "0x6FF6CDE7",
-        "LoD/1.10": "0x6FF6E5BE",
-        "LoD/1.11": "0x6FF5368F",
-        "LoD/1.11b": "0x6FF598EB",
-        "LoD/1.12a": "0x6FF596AE",
-        "LoD/1.13c": "0x6FF53A6E",
-        "LoD/1.13d": "0x6FF59A0B"
+        "LoD/1.09": "0x6FF6BA87",
+        "LoD/1.09b": "0x6FF6BA87",
+        "LoD/1.09d": "0x6FF6341D",
+        "LoD/1.10": "0x6FF69DBA",
+        "LoD/1.11": "0x6FF5369B",
+        "LoD/1.11b": "0x6FF53DA4",
+        "LoD/1.12a": "0x6FF537E1",
+        "LoD/1.13c": "0x6FF53889",
+        "LoD/1.13d": "0x6FF55F71"
       },
       "rvas": {
         "LoD/1.07": "0x171AA",
         "LoD/1.08": "0x1716A",
-        "LoD/1.09": "0x171DF",
-        "LoD/1.09b": "0x171DF",
-        "LoD/1.09d": "0x1CDE7",
-        "LoD/1.10": "0x1E5BE",
-        "LoD/1.11": "0x368F",
-        "LoD/1.11b": "0x98EB",
-        "LoD/1.12a": "0x96AE",
-        "LoD/1.13c": "0x3A6E",
-        "LoD/1.13d": "0x9A0B"
+        "LoD/1.09": "0x1BA87",
+        "LoD/1.09b": "0x1BA87",
+        "LoD/1.09d": "0x1341D",
+        "LoD/1.10": "0x19DBA",
+        "LoD/1.11": "0x369B",
+        "LoD/1.11b": "0x3DA4",
+        "LoD/1.12a": "0x37E1",
+        "LoD/1.13c": "0x3889",
+        "LoD/1.13d": "0x5F71"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -37946,6 +46253,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6dad5d06763847d66c3aa4a89105e250",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -38165,9 +46489,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF67590",
         "LoD/1.09d": "0x6FF688F0",
         "LoD/1.10": "0x6FF6A0BE",
-        "LoD/1.11": "0x6FF558E8",
-        "LoD/1.11b": "0x6FF5594D",
-        "LoD/1.12a": "0x6FF53C18",
+        "LoD/1.11": "0x6FF5593A",
+        "LoD/1.11b": "0x6FF5599F",
+        "LoD/1.12a": "0x6FF53C6A",
         "LoD/1.13c": "0x6FF568A0",
         "LoD/1.13d": "0x6FF563FA"
       },
@@ -38178,9 +46502,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x17590",
         "LoD/1.09d": "0x188F0",
         "LoD/1.10": "0x1A0BE",
-        "LoD/1.11": "0x58E8",
-        "LoD/1.11b": "0x594D",
-        "LoD/1.12a": "0x3C18",
+        "LoD/1.11": "0x593A",
+        "LoD/1.11b": "0x599F",
+        "LoD/1.12a": "0x3C6A",
         "LoD/1.13c": "0x68A0",
         "LoD/1.13d": "0x63FA"
       },
@@ -38252,10 +46576,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF675BF",
         "LoD/1.09d": "0x6FF6891F",
         "LoD/1.10": "0x6FF6A09B",
-        "LoD/1.11": "0x6FF55917",
+        "LoD/1.11": "0x6FF55969",
         "LoD/1.11b": "0x6FF5597C",
         "LoD/1.12a": "0x6FF53C99",
-        "LoD/1.13c": "0x6FF568CF",
+        "LoD/1.13c": "0x6FF5687D",
         "LoD/1.13d": "0x6FF56429"
       },
       "rvas": {
@@ -38265,10 +46589,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x175BF",
         "LoD/1.09d": "0x1891F",
         "LoD/1.10": "0x1A09B",
-        "LoD/1.11": "0x5917",
+        "LoD/1.11": "0x5969",
         "LoD/1.11b": "0x597C",
         "LoD/1.12a": "0x3C99",
-        "LoD/1.13c": "0x68CF",
+        "LoD/1.13c": "0x687D",
         "LoD/1.13d": "0x6429"
       },
       "sizes": {
@@ -38339,9 +46663,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF675E2",
         "LoD/1.09d": "0x6FF68942",
         "LoD/1.10": "0x6FF6A06C",
-        "LoD/1.11": "0x6FF5593A",
-        "LoD/1.11b": "0x6FF5599F",
-        "LoD/1.12a": "0x6FF53C6A",
+        "LoD/1.11": "0x6FF558E8",
+        "LoD/1.11b": "0x6FF5594D",
+        "LoD/1.12a": "0x6FF53C18",
         "LoD/1.13c": "0x6FF5684E",
         "LoD/1.13d": "0x6FF563A8"
       },
@@ -38352,9 +46676,9 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x175E2",
         "LoD/1.09d": "0x18942",
         "LoD/1.10": "0x1A06C",
-        "LoD/1.11": "0x593A",
-        "LoD/1.11b": "0x599F",
-        "LoD/1.12a": "0x3C6A",
+        "LoD/1.11": "0x58E8",
+        "LoD/1.11b": "0x594D",
+        "LoD/1.12a": "0x3C18",
         "LoD/1.13c": "0x684E",
         "LoD/1.13d": "0x63A8"
       },
@@ -38426,10 +46750,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF67611",
         "LoD/1.09d": "0x6FF68971",
         "LoD/1.10": "0x6FF6A0ED",
-        "LoD/1.11": "0x6FF55969",
+        "LoD/1.11": "0x6FF55917",
         "LoD/1.11b": "0x6FF559CE",
         "LoD/1.12a": "0x6FF53C47",
-        "LoD/1.13c": "0x6FF5687D",
+        "LoD/1.13c": "0x6FF568CF",
         "LoD/1.13d": "0x6FF563D7"
       },
       "rvas": {
@@ -38439,10 +46763,10 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x17611",
         "LoD/1.09d": "0x18971",
         "LoD/1.10": "0x1A0ED",
-        "LoD/1.11": "0x5969",
+        "LoD/1.11": "0x5917",
         "LoD/1.11b": "0x59CE",
         "LoD/1.12a": "0x3C47",
-        "LoD/1.13c": "0x687D",
+        "LoD/1.13c": "0x68CF",
         "LoD/1.13d": "0x63D7"
       },
       "sizes": {
@@ -38600,11 +46924,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF676A7",
         "LoD/1.09d": "0x6FF68A07",
         "LoD/1.10": "0x6FF6AB07",
-        "LoD/1.11": "0x6FF55AFD",
-        "LoD/1.11b": "0x6FF55B62",
-        "LoD/1.12a": "0x6FF53E2D",
-        "LoD/1.13c": "0x6FF56A63",
-        "LoD/1.13d": "0x6FF565BD"
+        "LoD/1.11": "0x6FF55AF4",
+        "LoD/1.11b": "0x6FF55B59",
+        "LoD/1.12a": "0x6FF53E24",
+        "LoD/1.13c": "0x6FF56A5A",
+        "LoD/1.13d": "0x6FF565B4"
       },
       "rvas": {
         "LoD/1.07": "0x175F7",
@@ -38613,11 +46937,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x176A7",
         "LoD/1.09d": "0x18A07",
         "LoD/1.10": "0x1AB07",
-        "LoD/1.11": "0x5AFD",
-        "LoD/1.11b": "0x5B62",
-        "LoD/1.12a": "0x3E2D",
-        "LoD/1.13c": "0x6A63",
-        "LoD/1.13d": "0x65BD"
+        "LoD/1.11": "0x5AF4",
+        "LoD/1.11b": "0x5B59",
+        "LoD/1.12a": "0x3E24",
+        "LoD/1.13c": "0x6A5A",
+        "LoD/1.13d": "0x65B4"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -38687,11 +47011,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF676B0",
         "LoD/1.09d": "0x6FF68A10",
         "LoD/1.10": "0x6FF6AB10",
-        "LoD/1.11": "0x6FF55AF4",
-        "LoD/1.11b": "0x6FF55B59",
-        "LoD/1.12a": "0x6FF53E24",
-        "LoD/1.13c": "0x6FF56A5A",
-        "LoD/1.13d": "0x6FF565B4"
+        "LoD/1.11": "0x6FF55AFD",
+        "LoD/1.11b": "0x6FF55B62",
+        "LoD/1.12a": "0x6FF53E2D",
+        "LoD/1.13c": "0x6FF56A63",
+        "LoD/1.13d": "0x6FF565BD"
       },
       "rvas": {
         "LoD/1.07": "0x17600",
@@ -38700,11 +47024,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x176B0",
         "LoD/1.09d": "0x18A10",
         "LoD/1.10": "0x1AB10",
-        "LoD/1.11": "0x5AF4",
-        "LoD/1.11b": "0x5B59",
-        "LoD/1.12a": "0x3E24",
-        "LoD/1.13c": "0x6A5A",
-        "LoD/1.13d": "0x65B4"
+        "LoD/1.11": "0x5AFD",
+        "LoD/1.11b": "0x5B62",
+        "LoD/1.12a": "0x3E2D",
+        "LoD/1.13c": "0x6A63",
+        "LoD/1.13d": "0x65BD"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -38883,17 +47207,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_SeekFileWithLock": {
       "addresses": {
         "LoD/1.07": "0x6FF77819",
-        "LoD/1.08": "0x6FF77E07",
+        "LoD/1.08": "0x6FF777D9",
         "LoD/1.09": "0x6FF678C9",
-        "LoD/1.09b": "0x6FF67EF7",
+        "LoD/1.09b": "0x6FF678C9",
         "LoD/1.09d": "0x6FF68C29",
         "LoD/1.10": "0x6FF6A352"
       },
       "rvas": {
         "LoD/1.07": "0x17819",
-        "LoD/1.08": "0x17E07",
+        "LoD/1.08": "0x177D9",
         "LoD/1.09": "0x178C9",
-        "LoD/1.09b": "0x17EF7",
+        "LoD/1.09b": "0x178C9",
         "LoD/1.09d": "0x18C29",
         "LoD/1.10": "0x1A352"
       },
@@ -39002,11 +47326,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF679A1",
         "LoD/1.09d": "0x6FF68D01",
         "LoD/1.10": "0x6FF6A21B",
-        "LoD/1.11": "0x6FF6E810",
-        "LoD/1.11b": "0x6FF6E250",
-        "LoD/1.12a": "0x6FF6B890",
-        "LoD/1.13c": "0x6FF63C10",
-        "LoD/1.13d": "0x6FF6EAD0"
+        "LoD/1.11": "0x6FF566D5",
+        "LoD/1.11b": "0x6FF5633D",
+        "LoD/1.12a": "0x6FF54A5A",
+        "LoD/1.13c": "0x6FF572E0",
+        "LoD/1.13d": "0x6FF56D98"
       },
       "rvas": {
         "LoD/1.07": "0x178F1",
@@ -39015,11 +47339,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x179A1",
         "LoD/1.09d": "0x18D01",
         "LoD/1.10": "0x1A21B",
-        "LoD/1.11": "0x1E810",
-        "LoD/1.11b": "0x1E250",
-        "LoD/1.12a": "0x1B890",
-        "LoD/1.13c": "0x13C10",
-        "LoD/1.13d": "0x1EAD0"
+        "LoD/1.11": "0x66D5",
+        "LoD/1.11b": "0x633D",
+        "LoD/1.12a": "0x4A5A",
+        "LoD/1.13c": "0x72E0",
+        "LoD/1.13d": "0x6D98"
       },
       "sizes": {
         "LoD/1.07": 46,
@@ -39074,11 +47398,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0db91ea76f5c7c9fd0bef446c106db61",
         "LoD/1.09d": "0db91ea76f5c7c9fd0bef446c106db61",
         "LoD/1.10": "0db91ea76f5c7c9fd0bef446c106db61",
-        "LoD/1.11": "25e27780bc3e09524014f612d760dbd7",
-        "LoD/1.11b": "25e27780bc3e09524014f612d760dbd7",
-        "LoD/1.12a": "25e27780bc3e09524014f612d760dbd7",
-        "LoD/1.13c": "25e27780bc3e09524014f612d760dbd7",
-        "LoD/1.13d": "25e27780bc3e09524014f612d760dbd7"
+        "LoD/1.11": "29a9619b77ee062a7363cd1953a97c8b",
+        "LoD/1.11b": "29a9619b77ee062a7363cd1953a97c8b",
+        "LoD/1.12a": "29a9619b77ee062a7363cd1953a97c8b",
+        "LoD/1.13c": "29a9619b77ee062a7363cd1953a97c8b",
+        "LoD/1.13d": "29a9619b77ee062a7363cd1953a97c8b"
       }
     },
     "fog.dll_FlushWriteBuffer": {
@@ -39604,7 +47928,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x6FF68135",
         "LoD/1.09b": "0x6FF68135",
         "LoD/1.09d": "0x6FF69257",
-        "LoD/1.10": "0x6FF6A856"
+        "LoD/1.10": "0x6FF6AD29"
       },
       "rvas": {
         "LoD/1.07": "0x17E47",
@@ -39612,7 +47936,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09": "0x18135",
         "LoD/1.09b": "0x18135",
         "LoD/1.09d": "0x19257",
-        "LoD/1.10": "0x1A856"
+        "LoD/1.10": "0x1AD29"
       },
       "sizes": {
         "LoD/1.07": 101,
@@ -39714,19 +48038,19 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_WriteFileLocked": {
       "addresses": {
         "LoD/1.07": "0x6FF78085",
-        "LoD/1.08": "0x6FF777D9",
+        "LoD/1.08": "0x6FF77E07",
         "LoD/1.09": "0x6FF67EF7",
-        "LoD/1.09b": "0x6FF678C9",
+        "LoD/1.09b": "0x6FF67EF7",
         "LoD/1.09d": "0x6FF69495",
-        "LoD/1.10": "0x6FF6AD29"
+        "LoD/1.10": "0x6FF6A856"
       },
       "rvas": {
         "LoD/1.07": "0x18085",
-        "LoD/1.08": "0x177D9",
+        "LoD/1.08": "0x17E07",
         "LoD/1.09": "0x17EF7",
-        "LoD/1.09b": "0x178C9",
+        "LoD/1.09b": "0x17EF7",
         "LoD/1.09d": "0x19495",
-        "LoD/1.10": "0x1AD29"
+        "LoD/1.10": "0x1A856"
       },
       "sizes": {
         "LoD/1.07": 101,
@@ -40237,6 +48561,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c114525a4c0480a9cc4b16231f40eae1",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".PAX\""
@@ -41745,27 +50086,27 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ConvertExtPrecToDouble": {
       "addresses": {
         "LoD/1.07": "0x6FF798EB",
-        "LoD/1.08": "0x6FF798C1",
-        "LoD/1.09": "0x6FF699B1",
-        "LoD/1.09b": "0x6FF699B1",
-        "LoD/1.09d": "0x6FF6AD11",
+        "LoD/1.08": "0x6FF798AB",
+        "LoD/1.09": "0x6FF6999B",
+        "LoD/1.09b": "0x6FF6999B",
+        "LoD/1.09d": "0x6FF6ACFB",
         "LoD/1.10": "0x6FF6C571",
-        "LoD/1.11": "0x6FF5BBFF",
-        "LoD/1.11b": "0x6FF5BC6B",
-        "LoD/1.12a": "0x6FF5BD3B",
+        "LoD/1.11": "0x6FF5BBE9",
+        "LoD/1.11b": "0x6FF5BC55",
+        "LoD/1.12a": "0x6FF5BD25",
         "LoD/1.13c": "0x6FF5BD4B",
         "LoD/1.13d": "0x6FF5BC6B"
       },
       "rvas": {
         "LoD/1.07": "0x198EB",
-        "LoD/1.08": "0x198C1",
-        "LoD/1.09": "0x199B1",
-        "LoD/1.09b": "0x199B1",
-        "LoD/1.09d": "0x1AD11",
+        "LoD/1.08": "0x198AB",
+        "LoD/1.09": "0x1999B",
+        "LoD/1.09b": "0x1999B",
+        "LoD/1.09d": "0x1ACFB",
         "LoD/1.10": "0x1C571",
-        "LoD/1.11": "0xBBFF",
-        "LoD/1.11b": "0xBC6B",
-        "LoD/1.12a": "0xBD3B",
+        "LoD/1.11": "0xBBE9",
+        "LoD/1.11b": "0xBC55",
+        "LoD/1.12a": "0xBD25",
         "LoD/1.13c": "0xBD4B",
         "LoD/1.13d": "0xBC6B"
       },
@@ -41832,27 +50173,27 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ConvertExtendedToFloat": {
       "addresses": {
         "LoD/1.07": "0x6FF79901",
-        "LoD/1.08": "0x6FF798AB",
-        "LoD/1.09": "0x6FF6999B",
-        "LoD/1.09b": "0x6FF6999B",
-        "LoD/1.09d": "0x6FF6ACFB",
+        "LoD/1.08": "0x6FF798C1",
+        "LoD/1.09": "0x6FF699B1",
+        "LoD/1.09b": "0x6FF699B1",
+        "LoD/1.09d": "0x6FF6AD11",
         "LoD/1.10": "0x6FF6C55B",
-        "LoD/1.11": "0x6FF5BBE9",
-        "LoD/1.11b": "0x6FF5BC55",
-        "LoD/1.12a": "0x6FF5BD25",
+        "LoD/1.11": "0x6FF5BBFF",
+        "LoD/1.11b": "0x6FF5BC6B",
+        "LoD/1.12a": "0x6FF5BD3B",
         "LoD/1.13c": "0x6FF5BD35",
         "LoD/1.13d": "0x6FF5BC55"
       },
       "rvas": {
         "LoD/1.07": "0x19901",
-        "LoD/1.08": "0x198AB",
-        "LoD/1.09": "0x1999B",
-        "LoD/1.09b": "0x1999B",
-        "LoD/1.09d": "0x1ACFB",
+        "LoD/1.08": "0x198C1",
+        "LoD/1.09": "0x199B1",
+        "LoD/1.09b": "0x199B1",
+        "LoD/1.09d": "0x1AD11",
         "LoD/1.10": "0x1C55B",
-        "LoD/1.11": "0xBBE9",
-        "LoD/1.11b": "0xBC55",
-        "LoD/1.12a": "0xBD25",
+        "LoD/1.11": "0xBBFF",
+        "LoD/1.11b": "0xBC6B",
+        "LoD/1.12a": "0xBD3B",
         "LoD/1.13c": "0xBD35",
         "LoD/1.13d": "0xBC55"
       },
@@ -41920,17 +50261,17 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF79917",
         "LoD/1.08": "0x6FF798D7",
-        "LoD/1.09": "0x6FF699C7",
+        "LoD/1.09": "0x6FF699F4",
         "LoD/1.09b": "0x6FF699C7",
-        "LoD/1.09d": "0x6FF6AD27",
+        "LoD/1.09d": "0x6FF6AD54",
         "LoD/1.10": "0x6FF6C5B4"
       },
       "rvas": {
         "LoD/1.07": "0x19917",
         "LoD/1.08": "0x198D7",
-        "LoD/1.09": "0x199C7",
+        "LoD/1.09": "0x199F4",
         "LoD/1.09b": "0x199C7",
-        "LoD/1.09d": "0x1AD27",
+        "LoD/1.09d": "0x1AD54",
         "LoD/1.10": "0x1C5B4"
       },
       "sizes": {
@@ -41977,17 +50318,17 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF79944",
         "LoD/1.08": "0x6FF79904",
-        "LoD/1.09": "0x6FF699F4",
+        "LoD/1.09": "0x6FF699C7",
         "LoD/1.09b": "0x6FF699F4",
-        "LoD/1.09d": "0x6FF6AD54",
+        "LoD/1.09d": "0x6FF6AD27",
         "LoD/1.10": "0x6FF6C587"
       },
       "rvas": {
         "LoD/1.07": "0x19944",
         "LoD/1.08": "0x19904",
-        "LoD/1.09": "0x199F4",
+        "LoD/1.09": "0x199C7",
         "LoD/1.09b": "0x199F4",
-        "LoD/1.09d": "0x1AD54",
+        "LoD/1.09d": "0x1AD27",
         "LoD/1.10": "0x1C587"
       },
       "sizes": {
@@ -44042,11 +52383,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF6B3A0",
         "LoD/1.09d": "0x6FF6C700",
         "LoD/1.10": "0x6FF6DF60",
-        "LoD/1.11": "0x6FF566D5",
-        "LoD/1.11b": "0x6FF5633D",
-        "LoD/1.12a": "0x6FF54A5A",
-        "LoD/1.13c": "0x6FF572E0",
-        "LoD/1.13d": "0x6FF56D98"
+        "LoD/1.11": "0x6FF6E810",
+        "LoD/1.11b": "0x6FF6E250",
+        "LoD/1.12a": "0x6FF6B890",
+        "LoD/1.13c": "0x6FF63C10",
+        "LoD/1.13d": "0x6FF6EAD0"
       },
       "rvas": {
         "LoD/1.07": "0x1B2F0",
@@ -44055,11 +52396,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x1B3A0",
         "LoD/1.09d": "0x1C700",
         "LoD/1.10": "0x1DF60",
-        "LoD/1.11": "0x66D5",
-        "LoD/1.11b": "0x633D",
-        "LoD/1.12a": "0x4A5A",
-        "LoD/1.13c": "0x72E0",
-        "LoD/1.13d": "0x6D98"
+        "LoD/1.11": "0x1E810",
+        "LoD/1.11b": "0x1E250",
+        "LoD/1.12a": "0x1B890",
+        "LoD/1.13c": "0x13C10",
+        "LoD/1.13d": "0x1EAD0"
       },
       "sizes": {
         "LoD/1.07": 46,
@@ -44114,11 +52455,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0432b550769644da846baf2a836117f2",
         "LoD/1.09d": "0432b550769644da846baf2a836117f2",
         "LoD/1.10": "0432b550769644da846baf2a836117f2",
-        "LoD/1.11": "29a9619b77ee062a7363cd1953a97c8b",
-        "LoD/1.11b": "29a9619b77ee062a7363cd1953a97c8b",
-        "LoD/1.12a": "29a9619b77ee062a7363cd1953a97c8b",
-        "LoD/1.13c": "29a9619b77ee062a7363cd1953a97c8b",
-        "LoD/1.13d": "29a9619b77ee062a7363cd1953a97c8b"
+        "LoD/1.11": "25e27780bc3e09524014f612d760dbd7",
+        "LoD/1.11b": "25e27780bc3e09524014f612d760dbd7",
+        "LoD/1.12a": "25e27780bc3e09524014f612d760dbd7",
+        "LoD/1.13c": "25e27780bc3e09524014f612d760dbd7",
+        "LoD/1.13d": "25e27780bc3e09524014f612d760dbd7"
       }
     },
     "fog.dll_InitializeTimezoneData": {
@@ -44353,28 +52694,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF7B8B2",
         "LoD/1.08": "0x6FF7B872",
-        "LoD/1.09": "0x6FF5B3C0",
+        "LoD/1.09": "0x6FF6B962",
         "LoD/1.09b": "0x6FF6B962",
-        "LoD/1.09d": "0x6FF6CCC2",
+        "LoD/1.09d": "0x6FF5B0F0",
         "LoD/1.10": "0x6FF5C9D0",
-        "LoD/1.11": "0x6FF6F840",
+        "LoD/1.11": "0x6FF597B5",
         "LoD/1.11b": "0x6FF68F60",
-        "LoD/1.12a": "0x6FF6A1A0",
-        "LoD/1.13c": "0x6FF6A9C0",
-        "LoD/1.13d": "0x6FF6B4B0"
+        "LoD/1.12a": "0x6FF617D0",
+        "LoD/1.13c": "0x6FF5A5AC",
+        "LoD/1.13d": "0x6FF6DD70"
       },
       "rvas": {
         "LoD/1.07": "0x1B8B2",
         "LoD/1.08": "0x1B872",
-        "LoD/1.09": "0xB3C0",
+        "LoD/1.09": "0x1B962",
         "LoD/1.09b": "0x1B962",
-        "LoD/1.09d": "0x1CCC2",
+        "LoD/1.09d": "0xB0F0",
         "LoD/1.10": "0xC9D0",
-        "LoD/1.11": "0x1F840",
+        "LoD/1.11": "0x97B5",
         "LoD/1.11b": "0x18F60",
-        "LoD/1.12a": "0x1A1A0",
-        "LoD/1.13c": "0x1A9C0",
-        "LoD/1.13d": "0x1B4B0"
+        "LoD/1.12a": "0x117D0",
+        "LoD/1.13c": "0xA5AC",
+        "LoD/1.13d": "0x1DD70"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -44497,28 +52838,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF7B94E",
         "LoD/1.08": "0x6FF7B90E",
-        "LoD/1.09": "0x6FF6BA87",
-        "LoD/1.09b": "0x6FF6BA87",
-        "LoD/1.09d": "0x6FF67C7F",
-        "LoD/1.10": "0x6FF654A6",
-        "LoD/1.11": "0x6FF5A9E2",
-        "LoD/1.11b": "0x6FF5A16B",
-        "LoD/1.12a": "0x6FF59D5E",
-        "LoD/1.13c": "0x6FF5A435",
-        "LoD/1.13d": "0x6FF5A0F8"
+        "LoD/1.09": "0x6FF671DF",
+        "LoD/1.09b": "0x6FF671DF",
+        "LoD/1.09d": "0x6FF67CFA",
+        "LoD/1.10": "0x6FF651AB",
+        "LoD/1.11": "0x6FF52F93",
+        "LoD/1.11b": "0x6FF57E51",
+        "LoD/1.12a": "0x6FF526EF",
+        "LoD/1.13c": "0x6FF52090",
+        "LoD/1.13d": "0x6FF57E52"
       },
       "rvas": {
         "LoD/1.07": "0x1B94E",
         "LoD/1.08": "0x1B90E",
-        "LoD/1.09": "0x1BA87",
-        "LoD/1.09b": "0x1BA87",
-        "LoD/1.09d": "0x17C7F",
-        "LoD/1.10": "0x154A6",
-        "LoD/1.11": "0xA9E2",
-        "LoD/1.11b": "0xA16B",
-        "LoD/1.12a": "0x9D5E",
-        "LoD/1.13c": "0xA435",
-        "LoD/1.13d": "0xA0F8"
+        "LoD/1.09": "0x171DF",
+        "LoD/1.09b": "0x171DF",
+        "LoD/1.09d": "0x17CFA",
+        "LoD/1.10": "0x151AB",
+        "LoD/1.11": "0x2F93",
+        "LoD/1.11b": "0x7E51",
+        "LoD/1.12a": "0x26EF",
+        "LoD/1.13c": "0x2090",
+        "LoD/1.13d": "0x7E52"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -44584,28 +52925,28 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF7B9D7",
         "LoD/1.08": "0x6FF7B997",
-        "LoD/1.09": "0x6FF6725A",
-        "LoD/1.09b": "0x6FF6725A",
-        "LoD/1.09d": "0x6FF6332C",
-        "LoD/1.10": "0x6FF69DBA",
-        "LoD/1.11": "0x6FF5299E",
-        "LoD/1.11b": "0x6FF52A86",
-        "LoD/1.12a": "0x6FF529E0",
-        "LoD/1.13c": "0x6FF52B9A",
-        "LoD/1.13d": "0x6FF52C90"
+        "LoD/1.09": "0x6FF6B9FE",
+        "LoD/1.09b": "0x6FF6B9FE",
+        "LoD/1.09d": "0x6FF6CD5E",
+        "LoD/1.10": "0x6FF652F4",
+        "LoD/1.11": "0x6FF519B7",
+        "LoD/1.11b": "0x6FF519A4",
+        "LoD/1.12a": "0x6FF51886",
+        "LoD/1.13c": "0x6FF51A5B",
+        "LoD/1.13d": "0x6FF5187D"
       },
       "rvas": {
         "LoD/1.07": "0x1B9D7",
         "LoD/1.08": "0x1B997",
-        "LoD/1.09": "0x1725A",
-        "LoD/1.09b": "0x1725A",
-        "LoD/1.09d": "0x1332C",
-        "LoD/1.10": "0x19DBA",
-        "LoD/1.11": "0x299E",
-        "LoD/1.11b": "0x2A86",
-        "LoD/1.12a": "0x29E0",
-        "LoD/1.13c": "0x2B9A",
-        "LoD/1.13d": "0x2C90"
+        "LoD/1.09": "0x1B9FE",
+        "LoD/1.09b": "0x1B9FE",
+        "LoD/1.09d": "0x1CD5E",
+        "LoD/1.10": "0x152F4",
+        "LoD/1.11": "0x19B7",
+        "LoD/1.11b": "0x19A4",
+        "LoD/1.12a": "0x1886",
+        "LoD/1.13c": "0x1A5B",
+        "LoD/1.13d": "0x187D"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -46138,11 +54479,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x6FF6C999",
         "LoD/1.09d": "0x6FF6DDA9",
         "LoD/1.10": "0x6FF6F5A9",
-        "LoD/1.11": "0x6FF5C000",
-        "LoD/1.11b": "0x6FF5C000",
-        "LoD/1.12a": "0x6FF5C0EC",
-        "LoD/1.13c": "0x6FF5C0FC",
-        "LoD/1.13d": "0x6FF5C000"
+        "LoD/1.11": "0x6FF64030",
+        "LoD/1.11b": "0x6FF669E0",
+        "LoD/1.12a": "0x6FF62F30",
+        "LoD/1.13c": "0x6FF5EA20",
+        "LoD/1.13d": "0x6FF670F0"
       },
       "rvas": {
         "LoD/1.07": "0x1C8E9",
@@ -46151,11 +54492,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "0x1C999",
         "LoD/1.09d": "0x1DDA9",
         "LoD/1.10": "0x1F5A9",
-        "LoD/1.11": "0xC000",
-        "LoD/1.11b": "0xC000",
-        "LoD/1.12a": "0xC0EC",
-        "LoD/1.13c": "0xC0FC",
-        "LoD/1.13d": "0xC000"
+        "LoD/1.11": "0x14030",
+        "LoD/1.11b": "0x169E0",
+        "LoD/1.12a": "0x12F30",
+        "LoD/1.13c": "0xEA20",
+        "LoD/1.13d": "0x170F0"
       },
       "sizes": {
         "LoD/1.07": 33,
@@ -46210,11 +54551,11 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09b": "bff073652f00cbfc0b0f227bb7a313e1",
         "LoD/1.09d": "bff073652f00cbfc0b0f227bb7a313e1",
         "LoD/1.10": "bff073652f00cbfc0b0f227bb7a313e1",
-        "LoD/1.11": "c4400c8562aa84099781d0cf50c17c5c",
-        "LoD/1.11b": "c4400c8562aa84099781d0cf50c17c5c",
-        "LoD/1.12a": "c4400c8562aa84099781d0cf50c17c5c",
-        "LoD/1.13c": "c4400c8562aa84099781d0cf50c17c5c",
-        "LoD/1.13d": "c4400c8562aa84099781d0cf50c17c5c"
+        "LoD/1.11": "b50cacddfaff5a71225c273352bc6efb",
+        "LoD/1.11b": "b50cacddfaff5a71225c273352bc6efb",
+        "LoD/1.12a": "b50cacddfaff5a71225c273352bc6efb",
+        "LoD/1.13c": "b50cacddfaff5a71225c273352bc6efb",
+        "LoD/1.13d": "b50cacddfaff5a71225c273352bc6efb"
       }
     },
     "fog.dll____add_12": {
@@ -47874,6 +56215,83 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:59ad52a59b452669abc0ef2503a759fa",
+      "callees": {
+        "LoD/1.08": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ],
+        "LoD/1.09": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ],
+        "LoD/1.10": [
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError",
+          "EnterCriticalSectionWrapper",
+          "FogFatalError"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"MEMORY ERROR: Pool Blocks Overflowed\"",
@@ -48001,6 +56419,58 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:55dd8688622c927f5bc4e8fd76a2c35f",
+      "callees": {
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 37,
         "LoD/1.09": 37,
@@ -48051,6 +56521,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10145",
+      "callees": {
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -48116,6 +56608,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10147",
+      "callees": {
+        "LoD/1.08": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09b": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -48323,6 +56852,24 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:0b35e998d399937e74e143528a2164a0",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_503",
+          "Ordinal_503"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_503",
+          "Ordinal_503"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_503",
+          "Ordinal_503"
+        ],
+        "LoD/1.10": [
+          "Ordinal_503",
+          "Ordinal_503"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -48390,6 +56937,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10168",
+      "callees": {
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
@@ -48420,6 +56972,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "API",
       "index": "API:a7e5469f863683df96fb7dd8fd0b5ba7",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
@@ -48466,33 +57025,56 @@ var FUNCTIONS_Fog_dll = {
     },
     "fog.dll_STR_f5609875b324": {
       "addresses": {
-        "LoD/1.09d": "0x6FF53910"
+        "LoD/1.09d": "0x6FF53910",
+        "LoD/1.10": "0x6FF55550"
       },
       "rvas": {
-        "LoD/1.09d": "0x3910"
+        "LoD/1.09d": "0x3910",
+        "LoD/1.10": "0x5550"
       },
       "sizes": {
-        "LoD/1.09d": 197
+        "LoD/1.09d": 197,
+        "LoD/1.10": 209
       },
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:f5609875b3246a47475e8ff0279f370d",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
           "\"DC2 0x%08X ptClient->ptNextClient = %08X\"",
           "\"DC1 client %d refcount= %d\"",
           "\"  ptClient->ptNextClient =  %08X\""
+        ],
+        "LoD/1.10": [
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
         ]
       },
       "basic_block_counts": {
-        "LoD/1.09d": 7
+        "LoD/1.09d": 7,
+        "LoD/1.10": 12
       },
       "loop_counts": {
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.09d": "c52d276cc07a312958f9d4c994f4ae72"
+        "LoD/1.09d": "c52d276cc07a312958f9d4c994f4ae72",
+        "LoD/1.10": "2dfc10a43fa53d4a409c4b5eaf48d3e0"
       }
     },
     "fog.dll_EXP_10165": {
@@ -48514,6 +57096,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10165",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
@@ -48551,6 +57153,14 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "API",
       "index": "API:8cd99d4cefa75a22ed53f2cd047faa6f",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QSer...",
@@ -48586,6 +57196,14 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10188",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09d": 4,
         "LoD/1.10": 4
@@ -48612,6 +57230,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:62794276b3655fbdf67e28d5219c8652",
+      "callees": {
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "CloseHandleWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"[SERVER]  s_CreateServerSocket failed on socket()...",
@@ -48642,6 +57267,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:b9c28b013ccc5017d24123347156e335",
+      "callees": {
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"QSNTResetPort-1\"",
@@ -48673,6 +57305,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:b2324314a0d80bfcf1c6ae0f682694e3",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09d": 21
       },
@@ -48696,6 +57333,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:26e76a9272bcd846c4d4e4f36a0ba571",
+      "callees": {
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ShutdownStubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"sAcceptThread-1\"",
@@ -48729,6 +57381,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:4c4341162a7c684c2b1c5b853edc9370",
+      "callees": {
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "ShutdownStubNoOp",
+          "FogAssert",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"user on hack list\"",
@@ -48785,6 +57452,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "API",
       "index": "API:01ea08240fc2c95f093f1cac50e874e3",
+      "callees": {
+        "LoD/1.09d": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09d": 4
       },
@@ -48908,6 +57581,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10235",
+      "callees": {
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "ComputeStringHash"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"Fog\\\\Src\\\\ErrorManager.cpp\"",
@@ -48954,7 +57654,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "0x6FF5CE20",
         "LoD/1.12a": "0x6FF618A0",
         "LoD/1.13c": "0x6FF5CF50",
-        "LoD/1.13d": "0x6FF664E0"
+        "LoD/1.13d": "0x6FF5CE20"
       },
       "rvas": {
         "LoD/1.09d": "0xDBE0",
@@ -48963,7 +57663,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "0xCE20",
         "LoD/1.12a": "0x118A0",
         "LoD/1.13c": "0xCF50",
-        "LoD/1.13d": "0x164E0"
+        "LoD/1.13d": "0xCE20"
       },
       "sizes": {
         "LoD/1.09d": 72,
@@ -49082,6 +57782,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10231",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\".PAX\""
@@ -49116,6 +57822,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "EXP",
       "index": "EXP:10234",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_578"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"%s%s%02d%02d%02d.txt\""
@@ -49179,6 +57890,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:c9d98242e5d3c5b1825dd54ef06376a8",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\FogEvents.cpp..."
@@ -49207,6 +57923,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:600d3ae033e0741e1139b14485aa8334",
+      "callees": {
+        "LoD/1.09d": [
+          "LogAppendFormat",
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\Fog\\\\Src\\\\FogEvents.cpp...",
@@ -49306,6 +58029,13 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "API",
       "index": "API:f5b5b42d2d1fed227d4fa043a66edba4",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\".PAX\""
@@ -49384,6 +58114,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:312b4ad2d1d805e200c10b6d0fbe02ac",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\".PAX\""
@@ -49445,24 +58180,24 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09d": "8106ec2dc269ce998afc86082e0f6d45"
       }
     },
-    "fog.dll_Ordinal_423": {
+    "fog.dll_Ordinal_405": {
       "addresses": {
-        "LoD/1.09d": "0x6FF62474",
-        "LoD/1.10": "0x6FF64424",
-        "LoD/1.11": "0x6FF5CD3A",
-        "LoD/1.11b": "0x6FF5CD16",
-        "LoD/1.12a": "0x6FF5CE08",
-        "LoD/1.13c": "0x6FF5CE3C",
-        "LoD/1.13d": "0x6FF5CCFE"
+        "LoD/1.09d": "0x6FF624D4",
+        "LoD/1.10": "0x6FF64400",
+        "LoD/1.11": "0x6FF5CD1C",
+        "LoD/1.11b": "0x6FF5CCF2",
+        "LoD/1.12a": "0x6FF5CDE4",
+        "LoD/1.13c": "0x6FF5CE1E",
+        "LoD/1.13d": "0x6FF5CCDA"
       },
       "rvas": {
-        "LoD/1.09d": "0x12474",
-        "LoD/1.10": "0x14424",
-        "LoD/1.11": "0xCD3A",
-        "LoD/1.11b": "0xCD16",
-        "LoD/1.12a": "0xCE08",
-        "LoD/1.13c": "0xCE3C",
-        "LoD/1.13d": "0xCCFE"
+        "LoD/1.09d": "0x124D4",
+        "LoD/1.10": "0x14400",
+        "LoD/1.11": "0xCD1C",
+        "LoD/1.11b": "0xCCF2",
+        "LoD/1.12a": "0xCDE4",
+        "LoD/1.13c": "0xCE1E",
+        "LoD/1.13d": "0xCCDA"
       },
       "sizes": {
         "LoD/1.09d": 6,
@@ -49473,8 +58208,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_423",
-      "signature": "undefined Ordinal_423(void)",
+      "name": "Ordinal_405",
+      "signature": "undefined Ordinal_405(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.09d",
       "method": "MNE",
@@ -49695,6 +58430,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee",
+      "callees": {
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09d": 1
       },
@@ -50400,51 +59140,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.09d": "40903556bc57a4df1722c0a365e78b81"
       }
     },
-    "fog.dll_EXP_10070": {
-      "addresses": {
-        "LoD/1.10": "0x6FF51210",
-        "LoD/1.11": "0x6FF6F3F0",
-        "LoD/1.11b": "0x6FF68910"
-      },
-      "rvas": {
-        "LoD/1.10": "0x1210",
-        "LoD/1.11": "0x1F3F0",
-        "LoD/1.11b": "0x18910"
-      },
-      "sizes": {
-        "LoD/1.10": 372,
-        "LoD/1.11": 327,
-        "LoD/1.11b": 327
-      },
-      "name": "Ordinal_10070",
-      "signature": "bool Ordinal_10070(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.10",
-      "method": "EXP",
-      "index": "EXP:10070",
-      "strings": {
-        "LoD/1.10": [
-          "\"lpData != NULL && wBytes > 0 && wBytes < MAXBUFFE...",
-          "\"tMsg.wBytes < MAXBUFFERSIZE\"",
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.10": 19,
-        "LoD/1.11": 20,
-        "LoD/1.11b": 20
-      },
-      "loop_counts": {
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "60c24a9496ce3e3c8359783de0fb01b5",
-        "LoD/1.11": "ef29a29ad1b7f5e4485f3ddefbc3c1af",
-        "LoD/1.11b": "ef29a29ad1b7f5e4485f3ddefbc3c1af"
-      }
-    },
     "fog.dll_SetObjectFields0x118_0x120": {
       "addresses": {
         "LoD/1.10": "0x6FF515B0",
@@ -50533,6 +59228,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10075",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 5,
         "LoD/1.11": 5,
@@ -50820,6 +59520,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10254",
+      "callees": {
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "Ordinal_10253"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Error processing BBE\""
@@ -50889,6 +59595,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:160bb113a472ac77d92a82b40e46f2d5",
+      "callees": {
+        "LoD/1.11": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 9,
         "LoD/1.11": 9,
@@ -51116,19 +59844,19 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_EXP_10130": {
       "addresses": {
         "LoD/1.10": "0x6FF53840",
-        "LoD/1.11": "0x6FF65F50",
-        "LoD/1.11b": "0x6FF638B0",
-        "LoD/1.12a": "0x6FF691E0",
-        "LoD/1.13c": "0x6FF68940",
-        "LoD/1.13d": "0x6FF61CA0"
+        "LoD/1.11": "0x6FF74660",
+        "LoD/1.11b": "0x6FF74740",
+        "LoD/1.12a": "0x6FF749C0",
+        "LoD/1.13c": "0x6FF74A40",
+        "LoD/1.13d": "0x6FF74B60"
       },
       "rvas": {
         "LoD/1.10": "0x3840",
-        "LoD/1.11": "0x15F50",
-        "LoD/1.11b": "0x138B0",
-        "LoD/1.12a": "0x191E0",
-        "LoD/1.13c": "0x18940",
-        "LoD/1.13d": "0x11CA0"
+        "LoD/1.11": "0x24660",
+        "LoD/1.11b": "0x24740",
+        "LoD/1.12a": "0x249C0",
+        "LoD/1.13c": "0x24A40",
+        "LoD/1.13d": "0x24B60"
       },
       "sizes": {
         "LoD/1.10": 5,
@@ -51227,6 +59955,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:71237dfd22167a9df94cef7e8b8b3b6f",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10128"
+        ],
+        "LoD/1.11": [
+          "EncodeBitsToFilterBuffer"
+        ],
+        "LoD/1.11b": [
+          "EncodeBitsToFilterBuffer"
+        ],
+        "LoD/1.12a": [
+          "EncodeBitsToFilterBuffer"
+        ],
+        "LoD/1.13c": [
+          "EncodeBitsToFilterBuffer"
+        ],
+        "LoD/1.13d": [
+          "EncodeBitsToFilterBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1,
         "LoD/1.11": 1,
@@ -51341,6 +60089,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10150",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -51427,6 +60180,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:47e952a0aa3bd963d7459173a0fa25b3",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "EnterCriticalSectionWrapper",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"[sRemoveClient]  Couldn't remove TCLIENT %d %s fr...",
@@ -51459,6 +60227,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:e4f66bf0da0bd721328966cb07fde8a5",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 6
       },
@@ -51482,6 +60255,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:a2fd6df5908c66c8ecc1fd11839451f4",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 9
       },
@@ -51505,6 +60283,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:d69a7b411e70d9276f79ac0cc2dae4d5",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 26
       },
@@ -51513,34 +60296,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.10": "d69a7b411e70d9276f79ac0cc2dae4d5"
-      }
-    },
-    "fog.dll_API_6001c666c614": {
-      "addresses": {
-        "LoD/1.10": "0x6FF55550"
-      },
-      "rvas": {
-        "LoD/1.10": "0x5550"
-      },
-      "sizes": {
-        "LoD/1.10": 209
-      },
-      "name_source": "LoD/1.10",
-      "method": "API",
-      "index": "API:6001c666c614f65aec3a9835e3619bfa",
-      "strings": {
-        "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.10": 12
-      },
-      "loop_counts": {
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "2dfc10a43fa53d4a409c4b5eaf48d3e0"
       }
     },
     "fog.dll_MNE_31e1bc8ba5af": {
@@ -51556,6 +60311,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:31e1bc8ba5af297052d714c70a536ce3",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 7
       },
@@ -51579,6 +60339,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:f0fc7e6d54d1f2095d0a68ce1c10021c",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
@@ -51607,6 +60372,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:9f1893d302f5f62e0f4b0b541c7a5433",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "...+7 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -51640,6 +60420,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10244",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 10
       },
@@ -51666,6 +60451,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10245",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 10
       },
@@ -51692,6 +60482,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10246",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 10
       },
@@ -51718,6 +60513,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10247",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 10
       },
@@ -51726,87 +60526,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.10": "112644febe637cee55ae416b21015290"
-      }
-    },
-    "fog.dll_API_6001c666c614_6680": {
-      "addresses": {
-        "LoD/1.10": "0x6FF56680",
-        "LoD/1.11": "0x6FF65810",
-        "LoD/1.11b": "0x6FF63280",
-        "LoD/1.12a": "0x6FF68BB0",
-        "LoD/1.13c": "0x6FF68340",
-        "LoD/1.13d": "0x6FF61670"
-      },
-      "rvas": {
-        "LoD/1.10": "0x6680",
-        "LoD/1.11": "0x15810",
-        "LoD/1.11b": "0x13280",
-        "LoD/1.12a": "0x18BB0",
-        "LoD/1.13c": "0x18340",
-        "LoD/1.13d": "0x11670"
-      },
-      "sizes": {
-        "LoD/1.10": 90,
-        "LoD/1.11": 90,
-        "LoD/1.11b": 90,
-        "LoD/1.12a": 90,
-        "LoD/1.13c": 90,
-        "LoD/1.13d": 90
-      },
-      "signature": "void WriteLogFileHeader(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Writes a formatted header to the log file with computer name and timestamp information.\n\nThis function writes diagnostic information to the log file header when config data is missing or the log file was just opened. The header contains separator lines and timestamp information extracted from a SYSTEMTIME structure.\n\nAlgorithm:\n1. Allocate 64-byte stack buffer for computer name storage (MAX_COMPUTERNAME_LENGTH)\n2. Initialize buffer size to 0x40 (64 bytes) for GetComputerNameA parameter\n3. Call GetComputerNameA to retrieve the local computer name into buffer\n4. If GetComputerNameA fails (returns 0), clear first byte of buffer to null-terminate empty string\n5. Call WriteFormattedWideStringToFile to write separator line (dashes) to log file\n6. Extract time fields from SYSTEMTIME structure: year at offset +0, month at +2, day at +6 (WORD fields)\n7. Call WriteFormattedWideStringToFile with format string szLogHeaderDateFormat and extracted fields to write formatted timestamp line with computer name\n8. Call WriteFormattedWideStringToFile again to write trailing separator line\n9. Clean up stack (0x6C bytes) and return to caller via __stdcall\n\nParameters:\n  pLogFile - FILE* pointer to open log file for writing (passed via EDI in __stdcall convention)\n  pTime - Pointer to SYSTEMTIME structure containing year/month/day fields (passed via ESI)\n\nReturns:\n  void - Function returns no value; changes are made to log file via FILE* pointer\n\nSpecial Cases:\n  Computer name failure: If GetComputerNameA fails, computer name is cleared to empty string but timestamp is still written\n  Buffer allocation: 64 bytes for computer name is standard Windows MAX_COMPUTERNAME_LENGTH\n  SYSTEMTIME fields: Year at +0x0, Month at +0x2, Day at +0x6 (Day-of-Week at +0x4, Hour at +0x8, etc.)\n  Stack cleanup: __stdcall convention requires callee to clean 0x6C bytes (0x44 local + 0x28 for nested calls)",
-      "name_source": "LoD/1.11",
-      "method": "STR",
-      "index": "STR:b9c2f418146eff1cc389f585fcd9f27a",
-      "strings": {
-        "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
-        ],
-        "LoD/1.11": [
-          "\"-------------------------------------------------...",
-          "\"%s %04d-%02d-%02d\\n\""
-        ],
-        "LoD/1.11b": [
-          "\"-------------------------------------------------...",
-          "\"%s %04d-%02d-%02d\\n\""
-        ],
-        "LoD/1.12a": [
-          "\"-------------------------------------------------...",
-          "\"%s %04d-%02d-%02d\\n\""
-        ],
-        "LoD/1.13c": [
-          "\"-------------------------------------------------...",
-          "\"%s %04d-%02d-%02d\\n\""
-        ],
-        "LoD/1.13d": [
-          "\"-------------------------------------------------...",
-          "\"%s %04d-%02d-%02d\\n\""
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.10": 3,
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "537c517818a372a9f3a4340bacf04698",
-        "LoD/1.11": "42a9f8862fd7fe3c8e3cecb496c3e60d",
-        "LoD/1.11b": "42a9f8862fd7fe3c8e3cecb496c3e60d",
-        "LoD/1.12a": "42a9f8862fd7fe3c8e3cecb496c3e60d",
-        "LoD/1.13c": "42a9f8862fd7fe3c8e3cecb496c3e60d",
-        "LoD/1.13d": "42a9f8862fd7fe3c8e3cecb496c3e60d"
       }
     },
     "fog.dll_API_c7179560d930": {
@@ -51822,6 +60541,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:c7179560d9305d1d9422baf318f1f876",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "LogAppendFormat",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "GetUptimeSeconds",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -51852,6 +60586,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:cfb8e1932a75d40e68c215ca00213e7a",
+      "callees": {
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
@@ -51898,6 +60637,85 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:8b0deec5f67260bfe4ae73e150bfe9c3",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "CloseHandleWrapper",
+          "FogMemAlloc",
+          "ShutdownStubNoOp",
+          "QueueLogMessage",
+          "FogMemAlloc",
+          "ShutdownStubNoOp",
+          "QueueLogMessage"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "socket",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "...+9 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "socket",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "...+9 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "socket",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "...+9 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "socket",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "...+9 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "socket",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "...+9 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"[SERVER]  QSNTInit failed on listen() - err=%d\"",
@@ -51981,6 +60799,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:beadedd144dbc7462e5b86a8b3e629fe",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 17
       },
@@ -52004,6 +60827,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:f9ada23809aaebf49fcb1059f9376529",
+      "callees": {
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "QueueLogMessage",
+          "ShutdownStubNoOp",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "CloseHandleWrapper",
+          "SMemZero",
+          "SMemZero",
+          "EnterCriticalSectionWrapper",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"user on hack list\"",
@@ -52063,6 +60901,16 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:9bf20d263f342ae4ed73b90a2a39247f",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper",
+          "FogAssert",
+          "FogAssert",
+          "EnterCriticalSectionWrapper",
+          "EnterCriticalSectionWrapper"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"!ptClient->tReadOverlapped.hEvent\"",
@@ -52119,6 +60967,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10255",
+      "callees": {
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"null index\"",
@@ -52171,6 +61025,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:512e66ecb23b7a8e75ce1feb55b1434b",
+      "callees": {
+        "LoD/1.10": [
+          "QueueLogMessage",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Duplicate string index '%s'\"",
@@ -52200,6 +61060,18 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:7649cc47b27413b61f19a1a6ee99e146",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10217",
+          "Ordinal_10045",
+          "Ordinal_501",
+          "ToUpperInPlace",
+          "QueueLogMessage",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"!ptIndex->pTbl\"",
@@ -52249,6 +61121,85 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10091",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10045",
+          "SetAsyncFileHandle",
+          "SetFilePosition",
+          "FogAssertWithHandle",
+          "SetAsyncFileHandle",
+          "ProcessInventoryItemWrapper",
+          "FreePoolMemoryTracked",
+          "FreePoolMemoryTracked",
+          "ReadFileAsync",
+          "ReadFileAsync"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "OpenAndProcessFile",
+          "SeekInMemoryBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetStreamFileSize",
+          "ReleaseFileHandleWithRefCount",
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "OpenAndProcessFile",
+          "SeekInMemoryBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetStreamFileSize",
+          "ReleaseFileHandleWithRefCount",
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "OpenAndProcessFile",
+          "SeekInMemoryBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetStreamFileSize",
+          "ReleaseFileHandleWithRefCount",
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "OpenAndProcessFile",
+          "SeekInMemoryBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetStreamFileSize",
+          "ReleaseFileHandleWithRefCount",
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "OpenAndProcessFile",
+          "SeekInMemoryBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetStreamFileSize",
+          "ReleaseFileHandleWithRefCount",
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
@@ -52315,6 +61266,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10092",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -52373,6 +61329,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10218",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10219"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1
       },
@@ -52525,6 +61486,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10060",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src..."
@@ -52639,6 +61620,18 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:61aeeb0b1efe67794908d1b18511d9e4",
+      "callees": {
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "LogAppendFormat",
+          "Ordinal_10231",
+          "SStrLen",
+          "SStrLen",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"s_DoSymInitialize(): err = %lu\"",
@@ -52671,6 +61664,19 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:4fb27b41dfcd92da152bfd6e8bf336e6",
+      "callees": {
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "FogMemAlloc",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"tlhelp32.dll\"",
@@ -52722,6 +61728,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:236f574b953133142779bd9bba355dc5",
+      "callees": {
+        "LoD/1.10": [
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"_NT_SYMBOL_PATH\"",
@@ -52807,6 +61839,21 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:f788b2e2e7edba8781db2775084613d7",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_423",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10238",
+          "Ordinal_10238",
+          "Ordinal_578",
+          "Ordinal_503",
+          "...+26 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"NoStackDump\"",
@@ -52840,6 +61887,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:c43380e618fd1b988ff955f8e04248ca",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_503",
+          "CopyMemoryBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Crashdump\""
@@ -52886,6 +61939,60 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10263",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_503",
+          "FogMemAlloc",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "Ordinal_10028",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "Ordinal_10028",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryBuffer",
+          "CompareMemory",
+          "CopyMemoryBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Crashdump\"",
@@ -52968,6 +62075,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10239",
+      "callees": {
+        "LoD/1.10": [
+          "FindLastChar"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 3,
         "LoD/1.11": 3,
@@ -53047,6 +62159,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:16ccdc3eef3ce7b18ced105f4d066ded",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUMessage@LogManager@@\""
@@ -53123,6 +62255,32 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10235",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "Ordinal_578"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\Fog\\\\Src...",
@@ -53174,32 +62332,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "1567f50a92d7d67211e17208a7bb336e"
       }
     },
-    "fog.dll_EXP_10032": {
-      "addresses": {
-        "LoD/1.10": "0x6FF62210"
-      },
-      "rvas": {
-        "LoD/1.10": "0x12210"
-      },
-      "sizes": {
-        "LoD/1.10": 400
-      },
-      "name": "Ordinal_10032",
-      "signature": "undefined Ordinal_10032(char * param_1, char * param_2, undefined4 * param_3, uint param_4, undefined4 param_5, int param_6, int param_7)",
-      "calling_convention": "__cdecl",
-      "name_source": "LoD/1.10",
-      "method": "EXP",
-      "index": "EXP:10032",
-      "basic_block_counts": {
-        "LoD/1.10": 16
-      },
-      "loop_counts": {
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "d28e62347534484a714fe30d927ac13a"
-      }
-    },
     "fog.dll_MNE_b02117b08d6a": {
       "addresses": {
         "LoD/1.10": "0x6FF62470",
@@ -53231,6 +62363,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c65992ee1983190c2111f6fc13373131",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"delete\""
@@ -53346,6 +62498,16 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:f1411841f05b61495175f656c1f485fb",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_503",
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 11
       },
@@ -53387,6 +62549,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:06690f5318a3c553e5ea099481bc76c2",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"%02d:%02d:%02d.%03d  \"",
@@ -53470,6 +62674,78 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:97d1e397fedc0d33a5bc9792abc96489",
+      "callees": {
+        "LoD/1.10": [
+          "SStrLen",
+          "FogAssert",
+          "Ordinal_578"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "accept",
+          "ValidateCriticalSection",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "closesocket",
+          "ioctlsocket",
+          "getpeername",
+          "...+8 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "accept",
+          "ValidateCriticalSection",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "closesocket",
+          "ioctlsocket",
+          "getpeername",
+          "...+8 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "accept",
+          "ValidateCriticalSection",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "closesocket",
+          "ioctlsocket",
+          "getpeername",
+          "...+8 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "accept",
+          "ValidateCriticalSection",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "closesocket",
+          "ioctlsocket",
+          "getpeername",
+          "...+8 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "accept",
+          "ValidateCriticalSection",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "closesocket",
+          "ioctlsocket",
+          "getpeername",
+          "...+8 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"-------------------------------------------------...",
@@ -53576,6 +62852,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:faa86e79d9b1980bad4d322b9925b87c",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_503",
+          "CreateDirectoryRecursive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 3,
         "LoD/1.11": 3,
@@ -53678,6 +62960,31 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10012",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1,
         "LoD/1.11": 1,
@@ -53734,6 +63041,31 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10262",
+      "callees": {
+        "LoD/1.10": [
+          "EnterCriticalSectionWrapper"
+        ],
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "getsockname"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "getsockname"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "getsockname"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "getsockname"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "getsockname"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1,
         "LoD/1.11": 1,
@@ -53989,6 +63321,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10250",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10249",
+          "Ordinal_10249"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 7
       },
@@ -54058,6 +63396,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:02f63f79ce8db59bc61e8411ac4120cf",
+      "callees": {
+        "LoD/1.11": [
+          "FindLastCharInString"
+        ],
+        "LoD/1.11b": [
+          "FindLastCharInString"
+        ],
+        "LoD/1.12a": [
+          "FindLastCharInString"
+        ],
+        "LoD/1.13c": [
+          "FindLastCharInString"
+        ],
+        "LoD/1.13d": [
+          "FindLastCharInString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 3,
         "LoD/1.11": 3,
@@ -54110,12 +63465,12 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "2e78df1b9a1c671e0846f991e2340b3d"
       }
     },
-    "fog.dll_ReadStreamLocked_5CE1": {
+    "fog.dll_ReadStreamLocked_5B64": {
       "addresses": {
-        "LoD/1.10": "0x6FF65CE1"
+        "LoD/1.10": "0x6FF65B64"
       },
       "rvas": {
-        "LoD/1.10": "0x15CE1"
+        "LoD/1.10": "0x15B64"
       },
       "sizes": {
         "LoD/1.10": 47
@@ -54272,19 +63627,70 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.10": "cdd4a5252090cd9c1fa5b43732f89e8c"
       }
     },
+    "fog.dll_ShutdownStubNoOp": {
+      "addresses": {
+        "LoD/1.11": "0x6FF51020",
+        "LoD/1.11b": "0x6FF68F80",
+        "LoD/1.12a": "0x6FF5F9E0",
+        "LoD/1.13c": "0x6FF6CC50",
+        "LoD/1.13d": "0x6FF6B4A0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1020",
+        "LoD/1.11b": "0x18F80",
+        "LoD/1.12a": "0xF9E0",
+        "LoD/1.13c": "0x1CC50",
+        "LoD/1.13d": "0x1B4A0"
+      },
+      "sizes": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "name": "ShutdownStubNoOp",
+      "signature": "void ShutdownStubNoOp(void)",
+      "calling_convention": "__stdcall",
+      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
+      }
+    },
     "fog.dll_UnwindExceptionContext": {
       "addresses": {
         "LoD/1.11": "0x6FF51040",
         "LoD/1.11b": "0x6FF51500",
-        "LoD/1.12a": "0x6FF51670",
-        "LoD/1.13c": "0x6FF51670",
+        "LoD/1.12a": "0x6FF51630",
+        "LoD/1.13c": "0x6FF51040",
         "LoD/1.13d": "0x6FF51670"
       },
       "rvas": {
         "LoD/1.11": "0x1040",
         "LoD/1.11b": "0x1500",
-        "LoD/1.12a": "0x1670",
-        "LoD/1.13c": "0x1670",
+        "LoD/1.12a": "0x1630",
+        "LoD/1.13c": "0x1040",
         "LoD/1.13d": "0x1670"
       },
       "sizes": {
@@ -54556,6 +63962,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:51aaaa1b5f95f813b6511c05272554ac",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUMessage@LogManager@@\""
@@ -54726,6 +64149,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:79ede85cba5d7d7af965bdcccf3b3cab",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".PAX\""
@@ -54794,6 +64234,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:17d0180b5bd9ac70a79dbf45b04b3557",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".PAX\""
@@ -54887,17 +64344,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionContext_1630": {
       "addresses": {
         "LoD/1.11": "0x6FF51630",
-        "LoD/1.11b": "0x6FF512E0",
+        "LoD/1.11b": "0x6FF51320",
         "LoD/1.12a": "0x6FF51040",
-        "LoD/1.13c": "0x6FF51040",
-        "LoD/1.13d": "0x6FF51040"
+        "LoD/1.13c": "0x6FF51670",
+        "LoD/1.13d": "0x6FF51630"
       },
       "rvas": {
         "LoD/1.11": "0x1630",
-        "LoD/1.11b": "0x12E0",
+        "LoD/1.11b": "0x1320",
         "LoD/1.12a": "0x1040",
-        "LoD/1.13c": "0x1040",
-        "LoD/1.13d": "0x1040"
+        "LoD/1.13c": "0x1670",
+        "LoD/1.13d": "0x1630"
       },
       "sizes": {
         "LoD/1.11": 55,
@@ -54938,17 +64395,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionContext_1670": {
       "addresses": {
         "LoD/1.11": "0x6FF51670",
-        "LoD/1.11b": "0x6FF51320",
-        "LoD/1.12a": "0x6FF51630",
+        "LoD/1.11b": "0x6FF512E0",
+        "LoD/1.12a": "0x6FF51670",
         "LoD/1.13c": "0x6FF51630",
-        "LoD/1.13d": "0x6FF51630"
+        "LoD/1.13d": "0x6FF51040"
       },
       "rvas": {
         "LoD/1.11": "0x1670",
-        "LoD/1.11b": "0x1320",
-        "LoD/1.12a": "0x1630",
+        "LoD/1.11b": "0x12E0",
+        "LoD/1.12a": "0x1670",
         "LoD/1.13c": "0x1630",
-        "LoD/1.13d": "0x1630"
+        "LoD/1.13d": "0x1040"
       },
       "sizes": {
         "LoD/1.11": 55,
@@ -54988,17 +64445,17 @@ var FUNCTIONS_Fog_dll = {
     },
     "fog.dll_UnwindHeapDestructor": {
       "addresses": {
-        "LoD/1.11": "0x6FF516B0",
-        "LoD/1.11b": "0x6FF51360",
+        "LoD/1.11": "0x6FF51700",
+        "LoD/1.11b": "0x6FF513B0",
         "LoD/1.12a": "0x6FF51700",
-        "LoD/1.13c": "0x6FF516B0",
+        "LoD/1.13c": "0x6FF51700",
         "LoD/1.13d": "0x6FF51700"
       },
       "rvas": {
-        "LoD/1.11": "0x16B0",
-        "LoD/1.11b": "0x1360",
+        "LoD/1.11": "0x1700",
+        "LoD/1.11b": "0x13B0",
         "LoD/1.12a": "0x1700",
-        "LoD/1.13c": "0x16B0",
+        "LoD/1.13c": "0x1700",
         "LoD/1.13d": "0x1700"
       },
       "sizes": {
@@ -55168,6 +64625,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1568b71261da2189803ba4295bb86adf",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".PAX\""
@@ -55533,57 +65017,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13c": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13d": "df0a04b7db34c5f035a394dc061ca513"
-      }
-    },
-    "fog.dll_AcquireFileHandleLock8": {
-      "addresses": {
-        "LoD/1.11": "0x6FF519AE",
-        "LoD/1.11b": "0x6FF519A4",
-        "LoD/1.12a": "0x6FF5187D",
-        "LoD/1.13c": "0x6FF51A52",
-        "LoD/1.13d": "0x6FF5187D"
-      },
-      "rvas": {
-        "LoD/1.11": "0x19AE",
-        "LoD/1.11b": "0x19A4",
-        "LoD/1.12a": "0x187D",
-        "LoD/1.13c": "0x1A52",
-        "LoD/1.13d": "0x187D"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "AcquireFileHandleLock8",
-      "signature": "void AcquireFileHandleLock8(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Acquires the multi-threaded critical section lock for file handle 8.\n\nAlgorithm:\n1. Call __lock(8) to acquire the critical section for file handle 8\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - no return value. The function acquires a lock that persists until\nthe thread explicitly releases it or terminates.\n\nSpecial Cases:\n- Lock initialization: If lock initialization fails in __lock, the program\n  terminates with exit code 17\n- Shutdown synchronization: This function is registered as an exit handler\n  (via __onexit) and is called during program termination to ensure proper\n  cleanup of file I/O synchronization\n- Thread safety: The lock must be released before the thread exits to avoid\n  deadlock in other threads waiting on this same lock\n\nStructure Layout:\nThe file handle 8 lock is part of the Visual Studio C runtime's multi-threaded\nfile I/O synchronization array, indexed by the handle ID (0-7 for standard\nfile handles).",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "fog.dll___initterm": {
@@ -56151,14 +65584,14 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF52020",
         "LoD/1.11b": "0x6FF554A0",
-        "LoD/1.12a": "0x6FF52120",
+        "LoD/1.12a": "0x6FF54340",
         "LoD/1.13c": "0x6FF55510",
         "LoD/1.13d": "0x6FF54C00"
       },
       "rvas": {
         "LoD/1.11": "0x2020",
         "LoD/1.11b": "0x54A0",
-        "LoD/1.12a": "0x2120",
+        "LoD/1.12a": "0x4340",
         "LoD/1.13c": "0x5510",
         "LoD/1.13d": "0x4C00"
       },
@@ -56354,15 +65787,15 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll__fread": {
       "addresses": {
         "LoD/1.11": "0x6FF524E9",
-        "LoD/1.11b": "0x6FF526A1",
-        "LoD/1.12a": "0x6FF51BDF",
+        "LoD/1.11b": "0x6FF5254E",
+        "LoD/1.12a": "0x6FF51D32",
         "LoD/1.13c": "0x6FF5268F",
         "LoD/1.13d": "0x6FF52591"
       },
       "rvas": {
         "LoD/1.11": "0x24E9",
-        "LoD/1.11b": "0x26A1",
-        "LoD/1.12a": "0x1BDF",
+        "LoD/1.11b": "0x254E",
+        "LoD/1.12a": "0x1D32",
         "LoD/1.13c": "0x268F",
         "LoD/1.13d": "0x2591"
       },
@@ -56406,14 +65839,14 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF5252B",
         "LoD/1.11b": "0x6FF52590",
-        "LoD/1.12a": "0x6FF51C21",
+        "LoD/1.12a": "0x6FF51D74",
         "LoD/1.13c": "0x6FF526D1",
         "LoD/1.13d": "0x6FF52480"
       },
       "rvas": {
         "LoD/1.11": "0x252B",
         "LoD/1.11b": "0x2590",
-        "LoD/1.12a": "0x1C21",
+        "LoD/1.12a": "0x1D74",
         "LoD/1.13c": "0x26D1",
         "LoD/1.13d": "0x2480"
       },
@@ -56609,15 +66042,15 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll__fread_269A": {
       "addresses": {
         "LoD/1.11": "0x6FF5269A",
-        "LoD/1.11b": "0x6FF5254E",
-        "LoD/1.12a": "0x6FF51D32",
+        "LoD/1.11b": "0x6FF526A1",
+        "LoD/1.12a": "0x6FF51BDF",
         "LoD/1.13c": "0x6FF52896",
         "LoD/1.13d": "0x6FF5243E"
       },
       "rvas": {
         "LoD/1.11": "0x269A",
-        "LoD/1.11b": "0x254E",
-        "LoD/1.12a": "0x1D32",
+        "LoD/1.11b": "0x26A1",
+        "LoD/1.12a": "0x1BDF",
         "LoD/1.13c": "0x2896",
         "LoD/1.13d": "0x243E"
       },
@@ -56661,14 +66094,14 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF526DC",
         "LoD/1.11b": "0x6FF526E3",
-        "LoD/1.12a": "0x6FF51D74",
+        "LoD/1.12a": "0x6FF51C21",
         "LoD/1.13c": "0x6FF528D8",
         "LoD/1.13d": "0x6FF525D3"
       },
       "rvas": {
         "LoD/1.11": "0x26DC",
         "LoD/1.11b": "0x26E3",
-        "LoD/1.12a": "0x1D74",
+        "LoD/1.12a": "0x1C21",
         "LoD/1.13c": "0x28D8",
         "LoD/1.13d": "0x25D3"
       },
@@ -56813,17 +66246,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnlockFileStream": {
       "addresses": {
         "LoD/1.11": "0x6FF5287F",
-        "LoD/1.11b": "0x6FF528B6",
+        "LoD/1.11b": "0x6FF5298E",
         "LoD/1.12a": "0x6FF51F46",
-        "LoD/1.13c": "0x6FF52A7B",
-        "LoD/1.13d": "0x6FF527A6"
+        "LoD/1.13c": "0x6FF52B53",
+        "LoD/1.13d": "0x6FF5287E"
       },
       "rvas": {
         "LoD/1.11": "0x287F",
-        "LoD/1.11b": "0x28B6",
+        "LoD/1.11b": "0x298E",
         "LoD/1.12a": "0x1F46",
-        "LoD/1.13c": "0x2A7B",
-        "LoD/1.13d": "0x27A6"
+        "LoD/1.13c": "0x2B53",
+        "LoD/1.13d": "0x287E"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -56966,17 +66399,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnlockFileStream_2957": {
       "addresses": {
         "LoD/1.11": "0x6FF52957",
-        "LoD/1.11b": "0x6FF5298E",
+        "LoD/1.11b": "0x6FF528B6",
         "LoD/1.12a": "0x6FF5201E",
-        "LoD/1.13c": "0x6FF52B53",
-        "LoD/1.13d": "0x6FF5287E"
+        "LoD/1.13c": "0x6FF52A7B",
+        "LoD/1.13d": "0x6FF527A6"
       },
       "rvas": {
         "LoD/1.11": "0x2957",
-        "LoD/1.11b": "0x298E",
+        "LoD/1.11b": "0x28B6",
         "LoD/1.12a": "0x201E",
-        "LoD/1.13c": "0x2B53",
-        "LoD/1.13d": "0x287E"
+        "LoD/1.13c": "0x2A7B",
+        "LoD/1.13d": "0x27A6"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -57218,6 +66651,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e1a55473b8c876366de891db323c13fa"
       }
     },
+    "fog.dll__toupper": {
+      "addresses": {
+        "LoD/1.11": "0x6FF52B28",
+        "LoD/1.11b": "0x6FF51BF4",
+        "LoD/1.12a": "0x6FF52CFD",
+        "LoD/1.13c": "0x6FF51A00",
+        "LoD/1.13d": "0x6FF52D7D"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2B28",
+        "LoD/1.11b": "0x1BF4",
+        "LoD/1.12a": "0x2CFD",
+        "LoD/1.13c": "0x1A00",
+        "LoD/1.13d": "0x2D7D"
+      },
+      "sizes": {
+        "LoD/1.11": 34,
+        "LoD/1.11b": 34,
+        "LoD/1.12a": 34,
+        "LoD/1.13c": 34,
+        "LoD/1.13d": 34
+      },
+      "name": "_toupper",
+      "signature": "int _toupper(int _C)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _toupper\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:5812d18894407ef6889050a4bd31c359",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "5812d18894407ef6889050a4bd31c359",
+        "LoD/1.11b": "5812d18894407ef6889050a4bd31c359",
+        "LoD/1.12a": "5812d18894407ef6889050a4bd31c359",
+        "LoD/1.13c": "5812d18894407ef6889050a4bd31c359",
+        "LoD/1.13d": "5812d18894407ef6889050a4bd31c359"
+      }
+    },
     "fog.dll____toupper_mt": {
       "addresses": {
         "LoD/1.11": "0x6FF52B4A",
@@ -57267,57 +66751,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "5d8be9030f8141e25fd0bc4b51fae279",
         "LoD/1.13c": "5d8be9030f8141e25fd0bc4b51fae279",
         "LoD/1.13d": "5d8be9030f8141e25fd0bc4b51fae279"
-      }
-    },
-    "fog.dll__toupper": {
-      "addresses": {
-        "LoD/1.11": "0x6FF52C13",
-        "LoD/1.11b": "0x6FF51BF4",
-        "LoD/1.12a": "0x6FF52CFD",
-        "LoD/1.13c": "0x6FF51A00",
-        "LoD/1.13d": "0x6FF52E68"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2C13",
-        "LoD/1.11b": "0x1BF4",
-        "LoD/1.12a": "0x2CFD",
-        "LoD/1.13c": "0x1A00",
-        "LoD/1.13d": "0x2E68"
-      },
-      "sizes": {
-        "LoD/1.11": 34,
-        "LoD/1.11b": 34,
-        "LoD/1.12a": 34,
-        "LoD/1.13c": 34,
-        "LoD/1.13d": 34
-      },
-      "name": "_toupper",
-      "signature": "int _toupper(int _C)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _toupper\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:5812d18894407ef6889050a4bd31c359",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "5812d18894407ef6889050a4bd31c359",
-        "LoD/1.11b": "5812d18894407ef6889050a4bd31c359",
-        "LoD/1.12a": "5812d18894407ef6889050a4bd31c359",
-        "LoD/1.13c": "5812d18894407ef6889050a4bd31c359",
-        "LoD/1.13d": "5812d18894407ef6889050a4bd31c359"
       }
     },
     "fog.dll_DestroyCompressionBuffer": {
@@ -57371,6 +66804,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
+    "fog.dll_LeaveCriticalSectionForMemoryF": {
+      "addresses": {
+        "LoD/1.11": "0x6FF52D54",
+        "LoD/1.11b": "0x6FF57888",
+        "LoD/1.12a": "0x6FF57438",
+        "LoD/1.13c": "0x6FF57F07",
+        "LoD/1.13d": "0x6FF51E80"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2D54",
+        "LoD/1.11b": "0x7888",
+        "LoD/1.12a": "0x7438",
+        "LoD/1.13c": "0x7F07",
+        "LoD/1.13d": "0x1E80"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "LeaveCriticalSectionForMemoryFree",
+      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "fog.dll_AllocateMemoryWithCache": {
       "addresses": {
         "LoD/1.11": "0x6FF52D72",
@@ -57422,53 +66906,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "8ac92c76a51a8b065a1fac94d719ae1f"
       }
     },
-    "fog.dll__realloc": {
+    "fog.dll_LeaveCriticalSectionForMemoryF_2DE4": {
       "addresses": {
-        "LoD/1.11": "0x6FF52E2B",
-        "LoD/1.11b": "0x6FF521C7"
+        "LoD/1.11": "0x6FF52DE4",
+        "LoD/1.11b": "0x6FF52180",
+        "LoD/1.12a": "0x6FF57EEC",
+        "LoD/1.13c": "0x6FF52000",
+        "LoD/1.13d": "0x6FF520BF"
       },
       "rvas": {
-        "LoD/1.11": "0x2E2B",
-        "LoD/1.11b": "0x21C7"
-      },
-      "sizes": {
-        "LoD/1.11": 412,
-        "LoD/1.11b": 412
-      },
-      "name": "_realloc",
-      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
-      "basic_block_counts": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
-        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
-      }
-    },
-    "fog.dll_LeaveCriticalSectionForMemoryF": {
-      "addresses": {
-        "LoD/1.11": "0x6FF52F93",
-        "LoD/1.11b": "0x6FF520F0",
-        "LoD/1.12a": "0x6FF52540",
-        "LoD/1.13c": "0x6FF5223F",
-        "LoD/1.13d": "0x6FF51E80"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2F93",
-        "LoD/1.11b": "0x20F0",
-        "LoD/1.12a": "0x2540",
-        "LoD/1.13c": "0x223F",
-        "LoD/1.13d": "0x1E80"
+        "LoD/1.11": "0x2DE4",
+        "LoD/1.11b": "0x2180",
+        "LoD/1.12a": "0x7EEC",
+        "LoD/1.13c": "0x2000",
+        "LoD/1.13d": "0x20BF"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -57504,6 +66955,39 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "fog.dll__realloc": {
+      "addresses": {
+        "LoD/1.11": "0x6FF52E2B",
+        "LoD/1.11b": "0x6FF521C7"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2E2B",
+        "LoD/1.11b": "0x21C7"
+      },
+      "sizes": {
+        "LoD/1.11": 412,
+        "LoD/1.11b": 412
+      },
+      "name": "_realloc",
+      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
+      "basic_block_counts": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
+        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
       }
     },
     "fog.dll___CRT_INIT@12": {
@@ -57812,57 +67296,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
       }
     },
-    "fog.dll_UnlockCriticalSection12": {
-      "addresses": {
-        "LoD/1.11": "0x6FF534AA",
-        "LoD/1.11b": "0x6FF53BB3",
-        "LoD/1.12a": "0x6FF537E1",
-        "LoD/1.13c": "0x6FF53889",
-        "LoD/1.13d": "0x6FF56162"
-      },
-      "rvas": {
-        "LoD/1.11": "0x34AA",
-        "LoD/1.11b": "0x3BB3",
-        "LoD/1.12a": "0x37E1",
-        "LoD/1.13c": "0x3889",
-        "LoD/1.13d": "0x6162"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "UnlockCriticalSection12",
-      "signature": "void UnlockCriticalSection12(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "fog.dll_AllocateTlsSlot": {
       "addresses": {
         "LoD/1.11": "0x6FF534B3",
@@ -58067,6 +67500,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "adafedc33ce199c85ef6d812cf9b5974"
       }
     },
+    "fog.dll_AcquireDynamicBufferLock": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5368F",
+        "LoD/1.11b": "0x6FF598EB",
+        "LoD/1.12a": "0x6FF539C6",
+        "LoD/1.13c": "0x6FF596FC",
+        "LoD/1.13d": "0x6FF59A0B"
+      },
+      "rvas": {
+        "LoD/1.11": "0x368F",
+        "LoD/1.11b": "0x98EB",
+        "LoD/1.12a": "0x39C6",
+        "LoD/1.13c": "0x96FC",
+        "LoD/1.13d": "0x9A0B"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "AcquireDynamicBufferLock",
+      "signature": "void AcquireDynamicBufferLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Acquires critical section 13 for thread-safe dynamic buffer operations.\n\nAlgorithm:\n1. Call FUN_6ff2c3fe with index 0xd (13) to initialize/enter critical section 13\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Critical section index 0xd (13) is reserved for dynamic buffer synchronization\n- Must be paired with FUN_6ff2b37b() (ReleaseDynamicBufferLock) to avoid deadlock\n- If critical section not initialized, FUN_6ff2c3fe will allocate and initialize it\n- Thread will block if another thread holds this critical section\n\nMagic Numbers Reference:\n0xd (13) - Critical section index for dynamic buffer operations",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "fog.dll___mtinit": {
       "addresses": {
         "LoD/1.11": "0x6FF536D3",
@@ -58096,6 +67580,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -58257,20 +67758,71 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "a51a9a5e7ceb2fab96b937dc9f784c13"
       }
     },
+    "fog.dll_ReleaseMTInitLock": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5390C",
+        "LoD/1.11b": "0x6FF533A3",
+        "LoD/1.12a": "0x6FF533AB",
+        "LoD/1.13c": "0x6FF53CEB",
+        "LoD/1.13d": "0x6FF533A3"
+      },
+      "rvas": {
+        "LoD/1.11": "0x390C",
+        "LoD/1.11b": "0x33A3",
+        "LoD/1.12a": "0x33AB",
+        "LoD/1.13c": "0x3CEB",
+        "LoD/1.13d": "0x33A3"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "ReleaseMTInitLock",
+      "signature": "void ReleaseMTInitLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "fog.dll___RTC_Initialize": {
       "addresses": {
         "LoD/1.11": "0x6FF53946",
         "LoD/1.11b": "0x6FF53421",
         "LoD/1.12a": "0x6FF53429",
-        "LoD/1.13c": "0x6FF53D69",
-        "LoD/1.13d": "0x6FF533DD"
+        "LoD/1.13c": "0x6FF53D25",
+        "LoD/1.13d": "0x6FF53421"
       },
       "rvas": {
         "LoD/1.11": "0x3946",
         "LoD/1.11b": "0x3421",
         "LoD/1.12a": "0x3429",
-        "LoD/1.13c": "0x3D69",
-        "LoD/1.13d": "0x33DD"
+        "LoD/1.13c": "0x3D25",
+        "LoD/1.13d": "0x3421"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -58313,15 +67865,15 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11": "0x6FF5398A",
         "LoD/1.11b": "0x6FF533DD",
         "LoD/1.12a": "0x6FF533E5",
-        "LoD/1.13c": "0x6FF53D25",
-        "LoD/1.13d": "0x6FF53421"
+        "LoD/1.13c": "0x6FF53D69",
+        "LoD/1.13d": "0x6FF533DD"
       },
       "rvas": {
         "LoD/1.11": "0x398A",
         "LoD/1.11b": "0x33DD",
         "LoD/1.12a": "0x33E5",
-        "LoD/1.13c": "0x3D25",
-        "LoD/1.13d": "0x3421"
+        "LoD/1.13c": "0x3D69",
+        "LoD/1.13d": "0x33DD"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -59099,57 +68651,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "f102f826338ad08d3de5f7e30c5a3098"
       }
     },
-    "fog.dll_CrtFlushAllFileStreamsCount": {
-      "addresses": {
-        "LoD/1.11": "0x6FF55C92",
-        "LoD/1.11b": "0x6FF55CF7",
-        "LoD/1.12a": "0x6FF53FC2",
-        "LoD/1.13c": "0x6FF56BF8",
-        "LoD/1.13d": "0x6FF56752"
-      },
-      "rvas": {
-        "LoD/1.11": "0x5C92",
-        "LoD/1.11b": "0x5CF7",
-        "LoD/1.12a": "0x3FC2",
-        "LoD/1.13c": "0x6BF8",
-        "LoD/1.13d": "0x6752"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "CrtFlushAllFileStreamsCount",
-      "signature": "void CrtFlushAllFileStreamsCount(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Releases the critical section lock protecting global file stream operations.\n\nAlgorithm:\n1. Push critical section index value 1 onto stack as function argument\n2. Call LeaveCriticalSectionByIndex(1) to atomically release the critical section\n3. Critical section index 1 protects the global file stream handle table\n4. Pop the return address from stack into ECX register (stdcall cleanup)\n5. Return to caller with void result (no return value)\n\nParameters:\nNone - This wrapper function accepts no parameters and always operates on critical section index 1 (hardcoded)\n\nReturns:\nvoid - No return value; this function performs only side effects by releasing the critical section lock\n\nSpecial Cases:\n- Uses __stdcall calling convention (callee cleans up its own stack arguments)\n- Critical section index 1 is hardcoded, not configurable via parameter\n- The POP ECX instruction at 0x6fbfe368 performs stack frame cleanup before return\n- Always called from FlushAndCloseStreamHandles to ensure proper synchronization\n- Acts as a centralized cleanup point rather than inlined critical section release code\n\nStructure Layout:\nNo structure access in this function; it is a simple wrapper function with no local variables\n\nRelated Functions:\n- LeaveCriticalSectionByIndex: System function that releases a critical section by index\n- FlushAndCloseStreamHandles: Parent function that calls this for file stream cleanup",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "fog.dll___filbuf": {
       "addresses": {
         "LoD/1.11": "0x6FF55C9B",
@@ -59237,14 +68738,14 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll___lseek": {
       "addresses": {
         "LoD/1.11": "0x6FF55F57",
-        "LoD/1.11b": "0x6FF56235",
+        "LoD/1.11b": "0x6FF55FBC",
         "LoD/1.12a": "0x6FF54952",
         "LoD/1.13c": "0x6FF56EBF",
         "LoD/1.13d": "0x6FF56A17"
       },
       "rvas": {
         "LoD/1.11": "0x5F57",
-        "LoD/1.11b": "0x6235",
+        "LoD/1.11b": "0x5FBC",
         "LoD/1.12a": "0x4952",
         "LoD/1.13c": "0x6EBF",
         "LoD/1.13d": "0x6A17"
@@ -59288,17 +68789,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnlockFileHandleThunk": {
       "addresses": {
         "LoD/1.11": "0x6FF55FDE",
-        "LoD/1.11b": "0x6FF5678E",
+        "LoD/1.11b": "0x6FF562BC",
         "LoD/1.12a": "0x6FF549D9",
-        "LoD/1.13c": "0x6FF56F46",
-        "LoD/1.13d": "0x6FF56A9E"
+        "LoD/1.13c": "0x6FF57731",
+        "LoD/1.13d": "0x6FF57307"
       },
       "rvas": {
         "LoD/1.11": "0x5FDE",
-        "LoD/1.11b": "0x678E",
+        "LoD/1.11b": "0x62BC",
         "LoD/1.12a": "0x49D9",
-        "LoD/1.13c": "0x6F46",
-        "LoD/1.13d": "0x6A9E"
+        "LoD/1.13c": "0x7731",
+        "LoD/1.13d": "0x7307"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -59340,14 +68841,14 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF56010",
         "LoD/1.11b": "0x6FF51D60",
-        "LoD/1.12a": "0x6FF54340",
+        "LoD/1.12a": "0x6FF52120",
         "LoD/1.13c": "0x6FF51C70",
         "LoD/1.13d": "0x6FF51AF0"
       },
       "rvas": {
         "LoD/1.11": "0x6010",
         "LoD/1.11b": "0x1D60",
-        "LoD/1.12a": "0x4340",
+        "LoD/1.12a": "0x2120",
         "LoD/1.13c": "0x1C70",
         "LoD/1.13d": "0x1AF0"
       },
@@ -59474,16 +68975,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll___lseek_65CD": {
       "addresses": {
         "LoD/1.11": "0x6FF565CD",
-        "LoD/1.11b": "0x6FF55FBC",
-        "LoD/1.12a": "0x6FF54E24",
-        "LoD/1.13c": "0x6FF571D8",
+        "LoD/1.11b": "0x6FF56707",
+        "LoD/1.12a": "0x6FF54289",
+        "LoD/1.13c": "0x6FF576AA",
         "LoD/1.13d": "0x6FF57162"
       },
       "rvas": {
         "LoD/1.11": "0x65CD",
-        "LoD/1.11b": "0x5FBC",
-        "LoD/1.12a": "0x4E24",
-        "LoD/1.13c": "0x71D8",
+        "LoD/1.11b": "0x6707",
+        "LoD/1.12a": "0x4289",
+        "LoD/1.13c": "0x76AA",
         "LoD/1.13d": "0x7162"
       },
       "sizes": {
@@ -59525,17 +69026,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnlockFileHandleThunk_6654": {
       "addresses": {
         "LoD/1.11": "0x6FF56654",
-        "LoD/1.11b": "0x6FF562BC",
+        "LoD/1.11b": "0x6FF56043",
         "LoD/1.12a": "0x6FF59FCF",
         "LoD/1.13c": "0x6FF578E2",
-        "LoD/1.13d": "0x6FF57307"
+        "LoD/1.13d": "0x6FF56D17"
       },
       "rvas": {
         "LoD/1.11": "0x6654",
-        "LoD/1.11b": "0x62BC",
+        "LoD/1.11b": "0x6043",
         "LoD/1.12a": "0x9FCF",
         "LoD/1.13c": "0x78E2",
-        "LoD/1.13d": "0x7307"
+        "LoD/1.13d": "0x6D17"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -59729,16 +69230,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll___lseek_6A9F": {
       "addresses": {
         "LoD/1.11": "0x6FF56A9F",
-        "LoD/1.11b": "0x6FF56707",
-        "LoD/1.12a": "0x6FF54289",
-        "LoD/1.13c": "0x6FF576AA",
+        "LoD/1.11b": "0x6FF56235",
+        "LoD/1.12a": "0x6FF54E24",
+        "LoD/1.13c": "0x6FF571D8",
         "LoD/1.13d": "0x6FF56C90"
       },
       "rvas": {
         "LoD/1.11": "0x6A9F",
-        "LoD/1.11b": "0x6707",
-        "LoD/1.12a": "0x4289",
-        "LoD/1.13c": "0x76AA",
+        "LoD/1.11b": "0x6235",
+        "LoD/1.12a": "0x4E24",
+        "LoD/1.13c": "0x71D8",
         "LoD/1.13d": "0x6C90"
       },
       "sizes": {
@@ -59781,15 +69282,15 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF56B26",
         "LoD/1.11b": "0x6FF568AC",
-        "LoD/1.12a": "0x6FF54310",
-        "LoD/1.13c": "0x6FF5A578",
+        "LoD/1.12a": "0x6FF54EAB",
+        "LoD/1.13c": "0x6FF56F46",
         "LoD/1.13d": "0x6FF571E9"
       },
       "rvas": {
         "LoD/1.11": "0x6B26",
         "LoD/1.11b": "0x68AC",
-        "LoD/1.12a": "0x4310",
-        "LoD/1.13c": "0xA578",
+        "LoD/1.12a": "0x4EAB",
+        "LoD/1.13c": "0x6F46",
         "LoD/1.13d": "0x71E9"
       },
       "sizes": {
@@ -59933,17 +69434,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnlockFileHandleThunk_6CD2": {
       "addresses": {
         "LoD/1.11": "0x6FF56CD2",
-        "LoD/1.11b": "0x6FF56043",
-        "LoD/1.12a": "0x6FF54EAB",
-        "LoD/1.13c": "0x6FF57731",
-        "LoD/1.13d": "0x6FF56D17"
+        "LoD/1.11b": "0x6FF5678E",
+        "LoD/1.12a": "0x6FF54FC9",
+        "LoD/1.13c": "0x6FF5725F",
+        "LoD/1.13d": "0x6FF5A2BE"
       },
       "rvas": {
         "LoD/1.11": "0x6CD2",
-        "LoD/1.11b": "0x6043",
-        "LoD/1.12a": "0x4EAB",
-        "LoD/1.13c": "0x7731",
-        "LoD/1.13d": "0x6D17"
+        "LoD/1.11b": "0x678E",
+        "LoD/1.12a": "0x4FC9",
+        "LoD/1.13c": "0x725F",
+        "LoD/1.13d": "0xA2BE"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -60320,57 +69821,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "43c0a0116a0179cd961980d35fb0c190"
       }
     },
-    "fog.dll____sbh_heap_init": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5727A",
-        "LoD/1.11b": "0x6FF54956",
-        "LoD/1.12a": "0x6FF5594C",
-        "LoD/1.13c": "0x6FF549C5",
-        "LoD/1.13d": "0x6FF540B3"
-      },
-      "rvas": {
-        "LoD/1.11": "0x727A",
-        "LoD/1.11b": "0x4956",
-        "LoD/1.12a": "0x594C",
-        "LoD/1.13c": "0x49C5",
-        "LoD/1.13d": "0x40B3"
-      },
-      "sizes": {
-        "LoD/1.11": 72,
-        "LoD/1.11b": 72,
-        "LoD/1.12a": 72,
-        "LoD/1.13c": 72,
-        "LoD/1.13d": 72
-      },
-      "name": "___sbh_heap_init",
-      "signature": "undefined4 ___sbh_heap_init(undefined4 param_1)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:288a4a209e4706fee9d14eabda44517a",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.11b": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.12a": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.13c": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.13d": "288a4a209e4706fee9d14eabda44517a"
-      }
-    },
     "fog.dll____sbh_free_block": {
       "addresses": {
         "LoD/1.11": "0x6FF572ED",
@@ -60606,6 +70056,57 @@ var FUNCTIONS_Fog_dll = {
       "mnemonic_hashes": {
         "LoD/1.11": "91411ab4247869eeb28238e92930a4a5",
         "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
+      }
+    },
+    "fog.dll_LeaveCriticalSectionForMemoryF_7E62": {
+      "addresses": {
+        "LoD/1.11": "0x6FF57E62",
+        "LoD/1.11b": "0x6FF5232F",
+        "LoD/1.12a": "0x6FF524B0",
+        "LoD/1.13c": "0x6FF56788",
+        "LoD/1.13d": "0x6FF5743A"
+      },
+      "rvas": {
+        "LoD/1.11": "0x7E62",
+        "LoD/1.11b": "0x232F",
+        "LoD/1.12a": "0x24B0",
+        "LoD/1.13c": "0x6788",
+        "LoD/1.13d": "0x743A"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "LeaveCriticalSectionForMemoryFree",
+      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "fog.dll___setenvp": {
@@ -62071,57 +71572,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "6b07f716ad39855b07502ac9a8f75c79"
       }
     },
-    "fog.dll_GetUnitX": {
-      "addresses": {
-        "LoD/1.11": "0x6FF597B5",
-        "LoD/1.11b": "0x6FF6C7E0",
-        "LoD/1.12a": "0x6FF5A5A5",
-        "LoD/1.13c": "0x6FF6CC40",
-        "LoD/1.13d": "0x6FF6DD70"
-      },
-      "rvas": {
-        "LoD/1.11": "0x97B5",
-        "LoD/1.11b": "0x1C7E0",
-        "LoD/1.12a": "0xA5A5",
-        "LoD/1.13c": "0x1CC40",
-        "LoD/1.13d": "0x1DD70"
-      },
-      "sizes": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "name": "GetUnitX",
-      "signature": "dword GetUnitX(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Get X coordinate of unit. Returns 0 (stub implementation).\n\nAlgorithm:\n1. Return 0\n\nParameters:\n- pUnit (void*): Unit pointer\n\nReturns:\n- dword: X coordinate (always 0 in this stub)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.11b": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.12a": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.13c": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.13d": "acbc2c857bf1a8401ca8fe5de1c0ec70"
-      }
-    },
     "fog.dll___fpmath": {
       "addresses": {
         "LoD/1.11": "0x6FF597F1",
@@ -63226,57 +72676,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "fd78a1cdcfba52796c1191ac28710e53"
       }
     },
-    "fog.dll_ReleaseMTInitLock": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5A8DE",
-        "LoD/1.11b": "0x6FF5A067",
-        "LoD/1.12a": "0x6FF59E62",
-        "LoD/1.13c": "0x6FF5A331",
-        "LoD/1.13d": "0x6FF59FF4"
-      },
-      "rvas": {
-        "LoD/1.11": "0xA8DE",
-        "LoD/1.11b": "0xA067",
-        "LoD/1.12a": "0x9E62",
-        "LoD/1.13c": "0xA331",
-        "LoD/1.13d": "0x9FF4"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "ReleaseMTInitLock",
-      "signature": "void ReleaseMTInitLock(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "fog.dll___unlock_fhandle": {
       "addresses": {
         "LoD/1.11": "0x6FF5A8E7",
@@ -63536,16 +72935,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF5ABA8",
         "LoD/1.11b": "0x6FF5A331",
-        "LoD/1.12a": "0x6FF54FC9",
-        "LoD/1.13c": "0x6FF5725F",
-        "LoD/1.13d": "0x6FF5A2BE"
+        "LoD/1.12a": "0x6FF54310",
+        "LoD/1.13c": "0x6FF5A578",
+        "LoD/1.13d": "0x6FF56A9E"
       },
       "rvas": {
         "LoD/1.11": "0xABA8",
         "LoD/1.11b": "0xA331",
-        "LoD/1.12a": "0x4FC9",
-        "LoD/1.13c": "0x725F",
-        "LoD/1.13d": "0xA2BE"
+        "LoD/1.12a": "0x4310",
+        "LoD/1.13c": "0xA578",
+        "LoD/1.13d": "0x6A9E"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -64620,11 +74019,11 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_FID_conflict:__atodbl": {
       "addresses": {
         "LoD/1.11": "0x6FF5BC15",
-        "LoD/1.11b": "0x6FF5BCBE"
+        "LoD/1.11b": "0x6FF5BC81"
       },
       "rvas": {
         "LoD/1.11": "0xBC15",
-        "LoD/1.11b": "0xBCBE"
+        "LoD/1.11b": "0xBC81"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -64653,11 +74052,11 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_FID_conflict:__atodbl_BC52": {
       "addresses": {
         "LoD/1.11": "0x6FF5BC52",
-        "LoD/1.11b": "0x6FF5BC81"
+        "LoD/1.11b": "0x6FF5BCBE"
       },
       "rvas": {
         "LoD/1.11": "0xBC52",
-        "LoD/1.11b": "0xBC81"
+        "LoD/1.11b": "0xBCBE"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -64920,6 +74319,53 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "a9b04f42a8a7532eed19202299b9f94e"
       }
     },
+    "fog.dll_MNE_c4400c8562aa": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5C000",
+        "LoD/1.11b": "0x6FF5C000",
+        "LoD/1.12a": "0x6FF5C0EC",
+        "LoD/1.13c": "0x6FF5C0FC",
+        "LoD/1.13d": "0x6FF5C000"
+      },
+      "rvas": {
+        "LoD/1.11": "0xC000",
+        "LoD/1.11b": "0xC000",
+        "LoD/1.12a": "0xC0EC",
+        "LoD/1.13c": "0xC0FC",
+        "LoD/1.13d": "0xC000"
+      },
+      "sizes": {
+        "LoD/1.11": 33,
+        "LoD/1.11b": 33,
+        "LoD/1.12a": 33,
+        "LoD/1.13c": 33,
+        "LoD/1.13d": 33
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:c4400c8562aa84099781d0cf50c17c5c",
+      "basic_block_counts": {
+        "LoD/1.11": 4,
+        "LoD/1.11b": 4,
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4,
+        "LoD/1.13d": 4
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "c4400c8562aa84099781d0cf50c17c5c",
+        "LoD/1.11b": "c4400c8562aa84099781d0cf50c17c5c",
+        "LoD/1.12a": "c4400c8562aa84099781d0cf50c17c5c",
+        "LoD/1.13c": "c4400c8562aa84099781d0cf50c17c5c",
+        "LoD/1.13d": "c4400c8562aa84099781d0cf50c17c5c"
+      }
+    },
     "fog.dll____shl_12": {
       "addresses": {
         "LoD/1.11": "0x6FF5C07F",
@@ -65154,20 +74600,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "1716f4745fd2cb6027c906fa16d26504"
       }
     },
-    "fog.dll_WSASetLastError": {
+    "fog.dll_send": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CC26",
-        "LoD/1.11b": "0x6FF5CC98",
-        "LoD/1.12a": "0x6FF5CD84",
-        "LoD/1.13c": "0x6FF5CD4C",
-        "LoD/1.13d": "0x6FF5CC68"
+        "LoD/1.11": "0x6FF5CC20",
+        "LoD/1.11b": "0x6FF5CC38",
+        "LoD/1.12a": "0x6FF5CD30",
+        "LoD/1.13c": "0x6FF5CD34",
+        "LoD/1.13d": "0x6FF5CC20"
       },
       "rvas": {
-        "LoD/1.11": "0xCC26",
-        "LoD/1.11b": "0xCC98",
-        "LoD/1.12a": "0xCD84",
-        "LoD/1.13c": "0xCD4C",
-        "LoD/1.13d": "0xCC68"
+        "LoD/1.11": "0xCC20",
+        "LoD/1.11b": "0xCC38",
+        "LoD/1.12a": "0xCD30",
+        "LoD/1.13c": "0xCD34",
+        "LoD/1.13d": "0xCC20"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65176,8 +74622,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "WSASetLastError",
-      "signature": "void WSASetLastError(int iError)",
+      "name": "send",
+      "signature": "int send(SOCKET s, char * buf, int len, int flags)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65504,6 +74950,56 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
+    "fog.dll_getsockname": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5CC5C",
+        "LoD/1.11b": "0x6FF5CC62",
+        "LoD/1.12a": "0x6FF5CD48",
+        "LoD/1.13c": "0x6FF5CD94",
+        "LoD/1.13d": "0x6FF5CC38"
+      },
+      "rvas": {
+        "LoD/1.11": "0xCC5C",
+        "LoD/1.11b": "0xCC62",
+        "LoD/1.12a": "0xCD48",
+        "LoD/1.13c": "0xCD94",
+        "LoD/1.13d": "0xCC38"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "getsockname",
+      "signature": "int getsockname(SOCKET s, sockaddr * name, int * namelen)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
     "fog.dll_WSAStartup": {
       "addresses": {
         "LoD/1.11": "0x6FF5CC62",
@@ -65554,20 +75050,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_inet_addr": {
+    "fog.dll_inet_ntoa": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CC8C",
-        "LoD/1.11b": "0x6FF5CC74",
-        "LoD/1.12a": "0x6FF5CDA2",
-        "LoD/1.13c": "0x6FF5CD9A",
-        "LoD/1.13d": "0x6FF5CC8C"
+        "LoD/1.11": "0x6FF5CC68",
+        "LoD/1.11b": "0x6FF5CC2C",
+        "LoD/1.12a": "0x6FF5CD66",
+        "LoD/1.13c": "0x6FF5CDA6",
+        "LoD/1.13d": "0x6FF5CC56"
       },
       "rvas": {
-        "LoD/1.11": "0xCC8C",
-        "LoD/1.11b": "0xCC74",
-        "LoD/1.12a": "0xCDA2",
-        "LoD/1.13c": "0xCD9A",
-        "LoD/1.13d": "0xCC8C"
+        "LoD/1.11": "0xCC68",
+        "LoD/1.11b": "0xCC2C",
+        "LoD/1.12a": "0xCD66",
+        "LoD/1.13c": "0xCDA6",
+        "LoD/1.13d": "0xCC56"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65576,8 +75072,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "inet_addr",
-      "signature": "ulong inet_addr(char * cp)",
+      "name": "inet_ntoa",
+      "signature": "char * inet_ntoa(in_addr in)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65604,20 +75100,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_connect": {
+    "fog.dll_getpeername": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CC92",
-        "LoD/1.11b": "0x6FF5CC7A",
-        "LoD/1.12a": "0x6FF5CDA8",
-        "LoD/1.13c": "0x6FF5CDAC",
-        "LoD/1.13d": "0x6FF5CC92"
+        "LoD/1.11": "0x6FF5CC6E",
+        "LoD/1.11b": "0x6FF5CC32",
+        "LoD/1.12a": "0x6FF5CD72",
+        "LoD/1.13c": "0x6FF5CDB8",
+        "LoD/1.13d": "0x6FF5CC62"
       },
       "rvas": {
-        "LoD/1.11": "0xCC92",
-        "LoD/1.11b": "0xCC7A",
-        "LoD/1.12a": "0xCDA8",
-        "LoD/1.13c": "0xCDAC",
-        "LoD/1.13d": "0xCC92"
+        "LoD/1.11": "0xCC6E",
+        "LoD/1.11b": "0xCC32",
+        "LoD/1.12a": "0xCD72",
+        "LoD/1.13c": "0xCDB8",
+        "LoD/1.13d": "0xCC62"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65626,58 +75122,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "connect",
-      "signature": "int connect(SOCKET s, sockaddr * name, int namelen)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "fog.dll_gethostname": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5CC98",
-        "LoD/1.11b": "0x6FF5CC80",
-        "LoD/1.12a": "0x6FF5CDAE",
-        "LoD/1.13c": "0x6FF5CDB2",
-        "LoD/1.13d": "0x6FF5CC98"
-      },
-      "rvas": {
-        "LoD/1.11": "0xCC98",
-        "LoD/1.11b": "0xCC80",
-        "LoD/1.12a": "0xCDAE",
-        "LoD/1.13c": "0xCDB2",
-        "LoD/1.13d": "0xCC98"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "gethostname",
-      "signature": "int gethostname(char * name, int namelen)",
+      "name": "getpeername",
+      "signature": "int getpeername(SOCKET s, sockaddr * name, int * namelen)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65754,20 +75200,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_ParseConfigurationValue": {
+    "fog.dll_FormatStringBuffer": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CCC2",
-        "LoD/1.11b": "0x6FF5CD3A",
-        "LoD/1.12a": "0x6FF5CE2C",
-        "LoD/1.13c": "0x6FF5CE66",
-        "LoD/1.13d": "0x6FF5CD40"
+        "LoD/1.11": "0x6FF5CCCE",
+        "LoD/1.11b": "0x6FF5CCC8",
+        "LoD/1.12a": "0x6FF5CE32",
+        "LoD/1.13c": "0x6FF5CDD0",
+        "LoD/1.13d": "0x6FF5CD46"
       },
       "rvas": {
-        "LoD/1.11": "0xCCC2",
-        "LoD/1.11b": "0xCD3A",
-        "LoD/1.12a": "0xCE2C",
-        "LoD/1.13c": "0xCE66",
-        "LoD/1.13d": "0xCD40"
+        "LoD/1.11": "0xCCCE",
+        "LoD/1.11b": "0xCCC8",
+        "LoD/1.12a": "0xCE32",
+        "LoD/1.13c": "0xCDD0",
+        "LoD/1.13d": "0xCD46"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65776,8 +75222,58 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "ParseConfigurationValue",
-      "signature": "int ParseConfigurationValue(char * szConfigName, char * szValueString, byte byParseMode, ulong * pOutputValue)",
+      "name": "FormatStringBuffer",
+      "signature": "uint FormatStringBuffer(char * szBuffer, uint dwBufferSize, char * szFormat)",
+      "calling_convention": "__cdecl",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "fog.dll_ComputeStringHash_CCD4": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5CCD4",
+        "LoD/1.11b": "0x6FF5CD52",
+        "LoD/1.12a": "0x6FF5CDC0",
+        "LoD/1.13c": "0x6FF5CE5A",
+        "LoD/1.13d": "0x6FF5CCB6"
+      },
+      "rvas": {
+        "LoD/1.11": "0xCCD4",
+        "LoD/1.11b": "0xCD52",
+        "LoD/1.12a": "0xCDC0",
+        "LoD/1.13c": "0xCE5A",
+        "LoD/1.13d": "0xCCB6"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "ComputeStringHash",
+      "signature": "uint ComputeStringHash(char * pString, byte bCaseSensitive, uint dwInitialHash)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65804,20 +75300,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_CalculateStringLength": {
+    "fog.dll_ValidatePowerOfTwo": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CCC8",
-        "LoD/1.11b": "0x6FF5CD10",
-        "LoD/1.12a": "0x6FF5CE02",
-        "LoD/1.13c": "0x6FF5CE00",
-        "LoD/1.13d": "0x6FF5CCF8"
+        "LoD/1.11": "0x6FF5CCDA",
+        "LoD/1.11b": "0x6FF5CCB0",
+        "LoD/1.12a": "0x6FF5CE56",
+        "LoD/1.13c": "0x6FF5CDE2",
+        "LoD/1.13d": "0x6FF5CD1C"
       },
       "rvas": {
-        "LoD/1.11": "0xCCC8",
-        "LoD/1.11b": "0xCD10",
-        "LoD/1.12a": "0xCE02",
-        "LoD/1.13c": "0xCE00",
-        "LoD/1.13d": "0xCCF8"
+        "LoD/1.11": "0xCCDA",
+        "LoD/1.11b": "0xCCB0",
+        "LoD/1.12a": "0xCE56",
+        "LoD/1.13c": "0xCDE2",
+        "LoD/1.13d": "0xCD1C"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65826,8 +75322,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "CalculateStringLength",
-      "signature": "uint CalculateStringLength(char * szString)",
+      "name": "ValidatePowerOfTwo",
+      "signature": "void ValidatePowerOfTwo(uint valueToPowerOfTwo)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65904,20 +75400,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_ClearMemory": {
+    "fog.dll_ValidateAndSignalGameEvent": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CCF2",
-        "LoD/1.11b": "0x6FF5CD4C",
-        "LoD/1.12a": "0x6FF5CE44",
-        "LoD/1.13c": "0x6FF5CE78",
-        "LoD/1.13d": "0x6FF5CCB0"
+        "LoD/1.11": "0x6FF5CCEC",
+        "LoD/1.11b": "0x6FF5CCC2",
+        "LoD/1.12a": "0x6FF5CE68",
+        "LoD/1.13c": "0x6FF5CDF4",
+        "LoD/1.13d": "0x6FF5CD2E"
       },
       "rvas": {
-        "LoD/1.11": "0xCCF2",
-        "LoD/1.11b": "0xCD4C",
-        "LoD/1.12a": "0xCE44",
-        "LoD/1.13c": "0xCE78",
-        "LoD/1.13d": "0xCCB0"
+        "LoD/1.11": "0xCCEC",
+        "LoD/1.11b": "0xCCC2",
+        "LoD/1.12a": "0xCE68",
+        "LoD/1.13c": "0xCDF4",
+        "LoD/1.13d": "0xCD2E"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -65926,8 +75422,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "ClearMemory",
-      "signature": "void ClearMemory(void * pBuffer, uint dwSize)",
+      "name": "ValidateAndSignalGameEvent",
+      "signature": "void ValidateAndSignalGameEvent(void * pGameObject, int nSignalFlag)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -65957,17 +75453,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_CompareStringsIgnoreCase_CCFE": {
       "addresses": {
         "LoD/1.11": "0x6FF5CCFE",
-        "LoD/1.11b": "0x6FF5CD5E",
-        "LoD/1.12a": "0x6FF5CE50",
+        "LoD/1.11b": "0x6FF5CD58",
+        "LoD/1.12a": "0x6FF5CE4A",
         "LoD/1.13c": "0x6FF5CE6C",
-        "LoD/1.13d": "0x6FF5CD58"
+        "LoD/1.13d": "0x6FF5CD5E"
       },
       "rvas": {
         "LoD/1.11": "0xCCFE",
-        "LoD/1.11b": "0xCD5E",
-        "LoD/1.12a": "0xCE50",
+        "LoD/1.11b": "0xCD58",
+        "LoD/1.12a": "0xCE4A",
         "LoD/1.13c": "0xCE6C",
-        "LoD/1.13d": "0xCD58"
+        "LoD/1.13d": "0xCD5E"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -66054,20 +75550,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "fog.dll_strncoll_CD28": {
+    "fog.dll_ProcessInventoryItem": {
       "addresses": {
-        "LoD/1.11": "0x6FF5CD28",
-        "LoD/1.11b": "0x6FF5CCFE",
-        "LoD/1.12a": "0x6FF5CDF0",
-        "LoD/1.13c": "0x6FF5CE2A",
-        "LoD/1.13d": "0x6FF5CCE6"
+        "LoD/1.11": "0x6FF5CD3A",
+        "LoD/1.11b": "0x6FF5CD16",
+        "LoD/1.12a": "0x6FF5CE08",
+        "LoD/1.13c": "0x6FF5CE3C",
+        "LoD/1.13d": "0x6FF5CCFE"
       },
       "rvas": {
-        "LoD/1.11": "0xCD28",
-        "LoD/1.11b": "0xCCFE",
-        "LoD/1.12a": "0xCDF0",
-        "LoD/1.13c": "0xCE2A",
-        "LoD/1.13d": "0xCCE6"
+        "LoD/1.11": "0xCD3A",
+        "LoD/1.11b": "0xCD16",
+        "LoD/1.12a": "0xCE08",
+        "LoD/1.13c": "0xCE3C",
+        "LoD/1.13d": "0xCCFE"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -66076,8 +75572,8 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "strncoll",
-      "signature": "uint strncoll(char * szPathString)",
+      "name": "ProcessInventoryItem",
+      "signature": "int ProcessInventoryItem(int * pFileHandle)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -66178,56 +75674,6 @@ var FUNCTIONS_Fog_dll = {
       },
       "name": "SetFrameDivisor",
       "signature": "void SetFrameDivisor(uint dwFrameDivisor)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "fog.dll_FindLastCharInString": {
-      "addresses": {
-        "LoD/1.11": "0x6FF5CD52",
-        "LoD/1.11b": "0x6FF5CD2E",
-        "LoD/1.12a": "0x6FF5CE20",
-        "LoD/1.13c": "0x6FF5CE54",
-        "LoD/1.13d": "0x6FF5CD16"
-      },
-      "rvas": {
-        "LoD/1.11": "0xCD52",
-        "LoD/1.11b": "0xCD2E",
-        "LoD/1.12a": "0xCE20",
-        "LoD/1.13c": "0xCE54",
-        "LoD/1.13d": "0xCD16"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "FindLastCharInString",
-      "signature": "char * FindLastCharInString(char * szString, char chSearchChar)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -66406,20 +75852,20 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "5fcfe8683d09a8f8b3918e5b0520ca46"
       }
     },
-    "fog.dll_GetUnitX_CEE0": {
+    "fog.dll_GetUnitX": {
       "addresses": {
         "LoD/1.11": "0x6FF5CEE0",
-        "LoD/1.11b": "0x6FF5A4E4",
-        "LoD/1.12a": "0x6FF64D50",
+        "LoD/1.11b": "0x6FF6EAD0",
+        "LoD/1.12a": "0x6FF5A5A5",
         "LoD/1.13c": "0x6FF670E0",
-        "LoD/1.13d": "0x6FF6CAF0"
+        "LoD/1.13d": "0x6FF5A4E6"
       },
       "rvas": {
         "LoD/1.11": "0xCEE0",
-        "LoD/1.11b": "0xA4E4",
-        "LoD/1.12a": "0x14D50",
+        "LoD/1.11b": "0x1EAD0",
+        "LoD/1.12a": "0xA5A5",
         "LoD/1.13c": "0x170E0",
-        "LoD/1.13d": "0x1CAF0"
+        "LoD/1.13d": "0xA4E6"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -66457,19 +75903,19 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
-    "fog.dll_ShutdownStubNoOp": {
+    "fog.dll_ShutdownStubNoOp_CEF0": {
       "addresses": {
         "LoD/1.11": "0x6FF5CEF0",
-        "LoD/1.11b": "0x6FF51020",
-        "LoD/1.12a": "0x6FF5F9F0",
-        "LoD/1.13c": "0x6FF66750",
+        "LoD/1.11b": "0x6FF68F70",
+        "LoD/1.12a": "0x6FF5CEC0",
+        "LoD/1.13c": "0x6FF6A9D0",
         "LoD/1.13d": "0x6FF5CD90"
       },
       "rvas": {
         "LoD/1.11": "0xCEF0",
-        "LoD/1.11b": "0x1020",
-        "LoD/1.12a": "0xF9F0",
-        "LoD/1.13c": "0x16750",
+        "LoD/1.11b": "0x18F70",
+        "LoD/1.12a": "0xCEC0",
+        "LoD/1.13c": "0x1A9D0",
         "LoD/1.13d": "0xCD90"
       },
       "sizes": {
@@ -66741,6 +76187,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -66792,6 +76260,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -66945,6 +76435,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -66996,6 +76508,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -67047,6 +76581,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -67098,6 +76654,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:94fa5349e860a16e547142ed2f9830c1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 23,
         "LoD/1.11b": 23,
@@ -67149,6 +76747,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:8c32e4eebf550f8be20566ccec253d17",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -67222,6 +76857,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e6abec367d2d2831dc2ce802c7b97f10",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -67295,6 +76987,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a99437ae4f13f8a013f2d8444e71a201",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -67368,6 +77097,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4bb1a88fab35232abe6af66c8a954cd4",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 23,
         "LoD/1.11b": 23,
@@ -67469,6 +77230,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:cfec0163d70f30755b41ba5bd673d257",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeMemoryPoolAllocator",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "InitializeMemoryPoolAllocator",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "...+6 more"
+        ],
+        "LoD/1.12a": [
+          "InitializeMemoryPoolAllocator",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+6 more"
+        ],
+        "LoD/1.13c": [
+          "InitializeMemoryPoolAllocator",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+6 more"
+        ],
+        "LoD/1.13d": [
+          "InitializeMemoryPoolAllocator",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -67541,6 +77369,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:c9ba3a9c15fe1cdc3e9523f4f2ade53a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+4 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+4 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+4 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+4 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -67580,20 +77475,71 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "c653d160cc1de8c096e2e3491f3a4a22"
       }
     },
+    "fog.dll_ShutdownStubNoOp_E4D0": {
+      "addresses": {
+        "LoD/1.11": "0x6FF5E4D0",
+        "LoD/1.11b": "0x6FF60950",
+        "LoD/1.12a": "0x6FF6C7C0",
+        "LoD/1.13c": "0x6FF60620",
+        "LoD/1.13d": "0x6FF6AC70"
+      },
+      "rvas": {
+        "LoD/1.11": "0xE4D0",
+        "LoD/1.11b": "0x10950",
+        "LoD/1.12a": "0x1C7C0",
+        "LoD/1.13c": "0x10620",
+        "LoD/1.13d": "0x1AC70"
+      },
+      "sizes": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "name": "ShutdownStubNoOp",
+      "signature": "void ShutdownStubNoOp(void)",
+      "calling_convention": "__stdcall",
+      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
+      }
+    },
     "fog.dll_ShutdownStubNoOp_E4E0": {
       "addresses": {
         "LoD/1.11": "0x6FF5E4E0",
-        "LoD/1.11b": "0x6FF691F0",
-        "LoD/1.12a": "0x6FF6A1B0",
-        "LoD/1.13c": "0x6FF6CC70",
-        "LoD/1.13d": "0x6FF5CDA0"
+        "LoD/1.11b": "0x6FF5CDB0",
+        "LoD/1.12a": "0x6FF6C7E0",
+        "LoD/1.13c": "0x6FF5FC60",
+        "LoD/1.13d": "0x6FF6B490"
       },
       "rvas": {
         "LoD/1.11": "0xE4E0",
-        "LoD/1.11b": "0x191F0",
-        "LoD/1.12a": "0x1A1B0",
-        "LoD/1.13c": "0x1CC70",
-        "LoD/1.13d": "0xCDA0"
+        "LoD/1.11b": "0xCDB0",
+        "LoD/1.12a": "0x1C7E0",
+        "LoD/1.13c": "0xFC60",
+        "LoD/1.13d": "0x1B490"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -67687,6 +77633,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ed571f52c33d9f7bf257a1295aeb9dba",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\FogEvents.cpp\""
@@ -67806,6 +77769,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:600d3ae033e0741e1139b14485aa8334",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[_sched] WaitForSingleObject failed with %d\"",
@@ -67934,6 +77924,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:75754301eb722986fb36c958a825f8fb",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"unknown\""
@@ -68097,6 +78109,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:830e00ebde3185a128193750cdc503ad",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"tlhelp32.dll\"",
@@ -68292,6 +78336,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ef7bb08bd488857c0f2a7a783c6d4a10",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "CopyStringBounded",
+          "CopyMemoryBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Crashdump\""
@@ -68359,6 +78435,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:e3337de051d22ed727c661d5c7cec256",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "FormatStringBuffer",
+          "CopyStringBounded",
+          "ValidateAndInitializeNetworkConfig",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "...+3 more"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "FormatStringBuffer",
+          "CopyStringBounded",
+          "ValidateAndInitializeNetworkConfig",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "...+3 more"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "FormatStringBuffer",
+          "CopyStringBounded",
+          "ValidateAndInitializeNetworkConfig",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "...+3 more"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "FormatStringBuffer",
+          "CopyStringBounded",
+          "ValidateAndInitializeNetworkConfig",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "...+3 more"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "FormatStringBuffer",
+          "CopyStringBounded",
+          "ValidateAndInitializeNetworkConfig",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -68519,6 +78662,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:5c88e429a8671fac2314ef9ae353c881",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"    Base:%08lXh  Size:%7lXh  Name:%-15.15s  Path:..."
@@ -68587,6 +78747,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:eb9fa67e30c7f852ca83175806231a6d",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Error (%d) loading symbols for '%s'\"",
@@ -68665,6 +78857,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:c0a57bdce36bdf40a68f8409f3efd2e3",
+      "callees": {
+        "LoD/1.11": [
+          "ParseConfigurationValue",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "ParseConfigurationValue",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "ParseConfigurationValue",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "ValidateAndInitializeNetworkConfig",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"NoStackDump\"",
@@ -68757,6 +79016,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:e7ed21c0b231939a932a056f7d50b90b",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"s_DoSymInitialize(): err = %lu\"",
@@ -68830,6 +79106,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:0f58063caf630705673b0cf3dafa720f",
+      "callees": {
+        "LoD/1.11": [
+          "StripSourcePathPrefix",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "StripSourcePathPrefix",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "StripSourcePathPrefix",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "StripSourcePathPrefix",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "StripSourcePathPrefix",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"QuickStackWalk: %d entries, %I64d+%I64d+%I64d+%I6...",
@@ -68962,6 +79280,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:177e24cf436107680cc0a0d57b21139e",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Dumping stack for thread handle: %08x\""
@@ -69004,17 +79339,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_0D40": {
       "addresses": {
         "LoD/1.11": "0x6FF60D40",
-        "LoD/1.11b": "0x6FF6DE20",
-        "LoD/1.12a": "0x6FF5CEC0",
-        "LoD/1.13c": "0x6FF63B50",
-        "LoD/1.13d": "0x6FF5D730"
+        "LoD/1.11b": "0x6FF5D790",
+        "LoD/1.12a": "0x6FF51020",
+        "LoD/1.13c": "0x6FF60630",
+        "LoD/1.13d": "0x6FF6AC60"
       },
       "rvas": {
         "LoD/1.11": "0x10D40",
-        "LoD/1.11b": "0x1DE20",
-        "LoD/1.12a": "0xCEC0",
-        "LoD/1.13c": "0x13B50",
-        "LoD/1.13d": "0xD730"
+        "LoD/1.11b": "0xD790",
+        "LoD/1.12a": "0x1020",
+        "LoD/1.13c": "0x10630",
+        "LoD/1.13d": "0x1AC60"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -69183,6 +79518,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e6d40714e8e007f7cbaf1dedbf461d10",
+      "callees": {
+        "LoD/1.11": [
+          "SHA1InputUpdate",
+          "SHA1InputUpdate"
+        ],
+        "LoD/1.11b": [
+          "SHA1InputUpdate",
+          "SHA1InputUpdate"
+        ],
+        "LoD/1.12a": [
+          "SHA1InputUpdate",
+          "SHA1InputUpdate"
+        ],
+        "LoD/1.13c": [
+          "SHA1InputUpdate",
+          "SHA1InputUpdate"
+        ],
+        "LoD/1.13d": [
+          "SHA1InputUpdate",
+          "SHA1InputUpdate"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -69302,6 +79659,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5890bbcc34b241a71ec6ac33f961bb9c",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -69370,6 +79764,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -69438,6 +79859,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -69506,6 +79954,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:82e76a93e89cb4636299da948f4a8d79",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeGameContext"
+        ],
+        "LoD/1.11b": [
+          "InitializeGameContext"
+        ],
+        "LoD/1.12a": [
+          "InitializeGameContext"
+        ],
+        "LoD/1.13c": [
+          "InitializeGameContext"
+        ],
+        "LoD/1.13d": [
+          "InitializeGameContext"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -69557,6 +80022,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:9d7a192a9dc4655742a7159ac25b11c4",
+      "callees": {
+        "LoD/1.11": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -69625,6 +80122,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:9d7a192a9dc4655742a7159ac25b11c4",
+      "callees": {
+        "LoD/1.11": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetSocketQueueItem",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -70341,6 +80870,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:02a2aebef1f94f7f0e3d89414f3d6ce1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Intel 486\"",
@@ -70604,6 +81170,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "a838f88a241e087e20b2b3ce1b482ba7"
       }
     },
+    "fog.dll_StubNoOp_29E0": {
+      "addresses": {
+        "LoD/1.11": "0x6FF629E0",
+        "LoD/1.11b": "0x6FF64F20",
+        "LoD/1.12a": "0x6FF618B0",
+        "LoD/1.13c": "0x6FF6E310",
+        "LoD/1.13d": "0x6FF6ACA0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x129E0",
+        "LoD/1.11b": "0x14F20",
+        "LoD/1.12a": "0x118B0",
+        "LoD/1.13c": "0x1E310",
+        "LoD/1.13d": "0x1ACA0"
+      },
+      "sizes": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "name": "StubNoOp",
+      "signature": "void StubNoOp(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Stub function exported as Ordinal 10856.\n\nAlgorithm:\n1. Immediately returns (single RET instruction)\n\nParameters:\n- None\n\nReturns:\n- void (no return value)\n\nNotes:\n- This is a placeholder/deprecated export that performs no operation\n- Referenced from export table at 0x6fde5f38\n- Likely preserved for backwards compatibility with older code",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:576e71e58ac12dc4dc652fb1f77bef85",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "576e71e58ac12dc4dc652fb1f77bef85",
+        "LoD/1.11b": "576e71e58ac12dc4dc652fb1f77bef85",
+        "LoD/1.12a": "576e71e58ac12dc4dc652fb1f77bef85",
+        "LoD/1.13c": "576e71e58ac12dc4dc652fb1f77bef85",
+        "LoD/1.13d": "576e71e58ac12dc4dc652fb1f77bef85"
+      }
+    },
     "fog.dll_IsStateField0x86cActiveOrBusy": {
       "addresses": {
         "LoD/1.11": "0x6FF62AD0",
@@ -70757,6 +81374,101 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "0d81b916dc6b2c62c9975262a08bf815"
       }
     },
+    "fog.dll_SetResourceStateOrHandleError": {
+      "addresses": {
+        "LoD/1.11": "0x6FF62BF0",
+        "LoD/1.11b": "0x6FF65160",
+        "LoD/1.12a": "0x6FF61AF0",
+        "LoD/1.13c": "0x6FF5D1A0",
+        "LoD/1.13d": "0x6FF67D00"
+      },
+      "rvas": {
+        "LoD/1.11": "0x12BF0",
+        "LoD/1.11b": "0x15160",
+        "LoD/1.12a": "0x11AF0",
+        "LoD/1.13c": "0xD1A0",
+        "LoD/1.13d": "0x17D00"
+      },
+      "sizes": {
+        "LoD/1.11": 72,
+        "LoD/1.11b": 72,
+        "LoD/1.12a": 72,
+        "LoD/1.13c": 72,
+        "LoD/1.13d": 72
+      },
+      "name": "SetResourceStateOrHandleError",
+      "signature": "void SetResourceStateOrHandleError(void * pResourceContext, uint dwResourceState)",
+      "calling_convention": "__stdcall",
+      "comment": "Sets resource state or handles critical initialization failure.\n\nAlgorithm:\n1. Load pResourceContext parameter from ESP+0x4\n2. Test if pResourceContext is NULL\n3. If NULL (initialization failure):\n   a. Get caller's return address via GetReturnAddress() for error context\n   b. Call WSACleanup() to shut down Windows Socket API\n   c. Call LogErrorAndShutdown() with severity 6 and error code 0x83d\n   d. Call ShutdownResourcesAndExit() to clean up all resources\n   e. Call _exit(0xffffffff) to terminate process with code -1\n4. If non-NULL (normal path):\n   a. Load resourceState parameter from ESP+0x8\n   b. Write resourceState to offset 0xbb8 (3000 bytes) in resource context\n   c. Return to caller via RET 0x8 (stdcall cleanup)\n\nParameters:\n- pResourceContext (void *): Pointer to resource context structure; NULL value triggers\n  emergency shutdown sequence\n- resourceState (uint): State value to store at context offset 0xbb8; typically contains\n  initialization flags or status codes\n\nReturns:\n- void: Function either sets state and returns normally, or initiates emergency shutdown\n  that never returns to caller\n\nSpecial Cases:\n- NULL pResourceContext is treated as unrecoverable initialization failure\n- Offset 0xbb8 (3000 decimal) indicates large context structure (minimum 3004 bytes)\n- Error code 0x83d logged in error message source location table\n- Calling convention is __stdcall with callee cleanup of 8 bytes (2 parameters x 4 bytes)",
+      "name_source": "LoD/1.11",
+      "method": "API",
+      "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
+      "strings": {
+        "LoD/1.11": [
+          "\"Unrecoverable internal error %08x\""
+        ],
+        "LoD/1.11b": [
+          "\"Unrecoverable internal error %08x\""
+        ],
+        "LoD/1.12a": [
+          "\"Unrecoverable internal error %08x\""
+        ],
+        "LoD/1.13c": [
+          "\"Unrecoverable internal error %08x\""
+        ],
+        "LoD/1.13d": [
+          "\"Unrecoverable internal error %08x\""
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "fdccc5bd44ab71d723a9244e8464fcd0",
+        "LoD/1.11b": "fdccc5bd44ab71d723a9244e8464fcd0",
+        "LoD/1.12a": "fdccc5bd44ab71d723a9244e8464fcd0",
+        "LoD/1.13c": "fdccc5bd44ab71d723a9244e8464fcd0",
+        "LoD/1.13d": "fdccc5bd44ab71d723a9244e8464fcd0"
+      }
+    },
     "fog.dll_CopyPlayerDataThreadSafe": {
       "addresses": {
         "LoD/1.11": "0x6FF62C40",
@@ -70786,6 +81498,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:48385233c5b0e078c1c19b6f219b9a6c",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -70837,6 +81566,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4bb1a88fab35232abe6af66c8a954cd4",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -70888,6 +81649,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a16f259f444f3a716eb08a72485c7745",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -70956,6 +81734,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b0d0c67df86364a4c27853119066b6e7",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -71024,6 +81819,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:9940e3c39c7e3742f4dbbb45a2008136",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -71092,6 +81904,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:022b43cd1cfacde9c75907c9a48c99e9",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Size:%s  QSHackListSize() from FILE:%..."
@@ -71160,6 +81989,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5140db660455b2e5e397ed2e681dfb5b",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -71211,6 +82057,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a99041f378efd08672ddb788348e7a30",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "getpeername"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -71262,6 +82130,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c5800ec6ff8da16c07921b8374f97fd6",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -71313,6 +82198,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c71fcf3daca8af713120c72abce3e8e2",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -71364,6 +82276,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e08518d32f3ae7c7350b06e547a59811",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -71415,6 +82344,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -71466,6 +82417,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:664bc9670c815e51e0525b0d0684158e",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -71516,6 +82484,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:df8b7624f2851819ccec21c420a172e9",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -71584,6 +82574,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:382a3397b2e72163a246122817407b73",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -71635,6 +82642,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ad75524837c8d73bd92681f86883cb16",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -71686,6 +82710,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:424a19b0dcae5e8d05ec1504b7dd1807",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Hacklist size is %d\""
@@ -71754,6 +82795,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1a7030cd46d5220701654ed22437d9df",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateElapsedTimeInSeconds",
+          "inet_ntoa",
+          "...+5 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "CalculateElapsedTimeInSeconds",
+          "inet_ntoa",
+          "...+5 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateElapsedTimeInSeconds",
+          "inet_ntoa",
+          "...+5 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateElapsedTimeInSeconds",
+          "inet_ntoa",
+          "...+5 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "CalculateElapsedTimeInSeconds",
+          "inet_ntoa",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -71822,6 +82930,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b461328a64b07842e747db7157adb550",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -71958,6 +83083,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:89a120f7496293b04ff2b3017e7bfdf4",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -72009,6 +83151,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:147162bd175aeb3e4e42b5fa631a66c0",
+      "callees": {
+        "LoD/1.11": [
+          "closesocket",
+          "WSAGetLastError",
+          "LogAppendFormat",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "closesocket",
+          "WSAGetLastError",
+          "NullStubProc",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "closesocket",
+          "WSAGetLastError",
+          "NullStubProc",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "closesocket",
+          "WSAGetLastError",
+          "LogAppendFormat",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "closesocket",
+          "WSAGetLastError",
+          "NullStubProc",
+          "WSAGetLastError"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\"",
@@ -72081,6 +83255,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:6aa15a9dd6e3e85a30931a5a00985335",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -72149,6 +83370,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:1b8cac0d1aac0fab543e6cb69d5e33fc",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -72200,6 +83438,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:aab7e8e30f79729b516eae9a74eba7fb",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -72268,6 +83523,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:160bb113a472ac77d92a82b40e46f2d5",
+      "callees": {
+        "LoD/1.11": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -72319,6 +83596,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8f82d37ce823288f305c1aeea3a12c72",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -72392,57 +83686,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "154347e686567dcc9ed4d7e4ff003a40"
       }
     },
-    "fog.dll_SetHashTableEntryValue": {
-      "addresses": {
-        "LoD/1.11": "0x6FF64030",
-        "LoD/1.11b": "0x6FF669E0",
-        "LoD/1.12a": "0x6FF62F30",
-        "LoD/1.13c": "0x6FF5EA20",
-        "LoD/1.13d": "0x6FF670F0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x14030",
-        "LoD/1.11b": "0x169E0",
-        "LoD/1.12a": "0x12F30",
-        "LoD/1.13c": "0xEA20",
-        "LoD/1.13d": "0x170F0"
-      },
-      "sizes": {
-        "LoD/1.11": 33,
-        "LoD/1.11b": 33,
-        "LoD/1.12a": 33,
-        "LoD/1.13c": 33,
-        "LoD/1.13d": 33
-      },
-      "name": "SetHashTableEntryValue",
-      "signature": "void SetHashTableEntryValue(void * pHashTableMgr, uint dwSearchKey, uint dwNewValue)",
-      "calling_convention": "__stdcall",
-      "comment": "Setting prototype: void SetHashTableEntryValue(void* pHashTableMgr, uint dwSearchKey, uint dwNewValue)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:b50cacddfaff5a71225c273352bc6efb",
-      "basic_block_counts": {
-        "LoD/1.11": 4,
-        "LoD/1.11b": 4,
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "b50cacddfaff5a71225c273352bc6efb",
-        "LoD/1.11b": "b50cacddfaff5a71225c273352bc6efb",
-        "LoD/1.12a": "b50cacddfaff5a71225c273352bc6efb",
-        "LoD/1.13c": "b50cacddfaff5a71225c273352bc6efb",
-        "LoD/1.13d": "b50cacddfaff5a71225c273352bc6efb"
-      }
-    },
     "fog.dll_DisconnectSocketByIP": {
       "addresses": {
         "LoD/1.11": "0x6FF64060",
@@ -72472,6 +83715,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:586f226a596790b3404c338f439c28ea",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Client %s is already closed\"",
@@ -72596,6 +83876,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:03fc45ba940c3f06774ead3e634dd7db",
+      "callees": {
+        "LoD/1.11": [
+          "ntohs"
+        ],
+        "LoD/1.11b": [
+          "ntohs"
+        ],
+        "LoD/1.12a": [
+          "ntohs"
+        ],
+        "LoD/1.13c": [
+          "ntohs"
+        ],
+        "LoD/1.13d": [
+          "ntohs"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -72698,6 +83995,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:307e14769b1a5a81818edd83d50664e1",
+      "callees": {
+        "LoD/1.11": [
+          "ntohs"
+        ],
+        "LoD/1.11b": [
+          "ntohs"
+        ],
+        "LoD/1.12a": [
+          "ntohs"
+        ],
+        "LoD/1.13c": [
+          "ntohs"
+        ],
+        "LoD/1.13d": [
+          "ntohs"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -72800,6 +84114,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3a43acad3c00013f73ec709f10a37ffa",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Hacklist size is %d\"",
@@ -72873,6 +84209,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8b2439767f502e8ef29483e438f0839d",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -72941,6 +84299,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3a43acad3c00013f73ec709f10a37ffa",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Hacklist size is %d\""
@@ -73009,6 +84389,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:105680f6b3c9f366b6b1354c02bca5a7",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -73060,6 +84467,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f6002498f7c2333505e078b81dac62cf",
+      "callees": {
+        "LoD/1.11": [
+          "BroadcastSocketData",
+          "ClearAllResourcePoolElements",
+          "closesocket",
+          "WSACleanup",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "BroadcastSocketData",
+          "ClearAllResourcePoolElements",
+          "closesocket",
+          "WSACleanup",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "BroadcastSocketData",
+          "ClearAllResourcePoolElements",
+          "closesocket",
+          "WSACleanup",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "BroadcastSocketData",
+          "ClearAllResourcePoolElements",
+          "closesocket",
+          "WSACleanup",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "BroadcastSocketData",
+          "ClearAllResourcePoolElements",
+          "closesocket",
+          "WSACleanup",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -73128,6 +84592,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:958f7f674212ece978987590f716be30",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -73179,6 +84660,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:e06d368537b03ba9d686ce24b340d779",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  IP:%s  QSHackListIP() from FILE:%s  L...",
@@ -73252,6 +84770,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:4db6d0b5f34902d3c119b6cc1b7804da",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "LogAppendFormat",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "NullStubProc",
+          "inet_ntoa",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  IP:%s  QSHackList() from FILE:%s  LIN...",
@@ -73324,6 +84874,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "STR",
       "index": "STR:be6569ba552271725c00e1bb8d02b46b",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "Ordinal_10028",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc",
+          "LogErrorAndInitiateShutdown",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -73407,6 +85024,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:aaea9cdf27c54d43dbe2680acc41f722",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "inet_ntoa",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"[HACKLIST]  Client %d at %s banned via QSBanByAdd...",
@@ -73480,6 +85124,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:08f2a6a79995f4686a98d816dc4af037",
+      "callees": {
+        "LoD/1.11": [
+          "WSAStartup"
+        ],
+        "LoD/1.11b": [
+          "WSAStartup"
+        ],
+        "LoD/1.12a": [
+          "WSAStartup"
+        ],
+        "LoD/1.13c": [
+          "WSAStartup"
+        ],
+        "LoD/1.13d": [
+          "WSAStartup"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -73582,6 +85243,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -73619,6 +85307,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "034ffee74b60740343b1f3a3ee2b36e9",
         "LoD/1.13c": "034ffee74b60740343b1f3a3ee2b36e9",
         "LoD/1.13d": "034ffee74b60740343b1f3a3ee2b36e9"
+      }
+    },
+    "fog.dll_GetUnitX_55C0": {
+      "addresses": {
+        "LoD/1.11": "0x6FF655C0",
+        "LoD/1.11b": "0x6FF6F6B0",
+        "LoD/1.12a": "0x6FF6C7A0",
+        "LoD/1.13c": "0x6FF6CC40",
+        "LoD/1.13d": "0x6FF6B4B0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x155C0",
+        "LoD/1.11b": "0x1F6B0",
+        "LoD/1.12a": "0x1C7A0",
+        "LoD/1.13c": "0x1CC40",
+        "LoD/1.13d": "0x1B4B0"
+      },
+      "sizes": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "name": "GetUnitX",
+      "signature": "dword GetUnitX(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Get X coordinate of unit. Returns 0 (stub implementation).\n\nAlgorithm:\n1. Return 0\n\nParameters:\n- pUnit (void*): Unit pointer\n\nReturns:\n- dword: X coordinate (always 0 in this stub)",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.11b": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.12a": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.13c": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.13d": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
     "fog.dll_CloseCrashDumpFileByName": {
@@ -73701,6 +85440,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a1367c02e1ae1d02d00265a2c610e5cf",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"%2d%2d%2d\""
@@ -73842,6 +85598,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4844a88c093e34b5372bda54b1e41897",
+      "callees": {
+        "LoD/1.11": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"%s%s%02d%02d%02d.txt\""
@@ -73884,17 +85657,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_InitializeAndBuildPath": {
       "addresses": {
         "LoD/1.11": "0x6FF65900",
-        "LoD/1.11b": "0x6FF5D970",
-        "LoD/1.12a": "0x6FF605A0",
+        "LoD/1.11b": "0x6FF63370",
+        "LoD/1.12a": "0x6FF68CA0",
         "LoD/1.13c": "0x6FF68280",
-        "LoD/1.13d": "0x6FF5D8F0"
+        "LoD/1.13d": "0x6FF61760"
       },
       "rvas": {
         "LoD/1.11": "0x15900",
-        "LoD/1.11b": "0xD970",
-        "LoD/1.12a": "0x105A0",
+        "LoD/1.11b": "0x13370",
+        "LoD/1.12a": "0x18CA0",
         "LoD/1.13c": "0x18280",
-        "LoD/1.13d": "0xD8F0"
+        "LoD/1.13d": "0x11760"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -73910,6 +85683,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f572de39989bcc841e3b170dce8cb9d2",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -73961,6 +85756,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74029,6 +85851,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6dc93bf340dfbc13dadc21a7404ed61b",
+      "callees": {
+        "LoD/1.11": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"%s%s%02d%02d%02d.txt\""
@@ -74097,6 +85936,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c196885ac64e5b30bd8bb88ee7660b44",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -74148,6 +86029,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7d41e7562f7f6856d38421ed21f965a0",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 16,
         "LoD/1.11b": 16,
@@ -74199,6 +86112,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74267,6 +86207,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74335,6 +86302,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1ea2fa48020c1fca32c60317e095dd5d",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74403,6 +86402,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74471,6 +86497,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74623,6 +86676,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3a99a230ffb2b9ed05290add48bab6bd",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74691,6 +86811,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:d88c9982df5c2d291f3bacd0fbcbb613",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74759,6 +86946,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -74827,6 +87041,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e781b1ca63bc9147c2d399ebb9d37072",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -75022,17 +87293,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_7080": {
       "addresses": {
         "LoD/1.11": "0x6FF67080",
-        "LoD/1.11b": "0x6FF68F90",
-        "LoD/1.12a": "0x6FF6C7B0",
-        "LoD/1.13c": "0x6FF5FC60",
-        "LoD/1.13d": "0x6FF6AC70"
+        "LoD/1.11b": "0x6FF6C7F0",
+        "LoD/1.12a": "0x6FF5F9D0",
+        "LoD/1.13c": "0x6FF6EFC0",
+        "LoD/1.13d": "0x6FF6B4C0"
       },
       "rvas": {
         "LoD/1.11": "0x17080",
-        "LoD/1.11b": "0x18F90",
-        "LoD/1.12a": "0x1C7B0",
-        "LoD/1.13c": "0xFC60",
-        "LoD/1.13d": "0x1AC70"
+        "LoD/1.11b": "0x1C7F0",
+        "LoD/1.12a": "0xF9D0",
+        "LoD/1.13c": "0x1EFC0",
+        "LoD/1.13d": "0x1B4C0"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -75099,6 +87370,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:09c43ccc17c00d2b57608c8688fd793c",
+      "callees": {
+        "LoD/1.11": [
+          "ioctlsocket"
+        ],
+        "LoD/1.11b": [
+          "ioctlsocket"
+        ],
+        "LoD/1.12a": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13c": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13d": [
+          "ioctlsocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -75150,6 +87438,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3d551c6eb885cc406f7bba5dc997cf2d",
+      "callees": {
+        "LoD/1.11": [
+          "inet_ntoa"
+        ],
+        "LoD/1.11b": [
+          "inet_ntoa"
+        ],
+        "LoD/1.12a": [
+          "inet_ntoa"
+        ],
+        "LoD/1.13c": [
+          "inet_ntoa"
+        ],
+        "LoD/1.13d": [
+          "inet_ntoa"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -75201,6 +87506,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a32ec60b0ebe57ec3f33d86cd090ce1c",
+      "callees": {
+        "LoD/1.11": [
+          "select",
+          "__WSAFDIsSet",
+          "__WSAFDIsSet",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "select",
+          "__WSAFDIsSet",
+          "__WSAFDIsSet",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "select",
+          "__WSAFDIsSet",
+          "__WSAFDIsSet",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "select",
+          "__WSAFDIsSet",
+          "__WSAFDIsSet",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "select",
+          "__WSAFDIsSet",
+          "__WSAFDIsSet",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -75252,6 +87589,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3fa12ef2e049bfbacfa74e934975c62c",
+      "callees": {
+        "LoD/1.11": [
+          "WSAStartup"
+        ],
+        "LoD/1.11b": [
+          "WSAStartup"
+        ],
+        "LoD/1.12a": [
+          "WSAStartup"
+        ],
+        "LoD/1.13c": [
+          "WSAStartup"
+        ],
+        "LoD/1.13d": [
+          "WSAStartup"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -75280,14 +87634,14 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.11b": "0x6FF646D0",
         "LoD/1.12a": "0x6FF60610",
         "LoD/1.13c": "0x6FF67E30",
-        "LoD/1.13d": "0x6FF6A480"
+        "LoD/1.13d": "0x6FF6DFF0"
       },
       "rvas": {
         "LoD/1.11": "0x17210",
         "LoD/1.11b": "0x146D0",
         "LoD/1.12a": "0x10610",
         "LoD/1.13c": "0x17E30",
-        "LoD/1.13d": "0x1A480"
+        "LoD/1.13d": "0x1DFF0"
       },
       "sizes": {
         "LoD/1.11": 7,
@@ -75303,6 +87657,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:259e69de0e65044867c468a378151c1d",
+      "callees": {
+        "LoD/1.11": [
+          "closesocket"
+        ],
+        "LoD/1.11b": [
+          "closesocket"
+        ],
+        "LoD/1.13c": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13d": [
+          "ReleaseFileHandleWithRefCount"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -75354,6 +87722,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a49f54849f1906bef898b616243e65db",
+      "callees": {
+        "LoD/1.11": [
+          "send",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "closesocket"
+        ],
+        "LoD/1.11b": [
+          "send",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "closesocket"
+        ],
+        "LoD/1.12a": [
+          "send",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "closesocket"
+        ],
+        "LoD/1.13c": [
+          "send",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "closesocket"
+        ],
+        "LoD/1.13d": [
+          "send",
+          "WSAGetLastError",
+          "ValidateParameterOrShutdown",
+          "closesocket"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"ERROR: Disconnecting socket due to WSAETIMEDOUT\\n..."
@@ -75421,6 +87821,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10010",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -75446,15 +87863,24 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_EXP_10007": {
       "addresses": {
         "LoD/1.11": "0x6FF677F0",
-        "LoD/1.11b": "0x6FF64CB0"
+        "LoD/1.11b": "0x6FF64CB0",
+        "LoD/1.12a": "0x6FF5DDC0",
+        "LoD/1.13c": "0x6FF6E880",
+        "LoD/1.13d": "0x6FF60B30"
       },
       "rvas": {
         "LoD/1.11": "0x177F0",
-        "LoD/1.11b": "0x14CB0"
+        "LoD/1.11b": "0x14CB0",
+        "LoD/1.12a": "0xDDC0",
+        "LoD/1.13c": "0x1E880",
+        "LoD/1.13d": "0x10B30"
       },
       "sizes": {
         "LoD/1.11": 104,
-        "LoD/1.11b": 104
+        "LoD/1.11b": 104,
+        "LoD/1.12a": 132,
+        "LoD/1.13c": 132,
+        "LoD/1.13d": 132
       },
       "name": "Ordinal_10007",
       "signature": "int Ordinal_10007(int param_1, char * param_2, int param_3)",
@@ -75462,17 +87888,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10007",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
-        "LoD/1.11b": 6
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "ffe0fb1b04b34f57984b5f735618cb83",
-        "LoD/1.11b": "ffe0fb1b04b34f57984b5f735618cb83"
+        "LoD/1.11b": "ffe0fb1b04b34f57984b5f735618cb83",
+        "LoD/1.12a": "2b81520119ce091183f5bfbe8bfb71af",
+        "LoD/1.13c": "2b81520119ce091183f5bfbe8bfb71af",
+        "LoD/1.13d": "2b81520119ce091183f5bfbe8bfb71af"
       }
     },
     "fog.dll_ReceiveNetworkDataFromSocket": {
@@ -75504,6 +87966,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c14c6d32d81a130050b3c631eb8e206e",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -75555,6 +88044,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:aa91ca2c856a7f78b60840e684ee6083",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "closesocket",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "closesocket",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "closesocket",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "closesocket",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "closesocket",
+          "WSAGetLastError"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\Safesock.cpp\""
@@ -75750,17 +88271,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_7BB0": {
       "addresses": {
         "LoD/1.11": "0x6FF67BB0",
-        "LoD/1.11b": "0x6FF68F80",
-        "LoD/1.12a": "0x6FF5FAE0",
-        "LoD/1.13c": "0x6FF5FD60",
-        "LoD/1.13d": "0x6FF6AC60"
+        "LoD/1.11b": "0x6FF5CDA0",
+        "LoD/1.12a": "0x6FF6C780",
+        "LoD/1.13c": "0x6FF51020",
+        "LoD/1.13d": "0x6FF6AC80"
       },
       "rvas": {
         "LoD/1.11": "0x17BB0",
-        "LoD/1.11b": "0x18F80",
-        "LoD/1.12a": "0xFAE0",
-        "LoD/1.13c": "0xFD60",
-        "LoD/1.13d": "0x1AC60"
+        "LoD/1.11b": "0xCDA0",
+        "LoD/1.12a": "0x1C780",
+        "LoD/1.13c": "0x1020",
+        "LoD/1.13d": "0x1AC80"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -75954,17 +88475,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_8130": {
       "addresses": {
         "LoD/1.11": "0x6FF68130",
-        "LoD/1.11b": "0x6FF6BD30",
-        "LoD/1.12a": "0x6FF6C7C0",
-        "LoD/1.13c": "0x6FF5FC40",
-        "LoD/1.13d": "0x6FF5CD80"
+        "LoD/1.11b": "0x6FF68F90",
+        "LoD/1.12a": "0x6FF6B7E0",
+        "LoD/1.13c": "0x6FF6CC60",
+        "LoD/1.13d": "0x6FF5D720"
       },
       "rvas": {
         "LoD/1.11": "0x18130",
-        "LoD/1.11b": "0x1BD30",
-        "LoD/1.12a": "0x1C7C0",
-        "LoD/1.13c": "0xFC40",
-        "LoD/1.13d": "0xCD80"
+        "LoD/1.11b": "0x18F90",
+        "LoD/1.12a": "0x1B7E0",
+        "LoD/1.13c": "0x1CC60",
+        "LoD/1.13d": "0xD720"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -76031,6 +88552,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7f5a23458c57dc4e4a80ec5717a46eaa",
+      "callees": {
+        "LoD/1.11": [
+          "BuildPKWareHuffmanDecodeTables"
+        ],
+        "LoD/1.11b": [
+          "BuildPKWareHuffmanDecodeTables"
+        ],
+        "LoD/1.12a": [
+          "BuildPKWareHuffmanDecodeTables"
+        ],
+        "LoD/1.13c": [
+          "BuildPKWareHuffmanDecodeTables"
+        ],
+        "LoD/1.13d": [
+          "BuildPKWareHuffmanDecodeTables"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -76133,6 +88671,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:13ec7578ddcf5b763f3edae16352d4b3",
+      "callees": {
+        "LoD/1.11": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.11b": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.12a": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13c": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13d": [
+          "FindCharInString",
+          "FindCharInString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -76159,16 +88719,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF684A0",
         "LoD/1.11b": "0x6FF6BFB0",
-        "LoD/1.12a": "0x6FF5D090",
-        "LoD/1.13c": "0x6FF60810",
-        "LoD/1.13d": "0x6FF6DFF0"
+        "LoD/1.12a": "0x6FF6EF30",
+        "LoD/1.13c": "0x6FF66920",
+        "LoD/1.13d": "0x6FF5D920"
       },
       "rvas": {
         "LoD/1.11": "0x184A0",
         "LoD/1.11b": "0x1BFB0",
-        "LoD/1.12a": "0xD090",
-        "LoD/1.13c": "0x10810",
-        "LoD/1.13d": "0x1DFF0"
+        "LoD/1.12a": "0x1EF30",
+        "LoD/1.13c": "0x16920",
+        "LoD/1.13d": "0xD920"
       },
       "sizes": {
         "LoD/1.11": 7,
@@ -76184,6 +88744,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:259e69de0e65044867c468a378151c1d",
+      "callees": {
+        "LoD/1.11": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.11b": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.12a": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13c": [
+          "closesocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -76209,17 +88783,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_strcoll": {
       "addresses": {
         "LoD/1.11": "0x6FF684C0",
-        "LoD/1.11b": "0x6FF6BFD0",
-        "LoD/1.12a": "0x6FF74BB0",
-        "LoD/1.13c": "0x6FF74BC0",
-        "LoD/1.13d": "0x6FF6E010"
+        "LoD/1.11b": "0x6FF748C0",
+        "LoD/1.12a": "0x6FF6EF50",
+        "LoD/1.13c": "0x6FF67E50",
+        "LoD/1.13d": "0x6FF74CE0"
       },
       "rvas": {
         "LoD/1.11": "0x184C0",
-        "LoD/1.11b": "0x1BFD0",
-        "LoD/1.12a": "0x24BB0",
-        "LoD/1.13c": "0x24BC0",
-        "LoD/1.13d": "0x1E010"
+        "LoD/1.11b": "0x248C0",
+        "LoD/1.12a": "0x1EF50",
+        "LoD/1.13c": "0x17E50",
+        "LoD/1.13d": "0x24CE0"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -76235,6 +88809,17 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a0296f3d619ffd4307ef69ba5693f78e",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateAndSetGamePath"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndSetGamePath"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndSetGamePath"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -76286,6 +88871,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fe0b00bf92e02b434cbafdd786d8ad21",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateAndSetGamePath",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndSetGamePath",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndSetGamePath",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndSetGamePath",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndSetGamePath",
+          "SetStreamOrFileHandle",
+          "InitializeFileErrorHandler",
+          "SetFrameDivisor",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter",
+          "ValidateAndStoreConfigParameter"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -76541,6 +89173,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6f57932b299bee0b44c19b667da90f2e",
+      "callees": {
+        "LoD/1.11": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "ComputeStringHash"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -76898,6 +89547,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4192b975fa281378cba274e0251a0a31",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -76966,6 +89647,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6024e714a4c1dd7f98a1be5e8d2fe22f",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory",
+          "ComputeStringHash",
+          "ComputeStringHash",
+          "CompareStringsIgnoreCase",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory",
+          "ComputeStringHash",
+          "ComputeStringHash",
+          "CompareStringsIgnoreCase",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "ComputeStringHash",
+          "ComputeStringHash",
+          "CompareStringsIgnoreCase",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "ComputeStringHash",
+          "ComputeStringHash",
+          "CompareStringsIgnoreCase",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "ComputeStringHash",
+          "ComputeStringHash",
+          "CompareStringsIgnoreCase",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -77033,6 +89776,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:24ca3f12007200a1e113342907a350b1",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "SearchBinaryTreeForTransformedKey",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "ApplyCharacterTransformationToBuffer"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "SearchBinaryTreeForTransformedKey",
+          "Ordinal_10028",
+          "CopyMemoryAndDetectTerminator",
+          "ApplyCharacterTransformationToBuffer"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SearchBinaryTreeForTransformedKey",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "ApplyCharacterTransformationToBuffer"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SearchBinaryTreeForTransformedKey",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "ApplyCharacterTransformationToBuffer"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SearchBinaryTreeForTransformedKey",
+          "LogErrorAndInitiateShutdown",
+          "CopyMemoryAndDetectTerminator",
+          "ApplyCharacterTransformationToBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -77106,6 +89911,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:740470ae4e724b78f2a2044f50b53fef",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "AllocateConditionalResource"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "AllocateConditionalResource"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "AllocateConditionalResource"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "AllocateConditionalResource"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "AllocateConditionalResource"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -77179,6 +90031,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:187561b12b9133a2fb5b2a6e0cb6c9f4",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "InsertSortedValueIntoArray",
+          "Ordinal_10216",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "InsertSortedValueIntoArray",
+          "InitializeAndInsertBSTNode",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "InsertSortedValueIntoArray",
+          "InitializeAndInsertBSTNode",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "InsertSortedValueIntoArray",
+          "InitializeAndInsertBSTNode",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "InsertSortedValueIntoArray",
+          "InitializeAndInsertBSTNode",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -77297,6 +90216,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:ef620350584f61a060ddad254bbe23b4",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServerNT.cpp\""
@@ -77365,6 +90301,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6fea067fe7da99204f92ce68713ef2f1",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServerNT.cpp\""
@@ -77433,6 +90391,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -77501,6 +90486,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:50201766d7f87ba94fd22789bec6b372",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -77569,6 +90616,53 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:14d599a5c715b47ce97cc3b434829e92",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServer.cpp\""
@@ -77637,6 +90731,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:462d4495f406de7d20c8977017fa0d98",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 30,
         "LoD/1.11b": 30,
@@ -77688,6 +90799,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:21fb31edef950e3c5f26967a40c050bf",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection",
+          "CalculateElapsedTimeInSeconds",
+          "ValidateCriticalSection",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -77812,6 +90980,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:27dc00abd21c5ce09d0af14163594492",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -77885,6 +91085,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fc6cc3ce3e41f99cd1d7c96a3e60b7d0",
+      "callees": {
+        "LoD/1.11": [
+          "select",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "select",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "select",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "select",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "select",
+          "ValidateCriticalSection",
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\QServer\\\\QServerNT.cpp\""
@@ -78055,6 +91282,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -78120,6 +91374,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a3a1a3292a9249622ddac011054e50ec",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -78158,6 +91426,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:160bb113a472ac77d92a82b40e46f2d5",
+      "callees": {
+        "LoD/1.11": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "send",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -78187,6 +91469,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e241b0b4578fd97282eaead0fcd53632",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1
       },
@@ -78226,6 +91513,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:04be1cb0309df04504b4c514e33c84af",
+      "callees": {
+        "LoD/1.11": [
+          "socket",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "bind",
+          "closesocket",
+          "listen",
+          "closesocket"
+        ],
+        "LoD/1.11b": [
+          "socket",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "bind",
+          "closesocket",
+          "listen",
+          "closesocket"
+        ],
+        "LoD/1.12a": [
+          "socket",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "bind",
+          "closesocket",
+          "listen",
+          "closesocket"
+        ],
+        "LoD/1.13c": [
+          "socket",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "bind",
+          "closesocket",
+          "listen",
+          "closesocket"
+        ],
+        "LoD/1.13d": [
+          "socket",
+          "setsockopt",
+          "setsockopt",
+          "setsockopt",
+          "ioctlsocket",
+          "htons",
+          "bind",
+          "closesocket",
+          "listen",
+          "closesocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -78246,57 +91595,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "f090863027919451d58778899d8dda9a",
         "LoD/1.13c": "f090863027919451d58778899d8dda9a",
         "LoD/1.13d": "f090863027919451d58778899d8dda9a"
-      }
-    },
-    "fog.dll_GetUnitX_BC00": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6BC00",
-        "LoD/1.11b": "0x6FF6F6B0",
-        "LoD/1.12a": "0x6FF617D0",
-        "LoD/1.13c": "0x6FF6D730",
-        "LoD/1.13d": "0x6FF5A4E6"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1BC00",
-        "LoD/1.11b": "0x1F6B0",
-        "LoD/1.12a": "0x117D0",
-        "LoD/1.13c": "0x1D730",
-        "LoD/1.13d": "0xA4E6"
-      },
-      "sizes": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "name": "GetUnitX",
-      "signature": "dword GetUnitX(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Get X coordinate of unit. Returns 0 (stub implementation).\n\nAlgorithm:\n1. Return 0\n\nParameters:\n- pUnit (void*): Unit pointer\n\nReturns:\n- dword: X coordinate (always 0 in this stub)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.11b": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.12a": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.13c": "acbc2c857bf1a8401ca8fe5de1c0ec70",
-        "LoD/1.13d": "acbc2c857bf1a8401ca8fe5de1c0ec70"
       }
     },
     "fog.dll_CleanupResourcesAndResetContex": {
@@ -78328,6 +91626,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:716e7b41d34f399ade539275053f17e3",
+      "callees": {
+        "LoD/1.11": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.11b": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.12a": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13c": [
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13d": [
+          "ReleaseFileHandleWithRefCount"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\AsyncData.cpp\""
@@ -78515,6 +91830,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e781b1ca63bc9147c2d399ebb9d37072",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -78588,6 +91960,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:23723dab965f7091da6b88f000947ae6",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -78656,6 +92070,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2cb3a92f00444f2f9592ae3ef2897257",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -78724,6 +92170,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:60d05856227b583ce13e7a2852e72c74",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateAndSignalGameEvent"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -78792,6 +92300,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -78859,6 +92394,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10089",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "SetFrameDivisor",
+          "ValidatePowerOfTwo",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "SetFrameDivisor",
+          "ValidatePowerOfTwo",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SetFrameDivisor",
+          "ValidatePowerOfTwo",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SetFrameDivisor",
+          "ValidatePowerOfTwo",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "SetFrameDivisor",
+          "ValidatePowerOfTwo",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -78932,6 +92524,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:71cc75f5570226679c21ac6e46e58097",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextAndWaitHandle",
+          "RemoveGameObjectsByIdentifier",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextAndWaitHandle",
+          "RemoveGameObjectsByIdentifier",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "RemoveGameObjectsByIdentifier",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "RemoveGameObjectsByIdentifier",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "RemoveGameObjectsByIdentifier",
+          "GetReturnAddress",
+          "WSACleanup",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -79005,6 +92664,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:df6c23fb2ed4676e63efb8055e743ec9",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextAndWaitHandle",
+          "ValidateAndSignalGameEvent",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextAndWaitHandle",
+          "ValidateAndSignalGameEvent",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "ValidateAndSignalGameEvent",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "ValidateAndSignalGameEvent",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextAndWaitHandle",
+          "ValidateAndSignalGameEvent",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -79073,6 +92794,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f8145d77d87dea31e89e03478c84439d",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextSignatureAndWaitThread",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateContextSignatureAndWaitThread",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextSignatureAndWaitThread",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextSignatureAndWaitThread",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateContextSignatureAndWaitThread",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -79370,17 +93153,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_CA00": {
       "addresses": {
         "LoD/1.11": "0x6FF6CA00",
-        "LoD/1.11b": "0x6FF5CEB0",
-        "LoD/1.12a": "0x6FF6C100",
-        "LoD/1.13c": "0x6FF5FC30",
-        "LoD/1.13d": "0x6FF51020"
+        "LoD/1.11b": "0x6FF5D780",
+        "LoD/1.12a": "0x6FF5F9C0",
+        "LoD/1.13c": "0x6FF5FC50",
+        "LoD/1.13d": "0x6FF5CDB0"
       },
       "rvas": {
         "LoD/1.11": "0x1CA00",
-        "LoD/1.11b": "0xCEB0",
-        "LoD/1.12a": "0x1C100",
-        "LoD/1.13c": "0xFC30",
-        "LoD/1.13d": "0x1020"
+        "LoD/1.11b": "0xD780",
+        "LoD/1.12a": "0xF9C0",
+        "LoD/1.13c": "0xFC50",
+        "LoD/1.13d": "0xCDB0"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -79421,68 +93204,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_CA10": {
       "addresses": {
         "LoD/1.11": "0x6FF6CA10",
-        "LoD/1.11b": "0x6FF60950",
-        "LoD/1.12a": "0x6FF5FAF0",
-        "LoD/1.13c": "0x6FF61A40",
-        "LoD/1.13d": "0x6FF6AC80"
+        "LoD/1.11b": "0x6FF51020",
+        "LoD/1.12a": "0x6FF603B0",
+        "LoD/1.13c": "0x6FF63B50",
+        "LoD/1.13d": "0x6FF5CD80"
       },
       "rvas": {
         "LoD/1.11": "0x1CA10",
-        "LoD/1.11b": "0x10950",
-        "LoD/1.12a": "0xFAF0",
-        "LoD/1.13c": "0x11A40",
-        "LoD/1.13d": "0x1AC80"
-      },
-      "sizes": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "name": "ShutdownStubNoOp",
-      "signature": "void ShutdownStubNoOp(void)",
-      "calling_convention": "__stdcall",
-      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
-      }
-    },
-    "fog.dll_ShutdownStubNoOp_CA20": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6CA20",
-        "LoD/1.11b": "0x6FF69770",
-        "LoD/1.12a": "0x6FF603C0",
-        "LoD/1.13c": "0x6FF63B60",
-        "LoD/1.13d": "0x6FF5CE60"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1CA20",
-        "LoD/1.11b": "0x19770",
-        "LoD/1.12a": "0x103C0",
-        "LoD/1.13c": "0x13B60",
-        "LoD/1.13d": "0xCE60"
+        "LoD/1.11b": "0x1020",
+        "LoD/1.12a": "0x103B0",
+        "LoD/1.13c": "0x13B50",
+        "LoD/1.13d": "0xCD80"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -79523,17 +93255,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_CA30": {
       "addresses": {
         "LoD/1.11": "0x6FF6CA30",
-        "LoD/1.11b": "0x6FF6C7F0",
-        "LoD/1.12a": "0x6FF6C7E0",
-        "LoD/1.13c": "0x6FF6A9D0",
-        "LoD/1.13d": "0x6FF5CDB0"
+        "LoD/1.11b": "0x6FF6BD30",
+        "LoD/1.12a": "0x6FF5F9F0",
+        "LoD/1.13c": "0x6FF6CC80",
+        "LoD/1.13d": "0x6FF6ACF0"
       },
       "rvas": {
         "LoD/1.11": "0x1CA30",
-        "LoD/1.11b": "0x1C7F0",
-        "LoD/1.12a": "0x1C7E0",
-        "LoD/1.13c": "0x1A9D0",
-        "LoD/1.13d": "0xCDB0"
+        "LoD/1.11b": "0x1BD30",
+        "LoD/1.12a": "0xF9F0",
+        "LoD/1.13c": "0x1CC80",
+        "LoD/1.13d": "0x1ACF0"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -79600,6 +93332,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f315f7a96cd733bbfff47b01b1477d98",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\ErrorManager.cpp\""
@@ -79697,68 +93456,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_CB30": {
       "addresses": {
         "LoD/1.11": "0x6FF6CB30",
-        "LoD/1.11b": "0x6FF5CD90",
-        "LoD/1.12a": "0x6FF603B0",
-        "LoD/1.13c": "0x6FF6EFC0",
-        "LoD/1.13d": "0x6FF5CE70"
+        "LoD/1.11b": "0x6FF691F0",
+        "LoD/1.12a": "0x6FF5FAF0",
+        "LoD/1.13c": "0x6FF5FD50",
+        "LoD/1.13d": "0x6FF5CDA0"
       },
       "rvas": {
         "LoD/1.11": "0x1CB30",
-        "LoD/1.11b": "0xCD90",
-        "LoD/1.12a": "0x103B0",
-        "LoD/1.13c": "0x1EFC0",
-        "LoD/1.13d": "0xCE70"
-      },
-      "sizes": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "name": "ShutdownStubNoOp",
-      "signature": "void ShutdownStubNoOp(void)",
-      "calling_convention": "__stdcall",
-      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
-      }
-    },
-    "fog.dll_ShutdownStubNoOp_CB40": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6CB40",
-        "LoD/1.11b": "0x6FF5CDB0",
-        "LoD/1.12a": "0x6FF51020",
-        "LoD/1.13c": "0x6FF5FD50",
-        "LoD/1.13d": "0x6FF6B4C0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1CB40",
-        "LoD/1.11b": "0xCDB0",
-        "LoD/1.12a": "0x1020",
+        "LoD/1.11b": "0x191F0",
+        "LoD/1.12a": "0xFAF0",
         "LoD/1.13c": "0xFD50",
-        "LoD/1.13d": "0x1B4C0"
+        "LoD/1.13d": "0xCDA0"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -79825,6 +93533,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:433c536f7cabba714b1c8a2bbb677fe7",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CopyStringBounded"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CopyStringBounded"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CopyStringBounded"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CopyStringBounded"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CopyStringBounded"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -79876,6 +93606,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:c9a7dd7eba51e2aaa465b92045844d07",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"*unknown*\""
@@ -80062,17 +93814,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_InitializeAndBuildPath_D1C0": {
       "addresses": {
         "LoD/1.11": "0x6FF6D1C0",
-        "LoD/1.11b": "0x6FF63370",
-        "LoD/1.12a": "0x6FF68CA0",
+        "LoD/1.11b": "0x6FF5D970",
+        "LoD/1.12a": "0x6FF605A0",
         "LoD/1.13c": "0x6FF60820",
-        "LoD/1.13d": "0x6FF61760"
+        "LoD/1.13d": "0x6FF5D8F0"
       },
       "rvas": {
         "LoD/1.11": "0x1D1C0",
-        "LoD/1.11b": "0x13370",
-        "LoD/1.12a": "0x18CA0",
+        "LoD/1.11b": "0xD970",
+        "LoD/1.12a": "0x105A0",
         "LoD/1.13c": "0x10820",
-        "LoD/1.13d": "0x11760"
+        "LoD/1.13d": "0xD8F0"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -80088,6 +93840,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f572de39989bcc841e3b170dce8cb9d2",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -80212,7 +93986,7 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "db834c5fdc8e9ef62df2a07544dcc181"
       }
     },
-    "fog.dll_FormatStringBuffer": {
+    "fog.dll_FormatStringBuffer_D410": {
       "addresses": {
         "LoD/1.11": "0x6FF6D410",
         "LoD/1.11b": "0x6FF5D760",
@@ -80266,16 +94040,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_D430": {
       "addresses": {
         "LoD/1.11": "0x6FF6D430",
-        "LoD/1.11b": "0x6FF5D780",
-        "LoD/1.12a": "0x6FF6C7D0",
-        "LoD/1.13c": "0x6FF60620",
+        "LoD/1.11b": "0x6FF5CD80",
+        "LoD/1.12a": "0x6FF5FAE0",
+        "LoD/1.13c": "0x6FF61A40",
         "LoD/1.13d": "0x6FF698A0"
       },
       "rvas": {
         "LoD/1.11": "0x1D430",
-        "LoD/1.11b": "0xD780",
-        "LoD/1.12a": "0x1C7D0",
-        "LoD/1.13c": "0x10620",
+        "LoD/1.11b": "0xCD80",
+        "LoD/1.12a": "0xFAE0",
+        "LoD/1.13c": "0x11A40",
         "LoD/1.13d": "0x198A0"
       },
       "sizes": {
@@ -80317,17 +94091,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_D440": {
       "addresses": {
         "LoD/1.11": "0x6FF6D440",
-        "LoD/1.11b": "0x6FF5CEC0",
-        "LoD/1.12a": "0x6FF6C790",
-        "LoD/1.13c": "0x6FF6CC50",
-        "LoD/1.13d": "0x6FF6ACF0"
+        "LoD/1.11b": "0x6FF6DE20",
+        "LoD/1.12a": "0x6FF6A1B0",
+        "LoD/1.13c": "0x6FF6CC70",
+        "LoD/1.13d": "0x6FF5CE70"
       },
       "rvas": {
         "LoD/1.11": "0x1D440",
-        "LoD/1.11b": "0xCEC0",
-        "LoD/1.12a": "0x1C790",
-        "LoD/1.13c": "0x1CC50",
-        "LoD/1.13d": "0x1ACF0"
+        "LoD/1.11b": "0x1DE20",
+        "LoD/1.12a": "0x1A1B0",
+        "LoD/1.13c": "0x1CC70",
+        "LoD/1.13d": "0xCE70"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -80394,6 +94168,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6f1b0c16a19f7a818b99a111e9aa0bed",
+      "callees": {
+        "LoD/1.11": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CreateDirectoryPathRecursive",
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"%s%s%02d%02d%02d.txt\""
@@ -80459,6 +94260,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:aed29c110a7d521d02720993b983f602",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndInitializeNetworkConfig"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -80507,6 +94322,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2ce167e985b518404b4eb1981438ab6c",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"-------------------------------------------------..."
@@ -80575,6 +94422,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:947d8d1015b741659c9b603f097a50b9",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "EnqueueLogMessage",
+          "LogAppendFormat",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "NullStubProc",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "NullStubProc",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "EnqueueLogMessage",
+          "LogAppendFormat",
+          "EnqueueLogMessage"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "EnqueueLogMessage",
+          "NullStubProc",
+          "EnqueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Code bytes:\"",
@@ -80647,6 +94526,73 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:e55ee0411b082344387ce9faddc79a6a",
+      "callees": {
+        "LoD/1.11": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader",
+          "StripSourcePathPrefix",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "StripSourcePathPrefix",
+          "...+3 more"
+        ],
+        "LoD/1.11b": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "StripSourcePathPrefix",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "StripSourcePathPrefix",
+          "...+3 more"
+        ],
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "StripSourcePathPrefix",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "StripSourcePathPrefix",
+          "...+3 more"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "BuildDiabloLogHeader",
+          "StripSourcePathPrefix",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "StripSourcePathPrefix",
+          "...+3 more"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "BuildDiabloLogHeader",
+          "StripSourcePathPrefix",
+          "FormatStringBuffer",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "StripSourcePathPrefix",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -80740,6 +94686,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6757c8ef1fde6b11e12713ecc03ec8ea",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.11b": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.12a": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndInitializeNetworkConfig"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndInitializeNetworkConfig"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -80944,6 +94907,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:88780d63d633fcfc89af6d1267125934",
+      "callees": {
+        "LoD/1.11": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -81012,6 +94997,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:88780d63d633fcfc89af6d1267125934",
+      "callees": {
+        "LoD/1.11": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -81080,6 +95087,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:88780d63d633fcfc89af6d1267125934",
+      "callees": {
+        "LoD/1.11": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -81148,6 +95177,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:88780d63d633fcfc89af6d1267125934",
+      "callees": {
+        "LoD/1.11": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -81216,6 +95267,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8cd9ba288c0333ffeb4670c16e89f464",
+      "callees": {
+        "LoD/1.11": [
+          "CloseAllEventHandles",
+          "DeinitializeGameResources",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "CloseAllEventHandles",
+          "DeinitializeGameResources",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "CloseAllEventHandles",
+          "DeinitializeGameResources",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "CloseAllEventHandles",
+          "DeinitializeGameResources",
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "CloseAllEventHandles",
+          "DeinitializeGameResources",
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -81267,6 +95345,68 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:048e1485894445b9200df648d5ef6c36",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ParseConfigurationValue",
+          "InitializeMemoryPoolAllocator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ParseConfigurationValue",
+          "InitializeMemoryPoolAllocator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ParseConfigurationValue",
+          "InitializeMemoryPoolAllocator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ParseConfigurationValue",
+          "InitializeMemoryPoolAllocator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ParseConfigurationValue",
+          "InitializeMemoryPoolAllocator",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -81472,6 +95612,57 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "35fc0db024e43eb773ff49c7c3df6352",
         "LoD/1.13c": "35fc0db024e43eb773ff49c7c3df6352",
         "LoD/1.13d": "35fc0db024e43eb773ff49c7c3df6352"
+      }
+    },
+    "fog.dll_GetAdjustedCountValue": {
+      "addresses": {
+        "LoD/1.11": "0x6FF6E980",
+        "LoD/1.11b": "0x6FF6E3C0",
+        "LoD/1.12a": "0x6FF6BA00",
+        "LoD/1.13c": "0x6FF63D80",
+        "LoD/1.13d": "0x6FF6EC40"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1E980",
+        "LoD/1.11b": "0x1E3C0",
+        "LoD/1.12a": "0x1BA00",
+        "LoD/1.13c": "0x13D80",
+        "LoD/1.13d": "0x1EC40"
+      },
+      "sizes": {
+        "LoD/1.11": 18,
+        "LoD/1.11b": 18,
+        "LoD/1.12a": 18,
+        "LoD/1.13c": 18,
+        "LoD/1.13d": 18
+      },
+      "name": "GetAdjustedCountValue",
+      "signature": "int GetAdjustedCountValue(void * pDataStruct)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves and optionally adjusts a count value from a data structure.\n\nAlgorithm:\n1. Load the structure pointer from the function parameter (stack offset +0x4)\n2. Load the count value from offset +0x8 within the structure\n3. Load the increment flag from offset +0xc within the structure\n4. Test if the increment flag is non-zero (sets ZF if zero)\n5. If flag is non-zero, increment the count value by 1\n6. Return the adjusted count value (callee cleanup 4 bytes per __stdcall)\n\nParameters:\npDataStruct (void*): Pointer to a data structure containing:\n  - Offset +0x8: Count value (dword) - base count/index to retrieve\n  - Offset +0xc: Increment flag (dword) - non-zero triggers +1 adjustment\n\nReturns:\nint: The count value retrieved from offset +0x8, optionally incremented by 1 if the flag at +0xc is non-zero\n\nSpecial Cases:\n- Flag comparison uses zero-test; any non-zero value triggers increment\n- No validation of structure pointer; assumes valid memory access\n- No range checks on returned count value\n- Structure padding/alignment assumed 4-byte aligned for offset access\n- __stdcall convention requires callee cleanup of 4-byte parameter",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:fddb14ab818d7855c2d9f4103a8015c1",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "fddb14ab818d7855c2d9f4103a8015c1",
+        "LoD/1.11b": "fddb14ab818d7855c2d9f4103a8015c1",
+        "LoD/1.12a": "fddb14ab818d7855c2d9f4103a8015c1",
+        "LoD/1.13c": "fddb14ab818d7855c2d9f4103a8015c1",
+        "LoD/1.13d": "fddb14ab818d7855c2d9f4103a8015c1"
       }
     },
     "fog.dll_XorMemoryRegions": {
@@ -81962,6 +96153,33 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4e2690e85ab304c00638f2a19c048f8a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -82004,17 +96222,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_StubNoOp_EE60": {
       "addresses": {
         "LoD/1.11": "0x6FF6EE60",
-        "LoD/1.11b": "0x6FF64F50",
-        "LoD/1.12a": "0x6FF618B0",
-        "LoD/1.13c": "0x6FF6E310",
-        "LoD/1.13d": "0x6FF6ACA0"
+        "LoD/1.11b": "0x6FF68FC0",
+        "LoD/1.12a": "0x6FF618E0",
+        "LoD/1.13c": "0x6FF5CF60",
+        "LoD/1.13d": "0x6FF66520"
       },
       "rvas": {
         "LoD/1.11": "0x1EE60",
-        "LoD/1.11b": "0x14F50",
-        "LoD/1.12a": "0x118B0",
-        "LoD/1.13c": "0x1E310",
-        "LoD/1.13d": "0x1ACA0"
+        "LoD/1.11b": "0x18FC0",
+        "LoD/1.12a": "0x118E0",
+        "LoD/1.13c": "0xCF60",
+        "LoD/1.13d": "0x16520"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -82080,6 +96298,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:1f0cbca300b2d108cf7b2338ac3a4dba",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "closesocket"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "closesocket"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "closesocket"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "closesocket"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "closesocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -82130,6 +96370,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:94ef0c1933e7d0f1ea92bb4002968e8e",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -82150,57 +96407,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "94ef0c1933e7d0f1ea92bb4002968e8e",
         "LoD/1.13c": "94ef0c1933e7d0f1ea92bb4002968e8e",
         "LoD/1.13d": "94ef0c1933e7d0f1ea92bb4002968e8e"
-      }
-    },
-    "fog.dll_ConditionallyExecuteSystemTask": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6F140",
-        "LoD/1.11b": "0x6FF68AC0",
-        "LoD/1.12a": "0x6FF5DEE0",
-        "LoD/1.13c": "0x6FF6E9A0",
-        "LoD/1.13d": "0x6FF60BF0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1F140",
-        "LoD/1.11b": "0x18AC0",
-        "LoD/1.12a": "0xDEE0",
-        "LoD/1.13c": "0x1E9A0",
-        "LoD/1.13d": "0x10BF0"
-      },
-      "sizes": {
-        "LoD/1.11": 18,
-        "LoD/1.11b": 18,
-        "LoD/1.12a": 18,
-        "LoD/1.13c": 18,
-        "LoD/1.13d": 18
-      },
-      "name": "ConditionallyExecuteSystemTask",
-      "signature": "void ConditionallyExecuteSystemTask(int nTaskHandle)",
-      "calling_convention": "__stdcall",
-      "comment": "Setting prototype: void ConditionallyExecuteSystemTask(int nTaskHandle)",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e17f684dc6776367a14c1fb520e4546d",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e17f684dc6776367a14c1fb520e4546d",
-        "LoD/1.11b": "e17f684dc6776367a14c1fb520e4546d",
-        "LoD/1.12a": "e17f684dc6776367a14c1fb520e4546d",
-        "LoD/1.13c": "e17f684dc6776367a14c1fb520e4546d",
-        "LoD/1.13d": "e17f684dc6776367a14c1fb520e4546d"
       }
     },
     "fog.dll_CleanupResourcePointer": {
@@ -82232,6 +96438,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:939e42332e0c370c3477e58f5b6ab7ce",
+      "callees": {
+        "LoD/1.11": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.11b": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.12a": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13c": [
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13d": [
+          "CloseNetworkResource"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -82282,6 +96505,48 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:f31d4a4004481e192c8756fa0369a6fc",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -82349,6 +96614,28 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10071",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection",
+          "SendDataToSocket"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection",
+          "SendDataToSocket"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "SendDataToSocket"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "SendDataToSocket"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "SendDataToSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -82400,6 +96687,38 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fd6b421ff0c53d497a756162d06e18b2",
+      "callees": {
+        "LoD/1.11": [
+          "CheckSocketReadiness",
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.11b": [
+          "CheckSocketReadiness",
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.12a": [
+          "CheckSocketReadiness",
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "CheckSocketReadiness",
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "CheckSocketReadiness",
+          "ValidateCriticalSection",
+          "recv",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 27,
         "LoD/1.11b": 27,
@@ -82451,6 +96770,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:255768def46c64da49433c52c0100ceb",
+      "callees": {
+        "LoD/1.11": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.11b": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.12a": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.13c": [
+          "CreateTcpConnection"
+        ],
+        "LoD/1.13d": [
+          "CreateTcpConnection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -82575,20 +96911,71 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "fe932b465dbfa15dfbee1a94f521850f"
       }
     },
+    "fog.dll_GetUnitX_F840": {
+      "addresses": {
+        "LoD/1.11": "0x6FF6F840",
+        "LoD/1.11b": "0x6FF6C7E0",
+        "LoD/1.12a": "0x6FF6A1A0",
+        "LoD/1.13c": "0x6FF6A9C0",
+        "LoD/1.13d": "0x6FF6AC40"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1F840",
+        "LoD/1.11b": "0x1C7E0",
+        "LoD/1.12a": "0x1A1A0",
+        "LoD/1.13c": "0x1A9C0",
+        "LoD/1.13d": "0x1AC40"
+      },
+      "sizes": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "name": "GetUnitX",
+      "signature": "dword GetUnitX(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Get X coordinate of unit. Returns 0 (stub implementation).\n\nAlgorithm:\n1. Return 0\n\nParameters:\n- pUnit (void*): Unit pointer\n\nReturns:\n- dword: X coordinate (always 0 in this stub)",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.11b": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.12a": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.13c": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "LoD/1.13d": "acbc2c857bf1a8401ca8fe5de1c0ec70"
+      }
+    },
     "fog.dll_ShutdownStubNoOp_F850": {
       "addresses": {
         "LoD/1.11": "0x6FF6F850",
-        "LoD/1.11b": "0x6FF5D790",
-        "LoD/1.12a": "0x6FF5F9E0",
-        "LoD/1.13c": "0x6FF5FC50",
-        "LoD/1.13d": "0x6FF6AC50"
+        "LoD/1.11b": "0x6FF5CEB0",
+        "LoD/1.12a": "0x6FF6C790",
+        "LoD/1.13c": "0x6FF5FC40",
+        "LoD/1.13d": "0x6FF69320"
       },
       "rvas": {
         "LoD/1.11": "0x1F850",
-        "LoD/1.11b": "0xD790",
-        "LoD/1.12a": "0xF9E0",
-        "LoD/1.13c": "0xFC50",
-        "LoD/1.13d": "0x1AC50"
+        "LoD/1.11b": "0xCEB0",
+        "LoD/1.12a": "0x1C790",
+        "LoD/1.13c": "0xFC40",
+        "LoD/1.13d": "0x19320"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -82629,17 +97016,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_F860": {
       "addresses": {
         "LoD/1.11": "0x6FF6F860",
-        "LoD/1.11b": "0x6FF5CDA0",
-        "LoD/1.12a": "0x6FF6B7E0",
-        "LoD/1.13c": "0x6FF60630",
-        "LoD/1.13d": "0x6FF6B490"
+        "LoD/1.11b": "0x6FF69770",
+        "LoD/1.12a": "0x6FF6C7B0",
+        "LoD/1.13c": "0x6FF5FD60",
+        "LoD/1.13d": "0x6FF51020"
       },
       "rvas": {
         "LoD/1.11": "0x1F860",
-        "LoD/1.11b": "0xCDA0",
-        "LoD/1.12a": "0x1B7E0",
-        "LoD/1.13c": "0x10630",
-        "LoD/1.13d": "0x1B490"
+        "LoD/1.11b": "0x19770",
+        "LoD/1.12a": "0x1C7B0",
+        "LoD/1.13c": "0xFD60",
+        "LoD/1.13d": "0x1020"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -82680,17 +97067,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_ShutdownStubNoOp_F870": {
       "addresses": {
         "LoD/1.11": "0x6FF6F870",
-        "LoD/1.11b": "0x6FF68F70",
-        "LoD/1.12a": "0x6FF5F9D0",
-        "LoD/1.13c": "0x6FF51020",
-        "LoD/1.13d": "0x6FF5D720"
+        "LoD/1.11b": "0x6FF5CD90",
+        "LoD/1.12a": "0x6FF6C100",
+        "LoD/1.13c": "0x6FF63B60",
+        "LoD/1.13d": "0x6FF5D730"
       },
       "rvas": {
         "LoD/1.11": "0x1F870",
-        "LoD/1.11b": "0x18F70",
-        "LoD/1.12a": "0xF9D0",
-        "LoD/1.13c": "0x1020",
-        "LoD/1.13d": "0xD720"
+        "LoD/1.11b": "0xCD90",
+        "LoD/1.12a": "0x1C100",
+        "LoD/1.13c": "0x13B60",
+        "LoD/1.13d": "0xD730"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -82732,15 +97119,15 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF6F880",
         "LoD/1.11b": "0x6FF6DE30",
-        "LoD/1.12a": "0x6FF6C680",
-        "LoD/1.13c": "0x6FF6CC80",
+        "LoD/1.12a": "0x6FF6C7D0",
+        "LoD/1.13c": "0x6FF66750",
         "LoD/1.13d": "0x6FF60620"
       },
       "rvas": {
         "LoD/1.11": "0x1F880",
         "LoD/1.11b": "0x1DE30",
-        "LoD/1.12a": "0x1C680",
-        "LoD/1.13c": "0x1CC80",
+        "LoD/1.12a": "0x1C7D0",
+        "LoD/1.13c": "0x16750",
         "LoD/1.13d": "0x10620"
       },
       "sizes": {
@@ -82779,57 +97166,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
       }
     },
-    "fog.dll_StubNoOp_F8A0": {
-      "addresses": {
-        "LoD/1.11": "0x6FF6F8A0",
-        "LoD/1.11b": "0x6FF68580",
-        "LoD/1.12a": "0x6FF5D850",
-        "LoD/1.13c": "0x6FF5CF90",
-        "LoD/1.13d": "0x6FF66520"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1F8A0",
-        "LoD/1.11b": "0x18580",
-        "LoD/1.12a": "0xD850",
-        "LoD/1.13c": "0xCF90",
-        "LoD/1.13d": "0x16520"
-      },
-      "sizes": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "name": "StubNoOp",
-      "signature": "void StubNoOp(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Stub function exported as Ordinal 10856.\n\nAlgorithm:\n1. Immediately returns (single RET instruction)\n\nParameters:\n- None\n\nReturns:\n- void (no return value)\n\nNotes:\n- This is a placeholder/deprecated export that performs no operation\n- Referenced from export table at 0x6fde5f38\n- Likely preserved for backwards compatibility with older code",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:576e71e58ac12dc4dc652fb1f77bef85",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "576e71e58ac12dc4dc652fb1f77bef85",
-        "LoD/1.11b": "576e71e58ac12dc4dc652fb1f77bef85",
-        "LoD/1.12a": "576e71e58ac12dc4dc652fb1f77bef85",
-        "LoD/1.13c": "576e71e58ac12dc4dc652fb1f77bef85",
-        "LoD/1.13d": "576e71e58ac12dc4dc652fb1f77bef85"
-      }
-    },
     "fog.dll_DequeueAndCopyNodeData": {
       "addresses": {
         "LoD/1.11": "0x6FF6F8D0",
@@ -82859,6 +97195,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5ab53105a3fcdfb0ad42f49de0d0b2ea",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\D2QSQueue.cpp\""
@@ -82926,6 +97279,43 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:faa8324492fe4cad0fcf206bb80d27ef",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "ValidateCriticalSection",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "ValidateCriticalSection",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\"",
@@ -82999,6 +97389,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:09808bafb6133cafccf18793461d4f77",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -83050,6 +97457,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a5b342899444f5c34937f0d015dd7755",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.11b": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\Fog\\\\Src\\\\D2QSQueue.cpp\""
@@ -83475,6 +97899,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:576f17d6f5ec40dc5a2c4e769b152b03",
+      "callees": {
+        "LoD/1.11": [
+          "InterpretBytecodeProgram"
+        ],
+        "LoD/1.11b": [
+          "InterpretBytecodeProgram"
+        ],
+        "LoD/1.12a": [
+          "InterpretBytecodeProgram"
+        ],
+        "LoD/1.13c": [
+          "InterpretBytecodeProgram"
+        ],
+        "LoD/1.13d": [
+          "InterpretBytecodeProgram"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 61,
         "LoD/1.11b": 61,
@@ -83526,6 +97967,63 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e781b1ca63bc9147c2d399ebb9d37072",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028",
+          "GetReturnAddress",
+          "WSACleanup",
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown",
+          "GetReturnAddress",
+          "WSACleanup",
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unrecoverable internal error %08x\""
@@ -83747,6 +98245,23 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18",
+      "callees": {
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -85251,16 +99766,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll__ValidateRead": {
       "addresses": {
         "LoD/1.11": "0x6FF743FA",
-        "LoD/1.11b": "0x6FF74486",
-        "LoD/1.12a": "0x6FF74766",
-        "LoD/1.13c": "0x6FF74776",
+        "LoD/1.11b": "0x6FF7446A",
+        "LoD/1.12a": "0x6FF7474A",
+        "LoD/1.13c": "0x6FF7475A",
         "LoD/1.13d": "0x6FF7488A"
       },
       "rvas": {
         "LoD/1.11": "0x243FA",
-        "LoD/1.11b": "0x24486",
-        "LoD/1.12a": "0x24766",
-        "LoD/1.13c": "0x24776",
+        "LoD/1.11b": "0x2446A",
+        "LoD/1.12a": "0x2474A",
+        "LoD/1.13c": "0x2475A",
         "LoD/1.13d": "0x2488A"
       },
       "sizes": {
@@ -85302,16 +99817,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll__ValidateRead_4416": {
       "addresses": {
         "LoD/1.11": "0x6FF74416",
-        "LoD/1.11b": "0x6FF7446A",
-        "LoD/1.12a": "0x6FF7474A",
-        "LoD/1.13c": "0x6FF7475A",
+        "LoD/1.11b": "0x6FF74486",
+        "LoD/1.12a": "0x6FF74766",
+        "LoD/1.13c": "0x6FF74776",
         "LoD/1.13d": "0x6FF748A6"
       },
       "rvas": {
         "LoD/1.11": "0x24416",
-        "LoD/1.11b": "0x2446A",
-        "LoD/1.12a": "0x2474A",
-        "LoD/1.13c": "0x2475A",
+        "LoD/1.11b": "0x24486",
+        "LoD/1.12a": "0x24766",
+        "LoD/1.13c": "0x24776",
         "LoD/1.13d": "0x248A6"
       },
       "sizes": {
@@ -85456,16 +99971,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF745E0",
         "LoD/1.11b": "0x6FF7470A",
-        "LoD/1.12a": "0x6FF74AFA",
-        "LoD/1.13c": "0x6FF74950",
-        "LoD/1.13d": "0x6FF74BB4"
+        "LoD/1.12a": "0x6FF749FA",
+        "LoD/1.13c": "0x6FF74A0A",
+        "LoD/1.13d": "0x6FF74A70"
       },
       "rvas": {
         "LoD/1.11": "0x245E0",
         "LoD/1.11b": "0x2470A",
-        "LoD/1.12a": "0x24AFA",
-        "LoD/1.13c": "0x24950",
-        "LoD/1.13d": "0x24BB4"
+        "LoD/1.12a": "0x249FA",
+        "LoD/1.13c": "0x24A0A",
+        "LoD/1.13d": "0x24A70"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -85558,16 +100073,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF74620",
         "LoD/1.11b": "0x6FF74745",
-        "LoD/1.12a": "0x6FF74940",
-        "LoD/1.13c": "0x6FF74B0A",
-        "LoD/1.13d": "0x6FF74B2A"
+        "LoD/1.12a": "0x6FF74980",
+        "LoD/1.13c": "0x6FF74A45",
+        "LoD/1.13d": "0x6FF74B40"
       },
       "rvas": {
         "LoD/1.11": "0x24620",
         "LoD/1.11b": "0x24745",
-        "LoD/1.12a": "0x24940",
-        "LoD/1.13c": "0x24B0A",
-        "LoD/1.13d": "0x24B2A"
+        "LoD/1.12a": "0x24980",
+        "LoD/1.13c": "0x24A45",
+        "LoD/1.13d": "0x24B40"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -85608,17 +100123,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame": {
       "addresses": {
         "LoD/1.11": "0x6FF74640",
-        "LoD/1.11b": "0x6FF74761",
-        "LoD/1.12a": "0x6FF74AF0",
-        "LoD/1.13c": "0x6FF74A61",
-        "LoD/1.13d": "0x6FF74BD0"
+        "LoD/1.11b": "0x6FF747E0",
+        "LoD/1.12a": "0x6FF74AD0",
+        "LoD/1.13c": "0x6FF74A80",
+        "LoD/1.13d": "0x6FF74BBC"
       },
       "rvas": {
         "LoD/1.11": "0x24640",
-        "LoD/1.11b": "0x24761",
-        "LoD/1.12a": "0x24AF0",
-        "LoD/1.13c": "0x24A61",
-        "LoD/1.13d": "0x24BD0"
+        "LoD/1.11b": "0x247E0",
+        "LoD/1.12a": "0x24AD0",
+        "LoD/1.13c": "0x24A80",
+        "LoD/1.13d": "0x24BBC"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -85761,17 +100276,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4690": {
       "addresses": {
         "LoD/1.11": "0x6FF74690",
-        "LoD/1.11b": "0x6FF747B0",
-        "LoD/1.12a": "0x6FF749A0",
-        "LoD/1.13c": "0x6FF74A76",
-        "LoD/1.13d": "0x6FF74BDA"
+        "LoD/1.11b": "0x6FF74700",
+        "LoD/1.12a": "0x6FF74AF0",
+        "LoD/1.13c": "0x6FF74A00",
+        "LoD/1.13d": "0x6FF74C20"
       },
       "rvas": {
         "LoD/1.11": "0x24690",
-        "LoD/1.11b": "0x247B0",
-        "LoD/1.12a": "0x249A0",
-        "LoD/1.13c": "0x24A76",
-        "LoD/1.13d": "0x24BDA"
+        "LoD/1.11b": "0x24700",
+        "LoD/1.12a": "0x24AF0",
+        "LoD/1.13c": "0x24A00",
+        "LoD/1.13d": "0x24C20"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -85813,16 +100328,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF7469A",
         "LoD/1.11b": "0x6FF746B0",
-        "LoD/1.12a": "0x6FF74A10",
-        "LoD/1.13c": "0x6FF74990",
-        "LoD/1.13d": "0x6FF74C2A"
+        "LoD/1.12a": "0x6FF74A84",
+        "LoD/1.13c": "0x6FF74950",
+        "LoD/1.13d": "0x6FF74BB4"
       },
       "rvas": {
         "LoD/1.11": "0x2469A",
         "LoD/1.11b": "0x246B0",
-        "LoD/1.12a": "0x24A10",
-        "LoD/1.13c": "0x24990",
-        "LoD/1.13d": "0x24C2A"
+        "LoD/1.12a": "0x24A84",
+        "LoD/1.13c": "0x24950",
+        "LoD/1.13d": "0x24BB4"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -85864,16 +100379,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF746B0",
         "LoD/1.11b": "0x6FF74794",
-        "LoD/1.12a": "0x6FF74A84",
-        "LoD/1.13c": "0x6FF74A94",
-        "LoD/1.13d": "0x6FF74A70"
+        "LoD/1.12a": "0x6FF74AFA",
+        "LoD/1.13c": "0x6FF74A20",
+        "LoD/1.13d": "0x6FF74B2A"
       },
       "rvas": {
         "LoD/1.11": "0x246B0",
         "LoD/1.11b": "0x24794",
-        "LoD/1.12a": "0x24A84",
-        "LoD/1.13c": "0x24A94",
-        "LoD/1.13d": "0x24A70"
+        "LoD/1.12a": "0x24AFA",
+        "LoD/1.13c": "0x24A20",
+        "LoD/1.13d": "0x24B2A"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -85915,14 +100430,14 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF746D0",
         "LoD/1.11b": "0x6FF746D0",
-        "LoD/1.12a": "0x6FF749C0",
+        "LoD/1.12a": "0x6FF74A30",
         "LoD/1.13c": "0x6FF749D0",
         "LoD/1.13d": "0x6FF74AF0"
       },
       "rvas": {
         "LoD/1.11": "0x246D0",
         "LoD/1.11b": "0x246D0",
-        "LoD/1.12a": "0x249C0",
+        "LoD/1.12a": "0x24A30",
         "LoD/1.13c": "0x249D0",
         "LoD/1.13d": "0x24AF0"
       },
@@ -85965,16 +100480,16 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF746D5",
         "LoD/1.11b": "0x6FF74670",
-        "LoD/1.12a": "0x6FF749FA",
-        "LoD/1.13c": "0x6FF74A0A",
-        "LoD/1.13d": "0x6FF74B40"
+        "LoD/1.12a": "0x6FF74A10",
+        "LoD/1.13c": "0x6FF74990",
+        "LoD/1.13d": "0x6FF74C2A"
       },
       "rvas": {
         "LoD/1.11": "0x246D5",
         "LoD/1.11b": "0x24670",
-        "LoD/1.12a": "0x249FA",
-        "LoD/1.13c": "0x24A0A",
-        "LoD/1.13d": "0x24B40"
+        "LoD/1.12a": "0x24A10",
+        "LoD/1.13c": "0x24990",
+        "LoD/1.13d": "0x24C2A"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -86015,17 +100530,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_46DD": {
       "addresses": {
         "LoD/1.11": "0x6FF746DD",
-        "LoD/1.11b": "0x6FF747BA",
-        "LoD/1.12a": "0x6FF74A3D",
-        "LoD/1.13c": "0x6FF749B0",
-        "LoD/1.13d": "0x6FF74C00"
+        "LoD/1.11b": "0x6FF747B0",
+        "LoD/1.12a": "0x6FF74A66",
+        "LoD/1.13c": "0x6FF74A4D",
+        "LoD/1.13d": "0x6FF74BA0"
       },
       "rvas": {
         "LoD/1.11": "0x246DD",
-        "LoD/1.11b": "0x247BA",
-        "LoD/1.12a": "0x24A3D",
-        "LoD/1.13c": "0x249B0",
-        "LoD/1.13d": "0x24C00"
+        "LoD/1.11b": "0x247B0",
+        "LoD/1.12a": "0x24A66",
+        "LoD/1.13c": "0x24A4D",
+        "LoD/1.13d": "0x24BA0"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86066,16 +100581,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_46F1": {
       "addresses": {
         "LoD/1.11": "0x6FF746F1",
-        "LoD/1.11b": "0x6FF74820",
-        "LoD/1.12a": "0x6FF74AD0",
-        "LoD/1.13c": "0x6FF74B20",
+        "LoD/1.11b": "0x6FF74776",
+        "LoD/1.12a": "0x6FF749F0",
+        "LoD/1.13c": "0x6FF74AE0",
         "LoD/1.13d": "0x6FF74B81"
       },
       "rvas": {
         "LoD/1.11": "0x246F1",
-        "LoD/1.11b": "0x24820",
-        "LoD/1.12a": "0x24AD0",
-        "LoD/1.13c": "0x24B20",
+        "LoD/1.11b": "0x24776",
+        "LoD/1.12a": "0x249F0",
+        "LoD/1.13c": "0x24AE0",
         "LoD/1.13d": "0x24B81"
       },
       "sizes": {
@@ -86117,17 +100632,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_CleanupCriticalSectionAtOffset": {
       "addresses": {
         "LoD/1.11": "0x6FF746FB",
-        "LoD/1.11b": "0x6FF747C4",
+        "LoD/1.11b": "0x6FF7476B",
         "LoD/1.12a": "0x6FF74AB4",
         "LoD/1.13c": "0x6FF74AC4",
-        "LoD/1.13d": "0x6FF74B8B"
+        "LoD/1.13d": "0x6FF74BE4"
       },
       "rvas": {
         "LoD/1.11": "0x246FB",
-        "LoD/1.11b": "0x247C4",
+        "LoD/1.11b": "0x2476B",
         "LoD/1.12a": "0x24AB4",
         "LoD/1.13c": "0x24AC4",
-        "LoD/1.13d": "0x24B8B"
+        "LoD/1.13d": "0x24BE4"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -86168,17 +100683,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4706": {
       "addresses": {
         "LoD/1.11": "0x6FF74706",
-        "LoD/1.11b": "0x6FF747A6",
+        "LoD/1.11b": "0x6FF747BA",
         "LoD/1.12a": "0x6FF74AAA",
-        "LoD/1.13c": "0x6FF74AB0",
-        "LoD/1.13d": "0x6FF74B96"
+        "LoD/1.13c": "0x6FF74B20",
+        "LoD/1.13d": "0x6FF74C40"
       },
       "rvas": {
         "LoD/1.11": "0x24706",
-        "LoD/1.11b": "0x247A6",
+        "LoD/1.11b": "0x247BA",
         "LoD/1.12a": "0x24AAA",
-        "LoD/1.13c": "0x24AB0",
-        "LoD/1.13d": "0x24B96"
+        "LoD/1.13c": "0x24B20",
+        "LoD/1.13d": "0x24C40"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86219,16 +100734,16 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4710": {
       "addresses": {
         "LoD/1.11": "0x6FF74710",
-        "LoD/1.11b": "0x6FF74700",
-        "LoD/1.12a": "0x6FF749F0",
-        "LoD/1.13c": "0x6FF74A80",
+        "LoD/1.11b": "0x6FF7482A",
+        "LoD/1.12a": "0x6FF74B1A",
+        "LoD/1.13c": "0x6FF74AB0",
         "LoD/1.13d": "0x6FF74C4A"
       },
       "rvas": {
         "LoD/1.11": "0x24710",
-        "LoD/1.11b": "0x24700",
-        "LoD/1.12a": "0x249F0",
-        "LoD/1.13c": "0x24A80",
+        "LoD/1.11b": "0x2482A",
+        "LoD/1.12a": "0x24B1A",
+        "LoD/1.13c": "0x24AB0",
         "LoD/1.13d": "0x24C4A"
       },
       "sizes": {
@@ -86271,15 +100786,15 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF74724",
         "LoD/1.11b": "0x6FF7480A",
-        "LoD/1.12a": "0x6FF74980",
-        "LoD/1.13c": "0x6FF74A20",
+        "LoD/1.12a": "0x6FF74A35",
+        "LoD/1.13c": "0x6FF74B0A",
         "LoD/1.13d": "0x6FF74AB0"
       },
       "rvas": {
         "LoD/1.11": "0x24724",
         "LoD/1.11b": "0x2480A",
-        "LoD/1.12a": "0x24980",
-        "LoD/1.13c": "0x24A20",
+        "LoD/1.12a": "0x24A35",
+        "LoD/1.13c": "0x24B0A",
         "LoD/1.13d": "0x24AB0"
       },
       "sizes": {
@@ -86321,17 +100836,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_472C": {
       "addresses": {
         "LoD/1.11": "0x6FF7472C",
-        "LoD/1.11b": "0x6FF74800",
-        "LoD/1.12a": "0x6FF74A96",
-        "LoD/1.13c": "0x6FF74A00",
-        "LoD/1.13d": "0x6FF74C20"
+        "LoD/1.11b": "0x6FF747A6",
+        "LoD/1.12a": "0x6FF74AA0",
+        "LoD/1.13c": "0x6FF74B00",
+        "LoD/1.13d": "0x6FF74BC6"
       },
       "rvas": {
         "LoD/1.11": "0x2472C",
-        "LoD/1.11b": "0x24800",
-        "LoD/1.12a": "0x24A96",
-        "LoD/1.13c": "0x24A00",
-        "LoD/1.13d": "0x24C20"
+        "LoD/1.11b": "0x247A6",
+        "LoD/1.12a": "0x24AA0",
+        "LoD/1.13c": "0x24B00",
+        "LoD/1.13d": "0x24BC6"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86372,17 +100887,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4736": {
       "addresses": {
         "LoD/1.11": "0x6FF74736",
-        "LoD/1.11b": "0x6FF74690",
+        "LoD/1.11b": "0x6FF74780",
         "LoD/1.12a": "0x6FF74A51",
-        "LoD/1.13c": "0x6FF74A9C",
-        "LoD/1.13d": "0x6FF74BC6"
+        "LoD/1.13c": "0x6FF74A61",
+        "LoD/1.13d": "0x6FF74BDA"
       },
       "rvas": {
         "LoD/1.11": "0x24736",
-        "LoD/1.11b": "0x24690",
+        "LoD/1.11b": "0x24780",
         "LoD/1.12a": "0x24A51",
-        "LoD/1.13c": "0x24A9C",
-        "LoD/1.13d": "0x24BC6"
+        "LoD/1.13c": "0x24A61",
+        "LoD/1.13d": "0x24BDA"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86423,15 +100938,15 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4740": {
       "addresses": {
         "LoD/1.11": "0x6FF74740",
-        "LoD/1.11b": "0x6FF7479C",
-        "LoD/1.12a": "0x6FF74A8C",
+        "LoD/1.11b": "0x6FF74800",
+        "LoD/1.12a": "0x6FF74A96",
         "LoD/1.13c": "0x6FF74ABA",
         "LoD/1.13d": "0x6FF74B20"
       },
       "rvas": {
         "LoD/1.11": "0x24740",
-        "LoD/1.11b": "0x2479C",
-        "LoD/1.12a": "0x24A8C",
+        "LoD/1.11b": "0x24800",
+        "LoD/1.12a": "0x24A96",
         "LoD/1.13c": "0x24ABA",
         "LoD/1.13d": "0x24B20"
       },
@@ -86474,17 +100989,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_474A": {
       "addresses": {
         "LoD/1.11": "0x6FF7474A",
-        "LoD/1.11b": "0x6FF747E0",
+        "LoD/1.11b": "0x6FF74761",
         "LoD/1.12a": "0x6FF74A70",
-        "LoD/1.13c": "0x6FF74B00",
-        "LoD/1.13d": "0x6FF74BA0"
+        "LoD/1.13c": "0x6FF74B2A",
+        "LoD/1.13d": "0x6FF74AD0"
       },
       "rvas": {
         "LoD/1.11": "0x2474A",
-        "LoD/1.11b": "0x247E0",
+        "LoD/1.11b": "0x24761",
         "LoD/1.12a": "0x24A70",
-        "LoD/1.13c": "0x24B00",
-        "LoD/1.13d": "0x24BA0"
+        "LoD/1.13c": "0x24B2A",
+        "LoD/1.13d": "0x24AD0"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86525,17 +101040,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_CleanupCriticalSectionAtOffset_4754": {
       "addresses": {
         "LoD/1.11": "0x6FF74754",
-        "LoD/1.11b": "0x6FF7476B",
+        "LoD/1.11b": "0x6FF747C4",
         "LoD/1.12a": "0x6FF74A5B",
         "LoD/1.13c": "0x6FF74A6B",
-        "LoD/1.13d": "0x6FF74BE4"
+        "LoD/1.13d": "0x6FF74B8B"
       },
       "rvas": {
         "LoD/1.11": "0x24754",
-        "LoD/1.11b": "0x2476B",
+        "LoD/1.11b": "0x247C4",
         "LoD/1.12a": "0x24A5B",
         "LoD/1.13c": "0x24A6B",
-        "LoD/1.13d": "0x24BE4"
+        "LoD/1.13d": "0x24B8B"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -86576,17 +101091,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4770": {
       "addresses": {
         "LoD/1.11": "0x6FF74770",
-        "LoD/1.11b": "0x6FF7474D",
-        "LoD/1.12a": "0x6FF74B10",
-        "LoD/1.13c": "0x6FF74B2A",
-        "LoD/1.13d": "0x6FF74BBC"
+        "LoD/1.11b": "0x6FF74820",
+        "LoD/1.12a": "0x6FF749A0",
+        "LoD/1.13c": "0x6FF74A9C",
+        "LoD/1.13d": "0x6FF74C00"
       },
       "rvas": {
         "LoD/1.11": "0x24770",
-        "LoD/1.11b": "0x2474D",
-        "LoD/1.12a": "0x24B10",
-        "LoD/1.13c": "0x24B2A",
-        "LoD/1.13d": "0x24BBC"
+        "LoD/1.11b": "0x24820",
+        "LoD/1.12a": "0x249A0",
+        "LoD/1.13c": "0x24A9C",
+        "LoD/1.13d": "0x24C00"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86627,17 +101142,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_4790": {
       "addresses": {
         "LoD/1.11": "0x6FF74790",
-        "LoD/1.11b": "0x6FF74776",
-        "LoD/1.12a": "0x6FF74B1A",
-        "LoD/1.13c": "0x6FF74AA6",
-        "LoD/1.13d": "0x6FF74B6D"
+        "LoD/1.11b": "0x6FF74690",
+        "LoD/1.12a": "0x6FF74A3D",
+        "LoD/1.13c": "0x6FF749B0",
+        "LoD/1.13d": "0x6FF74B96"
       },
       "rvas": {
         "LoD/1.11": "0x24790",
-        "LoD/1.11b": "0x24776",
-        "LoD/1.12a": "0x24B1A",
-        "LoD/1.13c": "0x24AA6",
-        "LoD/1.13d": "0x24B6D"
+        "LoD/1.11b": "0x24690",
+        "LoD/1.12a": "0x24A3D",
+        "LoD/1.13c": "0x249B0",
+        "LoD/1.13d": "0x24B96"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86679,15 +101194,15 @@ var FUNCTIONS_Fog_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF7479A",
         "LoD/1.11b": "0x6FF74720",
-        "LoD/1.12a": "0x6FF74A35",
-        "LoD/1.13c": "0x6FF74A45",
+        "LoD/1.12a": "0x6FF74940",
+        "LoD/1.13c": "0x6FF74A94",
         "LoD/1.13d": "0x6FF74B65"
       },
       "rvas": {
         "LoD/1.11": "0x2479A",
         "LoD/1.11b": "0x24720",
-        "LoD/1.12a": "0x24A35",
-        "LoD/1.13c": "0x24A45",
+        "LoD/1.12a": "0x24940",
+        "LoD/1.13c": "0x24A94",
         "LoD/1.13d": "0x24B65"
       },
       "sizes": {
@@ -86729,17 +101244,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_47B0": {
       "addresses": {
         "LoD/1.11": "0x6FF747B0",
-        "LoD/1.11b": "0x6FF7482A",
-        "LoD/1.12a": "0x6FF74AA0",
-        "LoD/1.13c": "0x6FF74A4D",
-        "LoD/1.13d": "0x6FF74C40"
+        "LoD/1.11b": "0x6FF7474D",
+        "LoD/1.12a": "0x6FF74B10",
+        "LoD/1.13c": "0x6FF74A76",
+        "LoD/1.13d": "0x6FF74BD0"
       },
       "rvas": {
         "LoD/1.11": "0x247B0",
-        "LoD/1.11b": "0x2482A",
-        "LoD/1.12a": "0x24AA0",
-        "LoD/1.13c": "0x24A4D",
-        "LoD/1.13d": "0x24C40"
+        "LoD/1.11b": "0x2474D",
+        "LoD/1.12a": "0x24B10",
+        "LoD/1.13c": "0x24A76",
+        "LoD/1.13d": "0x24BD0"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86780,17 +101295,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_UnwindExceptionFrame_47BA": {
       "addresses": {
         "LoD/1.11": "0x6FF747BA",
-        "LoD/1.11b": "0x6FF74780",
-        "LoD/1.12a": "0x6FF74A66",
-        "LoD/1.13c": "0x6FF74AE0",
-        "LoD/1.13d": "0x6FF74AD0"
+        "LoD/1.11b": "0x6FF7479C",
+        "LoD/1.12a": "0x6FF74A8C",
+        "LoD/1.13c": "0x6FF74AA6",
+        "LoD/1.13d": "0x6FF74B6D"
       },
       "rvas": {
         "LoD/1.11": "0x247BA",
-        "LoD/1.11b": "0x24780",
-        "LoD/1.12a": "0x24A66",
-        "LoD/1.13c": "0x24AE0",
-        "LoD/1.13d": "0x24AD0"
+        "LoD/1.11b": "0x2479C",
+        "LoD/1.12a": "0x24A8C",
+        "LoD/1.13c": "0x24AA6",
+        "LoD/1.13d": "0x24B6D"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -86882,17 +101397,17 @@ var FUNCTIONS_Fog_dll = {
     "fog.dll_strcoll_4850": {
       "addresses": {
         "LoD/1.11": "0x6FF74850",
-        "LoD/1.11b": "0x6FF748C0",
-        "LoD/1.12a": "0x6FF6EF50",
-        "LoD/1.13c": "0x6FF67E50",
-        "LoD/1.13d": "0x6FF74CE0"
+        "LoD/1.11b": "0x6FF6BFD0",
+        "LoD/1.12a": "0x6FF74BB0",
+        "LoD/1.13c": "0x6FF74BC0",
+        "LoD/1.13d": "0x6FF6E010"
       },
       "rvas": {
         "LoD/1.11": "0x24850",
-        "LoD/1.11b": "0x248C0",
-        "LoD/1.12a": "0x1EF50",
-        "LoD/1.13c": "0x17E50",
-        "LoD/1.13d": "0x24CE0"
+        "LoD/1.11b": "0x1BFD0",
+        "LoD/1.12a": "0x24BB0",
+        "LoD/1.13c": "0x24BC0",
+        "LoD/1.13d": "0x1E010"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -86908,6 +101423,14 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a0296f3d619ffd4307ef69ba5693f78e",
+      "callees": {
+        "LoD/1.11b": [
+          "ValidateAndSetGamePath"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndSetGamePath"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -86983,6 +101506,20 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:40c495d3dbd005cb599c7cce04a5e3eb",
+      "callees": {
+        "LoD/1.11b": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.12a": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13c": [
+          "LogErrorAndInitiateShutdown"
+        ],
+        "LoD/1.13d": [
+          "LogErrorAndInitiateShutdown"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
@@ -87739,6 +102276,17 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:c644f5dcf2e3d26eca019a22b45dae47",
+      "callees": {
+        "LoD/1.12a": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13c": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13d": [
+          "ioctlsocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 1,
         "LoD/1.13c": 1,
@@ -87778,6 +102326,17 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:c644f5dcf2e3d26eca019a22b45dae47",
+      "callees": {
+        "LoD/1.12a": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13c": [
+          "ioctlsocket"
+        ],
+        "LoD/1.13d": [
+          "ioctlsocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 1,
         "LoD/1.13c": 1,
@@ -87817,6 +102376,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:3fd08fe0a27496486776a2f7f7e2f58d",
+      "callees": {
+        "LoD/1.12a": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13c": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "WSAGetLastError"
+        ],
+        "LoD/1.13d": [
+          "ValidateCriticalSection",
+          "send",
+          "WSAGetLastError",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 10,
         "LoD/1.13c": 10,
@@ -87831,45 +102410,6 @@ var FUNCTIONS_Fog_dll = {
         "LoD/1.12a": "9032552efe0271dd5f3ca6c48d59bea3",
         "LoD/1.13c": "9032552efe0271dd5f3ca6c48d59bea3",
         "LoD/1.13d": "9032552efe0271dd5f3ca6c48d59bea3"
-      }
-    },
-    "fog.dll_SendDataViaSocket": {
-      "addresses": {
-        "LoD/1.12a": "0x6FF5DDC0",
-        "LoD/1.13c": "0x6FF6E880",
-        "LoD/1.13d": "0x6FF60B30"
-      },
-      "rvas": {
-        "LoD/1.12a": "0xDDC0",
-        "LoD/1.13c": "0x1E880",
-        "LoD/1.13d": "0x10B30"
-      },
-      "sizes": {
-        "LoD/1.12a": 132,
-        "LoD/1.13c": 132,
-        "LoD/1.13d": 132
-      },
-      "name": "SendDataViaSocket",
-      "signature": "int SendDataViaSocket(NetworkResourceContext * pNetworkContext, char * pBuffer)",
-      "calling_convention": "__d2call",
-      "comment": "Sends data over a TCP socket with critical section protection and WSA error handling.\\n\\nAlgorithm:\\n1. Validate context pointer is not null; return -1 if null\\n2. Load validation/closing flag from context+0x2c; return -1 if non-zero\\n3. Get critical section pointer at context+0xc\\n4. Call ValidateDataStructureIntegrity for validation\\n5. Enter critical section to protect socket operations\\n6. Call send() with socket handle from context+0x8, buffer pointer, buffer size, flags=0\\n7. Handle send() result:\\n   a. If send() returns -1 (error):\\n      - Call WSAGetLastError() to retrieve error code\\n      - Store error code at context+0x34\\n      - Check if error is 0x2733 (WSAEWOULDBLOCK - would block error):\\n        * If WOULDBLOCK: leave critical section and return 0 (recoverable)\\n        * If other error: set context+0x30 to 4 and return -1 (fatal)\\n   b. If send() succeeds: leave critical section and return byte count sent\\n\\nParameters:\\npNetworkContext (EBX - implicit __d2call first parameter): Pointer to NetworkResourceContext structure\\n  Fields accessed:\\n    +0x08: SOCKET handle for WSA send operation\\n    +0x0c: CRITICAL_SECTION (28 bytes) for thread synchronization\\n    +0x2c: Validation flag - non-zero indicates connection closing\\n    +0x30: Error flags field - set to 4 on unrecoverable WSA error\\n    +0x34: Last WSA error code storage\\npBuffer (Stack parameter 1): Pointer to data buffer to transmit\\nbufferSize (Stack parameter 2): Number of bytes to send from buffer\\n\\nReturns:\\nint: Byte count sent by send() on success (>= 0)\\n     0 on WSAEWOULDBLOCK error (recoverable, buffer full)\\n     -1 on null context, validation failure, or unrecoverable WSA error\\n\\nSpecial Cases:\\n- WSAEWOULDBLOCK (0x2733): Treated as recoverable, returns 0 to signal retry\\n- Null context pointer: Returns -1 immediately without further processing\\n- Non-zero validation flag: Indicates connection closing, returns -1 to abort\\n- All other WSA errors: Fatal errors that set flag and return -1\\n- Critical section protects against concurrent socket access",
-      "name_source": "LoD/1.12a",
-      "method": "API",
-      "index": "API:105680f6b3c9f366b6b1354c02bca5a7",
-      "basic_block_counts": {
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "2b81520119ce091183f5bfbe8bfb71af",
-        "LoD/1.13c": "2b81520119ce091183f5bfbe8bfb71af",
-        "LoD/1.13d": "2b81520119ce091183f5bfbe8bfb71af"
       }
     },
     "fog.dll_ValidateContextAndSendBuffer": {
@@ -87934,6 +102474,35 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:5841be572cd9c17c6a0b690b8fdf36b0",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ValidateContextAndSendBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ValidateContextAndSendBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ValidateContextAndSendBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 20,
         "LoD/1.13c": 20,
@@ -87963,6 +102532,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:e241b0b4578fd97282eaead0fcd53632",
+      "callees": {
+        "LoD/1.12a": [
+          "ValidateCriticalSection"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 1
       },
@@ -87996,6 +102570,26 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:a57ddc0725e213f0242a9cce016c6889",
+      "callees": {
+        "LoD/1.12a": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ],
+        "LoD/1.13c": [
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat",
+          "LogAppendFormat"
+        ],
+        "LoD/1.13d": [
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc",
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"----------\"",
@@ -88759,6 +103353,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.13d",
       "method": "MNE",
       "index": "MNE:aa988279fdd5f50ee9b026fbc6e82610",
+      "callees": {
+        "LoD/1.13d": [
+          "ValidateAndInitializeNetworkConfig"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 3
       },
@@ -88782,6 +103381,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.13d",
       "method": "MNE",
       "index": "MNE:46749539e7a8781b175b04cfa2fdb76d",
+      "callees": {
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\".PAX\""
@@ -88861,6 +103465,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.13d",
       "method": "STR",
       "index": "STR:636f32e7edf7ff155ff7e3cbc6156eec",
+      "callees": {
+        "LoD/1.13d": [
+          "FormatStringBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"D2S-crash-\"",
@@ -88890,6 +103499,11 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.13d",
       "method": "STR",
       "index": "STR:f9da012ecb8f5cb7e445898df39e2e07",
+      "callees": {
+        "LoD/1.13d": [
+          "NullStubProc"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"ExceptionHandler: imagehlp.dll not loaded\""
@@ -88918,6 +103532,12 @@ var FUNCTIONS_Fog_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:160bb113a472ac77d92a82b40e46f2d5",
+      "callees": {
+        "LoD/1.13d": [
+          "send",
+          "WSAGetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 3
       },

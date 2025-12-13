@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2CMP.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -49,17 +49,17 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE11020",
         "LoD/1.08": "0x6FE11020",
-        "LoD/1.09": "0x6FDFDC90",
-        "LoD/1.09b": "0x6FDFDC90",
-        "LoD/1.09d": "0x6FDFDD00",
+        "LoD/1.09": "0x6FDFDD00",
+        "LoD/1.09b": "0x6FDFDD00",
+        "LoD/1.09d": "0x6FDF1020",
         "LoD/1.10": "0x6FDFD7D0"
       },
       "rvas": {
         "LoD/1.07": "0x1020",
         "LoD/1.08": "0x1020",
-        "LoD/1.09": "0xDC90",
-        "LoD/1.09b": "0xDC90",
-        "LoD/1.09d": "0xDD00",
+        "LoD/1.09": "0xDD00",
+        "LoD/1.09b": "0xDD00",
+        "LoD/1.09d": "0x1020",
         "LoD/1.10": "0xD7D0"
       },
       "sizes": {
@@ -77,6 +77,17 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4a81966979e45325610a190ba9a761b5",
+      "callees": {
+        "LoD/1.09": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.09b": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.10": [
+          "ShutdownStubNoOp"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -134,6 +145,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff1b02b84ed6ba184b35d160d4d4cd18",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@...",
@@ -214,6 +251,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:223c964f78be28754951e41d10cebe62",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -315,6 +379,73 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:186612200c1f95e0120d81b230f64725",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"BITCOUNT( nLevelOfRotation ) == 1\"",
@@ -455,6 +586,77 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3671b5da25378b7d71e2e44cb0e6dd58",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -589,6 +791,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b971a7136b1dcd60f532df35ec55e166",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -693,6 +930,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9be9259b4952c151ce7d778238a73d94",
+      "callees": {
+        "LoD/1.07": [
+          "FogFatalError"
+        ],
+        "LoD/1.08": [
+          "FogFatalError"
+        ],
+        "LoD/1.09": [
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "FogFatalError"
+        ],
+        "LoD/1.10": [
+          "FogFatalError"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -791,6 +1048,83 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:186612200c1f95e0120d81b230f64725",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "BuildProjectPathThunk",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "BuildProjectPathThunk",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "BuildProjectPathThunk",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "BuildProjectPathThunk",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "BuildProjectPathThunk",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"BITCOUNT( nLevelOfRotation ) == 1\"",
@@ -918,6 +1252,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:186612200c1f95e0120d81b230f64725",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"BITCOUNT( nLevelOfRotation ) == 1\"",
@@ -1004,6 +1365,44 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5cd9b8e6427cf925eb51237f33ebefbb",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1105,6 +1504,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0c460fc605e65171b22bb8e8275690ca",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1194,6 +1625,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:aebafecbbfbc854ee6a5d48d7f60bdf4",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1274,6 +1731,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:45a357548e2179fe47de4d5270e2307f",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."
@@ -1360,6 +1834,56 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7c8b9dcb99fd0c6e6788b3015791ae5b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1473,6 +1997,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f0519f3790836b02c31f3ec4b7043d88",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1548,10 +2098,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6FDF1C40",
         "LoD/1.10": "0x6FDF1AD0",
         "LoD/1.11": "0x6FE202E0",
-        "LoD/1.11b": "0x6FE1DEF0",
-        "LoD/1.12a": "0x6FE1A470",
-        "LoD/1.13c": "0x6FE22380",
-        "LoD/1.13d": "0x6FE23310"
+        "LoD/1.11b": "0x6FE21D20",
+        "LoD/1.12a": "0x6FE1D120",
+        "LoD/1.13c": "0x6FE25270",
+        "LoD/1.13d": "0x6FE233D0"
       },
       "rvas": {
         "LoD/1.07": "0x1C40",
@@ -1561,10 +2111,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x1C40",
         "LoD/1.10": "0x1AD0",
         "LoD/1.11": "0x102E0",
-        "LoD/1.11b": "0xDEF0",
-        "LoD/1.12a": "0xA470",
-        "LoD/1.13c": "0x12380",
-        "LoD/1.13d": "0x13310"
+        "LoD/1.11b": "0x11D20",
+        "LoD/1.12a": "0xD120",
+        "LoD/1.13c": "0x15270",
+        "LoD/1.13d": "0x133D0"
       },
       "sizes": {
         "LoD/1.07": 496,
@@ -1575,8 +2125,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 496,
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
-        "LoD/1.12a": 124,
-        "LoD/1.13c": 124,
+        "LoD/1.12a": 42,
+        "LoD/1.13c": 42,
         "LoD/1.13d": 42
       },
       "name": "AllocateCelImageBuffer",
@@ -1586,6 +2136,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:86c46ac24460bff06384588d238ccf2b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pOldFile->dwVersion == ( CELFILE_VERSION - 1 )\"",
@@ -1627,8 +2229,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 25,
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
         "LoD/1.13d": 3
       },
       "loop_counts": {
@@ -1653,8 +2255,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "ad41a4493758f96f56e17bd31d6dee54",
         "LoD/1.11": "f027730cc40145adc0697766469adf34",
         "LoD/1.11b": "f027730cc40145adc0697766469adf34",
-        "LoD/1.12a": "273363bdf7c80fd27c6890811a8a205d",
-        "LoD/1.13c": "273363bdf7c80fd27c6890811a8a205d",
+        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
         "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
       }
     },
@@ -1690,6 +2292,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:59aa740c8d214c836ff515c46239fa57",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -1788,6 +2410,62 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:22dc1a007f2ef4b05b4cf324513a6e2c",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp..."
@@ -1895,6 +2573,49 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dd882f3b4a49b531270cc593c643d2e5",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pFile->dwFlags & CELFILE_SERIALIZED\"",
@@ -2001,6 +2722,36 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f412601dfa70e13c77053c9b2164b887",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pSerializedFile\"",
@@ -2067,7 +2818,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6FDF2170",
         "LoD/1.10": "0x6FDF1FE0",
         "LoD/1.11": "0x6FE27440",
-        "LoD/1.11b": "0x6FE21E40"
+        "LoD/1.11b": "0x6FE21E40",
+        "LoD/1.12a": "0x6FE1D0F0",
+        "LoD/1.13c": "0x6FE25240",
+        "LoD/1.13d": "0x6FE232B0"
       },
       "rvas": {
         "LoD/1.07": "0x2170",
@@ -2077,7 +2831,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x2170",
         "LoD/1.10": "0x1FE0",
         "LoD/1.11": "0x17440",
-        "LoD/1.11b": "0x11E40"
+        "LoD/1.11b": "0x11E40",
+        "LoD/1.12a": "0xD0F0",
+        "LoD/1.13c": "0x15240",
+        "LoD/1.13d": "0x132B0"
       },
       "sizes": {
         "LoD/1.07": 79,
@@ -2087,7 +2844,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": 79,
         "LoD/1.10": 79,
         "LoD/1.11": 43,
-        "LoD/1.11b": 43
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 41,
+        "LoD/1.13c": 41,
+        "LoD/1.13d": 41
       },
       "name": "ValidateAndProcessData",
       "signature": "void ValidateAndProcessData(int * pData)",
@@ -2096,6 +2856,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:831e0d62219c21b79b3b2ad58bbf8a8b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ClearCelGraphicsCache",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "ClearCelGraphicsCache",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "ClearCelGraphicsCache",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "ClearCelGraphicsCache",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "ClearCelGraphicsCache",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10032",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -2130,7 +2942,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": 7,
         "LoD/1.10": 7,
         "LoD/1.11": 3,
-        "LoD/1.11b": 3
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -2140,7 +2955,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "048467d1426fc9f0afc9a7f85671f2cd",
@@ -2150,7 +2968,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "048467d1426fc9f0afc9a7f85671f2cd",
         "LoD/1.10": "048467d1426fc9f0afc9a7f85671f2cd",
         "LoD/1.11": "a13db62d247f299a536ea9cd909a5395",
-        "LoD/1.11b": "a13db62d247f299a536ea9cd909a5395"
+        "LoD/1.11b": "a13db62d247f299a536ea9cd909a5395",
+        "LoD/1.12a": "7327fe4965697b84a6e570abecfcc70f",
+        "LoD/1.13c": "7327fe4965697b84a6e570abecfcc70f",
+        "LoD/1.13d": "7327fe4965697b84a6e570abecfcc70f"
       }
     },
     "d2cmp.dll_ProcessCelFileData": {
@@ -2200,6 +3021,46 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7563120475f0aab496c88ec4cfd35a5a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -2276,7 +3137,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x6FDF20A0",
         "LoD/1.11": "0x6FE27380",
         "LoD/1.11b": "0x6FE21D80",
-        "LoD/1.12a": "0x6FE1D060"
+        "LoD/1.12a": "0x6FE1D060",
+        "LoD/1.13c": "0x6FE251E0",
+        "LoD/1.13d": "0x6FE23250"
       },
       "rvas": {
         "LoD/1.07": "0x2230",
@@ -2287,7 +3150,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x20A0",
         "LoD/1.11": "0x17380",
         "LoD/1.11b": "0x11D80",
-        "LoD/1.12a": "0xD060"
+        "LoD/1.12a": "0xD060",
+        "LoD/1.13c": "0x151E0",
+        "LoD/1.13d": "0x13250"
       },
       "sizes": {
         "LoD/1.07": 367,
@@ -2298,7 +3163,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 367,
         "LoD/1.11": 41,
         "LoD/1.11b": 41,
-        "LoD/1.12a": 45
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
       "name": "D2CMP_DecodeAndDrawCelFrame",
       "signature": "void D2CMP_DecodeAndDrawCelFrame(CelFile * pCelFile, int nXPos, int nYPos, int nDstX, int nDstY, int nDestSurface, int nMaxWidth, uint dwBlendMode, uint dwParam9, uint dwParam10, uint dwParam11)",
@@ -2307,6 +3174,70 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:036ffe4ea5a2d2ce76758cf4024904ff",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -2359,7 +3290,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 25,
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
-        "LoD/1.12a": 3
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -2370,7 +3303,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 0,
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
-        "LoD/1.12a": 0
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "9815734cd960cb15ccc66531bdbc234c",
@@ -2381,7 +3316,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "9815734cd960cb15ccc66531bdbc234c",
         "LoD/1.11": "7327fe4965697b84a6e570abecfcc70f",
         "LoD/1.11b": "7327fe4965697b84a6e570abecfcc70f",
-        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13c": "f027730cc40145adc0697766469adf34",
+        "LoD/1.13d": "f027730cc40145adc0697766469adf34"
       }
     },
     "d2cmp.dll_ExtractCelFramePixels": {
@@ -2394,9 +3331,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x6FDF2210",
         "LoD/1.11": "0x6FE27410",
         "LoD/1.11b": "0x6FE21E10",
-        "LoD/1.12a": "0x6FE1D1E0",
-        "LoD/1.13c": "0x6FE252D0",
-        "LoD/1.13d": "0x6FE233D0"
+        "LoD/1.12a": "0x6FE1D210",
+        "LoD/1.13c": "0x6FE21700",
+        "LoD/1.13d": "0x6FE23730"
       },
       "rvas": {
         "LoD/1.07": "0x23A0",
@@ -2407,9 +3344,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x2210",
         "LoD/1.11": "0x17410",
         "LoD/1.11b": "0x11E10",
-        "LoD/1.12a": "0xD1E0",
-        "LoD/1.13c": "0x152D0",
-        "LoD/1.13d": "0x133D0"
+        "LoD/1.12a": "0xD210",
+        "LoD/1.13c": "0x11700",
+        "LoD/1.13d": "0x13730"
       },
       "sizes": {
         "LoD/1.07": 146,
@@ -2421,8 +3358,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 42,
         "LoD/1.11b": 42,
         "LoD/1.12a": 42,
-        "LoD/1.13c": 42,
-        "LoD/1.13d": 42
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
       "name": "ExtractCelFramePixels",
       "signature": "int ExtractCelFramePixels(int * pnCelData, uint dwCelIndex, int nFrameIndex, uint * pdwDestBuffer)",
@@ -2431,6 +3368,57 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:2694d0e6b632707c4e35bf8ece3cb967",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pCelFile->dwFlags & CELFILE_24BIT\"",
@@ -2499,8 +3487,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "2ff57bd8933574e570776bba02a1755b",
         "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b",
         "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
+        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_DecodeCelFrame": {
@@ -2513,7 +3501,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x6FDF22C0",
         "LoD/1.11": "0x6FE202B0",
         "LoD/1.11b": "0x6FE21DE0",
-        "LoD/1.12a": "0x6FE1D0C0"
+        "LoD/1.12a": "0x6FE1D0C0",
+        "LoD/1.13c": "0x6FE21670",
+        "LoD/1.13d": "0x6FE23700"
       },
       "rvas": {
         "LoD/1.07": "0x2440",
@@ -2524,7 +3514,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x22C0",
         "LoD/1.11": "0x102B0",
         "LoD/1.11b": "0x11DE0",
-        "LoD/1.12a": "0xD0C0"
+        "LoD/1.12a": "0xD0C0",
+        "LoD/1.13c": "0x11670",
+        "LoD/1.13d": "0x13700"
       },
       "sizes": {
         "LoD/1.07": 325,
@@ -2535,7 +3527,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 325,
         "LoD/1.11": 46,
         "LoD/1.11b": 42,
-        "LoD/1.12a": 45
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
       "name": "DecodeCelFrame",
       "signature": "void DecodeCelFrame(int * pCelFile, int nBufferOffset, int nY, void * pRGB, void * pAlpha, void * pDestSurface, int nHeight, uint dwTranslationOffset, uint dwFrameIndex, void * pOutputBuffer, int nYOffset, int nHeightClamp, uint dwFlags)",
@@ -2544,6 +3538,70 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ba62382b162f03e8db9f28ec4be29107",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"sgpfnDecodeFunc[pCelFile->format]\"",
@@ -2596,7 +3654,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 20,
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
-        "LoD/1.12a": 3
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -2607,7 +3667,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 0,
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
-        "LoD/1.12a": 0
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "285de97ff0e56c608ae0deeb73737624",
@@ -2618,7 +3680,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "285de97ff0e56c608ae0deeb73737624",
         "LoD/1.11": "376de26b06c22149642936501844d3db",
         "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13c": "f027730cc40145adc0697766469adf34",
+        "LoD/1.13d": "f027730cc40145adc0697766469adf34"
       }
     },
     "d2cmp.dll_BlitScaledCmpFrameClipped": {
@@ -2630,10 +3694,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6FDF2590",
         "LoD/1.10": "0x6FDF2410",
         "LoD/1.11": "0x6FE203A0",
-        "LoD/1.11b": "0x6FE1DF80",
-        "LoD/1.12a": "0x6FE197B0",
-        "LoD/1.13c": "0x6FE216A0",
-        "LoD/1.13d": "0x6FE23730"
+        "LoD/1.11b": "0x6FE1DD70",
+        "LoD/1.12a": "0x6FE1D150",
+        "LoD/1.13c": "0x6FE252D0",
+        "LoD/1.13d": "0x6FE233A0"
       },
       "rvas": {
         "LoD/1.07": "0x2590",
@@ -2643,10 +3707,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x2590",
         "LoD/1.10": "0x2410",
         "LoD/1.11": "0x103A0",
-        "LoD/1.11b": "0xDF80",
-        "LoD/1.12a": "0x97B0",
-        "LoD/1.13c": "0x116A0",
-        "LoD/1.13d": "0x13730"
+        "LoD/1.11b": "0xDD70",
+        "LoD/1.12a": "0xD150",
+        "LoD/1.13c": "0x152D0",
+        "LoD/1.13d": "0x133A0"
       },
       "sizes": {
         "LoD/1.07": 289,
@@ -2657,9 +3721,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 289,
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
-        "LoD/1.12a": 45,
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
+        "LoD/1.12a": 42,
+        "LoD/1.13c": 42,
+        "LoD/1.13d": 42
       },
       "name": "BlitScaledCmpFrameClipped",
       "signature": "void BlitScaledCmpFrameClipped(int * pCmpFile, int nXOffset, int nYOffset, int nDestX, int nDestY, byte * pDestSurface, int nMaxY, uint dwPitch, int nPaletteIndex, byte bTransparency)",
@@ -2668,6 +3732,64 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:449e68050137ffb3d02781b1c2e44b59",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -2740,9 +3862,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "9fa1c6f6a3c2d7136c1f55504388f073",
         "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
       }
     },
     "d2cmp.dll_GetCelDataByIndex": {
@@ -2792,6 +3914,67 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:637159852e08c7380afa79d92bc275b5",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pCelContext\"",
@@ -2904,6 +4087,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8eab67eb03df05f10259c22a2e1a8e6c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3000,6 +4203,76 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8eab67eb03df05f10259c22a2e1a8e6c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3123,6 +4396,51 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8eab67eb03df05f10259c22a2e1a8e6c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3231,6 +4549,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8eab67eb03df05f10259c22a2e1a8e6c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3309,6 +4647,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:44a2d1f2032e2db426ccf958e839f823",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3367,119 +4725,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF2850",
         "LoD/1.09b": "0x6FDF2850",
         "LoD/1.09d": "0x6FDF2850",
-        "LoD/1.10": "0x6FDF2700",
-        "LoD/1.11": "0x6FE1C900",
-        "LoD/1.11b": "0x6FE23CC0",
-        "LoD/1.12a": "0x6FE229E0",
-        "LoD/1.13c": "0x6FE1D680",
-        "LoD/1.13d": "0x6FE22460"
-      },
-      "rvas": {
-        "LoD/1.07": "0x2850",
-        "LoD/1.08": "0x2850",
-        "LoD/1.09": "0x2850",
-        "LoD/1.09b": "0x2850",
-        "LoD/1.09d": "0x2850",
-        "LoD/1.10": "0x2700",
-        "LoD/1.11": "0xC900",
-        "LoD/1.11b": "0x13CC0",
-        "LoD/1.12a": "0x129E0",
-        "LoD/1.13c": "0xD680",
-        "LoD/1.13d": "0x12460"
-      },
-      "sizes": {
-        "LoD/1.07": 45,
-        "LoD/1.08": 45,
-        "LoD/1.09": 45,
-        "LoD/1.09b": 45,
-        "LoD/1.09d": 45,
-        "LoD/1.10": 45,
-        "LoD/1.11": 223,
-        "LoD/1.11b": 223,
-        "LoD/1.12a": 223,
-        "LoD/1.13c": 223,
-        "LoD/1.13d": 223
-      },
-      "name": "GetCelFileSpriteDataPointer",
-      "signature": "int GetCelFileSpriteDataPointer(int * pCelFile)",
-      "calling_convention": "__stdcall",
-      "comment": "Validate CEL file version and return sprite data pointer.\n\nAlgorithm:\n1. Read version field at offset 0x0 of pCelFile\n2. If version != 6, call FogAssertFail and terminate\n3. Return sprite data pointer at offset 0x10\n\nParameters:\n- pCelFile (int*): Pointer to CEL file structure\n\nReturns:\n- int: Sprite data pointer from offset 0x10 if version valid\n\nMagic Numbers:\n- 0x6: Required CEL file version\n- 0x10: Offset of sprite data pointer\n- 0x5a4: Error string max length\n- 0xFFFFFFFF: Exit code on failure",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:56eff3b8e4c53163addb4f088955c656",
-      "strings": {
-        "LoD/1.07": [
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ],
-        "LoD/1.08": [
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ],
-        "LoD/1.09": [
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ],
-        "LoD/1.09b": [
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ],
-        "LoD/1.09d": [
-          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp.cpp\"",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ],
-        "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S...",
-          "\"pFile->dwVersion == CELFILE_VERSION\""
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.07": 3,
-        "LoD/1.08": 3,
-        "LoD/1.09": 3,
-        "LoD/1.09b": 3,
-        "LoD/1.09d": 3,
-        "LoD/1.10": 3,
-        "LoD/1.11": 7,
-        "LoD/1.11b": 7,
-        "LoD/1.12a": 7,
-        "LoD/1.13c": 7,
-        "LoD/1.13d": 7
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.08": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.09": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.09b": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.09d": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.10": "56eff3b8e4c53163addb4f088955c656",
-        "LoD/1.11": "4802180c77b4a46408c7bcbfe1f4d105",
-        "LoD/1.11b": "4802180c77b4a46408c7bcbfe1f4d105",
-        "LoD/1.12a": "4802180c77b4a46408c7bcbfe1f4d105",
-        "LoD/1.13c": "4802180c77b4a46408c7bcbfe1f4d105",
-        "LoD/1.13d": "4802180c77b4a46408c7bcbfe1f4d105"
-      }
-    },
-    "d2cmp.dll_GetCelFrameCount": {
-      "addresses": {
-        "LoD/1.07": "0x6FE12880",
-        "LoD/1.08": "0x6FE12880",
-        "LoD/1.09": "0x6FDF2880",
-        "LoD/1.09b": "0x6FDF2880",
-        "LoD/1.09d": "0x6FDF2880",
         "LoD/1.10": "0x6FDF26D0",
         "LoD/1.11": "0x6FE199D0",
         "LoD/1.11b": "0x6FE19B40",
@@ -3488,11 +4733,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE1A6C0"
       },
       "rvas": {
-        "LoD/1.07": "0x2880",
-        "LoD/1.08": "0x2880",
-        "LoD/1.09": "0x2880",
-        "LoD/1.09b": "0x2880",
-        "LoD/1.09d": "0x2880",
+        "LoD/1.07": "0x2850",
+        "LoD/1.08": "0x2850",
+        "LoD/1.09": "0x2850",
+        "LoD/1.09b": "0x2850",
+        "LoD/1.09d": "0x2850",
         "LoD/1.10": "0x26D0",
         "LoD/1.11": "0x99D0",
         "LoD/1.11b": "0x9B40",
@@ -3513,13 +4758,58 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 82,
         "LoD/1.13d": 82
       },
-      "name": "GetCelFrameCount",
-      "signature": "int GetCelFrameCount(uint * pnFileHeader)",
+      "name": "GetCelFileSpriteDataPointer",
+      "signature": "int GetCelFileSpriteDataPointer(int * pCelFile)",
       "calling_convention": "__stdcall",
-      "comment": "Validates CEL file format version and retrieves frame count.\n\nAlgorithm:\n1. Load parameter pointer from stack (stdcall convention)\n2. Check if file header version field (offset 0) equals 0x6 (CEL format v6)\n3. If version mismatch: call FogAssertFail to log error, then exit via TerminateProcessWithCode\n4. If version matches: load value at offset 0x14 (frame count) into EAX\n5. Return frame count to caller\n\nParameters:\n- pnFileHeader (uint*): Pointer to CEL file header structure\n  - [+0x0] version - Format version (expected: 0x6)\n  - [+0x14] frame_count - Number of frames in CEL file\n\nReturns:\n- uint: Frame count from header offset 0x14\n- Never returns on version mismatch (calls non-returning function)\n\nMagic Numbers:\n- 0x6: CEL file format version identifier\n- 0x5b3 (1459): Source file line number for diagnostic logging\n- 0x14 (20): Offset to frame count field in header",
+      "comment": "Validate CEL file version and return sprite data pointer.\n\nAlgorithm:\n1. Read version field at offset 0x0 of pCelFile\n2. If version != 6, call FogAssertFail and terminate\n3. Return sprite data pointer at offset 0x10\n\nParameters:\n- pCelFile (int*): Pointer to CEL file structure\n\nReturns:\n- int: Sprite data pointer from offset 0x10 if version valid\n\nMagic Numbers:\n- 0x6: Required CEL file version\n- 0x10: Offset of sprite data pointer\n- 0x5a4: Error string max length\n- 0xFFFFFFFF: Exit code on failure",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:56eff3b8e4c53163addb4f088955c656",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -3601,32 +4891,190 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "d4d4dc58472be99392d55b93f4b8b297"
       }
     },
+    "d2cmp.dll_GetCelFrameCount": {
+      "addresses": {
+        "LoD/1.07": "0x6FE12880",
+        "LoD/1.08": "0x6FE12880",
+        "LoD/1.09": "0x6FDF2880",
+        "LoD/1.09b": "0x6FDF2880",
+        "LoD/1.09d": "0x6FDF2880",
+        "LoD/1.10": "0x6FDF2700",
+        "LoD/1.11": "0x6FE1C900",
+        "LoD/1.11b": "0x6FE23CC0",
+        "LoD/1.12a": "0x6FE229E0",
+        "LoD/1.13c": "0x6FE1D680",
+        "LoD/1.13d": "0x6FE22460"
+      },
+      "rvas": {
+        "LoD/1.07": "0x2880",
+        "LoD/1.08": "0x2880",
+        "LoD/1.09": "0x2880",
+        "LoD/1.09b": "0x2880",
+        "LoD/1.09d": "0x2880",
+        "LoD/1.10": "0x2700",
+        "LoD/1.11": "0xC900",
+        "LoD/1.11b": "0x13CC0",
+        "LoD/1.12a": "0x129E0",
+        "LoD/1.13c": "0xD680",
+        "LoD/1.13d": "0x12460"
+      },
+      "sizes": {
+        "LoD/1.07": 45,
+        "LoD/1.08": 45,
+        "LoD/1.09": 45,
+        "LoD/1.09b": 45,
+        "LoD/1.09d": 45,
+        "LoD/1.10": 45,
+        "LoD/1.11": 223,
+        "LoD/1.11b": 223,
+        "LoD/1.12a": 223,
+        "LoD/1.13c": 223,
+        "LoD/1.13d": 223
+      },
+      "name": "GetCelFrameCount",
+      "signature": "int GetCelFrameCount(uint * pnFileHeader)",
+      "calling_convention": "__stdcall",
+      "comment": "Validates CEL file format version and retrieves frame count.\n\nAlgorithm:\n1. Load parameter pointer from stack (stdcall convention)\n2. Check if file header version field (offset 0) equals 0x6 (CEL format v6)\n3. If version mismatch: call FogAssertFail to log error, then exit via TerminateProcessWithCode\n4. If version matches: load value at offset 0x14 (frame count) into EAX\n5. Return frame count to caller\n\nParameters:\n- pnFileHeader (uint*): Pointer to CEL file header structure\n  - [+0x0] version - Format version (expected: 0x6)\n  - [+0x14] frame_count - Number of frames in CEL file\n\nReturns:\n- uint: Frame count from header offset 0x14\n- Never returns on version mismatch (calls non-returning function)\n\nMagic Numbers:\n- 0x6: CEL file format version identifier\n- 0x5b3 (1459): Source file line number for diagnostic logging\n- 0x14 (20): Offset to frame count field in header",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:56eff3b8e4c53163addb4f088955c656",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "strings": {
+        "LoD/1.07": [
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ],
+        "LoD/1.08": [
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ],
+        "LoD/1.09": [
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ],
+        "LoD/1.09b": [
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ],
+        "LoD/1.09d": [
+          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp.cpp\"",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ],
+        "LoD/1.10": [
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S...",
+          "\"pFile->dwVersion == CELFILE_VERSION\""
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.08": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.09": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.09b": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.09d": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.10": "56eff3b8e4c53163addb4f088955c656",
+        "LoD/1.11": "4802180c77b4a46408c7bcbfe1f4d105",
+        "LoD/1.11b": "4802180c77b4a46408c7bcbfe1f4d105",
+        "LoD/1.12a": "4802180c77b4a46408c7bcbfe1f4d105",
+        "LoD/1.13c": "4802180c77b4a46408c7bcbfe1f4d105",
+        "LoD/1.13d": "4802180c77b4a46408c7bcbfe1f4d105"
+      }
+    },
     "d2cmp.dll_SetCelfileCallback": {
       "addresses": {
         "LoD/1.07": "0x6FE128B0",
         "LoD/1.08": "0x6FE128B0",
         "LoD/1.09": "0x6FDFB520",
         "LoD/1.09b": "0x6FDFB520",
-        "LoD/1.09d": "0x6FDFB370",
-        "LoD/1.10": "0x6FDFB170",
+        "LoD/1.09d": "0x6FDF28B0",
+        "LoD/1.10": "0x6FDFAFD0",
         "LoD/1.11": "0x6FE274D0",
-        "LoD/1.11b": "0x6FE1AE40",
-        "LoD/1.12a": "0x6FE196E0",
-        "LoD/1.13c": "0x6FE25390",
-        "LoD/1.13d": "0x6FE25540"
+        "LoD/1.11b": "0x6FE21ED0",
+        "LoD/1.12a": "0x6FE1AAD0",
+        "LoD/1.13c": "0x6FE19A00",
+        "LoD/1.13d": "0x6FE23690"
       },
       "rvas": {
         "LoD/1.07": "0x28B0",
         "LoD/1.08": "0x28B0",
         "LoD/1.09": "0xB520",
         "LoD/1.09b": "0xB520",
-        "LoD/1.09d": "0xB370",
-        "LoD/1.10": "0xB170",
+        "LoD/1.09d": "0x28B0",
+        "LoD/1.10": "0xAFD0",
         "LoD/1.11": "0x174D0",
-        "LoD/1.11b": "0xAE40",
-        "LoD/1.12a": "0x96E0",
-        "LoD/1.13c": "0x15390",
-        "LoD/1.13d": "0x15540"
+        "LoD/1.11b": "0x11ED0",
+        "LoD/1.12a": "0xAAD0",
+        "LoD/1.13c": "0x9A00",
+        "LoD/1.13d": "0x13690"
       },
       "sizes": {
         "LoD/1.07": 12,
@@ -3695,12 +5143,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF28C0",
         "LoD/1.09b": "0x6FDF28C0",
         "LoD/1.09d": "0x6FDF28C0",
-        "LoD/1.10": "0x6FDFD830",
-        "LoD/1.11": "0x6FE1B4D0",
-        "LoD/1.11b": "0x6FE22810",
+        "LoD/1.10": "0x6FDFD850",
+        "LoD/1.11": "0x6FE20260",
+        "LoD/1.11b": "0x6FE22830",
         "LoD/1.12a": "0x6FE21550",
         "LoD/1.13c": "0x6FE1C250",
-        "LoD/1.13d": "0x6FE20FD0"
+        "LoD/1.13d": "0x6FE23680"
       },
       "rvas": {
         "LoD/1.07": "0x28C0",
@@ -3708,12 +5156,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x28C0",
         "LoD/1.09b": "0x28C0",
         "LoD/1.09d": "0x28C0",
-        "LoD/1.10": "0xD830",
-        "LoD/1.11": "0xB4D0",
-        "LoD/1.11b": "0x12810",
+        "LoD/1.10": "0xD850",
+        "LoD/1.11": "0x10260",
+        "LoD/1.11b": "0x12830",
         "LoD/1.12a": "0x11550",
         "LoD/1.13c": "0xC250",
-        "LoD/1.13d": "0x10FD0"
+        "LoD/1.13d": "0x13680"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3822,6 +5270,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5cb95fecf22a4e25fd97865dde0d3d5b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"lpParent\"",
@@ -3941,6 +5421,46 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8eab67eb03df05f10259c22a2e1a8e6c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp...",
@@ -4039,6 +5559,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ca6c3d77b5f569f55ab4bf56002c41f1",
+      "callees": {
+        "LoD/1.07": [
+          "SMemAlloc"
+        ],
+        "LoD/1.08": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AUTCELENTRY@@\""
@@ -4188,6 +5728,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4b3ae60450c59dea6f89451ba50ff9b0",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AUCELLIST@@\""
@@ -4310,6 +5885,47 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff1b02b84ed6ba184b35d160d4d4cd18",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@...",
@@ -4420,6 +6036,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6064991a2af50651cf2902deed604c79",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -4491,6 +6124,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5f7263542a8b92ac5685b21da5bb7751",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -4543,12 +6196,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF2F00",
         "LoD/1.09b": "0x6FDF2F00",
         "LoD/1.09d": "0x6FDF2F00",
-        "LoD/1.10": "0x6FDF2D90",
-        "LoD/1.11": "0x6FE11510",
-        "LoD/1.11b": "0x6FE11510",
-        "LoD/1.12a": "0x6FE114D0",
-        "LoD/1.13c": "0x6FE114D0",
-        "LoD/1.13d": "0x6FE113F0"
+        "LoD/1.10": "0x6FDF3030"
       },
       "rvas": {
         "LoD/1.07": "0x2F00",
@@ -4556,12 +6204,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x2F00",
         "LoD/1.09b": "0x2F00",
         "LoD/1.09d": "0x2F00",
-        "LoD/1.10": "0x2D90",
-        "LoD/1.11": "0x1510",
-        "LoD/1.11b": "0x1510",
-        "LoD/1.12a": "0x14D0",
-        "LoD/1.13c": "0x14D0",
-        "LoD/1.13d": "0x13F0"
+        "LoD/1.10": "0x3030"
       },
       "sizes": {
         "LoD/1.07": 40,
@@ -4569,12 +6212,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 40,
         "LoD/1.09b": 40,
         "LoD/1.09d": 40,
-        "LoD/1.10": 40,
-        "LoD/1.11": 40,
-        "LoD/1.11b": 40,
-        "LoD/1.12a": 40,
-        "LoD/1.13c": 40,
-        "LoD/1.13d": 40
+        "LoD/1.10": 40
       },
       "name": "Destructor",
       "signature": "void * Destructor(void * this, void * pThis, byte fDeleteContents)",
@@ -4583,6 +6221,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -4601,18 +6259,6 @@ var FUNCTIONS_D2CMP_dll = {
         ],
         "LoD/1.10": [
           "\"delete\""
-        ],
-        "LoD/1.11": [
-          "\"delete\""
-        ],
-        "LoD/1.11b": [
-          "\"delete\""
-        ],
-        "LoD/1.12a": [
-          "\"delete\""
-        ],
-        "LoD/1.13c": [
-          "\"delete\""
         ]
       },
       "basic_block_counts": {
@@ -4621,12 +6267,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 4,
         "LoD/1.09b": 4,
         "LoD/1.09d": 4,
-        "LoD/1.10": 4,
-        "LoD/1.11": 4,
-        "LoD/1.11b": 4,
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4
+        "LoD/1.10": 4
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -4634,12 +6275,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "971e52ca170c736a7516f041b09754b4",
@@ -4647,12 +6283,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "971e52ca170c736a7516f041b09754b4",
         "LoD/1.09b": "971e52ca170c736a7516f041b09754b4",
         "LoD/1.09d": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.10": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.11": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.11b": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.12a": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.13c": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.13d": "971e52ca170c736a7516f041b09754b4"
+        "LoD/1.10": "971e52ca170c736a7516f041b09754b4"
       }
     },
     "d2cmp.dll_DestructorWithConditionalClean": {
@@ -4687,6 +6318,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -4735,19 +6386,19 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_DestructorWithOptionalDelete": {
       "addresses": {
         "LoD/1.07": "0x6FE12F60",
-        "LoD/1.08": "0x6FE13510",
-        "LoD/1.09": "0x6FDF3510",
-        "LoD/1.09b": "0x6FDF3510",
-        "LoD/1.09d": "0x6FDF3510",
-        "LoD/1.10": "0x6FDF2DF0"
+        "LoD/1.08": "0x6FE12F60",
+        "LoD/1.09": "0x6FDF2F60",
+        "LoD/1.09b": "0x6FDF2F60",
+        "LoD/1.09d": "0x6FDF2F60",
+        "LoD/1.10": "0x6FDF3370"
       },
       "rvas": {
         "LoD/1.07": "0x2F60",
-        "LoD/1.08": "0x3510",
-        "LoD/1.09": "0x3510",
-        "LoD/1.09b": "0x3510",
-        "LoD/1.09d": "0x3510",
-        "LoD/1.10": "0x2DF0"
+        "LoD/1.08": "0x2F60",
+        "LoD/1.09": "0x2F60",
+        "LoD/1.09b": "0x2F60",
+        "LoD/1.09d": "0x2F60",
+        "LoD/1.10": "0x3370"
       },
       "sizes": {
         "LoD/1.07": 40,
@@ -4764,6 +6415,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -4841,6 +6512,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff1b02b84ed6ba184b35d160d4d4cd18",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@...",
@@ -4950,7 +6647,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF31A0",
         "LoD/1.09b": "0x6FDF31A0",
         "LoD/1.09d": "0x6FDF31A0",
-        "LoD/1.10": "0x6FDF3370"
+        "LoD/1.10": "0x6FDF36D0"
       },
       "rvas": {
         "LoD/1.07": "0x31A0",
@@ -4958,7 +6655,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x31A0",
         "LoD/1.09b": "0x31A0",
         "LoD/1.09d": "0x31A0",
-        "LoD/1.10": "0x3370"
+        "LoD/1.10": "0x36D0"
       },
       "sizes": {
         "LoD/1.07": 40,
@@ -4975,6 +6672,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -5067,6 +6784,51 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4fa45e51f3ceaf8c504825f9cef7e4ae",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -5276,6 +7038,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f47ddfa85791e5781642943b61cb534f",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUCELLIST@@\""
@@ -5353,6 +7120,68 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:82e05515bca98ac3c5cf6064f3dfcb0d",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -5428,19 +7257,19 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_DestructorWithOptionalCleanup": {
       "addresses": {
         "LoD/1.07": "0x6FE13510",
-        "LoD/1.08": "0x6FE12F60",
-        "LoD/1.09": "0x6FDF2F60",
-        "LoD/1.09b": "0x6FDF2F60",
-        "LoD/1.09d": "0x6FDF2F60",
-        "LoD/1.10": "0x6FDF36D0"
+        "LoD/1.08": "0x6FE13510",
+        "LoD/1.09": "0x6FDF3510",
+        "LoD/1.09b": "0x6FDF3510",
+        "LoD/1.09d": "0x6FDF3510",
+        "LoD/1.10": "0x6FDF2DF0"
       },
       "rvas": {
         "LoD/1.07": "0x3510",
-        "LoD/1.08": "0x2F60",
-        "LoD/1.09": "0x2F60",
-        "LoD/1.09b": "0x2F60",
-        "LoD/1.09d": "0x2F60",
-        "LoD/1.10": "0x36D0"
+        "LoD/1.08": "0x3510",
+        "LoD/1.09": "0x3510",
+        "LoD/1.09b": "0x3510",
+        "LoD/1.09d": "0x3510",
+        "LoD/1.10": "0x2DF0"
       },
       "sizes": {
         "LoD/1.07": 40,
@@ -5457,6 +7286,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -5534,6 +7383,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ff1b02b84ed6ba184b35d160d4d4cd18",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@...",
@@ -5838,7 +7713,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FDF38C0",
         "LoD/1.09b": "0x6FDF38C0",
         "LoD/1.09d": "0x6FDF38C0",
-        "LoD/1.10": "0x6FDF3030"
+        "LoD/1.10": "0x6FDF2D90",
+        "LoD/1.11": "0x6FE11510",
+        "LoD/1.11b": "0x6FE11510",
+        "LoD/1.12a": "0x6FE114D0",
+        "LoD/1.13c": "0x6FE114D0",
+        "LoD/1.13d": "0x6FE113F0"
       },
       "rvas": {
         "LoD/1.07": "0x38C0",
@@ -5846,7 +7726,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x38C0",
         "LoD/1.09b": "0x38C0",
         "LoD/1.09d": "0x38C0",
-        "LoD/1.10": "0x3030"
+        "LoD/1.10": "0x2D90",
+        "LoD/1.11": "0x1510",
+        "LoD/1.11b": "0x1510",
+        "LoD/1.12a": "0x14D0",
+        "LoD/1.13c": "0x14D0",
+        "LoD/1.13d": "0x13F0"
       },
       "sizes": {
         "LoD/1.07": 40,
@@ -5854,7 +7739,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 40,
         "LoD/1.09b": 40,
         "LoD/1.09d": 40,
-        "LoD/1.10": 40
+        "LoD/1.10": 40,
+        "LoD/1.11": 40,
+        "LoD/1.11b": 40,
+        "LoD/1.12a": 40,
+        "LoD/1.13c": 40,
+        "LoD/1.13d": 40
       },
       "name": "DestroyNodeWithCleanup",
       "signature": "int * DestroyNodeWithCleanup(void * this, int * pNode, byte fInvokeCallback)",
@@ -5863,6 +7753,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:971e52ca170c736a7516f041b09754b4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"delete\""
@@ -5881,6 +7806,18 @@ var FUNCTIONS_D2CMP_dll = {
         ],
         "LoD/1.10": [
           "\"delete\""
+        ],
+        "LoD/1.11": [
+          "\"delete\""
+        ],
+        "LoD/1.11b": [
+          "\"delete\""
+        ],
+        "LoD/1.12a": [
+          "\"delete\""
+        ],
+        "LoD/1.13c": [
+          "\"delete\""
         ]
       },
       "basic_block_counts": {
@@ -5889,7 +7826,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 4,
         "LoD/1.09b": 4,
         "LoD/1.09d": 4,
-        "LoD/1.10": 4
+        "LoD/1.10": 4,
+        "LoD/1.11": 4,
+        "LoD/1.11b": 4,
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4,
+        "LoD/1.13d": 4
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -5897,7 +7839,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "971e52ca170c736a7516f041b09754b4",
@@ -5905,7 +7852,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "971e52ca170c736a7516f041b09754b4",
         "LoD/1.09b": "971e52ca170c736a7516f041b09754b4",
         "LoD/1.09d": "971e52ca170c736a7516f041b09754b4",
-        "LoD/1.10": "971e52ca170c736a7516f041b09754b4"
+        "LoD/1.10": "971e52ca170c736a7516f041b09754b4",
+        "LoD/1.11": "971e52ca170c736a7516f041b09754b4",
+        "LoD/1.11b": "971e52ca170c736a7516f041b09754b4",
+        "LoD/1.12a": "971e52ca170c736a7516f041b09754b4",
+        "LoD/1.13c": "971e52ca170c736a7516f041b09754b4",
+        "LoD/1.13d": "971e52ca170c736a7516f041b09754b4"
       }
     },
     "d2cmp.dll_CleanupListNodeItems": {
@@ -5940,6 +7892,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:af3d376c9b25fcb6a80c13daf1682a51",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AUCELLIST@@\""
@@ -6692,6 +8664,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:1153845a6f780937ce6667c2f7768a8f",
+      "callees": {
+        "LoD/1.07": [
+          "SMemReAlloc",
+          "SMemAlloc",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -6910,6 +8914,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b9f45e9c9e13ff20fe4e990fca3a5632",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ComputeStringHash"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_502"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\CelDat...",
@@ -6983,6 +9009,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:aff71a855a2687beff962aa50b03764e",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "ComputeStringHash"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "Ordinal_502"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\CelDat...",
@@ -7059,6 +9112,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:e78b3b4f51622f3e0560c7c33f766a5b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10046"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\CelDat...",
@@ -7142,6 +9221,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f109cffbf32fd20bc7fa51bc858bbc96",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Codec....",
@@ -7225,6 +9324,62 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:70424ca6022e18dbd6430fbaeb6208fa",
+      "callees": {
+        "LoD/1.07": [
+          "SetAsyncFileHandle",
+          "ReadFileAsync",
+          "FogAssert",
+          "ReadFileAsync",
+          "CloseFileHandle",
+          "GetFileSize",
+          "CloseFileHandle"
+        ],
+        "LoD/1.08": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09b": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09d": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.10": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Codec....",
@@ -7323,6 +9478,112 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:231be8621e7e60fd97f817609dd2e386",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+8 more"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+8 more"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "FogFatalError"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "FogFatalError"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10045",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateAndValidateResourceSlot",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateAndValidateResourceSlot",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndValidateResourceSlot",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndValidateResourceSlot",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"curcell->image\"",
@@ -7566,6 +9827,14 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1a333d539b6ab61563fa73548c034e9c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"(ptBuffer->pdwCurr - ptBuffer->pdwData) * DWORD_B...",
@@ -7693,6 +9962,16 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"(ptBuffer->pdwCurr - ptBuffer->pdwData) * DWORD_B...",
@@ -7736,6 +10015,20 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:449e68050137ffb3d02781b1c2e44b59",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"(ptBuffer->pdwCurr - ptBuffer->pdwData) * DWORD_B...",
@@ -7992,6 +10285,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9a1f40d78d0e0fedaa9c8d652d141feb",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Count....",
@@ -8075,6 +10388,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2054b0e4fc53a2ee670e988d804c7342",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Count....",
@@ -8158,6 +10491,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef8012fd0e93cf93bb3dfb79bcdc88b8",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Count....",
@@ -8328,6 +10681,44 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e2294d88b13e08fe53597282878ac765",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "Ordinal_10018"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\FastCm...",
@@ -8408,6 +10799,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5ead84294924e40ef37e3b2bf40931f4",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\FastCm..."
@@ -8479,6 +10887,56 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:aa88d5f00e04da851a296ef9d3fa38ce",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"bTemp\"",
@@ -9336,6 +11794,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d715c715e9069524e0bffeceeead6880",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dwStride >= pCel->dwWidth\"",
@@ -9482,6 +11966,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50454d35692b5df646f9d4d459550144",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dwStride >= pCel->dwWidth\"",
@@ -9565,6 +12069,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0379e315aa90f12f42e183c52cb142b8",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptHash\"",
@@ -9663,6 +12193,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0db24bdd929245e6591f3fde2d9241c1",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\FindTi..."
@@ -9755,6 +12317,74 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d124488275e3e4e61be66ea3f3390b00",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tKey < FIND_TILE_HASH_SIZE\"",
@@ -9862,6 +12492,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b8d8648a1a4d7d2bcfcd1d4551e39eca",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTileList\"",
@@ -10080,6 +12742,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b9f45e9c9e13ff20fe4e990fca3a5632",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ComputeStringHash"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_502"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_502"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptCelContext->tUnitInfo.pszFileName\"",
@@ -10178,6 +12866,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70549bcd22aede2d994ba5251c2a6921",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\GfxHas..."
@@ -10252,6 +12960,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:00cf043b9478bf7ba2232f81a3f400aa",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "GetCelfileCallback",
+          "GetAsyncResult",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreeAsyncData",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "GetCelfileCallback",
+          "GetAsyncResult",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreeAsyncData",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "GetCelfileCallback",
+          "GetAsyncResult",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreeAsyncData",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "GetCelfileCallback",
+          "GetAsyncResult",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreeAsyncData",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "GetCelfileCallback",
+          "GetAsyncResult",
+          "FogAssert",
+          "FreePoolMemoryTracked",
+          "FreeAsyncData",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptElement\"",
@@ -10338,6 +13098,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:00f892b7d6a43406dd661da9fe57b3bd",
+      "callees": {
+        "LoD/1.07": [
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10018"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 23,
         "LoD/1.08": 23,
@@ -10395,6 +13175,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fe7d9cdfca17307a1b88fa328d345db3",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCac..."
@@ -10448,11 +13248,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FDF8EF0",
         "LoD/1.09d": "0x6FDF8EF0",
         "LoD/1.10": "0x6FDF8BF0",
-        "LoD/1.11": "0x6FE19630",
-        "LoD/1.11b": "0x6FE197A0",
-        "LoD/1.12a": "0x6FE1F4A0",
-        "LoD/1.13c": "0x6FE25610",
-        "LoD/1.13d": "0x6FE1A320"
+        "LoD/1.11": "0x6FE18A3E",
+        "LoD/1.11b": "0x6FE18A2E",
+        "LoD/1.12a": "0x6FE18A33",
+        "LoD/1.13c": "0x6FE18A33",
+        "LoD/1.13d": "0x6FE18A3E"
       },
       "rvas": {
         "LoD/1.07": "0x9130",
@@ -10461,11 +13261,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x8EF0",
         "LoD/1.09d": "0x8EF0",
         "LoD/1.10": "0x8BF0",
-        "LoD/1.11": "0x9630",
-        "LoD/1.11b": "0x97A0",
-        "LoD/1.12a": "0xF4A0",
-        "LoD/1.13c": "0x15610",
-        "LoD/1.13d": "0xA320"
+        "LoD/1.11": "0x8A3E",
+        "LoD/1.11b": "0x8A2E",
+        "LoD/1.12a": "0x8A33",
+        "LoD/1.13c": "0x8A33",
+        "LoD/1.13d": "0x8A3E"
       },
       "sizes": {
         "LoD/1.07": 58,
@@ -10487,6 +13287,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9a5ce2267bc145a21b95341852f43eee",
+      "callees": {
+        "LoD/1.07": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10046"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCac..."
@@ -10540,11 +13360,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "9a5ce2267bc145a21b95341852f43eee",
         "LoD/1.09d": "9a5ce2267bc145a21b95341852f43eee",
         "LoD/1.10": "9a5ce2267bc145a21b95341852f43eee",
-        "LoD/1.11": "63750d87ae53d8a7abd50e1c8f42c1cc",
-        "LoD/1.11b": "63750d87ae53d8a7abd50e1c8f42c1cc",
-        "LoD/1.12a": "63750d87ae53d8a7abd50e1c8f42c1cc",
-        "LoD/1.13c": "63750d87ae53d8a7abd50e1c8f42c1cc",
-        "LoD/1.13d": "63750d87ae53d8a7abd50e1c8f42c1cc"
+        "LoD/1.11": "99486f21581ce5ab9e85ee964f03efa4",
+        "LoD/1.11b": "99486f21581ce5ab9e85ee964f03efa4",
+        "LoD/1.12a": "99486f21581ce5ab9e85ee964f03efa4",
+        "LoD/1.13c": "99486f21581ce5ab9e85ee964f03efa4",
+        "LoD/1.13d": "99486f21581ce5ab9e85ee964f03efa4"
       }
     },
     "d2cmp.dll_AllocateMemoryBlockToArray": {
@@ -10579,6 +13399,50 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f38e4d4846ca263a66a1bb64b9c3df79",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10045",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dwSize < ptCache->dwMaxAllocated\"",
@@ -10671,6 +13535,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:628f8a23271044b907f7a417c5072702",
+      "callees": {
+        "LoD/1.07": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCac..."
@@ -10742,6 +13623,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:902a5d69ab2988978fa8aa6b91e50aeb",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptBlock\"",
@@ -10939,6 +13840,56 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4d18c45a204f5477d249e3cc7981ef6a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FindClosestColorMatch",
+          "FindClosestColorMatch"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pPal\"",
@@ -11391,6 +14342,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:36b4a8b367f6115b6a9f3eef5837aba8",
+      "callees": {
+        "LoD/1.07": [
+          "ConvertAndQuantizeRGBImage"
+        ],
+        "LoD/1.08": [
+          "ConvertAndQuantizeRGBImage"
+        ],
+        "LoD/1.09": [
+          "ConvertAndQuantizeRGBImage"
+        ],
+        "LoD/1.09b": [
+          "ConvertAndQuantizeRGBImage"
+        ],
+        "LoD/1.09d": [
+          "ConvertAndQuantizeRGBImage"
+        ],
+        "LoD/1.10": [
+          "ConvertAndQuantizeRGBImage"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -11691,6 +14662,59 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:88957becc3b3eea02560eb67886ae150",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"PaletteStartEntry <= PaletteEndEntry\"",
@@ -11800,28 +14824,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE1B5B0",
         "LoD/1.08": "0x6FE1B5B0",
-        "LoD/1.09": "0x6FDF28B0",
-        "LoD/1.09b": "0x6FDF28B0",
-        "LoD/1.09d": "0x6FDFB520",
-        "LoD/1.10": "0x6FDFAFD0",
-        "LoD/1.11": "0x6FE22110",
-        "LoD/1.11b": "0x6FE1AF30",
-        "LoD/1.12a": "0x6FE1ABC0",
-        "LoD/1.13c": "0x6FE19AF0",
-        "LoD/1.13d": "0x6FE25630"
+        "LoD/1.09": "0x6FDFB370",
+        "LoD/1.09b": "0x6FDFB370",
+        "LoD/1.09d": "0x6FDFB370",
+        "LoD/1.10": "0x6FDFB170",
+        "LoD/1.11": "0x6FE22200",
+        "LoD/1.11b": "0x6FE1DE80",
+        "LoD/1.12a": "0x6FE196E0",
+        "LoD/1.13c": "0x6FE21600",
+        "LoD/1.13d": "0x6FE23400"
       },
       "rvas": {
         "LoD/1.07": "0xB5B0",
         "LoD/1.08": "0xB5B0",
-        "LoD/1.09": "0x28B0",
-        "LoD/1.09b": "0x28B0",
-        "LoD/1.09d": "0xB520",
-        "LoD/1.10": "0xAFD0",
-        "LoD/1.11": "0x12110",
-        "LoD/1.11b": "0xAF30",
-        "LoD/1.12a": "0xABC0",
-        "LoD/1.13c": "0x9AF0",
-        "LoD/1.13d": "0x15630"
+        "LoD/1.09": "0xB370",
+        "LoD/1.09b": "0xB370",
+        "LoD/1.09d": "0xB370",
+        "LoD/1.10": "0xB170",
+        "LoD/1.11": "0x12200",
+        "LoD/1.11b": "0xDE80",
+        "LoD/1.12a": "0x96E0",
+        "LoD/1.13c": "0x11600",
+        "LoD/1.13d": "0x13400"
       },
       "sizes": {
         "LoD/1.07": 12,
@@ -11989,28 +15013,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE1B760",
         "LoD/1.08": "0x6FE1B760",
-        "LoD/1.09": "0x6FDFB370",
-        "LoD/1.09b": "0x6FDFB370",
-        "LoD/1.09d": "0x6FDF28B0",
+        "LoD/1.09": "0x6FDF28B0",
+        "LoD/1.09b": "0x6FDF28B0",
+        "LoD/1.09d": "0x6FDFB520",
         "LoD/1.10": "0x6FDF2730",
-        "LoD/1.11": "0x6FE20270",
-        "LoD/1.11b": "0x6FE1DE80",
-        "LoD/1.12a": "0x6FE1AAD0",
-        "LoD/1.13c": "0x6FE19A00",
-        "LoD/1.13d": "0x6FE23400"
+        "LoD/1.11": "0x6FE22110",
+        "LoD/1.11b": "0x6FE1AF30",
+        "LoD/1.12a": "0x6FE1ABC0",
+        "LoD/1.13c": "0x6FE19AF0",
+        "LoD/1.13d": "0x6FE25630"
       },
       "rvas": {
         "LoD/1.07": "0xB760",
         "LoD/1.08": "0xB760",
-        "LoD/1.09": "0xB370",
-        "LoD/1.09b": "0xB370",
-        "LoD/1.09d": "0x28B0",
+        "LoD/1.09": "0x28B0",
+        "LoD/1.09b": "0x28B0",
+        "LoD/1.09d": "0xB520",
         "LoD/1.10": "0x2730",
-        "LoD/1.11": "0x10270",
-        "LoD/1.11b": "0xDE80",
-        "LoD/1.12a": "0xAAD0",
-        "LoD/1.13c": "0x9A00",
-        "LoD/1.13d": "0x13400"
+        "LoD/1.11": "0x12110",
+        "LoD/1.11b": "0xAF30",
+        "LoD/1.12a": "0xABC0",
+        "LoD/1.13c": "0x9AF0",
+        "LoD/1.13d": "0x15630"
       },
       "sizes": {
         "LoD/1.07": 12,
@@ -12140,8 +15164,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0x6FE1AE30",
         "LoD/1.11b": "0x6FE1EC80",
         "LoD/1.12a": "0x6FE197E0",
-        "LoD/1.13c": "0x6FE251B0",
-        "LoD/1.13d": "0x6FE237C0"
+        "LoD/1.13c": "0x6FE25210"
       },
       "rvas": {
         "LoD/1.07": "0xB7A0",
@@ -12153,8 +15176,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0xAE30",
         "LoD/1.11b": "0xEC80",
         "LoD/1.12a": "0x97E0",
-        "LoD/1.13c": "0x151B0",
-        "LoD/1.13d": "0x137C0"
+        "LoD/1.13c": "0x15210"
       },
       "sizes": {
         "LoD/1.07": 1357,
@@ -12166,8 +15188,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 65,
         "LoD/1.11b": 124,
         "LoD/1.12a": 45,
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
+        "LoD/1.13c": 45
       },
       "name": "InitializeGlobalPalettes",
       "signature": "void InitializeGlobalPalettes(void)",
@@ -12176,6 +15197,69 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:da39e7d640689a46694749b911daf5ad",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning",
+          "LogPoolWarning"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10080"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Data\\\\Global\\\\Items\\\\Palette\\\\\"",
@@ -12236,8 +15320,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 1,
         "LoD/1.11b": 6,
         "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
+        "LoD/1.13c": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -12249,8 +15332,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.13c": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "dee881113f3e8b7abd4c642e3d35d071",
@@ -12262,8 +15344,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "9a30711f2dbf4d4b8f04d545f11e64ad",
         "LoD/1.11b": "273363bdf7c80fd27c6890811a8a205d",
         "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_BuildAndApplyPaletteShift": {
@@ -12295,6 +15376,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:964be4e5f49e5501c820298f2af31bae",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Data\\\\Global\\\\Items\\\\Palette\\\\\"",
@@ -12455,6 +15553,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c2fe20e91c1e8289fc1d1b13c29cec51",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"eClass < NUM_ICLASSES && eTransform < NUM_ITRANSF..."
@@ -12527,6 +15642,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:aedf9ddde8075436eaabe0f55d1a61e8",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "GetRotationLookupValue"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Raw.cp..."
@@ -12814,6 +15951,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:8fdf8991cd356a09cc2e55694c4d4499",
+      "callees": {
+        "LoD/1.07": [
+          "QueryRegistryUlong"
+        ],
+        "LoD/1.08": [
+          "Ordinal_423"
+        ],
+        "LoD/1.09": [
+          "Ordinal_423"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_423"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_423"
+        ],
+        "LoD/1.10": [
+          "Ordinal_423"
+        ],
+        "LoD/1.11": [
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.11b": [
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.12a": [
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13c": [
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13d": [
+          "ParseConfigurationValue"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"CompressedData\"",
@@ -12929,6 +16101,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f5d7ef3e4e05006fbe594519bf9ea24e",
+      "callees": {
+        "LoD/1.07": [
+          "GetFogStatePtr",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pSysInfo != NULL\"",
@@ -13005,6 +16199,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e9b0c0f354a91cd1e2b72c82422d0f81",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptGfxNode\"",
@@ -13145,6 +16359,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f04d278679c28be92597557fb88197be",
+      "callees": {
+        "LoD/1.07": [
+          "FreePoolMemoryTracked",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FreePoolMemoryTracked",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FreePoolMemoryTracked",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FreePoolMemoryTracked",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FreePoolMemoryTracked",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10046",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Sprite..."
@@ -13294,6 +16534,86 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c4cadb51bf3253a674549110ae0d696d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "FogAssert",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "FogAssert",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "FogAssert",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "FogAssert",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert",
+          "PollAsyncOperationStatus",
+          "FogAssert",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10036",
+          "Ordinal_10092",
+          "Ordinal_10019",
+          "Ordinal_10092",
+          "FogAssert",
+          "Ordinal_10094",
+          "Ordinal_10029",
+          "Ordinal_10018",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptGfxNode->tGfxBlock.lpAsyncData\"",
@@ -13416,6 +16736,80 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:2eae0446bc681b4c7624efc370282c98",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "SetAsyncFileHandle",
+          "ReadFileAsync",
+          "GetFileSize",
+          "FogAssert",
+          "ReadFileAsync",
+          "CloseFileHandle",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptCelData->tHeader.dwNumDirections < MAX_DIROFFSE...",
@@ -13520,6 +16914,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c38e962e6b5e8e2f55b11e4aca2336f8",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogFatalError",
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogFatalError",
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogFatalError",
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogFatalError",
+          "FogAssert",
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogFatalError",
+          "FogAssert",
+          "FogFatalError"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"DATA\\\\GLOBAL\\\\MISSILES\"",
@@ -13616,6 +17047,74 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9ddd4583eb05e5a6cad033d3356e6433",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "GetAsyncResult",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "GetAsyncResult",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "GetAsyncResult",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "GetAsyncResult",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "AllocPoolMemoryTracked",
+          "GetAsyncResult",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10045",
+          "Ordinal_10094",
+          "FogAssert",
+          "FormatStringVarArgs",
+          "FogFatalError"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!ptGfxBlock->fHardwareCelData\"",
@@ -13723,6 +17222,86 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1ddf3314feb1c6f36712cfced145d635",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue",
+          "GetRotationLookupValue",
+          "FormatStringVarArgs",
+          "FogAssert",
+          "FogAssert",
+          "...+8 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue",
+          "GetRotationLookupValue",
+          "FormatStringVarArgs",
+          "FogAssert",
+          "FogAssert",
+          "...+8 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue",
+          "GetRotationLookupValue",
+          "FormatStringVarArgs",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "...+7 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue",
+          "GetRotationLookupValue",
+          "FormatStringVarArgs",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "...+7 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "GetRotationLookupValue",
+          "GetRotationLookupValue",
+          "FormatStringVarArgs",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "...+7 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10018",
+          "Ordinal_10018",
+          "Ordinal_10029",
+          "FogAssert",
+          "Ordinal_10091",
+          "Ordinal_10095",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10091",
+          "FogAssert",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptGfxNode->tGfxBlock.lpAsyncData\"",
@@ -13827,6 +17406,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9cdca8cfabc4f85c5e6e532c98c62dd0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "GetAsyncResult",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "GetAsyncResult",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "GetAsyncResult",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "GetAsyncResult",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "GetAsyncResult",
+          "FogAssert",
+          "GetRotationLookupValue"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptGfxNode->tGfxBlock.lpAsyncData\"",
@@ -13913,6 +17529,48 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3564bcbc5d52d3a314051ce654857b5a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "ValidateUIStateDirectionPair",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "ValidateUIStateDirectionPair",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "ValidateUIStateDirectionPair",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "ValidateUIStateDirectionPair",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "ValidateUIStateDirectionPair",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10020",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptCelContext\"",
@@ -14012,6 +17670,72 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:85a4f97031f1b73d146ba3eb0600417f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "InitAsyncFileOperation",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10091",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10091",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptCelContext\"",
@@ -14134,6 +17858,70 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:74fe70233868a0e95bba5f3130cc60f4",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetCelDataByIndex",
+          "ConvertDirectionToNormalized8bit",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10036",
+          "Ordinal_10019",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptCelContext\"",
@@ -14216,18 +18004,18 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE1DEB0",
         "LoD/1.08": "0x6FE1DEB0",
-        "LoD/1.09": "0x6FDFDD00",
-        "LoD/1.09b": "0x6FDFDD00",
-        "LoD/1.09d": "0x6FDF1020",
-        "LoD/1.10": "0x6FDFD840"
+        "LoD/1.09": "0x6FDFDC90",
+        "LoD/1.09b": "0x6FDFDC90",
+        "LoD/1.09d": "0x6FDFDC90",
+        "LoD/1.10": "0x6FDF1020"
       },
       "rvas": {
         "LoD/1.07": "0xDEB0",
         "LoD/1.08": "0xDEB0",
-        "LoD/1.09": "0xDD00",
-        "LoD/1.09b": "0xDD00",
-        "LoD/1.09d": "0x1020",
-        "LoD/1.10": "0xD840"
+        "LoD/1.09": "0xDC90",
+        "LoD/1.09b": "0xDC90",
+        "LoD/1.09d": "0xDC90",
+        "LoD/1.10": "0x1020"
       },
       "sizes": {
         "LoD/1.07": 10,
@@ -14244,6 +18032,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4a81966979e45325610a190ba9a761b5",
+      "callees": {
+        "LoD/1.07": [
+          "ContextDispatcherStub"
+        ],
+        "LoD/1.08": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.09": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.09b": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.09d": [
+          "ShutdownStubNoOp"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -14316,6 +18121,51 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5ac4e5b871524f6de993a2fa3ea45bd1",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"sgtGfxCache.pcs\"",
@@ -14401,28 +18251,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE1DF10",
         "LoD/1.08": "0x6FE1DF10",
-        "LoD/1.09": "0x6FDFDD10",
-        "LoD/1.09b": "0x6FDFDD10",
-        "LoD/1.09d": "0x6FDFDD20",
+        "LoD/1.09": "0x6FDFDCF0",
+        "LoD/1.09b": "0x6FDFDCF0",
+        "LoD/1.09d": "0x6FDFDCF0",
         "LoD/1.10": "0x6FDFD860",
         "LoD/1.11": "0x6FE1B4F0",
-        "LoD/1.11b": "0x6FE22830",
-        "LoD/1.12a": "0x6FE196D0",
+        "LoD/1.11b": "0x6FE22800",
+        "LoD/1.12a": "0x6FE21530",
         "LoD/1.13c": "0x6FE1C270",
-        "LoD/1.13d": "0x6FE20FB0"
+        "LoD/1.13d": "0x6FE20FD0"
       },
       "rvas": {
         "LoD/1.07": "0xDF10",
         "LoD/1.08": "0xDF10",
-        "LoD/1.09": "0xDD10",
-        "LoD/1.09b": "0xDD10",
-        "LoD/1.09d": "0xDD20",
+        "LoD/1.09": "0xDCF0",
+        "LoD/1.09b": "0xDCF0",
+        "LoD/1.09d": "0xDCF0",
         "LoD/1.10": "0xD860",
         "LoD/1.11": "0xB4F0",
-        "LoD/1.11b": "0x12830",
-        "LoD/1.12a": "0x96D0",
+        "LoD/1.11b": "0x12800",
+        "LoD/1.12a": "0x11530",
         "LoD/1.13c": "0xC270",
-        "LoD/1.13d": "0x10FB0"
+        "LoD/1.13d": "0x10FD0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -14490,16 +18340,16 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE1DF20",
         "LoD/1.09": "0x6FDF1020",
         "LoD/1.09b": "0x6FDF1020",
-        "LoD/1.09d": "0x6FDFDC90",
-        "LoD/1.10": "0x6FDF1020"
+        "LoD/1.09d": "0x6FDFDD00",
+        "LoD/1.10": "0x6FDFD840"
       },
       "rvas": {
         "LoD/1.07": "0xDF20",
         "LoD/1.08": "0xDF20",
         "LoD/1.09": "0x1020",
         "LoD/1.09b": "0x1020",
-        "LoD/1.09d": "0xDC90",
-        "LoD/1.10": "0x1020"
+        "LoD/1.09d": "0xDD00",
+        "LoD/1.10": "0xD840"
       },
       "sizes": {
         "LoD/1.07": 10,
@@ -14516,6 +18366,20 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4a81966979e45325610a190ba9a761b5",
+      "callees": {
+        "LoD/1.07": [
+          "ContextDispatcherStub"
+        ],
+        "LoD/1.08": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.09d": [
+          "ShutdownStubNoOp"
+        ],
+        "LoD/1.10": [
+          "ShutdownStubNoOp"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -14547,26 +18411,26 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.08": "0x6FE1DF30",
         "LoD/1.09": "0x6FDFDD20",
         "LoD/1.09b": "0x6FDFDD20",
-        "LoD/1.09d": "0x6FDFDCF0",
+        "LoD/1.09d": "0x6FDFDD10",
         "LoD/1.10": "0x6FDF2740",
-        "LoD/1.11": "0x6FE1B4E0",
-        "LoD/1.11b": "0x6FE22800",
+        "LoD/1.11": "0x6FE1B4D0",
+        "LoD/1.11b": "0x6FE22810",
         "LoD/1.12a": "0x6FE21520",
         "LoD/1.13c": "0x6FE215F0",
-        "LoD/1.13d": "0x6FE20FA0"
+        "LoD/1.13d": "0x6FE20FB0"
       },
       "rvas": {
         "LoD/1.07": "0xDF30",
         "LoD/1.08": "0xDF30",
         "LoD/1.09": "0xDD20",
         "LoD/1.09b": "0xDD20",
-        "LoD/1.09d": "0xDCF0",
+        "LoD/1.09d": "0xDD10",
         "LoD/1.10": "0x2740",
-        "LoD/1.11": "0xB4E0",
-        "LoD/1.11b": "0x12800",
+        "LoD/1.11": "0xB4D0",
+        "LoD/1.11b": "0x12810",
         "LoD/1.12a": "0x11520",
         "LoD/1.13c": "0x115F0",
-        "LoD/1.13d": "0x10FA0"
+        "LoD/1.13d": "0x10FB0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -14632,28 +18496,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE1DF40",
         "LoD/1.08": "0x6FE1DF40",
-        "LoD/1.09": "0x6FDFDCF0",
-        "LoD/1.09b": "0x6FDFDCF0",
-        "LoD/1.09d": "0x6FDFDD10",
-        "LoD/1.10": "0x6FDFD850",
-        "LoD/1.11": "0x6FE20260",
+        "LoD/1.09": "0x6FDFDD10",
+        "LoD/1.09b": "0x6FDFDD10",
+        "LoD/1.09d": "0x6FDFDD20",
+        "LoD/1.10": "0x6FDFD830",
+        "LoD/1.11": "0x6FE1B4E0",
         "LoD/1.11b": "0x6FE1DE70",
-        "LoD/1.12a": "0x6FE21530",
+        "LoD/1.12a": "0x6FE196D0",
         "LoD/1.13c": "0x6FE1C260",
-        "LoD/1.13d": "0x6FE23680"
+        "LoD/1.13d": "0x6FE20FA0"
       },
       "rvas": {
         "LoD/1.07": "0xDF40",
         "LoD/1.08": "0xDF40",
-        "LoD/1.09": "0xDCF0",
-        "LoD/1.09b": "0xDCF0",
-        "LoD/1.09d": "0xDD10",
-        "LoD/1.10": "0xD850",
-        "LoD/1.11": "0x10260",
+        "LoD/1.09": "0xDD10",
+        "LoD/1.09b": "0xDD10",
+        "LoD/1.09d": "0xDD20",
+        "LoD/1.10": "0xD830",
+        "LoD/1.11": "0xB4E0",
         "LoD/1.11b": "0xDE70",
-        "LoD/1.12a": "0x11530",
+        "LoD/1.12a": "0x96D0",
         "LoD/1.13c": "0xC260",
-        "LoD/1.13d": "0x13680"
+        "LoD/1.13d": "0x10FA0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -14747,6 +18611,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:98f023020035a4f45095c64099005bab",
+      "callees": {
+        "LoD/1.07": [
+          "AllocPoolMemoryTracked",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "AllocPoolMemoryTracked",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "AllocPoolMemoryTracked",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "AllocPoolMemoryTracked",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "AllocPoolMemoryTracked",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10045",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\Sprite..."
@@ -14824,6 +18714,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0db90f639c66b91372c72582d078dc75",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "LogAppendFormat",
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "LogAppendFormat",
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "LogAppendFormat",
+          "AllocPoolMemoryTracked"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10030",
+          "FogAssert",
+          "Ordinal_10045"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"dwSize < ptCache->dwMaxAllocated\"",
@@ -14909,6 +18831,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptBlock\"",
@@ -14987,6 +18931,30 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:eb2637b95a95399b7134fddb4b12c076",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FreePoolMemoryTracked"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!(ptBlock->fSpriteFlags & spriteFlagNoPurge)\"",
@@ -15065,6 +19033,31 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:20dda2e7902f3ba72b8ad8a22afaf82c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptFreedBlock != ptBlock\"",
@@ -15297,6 +19290,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cdd01353cfb9a5eb9042a1a2bb154bea",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptBlock\"",
@@ -15395,6 +19408,52 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:403127533ac2523dedf20ab85f6f0449",
+      "callees": {
+        "LoD/1.07": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10092",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hAsyncData\"",
@@ -15484,7 +19543,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FDFE400",
         "LoD/1.09d": "0x6FDFE400",
         "LoD/1.10": "0x6FDFDF70",
-        "LoD/1.11": "0x6FE27350"
+        "LoD/1.11": "0x6FE27350",
+        "LoD/1.11b": "0x6FE1DEF0",
+        "LoD/1.12a": "0x6FE1A470",
+        "LoD/1.13c": "0x6FE22380",
+        "LoD/1.13d": "0x6FE23310"
       },
       "rvas": {
         "LoD/1.07": "0xE610",
@@ -15493,7 +19556,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xE400",
         "LoD/1.09d": "0xE400",
         "LoD/1.10": "0xDF70",
-        "LoD/1.11": "0x17350"
+        "LoD/1.11": "0x17350",
+        "LoD/1.11b": "0xDEF0",
+        "LoD/1.12a": "0xA470",
+        "LoD/1.13c": "0x12380",
+        "LoD/1.13d": "0x13310"
       },
       "sizes": {
         "LoD/1.07": 131,
@@ -15502,7 +19569,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 131,
         "LoD/1.09d": 131,
         "LoD/1.10": 131,
-        "LoD/1.11": 45
+        "LoD/1.11": 45,
+        "LoD/1.11b": 45,
+        "LoD/1.12a": 124,
+        "LoD/1.13c": 124,
+        "LoD/1.13d": 42
       },
       "name": "FindAsyncDataNode",
       "signature": "uint FindAsyncDataNode(uint dwId1, uint dwId2, uint dwId3)",
@@ -15511,6 +19582,54 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:403127533ac2523dedf20ab85f6f0449",
+      "callees": {
+        "LoD/1.07": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "PollAsyncOperationStatus",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10092",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10013"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10073"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hAsyncData\"",
@@ -15544,7 +19663,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 13,
         "LoD/1.09d": 13,
         "LoD/1.10": 13,
-        "LoD/1.11": 3
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -15553,7 +19676,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
-        "LoD/1.11": 0
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "e77cfaae479e773b979fbb79adb58657",
@@ -15562,7 +19689,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "e77cfaae479e773b979fbb79adb58657",
         "LoD/1.09d": "e77cfaae479e773b979fbb79adb58657",
         "LoD/1.10": "e77cfaae479e773b979fbb79adb58657",
-        "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.11b": "f027730cc40145adc0697766469adf34",
+        "LoD/1.12a": "273363bdf7c80fd27c6890811a8a205d",
+        "LoD/1.13c": "273363bdf7c80fd27c6890811a8a205d",
+        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
       }
     },
     "d2cmp.dll_ProcessAsyncDataListCleanup": {
@@ -15597,6 +19728,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:e623b29b80582c3eddfc303a699b2457",
+      "callees": {
+        "LoD/1.07": [
+          "PollAsyncOperationStatus",
+          "FreeAsyncData"
+        ],
+        "LoD/1.08": [
+          "PollAsyncOperationStatus",
+          "FreeAsyncData"
+        ],
+        "LoD/1.09": [
+          "PollAsyncOperationStatus",
+          "FreeAsyncData"
+        ],
+        "LoD/1.09b": [
+          "PollAsyncOperationStatus",
+          "FreeAsyncData"
+        ],
+        "LoD/1.09d": [
+          "PollAsyncOperationStatus",
+          "FreeAsyncData"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10092",
+          "Ordinal_10097"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -15654,6 +19811,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6fa891ea46ae0a4b1668f6a957f37bb3",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\SubTil..."
@@ -15731,6 +19908,68 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ad4cb38410fcbc856f9386b79fa3cd9d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"bColor\"",
@@ -15838,6 +20077,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:88d312b7ac358c4090f4f57e15498cff",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\SubTil..."
@@ -15915,6 +20174,56 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c070d6a77382dbd3472ef58047830617",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nSize < 0x00010000\"",
@@ -16010,6 +20319,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:03e169cd63514876e489e66bd6ae0a47",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptSquished\"",
@@ -16150,6 +20485,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:5fed11d17c0d0c81dddf30e6d89ebbd1",
+      "callees": {
+        "LoD/1.07": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ],
+        "LoD/1.08": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ],
+        "LoD/1.09": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ],
+        "LoD/1.09b": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ],
+        "LoD/1.09d": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ],
+        "LoD/1.10": [
+          "CleanupProjectNodes",
+          "CleanupProjectNodes"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -16549,11 +20910,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FDFED50",
         "LoD/1.09d": "0x6FDFED50",
         "LoD/1.10": "0x6FDF3ED0",
-        "LoD/1.11": "0x6FE1C220",
-        "LoD/1.11b": "0x6FE1CE90",
+        "LoD/1.11": "0x6FE1ACD0",
+        "LoD/1.11b": "0x6FE22820",
         "LoD/1.12a": "0x6FE22330",
-        "LoD/1.13c": "0x6FE1CFA0",
-        "LoD/1.13d": "0x6FE20FC0"
+        "LoD/1.13c": "0x6FE1CFB0",
+        "LoD/1.13d": "0x6FE19760"
       },
       "rvas": {
         "LoD/1.07": "0xEF50",
@@ -16562,11 +20923,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0xED50",
         "LoD/1.09d": "0xED50",
         "LoD/1.10": "0x3ED0",
-        "LoD/1.11": "0xC220",
-        "LoD/1.11b": "0xCE90",
+        "LoD/1.11": "0xACD0",
+        "LoD/1.11b": "0x12820",
         "LoD/1.12a": "0x12330",
-        "LoD/1.13c": "0xCFA0",
-        "LoD/1.13d": "0x10FC0"
+        "LoD/1.13c": "0xCFB0",
+        "LoD/1.13d": "0x9760"
       },
       "sizes": {
         "LoD/1.07": 1,
@@ -16762,6 +21123,57 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0379e315aa90f12f42e183c52cb142b8",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -16872,6 +21284,53 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f13a12e1c1c13252dc690c1069762c21",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptComp\"",
@@ -16973,6 +21432,54 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0cfc69076ce25824c436860cb8f47943",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10093"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10027"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10055"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -17092,6 +21599,87 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:2b5533b0b1a36c62abd624c360b1163c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptImage\"",
@@ -17232,6 +21820,62 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:571312314711a33166bcf19dd0a6d92d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptImage\"",
@@ -17313,10 +21957,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6FDFF440",
         "LoD/1.10": "0x6FDFEF60",
         "LoD/1.11": "0x6FE274A0",
-        "LoD/1.11b": "0x6FE21DB0",
-        "LoD/1.12a": "0x6FE1D210",
-        "LoD/1.13c": "0x6FE21700",
-        "LoD/1.13d": "0x6FE231C0"
+        "LoD/1.11b": "0x6FE21EA0",
+        "LoD/1.12a": "0x6FE20B10",
+        "LoD/1.13c": "0x6FE270F0",
+        "LoD/1.13d": "0x6FE24A40"
       },
       "rvas": {
         "LoD/1.07": "0xF650",
@@ -17326,10 +21970,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0xF440",
         "LoD/1.10": "0xEF60",
         "LoD/1.11": "0x174A0",
-        "LoD/1.11b": "0x11DB0",
-        "LoD/1.12a": "0xD210",
-        "LoD/1.13c": "0x11700",
-        "LoD/1.13d": "0x131C0"
+        "LoD/1.11b": "0x11EA0",
+        "LoD/1.12a": "0x10B10",
+        "LoD/1.13c": "0x170F0",
+        "LoD/1.13d": "0x14A40"
       },
       "sizes": {
         "LoD/1.07": 702,
@@ -17340,9 +21984,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 699,
         "LoD/1.11": 42,
         "LoD/1.11b": 42,
-        "LoD/1.12a": 42,
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
+        "LoD/1.12a": 64,
+        "LoD/1.13c": 64,
+        "LoD/1.13d": 64
       },
       "name": "AllocateAndInitializeTile",
       "signature": "uint AllocateAndInitializeTile(int * pTileInfo, void * * ppTileData)",
@@ -17351,6 +21995,94 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c548fdf1ceaf9d8a8d2d92303fb1d925",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nTile == ptProject->nNumTiles\"",
@@ -17410,9 +22142,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 26,
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -17436,9 +22168,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "3603c1bf0d366f25fe1807b57674537c",
         "LoD/1.11": "2ff57bd8933574e570776bba02a1755b",
         "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.12a": "6bf7f65397ead9a21760b0d736ba97c5",
+        "LoD/1.13c": "6bf7f65397ead9a21760b0d736ba97c5",
+        "LoD/1.13d": "6bf7f65397ead9a21760b0d736ba97c5"
       }
     },
     "d2cmp.dll_ClearTileProjectData": {
@@ -17473,6 +22205,62 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0befd55a75d12ae85bb61d5040a7b1d6",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!(ptProject->dwFlags & TILEPROJECT_FEWBLOCKS)\"",
@@ -17562,6 +22350,62 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0772d08fa25407045657d07155c253a0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptData\"",
@@ -17647,7 +22491,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0x6FDFF670",
         "LoD/1.11": "0x6FE22370",
         "LoD/1.11b": "0x6FE1DEC0",
-        "LoD/1.12a": "0x6FE1D030"
+        "LoD/1.12a": "0x6FE1D030",
+        "LoD/1.13c": "0x6FE21640",
+        "LoD/1.13d": "0x6FE236D0"
       },
       "rvas": {
         "LoD/1.07": "0xFD60",
@@ -17658,7 +22504,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "0xF670",
         "LoD/1.11": "0x12370",
         "LoD/1.11b": "0xDEC0",
-        "LoD/1.12a": "0xD030"
+        "LoD/1.12a": "0xD030",
+        "LoD/1.13c": "0x11640",
+        "LoD/1.13d": "0x136D0"
       },
       "sizes": {
         "LoD/1.07": 287,
@@ -17669,7 +22517,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 269,
         "LoD/1.11": 33,
         "LoD/1.11b": 46,
-        "LoD/1.12a": 46
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name": "ProcessTileProjectData",
       "signature": "void ProcessTileProjectData(int * pProject, uint * pOutProject, byte * pbDataBuffer)",
@@ -17678,6 +22528,42 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6b891a8ec751507d9d0f13c2398299d2",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -17713,7 +22599,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 15,
         "LoD/1.11": 1,
         "LoD/1.11b": 3,
-        "LoD/1.12a": 3
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -17724,7 +22612,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": 0,
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
-        "LoD/1.12a": 0
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "6b891a8ec751507d9d0f13c2398299d2",
@@ -17735,7 +22625,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": "eaba018a1ee8b1c22e0dbdf771643b22",
         "LoD/1.11": "ce76516a36316fba8a77b3056f78b031",
         "LoD/1.11b": "376de26b06c22149642936501844d3db",
-        "LoD/1.12a": "ea39fe8f50d9138c623f93f89b2d5285"
+        "LoD/1.12a": "ea39fe8f50d9138c623f93f89b2d5285",
+        "LoD/1.13c": "376de26b06c22149642936501844d3db",
+        "LoD/1.13d": "376de26b06c22149642936501844d3db"
       }
     },
     "d2cmp.dll_InitializeTileProjectData": {
@@ -17770,6 +22662,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:16b397e51bef0ef5a588b4cd82a2578a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -17865,6 +22789,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e56e8ae6b380d82c5cfbaf451da5f21f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -17969,6 +22919,46 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c6722e7c6cb8ceef9baec556453717a2",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecm...",
@@ -18046,7 +23036,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0x6FE20BF0",
         "LoD/1.11b": "0x6FE1E880",
         "LoD/1.12a": "0x6FE1A070",
-        "LoD/1.13c": "0x6FE21F80"
+        "LoD/1.13c": "0x6FE21F80",
+        "LoD/1.13d": "0x6FE20FE0"
       },
       "rvas": {
         "LoD/1.07": "0x10070",
@@ -18058,7 +23049,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0x10BF0",
         "LoD/1.11b": "0xE880",
         "LoD/1.12a": "0xA070",
-        "LoD/1.13c": "0x11F80"
+        "LoD/1.13c": "0x11F80",
+        "LoD/1.13d": "0x10FE0"
       },
       "sizes": {
         "LoD/1.07": 264,
@@ -18070,7 +23062,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 42,
         "LoD/1.11b": 42,
         "LoD/1.12a": 42,
-        "LoD/1.13c": 42
+        "LoD/1.13c": 42,
+        "LoD/1.13d": 70
       },
       "name": "ProcessTileProjectPixels",
       "signature": "void ProcessTileProjectPixels(TileProject * pTileProject, void * pfnRgbCallback)",
@@ -18079,6 +23072,52 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c2b4a6d06bf4d7b3ed3383a2628b3226",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptProject->dwFlags & TILEPROJECT_FLAG_24BIT\"",
@@ -18121,7 +23160,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
-        "LoD/1.13c": 3
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -18133,7 +23173,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "c45df0e5d2e10a812ed58e033a828a5e",
@@ -18145,7 +23186,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "5f62a60e6a444a7b9dd65c1b69675b4f",
         "LoD/1.11b": "5f62a60e6a444a7b9dd65c1b69675b4f",
         "LoD/1.12a": "5f62a60e6a444a7b9dd65c1b69675b4f",
-        "LoD/1.13c": "5f62a60e6a444a7b9dd65c1b69675b4f"
+        "LoD/1.13c": "5f62a60e6a444a7b9dd65c1b69675b4f",
+        "LoD/1.13d": "2902688516a94c7f11ee0a4e580e9f6b"
       }
     },
     "d2cmp.dll_CloneTileProject": {
@@ -18186,6 +23228,102 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:99fd9699491ddc41748c8c7fcad41269",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "...+4 more"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10011",
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10052",
+          "Ordinal_10050",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptProject8->ptTileArray\"",
@@ -18356,6 +23494,44 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7e8d2e7999d2507ae9bb4f6a60375359",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "LoadOrCreateTileHash",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "LoadOrCreateTileHash",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "LoadOrCreateTileHash",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "LoadOrCreateTileHash",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "LoadOrCreateTileHash",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10095",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"szName\"",
@@ -18466,6 +23642,51 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d8b46299f9f879fbe52256733ba97920",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptTileLibrary\"",
@@ -18594,6 +23815,42 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5ff4c2db15bf9a364eef301c598cf92c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10021",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10020",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -18707,6 +23964,34 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -18774,6 +24059,109 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE004C0",
         "LoD/1.09b": "0x6FE004C0",
         "LoD/1.09d": "0x6FE004C0",
+        "LoD/1.10": "0x6FDFFFF0"
+      },
+      "rvas": {
+        "LoD/1.07": "0x106D0",
+        "LoD/1.08": "0x106D0",
+        "LoD/1.09": "0x104C0",
+        "LoD/1.09b": "0x104C0",
+        "LoD/1.09d": "0x104C0",
+        "LoD/1.10": "0xFFF0"
+      },
+      "sizes": {
+        "LoD/1.07": 36,
+        "LoD/1.08": 36,
+        "LoD/1.09": 36,
+        "LoD/1.09b": 36,
+        "LoD/1.09d": 36,
+        "LoD/1.10": 36
+      },
+      "name": "GetTileAttribute",
+      "signature": "uint GetTileAttribute(TileProject * pTile)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieve tile attribute value from tile structure.\n\nAlgorithm:\n1. Check if pTile is NULL\n2. If NULL, initialize default tile via Ordinal_10025 (TileInitialize)\n3. Read attribute dword from tile structure offset +0xC\n4. Return attribute value\n\nParameters:\n- pTile (TileProject*): Pointer to tile structure, or NULL to initialize\n\nReturns:\n- Tile attribute value (dword) from offset +0xC in tile structure\n\nSpecial Cases:\n- NULL pointer triggers default tile initialization\n- Returns uninitialized memory if pTile is invalid non-NULL address\n\nMagic Numbers:\n- 0x7B (123): Tile type constant for initialization\n- 0xC (12): Offset to attribute field in tile structure",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ]
+      },
+      "strings": {
+        "LoD/1.07": [
+          "\"hTile\"",
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
+        ],
+        "LoD/1.08": [
+          "\"hTile\"",
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
+        ],
+        "LoD/1.09": [
+          "\"hTile\"",
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
+        ],
+        "LoD/1.09b": [
+          "\"hTile\"",
+          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
+        ],
+        "LoD/1.09d": [
+          "\"hTile\"",
+          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLib.cpp..."
+        ],
+        "LoD/1.10": [
+          "\"hTile\"",
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "edb5e0a82a98a4b8e627f12135ab520c",
+        "LoD/1.08": "edb5e0a82a98a4b8e627f12135ab520c",
+        "LoD/1.09": "edb5e0a82a98a4b8e627f12135ab520c",
+        "LoD/1.09b": "edb5e0a82a98a4b8e627f12135ab520c",
+        "LoD/1.09d": "edb5e0a82a98a4b8e627f12135ab520c",
+        "LoD/1.10": "edb5e0a82a98a4b8e627f12135ab520c"
+      }
+    },
+    "d2cmp.dll_GetOrInitializeTextHeight": {
+      "addresses": {
+        "LoD/1.07": "0x6FE20700",
+        "LoD/1.08": "0x6FE20700",
+        "LoD/1.09": "0x6FE004F0",
+        "LoD/1.09b": "0x6FE004F0",
+        "LoD/1.09d": "0x6FE004F0",
         "LoD/1.10": "0x6FDFFF30",
         "LoD/1.11": "0x6FE1AFF0",
         "LoD/1.11b": "0x6FE1D1B0",
@@ -18782,11 +24170,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "0x6FE19A90"
       },
       "rvas": {
-        "LoD/1.07": "0x106D0",
-        "LoD/1.08": "0x106D0",
-        "LoD/1.09": "0x104C0",
-        "LoD/1.09b": "0x104C0",
-        "LoD/1.09d": "0x104C0",
+        "LoD/1.07": "0x10700",
+        "LoD/1.08": "0x10700",
+        "LoD/1.09": "0x104F0",
+        "LoD/1.09b": "0x104F0",
+        "LoD/1.09d": "0x104F0",
         "LoD/1.10": "0xFF30",
         "LoD/1.11": "0xAFF0",
         "LoD/1.11b": "0xD1B0",
@@ -18807,13 +24195,53 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 64,
         "LoD/1.13d": 64
       },
-      "name": "GetTileAttribute",
-      "signature": "uint GetTileAttribute(TileProject * pTile)",
+      "name": "GetOrInitializeTextHeight",
+      "signature": "dword GetOrInitializeTextHeight(void * pTileHandle)",
       "calling_convention": "__stdcall",
-      "comment": "Retrieve tile attribute value from tile structure.\n\nAlgorithm:\n1. Check if pTile is NULL\n2. If NULL, initialize default tile via Ordinal_10025 (TileInitialize)\n3. Read attribute dword from tile structure offset +0xC\n4. Return attribute value\n\nParameters:\n- pTile (TileProject*): Pointer to tile structure, or NULL to initialize\n\nReturns:\n- Tile attribute value (dword) from offset +0xC in tile structure\n\nSpecial Cases:\n- NULL pointer triggers default tile initialization\n- Returns uninitialized memory if pTile is invalid non-NULL address\n\nMagic Numbers:\n- 0x7B (123): Tile type constant for initialization\n- 0xC (12): Offset to attribute field in tile structure",
+      "comment": "Get or initialize cached text height property\n\nAlgorithm:\n1. Check if pTextHandle is NULL\n2. If NULL, call Ordinal_10025 (D2Win.GetTextHeight) with tile handle, source path, and 0x7c limit\n3. Load dword value from offset 0x20 within the text/tile handle structure\n4. Return the cached property value\n\nParameters:\npTextHandle (void *) - Pointer to text data structure, or NULL to trigger initialization via GetTextHeight\n\nReturns:\ndword - Cached property at offset 0x20 of text structure (height value or similar metric)\n\nSpecial Cases:\n- NULL parameter invokes D2Win.GetTextHeight initialization before returning property\n- Always accesses offset 0x20 after NULL check completes",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10005",
+          "Ordinal_10005"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10032",
+          "Ordinal_10032"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10051",
+          "Ordinal_10051"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10096",
+          "Ordinal_10096"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10068",
+          "Ordinal_10068"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -18880,23 +24308,23 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "b85b4e9e0a6f57a6413305b2f96d3da1"
       }
     },
-    "d2cmp.dll_GetOrInitializeTextHeight": {
+    "d2cmp.dll_IsDataCompressed": {
       "addresses": {
-        "LoD/1.07": "0x6FE20700",
-        "LoD/1.08": "0x6FE20700",
-        "LoD/1.09": "0x6FE004F0",
-        "LoD/1.09b": "0x6FE004F0",
-        "LoD/1.09d": "0x6FE004F0",
+        "LoD/1.07": "0x6FE20730",
+        "LoD/1.08": "0x6FE20730",
+        "LoD/1.09": "0x6FE00520",
+        "LoD/1.09b": "0x6FE00520",
+        "LoD/1.09d": "0x6FE00520",
         "LoD/1.10": "0x6FDFFF90",
         "LoD/1.11": "0x6FE20280",
         "LoD/1.11b": "0x6FE1EB40"
       },
       "rvas": {
-        "LoD/1.07": "0x10700",
-        "LoD/1.08": "0x10700",
-        "LoD/1.09": "0x104F0",
-        "LoD/1.09b": "0x104F0",
-        "LoD/1.09d": "0x104F0",
+        "LoD/1.07": "0x10730",
+        "LoD/1.08": "0x10730",
+        "LoD/1.09": "0x10520",
+        "LoD/1.09b": "0x10520",
+        "LoD/1.09d": "0x10520",
         "LoD/1.10": "0xFF90",
         "LoD/1.11": "0x10280",
         "LoD/1.11b": "0xEB40"
@@ -18911,13 +24339,37 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": 46,
         "LoD/1.11b": 63
       },
-      "name": "GetOrInitializeTextHeight",
-      "signature": "dword GetOrInitializeTextHeight(void * pTileHandle)",
+      "name": "IsDataCompressed",
+      "signature": "uint IsDataCompressed(uint dwData)",
       "calling_convention": "__stdcall",
-      "comment": "Get or initialize cached text height property\n\nAlgorithm:\n1. Check if pTextHandle is NULL\n2. If NULL, call Ordinal_10025 (D2Win.GetTextHeight) with tile handle, source path, and 0x7c limit\n3. Load dword value from offset 0x20 within the text/tile handle structure\n4. Return the cached property value\n\nParameters:\npTextHandle (void *) - Pointer to text data structure, or NULL to trigger initialization via GetTextHeight\n\nReturns:\ndword - Cached property at offset 0x20 of text structure (height value or similar metric)\n\nSpecial Cases:\n- NULL parameter invokes D2Win.GetTextHeight initialization before returning property\n- Always accesses offset 0x20 after NULL check completes",
+      "comment": "Checks if data is compressed in the data handle.\n\nAlgorithm:\n1. Test if dwData handle is null/zero\n2. If null, invoke GetTextHeight(s_hTile, szConfigPath, 0x7d) for initialization/error handling\n3. Load dword at [dwData + 0x1c] into EAX as compression flag\n4. Return compression flag to caller\n\nParameters:\n- dwData (uint): Handle to data structure; null value triggers GetTextHeight call\n\nReturns:\n- uint: Compression flag from [dwData + 0x1c], or GetTextHeight result if dwData is null\n- Non-zero indicates data is compressed; zero indicates uncompressed\n\nSpecial Cases:\n- Null dwData (0) does not crash; instead calls GetTextHeight for context initialization\n- Return value is always loaded from offset 0x1c regardless of null check outcome",
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -18975,89 +24427,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11b": "e56a008a4e7414d4e3d983b5a0fa6d9d"
       }
     },
-    "d2cmp.dll_IsDataCompressed": {
-      "addresses": {
-        "LoD/1.07": "0x6FE20730",
-        "LoD/1.08": "0x6FE20730",
-        "LoD/1.09": "0x6FE00520",
-        "LoD/1.09b": "0x6FE00520",
-        "LoD/1.09d": "0x6FE00520",
-        "LoD/1.10": "0x6FDFFFF0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x10730",
-        "LoD/1.08": "0x10730",
-        "LoD/1.09": "0x10520",
-        "LoD/1.09b": "0x10520",
-        "LoD/1.09d": "0x10520",
-        "LoD/1.10": "0xFFF0"
-      },
-      "sizes": {
-        "LoD/1.07": 36,
-        "LoD/1.08": 36,
-        "LoD/1.09": 36,
-        "LoD/1.09b": 36,
-        "LoD/1.09d": 36,
-        "LoD/1.10": 36
-      },
-      "name": "IsDataCompressed",
-      "signature": "uint IsDataCompressed(uint dwData)",
-      "calling_convention": "__stdcall",
-      "comment": "Checks if data is compressed in the data handle.\n\nAlgorithm:\n1. Test if dwData handle is null/zero\n2. If null, invoke GetTextHeight(s_hTile, szConfigPath, 0x7d) for initialization/error handling\n3. Load dword at [dwData + 0x1c] into EAX as compression flag\n4. Return compression flag to caller\n\nParameters:\n- dwData (uint): Handle to data structure; null value triggers GetTextHeight call\n\nReturns:\n- uint: Compression flag from [dwData + 0x1c], or GetTextHeight result if dwData is null\n- Non-zero indicates data is compressed; zero indicates uncompressed\n\nSpecial Cases:\n- Null dwData (0) does not crash; instead calls GetTextHeight for context initialization\n- Return value is always loaded from offset 0x1c regardless of null check outcome",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
-      "strings": {
-        "LoD/1.07": [
-          "\"hTile\"",
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
-        ],
-        "LoD/1.08": [
-          "\"hTile\"",
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
-        ],
-        "LoD/1.09": [
-          "\"hTile\"",
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
-        ],
-        "LoD/1.09b": [
-          "\"hTile\"",
-          "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLi..."
-        ],
-        "LoD/1.09d": [
-          "\"hTile\"",
-          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2CMP\\\\Src\\\\TileLib.cpp..."
-        ],
-        "LoD/1.10": [
-          "\"hTile\"",
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.07": 3,
-        "LoD/1.08": 3,
-        "LoD/1.09": 3,
-        "LoD/1.09b": 3,
-        "LoD/1.09d": 3,
-        "LoD/1.10": 3
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "edb5e0a82a98a4b8e627f12135ab520c",
-        "LoD/1.08": "edb5e0a82a98a4b8e627f12135ab520c",
-        "LoD/1.09": "edb5e0a82a98a4b8e627f12135ab520c",
-        "LoD/1.09b": "edb5e0a82a98a4b8e627f12135ab520c",
-        "LoD/1.09d": "edb5e0a82a98a4b8e627f12135ab520c",
-        "LoD/1.10": "edb5e0a82a98a4b8e627f12135ab520c"
-      }
-    },
     "d2cmp.dll_DerefAndValidatePointer": {
       "addresses": {
         "LoD/1.07": "0x6FE20760",
@@ -19105,6 +24474,46 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e6d7d39227bcf4b33f4362fca3db53e1",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19200,6 +24609,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:edb5e0a82a98a4b8e627f12135ab520c",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19291,6 +24717,46 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7d3a3665ad62e3b4f91cec42c29c1017",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19364,8 +24830,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE005E0",
         "LoD/1.09b": "0x6FE005E0",
         "LoD/1.09d": "0x6FE005E0",
-        "LoD/1.10": "0x6FE00110",
-        "LoD/1.11": "0x6FE20FF0"
+        "LoD/1.10": "0x6FE00050",
+        "LoD/1.11": "0x6FE21330",
+        "LoD/1.11b": "0x6FE1F030",
+        "LoD/1.12a": "0x6FE1A8A0",
+        "LoD/1.13c": "0x6FE22480",
+        "LoD/1.13d": "0x6FE24510"
       },
       "rvas": {
         "LoD/1.07": "0x107F0",
@@ -19373,8 +24843,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x105E0",
         "LoD/1.09b": "0x105E0",
         "LoD/1.09d": "0x105E0",
-        "LoD/1.10": "0x10110",
-        "LoD/1.11": "0x10FF0"
+        "LoD/1.10": "0x10050",
+        "LoD/1.11": "0x11330",
+        "LoD/1.11b": "0xF030",
+        "LoD/1.12a": "0xA8A0",
+        "LoD/1.13c": "0x12480",
+        "LoD/1.13d": "0x14510"
       },
       "sizes": {
         "LoD/1.07": 39,
@@ -19383,7 +24857,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 39,
         "LoD/1.09d": 39,
         "LoD/1.10": 39,
-        "LoD/1.11": 124
+        "LoD/1.11": 245,
+        "LoD/1.11b": 245,
+        "LoD/1.12a": 245,
+        "LoD/1.13c": 245,
+        "LoD/1.13d": 245
       },
       "name": "GetTextHeightForStringId",
       "signature": "int GetTextHeightForStringId(uint dwStringStruct)",
@@ -19392,6 +24870,56 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b12723f7f591f0b98ffd312a0ff5e647",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19425,7 +24953,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 3,
         "LoD/1.09d": 3,
         "LoD/1.10": 3,
-        "LoD/1.11": 6
+        "LoD/1.11": 18,
+        "LoD/1.11b": 18,
+        "LoD/1.12a": 18,
+        "LoD/1.13c": 18,
+        "LoD/1.13d": 18
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -19434,7 +24966,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
-        "LoD/1.11": 0
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "b12723f7f591f0b98ffd312a0ff5e647",
@@ -19443,7 +24979,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "b12723f7f591f0b98ffd312a0ff5e647",
         "LoD/1.09d": "b12723f7f591f0b98ffd312a0ff5e647",
         "LoD/1.10": "b12723f7f591f0b98ffd312a0ff5e647",
-        "LoD/1.11": "273363bdf7c80fd27c6890811a8a205d"
+        "LoD/1.11": "0f76703e568f5413527b6a04e8b4de4c",
+        "LoD/1.11b": "0f76703e568f5413527b6a04e8b4de4c",
+        "LoD/1.12a": "0f76703e568f5413527b6a04e8b4de4c",
+        "LoD/1.13c": "0f76703e568f5413527b6a04e8b4de4c",
+        "LoD/1.13d": "0f76703e568f5413527b6a04e8b4de4c"
       }
     },
     "d2cmp.dll_GetTileDataWord": {
@@ -19493,6 +25033,61 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:06d2825565a7020cbdf7d28b980a612a",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19581,9 +25176,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00640",
         "LoD/1.09b": "0x6FE00640",
         "LoD/1.09d": "0x6FE00640",
-        "LoD/1.10": "0x6FE000B0",
-        "LoD/1.11": "0x6FE20160",
-        "LoD/1.11b": "0x6FE21D50"
+        "LoD/1.10": "0x6FE00110",
+        "LoD/1.11": "0x6FE20FF0"
       },
       "rvas": {
         "LoD/1.07": "0x10850",
@@ -19591,9 +25185,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10640",
         "LoD/1.09b": "0x10640",
         "LoD/1.09d": "0x10640",
-        "LoD/1.10": "0x100B0",
-        "LoD/1.11": "0x10160",
-        "LoD/1.11b": "0x11D50"
+        "LoD/1.10": "0x10110",
+        "LoD/1.11": "0x10FF0"
       },
       "sizes": {
         "LoD/1.07": 39,
@@ -19602,8 +25195,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 39,
         "LoD/1.09d": 39,
         "LoD/1.10": 39,
-        "LoD/1.11": 45,
-        "LoD/1.11b": 45
+        "LoD/1.11": 124
       },
       "name": "GetCachedTextHeight",
       "signature": "dword GetCachedTextHeight(dword * pTextData)",
@@ -19612,6 +25204,31 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b12723f7f591f0b98ffd312a0ff5e647",
+      "callees": {
+        "LoD/1.07": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.08": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09b": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.09d": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10069"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"hTile\"",
@@ -19645,8 +25262,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 3,
         "LoD/1.09d": 3,
         "LoD/1.10": 3,
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3
+        "LoD/1.11": 6
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -19655,8 +25271,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "b12723f7f591f0b98ffd312a0ff5e647",
@@ -19665,8 +25280,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "b12723f7f591f0b98ffd312a0ff5e647",
         "LoD/1.09d": "b12723f7f591f0b98ffd312a0ff5e647",
         "LoD/1.10": "b12723f7f591f0b98ffd312a0ff5e647",
-        "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.11": "273363bdf7c80fd27c6890811a8a205d"
       }
     },
     "d2cmp.dll_CleanupProjectNodes": {
@@ -19716,6 +25330,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b405d0e1aa385df73635952cafc5a563",
+      "callees": {
+        "LoD/1.07": [
+          "ClearTileProjectData",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ClearTileProjectData",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ClearTileProjectData",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ClearTileProjectData",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ClearTileProjectData",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10073",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2CMP\\\\SRC\\\\TilePr..."
@@ -19823,6 +25463,69 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:63366405376f957779a6e6f70801bb3b",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptData\"",
@@ -20200,6 +25903,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:64d6018f1e5ee040f512299b171bc5eb",
+      "callees": {
+        "LoD/1.07": [
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.08": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09b": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09d": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi..."
@@ -20250,11 +25975,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00996",
         "LoD/1.09d": "0x6FE00996",
         "LoD/1.10": "0x6FE00454",
-        "LoD/1.11": "0x6FE1E220",
-        "LoD/1.11b": "0x6FE20000",
-        "LoD/1.12a": "0x6FE1DEF0",
-        "LoD/1.13c": "0x6FE23B10",
-        "LoD/1.13d": "0x6FE1EAE0"
+        "LoD/1.11": "0x6FE18E80",
+        "LoD/1.11b": "0x6FE18FB0",
+        "LoD/1.12a": "0x6FE18FB0",
+        "LoD/1.13c": "0x6FE18E70",
+        "LoD/1.13d": "0x6FE18FC0"
       },
       "rvas": {
         "LoD/1.07": "0x10BA6",
@@ -20263,11 +25988,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10996",
         "LoD/1.09d": "0x10996",
         "LoD/1.10": "0x10454",
-        "LoD/1.11": "0xE220",
-        "LoD/1.11b": "0x10000",
-        "LoD/1.12a": "0xDEF0",
-        "LoD/1.13c": "0x13B10",
-        "LoD/1.13d": "0xEAE0"
+        "LoD/1.11": "0x8E80",
+        "LoD/1.11b": "0x8FB0",
+        "LoD/1.12a": "0x8FB0",
+        "LoD/1.13c": "0x8E70",
+        "LoD/1.13d": "0x8FC0"
       },
       "sizes": {
         "LoD/1.07": 38,
@@ -20289,6 +26014,52 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:188ea635af170bc1d0dfb3c586af0ea4",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "CloseFileHandle"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -20313,6 +26084,21 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.10": [
           "\"hFile\"",
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Hell\\\\..."
+        ],
+        "LoD/1.11": [
+          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
+        ],
+        "LoD/1.11b": [
+          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
+        ],
+        "LoD/1.12a": [
+          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
+        ],
+        "LoD/1.13c": [
+          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
+        ],
+        "LoD/1.13d": [
+          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
         ]
       },
       "basic_block_counts": {
@@ -20348,11 +26134,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "f1d5b2ee21a71e52b2130f216b09f2dd",
         "LoD/1.09d": "f1d5b2ee21a71e52b2130f216b09f2dd",
         "LoD/1.10": "f1d5b2ee21a71e52b2130f216b09f2dd",
-        "LoD/1.11": "d16be06052875926b66256e07af692f1",
-        "LoD/1.11b": "d16be06052875926b66256e07af692f1",
-        "LoD/1.12a": "d16be06052875926b66256e07af692f1",
-        "LoD/1.13c": "d16be06052875926b66256e07af692f1",
-        "LoD/1.13d": "d16be06052875926b66256e07af692f1"
+        "LoD/1.11": "66acc54c9d7bd033827650bac1a5758e",
+        "LoD/1.11b": "66acc54c9d7bd033827650bac1a5758e",
+        "LoD/1.12a": "66acc54c9d7bd033827650bac1a5758e",
+        "LoD/1.13c": "66acc54c9d7bd033827650bac1a5758e",
+        "LoD/1.13d": "66acc54c9d7bd033827650bac1a5758e"
       }
     },
     "d2cmp.dll_ValidateGameObjectData": {
@@ -20387,6 +26173,44 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:fa518f1f942c5ca79320287e657b5962",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetFilePosition",
+          "GetKeyValue",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "BindSocketToPortWrapper",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "BindSocketToPortWrapper",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "BindSocketToPortWrapper",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "BindSocketToPortWrapper",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "BindSocketToPortWrapper",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -20470,6 +26294,50 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:477da5eccddd3240a2d11a015ebb49db",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ReadFileAsync",
+          "GetKeyValue",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -20535,11 +26403,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00ADA",
         "LoD/1.09d": "0x6FE00ADA",
         "LoD/1.10": "0x6FE005B0",
-        "LoD/1.11": "0x6FE18E2E",
-        "LoD/1.11b": "0x6FE18E1E",
-        "LoD/1.12a": "0x6FE18E1E",
-        "LoD/1.13c": "0x6FE18E1E",
-        "LoD/1.13d": "0x6FE18E2E"
+        "LoD/1.11": "0x6FE18DAC",
+        "LoD/1.11b": "0x6FE18D9C",
+        "LoD/1.12a": "0x6FE18D8A",
+        "LoD/1.13c": "0x6FE18D9C",
+        "LoD/1.13d": "0x6FE18DA0"
       },
       "rvas": {
         "LoD/1.07": "0x10CEA",
@@ -20548,11 +26416,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10ADA",
         "LoD/1.09d": "0x10ADA",
         "LoD/1.10": "0x105B0",
-        "LoD/1.11": "0x8E2E",
-        "LoD/1.11b": "0x8E1E",
-        "LoD/1.12a": "0x8E1E",
-        "LoD/1.13c": "0x8E1E",
-        "LoD/1.13d": "0x8E2E"
+        "LoD/1.11": "0x8DAC",
+        "LoD/1.11b": "0x8D9C",
+        "LoD/1.12a": "0x8D8A",
+        "LoD/1.13c": "0x8D9C",
+        "LoD/1.13d": "0x8DA0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20621,11 +26489,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00AE0",
         "LoD/1.09d": "0x6FE00AE0",
         "LoD/1.10": "0x6FE005AA",
-        "LoD/1.11": "0x6FE18D82",
-        "LoD/1.11b": "0x6FE18D60",
-        "LoD/1.12a": "0x6FE18D66",
-        "LoD/1.13c": "0x6FE18D6C",
-        "LoD/1.13d": "0x6FE18D82"
+        "LoD/1.11": "0x6FE18E3A",
+        "LoD/1.11b": "0x6FE18E2A",
+        "LoD/1.12a": "0x6FE18E2A",
+        "LoD/1.13c": "0x6FE18E2A",
+        "LoD/1.13d": "0x6FE18E3A"
       },
       "rvas": {
         "LoD/1.07": "0x10CF0",
@@ -20634,11 +26502,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10AE0",
         "LoD/1.09d": "0x10AE0",
         "LoD/1.10": "0x105AA",
-        "LoD/1.11": "0x8D82",
-        "LoD/1.11b": "0x8D60",
-        "LoD/1.12a": "0x8D66",
-        "LoD/1.13c": "0x8D6C",
-        "LoD/1.13d": "0x8D82"
+        "LoD/1.11": "0x8E3A",
+        "LoD/1.11b": "0x8E2A",
+        "LoD/1.12a": "0x8E2A",
+        "LoD/1.13c": "0x8E2A",
+        "LoD/1.13d": "0x8E3A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20707,11 +26575,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00AE6",
         "LoD/1.09d": "0x6FE00AE6",
         "LoD/1.10": "0x6FE005B6",
-        "LoD/1.11": "0x6FE18DD0",
-        "LoD/1.11b": "0x6FE18DCC",
-        "LoD/1.12a": "0x6FE18DD2",
-        "LoD/1.13c": "0x6FE18DC0",
-        "LoD/1.13d": "0x6FE18DE2"
+        "LoD/1.11": "0x6FE18E2E",
+        "LoD/1.11b": "0x6FE18E1E",
+        "LoD/1.12a": "0x6FE18E1E",
+        "LoD/1.13c": "0x6FE18E1E",
+        "LoD/1.13d": "0x6FE18E2E"
       },
       "rvas": {
         "LoD/1.07": "0x10CF6",
@@ -20720,11 +26588,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10AE6",
         "LoD/1.09d": "0x10AE6",
         "LoD/1.10": "0x105B6",
-        "LoD/1.11": "0x8DD0",
-        "LoD/1.11b": "0x8DCC",
-        "LoD/1.12a": "0x8DD2",
-        "LoD/1.13c": "0x8DC0",
-        "LoD/1.13d": "0x8DE2"
+        "LoD/1.11": "0x8E2E",
+        "LoD/1.11b": "0x8E1E",
+        "LoD/1.12a": "0x8E1E",
+        "LoD/1.13c": "0x8E1E",
+        "LoD/1.13d": "0x8E2E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20793,11 +26661,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00AEC",
         "LoD/1.09d": "0x6FE00AEC",
         "LoD/1.10": "0x6FE005BC",
-        "LoD/1.11": "0x6FE18DE8",
-        "LoD/1.11b": "0x6FE18DB4",
-        "LoD/1.12a": "0x6FE18DBA",
-        "LoD/1.13c": "0x6FE18DD8",
-        "LoD/1.13d": "0x6FE18DCA"
+        "LoD/1.11": "0x6FE18DD0",
+        "LoD/1.11b": "0x6FE18DCC",
+        "LoD/1.12a": "0x6FE18DD2",
+        "LoD/1.13c": "0x6FE18DC0",
+        "LoD/1.13d": "0x6FE18DE2"
       },
       "rvas": {
         "LoD/1.07": "0x10CFC",
@@ -20806,11 +26674,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10AEC",
         "LoD/1.09d": "0x10AEC",
         "LoD/1.10": "0x105BC",
-        "LoD/1.11": "0x8DE8",
-        "LoD/1.11b": "0x8DB4",
-        "LoD/1.12a": "0x8DBA",
-        "LoD/1.13c": "0x8DD8",
-        "LoD/1.13d": "0x8DCA"
+        "LoD/1.11": "0x8DD0",
+        "LoD/1.11b": "0x8DCC",
+        "LoD/1.12a": "0x8DD2",
+        "LoD/1.13c": "0x8DC0",
+        "LoD/1.13d": "0x8DE2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20878,12 +26746,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00AF2",
         "LoD/1.09b": "0x6FE00AF2",
         "LoD/1.09d": "0x6FE00AF2",
-        "LoD/1.10": "0x6FE0040C",
-        "LoD/1.11": "0x6FE18DB8",
-        "LoD/1.11b": "0x6FE18DD2",
-        "LoD/1.12a": "0x6FE18DA2",
-        "LoD/1.13c": "0x6FE18D96",
-        "LoD/1.13d": "0x6FE18DAC"
+        "LoD/1.10": "0x6FE005C2",
+        "LoD/1.11": "0x6FE18D94",
+        "LoD/1.11b": "0x6FE18D8A",
+        "LoD/1.12a": "0x6FE18DA8",
+        "LoD/1.13c": "0x6FE18DA8",
+        "LoD/1.13d": "0x6FE18DB8"
       },
       "rvas": {
         "LoD/1.07": "0x10D02",
@@ -20891,12 +26759,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10AF2",
         "LoD/1.09b": "0x10AF2",
         "LoD/1.09d": "0x10AF2",
-        "LoD/1.10": "0x1040C",
-        "LoD/1.11": "0x8DB8",
-        "LoD/1.11b": "0x8DD2",
-        "LoD/1.12a": "0x8DA2",
-        "LoD/1.13c": "0x8D96",
-        "LoD/1.13d": "0x8DAC"
+        "LoD/1.10": "0x105C2",
+        "LoD/1.11": "0x8D94",
+        "LoD/1.11b": "0x8D8A",
+        "LoD/1.12a": "0x8DA8",
+        "LoD/1.13c": "0x8DA8",
+        "LoD/1.13d": "0x8DB8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -20964,12 +26832,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00AF8",
         "LoD/1.09b": "0x6FE00AF8",
         "LoD/1.09d": "0x6FE00AF8",
-        "LoD/1.10": "0x6FE005E6",
-        "LoD/1.11": "0x6FE18DD6",
-        "LoD/1.11b": "0x6FE18DC6",
-        "LoD/1.12a": "0x6FE18DD8",
-        "LoD/1.13c": "0x6FE18DB4",
-        "LoD/1.13d": "0x6FE18DE8"
+        "LoD/1.10": "0x6FE005FE",
+        "LoD/1.11": "0x6FE18DDC",
+        "LoD/1.11b": "0x6FE18DA2",
+        "LoD/1.12a": "0x6FE18DAE",
+        "LoD/1.13c": "0x6FE18DCC",
+        "LoD/1.13d": "0x6FE18DBE"
       },
       "rvas": {
         "LoD/1.07": "0x10D08",
@@ -20977,12 +26845,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10AF8",
         "LoD/1.09b": "0x10AF8",
         "LoD/1.09d": "0x10AF8",
-        "LoD/1.10": "0x105E6",
-        "LoD/1.11": "0x8DD6",
-        "LoD/1.11b": "0x8DC6",
-        "LoD/1.12a": "0x8DD8",
-        "LoD/1.13c": "0x8DB4",
-        "LoD/1.13d": "0x8DE8"
+        "LoD/1.10": "0x105FE",
+        "LoD/1.11": "0x8DDC",
+        "LoD/1.11b": "0x8DA2",
+        "LoD/1.12a": "0x8DAE",
+        "LoD/1.13c": "0x8DCC",
+        "LoD/1.13d": "0x8DBE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21050,12 +26918,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00AFE",
         "LoD/1.09b": "0x6FE00AFE",
         "LoD/1.09d": "0x6FE00AFE",
-        "LoD/1.10": "0x6FE0061C",
-        "LoD/1.11": "0x6FE18E34",
-        "LoD/1.11b": "0x6FE18E24",
-        "LoD/1.12a": "0x6FE18E24",
-        "LoD/1.13c": "0x6FE18E24",
-        "LoD/1.13d": "0x6FE18E34"
+        "LoD/1.10": "0x6FE005F2",
+        "LoD/1.11": "0x6FE18D76",
+        "LoD/1.11b": "0x6FE18D78",
+        "LoD/1.12a": "0x6FE18D72",
+        "LoD/1.13c": "0x6FE18D78",
+        "LoD/1.13d": "0x6FE18D70"
       },
       "rvas": {
         "LoD/1.07": "0x10D0E",
@@ -21063,12 +26931,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10AFE",
         "LoD/1.09b": "0x10AFE",
         "LoD/1.09d": "0x10AFE",
-        "LoD/1.10": "0x1061C",
-        "LoD/1.11": "0x8E34",
-        "LoD/1.11b": "0x8E24",
-        "LoD/1.12a": "0x8E24",
-        "LoD/1.13c": "0x8E24",
-        "LoD/1.13d": "0x8E34"
+        "LoD/1.10": "0x105F2",
+        "LoD/1.11": "0x8D76",
+        "LoD/1.11b": "0x8D78",
+        "LoD/1.12a": "0x8D72",
+        "LoD/1.13c": "0x8D78",
+        "LoD/1.13d": "0x8D70"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21137,8 +27005,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B04",
         "LoD/1.09d": "0x6FE00B04",
         "LoD/1.10": "0x6FE005D4",
-        "LoD/1.11": "0x6FE18DC4",
-        "LoD/1.11b": "0x6FE18DD8",
+        "LoD/1.11": "0x6FE18DD6",
+        "LoD/1.11b": "0x6FE18DC6",
         "LoD/1.12a": "0x6FE18DCC",
         "LoD/1.13c": "0x6FE18DC6",
         "LoD/1.13d": "0x6FE18DDC"
@@ -21150,8 +27018,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B04",
         "LoD/1.09d": "0x10B04",
         "LoD/1.10": "0x105D4",
-        "LoD/1.11": "0x8DC4",
-        "LoD/1.11b": "0x8DD8",
+        "LoD/1.11": "0x8DD6",
+        "LoD/1.11b": "0x8DC6",
         "LoD/1.12a": "0x8DCC",
         "LoD/1.13c": "0x8DC6",
         "LoD/1.13d": "0x8DDC"
@@ -21309,11 +27177,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B10",
         "LoD/1.09d": "0x6FE00B10",
         "LoD/1.10": "0x6FE005E0",
-        "LoD/1.11": "0x6FE18DA0",
-        "LoD/1.11b": "0x6FE18D90",
-        "LoD/1.12a": "0x6FE18D9C",
-        "LoD/1.13c": "0x6FE18D90",
-        "LoD/1.13d": "0x6FE18D94"
+        "LoD/1.11": "0x6FE18E40",
+        "LoD/1.11b": "0x6FE18E30",
+        "LoD/1.12a": "0x6FE18E36",
+        "LoD/1.13c": "0x6FE18E36",
+        "LoD/1.13d": "0x6FE18E46"
       },
       "rvas": {
         "LoD/1.07": "0x10D20",
@@ -21322,11 +27190,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B10",
         "LoD/1.09d": "0x10B10",
         "LoD/1.10": "0x105E0",
-        "LoD/1.11": "0x8DA0",
-        "LoD/1.11b": "0x8D90",
-        "LoD/1.12a": "0x8D9C",
-        "LoD/1.13c": "0x8D90",
-        "LoD/1.13d": "0x8D94"
+        "LoD/1.11": "0x8E40",
+        "LoD/1.11b": "0x8E30",
+        "LoD/1.12a": "0x8E36",
+        "LoD/1.13c": "0x8E36",
+        "LoD/1.13d": "0x8E46"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21394,12 +27262,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B16",
         "LoD/1.09b": "0x6FE00B16",
         "LoD/1.09d": "0x6FE00B16",
-        "LoD/1.10": "0x6FE005CE",
-        "LoD/1.11": "0x6FE18DCA",
-        "LoD/1.11b": "0x6FE18DDE",
-        "LoD/1.12a": "0x6FE18DDE",
-        "LoD/1.13c": "0x6FE18DBA",
-        "LoD/1.13d": "0x6FE18DEE"
+        "LoD/1.10": "0x6FE00616",
+        "LoD/1.11": "0x6FE18DEE",
+        "LoD/1.11b": "0x6FE18DC0",
+        "LoD/1.12a": "0x6FE18DC6",
+        "LoD/1.13c": "0x6FE18DDE",
+        "LoD/1.13d": "0x6FE18DD6"
       },
       "rvas": {
         "LoD/1.07": "0x10D26",
@@ -21407,12 +27275,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B16",
         "LoD/1.09b": "0x10B16",
         "LoD/1.09d": "0x10B16",
-        "LoD/1.10": "0x105CE",
-        "LoD/1.11": "0x8DCA",
-        "LoD/1.11b": "0x8DDE",
-        "LoD/1.12a": "0x8DDE",
-        "LoD/1.13c": "0x8DBA",
-        "LoD/1.13d": "0x8DEE"
+        "LoD/1.10": "0x10616",
+        "LoD/1.11": "0x8DEE",
+        "LoD/1.11b": "0x8DC0",
+        "LoD/1.12a": "0x8DC6",
+        "LoD/1.13c": "0x8DDE",
+        "LoD/1.13d": "0x8DD6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21481,11 +27349,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B1C",
         "LoD/1.09d": "0x6FE00B1C",
         "LoD/1.10": "0x6FE005EC",
-        "LoD/1.11": "0x6FE18DAC",
-        "LoD/1.11b": "0x6FE18D9C",
-        "LoD/1.12a": "0x6FE18D8A",
-        "LoD/1.13c": "0x6FE18D9C",
-        "LoD/1.13d": "0x6FE18DA0"
+        "LoD/1.11": "0x6FE18DCA",
+        "LoD/1.11b": "0x6FE18DDE",
+        "LoD/1.12a": "0x6FE18DDE",
+        "LoD/1.13c": "0x6FE18DBA",
+        "LoD/1.13d": "0x6FE18DEE"
       },
       "rvas": {
         "LoD/1.07": "0x10D2C",
@@ -21494,11 +27362,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B1C",
         "LoD/1.09d": "0x10B1C",
         "LoD/1.10": "0x105EC",
-        "LoD/1.11": "0x8DAC",
-        "LoD/1.11b": "0x8D9C",
-        "LoD/1.12a": "0x8D8A",
-        "LoD/1.13c": "0x8D9C",
-        "LoD/1.13d": "0x8DA0"
+        "LoD/1.11": "0x8DCA",
+        "LoD/1.11b": "0x8DDE",
+        "LoD/1.12a": "0x8DDE",
+        "LoD/1.13c": "0x8DBA",
+        "LoD/1.13d": "0x8DEE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21566,12 +27434,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B22",
         "LoD/1.09b": "0x6FE00B22",
         "LoD/1.09d": "0x6FE00B22",
-        "LoD/1.10": "0x6FE00610",
-        "LoD/1.11": "0x6FE18DE2",
-        "LoD/1.11b": "0x6FE18DAE",
-        "LoD/1.12a": "0x6FE18DB4",
-        "LoD/1.13c": "0x6FE18DD2",
-        "LoD/1.13d": "0x6FE18DC4"
+        "LoD/1.10": "0x6FE0040C",
+        "LoD/1.11": "0x6FE18D9A",
+        "LoD/1.11b": "0x6FE18D84",
+        "LoD/1.12a": "0x6FE18D96",
+        "LoD/1.13c": "0x6FE18D8A",
+        "LoD/1.13d": "0x6FE18D8E"
       },
       "rvas": {
         "LoD/1.07": "0x10D32",
@@ -21579,12 +27447,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B22",
         "LoD/1.09b": "0x10B22",
         "LoD/1.09d": "0x10B22",
-        "LoD/1.10": "0x10610",
-        "LoD/1.11": "0x8DE2",
-        "LoD/1.11b": "0x8DAE",
-        "LoD/1.12a": "0x8DB4",
-        "LoD/1.13c": "0x8DD2",
-        "LoD/1.13d": "0x8DC4"
+        "LoD/1.10": "0x1040C",
+        "LoD/1.11": "0x8D9A",
+        "LoD/1.11b": "0x8D84",
+        "LoD/1.12a": "0x8D96",
+        "LoD/1.13c": "0x8D8A",
+        "LoD/1.13d": "0x8D8E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21653,11 +27521,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B28",
         "LoD/1.09d": "0x6FE00B28",
         "LoD/1.10": "0x6FE005F8",
-        "LoD/1.11": "0x6FE18D76",
-        "LoD/1.11b": "0x6FE18D78",
-        "LoD/1.12a": "0x6FE18D72",
-        "LoD/1.13c": "0x6FE18D78",
-        "LoD/1.13d": "0x6FE18D70"
+        "LoD/1.11": "0x6FE18DBE",
+        "LoD/1.11b": "0x6FE18DBA",
+        "LoD/1.12a": "0x6FE18DC0",
+        "LoD/1.13c": "0x6FE18DAE",
+        "LoD/1.13d": "0x6FE18DD0"
       },
       "rvas": {
         "LoD/1.07": "0x10D38",
@@ -21666,11 +27534,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B28",
         "LoD/1.09d": "0x10B28",
         "LoD/1.10": "0x105F8",
-        "LoD/1.11": "0x8D76",
-        "LoD/1.11b": "0x8D78",
-        "LoD/1.12a": "0x8D72",
-        "LoD/1.13c": "0x8D78",
-        "LoD/1.13d": "0x8D70"
+        "LoD/1.11": "0x8DBE",
+        "LoD/1.11b": "0x8DBA",
+        "LoD/1.12a": "0x8DC0",
+        "LoD/1.13c": "0x8DAE",
+        "LoD/1.13d": "0x8DD0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21738,7 +27606,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B2E",
         "LoD/1.09b": "0x6FE00B2E",
         "LoD/1.09d": "0x6FE00B2E",
-        "LoD/1.10": "0x6FE005C2",
+        "LoD/1.10": "0x6FE00362",
         "LoD/1.11": "0x6FE18DB2",
         "LoD/1.11b": "0x6FE18DA8",
         "LoD/1.12a": "0x6FE18D90",
@@ -21751,7 +27619,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B2E",
         "LoD/1.09b": "0x10B2E",
         "LoD/1.09d": "0x10B2E",
-        "LoD/1.10": "0x105C2",
+        "LoD/1.10": "0x10362",
         "LoD/1.11": "0x8DB2",
         "LoD/1.11b": "0x8DA8",
         "LoD/1.12a": "0x8D90",
@@ -21825,11 +27693,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B34",
         "LoD/1.09d": "0x6FE00B34",
         "LoD/1.10": "0x6FE00604",
-        "LoD/1.11": "0x6FE18D64",
-        "LoD/1.11b": "0x6FE18D54",
-        "LoD/1.12a": "0x6FE18D54",
-        "LoD/1.13c": "0x6FE18D54",
-        "LoD/1.13d": "0x6FE18D64"
+        "LoD/1.11": "0x6FE18D82",
+        "LoD/1.11b": "0x6FE18D60",
+        "LoD/1.12a": "0x6FE18D66",
+        "LoD/1.13c": "0x6FE18D6C",
+        "LoD/1.13d": "0x6FE18D82"
       },
       "rvas": {
         "LoD/1.07": "0x10D44",
@@ -21838,11 +27706,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B34",
         "LoD/1.09d": "0x10B34",
         "LoD/1.10": "0x10604",
-        "LoD/1.11": "0x8D64",
-        "LoD/1.11b": "0x8D54",
-        "LoD/1.12a": "0x8D54",
-        "LoD/1.13c": "0x8D54",
-        "LoD/1.13d": "0x8D64"
+        "LoD/1.11": "0x8D82",
+        "LoD/1.11b": "0x8D60",
+        "LoD/1.12a": "0x8D66",
+        "LoD/1.13c": "0x8D6C",
+        "LoD/1.13d": "0x8D82"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21911,11 +27779,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B3A",
         "LoD/1.09d": "0x6FE00B3A",
         "LoD/1.10": "0x6FE0060A",
-        "LoD/1.11": "0x6FE18D9A",
-        "LoD/1.11b": "0x6FE18D84",
-        "LoD/1.12a": "0x6FE18D96",
-        "LoD/1.13c": "0x6FE18D8A",
-        "LoD/1.13d": "0x6FE18D8E"
+        "LoD/1.11": "0x6FE18D64",
+        "LoD/1.11b": "0x6FE18D54",
+        "LoD/1.12a": "0x6FE18D54",
+        "LoD/1.13c": "0x6FE18D54",
+        "LoD/1.13d": "0x6FE18D64"
       },
       "rvas": {
         "LoD/1.07": "0x10D4A",
@@ -21924,11 +27792,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B3A",
         "LoD/1.09d": "0x10B3A",
         "LoD/1.10": "0x1060A",
-        "LoD/1.11": "0x8D9A",
-        "LoD/1.11b": "0x8D84",
-        "LoD/1.12a": "0x8D96",
-        "LoD/1.13c": "0x8D8A",
-        "LoD/1.13d": "0x8D8E"
+        "LoD/1.11": "0x8D64",
+        "LoD/1.11b": "0x8D54",
+        "LoD/1.12a": "0x8D54",
+        "LoD/1.13c": "0x8D54",
+        "LoD/1.13d": "0x8D64"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -21996,12 +27864,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B40",
         "LoD/1.09b": "0x6FE00B40",
         "LoD/1.09d": "0x6FE00B40",
-        "LoD/1.10": "0x6FE00362",
-        "LoD/1.11": "0x6FE18E40",
-        "LoD/1.11b": "0x6FE18E30",
-        "LoD/1.12a": "0x6FE18E36",
-        "LoD/1.13c": "0x6FE18E36",
-        "LoD/1.13d": "0x6FE18E46"
+        "LoD/1.10": "0x6FE00610",
+        "LoD/1.11": "0x6FE18E4C",
+        "LoD/1.11b": "0x6FE18E3C",
+        "LoD/1.12a": "0x6FE18E42",
+        "LoD/1.13c": "0x6FE18E42",
+        "LoD/1.13d": "0x6FE18E52"
       },
       "rvas": {
         "LoD/1.07": "0x10D50",
@@ -22009,12 +27877,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B40",
         "LoD/1.09b": "0x10B40",
         "LoD/1.09d": "0x10B40",
-        "LoD/1.10": "0x10362",
-        "LoD/1.11": "0x8E40",
-        "LoD/1.11b": "0x8E30",
-        "LoD/1.12a": "0x8E36",
-        "LoD/1.13c": "0x8E36",
-        "LoD/1.13d": "0x8E46"
+        "LoD/1.10": "0x10610",
+        "LoD/1.11": "0x8E4C",
+        "LoD/1.11b": "0x8E3C",
+        "LoD/1.12a": "0x8E42",
+        "LoD/1.13c": "0x8E42",
+        "LoD/1.13d": "0x8E52"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -22082,12 +27950,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B46",
         "LoD/1.09b": "0x6FE00B46",
         "LoD/1.09d": "0x6FE00B46",
-        "LoD/1.10": "0x6FE005C8",
-        "LoD/1.11": "0x6FE18DA6",
-        "LoD/1.11b": "0x6FE18D96",
-        "LoD/1.12a": "0x6FE18D84",
-        "LoD/1.13c": "0x6FE18D84",
-        "LoD/1.13d": "0x6FE18D9A"
+        "LoD/1.10": "0x6FE0061C",
+        "LoD/1.11": "0x6FE18DE8",
+        "LoD/1.11b": "0x6FE18DB4",
+        "LoD/1.12a": "0x6FE18DBA",
+        "LoD/1.13c": "0x6FE18DD8",
+        "LoD/1.13d": "0x6FE18DCA"
       },
       "rvas": {
         "LoD/1.07": "0x10D56",
@@ -22095,12 +27963,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B46",
         "LoD/1.09b": "0x10B46",
         "LoD/1.09d": "0x10B46",
-        "LoD/1.10": "0x105C8",
-        "LoD/1.11": "0x8DA6",
-        "LoD/1.11b": "0x8D96",
-        "LoD/1.12a": "0x8D84",
-        "LoD/1.13c": "0x8D84",
-        "LoD/1.13d": "0x8D9A"
+        "LoD/1.10": "0x1061C",
+        "LoD/1.11": "0x8DE8",
+        "LoD/1.11b": "0x8DB4",
+        "LoD/1.12a": "0x8DBA",
+        "LoD/1.13c": "0x8DD8",
+        "LoD/1.13d": "0x8DCA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -22169,11 +28037,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B52",
         "LoD/1.09d": "0x6FE00B52",
         "LoD/1.10": "0x6FE00622",
-        "LoD/1.11": "0x6FE18E3A",
-        "LoD/1.11b": "0x6FE18E2A",
-        "LoD/1.12a": "0x6FE18E2A",
-        "LoD/1.13c": "0x6FE18E2A",
-        "LoD/1.13d": "0x6FE18E3A"
+        "LoD/1.11": "0x6FE18E34",
+        "LoD/1.11b": "0x6FE18E24",
+        "LoD/1.12a": "0x6FE18E24",
+        "LoD/1.13c": "0x6FE18E24",
+        "LoD/1.13d": "0x6FE18E34"
       },
       "rvas": {
         "LoD/1.07": "0x10D5C",
@@ -22182,11 +28050,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B52",
         "LoD/1.09d": "0x10B52",
         "LoD/1.10": "0x10622",
-        "LoD/1.11": "0x8E3A",
-        "LoD/1.11b": "0x8E2A",
-        "LoD/1.12a": "0x8E2A",
-        "LoD/1.13c": "0x8E2A",
-        "LoD/1.13d": "0x8E3A"
+        "LoD/1.11": "0x8E34",
+        "LoD/1.11b": "0x8E24",
+        "LoD/1.12a": "0x8E24",
+        "LoD/1.13c": "0x8E24",
+        "LoD/1.13d": "0x8E34"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -22255,11 +28123,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE00B58",
         "LoD/1.09d": "0x6FE00B58",
         "LoD/1.10": "0x6FE00628",
-        "LoD/1.11": "0x6FE18DBE",
-        "LoD/1.11b": "0x6FE18DBA",
-        "LoD/1.12a": "0x6FE18DC0",
-        "LoD/1.13c": "0x6FE18DAE",
-        "LoD/1.13d": "0x6FE18DD0"
+        "LoD/1.11": "0x6FE18DB8",
+        "LoD/1.11b": "0x6FE18DD2",
+        "LoD/1.12a": "0x6FE18DA2",
+        "LoD/1.13c": "0x6FE18D96",
+        "LoD/1.13d": "0x6FE18DAC"
       },
       "rvas": {
         "LoD/1.07": "0x10D62",
@@ -22268,11 +28136,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x10B58",
         "LoD/1.09d": "0x10B58",
         "LoD/1.10": "0x10628",
-        "LoD/1.11": "0x8DBE",
-        "LoD/1.11b": "0x8DBA",
-        "LoD/1.12a": "0x8DC0",
-        "LoD/1.13c": "0x8DAE",
-        "LoD/1.13d": "0x8DD0"
+        "LoD/1.11": "0x8DB8",
+        "LoD/1.11b": "0x8DD2",
+        "LoD/1.12a": "0x8DA2",
+        "LoD/1.13c": "0x8D96",
+        "LoD/1.13d": "0x8DAC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -22426,12 +28294,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B64",
         "LoD/1.09b": "0x6FE00B64",
         "LoD/1.09d": "0x6FE00B64",
-        "LoD/1.10": "0x6FE005FE",
-        "LoD/1.11": "0x6FE18DDC",
-        "LoD/1.11b": "0x6FE18DA2",
-        "LoD/1.12a": "0x6FE18DAE",
-        "LoD/1.13c": "0x6FE18DCC",
-        "LoD/1.13d": "0x6FE18DBE"
+        "LoD/1.10": "0x6FE005E6",
+        "LoD/1.11": "0x6FE18DC4",
+        "LoD/1.11b": "0x6FE18DD8",
+        "LoD/1.12a": "0x6FE18DD8",
+        "LoD/1.13c": "0x6FE18DB4",
+        "LoD/1.13d": "0x6FE18DE8"
       },
       "rvas": {
         "LoD/1.07": "0x10D6E",
@@ -22439,12 +28307,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B64",
         "LoD/1.09b": "0x10B64",
         "LoD/1.09d": "0x10B64",
-        "LoD/1.10": "0x105FE",
-        "LoD/1.11": "0x8DDC",
-        "LoD/1.11b": "0x8DA2",
-        "LoD/1.12a": "0x8DAE",
-        "LoD/1.13c": "0x8DCC",
-        "LoD/1.13d": "0x8DBE"
+        "LoD/1.10": "0x105E6",
+        "LoD/1.11": "0x8DC4",
+        "LoD/1.11b": "0x8DD8",
+        "LoD/1.12a": "0x8DD8",
+        "LoD/1.13c": "0x8DB4",
+        "LoD/1.13d": "0x8DE8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -22512,12 +28380,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B6A",
         "LoD/1.09b": "0x6FE00B6A",
         "LoD/1.09d": "0x6FE00B6A",
-        "LoD/1.10": "0x6FE005F2",
-        "LoD/1.11": "0x6FE18E4C",
-        "LoD/1.11b": "0x6FE18E3C",
-        "LoD/1.12a": "0x6FE18E42",
-        "LoD/1.13c": "0x6FE18E42",
-        "LoD/1.13d": "0x6FE18E52"
+        "LoD/1.10": "0x6FE005CE",
+        "LoD/1.11": "0x6FE18E46",
+        "LoD/1.11b": "0x6FE18E36",
+        "LoD/1.12a": "0x6FE18E3C",
+        "LoD/1.13c": "0x6FE18E3C",
+        "LoD/1.13d": "0x6FE18E4C"
       },
       "rvas": {
         "LoD/1.07": "0x10D74",
@@ -22525,12 +28393,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x10B6A",
         "LoD/1.09b": "0x10B6A",
         "LoD/1.09d": "0x10B6A",
-        "LoD/1.10": "0x105F2",
-        "LoD/1.11": "0x8E4C",
-        "LoD/1.11b": "0x8E3C",
-        "LoD/1.12a": "0x8E42",
-        "LoD/1.13c": "0x8E42",
-        "LoD/1.13d": "0x8E52"
+        "LoD/1.10": "0x105CE",
+        "LoD/1.11": "0x8E46",
+        "LoD/1.11b": "0x8E36",
+        "LoD/1.12a": "0x8E3C",
+        "LoD/1.13c": "0x8E3C",
+        "LoD/1.13d": "0x8E4C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -23340,6 +29208,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -23784,6 +29672,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -24554,12 +30477,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE01166",
         "LoD/1.09b": "0x6FE01166",
         "LoD/1.09d": "0x6FE01166",
-        "LoD/1.10": "0x6FE00C12",
-        "LoD/1.11": "0x6FE16D2C",
+        "LoD/1.10": "0x6FE00C09",
+        "LoD/1.11": "0x6FE13FF1",
         "LoD/1.11b": "0x6FE13FF9",
         "LoD/1.12a": "0x6FE13FC0",
         "LoD/1.13c": "0x6FE13FC0",
-        "LoD/1.13d": "0x6FE16D2C"
+        "LoD/1.13d": "0x6FE13FF5"
       },
       "rvas": {
         "LoD/1.07": "0x11369",
@@ -24567,12 +30490,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x11166",
         "LoD/1.09b": "0x11166",
         "LoD/1.09d": "0x11166",
-        "LoD/1.10": "0x10C12",
-        "LoD/1.11": "0x6D2C",
+        "LoD/1.10": "0x10C09",
+        "LoD/1.11": "0x3FF1",
         "LoD/1.11b": "0x3FF9",
         "LoD/1.12a": "0x3FC0",
         "LoD/1.13c": "0x3FC0",
-        "LoD/1.13d": "0x6D2C"
+        "LoD/1.13d": "0x3FF5"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -24641,12 +30564,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE0115D",
         "LoD/1.09b": "0x6FE0115D",
         "LoD/1.09d": "0x6FE0115D",
-        "LoD/1.10": "0x6FE00C09",
-        "LoD/1.11": "0x6FE13FF1",
+        "LoD/1.10": "0x6FE00C12",
+        "LoD/1.11": "0x6FE16D2C",
         "LoD/1.11b": "0x6FE16D24",
         "LoD/1.12a": "0x6FE16D07",
         "LoD/1.13c": "0x6FE16D07",
-        "LoD/1.13d": "0x6FE13FF5"
+        "LoD/1.13d": "0x6FE16D2C"
       },
       "rvas": {
         "LoD/1.07": "0x11372",
@@ -24654,12 +30577,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x1115D",
         "LoD/1.09b": "0x1115D",
         "LoD/1.09d": "0x1115D",
-        "LoD/1.10": "0x10C09",
-        "LoD/1.11": "0x3FF1",
+        "LoD/1.10": "0x10C12",
+        "LoD/1.11": "0x6D2C",
         "LoD/1.11b": "0x6D24",
         "LoD/1.12a": "0x6D07",
         "LoD/1.13c": "0x6D07",
-        "LoD/1.13d": "0x3FF5"
+        "LoD/1.13d": "0x6D2C"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -25413,11 +31336,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE059CE",
         "LoD/1.09d": "0x6FE059CE",
         "LoD/1.10": "0x6FE054CE",
-        "LoD/1.11": "0x6FE12E84",
-        "LoD/1.11b": "0x6FE17574",
-        "LoD/1.12a": "0x6FE17554",
-        "LoD/1.13c": "0x6FE17554",
-        "LoD/1.13d": "0x6FE17584"
+        "LoD/1.11": "0x6FE130F0",
+        "LoD/1.11b": "0x6FE13DD6",
+        "LoD/1.12a": "0x6FE13C6B",
+        "LoD/1.13c": "0x6FE141B9",
+        "LoD/1.13d": "0x6FE13205"
       },
       "rvas": {
         "LoD/1.07": "0x15BDE",
@@ -25426,11 +31349,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x159CE",
         "LoD/1.09d": "0x159CE",
         "LoD/1.10": "0x154CE",
-        "LoD/1.11": "0x2E84",
-        "LoD/1.11b": "0x7574",
-        "LoD/1.12a": "0x7554",
-        "LoD/1.13c": "0x7554",
-        "LoD/1.13d": "0x7584"
+        "LoD/1.11": "0x30F0",
+        "LoD/1.11b": "0x3DD6",
+        "LoD/1.12a": "0x3C6B",
+        "LoD/1.13c": "0x41B9",
+        "LoD/1.13d": "0x3205"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -25615,10 +31538,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x6FE05A57",
         "LoD/1.10": "0x6FE05557",
         "LoD/1.11": "0x6FE141CE",
-        "LoD/1.11b": "0x6FE12F11",
-        "LoD/1.12a": "0x6FE13C6B",
-        "LoD/1.13c": "0x6FE13C6B",
-        "LoD/1.13d": "0x6FE141D2"
+        "LoD/1.11b": "0x6FE17574",
+        "LoD/1.12a": "0x6FE17554",
+        "LoD/1.13c": "0x6FE17554",
+        "LoD/1.13d": "0x6FE17584"
       },
       "rvas": {
         "LoD/1.07": "0x15C67",
@@ -25628,10 +31551,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09d": "0x15A57",
         "LoD/1.10": "0x15557",
         "LoD/1.11": "0x41CE",
-        "LoD/1.11b": "0x2F11",
-        "LoD/1.12a": "0x3C6B",
-        "LoD/1.13c": "0x3C6B",
-        "LoD/1.13d": "0x41D2"
+        "LoD/1.11b": "0x7574",
+        "LoD/1.12a": "0x7554",
+        "LoD/1.13c": "0x7554",
+        "LoD/1.13d": "0x7584"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -26277,11 +32200,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE01B8B",
         "LoD/1.09d": "0x6FE01B8B",
         "LoD/1.10": "0x6FE0168B",
-        "LoD/1.11": "0x6FE133B2",
-        "LoD/1.11b": "0x6FE13CA9",
-        "LoD/1.12a": "0x6FE13D22",
-        "LoD/1.13c": "0x6FE13D9D",
-        "LoD/1.13d": "0x6FE132B7"
+        "LoD/1.11": "0x6FE16868",
+        "LoD/1.11b": "0x6FE16860",
+        "LoD/1.12a": "0x6FE13FCC",
+        "LoD/1.13c": "0x6FE13FCC",
+        "LoD/1.13d": "0x6FE14001"
       },
       "rvas": {
         "LoD/1.07": "0x11D9B",
@@ -26290,11 +32213,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x11B8B",
         "LoD/1.09d": "0x11B8B",
         "LoD/1.10": "0x1168B",
-        "LoD/1.11": "0x33B2",
-        "LoD/1.11b": "0x3CA9",
-        "LoD/1.12a": "0x3D22",
-        "LoD/1.13c": "0x3D9D",
-        "LoD/1.13d": "0x32B7"
+        "LoD/1.11": "0x6868",
+        "LoD/1.11b": "0x6860",
+        "LoD/1.12a": "0x3FCC",
+        "LoD/1.13c": "0x3FCC",
+        "LoD/1.13d": "0x4001"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -27225,11 +33148,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE02500",
         "LoD/1.09d": "0x6FE02500",
         "LoD/1.10": "0x6FE02000",
-        "LoD/1.11": "0x6FE27761",
-        "LoD/1.11b": "0x6FE27751",
-        "LoD/1.12a": "0x6FE27801",
-        "LoD/1.13c": "0x6FE27817",
-        "LoD/1.13d": "0x6FE27821"
+        "LoD/1.11": "0x6FE16D35",
+        "LoD/1.11b": "0x6FE16D2D",
+        "LoD/1.12a": "0x6FE16D10",
+        "LoD/1.13c": "0x6FE16D10",
+        "LoD/1.13d": "0x6FE16D35"
       },
       "rvas": {
         "LoD/1.07": "0x12710",
@@ -27238,11 +33161,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x12500",
         "LoD/1.09d": "0x12500",
         "LoD/1.10": "0x12000",
-        "LoD/1.11": "0x17761",
-        "LoD/1.11b": "0x17751",
-        "LoD/1.12a": "0x17801",
-        "LoD/1.13c": "0x17817",
-        "LoD/1.13d": "0x17821"
+        "LoD/1.11": "0x6D35",
+        "LoD/1.11b": "0x6D2D",
+        "LoD/1.12a": "0x6D10",
+        "LoD/1.13c": "0x6D10",
+        "LoD/1.13d": "0x6D35"
       },
       "sizes": {
         "LoD/1.07": 30,
@@ -27297,11 +33220,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.09d": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.10": "83d07e3c014d31c19cf14861bc62b0a0",
-        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
+        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "d2cmp.dll_InitializeGameObjectFields": {
@@ -28543,6 +34466,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b7d4a5a4939b00399701a93fe243a594",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -30961,17 +36911,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_CopyMemoryWithAlignment": {
       "addresses": {
         "LoD/1.07": "0x6FE25340",
-        "LoD/1.08": "0x6FE25340",
+        "LoD/1.08": "0x6FE25810",
         "LoD/1.09": "0x6FE05600",
-        "LoD/1.09b": "0x6FE05130",
+        "LoD/1.09b": "0x6FE05600",
         "LoD/1.09d": "0x6FE05600",
         "LoD/1.10": "0x6FE04C30"
       },
       "rvas": {
         "LoD/1.07": "0x15340",
-        "LoD/1.08": "0x15340",
+        "LoD/1.08": "0x15810",
         "LoD/1.09": "0x15600",
-        "LoD/1.09b": "0x15130",
+        "LoD/1.09b": "0x15600",
         "LoD/1.09d": "0x15600",
         "LoD/1.10": "0x14C30"
       },
@@ -31223,7 +37173,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE055AC",
         "LoD/1.09b": "0x6FE055AC",
         "LoD/1.09d": "0x6FE055AC",
-        "LoD/1.10": "0x6FE050C8"
+        "LoD/1.10": "0x6FE050AC"
       },
       "rvas": {
         "LoD/1.07": "0x157BC",
@@ -31231,7 +37181,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x155AC",
         "LoD/1.09b": "0x155AC",
         "LoD/1.09d": "0x155AC",
-        "LoD/1.10": "0x150C8"
+        "LoD/1.10": "0x150AC"
       },
       "sizes": {
         "LoD/1.07": 28,
@@ -31280,7 +37230,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE055C8",
         "LoD/1.09b": "0x6FE055C8",
         "LoD/1.09d": "0x6FE055C8",
-        "LoD/1.10": "0x6FE050AC"
+        "LoD/1.10": "0x6FE050C8"
       },
       "rvas": {
         "LoD/1.07": "0x157D8",
@@ -31288,7 +37238,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x155C8",
         "LoD/1.09b": "0x155C8",
         "LoD/1.09d": "0x155C8",
-        "LoD/1.10": "0x150AC"
+        "LoD/1.10": "0x150C8"
       },
       "sizes": {
         "LoD/1.07": 28,
@@ -31420,17 +37370,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_CopyMemoryWithOverlapHandling": {
       "addresses": {
         "LoD/1.07": "0x6FE25810",
-        "LoD/1.08": "0x6FE25810",
+        "LoD/1.08": "0x6FE25340",
         "LoD/1.09": "0x6FE05130",
-        "LoD/1.09b": "0x6FE05600",
+        "LoD/1.09b": "0x6FE05130",
         "LoD/1.09d": "0x6FE05130",
         "LoD/1.10": "0x6FE05100"
       },
       "rvas": {
         "LoD/1.07": "0x15810",
-        "LoD/1.08": "0x15810",
+        "LoD/1.08": "0x15340",
         "LoD/1.09": "0x15130",
-        "LoD/1.09b": "0x15600",
+        "LoD/1.09b": "0x15130",
         "LoD/1.09d": "0x15130",
         "LoD/1.10": "0x15100"
       },
@@ -32627,12 +38577,12 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE26314",
         "LoD/1.08": "0x6FE26314",
-        "LoD/1.09": "0x6FE06104",
-        "LoD/1.09b": "0x6FE06104",
+        "LoD/1.09": "0x6FE0611A",
+        "LoD/1.09b": "0x6FE0611A",
         "LoD/1.09d": "0x6FE06104",
-        "LoD/1.10": "0x6FE062D6",
-        "LoD/1.11": "0x6FE29A5A",
-        "LoD/1.11b": "0x6FE29A4A",
+        "LoD/1.10": "0x6FE062C0",
+        "LoD/1.11": "0x6FE29A44",
+        "LoD/1.11b": "0x6FE29A34",
         "LoD/1.12a": "0x6FE29AE4",
         "LoD/1.13c": "0x6FE29AF4",
         "LoD/1.13d": "0x6FE29B04"
@@ -32640,12 +38590,12 @@ var FUNCTIONS_D2CMP_dll = {
       "rvas": {
         "LoD/1.07": "0x16314",
         "LoD/1.08": "0x16314",
-        "LoD/1.09": "0x16104",
-        "LoD/1.09b": "0x16104",
+        "LoD/1.09": "0x1611A",
+        "LoD/1.09b": "0x1611A",
         "LoD/1.09d": "0x16104",
-        "LoD/1.10": "0x162D6",
-        "LoD/1.11": "0x19A5A",
-        "LoD/1.11b": "0x19A4A",
+        "LoD/1.10": "0x162C0",
+        "LoD/1.11": "0x19A44",
+        "LoD/1.11b": "0x19A34",
         "LoD/1.12a": "0x19AE4",
         "LoD/1.13c": "0x19AF4",
         "LoD/1.13d": "0x19B04"
@@ -32714,12 +38664,12 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE2632A",
         "LoD/1.08": "0x6FE2632A",
-        "LoD/1.09": "0x6FE0611A",
-        "LoD/1.09b": "0x6FE0611A",
+        "LoD/1.09": "0x6FE06104",
+        "LoD/1.09b": "0x6FE06104",
         "LoD/1.09d": "0x6FE0611A",
-        "LoD/1.10": "0x6FE062C0",
-        "LoD/1.11": "0x6FE29A44",
-        "LoD/1.11b": "0x6FE29A34",
+        "LoD/1.10": "0x6FE062D6",
+        "LoD/1.11": "0x6FE29A5A",
+        "LoD/1.11b": "0x6FE29A4A",
         "LoD/1.12a": "0x6FE29AFA",
         "LoD/1.13c": "0x6FE29B0A",
         "LoD/1.13d": "0x6FE29B1A"
@@ -32727,12 +38677,12 @@ var FUNCTIONS_D2CMP_dll = {
       "rvas": {
         "LoD/1.07": "0x1632A",
         "LoD/1.08": "0x1632A",
-        "LoD/1.09": "0x1611A",
-        "LoD/1.09b": "0x1611A",
+        "LoD/1.09": "0x16104",
+        "LoD/1.09b": "0x16104",
         "LoD/1.09d": "0x1611A",
-        "LoD/1.10": "0x162C0",
-        "LoD/1.11": "0x19A44",
-        "LoD/1.11b": "0x19A34",
+        "LoD/1.10": "0x162D6",
+        "LoD/1.11": "0x19A5A",
+        "LoD/1.11b": "0x19A4A",
         "LoD/1.12a": "0x19AFA",
         "LoD/1.13c": "0x19B0A",
         "LoD/1.13d": "0x19B1A"
@@ -32804,7 +38754,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE0615D",
         "LoD/1.09b": "0x6FE0615D",
         "LoD/1.09d": "0x6FE0615D",
-        "LoD/1.10": "0x6FE062EC"
+        "LoD/1.10": "0x6FE06319"
       },
       "rvas": {
         "LoD/1.07": "0x16340",
@@ -32812,7 +38762,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x1615D",
         "LoD/1.09b": "0x1615D",
         "LoD/1.09d": "0x1615D",
-        "LoD/1.10": "0x162EC"
+        "LoD/1.10": "0x16319"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -32861,7 +38811,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE06130",
         "LoD/1.09b": "0x6FE06130",
         "LoD/1.09d": "0x6FE06130",
-        "LoD/1.10": "0x6FE06319"
+        "LoD/1.10": "0x6FE062EC"
       },
       "rvas": {
         "LoD/1.07": "0x1636D",
@@ -32869,7 +38819,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x16130",
         "LoD/1.09b": "0x16130",
         "LoD/1.09d": "0x16130",
-        "LoD/1.10": "0x16319"
+        "LoD/1.10": "0x162EC"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -33433,19 +39383,19 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_ProcessCharacterWrite": {
       "addresses": {
         "LoD/1.07": "0x6FE26704",
-        "LoD/1.08": "0x6FE26704",
-        "LoD/1.09": "0x6FE064F4",
-        "LoD/1.09b": "0x6FE064F4",
-        "LoD/1.09d": "0x6FE064F4",
-        "LoD/1.10": "0x6FE05589"
+        "LoD/1.08": "0x6FE267DC",
+        "LoD/1.09": "0x6FE065CC",
+        "LoD/1.09b": "0x6FE065CC",
+        "LoD/1.09d": "0x6FE065CC",
+        "LoD/1.10": "0x6FE05661"
       },
       "rvas": {
         "LoD/1.07": "0x16704",
-        "LoD/1.08": "0x16704",
-        "LoD/1.09": "0x164F4",
-        "LoD/1.09b": "0x164F4",
-        "LoD/1.09d": "0x164F4",
-        "LoD/1.10": "0x15589"
+        "LoD/1.08": "0x167DC",
+        "LoD/1.09": "0x165CC",
+        "LoD/1.09b": "0x165CC",
+        "LoD/1.09d": "0x165CC",
+        "LoD/1.10": "0x15661"
       },
       "sizes": {
         "LoD/1.07": 101,
@@ -33547,19 +39497,19 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_ProcessCharacterTableWrite": {
       "addresses": {
         "LoD/1.07": "0x6FE267DC",
-        "LoD/1.08": "0x6FE267DC",
-        "LoD/1.09": "0x6FE065CC",
-        "LoD/1.09b": "0x6FE065CC",
-        "LoD/1.09d": "0x6FE065CC",
-        "LoD/1.10": "0x6FE05661"
+        "LoD/1.08": "0x6FE26704",
+        "LoD/1.09": "0x6FE064F4",
+        "LoD/1.09b": "0x6FE064F4",
+        "LoD/1.09d": "0x6FE064F4",
+        "LoD/1.10": "0x6FE05589"
       },
       "rvas": {
         "LoD/1.07": "0x167DC",
-        "LoD/1.08": "0x167DC",
-        "LoD/1.09": "0x165CC",
-        "LoD/1.09b": "0x165CC",
-        "LoD/1.09d": "0x165CC",
-        "LoD/1.10": "0x15661"
+        "LoD/1.08": "0x16704",
+        "LoD/1.09": "0x164F4",
+        "LoD/1.09b": "0x164F4",
+        "LoD/1.09d": "0x164F4",
+        "LoD/1.10": "0x15589"
       },
       "sizes": {
         "LoD/1.07": 101,
@@ -35532,6 +41482,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bff073652f00cbfc0b0f227bb7a313e1",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUTCELENTRY@@\""
@@ -37829,12 +43796,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08F56",
         "LoD/1.09b": "0x6FE08F56",
         "LoD/1.09d": "0x6FE08F56",
-        "LoD/1.10": "0x6FE089E0",
-        "LoD/1.11": "0x6FE2ADE0",
-        "LoD/1.11b": "0x6FE2AEE0",
-        "LoD/1.12a": "0x6FE2AFE0",
-        "LoD/1.13c": "0x6FE2AEE0",
-        "LoD/1.13d": "0x6FE2AFA0"
+        "LoD/1.10": "0x6FE08AC0",
+        "LoD/1.11": "0x6FE2AC80",
+        "LoD/1.11b": "0x6FE2AB90",
+        "LoD/1.12a": "0x6FE2AE80",
+        "LoD/1.13c": "0x6FE2AE90",
+        "LoD/1.13d": "0x6FE2ADB0"
       },
       "rvas": {
         "LoD/1.07": "0x190F0",
@@ -37842,12 +43809,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18F56",
         "LoD/1.09b": "0x18F56",
         "LoD/1.09d": "0x18F56",
-        "LoD/1.10": "0x189E0",
-        "LoD/1.11": "0x1ADE0",
-        "LoD/1.11b": "0x1AEE0",
-        "LoD/1.12a": "0x1AFE0",
-        "LoD/1.13c": "0x1AEE0",
-        "LoD/1.13d": "0x1AFA0"
+        "LoD/1.10": "0x18AC0",
+        "LoD/1.11": "0x1AC80",
+        "LoD/1.11b": "0x1AB90",
+        "LoD/1.12a": "0x1AE80",
+        "LoD/1.13c": "0x1AE90",
+        "LoD/1.13d": "0x1ADB0"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -37915,12 +43882,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08F66",
         "LoD/1.09b": "0x6FE08F66",
         "LoD/1.09d": "0x6FE08F66",
-        "LoD/1.10": "0x6FE089E8",
-        "LoD/1.11": "0x6FE2AE2A",
+        "LoD/1.10": "0x6FE08A66",
+        "LoD/1.11": "0x6FE2AF7A",
         "LoD/1.11b": "0x6FE2AE1A",
-        "LoD/1.12a": "0x6FE2AF1A",
-        "LoD/1.13c": "0x6FE2AF2A",
-        "LoD/1.13d": "0x6FE2B00A"
+        "LoD/1.12a": "0x6FE2B06A",
+        "LoD/1.13c": "0x6FE2B07A",
+        "LoD/1.13d": "0x6FE2B03A"
       },
       "rvas": {
         "LoD/1.07": "0x190F8",
@@ -37928,12 +43895,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18F66",
         "LoD/1.09b": "0x18F66",
         "LoD/1.09d": "0x18F66",
-        "LoD/1.10": "0x189E8",
-        "LoD/1.11": "0x1AE2A",
+        "LoD/1.10": "0x18A66",
+        "LoD/1.11": "0x1AF7A",
         "LoD/1.11b": "0x1AE1A",
-        "LoD/1.12a": "0x1AF1A",
-        "LoD/1.13c": "0x1AF2A",
-        "LoD/1.13d": "0x1B00A"
+        "LoD/1.12a": "0x1B06A",
+        "LoD/1.13c": "0x1B07A",
+        "LoD/1.13d": "0x1B03A"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -37998,252 +43965,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE29103",
         "LoD/1.08": "0x6FE29103",
-        "LoD/1.09": "0x6FE08EF3",
-        "LoD/1.09b": "0x6FE08EF3",
-        "LoD/1.09d": "0x6FE08EF3",
-        "LoD/1.10": "0x6FE08AD3"
+        "LoD/1.09": "0x6FE08F79",
+        "LoD/1.09b": "0x6FE08F79",
+        "LoD/1.09d": "0x6FE08F79",
+        "LoD/1.10": "0x6FE08A79",
+        "LoD/1.11": "0x6FE2ACBB",
+        "LoD/1.11b": "0x6FE2ACAB",
+        "LoD/1.12a": "0x6FE2ACFB",
+        "LoD/1.13c": "0x6FE2AD0B",
+        "LoD/1.13d": "0x6FE2AC8B"
       },
       "rvas": {
         "LoD/1.07": "0x19103",
         "LoD/1.08": "0x19103",
-        "LoD/1.09": "0x18EF3",
-        "LoD/1.09b": "0x18EF3",
-        "LoD/1.09d": "0x18EF3",
-        "LoD/1.10": "0x18AD3"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe29103",
-      "signature": "void Unwind@6fe29103(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe2910e": {
-      "addresses": {
-        "LoD/1.07": "0x6FE2910E",
-        "LoD/1.08": "0x6FE2910E",
-        "LoD/1.09": "0x6FE08FE9",
-        "LoD/1.09b": "0x6FE08FE9",
-        "LoD/1.09d": "0x6FE08FE9",
-        "LoD/1.10": "0x6FE08B0A"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1910E",
-        "LoD/1.08": "0x1910E",
-        "LoD/1.09": "0x18FE9",
-        "LoD/1.09b": "0x18FE9",
-        "LoD/1.09d": "0x18FE9",
-        "LoD/1.10": "0x18B0A"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe2910e",
-      "signature": "void Unwind@6fe2910e(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe29119": {
-      "addresses": {
-        "LoD/1.07": "0x6FE29119",
-        "LoD/1.08": "0x6FE29119",
-        "LoD/1.09": "0x6FE09080",
-        "LoD/1.09b": "0x6FE09080",
-        "LoD/1.09d": "0x6FE09080",
-        "LoD/1.10": "0x6FE08ADE"
-      },
-      "rvas": {
-        "LoD/1.07": "0x19119",
-        "LoD/1.08": "0x19119",
-        "LoD/1.09": "0x19080",
-        "LoD/1.09b": "0x19080",
-        "LoD/1.09d": "0x19080",
-        "LoD/1.10": "0x18ADE"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe29119",
-      "signature": "void Unwind@6fe29119(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe29124": {
-      "addresses": {
-        "LoD/1.07": "0x6FE29124",
-        "LoD/1.08": "0x6FE29124",
-        "LoD/1.09": "0x6FE08F14",
-        "LoD/1.09b": "0x6FE08F14",
-        "LoD/1.09d": "0x6FE08F14",
-        "LoD/1.10": "0x6FE08AF4"
-      },
-      "rvas": {
-        "LoD/1.07": "0x19124",
-        "LoD/1.08": "0x19124",
-        "LoD/1.09": "0x18F14",
-        "LoD/1.09b": "0x18F14",
-        "LoD/1.09d": "0x18F14",
-        "LoD/1.10": "0x18AF4"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe29124",
-      "signature": "void Unwind@6fe29124(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe2912f": {
-      "addresses": {
-        "LoD/1.07": "0x6FE2912F",
-        "LoD/1.08": "0x6FE2912F",
-        "LoD/1.09": "0x6FE08F4B",
-        "LoD/1.09b": "0x6FE08F4B",
-        "LoD/1.09d": "0x6FE08F4B",
-        "LoD/1.10": "0x6FE08A1F",
-        "LoD/1.11": "0x6FE2AD50",
-        "LoD/1.11b": "0x6FE2ACA0",
-        "LoD/1.12a": "0x6FE2ACD0",
-        "LoD/1.13c": "0x6FE2ADB0",
-        "LoD/1.13d": "0x6FE2ACF0"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1912F",
-        "LoD/1.08": "0x1912F",
-        "LoD/1.09": "0x18F4B",
-        "LoD/1.09b": "0x18F4B",
-        "LoD/1.09d": "0x18F4B",
-        "LoD/1.10": "0x18A1F",
-        "LoD/1.11": "0x1AD50",
-        "LoD/1.11b": "0x1ACA0",
-        "LoD/1.12a": "0x1ACD0",
-        "LoD/1.13c": "0x1ADB0",
-        "LoD/1.13d": "0x1ACF0"
+        "LoD/1.09": "0x18F79",
+        "LoD/1.09b": "0x18F79",
+        "LoD/1.09d": "0x18F79",
+        "LoD/1.10": "0x18A79",
+        "LoD/1.11": "0x1ACBB",
+        "LoD/1.11b": "0x1ACAB",
+        "LoD/1.12a": "0x1ACFB",
+        "LoD/1.13c": "0x1AD0B",
+        "LoD/1.13d": "0x1AC8B"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38258,8 +44001,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 11,
         "LoD/1.13d": 11
       },
-      "name": "Unwind@6fe2912f",
-      "signature": "void Unwind@6fe2912f(void)",
+      "name": "Unwind@6fe29103",
+      "signature": "void Unwind@6fe29103(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -38304,22 +44047,336 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
       }
     },
+    "d2cmp.dll_Unwind@6fe2910e": {
+      "addresses": {
+        "LoD/1.07": "0x6FE2910E",
+        "LoD/1.08": "0x6FE2910E",
+        "LoD/1.09": "0x6FE08F09",
+        "LoD/1.09b": "0x6FE08F09",
+        "LoD/1.09d": "0x6FE08F09",
+        "LoD/1.10": "0x6FE08A09",
+        "LoD/1.11": "0x6FE2ACB0",
+        "LoD/1.11b": "0x6FE2ABD0",
+        "LoD/1.12a": "0x6FE2ACD0",
+        "LoD/1.13c": "0x6FE2ACE0",
+        "LoD/1.13d": "0x6FE2AD90"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1910E",
+        "LoD/1.08": "0x1910E",
+        "LoD/1.09": "0x18F09",
+        "LoD/1.09b": "0x18F09",
+        "LoD/1.09d": "0x18F09",
+        "LoD/1.10": "0x18A09",
+        "LoD/1.11": "0x1ACB0",
+        "LoD/1.11b": "0x1ABD0",
+        "LoD/1.12a": "0x1ACD0",
+        "LoD/1.13c": "0x1ACE0",
+        "LoD/1.13d": "0x1AD90"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
+      "name": "Unwind@6fe2910e",
+      "signature": "void Unwind@6fe2910e(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
+    "d2cmp.dll_Unwind@6fe29119": {
+      "addresses": {
+        "LoD/1.07": "0x6FE29119",
+        "LoD/1.08": "0x6FE29119",
+        "LoD/1.09": "0x6FE08FE9",
+        "LoD/1.09b": "0x6FE08FE9",
+        "LoD/1.09d": "0x6FE08FE9",
+        "LoD/1.10": "0x6FE08AA6",
+        "LoD/1.11": "0x6FE2AC0B",
+        "LoD/1.11b": "0x6FE2ABFB",
+        "LoD/1.12a": "0x6FE2ADAB",
+        "LoD/1.13c": "0x6FE2ADBB",
+        "LoD/1.13d": "0x6FE2ADEB"
+      },
+      "rvas": {
+        "LoD/1.07": "0x19119",
+        "LoD/1.08": "0x19119",
+        "LoD/1.09": "0x18FE9",
+        "LoD/1.09b": "0x18FE9",
+        "LoD/1.09d": "0x18FE9",
+        "LoD/1.10": "0x18AA6",
+        "LoD/1.11": "0x1AC0B",
+        "LoD/1.11b": "0x1ABFB",
+        "LoD/1.12a": "0x1ADAB",
+        "LoD/1.13c": "0x1ADBB",
+        "LoD/1.13d": "0x1ADEB"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
+      "name": "Unwind@6fe29119",
+      "signature": "void Unwind@6fe29119(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
+    "d2cmp.dll_Unwind@6fe29124": {
+      "addresses": {
+        "LoD/1.07": "0x6FE29124",
+        "LoD/1.08": "0x6FE29124",
+        "LoD/1.09": "0x6FE08F14",
+        "LoD/1.09b": "0x6FE08F14",
+        "LoD/1.09d": "0x6FE08F14",
+        "LoD/1.10": "0x6FE08A14",
+        "LoD/1.11": "0x6FE2AEF8",
+        "LoD/1.11b": "0x6FE2AE90",
+        "LoD/1.12a": "0x6FE2AFE8",
+        "LoD/1.13c": "0x6FE2AFF8",
+        "LoD/1.13d": "0x6FE2AF48"
+      },
+      "rvas": {
+        "LoD/1.07": "0x19124",
+        "LoD/1.08": "0x19124",
+        "LoD/1.09": "0x18F14",
+        "LoD/1.09b": "0x18F14",
+        "LoD/1.09d": "0x18F14",
+        "LoD/1.10": "0x18A14",
+        "LoD/1.11": "0x1AEF8",
+        "LoD/1.11b": "0x1AE90",
+        "LoD/1.12a": "0x1AFE8",
+        "LoD/1.13c": "0x1AFF8",
+        "LoD/1.13d": "0x1AF48"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
+      "name": "Unwind@6fe29124",
+      "signature": "void Unwind@6fe29124(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
+    "d2cmp.dll_Unwind@6fe2912f": {
+      "addresses": {
+        "LoD/1.07": "0x6FE2912F",
+        "LoD/1.08": "0x6FE2912F",
+        "LoD/1.09": "0x6FE08F1F",
+        "LoD/1.09b": "0x6FE08F1F",
+        "LoD/1.09d": "0x6FE08F1F",
+        "LoD/1.10": "0x6FE08AFF"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1912F",
+        "LoD/1.08": "0x1912F",
+        "LoD/1.09": "0x18F1F",
+        "LoD/1.09b": "0x18F1F",
+        "LoD/1.09d": "0x18F1F",
+        "LoD/1.10": "0x18AFF"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11
+      },
+      "name": "Unwind@6fe2912f",
+      "signature": "void Unwind@6fe2912f(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
     "d2cmp.dll_Unwind@6fe2913a": {
       "addresses": {
         "LoD/1.07": "0x6FE2913A",
         "LoD/1.08": "0x6FE2913A",
-        "LoD/1.09": "0x6FE08EFE",
-        "LoD/1.09b": "0x6FE08EFE",
-        "LoD/1.09d": "0x6FE08EFE",
-        "LoD/1.10": "0x6FE08B5E"
+        "LoD/1.09": "0x6FE08FDE",
+        "LoD/1.09b": "0x6FE08FDE",
+        "LoD/1.09d": "0x6FE08FDE",
+        "LoD/1.10": "0x6FE08B80"
       },
       "rvas": {
         "LoD/1.07": "0x1913A",
         "LoD/1.08": "0x1913A",
-        "LoD/1.09": "0x18EFE",
-        "LoD/1.09b": "0x18EFE",
-        "LoD/1.09d": "0x18EFE",
-        "LoD/1.10": "0x18B5E"
+        "LoD/1.09": "0x18FDE",
+        "LoD/1.09b": "0x18FDE",
+        "LoD/1.09d": "0x18FDE",
+        "LoD/1.10": "0x18B80"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38367,12 +44424,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08F40",
         "LoD/1.09b": "0x6FE08F40",
         "LoD/1.09d": "0x6FE08F40",
-        "LoD/1.10": "0x6FE08A14",
-        "LoD/1.11": "0x6FE2ABE0",
-        "LoD/1.11b": "0x6FE2ABD0",
-        "LoD/1.12a": "0x6FE2ACF0",
-        "LoD/1.13c": "0x6FE2AD00",
-        "LoD/1.13d": "0x6FE2AC80"
+        "LoD/1.10": "0x6FE08A40",
+        "LoD/1.11": "0x6FE2AEA0",
+        "LoD/1.11b": "0x6FE2ACC0",
+        "LoD/1.12a": "0x6FE2AE15",
+        "LoD/1.13c": "0x6FE2B01A",
+        "LoD/1.13d": "0x6FE2AD65"
       },
       "rvas": {
         "LoD/1.07": "0x19150",
@@ -38380,12 +44437,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18F40",
         "LoD/1.09b": "0x18F40",
         "LoD/1.09d": "0x18F40",
-        "LoD/1.10": "0x18A14",
-        "LoD/1.11": "0x1ABE0",
-        "LoD/1.11b": "0x1ABD0",
-        "LoD/1.12a": "0x1ACF0",
-        "LoD/1.13c": "0x1AD00",
-        "LoD/1.13d": "0x1AC80"
+        "LoD/1.10": "0x18A40",
+        "LoD/1.11": "0x1AEA0",
+        "LoD/1.11b": "0x1ACC0",
+        "LoD/1.12a": "0x1AE15",
+        "LoD/1.13c": "0x1B01A",
+        "LoD/1.13d": "0x1AD65"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38450,28 +44507,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE2915B",
         "LoD/1.08": "0x6FE2915B",
-        "LoD/1.09": "0x6FE08F1F",
-        "LoD/1.09b": "0x6FE08F1F",
-        "LoD/1.09d": "0x6FE08F1F",
+        "LoD/1.09": "0x6FE08F4B",
+        "LoD/1.09b": "0x6FE08F4B",
+        "LoD/1.09d": "0x6FE08F4B",
         "LoD/1.10": "0x6FE08A4B",
-        "LoD/1.11": "0x6FE2AF7A",
-        "LoD/1.11b": "0x6FE2AF6A",
-        "LoD/1.12a": "0x6FE2B06A",
-        "LoD/1.13c": "0x6FE2B07A",
-        "LoD/1.13d": "0x6FE2B03A"
+        "LoD/1.11": "0x6FE2AF1A",
+        "LoD/1.11b": "0x6FE2AEE8",
+        "LoD/1.12a": "0x6FE2B00A",
+        "LoD/1.13c": "0x6FE2AE25",
+        "LoD/1.13d": "0x6FE2AED0"
       },
       "rvas": {
         "LoD/1.07": "0x1915B",
         "LoD/1.08": "0x1915B",
-        "LoD/1.09": "0x18F1F",
-        "LoD/1.09b": "0x18F1F",
-        "LoD/1.09d": "0x18F1F",
+        "LoD/1.09": "0x18F4B",
+        "LoD/1.09b": "0x18F4B",
+        "LoD/1.09d": "0x18F4B",
         "LoD/1.10": "0x18A4B",
-        "LoD/1.11": "0x1AF7A",
-        "LoD/1.11b": "0x1AF6A",
-        "LoD/1.12a": "0x1B06A",
-        "LoD/1.13c": "0x1B07A",
-        "LoD/1.13d": "0x1B03A"
+        "LoD/1.11": "0x1AF1A",
+        "LoD/1.11b": "0x1AEE8",
+        "LoD/1.12a": "0x1B00A",
+        "LoD/1.13c": "0x1AE25",
+        "LoD/1.13d": "0x1AED0"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38539,12 +44596,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08FC0",
         "LoD/1.09b": "0x6FE08FC0",
         "LoD/1.09d": "0x6FE08FC0",
-        "LoD/1.10": "0x6FE08AC0",
-        "LoD/1.11": "0x6FE2AD90",
-        "LoD/1.11b": "0x6FE2AB90",
-        "LoD/1.12a": "0x6FE2AC90",
-        "LoD/1.13c": "0x6FE2AD80",
-        "LoD/1.13d": "0x6FE2AC60"
+        "LoD/1.10": "0x6FE089E0",
+        "LoD/1.11": "0x6FE2AC55",
+        "LoD/1.11b": "0x6FE2AC45",
+        "LoD/1.12a": "0x6FE2AD45",
+        "LoD/1.13c": "0x6FE2AD55",
+        "LoD/1.13d": "0x6FE2ACC5"
       },
       "rvas": {
         "LoD/1.07": "0x19166",
@@ -38552,12 +44609,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18FC0",
         "LoD/1.09b": "0x18FC0",
         "LoD/1.09d": "0x18FC0",
-        "LoD/1.10": "0x18AC0",
-        "LoD/1.11": "0x1AD90",
-        "LoD/1.11b": "0x1AB90",
-        "LoD/1.12a": "0x1AC90",
-        "LoD/1.13c": "0x1AD80",
-        "LoD/1.13d": "0x1AC60"
+        "LoD/1.10": "0x189E0",
+        "LoD/1.11": "0x1AC55",
+        "LoD/1.11b": "0x1AC45",
+        "LoD/1.12a": "0x1AD45",
+        "LoD/1.13c": "0x1AD55",
+        "LoD/1.13d": "0x1ACC5"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -38625,12 +44682,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE09040",
         "LoD/1.09b": "0x6FE09040",
         "LoD/1.09d": "0x6FE09040",
-        "LoD/1.10": "0x6FE08A71",
-        "LoD/1.11": "0x6FE2AEC2",
-        "LoD/1.11b": "0x6FE2AEB2",
-        "LoD/1.12a": "0x6FE2AFB2",
-        "LoD/1.13c": "0x6FE2AFC2",
-        "LoD/1.13d": "0x6FE2AEF2"
+        "LoD/1.10": "0x6FE08B40",
+        "LoD/1.11": "0x6FE2AEF0",
+        "LoD/1.11b": "0x6FE2AEE0",
+        "LoD/1.12a": "0x6FE2AFE0",
+        "LoD/1.13c": "0x6FE2AFF0",
+        "LoD/1.13d": "0x6FE2AFA0"
       },
       "rvas": {
         "LoD/1.07": "0x1916E",
@@ -38638,12 +44695,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x19040",
         "LoD/1.09b": "0x19040",
         "LoD/1.09d": "0x19040",
-        "LoD/1.10": "0x18A71",
-        "LoD/1.11": "0x1AEC2",
-        "LoD/1.11b": "0x1AEB2",
-        "LoD/1.12a": "0x1AFB2",
-        "LoD/1.13c": "0x1AFC2",
-        "LoD/1.13d": "0x1AEF2"
+        "LoD/1.10": "0x18B40",
+        "LoD/1.11": "0x1AEF0",
+        "LoD/1.11b": "0x1AEE0",
+        "LoD/1.12a": "0x1AFE0",
+        "LoD/1.13c": "0x1AFF0",
+        "LoD/1.13d": "0x1AFA0"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -38711,12 +44768,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08FC8",
         "LoD/1.09b": "0x6FE08FC8",
         "LoD/1.09d": "0x6FE08FC8",
-        "LoD/1.10": "0x6FE08A66",
-        "LoD/1.11": "0x6FE2ACBB",
-        "LoD/1.11b": "0x6FE2ACAB",
-        "LoD/1.12a": "0x6FE2ADAB",
-        "LoD/1.13c": "0x6FE2ADBB",
-        "LoD/1.13d": "0x6FE2ADEB"
+        "LoD/1.10": "0x6FE08AC8"
       },
       "rvas": {
         "LoD/1.07": "0x19176",
@@ -38724,12 +44776,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18FC8",
         "LoD/1.09b": "0x18FC8",
         "LoD/1.09d": "0x18FC8",
-        "LoD/1.10": "0x18A66",
-        "LoD/1.11": "0x1ACBB",
-        "LoD/1.11b": "0x1ACAB",
-        "LoD/1.12a": "0x1ADAB",
-        "LoD/1.13c": "0x1ADBB",
-        "LoD/1.13d": "0x1ADEB"
+        "LoD/1.10": "0x18AC8"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38737,12 +44784,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe29176",
       "signature": "void Unwind@6fe29176(void)",
@@ -38756,12 +44798,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -38769,12 +44806,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -38782,40 +44814,35 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe29181": {
       "addresses": {
         "LoD/1.07": "0x6FE29181",
         "LoD/1.08": "0x6FE29181",
-        "LoD/1.09": "0x6FE08F71",
-        "LoD/1.09b": "0x6FE08F71",
-        "LoD/1.09d": "0x6FE08F71",
-        "LoD/1.10": "0x6FE08A5E",
-        "LoD/1.11": "0x6FE2AEF0",
-        "LoD/1.11b": "0x6FE2ADD0",
-        "LoD/1.12a": "0x6FE2AED0",
-        "LoD/1.13c": "0x6FE2AFF0",
-        "LoD/1.13d": "0x6FE2AF40"
+        "LoD/1.09": "0x6FE08F5E",
+        "LoD/1.09b": "0x6FE08F5E",
+        "LoD/1.09d": "0x6FE08F5E",
+        "LoD/1.10": "0x6FE08A71",
+        "LoD/1.11": "0x6FE2AEC2",
+        "LoD/1.11b": "0x6FE2AEB2",
+        "LoD/1.12a": "0x6FE2AFB2",
+        "LoD/1.13c": "0x6FE2AFC2",
+        "LoD/1.13d": "0x6FE2AEF2"
       },
       "rvas": {
         "LoD/1.07": "0x19181",
         "LoD/1.08": "0x19181",
-        "LoD/1.09": "0x18F71",
-        "LoD/1.09b": "0x18F71",
-        "LoD/1.09d": "0x18F71",
-        "LoD/1.10": "0x18A5E",
-        "LoD/1.11": "0x1AEF0",
-        "LoD/1.11b": "0x1ADD0",
-        "LoD/1.12a": "0x1AED0",
-        "LoD/1.13c": "0x1AFF0",
-        "LoD/1.13d": "0x1AF40"
+        "LoD/1.09": "0x18F5E",
+        "LoD/1.09b": "0x18F5E",
+        "LoD/1.09d": "0x18F5E",
+        "LoD/1.10": "0x18A71",
+        "LoD/1.11": "0x1AEC2",
+        "LoD/1.11b": "0x1AEB2",
+        "LoD/1.12a": "0x1AFB2",
+        "LoD/1.13c": "0x1AFC2",
+        "LoD/1.13d": "0x1AEF2"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -38880,28 +44907,18 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE29189",
         "LoD/1.08": "0x6FE29189",
-        "LoD/1.09": "0x6FE08F79",
-        "LoD/1.09b": "0x6FE08F79",
-        "LoD/1.09d": "0x6FE08F79",
-        "LoD/1.10": "0x6FE089F3",
-        "LoD/1.11": "0x6FE2AEF8",
-        "LoD/1.11b": "0x6FE2AE90",
-        "LoD/1.12a": "0x6FE2ADC0",
-        "LoD/1.13c": "0x6FE2B01A",
-        "LoD/1.13d": "0x6FE2AF48"
+        "LoD/1.09": "0x6FE08FD3",
+        "LoD/1.09b": "0x6FE08FD3",
+        "LoD/1.09d": "0x6FE08FD3",
+        "LoD/1.10": "0x6FE08AD3"
       },
       "rvas": {
         "LoD/1.07": "0x19189",
         "LoD/1.08": "0x19189",
-        "LoD/1.09": "0x18F79",
-        "LoD/1.09b": "0x18F79",
-        "LoD/1.09d": "0x18F79",
-        "LoD/1.10": "0x189F3",
-        "LoD/1.11": "0x1AEF8",
-        "LoD/1.11b": "0x1AE90",
-        "LoD/1.12a": "0x1ADC0",
-        "LoD/1.13c": "0x1B01A",
-        "LoD/1.13d": "0x1AF48"
+        "LoD/1.09": "0x18FD3",
+        "LoD/1.09b": "0x18FD3",
+        "LoD/1.09d": "0x18FD3",
+        "LoD/1.10": "0x18AD3"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -38909,12 +44926,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe29189",
       "signature": "void Unwind@6fe29189(void)",
@@ -38928,12 +44940,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -38941,12 +44948,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -38954,30 +44956,25 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe291a0": {
       "addresses": {
         "LoD/1.07": "0x6FE291A0",
         "LoD/1.08": "0x6FE291A0",
-        "LoD/1.09": "0x6FE08FDE",
-        "LoD/1.09b": "0x6FE08FDE",
-        "LoD/1.09d": "0x6FE08FDE",
-        "LoD/1.10": "0x6FE08B80"
+        "LoD/1.09": "0x6FE0905E",
+        "LoD/1.09b": "0x6FE0905E",
+        "LoD/1.09d": "0x6FE0905E",
+        "LoD/1.10": "0x6FE08B0A"
       },
       "rvas": {
         "LoD/1.07": "0x191A0",
         "LoD/1.08": "0x191A0",
-        "LoD/1.09": "0x18FDE",
-        "LoD/1.09b": "0x18FDE",
-        "LoD/1.09d": "0x18FDE",
-        "LoD/1.10": "0x18B80"
+        "LoD/1.09": "0x1905E",
+        "LoD/1.09b": "0x1905E",
+        "LoD/1.09d": "0x1905E",
+        "LoD/1.10": "0x18B0A"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39108,28 +45105,18 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE291B6",
         "LoD/1.08": "0x6FE291B6",
-        "LoD/1.09": "0x6FE09020",
-        "LoD/1.09b": "0x6FE09020",
-        "LoD/1.09d": "0x6FE09020",
-        "LoD/1.10": "0x6FE089FE",
-        "LoD/1.11": "0x6FE2AF1A",
-        "LoD/1.11b": "0x6FE2AEE8",
-        "LoD/1.12a": "0x6FE2AE15",
-        "LoD/1.13c": "0x6FE2AE25",
-        "LoD/1.13d": "0x6FE2AD65"
+        "LoD/1.09": "0x6FE0900A",
+        "LoD/1.09b": "0x6FE0900A",
+        "LoD/1.09d": "0x6FE0900A",
+        "LoD/1.10": "0x6FE08AE9"
       },
       "rvas": {
         "LoD/1.07": "0x191B6",
         "LoD/1.08": "0x191B6",
-        "LoD/1.09": "0x19020",
-        "LoD/1.09b": "0x19020",
-        "LoD/1.09d": "0x19020",
-        "LoD/1.10": "0x189FE",
-        "LoD/1.11": "0x1AF1A",
-        "LoD/1.11b": "0x1AEE8",
-        "LoD/1.12a": "0x1AE15",
-        "LoD/1.13c": "0x1AE25",
-        "LoD/1.13d": "0x1AD65"
+        "LoD/1.09": "0x1900A",
+        "LoD/1.09b": "0x1900A",
+        "LoD/1.09d": "0x1900A",
+        "LoD/1.10": "0x18AE9"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39137,12 +45124,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe291b6",
       "signature": "void Unwind@6fe291b6(void)",
@@ -39156,12 +45138,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -39169,12 +45146,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -39182,12 +45154,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe291d0": {
@@ -39198,11 +45165,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE08EE0",
         "LoD/1.09d": "0x6FE08EE0",
         "LoD/1.10": "0x6FE08A56",
-        "LoD/1.11": "0x6FE2AC80",
+        "LoD/1.11": "0x6FE2AD90",
         "LoD/1.11b": "0x6FE2AC70",
         "LoD/1.12a": "0x6FE2AD70",
         "LoD/1.13c": "0x6FE2ACA0",
-        "LoD/1.13d": "0x6FE2ADB0"
+        "LoD/1.13d": "0x6FE2AC60"
       },
       "rvas": {
         "LoD/1.07": "0x191D0",
@@ -39211,11 +45178,11 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x18EE0",
         "LoD/1.09d": "0x18EE0",
         "LoD/1.10": "0x18A56",
-        "LoD/1.11": "0x1AC80",
+        "LoD/1.11": "0x1AD90",
         "LoD/1.11b": "0x1AC70",
         "LoD/1.12a": "0x1AD70",
         "LoD/1.13c": "0x1ACA0",
-        "LoD/1.13d": "0x1ADB0"
+        "LoD/1.13d": "0x1AC60"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -39283,7 +45250,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08EE8",
         "LoD/1.09b": "0x6FE08EE8",
         "LoD/1.09d": "0x6FE08EE8",
-        "LoD/1.10": "0x6FE08AC8"
+        "LoD/1.10": "0x6FE089E8",
+        "LoD/1.11": "0x6FE2ACD0",
+        "LoD/1.11b": "0x6FE2AF0A",
+        "LoD/1.12a": "0x6FE2ADC0",
+        "LoD/1.13c": "0x6FE2ADD0",
+        "LoD/1.13d": "0x6FE2AF6A"
       },
       "rvas": {
         "LoD/1.07": "0x191D8",
@@ -39291,7 +45263,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18EE8",
         "LoD/1.09b": "0x18EE8",
         "LoD/1.09d": "0x18EE8",
-        "LoD/1.10": "0x18AC8"
+        "LoD/1.10": "0x189E8",
+        "LoD/1.11": "0x1ACD0",
+        "LoD/1.11b": "0x1AF0A",
+        "LoD/1.12a": "0x1ADC0",
+        "LoD/1.13c": "0x1ADD0",
+        "LoD/1.13d": "0x1AF6A"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39299,7 +45276,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
       },
       "name": "Unwind@6fe291d8",
       "signature": "void Unwind@6fe291d8(void)",
@@ -39313,7 +45295,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -39321,7 +45308,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -39329,34 +45321,39 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe291e3": {
       "addresses": {
         "LoD/1.07": "0x6FE291E3",
         "LoD/1.08": "0x6FE291E3",
-        "LoD/1.09": "0x6FE08FD3",
-        "LoD/1.09b": "0x6FE08FD3",
-        "LoD/1.09d": "0x6FE08FD3",
-        "LoD/1.10": "0x6FE08A79",
-        "LoD/1.11": "0x6FE2ACD0",
-        "LoD/1.11b": "0x6FE2ACC0",
-        "LoD/1.12a": "0x6FE2B00A",
-        "LoD/1.13c": "0x6FE2AFF8",
+        "LoD/1.09": "0x6FE08EF3",
+        "LoD/1.09b": "0x6FE08EF3",
+        "LoD/1.09d": "0x6FE08EF3",
+        "LoD/1.10": "0x6FE089F3",
+        "LoD/1.11": "0x6FE2AD25",
+        "LoD/1.11b": "0x6FE2AD15",
+        "LoD/1.12a": "0x6FE2AF90",
+        "LoD/1.13c": "0x6FE2AFA0",
         "LoD/1.13d": "0x6FE2AE00"
       },
       "rvas": {
         "LoD/1.07": "0x191E3",
         "LoD/1.08": "0x191E3",
-        "LoD/1.09": "0x18FD3",
-        "LoD/1.09b": "0x18FD3",
-        "LoD/1.09d": "0x18FD3",
-        "LoD/1.10": "0x18A79",
-        "LoD/1.11": "0x1ACD0",
-        "LoD/1.11b": "0x1ACC0",
-        "LoD/1.12a": "0x1B00A",
-        "LoD/1.13c": "0x1AFF8",
+        "LoD/1.09": "0x18EF3",
+        "LoD/1.09b": "0x18EF3",
+        "LoD/1.09d": "0x18EF3",
+        "LoD/1.10": "0x189F3",
+        "LoD/1.11": "0x1AD25",
+        "LoD/1.11b": "0x1AD15",
+        "LoD/1.12a": "0x1AF90",
+        "LoD/1.13c": "0x1AFA0",
         "LoD/1.13d": "0x1AE00"
       },
       "sizes": {
@@ -39422,28 +45419,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE291EE",
         "LoD/1.08": "0x6FE291EE",
-        "LoD/1.09": "0x6FE0905E",
-        "LoD/1.09b": "0x6FE0905E",
-        "LoD/1.09d": "0x6FE0905E",
+        "LoD/1.09": "0x6FE09020",
+        "LoD/1.09b": "0x6FE09020",
+        "LoD/1.09d": "0x6FE09020",
         "LoD/1.10": "0x6FE08A90",
-        "LoD/1.11": "0x6FE2ACB0",
-        "LoD/1.11b": "0x6FE2AD40",
-        "LoD/1.12a": "0x6FE2AE40",
-        "LoD/1.13c": "0x6FE2ACE0",
-        "LoD/1.13d": "0x6FE2ADE0"
+        "LoD/1.11": "0x6FE2AC00",
+        "LoD/1.11b": "0x6FE2ABF0",
+        "LoD/1.12a": "0x6FE2ADA0",
+        "LoD/1.13c": "0x6FE2ADB0",
+        "LoD/1.13d": "0x6FE2ACF0"
       },
       "rvas": {
         "LoD/1.07": "0x191EE",
         "LoD/1.08": "0x191EE",
-        "LoD/1.09": "0x1905E",
-        "LoD/1.09b": "0x1905E",
-        "LoD/1.09d": "0x1905E",
+        "LoD/1.09": "0x19020",
+        "LoD/1.09b": "0x19020",
+        "LoD/1.09d": "0x19020",
         "LoD/1.10": "0x18A90",
-        "LoD/1.11": "0x1ACB0",
-        "LoD/1.11b": "0x1AD40",
-        "LoD/1.12a": "0x1AE40",
-        "LoD/1.13c": "0x1ACE0",
-        "LoD/1.13d": "0x1ADE0"
+        "LoD/1.11": "0x1AC00",
+        "LoD/1.11b": "0x1ABF0",
+        "LoD/1.12a": "0x1ADA0",
+        "LoD/1.13c": "0x1ADB0",
+        "LoD/1.13d": "0x1ACF0"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39508,28 +45505,18 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE291F9",
         "LoD/1.08": "0x6FE291F9",
-        "LoD/1.09": "0x6FE08FA6",
-        "LoD/1.09b": "0x6FE08FA6",
-        "LoD/1.09d": "0x6FE08FA6",
-        "LoD/1.10": "0x6FE08A09",
-        "LoD/1.11": "0x6FE2AC0B",
-        "LoD/1.11b": "0x6FE2ABFB",
-        "LoD/1.12a": "0x6FE2ACFB",
-        "LoD/1.13c": "0x6FE2AD0B",
-        "LoD/1.13d": "0x6FE2AC8B"
+        "LoD/1.09": "0x6FE08F2A",
+        "LoD/1.09b": "0x6FE08F2A",
+        "LoD/1.09d": "0x6FE08F2A",
+        "LoD/1.10": "0x6FE08ADE"
       },
       "rvas": {
         "LoD/1.07": "0x191F9",
         "LoD/1.08": "0x191F9",
-        "LoD/1.09": "0x18FA6",
-        "LoD/1.09b": "0x18FA6",
-        "LoD/1.09d": "0x18FA6",
-        "LoD/1.10": "0x18A09",
-        "LoD/1.11": "0x1AC0B",
-        "LoD/1.11b": "0x1ABFB",
-        "LoD/1.12a": "0x1ACFB",
-        "LoD/1.13c": "0x1AD0B",
-        "LoD/1.13d": "0x1AC8B"
+        "LoD/1.09": "0x18F2A",
+        "LoD/1.09b": "0x18F2A",
+        "LoD/1.09d": "0x18F2A",
+        "LoD/1.10": "0x18ADE"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39537,12 +45524,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe291f9",
       "signature": "void Unwind@6fe291f9(void)",
@@ -39556,12 +45538,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -39569,12 +45546,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -39582,12 +45554,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe29204": {
@@ -39597,12 +45564,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08FF4",
         "LoD/1.09b": "0x6FE08FF4",
         "LoD/1.09d": "0x6FE08FF4",
-        "LoD/1.10": "0x6FE08A40",
-        "LoD/1.11": "0x6FE2AD25",
-        "LoD/1.11b": "0x6FE2AD15",
-        "LoD/1.12a": "0x6FE2AFE8",
-        "LoD/1.13c": "0x6FE2AFA0",
-        "LoD/1.13d": "0x6FE2AF6A"
+        "LoD/1.10": "0x6FE08AF4"
       },
       "rvas": {
         "LoD/1.07": "0x19204",
@@ -39610,12 +45572,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18FF4",
         "LoD/1.09b": "0x18FF4",
         "LoD/1.09d": "0x18FF4",
-        "LoD/1.10": "0x18A40",
-        "LoD/1.11": "0x1AD25",
-        "LoD/1.11b": "0x1AD15",
-        "LoD/1.12a": "0x1AFE8",
-        "LoD/1.13c": "0x1AFA0",
-        "LoD/1.13d": "0x1AF6A"
+        "LoD/1.10": "0x18AF4"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39623,12 +45580,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe29204",
       "signature": "void Unwind@6fe29204(void)",
@@ -39642,12 +45594,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -39655,12 +45602,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -39668,12 +45610,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe2920f": {
@@ -39683,7 +45620,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE08FFF",
         "LoD/1.09b": "0x6FE08FFF",
         "LoD/1.09d": "0x6FE08FFF",
-        "LoD/1.10": "0x6FE08AFF"
+        "LoD/1.10": "0x6FE08A1F",
+        "LoD/1.11": "0x6FE2ABE0",
+        "LoD/1.11b": "0x6FE2ACA0",
+        "LoD/1.12a": "0x6FE2AE40",
+        "LoD/1.13c": "0x6FE2AE50",
+        "LoD/1.13d": "0x6FE2ADE0"
       },
       "rvas": {
         "LoD/1.07": "0x1920F",
@@ -39691,129 +45633,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x18FFF",
         "LoD/1.09b": "0x18FFF",
         "LoD/1.09d": "0x18FFF",
-        "LoD/1.10": "0x18AFF"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe2920f",
-      "signature": "void Unwind@6fe2920f(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe2921a": {
-      "addresses": {
-        "LoD/1.07": "0x6FE2921A",
-        "LoD/1.08": "0x6FE2921A",
-        "LoD/1.09": "0x6FE08F90",
-        "LoD/1.09b": "0x6FE08F90",
-        "LoD/1.09d": "0x6FE08F90",
-        "LoD/1.10": "0x6FE08B20"
-      },
-      "rvas": {
-        "LoD/1.07": "0x1921A",
-        "LoD/1.08": "0x1921A",
-        "LoD/1.09": "0x18F90",
-        "LoD/1.09b": "0x18F90",
-        "LoD/1.09d": "0x18F90",
-        "LoD/1.10": "0x18B20"
-      },
-      "sizes": {
-        "LoD/1.07": 11,
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11,
-        "LoD/1.10": 11
-      },
-      "name": "Unwind@6fe2921a",
-      "signature": "void Unwind@6fe2921a(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
-      "basic_block_counts": {
-        "LoD/1.07": 1,
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.07": 0,
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
-      }
-    },
-    "d2cmp.dll_Unwind@6fe29230": {
-      "addresses": {
-        "LoD/1.07": "0x6FE29230",
-        "LoD/1.08": "0x6FE29230",
-        "LoD/1.09": "0x6FE0900A",
-        "LoD/1.09b": "0x6FE0900A",
-        "LoD/1.09d": "0x6FE0900A",
-        "LoD/1.10": "0x6FE08A2A",
-        "LoD/1.11": "0x6FE2AC00",
-        "LoD/1.11b": "0x6FE2ABF0",
-        "LoD/1.12a": "0x6FE2ADA0",
-        "LoD/1.13c": "0x6FE2AE50",
-        "LoD/1.13d": "0x6FE2AD90"
-      },
-      "rvas": {
-        "LoD/1.07": "0x19230",
-        "LoD/1.08": "0x19230",
-        "LoD/1.09": "0x1900A",
-        "LoD/1.09b": "0x1900A",
-        "LoD/1.09d": "0x1900A",
-        "LoD/1.10": "0x18A2A",
-        "LoD/1.11": "0x1AC00",
-        "LoD/1.11b": "0x1ABF0",
-        "LoD/1.12a": "0x1ADA0",
+        "LoD/1.10": "0x18A1F",
+        "LoD/1.11": "0x1ABE0",
+        "LoD/1.11b": "0x1ACA0",
+        "LoD/1.12a": "0x1AE40",
         "LoD/1.13c": "0x1AE50",
-        "LoD/1.13d": "0x1AD90"
+        "LoD/1.13d": "0x1ADE0"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -39828,8 +45653,8 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 11,
         "LoD/1.13d": 11
       },
-      "name": "Unwind@6fe29230",
-      "signature": "void Unwind@6fe29230(void)",
+      "name": "Unwind@6fe2920f",
+      "signature": "void Unwind@6fe2920f(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -39874,32 +45699,174 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
       }
     },
+    "d2cmp.dll_Unwind@6fe2921a": {
+      "addresses": {
+        "LoD/1.07": "0x6FE2921A",
+        "LoD/1.08": "0x6FE2921A",
+        "LoD/1.09": "0x6FE09080",
+        "LoD/1.09b": "0x6FE09080",
+        "LoD/1.09d": "0x6FE09080",
+        "LoD/1.10": "0x6FE08A2A",
+        "LoD/1.11": "0x6FE2AE2A",
+        "LoD/1.11b": "0x6FE2AF6A",
+        "LoD/1.12a": "0x6FE2AF1A",
+        "LoD/1.13c": "0x6FE2AF2A",
+        "LoD/1.13d": "0x6FE2B00A"
+      },
+      "rvas": {
+        "LoD/1.07": "0x1921A",
+        "LoD/1.08": "0x1921A",
+        "LoD/1.09": "0x19080",
+        "LoD/1.09b": "0x19080",
+        "LoD/1.09d": "0x19080",
+        "LoD/1.10": "0x18A2A",
+        "LoD/1.11": "0x1AE2A",
+        "LoD/1.11b": "0x1AF6A",
+        "LoD/1.12a": "0x1AF1A",
+        "LoD/1.13c": "0x1AF2A",
+        "LoD/1.13d": "0x1B00A"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
+      },
+      "name": "Unwind@6fe2921a",
+      "signature": "void Unwind@6fe2921a(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
+    "d2cmp.dll_Unwind@6fe29230": {
+      "addresses": {
+        "LoD/1.07": "0x6FE29230",
+        "LoD/1.08": "0x6FE29230",
+        "LoD/1.09": "0x6FE08FA6",
+        "LoD/1.09b": "0x6FE08FA6",
+        "LoD/1.09d": "0x6FE08FA6",
+        "LoD/1.10": "0x6FE08B20"
+      },
+      "rvas": {
+        "LoD/1.07": "0x19230",
+        "LoD/1.08": "0x19230",
+        "LoD/1.09": "0x18FA6",
+        "LoD/1.09b": "0x18FA6",
+        "LoD/1.09d": "0x18FA6",
+        "LoD/1.10": "0x18B20"
+      },
+      "sizes": {
+        "LoD/1.07": 11,
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11,
+        "LoD/1.10": 11
+      },
+      "name": "Unwind@6fe29230",
+      "signature": "void Unwind@6fe29230(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.07",
+      "method": "MNE",
+      "index": "MNE:ac5f298425102bd1e7190496a742e83e",
+      "basic_block_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1
+      },
+      "loop_counts": {
+        "LoD/1.07": 0,
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.08": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
+      }
+    },
     "d2cmp.dll_Unwind@6fe29250": {
       "addresses": {
         "LoD/1.07": "0x6FE29250",
         "LoD/1.08": "0x6FE29250",
-        "LoD/1.09": "0x6FE08F5E",
-        "LoD/1.09b": "0x6FE08F5E",
-        "LoD/1.09d": "0x6FE08F5E",
-        "LoD/1.10": "0x6FE08B40",
-        "LoD/1.11": "0x6FE2AC55",
-        "LoD/1.11b": "0x6FE2AC45",
-        "LoD/1.12a": "0x6FE2AD45",
-        "LoD/1.13c": "0x6FE2AD55",
-        "LoD/1.13d": "0x6FE2ACC5"
+        "LoD/1.09": "0x6FE08F71",
+        "LoD/1.09b": "0x6FE08F71",
+        "LoD/1.09d": "0x6FE08F71",
+        "LoD/1.10": "0x6FE08A5E",
+        "LoD/1.11": "0x6FE2ABA0",
+        "LoD/1.11b": "0x6FE2AD80",
+        "LoD/1.12a": "0x6FE2AC90",
+        "LoD/1.13c": "0x6FE2AD80",
+        "LoD/1.13d": "0x6FE2AE40"
       },
       "rvas": {
         "LoD/1.07": "0x19250",
         "LoD/1.08": "0x19250",
-        "LoD/1.09": "0x18F5E",
-        "LoD/1.09b": "0x18F5E",
-        "LoD/1.09d": "0x18F5E",
-        "LoD/1.10": "0x18B40",
-        "LoD/1.11": "0x1AC55",
-        "LoD/1.11b": "0x1AC45",
-        "LoD/1.12a": "0x1AD45",
-        "LoD/1.13c": "0x1AD55",
-        "LoD/1.13d": "0x1ACC5"
+        "LoD/1.09": "0x18F71",
+        "LoD/1.09b": "0x18F71",
+        "LoD/1.09d": "0x18F71",
+        "LoD/1.10": "0x18A5E",
+        "LoD/1.11": "0x1ABA0",
+        "LoD/1.11b": "0x1AD80",
+        "LoD/1.12a": "0x1AC90",
+        "LoD/1.13c": "0x1AD80",
+        "LoD/1.13d": "0x1AE40"
       },
       "sizes": {
         "LoD/1.07": 8,
@@ -40076,28 +46043,18 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE2926E",
         "LoD/1.08": "0x6FE2926E",
-        "LoD/1.09": "0x6FE08F09",
-        "LoD/1.09b": "0x6FE08F09",
-        "LoD/1.09d": "0x6FE08F09",
-        "LoD/1.10": "0x6FE08AA6",
-        "LoD/1.11": "0x6FE2AEA0",
-        "LoD/1.11b": "0x6FE2AF0A",
-        "LoD/1.12a": "0x6FE2AF90",
-        "LoD/1.13c": "0x6FE2ADD0",
-        "LoD/1.13d": "0x6FE2AED0"
+        "LoD/1.09": "0x6FE08EFE",
+        "LoD/1.09b": "0x6FE08EFE",
+        "LoD/1.09d": "0x6FE08EFE",
+        "LoD/1.10": "0x6FE08B5E"
       },
       "rvas": {
         "LoD/1.07": "0x1926E",
         "LoD/1.08": "0x1926E",
-        "LoD/1.09": "0x18F09",
-        "LoD/1.09b": "0x18F09",
-        "LoD/1.09d": "0x18F09",
-        "LoD/1.10": "0x18AA6",
-        "LoD/1.11": "0x1AEA0",
-        "LoD/1.11b": "0x1AF0A",
-        "LoD/1.12a": "0x1AF90",
-        "LoD/1.13c": "0x1ADD0",
-        "LoD/1.13d": "0x1AED0"
+        "LoD/1.09": "0x18EFE",
+        "LoD/1.09b": "0x18EFE",
+        "LoD/1.09d": "0x18EFE",
+        "LoD/1.10": "0x18B5E"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -40105,12 +46062,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Unwind@6fe2926e",
       "signature": "void Unwind@6fe2926e(void)",
@@ -40124,12 +46076,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -40137,12 +46084,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -40150,12 +46092,7 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe29279": {
@@ -40218,18 +46155,28 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.07": "0x6FE29290",
         "LoD/1.08": "0x6FE29290",
-        "LoD/1.09": "0x6FE08F2A",
-        "LoD/1.09b": "0x6FE08F2A",
-        "LoD/1.09d": "0x6FE08F2A",
-        "LoD/1.10": "0x6FE08AE9"
+        "LoD/1.09": "0x6FE08F90",
+        "LoD/1.09b": "0x6FE08F90",
+        "LoD/1.09d": "0x6FE08F90",
+        "LoD/1.10": "0x6FE089FE",
+        "LoD/1.11": "0x6FE2AD50",
+        "LoD/1.11b": "0x6FE2AD40",
+        "LoD/1.12a": "0x6FE2ACF0",
+        "LoD/1.13c": "0x6FE2AD00",
+        "LoD/1.13d": "0x6FE2AC80"
       },
       "rvas": {
         "LoD/1.07": "0x19290",
         "LoD/1.08": "0x19290",
-        "LoD/1.09": "0x18F2A",
-        "LoD/1.09b": "0x18F2A",
-        "LoD/1.09d": "0x18F2A",
-        "LoD/1.10": "0x18AE9"
+        "LoD/1.09": "0x18F90",
+        "LoD/1.09b": "0x18F90",
+        "LoD/1.09d": "0x18F90",
+        "LoD/1.10": "0x189FE",
+        "LoD/1.11": "0x1AD50",
+        "LoD/1.11b": "0x1AD40",
+        "LoD/1.12a": "0x1ACF0",
+        "LoD/1.13c": "0x1AD00",
+        "LoD/1.13d": "0x1AC80"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -40237,7 +46184,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
       },
       "name": "Unwind@6fe29290",
       "signature": "void Unwind@6fe29290(void)",
@@ -40251,7 +46203,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -40259,7 +46216,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ac5f298425102bd1e7190496a742e83e",
@@ -40267,7 +46229,12 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09b": "ac5f298425102bd1e7190496a742e83e",
         "LoD/1.09d": "ac5f298425102bd1e7190496a742e83e",
-        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e"
+        "LoD/1.10": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.11b": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.12a": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13c": "ac5f298425102bd1e7190496a742e83e",
+        "LoD/1.13d": "ac5f298425102bd1e7190496a742e83e"
       }
     },
     "d2cmp.dll_Unwind@6fe292b0": {
@@ -40278,10 +46245,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE090A0",
         "LoD/1.09d": "0x6FE090A0",
         "LoD/1.10": "0x6FE08BA0",
-        "LoD/1.11": "0x6FE2AE86",
-        "LoD/1.11b": "0x6FE2AE50",
+        "LoD/1.11": "0x6FE2AE60",
+        "LoD/1.11b": "0x6FE2AE76",
         "LoD/1.12a": "0x6FE2AF76",
-        "LoD/1.13c": "0x6FE2AF60",
+        "LoD/1.13c": "0x6FE2AF86",
         "LoD/1.13d": "0x6FE2AEB6"
       },
       "rvas": {
@@ -40291,10 +46258,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x190A0",
         "LoD/1.09d": "0x190A0",
         "LoD/1.10": "0x18BA0",
-        "LoD/1.11": "0x1AE86",
-        "LoD/1.11b": "0x1AE50",
+        "LoD/1.11": "0x1AE60",
+        "LoD/1.11b": "0x1AE76",
         "LoD/1.12a": "0x1AF76",
-        "LoD/1.13c": "0x1AF60",
+        "LoD/1.13c": "0x1AF86",
         "LoD/1.13d": "0x1AEB6"
       },
       "sizes": {
@@ -40364,10 +46331,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x6FE090A8",
         "LoD/1.09d": "0x6FE090A8",
         "LoD/1.10": "0x6FE08BA8",
-        "LoD/1.11": "0x6FE2AE60",
-        "LoD/1.11b": "0x6FE2AE76",
+        "LoD/1.11": "0x6FE2AE86",
+        "LoD/1.11b": "0x6FE2AE50",
         "LoD/1.12a": "0x6FE2AF50",
-        "LoD/1.13c": "0x6FE2AF86",
+        "LoD/1.13c": "0x6FE2AF60",
         "LoD/1.13d": "0x6FE2AE90"
       },
       "rvas": {
@@ -40377,10 +46344,10 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09b": "0x190A8",
         "LoD/1.09d": "0x190A8",
         "LoD/1.10": "0x18BA8",
-        "LoD/1.11": "0x1AE60",
-        "LoD/1.11b": "0x1AE76",
+        "LoD/1.11": "0x1AE86",
+        "LoD/1.11b": "0x1AE50",
         "LoD/1.12a": "0x1AF50",
-        "LoD/1.13c": "0x1AF86",
+        "LoD/1.13c": "0x1AF60",
         "LoD/1.13d": "0x1AE90"
       },
       "sizes": {
@@ -40593,23 +46560,23 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.09": "0x6FE00B4C",
         "LoD/1.09b": "0x6FE00B4C",
         "LoD/1.09d": "0x6FE00B4C",
-        "LoD/1.10": "0x6FE0059E",
-        "LoD/1.11": "0x6FE18E46",
-        "LoD/1.11b": "0x6FE18E36",
-        "LoD/1.12a": "0x6FE18E3C",
-        "LoD/1.13c": "0x6FE18E3C",
-        "LoD/1.13d": "0x6FE18E4C"
+        "LoD/1.10": "0x6FE005C8",
+        "LoD/1.11": "0x6FE18DA6",
+        "LoD/1.11b": "0x6FE18D96",
+        "LoD/1.12a": "0x6FE18D84",
+        "LoD/1.13c": "0x6FE18D84",
+        "LoD/1.13d": "0x6FE18D9A"
       },
       "rvas": {
         "LoD/1.09": "0x10B4C",
         "LoD/1.09b": "0x10B4C",
         "LoD/1.09d": "0x10B4C",
-        "LoD/1.10": "0x1059E",
-        "LoD/1.11": "0x8E46",
-        "LoD/1.11b": "0x8E36",
-        "LoD/1.12a": "0x8E3C",
-        "LoD/1.13c": "0x8E3C",
-        "LoD/1.13d": "0x8E4C"
+        "LoD/1.10": "0x105C8",
+        "LoD/1.11": "0x8DA6",
+        "LoD/1.11b": "0x8D96",
+        "LoD/1.12a": "0x8D84",
+        "LoD/1.13c": "0x8D84",
+        "LoD/1.13d": "0x8D9A"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -40693,6 +46660,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10017",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateContextAndWaitHandle",
+          "DestroyEntity"
+        ],
+        "LoD/1.11b": [
+          "ValidateContextAndWaitHandle",
+          "DestroyEntity"
+        ],
+        "LoD/1.12a": [
+          "ValidateContextAndWaitHandle",
+          "DestroyEntity"
+        ],
+        "LoD/1.13c": [
+          "ValidateContextAndWaitHandle",
+          "DestroyEntity"
+        ],
+        "LoD/1.13d": [
+          "ValidateContextAndWaitHandle",
+          "DestroyEntity"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1,
         "LoD/1.11": 9,
@@ -40749,6 +46738,63 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10018",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -40822,6 +46868,19 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10016",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
@@ -40868,6 +46927,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:72ca41d55fdd3d07a506822e321f78cb",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -40963,6 +47027,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:8bbd022d51d58c9663c897a95eec0b8a",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -41073,6 +47157,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:6f989b51df723148e6ab6453af50da4f",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUCELLIST@@\""
@@ -41153,6 +47242,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:5a84972b29e279caa387545e908138a2",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_502"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 13
       },
@@ -41176,6 +47270,12 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:14f56baaadd10d5ac0781bfc96dbeb21",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10045",
+          "Ordinal_502"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
@@ -41651,6 +47751,17 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:f43c6dd3a342594d99c82f3e9754f478",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "GetLastError",
+          "Ordinal_10094",
+          "FogAssert",
+          "Ordinal_10046",
+          "Ordinal_10097",
+          "Ordinal_10046"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"ptElement\"",
@@ -41681,6 +47792,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:2fa0bad2ba7fb8c96948ad2857c33616",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10046"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
@@ -41944,6 +48060,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10008",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10022",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10037",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10071",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10003",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10057",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 13,
         "LoD/1.11": 12,
@@ -41982,6 +48135,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:591ee66471afd1ec7c4ab96c7b771e10",
+      "callees": {
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Data\\\\Global\\\\Items\\\\Palette\\\\\"",
@@ -42011,6 +48169,12 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:e549a0fd3b3d142e918835a67c04307c",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "Ordinal_10018"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
@@ -42057,6 +48221,41 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10052",
+      "callees": {
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10046",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"pSysInfo != NULL\"",
@@ -42157,6 +48356,26 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:a81639b7b420645059b930e3f9120ebd",
+      "callees": {
+        "LoD/1.10": [
+          "SCompareN"
+        ],
+        "LoD/1.11": [
+          "CompareStringsIgnoreCase"
+        ],
+        "LoD/1.11b": [
+          "CompareStringsIgnoreCase"
+        ],
+        "LoD/1.12a": [
+          "CompareStringsIgnoreCase"
+        ],
+        "LoD/1.13c": [
+          "CompareStringsIgnoreCase"
+        ],
+        "LoD/1.13d": [
+          "CompareStringsIgnoreCase"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"%s\\\\%s\\\\%s\\\\%s.dc6\"",
@@ -42286,6 +48505,17 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:6829c7e2ecf5617d1af04a2d6d84fcdc",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10018",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"SpriteCache.cpp:sFindCel()  (ptCel->dwFlags != 0)...",
@@ -42374,6 +48604,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:55474d2bf1ff8f1ac2228c7298d341a5",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10046"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S..."
@@ -42420,6 +48655,35 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10066",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2CMP\\\\S...",
@@ -42451,37 +48715,54 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "79f46612c183d4759442391f95016986"
       }
     },
-    "d2cmp.dll_EXP_10084": {
+    "d2cmp.dll_EXP_10086": {
       "addresses": {
-        "LoD/1.10": "0x6FE00050",
-        "LoD/1.11": "0x6FE21330",
-        "LoD/1.11b": "0x6FE1F030",
-        "LoD/1.12a": "0x6FE1A8A0",
-        "LoD/1.13c": "0x6FE22480",
-        "LoD/1.13d": "0x6FE24510"
+        "LoD/1.10": "0x6FE000B0",
+        "LoD/1.11": "0x6FE20160",
+        "LoD/1.11b": "0x6FE1DF80",
+        "LoD/1.12a": "0x6FE19780",
+        "LoD/1.13c": "0x6FE22280",
+        "LoD/1.13d": "0x6FE24390"
       },
       "rvas": {
-        "LoD/1.10": "0x10050",
-        "LoD/1.11": "0x11330",
-        "LoD/1.11b": "0xF030",
-        "LoD/1.12a": "0xA8A0",
-        "LoD/1.13c": "0x12480",
-        "LoD/1.13d": "0x14510"
+        "LoD/1.10": "0x100B0",
+        "LoD/1.11": "0x10160",
+        "LoD/1.11b": "0xDF80",
+        "LoD/1.12a": "0x9780",
+        "LoD/1.13c": "0x12280",
+        "LoD/1.13d": "0x14390"
       },
       "sizes": {
         "LoD/1.10": 39,
-        "LoD/1.11": 245,
-        "LoD/1.11b": 245,
-        "LoD/1.12a": 245,
-        "LoD/1.13c": 245,
-        "LoD/1.13d": 245
+        "LoD/1.11": 45,
+        "LoD/1.11b": 45,
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 63,
+        "LoD/1.13d": 63
       },
-      "name": "Ordinal_10084",
-      "signature": "undefined4 Ordinal_10084(int param_1)",
+      "name": "Ordinal_10086",
+      "signature": "undefined4 Ordinal_10086(int param_1)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.10",
       "method": "EXP",
-      "index": "EXP:10084",
+      "index": "EXP:10086",
+      "callees": {
+        "LoD/1.10": [
+          "LogPoolWarning"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"hTile\"",
@@ -42490,11 +48771,11 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "basic_block_counts": {
         "LoD/1.10": 3,
-        "LoD/1.11": 18,
-        "LoD/1.11b": 18,
-        "LoD/1.12a": 18,
-        "LoD/1.13c": 18,
-        "LoD/1.13d": 18
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.10": 0,
@@ -42506,11 +48787,11 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.10": "b12723f7f591f0b98ffd312a0ff5e647",
-        "LoD/1.11": "0f76703e568f5413527b6a04e8b4de4c",
-        "LoD/1.11b": "0f76703e568f5413527b6a04e8b4de4c",
-        "LoD/1.12a": "0f76703e568f5413527b6a04e8b4de4c",
-        "LoD/1.13c": "0f76703e568f5413527b6a04e8b4de4c",
-        "LoD/1.13d": "0f76703e568f5413527b6a04e8b4de4c"
+        "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13c": "e56a008a4e7414d4e3d983b5a0fa6d9d",
+        "LoD/1.13d": "e56a008a4e7414d4e3d983b5a0fa6d9d"
       }
     },
     "d2cmp.dll_InitializeResourceAndLock_0418": {
@@ -42544,6 +48825,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:03f998da994b54393077a00f814e29c8",
+      "callees": {
+        "LoD/1.10": [
+          "GetDefaultResourceCount",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"Error opening file: %s\""
@@ -42589,22 +48896,22 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "15579ba3ab96e642c656a5401ec21d55"
       }
     },
-    "d2cmp.dll_Ordinal_10091": {
+    "d2cmp.dll_SCompareN": {
       "addresses": {
-        "LoD/1.10": "0x6FE00616",
-        "LoD/1.11": "0x6FE18DEE",
-        "LoD/1.11b": "0x6FE18DC0",
-        "LoD/1.12a": "0x6FE18DC6",
-        "LoD/1.13c": "0x6FE18DDE",
-        "LoD/1.13d": "0x6FE18DD6"
+        "LoD/1.10": "0x6FE0059E",
+        "LoD/1.11": "0x6FE18DA0",
+        "LoD/1.11b": "0x6FE18D90",
+        "LoD/1.12a": "0x6FE18D9C",
+        "LoD/1.13c": "0x6FE18D90",
+        "LoD/1.13d": "0x6FE18D94"
       },
       "rvas": {
-        "LoD/1.10": "0x10616",
-        "LoD/1.11": "0x8DEE",
-        "LoD/1.11b": "0x8DC0",
-        "LoD/1.12a": "0x8DC6",
-        "LoD/1.13c": "0x8DDE",
-        "LoD/1.13d": "0x8DD6"
+        "LoD/1.10": "0x1059E",
+        "LoD/1.11": "0x8DA0",
+        "LoD/1.11b": "0x8D90",
+        "LoD/1.12a": "0x8D9C",
+        "LoD/1.13c": "0x8D90",
+        "LoD/1.13d": "0x8D94"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -42614,9 +48921,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10091",
-      "signature": "undefined Ordinal_10091(void)",
-      "calling_convention": "unknown",
+      "name": "SCompareN",
+      "signature": "int SCompareN(char * szStr1, char * szStr2, size_t nMaxLen)",
+      "calling_convention": "__stdcall",
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -42675,16 +48982,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionContext": {
       "addresses": {
         "LoD/1.11": "0x6FE11020",
-        "LoD/1.11b": "0x6FE11020",
+        "LoD/1.11b": "0x6FE114D0",
         "LoD/1.12a": "0x6FE11020",
-        "LoD/1.13c": "0x6FE11020",
+        "LoD/1.13c": "0x6FE11170",
         "LoD/1.13d": "0x6FE114A0"
       },
       "rvas": {
         "LoD/1.11": "0x1020",
-        "LoD/1.11b": "0x1020",
+        "LoD/1.11b": "0x14D0",
         "LoD/1.12a": "0x1020",
-        "LoD/1.13c": "0x1020",
+        "LoD/1.13c": "0x1170",
         "LoD/1.13d": "0x14A0"
       },
       "sizes": {
@@ -42777,17 +49084,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_ShutdownStubNoOp": {
       "addresses": {
         "LoD/1.11": "0x6FE11140",
-        "LoD/1.11b": "0x6FE1CE60",
+        "LoD/1.11b": "0x6FE22890",
         "LoD/1.12a": "0x6FE21540",
-        "LoD/1.13c": "0x6FE1BA40",
-        "LoD/1.13d": "0x6FE19740"
+        "LoD/1.13c": "0x6FE11100",
+        "LoD/1.13d": "0x6FE11020"
       },
       "rvas": {
         "LoD/1.11": "0x1140",
-        "LoD/1.11b": "0xCE60",
+        "LoD/1.11b": "0x12890",
         "LoD/1.12a": "0x11540",
-        "LoD/1.13c": "0xBA40",
-        "LoD/1.13d": "0x9740"
+        "LoD/1.13c": "0x1100",
+        "LoD/1.13d": "0x1020"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -42930,16 +49237,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionContext_11B0": {
       "addresses": {
         "LoD/1.11": "0x6FE111B0",
-        "LoD/1.11b": "0x6FE111B0",
+        "LoD/1.11b": "0x6FE11020",
         "LoD/1.12a": "0x6FE11170",
-        "LoD/1.13c": "0x6FE11170",
+        "LoD/1.13c": "0x6FE11490",
         "LoD/1.13d": "0x6FE11090"
       },
       "rvas": {
         "LoD/1.11": "0x11B0",
-        "LoD/1.11b": "0x11B0",
+        "LoD/1.11b": "0x1020",
         "LoD/1.12a": "0x1170",
-        "LoD/1.13c": "0x1170",
+        "LoD/1.13c": "0x1490",
         "LoD/1.13d": "0x1090"
       },
       "sizes": {
@@ -43007,6 +49314,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:51aaaa1b5f95f813b6511c05272554ac",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUTCELENTRY@@\""
@@ -43348,6 +49672,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7910382e6477e014b3cbd020c033da7c",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"delete\""
@@ -43413,6 +49754,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7910382e6477e014b3cbd020c033da7c",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"delete\""
@@ -43452,16 +49810,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionContext_14D0": {
       "addresses": {
         "LoD/1.11": "0x6FE114D0",
-        "LoD/1.11b": "0x6FE114D0",
+        "LoD/1.11b": "0x6FE111B0",
         "LoD/1.12a": "0x6FE11490",
-        "LoD/1.13c": "0x6FE11490",
+        "LoD/1.13c": "0x6FE11020",
         "LoD/1.13d": "0x6FE113B0"
       },
       "rvas": {
         "LoD/1.11": "0x14D0",
-        "LoD/1.11b": "0x14D0",
+        "LoD/1.11b": "0x11B0",
         "LoD/1.12a": "0x1490",
-        "LoD/1.13c": "0x1490",
+        "LoD/1.13c": "0x1020",
         "LoD/1.13d": "0x13B0"
       },
       "sizes": {
@@ -43525,6 +49883,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f68761e52a95a4ef8ca5d53e9e2a24a",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -43793,6 +50168,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:3e45606f64ffc02aac278106ac169089",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@...",
@@ -43964,6 +50361,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:09b830906f40e404452c4f3b301dcbdc",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUCELLIST@@\""
@@ -44028,6 +50442,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4f4bc8d96811fddf26d183a93c3756c3",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@\""
@@ -44147,6 +50578,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7910382e6477e014b3cbd020c033da7c",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"delete\""
@@ -44556,6 +51004,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e9843c68da2d9b2cef9073c1e79c45d0",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUCELLIST@@\""
@@ -45756,20 +52221,71 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "a51a9a5e7ceb2fab96b937dc9f784c13"
       }
     },
+    "d2cmp.dll_ReleaseMTInitLock": {
+      "addresses": {
+        "LoD/1.11": "0x6FE12E84",
+        "LoD/1.11b": "0x6FE12E84",
+        "LoD/1.12a": "0x6FE12E84",
+        "LoD/1.13c": "0x6FE12E84",
+        "LoD/1.13d": "0x6FE12E84"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2E84",
+        "LoD/1.11b": "0x2E84",
+        "LoD/1.12a": "0x2E84",
+        "LoD/1.13c": "0x2E84",
+        "LoD/1.13d": "0x2E84"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "ReleaseMTInitLock",
+      "signature": "void ReleaseMTInitLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "d2cmp.dll___RTC_Initialize": {
       "addresses": {
         "LoD/1.11": "0x6FE12EBE",
         "LoD/1.11b": "0x6FE1315C",
         "LoD/1.12a": "0x6FE13118",
         "LoD/1.13c": "0x6FE1315C",
-        "LoD/1.13d": "0x6FE12EBE"
+        "LoD/1.13d": "0x6FE12F02"
       },
       "rvas": {
         "LoD/1.11": "0x2EBE",
         "LoD/1.11b": "0x315C",
         "LoD/1.12a": "0x3118",
         "LoD/1.13c": "0x315C",
-        "LoD/1.13d": "0x2EBE"
+        "LoD/1.13d": "0x2F02"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -45813,14 +52329,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11b": "0x6FE13118",
         "LoD/1.12a": "0x6FE1315C",
         "LoD/1.13c": "0x6FE13118",
-        "LoD/1.13d": "0x6FE12F02"
+        "LoD/1.13d": "0x6FE12EBE"
       },
       "rvas": {
         "LoD/1.11": "0x2F02",
         "LoD/1.11b": "0x3118",
         "LoD/1.12a": "0x315C",
         "LoD/1.13c": "0x3118",
-        "LoD/1.13d": "0x2F02"
+        "LoD/1.13d": "0x2EBE"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -46011,20 +52527,53 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
-    "d2cmp.dll_LeaveCriticalSectionForMemoryF": {
+    "d2cmp.dll__realloc": {
       "addresses": {
-        "LoD/1.11": "0x6FE130F0",
-        "LoD/1.11b": "0x6FE13DD6",
-        "LoD/1.12a": "0x6FE141B9",
-        "LoD/1.13c": "0x6FE141B9",
-        "LoD/1.13d": "0x6FE13332"
+        "LoD/1.11": "0x6FE13198",
+        "LoD/1.11b": "0x6FE13B41"
       },
       "rvas": {
-        "LoD/1.11": "0x30F0",
-        "LoD/1.11b": "0x3DD6",
-        "LoD/1.12a": "0x41B9",
-        "LoD/1.13c": "0x41B9",
-        "LoD/1.13d": "0x3332"
+        "LoD/1.11": "0x3198",
+        "LoD/1.11b": "0x3B41"
+      },
+      "sizes": {
+        "LoD/1.11": 412,
+        "LoD/1.11b": 412
+      },
+      "name": "_realloc",
+      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
+      "basic_block_counts": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
+        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
+      }
+    },
+    "d2cmp.dll_LeaveCriticalSectionForMemoryF": {
+      "addresses": {
+        "LoD/1.11": "0x6FE13300",
+        "LoD/1.11b": "0x6FE13D5B",
+        "LoD/1.12a": "0x6FE13D22",
+        "LoD/1.13c": "0x6FE13D22",
+        "LoD/1.13d": "0x6FE141D2"
+      },
+      "rvas": {
+        "LoD/1.11": "0x3300",
+        "LoD/1.11b": "0x3D5B",
+        "LoD/1.12a": "0x3D22",
+        "LoD/1.13c": "0x3D22",
+        "LoD/1.13d": "0x41D2"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -46060,39 +52609,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
-    "d2cmp.dll__realloc": {
-      "addresses": {
-        "LoD/1.11": "0x6FE13198",
-        "LoD/1.11b": "0x6FE13B41"
-      },
-      "rvas": {
-        "LoD/1.11": "0x3198",
-        "LoD/1.11b": "0x3B41"
-      },
-      "sizes": {
-        "LoD/1.11": 412,
-        "LoD/1.11b": 412
-      },
-      "name": "_realloc",
-      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
-      "basic_block_counts": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
-        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
       }
     },
     "d2cmp.dll___msize": {
@@ -46456,16 +52972,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE13FFD",
         "LoD/1.11b": "0x6FE14005",
-        "LoD/1.12a": "0x6FE13FCC",
-        "LoD/1.13c": "0x6FE13FCC",
-        "LoD/1.13d": "0x6FE14001"
+        "LoD/1.12a": "0x6FE16830",
+        "LoD/1.13c": "0x6FE16830",
+        "LoD/1.13d": "0x6FE16868"
       },
       "rvas": {
         "LoD/1.11": "0x3FFD",
         "LoD/1.11b": "0x4005",
-        "LoD/1.12a": "0x3FCC",
-        "LoD/1.13c": "0x3FCC",
-        "LoD/1.13d": "0x4001"
+        "LoD/1.12a": "0x6830",
+        "LoD/1.13c": "0x6830",
+        "LoD/1.13d": "0x6868"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -46583,6 +53099,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -47619,16 +54152,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE15C00",
         "LoD/1.11b": "0x6FE16360",
-        "LoD/1.12a": "0x6FE16330",
+        "LoD/1.12a": "0x6FE170C0",
         "LoD/1.13c": "0x6FE16330",
-        "LoD/1.13d": "0x6FE170F0"
+        "LoD/1.13d": "0x6FE15C00"
       },
       "rvas": {
         "LoD/1.11": "0x5C00",
         "LoD/1.11b": "0x6360",
-        "LoD/1.12a": "0x6330",
+        "LoD/1.12a": "0x70C0",
         "LoD/1.13c": "0x6330",
-        "LoD/1.13d": "0x70F0"
+        "LoD/1.13d": "0x5C00"
       },
       "sizes": {
         "LoD/1.11": 672,
@@ -47720,17 +54253,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll___lseek": {
       "addresses": {
         "LoD/1.11": "0x6FE15FB1",
-        "LoD/1.11b": "0x6FE15C5A",
+        "LoD/1.11b": "0x6FE15ED3",
         "LoD/1.12a": "0x6FE15EA5",
         "LoD/1.13c": "0x6FE15EA5",
-        "LoD/1.13d": "0x6FE15FB1"
+        "LoD/1.13d": "0x6FE1622A"
       },
       "rvas": {
         "LoD/1.11": "0x5FB1",
-        "LoD/1.11b": "0x5C5A",
+        "LoD/1.11b": "0x5ED3",
         "LoD/1.12a": "0x5EA5",
         "LoD/1.13c": "0x5EA5",
-        "LoD/1.13d": "0x5FB1"
+        "LoD/1.13d": "0x622A"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -47771,17 +54304,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnlockFileHandleThunk": {
       "addresses": {
         "LoD/1.11": "0x6FE16038",
-        "LoD/1.11b": "0x6FE15F5A",
-        "LoD/1.12a": "0x6FE15F2C",
-        "LoD/1.13c": "0x6FE15F2C",
-        "LoD/1.13d": "0x6FE162B1"
+        "LoD/1.11b": "0x6FE15CE1",
+        "LoD/1.12a": "0x6FE184F3",
+        "LoD/1.13c": "0x6FE184F3",
+        "LoD/1.13d": "0x6FE18509"
       },
       "rvas": {
         "LoD/1.11": "0x6038",
-        "LoD/1.11b": "0x5F5A",
-        "LoD/1.12a": "0x5F2C",
-        "LoD/1.13c": "0x5F2C",
-        "LoD/1.13d": "0x62B1"
+        "LoD/1.11b": "0x5CE1",
+        "LoD/1.12a": "0x84F3",
+        "LoD/1.13c": "0x84F3",
+        "LoD/1.13d": "0x8509"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -47855,17 +54388,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll___lseek_622A": {
       "addresses": {
         "LoD/1.11": "0x6FE1622A",
-        "LoD/1.11b": "0x6FE15ED3",
+        "LoD/1.11b": "0x6FE15C5A",
         "LoD/1.12a": "0x6FE15C3E",
         "LoD/1.13c": "0x6FE15C3E",
-        "LoD/1.13d": "0x6FE1622A"
+        "LoD/1.13d": "0x6FE15FB1"
       },
       "rvas": {
         "LoD/1.11": "0x622A",
-        "LoD/1.11b": "0x5ED3",
+        "LoD/1.11b": "0x5C5A",
         "LoD/1.12a": "0x5C3E",
         "LoD/1.13c": "0x5C3E",
-        "LoD/1.13d": "0x622A"
+        "LoD/1.13d": "0x5FB1"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -47906,17 +54439,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnlockFileHandleThunk_62B1": {
       "addresses": {
         "LoD/1.11": "0x6FE162B1",
-        "LoD/1.11b": "0x6FE15CE1",
-        "LoD/1.12a": "0x6FE189E4",
-        "LoD/1.13c": "0x6FE189E4",
-        "LoD/1.13d": "0x6FE16038"
+        "LoD/1.11b": "0x6FE15F5A",
+        "LoD/1.12a": "0x6FE15CC5",
+        "LoD/1.13c": "0x6FE15CC5",
+        "LoD/1.13d": "0x6FE189EF"
       },
       "rvas": {
         "LoD/1.11": "0x62B1",
-        "LoD/1.11b": "0x5CE1",
-        "LoD/1.12a": "0x89E4",
-        "LoD/1.13c": "0x89E4",
-        "LoD/1.13d": "0x6038"
+        "LoD/1.11b": "0x5F5A",
+        "LoD/1.12a": "0x5CC5",
+        "LoD/1.13c": "0x5CC5",
+        "LoD/1.13d": "0x89EF"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -48413,57 +54946,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
       }
     },
-    "d2cmp.dll_UnlockCriticalSection12_6868": {
-      "addresses": {
-        "LoD/1.11": "0x6FE16868",
-        "LoD/1.11b": "0x6FE16860",
-        "LoD/1.12a": "0x6FE16830",
-        "LoD/1.13c": "0x6FE16830",
-        "LoD/1.13d": "0x6FE16868"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6868",
-        "LoD/1.11b": "0x6860",
-        "LoD/1.12a": "0x6830",
-        "LoD/1.13c": "0x6830",
-        "LoD/1.13d": "0x6868"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "UnlockCriticalSection12",
-      "signature": "void UnlockCriticalSection12(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "d2cmp.dll_MapMessageIdToCommand": {
       "addresses": {
         "LoD/1.11": "0x6FE16871",
@@ -48683,57 +55165,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "3d95938874732b844e73905e6c952bdf"
       }
     },
-    "d2cmp.dll____initmbctable": {
-      "addresses": {
-        "LoD/1.11": "0x6FE16D35",
-        "LoD/1.11b": "0x6FE16D2D",
-        "LoD/1.12a": "0x6FE16D10",
-        "LoD/1.13c": "0x6FE16D10",
-        "LoD/1.13d": "0x6FE16D35"
-      },
-      "rvas": {
-        "LoD/1.11": "0x6D35",
-        "LoD/1.11b": "0x6D2D",
-        "LoD/1.12a": "0x6D10",
-        "LoD/1.13c": "0x6D10",
-        "LoD/1.13d": "0x6D35"
-      },
-      "sizes": {
-        "LoD/1.11": 30,
-        "LoD/1.11b": 30,
-        "LoD/1.12a": 30,
-        "LoD/1.13c": 30,
-        "LoD/1.13d": 30
-      },
-      "name": "___initmbctable",
-      "signature": "undefined4 ___initmbctable(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:a4ba30fe4414581a89a628d047ff2406",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
-      }
-    },
     "d2cmp.dll_StringConcatenate": {
       "addresses": {
         "LoD/1.11": "0x6FE16DD0",
@@ -48877,16 +55308,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE170F0",
         "LoD/1.11b": "0x6FE170E0",
-        "LoD/1.12a": "0x6FE170C0",
+        "LoD/1.12a": "0x6FE16330",
         "LoD/1.13c": "0x6FE170C0",
-        "LoD/1.13d": "0x6FE15C00"
+        "LoD/1.13d": "0x6FE170F0"
       },
       "rvas": {
         "LoD/1.11": "0x70F0",
         "LoD/1.11b": "0x70E0",
-        "LoD/1.12a": "0x70C0",
+        "LoD/1.12a": "0x6330",
         "LoD/1.13c": "0x70C0",
-        "LoD/1.13d": "0x5C00"
+        "LoD/1.13d": "0x70F0"
       },
       "sizes": {
         "LoD/1.11": 672,
@@ -49675,16 +56106,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE18509",
         "LoD/1.11b": "0x6FE184F9",
-        "LoD/1.12a": "0x6FE15CC5",
-        "LoD/1.13c": "0x6FE15CC5",
-        "LoD/1.13d": "0x6FE18509"
+        "LoD/1.12a": "0x6FE15F2C",
+        "LoD/1.13c": "0x6FE15F2C",
+        "LoD/1.13d": "0x6FE16038"
       },
       "rvas": {
         "LoD/1.11": "0x8509",
         "LoD/1.11b": "0x84F9",
-        "LoD/1.12a": "0x5CC5",
-        "LoD/1.13c": "0x5CC5",
-        "LoD/1.13d": "0x8509"
+        "LoD/1.12a": "0x5F2C",
+        "LoD/1.13c": "0x5F2C",
+        "LoD/1.13d": "0x6038"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -49996,16 +56427,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE189EF",
         "LoD/1.11b": "0x6FE189DF",
-        "LoD/1.12a": "0x6FE184F3",
-        "LoD/1.13c": "0x6FE184F3",
-        "LoD/1.13d": "0x6FE189EF"
+        "LoD/1.12a": "0x6FE189E4",
+        "LoD/1.13c": "0x6FE189E4",
+        "LoD/1.13d": "0x6FE162B1"
       },
       "rvas": {
         "LoD/1.11": "0x89EF",
         "LoD/1.11b": "0x89DF",
-        "LoD/1.12a": "0x84F3",
-        "LoD/1.13c": "0x84F3",
-        "LoD/1.13d": "0x89EF"
+        "LoD/1.12a": "0x89E4",
+        "LoD/1.13c": "0x89E4",
+        "LoD/1.13d": "0x62B1"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -50041,57 +56472,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.12a": "d4c2d26a88b113bd75739659d4ef7dd5",
         "LoD/1.13c": "d4c2d26a88b113bd75739659d4ef7dd5",
         "LoD/1.13d": "d4c2d26a88b113bd75739659d4ef7dd5"
-      }
-    },
-    "d2cmp.dll__isdigit": {
-      "addresses": {
-        "LoD/1.11": "0x6FE18A3E",
-        "LoD/1.11b": "0x6FE18A2E",
-        "LoD/1.12a": "0x6FE18A33",
-        "LoD/1.13c": "0x6FE18A33",
-        "LoD/1.13d": "0x6FE18A3E"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8A3E",
-        "LoD/1.11b": "0x8A2E",
-        "LoD/1.12a": "0x8A33",
-        "LoD/1.13c": "0x8A33",
-        "LoD/1.13d": "0x8A3E"
-      },
-      "sizes": {
-        "LoD/1.11": 58,
-        "LoD/1.11b": 58,
-        "LoD/1.12a": 58,
-        "LoD/1.13c": 58,
-        "LoD/1.13d": 58
-      },
-      "name": "_isdigit",
-      "signature": "int _isdigit(int _C)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _isdigit\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:99486f21581ce5ab9e85ee964f03efa4",
-      "basic_block_counts": {
-        "LoD/1.11": 5,
-        "LoD/1.11b": 5,
-        "LoD/1.12a": 5,
-        "LoD/1.13c": 5,
-        "LoD/1.13d": 5
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "99486f21581ce5ab9e85ee964f03efa4",
-        "LoD/1.11b": "99486f21581ce5ab9e85ee964f03efa4",
-        "LoD/1.12a": "99486f21581ce5ab9e85ee964f03efa4",
-        "LoD/1.13c": "99486f21581ce5ab9e85ee964f03efa4",
-        "LoD/1.13d": "99486f21581ce5ab9e85ee964f03efa4"
       }
     },
     "d2cmp.dll____tolower_mt": {
@@ -50247,20 +56627,20 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "ecf4fe5a7e473ceb70f30e35ac316045"
       }
     },
-    "d2cmp.dll_InitializeModule": {
+    "d2cmp.dll_ValidateConnectionObject": {
       "addresses": {
-        "LoD/1.11": "0x6FE18D94",
-        "LoD/1.11b": "0x6FE18D8A",
-        "LoD/1.12a": "0x6FE18DA8",
-        "LoD/1.13c": "0x6FE18DA8",
-        "LoD/1.13d": "0x6FE18DB8"
+        "LoD/1.11": "0x6FE18DE2",
+        "LoD/1.11b": "0x6FE18DAE",
+        "LoD/1.12a": "0x6FE18DB4",
+        "LoD/1.13c": "0x6FE18DD2",
+        "LoD/1.13d": "0x6FE18DC4"
       },
       "rvas": {
-        "LoD/1.11": "0x8D94",
-        "LoD/1.11b": "0x8D8A",
-        "LoD/1.12a": "0x8DA8",
-        "LoD/1.13c": "0x8DA8",
-        "LoD/1.13d": "0x8DB8"
+        "LoD/1.11": "0x8DE2",
+        "LoD/1.11b": "0x8DAE",
+        "LoD/1.12a": "0x8DB4",
+        "LoD/1.13c": "0x8DD2",
+        "LoD/1.13d": "0x8DC4"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -50269,9 +56649,9 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "InitializeModule",
-      "signature": "int InitializeModule(void)",
-      "calling_convention": "__stdcall",
+      "name": "ValidateConnectionObject",
+      "signature": "uint ValidateConnectionObject(void * pConnectionObject)",
+      "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -50344,70 +56724,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "3a99f949f93c7a00a2a1605ebfe998fa"
       }
     },
-    "d2cmp.dll_API_227bedd2db9c": {
-      "addresses": {
-        "LoD/1.11": "0x6FE18E80",
-        "LoD/1.11b": "0x6FE18FB0",
-        "LoD/1.12a": "0x6FE18FB0",
-        "LoD/1.13c": "0x6FE18E70",
-        "LoD/1.13d": "0x6FE18FC0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8E80",
-        "LoD/1.11b": "0x8FB0",
-        "LoD/1.12a": "0x8FB0",
-        "LoD/1.13c": "0x8E70",
-        "LoD/1.13d": "0x8FC0"
-      },
-      "sizes": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38,
-        "LoD/1.12a": 38,
-        "LoD/1.13c": 38,
-        "LoD/1.13d": 38
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:227bedd2db9c43545664c4619094d523",
-      "strings": {
-        "LoD/1.11": [
-          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
-        ],
-        "LoD/1.11b": [
-          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
-        ],
-        "LoD/1.12a": [
-          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
-        ],
-        "LoD/1.13c": [
-          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
-        ],
-        "LoD/1.13d": [
-          "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "66acc54c9d7bd033827650bac1a5758e",
-        "LoD/1.11b": "66acc54c9d7bd033827650bac1a5758e",
-        "LoD/1.12a": "66acc54c9d7bd033827650bac1a5758e",
-        "LoD/1.13c": "66acc54c9d7bd033827650bac1a5758e",
-        "LoD/1.13d": "66acc54c9d7bd033827650bac1a5758e"
-      }
-    },
     "d2cmp.dll_API_2770779bf95e": {
       "addresses": {
         "LoD/1.11": "0x6FE18EB0",
@@ -50424,6 +56740,18 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2770779bf95e5b74ff00cb8c4ba4f5ee",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13
@@ -50462,6 +56790,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:553bf43acddfc3c897fcddab5b70ec2b",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -50509,6 +56869,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1ac4095c3b44baad33ce438edc80b34d",
+      "callees": {
+        "LoD/1.11": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -50556,6 +56948,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:545c5ebe25fa49eb50b6ac63650d3eaa",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -50603,6 +57027,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:462bdd0b497f0d196acf39a667f88575",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -50641,6 +57097,16 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:40f13e96c803edf6e458beab32d4eb7f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
@@ -50769,6 +57235,15 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f59a8610cecb522a625394c4e79bcf43",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -50782,6 +57257,53 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.11": "147b211ea8e44171de0a0cf1e6d9aea8"
+      }
+    },
+    "d2cmp.dll_MNE_63750d87ae53": {
+      "addresses": {
+        "LoD/1.11": "0x6FE19630",
+        "LoD/1.11b": "0x6FE197A0",
+        "LoD/1.12a": "0x6FE1F4A0",
+        "LoD/1.13c": "0x6FE25610",
+        "LoD/1.13d": "0x6FE1A320"
+      },
+      "rvas": {
+        "LoD/1.11": "0x9630",
+        "LoD/1.11b": "0x97A0",
+        "LoD/1.12a": "0xF4A0",
+        "LoD/1.13c": "0x15610",
+        "LoD/1.13d": "0xA320"
+      },
+      "sizes": {
+        "LoD/1.11": 58,
+        "LoD/1.11b": 58,
+        "LoD/1.12a": 58,
+        "LoD/1.13c": 58,
+        "LoD/1.13d": 58
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:63750d87ae53d8a7abd50e1c8f42c1cc",
+      "basic_block_counts": {
+        "LoD/1.11": 5,
+        "LoD/1.11b": 5,
+        "LoD/1.12a": 5,
+        "LoD/1.13c": 5,
+        "LoD/1.13d": 5
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "63750d87ae53d8a7abd50e1c8f42c1cc",
+        "LoD/1.11b": "63750d87ae53d8a7abd50e1c8f42c1cc",
+        "LoD/1.12a": "63750d87ae53d8a7abd50e1c8f42c1cc",
+        "LoD/1.13c": "63750d87ae53d8a7abd50e1c8f42c1cc",
+        "LoD/1.13d": "63750d87ae53d8a7abd50e1c8f42c1cc"
       }
     },
     "d2cmp.dll_API_cf9711b41999": {
@@ -50809,6 +57331,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -50950,6 +57504,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -51138,6 +57714,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51202,6 +57805,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c02ff589dd0124ecb5fc0106ce8e8b1f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51266,6 +57901,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51333,6 +57995,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10003",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -51380,6 +58064,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -51427,6 +58133,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51491,6 +58224,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:484693fd6918c6abab9f5402f877520f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51555,6 +58320,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c160fb2e08677216755d7c09d50baa06",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51619,6 +58421,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:da33466bed45c7d23d4abb8a16e41868",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FindTiles.cpp\""
@@ -51683,6 +58522,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51747,6 +58613,48 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:45623c3011afe6d9a6ff4dbad9652358",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51814,6 +58722,53 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10054",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -51881,6 +58836,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10105",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -51907,16 +58884,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE1ACA0",
         "LoD/1.11b": "0x6FE1CE80",
-        "LoD/1.12a": "0x6FE26B20",
-        "LoD/1.13c": "0x6FE11100",
-        "LoD/1.13d": "0x6FE11020"
+        "LoD/1.12a": "0x6FE26B40",
+        "LoD/1.13c": "0x6FE1BA40",
+        "LoD/1.13d": "0x6FE19770"
       },
       "rvas": {
         "LoD/1.11": "0xACA0",
         "LoD/1.11b": "0xCE80",
-        "LoD/1.12a": "0x16B20",
-        "LoD/1.13c": "0x1100",
-        "LoD/1.13d": "0x1020"
+        "LoD/1.12a": "0x16B40",
+        "LoD/1.13c": "0xBA40",
+        "LoD/1.13d": "0x9770"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -51957,68 +58934,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_ShutdownStubNoOp_ACC0": {
       "addresses": {
         "LoD/1.11": "0x6FE1ACC0",
-        "LoD/1.11b": "0x6FE22820",
+        "LoD/1.11b": "0x6FE1CE60",
         "LoD/1.12a": "0x6FE11100",
         "LoD/1.13c": "0x6FE1BA50",
         "LoD/1.13d": "0x6FE21D00"
       },
       "rvas": {
         "LoD/1.11": "0xACC0",
-        "LoD/1.11b": "0x12820",
+        "LoD/1.11b": "0xCE60",
         "LoD/1.12a": "0x1100",
         "LoD/1.13c": "0xBA50",
         "LoD/1.13d": "0x11D00"
-      },
-      "sizes": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "name": "ShutdownStubNoOp",
-      "signature": "void ShutdownStubNoOp(void)",
-      "calling_convention": "__stdcall",
-      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
-        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
-      }
-    },
-    "d2cmp.dll_ShutdownStubNoOp_ACD0": {
-      "addresses": {
-        "LoD/1.11": "0x6FE1ACD0",
-        "LoD/1.11b": "0x6FE22890",
-        "LoD/1.12a": "0x6FE26B50",
-        "LoD/1.13c": "0x6FE1CFB0",
-        "LoD/1.13d": "0x6FE19760"
-      },
-      "rvas": {
-        "LoD/1.11": "0xACD0",
-        "LoD/1.11b": "0x12890",
-        "LoD/1.12a": "0x16B50",
-        "LoD/1.13c": "0xCFB0",
-        "LoD/1.13d": "0x9760"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -52131,6 +59057,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8170229bb21055a312d6facba5b9bdd7",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Error opening file: %s\""
@@ -52245,6 +59208,24 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10010",
+      "callees": {
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 3,
@@ -52342,6 +59323,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10099",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "ValidateContextAndWaitHandle",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -52579,6 +59587,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -52626,6 +59656,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:774132a9d929b7eedf567e92771d4edf",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10045",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndValidateResourceSlot",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -52719,6 +59771,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 23,
         "LoD/1.11b": 23,
@@ -52766,6 +59840,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -52813,6 +59909,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:531e4729172a84b35cf367649a78fba7",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.11b": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.12a": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13c": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13d": [
+          "DeallocateResourceBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -52877,6 +59990,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:306f3e2725f9cd45eb50c17a99c6c4c0",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "Ordinal_10045"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -52941,6 +60086,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f085e403c6f35067dd1e238e8633473a",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -52980,20 +60152,71 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "6bf940124d090a3ccc21fde633c96d23"
       }
     },
+    "d2cmp.dll_ShutdownStubNoOp_C220": {
+      "addresses": {
+        "LoD/1.11": "0x6FE1C220",
+        "LoD/1.11b": "0x6FE11140",
+        "LoD/1.12a": "0x6FE26B20",
+        "LoD/1.13c": "0x6FE1BA20",
+        "LoD/1.13d": "0x6FE19740"
+      },
+      "rvas": {
+        "LoD/1.11": "0xC220",
+        "LoD/1.11b": "0x1140",
+        "LoD/1.12a": "0x16B20",
+        "LoD/1.13c": "0xBA20",
+        "LoD/1.13d": "0x9740"
+      },
+      "sizes": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "name": "ShutdownStubNoOp",
+      "signature": "void ShutdownStubNoOp(void)",
+      "calling_convention": "__stdcall",
+      "comment": "No-op stub function for configuration initialization.\n\nAlgorithm:\n1. Return immediately (single RET instruction)\n\nParameters:\nNone\n\nReturns:\nvoid\n\nSpecial Cases:\n- Placeholder function with no implementation\n- Called during InitializeGameDataTables between superunique item table and item config parsing\n- Called during Ordinal_10575 cleanup after ClearActiveCharacterTemplate\n- May have been stripped or exists for API compatibility",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:5c73446e6da2bc552d6d981beccb1347",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.11b": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.12a": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13c": "5c73446e6da2bc552d6d981beccb1347",
+        "LoD/1.13d": "5c73446e6da2bc552d6d981beccb1347"
+      }
+    },
     "d2cmp.dll_ShutdownStubNoOp_C230": {
       "addresses": {
         "LoD/1.11": "0x6FE1C230",
-        "LoD/1.11b": "0x6FE11140",
-        "LoD/1.12a": "0x6FE26B40",
-        "LoD/1.13c": "0x6FE1BA20",
-        "LoD/1.13d": "0x6FE19770"
+        "LoD/1.11b": "0x6FE1CE90",
+        "LoD/1.12a": "0x6FE26B50",
+        "LoD/1.13c": "0x6FE1CFA0",
+        "LoD/1.13d": "0x6FE20FC0"
       },
       "rvas": {
         "LoD/1.11": "0xC230",
-        "LoD/1.11b": "0x1140",
-        "LoD/1.12a": "0x16B40",
-        "LoD/1.13c": "0xBA20",
-        "LoD/1.13d": "0x9770"
+        "LoD/1.11b": "0xCE90",
+        "LoD/1.12a": "0x16B50",
+        "LoD/1.13c": "0xCFA0",
+        "LoD/1.13d": "0x10FC0"
       },
       "sizes": {
         "LoD/1.11": 1,
@@ -53056,6 +60279,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:45f124b6d7e6421c6d564f16ab946f5d",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10045",
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateAndValidateResourceSlot",
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateAndValidateResourceSlot",
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateAndValidateResourceSlot",
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateAndValidateResourceSlot",
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -53120,6 +60395,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3aac37ada9720aea248aa0973ade96e8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10069"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10080"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10013"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10073"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10058"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 22,
         "LoD/1.11b": 22,
@@ -53167,6 +60459,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -53214,6 +60528,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ad85b86b73cb4cf4487fcb5b3b9be7cb",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateEntityState"
+        ],
+        "LoD/1.11b": [
+          "ValidateEntityState"
+        ],
+        "LoD/1.12a": [
+          "ValidateEntityState"
+        ],
+        "LoD/1.13c": [
+          "ValidateEntityState"
+        ],
+        "LoD/1.13d": [
+          "ValidateEntityState"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -53261,6 +60592,53 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5284660808ca93ef29f869f95e353384",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 28,
         "LoD/1.11b": 28,
@@ -53355,6 +60733,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -53449,6 +60849,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:42a585b2f1274c02e2b8277e9e197388",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10091"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeGameSessionConfig"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeGameSessionConfig"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeGameSessionConfig"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeGameSessionConfig"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -53513,6 +60950,53 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4fcd95d9ee30989b7ef4312ba21be64c",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10069",
+          "Ordinal_10069",
+          "Ordinal_10091",
+          "ValidateConnectionObject",
+          "Ordinal_10091",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10080",
+          "Ordinal_10080",
+          "InitializeGameSessionConfig",
+          "ValidateConnectionObject",
+          "InitializeGameSessionConfig",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10013",
+          "Ordinal_10013",
+          "InitializeGameSessionConfig",
+          "ValidateConnectionObject",
+          "InitializeGameSessionConfig",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10073",
+          "Ordinal_10073",
+          "InitializeGameSessionConfig",
+          "ValidateConnectionObject",
+          "InitializeGameSessionConfig",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10058",
+          "Ordinal_10058",
+          "InitializeGameSessionConfig",
+          "ValidateConnectionObject",
+          "InitializeGameSessionConfig",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SpriteCache.cpp\""
@@ -53577,6 +61061,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -53624,6 +61130,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -53662,6 +61190,18 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:bcfa585caaa8f9f1ac0ed49112439a50",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10045",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10086",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 32,
         "LoD/1.11b": 32
@@ -53703,6 +61243,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10091",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10011",
+          "ValidateContextAndWaitHandle",
+          "Ordinal_10043",
+          "ValidateContextAndWaitHandle"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10052",
+          "ValidateContextAndWaitHandle",
+          "Ordinal_10050",
+          "ValidateContextAndWaitHandle"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10038",
+          "ValidateContextAndWaitHandle",
+          "Ordinal_10041",
+          "ValidateContextAndWaitHandle"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10021",
+          "ValidateContextAndWaitHandle",
+          "Ordinal_10057",
+          "ValidateContextAndWaitHandle"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10035",
+          "ValidateContextAndWaitHandle",
+          "Ordinal_10104",
+          "ValidateContextAndWaitHandle"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 41,
         "LoD/1.11b": 41,
@@ -53750,6 +61322,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:52632646aee39f77edc301ff01ab05f3",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "InitializeAsyncEventListeners",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeAsyncEventListeners",
+          "BuildProjectPathThunk",
+          "GetDefaultResourceCount",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -53938,6 +61562,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -54314,6 +61960,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:84211edeb829a566443fad70d51d9d02",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Sprite Decompression Error\""
@@ -54445,6 +62108,53 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.12a": "a237c65a2ba21eff4a1584c6924741da",
         "LoD/1.13c": "a237c65a2ba21eff4a1584c6924741da",
         "LoD/1.13d": "a237c65a2ba21eff4a1584c6924741da"
+      }
+    },
+    "d2cmp.dll_MNE_d16be0605287": {
+      "addresses": {
+        "LoD/1.11": "0x6FE1E220",
+        "LoD/1.11b": "0x6FE20000",
+        "LoD/1.12a": "0x6FE1DEF0",
+        "LoD/1.13c": "0x6FE23B10",
+        "LoD/1.13d": "0x6FE1EAE0"
+      },
+      "rvas": {
+        "LoD/1.11": "0xE220",
+        "LoD/1.11b": "0x10000",
+        "LoD/1.12a": "0xDEF0",
+        "LoD/1.13c": "0x13B10",
+        "LoD/1.13d": "0xEAE0"
+      },
+      "sizes": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38,
+        "LoD/1.12a": 38,
+        "LoD/1.13c": 38,
+        "LoD/1.13d": 38
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:d16be06052875926b66256e07af692f1",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "d16be06052875926b66256e07af692f1",
+        "LoD/1.11b": "d16be06052875926b66256e07af692f1",
+        "LoD/1.12a": "d16be06052875926b66256e07af692f1",
+        "LoD/1.13c": "d16be06052875926b66256e07af692f1",
+        "LoD/1.13d": "d16be06052875926b66256e07af692f1"
       }
     },
     "d2cmp.dll_MNE_531b89151fc5": {
@@ -54663,6 +62373,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:0ed41e0ffa175b85aed24454adc4de29",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Data\\\\Global\\\\Items\\\\Palette\\\\\""
@@ -54866,6 +62598,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55024,6 +62783,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:da33466bed45c7d23d4abb8a16e41868",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55088,6 +62884,43 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f59a8610cecb522a625394c4e79bcf43",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55152,6 +62985,53 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:55d613a5d4d0f409ccb17b743fbf61d7",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55216,6 +63096,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8e992c8467b618481f84495e64e463a7",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55280,6 +63177,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b0c1e13a9096d33e4a1dda75b4924f39",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55344,6 +63258,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3a8a0edcf73a0b9f0311072b1c090ec6",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55408,6 +63344,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:caaeb5de144c2d55ff8a1f9f6d6dfcc8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\SubTile.cpp\""
@@ -55472,6 +63440,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -55494,27 +63484,78 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "82bb57ed111b8c839b069f71c798f7bb"
       }
     },
+    "d2cmp.dll_SetErrorHandlingDisabled": {
+      "addresses": {
+        "LoD/1.11": "0x6FE20270",
+        "LoD/1.11b": "0x6FE1AE40",
+        "LoD/1.12a": "0x6FE1D240",
+        "LoD/1.13c": "0x6FE25390",
+        "LoD/1.13d": "0x6FE25540"
+      },
+      "rvas": {
+        "LoD/1.11": "0x10270",
+        "LoD/1.11b": "0xAE40",
+        "LoD/1.12a": "0xD240",
+        "LoD/1.13c": "0x15390",
+        "LoD/1.13d": "0x15540"
+      },
+      "sizes": {
+        "LoD/1.11": 12,
+        "LoD/1.11b": 12,
+        "LoD/1.12a": 12,
+        "LoD/1.13c": 12,
+        "LoD/1.13d": 12
+      },
+      "name": "SetErrorHandlingDisabled",
+      "signature": "void SetErrorHandlingDisabled(uint dwDisable)",
+      "calling_convention": "__stdcall",
+      "comment": "Sets the error handling disabled flag.\n\nAlgorithm:\n1. Store dwDisable value to g_fErrorHandlingDisabled global\n\nWhen enabled (dwDisable != 0), DisplayCriticalError returns\nimmediately without showing dialogs or terminating the process.\nCalled with 1 during process termination in DisplayCriticalError.\n\nParameters:\n- dwDisable (uint): Non-zero to disable error handling\n\nReturns:\n- void",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "LoD/1.11b": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "LoD/1.12a": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "LoD/1.13c": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "LoD/1.13d": "0f26f5ebbb6562741331dd6e6bdd0342"
+      }
+    },
     "d2cmp.dll_EXP_10063": {
       "addresses": {
         "LoD/1.11": "0x6FE20310",
         "LoD/1.11b": "0x6FE1DF20",
-        "LoD/1.12a": "0x6FE19780",
-        "LoD/1.13c": "0x6FE22280",
-        "LoD/1.13d": "0x6FE24390"
+        "LoD/1.12a": "0x6FE1D000",
+        "LoD/1.13c": "0x6FE216D0",
+        "LoD/1.13d": "0x6FE231C0"
       },
       "rvas": {
         "LoD/1.11": "0x10310",
         "LoD/1.11b": "0xDF20",
-        "LoD/1.12a": "0x9780",
-        "LoD/1.13c": "0x12280",
-        "LoD/1.13d": "0x14390"
+        "LoD/1.12a": "0xD000",
+        "LoD/1.13c": "0x116D0",
+        "LoD/1.13d": "0x131C0"
       },
       "sizes": {
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
         "LoD/1.12a": 45,
-        "LoD/1.13c": 63,
-        "LoD/1.13d": 63
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
       "name": "Ordinal_10063",
       "signature": "undefined4 Ordinal_10063(int param_1)",
@@ -55522,6 +63563,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10063",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -55540,31 +63603,31 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13c": "e56a008a4e7414d4e3d983b5a0fa6d9d",
-        "LoD/1.13d": "e56a008a4e7414d4e3d983b5a0fa6d9d"
+        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_EXP_10092": {
       "addresses": {
         "LoD/1.11": "0x6FE20340",
-        "LoD/1.11b": "0x6FE1DD70",
-        "LoD/1.12a": "0x6FE1D150",
-        "LoD/1.13c": "0x6FE252A0",
-        "LoD/1.13d": "0x6FE232E0"
+        "LoD/1.11b": "0x6FE21CF0",
+        "LoD/1.12a": "0x6FE195D0",
+        "LoD/1.13c": "0x6FE214F0",
+        "LoD/1.13d": "0x6FE198D0"
       },
       "rvas": {
         "LoD/1.11": "0x10340",
-        "LoD/1.11b": "0xDD70",
-        "LoD/1.12a": "0xD150",
-        "LoD/1.13c": "0x152A0",
-        "LoD/1.13d": "0x132E0"
+        "LoD/1.11b": "0x11CF0",
+        "LoD/1.12a": "0x95D0",
+        "LoD/1.13c": "0x114F0",
+        "LoD/1.13d": "0x98D0"
       },
       "sizes": {
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
-        "LoD/1.12a": 42,
-        "LoD/1.13c": 42,
-        "LoD/1.13d": 42
+        "LoD/1.12a": 45,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 65
       },
       "name": "Ordinal_10092",
       "signature": "undefined4 Ordinal_10092(int param_1)",
@@ -55572,12 +63635,30 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10092",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
         "LoD/1.13c": 3,
-        "LoD/1.13d": 3
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.11": 0,
@@ -55589,9 +63670,9 @@ var FUNCTIONS_D2CMP_dll = {
       "mnemonic_hashes": {
         "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
+        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13d": "9a30711f2dbf4d4b8f04d545f11e64ad"
       }
     },
     "d2cmp.dll_MNE_b5d62ddc9ae2": {
@@ -55651,6 +63732,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10076",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 21,
         "LoD/1.11b": 21,
@@ -55701,6 +63814,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10103",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 26,
         "LoD/1.11b": 26,
@@ -55751,6 +63896,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10094",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -55801,6 +63968,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10090",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp.cpp\""
@@ -55868,6 +64062,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10001",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -55943,15 +64169,24 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_EXP_10011": {
       "addresses": {
         "LoD/1.11": "0x6FE20F50",
-        "LoD/1.11b": "0x6FE1EBE0"
+        "LoD/1.11b": "0x6FE1EBE0",
+        "LoD/1.12a": "0x6FE1A3D0",
+        "LoD/1.13c": "0x6FE25180",
+        "LoD/1.13d": "0x6FE231F0"
       },
       "rvas": {
         "LoD/1.11": "0x10F50",
-        "LoD/1.11b": "0xEBE0"
+        "LoD/1.11b": "0xEBE0",
+        "LoD/1.12a": "0xA3D0",
+        "LoD/1.13c": "0x15180",
+        "LoD/1.13d": "0x131F0"
       },
       "sizes": {
         "LoD/1.11": 152,
-        "LoD/1.11b": 152
+        "LoD/1.11b": 152,
+        "LoD/1.12a": 153,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name": "Ordinal_10011",
       "signature": "int Ordinal_10011(void * this, uint * param_1)",
@@ -55959,17 +64194,54 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10011",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
-        "LoD/1.11b": 10
+        "LoD/1.11b": 10,
+        "LoD/1.12a": 10,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "1b06de535cf50711bccab899cce75e3b",
-        "LoD/1.11b": "1b06de535cf50711bccab899cce75e3b"
+        "LoD/1.11b": "1b06de535cf50711bccab899cce75e3b",
+        "LoD/1.12a": "b13038679666d72ac0d6d19d3f849cb5",
+        "LoD/1.13c": "ea39fe8f50d9138c623f93f89b2d5285",
+        "LoD/1.13d": "ea39fe8f50d9138c623f93f89b2d5285"
       }
     },
     "d2cmp.dll_EXP_10050": {
@@ -56000,6 +64272,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10050",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\CelCmp.cpp\"",
@@ -56069,6 +64363,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:caaeb5de144c2d55ff8a1f9f6d6dfcc8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FindTiles.cpp\""
@@ -56133,6 +64459,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FindTiles.cpp\""
@@ -56197,6 +64550,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:300090d22d52350ce3851e6070f0a72c",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FindTiles.cpp\""
@@ -56261,6 +64641,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FindTiles.cpp\""
@@ -56325,6 +64732,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -56372,6 +64801,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 20,
         "LoD/1.11b": 20,
@@ -56419,6 +64870,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 16,
         "LoD/1.11b": 16,
@@ -56513,6 +64986,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:4dbe992c95c599a63d400eab29b42962",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Raw.cpp\""
@@ -56621,6 +65111,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bee715344d1d7194ae0aba7139b81574",
+      "callees": {
+        "LoD/1.11": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "ComputeStringHash"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -56668,6 +65175,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:0a676607fbb9e02975f7dd1e7d3e3fbc",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\CelDataHash.cpp\""
@@ -56732,6 +65266,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e1bfbdcf232cb2b0203ddeb361a06a16",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10045",
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "AllocateAndValidateResourceSlot",
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "AllocateAndValidateResourceSlot",
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndValidateResourceSlot",
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndValidateResourceSlot",
+          "ComputeStringHash"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\CelDataHash.cpp\""
@@ -56796,6 +65352,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a1995a836549f5d4d052286c552157aa",
+      "callees": {
+        "LoD/1.11": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "ComputeStringHash"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 14,
@@ -56843,6 +65416,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:b8b6207501452ff528dba5c0d95a93d4",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateResourceBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "DeallocateResourceBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "DeallocateResourceBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "DeallocateResourceBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "DeallocateResourceBuffer",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\CelDataHash.cpp\""
@@ -57074,6 +65674,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10005",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10054",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10055",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10011",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10087",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\TileProjects.cpp\""
@@ -57137,57 +65759,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.11": "ebaaf5672e72e8d48014f357d4174d80"
-      }
-    },
-    "d2cmp.dll_SetErrorHandlingDisabled": {
-      "addresses": {
-        "LoD/1.11": "0x6FE22200",
-        "LoD/1.11b": "0x6FE21ED0",
-        "LoD/1.12a": "0x6FE1D240",
-        "LoD/1.13c": "0x6FE21600",
-        "LoD/1.13d": "0x6FE23690"
-      },
-      "rvas": {
-        "LoD/1.11": "0x12200",
-        "LoD/1.11b": "0x11ED0",
-        "LoD/1.12a": "0xD240",
-        "LoD/1.13c": "0x11600",
-        "LoD/1.13d": "0x13690"
-      },
-      "sizes": {
-        "LoD/1.11": 12,
-        "LoD/1.11b": 12,
-        "LoD/1.12a": 12,
-        "LoD/1.13c": 12,
-        "LoD/1.13d": 12
-      },
-      "name": "SetErrorHandlingDisabled",
-      "signature": "void SetErrorHandlingDisabled(uint dwDisable)",
-      "calling_convention": "__stdcall",
-      "comment": "Sets the error handling disabled flag.\n\nAlgorithm:\n1. Store dwDisable value to g_fErrorHandlingDisabled global\n\nWhen enabled (dwDisable != 0), DisplayCriticalError returns\nimmediately without showing dialogs or terminating the process.\nCalled with 1 during process termination in DisplayCriticalError.\n\nParameters:\n- dwDisable (uint): Non-zero to disable error handling\n\nReturns:\n- void",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:0f26f5ebbb6562741331dd6e6bdd0342",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "0f26f5ebbb6562741331dd6e6bdd0342",
-        "LoD/1.11b": "0f26f5ebbb6562741331dd6e6bdd0342",
-        "LoD/1.12a": "0f26f5ebbb6562741331dd6e6bdd0342",
-        "LoD/1.13c": "0f26f5ebbb6562741331dd6e6bdd0342",
-        "LoD/1.13d": "0f26f5ebbb6562741331dd6e6bdd0342"
       }
     },
     "d2cmp.dll_STR_5646b1d5d473": {
@@ -57486,6 +66057,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a82af63f2ef0fa70c999dc7b2c1afded",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -57533,6 +66121,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a11847f0c00f1a025bbd79168c418ab2",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -57580,6 +66185,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:07477b5d25c7f78118499e27b696d68c",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -57627,6 +66249,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c884902ad87440cb05a087bf8d585905",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -57674,6 +66313,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2a91e70580e50a51829e998ac44236d0",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -57768,6 +66424,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1affbd3f4603608a257ce76388146a50",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051",
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045",
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067",
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049",
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075",
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -57815,6 +66493,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b8ad5d03f7deda8a726f893f64097cd4",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -57909,6 +66604,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 50,
         "LoD/1.11b": 50,
@@ -57956,6 +66673,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:eb05d65ce5bb476cb5228802aafd72f5",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -58003,6 +66737,68 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:13fbbd32a1527cda38111ce699768330",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051",
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045",
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067",
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049",
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075",
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 121,
         "LoD/1.11b": 121,
@@ -58053,6 +66849,16 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10049",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -58103,6 +66909,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10093",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -58127,25 +66955,73 @@ var FUNCTIONS_D2CMP_dll = {
     },
     "d2cmp.dll_API_c01fa6e1a170_4130": {
       "addresses": {
-        "LoD/1.11": "0x6FE24130"
+        "LoD/1.11": "0x6FE24130",
+        "LoD/1.11b": "0x6FE1DE90",
+        "LoD/1.12a": "0x6FE19720",
+        "LoD/1.13c": "0x6FE25150",
+        "LoD/1.13d": "0x6FE23580"
       },
       "rvas": {
-        "LoD/1.11": "0x14130"
+        "LoD/1.11": "0x14130",
+        "LoD/1.11b": "0xDE90",
+        "LoD/1.12a": "0x9720",
+        "LoD/1.13c": "0x15150",
+        "LoD/1.13d": "0x13580"
       },
       "sizes": {
-        "LoD/1.11": 64
+        "LoD/1.11": 64,
+        "LoD/1.11b": 46,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 45,
+        "LoD/1.13d": 45
       },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "signature": "int Ordinal_10066(int * param_1)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11b",
+      "method": "EXP",
+      "index": "EXP:10066",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
-        "LoD/1.11": 8
+        "LoD/1.11": 8,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
-        "LoD/1.11": 0
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.11": "6bf7f65397ead9a21760b0d736ba97c5"
+        "LoD/1.11": "6bf7f65397ead9a21760b0d736ba97c5",
+        "LoD/1.11b": "376de26b06c22149642936501844d3db",
+        "LoD/1.12a": "376de26b06c22149642936501844d3db",
+        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
+        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_MNE_63a4293a7810": {
@@ -58314,6 +67190,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -58361,6 +67259,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:0ef755658df05eb1123c2ece789dc79f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.11b": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.12a": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndValidateResourceSlot"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCache.cpp\""
@@ -58425,6 +67340,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -58472,6 +67409,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f058a2087370d59cee8e829a76ea215f",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.11b": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.12a": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13c": [
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13d": [
+          "DeallocateResourceBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCache.cpp\""
@@ -58536,6 +67490,48 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:75dbebb07a9bc317d8c52e2c54ea82ae",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "Ordinal_10045",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "AllocateAndValidateResourceSlot",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCache.cpp\""
@@ -58600,6 +67596,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:820ff34f1ff98e3b3206d7d4eda2ccae",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.11b": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.12a": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13c": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13d": [
+          "DeallocateResourceBuffer",
+          "DeallocateResourceBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\LRUCache.cpp\""
@@ -58655,6 +67673,14 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2ca3644e033f344b0ba2ea705bb34eed",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10069"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10080"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 23,
         "LoD/1.11b": 23
@@ -58740,6 +67766,48 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a9196d060cb3595963019497b49be200",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "DestroyEntity",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.11b": [
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "DestroyEntity",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.12a": [
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "DestroyEntity",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13c": [
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "DestroyEntity",
+          "DeallocateResourceBuffer"
+        ],
+        "LoD/1.13d": [
+          "ValidateEntityState",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DeallocateResourceBuffer",
+          "DestroyEntity",
+          "DeallocateResourceBuffer"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\GfxHash.cpp\""
@@ -58804,6 +67872,33 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7a58a23cc81206d0bf0f44122af08305",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ComputeStringHash"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ComputeStringHash"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ComputeStringHash"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ComputeStringHash"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ComputeStringHash"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -58851,6 +67946,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -58898,6 +68015,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:eadf24723b0a4ebb84361b32a5785f83",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.11b": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.12a": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndValidateResourceSlot"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndValidateResourceSlot"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\GfxHash.cpp\""
@@ -58991,6 +68125,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -59038,6 +68194,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -59085,6 +68263,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -59206,14 +68406,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0x6FE25090",
         "LoD/1.11b": "0x6FE25510",
         "LoD/1.12a": "0x6FE24F10",
-        "LoD/1.13c": "0x6FE1E860",
+        "LoD/1.13c": "0x6FE1EFD0",
         "LoD/1.13d": "0x6FE1BD90"
       },
       "rvas": {
         "LoD/1.11": "0x15090",
         "LoD/1.11b": "0x15510",
         "LoD/1.12a": "0x14F10",
-        "LoD/1.13c": "0xE860",
+        "LoD/1.13c": "0xEFD0",
         "LoD/1.13d": "0xBD90"
       },
       "sizes": {
@@ -59251,17 +68451,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_544d3a46d5f1": {
       "addresses": {
         "LoD/1.11": "0x6FE25250",
-        "LoD/1.11b": "0x6FE25E40",
-        "LoD/1.12a": "0x6FE24960",
-        "LoD/1.13c": "0x6FE1EA20",
-        "LoD/1.13d": "0x6FE1C6C0"
+        "LoD/1.11b": "0x6FE256D0",
+        "LoD/1.12a": "0x6FE250D0",
+        "LoD/1.13c": "0x6FE1F190",
+        "LoD/1.13d": "0x6FE1BF50"
       },
       "rvas": {
         "LoD/1.11": "0x15250",
-        "LoD/1.11b": "0x15E40",
-        "LoD/1.12a": "0x14960",
-        "LoD/1.13c": "0xEA20",
-        "LoD/1.13d": "0xC6C0"
+        "LoD/1.11b": "0x156D0",
+        "LoD/1.12a": "0x150D0",
+        "LoD/1.13c": "0xF190",
+        "LoD/1.13d": "0xBF50"
       },
       "sizes": {
         "LoD/1.11": 258,
@@ -59298,16 +68498,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_c485197acb5b": {
       "addresses": {
         "LoD/1.11": "0x6FE25380",
-        "LoD/1.11b": "0x6FE262D0",
+        "LoD/1.11b": "0x6FE25800",
         "LoD/1.12a": "0x6FE24A90",
-        "LoD/1.13c": "0x6FE1F620",
+        "LoD/1.13c": "0x6FE1EB50",
         "LoD/1.13d": "0x6FE1C080"
       },
       "rvas": {
         "LoD/1.11": "0x15380",
-        "LoD/1.11b": "0x162D0",
+        "LoD/1.11b": "0x15800",
         "LoD/1.12a": "0x14A90",
-        "LoD/1.13c": "0xF620",
+        "LoD/1.13c": "0xEB50",
         "LoD/1.13d": "0xC080"
       },
       "sizes": {
@@ -59345,17 +68545,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_637fa436b0e2": {
       "addresses": {
         "LoD/1.11": "0x6FE25600",
-        "LoD/1.11b": "0x6FE26550",
+        "LoD/1.11b": "0x6FE25A80",
         "LoD/1.12a": "0x6FE24D10",
         "LoD/1.13c": "0x6FE1EDD0",
-        "LoD/1.13d": "0x6FE1C300"
+        "LoD/1.13d": "0x6FE1CDD0"
       },
       "rvas": {
         "LoD/1.11": "0x15600",
-        "LoD/1.11b": "0x16550",
+        "LoD/1.11b": "0x15A80",
         "LoD/1.12a": "0x14D10",
         "LoD/1.13c": "0xEDD0",
-        "LoD/1.13d": "0xC300"
+        "LoD/1.13d": "0xCDD0"
       },
       "sizes": {
         "LoD/1.11": 473,
@@ -59394,14 +68594,14 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11": "0x6FE25800",
         "LoD/1.11b": "0x6FE25C80",
         "LoD/1.12a": "0x6FE247A0",
-        "LoD/1.13c": "0x6FE1EFD0",
+        "LoD/1.13c": "0x6FE1E860",
         "LoD/1.13d": "0x6FE1C500"
       },
       "rvas": {
         "LoD/1.11": "0x15800",
         "LoD/1.11b": "0x15C80",
         "LoD/1.12a": "0x147A0",
-        "LoD/1.13c": "0xEFD0",
+        "LoD/1.13c": "0xE860",
         "LoD/1.13d": "0xC500"
       },
       "sizes": {
@@ -59439,17 +68639,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_544d3a46d5f1_59C0": {
       "addresses": {
         "LoD/1.11": "0x6FE259C0",
-        "LoD/1.11b": "0x6FE256D0",
-        "LoD/1.12a": "0x6FE250D0",
-        "LoD/1.13c": "0x6FE1F190",
-        "LoD/1.13d": "0x6FE1BF50"
+        "LoD/1.11b": "0x6FE25E40",
+        "LoD/1.12a": "0x6FE24960",
+        "LoD/1.13c": "0x6FE1EA20",
+        "LoD/1.13d": "0x6FE1C6C0"
       },
       "rvas": {
         "LoD/1.11": "0x159C0",
-        "LoD/1.11b": "0x156D0",
-        "LoD/1.12a": "0x150D0",
-        "LoD/1.13c": "0xF190",
-        "LoD/1.13d": "0xBF50"
+        "LoD/1.11b": "0x15E40",
+        "LoD/1.12a": "0x14960",
+        "LoD/1.13c": "0xEA20",
+        "LoD/1.13d": "0xC6C0"
       },
       "sizes": {
         "LoD/1.11": 258,
@@ -59580,16 +68780,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_c485197acb5b_5E50": {
       "addresses": {
         "LoD/1.11": "0x6FE25E50",
-        "LoD/1.11b": "0x6FE25800",
+        "LoD/1.11b": "0x6FE262D0",
         "LoD/1.12a": "0x6FE25560",
-        "LoD/1.13c": "0x6FE1EB50",
+        "LoD/1.13c": "0x6FE1F620",
         "LoD/1.13d": "0x6FE1CB50"
       },
       "rvas": {
         "LoD/1.11": "0x15E50",
-        "LoD/1.11b": "0x15800",
+        "LoD/1.11b": "0x162D0",
         "LoD/1.12a": "0x15560",
-        "LoD/1.13c": "0xEB50",
+        "LoD/1.13c": "0xF620",
         "LoD/1.13d": "0xCB50"
       },
       "sizes": {
@@ -59627,17 +68827,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_MNE_637fa436b0e2_60D0": {
       "addresses": {
         "LoD/1.11": "0x6FE260D0",
-        "LoD/1.11b": "0x6FE25A80",
+        "LoD/1.11b": "0x6FE26550",
         "LoD/1.12a": "0x6FE257E0",
         "LoD/1.13c": "0x6FE1F8A0",
-        "LoD/1.13d": "0x6FE1CDD0"
+        "LoD/1.13d": "0x6FE1C300"
       },
       "rvas": {
         "LoD/1.11": "0x160D0",
-        "LoD/1.11b": "0x15A80",
+        "LoD/1.11b": "0x16550",
         "LoD/1.12a": "0x157E0",
         "LoD/1.13c": "0xF8A0",
-        "LoD/1.13d": "0xCDD0"
+        "LoD/1.13d": "0xC300"
       },
       "sizes": {
         "LoD/1.11": 473,
@@ -59837,6 +69037,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5e0b3c47aa8ffa5e40295ca87d687931",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FastCmp.cpp\""
@@ -59901,6 +69118,58 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7d05816020d97139c83d3ddc698d61a6",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "InitializeModule",
+          "Ordinal_10042",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\FastCmp.cpp\""
@@ -59965,6 +69234,28 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 35,
         "LoD/1.11b": 35,
@@ -60059,6 +69350,38 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 93,
         "LoD/1.11b": 93,
@@ -60084,21 +69407,24 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_EXP_10097": {
       "addresses": {
         "LoD/1.11": "0x6FE27290",
-        "LoD/1.11b": "0x6FE21CF0",
-        "LoD/1.12a": "0x6FE1D000",
-        "LoD/1.13c": "0x6FE25210"
+        "LoD/1.11b": "0x6FE21D50",
+        "LoD/1.12a": "0x6FE19750",
+        "LoD/1.13c": "0x6FE222E0",
+        "LoD/1.13d": "0x6FE243F0"
       },
       "rvas": {
         "LoD/1.11": "0x17290",
-        "LoD/1.11b": "0x11CF0",
-        "LoD/1.12a": "0xD000",
-        "LoD/1.13c": "0x15210"
+        "LoD/1.11b": "0x11D50",
+        "LoD/1.12a": "0x9750",
+        "LoD/1.13c": "0x122E0",
+        "LoD/1.13d": "0x143F0"
       },
       "sizes": {
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
         "LoD/1.12a": 45,
-        "LoD/1.13c": 45
+        "LoD/1.13c": 151,
+        "LoD/1.13d": 151
       },
       "name": "Ordinal_10097",
       "signature": "undefined4 Ordinal_10097(int param_1)",
@@ -60106,46 +69432,75 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10097",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
-        "LoD/1.13c": 3
+        "LoD/1.13c": 10,
+        "LoD/1.13d": 10
       },
       "loop_counts": {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe"
+        "LoD/1.12a": "f027730cc40145adc0697766469adf34",
+        "LoD/1.13c": "f3ec38269adf7b45c8d9e6cb004352ff",
+        "LoD/1.13d": "f3ec38269adf7b45c8d9e6cb004352ff"
       }
     },
     "d2cmp.dll_EXP_10000": {
       "addresses": {
         "LoD/1.11": "0x6FE272F0",
         "LoD/1.11b": "0x6FE1DF50",
-        "LoD/1.12a": "0x6FE195D0",
-        "LoD/1.13c": "0x6FE214F0",
-        "LoD/1.13d": "0x6FE198D0"
+        "LoD/1.12a": "0x6FE197B0",
+        "LoD/1.13c": "0x6FE216A0",
+        "LoD/1.13d": "0x6FE23760"
       },
       "rvas": {
         "LoD/1.11": "0x172F0",
         "LoD/1.11b": "0xDF50",
-        "LoD/1.12a": "0x95D0",
-        "LoD/1.13c": "0x114F0",
-        "LoD/1.13d": "0x98D0"
+        "LoD/1.12a": "0x97B0",
+        "LoD/1.13c": "0x116A0",
+        "LoD/1.13d": "0x13760"
       },
       "sizes": {
         "LoD/1.11": 45,
         "LoD/1.11b": 45,
         "LoD/1.12a": 45,
         "LoD/1.13c": 45,
-        "LoD/1.13d": 65
+        "LoD/1.13d": 45
       },
       "name": "Ordinal_10000",
       "signature": "undefined4 Ordinal_10000(int param_1)",
@@ -60153,12 +69508,34 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10000",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
         "LoD/1.13c": 3,
-        "LoD/1.13d": 1
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.11": 0,
@@ -60172,21 +69549,30 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11b": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.12a": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13d": "9a30711f2dbf4d4b8f04d545f11e64ad"
+        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_EXP_10059": {
       "addresses": {
         "LoD/1.11": "0x6FE273B0",
-        "LoD/1.11b": "0x6FE21EA0"
+        "LoD/1.11b": "0x6FE21E70",
+        "LoD/1.12a": "0x6FE196F0",
+        "LoD/1.13c": "0x6FE21610",
+        "LoD/1.13d": "0x6FE236A0"
       },
       "rvas": {
         "LoD/1.11": "0x173B0",
-        "LoD/1.11b": "0x11EA0"
+        "LoD/1.11b": "0x11E70",
+        "LoD/1.12a": "0x96F0",
+        "LoD/1.13c": "0x11610",
+        "LoD/1.13d": "0x136A0"
       },
       "sizes": {
         "LoD/1.11": 42,
-        "LoD/1.11b": 42
+        "LoD/1.11b": 42,
+        "LoD/1.12a": 46,
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name": "Ordinal_10059",
       "signature": "undefined4 Ordinal_10059(int param_1)",
@@ -60194,31 +69580,71 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10059",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
-        "LoD/1.11b": 3
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b"
+        "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.12a": "376de26b06c22149642936501844d3db",
+        "LoD/1.13c": "376de26b06c22149642936501844d3db",
+        "LoD/1.13d": "376de26b06c22149642936501844d3db"
       }
     },
     "d2cmp.dll_EXP_10064": {
       "addresses": {
         "LoD/1.11": "0x6FE27470",
-        "LoD/1.11b": "0x6FE21E70"
+        "LoD/1.11b": "0x6FE21DB0",
+        "LoD/1.12a": "0x6FE1D1E0",
+        "LoD/1.13c": "0x6FE252A0",
+        "LoD/1.13d": "0x6FE232E0"
       },
       "rvas": {
         "LoD/1.11": "0x17470",
-        "LoD/1.11b": "0x11E70"
+        "LoD/1.11b": "0x11DB0",
+        "LoD/1.12a": "0xD1E0",
+        "LoD/1.13c": "0x152A0",
+        "LoD/1.13d": "0x132E0"
       },
       "sizes": {
         "LoD/1.11": 42,
-        "LoD/1.11b": 42
+        "LoD/1.11b": 42,
+        "LoD/1.12a": 42,
+        "LoD/1.13c": 42,
+        "LoD/1.13d": 42
       },
       "name": "Ordinal_10064",
       "signature": "undefined4 Ordinal_10064(int param_1)",
@@ -60226,17 +69652,48 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10064",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
-        "LoD/1.11b": 3
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b"
+        "LoD/1.11b": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
+        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
       }
     },
     "d2cmp.dll_MNE_c8218bf9a09f": {
@@ -60311,6 +69768,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4b8879075b0a74e7893f569fb44bcbfa",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\DrwCntxt.cpp\""
@@ -60375,6 +69849,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bba2bfb824e184cbfeb5a8714cb49c11",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\DrwCntxt.cpp\""
@@ -60461,6 +69952,57 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "6056bffb7c9f7504d8d8c336e8c1f195"
       }
     },
+    "d2cmp.dll___fpmath": {
+      "addresses": {
+        "LoD/1.11": "0x6FE27761",
+        "LoD/1.11b": "0x6FE27751",
+        "LoD/1.12a": "0x6FE27801",
+        "LoD/1.13c": "0x6FE27817",
+        "LoD/1.13d": "0x6FE27821"
+      },
+      "rvas": {
+        "LoD/1.11": "0x17761",
+        "LoD/1.11b": "0x17751",
+        "LoD/1.12a": "0x17801",
+        "LoD/1.13c": "0x17817",
+        "LoD/1.13d": "0x17821"
+      },
+      "sizes": {
+        "LoD/1.11": 30,
+        "LoD/1.11b": 30,
+        "LoD/1.12a": 30,
+        "LoD/1.13c": 30,
+        "LoD/1.13d": 30
+      },
+      "name": "__fpmath",
+      "signature": "void __fpmath(int param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __fpmath\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:4d560490b77bf3b5146b14c1413f0461",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
+      }
+    },
     "d2cmp.dll__JumpToContinuation": {
       "addresses": {
         "LoD/1.11": "0x6FE2777F",
@@ -60541,6 +70083,23 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18",
+      "callees": {
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -62691,16 +72250,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE29E5D",
         "LoD/1.11b": "0x6FE29E4D",
-        "LoD/1.12a": "0x6FE29F35",
-        "LoD/1.13c": "0x6FE29F45",
-        "LoD/1.13d": "0x6FE29F39"
+        "LoD/1.12a": "0x6FE29F19",
+        "LoD/1.13c": "0x6FE29F29",
+        "LoD/1.13d": "0x6FE29F1D"
       },
       "rvas": {
         "LoD/1.11": "0x19E5D",
         "LoD/1.11b": "0x19E4D",
-        "LoD/1.12a": "0x19F35",
-        "LoD/1.13c": "0x19F45",
-        "LoD/1.13d": "0x19F39"
+        "LoD/1.12a": "0x19F19",
+        "LoD/1.13c": "0x19F29",
+        "LoD/1.13d": "0x19F1D"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -62742,16 +72301,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE29E79",
         "LoD/1.11b": "0x6FE29E69",
-        "LoD/1.12a": "0x6FE29F19",
-        "LoD/1.13c": "0x6FE29F29",
-        "LoD/1.13d": "0x6FE29F1D"
+        "LoD/1.12a": "0x6FE29F35",
+        "LoD/1.13c": "0x6FE29F45",
+        "LoD/1.13d": "0x6FE29F39"
       },
       "rvas": {
         "LoD/1.11": "0x19E79",
         "LoD/1.11b": "0x19E69",
-        "LoD/1.12a": "0x19F19",
-        "LoD/1.13c": "0x19F29",
-        "LoD/1.13d": "0x19F1D"
+        "LoD/1.12a": "0x19F35",
+        "LoD/1.13c": "0x19F45",
+        "LoD/1.13d": "0x19F39"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -63172,71 +72731,20 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.11b": "1716f4745fd2cb6027c906fa16d26504"
       }
     },
-    "d2cmp.dll_RemoveNodeFromList": {
-      "addresses": {
-        "LoD/1.11": "0x6FE2ABA0",
-        "LoD/1.11b": "0x6FE2AD80",
-        "LoD/1.12a": "0x6FE2AE80",
-        "LoD/1.13c": "0x6FE2AE90",
-        "LoD/1.13d": "0x6FE2AE40"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1ABA0",
-        "LoD/1.11b": "0x1AD80",
-        "LoD/1.12a": "0x1AE80",
-        "LoD/1.13c": "0x1AE90",
-        "LoD/1.13d": "0x1AE40"
-      },
-      "sizes": {
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8
-      },
-      "name": "RemoveNodeFromList",
-      "signature": "void RemoveNodeFromList(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Removes a node from a doubly-linked list.\n\nThis function serves as a wrapper/thunk for the UnlinkListNode function, providing\na standard __stdcall interface for removing nodes from linked list structures.\n\nAlgorithm:\n1. Load node pointer from stack at [EBP + 0x4]\n2. Perform tail-call to UnlinkListNode at 0x6fbf4c20\n3. UnlinkListNode performs the actual node unlinking operation\n4. Return to caller\n\nParameters:\n  pNode (void*) - Pointer to the list node structure to be removed\n                 Expected to be a valid pointer to a node with prev/next pointers\n\nReturns:\n  void - Function returns void; list modification is performed in-place\n\nSpecial Cases:\n  This is a tail-call wrapper optimization that reduces function call overhead\n  The function is referenced from 21 locations, indicating heavy use in list management\n  Calling convention is __stdcall with one parameter on stack",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "40903556bc57a4df1722c0a365e78b81",
-        "LoD/1.11b": "40903556bc57a4df1722c0a365e78b81",
-        "LoD/1.12a": "40903556bc57a4df1722c0a365e78b81",
-        "LoD/1.13c": "40903556bc57a4df1722c0a365e78b81",
-        "LoD/1.13d": "40903556bc57a4df1722c0a365e78b81"
-      }
-    },
     "d2cmp.dll_UnwindExceptionFrame_ABC0": {
       "addresses": {
         "LoD/1.11": "0x6FE2ABC0",
-        "LoD/1.11b": "0x6FE2ACF0",
-        "LoD/1.12a": "0x6FE2AD78",
-        "LoD/1.13c": "0x6FE2AE98",
-        "LoD/1.13d": "0x6FE2AD9B"
+        "LoD/1.11b": "0x6FE2AD4B",
+        "LoD/1.12a": "0x6FE2ADB6",
+        "LoD/1.13c": "0x6FE2AD88",
+        "LoD/1.13d": "0x6FE2ACA0"
       },
       "rvas": {
         "LoD/1.11": "0x1ABC0",
-        "LoD/1.11b": "0x1ACF0",
-        "LoD/1.12a": "0x1AD78",
-        "LoD/1.13c": "0x1AE98",
-        "LoD/1.13d": "0x1AD9B"
+        "LoD/1.11b": "0x1AD4B",
+        "LoD/1.12a": "0x1ADB6",
+        "LoD/1.13c": "0x1AD88",
+        "LoD/1.13d": "0x1ACA0"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63277,17 +72785,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AC20": {
       "addresses": {
         "LoD/1.11": "0x6FE2AC20",
-        "LoD/1.11b": "0x6FE2AE25",
-        "LoD/1.12a": "0x6FE2B060",
-        "LoD/1.13c": "0x6FE2AF20",
-        "LoD/1.13d": "0x6FE2AE48"
+        "LoD/1.11b": "0x6FE2AD60",
+        "LoD/1.12a": "0x6FE2AF25",
+        "LoD/1.13c": "0x6FE2AE00",
+        "LoD/1.13d": "0x6FE2AF20"
       },
       "rvas": {
         "LoD/1.11": "0x1AC20",
-        "LoD/1.11b": "0x1AE25",
-        "LoD/1.12a": "0x1B060",
-        "LoD/1.13c": "0x1AF20",
-        "LoD/1.13d": "0x1AE48"
+        "LoD/1.11b": "0x1AD60",
+        "LoD/1.12a": "0x1AF25",
+        "LoD/1.13c": "0x1AE00",
+        "LoD/1.13d": "0x1AF20"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63328,16 +72836,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2ac2a": {
       "addresses": {
         "LoD/1.11": "0x6FE2AC2A",
-        "LoD/1.11b": "0x6FE2AC82",
-        "LoD/1.12a": "0x6FE2AEAD",
-        "LoD/1.13c": "0x6FE2AEB0",
+        "LoD/1.11b": "0x6FE2AC1A",
+        "LoD/1.12a": "0x6FE2AD1A",
+        "LoD/1.13c": "0x6FE2AD92",
         "LoD/1.13d": "0x6FE2AE60"
       },
       "rvas": {
         "LoD/1.11": "0x1AC2A",
-        "LoD/1.11b": "0x1AC82",
-        "LoD/1.12a": "0x1AEAD",
-        "LoD/1.13c": "0x1AEB0",
+        "LoD/1.11b": "0x1AC1A",
+        "LoD/1.12a": "0x1AD1A",
+        "LoD/1.13c": "0x1AD92",
         "LoD/1.13d": "0x1AE60"
       },
       "sizes": {
@@ -63378,16 +72886,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2ac50": {
       "addresses": {
         "LoD/1.11": "0x6FE2AC50",
-        "LoD/1.11b": "0x6FE2AE40",
+        "LoD/1.11b": "0x6FE2AD10",
         "LoD/1.12a": "0x6FE2AF40",
-        "LoD/1.13c": "0x6FE2AE20",
+        "LoD/1.13c": "0x6FE2AF50",
         "LoD/1.13d": "0x6FE2AD60"
       },
       "rvas": {
         "LoD/1.11": "0x1AC50",
-        "LoD/1.11b": "0x1AE40",
+        "LoD/1.11b": "0x1AD10",
         "LoD/1.12a": "0x1AF40",
-        "LoD/1.13c": "0x1AE20",
+        "LoD/1.13c": "0x1AF50",
         "LoD/1.13d": "0x1AD60"
       },
       "sizes": {
@@ -63479,17 +72987,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AC88": {
       "addresses": {
         "LoD/1.11": "0x6FE2AC88",
-        "LoD/1.11b": "0x6FE2AF40",
-        "LoD/1.12a": "0x6FE2AF10",
-        "LoD/1.13c": "0x6FE2AE00",
-        "LoD/1.13d": "0x6FE2ADB8"
+        "LoD/1.11b": "0x6FE2AE10",
+        "LoD/1.12a": "0x6FE2ACB0",
+        "LoD/1.13c": "0x6FE2AF35",
+        "LoD/1.13d": "0x6FE2AD10"
       },
       "rvas": {
         "LoD/1.11": "0x1AC88",
-        "LoD/1.11b": "0x1AF40",
-        "LoD/1.12a": "0x1AF10",
-        "LoD/1.13c": "0x1AE00",
-        "LoD/1.13d": "0x1ADB8"
+        "LoD/1.11b": "0x1AE10",
+        "LoD/1.12a": "0x1ACB0",
+        "LoD/1.13c": "0x1AF35",
+        "LoD/1.13d": "0x1AD10"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63531,16 +73039,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE2AC92",
         "LoD/1.11b": "0x6FE2ADAD",
-        "LoD/1.12a": "0x6FE2AEA0",
-        "LoD/1.13c": "0x6FE2AD2A",
-        "LoD/1.13d": "0x6FE2AD1A"
+        "LoD/1.12a": "0x6FE2AD82",
+        "LoD/1.13c": "0x6FE2AEBD",
+        "LoD/1.13d": "0x6FE2ADC2"
       },
       "rvas": {
         "LoD/1.11": "0x1AC92",
         "LoD/1.11b": "0x1ADAD",
-        "LoD/1.12a": "0x1AEA0",
-        "LoD/1.13c": "0x1AD2A",
-        "LoD/1.13d": "0x1AD1A"
+        "LoD/1.12a": "0x1AD82",
+        "LoD/1.13c": "0x1AEBD",
+        "LoD/1.13d": "0x1ADC2"
       },
       "sizes": {
         "LoD/1.11": 13,
@@ -63581,16 +73089,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE2ACC6",
         "LoD/1.11b": "0x6FE2ABB0",
-        "LoD/1.12a": "0x6FE2AE4B",
-        "LoD/1.13c": "0x6FE2ADC6",
-        "LoD/1.13d": "0x6FE2ACA0"
+        "LoD/1.12a": "0x6FE2AE88",
+        "LoD/1.13c": "0x6FE2B070",
+        "LoD/1.13d": "0x6FE2AFE0"
       },
       "rvas": {
         "LoD/1.11": "0x1ACC6",
         "LoD/1.11b": "0x1ABB0",
-        "LoD/1.12a": "0x1AE4B",
-        "LoD/1.13c": "0x1ADC6",
-        "LoD/1.13d": "0x1ACA0"
+        "LoD/1.12a": "0x1AE88",
+        "LoD/1.13c": "0x1B070",
+        "LoD/1.13d": "0x1AFE0"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63631,16 +73139,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2acdb": {
       "addresses": {
         "LoD/1.11": "0x6FE2ACDB",
-        "LoD/1.11b": "0x6FE2ACCB",
-        "LoD/1.12a": "0x6FE2AD82",
-        "LoD/1.13c": "0x6FE2AEBD",
+        "LoD/1.11b": "0x6FE2ADA0",
+        "LoD/1.12a": "0x6FE2AEAD",
+        "LoD/1.13c": "0x6FE2AEB0",
         "LoD/1.13d": "0x6FE2AE0B"
       },
       "rvas": {
         "LoD/1.11": "0x1ACDB",
-        "LoD/1.11b": "0x1ACCB",
-        "LoD/1.12a": "0x1AD82",
-        "LoD/1.13c": "0x1AEBD",
+        "LoD/1.11b": "0x1ADA0",
+        "LoD/1.12a": "0x1AEAD",
+        "LoD/1.13c": "0x1AEB0",
         "LoD/1.13d": "0x1AE0B"
       },
       "sizes": {
@@ -63681,17 +73189,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AD00": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD00",
-        "LoD/1.11b": "0x6FE2AD60",
-        "LoD/1.12a": "0x6FE2AF25",
-        "LoD/1.13c": "0x6FE2AD88",
-        "LoD/1.13d": "0x6FE2B015"
+        "LoD/1.11b": "0x6FE2AC78",
+        "LoD/1.12a": "0x6FE2AD78",
+        "LoD/1.13c": "0x6FE2ADC6",
+        "LoD/1.13d": "0x6FE2AD40"
       },
       "rvas": {
         "LoD/1.11": "0x1AD00",
-        "LoD/1.11b": "0x1AD60",
-        "LoD/1.12a": "0x1AF25",
-        "LoD/1.13c": "0x1AD88",
-        "LoD/1.13d": "0x1B015"
+        "LoD/1.11b": "0x1AC78",
+        "LoD/1.12a": "0x1AD78",
+        "LoD/1.13c": "0x1ADC6",
+        "LoD/1.13d": "0x1AD40"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63732,16 +73240,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2ad20": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD20",
-        "LoD/1.11b": "0x6FE2AD10",
-        "LoD/1.12a": "0x6FE2AD40",
-        "LoD/1.13c": "0x6FE2AF50",
+        "LoD/1.11b": "0x6FE2AE40",
+        "LoD/1.12a": "0x6FE2AE10",
+        "LoD/1.13c": "0x6FE2AE20",
         "LoD/1.13d": "0x6FE2AE30"
       },
       "rvas": {
         "LoD/1.11": "0x1AD20",
-        "LoD/1.11b": "0x1AD10",
-        "LoD/1.12a": "0x1AD40",
-        "LoD/1.13c": "0x1AF50",
+        "LoD/1.11b": "0x1AE40",
+        "LoD/1.12a": "0x1AE10",
+        "LoD/1.13c": "0x1AE20",
         "LoD/1.13d": "0x1AE30"
       },
       "sizes": {
@@ -63782,17 +73290,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD30",
-        "LoD/1.11b": "0x6FE2AF15",
+        "LoD/1.11b": "0x6FE2AE9B",
         "LoD/1.12a": "0x6FE2AEFC",
         "LoD/1.13c": "0x6FE2AECA",
-        "LoD/1.13d": "0x6FE2AEDB"
+        "LoD/1.13d": "0x6FE2AF75"
       },
       "rvas": {
         "LoD/1.11": "0x1AD30",
-        "LoD/1.11b": "0x1AF15",
+        "LoD/1.11b": "0x1AE9B",
         "LoD/1.12a": "0x1AEFC",
         "LoD/1.13c": "0x1AECA",
-        "LoD/1.13d": "0x1AEDB"
+        "LoD/1.13d": "0x1AF75"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63833,17 +73341,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AD5B": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD5B",
-        "LoD/1.11b": "0x6FE2AD4B",
-        "LoD/1.12a": "0x6FE2ADB6",
-        "LoD/1.13c": "0x6FE2B050",
-        "LoD/1.13d": "0x6FE2AF20"
+        "LoD/1.11b": "0x6FE2AC10",
+        "LoD/1.12a": "0x6FE2B060",
+        "LoD/1.13c": "0x6FE2AE70",
+        "LoD/1.13d": "0x6FE2AD9B"
       },
       "rvas": {
         "LoD/1.11": "0x1AD5B",
-        "LoD/1.11b": "0x1AD4B",
-        "LoD/1.12a": "0x1ADB6",
-        "LoD/1.13c": "0x1B050",
-        "LoD/1.13d": "0x1AF20"
+        "LoD/1.11b": "0x1AC10",
+        "LoD/1.12a": "0x1B060",
+        "LoD/1.13c": "0x1AE70",
+        "LoD/1.13d": "0x1AD9B"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63884,17 +73392,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AD70": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD70",
-        "LoD/1.11b": "0x6FE2AC10",
-        "LoD/1.12a": "0x6FE2AE60",
-        "LoD/1.13c": "0x6FE2AF35",
-        "LoD/1.13d": "0x6FE2B000"
+        "LoD/1.11b": "0x6FE2AD88",
+        "LoD/1.12a": "0x6FE2AE4B",
+        "LoD/1.13c": "0x6FE2AF20",
+        "LoD/1.13d": "0x6FE2AE48"
       },
       "rvas": {
         "LoD/1.11": "0x1AD70",
-        "LoD/1.11b": "0x1AC10",
-        "LoD/1.12a": "0x1AE60",
-        "LoD/1.13c": "0x1AF35",
-        "LoD/1.13d": "0x1B000"
+        "LoD/1.11b": "0x1AD88",
+        "LoD/1.12a": "0x1AE4B",
+        "LoD/1.13c": "0x1AF20",
+        "LoD/1.13d": "0x1AE48"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63935,17 +73443,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AD98": {
       "addresses": {
         "LoD/1.11": "0x6FE2AD98",
-        "LoD/1.11b": "0x6FE2AE10",
-        "LoD/1.12a": "0x6FE2ACB0",
-        "LoD/1.13c": "0x6FE2ACC0",
-        "LoD/1.13d": "0x6FE2B030"
+        "LoD/1.11b": "0x6FE2AE25",
+        "LoD/1.12a": "0x6FE2ADF0",
+        "LoD/1.13c": "0x6FE2AE98",
+        "LoD/1.13d": "0x6FE2ADF6"
       },
       "rvas": {
         "LoD/1.11": "0x1AD98",
-        "LoD/1.11b": "0x1AE10",
-        "LoD/1.12a": "0x1ACB0",
-        "LoD/1.13c": "0x1ACC0",
-        "LoD/1.13d": "0x1B030"
+        "LoD/1.11b": "0x1AE25",
+        "LoD/1.12a": "0x1ADF0",
+        "LoD/1.13c": "0x1AE98",
+        "LoD/1.13d": "0x1ADF6"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -63986,17 +73494,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2adb0": {
       "addresses": {
         "LoD/1.11": "0x6FE2ADB0",
-        "LoD/1.11b": "0x6FE2AC1A",
-        "LoD/1.12a": "0x6FE2AD1A",
-        "LoD/1.13c": "0x6FE2ADDB",
-        "LoD/1.13d": "0x6FE2ADC2"
+        "LoD/1.11b": "0x6FE2ACCB",
+        "LoD/1.12a": "0x6FE2AEA0",
+        "LoD/1.13c": "0x6FE2AD2A",
+        "LoD/1.13d": "0x6FE2AD1A"
       },
       "rvas": {
         "LoD/1.11": "0x1ADB0",
-        "LoD/1.11b": "0x1AC1A",
-        "LoD/1.12a": "0x1AD1A",
-        "LoD/1.13c": "0x1ADDB",
-        "LoD/1.13d": "0x1ADC2"
+        "LoD/1.11b": "0x1ACCB",
+        "LoD/1.12a": "0x1AEA0",
+        "LoD/1.13c": "0x1AD2A",
+        "LoD/1.13d": "0x1AD1A"
       },
       "sizes": {
         "LoD/1.11": 13,
@@ -64036,16 +73544,16 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_Unwind@6fe2adbd": {
       "addresses": {
         "LoD/1.11": "0x6FE2ADBD",
-        "LoD/1.11b": "0x6FE2ADA0",
+        "LoD/1.11b": "0x6FE2AC82",
         "LoD/1.12a": "0x6FE2ADCB",
-        "LoD/1.13c": "0x6FE2AD92",
+        "LoD/1.13c": "0x6FE2ADDB",
         "LoD/1.13d": "0x6FE2AE6D"
       },
       "rvas": {
         "LoD/1.11": "0x1ADBD",
-        "LoD/1.11b": "0x1ADA0",
+        "LoD/1.11b": "0x1AC82",
         "LoD/1.12a": "0x1ADCB",
-        "LoD/1.13c": "0x1AD92",
+        "LoD/1.13c": "0x1ADDB",
         "LoD/1.13d": "0x1AE6D"
       },
       "sizes": {
@@ -64086,17 +73594,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_ADCA": {
       "addresses": {
         "LoD/1.11": "0x6FE2ADCA",
-        "LoD/1.11b": "0x6FE2ADF2",
-        "LoD/1.12a": "0x6FE2B015",
-        "LoD/1.13c": "0x6FE2AFAB",
-        "LoD/1.13d": "0x6FE2AF53"
+        "LoD/1.11b": "0x6FE2ADFC",
+        "LoD/1.12a": "0x6FE2AF9B",
+        "LoD/1.13c": "0x6FE2AF0C",
+        "LoD/1.13d": "0x6FE2AE7A"
       },
       "rvas": {
         "LoD/1.11": "0x1ADCA",
-        "LoD/1.11b": "0x1ADF2",
-        "LoD/1.12a": "0x1B015",
-        "LoD/1.13c": "0x1AFAB",
-        "LoD/1.13d": "0x1AF53"
+        "LoD/1.11b": "0x1ADFC",
+        "LoD/1.12a": "0x1AF9B",
+        "LoD/1.13c": "0x1AF0C",
+        "LoD/1.13d": "0x1AE7A"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64134,18 +73642,69 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "e83bd76a96c575481d28f5927cfaf30f"
       }
     },
+    "d2cmp.dll_UnwindDestructorThunk": {
+      "addresses": {
+        "LoD/1.11": "0x6FE2ADE0",
+        "LoD/1.11b": "0x6FE2ADD0",
+        "LoD/1.12a": "0x6FE2AED0",
+        "LoD/1.13c": "0x6FE2AEE0",
+        "LoD/1.13d": "0x6FE2AF40"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1ADE0",
+        "LoD/1.11b": "0x1ADD0",
+        "LoD/1.12a": "0x1AED0",
+        "LoD/1.13c": "0x1AEE0",
+        "LoD/1.13d": "0x1AF40"
+      },
+      "sizes": {
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
+      },
+      "name": "UnwindDestructorThunk",
+      "signature": "void UnwindDestructorThunk(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Exception unwind thunk that delegates to the destructor cleanup handler.\n\nThis is a thin wrapper function generated by the C++ compiler's exception\nhandling mechanism. It is referenced from an exception handler table at\n0x6fc3cb3c and is invoked during stack unwinding when an exception occurs.\n\nAlgorithm:\n1. Load the destructor object pointer from EBP+4 (parameter)\n2. Transfer control to DestructorCleanupField via unconditional jump\n\nParameters:\npObject: void* - Pointer to the object being destructed during exception unwinding\n\nReturns:\nvoid - Does not return; transfers control to DestructorCleanupField\n\nSpecial Cases:\n- Used exclusively in exception handling context\n- Referenced from data section (exception table), not called directly by code\n- Part of C++ runtime exception handling framework",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:40903556bc57a4df1722c0a365e78b81",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "40903556bc57a4df1722c0a365e78b81",
+        "LoD/1.11b": "40903556bc57a4df1722c0a365e78b81",
+        "LoD/1.12a": "40903556bc57a4df1722c0a365e78b81",
+        "LoD/1.13c": "40903556bc57a4df1722c0a365e78b81",
+        "LoD/1.13d": "40903556bc57a4df1722c0a365e78b81"
+      }
+    },
     "d2cmp.dll_CleanupExceptionUnwindFrame": {
       "addresses": {
         "LoD/1.11": "0x6FE2ADE8",
         "LoD/1.11b": "0x6FE2AEFD",
-        "LoD/1.12a": "0x6FE2AED8",
+        "LoD/1.12a": "0x6FE2AFFD",
         "LoD/1.13c": "0x6FE2B00D",
         "LoD/1.13d": "0x6FE2AFA8"
       },
       "rvas": {
         "LoD/1.11": "0x1ADE8",
         "LoD/1.11b": "0x1AEFD",
-        "LoD/1.12a": "0x1AED8",
+        "LoD/1.12a": "0x1AFFD",
         "LoD/1.13c": "0x1B00D",
         "LoD/1.13d": "0x1AFA8"
       },
@@ -64188,17 +73747,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindFoundParamException": {
       "addresses": {
         "LoD/1.11": "0x6FE2ADF5",
-        "LoD/1.11b": "0x6FE2AF1F",
+        "LoD/1.11b": "0x6FE2ADE5",
         "LoD/1.12a": "0x6FE2AEE5",
         "LoD/1.13c": "0x6FE2AEF5",
-        "LoD/1.13d": "0x6FE2AFB5"
+        "LoD/1.13d": "0x6FE2AF7F"
       },
       "rvas": {
         "LoD/1.11": "0x1ADF5",
-        "LoD/1.11b": "0x1AF1F",
+        "LoD/1.11b": "0x1ADE5",
         "LoD/1.12a": "0x1AEE5",
         "LoD/1.13c": "0x1AEF5",
-        "LoD/1.13d": "0x1AFB5"
+        "LoD/1.13d": "0x1AF7F"
       },
       "sizes": {
         "LoD/1.11": 13,
@@ -64239,17 +73798,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_AE02": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE02",
-        "LoD/1.11b": "0x6FE2ADBA",
+        "LoD/1.11b": "0x6FE2AD20",
         "LoD/1.12a": "0x6FE2AFF3",
-        "LoD/1.13c": "0x6FE2B025",
-        "LoD/1.13d": "0x6FE2AFCC"
+        "LoD/1.13c": "0x6FE2B003",
+        "LoD/1.13d": "0x6FE2AD70"
       },
       "rvas": {
         "LoD/1.11": "0x1AE02",
-        "LoD/1.11b": "0x1ADBA",
+        "LoD/1.11b": "0x1AD20",
         "LoD/1.12a": "0x1AFF3",
-        "LoD/1.13c": "0x1B025",
-        "LoD/1.13d": "0x1AFCC"
+        "LoD/1.13c": "0x1B003",
+        "LoD/1.13d": "0x1AD70"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64290,17 +73849,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_AE0C": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE0C",
-        "LoD/1.11b": "0x6FE2AEF3",
-        "LoD/1.12a": "0x6FE2AF9B",
-        "LoD/1.13c": "0x6FE2AF02",
-        "LoD/1.13d": "0x6FE2AFC2"
+        "LoD/1.11b": "0x6FE2ADF2",
+        "LoD/1.12a": "0x6FE2AEBA",
+        "LoD/1.13c": "0x6FE2AFAB",
+        "LoD/1.13d": "0x6FE2AF53"
       },
       "rvas": {
         "LoD/1.11": "0x1AE0C",
-        "LoD/1.11b": "0x1AEF3",
-        "LoD/1.12a": "0x1AF9B",
-        "LoD/1.13c": "0x1AF02",
-        "LoD/1.13d": "0x1AFC2"
+        "LoD/1.11b": "0x1ADF2",
+        "LoD/1.12a": "0x1AEBA",
+        "LoD/1.13c": "0x1AFAB",
+        "LoD/1.13d": "0x1AF53"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64341,17 +73900,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AE20": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE20",
-        "LoD/1.11b": "0x6FE2AD88",
+        "LoD/1.11b": "0x6FE2AF40",
         "LoD/1.12a": "0x6FE2AD10",
-        "LoD/1.13c": "0x6FE2AE5B",
-        "LoD/1.13d": "0x6FE2ADF6"
+        "LoD/1.13c": "0x6FE2ACC0",
+        "LoD/1.13d": "0x6FE2ADB8"
       },
       "rvas": {
         "LoD/1.11": "0x1AE20",
-        "LoD/1.11b": "0x1AD88",
+        "LoD/1.11b": "0x1AF40",
         "LoD/1.12a": "0x1AD10",
-        "LoD/1.13c": "0x1AE5B",
-        "LoD/1.13d": "0x1ADF6"
+        "LoD/1.13c": "0x1ACC0",
+        "LoD/1.13d": "0x1ADB8"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64392,17 +73951,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AE35": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE35",
-        "LoD/1.11b": "0x6FE2AF60",
-        "LoD/1.12a": "0x6FE2B040",
+        "LoD/1.11b": "0x6FE2ACB6",
+        "LoD/1.12a": "0x6FE2AF10",
         "LoD/1.13c": "0x6FE2AD20",
-        "LoD/1.13d": "0x6FE2AFE0"
+        "LoD/1.13d": "0x6FE2B000"
       },
       "rvas": {
         "LoD/1.11": "0x1AE35",
-        "LoD/1.11b": "0x1AF60",
-        "LoD/1.12a": "0x1B040",
+        "LoD/1.11b": "0x1ACB6",
+        "LoD/1.12a": "0x1AF10",
         "LoD/1.13c": "0x1AD20",
-        "LoD/1.13d": "0x1AFE0"
+        "LoD/1.13d": "0x1B000"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64444,14 +74003,14 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE2AE50",
         "LoD/1.11b": "0x6FE2AC40",
-        "LoD/1.12a": "0x6FE2AE10",
+        "LoD/1.12a": "0x6FE2AD40",
         "LoD/1.13c": "0x6FE2AD50",
         "LoD/1.13d": "0x6FE2ACC0"
       },
       "rvas": {
         "LoD/1.11": "0x1AE50",
         "LoD/1.11b": "0x1AC40",
-        "LoD/1.12a": "0x1AE10",
+        "LoD/1.12a": "0x1AD40",
         "LoD/1.13c": "0x1AD50",
         "LoD/1.13d": "0x1ACC0"
       },
@@ -64493,17 +74052,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InitializeExceptionContext": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE68",
-        "LoD/1.11b": "0x6FE2AE6C",
-        "LoD/1.12a": "0x6FE2AF6C",
-        "LoD/1.13c": "0x6FE2AF68",
-        "LoD/1.13d": "0x6FE2AE98"
+        "LoD/1.11b": "0x6FE2AE62",
+        "LoD/1.12a": "0x6FE2AF62",
+        "LoD/1.13c": "0x6FE2AF7C",
+        "LoD/1.13d": "0x6FE2AEAC"
       },
       "rvas": {
         "LoD/1.11": "0x1AE68",
-        "LoD/1.11b": "0x1AE6C",
-        "LoD/1.12a": "0x1AF6C",
-        "LoD/1.13c": "0x1AF68",
-        "LoD/1.13d": "0x1AE98"
+        "LoD/1.11b": "0x1AE62",
+        "LoD/1.12a": "0x1AF62",
+        "LoD/1.13c": "0x1AF7C",
+        "LoD/1.13d": "0x1AEAC"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64545,16 +74104,16 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE2AE72",
         "LoD/1.11b": "0x6FE2AE58",
-        "LoD/1.12a": "0x6FE2AF62",
+        "LoD/1.12a": "0x6FE2AF58",
         "LoD/1.13c": "0x6FE2AF72",
-        "LoD/1.13d": "0x6FE2AEA2"
+        "LoD/1.13d": "0x6FE2AE98"
       },
       "rvas": {
         "LoD/1.11": "0x1AE72",
         "LoD/1.11b": "0x1AE58",
-        "LoD/1.12a": "0x1AF62",
+        "LoD/1.12a": "0x1AF58",
         "LoD/1.13c": "0x1AF72",
-        "LoD/1.13d": "0x1AEA2"
+        "LoD/1.13d": "0x1AE98"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64595,17 +74154,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InitializeExceptionContext_AE7C": {
       "addresses": {
         "LoD/1.11": "0x6FE2AE7C",
-        "LoD/1.11b": "0x6FE2AE62",
-        "LoD/1.12a": "0x6FE2AF58",
-        "LoD/1.13c": "0x6FE2AF7C",
-        "LoD/1.13d": "0x6FE2AEAC"
+        "LoD/1.11b": "0x6FE2AE6C",
+        "LoD/1.12a": "0x6FE2AF6C",
+        "LoD/1.13c": "0x6FE2AF68",
+        "LoD/1.13d": "0x6FE2AEA2"
       },
       "rvas": {
         "LoD/1.11": "0x1AE7C",
-        "LoD/1.11b": "0x1AE62",
-        "LoD/1.12a": "0x1AF58",
-        "LoD/1.13c": "0x1AF7C",
-        "LoD/1.13d": "0x1AEAC"
+        "LoD/1.11b": "0x1AE6C",
+        "LoD/1.12a": "0x1AF6C",
+        "LoD/1.13c": "0x1AF68",
+        "LoD/1.13d": "0x1AEA2"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64646,17 +74205,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_AEAB": {
       "addresses": {
         "LoD/1.11": "0x6FE2AEAB",
-        "LoD/1.11b": "0x6FE2ADFC",
-        "LoD/1.12a": "0x6FE2AE20",
-        "LoD/1.13c": "0x6FE2AF0C",
-        "LoD/1.13d": "0x6FE2AF75"
+        "LoD/1.11b": "0x6FE2ADBA",
+        "LoD/1.12a": "0x6FE2AEF2",
+        "LoD/1.13c": "0x6FE2AF02",
+        "LoD/1.13d": "0x6FE2AEDB"
       },
       "rvas": {
         "LoD/1.11": "0x1AEAB",
-        "LoD/1.11b": "0x1ADFC",
-        "LoD/1.12a": "0x1AE20",
-        "LoD/1.13c": "0x1AF0C",
-        "LoD/1.13d": "0x1AF75"
+        "LoD/1.11b": "0x1ADBA",
+        "LoD/1.12a": "0x1AEF2",
+        "LoD/1.13c": "0x1AF02",
+        "LoD/1.13d": "0x1AEDB"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64799,17 +74358,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_AF03": {
       "addresses": {
         "LoD/1.11": "0x6FE2AF03",
-        "LoD/1.11b": "0x6FE2AE9B",
-        "LoD/1.12a": "0x6FE2AEF2",
+        "LoD/1.11b": "0x6FE2AEF3",
+        "LoD/1.12a": "0x6FE2AE20",
         "LoD/1.13c": "0x6FE2AE30",
-        "LoD/1.13d": "0x6FE2AE7A"
+        "LoD/1.13d": "0x6FE2AFC2"
       },
       "rvas": {
         "LoD/1.11": "0x1AF03",
-        "LoD/1.11b": "0x1AE9B",
-        "LoD/1.12a": "0x1AEF2",
+        "LoD/1.11b": "0x1AEF3",
+        "LoD/1.12a": "0x1AE20",
         "LoD/1.13c": "0x1AE30",
-        "LoD/1.13d": "0x1AE7A"
+        "LoD/1.13d": "0x1AFC2"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64851,14 +74410,14 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11": "0x6FE2AF0D",
         "LoD/1.11b": "0x6FE2ADD8",
-        "LoD/1.12a": "0x6FE2AFFD",
+        "LoD/1.12a": "0x6FE2AED8",
         "LoD/1.13c": "0x6FE2AEE8",
         "LoD/1.13d": "0x6FE2AF5D"
       },
       "rvas": {
         "LoD/1.11": "0x1AF0D",
         "LoD/1.11b": "0x1ADD8",
-        "LoD/1.12a": "0x1AFFD",
+        "LoD/1.12a": "0x1AED8",
         "LoD/1.13c": "0x1AEE8",
         "LoD/1.13d": "0x1AF5D"
       },
@@ -64901,17 +74460,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_InvokeExceptionFrameDestructor_AF25": {
       "addresses": {
         "LoD/1.11": "0x6FE2AF25",
-        "LoD/1.11b": "0x6FE2AD20",
-        "LoD/1.12a": "0x6FE2AEBA",
-        "LoD/1.13c": "0x6FE2B003",
-        "LoD/1.13d": "0x6FE2AD70"
+        "LoD/1.11b": "0x6FE2AF15",
+        "LoD/1.12a": "0x6FE2B015",
+        "LoD/1.13c": "0x6FE2B025",
+        "LoD/1.13d": "0x6FE2AFCC"
       },
       "rvas": {
         "LoD/1.11": "0x1AF25",
-        "LoD/1.11b": "0x1AD20",
-        "LoD/1.12a": "0x1AEBA",
-        "LoD/1.13c": "0x1B003",
-        "LoD/1.13d": "0x1AD70"
+        "LoD/1.11b": "0x1AF15",
+        "LoD/1.12a": "0x1B015",
+        "LoD/1.13c": "0x1B025",
+        "LoD/1.13d": "0x1AFCC"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -64952,17 +74511,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindFoundParamException_AF2F": {
       "addresses": {
         "LoD/1.11": "0x6FE2AF2F",
-        "LoD/1.11b": "0x6FE2ADE5",
+        "LoD/1.11b": "0x6FE2AF1F",
         "LoD/1.12a": "0x6FE2B01F",
         "LoD/1.13c": "0x6FE2B02F",
-        "LoD/1.13d": "0x6FE2AF7F"
+        "LoD/1.13d": "0x6FE2AFB5"
       },
       "rvas": {
         "LoD/1.11": "0x1AF2F",
-        "LoD/1.11b": "0x1ADE5",
+        "LoD/1.11b": "0x1AF1F",
         "LoD/1.12a": "0x1B01F",
         "LoD/1.13c": "0x1B02F",
-        "LoD/1.13d": "0x1AF7F"
+        "LoD/1.13d": "0x1AFB5"
       },
       "sizes": {
         "LoD/1.11": 13,
@@ -65003,17 +74562,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AF50": {
       "addresses": {
         "LoD/1.11": "0x6FE2AF50",
-        "LoD/1.11b": "0x6FE2ACB6",
-        "LoD/1.12a": "0x6FE2AE88",
-        "LoD/1.13c": "0x6FE2AE70",
-        "LoD/1.13d": "0x6FE2AD40"
+        "LoD/1.11b": "0x6FE2ACF0",
+        "LoD/1.12a": "0x6FE2B040",
+        "LoD/1.13c": "0x6FE2B050",
+        "LoD/1.13d": "0x6FE2B015"
       },
       "rvas": {
         "LoD/1.11": "0x1AF50",
-        "LoD/1.11b": "0x1ACB6",
-        "LoD/1.12a": "0x1AE88",
-        "LoD/1.13c": "0x1AE70",
-        "LoD/1.13d": "0x1AD40"
+        "LoD/1.11b": "0x1ACF0",
+        "LoD/1.12a": "0x1B040",
+        "LoD/1.13c": "0x1B050",
+        "LoD/1.13d": "0x1B015"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -65054,17 +74613,17 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_UnwindExceptionFrame_AF70": {
       "addresses": {
         "LoD/1.11": "0x6FE2AF70",
-        "LoD/1.11b": "0x6FE2AC78",
-        "LoD/1.12a": "0x6FE2ADF0",
-        "LoD/1.13c": "0x6FE2B070",
-        "LoD/1.13d": "0x6FE2AD10"
+        "LoD/1.11b": "0x6FE2AF60",
+        "LoD/1.12a": "0x6FE2AE60",
+        "LoD/1.13c": "0x6FE2AE5B",
+        "LoD/1.13d": "0x6FE2B030"
       },
       "rvas": {
         "LoD/1.11": "0x1AF70",
-        "LoD/1.11b": "0x1AC78",
-        "LoD/1.12a": "0x1ADF0",
-        "LoD/1.13c": "0x1B070",
-        "LoD/1.13d": "0x1AD10"
+        "LoD/1.11b": "0x1AF60",
+        "LoD/1.12a": "0x1AE60",
+        "LoD/1.13c": "0x1AE5B",
+        "LoD/1.13d": "0x1B030"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -65157,14 +74716,14 @@ var FUNCTIONS_D2CMP_dll = {
       "addresses": {
         "LoD/1.11b": "0x6FE1B0A0",
         "LoD/1.12a": "0x6FE19810",
-        "LoD/1.13c": "0x6FE216D0",
-        "LoD/1.13d": "0x6FE23760"
+        "LoD/1.13c": "0x6FE251B0",
+        "LoD/1.13d": "0x6FE237C0"
       },
       "rvas": {
         "LoD/1.11b": "0xB0A0",
         "LoD/1.12a": "0x9810",
-        "LoD/1.13c": "0x116D0",
-        "LoD/1.13d": "0x13760"
+        "LoD/1.13c": "0x151B0",
+        "LoD/1.13d": "0x137C0"
       },
       "sizes": {
         "LoD/1.11b": 33,
@@ -65178,6 +74737,20 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11b",
       "method": "EXP",
       "index": "EXP:10031",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 1,
         "LoD/1.12a": 3,
@@ -65260,6 +74833,21 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.11b",
       "method": "EXP",
       "index": "EXP:10060",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10058"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 1,
         "LoD/1.12a": 3,
@@ -65277,50 +74865,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.12a": "f027730cc40145adc0697766469adf34",
         "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
         "LoD/1.13d": "273363bdf7c80fd27c6890811a8a205d"
-      }
-    },
-    "d2cmp.dll_EXP_10066_DE90": {
-      "addresses": {
-        "LoD/1.11b": "0x6FE1DE90",
-        "LoD/1.12a": "0x6FE19720",
-        "LoD/1.13c": "0x6FE25150",
-        "LoD/1.13d": "0x6FE23580"
-      },
-      "rvas": {
-        "LoD/1.11b": "0xDE90",
-        "LoD/1.12a": "0x9720",
-        "LoD/1.13c": "0x15150",
-        "LoD/1.13d": "0x13580"
-      },
-      "sizes": {
-        "LoD/1.11b": 46,
-        "LoD/1.12a": 46,
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
-      },
-      "name": "Ordinal_10066",
-      "signature": "int Ordinal_10066(int * param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11b",
-      "method": "EXP",
-      "index": "EXP:10066",
-      "basic_block_counts": {
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11b": "376de26b06c22149642936501844d3db",
-        "LoD/1.12a": "376de26b06c22149642936501844d3db",
-        "LoD/1.13c": "7bf1d875218a1b679b68b13315556cbe",
-        "LoD/1.13d": "7bf1d875218a1b679b68b13315556cbe"
       }
     },
     "d2cmp.dll_MNE_3bc4b403d012": {
@@ -65344,50 +74888,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.11b": "3bc4b403d012c66d264a2a82802842f8"
-      }
-    },
-    "d2cmp.dll_EXP_10084_1D20": {
-      "addresses": {
-        "LoD/1.11b": "0x6FE21D20",
-        "LoD/1.12a": "0x6FE1D120",
-        "LoD/1.13c": "0x6FE25270",
-        "LoD/1.13d": "0x6FE233A0"
-      },
-      "rvas": {
-        "LoD/1.11b": "0x11D20",
-        "LoD/1.12a": "0xD120",
-        "LoD/1.13c": "0x15270",
-        "LoD/1.13d": "0x133A0"
-      },
-      "sizes": {
-        "LoD/1.11b": 45,
-        "LoD/1.12a": 42,
-        "LoD/1.13c": 42,
-        "LoD/1.13d": 42
-      },
-      "name": "Ordinal_10084",
-      "signature": "int Ordinal_10084(int param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11b",
-      "method": "EXP",
-      "index": "EXP:10084",
-      "basic_block_counts": {
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11b": "f027730cc40145adc0697766469adf34",
-        "LoD/1.12a": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13c": "2ff57bd8933574e570776bba02a1755b",
-        "LoD/1.13d": "2ff57bd8933574e570776bba02a1755b"
       }
     },
     "d2cmp.dll_MNE_c70ef1845782_3C30": {
@@ -65781,6 +75281,20 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:13ec7578ddcf5b763f3edae16352d4b3",
+      "callees": {
+        "LoD/1.12a": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13c": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13d": [
+          "FindCharInString",
+          "FindCharInString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 6,
         "LoD/1.13c": 6,
@@ -65816,6 +75330,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:a8613ce83c477ddee9394edab045212a",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 17,
         "LoD/1.13c": 17,
@@ -65851,6 +75391,32 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:8c6f8acb087e0892fd48e980686f4875",
+      "callees": {
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\"",
@@ -65881,82 +75447,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "b9f07a9ccde7067c361303d8f001a364"
       }
     },
-    "d2cmp.dll_EXP_10018_96F0": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE196F0",
-        "LoD/1.13c": "0x6FE21610",
-        "LoD/1.13d": "0x6FE236A0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x96F0",
-        "LoD/1.13c": "0x11610",
-        "LoD/1.13d": "0x136A0"
-      },
-      "sizes": {
-        "LoD/1.12a": 46,
-        "LoD/1.13c": 46,
-        "LoD/1.13d": 46
-      },
-      "name": "Ordinal_10018",
-      "signature": "int Ordinal_10018(int * param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10018",
-      "basic_block_counts": {
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "376de26b06c22149642936501844d3db",
-        "LoD/1.13c": "376de26b06c22149642936501844d3db",
-        "LoD/1.13d": "376de26b06c22149642936501844d3db"
-      }
-    },
-    "d2cmp.dll_EXP_10021": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE19750",
-        "LoD/1.13c": "0x6FE222E0",
-        "LoD/1.13d": "0x6FE243F0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x9750",
-        "LoD/1.13c": "0x122E0",
-        "LoD/1.13d": "0x143F0"
-      },
-      "sizes": {
-        "LoD/1.12a": 45,
-        "LoD/1.13c": 151,
-        "LoD/1.13d": 151
-      },
-      "name": "Ordinal_10021",
-      "signature": "int Ordinal_10021(int param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10021",
-      "basic_block_counts": {
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 10,
-        "LoD/1.13d": 10
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "f027730cc40145adc0697766469adf34",
-        "LoD/1.13c": "f3ec38269adf7b45c8d9e6cb004352ff",
-        "LoD/1.13d": "f3ec38269adf7b45c8d9e6cb004352ff"
-      }
-    },
     "d2cmp.dll_MNE_904a77f5b0fd": {
       "addresses": {
         "LoD/1.12a": "0x6FE19840"
@@ -65978,44 +75468,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.12a": "904a77f5b0fd2b30d5b61a9cada9252b"
-      }
-    },
-    "d2cmp.dll_EXP_10038": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE1A3D0",
-        "LoD/1.13c": "0x6FE25180",
-        "LoD/1.13d": "0x6FE231F0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0xA3D0",
-        "LoD/1.13c": "0x15180",
-        "LoD/1.13d": "0x131F0"
-      },
-      "sizes": {
-        "LoD/1.12a": 153,
-        "LoD/1.13c": 46,
-        "LoD/1.13d": 46
-      },
-      "name": "Ordinal_10038",
-      "signature": "int Ordinal_10038(undefined4 param_1_00, int param_2)",
-      "calling_convention": "__thiscall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10038",
-      "basic_block_counts": {
-        "LoD/1.12a": 10,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "b13038679666d72ac0d6d19d3f849cb5",
-        "LoD/1.13c": "ea39fe8f50d9138c623f93f89b2d5285",
-        "LoD/1.13d": "ea39fe8f50d9138c623f93f89b2d5285"
       }
     },
     "d2cmp.dll_EXP_10070": {
@@ -66094,44 +75546,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "ea61922022cb536d70448a5259bdd7e0"
       }
     },
-    "d2cmp.dll_EXP_10089_D0F0": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE1D0F0",
-        "LoD/1.13c": "0x6FE25240",
-        "LoD/1.13d": "0x6FE232B0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0xD0F0",
-        "LoD/1.13c": "0x15240",
-        "LoD/1.13d": "0x132B0"
-      },
-      "sizes": {
-        "LoD/1.12a": 41,
-        "LoD/1.13c": 41,
-        "LoD/1.13d": 41
-      },
-      "name": "Ordinal_10089",
-      "signature": "undefined4 Ordinal_10089(undefined4 * param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10089",
-      "basic_block_counts": {
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "7327fe4965697b84a6e570abecfcc70f",
-        "LoD/1.13c": "7327fe4965697b84a6e570abecfcc70f",
-        "LoD/1.13d": "7327fe4965697b84a6e570abecfcc70f"
-      }
-    },
     "d2cmp.dll_API_4fd81c4b0c76": {
       "addresses": {
         "LoD/1.12a": "0x6FE1F380"
@@ -66145,6 +75559,15 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:4fd81c4b0c76b1af953a74157910955d",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -66158,41 +75581,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.12a": "147b211ea8e44171de0a0cf1e6d9aea8"
-      }
-    },
-    "d2cmp.dll_API_c01fa6e1a170_0B10": {
-      "addresses": {
-        "LoD/1.12a": "0x6FE20B10",
-        "LoD/1.13c": "0x6FE270F0",
-        "LoD/1.13d": "0x6FE24A40"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x10B10",
-        "LoD/1.13c": "0x170F0",
-        "LoD/1.13d": "0x14A40"
-      },
-      "sizes": {
-        "LoD/1.12a": 64,
-        "LoD/1.13c": 64,
-        "LoD/1.13d": 64
-      },
-      "name_source": "LoD/1.12a",
-      "method": "API",
-      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
-      "basic_block_counts": {
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "6bf7f65397ead9a21760b0d736ba97c5",
-        "LoD/1.13c": "6bf7f65397ead9a21760b0d736ba97c5",
-        "LoD/1.13d": "6bf7f65397ead9a21760b0d736ba97c5"
       }
     },
     "d2cmp.dll_MNE_a565174cd84a": {
@@ -66234,6 +75622,16 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "EXP",
       "index": "EXP:10030",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10038",
+          "Ordinal_10041",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 26
       },
@@ -66257,6 +75655,13 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:6eb7b1fe141270113dd698b533e7e498",
+      "callees": {
+        "LoD/1.12a": [
+          "Ordinal_10097",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 32
       },
@@ -66289,6 +75694,16 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "EXP",
       "index": "EXP:10032",
+      "callees": {
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 1,
         "LoD/1.13c": 3,
@@ -66318,6 +75733,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:5be78d4fce2983609ea79e51f3094b9c",
+      "callees": {
+        "LoD/1.12a": [
+          "Ordinal_10013"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 23
       },
@@ -66441,11 +75861,11 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_DecimalStringToDouble": {
       "addresses": {
         "LoD/1.12a": "0x6FE29B10",
-        "LoD/1.13c": "0x6FE29B65"
+        "LoD/1.13c": "0x6FE29B20"
       },
       "rvas": {
         "LoD/1.12a": "0x19B10",
-        "LoD/1.13c": "0x19B65"
+        "LoD/1.13c": "0x19B20"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -66474,11 +75894,11 @@ var FUNCTIONS_D2CMP_dll = {
     "d2cmp.dll_DecimalStringToDouble_9B55": {
       "addresses": {
         "LoD/1.12a": "0x6FE29B55",
-        "LoD/1.13c": "0x6FE29B20"
+        "LoD/1.13c": "0x6FE29B65"
       },
       "rvas": {
         "LoD/1.12a": "0x19B55",
-        "LoD/1.13c": "0x19B20"
+        "LoD/1.13c": "0x19B65"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -66717,6 +76137,12 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13c",
       "method": "EXP",
       "index": "EXP:10078",
+      "callees": {
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 1,
         "LoD/1.13d": 3
@@ -66778,6 +76204,24 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13c",
       "method": "EXP",
       "index": "EXP:10103",
+      "callees": {
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10021",
+          "Ordinal_10057",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10035",
+          "Ordinal_10104",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 26,
         "LoD/1.13d": 26
@@ -66807,6 +76251,18 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:47b4df046251053c0c168ebebfe06ee6",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10102",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10029",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 32,
         "LoD/1.13d": 32
@@ -66818,70 +76274,6 @@ var FUNCTIONS_D2CMP_dll = {
       "mnemonic_hashes": {
         "LoD/1.13c": "9925f26e4e7342f2910c6831bf7b98d4",
         "LoD/1.13d": "9925f26e4e7342f2910c6831bf7b98d4"
-      }
-    },
-    "d2cmp.dll_EXP_10079": {
-      "addresses": {
-        "LoD/1.13c": "0x6FE21640",
-        "LoD/1.13d": "0x6FE236D0"
-      },
-      "rvas": {
-        "LoD/1.13c": "0x11640",
-        "LoD/1.13d": "0x136D0"
-      },
-      "sizes": {
-        "LoD/1.13c": 46,
-        "LoD/1.13d": 46
-      },
-      "name": "Ordinal_10079",
-      "signature": "int Ordinal_10079(int * param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.13c",
-      "method": "EXP",
-      "index": "EXP:10079",
-      "basic_block_counts": {
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.13c": "376de26b06c22149642936501844d3db",
-        "LoD/1.13d": "376de26b06c22149642936501844d3db"
-      }
-    },
-    "d2cmp.dll_EXP_10085": {
-      "addresses": {
-        "LoD/1.13c": "0x6FE21670",
-        "LoD/1.13d": "0x6FE23700"
-      },
-      "rvas": {
-        "LoD/1.13c": "0x11670",
-        "LoD/1.13d": "0x13700"
-      },
-      "sizes": {
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
-      },
-      "name": "Ordinal_10085",
-      "signature": "int Ordinal_10085(int param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.13c",
-      "method": "EXP",
-      "index": "EXP:10085",
-      "basic_block_counts": {
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.13c": "f027730cc40145adc0697766469adf34",
-        "LoD/1.13d": "f027730cc40145adc0697766469adf34"
       }
     },
     "d2cmp.dll_MNE_b5d62ddc9ae2_1760": {
@@ -66942,38 +76334,6 @@ var FUNCTIONS_D2CMP_dll = {
         "LoD/1.13d": "3bc4b403d012c66d264a2a82802842f8"
       }
     },
-    "d2cmp.dll_EXP_10011_51E0": {
-      "addresses": {
-        "LoD/1.13c": "0x6FE251E0",
-        "LoD/1.13d": "0x6FE23250"
-      },
-      "rvas": {
-        "LoD/1.13c": "0x151E0",
-        "LoD/1.13d": "0x13250"
-      },
-      "sizes": {
-        "LoD/1.13c": 45,
-        "LoD/1.13d": 45
-      },
-      "name": "Ordinal_10011",
-      "signature": "int Ordinal_10011(int param_1)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.13c",
-      "method": "EXP",
-      "index": "EXP:10011",
-      "basic_block_counts": {
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.13c": "f027730cc40145adc0697766469adf34",
-        "LoD/1.13d": "f027730cc40145adc0697766469adf34"
-      }
-    },
     "d2cmp.dll_MNE_46068e7e0a8e": {
       "addresses": {
         "LoD/1.13c": "0x6FE26C90",
@@ -66990,6 +76350,14 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:46068e7e0a8ee4e50c5003429c97f4bb",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10073"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10058"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 23,
         "LoD/1.13d": 23
@@ -67314,6 +76682,15 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:4fd81c4b0c76b1af953a74157910955d",
+      "callees": {
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"..\\\\Source\\\\D2CMP\\\\SRC\\\\Tilecmp.cpp\""
@@ -67327,32 +76704,6 @@ var FUNCTIONS_D2CMP_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.13d": "147b211ea8e44171de0a0cf1e6d9aea8"
-      }
-    },
-    "d2cmp.dll_EXP_10047": {
-      "addresses": {
-        "LoD/1.13d": "0x6FE20FE0"
-      },
-      "rvas": {
-        "LoD/1.13d": "0x10FE0"
-      },
-      "sizes": {
-        "LoD/1.13d": 70
-      },
-      "name": "Ordinal_10047",
-      "signature": "undefined4 Ordinal_10047(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.13d",
-      "method": "EXP",
-      "index": "EXP:10047",
-      "basic_block_counts": {
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.13d": "2902688516a94c7f11ee0a4e580e9f6b"
       }
     },
     "d2cmp.dll_MNE_c70ef1845782_23D0": {
@@ -67420,6 +76771,11 @@ var FUNCTIONS_D2CMP_dll = {
       "name_source": "LoD/1.13d",
       "method": "EXP",
       "index": "EXP:10024",
+      "callees": {
+        "LoD/1.13d": [
+          "Ordinal_10045"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 1
       },

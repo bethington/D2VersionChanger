@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2Gdi.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -265,6 +265,32 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:edaa14afba4583ccecdf883d17f48f04",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Opening GDI window at 640x480...\"",
@@ -511,11 +537,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F831550",
         "LoD/1.09d": "0x6F831550",
         "LoD/1.10": "0x6F831550",
-        "LoD/1.11": "0x6F875F30",
-        "LoD/1.11b": "0x6F876AE0",
+        "LoD/1.11": "0x6F875DD0",
+        "LoD/1.11b": "0x6F876C40",
         "LoD/1.12a": "0x6F875E40",
         "LoD/1.13c": "0x6F876A20",
-        "LoD/1.13d": "0x6F877710"
+        "LoD/1.13d": "0x6F877870"
       },
       "rvas": {
         "LoD/1.07": "0x1550",
@@ -524,11 +550,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x1550",
         "LoD/1.09d": "0x1550",
         "LoD/1.10": "0x1550",
-        "LoD/1.11": "0x5F30",
-        "LoD/1.11b": "0x6AE0",
+        "LoD/1.11": "0x5DD0",
+        "LoD/1.11b": "0x6C40",
         "LoD/1.12a": "0x5E40",
         "LoD/1.13c": "0x6A20",
-        "LoD/1.13d": "0x7710"
+        "LoD/1.13d": "0x7870"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -635,6 +661,52 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10001",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pptPal\"",
@@ -753,6 +825,58 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10002",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ppbBuffer\"",
@@ -839,11 +963,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F8316C0",
         "LoD/1.09d": "0x6F8316C0",
         "LoD/1.10": "0x6F8316C0",
-        "LoD/1.11": "0x6F875DD0",
-        "LoD/1.11b": "0x6F876C40",
+        "LoD/1.11": "0x6F875F30",
+        "LoD/1.11b": "0x6F876AE0",
         "LoD/1.12a": "0x6F875FA0",
         "LoD/1.13c": "0x6F8768C0",
-        "LoD/1.13d": "0x6F877870"
+        "LoD/1.13d": "0x6F877710"
       },
       "rvas": {
         "LoD/1.07": "0x16C0",
@@ -852,11 +976,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x16C0",
         "LoD/1.09d": "0x16C0",
         "LoD/1.10": "0x16C0",
-        "LoD/1.11": "0x5DD0",
-        "LoD/1.11b": "0x6C40",
+        "LoD/1.11": "0x5F30",
+        "LoD/1.11b": "0x6AE0",
         "LoD/1.12a": "0x5FA0",
         "LoD/1.13c": "0x68C0",
-        "LoD/1.13d": "0x7870"
+        "LoD/1.13d": "0x7710"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1229,6 +1353,26 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ae9609438a3c35f80bd06c4b89002372",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...",
@@ -1355,6 +1499,32 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:660b70fb93d7a717da5d6826022cc00d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...",
@@ -1496,7 +1666,8 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F8320B0",
         "LoD/1.09d": "0x6F8320B0",
         "LoD/1.10": "0x6F8320C0",
-        "LoD/1.11": "0x6F876AE0"
+        "LoD/1.11": "0x6F877550",
+        "LoD/1.11b": "0x6F8773F0"
       },
       "rvas": {
         "LoD/1.07": "0x20B0",
@@ -1505,7 +1676,8 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x20B0",
         "LoD/1.09d": "0x20B0",
         "LoD/1.10": "0x20C0",
-        "LoD/1.11": "0x6AE0"
+        "LoD/1.11": "0x7550",
+        "LoD/1.11b": "0x73F0"
       },
       "sizes": {
         "LoD/1.07": 94,
@@ -1514,11 +1686,38 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": 94,
         "LoD/1.09d": 94,
         "LoD/1.10": 94,
-        "LoD/1.11": 94
+        "LoD/1.11": 94,
+        "LoD/1.11b": 94
       },
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e78177a189d01451abce035b832e32fc",
+      "callees": {
+        "LoD/1.07": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10100"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -1526,7 +1725,8 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": 8,
         "LoD/1.09d": 8,
         "LoD/1.10": 8,
-        "LoD/1.11": 8
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -1535,7 +1735,8 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
-        "LoD/1.11": 0
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "e78177a189d01451abce035b832e32fc",
@@ -1544,7 +1745,8 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "e78177a189d01451abce035b832e32fc",
         "LoD/1.09d": "e78177a189d01451abce035b832e32fc",
         "LoD/1.10": "7bf85eac09c4184f6cc9876299e5e012",
-        "LoD/1.11": "02970ea94d9d5cdfbf24077d0a947ccb"
+        "LoD/1.11": "6abcc731a6dfa7e0b993f3b20da37c0a",
+        "LoD/1.11b": "6abcc731a6dfa7e0b993f3b20da37c0a"
       }
     },
     "d2gdi.dll_STR_2d5bf8edd674": {
@@ -1590,6 +1792,41 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:2d5bf8edd674a86ba2e53b09e3602313",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiSma..."
@@ -1823,6 +2060,56 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8ed48f8ed7b3b4ba9d7594e730dff888",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "Ordinal_10033"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 21,
         "LoD/1.08": 21,
@@ -1876,6 +2163,62 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ce4e6d542faa18d3febf5c08e647ddc3",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "FogAssert",
+          "Ordinal_10034"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptClipRect->bottom > 0\"",
@@ -1955,6 +2298,56 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7ec5ca8f54f8dc04fa4be4bf81c6b50e",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "Ordinal_10035"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -2005,6 +2398,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:764ba89d955cb2837e70da8f85d4f96c",
+      "callees": {
+        "LoD/1.07": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 17,
         "LoD/1.08": 17,
@@ -2035,11 +2445,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833040",
         "LoD/1.09d": "0x6F833040",
         "LoD/1.10": "0x6F833070",
-        "LoD/1.11": "0x6F875D6A",
-        "LoD/1.11b": "0x6F875D6A",
-        "LoD/1.12a": "0x6F875DDA",
-        "LoD/1.13c": "0x6F875DDA",
-        "LoD/1.13d": "0x6F875D6A"
+        "LoD/1.11": "0x6F875D88",
+        "LoD/1.11b": "0x6F875D88",
+        "LoD/1.12a": "0x6F875DF8",
+        "LoD/1.13c": "0x6F875DEC",
+        "LoD/1.13d": "0x6F875D82"
       },
       "rvas": {
         "LoD/1.07": "0x3040",
@@ -2048,11 +2458,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3040",
         "LoD/1.09d": "0x3040",
         "LoD/1.10": "0x3070",
-        "LoD/1.11": "0x5D6A",
-        "LoD/1.11b": "0x5D6A",
-        "LoD/1.12a": "0x5DDA",
-        "LoD/1.13c": "0x5DDA",
-        "LoD/1.13d": "0x5D6A"
+        "LoD/1.11": "0x5D88",
+        "LoD/1.11b": "0x5D88",
+        "LoD/1.12a": "0x5DF8",
+        "LoD/1.13c": "0x5DEC",
+        "LoD/1.13d": "0x5D82"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2121,11 +2531,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833046",
         "LoD/1.09d": "0x6F833046",
         "LoD/1.10": "0x6F833076",
-        "LoD/1.11": "0x6F875DCA",
-        "LoD/1.11b": "0x6F875DCA",
-        "LoD/1.12a": "0x6F875E3A",
-        "LoD/1.13c": "0x6F875E0A",
-        "LoD/1.13d": "0x6F875D9A"
+        "LoD/1.11": "0x6F875D8E",
+        "LoD/1.11b": "0x6F875D8E",
+        "LoD/1.12a": "0x6F875DFE",
+        "LoD/1.13c": "0x6F875E04",
+        "LoD/1.13d": "0x6F875D94"
       },
       "rvas": {
         "LoD/1.07": "0x3046",
@@ -2134,11 +2544,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3046",
         "LoD/1.09d": "0x3046",
         "LoD/1.10": "0x3076",
-        "LoD/1.11": "0x5DCA",
-        "LoD/1.11b": "0x5DCA",
-        "LoD/1.12a": "0x5E3A",
-        "LoD/1.13c": "0x5E0A",
-        "LoD/1.13d": "0x5D9A"
+        "LoD/1.11": "0x5D8E",
+        "LoD/1.11b": "0x5D8E",
+        "LoD/1.12a": "0x5DFE",
+        "LoD/1.13c": "0x5E04",
+        "LoD/1.13d": "0x5D94"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2207,11 +2617,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F83304C",
         "LoD/1.09d": "0x6F83304C",
         "LoD/1.10": "0x6F83307C",
-        "LoD/1.11": "0x6F875DBE",
-        "LoD/1.11b": "0x6F875DBE",
-        "LoD/1.12a": "0x6F875E16",
-        "LoD/1.13c": "0x6F875E40",
-        "LoD/1.13d": "0x6F875DD0"
+        "LoD/1.11": "0x6F875D94",
+        "LoD/1.11b": "0x6F875DB8",
+        "LoD/1.12a": "0x6F875E28",
+        "LoD/1.13c": "0x6F875E1C",
+        "LoD/1.13d": "0x6F875DAC"
       },
       "rvas": {
         "LoD/1.07": "0x304C",
@@ -2220,11 +2630,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x304C",
         "LoD/1.09d": "0x304C",
         "LoD/1.10": "0x307C",
-        "LoD/1.11": "0x5DBE",
-        "LoD/1.11b": "0x5DBE",
-        "LoD/1.12a": "0x5E16",
-        "LoD/1.13c": "0x5E40",
-        "LoD/1.13d": "0x5DD0"
+        "LoD/1.11": "0x5D94",
+        "LoD/1.11b": "0x5DB8",
+        "LoD/1.12a": "0x5E28",
+        "LoD/1.13c": "0x5E1C",
+        "LoD/1.13d": "0x5DAC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2293,11 +2703,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833052",
         "LoD/1.09d": "0x6F833052",
         "LoD/1.10": "0x6F833082",
-        "LoD/1.11": "0x6F875D7C",
-        "LoD/1.11b": "0x6F875D7C",
-        "LoD/1.12a": "0x6F875DEC",
-        "LoD/1.13c": "0x6F875DF8",
-        "LoD/1.13d": "0x6F875D88"
+        "LoD/1.11": "0x6F875DBE",
+        "LoD/1.11b": "0x6F875DBE",
+        "LoD/1.12a": "0x6F875E16",
+        "LoD/1.13c": "0x6F875E2E",
+        "LoD/1.13d": "0x6F875DBE"
       },
       "rvas": {
         "LoD/1.07": "0x3052",
@@ -2306,11 +2716,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3052",
         "LoD/1.09d": "0x3052",
         "LoD/1.10": "0x3082",
-        "LoD/1.11": "0x5D7C",
-        "LoD/1.11b": "0x5D7C",
-        "LoD/1.12a": "0x5DEC",
-        "LoD/1.13c": "0x5DF8",
-        "LoD/1.13d": "0x5D88"
+        "LoD/1.11": "0x5DBE",
+        "LoD/1.11b": "0x5DBE",
+        "LoD/1.12a": "0x5E16",
+        "LoD/1.13c": "0x5E2E",
+        "LoD/1.13d": "0x5DBE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2379,11 +2789,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833058",
         "LoD/1.09d": "0x6F833058",
         "LoD/1.10": "0x6F833088",
-        "LoD/1.11": "0x6F875DAC",
-        "LoD/1.11b": "0x6F875DAC",
-        "LoD/1.12a": "0x6F875E1C",
-        "LoD/1.13c": "0x6F875E3A",
-        "LoD/1.13d": "0x6F875DCA"
+        "LoD/1.11": "0x6F875D7C",
+        "LoD/1.11b": "0x6F875D7C",
+        "LoD/1.12a": "0x6F875DEC",
+        "LoD/1.13c": "0x6F875DF8",
+        "LoD/1.13d": "0x6F875D88"
       },
       "rvas": {
         "LoD/1.07": "0x3058",
@@ -2392,11 +2802,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3058",
         "LoD/1.09d": "0x3058",
         "LoD/1.10": "0x3088",
-        "LoD/1.11": "0x5DAC",
-        "LoD/1.11b": "0x5DAC",
-        "LoD/1.12a": "0x5E1C",
-        "LoD/1.13c": "0x5E3A",
-        "LoD/1.13d": "0x5DCA"
+        "LoD/1.11": "0x5D7C",
+        "LoD/1.11b": "0x5D7C",
+        "LoD/1.12a": "0x5DEC",
+        "LoD/1.13c": "0x5DF8",
+        "LoD/1.13d": "0x5D88"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2465,11 +2875,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F83305E",
         "LoD/1.09d": "0x6F83305E",
         "LoD/1.10": "0x6F83308E",
-        "LoD/1.11": "0x6F875D88",
-        "LoD/1.11b": "0x6F875D88",
-        "LoD/1.12a": "0x6F875DF8",
-        "LoD/1.13c": "0x6F875DEC",
-        "LoD/1.13d": "0x6F875D82"
+        "LoD/1.11": "0x6F875DAC",
+        "LoD/1.11b": "0x6F875DAC",
+        "LoD/1.12a": "0x6F875E1C",
+        "LoD/1.13c": "0x6F875E3A",
+        "LoD/1.13d": "0x6F875DCA"
       },
       "rvas": {
         "LoD/1.07": "0x305E",
@@ -2478,11 +2888,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x305E",
         "LoD/1.09d": "0x305E",
         "LoD/1.10": "0x308E",
-        "LoD/1.11": "0x5D88",
-        "LoD/1.11b": "0x5D88",
-        "LoD/1.12a": "0x5DF8",
-        "LoD/1.13c": "0x5DEC",
-        "LoD/1.13d": "0x5D82"
+        "LoD/1.11": "0x5DAC",
+        "LoD/1.11b": "0x5DAC",
+        "LoD/1.12a": "0x5E1C",
+        "LoD/1.13c": "0x5E3A",
+        "LoD/1.13d": "0x5DCA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2551,11 +2961,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833064",
         "LoD/1.09d": "0x6F833064",
         "LoD/1.10": "0x6F833094",
-        "LoD/1.11": "0x6F875D64",
-        "LoD/1.11b": "0x6F875D64",
-        "LoD/1.12a": "0x6F875DD4",
-        "LoD/1.13c": "0x6F875DD4",
-        "LoD/1.13d": "0x6F875D64"
+        "LoD/1.11": "0x6F875D6A",
+        "LoD/1.11b": "0x6F875D6A",
+        "LoD/1.12a": "0x6F875DDA",
+        "LoD/1.13c": "0x6F875DDA",
+        "LoD/1.13d": "0x6F875D6A"
       },
       "rvas": {
         "LoD/1.07": "0x3064",
@@ -2564,11 +2974,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3064",
         "LoD/1.09d": "0x3064",
         "LoD/1.10": "0x3094",
-        "LoD/1.11": "0x5D64",
-        "LoD/1.11b": "0x5D64",
-        "LoD/1.12a": "0x5DD4",
-        "LoD/1.13c": "0x5DD4",
-        "LoD/1.13d": "0x5D64"
+        "LoD/1.11": "0x5D6A",
+        "LoD/1.11b": "0x5D6A",
+        "LoD/1.12a": "0x5DDA",
+        "LoD/1.13c": "0x5DDA",
+        "LoD/1.13d": "0x5D6A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2633,28 +3043,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "addresses": {
         "LoD/1.07": "0x6F89306A",
         "LoD/1.08": "0x6F89306A",
-        "LoD/1.09": "0x6F83306A",
-        "LoD/1.09b": "0x6F83306A",
-        "LoD/1.09d": "0x6F83306A",
-        "LoD/1.10": "0x6F83309A",
-        "LoD/1.11": "0x6F875D94",
-        "LoD/1.11b": "0x6F875DB8",
-        "LoD/1.12a": "0x6F875E28",
-        "LoD/1.13c": "0x6F875E1C",
-        "LoD/1.13d": "0x6F875DAC"
+        "LoD/1.09": "0x6F83307C",
+        "LoD/1.09b": "0x6F83307C",
+        "LoD/1.09d": "0x6F83307C",
+        "LoD/1.10": "0x6F8330AC",
+        "LoD/1.11": "0x6F875DB8",
+        "LoD/1.11b": "0x6F875D94",
+        "LoD/1.12a": "0x6F875E04",
+        "LoD/1.13c": "0x6F875E22",
+        "LoD/1.13d": "0x6F875DB2"
       },
       "rvas": {
         "LoD/1.07": "0x306A",
         "LoD/1.08": "0x306A",
-        "LoD/1.09": "0x306A",
-        "LoD/1.09b": "0x306A",
-        "LoD/1.09d": "0x306A",
-        "LoD/1.10": "0x309A",
-        "LoD/1.11": "0x5D94",
-        "LoD/1.11b": "0x5DB8",
-        "LoD/1.12a": "0x5E28",
-        "LoD/1.13c": "0x5E1C",
-        "LoD/1.13d": "0x5DAC"
+        "LoD/1.09": "0x307C",
+        "LoD/1.09b": "0x307C",
+        "LoD/1.09d": "0x307C",
+        "LoD/1.10": "0x30AC",
+        "LoD/1.11": "0x5DB8",
+        "LoD/1.11b": "0x5D94",
+        "LoD/1.12a": "0x5E04",
+        "LoD/1.13c": "0x5E22",
+        "LoD/1.13d": "0x5DB2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2723,11 +3133,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833070",
         "LoD/1.09d": "0x6F833070",
         "LoD/1.10": "0x6F8330A0",
-        "LoD/1.11": "0x6F875DA6",
-        "LoD/1.11b": "0x6F875DA6",
-        "LoD/1.12a": "0x6F875E2E",
-        "LoD/1.13c": "0x6F875E16",
-        "LoD/1.13d": "0x6F875DA6"
+        "LoD/1.11": "0x6F875D64",
+        "LoD/1.11b": "0x6F875D64",
+        "LoD/1.12a": "0x6F875DD4",
+        "LoD/1.13c": "0x6F875DD4",
+        "LoD/1.13d": "0x6F875D64"
       },
       "rvas": {
         "LoD/1.07": "0x3070",
@@ -2736,11 +3146,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3070",
         "LoD/1.09d": "0x3070",
         "LoD/1.10": "0x30A0",
-        "LoD/1.11": "0x5DA6",
-        "LoD/1.11b": "0x5DA6",
-        "LoD/1.12a": "0x5E2E",
-        "LoD/1.13c": "0x5E16",
-        "LoD/1.13d": "0x5DA6"
+        "LoD/1.11": "0x5D64",
+        "LoD/1.11b": "0x5D64",
+        "LoD/1.12a": "0x5DD4",
+        "LoD/1.13c": "0x5DD4",
+        "LoD/1.13d": "0x5D64"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2895,11 +3305,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833082",
         "LoD/1.09d": "0x6F833082",
         "LoD/1.10": "0x6F8330B2",
-        "LoD/1.11": "0x6F875D76",
-        "LoD/1.11b": "0x6F875D76",
-        "LoD/1.12a": "0x6F875DE6",
-        "LoD/1.13c": "0x6F875DF2",
-        "LoD/1.13d": "0x6F875D7C"
+        "LoD/1.11": "0x6F875DC4",
+        "LoD/1.11b": "0x6F875DC4",
+        "LoD/1.12a": "0x6F875E34",
+        "LoD/1.13c": "0x6F875E10",
+        "LoD/1.13d": "0x6F875DA0"
       },
       "rvas": {
         "LoD/1.07": "0x3082",
@@ -2908,11 +3318,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3082",
         "LoD/1.09d": "0x3082",
         "LoD/1.10": "0x30B2",
-        "LoD/1.11": "0x5D76",
-        "LoD/1.11b": "0x5D76",
-        "LoD/1.12a": "0x5DE6",
-        "LoD/1.13c": "0x5DF2",
-        "LoD/1.13d": "0x5D7C"
+        "LoD/1.11": "0x5DC4",
+        "LoD/1.11b": "0x5DC4",
+        "LoD/1.12a": "0x5E34",
+        "LoD/1.13c": "0x5E10",
+        "LoD/1.13d": "0x5DA0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2981,11 +3391,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833088",
         "LoD/1.09d": "0x6F833088",
         "LoD/1.10": "0x6F8330B8",
-        "LoD/1.11": "0x6F875DB2",
-        "LoD/1.11b": "0x6F875DB2",
-        "LoD/1.12a": "0x6F875E22",
-        "LoD/1.13c": "0x6F875DFE",
-        "LoD/1.13d": "0x6F875D8E"
+        "LoD/1.11": "0x6F875D9A",
+        "LoD/1.11b": "0x6F875D9A",
+        "LoD/1.12a": "0x6F875E0A",
+        "LoD/1.13c": "0x6F875E28",
+        "LoD/1.13d": "0x6F875DB8"
       },
       "rvas": {
         "LoD/1.07": "0x3088",
@@ -2994,11 +3404,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3088",
         "LoD/1.09d": "0x3088",
         "LoD/1.10": "0x30B8",
-        "LoD/1.11": "0x5DB2",
-        "LoD/1.11b": "0x5DB2",
-        "LoD/1.12a": "0x5E22",
-        "LoD/1.13c": "0x5DFE",
-        "LoD/1.13d": "0x5D8E"
+        "LoD/1.11": "0x5D9A",
+        "LoD/1.11b": "0x5D9A",
+        "LoD/1.12a": "0x5E0A",
+        "LoD/1.13c": "0x5E28",
+        "LoD/1.13d": "0x5DB8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3067,11 +3477,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F83308E",
         "LoD/1.09d": "0x6F83308E",
         "LoD/1.10": "0x6F8330BE",
-        "LoD/1.11": "0x6F875DC4",
-        "LoD/1.11b": "0x6F875DC4",
-        "LoD/1.12a": "0x6F875E34",
-        "LoD/1.13c": "0x6F875E10",
-        "LoD/1.13d": "0x6F875DA0"
+        "LoD/1.11": "0x6F875DCA",
+        "LoD/1.11b": "0x6F875DCA",
+        "LoD/1.12a": "0x6F875E3A",
+        "LoD/1.13c": "0x6F875E0A",
+        "LoD/1.13d": "0x6F875D9A"
       },
       "rvas": {
         "LoD/1.07": "0x308E",
@@ -3080,11 +3490,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x308E",
         "LoD/1.09d": "0x308E",
         "LoD/1.10": "0x30BE",
-        "LoD/1.11": "0x5DC4",
-        "LoD/1.11b": "0x5DC4",
-        "LoD/1.12a": "0x5E34",
-        "LoD/1.13c": "0x5E10",
-        "LoD/1.13d": "0x5DA0"
+        "LoD/1.11": "0x5DCA",
+        "LoD/1.11b": "0x5DCA",
+        "LoD/1.12a": "0x5E3A",
+        "LoD/1.13c": "0x5E0A",
+        "LoD/1.13d": "0x5D9A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3153,11 +3563,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F833094",
         "LoD/1.09d": "0x6F833094",
         "LoD/1.10": "0x6F8330C4",
-        "LoD/1.11": "0x6F875D82",
-        "LoD/1.11b": "0x6F875D82",
-        "LoD/1.12a": "0x6F875DF2",
-        "LoD/1.13c": "0x6F875DE6",
-        "LoD/1.13d": "0x6F875D76"
+        "LoD/1.11": "0x6F875DB2",
+        "LoD/1.11b": "0x6F875DB2",
+        "LoD/1.12a": "0x6F875E22",
+        "LoD/1.13c": "0x6F875DFE",
+        "LoD/1.13d": "0x6F875D8E"
       },
       "rvas": {
         "LoD/1.07": "0x3094",
@@ -3166,11 +3576,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x3094",
         "LoD/1.09d": "0x3094",
         "LoD/1.10": "0x30C4",
-        "LoD/1.11": "0x5D82",
-        "LoD/1.11b": "0x5D82",
-        "LoD/1.12a": "0x5DF2",
-        "LoD/1.13c": "0x5DE6",
-        "LoD/1.13d": "0x5D76"
+        "LoD/1.11": "0x5DB2",
+        "LoD/1.11b": "0x5DB2",
+        "LoD/1.12a": "0x5E22",
+        "LoD/1.13c": "0x5DFE",
+        "LoD/1.13d": "0x5D8E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3239,11 +3649,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F83309A",
         "LoD/1.09d": "0x6F83309A",
         "LoD/1.10": "0x6F8330CA",
-        "LoD/1.11": "0x6F875DB8",
-        "LoD/1.11b": "0x6F875D94",
-        "LoD/1.12a": "0x6F875E04",
-        "LoD/1.13c": "0x6F875E22",
-        "LoD/1.13d": "0x6F875DB2"
+        "LoD/1.11": "0x6F875DA6",
+        "LoD/1.11b": "0x6F875DA6",
+        "LoD/1.12a": "0x6F875E2E",
+        "LoD/1.13c": "0x6F875E16",
+        "LoD/1.13d": "0x6F875DA6"
       },
       "rvas": {
         "LoD/1.07": "0x309A",
@@ -3252,11 +3662,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x309A",
         "LoD/1.09d": "0x309A",
         "LoD/1.10": "0x30CA",
-        "LoD/1.11": "0x5DB8",
-        "LoD/1.11b": "0x5D94",
-        "LoD/1.12a": "0x5E04",
-        "LoD/1.13c": "0x5E22",
-        "LoD/1.13d": "0x5DB2"
+        "LoD/1.11": "0x5DA6",
+        "LoD/1.11b": "0x5DA6",
+        "LoD/1.12a": "0x5E2E",
+        "LoD/1.13c": "0x5E16",
+        "LoD/1.13d": "0x5DA6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3325,11 +3735,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F8330A0",
         "LoD/1.09d": "0x6F8330A0",
         "LoD/1.10": "0x6F8330D0",
-        "LoD/1.11": "0x6F875D8E",
-        "LoD/1.11b": "0x6F875D8E",
-        "LoD/1.12a": "0x6F875DFE",
-        "LoD/1.13c": "0x6F875E04",
-        "LoD/1.13d": "0x6F875D94"
+        "LoD/1.11": "0x6F875D76",
+        "LoD/1.11b": "0x6F875D76",
+        "LoD/1.12a": "0x6F875DE6",
+        "LoD/1.13c": "0x6F875DF2",
+        "LoD/1.13d": "0x6F875D7C"
       },
       "rvas": {
         "LoD/1.07": "0x30A0",
@@ -3338,11 +3748,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x30A0",
         "LoD/1.09d": "0x30A0",
         "LoD/1.10": "0x30D0",
-        "LoD/1.11": "0x5D8E",
-        "LoD/1.11b": "0x5D8E",
-        "LoD/1.12a": "0x5DFE",
-        "LoD/1.13c": "0x5E04",
-        "LoD/1.13d": "0x5D94"
+        "LoD/1.11": "0x5D76",
+        "LoD/1.11b": "0x5D76",
+        "LoD/1.12a": "0x5DE6",
+        "LoD/1.13c": "0x5DF2",
+        "LoD/1.13d": "0x5D7C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3868,7 +4278,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F8343AE",
         "LoD/1.09d": "0x6F8343AE",
         "LoD/1.10": "0x6F8343DE",
-        "LoD/1.11": "0x6F872892",
+        "LoD/1.11": "0x6F871039",
         "LoD/1.11b": "0x6F87349D",
         "LoD/1.12a": "0x6F8734D5",
         "LoD/1.13c": "0x6F8734D5",
@@ -3881,7 +4291,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x43AE",
         "LoD/1.09d": "0x43AE",
         "LoD/1.10": "0x43DE",
-        "LoD/1.11": "0x2892",
+        "LoD/1.11": "0x1039",
         "LoD/1.11b": "0x349D",
         "LoD/1.12a": "0x34D5",
         "LoD/1.13c": "0x34D5",
@@ -6553,7 +6963,7 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_MNE_bff09423b51f": {
       "addresses": {
         "LoD/1.07": "0x6F8967F0",
-        "LoD/1.08": "0x6F8967F0",
+        "LoD/1.08": "0x6F894930",
         "LoD/1.09": "0x6F834930",
         "LoD/1.09b": "0x6F834930",
         "LoD/1.09d": "0x6F834930",
@@ -6561,7 +6971,7 @@ var FUNCTIONS_D2Gdi_dll = {
       },
       "rvas": {
         "LoD/1.07": "0x67F0",
-        "LoD/1.08": "0x67F0",
+        "LoD/1.08": "0x4930",
         "LoD/1.09": "0x4930",
         "LoD/1.09b": "0x4930",
         "LoD/1.09d": "0x4930",
@@ -7069,11 +7479,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F83504F",
         "LoD/1.09d": "0x6F83504F",
         "LoD/1.10": "0x6F83507F",
-        "LoD/1.11": "0x6F876130",
-        "LoD/1.11b": "0x6F876E40",
-        "LoD/1.12a": "0x6F8761A0",
-        "LoD/1.13c": "0x6F876C50",
-        "LoD/1.13d": "0x6F877AA0"
+        "LoD/1.11": "0x6F8734C4",
+        "LoD/1.11b": "0x6F8734C4",
+        "LoD/1.12a": "0x6F8734FC",
+        "LoD/1.13c": "0x6F8734FC",
+        "LoD/1.13d": "0x6F8734C4"
       },
       "rvas": {
         "LoD/1.07": "0x504F",
@@ -7082,11 +7492,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x504F",
         "LoD/1.09d": "0x504F",
         "LoD/1.10": "0x507F",
-        "LoD/1.11": "0x6130",
-        "LoD/1.11b": "0x6E40",
-        "LoD/1.12a": "0x61A0",
-        "LoD/1.13c": "0x6C50",
-        "LoD/1.13d": "0x7AA0"
+        "LoD/1.11": "0x34C4",
+        "LoD/1.11b": "0x34C4",
+        "LoD/1.12a": "0x34FC",
+        "LoD/1.13c": "0x34FC",
+        "LoD/1.13d": "0x34C4"
       },
       "sizes": {
         "LoD/1.07": 72,
@@ -7140,11 +7550,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "a57b3ae583e4f6f104245d4da8d3b9fe",
         "LoD/1.09d": "a57b3ae583e4f6f104245d4da8d3b9fe",
         "LoD/1.10": "a57b3ae583e4f6f104245d4da8d3b9fe",
-        "LoD/1.11": "97da344aa14cbecea5b1e2e02d7a2928",
-        "LoD/1.11b": "97da344aa14cbecea5b1e2e02d7a2928",
-        "LoD/1.12a": "97da344aa14cbecea5b1e2e02d7a2928",
-        "LoD/1.13c": "97da344aa14cbecea5b1e2e02d7a2928",
-        "LoD/1.13d": "97da344aa14cbecea5b1e2e02d7a2928"
+        "LoD/1.11": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.11b": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.12a": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.13c": "288a4a209e4706fee9d14eabda44517a",
+        "LoD/1.13d": "288a4a209e4706fee9d14eabda44517a"
       }
     },
     "d2gdi.dll_MNE_2a0dd1f395da": {
@@ -8071,6 +8481,41 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -9437,6 +9882,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:2547d6ff0bb8c14e3aa43aba2e59affb",
+      "callees": {
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor..."
@@ -9483,11 +9945,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F831070",
         "LoD/1.09d": "0x6F831070",
         "LoD/1.10": "0x6F831070",
-        "LoD/1.11": "0x6F875B40",
-        "LoD/1.11b": "0x6F875B40",
-        "LoD/1.12a": "0x6F875BB0",
-        "LoD/1.13c": "0x6F875BB0",
-        "LoD/1.13d": "0x6F875B40"
+        "LoD/1.11": "0x6F8762E0",
+        "LoD/1.11b": "0x6F876FF0",
+        "LoD/1.12a": "0x6F876350",
+        "LoD/1.13c": "0x6F876E00",
+        "LoD/1.13d": "0x6F877C50"
       },
       "rvas": {
         "LoD/1.08": "0x1070",
@@ -9495,11 +9957,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x1070",
         "LoD/1.09d": "0x1070",
         "LoD/1.10": "0x1070",
-        "LoD/1.11": "0x5B40",
-        "LoD/1.11b": "0x5B40",
-        "LoD/1.12a": "0x5BB0",
-        "LoD/1.13c": "0x5BB0",
-        "LoD/1.13d": "0x5B40"
+        "LoD/1.11": "0x62E0",
+        "LoD/1.11b": "0x6FF0",
+        "LoD/1.12a": "0x6350",
+        "LoD/1.13c": "0x6E00",
+        "LoD/1.13d": "0x7C50"
       },
       "sizes": {
         "LoD/1.08": 52,
@@ -9513,12 +9975,41 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": 52,
         "LoD/1.13d": 52
       },
-      "signature": "longlong __allmul(uint dwLowA, int nHighA, uint dwLowB, int nHighB)",
-      "calling_convention": "__stdcall",
-      "comment": "Library Function - Single Match\n __allmul\n\nLibrary: Visual Studio",
-      "name_source": "LoD/1.11",
+      "name_source": "LoD/1.08",
       "method": "MNE",
-      "index": "MNE:d54b31472f74b078be31f20f65c7b2d3",
+      "index": "MNE:9e101ef2d8d77650dcbee8365c7d25cc",
+      "callees": {
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor..."
@@ -9534,6 +10025,21 @@ var FUNCTIONS_D2Gdi_dll = {
         ],
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Gdi\\\\S..."
+        ],
+        "LoD/1.11": [
+          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
+        ],
+        "LoD/1.11b": [
+          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
+        ],
+        "LoD/1.12a": [
+          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
+        ],
+        "LoD/1.13c": [
+          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
+        ],
+        "LoD/1.13d": [
+          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
         ]
       },
       "basic_block_counts": {
@@ -9566,11 +10072,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "9e101ef2d8d77650dcbee8365c7d25cc",
         "LoD/1.09d": "9e101ef2d8d77650dcbee8365c7d25cc",
         "LoD/1.10": "9e101ef2d8d77650dcbee8365c7d25cc",
-        "LoD/1.11": "d54b31472f74b078be31f20f65c7b2d3",
-        "LoD/1.11b": "d54b31472f74b078be31f20f65c7b2d3",
-        "LoD/1.12a": "d54b31472f74b078be31f20f65c7b2d3",
-        "LoD/1.13c": "d54b31472f74b078be31f20f65c7b2d3",
-        "LoD/1.13d": "d54b31472f74b078be31f20f65c7b2d3"
+        "LoD/1.11": "648c85b8ea37f47fc7b251e4ba42446f",
+        "LoD/1.11b": "648c85b8ea37f47fc7b251e4ba42446f",
+        "LoD/1.12a": "648c85b8ea37f47fc7b251e4ba42446f",
+        "LoD/1.13c": "648c85b8ea37f47fc7b251e4ba42446f",
+        "LoD/1.13d": "648c85b8ea37f47fc7b251e4ba42446f"
       }
     },
     "d2gdi.dll_MNE_8e80b6cb8c8f": {
@@ -9628,10 +10134,10 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09d": "0x6F831250",
         "LoD/1.10": "0x6F831250",
         "LoD/1.11": "0x6F875EF0",
-        "LoD/1.11b": "0x6F876C00",
-        "LoD/1.12a": "0x6F876200",
-        "LoD/1.13c": "0x6F8769E0",
-        "LoD/1.13d": "0x6F877830"
+        "LoD/1.11b": "0x6F876EA0",
+        "LoD/1.12a": "0x6F875F60",
+        "LoD/1.13c": "0x6F876CB0",
+        "LoD/1.13d": "0x6F877B00"
       },
       "rvas": {
         "LoD/1.08": "0x1250",
@@ -9640,10 +10146,10 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09d": "0x1250",
         "LoD/1.10": "0x1250",
         "LoD/1.11": "0x5EF0",
-        "LoD/1.11b": "0x6C00",
-        "LoD/1.12a": "0x6200",
-        "LoD/1.13c": "0x69E0",
-        "LoD/1.13d": "0x7830"
+        "LoD/1.11b": "0x6EA0",
+        "LoD/1.12a": "0x5F60",
+        "LoD/1.13c": "0x6CB0",
+        "LoD/1.13d": "0x7B00"
       },
       "sizes": {
         "LoD/1.08": 3,
@@ -9773,6 +10279,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:954ac87229753907d32f51d2c355ced6",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor...",
@@ -9824,11 +10347,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x6F831350",
         "LoD/1.09d": "0x6F831350",
         "LoD/1.10": "0x6F831350",
-        "LoD/1.11": "0x6F8762E0",
-        "LoD/1.11b": "0x6F876FF0",
-        "LoD/1.12a": "0x6F876350",
-        "LoD/1.13c": "0x6F876E00",
-        "LoD/1.13d": "0x6F877C50"
+        "LoD/1.11": "0x6F875B40",
+        "LoD/1.11b": "0x6F875B40",
+        "LoD/1.12a": "0x6F875BB0",
+        "LoD/1.13c": "0x6F875BB0",
+        "LoD/1.13d": "0x6F875B40"
       },
       "rvas": {
         "LoD/1.08": "0x1350",
@@ -9836,11 +10359,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "0x1350",
         "LoD/1.09d": "0x1350",
         "LoD/1.10": "0x1350",
-        "LoD/1.11": "0x62E0",
-        "LoD/1.11b": "0x6FF0",
-        "LoD/1.12a": "0x6350",
-        "LoD/1.13c": "0x6E00",
-        "LoD/1.13d": "0x7C50"
+        "LoD/1.11": "0x5B40",
+        "LoD/1.11b": "0x5B40",
+        "LoD/1.12a": "0x5BB0",
+        "LoD/1.13c": "0x5BB0",
+        "LoD/1.13d": "0x5B40"
       },
       "sizes": {
         "LoD/1.08": 52,
@@ -9854,9 +10377,29 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": 52,
         "LoD/1.13d": 52
       },
-      "name_source": "LoD/1.08",
+      "signature": "longlong __allmul(uint dwLowA, int nHighA, uint dwLowB, int nHighB)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n __allmul\n\nLibrary: Visual Studio",
+      "name_source": "LoD/1.11",
       "method": "MNE",
-      "index": "MNE:8ca8a4a70a3c9d32a51e01cca8ed6651",
+      "index": "MNE:d54b31472f74b078be31f20f65c7b2d3",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCor...",
@@ -9877,21 +10420,6 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Gdi\\\\S...",
           "\"pcsPause\""
-        ],
-        "LoD/1.11": [
-          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
-        ],
-        "LoD/1.11b": [
-          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
-        ],
-        "LoD/1.12a": [
-          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
-        ],
-        "LoD/1.13c": [
-          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
-        ],
-        "LoD/1.13d": [
-          "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
         ]
       },
       "basic_block_counts": {
@@ -9924,11 +10452,11 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.09b": "8ca8a4a70a3c9d32a51e01cca8ed6651",
         "LoD/1.09d": "8ca8a4a70a3c9d32a51e01cca8ed6651",
         "LoD/1.10": "8ca8a4a70a3c9d32a51e01cca8ed6651",
-        "LoD/1.11": "648c85b8ea37f47fc7b251e4ba42446f",
-        "LoD/1.11b": "648c85b8ea37f47fc7b251e4ba42446f",
-        "LoD/1.12a": "648c85b8ea37f47fc7b251e4ba42446f",
-        "LoD/1.13c": "648c85b8ea37f47fc7b251e4ba42446f",
-        "LoD/1.13d": "648c85b8ea37f47fc7b251e4ba42446f"
+        "LoD/1.11": "d54b31472f74b078be31f20f65c7b2d3",
+        "LoD/1.11b": "d54b31472f74b078be31f20f65c7b2d3",
+        "LoD/1.12a": "d54b31472f74b078be31f20f65c7b2d3",
+        "LoD/1.13c": "d54b31472f74b078be31f20f65c7b2d3",
+        "LoD/1.13d": "d54b31472f74b078be31f20f65c7b2d3"
       }
     },
     "d2gdi.dll_MNE_edf67d11af43": {
@@ -10455,6 +10983,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...",
@@ -10529,6 +11079,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiEng...",
@@ -10650,6 +11222,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:05c67e3255cfe2e47ff2769823d4a2a0",
+      "callees": {
+        "LoD/1.08": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Gdi\\\\Src\\\\gdiSma..."
@@ -10791,6 +11385,32 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "RefreshViewportScrollRegion",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "RefreshViewportScrollRegion",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "RefreshViewportScrollRegion",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10048",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"nY > 0 && nY < gnBufferHeight - 80\"",
@@ -10860,6 +11480,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:524f5c6fd6cc5d10dd1ba023712112f0",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -10904,6 +11541,20 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:e2489ecdef266ff4eacbf749a135d800",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -11076,28 +11727,28 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.10": "e318b2efa2b7ed9dcb619fe5ba3fc2d5"
       }
     },
-    "d2gdi.dll_RefreshViewportScrollRegion": {
+    "d2gdi.dll_Ordinal_10055": {
       "addresses": {
-        "LoD/1.09": "0x6F83307C",
-        "LoD/1.09b": "0x6F83307C",
-        "LoD/1.09d": "0x6F83307C",
-        "LoD/1.10": "0x6F8330AC",
-        "LoD/1.11": "0x6F875D9A",
-        "LoD/1.11b": "0x6F875D9A",
-        "LoD/1.12a": "0x6F875E0A",
-        "LoD/1.13c": "0x6F875E28",
-        "LoD/1.13d": "0x6F875DB8"
+        "LoD/1.09": "0x6F83306A",
+        "LoD/1.09b": "0x6F83306A",
+        "LoD/1.09d": "0x6F83306A",
+        "LoD/1.10": "0x6F83309A",
+        "LoD/1.11": "0x6F875D82",
+        "LoD/1.11b": "0x6F875D82",
+        "LoD/1.12a": "0x6F875DF2",
+        "LoD/1.13c": "0x6F875DE6",
+        "LoD/1.13d": "0x6F875D76"
       },
       "rvas": {
-        "LoD/1.09": "0x307C",
-        "LoD/1.09b": "0x307C",
-        "LoD/1.09d": "0x307C",
-        "LoD/1.10": "0x30AC",
-        "LoD/1.11": "0x5D9A",
-        "LoD/1.11b": "0x5D9A",
-        "LoD/1.12a": "0x5E0A",
-        "LoD/1.13c": "0x5E28",
-        "LoD/1.13d": "0x5DB8"
+        "LoD/1.09": "0x306A",
+        "LoD/1.09b": "0x306A",
+        "LoD/1.09d": "0x306A",
+        "LoD/1.10": "0x309A",
+        "LoD/1.11": "0x5D82",
+        "LoD/1.11b": "0x5D82",
+        "LoD/1.12a": "0x5DF2",
+        "LoD/1.13c": "0x5DE6",
+        "LoD/1.13d": "0x5D76"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -11110,9 +11761,9 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "RefreshViewportScrollRegion",
-      "signature": "void RefreshViewportScrollRegion(int nOffsetBase, int nRowStride)",
-      "calling_convention": "__stdcall",
+      "name": "Ordinal_10055",
+      "signature": "undefined Ordinal_10055(void)",
+      "calling_convention": "unknown",
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -11331,6 +11982,11 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:f0e93ab496b038501f94b237d68cfa2e",
+      "callees": {
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 17
       },
@@ -11354,6 +12010,11 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:faf55ebd04917b29c61562507f5cdb39",
+      "callees": {
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 15
       },
@@ -11894,6 +12555,57 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": "a51a9a5e7ceb2fab96b937dc9f784c13",
         "LoD/1.13c": "a51a9a5e7ceb2fab96b937dc9f784c13",
         "LoD/1.13d": "a51a9a5e7ceb2fab96b937dc9f784c13"
+      }
+    },
+    "d2gdi.dll_ReleaseMTInitLock": {
+      "addresses": {
+        "LoD/1.11": "0x6F87159A",
+        "LoD/1.11b": "0x6F87159A",
+        "LoD/1.12a": "0x6F87159A",
+        "LoD/1.13c": "0x6F87159A",
+        "LoD/1.13d": "0x6F87159A"
+      },
+      "rvas": {
+        "LoD/1.11": "0x159A",
+        "LoD/1.11b": "0x159A",
+        "LoD/1.12a": "0x159A",
+        "LoD/1.13c": "0x159A",
+        "LoD/1.13d": "0x159A"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "ReleaseMTInitLock",
+      "signature": "void ReleaseMTInitLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2gdi.dll___lock": {
@@ -12558,57 +13270,6 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "adafedc33ce199c85ef6d812cf9b5974"
       }
     },
-    "d2gdi.dll_UnlockCriticalSection12": {
-      "addresses": {
-        "LoD/1.11": "0x6F871A8D",
-        "LoD/1.11b": "0x6F871A8D",
-        "LoD/1.12a": "0x6F871A8D",
-        "LoD/1.13c": "0x6F871A8D",
-        "LoD/1.13d": "0x6F871A8D"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1A8D",
-        "LoD/1.11b": "0x1A8D",
-        "LoD/1.12a": "0x1A8D",
-        "LoD/1.13c": "0x1A8D",
-        "LoD/1.13d": "0x1A8D"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "UnlockCriticalSection12",
-      "signature": "void UnlockCriticalSection12(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "d2gdi.dll___freeptd": {
       "addresses": {
         "LoD/1.11": "0x6F871A96",
@@ -12689,6 +13350,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -12799,53 +13477,20 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
-    "d2gdi.dll__calloc": {
-      "addresses": {
-        "LoD/1.11": "0x6F871C25",
-        "LoD/1.11b": "0x6F871C25"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1C25",
-        "LoD/1.11b": "0x1C25"
-      },
-      "sizes": {
-        "LoD/1.11": 175,
-        "LoD/1.11b": 175
-      },
-      "name": "_calloc",
-      "signature": "void * _calloc(size_t _Count, size_t _Size)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _calloc\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:91411ab4247869eeb28238e92930a4a5",
-      "basic_block_counts": {
-        "LoD/1.11": 15,
-        "LoD/1.11b": 15
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "91411ab4247869eeb28238e92930a4a5",
-        "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
-      }
-    },
     "d2gdi.dll_LeaveCriticalSectionForMemoryF": {
       "addresses": {
-        "LoD/1.11": "0x6F871CCF",
-        "LoD/1.11b": "0x6F871CCF",
-        "LoD/1.12a": "0x6F8728B3",
-        "LoD/1.13c": "0x6F8728B3",
-        "LoD/1.13d": "0x6F872892"
+        "LoD/1.11": "0x6F871C07",
+        "LoD/1.11b": "0x6F871C07",
+        "LoD/1.12a": "0x6F871C07",
+        "LoD/1.13c": "0x6F871C07",
+        "LoD/1.13d": "0x6F871C07"
       },
       "rvas": {
-        "LoD/1.11": "0x1CCF",
-        "LoD/1.11b": "0x1CCF",
-        "LoD/1.12a": "0x28B3",
-        "LoD/1.13c": "0x28B3",
-        "LoD/1.13d": "0x2892"
+        "LoD/1.11": "0x1C07",
+        "LoD/1.11b": "0x1C07",
+        "LoD/1.12a": "0x1C07",
+        "LoD/1.13c": "0x1C07",
+        "LoD/1.13d": "0x1C07"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -12881,6 +13526,39 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "d2gdi.dll__calloc": {
+      "addresses": {
+        "LoD/1.11": "0x6F871C25",
+        "LoD/1.11b": "0x6F871C25"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1C25",
+        "LoD/1.11b": "0x1C25"
+      },
+      "sizes": {
+        "LoD/1.11": 175,
+        "LoD/1.11b": 175
+      },
+      "name": "_calloc",
+      "signature": "void * _calloc(size_t _Count, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _calloc\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:91411ab4247869eeb28238e92930a4a5",
+      "basic_block_counts": {
+        "LoD/1.11": 15,
+        "LoD/1.11b": 15
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "91411ab4247869eeb28238e92930a4a5",
+        "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
       }
     },
     "d2gdi.dll___ioinit": {
@@ -13703,57 +14381,6 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
       }
     },
-    "d2gdi.dll_LeaveCriticalSectionForMemoryF_2B32": {
-      "addresses": {
-        "LoD/1.11": "0x6F872B32",
-        "LoD/1.11b": "0x6F872B32",
-        "LoD/1.12a": "0x6F871CEB",
-        "LoD/1.13c": "0x6F871CEB",
-        "LoD/1.13d": "0x6F872BE4"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2B32",
-        "LoD/1.11b": "0x2B32",
-        "LoD/1.12a": "0x1CEB",
-        "LoD/1.13c": "0x1CEB",
-        "LoD/1.13d": "0x2BE4"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "LeaveCriticalSectionForMemoryFree",
-      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "d2gdi.dll___msize": {
       "addresses": {
         "LoD/1.11": "0x6F872B77",
@@ -13803,6 +14430,57 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": "7fa238a0d1fe5549fc522252a2120d78",
         "LoD/1.13c": "7fa238a0d1fe5549fc522252a2120d78",
         "LoD/1.13d": "7fa238a0d1fe5549fc522252a2120d78"
+      }
+    },
+    "d2gdi.dll_LeaveCriticalSectionForMemoryF_2BE4": {
+      "addresses": {
+        "LoD/1.11": "0x6F872BE4",
+        "LoD/1.11b": "0x6F872BE4",
+        "LoD/1.12a": "0x6F872B52",
+        "LoD/1.13c": "0x6F872B52",
+        "LoD/1.13d": "0x6F872B32"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2BE4",
+        "LoD/1.11b": "0x2BE4",
+        "LoD/1.12a": "0x2B52",
+        "LoD/1.13c": "0x2B52",
+        "LoD/1.13d": "0x2B32"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "LeaveCriticalSectionForMemoryFree",
+      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2gdi.dll___ValidateEH3RN": {
@@ -14009,7 +14687,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
       }
     },
-    "d2gdi.dll_UnlockCriticalSection12_2FD9": {
+    "d2gdi.dll_UnlockCriticalSection12": {
       "addresses": {
         "LoD/1.11": "0x6F872FD9",
         "LoD/1.11b": "0x6F872FD9",
@@ -14277,57 +14955,6 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.12a": "3d95938874732b844e73905e6c952bdf",
         "LoD/1.13c": "3d95938874732b844e73905e6c952bdf",
         "LoD/1.13d": "3d95938874732b844e73905e6c952bdf"
-      }
-    },
-    "d2gdi.dll____sbh_heap_init": {
-      "addresses": {
-        "LoD/1.11": "0x6F8734C4",
-        "LoD/1.11b": "0x6F8734C4",
-        "LoD/1.12a": "0x6F8734FC",
-        "LoD/1.13c": "0x6F8734FC",
-        "LoD/1.13d": "0x6F8734C4"
-      },
-      "rvas": {
-        "LoD/1.11": "0x34C4",
-        "LoD/1.11b": "0x34C4",
-        "LoD/1.12a": "0x34FC",
-        "LoD/1.13c": "0x34FC",
-        "LoD/1.13d": "0x34C4"
-      },
-      "sizes": {
-        "LoD/1.11": 72,
-        "LoD/1.11b": 72,
-        "LoD/1.12a": 72,
-        "LoD/1.13c": 72,
-        "LoD/1.13d": 72
-      },
-      "name": "___sbh_heap_init",
-      "signature": "undefined4 ___sbh_heap_init(undefined4 param_1)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n ___sbh_heap_init\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:288a4a209e4706fee9d14eabda44517a",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.11b": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.12a": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.13c": "288a4a209e4706fee9d14eabda44517a",
-        "LoD/1.13d": "288a4a209e4706fee9d14eabda44517a"
       }
     },
     "d2gdi.dll____sbh_free_block": {
@@ -15888,17 +16515,17 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_GetUnitX": {
       "addresses": {
         "LoD/1.11": "0x6F875E80",
-        "LoD/1.11b": "0x6F876E90",
-        "LoD/1.12a": "0x6F875F00",
-        "LoD/1.13c": "0x6F876CC0",
-        "LoD/1.13d": "0x6F877AF0"
+        "LoD/1.11b": "0x6F876C10",
+        "LoD/1.12a": "0x6F875F70",
+        "LoD/1.13c": "0x6F876980",
+        "LoD/1.13d": "0x6F8777D0"
       },
       "rvas": {
         "LoD/1.11": "0x5E80",
-        "LoD/1.11b": "0x6E90",
-        "LoD/1.12a": "0x5F00",
-        "LoD/1.13c": "0x6CC0",
-        "LoD/1.13d": "0x7AF0"
+        "LoD/1.11b": "0x6C10",
+        "LoD/1.12a": "0x5F70",
+        "LoD/1.13c": "0x6980",
+        "LoD/1.13d": "0x77D0"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -15939,17 +16566,17 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_GetUnitX_5E90": {
       "addresses": {
         "LoD/1.11": "0x6F875E90",
-        "LoD/1.11b": "0x6F876BB0",
-        "LoD/1.12a": "0x6F8761F0",
-        "LoD/1.13c": "0x6F876980",
-        "LoD/1.13d": "0x6F877B10"
+        "LoD/1.11b": "0x6F876EB0",
+        "LoD/1.12a": "0x6F875F00",
+        "LoD/1.13c": "0x6F876990",
+        "LoD/1.13d": "0x6F8777C0"
       },
       "rvas": {
         "LoD/1.11": "0x5E90",
-        "LoD/1.11b": "0x6BB0",
-        "LoD/1.12a": "0x61F0",
-        "LoD/1.13c": "0x6980",
-        "LoD/1.13d": "0x7B10"
+        "LoD/1.11b": "0x6EB0",
+        "LoD/1.12a": "0x5F00",
+        "LoD/1.13c": "0x6990",
+        "LoD/1.13d": "0x77C0"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -15990,17 +16617,17 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_GetUnitX_5EA0": {
       "addresses": {
         "LoD/1.11": "0x6F875EA0",
-        "LoD/1.11b": "0x6F876B90",
-        "LoD/1.12a": "0x6F875F10",
-        "LoD/1.13c": "0x6F876990",
-        "LoD/1.13d": "0x6F8777D0"
+        "LoD/1.11b": "0x6F876BB0",
+        "LoD/1.12a": "0x6F876210",
+        "LoD/1.13c": "0x6F876CA0",
+        "LoD/1.13d": "0x6F877840"
       },
       "rvas": {
         "LoD/1.11": "0x5EA0",
-        "LoD/1.11b": "0x6B90",
-        "LoD/1.12a": "0x5F10",
-        "LoD/1.13c": "0x6990",
-        "LoD/1.13d": "0x77D0"
+        "LoD/1.11b": "0x6BB0",
+        "LoD/1.12a": "0x6210",
+        "LoD/1.13c": "0x6CA0",
+        "LoD/1.13d": "0x7840"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -16044,14 +16671,14 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.11b": "0x6F876BA0",
         "LoD/1.12a": "0x6F875EF0",
         "LoD/1.13c": "0x6F876970",
-        "LoD/1.13d": "0x6F8777E0"
+        "LoD/1.13d": "0x6F877AF0"
       },
       "rvas": {
         "LoD/1.11": "0x5F00",
         "LoD/1.11b": "0x6BA0",
         "LoD/1.12a": "0x5EF0",
         "LoD/1.13c": "0x6970",
-        "LoD/1.13d": "0x77E0"
+        "LoD/1.13d": "0x7AF0"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -16196,6 +16823,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -16218,20 +16867,89 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "9e62489dae09b6ff598e22f8f45884f3"
       }
     },
+    "d2gdi.dll_API_c01fa6e1a170_6130": {
+      "addresses": {
+        "LoD/1.11": "0x6F876130",
+        "LoD/1.11b": "0x6F876E40",
+        "LoD/1.12a": "0x6F8761A0",
+        "LoD/1.13c": "0x6F876C50",
+        "LoD/1.13d": "0x6F877AA0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x6130",
+        "LoD/1.11b": "0x6E40",
+        "LoD/1.12a": "0x61A0",
+        "LoD/1.13c": "0x6C50",
+        "LoD/1.13d": "0x7AA0"
+      },
+      "sizes": {
+        "LoD/1.11": 72,
+        "LoD/1.11b": 72,
+        "LoD/1.12a": 72,
+        "LoD/1.13c": 72,
+        "LoD/1.13d": 72
+      },
+      "name_source": "LoD/1.11",
+      "method": "API",
+      "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "97da344aa14cbecea5b1e2e02d7a2928",
+        "LoD/1.11b": "97da344aa14cbecea5b1e2e02d7a2928",
+        "LoD/1.12a": "97da344aa14cbecea5b1e2e02d7a2928",
+        "LoD/1.13c": "97da344aa14cbecea5b1e2e02d7a2928",
+        "LoD/1.13d": "97da344aa14cbecea5b1e2e02d7a2928"
+      }
+    },
     "d2gdi.dll_GetUnitX_6180": {
       "addresses": {
         "LoD/1.11": "0x6F876180",
-        "LoD/1.11b": "0x6F876C10",
-        "LoD/1.12a": "0x6F875F70",
+        "LoD/1.11b": "0x6F876E90",
+        "LoD/1.12a": "0x6F8761F0",
         "LoD/1.13c": "0x6F8769F0",
-        "LoD/1.13d": "0x6F877840"
+        "LoD/1.13d": "0x6F8777E0"
       },
       "rvas": {
         "LoD/1.11": "0x6180",
-        "LoD/1.11b": "0x6C10",
-        "LoD/1.12a": "0x5F70",
+        "LoD/1.11b": "0x6E90",
+        "LoD/1.12a": "0x61F0",
         "LoD/1.13c": "0x69F0",
-        "LoD/1.13d": "0x7840"
+        "LoD/1.13d": "0x77E0"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -16272,17 +16990,17 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_StubNoOp_6190": {
       "addresses": {
         "LoD/1.11": "0x6F876190",
-        "LoD/1.11b": "0x6F876EA0",
-        "LoD/1.12a": "0x6F875F60",
-        "LoD/1.13c": "0x6F876CB0",
-        "LoD/1.13d": "0x6F877B00"
+        "LoD/1.11b": "0x6F876C00",
+        "LoD/1.12a": "0x6F876200",
+        "LoD/1.13c": "0x6F8769E0",
+        "LoD/1.13d": "0x6F877830"
       },
       "rvas": {
         "LoD/1.11": "0x6190",
-        "LoD/1.11b": "0x6EA0",
-        "LoD/1.12a": "0x5F60",
-        "LoD/1.13c": "0x6CB0",
-        "LoD/1.13d": "0x7B00"
+        "LoD/1.11b": "0x6C00",
+        "LoD/1.12a": "0x6200",
+        "LoD/1.13c": "0x69E0",
+        "LoD/1.13d": "0x7830"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -16323,17 +17041,17 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_GetUnitX_61A0": {
       "addresses": {
         "LoD/1.11": "0x6F8761A0",
-        "LoD/1.11b": "0x6F876EB0",
-        "LoD/1.12a": "0x6F876210",
-        "LoD/1.13c": "0x6F876CA0",
-        "LoD/1.13d": "0x6F8777C0"
+        "LoD/1.11b": "0x6F876B90",
+        "LoD/1.12a": "0x6F875F10",
+        "LoD/1.13c": "0x6F876CC0",
+        "LoD/1.13d": "0x6F877B10"
       },
       "rvas": {
         "LoD/1.11": "0x61A0",
-        "LoD/1.11b": "0x6EB0",
-        "LoD/1.12a": "0x6210",
-        "LoD/1.13c": "0x6CA0",
-        "LoD/1.13d": "0x77C0"
+        "LoD/1.11b": "0x6B90",
+        "LoD/1.12a": "0x5F10",
+        "LoD/1.13c": "0x6CC0",
+        "LoD/1.13d": "0x7B10"
       },
       "sizes": {
         "LoD/1.11": 3,
@@ -16443,6 +17161,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -16490,6 +17230,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ab778f3042be2699868d097826a7fc74",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiCore.cpp\""
@@ -16712,6 +17469,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -16806,6 +17585,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:71a3249aaa99ea603a42594964621b0a",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 21,
         "LoD/1.11b": 21,
@@ -16853,6 +17649,53 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:26bd59a856b2a856841c750aefb7bb81",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10051",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10045",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10067",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10049",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10075",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Gdi\\\\Src\\\\gdiSmack.cpp\""
@@ -16892,6 +17735,36 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "302fa3ac3c20a7e39fe0275cf4526ad5"
       }
     },
+    "d2gdi.dll_API_01ed34841004": {
+      "addresses": {
+        "LoD/1.11": "0x6F876AE0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x6AE0"
+      },
+      "sizes": {
+        "LoD/1.11": 94
+      },
+      "name_source": "LoD/1.11",
+      "method": "API",
+      "index": "API:01ed3484100449fed6fea069fe839a57",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10032",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 8
+      },
+      "loop_counts": {
+        "LoD/1.11": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "02970ea94d9d5cdfbf24077d0a947ccb"
+      }
+    },
     "d2gdi.dll_API_7c0f7c9913fc": {
       "addresses": {
         "LoD/1.11": "0x6F876B50",
@@ -16917,6 +17790,38 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7c0f7c9913fc964888357cd4b233495a",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -17011,6 +17916,48 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:42ca557efbfabcc1c05d050b370a71ee",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10084"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10097"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10079"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10072"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10041"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -17058,6 +18005,48 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:991703c12cadfa58db490f9bafd78ddd",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10076"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10083"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10093"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10080"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -17105,6 +18094,48 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c214a2e79a23b5b6ea24ea5fa70a5a4e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10103"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10021"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10053"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10001"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -17152,6 +18183,48 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c214a2e79a23b5b6ea24ea5fa70a5a4e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10103"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10021"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10053"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10001"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -17199,6 +18272,48 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:74fd6059e906dba2c894704ff59b3afa",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 20,
         "LoD/1.11b": 20,
@@ -17246,6 +18361,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:948cd1a598a6dc495638f6ff508fe0f1",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10076"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10083"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10093"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10080"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -17293,6 +18430,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:222a9481cc25254932e2a6f6a0636b61",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -17340,6 +18494,23 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a1fd4898b42622c1fd8324dbe77dd0a1",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -17362,48 +18533,19 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "a1fd4898b42622c1fd8324dbe77dd0a1"
       }
     },
-    "d2gdi.dll_MNE_6abcc731a6df": {
-      "addresses": {
-        "LoD/1.11": "0x6F877550",
-        "LoD/1.11b": "0x6F8773F0"
-      },
-      "rvas": {
-        "LoD/1.11": "0x7550",
-        "LoD/1.11b": "0x73F0"
-      },
-      "sizes": {
-        "LoD/1.11": 94,
-        "LoD/1.11b": 94
-      },
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:6abcc731a6dfa7e0b993f3b20da37c0a",
-      "basic_block_counts": {
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "6abcc731a6dfa7e0b993f3b20da37c0a",
-        "LoD/1.11b": "6abcc731a6dfa7e0b993f3b20da37c0a"
-      }
-    },
     "d2gdi.dll_MNE_c70c5031fe3d": {
       "addresses": {
         "LoD/1.11": "0x6F8775C0",
-        "LoD/1.11b": "0x6F876520",
+        "LoD/1.11b": "0x6F8761D0",
         "LoD/1.12a": "0x6F876B70",
-        "LoD/1.13c": "0x6F877200",
+        "LoD/1.13c": "0x6F877550",
         "LoD/1.13d": "0x6F876C50"
       },
       "rvas": {
         "LoD/1.11": "0x75C0",
-        "LoD/1.11b": "0x6520",
+        "LoD/1.11b": "0x61D0",
         "LoD/1.12a": "0x6B70",
-        "LoD/1.13c": "0x7200",
+        "LoD/1.13c": "0x7550",
         "LoD/1.13d": "0x6C50"
       },
       "sizes": {
@@ -17463,6 +18605,38 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -17535,16 +18709,16 @@ var FUNCTIONS_D2Gdi_dll = {
     "d2gdi.dll_MNE_c70c5031fe3d_7910": {
       "addresses": {
         "LoD/1.11": "0x6F877910",
-        "LoD/1.11b": "0x6F8761D0",
+        "LoD/1.11b": "0x6F876520",
         "LoD/1.12a": "0x6F876EC0",
-        "LoD/1.13c": "0x6F877550",
+        "LoD/1.13c": "0x6F877200",
         "LoD/1.13d": "0x6F876FA0"
       },
       "rvas": {
         "LoD/1.11": "0x7910",
-        "LoD/1.11b": "0x61D0",
+        "LoD/1.11b": "0x6520",
         "LoD/1.12a": "0x6EC0",
-        "LoD/1.13c": "0x7550",
+        "LoD/1.13c": "0x7200",
         "LoD/1.13d": "0x6FA0"
       },
       "sizes": {
@@ -17698,6 +18872,38 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -17745,6 +18951,38 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -17839,6 +19077,28 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
@@ -18231,22 +19491,22 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13c": "a82412e86c7e059d3af6ea9d376e2875"
       }
     },
-    "d2gdi.dll_Ordinal_10015": {
+    "d2gdi.dll_GetGameState": {
       "addresses": {
-        "LoD/1.13c": "0x6F875E2E",
-        "LoD/1.13d": "0x6F875DBE"
+        "LoD/1.13c": "0x6F875E40",
+        "LoD/1.13d": "0x6F875DD0"
       },
       "rvas": {
-        "LoD/1.13c": "0x5E2E",
-        "LoD/1.13d": "0x5DBE"
+        "LoD/1.13c": "0x5E40",
+        "LoD/1.13d": "0x5DD0"
       },
       "sizes": {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10015",
-      "signature": "undefined Ordinal_10015(void)",
-      "calling_convention": "unknown",
+      "name": "GetGameState",
+      "signature": "uint GetGameState(void)",
+      "calling_convention": "__stdcall",
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -18279,6 +19539,18 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:1286a8696b951d9256ff6cf84540390d",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10031",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10067",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 8,
         "LoD/1.13d": 8
@@ -18308,6 +19580,14 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:714e7d7a1e34a08b7b30f95bc427099f",
+      "callees": {
+        "LoD/1.13c": [
+          "GetGameState"
+        ],
+        "LoD/1.13d": [
+          "GetGameState"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 1,
         "LoD/1.13d": 1
@@ -18321,7 +19601,7 @@ var FUNCTIONS_D2Gdi_dll = {
         "LoD/1.13d": "714e7d7a1e34a08b7b30f95bc427099f"
       }
     },
-    "d2gdi.dll_MNE_6abcc731a6df_7F30": {
+    "d2gdi.dll_MNE_6abcc731a6df": {
       "addresses": {
         "LoD/1.13c": "0x6F877F30",
         "LoD/1.13d": "0x6F877580"
@@ -18337,6 +19617,14 @@ var FUNCTIONS_D2Gdi_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:6abcc731a6dfa7e0b993f3b20da37c0a",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 8,
         "LoD/1.13d": 8

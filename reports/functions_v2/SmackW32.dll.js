@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for SmackW32.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -412,6 +412,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d4aeed3eb56f5547f1e65127a8516216",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.08": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.09": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.09b": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.09d": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.10": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.11": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.11b": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.12a": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.13c": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.13d": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.14a": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.14b": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.14c": [
+          "_SmackBlitString@8"
+        ],
+        "LoD/1.14d": [
+          "_SmackBlitString@8"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"DIBSection\"",
@@ -627,6 +674,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5800c1a6aac2b8f29b82ca157de7c1f4",
+      "callees": {
+        "LoD/1.07": [
+          "_CopyData@20"
+        ],
+        "LoD/1.08": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09d": [
+          "_CopyData@20"
+        ],
+        "LoD/1.10": [
+          "_CopyData@20"
+        ],
+        "LoD/1.11": [
+          "_CopyData@20"
+        ],
+        "LoD/1.11b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.12a": [
+          "_CopyData@20"
+        ],
+        "LoD/1.13c": [
+          "_CopyData@20"
+        ],
+        "LoD/1.13d": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14a": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14c": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14d": [
+          "_CopyData@20"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -737,6 +831,203 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2c068048aea10032546d9a1aa53778fc",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4",
+          "_radmalloc@4",
+          "_SmackBufferClear@8",
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackDDSurfaceType@4",
+          "_SmackIsSoftwareCursor@8",
+          "_SmackBlitOpen@4",
+          "_radfree@4",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"DisplayDibWindow\""
@@ -1752,6 +2043,83 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:5959af2506713549239413c0cb30d9a2",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.08": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.09": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.09b": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.09d": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.10": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.11": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.11b": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.12a": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.13c": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.13d": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.14a": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.14b": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.14c": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ],
+        "LoD/1.14d": [
+          "_SmackCheckCursor@20",
+          "_SmackBlit@44",
+          "_SmackRestoreCursor@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 116,
         "LoD/1.08": 116,
@@ -1969,6 +2337,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a18998f4c6afb9b77e03457bbb6f77e",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -2079,6 +2494,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1d38d1acea2463fa1e3ce7add3f8768b",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.08": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.09": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.09b": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.09d": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.10": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.11": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.11b": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.12a": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.13c": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.13d": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.14a": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.14b": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.14c": [
+          "_SmackBufferBlit@32"
+        ],
+        "LoD/1.14d": [
+          "_SmackBufferBlit@32"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -2299,6 +2761,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5686bbc651ea2fef34bfe6dff86d041d",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.08": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.09": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.09b": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.09d": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.10": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.11": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.11b": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.12a": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.13c": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.13d": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.14a": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.14b": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.14c": [
+          "_SmackBlitSetPalette@12"
+        ],
+        "LoD/1.14d": [
+          "_SmackBlitSetPalette@12"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 39,
         "LoD/1.08": 39,
@@ -2406,6 +2915,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:87e8773bdaf0c641a675300278ef75ac",
+      "callees": {
+        "LoD/1.07": [
+          "_CopyData@20"
+        ],
+        "LoD/1.08": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.09d": [
+          "_CopyData@20"
+        ],
+        "LoD/1.10": [
+          "_CopyData@20"
+        ],
+        "LoD/1.11": [
+          "_CopyData@20"
+        ],
+        "LoD/1.11b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.12a": [
+          "_CopyData@20"
+        ],
+        "LoD/1.13c": [
+          "_CopyData@20"
+        ],
+        "LoD/1.13d": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14a": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14b": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14c": [
+          "_CopyData@20"
+        ],
+        "LoD/1.14d": [
+          "_CopyData@20"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -2516,6 +3072,113 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0818ccc2434f3370ab6a8959e09b9ab5",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "_radfree@4",
+          "_SmackBlitClose@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radfree@4",
+          "ApplyPresetUnitTileAttributesSafe",
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 24,
         "LoD/1.08": 24,
@@ -3725,6 +4388,143 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:45f4099a42956f47b6f72ca251a29412",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Couldn't open the Smacker file\\r\\n\"",
@@ -3954,6 +4754,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d91af7ecf28ef8d229a9530fdd2a4ab6",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -4703,6 +5550,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:104af56c950534d9a837d5ac4dbb0348",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_SmackSoundUseWin@0",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 18,
         "LoD/1.08": 18,
@@ -5143,6 +6052,173 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:8a7ce4f622791224123bdd37086b937a",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"SmackClose: \""
@@ -5951,6 +7027,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:28c2232e7da6117b9038c4bd78f5995e",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 56,
         "LoD/1.08": 56,
@@ -6168,6 +7291,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7ea41d38c3be5dbcf086509c906678ea",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 35,
         "LoD/1.08": 35,
@@ -7699,6 +8884,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e499b129e15aadfc9aabb913f9088bf1",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.08": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.09": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.09b": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.09d": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.10": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.11": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.11b": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.12a": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.13c": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.13d": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.14a": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.14b": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ],
+        "LoD/1.14d": [
+          "_SmackSoundUseDirectSound@4",
+          "_SmackSoundUseDirectSound@4"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"_AIL_sample_buffer_info@20\"",
@@ -8588,6 +9835,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c5a8e05aea71952bacb1530713d36690",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4",
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -9173,6 +10482,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2a813995b1441f088cdfb419380fb2ad",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -11024,6 +12395,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b3fd36f46a7f89d91d5b376b2974d820",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.08": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.09": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.09b": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.09d": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.10": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.11": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.11b": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.12a": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.13c": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.13d": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.14a": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.14b": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ],
+        "LoD/1.14d": [
+          "_SmackSoundSetDirectSoundHWND@4"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Unable to create DirectSound object - error #: \""
@@ -13000,6 +14418,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bb46e06b55044304d678f27871e2cb58",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 17,
         "LoD/1.08": 17,
@@ -13454,6 +14919,68 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ddfa529e708ff383233517d840d23e47",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.08": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.09": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.09b": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.09d": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.10": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.11": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.11b": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.12a": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.13c": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.13d": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.14a": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.14b": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.14c": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ],
+        "LoD/1.14d": [
+          "_SmackSoundCheck@0",
+          "_SmackSoundCheck@0"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 22,
         "LoD/1.08": 22,
@@ -13674,6 +15201,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:65132d4bfacf86c16eeda3f35798836a",
+      "callees": {
+        "LoD/1.07": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.08": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.09": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.09b": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.09d": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.10": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.11": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.11b": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.12a": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.13c": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.13d": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.14a": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.14b": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.14c": [
+          "_SmackUseMMX@4"
+        ],
+        "LoD/1.14d": [
+          "_SmackUseMMX@4"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"16-bit 2x Interlaced\"",
@@ -14056,36 +15630,36 @@ var FUNCTIONS_SmackW32_dll = {
     "smackw32.dll__SmackBlitMask@52": {
       "addresses": {
         "LoD/1.07": "0x1000B2A0",
-        "LoD/1.08": "0x1000B310",
+        "LoD/1.08": "0x1000B2A0",
         "LoD/1.09": "0x1000B2A0",
-        "LoD/1.09b": "0x1000B310",
+        "LoD/1.09b": "0x1000B2A0",
         "LoD/1.09d": "0x1000B2A0",
-        "LoD/1.10": "0x1000B310",
+        "LoD/1.10": "0x1000B2A0",
         "LoD/1.11": "0x1000B2A0",
-        "LoD/1.11b": "0x1000B310",
+        "LoD/1.11b": "0x1000B2A0",
         "LoD/1.12a": "0x1000B2A0",
-        "LoD/1.13c": "0x1000B310",
+        "LoD/1.13c": "0x1000B2A0",
         "LoD/1.13d": "0x1000B2A0",
-        "LoD/1.14a": "0x1000B310",
+        "LoD/1.14a": "0x1000B2A0",
         "LoD/1.14b": "0x1000B2A0",
-        "LoD/1.14c": "0x1000B310",
+        "LoD/1.14c": "0x1000B2A0",
         "LoD/1.14d": "0x1000B2A0"
       },
       "rvas": {
         "LoD/1.07": "0xB2A0",
-        "LoD/1.08": "0xB310",
+        "LoD/1.08": "0xB2A0",
         "LoD/1.09": "0xB2A0",
-        "LoD/1.09b": "0xB310",
+        "LoD/1.09b": "0xB2A0",
         "LoD/1.09d": "0xB2A0",
-        "LoD/1.10": "0xB310",
+        "LoD/1.10": "0xB2A0",
         "LoD/1.11": "0xB2A0",
-        "LoD/1.11b": "0xB310",
+        "LoD/1.11b": "0xB2A0",
         "LoD/1.12a": "0xB2A0",
-        "LoD/1.13c": "0xB310",
+        "LoD/1.13c": "0xB2A0",
         "LoD/1.13d": "0xB2A0",
-        "LoD/1.14a": "0xB310",
+        "LoD/1.14a": "0xB2A0",
         "LoD/1.14b": "0xB2A0",
-        "LoD/1.14c": "0xB310",
+        "LoD/1.14c": "0xB2A0",
         "LoD/1.14d": "0xB2A0"
       },
       "sizes": {
@@ -14166,36 +15740,36 @@ var FUNCTIONS_SmackW32_dll = {
     "smackw32.dll__SmackBlitMerge@52": {
       "addresses": {
         "LoD/1.07": "0x1000B310",
-        "LoD/1.08": "0x1000B2A0",
+        "LoD/1.08": "0x1000B310",
         "LoD/1.09": "0x1000B310",
-        "LoD/1.09b": "0x1000B2A0",
+        "LoD/1.09b": "0x1000B310",
         "LoD/1.09d": "0x1000B310",
-        "LoD/1.10": "0x1000B2A0",
+        "LoD/1.10": "0x1000B310",
         "LoD/1.11": "0x1000B310",
-        "LoD/1.11b": "0x1000B2A0",
+        "LoD/1.11b": "0x1000B310",
         "LoD/1.12a": "0x1000B310",
-        "LoD/1.13c": "0x1000B2A0",
+        "LoD/1.13c": "0x1000B310",
         "LoD/1.13d": "0x1000B310",
-        "LoD/1.14a": "0x1000B2A0",
+        "LoD/1.14a": "0x1000B310",
         "LoD/1.14b": "0x1000B310",
-        "LoD/1.14c": "0x1000B2A0",
+        "LoD/1.14c": "0x1000B310",
         "LoD/1.14d": "0x1000B310"
       },
       "rvas": {
         "LoD/1.07": "0xB310",
-        "LoD/1.08": "0xB2A0",
+        "LoD/1.08": "0xB310",
         "LoD/1.09": "0xB310",
-        "LoD/1.09b": "0xB2A0",
+        "LoD/1.09b": "0xB310",
         "LoD/1.09d": "0xB310",
-        "LoD/1.10": "0xB2A0",
+        "LoD/1.10": "0xB310",
         "LoD/1.11": "0xB310",
-        "LoD/1.11b": "0xB2A0",
+        "LoD/1.11b": "0xB310",
         "LoD/1.12a": "0xB310",
-        "LoD/1.13c": "0xB2A0",
+        "LoD/1.13c": "0xB310",
         "LoD/1.13d": "0xB310",
-        "LoD/1.14a": "0xB2A0",
+        "LoD/1.14a": "0xB310",
         "LoD/1.14b": "0xB310",
-        "LoD/1.14c": "0xB2A0",
+        "LoD/1.14c": "0xB310",
         "LoD/1.14d": "0xB310"
       },
       "sizes": {
@@ -14441,6 +16015,53 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cffa9ff338088808bf5749ca49298e21",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -22468,6 +24089,64 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:7ea41d38c3be5dbcf086509c906678ea",
+      "callees": {
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 10,
         "LoD/1.09": 10,
@@ -22670,6 +24349,50 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:06ffa3da065379b7064deb0c67302897",
+      "callees": {
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 10,
         "LoD/1.09": 10,

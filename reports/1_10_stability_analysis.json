@@ -1,0 +1,124 @@
+{
+  "timestamp": "2025-12-13T03:08:39.235642",
+  "baseline_version": "1.10",
+  "all_versions": [
+    "1.07",
+    "1.08",
+    "1.09",
+    "1.09b",
+    "1.09d",
+    "1.10",
+    "1.11",
+    "1.11b",
+    "1.12a",
+    "1.13c",
+    "1.13d"
+  ],
+  "module_analysis": {
+    "D2Client": {
+      "total_functions": 1228,
+      "functions_in_all_versions": 804,
+      "consistency_percentage": 65.5,
+      "functions_by_consistency": {
+        "all_11_versions": 804,
+        "9_versions": 9,
+        "8_versions": 7
+      }
+    },
+    "D2Common": {
+      "total_functions": 608,
+      "functions_in_all_versions": 330,
+      "consistency_percentage": 54.3,
+      "functions_by_consistency": {
+        "all_11_versions": 330,
+        "9_versions": 3,
+        "8_versions": 12
+      }
+    },
+    "D2Game": {
+      "total_functions": 371,
+      "functions_in_all_versions": 251,
+      "consistency_percentage": 67.7,
+      "functions_by_consistency": {
+        "all_11_versions": 251,
+        "9_versions": 4,
+        "8_versions": 5
+      }
+    },
+    "D2Win": {
+      "total_functions": 376,
+      "functions_in_all_versions": 200,
+      "consistency_percentage": 53.2,
+      "functions_by_consistency": {
+        "all_11_versions": 200,
+        "9_versions": 0,
+        "8_versions": 0
+      }
+    },
+    "Fog": {
+      "total_functions": 437,
+      "functions_in_all_versions": 207,
+      "consistency_percentage": 47.4,
+      "functions_by_consistency": {
+        "all_11_versions": 207,
+        "9_versions": 0,
+        "8_versions": 1
+      }
+    },
+    "Storm": {
+      "total_functions": 297,
+      "functions_in_all_versions": 135,
+      "consistency_percentage": 45.5,
+      "functions_by_consistency": {
+        "all_11_versions": 135,
+        "9_versions": 17,
+        "8_versions": 1
+      }
+    }
+  },
+  "cross_module_analysis": {
+    "total_functions_across_all_modules": 3317,
+    "total_functions_present_in_all_versions": 1927,
+    "average_cross_version_stability": 55.6,
+    "most_stable_module": {
+      "name": "D2Game",
+      "stability_percentage": 67.7
+    },
+    "least_stable_module": {
+      "name": "Storm",
+      "stability_percentage": 45.5
+    },
+    "module_ranking": [
+      {
+        "rank": 1,
+        "module": "D2Game",
+        "stability_percentage": 67.7
+      },
+      {
+        "rank": 2,
+        "module": "D2Client",
+        "stability_percentage": 65.5
+      },
+      {
+        "rank": 3,
+        "module": "D2Common",
+        "stability_percentage": 54.3
+      },
+      {
+        "rank": 4,
+        "module": "D2Win",
+        "stability_percentage": 53.2
+      },
+      {
+        "rank": 5,
+        "module": "Fog",
+        "stability_percentage": 47.4
+      },
+      {
+        "rank": 6,
+        "module": "Storm",
+        "stability_percentage": 45.5
+      }
+    ]
+  }
+}

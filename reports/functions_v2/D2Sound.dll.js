@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2Sound.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -26,11 +26,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F981190",
         "LoD/1.09d": "0x6F981190",
         "LoD/1.10": "0x6F9810D0",
-        "LoD/1.11": "0x6F9B7D70",
-        "LoD/1.11b": "0x6F9B6A70",
-        "LoD/1.12a": "0x6F9B7BE0",
-        "LoD/1.13c": "0x6F9B7B00",
-        "LoD/1.13d": "0x6F9B67E0"
+        "LoD/1.11": "0x6F9B70E0",
+        "LoD/1.11b": "0x6F9B7AE0",
+        "LoD/1.12a": "0x6F9B83D0",
+        "LoD/1.13c": "0x6F9B8E50",
+        "LoD/1.13d": "0x6F9B67F0"
       },
       "rvas": {
         "LoD/1.07": "0x1190",
@@ -39,11 +39,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x1190",
         "LoD/1.09d": "0x1190",
         "LoD/1.10": "0x10D0",
-        "LoD/1.11": "0x7D70",
-        "LoD/1.11b": "0x6A70",
-        "LoD/1.12a": "0x7BE0",
-        "LoD/1.13c": "0x7B00",
-        "LoD/1.13d": "0x67E0"
+        "LoD/1.11": "0x70E0",
+        "LoD/1.11b": "0x7AE0",
+        "LoD/1.12a": "0x83D0",
+        "LoD/1.13c": "0x8E50",
+        "LoD/1.13d": "0x67F0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -152,6 +152,87 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c3b6abf16dc6acc5cd76aa2a8156ad9e",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectSoundEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectSoundEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectSoundEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectSoundEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectSoundEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "DirectSoundEnumerateA",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10022",
+          "Ordinal_10034",
+          "Ordinal_10002"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10042",
+          "Ordinal_10004",
+          "Ordinal_10009"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10019",
+          "Ordinal_10008",
+          "Ordinal_10061"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10008",
+          "Ordinal_10039"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10002",
+          "Ordinal_10057",
+          "Ordinal_10011"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Initializing sound engine...\"",
@@ -274,6 +355,86 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5e7055b0a37b12c46f6e8bde67a7f74b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "GetInitFlag",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "...+27 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "GetGameState",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "...+27 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "GetGameState",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "...+27 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "GetGameState",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "...+27 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "GetGameState",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "QueueLogMessage",
+          "...+27 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "DirectSoundCreate",
+          "GetGameState",
+          "Ordinal_10029",
+          "SetSoundVolume",
+          "Ordinal_10029",
+          "SetSoundVolume",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+24 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\tDirectSound3D with EAX initialized\"",
@@ -381,6 +542,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef7bf419ef8e462949e07a523dd96e6c",
+      "callees": {
+        "LoD/1.07": [
+          "SetSoundVolume"
+        ],
+        "LoD/1.08": [
+          "SetSoundVolume"
+        ],
+        "LoD/1.09": [
+          "SetSoundVolume"
+        ],
+        "LoD/1.09b": [
+          "SetSoundVolume"
+        ],
+        "LoD/1.09d": [
+          "SetSoundVolume"
+        ],
+        "LoD/1.10": [
+          "SetSoundVolume"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 13,
         "LoD/1.08": 13,
@@ -501,11 +682,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9823C0",
         "LoD/1.09d": "0x6F9823C0",
         "LoD/1.10": "0x6F9822B0",
-        "LoD/1.11": "0x6F9B7C80",
-        "LoD/1.11b": "0x6F9B6AA0",
-        "LoD/1.12a": "0x6F9B8410",
-        "LoD/1.13c": "0x6F9B8E90",
-        "LoD/1.13d": "0x6F9B6830"
+        "LoD/1.11": "0x6F9B70B0",
+        "LoD/1.11b": "0x6F9B7AB0",
+        "LoD/1.12a": "0x6F9B9730",
+        "LoD/1.13c": "0x6F9B9AF0",
+        "LoD/1.13d": "0x6F9B92C0"
       },
       "rvas": {
         "LoD/1.07": "0x23C0",
@@ -514,11 +695,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x23C0",
         "LoD/1.09d": "0x23C0",
         "LoD/1.10": "0x22B0",
-        "LoD/1.11": "0x7C80",
-        "LoD/1.11b": "0x6AA0",
-        "LoD/1.12a": "0x8410",
-        "LoD/1.13c": "0x8E90",
-        "LoD/1.13d": "0x6830"
+        "LoD/1.11": "0x70B0",
+        "LoD/1.11b": "0x7AB0",
+        "LoD/1.12a": "0x9730",
+        "LoD/1.13c": "0x9AF0",
+        "LoD/1.13d": "0x92C0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -644,12 +825,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F9823E0",
         "LoD/1.09b": "0x6F9823E0",
         "LoD/1.09d": "0x6F9823E0",
-        "LoD/1.10": "0x6F982990",
-        "LoD/1.11": "0x6F9B70C0",
-        "LoD/1.11b": "0x6F9B7AC0",
-        "LoD/1.12a": "0x6F9B83C0",
-        "LoD/1.13c": "0x6F9B9A60",
-        "LoD/1.13d": "0x6F9B9230"
+        "LoD/1.10": "0x6F982AD0",
+        "LoD/1.11": "0x6F9B7160",
+        "LoD/1.11b": "0x6F9B7B60",
+        "LoD/1.12a": "0x6F9B7D40",
+        "LoD/1.13c": "0x6F9B8EA0",
+        "LoD/1.13d": "0x6F9B73A0"
       },
       "rvas": {
         "LoD/1.07": "0x23E0",
@@ -657,12 +838,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x23E0",
         "LoD/1.09b": "0x23E0",
         "LoD/1.09d": "0x23E0",
-        "LoD/1.10": "0x2990",
-        "LoD/1.11": "0x70C0",
-        "LoD/1.11b": "0x7AC0",
-        "LoD/1.12a": "0x83C0",
-        "LoD/1.13c": "0x9A60",
-        "LoD/1.13d": "0x9230"
+        "LoD/1.10": "0x2AD0",
+        "LoD/1.11": "0x7160",
+        "LoD/1.11b": "0x7B60",
+        "LoD/1.12a": "0x7D40",
+        "LoD/1.13c": "0x8EA0",
+        "LoD/1.13d": "0x73A0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -727,29 +908,29 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_GetUnitX": {
       "addresses": {
         "LoD/1.07": "0x6F9E23F0",
-        "LoD/1.08": "0x6F9E23F0",
-        "LoD/1.09": "0x6F9823F0",
-        "LoD/1.09b": "0x6F9823F0",
-        "LoD/1.09d": "0x6F9823F0",
+        "LoD/1.08": "0x6F9EC7D8",
+        "LoD/1.09": "0x6F98C7D8",
+        "LoD/1.09b": "0x6F98C7D8",
+        "LoD/1.09d": "0x6F98C7D8",
         "LoD/1.10": "0x6F9822E0",
-        "LoD/1.11": "0x6F9BD8E6",
-        "LoD/1.11b": "0x6F9B7AD0",
-        "LoD/1.12a": "0x6F9BDA53",
-        "LoD/1.13c": "0x6F9BDA83",
-        "LoD/1.13d": "0x6F9B6800"
+        "LoD/1.11": "0x6F9B70D0",
+        "LoD/1.11b": "0x6F9BD8F6",
+        "LoD/1.12a": "0x6F9B83E0",
+        "LoD/1.13c": "0x6F9B8E70",
+        "LoD/1.13d": "0x6F9BD9C6"
       },
       "rvas": {
         "LoD/1.07": "0x23F0",
-        "LoD/1.08": "0x23F0",
-        "LoD/1.09": "0x23F0",
-        "LoD/1.09b": "0x23F0",
-        "LoD/1.09d": "0x23F0",
+        "LoD/1.08": "0xC7D8",
+        "LoD/1.09": "0xC7D8",
+        "LoD/1.09b": "0xC7D8",
+        "LoD/1.09d": "0xC7D8",
         "LoD/1.10": "0x22E0",
-        "LoD/1.11": "0xD8E6",
-        "LoD/1.11b": "0x7AD0",
-        "LoD/1.12a": "0xDA53",
-        "LoD/1.13c": "0xDA83",
-        "LoD/1.13d": "0x6800"
+        "LoD/1.11": "0x70D0",
+        "LoD/1.11b": "0xD8F6",
+        "LoD/1.12a": "0x83E0",
+        "LoD/1.13c": "0x8E70",
+        "LoD/1.13d": "0xD9C6"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -818,12 +999,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F982400",
         "LoD/1.09b": "0x6F982400",
         "LoD/1.09d": "0x6F982400",
-        "LoD/1.10": "0x6F982BC0",
-        "LoD/1.11": "0x6F9B7D40",
-        "LoD/1.11b": "0x6F9B6A10",
-        "LoD/1.12a": "0x6F9B8470",
-        "LoD/1.13c": "0x6F9B8010",
-        "LoD/1.13d": "0x6F9B6810"
+        "LoD/1.10": "0x6F982B90",
+        "LoD/1.11": "0x6F9B6530",
+        "LoD/1.11b": "0x6F9B6530",
+        "LoD/1.12a": "0x6F9B7BB0",
+        "LoD/1.13c": "0x6F9B7B00",
+        "LoD/1.13d": "0x6F9B67E0"
       },
       "rvas": {
         "LoD/1.07": "0x2400",
@@ -831,12 +1012,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x2400",
         "LoD/1.09b": "0x2400",
         "LoD/1.09d": "0x2400",
-        "LoD/1.10": "0x2BC0",
-        "LoD/1.11": "0x7D40",
-        "LoD/1.11b": "0x6A10",
-        "LoD/1.12a": "0x8470",
-        "LoD/1.13c": "0x8010",
-        "LoD/1.13d": "0x6810"
+        "LoD/1.10": "0x2B90",
+        "LoD/1.11": "0x6530",
+        "LoD/1.11b": "0x6530",
+        "LoD/1.12a": "0x7BB0",
+        "LoD/1.13c": "0x7B00",
+        "LoD/1.13d": "0x67E0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -905,12 +1086,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F982410",
         "LoD/1.09b": "0x6F982410",
         "LoD/1.09d": "0x6F982410",
-        "LoD/1.10": "0x6F982310",
-        "LoD/1.11": "0x6F9B70B0",
-        "LoD/1.11b": "0x6F9B7AB0",
-        "LoD/1.12a": "0x6F9B7BB0",
-        "LoD/1.13c": "0x6F9B8F00",
-        "LoD/1.13d": "0x6F9B6820"
+        "LoD/1.10": "0x6F9822D0",
+        "LoD/1.11": "0x6F9B7D10",
+        "LoD/1.11b": "0x6F9B6AA0",
+        "LoD/1.12a": "0x6F9B8470",
+        "LoD/1.13c": "0x6F9B8010",
+        "LoD/1.13d": "0x6F9B6810"
       },
       "rvas": {
         "LoD/1.07": "0x2410",
@@ -918,12 +1099,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x2410",
         "LoD/1.09b": "0x2410",
         "LoD/1.09d": "0x2410",
-        "LoD/1.10": "0x2310",
-        "LoD/1.11": "0x70B0",
-        "LoD/1.11b": "0x7AB0",
-        "LoD/1.12a": "0x7BB0",
-        "LoD/1.13c": "0x8F00",
-        "LoD/1.13d": "0x6820"
+        "LoD/1.10": "0x22D0",
+        "LoD/1.11": "0x7D10",
+        "LoD/1.11b": "0x6AA0",
+        "LoD/1.12a": "0x8470",
+        "LoD/1.13c": "0x8010",
+        "LoD/1.13d": "0x6810"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -992,12 +1173,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F982420",
         "LoD/1.09b": "0x6F982420",
         "LoD/1.09d": "0x6F982420",
-        "LoD/1.10": "0x6F9822D0",
-        "LoD/1.11": "0x6F9B7CE0",
-        "LoD/1.11b": "0x6F9B69E0",
+        "LoD/1.10": "0x6F982B00",
+        "LoD/1.11": "0x6F9B7C80",
+        "LoD/1.11b": "0x6F9B6A40",
         "LoD/1.12a": "0x6F9B7B50",
-        "LoD/1.13c": "0x6F9B9B20",
-        "LoD/1.13d": "0x6F9B92F0"
+        "LoD/1.13c": "0x6F9B8F00",
+        "LoD/1.13d": "0x6F9B6820"
       },
       "rvas": {
         "LoD/1.07": "0x2420",
@@ -1005,12 +1186,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x2420",
         "LoD/1.09b": "0x2420",
         "LoD/1.09d": "0x2420",
-        "LoD/1.10": "0x22D0",
-        "LoD/1.11": "0x7CE0",
-        "LoD/1.11b": "0x69E0",
+        "LoD/1.10": "0x2B00",
+        "LoD/1.11": "0x7C80",
+        "LoD/1.11b": "0x6A40",
         "LoD/1.12a": "0x7B50",
-        "LoD/1.13c": "0x9B20",
-        "LoD/1.13d": "0x92F0"
+        "LoD/1.13c": "0x8F00",
+        "LoD/1.13d": "0x6820"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1155,6 +1336,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2406dd2ac42c117cddca7a0782089a5e",
+      "callees": {
+        "LoD/1.07": [
+          "ClampSoundVolume"
+        ],
+        "LoD/1.08": [
+          "ClampSoundVolume"
+        ],
+        "LoD/1.09": [
+          "ClampSoundVolume"
+        ],
+        "LoD/1.09b": [
+          "ClampSoundVolume"
+        ],
+        "LoD/1.09d": [
+          "ClampSoundVolume"
+        ],
+        "LoD/1.10": [
+          "ClampSoundVolume"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -1275,11 +1476,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F982740",
         "LoD/1.09d": "0x6F982740",
         "LoD/1.10": "0x6F982630",
-        "LoD/1.11": "0x6F9B556D",
-        "LoD/1.11b": "0x6F9B556D",
-        "LoD/1.12a": "0x6F9B55BD",
-        "LoD/1.13c": "0x6F9B55BD",
-        "LoD/1.13d": "0x6F9B556D"
+        "LoD/1.11": "0x6F9B60F0",
+        "LoD/1.11b": "0x6F9B60F0",
+        "LoD/1.12a": "0x6F9B60F0",
+        "LoD/1.13c": "0x6F9B60F0",
+        "LoD/1.13d": "0x6F9B6080"
       },
       "rvas": {
         "LoD/1.07": "0x2740",
@@ -1288,11 +1489,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x2740",
         "LoD/1.09d": "0x2740",
         "LoD/1.10": "0x2630",
-        "LoD/1.11": "0x556D",
-        "LoD/1.11b": "0x556D",
-        "LoD/1.12a": "0x55BD",
-        "LoD/1.13c": "0x55BD",
-        "LoD/1.13d": "0x556D"
+        "LoD/1.11": "0x60F0",
+        "LoD/1.11b": "0x60F0",
+        "LoD/1.12a": "0x60F0",
+        "LoD/1.13c": "0x60F0",
+        "LoD/1.13d": "0x6080"
       },
       "sizes": {
         "LoD/1.07": 110,
@@ -1314,6 +1515,68 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0d037fb391dc7ad4886e860653d0fd96",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "SetSoundVolume",
+          "CreateGameObject"
+        ],
+        "LoD/1.11": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "BindSocketToPortWrapper",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -1347,11 +1610,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "d191feb7887f8845729944df882a8227",
         "LoD/1.09d": "d191feb7887f8845729944df882a8227",
         "LoD/1.10": "4f4596310a4a2b8a287e4202d912da9e",
-        "LoD/1.11": "4af6f4d1378e3b27617b296b4a2b16cc",
-        "LoD/1.11b": "4af6f4d1378e3b27617b296b4a2b16cc",
-        "LoD/1.12a": "4af6f4d1378e3b27617b296b4a2b16cc",
-        "LoD/1.13c": "4af6f4d1378e3b27617b296b4a2b16cc",
-        "LoD/1.13d": "4af6f4d1378e3b27617b296b4a2b16cc"
+        "LoD/1.11": "18daef3daaad0cf2ceb111a04873839a",
+        "LoD/1.11b": "18daef3daaad0cf2ceb111a04873839a",
+        "LoD/1.12a": "18daef3daaad0cf2ceb111a04873839a",
+        "LoD/1.13c": "18daef3daaad0cf2ceb111a04873839a",
+        "LoD/1.13d": "18daef3daaad0cf2ceb111a04873839a"
       }
     },
     "d2sound.dll_ShutdownSoundSystem": {
@@ -1386,6 +1649,44 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:cf3a7eac5e747e9c13faf7feea50579f",
+      "callees": {
+        "LoD/1.07": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "CloseSoundStream",
+          "CloseSoundObject",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -1478,6 +1779,52 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:857cfb138a85cd8c1e42fa081530808f",
+      "callees": {
+        "LoD/1.07": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "ParseWavFile",
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -1567,6 +1914,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:58d9899757cfd4203192734a6f529601",
+      "callees": {
+        "LoD/1.07": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "ActivateSoundSlot"
+        ],
+        "LoD/1.08": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "ActivateSoundSlot"
+        ],
+        "LoD/1.09": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "ActivateSoundSlot"
+        ],
+        "LoD/1.09b": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "ActivateSoundSlot"
+        ],
+        "LoD/1.09d": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "ActivateSoundSlot"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 21,
         "LoD/1.08": 21,
@@ -1621,6 +2005,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b5a45d1deb498f3be0c4d884aafcc598",
+      "callees": {
+        "LoD/1.07": [
+          "GetSampleSoundBuffer"
+        ],
+        "LoD/1.08": [
+          "GetSampleSoundBuffer"
+        ],
+        "LoD/1.09": [
+          "GetSampleSoundBuffer"
+        ],
+        "LoD/1.09b": [
+          "GetSampleSoundBuffer"
+        ],
+        "LoD/1.09d": [
+          "GetSampleSoundBuffer"
+        ],
+        "LoD/1.10": [
+          "GetSampleSoundBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
@@ -1678,6 +2082,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9ebc18019c9561252ba363896a5e140e",
+      "callees": {
+        "LoD/1.07": [
+          "CloseSoundStream"
+        ],
+        "LoD/1.08": [
+          "CloseSoundStream"
+        ],
+        "LoD/1.09": [
+          "CloseSoundStream"
+        ],
+        "LoD/1.09b": [
+          "CloseSoundStream"
+        ],
+        "LoD/1.09d": [
+          "CloseSoundStream"
+        ],
+        "LoD/1.10": [
+          "CloseSoundStream"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -1735,6 +2159,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7d8ff7bdd626e9e6a87d2a867b0761cd",
+      "callees": {
+        "LoD/1.07": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.08": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09b": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09d": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.10": [
+          "GetSampleSoundBuffer",
+          "QueueSoundBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -1764,28 +2214,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2AC0",
         "LoD/1.08": "0x6F9E2AC0",
-        "LoD/1.09": "0x6F984FD0",
-        "LoD/1.09b": "0x6F984FD0",
-        "LoD/1.09d": "0x6F982C30",
-        "LoD/1.10": "0x6F982B30",
-        "LoD/1.11": "0x6F9B7CB0",
-        "LoD/1.11b": "0x6F9B6AD0",
-        "LoD/1.12a": "0x6F9B7B20",
-        "LoD/1.13c": "0x6F9B9A30",
-        "LoD/1.13d": "0x6F9B9200"
+        "LoD/1.09": "0x6F982AC0",
+        "LoD/1.09b": "0x6F982AC0",
+        "LoD/1.09d": "0x6F982C60",
+        "LoD/1.10": "0x6F982310",
+        "LoD/1.11": "0x6F9B7CE0",
+        "LoD/1.11b": "0x6F9B6A10",
+        "LoD/1.12a": "0x6F9B7BE0",
+        "LoD/1.13c": "0x6F9B9B20",
+        "LoD/1.13d": "0x6F9B92F0"
       },
       "rvas": {
         "LoD/1.07": "0x2AC0",
         "LoD/1.08": "0x2AC0",
-        "LoD/1.09": "0x4FD0",
-        "LoD/1.09b": "0x4FD0",
-        "LoD/1.09d": "0x2C30",
-        "LoD/1.10": "0x2B30",
-        "LoD/1.11": "0x7CB0",
-        "LoD/1.11b": "0x6AD0",
-        "LoD/1.12a": "0x7B20",
-        "LoD/1.13c": "0x9A30",
-        "LoD/1.13d": "0x9200"
+        "LoD/1.09": "0x2AC0",
+        "LoD/1.09b": "0x2AC0",
+        "LoD/1.09d": "0x2C60",
+        "LoD/1.10": "0x2310",
+        "LoD/1.11": "0x7CE0",
+        "LoD/1.11b": "0x6A10",
+        "LoD/1.12a": "0x7BE0",
+        "LoD/1.13c": "0x9B20",
+        "LoD/1.13d": "0x92F0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1894,6 +2344,96 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:86c56857e36f9d967fbbb0ba943dc733",
+      "callees": {
+        "LoD/1.07": [
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong"
+        ],
+        "LoD/1.08": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ],
+        "LoD/1.09": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ],
+        "LoD/1.10": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ],
+        "LoD/1.11": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.11b": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.12a": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13c": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13d": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -2028,28 +2568,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2C00",
         "LoD/1.08": "0x6F9E2C00",
-        "LoD/1.09": "0x6F982C90",
-        "LoD/1.09b": "0x6F982C90",
-        "LoD/1.09d": "0x6F982C90",
-        "LoD/1.10": "0x6F982AD0",
+        "LoD/1.09": "0x6F982C00",
+        "LoD/1.09b": "0x6F982C00",
+        "LoD/1.09d": "0x6F982CC0",
+        "LoD/1.10": "0x6F982300",
         "LoD/1.11": "0x6F9B70F0",
         "LoD/1.11b": "0x6F9B7AF0",
         "LoD/1.12a": "0x6F9B83F0",
         "LoD/1.13c": "0x6F9B8E60",
-        "LoD/1.13d": "0x6F9B67F0"
+        "LoD/1.13d": "0x6F9B6890"
       },
       "rvas": {
         "LoD/1.07": "0x2C00",
         "LoD/1.08": "0x2C00",
-        "LoD/1.09": "0x2C90",
-        "LoD/1.09b": "0x2C90",
-        "LoD/1.09d": "0x2C90",
-        "LoD/1.10": "0x2AD0",
+        "LoD/1.09": "0x2C00",
+        "LoD/1.09b": "0x2C00",
+        "LoD/1.09d": "0x2CC0",
+        "LoD/1.10": "0x2300",
         "LoD/1.11": "0x70F0",
         "LoD/1.11b": "0x7AF0",
         "LoD/1.12a": "0x83F0",
         "LoD/1.13c": "0x8E60",
-        "LoD/1.13d": "0x67F0"
+        "LoD/1.13d": "0x6890"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2158,6 +2698,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "callees": {
+        "LoD/1.07": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.08": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -2248,28 +2823,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2C30",
         "LoD/1.08": "0x6F9E2C30",
-        "LoD/1.09": "0x6F982C00",
-        "LoD/1.09b": "0x6F982C00",
-        "LoD/1.09d": "0x6F982CC0",
-        "LoD/1.10": "0x6F982B00",
-        "LoD/1.11": "0x6F9B7160",
-        "LoD/1.11b": "0x6F9B7B60",
-        "LoD/1.12a": "0x6F9B7D40",
-        "LoD/1.13c": "0x6F9B9A90",
-        "LoD/1.13d": "0x6F9B9260"
+        "LoD/1.09": "0x6F982C60",
+        "LoD/1.09b": "0x6F982C60",
+        "LoD/1.09d": "0x6F982AC0",
+        "LoD/1.10": "0x6F982990",
+        "LoD/1.11": "0x6F9B7D70",
+        "LoD/1.11b": "0x6F9B6AD0",
+        "LoD/1.12a": "0x6F9B7B20",
+        "LoD/1.13c": "0x6F9B9A30",
+        "LoD/1.13d": "0x6F9B9200"
       },
       "rvas": {
         "LoD/1.07": "0x2C30",
         "LoD/1.08": "0x2C30",
-        "LoD/1.09": "0x2C00",
-        "LoD/1.09b": "0x2C00",
-        "LoD/1.09d": "0x2CC0",
-        "LoD/1.10": "0x2B00",
-        "LoD/1.11": "0x7160",
-        "LoD/1.11b": "0x7B60",
-        "LoD/1.12a": "0x7D40",
-        "LoD/1.13c": "0x9A90",
-        "LoD/1.13d": "0x9260"
+        "LoD/1.09": "0x2C60",
+        "LoD/1.09b": "0x2C60",
+        "LoD/1.09d": "0x2AC0",
+        "LoD/1.10": "0x2990",
+        "LoD/1.11": "0x7D70",
+        "LoD/1.11b": "0x6AD0",
+        "LoD/1.12a": "0x7B20",
+        "LoD/1.13c": "0x9A30",
+        "LoD/1.13d": "0x9200"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2378,6 +2953,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "callees": {
+        "LoD/1.07": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.08": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -2468,28 +3078,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2C60",
         "LoD/1.08": "0x6F9E2C60",
-        "LoD/1.09": "0x6F982AC0",
-        "LoD/1.09b": "0x6F982AC0",
-        "LoD/1.09d": "0x6F982C60",
-        "LoD/1.10": "0x6F9822F0",
-        "LoD/1.11": "0x6F9B6A30",
-        "LoD/1.11b": "0x6F9B73C0",
-        "LoD/1.12a": "0x6F9B7C10",
-        "LoD/1.13c": "0x6F9B9AF0",
-        "LoD/1.13d": "0x6F9B92C0"
+        "LoD/1.09": "0x6F982CC0",
+        "LoD/1.09b": "0x6F982CC0",
+        "LoD/1.09d": "0x6F984FD0",
+        "LoD/1.10": "0x6F982B30",
+        "LoD/1.11": "0x6F9B7100",
+        "LoD/1.11b": "0x6F9B7B00",
+        "LoD/1.12a": "0x6F9B8400",
+        "LoD/1.13c": "0x6F9B8E80",
+        "LoD/1.13d": "0x6F9B8D50"
       },
       "rvas": {
         "LoD/1.07": "0x2C60",
         "LoD/1.08": "0x2C60",
-        "LoD/1.09": "0x2AC0",
-        "LoD/1.09b": "0x2AC0",
-        "LoD/1.09d": "0x2C60",
-        "LoD/1.10": "0x22F0",
-        "LoD/1.11": "0x6A30",
-        "LoD/1.11b": "0x73C0",
-        "LoD/1.12a": "0x7C10",
-        "LoD/1.13c": "0x9AF0",
-        "LoD/1.13d": "0x92C0"
+        "LoD/1.09": "0x2CC0",
+        "LoD/1.09b": "0x2CC0",
+        "LoD/1.09d": "0x4FD0",
+        "LoD/1.10": "0x2B30",
+        "LoD/1.11": "0x7100",
+        "LoD/1.11b": "0x7B00",
+        "LoD/1.12a": "0x8400",
+        "LoD/1.13c": "0x8E80",
+        "LoD/1.13d": "0x8D50"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2598,6 +3208,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "callees": {
+        "LoD/1.07": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.08": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -2688,28 +3333,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2C90",
         "LoD/1.08": "0x6F9E2C90",
-        "LoD/1.09": "0x6F982C60",
-        "LoD/1.09b": "0x6F982C60",
-        "LoD/1.09d": "0x6F984FD0",
-        "LoD/1.10": "0x6F982B90",
-        "LoD/1.11": "0x6F9B70E0",
-        "LoD/1.11b": "0x6F9B7AE0",
-        "LoD/1.12a": "0x6F9B83D0",
-        "LoD/1.13c": "0x6F9B8E50",
-        "LoD/1.13d": "0x6F9B8D50"
+        "LoD/1.09": "0x6F984FD0",
+        "LoD/1.09b": "0x6F984FD0",
+        "LoD/1.09d": "0x6F982C90",
+        "LoD/1.10": "0x6F984E20",
+        "LoD/1.11": "0x6F9B7D40",
+        "LoD/1.11b": "0x6F9B69E0",
+        "LoD/1.12a": "0x6F9B7C10",
+        "LoD/1.13c": "0x6F9B9A90",
+        "LoD/1.13d": "0x6F9B9260"
       },
       "rvas": {
         "LoD/1.07": "0x2C90",
         "LoD/1.08": "0x2C90",
-        "LoD/1.09": "0x2C60",
-        "LoD/1.09b": "0x2C60",
-        "LoD/1.09d": "0x4FD0",
-        "LoD/1.10": "0x2B90",
-        "LoD/1.11": "0x70E0",
-        "LoD/1.11b": "0x7AE0",
-        "LoD/1.12a": "0x83D0",
-        "LoD/1.13c": "0x8E50",
-        "LoD/1.13d": "0x8D50"
+        "LoD/1.09": "0x4FD0",
+        "LoD/1.09b": "0x4FD0",
+        "LoD/1.09d": "0x2C90",
+        "LoD/1.10": "0x4E20",
+        "LoD/1.11": "0x7D40",
+        "LoD/1.11b": "0x69E0",
+        "LoD/1.12a": "0x7C10",
+        "LoD/1.13c": "0x9A90",
+        "LoD/1.13d": "0x9260"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2818,6 +3463,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "callees": {
+        "LoD/1.07": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.08": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -2908,28 +3588,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2CC0",
         "LoD/1.08": "0x6F9E2CC0",
-        "LoD/1.09": "0x6F982CC0",
-        "LoD/1.09b": "0x6F982CC0",
-        "LoD/1.09d": "0x6F982C00",
-        "LoD/1.10": "0x6F984E20",
-        "LoD/1.11": "0x6F9B7100",
-        "LoD/1.11b": "0x6F9B7B00",
-        "LoD/1.12a": "0x6F9B8400",
-        "LoD/1.13c": "0x6F9B8E80",
-        "LoD/1.13d": "0x6F9B73A0"
+        "LoD/1.09": "0x6F982C30",
+        "LoD/1.09b": "0x6F982C30",
+        "LoD/1.09d": "0x6F982CF0",
+        "LoD/1.10": "0x6F982BC0",
+        "LoD/1.11": "0x6F9B6A30",
+        "LoD/1.11b": "0x6F9B73C0",
+        "LoD/1.12a": "0x6F9B8410",
+        "LoD/1.13c": "0x6F9B8E90",
+        "LoD/1.13d": "0x6F9B6830"
       },
       "rvas": {
         "LoD/1.07": "0x2CC0",
         "LoD/1.08": "0x2CC0",
-        "LoD/1.09": "0x2CC0",
-        "LoD/1.09b": "0x2CC0",
-        "LoD/1.09d": "0x2C00",
-        "LoD/1.10": "0x4E20",
-        "LoD/1.11": "0x7100",
-        "LoD/1.11b": "0x7B00",
-        "LoD/1.12a": "0x8400",
-        "LoD/1.13c": "0x8E80",
-        "LoD/1.13d": "0x73A0"
+        "LoD/1.09": "0x2C30",
+        "LoD/1.09b": "0x2C30",
+        "LoD/1.09d": "0x2CF0",
+        "LoD/1.10": "0x2BC0",
+        "LoD/1.11": "0x6A30",
+        "LoD/1.11b": "0x73C0",
+        "LoD/1.12a": "0x8410",
+        "LoD/1.13c": "0x8E90",
+        "LoD/1.13d": "0x6830"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3038,6 +3718,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d14addc7929abe91957b0bc29e051997",
+      "callees": {
+        "LoD/1.07": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.08": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -3128,26 +3843,26 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E2CF0",
         "LoD/1.08": "0x6F9E2CF0",
-        "LoD/1.09": "0x6F982C30",
-        "LoD/1.09b": "0x6F982C30",
-        "LoD/1.09d": "0x6F982CF0",
-        "LoD/1.10": "0x6F982B60",
-        "LoD/1.11": "0x6F9B7D10",
-        "LoD/1.11b": "0x6F9B6A40",
-        "LoD/1.12a": "0x6F9B9730",
+        "LoD/1.09": "0x6F982C90",
+        "LoD/1.09b": "0x6F982C90",
+        "LoD/1.09d": "0x6F982C00",
+        "LoD/1.10": "0x6F9822F0",
+        "LoD/1.11": "0x6F9B70C0",
+        "LoD/1.11b": "0x6F9B7AC0",
+        "LoD/1.12a": "0x6F9B83C0",
         "LoD/1.13c": "0x6F9B9AC0",
         "LoD/1.13d": "0x6F9B9290"
       },
       "rvas": {
         "LoD/1.07": "0x2CF0",
         "LoD/1.08": "0x2CF0",
-        "LoD/1.09": "0x2C30",
-        "LoD/1.09b": "0x2C30",
-        "LoD/1.09d": "0x2CF0",
-        "LoD/1.10": "0x2B60",
-        "LoD/1.11": "0x7D10",
-        "LoD/1.11b": "0x6A40",
-        "LoD/1.12a": "0x9730",
+        "LoD/1.09": "0x2C90",
+        "LoD/1.09b": "0x2C90",
+        "LoD/1.09d": "0x2C00",
+        "LoD/1.10": "0x22F0",
+        "LoD/1.11": "0x70C0",
+        "LoD/1.11b": "0x7AC0",
+        "LoD/1.12a": "0x83C0",
         "LoD/1.13c": "0x9AC0",
         "LoD/1.13d": "0x9290"
       },
@@ -3258,6 +3973,46 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:6eb488ab76fcbe91b331e6974ea8a489",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -3356,6 +4111,86 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2b0fb5fd699684d6bfafc11b18be73ae",
+      "callees": {
+        "LoD/1.07": [
+          "GetInitFlag",
+          "GetLastSoundQueueTime",
+          "IsAudioObjectValid",
+          "StartBackgroundMusicPlayback",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "SAudCloseStream",
+          "CloseFileHandle",
+          "GetAudioStreamPosition",
+          "...+11 more"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "GetLastError",
+          "IsAudioObjectValid",
+          "StartBackgroundMusicPlayback",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "Ordinal_258",
+          "...+11 more"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "GetLastError",
+          "IsAudioObjectValid",
+          "StartBackgroundMusicPlayback",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "Ordinal_258",
+          "...+11 more"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "GetLastError",
+          "IsAudioObjectValid",
+          "StartBackgroundMusicPlayback",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "Ordinal_258",
+          "...+11 more"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "GetLastError",
+          "IsAudioObjectValid",
+          "StartBackgroundMusicPlayback",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "Ordinal_258",
+          "...+11 more"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "GetLastError",
+          "IsAudioObjectValid",
+          "Ordinal_10033",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "Ordinal_258",
+          "...+11 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -3532,6 +4367,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a1e8834f011a0c89a11eb63807d8b201",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -3615,6 +4470,50 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:dcf8f872996097fe032b56d09e9ff18e",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SAudCloseStream",
+          "CloseFileHandle",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -3704,6 +4603,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a5d91af82b4d5ef553d6aaa57e0b33aa",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -3787,6 +4706,44 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:32522d79c7283fedfcf5140fd7a10e33",
+      "callees": {
+        "LoD/1.07": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ],
+        "LoD/1.08": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ],
+        "LoD/1.09": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ],
+        "LoD/1.09b": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ],
+        "LoD/1.09d": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ],
+        "LoD/1.10": [
+          "IsDSoundWaveEnabled",
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "AllocLinkedListNode"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -3864,6 +4821,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7a6a6218b90e974d7d44e43618d7717b",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState",
+          "IsDSoundHWAccelEnabled"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "IsDSoundHWAccelEnabled"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "IsDSoundHWAccelEnabled"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "IsDSoundHWAccelEnabled"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "IsDSoundHWAccelEnabled"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "GetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 17,
         "LoD/1.08": 17,
@@ -3921,6 +4904,62 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:abd1ce728ed86791a52f393052728c53",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SAudCloseStream",
+          "CloseFileHandle",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "RemoveListNode",
+          "ReleasePoolAllocation",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4010,6 +5049,68 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:bfcbff4eaff96cd1a8dc92a05b5648d3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "CloseSoundStream",
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4099,6 +5200,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3dabba2586dca080a5974151db2c3cab",
+      "callees": {
+        "LoD/1.07": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "ParseWavFile",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptSample->dwLoopBlockStart < dwRawSize\"",
@@ -4188,6 +5321,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059dab78bf72c706517970dd66caed9b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4271,6 +5424,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6487b8031e820e8980be553303d571b9",
+      "callees": {
+        "LoD/1.07": [
+          "SAudCloseStream",
+          "CloseFileHandle",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_257",
+          "BuildProjectPathThunk",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4354,6 +5539,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7dc402cba1a7de60ca778b325d902cea",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4408,9 +5613,9 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_SetSoundVolume": {
       "addresses": {
         "LoD/1.07": "0x6F9E47D0",
-        "LoD/1.08": "0x6F9E47D0",
-        "LoD/1.09": "0x6F9847D0",
-        "LoD/1.09b": "0x6F9847D0",
+        "LoD/1.08": "0x6F9E4110",
+        "LoD/1.09": "0x6F984110",
+        "LoD/1.09b": "0x6F984110",
         "LoD/1.09d": "0x6F984110",
         "LoD/1.10": "0x6F983F80",
         "LoD/1.11": "0x6F9B85C0",
@@ -4421,9 +5626,9 @@ var FUNCTIONS_D2Sound_dll = {
       },
       "rvas": {
         "LoD/1.07": "0x47D0",
-        "LoD/1.08": "0x47D0",
-        "LoD/1.09": "0x47D0",
-        "LoD/1.09b": "0x47D0",
+        "LoD/1.08": "0x4110",
+        "LoD/1.09": "0x4110",
+        "LoD/1.09b": "0x4110",
         "LoD/1.09d": "0x4110",
         "LoD/1.10": "0x3F80",
         "LoD/1.11": "0x85C0",
@@ -4434,9 +5639,9 @@ var FUNCTIONS_D2Sound_dll = {
       },
       "sizes": {
         "LoD/1.07": 346,
-        "LoD/1.08": 346,
-        "LoD/1.09": 346,
-        "LoD/1.09b": 346,
+        "LoD/1.08": 179,
+        "LoD/1.09": 179,
+        "LoD/1.09b": 179,
         "LoD/1.09d": 179,
         "LoD/1.10": 154,
         "LoD/1.11": 154,
@@ -4452,6 +5657,65 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:abff479b56f8cb0540e83eeede440168",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "CalculateSoundAttenuation",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "CalculateSoundAttenuation",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "CalculateSoundAttenuation",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "CalculateSoundAttenuation",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "CalculateSoundAttenuation",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10061",
+          "Ordinal_10061"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10065",
+          "Ordinal_10065"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10031",
+          "Ordinal_10031"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10060",
+          "Ordinal_10060"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10004",
+          "Ordinal_10004"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4461,21 +5725,15 @@ var FUNCTIONS_D2Sound_dll = {
         ],
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
-          "\"ptSample && ptSample->ptSoundBuffer\"",
-          "\"nVolume >= MIN_VOLUME && nVolume <= MAX_VOLUME\"",
-          "\"ptSample\""
+          "\"ptSample && ptSample->ptSoundBuffer\""
         ],
         "LoD/1.09": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
-          "\"ptSample && ptSample->ptSoundBuffer\"",
-          "\"nVolume >= MIN_VOLUME && nVolume <= MAX_VOLUME\"",
-          "\"ptSample\""
+          "\"ptSample && ptSample->ptSoundBuffer\""
         ],
         "LoD/1.09b": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
-          "\"ptSample && ptSample->ptSoundBuffer\"",
-          "\"nVolume >= MIN_VOLUME && nVolume <= MAX_VOLUME\"",
-          "\"ptSample\""
+          "\"ptSample && ptSample->ptSoundBuffer\""
         ],
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundSm...",
@@ -4488,9 +5746,9 @@ var FUNCTIONS_D2Sound_dll = {
       },
       "basic_block_counts": {
         "LoD/1.07": 20,
-        "LoD/1.08": 20,
-        "LoD/1.09": 20,
-        "LoD/1.09b": 20,
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
         "LoD/1.09d": 9,
         "LoD/1.10": 7,
         "LoD/1.11": 7,
@@ -4514,9 +5772,9 @@ var FUNCTIONS_D2Sound_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.07": "ba6e0bd9899bd775faa9d0118c18deb2",
-        "LoD/1.08": "ba6e0bd9899bd775faa9d0118c18deb2",
-        "LoD/1.09": "ba6e0bd9899bd775faa9d0118c18deb2",
-        "LoD/1.09b": "ba6e0bd9899bd775faa9d0118c18deb2",
+        "LoD/1.08": "f3803ba7d7f8392e233e8cb3caefbc51",
+        "LoD/1.09": "f3803ba7d7f8392e233e8cb3caefbc51",
+        "LoD/1.09b": "f3803ba7d7f8392e233e8cb3caefbc51",
         "LoD/1.09d": "f3803ba7d7f8392e233e8cb3caefbc51",
         "LoD/1.10": "64d177fcc96ea5548677da6471254787",
         "LoD/1.11": "e49c953b2f7d54ca88a18efac53568a9",
@@ -4558,6 +5816,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fd09dc9939bcd8a550530c8ca957fce0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4641,6 +5919,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c1028b66165e9789cd2a8dfecb27ebc3",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "CalculateSoundAttenuation",
+          "CalculateSoundAttenuation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4724,6 +6034,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:98fc6d9b1ad86643564782ea276d251f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4807,6 +6137,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2de5c5e2270a4643e99e8a8235f0de1e",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetAudioStreamPosition"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_258"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_258"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_258"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_258"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_258"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4890,6 +6246,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fd09dc9939bcd8a550530c8ca957fce0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -4973,6 +6349,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fd09dc9939bcd8a550530c8ca957fce0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5056,6 +6452,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6a75a2f5e6d0724f3ad98351419ea09f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5154,6 +6576,67 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6a75a2f5e6d0724f3ad98351419ea09f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "CalculateSoundAttenuation"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10065",
+          "Ordinal_10027",
+          "Ordinal_10034",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10060",
+          "Ordinal_10023",
+          "Ordinal_10004",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10036",
+          "Ordinal_10034",
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10020",
+          "Ordinal_10051",
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10028",
+          "Ordinal_10053",
+          "Ordinal_10057",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5252,6 +6735,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:78edc1fa4165a1f88150d547e76bc08f",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5312,7 +6815,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": "0x6F984580",
         "LoD/1.10": "0x6F9843D0",
         "LoD/1.11": "0x6F9B8260",
-        "LoD/1.11b": "0x6F9B8CE0"
+        "LoD/1.11b": "0x6F9B8CE0",
+        "LoD/1.12a": "0x6F9B6980",
+        "LoD/1.13c": "0x6F9B6980",
+        "LoD/1.13d": "0x6F9B7C70"
       },
       "rvas": {
         "LoD/1.07": "0x4580",
@@ -5322,7 +6828,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": "0x4580",
         "LoD/1.10": "0x43D0",
         "LoD/1.11": "0x8260",
-        "LoD/1.11b": "0x8CE0"
+        "LoD/1.11b": "0x8CE0",
+        "LoD/1.12a": "0x6980",
+        "LoD/1.13c": "0x6980",
+        "LoD/1.13d": "0x7C70"
       },
       "sizes": {
         "LoD/1.07": 478,
@@ -5332,7 +6841,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": 70,
         "LoD/1.10": 68,
         "LoD/1.11": 96,
-        "LoD/1.11b": 96
+        "LoD/1.11b": 96,
+        "LoD/1.12a": 96,
+        "LoD/1.13c": 96,
+        "LoD/1.13d": 96
       },
       "name": "FadeVolumeOverDuration",
       "signature": "void FadeVolumeOverDuration(uint dwDuration)",
@@ -5341,6 +6853,68 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:262978c1fb8a656cc570456096ea4147",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState",
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10014",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5378,7 +6952,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": 4,
         "LoD/1.10": 4,
         "LoD/1.11": 6,
-        "LoD/1.11b": 6
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -5388,7 +6965,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "7df7b774ade16c0ae1794f8bba14781f",
@@ -5398,7 +6978,10 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09d": "a00f8a32a1b79d30edc28dc98756271a",
         "LoD/1.10": "df2b64eaab8da18c94b10f8cb1587d9c",
         "LoD/1.11": "017639e22377964540333b7e81961297",
-        "LoD/1.11b": "017639e22377964540333b7e81961297"
+        "LoD/1.11b": "017639e22377964540333b7e81961297",
+        "LoD/1.12a": "017639e22377964540333b7e81961297",
+        "LoD/1.13c": "017639e22377964540333b7e81961297",
+        "LoD/1.13d": "017639e22377964540333b7e81961297"
       }
     },
     "d2sound.dll_QueueSoundBuffer": {
@@ -5433,6 +7016,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4d5590f3b4eec5a6d2930d34b96b90db",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetGameState"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "GetGameState"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5516,6 +7125,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5733e87691317f9bfe7a0798b2fe74ce",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState"
+        ],
+        "LoD/1.08": [
+          "GetGameState"
+        ],
+        "LoD/1.09": [
+          "GetGameState"
+        ],
+        "LoD/1.09b": [
+          "GetGameState"
+        ],
+        "LoD/1.09d": [
+          "GetGameState"
+        ],
+        "LoD/1.10": [
+          "GetGameState"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -5573,6 +7202,44 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4360b5709bd1fc990703d55fc4482271",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetAsyncFileHandle",
+          "SAudOpenAudioStreamEx",
+          "CloseFileHandle"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_255",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_255",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_255",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_255",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_255",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -5656,6 +7323,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ed98255005155707b0d74b654459f8ef",
+      "callees": {
+        "LoD/1.07": [
+          "GetGameState",
+          "SetAudioStreamCount",
+          "CreateGameObject"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "Ordinal_260",
+          "CreateGameObject"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "Ordinal_260",
+          "CreateGameObject"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "Ordinal_260",
+          "CreateGameObject"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "Ordinal_260",
+          "CreateGameObject"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "Ordinal_260",
+          "CreateGameObject"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -5689,11 +7388,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F984AC0",
         "LoD/1.09d": "0x6F984AC0",
         "LoD/1.10": "0x6F984910",
-        "LoD/1.11": "0x6F9B34C6",
-        "LoD/1.11b": "0x6F9B34C6",
-        "LoD/1.12a": "0x6F9B2E60",
-        "LoD/1.13c": "0x6F9B34FE",
-        "LoD/1.13d": "0x6F9B34C6"
+        "LoD/1.11": "0x6F9B9B30",
+        "LoD/1.11b": "0x6F9B9B33",
+        "LoD/1.12a": "0x6F9B9C62",
+        "LoD/1.13c": "0x6F9B9C87",
+        "LoD/1.13d": "0x6F9B9C10"
       },
       "rvas": {
         "LoD/1.07": "0x4AC0",
@@ -5702,11 +7401,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x4AC0",
         "LoD/1.09d": "0x4AC0",
         "LoD/1.10": "0x4910",
-        "LoD/1.11": "0x34C6",
-        "LoD/1.11b": "0x34C6",
-        "LoD/1.12a": "0x2E60",
-        "LoD/1.13c": "0x34FE",
-        "LoD/1.13d": "0x34C6"
+        "LoD/1.11": "0x9B30",
+        "LoD/1.11b": "0x9B33",
+        "LoD/1.12a": "0x9C62",
+        "LoD/1.13c": "0x9C87",
+        "LoD/1.13d": "0x9C10"
       },
       "sizes": {
         "LoD/1.07": 30,
@@ -5728,6 +7427,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3f86f8785c6daef5fe48b54057eccb89",
+      "callees": {
+        "LoD/1.07": [
+          "CloseSoundObject",
+          "ShutdownAudioStreams"
+        ],
+        "LoD/1.08": [
+          "CloseSoundObject",
+          "Ordinal_256"
+        ],
+        "LoD/1.09": [
+          "CloseSoundObject",
+          "Ordinal_256"
+        ],
+        "LoD/1.09b": [
+          "CloseSoundObject",
+          "Ordinal_256"
+        ],
+        "LoD/1.09d": [
+          "CloseSoundObject",
+          "Ordinal_256"
+        ],
+        "LoD/1.10": [
+          "CloseSoundObject",
+          "Ordinal_256"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -5761,11 +7486,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "7af578b6e6fc9b145cededb9595ea246",
         "LoD/1.09d": "7af578b6e6fc9b145cededb9595ea246",
         "LoD/1.10": "7af578b6e6fc9b145cededb9595ea246",
-        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
+        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
       }
     },
     "d2sound.dll_InitializeAudioStream": {
@@ -5815,6 +7540,50 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4601bb33bcc083889b2ce69d9e1684d9",
+      "callees": {
+        "LoD/1.07": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ],
+        "LoD/1.08": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ],
+        "LoD/1.09": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ],
+        "LoD/1.09b": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ],
+        "LoD/1.09d": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ],
+        "LoD/1.10": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"InitializeCriticalSectionAndSpinCount\"",
@@ -5908,6 +7677,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:843747d827513cf5ee226e608a14a107",
+      "callees": {
+        "LoD/1.07": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ],
+        "LoD/1.08": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ],
+        "LoD/1.09": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ],
+        "LoD/1.09b": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ],
+        "LoD/1.09d": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ],
+        "LoD/1.10": [
+          "IsStateValid",
+          "CloseSoundStream"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -5965,6 +7760,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3f31097e0d6da4e455ae9c2baf1ba699",
+      "callees": {
+        "LoD/1.07": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.08": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09b": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.09d": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ],
+        "LoD/1.10": [
+          "IsStateValid",
+          "QueueSoundBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -6022,6 +7843,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a5fcc6fe40ac41b00c1610d0bff7258",
+      "callees": {
+        "LoD/1.07": [
+          "IsStateValid"
+        ],
+        "LoD/1.08": [
+          "IsStateValid"
+        ],
+        "LoD/1.09": [
+          "IsStateValid"
+        ],
+        "LoD/1.09b": [
+          "IsStateValid"
+        ],
+        "LoD/1.09d": [
+          "IsStateValid"
+        ],
+        "LoD/1.10": [
+          "IsStateValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -6079,6 +7920,86 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:621df8110a761ee9f03a164b01d5c40d",
+      "callees": {
+        "LoD/1.07": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.08": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09b": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09d": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.10": [
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "GetMaskedVolumeFactor",
+          "IsStateValid",
+          "InitSoundSample",
+          "SetSoundVolume",
+          "OpenAudioStream",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -6168,6 +8089,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -6231,26 +8178,26 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.08": "0x6F9E4FD0",
         "LoD/1.09": "0x6F982CF0",
         "LoD/1.09b": "0x6F982CF0",
-        "LoD/1.09d": "0x6F982AC0",
-        "LoD/1.10": "0x6F982300",
-        "LoD/1.11": "0x6F9B6530",
-        "LoD/1.11b": "0x6F9B6530",
+        "LoD/1.09d": "0x6F982C30",
+        "LoD/1.10": "0x6F982B60",
+        "LoD/1.11": "0x6F9B7CB0",
+        "LoD/1.11b": "0x6F9B6A70",
         "LoD/1.12a": "0x6F9B7B80",
-        "LoD/1.13c": "0x6F9B8EA0",
-        "LoD/1.13d": "0x6F9B6890"
+        "LoD/1.13c": "0x6F9B9A60",
+        "LoD/1.13d": "0x6F9B9230"
       },
       "rvas": {
         "LoD/1.07": "0x4FD0",
         "LoD/1.08": "0x4FD0",
         "LoD/1.09": "0x2CF0",
         "LoD/1.09b": "0x2CF0",
-        "LoD/1.09d": "0x2AC0",
-        "LoD/1.10": "0x2300",
-        "LoD/1.11": "0x6530",
-        "LoD/1.11b": "0x6530",
+        "LoD/1.09d": "0x2C30",
+        "LoD/1.10": "0x2B60",
+        "LoD/1.11": "0x7CB0",
+        "LoD/1.11b": "0x6A70",
         "LoD/1.12a": "0x7B80",
-        "LoD/1.13c": "0x8EA0",
-        "LoD/1.13d": "0x6890"
+        "LoD/1.13c": "0x9A60",
+        "LoD/1.13d": "0x9230"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6623,6 +8570,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8ba732671eeefce4adf8427b95fbb97f",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -6715,6 +8682,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:434c103c261c2cdfa42448e719eb1e9a",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -6996,6 +8998,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:314767313e8e907f63b2114e4ff97eb9",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -7070,6 +9092,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:199b16f03636dc8922df0e03aa50a7b1",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -7141,6 +9180,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:097b2d78f206dc38d4f8d1cf3a733c5b",
+      "callees": {
+        "LoD/1.07": [
+          "GetLastError"
+        ],
+        "LoD/1.08": [
+          "GetLastError"
+        ],
+        "LoD/1.09": [
+          "GetLastError"
+        ],
+        "LoD/1.09b": [
+          "GetLastError"
+        ],
+        "LoD/1.09d": [
+          "GetLastError"
+        ],
+        "LoD/1.10": [
+          "GetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 15,
         "LoD/1.08": 15,
@@ -7285,6 +9344,44 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ca12abbcd77d7baffe419b4c73cfd39e",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "ReleasePoolAllocation",
+          "VerQueryValueA",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So..."
@@ -7338,11 +9435,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F985700",
         "LoD/1.09d": "0x6F985700",
         "LoD/1.10": "0x6F98573E",
-        "LoD/1.11": "0x6F9B5F4A",
-        "LoD/1.11b": "0x6F9B5F4A",
-        "LoD/1.12a": "0x6F9B5FBA",
-        "LoD/1.13c": "0x6F9B5FBA",
-        "LoD/1.13d": "0x6F9B5F4A"
+        "LoD/1.11": "0x6F9B5F5C",
+        "LoD/1.11b": "0x6F9B5F5C",
+        "LoD/1.12a": "0x6F9B5FD2",
+        "LoD/1.13c": "0x6F9B5FD2",
+        "LoD/1.13d": "0x6F9B5F62"
       },
       "rvas": {
         "LoD/1.07": "0x5700",
@@ -7351,11 +9448,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x5700",
         "LoD/1.09d": "0x5700",
         "LoD/1.10": "0x573E",
-        "LoD/1.11": "0x5F4A",
-        "LoD/1.11b": "0x5F4A",
-        "LoD/1.12a": "0x5FBA",
-        "LoD/1.13c": "0x5FBA",
-        "LoD/1.13d": "0x5F4A"
+        "LoD/1.11": "0x5F5C",
+        "LoD/1.11b": "0x5F5C",
+        "LoD/1.12a": "0x5FD2",
+        "LoD/1.13c": "0x5FD2",
+        "LoD/1.13d": "0x5F62"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -7448,6 +9545,44 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3b7cdceba9817d252023582e28654503",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetFileSize",
+          "GetKeyValue",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "GetDefaultResourceCount",
+          "Ordinal_276",
+          "FogAssertWithHandle"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -7531,6 +9666,50 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:477da5eccddd3240a2d11a015ebb49db",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "ReadFileAsync",
+          "GetKeyValue",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "InitializeAsyncEventListeners",
+          "Ordinal_276",
+          "FogAssertWithHandle",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -7635,6 +9814,95 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:d57480982d9236ae5ac16308eb31e144",
+      "callees": {
+        "LoD/1.07": [
+          "SetAsyncFileHandle",
+          "FogAssertWithHandle",
+          "FogMemAlloc",
+          "FogAssert",
+          "CloseFileHandle"
+        ],
+        "LoD/1.08": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle",
+          "FogMemAlloc",
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle",
+          "FogMemAlloc",
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09b": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle",
+          "FogMemAlloc",
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.09d": [
+          "GetDefaultResourceCount",
+          "FogAssertWithHandle",
+          "FogMemAlloc",
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.10": [
+          "GetDefaultResourceCount",
+          "Ordinal_10029",
+          "FogMemAlloc",
+          "FogAssert",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Hell\\\\SRC\\\\Archi...",
@@ -7811,11 +10079,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858CC",
         "LoD/1.09d": "0x6F9858CC",
         "LoD/1.10": "0x6F985744",
-        "LoD/1.11": "0x6F9B5EBC",
-        "LoD/1.11b": "0x6F9B5EBC",
-        "LoD/1.12a": "0x6F9B5F44",
-        "LoD/1.13c": "0x6F9B5F44",
-        "LoD/1.13d": "0x6F9B5EC8"
+        "LoD/1.11": "0x6F9B5EF2",
+        "LoD/1.11b": "0x6F9B5EF8",
+        "LoD/1.12a": "0x6F9B5F56",
+        "LoD/1.13c": "0x6F9B5F5C",
+        "LoD/1.13d": "0x6F9B5EF2"
       },
       "rvas": {
         "LoD/1.07": "0x58CC",
@@ -7824,11 +10092,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58CC",
         "LoD/1.09d": "0x58CC",
         "LoD/1.10": "0x5744",
-        "LoD/1.11": "0x5EBC",
-        "LoD/1.11b": "0x5EBC",
-        "LoD/1.12a": "0x5F44",
-        "LoD/1.13c": "0x5F44",
-        "LoD/1.13d": "0x5EC8"
+        "LoD/1.11": "0x5EF2",
+        "LoD/1.11b": "0x5EF8",
+        "LoD/1.12a": "0x5F56",
+        "LoD/1.13c": "0x5F5C",
+        "LoD/1.13d": "0x5EF2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -7983,11 +10251,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858D8",
         "LoD/1.09d": "0x6F9858D8",
         "LoD/1.10": "0x6F985750",
-        "LoD/1.11": "0x6F9B5F44",
-        "LoD/1.11b": "0x6F9B5F44",
-        "LoD/1.12a": "0x6F9B5FB4",
-        "LoD/1.13c": "0x6F9B5FB4",
-        "LoD/1.13d": "0x6F9B5F44"
+        "LoD/1.11": "0x6F9B5EBC",
+        "LoD/1.11b": "0x6F9B5EBC",
+        "LoD/1.12a": "0x6F9B5F44",
+        "LoD/1.13c": "0x6F9B5F44",
+        "LoD/1.13d": "0x6F9B5EC8"
       },
       "rvas": {
         "LoD/1.07": "0x58D8",
@@ -7996,11 +10264,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58D8",
         "LoD/1.09d": "0x58D8",
         "LoD/1.10": "0x5750",
-        "LoD/1.11": "0x5F44",
-        "LoD/1.11b": "0x5F44",
-        "LoD/1.12a": "0x5FB4",
-        "LoD/1.13c": "0x5FB4",
-        "LoD/1.13d": "0x5F44"
+        "LoD/1.11": "0x5EBC",
+        "LoD/1.11b": "0x5EBC",
+        "LoD/1.12a": "0x5F44",
+        "LoD/1.13c": "0x5F44",
+        "LoD/1.13d": "0x5EC8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8069,11 +10337,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858DE",
         "LoD/1.09d": "0x6F9858DE",
         "LoD/1.10": "0x6F985756",
-        "LoD/1.11": "0x6F9B5F68",
-        "LoD/1.11b": "0x6F9B5F68",
-        "LoD/1.12a": "0x6F9B5FDE",
-        "LoD/1.13c": "0x6F9B5FDE",
-        "LoD/1.13d": "0x6F9B5F6E"
+        "LoD/1.11": "0x6F9B5ECE",
+        "LoD/1.11b": "0x6F9B5EDA",
+        "LoD/1.12a": "0x6F9B5F38",
+        "LoD/1.13c": "0x6F9B5F2C",
+        "LoD/1.13d": "0x6F9B5EBC"
       },
       "rvas": {
         "LoD/1.07": "0x58DE",
@@ -8082,11 +10350,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58DE",
         "LoD/1.09d": "0x58DE",
         "LoD/1.10": "0x5756",
-        "LoD/1.11": "0x5F68",
-        "LoD/1.11b": "0x5F68",
-        "LoD/1.12a": "0x5FDE",
-        "LoD/1.13c": "0x5FDE",
-        "LoD/1.13d": "0x5F6E"
+        "LoD/1.11": "0x5ECE",
+        "LoD/1.11b": "0x5EDA",
+        "LoD/1.12a": "0x5F38",
+        "LoD/1.13c": "0x5F2C",
+        "LoD/1.13d": "0x5EBC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8155,11 +10423,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858E4",
         "LoD/1.09d": "0x6F9858E4",
         "LoD/1.10": "0x6F98575C",
-        "LoD/1.11": "0x6F9B5EF8",
-        "LoD/1.11b": "0x6F9B5EE6",
-        "LoD/1.12a": "0x6F9B5F6E",
-        "LoD/1.13c": "0x6F9B5F6E",
-        "LoD/1.13d": "0x6F9B5EF8"
+        "LoD/1.11": "0x6F9B5F4A",
+        "LoD/1.11b": "0x6F9B5F4A",
+        "LoD/1.12a": "0x6F9B5FBA",
+        "LoD/1.13c": "0x6F9B5FBA",
+        "LoD/1.13d": "0x6F9B5F4A"
       },
       "rvas": {
         "LoD/1.07": "0x58E4",
@@ -8168,11 +10436,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58E4",
         "LoD/1.09d": "0x58E4",
         "LoD/1.10": "0x575C",
-        "LoD/1.11": "0x5EF8",
-        "LoD/1.11b": "0x5EE6",
-        "LoD/1.12a": "0x5F6E",
-        "LoD/1.13c": "0x5F6E",
-        "LoD/1.13d": "0x5EF8"
+        "LoD/1.11": "0x5F4A",
+        "LoD/1.11b": "0x5F4A",
+        "LoD/1.12a": "0x5FBA",
+        "LoD/1.13c": "0x5FBA",
+        "LoD/1.13d": "0x5F4A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8241,11 +10509,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858EA",
         "LoD/1.09d": "0x6F9858EA",
         "LoD/1.10": "0x6F985762",
-        "LoD/1.11": "0x6F9B5EDA",
-        "LoD/1.11b": "0x6F9B5ECE",
-        "LoD/1.12a": "0x6F9B5FCC",
-        "LoD/1.13c": "0x6F9B5FCC",
-        "LoD/1.13d": "0x6F9B5F5C"
+        "LoD/1.11": "0x6F9B5EF8",
+        "LoD/1.11b": "0x6F9B5EE6",
+        "LoD/1.12a": "0x6F9B5F6E",
+        "LoD/1.13c": "0x6F9B5F6E",
+        "LoD/1.13d": "0x6F9B5EF8"
       },
       "rvas": {
         "LoD/1.07": "0x58EA",
@@ -8254,11 +10522,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58EA",
         "LoD/1.09d": "0x58EA",
         "LoD/1.10": "0x5762",
-        "LoD/1.11": "0x5EDA",
-        "LoD/1.11b": "0x5ECE",
-        "LoD/1.12a": "0x5FCC",
-        "LoD/1.13c": "0x5FCC",
-        "LoD/1.13d": "0x5F5C"
+        "LoD/1.11": "0x5EF8",
+        "LoD/1.11b": "0x5EE6",
+        "LoD/1.12a": "0x5F6E",
+        "LoD/1.13c": "0x5F6E",
+        "LoD/1.13d": "0x5EF8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8327,11 +10595,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858F0",
         "LoD/1.09d": "0x6F9858F0",
         "LoD/1.10": "0x6F985768",
-        "LoD/1.11": "0x6F9B5EB6",
-        "LoD/1.11b": "0x6F9B5EB6",
-        "LoD/1.12a": "0x6F9B5F3E",
-        "LoD/1.13c": "0x6F9B5F3E",
-        "LoD/1.13d": "0x6F9B5EC2"
+        "LoD/1.11": "0x6F9B5F62",
+        "LoD/1.11b": "0x6F9B5F62",
+        "LoD/1.12a": "0x6F9B5FD8",
+        "LoD/1.13c": "0x6F9B5FD8",
+        "LoD/1.13d": "0x6F9B5F68"
       },
       "rvas": {
         "LoD/1.07": "0x58F0",
@@ -8340,11 +10608,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58F0",
         "LoD/1.09d": "0x58F0",
         "LoD/1.10": "0x5768",
-        "LoD/1.11": "0x5EB6",
-        "LoD/1.11b": "0x5EB6",
-        "LoD/1.12a": "0x5F3E",
-        "LoD/1.13c": "0x5F3E",
-        "LoD/1.13d": "0x5EC2"
+        "LoD/1.11": "0x5F62",
+        "LoD/1.11b": "0x5F62",
+        "LoD/1.12a": "0x5FD8",
+        "LoD/1.13c": "0x5FD8",
+        "LoD/1.13d": "0x5F68"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8413,11 +10681,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858F6",
         "LoD/1.09d": "0x6F9858F6",
         "LoD/1.10": "0x6F98576E",
-        "LoD/1.11": "0x6F9B5F3E",
-        "LoD/1.11b": "0x6F9B5F3E",
-        "LoD/1.12a": "0x6F9B5FAE",
-        "LoD/1.13c": "0x6F9B5FAE",
-        "LoD/1.13d": "0x6F9B5F3E"
+        "LoD/1.11": "0x6F9B5EB6",
+        "LoD/1.11b": "0x6F9B5EB6",
+        "LoD/1.12a": "0x6F9B5F3E",
+        "LoD/1.13c": "0x6F9B5F3E",
+        "LoD/1.13d": "0x6F9B5EC2"
       },
       "rvas": {
         "LoD/1.07": "0x58F6",
@@ -8426,11 +10694,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58F6",
         "LoD/1.09d": "0x58F6",
         "LoD/1.10": "0x576E",
-        "LoD/1.11": "0x5F3E",
-        "LoD/1.11b": "0x5F3E",
-        "LoD/1.12a": "0x5FAE",
-        "LoD/1.13c": "0x5FAE",
-        "LoD/1.13d": "0x5F3E"
+        "LoD/1.11": "0x5EB6",
+        "LoD/1.11b": "0x5EB6",
+        "LoD/1.12a": "0x5F3E",
+        "LoD/1.13c": "0x5F3E",
+        "LoD/1.13d": "0x5EC2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8499,11 +10767,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9858FC",
         "LoD/1.09d": "0x6F9858FC",
         "LoD/1.10": "0x6F98570E",
-        "LoD/1.11": "0x6F9B5EFE",
-        "LoD/1.11b": "0x6F9B5EFE",
-        "LoD/1.12a": "0x6F9B5F74",
-        "LoD/1.13c": "0x6F9B5F74",
-        "LoD/1.13d": "0x6F9B5EFE"
+        "LoD/1.11": "0x6F9B5EC2",
+        "LoD/1.11b": "0x6F9B5EC2",
+        "LoD/1.12a": "0x6F9B5F4A",
+        "LoD/1.13c": "0x6F9B5F4A",
+        "LoD/1.13d": "0x6F9B5ECE"
       },
       "rvas": {
         "LoD/1.07": "0x58FC",
@@ -8512,11 +10780,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x58FC",
         "LoD/1.09d": "0x58FC",
         "LoD/1.10": "0x570E",
-        "LoD/1.11": "0x5EFE",
-        "LoD/1.11b": "0x5EFE",
-        "LoD/1.12a": "0x5F74",
-        "LoD/1.13c": "0x5F74",
-        "LoD/1.13d": "0x5EFE"
+        "LoD/1.11": "0x5EC2",
+        "LoD/1.11b": "0x5EC2",
+        "LoD/1.12a": "0x5F4A",
+        "LoD/1.13c": "0x5F4A",
+        "LoD/1.13d": "0x5ECE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8671,11 +10939,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F985908",
         "LoD/1.09d": "0x6F985908",
         "LoD/1.10": "0x6F98571A",
-        "LoD/1.11": "0x6F9B5F04",
-        "LoD/1.11b": "0x6F9B5F04",
-        "LoD/1.12a": "0x6F9B5F68",
-        "LoD/1.13c": "0x6F9B5F56",
-        "LoD/1.13d": "0x6F9B5F04"
+        "LoD/1.11": "0x6F9B5F44",
+        "LoD/1.11b": "0x6F9B5F44",
+        "LoD/1.12a": "0x6F9B5FB4",
+        "LoD/1.13c": "0x6F9B5FB4",
+        "LoD/1.13d": "0x6F9B5F44"
       },
       "rvas": {
         "LoD/1.07": "0x5908",
@@ -8684,11 +10952,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x5908",
         "LoD/1.09d": "0x5908",
         "LoD/1.10": "0x571A",
-        "LoD/1.11": "0x5F04",
-        "LoD/1.11b": "0x5F04",
-        "LoD/1.12a": "0x5F68",
-        "LoD/1.13c": "0x5F56",
-        "LoD/1.13d": "0x5F04"
+        "LoD/1.11": "0x5F44",
+        "LoD/1.11b": "0x5F44",
+        "LoD/1.12a": "0x5FB4",
+        "LoD/1.13c": "0x5FB4",
+        "LoD/1.13d": "0x5F44"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8757,11 +11025,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F98590E",
         "LoD/1.09d": "0x6F98590E",
         "LoD/1.10": "0x6F985720",
-        "LoD/1.11": "0x6F9B5F50",
-        "LoD/1.11b": "0x6F9B5F50",
-        "LoD/1.12a": "0x6F9B5FC6",
-        "LoD/1.13c": "0x6F9B5FC6",
-        "LoD/1.13d": "0x6F9B5F56"
+        "LoD/1.11": "0x6F9B5EE6",
+        "LoD/1.11b": "0x6F9B5EEC",
+        "LoD/1.12a": "0x6F9B5F50",
+        "LoD/1.13c": "0x6F9B5F50",
+        "LoD/1.13d": "0x6F9B5EE6"
       },
       "rvas": {
         "LoD/1.07": "0x590E",
@@ -8770,11 +11038,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x590E",
         "LoD/1.09d": "0x590E",
         "LoD/1.10": "0x5720",
-        "LoD/1.11": "0x5F50",
-        "LoD/1.11b": "0x5F50",
-        "LoD/1.12a": "0x5FC6",
-        "LoD/1.13c": "0x5FC6",
-        "LoD/1.13d": "0x5F56"
+        "LoD/1.11": "0x5EE6",
+        "LoD/1.11b": "0x5EEC",
+        "LoD/1.12a": "0x5F50",
+        "LoD/1.13c": "0x5F50",
+        "LoD/1.13d": "0x5EE6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8843,11 +11111,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F985914",
         "LoD/1.09d": "0x6F985914",
         "LoD/1.10": "0x6F985726",
-        "LoD/1.11": "0x6F9B5EC2",
-        "LoD/1.11b": "0x6F9B5EC2",
-        "LoD/1.12a": "0x6F9B5F4A",
-        "LoD/1.13c": "0x6F9B5F4A",
-        "LoD/1.13d": "0x6F9B5ECE"
+        "LoD/1.11": "0x6F9B5F04",
+        "LoD/1.11b": "0x6F9B5F04",
+        "LoD/1.12a": "0x6F9B5F68",
+        "LoD/1.13c": "0x6F9B5F56",
+        "LoD/1.13d": "0x6F9B5F04"
       },
       "rvas": {
         "LoD/1.07": "0x5914",
@@ -8856,11 +11124,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x5914",
         "LoD/1.09d": "0x5914",
         "LoD/1.10": "0x5726",
-        "LoD/1.11": "0x5EC2",
-        "LoD/1.11b": "0x5EC2",
-        "LoD/1.12a": "0x5F4A",
-        "LoD/1.13c": "0x5F4A",
-        "LoD/1.13d": "0x5ECE"
+        "LoD/1.11": "0x5F04",
+        "LoD/1.11b": "0x5F04",
+        "LoD/1.12a": "0x5F68",
+        "LoD/1.13c": "0x5F56",
+        "LoD/1.13d": "0x5F04"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8929,11 +11197,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F98591A",
         "LoD/1.09d": "0x6F98591A",
         "LoD/1.10": "0x6F98572C",
-        "LoD/1.11": "0x6F9B5ECE",
-        "LoD/1.11b": "0x6F9B5EDA",
-        "LoD/1.12a": "0x6F9B5F38",
-        "LoD/1.13c": "0x6F9B5F2C",
-        "LoD/1.13d": "0x6F9B5EBC"
+        "LoD/1.11": "0x6F9B5EE0",
+        "LoD/1.11b": "0x6F9B5EE0",
+        "LoD/1.12a": "0x6F9B5F5C",
+        "LoD/1.13c": "0x6F9B5F62",
+        "LoD/1.13d": "0x6F9B5EE0"
       },
       "rvas": {
         "LoD/1.07": "0x591A",
@@ -8942,11 +11210,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x591A",
         "LoD/1.09d": "0x591A",
         "LoD/1.10": "0x572C",
-        "LoD/1.11": "0x5ECE",
-        "LoD/1.11b": "0x5EDA",
-        "LoD/1.12a": "0x5F38",
-        "LoD/1.13c": "0x5F2C",
-        "LoD/1.13d": "0x5EBC"
+        "LoD/1.11": "0x5EE0",
+        "LoD/1.11b": "0x5EE0",
+        "LoD/1.12a": "0x5F5C",
+        "LoD/1.13c": "0x5F62",
+        "LoD/1.13d": "0x5EE0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9015,11 +11283,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F985920",
         "LoD/1.09d": "0x6F985920",
         "LoD/1.10": "0x6F985732",
-        "LoD/1.11": "0x6F9B5EE6",
-        "LoD/1.11b": "0x6F9B5EEC",
-        "LoD/1.12a": "0x6F9B5F50",
-        "LoD/1.13c": "0x6F9B5F50",
-        "LoD/1.13d": "0x6F9B5EE6"
+        "LoD/1.11": "0x6F9B5ED4",
+        "LoD/1.11b": "0x6F9B5EC8",
+        "LoD/1.12a": "0x6F9B5F26",
+        "LoD/1.13c": "0x6F9B5F32",
+        "LoD/1.13d": "0x6F9B5ED4"
       },
       "rvas": {
         "LoD/1.07": "0x5920",
@@ -9028,11 +11296,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x5920",
         "LoD/1.09d": "0x5920",
         "LoD/1.10": "0x5732",
-        "LoD/1.11": "0x5EE6",
-        "LoD/1.11b": "0x5EEC",
-        "LoD/1.12a": "0x5F50",
-        "LoD/1.13c": "0x5F50",
-        "LoD/1.13d": "0x5EE6"
+        "LoD/1.11": "0x5ED4",
+        "LoD/1.11b": "0x5EC8",
+        "LoD/1.12a": "0x5F26",
+        "LoD/1.13c": "0x5F32",
+        "LoD/1.13d": "0x5ED4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9101,11 +11369,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F985926",
         "LoD/1.09d": "0x6F985926",
         "LoD/1.10": "0x6F985738",
-        "LoD/1.11": "0x6F9B5EF2",
-        "LoD/1.11b": "0x6F9B5EF8",
-        "LoD/1.12a": "0x6F9B5F56",
-        "LoD/1.13c": "0x6F9B5F5C",
-        "LoD/1.13d": "0x6F9B5EF2"
+        "LoD/1.11": "0x6F9B5F50",
+        "LoD/1.11b": "0x6F9B5F50",
+        "LoD/1.12a": "0x6F9B5FC6",
+        "LoD/1.13c": "0x6F9B5FC6",
+        "LoD/1.13d": "0x6F9B5F56"
       },
       "rvas": {
         "LoD/1.07": "0x5926",
@@ -9114,11 +11382,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x5926",
         "LoD/1.09d": "0x5926",
         "LoD/1.10": "0x5738",
-        "LoD/1.11": "0x5EF2",
-        "LoD/1.11b": "0x5EF8",
-        "LoD/1.12a": "0x5F56",
-        "LoD/1.13c": "0x5F5C",
-        "LoD/1.13d": "0x5EF2"
+        "LoD/1.11": "0x5F50",
+        "LoD/1.11b": "0x5F50",
+        "LoD/1.12a": "0x5FC6",
+        "LoD/1.13c": "0x5FC6",
+        "LoD/1.13d": "0x5F56"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9733,12 +12001,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F985A3B",
         "LoD/1.09b": "0x6F985A3B",
         "LoD/1.09d": "0x6F985A3B",
-        "LoD/1.10": "0x6F98588C",
-        "LoD/1.11": "0x6F9B1AA1",
-        "LoD/1.11b": "0x6F9B1AA1",
+        "LoD/1.10": "0x6F985883",
+        "LoD/1.11": "0x6F9B34BD",
+        "LoD/1.11b": "0x6F9B34BD",
         "LoD/1.12a": "0x6F9B164E",
-        "LoD/1.13c": "0x6F9B1AA1",
-        "LoD/1.13d": "0x6F9B1AA1"
+        "LoD/1.13c": "0x6F9B34F5",
+        "LoD/1.13d": "0x6F9B34BD"
       },
       "rvas": {
         "LoD/1.07": "0x616C",
@@ -9746,12 +12014,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x5A3B",
         "LoD/1.09b": "0x5A3B",
         "LoD/1.09d": "0x5A3B",
-        "LoD/1.10": "0x588C",
-        "LoD/1.11": "0x1AA1",
-        "LoD/1.11b": "0x1AA1",
+        "LoD/1.10": "0x5883",
+        "LoD/1.11": "0x34BD",
+        "LoD/1.11b": "0x34BD",
         "LoD/1.12a": "0x164E",
-        "LoD/1.13c": "0x1AA1",
-        "LoD/1.13d": "0x1AA1"
+        "LoD/1.13c": "0x34F5",
+        "LoD/1.13d": "0x34BD"
       },
       "sizes": {
         "LoD/1.07": 97,
@@ -9820,12 +12088,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F985A44",
         "LoD/1.09b": "0x6F985A44",
         "LoD/1.09d": "0x6F985A44",
-        "LoD/1.10": "0x6F985883",
-        "LoD/1.11": "0x6F9B34BD",
-        "LoD/1.11b": "0x6F9B34BD",
+        "LoD/1.10": "0x6F98588C",
+        "LoD/1.11": "0x6F9B1AA1",
+        "LoD/1.11b": "0x6F9B1AA1",
         "LoD/1.12a": "0x6F9B2E57",
-        "LoD/1.13c": "0x6F9B34F5",
-        "LoD/1.13d": "0x6F9B34BD"
+        "LoD/1.13c": "0x6F9B1AA1",
+        "LoD/1.13d": "0x6F9B1AA1"
       },
       "rvas": {
         "LoD/1.07": "0x5A44",
@@ -9833,12 +12101,12 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x5A44",
         "LoD/1.09b": "0x5A44",
         "LoD/1.09d": "0x5A44",
-        "LoD/1.10": "0x5883",
-        "LoD/1.11": "0x34BD",
-        "LoD/1.11b": "0x34BD",
+        "LoD/1.10": "0x588C",
+        "LoD/1.11": "0x1AA1",
+        "LoD/1.11b": "0x1AA1",
         "LoD/1.12a": "0x2E57",
-        "LoD/1.13c": "0x34F5",
-        "LoD/1.13d": "0x34BD"
+        "LoD/1.13c": "0x1AA1",
+        "LoD/1.13d": "0x1AA1"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -10493,6 +12761,41 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -12030,6 +14333,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fad3eac2df5559e93c2297970ed0004b",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10061"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10065"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10031"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10060"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10004"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -12204,6 +14534,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b7d4a5a4939b00399701a93fe243a594",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -12339,11 +14696,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F9866D5",
         "LoD/1.09d": "0x6F9866D5",
         "LoD/1.10": "0x6F986515",
-        "LoD/1.11": "0x6F9B9B30",
-        "LoD/1.11b": "0x6F9B9B33",
-        "LoD/1.12a": "0x6F9B9C62",
-        "LoD/1.13c": "0x6F9B9C87",
-        "LoD/1.13d": "0x6F9B9C10"
+        "LoD/1.11": "0x6F9B34C6",
+        "LoD/1.11b": "0x6F9B34C6",
+        "LoD/1.12a": "0x6F9B2E60",
+        "LoD/1.13c": "0x6F9B34FE",
+        "LoD/1.13d": "0x6F9B34C6"
       },
       "rvas": {
         "LoD/1.07": "0x66D5",
@@ -12352,11 +14709,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x66D5",
         "LoD/1.09d": "0x66D5",
         "LoD/1.10": "0x6515",
-        "LoD/1.11": "0x9B30",
-        "LoD/1.11b": "0x9B33",
-        "LoD/1.12a": "0x9C62",
-        "LoD/1.13c": "0x9C87",
-        "LoD/1.13d": "0x9C10"
+        "LoD/1.11": "0x34C6",
+        "LoD/1.11b": "0x34C6",
+        "LoD/1.12a": "0x2E60",
+        "LoD/1.13c": "0x34FE",
+        "LoD/1.13d": "0x34C6"
       },
       "sizes": {
         "LoD/1.07": 30,
@@ -12411,11 +14768,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.09d": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.10": "83d07e3c014d31c19cf14861bc62b0a0",
-        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
+        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "d2sound.dll_InitializeContextStructure": {
@@ -14647,9 +17004,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x6F98885D",
         "LoD/1.11": "0x6F9B15BC",
         "LoD/1.11b": "0x6F9B2B52",
-        "LoD/1.12a": "0x6F9B3232",
-        "LoD/1.13c": "0x6F9B2B72",
-        "LoD/1.13d": "0x6F9B1CEF"
+        "LoD/1.12a": "0x6F9B2F94",
+        "LoD/1.13c": "0x6F9B28D3",
+        "LoD/1.13d": "0x6F9B2C04"
       },
       "rvas": {
         "LoD/1.07": "0x8A1D",
@@ -14660,9 +17017,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x885D",
         "LoD/1.11": "0x15BC",
         "LoD/1.11b": "0x2B52",
-        "LoD/1.12a": "0x3232",
-        "LoD/1.13c": "0x2B72",
-        "LoD/1.13d": "0x1CEF"
+        "LoD/1.12a": "0x2F94",
+        "LoD/1.13c": "0x28D3",
+        "LoD/1.13d": "0x2C04"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -14963,9 +17320,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F987BAC",
         "LoD/1.09d": "0x6F987BAC",
         "LoD/1.10": "0x6F9879EC",
-        "LoD/1.11": "0x6F9B2C04",
+        "LoD/1.11": "0x6F9B1CEF",
         "LoD/1.11b": "0x6F9B2C04",
-        "LoD/1.12a": "0x6F9B1D0C",
+        "LoD/1.12a": "0x6F9B3232",
         "LoD/1.13c": "0x6F9B2C29",
         "LoD/1.13d": "0x6F9B28B2"
       },
@@ -14976,9 +17333,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x7BAC",
         "LoD/1.09d": "0x7BAC",
         "LoD/1.10": "0x79EC",
-        "LoD/1.11": "0x2C04",
+        "LoD/1.11": "0x1CEF",
         "LoD/1.11b": "0x2C04",
-        "LoD/1.12a": "0x1D0C",
+        "LoD/1.12a": "0x3232",
         "LoD/1.13c": "0x2C29",
         "LoD/1.13d": "0x28B2"
       },
@@ -16081,28 +18438,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E825D",
         "LoD/1.08": "0x6F9E825D",
-        "LoD/1.09": "0x6F988273",
-        "LoD/1.09b": "0x6F988273",
+        "LoD/1.09": "0x6F98825D",
+        "LoD/1.09b": "0x6F98825D",
         "LoD/1.09d": "0x6F98825D",
         "LoD/1.10": "0x6F9880B3",
         "LoD/1.11": "0x6F9BC75A",
         "LoD/1.11b": "0x6F9BC76A",
         "LoD/1.12a": "0x6F9BC89A",
-        "LoD/1.13c": "0x6F9BC8CA",
-        "LoD/1.13d": "0x6F9BC83A"
+        "LoD/1.13c": "0x6F9BC8B4",
+        "LoD/1.13d": "0x6F9BC824"
       },
       "rvas": {
         "LoD/1.07": "0x825D",
         "LoD/1.08": "0x825D",
-        "LoD/1.09": "0x8273",
-        "LoD/1.09b": "0x8273",
+        "LoD/1.09": "0x825D",
+        "LoD/1.09b": "0x825D",
         "LoD/1.09d": "0x825D",
         "LoD/1.10": "0x80B3",
         "LoD/1.11": "0xC75A",
         "LoD/1.11b": "0xC76A",
         "LoD/1.12a": "0xC89A",
-        "LoD/1.13c": "0xC8CA",
-        "LoD/1.13d": "0xC83A"
+        "LoD/1.13c": "0xC8B4",
+        "LoD/1.13d": "0xC824"
       },
       "sizes": {
         "LoD/1.07": 22,
@@ -16168,28 +18525,28 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.07": "0x6F9E8273",
         "LoD/1.08": "0x6F9E8273",
-        "LoD/1.09": "0x6F98825D",
-        "LoD/1.09b": "0x6F98825D",
+        "LoD/1.09": "0x6F988273",
+        "LoD/1.09b": "0x6F988273",
         "LoD/1.09d": "0x6F988273",
         "LoD/1.10": "0x6F98809D",
         "LoD/1.11": "0x6F9BC744",
         "LoD/1.11b": "0x6F9BC754",
         "LoD/1.12a": "0x6F9BC884",
-        "LoD/1.13c": "0x6F9BC8B4",
-        "LoD/1.13d": "0x6F9BC824"
+        "LoD/1.13c": "0x6F9BC8CA",
+        "LoD/1.13d": "0x6F9BC83A"
       },
       "rvas": {
         "LoD/1.07": "0x8273",
         "LoD/1.08": "0x8273",
-        "LoD/1.09": "0x825D",
-        "LoD/1.09b": "0x825D",
+        "LoD/1.09": "0x8273",
+        "LoD/1.09b": "0x8273",
         "LoD/1.09d": "0x8273",
         "LoD/1.10": "0x809D",
         "LoD/1.11": "0xC744",
         "LoD/1.11b": "0xC754",
         "LoD/1.12a": "0xC884",
-        "LoD/1.13c": "0xC8B4",
-        "LoD/1.13d": "0xC824"
+        "LoD/1.13c": "0xC8CA",
+        "LoD/1.13d": "0xC83A"
       },
       "sizes": {
         "LoD/1.07": 22,
@@ -16258,7 +18615,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F988289",
         "LoD/1.09b": "0x6F9882B6",
         "LoD/1.09d": "0x6F988289",
-        "LoD/1.10": "0x6F9880C9"
+        "LoD/1.10": "0x6F9880F6"
       },
       "rvas": {
         "LoD/1.07": "0x8289",
@@ -16266,7 +18623,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x8289",
         "LoD/1.09b": "0x82B6",
         "LoD/1.09d": "0x8289",
-        "LoD/1.10": "0x80C9"
+        "LoD/1.10": "0x80F6"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -16315,7 +18672,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x6F9882B6",
         "LoD/1.09b": "0x6F988289",
         "LoD/1.09d": "0x6F9882B6",
-        "LoD/1.10": "0x6F9880F6"
+        "LoD/1.10": "0x6F9880C9"
       },
       "rvas": {
         "LoD/1.07": "0x82B6",
@@ -16323,7 +18680,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09": "0x82B6",
         "LoD/1.09b": "0x8289",
         "LoD/1.09d": "0x82B6",
-        "LoD/1.10": "0x80F6"
+        "LoD/1.10": "0x80C9"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -16770,17 +19127,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_MemMove": {
       "addresses": {
         "LoD/1.07": "0x6F9E85C0",
-        "LoD/1.08": "0x6F9E9F10",
+        "LoD/1.08": "0x6F9E85C0",
         "LoD/1.09": "0x6F9885C0",
-        "LoD/1.09b": "0x6F989F10",
+        "LoD/1.09b": "0x6F9885C0",
         "LoD/1.09d": "0x6F9885C0",
         "LoD/1.10": "0x6F988400"
       },
       "rvas": {
         "LoD/1.07": "0x85C0",
-        "LoD/1.08": "0x9F10",
+        "LoD/1.08": "0x85C0",
         "LoD/1.09": "0x85C0",
-        "LoD/1.09b": "0x9F10",
+        "LoD/1.09b": "0x85C0",
         "LoD/1.09d": "0x85C0",
         "LoD/1.10": "0x8400"
       },
@@ -16976,11 +19333,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x6F988AA6",
         "LoD/1.09d": "0x6F988AA6",
         "LoD/1.10": "0x6F9888E6",
-        "LoD/1.11": "0x6F9B1AAD",
-        "LoD/1.11b": "0x6F9B1AAD",
-        "LoD/1.12a": "0x6F9B2980",
-        "LoD/1.13c": "0x6F9B1AAD",
-        "LoD/1.13d": "0x6F9B1AAD"
+        "LoD/1.11": "0x6F9B1030",
+        "LoD/1.11b": "0x6F9B1030",
+        "LoD/1.12a": "0x6F9B105B",
+        "LoD/1.13c": "0x6F9B1030",
+        "LoD/1.13d": "0x6F9B1030"
       },
       "rvas": {
         "LoD/1.07": "0x8AA6",
@@ -16989,11 +19346,11 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.09b": "0x8AA6",
         "LoD/1.09d": "0x8AA6",
         "LoD/1.10": "0x88E6",
-        "LoD/1.11": "0x1AAD",
-        "LoD/1.11b": "0x1AAD",
-        "LoD/1.12a": "0x2980",
-        "LoD/1.13c": "0x1AAD",
-        "LoD/1.13d": "0x1AAD"
+        "LoD/1.11": "0x1030",
+        "LoD/1.11b": "0x1030",
+        "LoD/1.12a": "0x105B",
+        "LoD/1.13c": "0x1030",
+        "LoD/1.13d": "0x1030"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -17889,17 +20246,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_Memmove": {
       "addresses": {
         "LoD/1.07": "0x6F9E9F10",
-        "LoD/1.08": "0x6F9E85C0",
+        "LoD/1.08": "0x6F9E9F10",
         "LoD/1.09": "0x6F989F10",
-        "LoD/1.09b": "0x6F9885C0",
+        "LoD/1.09b": "0x6F989F10",
         "LoD/1.09d": "0x6F989F10",
         "LoD/1.10": "0x6F989D50"
       },
       "rvas": {
         "LoD/1.07": "0x9F10",
-        "LoD/1.08": "0x85C0",
+        "LoD/1.08": "0x9F10",
         "LoD/1.09": "0x9F10",
-        "LoD/1.09b": "0x85C0",
+        "LoD/1.09b": "0x9F10",
         "LoD/1.09d": "0x9F10",
         "LoD/1.10": "0x9D50"
       },
@@ -20281,29 +22638,29 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_ReturnZero": {
       "addresses": {
         "LoD/1.07": "0x6F9EC7D8",
-        "LoD/1.08": "0x6F9EC7D8",
-        "LoD/1.09": "0x6F98C7D8",
-        "LoD/1.09b": "0x6F98C7D8",
-        "LoD/1.09d": "0x6F98C7D8",
+        "LoD/1.08": "0x6F9E23F0",
+        "LoD/1.09": "0x6F9823F0",
+        "LoD/1.09b": "0x6F9823F0",
+        "LoD/1.09d": "0x6F9823F0",
         "LoD/1.10": "0x6F98C618",
-        "LoD/1.11": "0x6F9B70D0",
-        "LoD/1.11b": "0x6F9BD8F6",
-        "LoD/1.12a": "0x6F9B83E0",
-        "LoD/1.13c": "0x6F9B8E70",
-        "LoD/1.13d": "0x6F9BD9C6"
+        "LoD/1.11": "0x6F9BD8E6",
+        "LoD/1.11b": "0x6F9B7AD0",
+        "LoD/1.12a": "0x6F9BDA53",
+        "LoD/1.13c": "0x6F9BDA83",
+        "LoD/1.13d": "0x6F9B6800"
       },
       "rvas": {
         "LoD/1.07": "0xC7D8",
-        "LoD/1.08": "0xC7D8",
-        "LoD/1.09": "0xC7D8",
-        "LoD/1.09b": "0xC7D8",
-        "LoD/1.09d": "0xC7D8",
+        "LoD/1.08": "0x23F0",
+        "LoD/1.09": "0x23F0",
+        "LoD/1.09b": "0x23F0",
+        "LoD/1.09d": "0x23F0",
         "LoD/1.10": "0xC618",
-        "LoD/1.11": "0x70D0",
-        "LoD/1.11b": "0xD8F6",
-        "LoD/1.12a": "0x83E0",
-        "LoD/1.13c": "0x8E70",
-        "LoD/1.13d": "0xD9C6"
+        "LoD/1.11": "0xD8E6",
+        "LoD/1.11b": "0x7AD0",
+        "LoD/1.12a": "0xDA53",
+        "LoD/1.13c": "0xDA83",
+        "LoD/1.13d": "0x6800"
       },
       "sizes": {
         "LoD/1.07": 3,
@@ -21574,9 +23931,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x6F983F10",
         "LoD/1.11": "0x6F9B66F0",
         "LoD/1.11b": "0x6F9B7890",
-        "LoD/1.12a": "0x6F9B6EC0",
-        "LoD/1.13c": "0x6F9B6EC0",
-        "LoD/1.13d": "0x6F9B8110"
+        "LoD/1.12a": "0x6F9B98F0",
+        "LoD/1.13c": "0x6F9B7FE0",
+        "LoD/1.13d": "0x6F9B7540"
       },
       "rvas": {
         "LoD/1.08": "0x40A0",
@@ -21586,9 +23943,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x3F10",
         "LoD/1.11": "0x66F0",
         "LoD/1.11b": "0x7890",
-        "LoD/1.12a": "0x6EC0",
-        "LoD/1.13c": "0x6EC0",
-        "LoD/1.13d": "0x8110"
+        "LoD/1.12a": "0x98F0",
+        "LoD/1.13c": "0x7FE0",
+        "LoD/1.13d": "0x7540"
       },
       "sizes": {
         "LoD/1.08": 108,
@@ -21598,9 +23955,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": 103,
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
-        "LoD/1.12a": 105,
-        "LoD/1.13c": 105,
-        "LoD/1.13d": 105
+        "LoD/1.12a": 33,
+        "LoD/1.13c": 33,
+        "LoD/1.13d": 33
       },
       "name": "Ordinal_10064",
       "signature": "uint Ordinal_10064(int * param_1)",
@@ -21608,6 +23965,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10064",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10042"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -21638,9 +24027,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": 6,
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4,
+        "LoD/1.13d": 4
       },
       "loop_counts": {
         "LoD/1.08": 0,
@@ -21662,9 +24051,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "e286883d5a448df6d191898745b129ff",
         "LoD/1.11": "8435bc0f12a8928fbaef24ebbfcdad2a",
         "LoD/1.11b": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.12a": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.13c": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.13d": "bb28d7e90cd8dd20307c808240a82993"
+        "LoD/1.12a": "8435bc0f12a8928fbaef24ebbfcdad2a",
+        "LoD/1.13c": "8435bc0f12a8928fbaef24ebbfcdad2a",
+        "LoD/1.13d": "8435bc0f12a8928fbaef24ebbfcdad2a"
       }
     },
     "d2sound.dll_API_abff479b56f8": {
@@ -21692,6 +24081,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:abff479b56f8cb0540e83eeede440168",
+      "callees": {
+        "LoD/1.08": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -21917,6 +24343,15 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10039",
+      "callees": {
+        "LoD/1.10": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 21
       },
@@ -21958,6 +24393,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10057",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 15,
         "LoD/1.11": 5,
@@ -22005,6 +24462,25 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10063",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10022",
+          "Ordinal_10034",
+          "Ordinal_10002",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10042",
+          "Ordinal_10004",
+          "Ordinal_10009",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Sound\\..."
@@ -22097,57 +24573,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13c": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13d": "df0a04b7db34c5f035a394dc061ca513"
-      }
-    },
-    "d2sound.dll_AcquireFileHandleLock8": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B1039",
-        "LoD/1.11b": "0x6F9B1039",
-        "LoD/1.12a": "0x6F9B1052",
-        "LoD/1.13c": "0x6F9B1030",
-        "LoD/1.13d": "0x6F9B1030"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1039",
-        "LoD/1.11b": "0x1039",
-        "LoD/1.12a": "0x1052",
-        "LoD/1.13c": "0x1030",
-        "LoD/1.13d": "0x1030"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "AcquireFileHandleLock8",
-      "signature": "void AcquireFileHandleLock8(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Acquires the multi-threaded critical section lock for file handle 8.\n\nAlgorithm:\n1. Call __lock(8) to acquire the critical section for file handle 8\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - no return value. The function acquires a lock that persists until\nthe thread explicitly releases it or terminates.\n\nSpecial Cases:\n- Lock initialization: If lock initialization fails in __lock, the program\n  terminates with exit code 17\n- Shutdown synchronization: This function is registered as an exit handler\n  (via __onexit) and is called during program termination to ensure proper\n  cleanup of file I/O synchronization\n- Thread safety: The lock must be released before the thread exits to avoid\n  deadlock in other threads waiting on this same lock\n\nStructure Layout:\nThe file handle 8 lock is part of the Visual Studio C runtime's multi-threaded\nfile I/O synchronization array, indexed by the handle ID (0-7 for standard\nfile handles).",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2sound.dll___initterm": {
@@ -22869,15 +25294,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": "0x6F9B16E8",
         "LoD/1.11b": "0x6F9B16E8",
         "LoD/1.12a": "0x6F9B19F7",
-        "LoD/1.13c": "0x6F9B172C",
-        "LoD/1.13d": "0x6F9B172C"
+        "LoD/1.13c": "0x6F9B16E8",
+        "LoD/1.13d": "0x6F9B16E8"
       },
       "rvas": {
         "LoD/1.11": "0x16E8",
         "LoD/1.11b": "0x16E8",
         "LoD/1.12a": "0x19F7",
-        "LoD/1.13c": "0x172C",
-        "LoD/1.13d": "0x172C"
+        "LoD/1.13c": "0x16E8",
+        "LoD/1.13d": "0x16E8"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -22920,15 +25345,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": "0x6F9B172C",
         "LoD/1.11b": "0x6F9B172C",
         "LoD/1.12a": "0x6F9B1A3B",
-        "LoD/1.13c": "0x6F9B16E8",
-        "LoD/1.13d": "0x6F9B16E8"
+        "LoD/1.13c": "0x6F9B172C",
+        "LoD/1.13d": "0x6F9B172C"
       },
       "rvas": {
         "LoD/1.11": "0x172C",
         "LoD/1.11b": "0x172C",
         "LoD/1.12a": "0x1A3B",
-        "LoD/1.13c": "0x16E8",
-        "LoD/1.13d": "0x16E8"
+        "LoD/1.13c": "0x172C",
+        "LoD/1.13d": "0x172C"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -23220,6 +25645,57 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "adafedc33ce199c85ef6d812cf9b5974"
       }
     },
+    "d2sound.dll_UnlockCriticalSection12": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B1AAD",
+        "LoD/1.11b": "0x6F9B1AAD",
+        "LoD/1.12a": "0x6F9B165A",
+        "LoD/1.13c": "0x6F9B301E",
+        "LoD/1.13d": "0x6F9B2FF9"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1AAD",
+        "LoD/1.11b": "0x1AAD",
+        "LoD/1.12a": "0x165A",
+        "LoD/1.13c": "0x301E",
+        "LoD/1.13d": "0x2FF9"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "UnlockCriticalSection12",
+      "signature": "void UnlockCriticalSection12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "d2sound.dll___freeptd": {
       "addresses": {
         "LoD/1.11": "0x6F9B1AB6",
@@ -23300,6 +25776,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -23410,53 +25903,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
-    "d2sound.dll__calloc": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B1C45",
-        "LoD/1.11b": "0x6F9B1C45"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1C45",
-        "LoD/1.11b": "0x1C45"
-      },
-      "sizes": {
-        "LoD/1.11": 175,
-        "LoD/1.11b": 175
-      },
-      "name": "_calloc",
-      "signature": "void * _calloc(size_t _Count, size_t _Size)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _calloc\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:91411ab4247869eeb28238e92930a4a5",
-      "basic_block_counts": {
-        "LoD/1.11": 15,
-        "LoD/1.11b": 15
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "91411ab4247869eeb28238e92930a4a5",
-        "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
-      }
-    },
     "d2sound.dll_LeaveCriticalSectionForMemoryF": {
       "addresses": {
-        "LoD/1.11": "0x6F9B1CEF",
-        "LoD/1.11b": "0x6F9B1CEF",
-        "LoD/1.12a": "0x6F9B2F94",
-        "LoD/1.13c": "0x6F9B1C27",
-        "LoD/1.13d": "0x6F9B1C27"
+        "LoD/1.11": "0x6F9B1C27",
+        "LoD/1.11b": "0x6F9B1C27",
+        "LoD/1.12a": "0x6F9B1D0C",
+        "LoD/1.13c": "0x6F9B2B72",
+        "LoD/1.13d": "0x6F9B1CEF"
       },
       "rvas": {
-        "LoD/1.11": "0x1CEF",
-        "LoD/1.11b": "0x1CEF",
-        "LoD/1.12a": "0x2F94",
-        "LoD/1.13c": "0x1C27",
-        "LoD/1.13d": "0x1C27"
+        "LoD/1.11": "0x1C27",
+        "LoD/1.11b": "0x1C27",
+        "LoD/1.12a": "0x1D0C",
+        "LoD/1.13c": "0x2B72",
+        "LoD/1.13d": "0x1CEF"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -23492,6 +25952,39 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "d2sound.dll__calloc": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B1C45",
+        "LoD/1.11b": "0x6F9B1C45"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1C45",
+        "LoD/1.11b": "0x1C45"
+      },
+      "sizes": {
+        "LoD/1.11": 175,
+        "LoD/1.11b": 175
+      },
+      "name": "_calloc",
+      "signature": "void * _calloc(size_t _Count, size_t _Size)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _calloc\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:91411ab4247869eeb28238e92930a4a5",
+      "basic_block_counts": {
+        "LoD/1.11": 15,
+        "LoD/1.11b": 15
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "91411ab4247869eeb28238e92930a4a5",
+        "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
       }
     },
     "d2sound.dll___ioinit": {
@@ -24213,15 +26706,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": "0x6F9B28B2",
         "LoD/1.11b": "0x6F9B28B2",
         "LoD/1.12a": "0x6F9B1C28",
-        "LoD/1.13c": "0x6F9B28D3",
-        "LoD/1.13d": "0x6F9B2C04"
+        "LoD/1.13c": "0x6F9B1D0B",
+        "LoD/1.13d": "0x6F9B2B52"
       },
       "rvas": {
         "LoD/1.11": "0x28B2",
         "LoD/1.11b": "0x28B2",
         "LoD/1.12a": "0x1C28",
-        "LoD/1.13c": "0x28D3",
-        "LoD/1.13d": "0x2C04"
+        "LoD/1.13c": "0x1D0B",
+        "LoD/1.13d": "0x2B52"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -24547,20 +27040,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
       }
     },
-    "d2sound.dll_UnlockCriticalSection12": {
+    "d2sound.dll_UnlockCriticalSection12_2FF9": {
       "addresses": {
         "LoD/1.11": "0x6F9B2FF9",
         "LoD/1.11b": "0x6F9B2FF9",
-        "LoD/1.12a": "0x6F9B165A",
-        "LoD/1.13c": "0x6F9B301E",
-        "LoD/1.13d": "0x6F9B2FF9"
+        "LoD/1.12a": "0x6F9B2980",
+        "LoD/1.13c": "0x6F9B1AAD",
+        "LoD/1.13d": "0x6F9B1AAD"
       },
       "rvas": {
         "LoD/1.11": "0x2FF9",
         "LoD/1.11b": "0x2FF9",
-        "LoD/1.12a": "0x165A",
-        "LoD/1.13c": "0x301E",
-        "LoD/1.13d": "0x2FF9"
+        "LoD/1.12a": "0x2980",
+        "LoD/1.13c": "0x1AAD",
+        "LoD/1.13d": "0x1AAD"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -25856,6 +28349,57 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "378e464c38840f3332fec8fa0fd86d30"
       }
     },
+    "d2sound.dll____security_init_cookie": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B556D",
+        "LoD/1.11b": "0x6F9B556D",
+        "LoD/1.12a": "0x6F9B55BD",
+        "LoD/1.13c": "0x6F9B55BD",
+        "LoD/1.13d": "0x6F9B556D"
+      },
+      "rvas": {
+        "LoD/1.11": "0x556D",
+        "LoD/1.11b": "0x556D",
+        "LoD/1.12a": "0x55BD",
+        "LoD/1.13c": "0x55BD",
+        "LoD/1.13d": "0x556D"
+      },
+      "sizes": {
+        "LoD/1.11": 102,
+        "LoD/1.11b": 102,
+        "LoD/1.12a": 102,
+        "LoD/1.13c": 102,
+        "LoD/1.13d": 102
+      },
+      "name": "___security_init_cookie",
+      "signature": "void ___security_init_cookie(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___security_init_cookie\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:4af6f4d1378e3b27617b296b4a2b16cc",
+      "basic_block_counts": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.11b": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.12a": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.13c": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.13d": "4af6f4d1378e3b27617b296b4a2b16cc"
+      }
+    },
     "d2sound.dll____security_error_handler": {
       "addresses": {
         "LoD/1.11": "0x6F9B55D3",
@@ -26474,20 +29018,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "6b07f716ad39855b07502ac9a8f75c79"
       }
     },
-    "d2sound.dll_SetConfigurationParameter": {
+    "d2sound.dll_DestroyAllGameObjects": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5ED4",
-        "LoD/1.11b": "0x6F9B5EC8",
-        "LoD/1.12a": "0x6F9B5F26",
-        "LoD/1.13c": "0x6F9B5F32",
-        "LoD/1.13d": "0x6F9B5ED4"
+        "LoD/1.11": "0x6F9B5EDA",
+        "LoD/1.11b": "0x6F9B5ECE",
+        "LoD/1.12a": "0x6F9B5FCC",
+        "LoD/1.13c": "0x6F9B5FCC",
+        "LoD/1.13d": "0x6F9B5F5C"
       },
       "rvas": {
-        "LoD/1.11": "0x5ED4",
-        "LoD/1.11b": "0x5EC8",
-        "LoD/1.12a": "0x5F26",
-        "LoD/1.13c": "0x5F32",
-        "LoD/1.13d": "0x5ED4"
+        "LoD/1.11": "0x5EDA",
+        "LoD/1.11b": "0x5ECE",
+        "LoD/1.12a": "0x5FCC",
+        "LoD/1.13c": "0x5FCC",
+        "LoD/1.13d": "0x5F5C"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -26496,8 +29040,8 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "SetConfigurationParameter",
-      "signature": "uint SetConfigurationParameter(uint parameterValue)",
+      "name": "DestroyAllGameObjects",
+      "signature": "int DestroyAllGameObjects(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -26524,20 +29068,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "d2sound.dll_Ordinal_10042": {
+    "d2sound.dll_BuildProjectPathThunk": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5EE0",
-        "LoD/1.11b": "0x6F9B5EE0",
-        "LoD/1.12a": "0x6F9B5F5C",
-        "LoD/1.13c": "0x6F9B5F62",
-        "LoD/1.13d": "0x6F9B5EE0"
+        "LoD/1.11": "0x6F9B5EFE",
+        "LoD/1.11b": "0x6F9B5EFE",
+        "LoD/1.12a": "0x6F9B5F74",
+        "LoD/1.13c": "0x6F9B5F74",
+        "LoD/1.13d": "0x6F9B5EFE"
       },
       "rvas": {
-        "LoD/1.11": "0x5EE0",
-        "LoD/1.11b": "0x5EE0",
-        "LoD/1.12a": "0x5F5C",
-        "LoD/1.13c": "0x5F62",
-        "LoD/1.13d": "0x5EE0"
+        "LoD/1.11": "0x5EFE",
+        "LoD/1.11b": "0x5EFE",
+        "LoD/1.12a": "0x5F74",
+        "LoD/1.13c": "0x5F74",
+        "LoD/1.13d": "0x5EFE"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -26546,58 +29090,8 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10042",
-      "signature": "undefined Ordinal_10042(void)",
-      "calling_convention": "unknown",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "d2sound.dll_InitializeAsyncEventListeners": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B5F5C",
-        "LoD/1.11b": "0x6F9B5F5C",
-        "LoD/1.12a": "0x6F9B5FD2",
-        "LoD/1.13c": "0x6F9B5FD2",
-        "LoD/1.13d": "0x6F9B5F62"
-      },
-      "rvas": {
-        "LoD/1.11": "0x5F5C",
-        "LoD/1.11b": "0x5F5C",
-        "LoD/1.12a": "0x5FD2",
-        "LoD/1.13c": "0x5FD2",
-        "LoD/1.13d": "0x5F62"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "InitializeAsyncEventListeners",
-      "signature": "void InitializeAsyncEventListeners(SOCKET socket, GameSessionConfig * pConfigBuffer, uint dwConfigSize, uint dwFlags, EventHandleSlot * pEventHandlers, int * pStatusCallback, void * pUserContext)",
+      "name": "BuildProjectPathThunk",
+      "signature": "void BuildProjectPathThunk(int nPathType)",
       "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -26624,20 +29118,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "d2sound.dll_BindSocketToPortWrapper": {
+    "d2sound.dll_OpenFileArchive": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5F62",
-        "LoD/1.11b": "0x6F9B5F62",
-        "LoD/1.12a": "0x6F9B5FD8",
-        "LoD/1.13c": "0x6F9B5FD8",
-        "LoD/1.13d": "0x6F9B5F68"
+        "LoD/1.11": "0x6F9B5F3E",
+        "LoD/1.11b": "0x6F9B5F3E",
+        "LoD/1.12a": "0x6F9B5FAE",
+        "LoD/1.13c": "0x6F9B5FAE",
+        "LoD/1.13d": "0x6F9B5F3E"
       },
       "rvas": {
-        "LoD/1.11": "0x5F62",
-        "LoD/1.11b": "0x5F62",
-        "LoD/1.12a": "0x5FD8",
-        "LoD/1.13c": "0x5FD8",
-        "LoD/1.13d": "0x5F68"
+        "LoD/1.11": "0x5F3E",
+        "LoD/1.11b": "0x5F3E",
+        "LoD/1.12a": "0x5FAE",
+        "LoD/1.13c": "0x5FAE",
+        "LoD/1.13d": "0x5F3E"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -26646,8 +29140,58 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "BindSocketToPortWrapper",
-      "signature": "int BindSocketToPortWrapper(int nSocketHandle, int nPort, int nFlags, int nParam4)",
+      "name": "OpenFileArchive",
+      "signature": "uint OpenFileArchive(char * pFilePath, uint archiveId, uint flags, uint * pArchiveHandle)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "d2sound.dll_GetDefaultResourceCount": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B5F68",
+        "LoD/1.11b": "0x6F9B5F68",
+        "LoD/1.12a": "0x6F9B5FDE",
+        "LoD/1.13c": "0x6F9B5FDE",
+        "LoD/1.13d": "0x6F9B5F6E"
+      },
+      "rvas": {
+        "LoD/1.11": "0x5F68",
+        "LoD/1.11b": "0x5F68",
+        "LoD/1.12a": "0x5FDE",
+        "LoD/1.13c": "0x5FDE",
+        "LoD/1.13d": "0x5F6E"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "GetDefaultResourceCount",
+      "signature": "int GetDefaultResourceCount(int nResourceType, int nReserved)",
       "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -26690,6 +29234,18 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2770779bf95e5b74ff00cb8c4ba4f5ee",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13
@@ -26728,6 +29284,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:553bf43acddfc3c897fcddab5b70ec2b",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -26748,53 +29336,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "1d2e62a8ba620b3c9f04bd6beb6c72ad",
         "LoD/1.13c": "1d2e62a8ba620b3c9f04bd6beb6c72ad",
         "LoD/1.13d": "1d2e62a8ba620b3c9f04bd6beb6c72ad"
-      }
-    },
-    "d2sound.dll_API_1ac4095c3b44": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B60F0",
-        "LoD/1.11b": "0x6F9B60F0",
-        "LoD/1.12a": "0x6F9B60F0",
-        "LoD/1.13c": "0x6F9B60F0",
-        "LoD/1.13d": "0x6F9B6080"
-      },
-      "rvas": {
-        "LoD/1.11": "0x60F0",
-        "LoD/1.11b": "0x60F0",
-        "LoD/1.12a": "0x60F0",
-        "LoD/1.13c": "0x60F0",
-        "LoD/1.13d": "0x6080"
-      },
-      "sizes": {
-        "LoD/1.11": 102,
-        "LoD/1.11b": 102,
-        "LoD/1.12a": 102,
-        "LoD/1.13c": 102,
-        "LoD/1.13d": 102
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:1ac4095c3b44baad33ce438edc80b34d",
-      "basic_block_counts": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.11b": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.12a": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.13c": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.13d": "18daef3daaad0cf2ceb111a04873839a"
       }
     },
     "d2sound.dll_API_545c5ebe25fa": {
@@ -26822,6 +29363,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:545c5ebe25fa49eb50b6ac63650d3eaa",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -26869,6 +29442,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:67243af3de62df676c8df210a5f4e4c5",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Error opening file: %s\""
@@ -26933,6 +29528,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:462bdd0b497f0d196acf39a667f88575",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -26980,6 +29607,73 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:086e0e198a8afd2068849e328a8c3aec",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\"",
@@ -27040,6 +29734,16 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:40f13e96c803edf6e458beab32d4eb7f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
@@ -27130,6 +29834,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -27171,6 +29889,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -27221,6 +29961,27 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10018",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10038"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10027"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10040"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10057",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -27262,6 +30023,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:22394eebae7163c718d4ecb5d45f5b22",
+      "callees": {
+        "LoD/1.11": [
+          "SetConfigurationParameter",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "SetConfigurationParameter",
+          "Ordinal_10040"
+        ],
+        "LoD/1.12a": [
+          "SetConfigurationParameter",
+          "Ordinal_10049"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -27303,6 +30078,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10037",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10038",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10027",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10040",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -27350,6 +30147,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10012",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10014",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -27400,6 +30224,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10003",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -27450,6 +30296,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10032",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10056",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10024",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10068",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10025",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10067",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundFast.cpp\""
@@ -27517,6 +30385,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10014",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10012",
+          "Ordinal_10013",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10057",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10053",
+          "Ordinal_10016",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10000",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10006",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundFast.cpp\""
@@ -27584,6 +30484,48 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10067",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10022",
+          "Ordinal_10058",
+          "Ordinal_10034",
+          "Ordinal_10057"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "Ordinal_10045",
+          "Ordinal_10004",
+          "Ordinal_10053"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10019",
+          "Ordinal_10058",
+          "Ordinal_10008",
+          "Ordinal_10027"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10005",
+          "Ordinal_10069",
+          "Ordinal_10008",
+          "Ordinal_10037"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10002",
+          "Ordinal_10019",
+          "Ordinal_10057",
+          "Ordinal_10030"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -27628,6 +30570,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10009",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "Ordinal_10007",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "Ordinal_10040",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "Ordinal_10049",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -27892,6 +30854,35 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10008",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10047"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10019",
+          "Ordinal_10008",
+          "Ordinal_10061",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10008",
+          "Ordinal_10039",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10002",
+          "Ordinal_10057",
+          "Ordinal_10011",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -27942,6 +30933,40 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10041",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "Ordinal_10013",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "Ordinal_10016",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -27989,6 +31014,73 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a46ee8f2cf1e2cb109c563256606ef29",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"........DirectSound progress: %s returned on fail...",
@@ -28081,6 +31173,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10043",
+      "callees": {
+        "LoD/1.11": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"\\tCouldn't initialize DirectSound\"",
@@ -28260,6 +31374,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10015",
+      "callees": {
+        "LoD/1.11": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -28310,6 +31456,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10002",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -28411,6 +31594,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10017",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -28436,17 +31641,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_EXP_10031": {
       "addresses": {
         "LoD/1.11": "0x6F9B80D0",
-        "LoD/1.11b": "0x6F9B8A10",
-        "LoD/1.12a": "0x6F9B67F0",
-        "LoD/1.13c": "0x6F9B67F0",
-        "LoD/1.13d": "0x6F9B7AE0"
+        "LoD/1.11b": "0x6F9B8A40",
+        "LoD/1.12a": "0x6F9B6920",
+        "LoD/1.13c": "0x6F9B6820",
+        "LoD/1.13d": "0x6F9B7B10"
       },
       "rvas": {
         "LoD/1.11": "0x80D0",
-        "LoD/1.11b": "0x8A10",
-        "LoD/1.12a": "0x67F0",
-        "LoD/1.13c": "0x67F0",
-        "LoD/1.13d": "0x7AE0"
+        "LoD/1.11b": "0x8A40",
+        "LoD/1.12a": "0x6920",
+        "LoD/1.13c": "0x6820",
+        "LoD/1.13d": "0x7B10"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -28461,6 +31666,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10031",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -28486,17 +31713,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_EXP_10060": {
       "addresses": {
         "LoD/1.11": "0x6F9B8100",
-        "LoD/1.11b": "0x6F9B8A40",
-        "LoD/1.12a": "0x6F9B6820",
-        "LoD/1.13c": "0x6F9B6820",
-        "LoD/1.13d": "0x6F9B7B10"
+        "LoD/1.11b": "0x6F9B8A10",
+        "LoD/1.12a": "0x6F9B67F0",
+        "LoD/1.13c": "0x6F9B67F0",
+        "LoD/1.13d": "0x6F9B7AE0"
       },
       "rvas": {
         "LoD/1.11": "0x8100",
-        "LoD/1.11b": "0x8A40",
-        "LoD/1.12a": "0x6820",
-        "LoD/1.13c": "0x6820",
-        "LoD/1.13d": "0x7B10"
+        "LoD/1.11b": "0x8A10",
+        "LoD/1.12a": "0x67F0",
+        "LoD/1.13c": "0x67F0",
+        "LoD/1.13d": "0x7AE0"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -28511,6 +31738,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10060",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -28561,6 +31810,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10025",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -28611,6 +31887,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10065",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -28637,14 +31935,14 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.11": "0x6F9B8200",
         "LoD/1.11b": "0x6F9B8BE0",
-        "LoD/1.12a": "0x6F9B6920",
+        "LoD/1.12a": "0x6F9B6820",
         "LoD/1.13c": "0x6F9B6920",
         "LoD/1.13d": "0x6F9B9690"
       },
       "rvas": {
         "LoD/1.11": "0x8200",
         "LoD/1.11b": "0x8BE0",
-        "LoD/1.12a": "0x6920",
+        "LoD/1.12a": "0x6820",
         "LoD/1.13c": "0x6920",
         "LoD/1.13d": "0x9690"
       },
@@ -28661,6 +31959,27 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10069",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -28716,6 +32035,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10070",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -28763,6 +32104,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:580d47f99333e06cc4225fc7dd8b4b20",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10042"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -28810,6 +32168,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -28860,6 +32240,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10026",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10061"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10065"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10031"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10060"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10004"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -28910,6 +32317,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10034",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10061",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10065",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10004",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -28936,23 +32370,23 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.11": "0x6F9B8700",
         "LoD/1.11b": "0x6F9B9160",
-        "LoD/1.12a": "0x6F9B6980",
-        "LoD/1.13c": "0x6F9B6980",
-        "LoD/1.13d": "0x6F9B7C70"
+        "LoD/1.12a": "0x6F9B6EC0",
+        "LoD/1.13c": "0x6F9B6EC0",
+        "LoD/1.13d": "0x6F9B8110"
       },
       "rvas": {
         "LoD/1.11": "0x8700",
         "LoD/1.11b": "0x9160",
-        "LoD/1.12a": "0x6980",
-        "LoD/1.13c": "0x6980",
-        "LoD/1.13d": "0x7C70"
+        "LoD/1.12a": "0x6EC0",
+        "LoD/1.13c": "0x6EC0",
+        "LoD/1.13d": "0x8110"
       },
       "sizes": {
         "LoD/1.11": 105,
         "LoD/1.11b": 105,
-        "LoD/1.12a": 96,
-        "LoD/1.13c": 96,
-        "LoD/1.13d": 96
+        "LoD/1.12a": 105,
+        "LoD/1.13c": 105,
+        "LoD/1.13d": 105
       },
       "name": "Ordinal_10044",
       "signature": "uint Ordinal_10044(int * param_1)",
@@ -28960,6 +32394,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10044",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -28977,9 +32433,9 @@ var FUNCTIONS_D2Sound_dll = {
       "mnemonic_hashes": {
         "LoD/1.11": "bb28d7e90cd8dd20307c808240a82993",
         "LoD/1.11b": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.12a": "017639e22377964540333b7e81961297",
-        "LoD/1.13c": "017639e22377964540333b7e81961297",
-        "LoD/1.13d": "017639e22377964540333b7e81961297"
+        "LoD/1.12a": "bb28d7e90cd8dd20307c808240a82993",
+        "LoD/1.13c": "bb28d7e90cd8dd20307c808240a82993",
+        "LoD/1.13d": "bb28d7e90cd8dd20307c808240a82993"
       }
     },
     "d2sound.dll_EXP_10013": {
@@ -29010,6 +32466,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10013",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10029",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10012",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10018",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10006",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundSmp.cpp\"",
@@ -29114,6 +32607,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:25831439002bbec9ab588d8746bd73d5",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -29161,6 +32681,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 26,
         "LoD/1.11b": 26,
@@ -29211,6 +32753,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10028",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10057",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -29261,6 +32830,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10042",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -29308,6 +32899,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:93806dcab8ba79a416bb8864dda68429",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10039"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10005"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10061"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10056"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -29358,6 +32966,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10058",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10056",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10024",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10068",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10025",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10067",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -29408,6 +33043,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10007",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundSmp.cpp\"",
@@ -29477,6 +33139,68 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:0add49b3abc244cdb5535c7962e163be",
+      "callees": {
+        "LoD/1.11": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10034",
+          "Ordinal_10034",
+          "Ordinal_10034",
+          "Ordinal_10015",
+          "FindItemById",
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetGameState",
+          "Ordinal_10025",
+          "Ordinal_10004",
+          "Ordinal_10004",
+          "Ordinal_10004",
+          "Ordinal_10015",
+          "FindItemById",
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10069",
+          "FindItemById",
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetGameState",
+          "Ordinal_10010",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "FindItemById",
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10057",
+          "Ordinal_10057",
+          "Ordinal_10057",
+          "Ordinal_10014",
+          "FindItemById",
+          "Ordinal_10014",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 46,
         "LoD/1.11b": 46,
@@ -29524,6 +33248,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d49921eb65284491dea0b481d719ae17",
+      "callees": {
+        "LoD/1.11": [
+          "GetLastError"
+        ],
+        "LoD/1.11b": [
+          "GetLastError"
+        ],
+        "LoD/1.12a": [
+          "GetLastError"
+        ],
+        "LoD/1.13c": [
+          "GetLastError"
+        ],
+        "LoD/1.13d": [
+          "GetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -29574,6 +33315,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10001",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -29638,6 +33396,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10054",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -29987,6 +33759,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10040",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -30101,6 +33890,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ecafa9405ef5bff62f78d81cc739bdac",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -32507,6 +36328,12 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:db47ccc2124431f6f536b85db6fd7ffb",
+      "callees": {
+        "LoD/1.11b": [
+          "CloseSoundObject",
+          "DestroyAllGameObjects"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 3
       },
@@ -32808,7 +36635,7 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": "d54b31472f74b078be31f20f65c7b2d3"
       }
     },
-    "d2sound.dll_DestroyAllGameObjects": {
+    "d2sound.dll_DestroyAllGameObjects_5F2C": {
       "addresses": {
         "LoD/1.12a": "0x6F9B5F2C",
         "LoD/1.13c": "0x6F9B5F38",
@@ -32903,6 +36730,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:227bedd2db9c43545664c4619094d523",
+      "callees": {
+        "LoD/1.12a": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
@@ -32949,6 +36790,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:13ec7578ddcf5b763f3edae16352d4b3",
+      "callees": {
+        "LoD/1.12a": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13c": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13d": [
+          "FindCharInString",
+          "FindCharInString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 6,
         "LoD/1.13c": 6,
@@ -32984,6 +36839,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:a8613ce83c477ddee9394edab045212a",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 17,
         "LoD/1.13c": 17,
@@ -33022,6 +36903,17 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "EXP",
       "index": "EXP:10028",
+      "callees": {
+        "LoD/1.12a": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10009"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10066"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 9,
         "LoD/1.13c": 9,
@@ -33036,44 +36928,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "c405d7ab0b432093d2ccff251cdf3499",
         "LoD/1.13c": "c405d7ab0b432093d2ccff251cdf3499",
         "LoD/1.13d": "c405d7ab0b432093d2ccff251cdf3499"
-      }
-    },
-    "d2sound.dll_EXP_10048": {
-      "addresses": {
-        "LoD/1.12a": "0x6F9B98F0",
-        "LoD/1.13c": "0x6F9B7FE0",
-        "LoD/1.13d": "0x6F9B7540"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x98F0",
-        "LoD/1.13c": "0x7FE0",
-        "LoD/1.13d": "0x7540"
-      },
-      "sizes": {
-        "LoD/1.12a": 33,
-        "LoD/1.13c": 33,
-        "LoD/1.13d": 33
-      },
-      "name": "Ordinal_10048",
-      "signature": "undefined Ordinal_10048(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10048",
-      "basic_block_counts": {
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.13c": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.13d": "8435bc0f12a8928fbaef24ebbfcdad2a"
       }
     },
     "d2sound.dll_MNE_6426717c049f": {
@@ -33166,11 +37020,11 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_DecimalStringToDouble": {
       "addresses": {
         "LoD/1.12a": "0x6F9BC8B0",
-        "LoD/1.13c": "0x6F9BC925"
+        "LoD/1.13c": "0x6F9BC8E0"
       },
       "rvas": {
         "LoD/1.12a": "0xC8B0",
-        "LoD/1.13c": "0xC925"
+        "LoD/1.13c": "0xC8E0"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -33199,11 +37053,11 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_DecimalStringToDouble_C8F5": {
       "addresses": {
         "LoD/1.12a": "0x6F9BC8F5",
-        "LoD/1.13c": "0x6F9BC8E0"
+        "LoD/1.13c": "0x6F9BC925"
       },
       "rvas": {
         "LoD/1.12a": "0xC8F5",
-        "LoD/1.13c": "0xC8E0"
+        "LoD/1.13c": "0xC925"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -33443,6 +37297,16 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:db47ccc2124431f6f536b85db6fd7ffb",
+      "callees": {
+        "LoD/1.13c": [
+          "CloseSoundObject",
+          "DestroyAllGameObjects"
+        ],
+        "LoD/1.13d": [
+          "CloseSoundObject",
+          "DestroyAllGameObjects"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 3,
         "LoD/1.13d": 3
@@ -33472,6 +37336,16 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:37db4c4fb5a0d4de03009a04c17a8d50",
+      "callees": {
+        "LoD/1.13c": [
+          "SetConfigurationParameter",
+          "Ordinal_10065"
+        ],
+        "LoD/1.13d": [
+          "SetConfigurationParameter",
+          "Ordinal_10013"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 1,
         "LoD/1.13d": 1
@@ -33504,6 +37378,19 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13c",
       "method": "EXP",
       "index": "EXP:10021",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "Ordinal_10065",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10050",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 14,
         "LoD/1.13d": 10
@@ -33746,6 +37633,12 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 10
       },
@@ -33772,6 +37665,11 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13d",
       "method": "EXP",
       "index": "EXP:10032",
+      "callees": {
+        "LoD/1.13d": [
+          "Ordinal_10050"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 4
       },
@@ -33798,6 +37696,14 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13d",
       "method": "EXP",
       "index": "EXP:10069",
+      "callees": {
+        "LoD/1.13d": [
+          "Ordinal_10057",
+          "Ordinal_10013",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 14
       },
@@ -34075,9 +37981,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x6F983F10",
         "LoD/1.11": "0x6F9B66F0",
         "LoD/1.11b": "0x6F9B7890",
-        "LoD/1.12a": "0x6F9B6EC0",
-        "LoD/1.13c": "0x6F9B6EC0",
-        "LoD/1.13d": "0x6F9B8110"
+        "LoD/1.12a": "0x6F9B98F0",
+        "LoD/1.13c": "0x6F9B7FE0",
+        "LoD/1.13d": "0x6F9B7540"
       },
       "rvas": {
         "LoD/1.08": "0x40A0",
@@ -34087,9 +37993,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "0x3F10",
         "LoD/1.11": "0x66F0",
         "LoD/1.11b": "0x7890",
-        "LoD/1.12a": "0x6EC0",
-        "LoD/1.13c": "0x6EC0",
-        "LoD/1.13d": "0x8110"
+        "LoD/1.12a": "0x98F0",
+        "LoD/1.13c": "0x7FE0",
+        "LoD/1.13d": "0x7540"
       },
       "sizes": {
         "LoD/1.08": 108,
@@ -34099,9 +38005,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": 103,
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
-        "LoD/1.12a": 105,
-        "LoD/1.13c": 105,
-        "LoD/1.13d": 105
+        "LoD/1.12a": 33,
+        "LoD/1.13c": 33,
+        "LoD/1.13d": 33
       },
       "name": "Ordinal_10064",
       "signature": "uint Ordinal_10064(int * param_1)",
@@ -34109,6 +38015,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10064",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10042"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -34139,9 +38077,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": 6,
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4,
+        "LoD/1.13d": 4
       },
       "loop_counts": {
         "LoD/1.08": 0,
@@ -34163,9 +38101,9 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.10": "e286883d5a448df6d191898745b129ff",
         "LoD/1.11": "8435bc0f12a8928fbaef24ebbfcdad2a",
         "LoD/1.11b": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.12a": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.13c": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.13d": "bb28d7e90cd8dd20307c808240a82993"
+        "LoD/1.12a": "8435bc0f12a8928fbaef24ebbfcdad2a",
+        "LoD/1.13c": "8435bc0f12a8928fbaef24ebbfcdad2a",
+        "LoD/1.13d": "8435bc0f12a8928fbaef24ebbfcdad2a"
       }
     },
     "d2sound.dll_API_abff479b56f8_45C6": {
@@ -34193,6 +38131,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:abff479b56f8cb0540e83eeede440168",
+      "callees": {
+        "LoD/1.08": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "CalculateSoundAttenuation",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Sound\\\\Src\\\\D2So...",
@@ -34418,6 +38393,15 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10039",
+      "callees": {
+        "LoD/1.10": [
+          "GetSampleSoundBuffer",
+          "InitSoundSample",
+          "WriteSoundBufferSlot",
+          "SetSoundVolume",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 21
       },
@@ -34459,6 +38443,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10057",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 15,
         "LoD/1.11": 5,
@@ -34506,6 +38512,25 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10063",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10022",
+          "Ordinal_10034",
+          "Ordinal_10002",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10042",
+          "Ordinal_10004",
+          "Ordinal_10009",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Sound\\..."
@@ -34598,57 +38623,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13c": "df0a04b7db34c5f035a394dc061ca513",
         "LoD/1.13d": "df0a04b7db34c5f035a394dc061ca513"
-      }
-    },
-    "d2sound.dll_AcquireFileHandleLock8_1039": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B1039",
-        "LoD/1.11b": "0x6F9B1039",
-        "LoD/1.12a": "0x6F9B1052",
-        "LoD/1.13c": "0x6F9B1030",
-        "LoD/1.13d": "0x6F9B1030"
-      },
-      "rvas": {
-        "LoD/1.11": "0x1039",
-        "LoD/1.11b": "0x1039",
-        "LoD/1.12a": "0x1052",
-        "LoD/1.13c": "0x1030",
-        "LoD/1.13d": "0x1030"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "AcquireFileHandleLock8",
-      "signature": "void AcquireFileHandleLock8(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Acquires the multi-threaded critical section lock for file handle 8.\n\nAlgorithm:\n1. Call __lock(8) to acquire the critical section for file handle 8\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - no return value. The function acquires a lock that persists until\nthe thread explicitly releases it or terminates.\n\nSpecial Cases:\n- Lock initialization: If lock initialization fails in __lock, the program\n  terminates with exit code 17\n- Shutdown synchronization: This function is registered as an exit handler\n  (via __onexit) and is called during program termination to ensure proper\n  cleanup of file I/O synchronization\n- Thread safety: The lock must be released before the thread exits to avoid\n  deadlock in other threads waiting on this same lock\n\nStructure Layout:\nThe file handle 8 lock is part of the Visual Studio C runtime's multi-threaded\nfile I/O synchronization array, indexed by the handle ID (0-7 for standard\nfile handles).",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2sound.dll___initterm_1042": {
@@ -35370,15 +39344,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": "0x6F9B16E8",
         "LoD/1.11b": "0x6F9B16E8",
         "LoD/1.12a": "0x6F9B19F7",
-        "LoD/1.13c": "0x6F9B172C",
-        "LoD/1.13d": "0x6F9B172C"
+        "LoD/1.13c": "0x6F9B16E8",
+        "LoD/1.13d": "0x6F9B16E8"
       },
       "rvas": {
         "LoD/1.11": "0x16E8",
         "LoD/1.11b": "0x16E8",
         "LoD/1.12a": "0x19F7",
-        "LoD/1.13c": "0x172C",
-        "LoD/1.13d": "0x172C"
+        "LoD/1.13c": "0x16E8",
+        "LoD/1.13d": "0x16E8"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -35421,15 +39395,15 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.11": "0x6F9B172C",
         "LoD/1.11b": "0x6F9B172C",
         "LoD/1.12a": "0x6F9B1A3B",
-        "LoD/1.13c": "0x6F9B16E8",
-        "LoD/1.13d": "0x6F9B16E8"
+        "LoD/1.13c": "0x6F9B172C",
+        "LoD/1.13d": "0x6F9B172C"
       },
       "rvas": {
         "LoD/1.11": "0x172C",
         "LoD/1.11b": "0x172C",
         "LoD/1.12a": "0x1A3B",
-        "LoD/1.13c": "0x16E8",
-        "LoD/1.13d": "0x16E8"
+        "LoD/1.13c": "0x172C",
+        "LoD/1.13d": "0x172C"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -35721,6 +39695,57 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "adafedc33ce199c85ef6d812cf9b5974"
       }
     },
+    "d2sound.dll_UnlockCriticalSection12_1AAD": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B1AAD",
+        "LoD/1.11b": "0x6F9B1AAD",
+        "LoD/1.12a": "0x6F9B165A",
+        "LoD/1.13c": "0x6F9B301E",
+        "LoD/1.13d": "0x6F9B2FF9"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1AAD",
+        "LoD/1.11b": "0x1AAD",
+        "LoD/1.12a": "0x165A",
+        "LoD/1.13c": "0x301E",
+        "LoD/1.13d": "0x2FF9"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "UnlockCriticalSection12",
+      "signature": "void UnlockCriticalSection12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "d2sound.dll___freeptd_1AB6": {
       "addresses": {
         "LoD/1.11": "0x6F9B1AB6",
@@ -35801,6 +39826,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -35911,20 +39953,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
-    "d2sound.dll_LeaveCriticalSectionForMemoryF_1CEF": {
+    "d2sound.dll_LeaveCriticalSectionForMemoryF_1C27": {
       "addresses": {
-        "LoD/1.11": "0x6F9B1CEF",
-        "LoD/1.11b": "0x6F9B1CEF",
-        "LoD/1.12a": "0x6F9B2F94",
-        "LoD/1.13c": "0x6F9B1C27",
-        "LoD/1.13d": "0x6F9B1C27"
+        "LoD/1.11": "0x6F9B1C27",
+        "LoD/1.11b": "0x6F9B1C27",
+        "LoD/1.12a": "0x6F9B1D0C",
+        "LoD/1.13c": "0x6F9B2B72",
+        "LoD/1.13d": "0x6F9B1CEF"
       },
       "rvas": {
-        "LoD/1.11": "0x1CEF",
-        "LoD/1.11b": "0x1CEF",
-        "LoD/1.12a": "0x2F94",
-        "LoD/1.13c": "0x1C27",
-        "LoD/1.13d": "0x1C27"
+        "LoD/1.11": "0x1C27",
+        "LoD/1.11b": "0x1C27",
+        "LoD/1.12a": "0x1D0C",
+        "LoD/1.13c": "0x2B72",
+        "LoD/1.13d": "0x1CEF"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -36929,57 +40971,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "202d2c66c8a5b404ad3bf64c94b499c1",
         "LoD/1.13c": "202d2c66c8a5b404ad3bf64c94b499c1",
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
-      }
-    },
-    "d2sound.dll_UnlockCriticalSection12_2FF9": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B2FF9",
-        "LoD/1.11b": "0x6F9B2FF9",
-        "LoD/1.12a": "0x6F9B165A",
-        "LoD/1.13c": "0x6F9B301E",
-        "LoD/1.13d": "0x6F9B2FF9"
-      },
-      "rvas": {
-        "LoD/1.11": "0x2FF9",
-        "LoD/1.11b": "0x2FF9",
-        "LoD/1.12a": "0x165A",
-        "LoD/1.13c": "0x301E",
-        "LoD/1.13d": "0x2FF9"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "UnlockCriticalSection12",
-      "signature": "void UnlockCriticalSection12(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2sound.dll_MapMessageIdToCommand_3002": {
@@ -38090,6 +42081,57 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "262b55d4b1f21fd166621d0ca2135ed8"
       }
     },
+    "d2sound.dll____security_init_cookie_556D": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B556D",
+        "LoD/1.11b": "0x6F9B556D",
+        "LoD/1.12a": "0x6F9B55BD",
+        "LoD/1.13c": "0x6F9B55BD",
+        "LoD/1.13d": "0x6F9B556D"
+      },
+      "rvas": {
+        "LoD/1.11": "0x556D",
+        "LoD/1.11b": "0x556D",
+        "LoD/1.12a": "0x55BD",
+        "LoD/1.13c": "0x55BD",
+        "LoD/1.13d": "0x556D"
+      },
+      "sizes": {
+        "LoD/1.11": 102,
+        "LoD/1.11b": 102,
+        "LoD/1.12a": 102,
+        "LoD/1.13c": 102,
+        "LoD/1.13d": 102
+      },
+      "name": "___security_init_cookie",
+      "signature": "void ___security_init_cookie(void)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n ___security_init_cookie\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:4af6f4d1378e3b27617b296b4a2b16cc",
+      "basic_block_counts": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.11b": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.12a": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.13c": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "LoD/1.13d": "4af6f4d1378e3b27617b296b4a2b16cc"
+      }
+    },
     "d2sound.dll____security_error_handler_55D3": {
       "addresses": {
         "LoD/1.11": "0x6F9B55D3",
@@ -38642,20 +42684,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "6b07f716ad39855b07502ac9a8f75c79"
       }
     },
-    "d2sound.dll_SetConfigurationParameter_5ED4": {
+    "d2sound.dll_DestroyAllGameObjects_5EDA": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5ED4",
-        "LoD/1.11b": "0x6F9B5EC8",
-        "LoD/1.12a": "0x6F9B5F26",
-        "LoD/1.13c": "0x6F9B5F32",
-        "LoD/1.13d": "0x6F9B5ED4"
+        "LoD/1.11": "0x6F9B5EDA",
+        "LoD/1.11b": "0x6F9B5ECE",
+        "LoD/1.12a": "0x6F9B5FCC",
+        "LoD/1.13c": "0x6F9B5FCC",
+        "LoD/1.13d": "0x6F9B5F5C"
       },
       "rvas": {
-        "LoD/1.11": "0x5ED4",
-        "LoD/1.11b": "0x5EC8",
-        "LoD/1.12a": "0x5F26",
-        "LoD/1.13c": "0x5F32",
-        "LoD/1.13d": "0x5ED4"
+        "LoD/1.11": "0x5EDA",
+        "LoD/1.11b": "0x5ECE",
+        "LoD/1.12a": "0x5FCC",
+        "LoD/1.13c": "0x5FCC",
+        "LoD/1.13d": "0x5F5C"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -38664,8 +42706,8 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "SetConfigurationParameter",
-      "signature": "uint SetConfigurationParameter(uint parameterValue)",
+      "name": "DestroyAllGameObjects",
+      "signature": "int DestroyAllGameObjects(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -38692,20 +42734,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "d2sound.dll_Ordinal_10042_5EE0": {
+    "d2sound.dll_BuildProjectPathThunk_5EFE": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5EE0",
-        "LoD/1.11b": "0x6F9B5EE0",
-        "LoD/1.12a": "0x6F9B5F5C",
-        "LoD/1.13c": "0x6F9B5F62",
-        "LoD/1.13d": "0x6F9B5EE0"
+        "LoD/1.11": "0x6F9B5EFE",
+        "LoD/1.11b": "0x6F9B5EFE",
+        "LoD/1.12a": "0x6F9B5F74",
+        "LoD/1.13c": "0x6F9B5F74",
+        "LoD/1.13d": "0x6F9B5EFE"
       },
       "rvas": {
-        "LoD/1.11": "0x5EE0",
-        "LoD/1.11b": "0x5EE0",
-        "LoD/1.12a": "0x5F5C",
-        "LoD/1.13c": "0x5F62",
-        "LoD/1.13d": "0x5EE0"
+        "LoD/1.11": "0x5EFE",
+        "LoD/1.11b": "0x5EFE",
+        "LoD/1.12a": "0x5F74",
+        "LoD/1.13c": "0x5F74",
+        "LoD/1.13d": "0x5EFE"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -38714,58 +42756,8 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10042",
-      "signature": "undefined Ordinal_10042(void)",
-      "calling_convention": "unknown",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "d2sound.dll_InitializeAsyncEventListeners_5F5C": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B5F5C",
-        "LoD/1.11b": "0x6F9B5F5C",
-        "LoD/1.12a": "0x6F9B5FD2",
-        "LoD/1.13c": "0x6F9B5FD2",
-        "LoD/1.13d": "0x6F9B5F62"
-      },
-      "rvas": {
-        "LoD/1.11": "0x5F5C",
-        "LoD/1.11b": "0x5F5C",
-        "LoD/1.12a": "0x5FD2",
-        "LoD/1.13c": "0x5FD2",
-        "LoD/1.13d": "0x5F62"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "InitializeAsyncEventListeners",
-      "signature": "void InitializeAsyncEventListeners(SOCKET socket, GameSessionConfig * pConfigBuffer, uint dwConfigSize, uint dwFlags, EventHandleSlot * pEventHandlers, int * pStatusCallback, void * pUserContext)",
+      "name": "BuildProjectPathThunk",
+      "signature": "void BuildProjectPathThunk(int nPathType)",
       "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -38792,20 +42784,20 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "d2sound.dll_BindSocketToPortWrapper_5F62": {
+    "d2sound.dll_OpenFileArchive_5F3E": {
       "addresses": {
-        "LoD/1.11": "0x6F9B5F62",
-        "LoD/1.11b": "0x6F9B5F62",
-        "LoD/1.12a": "0x6F9B5FD8",
-        "LoD/1.13c": "0x6F9B5FD8",
-        "LoD/1.13d": "0x6F9B5F68"
+        "LoD/1.11": "0x6F9B5F3E",
+        "LoD/1.11b": "0x6F9B5F3E",
+        "LoD/1.12a": "0x6F9B5FAE",
+        "LoD/1.13c": "0x6F9B5FAE",
+        "LoD/1.13d": "0x6F9B5F3E"
       },
       "rvas": {
-        "LoD/1.11": "0x5F62",
-        "LoD/1.11b": "0x5F62",
-        "LoD/1.12a": "0x5FD8",
-        "LoD/1.13c": "0x5FD8",
-        "LoD/1.13d": "0x5F68"
+        "LoD/1.11": "0x5F3E",
+        "LoD/1.11b": "0x5F3E",
+        "LoD/1.12a": "0x5FAE",
+        "LoD/1.13c": "0x5FAE",
+        "LoD/1.13d": "0x5F3E"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -38814,8 +42806,58 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "BindSocketToPortWrapper",
-      "signature": "int BindSocketToPortWrapper(int nSocketHandle, int nPort, int nFlags, int nParam4)",
+      "name": "OpenFileArchive",
+      "signature": "uint OpenFileArchive(char * pFilePath, uint archiveId, uint flags, uint * pArchiveHandle)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "d2sound.dll_GetDefaultResourceCount_5F68": {
+      "addresses": {
+        "LoD/1.11": "0x6F9B5F68",
+        "LoD/1.11b": "0x6F9B5F68",
+        "LoD/1.12a": "0x6F9B5FDE",
+        "LoD/1.13c": "0x6F9B5FDE",
+        "LoD/1.13d": "0x6F9B5F6E"
+      },
+      "rvas": {
+        "LoD/1.11": "0x5F68",
+        "LoD/1.11b": "0x5F68",
+        "LoD/1.12a": "0x5FDE",
+        "LoD/1.13c": "0x5FDE",
+        "LoD/1.13d": "0x5F6E"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "GetDefaultResourceCount",
+      "signature": "int GetDefaultResourceCount(int nResourceType, int nReserved)",
       "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -38858,6 +42900,18 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2770779bf95e5b74ff00cb8c4ba4f5ee",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13
@@ -38896,6 +42950,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:553bf43acddfc3c897fcddab5b70ec2b",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "InitializeAsyncEventListeners",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -38916,53 +43002,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "1d2e62a8ba620b3c9f04bd6beb6c72ad",
         "LoD/1.13c": "1d2e62a8ba620b3c9f04bd6beb6c72ad",
         "LoD/1.13d": "1d2e62a8ba620b3c9f04bd6beb6c72ad"
-      }
-    },
-    "d2sound.dll_API_1ac4095c3b44_60F0": {
-      "addresses": {
-        "LoD/1.11": "0x6F9B60F0",
-        "LoD/1.11b": "0x6F9B60F0",
-        "LoD/1.12a": "0x6F9B60F0",
-        "LoD/1.13c": "0x6F9B60F0",
-        "LoD/1.13d": "0x6F9B6080"
-      },
-      "rvas": {
-        "LoD/1.11": "0x60F0",
-        "LoD/1.11b": "0x60F0",
-        "LoD/1.12a": "0x60F0",
-        "LoD/1.13c": "0x60F0",
-        "LoD/1.13d": "0x6080"
-      },
-      "sizes": {
-        "LoD/1.11": 102,
-        "LoD/1.11b": 102,
-        "LoD/1.12a": 102,
-        "LoD/1.13c": 102,
-        "LoD/1.13d": 102
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:1ac4095c3b44baad33ce438edc80b34d",
-      "basic_block_counts": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.11b": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.12a": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.13c": "18daef3daaad0cf2ceb111a04873839a",
-        "LoD/1.13d": "18daef3daaad0cf2ceb111a04873839a"
       }
     },
     "d2sound.dll_API_545c5ebe25fa_6160": {
@@ -38990,6 +43029,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:545c5ebe25fa49eb50b6ac63650d3eaa",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -39037,6 +43108,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:67243af3de62df676c8df210a5f4e4c5",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Error opening file: %s\""
@@ -39101,6 +43194,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:462bdd0b497f0d196acf39a667f88575",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "OpenFileArchive",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -39148,6 +43273,73 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:086e0e198a8afd2068849e328a8c3aec",
+      "callees": {
+        "LoD/1.11": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "GetDefaultResourceCount",
+          "ValidateParameterOrShutdown",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "SafeCopyDataWithLocking",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\"",
@@ -39208,6 +43400,16 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:40f13e96c803edf6e458beab32d4eb7f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
@@ -39298,6 +43500,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -39342,6 +43558,27 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10018",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10038"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10027"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10040"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10057",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -39383,6 +43620,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:22394eebae7163c718d4ecb5d45f5b22",
+      "callees": {
+        "LoD/1.11": [
+          "SetConfigurationParameter",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "SetConfigurationParameter",
+          "Ordinal_10040"
+        ],
+        "LoD/1.12a": [
+          "SetConfigurationParameter",
+          "Ordinal_10049"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -39424,6 +43675,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10037",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10038",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10027",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10040",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -39471,6 +43744,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10012",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10014",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -39521,6 +43821,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10003",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -39571,6 +43893,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10032",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10056",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10024",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10068",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10025",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10067",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundFast.cpp\""
@@ -39638,6 +43982,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10014",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10012",
+          "Ordinal_10013",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10057",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10053",
+          "Ordinal_10016",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10000",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10006",
+          "CloseSoundObject",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundFast.cpp\""
@@ -39705,6 +44081,48 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10067",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10022",
+          "Ordinal_10058",
+          "Ordinal_10034",
+          "Ordinal_10057"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "Ordinal_10045",
+          "Ordinal_10004",
+          "Ordinal_10053"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10019",
+          "Ordinal_10058",
+          "Ordinal_10008",
+          "Ordinal_10027"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10005",
+          "Ordinal_10069",
+          "Ordinal_10008",
+          "Ordinal_10037"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10002",
+          "Ordinal_10019",
+          "Ordinal_10057",
+          "Ordinal_10030"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -39749,6 +44167,26 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10009",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "Ordinal_10007",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "Ordinal_10040",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "Ordinal_10049",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -40013,6 +44451,35 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10008",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10047"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10019",
+          "Ordinal_10008",
+          "Ordinal_10061",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10008",
+          "Ordinal_10039",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10002",
+          "Ordinal_10057",
+          "Ordinal_10011",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -40063,6 +44530,40 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10041",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "Ordinal_10013",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "Ordinal_10016",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "CloseSoundObject",
+          "DestroyAllGameObjects",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -40110,6 +44611,73 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a46ee8f2cf1e2cb109c563256606ef29",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10041",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10044",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10002",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10031",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "DirectSoundCreate",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "GetGameState",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "ValidateParameterOrShutdown",
+          "Ordinal_10024",
+          "...+10 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"........DirectSound progress: %s returned on fail...",
@@ -40202,6 +44770,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10043",
+      "callees": {
+        "LoD/1.11": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "DirectSoundEnumerateA",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"\\tCouldn't initialize DirectSound\"",
@@ -40330,6 +44920,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10015",
+      "callees": {
+        "LoD/1.11": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "RemoveGameObjectById",
+          "BuildProjectPathThunk",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -40380,6 +45002,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10002",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetDefaultResourceCount",
+          "InitializeAndOpenAudioStream",
+          "BuildProjectPathThunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -40481,6 +45140,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10017",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -40506,17 +45187,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_EXP_10031_80D0": {
       "addresses": {
         "LoD/1.11": "0x6F9B80D0",
-        "LoD/1.11b": "0x6F9B8A10",
-        "LoD/1.12a": "0x6F9B67F0",
-        "LoD/1.13c": "0x6F9B67F0",
-        "LoD/1.13d": "0x6F9B7AE0"
+        "LoD/1.11b": "0x6F9B8A40",
+        "LoD/1.12a": "0x6F9B6920",
+        "LoD/1.13c": "0x6F9B6820",
+        "LoD/1.13d": "0x6F9B7B10"
       },
       "rvas": {
         "LoD/1.11": "0x80D0",
-        "LoD/1.11b": "0x8A10",
-        "LoD/1.12a": "0x67F0",
-        "LoD/1.13c": "0x67F0",
-        "LoD/1.13d": "0x7AE0"
+        "LoD/1.11b": "0x8A40",
+        "LoD/1.12a": "0x6920",
+        "LoD/1.13c": "0x6820",
+        "LoD/1.13d": "0x7B10"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -40531,6 +45212,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10031",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -40556,17 +45259,17 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_EXP_10060_8100": {
       "addresses": {
         "LoD/1.11": "0x6F9B8100",
-        "LoD/1.11b": "0x6F9B8A40",
-        "LoD/1.12a": "0x6F9B6820",
-        "LoD/1.13c": "0x6F9B6820",
-        "LoD/1.13d": "0x6F9B7B10"
+        "LoD/1.11b": "0x6F9B8A10",
+        "LoD/1.12a": "0x6F9B67F0",
+        "LoD/1.13c": "0x6F9B67F0",
+        "LoD/1.13d": "0x6F9B7AE0"
       },
       "rvas": {
         "LoD/1.11": "0x8100",
-        "LoD/1.11b": "0x8A40",
-        "LoD/1.12a": "0x6820",
-        "LoD/1.13c": "0x6820",
-        "LoD/1.13d": "0x7B10"
+        "LoD/1.11b": "0x8A10",
+        "LoD/1.12a": "0x67F0",
+        "LoD/1.13c": "0x67F0",
+        "LoD/1.13d": "0x7AE0"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -40581,6 +45284,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10060",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -40631,6 +45356,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10025",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindItemById"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -40681,6 +45433,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10065",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -40707,14 +45481,14 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.11": "0x6F9B8200",
         "LoD/1.11b": "0x6F9B8BE0",
-        "LoD/1.12a": "0x6F9B6920",
+        "LoD/1.12a": "0x6F9B6820",
         "LoD/1.13c": "0x6F9B6920",
         "LoD/1.13d": "0x6F9B9690"
       },
       "rvas": {
         "LoD/1.11": "0x8200",
         "LoD/1.11b": "0x8BE0",
-        "LoD/1.12a": "0x6920",
+        "LoD/1.12a": "0x6820",
         "LoD/1.13c": "0x6920",
         "LoD/1.13d": "0x9690"
       },
@@ -40731,6 +45505,27 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10069",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -40786,6 +45581,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10070",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -40833,6 +45650,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:580d47f99333e06cc4225fc7dd8b4b20",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10042"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -40883,6 +45717,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10026",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10061"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10065"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10031"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10060"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10004"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -40933,6 +45794,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10034",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10061",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10065",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10004",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -40959,23 +45847,23 @@ var FUNCTIONS_D2Sound_dll = {
       "addresses": {
         "LoD/1.11": "0x6F9B8700",
         "LoD/1.11b": "0x6F9B9160",
-        "LoD/1.12a": "0x6F9B6980",
-        "LoD/1.13c": "0x6F9B6980",
-        "LoD/1.13d": "0x6F9B7C70"
+        "LoD/1.12a": "0x6F9B6EC0",
+        "LoD/1.13c": "0x6F9B6EC0",
+        "LoD/1.13d": "0x6F9B8110"
       },
       "rvas": {
         "LoD/1.11": "0x8700",
         "LoD/1.11b": "0x9160",
-        "LoD/1.12a": "0x6980",
-        "LoD/1.13c": "0x6980",
-        "LoD/1.13d": "0x7C70"
+        "LoD/1.12a": "0x6EC0",
+        "LoD/1.13c": "0x6EC0",
+        "LoD/1.13d": "0x8110"
       },
       "sizes": {
         "LoD/1.11": 105,
         "LoD/1.11b": 105,
-        "LoD/1.12a": 96,
-        "LoD/1.13c": 96,
-        "LoD/1.13d": 96
+        "LoD/1.12a": 105,
+        "LoD/1.13c": 105,
+        "LoD/1.13d": 105
       },
       "name": "Ordinal_10044",
       "signature": "uint Ordinal_10044(int * param_1)",
@@ -40983,6 +45871,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10044",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -41000,9 +45910,9 @@ var FUNCTIONS_D2Sound_dll = {
       "mnemonic_hashes": {
         "LoD/1.11": "bb28d7e90cd8dd20307c808240a82993",
         "LoD/1.11b": "bb28d7e90cd8dd20307c808240a82993",
-        "LoD/1.12a": "017639e22377964540333b7e81961297",
-        "LoD/1.13c": "017639e22377964540333b7e81961297",
-        "LoD/1.13d": "017639e22377964540333b7e81961297"
+        "LoD/1.12a": "bb28d7e90cd8dd20307c808240a82993",
+        "LoD/1.13c": "bb28d7e90cd8dd20307c808240a82993",
+        "LoD/1.13d": "bb28d7e90cd8dd20307c808240a82993"
       }
     },
     "d2sound.dll_EXP_10013_87E0": {
@@ -41033,6 +45943,43 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10013",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10029",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10012",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10018",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10006",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundSmp.cpp\"",
@@ -41137,6 +46084,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:25831439002bbec9ab588d8746bd73d5",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10018"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10006"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -41187,6 +46161,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10028",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10034",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10004",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10057",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -41237,6 +46238,28 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10042",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -41284,6 +46307,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:93806dcab8ba79a416bb8864dda68429",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10039"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10005"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10061"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10056"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -41334,6 +46374,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10058",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10056",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10024",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10068",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10025",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10067",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -41384,6 +46451,33 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10007",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundSmp.cpp\"",
@@ -41453,6 +46547,68 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:0add49b3abc244cdb5535c7962e163be",
+      "callees": {
+        "LoD/1.11": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10034",
+          "Ordinal_10034",
+          "Ordinal_10034",
+          "Ordinal_10015",
+          "FindItemById",
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetGameState",
+          "Ordinal_10025",
+          "Ordinal_10004",
+          "Ordinal_10004",
+          "Ordinal_10004",
+          "Ordinal_10015",
+          "FindItemById",
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10069",
+          "FindItemById",
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetGameState",
+          "Ordinal_10010",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "FindItemById",
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetGameState",
+          "Ordinal_10063",
+          "Ordinal_10057",
+          "Ordinal_10057",
+          "Ordinal_10057",
+          "Ordinal_10014",
+          "FindItemById",
+          "Ordinal_10014",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 46,
         "LoD/1.11b": 46,
@@ -41500,6 +46656,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d49921eb65284491dea0b481d719ae17",
+      "callees": {
+        "LoD/1.11": [
+          "GetLastError"
+        ],
+        "LoD/1.11b": [
+          "GetLastError"
+        ],
+        "LoD/1.12a": [
+          "GetLastError"
+        ],
+        "LoD/1.13c": [
+          "GetLastError"
+        ],
+        "LoD/1.13d": [
+          "GetLastError"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -41550,6 +46723,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10001",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -41614,6 +46804,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10054",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -41963,6 +47167,23 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10040",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -42077,6 +47298,38 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ecafa9405ef5bff62f78d81cc739bdac",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "InitializeModule",
+          "VerQueryValueA",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Sound\\\\Src\\\\D2SoundUtil.cpp\""
@@ -44691,44 +49944,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.13c": "a82412e86c7e059d3af6ea9d376e2875"
       }
     },
-    "d2sound.dll_DestroyAllGameObjects_5F2C": {
-      "addresses": {
-        "LoD/1.12a": "0x6F9B5F2C",
-        "LoD/1.13c": "0x6F9B5F38",
-        "LoD/1.13d": "0x6F9B5EDA"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x5F2C",
-        "LoD/1.13c": "0x5F38",
-        "LoD/1.13d": "0x5EDA"
-      },
-      "sizes": {
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "DestroyAllGameObjects",
-      "signature": "int DestroyAllGameObjects(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
     "d2sound.dll_FindCharInString_5FC0": {
       "addresses": {
         "LoD/1.12a": "0x6F9B5FC0",
@@ -44786,6 +50001,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:227bedd2db9c43545664c4619094d523",
+      "callees": {
+        "LoD/1.12a": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "ReleaseFileHandleWithRefCount",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"..\\\\Source\\\\D2Hell\\\\SRC\\\\Archive.cpp\""
@@ -44832,6 +50061,20 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:13ec7578ddcf5b763f3edae16352d4b3",
+      "callees": {
+        "LoD/1.12a": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13c": [
+          "FindCharInString",
+          "FindCharInString"
+        ],
+        "LoD/1.13d": [
+          "FindCharInString",
+          "FindCharInString"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 6,
         "LoD/1.13c": 6,
@@ -44867,6 +50110,32 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:a8613ce83c477ddee9394edab045212a",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13c": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ],
+        "LoD/1.13d": [
+          "CopyStringBounded",
+          "CopyStringBounded",
+          "OpenFileArchive",
+          "CopyMemoryAndDetectTerminator",
+          "CopyStringBounded",
+          "OpenFileArchive"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 17,
         "LoD/1.13c": 17,
@@ -44881,44 +50150,6 @@ var FUNCTIONS_D2Sound_dll = {
         "LoD/1.12a": "d2da31e70923dbc86bdb13cb9ac9f5fa",
         "LoD/1.13c": "d2da31e70923dbc86bdb13cb9ac9f5fa",
         "LoD/1.13d": "d2da31e70923dbc86bdb13cb9ac9f5fa"
-      }
-    },
-    "d2sound.dll_EXP_10048_98F0": {
-      "addresses": {
-        "LoD/1.12a": "0x6F9B98F0",
-        "LoD/1.13c": "0x6F9B7FE0",
-        "LoD/1.13d": "0x6F9B7540"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x98F0",
-        "LoD/1.13c": "0x7FE0",
-        "LoD/1.13d": "0x7540"
-      },
-      "sizes": {
-        "LoD/1.12a": 33,
-        "LoD/1.13c": 33,
-        "LoD/1.13d": 33
-      },
-      "name": "Ordinal_10048",
-      "signature": "undefined Ordinal_10048(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.12a",
-      "method": "EXP",
-      "index": "EXP:10048",
-      "basic_block_counts": {
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4,
-        "LoD/1.13d": 4
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.13c": "8435bc0f12a8928fbaef24ebbfcdad2a",
-        "LoD/1.13d": "8435bc0f12a8928fbaef24ebbfcdad2a"
       }
     },
     "d2sound.dll_MNE_6426717c049f_AEBB": {
@@ -45011,11 +50242,11 @@ var FUNCTIONS_D2Sound_dll = {
     "d2sound.dll_DecimalStringToDouble_C8B0": {
       "addresses": {
         "LoD/1.12a": "0x6F9BC8B0",
-        "LoD/1.13c": "0x6F9BC925"
+        "LoD/1.13c": "0x6F9BC8E0"
       },
       "rvas": {
         "LoD/1.12a": "0xC8B0",
-        "LoD/1.13c": "0xC925"
+        "LoD/1.13c": "0xC8E0"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -45251,6 +50482,16 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:37db4c4fb5a0d4de03009a04c17a8d50",
+      "callees": {
+        "LoD/1.13c": [
+          "SetConfigurationParameter",
+          "Ordinal_10065"
+        ],
+        "LoD/1.13d": [
+          "SetConfigurationParameter",
+          "Ordinal_10013"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 1,
         "LoD/1.13d": 1
@@ -45283,6 +50524,19 @@ var FUNCTIONS_D2Sound_dll = {
       "name_source": "LoD/1.13c",
       "method": "EXP",
       "index": "EXP:10021",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10008",
+          "Ordinal_10065",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10050",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 14,
         "LoD/1.13d": 10

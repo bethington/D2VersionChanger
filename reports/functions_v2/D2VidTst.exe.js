@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2VidTst.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -61,6 +61,134 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:869a8cdbfb2409ba470f3157ce7e7152",
+      "callees": {
+        "LoD/1.07": [
+          "GetFogStatePtr",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"*** DirectX registry version not found!\"",
@@ -755,6 +883,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:94392139a94cc5b04be3b1da79c63f48",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"No running dialog, can't display updatetext.\""
@@ -873,6 +1036,107 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b7d7287669032203ddc481fbeff8ba71",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetFogStatePtr",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"TestDDraw\"",
@@ -1046,6 +1310,151 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:86b5a27b921a122ffe12ed0bded30aa0",
+      "callees": {
+        "LoD/1.07": [
+          "SFileOpenArchive",
+          "OpenFileWithDefaultArchive",
+          "ReadFileSync",
+          "CloseFileHandle",
+          "SFileCloseArchive",
+          "FogInit",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+19 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_266",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "FogInit",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+19 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_266",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "Ordinal_10019",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+19 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_266",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "Ordinal_10019",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+19 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_266",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "Ordinal_10019",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+19 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_266",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "Ordinal_10019",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+19 more"
+        ],
+        "LoD/1.11": [
+          "OpenFileArchive",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "InitializeGameInstance",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.11b": [
+          "OpenFileArchive",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "InitializeGameInstance",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.12a": [
+          "OpenFileArchive",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "InitializeGameInstance",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.13c": [
+          "OpenFileArchive",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "InitializeGameInstance",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.13d": [
+          "OpenFileArchive",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "Ordinal_10019",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Deleted vidtestrequiredflag\"",
@@ -1222,6 +1631,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:b05a18f448a1d2ebeb4812c35e897820",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"delete\""
@@ -1322,6 +1748,85 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4d162f5ba2fb3717be98fa2b2cd7a969",
+      "callees": {
+        "LoD/1.07": [
+          "GetFogStatePtr",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Direct3D Enumeration\"",
@@ -1498,6 +2003,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f70aaa5cf1de660cb2865f924453c73e",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Caught a failure in Direct3DDetect ** \""
@@ -1616,6 +2156,52 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e9cb671a06f1948c863285a130dcc445",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Destroyed D3D window.\"",
@@ -1745,6 +2331,151 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:784353a51d51728d8908009221ea5428",
+      "callees": {
+        "LoD/1.07": [
+          "GetFogStatePtr",
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+18 more"
+        ],
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+18 more"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+18 more"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+18 more"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+18 more"
+        ],
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029",
+          "DirectDrawCreate",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+18 more"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+19 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\t\\tSupports 24 bit cutscenes.\"",
@@ -1921,6 +2652,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3aaed17774cd19ee4796bda6aad69b9e",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Caught a failure in sEnumerateD3DDevices ** \""
@@ -2042,6 +2808,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b2210f8aa8894df56f1d69bba3f2f25d",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Couldn't clean up sEnumerateD3DDevices ** \""
@@ -2120,18 +2921,18 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_427e6d3a8903": {
       "addresses": {
         "LoD/1.07": "0x00404FB8",
-        "LoD/1.08": "0x0040418C",
-        "LoD/1.09": "0x004041AC",
-        "LoD/1.09b": "0x004041AC",
-        "LoD/1.09d": "0x004041AC",
+        "LoD/1.08": "0x00404F52",
+        "LoD/1.09": "0x00404F72",
+        "LoD/1.09b": "0x00404F72",
+        "LoD/1.09d": "0x00404F72",
         "LoD/1.10": "0x0040409C"
       },
       "rvas": {
         "LoD/1.07": "0x4FB8",
-        "LoD/1.08": "0x418C",
-        "LoD/1.09": "0x41AC",
-        "LoD/1.09b": "0x41AC",
-        "LoD/1.09d": "0x41AC",
+        "LoD/1.08": "0x4F52",
+        "LoD/1.09": "0x4F72",
+        "LoD/1.09b": "0x4F72",
+        "LoD/1.09d": "0x4F72",
         "LoD/1.10": "0x409C"
       },
       "sizes": {
@@ -2213,6 +3014,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:53cb82bbeba2e669ffa558ac0b842310",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"D3DERR_LIGHTNOTINTHISVIEWPORT\"",
@@ -2386,6 +3222,107 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:fe2e9ffe8e8574e11b712f0433617a37",
+      "callees": {
+        "LoD/1.07": [
+          "GetFogStatePtr",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "DirectDrawEnumerateA",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "DirectDrawEnumerateA",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "DirectDrawEnumerateA",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Restricted to DirectX 3 support.\"",
@@ -2562,6 +3499,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c3f614e03fac0b9f337e417a58e58504",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Caught a failure in DDrawDetect ** \""
@@ -2680,6 +3652,151 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c69643978ae0c4854a13e753ac464302",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "DirectDrawCreate",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "DirectDrawCreate",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+1 more"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "DirectDrawCreate",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\t\\tSupports 32 bit cutscenes.\"",
@@ -2856,6 +3973,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:483c7b592af07f161a85191959b14451",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Caught a failure in sEnumerateDDrawDevices **..."
@@ -2977,6 +4129,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b542d0ca37c14fd390754650464ca8c5",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Couldn't clean up sEnumerateDDrawDevices ** \""
@@ -3095,6 +4282,63 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d8590879298159eccb036d7f8cbea3e3",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Failed to create primary surface for cutscenes\"",
@@ -3268,6 +4512,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a6a733874702848c947d4f13dd410c07",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"DDERR_EXCEPTION\"",
@@ -3441,6 +4720,151 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0065a15ffea0dbb532576870a2b8edcb",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+5 more"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+5 more"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+5 more"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+5 more"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+5 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+5 more"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+5 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+5 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+5 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+5 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"grSstWinClose failed, context= %d\"",
@@ -3617,6 +5041,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9e41092a47ca09a81dba71051284feab",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Caught a failure in GlideDetect ** \""
@@ -3735,6 +5194,52 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ae5df3ced08ade0274d1d06ba56578bf",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"grSstWinClose failed, context= %d\"",
@@ -3867,6 +5372,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:36a060df9dda8780b9ab4383e1a92524",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\" ** Couldn't clean up GlideDetect ** \""
@@ -4336,29 +5876,29 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_SFileCloseArchive": {
       "addresses": {
         "LoD/1.07": "0x00406410",
-        "LoD/1.08": "0x00406388",
-        "LoD/1.09": "0x004063A8",
-        "LoD/1.09b": "0x004063A8",
-        "LoD/1.09d": "0x004063A8",
-        "LoD/1.10": "0x00406288",
-        "LoD/1.11": "0x00408CF0",
-        "LoD/1.11b": "0x00408CF0",
-        "LoD/1.12a": "0x00408DBC",
-        "LoD/1.13c": "0x00408DB0",
-        "LoD/1.13d": "0x00408D20"
+        "LoD/1.08": "0x00406382",
+        "LoD/1.09": "0x004063A2",
+        "LoD/1.09b": "0x004063A2",
+        "LoD/1.09d": "0x004063A2",
+        "LoD/1.10": "0x00406282",
+        "LoD/1.11": "0x00408E86",
+        "LoD/1.11b": "0x00408E86",
+        "LoD/1.12a": "0x00408F4A",
+        "LoD/1.13c": "0x00408F4A",
+        "LoD/1.13d": "0x00408E86"
       },
       "rvas": {
         "LoD/1.07": "0x6410",
-        "LoD/1.08": "0x6388",
-        "LoD/1.09": "0x63A8",
-        "LoD/1.09b": "0x63A8",
-        "LoD/1.09d": "0x63A8",
-        "LoD/1.10": "0x6288",
-        "LoD/1.11": "0x8CF0",
-        "LoD/1.11b": "0x8CF0",
-        "LoD/1.12a": "0x8DBC",
-        "LoD/1.13c": "0x8DB0",
-        "LoD/1.13d": "0x8D20"
+        "LoD/1.08": "0x6382",
+        "LoD/1.09": "0x63A2",
+        "LoD/1.09b": "0x63A2",
+        "LoD/1.09d": "0x63A2",
+        "LoD/1.10": "0x6282",
+        "LoD/1.11": "0x8E86",
+        "LoD/1.11b": "0x8E86",
+        "LoD/1.12a": "0x8F4A",
+        "LoD/1.13c": "0x8F4A",
+        "LoD/1.13d": "0x8E86"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4422,29 +5962,29 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_CloseFileHandle": {
       "addresses": {
         "LoD/1.07": "0x00406416",
-        "LoD/1.08": "0x0040651C",
-        "LoD/1.09": "0x00406530",
-        "LoD/1.09b": "0x00406530",
-        "LoD/1.09d": "0x00406530",
-        "LoD/1.10": "0x00406410",
-        "LoD/1.11": "0x00408D1A",
-        "LoD/1.11b": "0x00408D20",
-        "LoD/1.12a": "0x00408DDA",
-        "LoD/1.13c": "0x00408DE0",
-        "LoD/1.13d": "0x00408D1A"
+        "LoD/1.08": "0x00406376",
+        "LoD/1.09": "0x00406396",
+        "LoD/1.09b": "0x00406396",
+        "LoD/1.09d": "0x00406396",
+        "LoD/1.10": "0x00406276",
+        "LoD/1.11": "0x00408CF6",
+        "LoD/1.11b": "0x00408CF6",
+        "LoD/1.12a": "0x00408DC2",
+        "LoD/1.13c": "0x00408DB6",
+        "LoD/1.13d": "0x00408D02"
       },
       "rvas": {
         "LoD/1.07": "0x6416",
-        "LoD/1.08": "0x651C",
-        "LoD/1.09": "0x6530",
-        "LoD/1.09b": "0x6530",
-        "LoD/1.09d": "0x6530",
-        "LoD/1.10": "0x6410",
-        "LoD/1.11": "0x8D1A",
-        "LoD/1.11b": "0x8D20",
-        "LoD/1.12a": "0x8DDA",
-        "LoD/1.13c": "0x8DE0",
-        "LoD/1.13d": "0x8D1A"
+        "LoD/1.08": "0x6376",
+        "LoD/1.09": "0x6396",
+        "LoD/1.09b": "0x6396",
+        "LoD/1.09d": "0x6396",
+        "LoD/1.10": "0x6276",
+        "LoD/1.11": "0x8CF6",
+        "LoD/1.11b": "0x8CF6",
+        "LoD/1.12a": "0x8DC2",
+        "LoD/1.13c": "0x8DB6",
+        "LoD/1.13d": "0x8D02"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4508,29 +6048,29 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_ReadFileSync": {
       "addresses": {
         "LoD/1.07": "0x0040641C",
-        "LoD/1.08": "0x00406370",
-        "LoD/1.09": "0x00406390",
-        "LoD/1.09b": "0x00406390",
-        "LoD/1.09d": "0x00406390",
-        "LoD/1.10": "0x00406270",
-        "LoD/1.11": "0x00408E86",
-        "LoD/1.11b": "0x00408E86",
-        "LoD/1.12a": "0x00408F4A",
-        "LoD/1.13c": "0x00408F4A",
-        "LoD/1.13d": "0x00408E86"
+        "LoD/1.08": "0x0040651C",
+        "LoD/1.09": "0x00406530",
+        "LoD/1.09b": "0x00406530",
+        "LoD/1.09d": "0x00406530",
+        "LoD/1.10": "0x00406410",
+        "LoD/1.11": "0x00408D1A",
+        "LoD/1.11b": "0x00408D20",
+        "LoD/1.12a": "0x00408DDA",
+        "LoD/1.13c": "0x00408DE0",
+        "LoD/1.13d": "0x00408D1A"
       },
       "rvas": {
         "LoD/1.07": "0x641C",
-        "LoD/1.08": "0x6370",
-        "LoD/1.09": "0x6390",
-        "LoD/1.09b": "0x6390",
-        "LoD/1.09d": "0x6390",
-        "LoD/1.10": "0x6270",
-        "LoD/1.11": "0x8E86",
-        "LoD/1.11b": "0x8E86",
-        "LoD/1.12a": "0x8F4A",
-        "LoD/1.13c": "0x8F4A",
-        "LoD/1.13d": "0x8E86"
+        "LoD/1.08": "0x651C",
+        "LoD/1.09": "0x6530",
+        "LoD/1.09b": "0x6530",
+        "LoD/1.09d": "0x6530",
+        "LoD/1.10": "0x6410",
+        "LoD/1.11": "0x8D1A",
+        "LoD/1.11b": "0x8D20",
+        "LoD/1.12a": "0x8DDA",
+        "LoD/1.13c": "0x8DE0",
+        "LoD/1.13d": "0x8D1A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4594,29 +6134,27 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_OpenFileWithDefaultArchive": {
       "addresses": {
         "LoD/1.07": "0x00406422",
-        "LoD/1.08": "0x00406376",
-        "LoD/1.09": "0x00406396",
-        "LoD/1.09b": "0x00406396",
-        "LoD/1.09d": "0x00406396",
-        "LoD/1.10": "0x00406276",
-        "LoD/1.11": "0x00408CFC",
-        "LoD/1.11b": "0x00408CFC",
-        "LoD/1.12a": "0x00408DB0",
-        "LoD/1.13c": "0x00408DBC",
-        "LoD/1.13d": "0x00408CF0"
+        "LoD/1.08": "0x00406388",
+        "LoD/1.09": "0x004063A8",
+        "LoD/1.09b": "0x004063A8",
+        "LoD/1.09d": "0x004063A8",
+        "LoD/1.10": "0x00406288",
+        "LoD/1.11": "0x00408D26",
+        "LoD/1.11b": "0x00408D26",
+        "LoD/1.12a": "0x00408DE0",
+        "LoD/1.13c": "0x00408DE6"
       },
       "rvas": {
         "LoD/1.07": "0x6422",
-        "LoD/1.08": "0x6376",
-        "LoD/1.09": "0x6396",
-        "LoD/1.09b": "0x6396",
-        "LoD/1.09d": "0x6396",
-        "LoD/1.10": "0x6276",
-        "LoD/1.11": "0x8CFC",
-        "LoD/1.11b": "0x8CFC",
-        "LoD/1.12a": "0x8DB0",
-        "LoD/1.13c": "0x8DBC",
-        "LoD/1.13d": "0x8CF0"
+        "LoD/1.08": "0x6388",
+        "LoD/1.09": "0x63A8",
+        "LoD/1.09b": "0x63A8",
+        "LoD/1.09d": "0x63A8",
+        "LoD/1.10": "0x6288",
+        "LoD/1.11": "0x8D26",
+        "LoD/1.11b": "0x8D26",
+        "LoD/1.12a": "0x8DE0",
+        "LoD/1.13c": "0x8DE6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4628,8 +6166,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
         "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
+        "LoD/1.13c": 6
       },
       "name": "OpenFileWithDefaultArchive",
       "signature": "void OpenFileWithDefaultArchive(char * szFileName, HANDLE * phFile)",
@@ -4647,8 +6184,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
         "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.13c": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -4660,8 +6196,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.13c": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "e3e7225badfcf3c2e051c42d71d7237a",
@@ -4673,36 +6208,35 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "d2vidtst.exe_SFileOpenArchive": {
       "addresses": {
         "LoD/1.07": "0x00406428",
-        "LoD/1.08": "0x0040637C",
-        "LoD/1.09": "0x0040639C",
-        "LoD/1.09b": "0x0040639C",
-        "LoD/1.09d": "0x0040639C",
-        "LoD/1.10": "0x0040627C",
-        "LoD/1.11": "0x00408D08",
-        "LoD/1.11b": "0x00408D08",
-        "LoD/1.12a": "0x00408DC8",
-        "LoD/1.13c": "0x00408DC8",
-        "LoD/1.13d": "0x00408D08"
+        "LoD/1.08": "0x00406370",
+        "LoD/1.09": "0x00406390",
+        "LoD/1.09b": "0x00406390",
+        "LoD/1.09d": "0x00406390",
+        "LoD/1.10": "0x00406270",
+        "LoD/1.11": "0x00408D0E",
+        "LoD/1.11b": "0x00408D0E",
+        "LoD/1.12a": "0x00408DD4",
+        "LoD/1.13c": "0x00408DD4",
+        "LoD/1.13d": "0x00408D14"
       },
       "rvas": {
         "LoD/1.07": "0x6428",
-        "LoD/1.08": "0x637C",
-        "LoD/1.09": "0x639C",
-        "LoD/1.09b": "0x639C",
-        "LoD/1.09d": "0x639C",
-        "LoD/1.10": "0x627C",
-        "LoD/1.11": "0x8D08",
-        "LoD/1.11b": "0x8D08",
-        "LoD/1.12a": "0x8DC8",
-        "LoD/1.13c": "0x8DC8",
-        "LoD/1.13d": "0x8D08"
+        "LoD/1.08": "0x6370",
+        "LoD/1.09": "0x6390",
+        "LoD/1.09b": "0x6390",
+        "LoD/1.09d": "0x6390",
+        "LoD/1.10": "0x6270",
+        "LoD/1.11": "0x8D0E",
+        "LoD/1.11b": "0x8D0E",
+        "LoD/1.12a": "0x8DD4",
+        "LoD/1.13c": "0x8DD4",
+        "LoD/1.13d": "0x8D14"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4809,6 +6343,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:33bd722168bf830bd5a5faa52b36b420",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"D2Hell Fault.cpp error.\""
@@ -5318,29 +6869,29 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_GetFogStatePtr": {
       "addresses": {
         "LoD/1.07": "0x004065BC",
-        "LoD/1.08": "0x00406382",
-        "LoD/1.09": "0x004063A2",
-        "LoD/1.09b": "0x004063A2",
-        "LoD/1.09d": "0x004063A2",
-        "LoD/1.10": "0x00406282",
-        "LoD/1.11": "0x00408CF6",
-        "LoD/1.11b": "0x00408CF6",
-        "LoD/1.12a": "0x00408DC2",
-        "LoD/1.13c": "0x00408DB6",
-        "LoD/1.13d": "0x00408D02"
+        "LoD/1.08": "0x0040637C",
+        "LoD/1.09": "0x0040639C",
+        "LoD/1.09b": "0x0040639C",
+        "LoD/1.09d": "0x0040639C",
+        "LoD/1.10": "0x0040627C",
+        "LoD/1.11": "0x00408D08",
+        "LoD/1.11b": "0x00408D08",
+        "LoD/1.12a": "0x00408DC8",
+        "LoD/1.13c": "0x00408DC8",
+        "LoD/1.13d": "0x00408D08"
       },
       "rvas": {
         "LoD/1.07": "0x65BC",
-        "LoD/1.08": "0x6382",
-        "LoD/1.09": "0x63A2",
-        "LoD/1.09b": "0x63A2",
-        "LoD/1.09d": "0x63A2",
-        "LoD/1.10": "0x6282",
-        "LoD/1.11": "0x8CF6",
-        "LoD/1.11b": "0x8CF6",
-        "LoD/1.12a": "0x8DC2",
-        "LoD/1.13c": "0x8DB6",
-        "LoD/1.13d": "0x8D02"
+        "LoD/1.08": "0x637C",
+        "LoD/1.09": "0x639C",
+        "LoD/1.09b": "0x639C",
+        "LoD/1.09d": "0x639C",
+        "LoD/1.10": "0x627C",
+        "LoD/1.11": "0x8D08",
+        "LoD/1.11b": "0x8D08",
+        "LoD/1.12a": "0x8DC8",
+        "LoD/1.13c": "0x8DC8",
+        "LoD/1.13d": "0x8D08"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5409,11 +6960,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x00406536",
         "LoD/1.09d": "0x00406536",
         "LoD/1.10": "0x00406416",
-        "LoD/1.11": "0x00408D14",
-        "LoD/1.11b": "0x00408D14",
-        "LoD/1.12a": "0x00408DCE",
-        "LoD/1.13c": "0x00408DCE",
-        "LoD/1.13d": "0x00408D14"
+        "LoD/1.11": "0x00408D02",
+        "LoD/1.11b": "0x00408D02",
+        "LoD/1.12a": "0x00408DB6",
+        "LoD/1.13c": "0x00408DC2",
+        "LoD/1.13d": "0x00408CF6"
       },
       "rvas": {
         "LoD/1.07": "0x65C2",
@@ -5422,11 +6973,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x6536",
         "LoD/1.09d": "0x6536",
         "LoD/1.10": "0x6416",
-        "LoD/1.11": "0x8D14",
-        "LoD/1.11b": "0x8D14",
-        "LoD/1.12a": "0x8DCE",
-        "LoD/1.13c": "0x8DCE",
-        "LoD/1.13d": "0x8D14"
+        "LoD/1.11": "0x8D02",
+        "LoD/1.11b": "0x8D02",
+        "LoD/1.12a": "0x8DB6",
+        "LoD/1.13c": "0x8DC2",
+        "LoD/1.13d": "0x8CF6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5944,6 +7495,26 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:50b3897ed620463feed31471327a96ee",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -6580,6 +8151,41 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -10822,29 +12428,29 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_f23ef2b3a6cf": {
       "addresses": {
         "LoD/1.07": "0x0040B810",
-        "LoD/1.08": "0x0040A3C9",
-        "LoD/1.09": "0x0040B497",
-        "LoD/1.09b": "0x0040B497",
-        "LoD/1.09d": "0x0040B497",
-        "LoD/1.10": "0x0040B377",
-        "LoD/1.11": "0x00408E61",
-        "LoD/1.11b": "0x00408E61",
-        "LoD/1.12a": "0x00408F25",
-        "LoD/1.13c": "0x00408F25",
-        "LoD/1.13d": "0x00408E61"
+        "LoD/1.08": "0x0040A560",
+        "LoD/1.09": "0x0040B40E",
+        "LoD/1.09b": "0x0040B40E",
+        "LoD/1.09d": "0x0040B40E",
+        "LoD/1.10": "0x0040B2EE",
+        "LoD/1.11": "0x0040436F",
+        "LoD/1.11b": "0x0040736A",
+        "LoD/1.12a": "0x00404B55",
+        "LoD/1.13c": "0x00404B55",
+        "LoD/1.13d": "0x0040736A"
       },
       "rvas": {
         "LoD/1.07": "0xB810",
-        "LoD/1.08": "0xA3C9",
-        "LoD/1.09": "0xB497",
-        "LoD/1.09b": "0xB497",
-        "LoD/1.09d": "0xB497",
-        "LoD/1.10": "0xB377",
-        "LoD/1.11": "0x8E61",
-        "LoD/1.11b": "0x8E61",
-        "LoD/1.12a": "0x8F25",
-        "LoD/1.13c": "0x8F25",
-        "LoD/1.13d": "0x8E61"
+        "LoD/1.08": "0xA560",
+        "LoD/1.09": "0xB40E",
+        "LoD/1.09b": "0xB40E",
+        "LoD/1.09d": "0xB40E",
+        "LoD/1.10": "0xB2EE",
+        "LoD/1.11": "0x436F",
+        "LoD/1.11b": "0x736A",
+        "LoD/1.12a": "0x4B55",
+        "LoD/1.13c": "0x4B55",
+        "LoD/1.13d": "0x736A"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -12622,7 +14228,7 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_ff70d7fac254": {
       "addresses": {
         "LoD/1.07": "0x0040A567",
-        "LoD/1.08": "0x0040AA05",
+        "LoD/1.08": "0x0040AA57",
         "LoD/1.09": "0x0040AA77",
         "LoD/1.09b": "0x0040AA77",
         "LoD/1.09d": "0x0040AA77",
@@ -12635,7 +14241,7 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0xA567",
-        "LoD/1.08": "0xAA05",
+        "LoD/1.08": "0xAA57",
         "LoD/1.09": "0xAA77",
         "LoD/1.09b": "0xAA77",
         "LoD/1.09d": "0xAA77",
@@ -12659,7 +14265,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": 47,
         "LoD/1.13d": 47
       },
-      "signature": "void AcquireCriticalSectionForAddress(uint dwAddress)",
+      "signature": "void ReleaseCriticalSectionByAddress(uint dwAddress)",
       "calling_convention": "__cdecl",
       "comment": "Acquires a critical section for memory protection based on address range.\n\nAlgorithm:\n1. Validate address parameter against defined memory range (0x6ff38ba0 to 0x6ff38e00)\n2. If address within range: Calculate indexed critical section\n   a. Subtract base address (0x6ff38ba0) to get relative offset\n   b. Divide by 32 (SAR 0x5) to get block index\n   c. Add offset 0x1c to get critical section index\n   d. Call AcquireCriticalSectionByIndex with calculated index\n3. If address outside range: Use direct critical section approach\n   a. Add 0x20 offset to address for critical section structure\n   b. Call EnterCriticalSection with calculated address\n\nParameters:\ndwAddress - uint: Memory address requiring critical section protection\n\nReturns:\nvoid - Function does not return a value\n\nSpecial Cases:\n- Range boundary: 0x6ff38ba0 to 0x6ff38e00 (exclusive end)\n- Block size: 32 bytes per indexed critical section\n- Direct offset: +0x20 for non-indexed critical sections\n\nMagic Numbers Reference:\n0x6ff38ba0 - Start of indexed critical section memory range\n0x6ff38e00 - End of indexed critical section memory range (exclusive)\n0x5 - Right shift by 5 (divide by 32) for block indexing\n0x1c - Base index offset (28) for critical section array\n0x20 - Offset to critical section structure for direct addressing",
       "name_source": "LoD/1.08",
@@ -12730,7 +14336,7 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_2221715ad392": {
       "addresses": {
         "LoD/1.07": "0x0040A596",
-        "LoD/1.08": "0x0040AA86",
+        "LoD/1.08": "0x0040AA34",
         "LoD/1.09": "0x0040AAA6",
         "LoD/1.09b": "0x0040AAA6",
         "LoD/1.09d": "0x0040AAA6",
@@ -12738,7 +14344,7 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0xA596",
-        "LoD/1.08": "0xAA86",
+        "LoD/1.08": "0xAA34",
         "LoD/1.09": "0xAAA6",
         "LoD/1.09b": "0xAAA6",
         "LoD/1.09d": "0xAAA6",
@@ -12752,7 +14358,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09d": 35,
         "LoD/1.10": 35
       },
-      "signature": "void ReleaseCriticalSectionConditional(int nLockIndex, LockContext * pLockContext)",
+      "signature": "void AcquireCriticalSectionConditional(int nLockIndex, LockContext * pLockContext)",
       "calling_convention": "__cdecl",
       "comment": "Acquire critical section using index-based or direct method based on threshold\n\nAlgorithm:\n\n1. Load lock index parameter from stack\n2. Compare lock index against threshold value 0x14 (20)\n3. If index below threshold: branch to indexed acquisition method\n4. If index at/above threshold: use direct critical section method\n5. For indexed method: add offset 0x1c (28) to index\n6. For indexed method: call AcquireCriticalSectionByIndex with adjusted index\n7. For direct method: calculate CRITICAL_SECTION address (pLockContext + 0x20)\n8. For direct method: call Windows EnterCriticalSection API\n9. Return to caller\n\nParameters:\n\n- nLockIndex: Zero-based index of critical section to acquire\n- pLockContext: Pointer to LockContext structure containing synchronization objects\n\nReturns:\n\n- void (no return value)\n- Function modifies global synchronization state\n\nSpecial Cases:\n\n- Threshold 0x14 (20) determines which acquisition method to use\n- Index adjustment +0x1c (28) applied for indexed acquisition only\n- Offset +0x20 (32) locates CRITICAL_SECTION within LockContext structure\n\nStructure Layout:\n\nLockContext structure:\nOffset  Size  Field Name        Type                 Description\n+0x00   32    data              byte[32]            Reserved data area\n+0x20   24    criticalSection   _RTL_CRITICAL_SECTION Windows sync object\n\nMagic Numbers Reference:\n\n- 0x14 (20): Threshold separating indexed vs direct acquisition methods\n- 0x1c (28): Index offset applied before calling AcquireCriticalSectionByIndex  \n- 0x20 (32): Byte offset to criticalSection field in LockContext structure",
       "name_source": "LoD/1.08",
@@ -13668,7 +15274,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0x0040B040",
         "LoD/1.09b": "0x0040B040",
         "LoD/1.09d": "0x0040B040",
-        "LoD/1.10": "0x0040C240"
+        "LoD/1.10": "0x0040AF20"
       },
       "rvas": {
         "LoD/1.07": "0xBDA0",
@@ -13676,7 +15282,7 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09": "0xB040",
         "LoD/1.09b": "0xB040",
         "LoD/1.09d": "0xB040",
-        "LoD/1.10": "0xC240"
+        "LoD/1.10": "0xAF20"
       },
       "sizes": {
         "LoD/1.07": 664,
@@ -14458,11 +16064,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040B894",
         "LoD/1.09d": "0x0040B894",
         "LoD/1.10": "0x0040B774",
-        "LoD/1.11": "0x0040FB3D",
-        "LoD/1.11b": "0x0040FB3D",
-        "LoD/1.12a": "0x0040FC0B",
-        "LoD/1.13c": "0x0040FC0B",
-        "LoD/1.13d": "0x0040FB3D"
+        "LoD/1.11": "0x0040ECC1",
+        "LoD/1.11b": "0x0040ECC1",
+        "LoD/1.12a": "0x0040ED81",
+        "LoD/1.13c": "0x0040ED81",
+        "LoD/1.13d": "0x0040ECC1"
       },
       "rvas": {
         "LoD/1.07": "0xB2D4",
@@ -14471,11 +16077,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xB894",
         "LoD/1.09d": "0xB894",
         "LoD/1.10": "0xB774",
-        "LoD/1.11": "0xFB3D",
-        "LoD/1.11b": "0xFB3D",
-        "LoD/1.12a": "0xFC0B",
-        "LoD/1.13c": "0xFC0B",
-        "LoD/1.13d": "0xFB3D"
+        "LoD/1.11": "0xECC1",
+        "LoD/1.11b": "0xECC1",
+        "LoD/1.12a": "0xED81",
+        "LoD/1.13c": "0xED81",
+        "LoD/1.13d": "0xECC1"
       },
       "sizes": {
         "LoD/1.07": 27,
@@ -14529,11 +16135,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "15ec667135b11a0873a61b429d37dd78",
         "LoD/1.09d": "15ec667135b11a0873a61b429d37dd78",
         "LoD/1.10": "15ec667135b11a0873a61b429d37dd78",
-        "LoD/1.11": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.11b": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.12a": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.13c": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.13d": "549d5b8046a6f807c0249d1d16a7d887"
+        "LoD/1.11": "f158096e2a8fe13c6f7971757535ec37",
+        "LoD/1.11b": "f158096e2a8fe13c6f7971757535ec37",
+        "LoD/1.12a": "f158096e2a8fe13c6f7971757535ec37",
+        "LoD/1.13c": "f158096e2a8fe13c6f7971757535ec37",
+        "LoD/1.13d": "f158096e2a8fe13c6f7971757535ec37"
       }
     },
     "d2vidtst.exe_MNE_06356139b9d2": {
@@ -14793,28 +16399,28 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_09d6403e834e": {
       "addresses": {
         "LoD/1.07": "0x0040B525",
-        "LoD/1.08": "0x0040BAC5",
+        "LoD/1.08": "0x0040BAAF",
         "LoD/1.09": "0x0040BAE5",
         "LoD/1.09b": "0x0040BAE5",
         "LoD/1.09d": "0x0040BAE5",
         "LoD/1.10": "0x0040B9C5",
         "LoD/1.11": "0x0040FD44",
         "LoD/1.11b": "0x0040FD5A",
-        "LoD/1.12a": "0x0040FE12",
-        "LoD/1.13c": "0x0040FE12",
+        "LoD/1.12a": "0x0040FE28",
+        "LoD/1.13c": "0x0040FE28",
         "LoD/1.13d": "0x0040FD44"
       },
       "rvas": {
         "LoD/1.07": "0xB525",
-        "LoD/1.08": "0xBAC5",
+        "LoD/1.08": "0xBAAF",
         "LoD/1.09": "0xBAE5",
         "LoD/1.09b": "0xBAE5",
         "LoD/1.09d": "0xBAE5",
         "LoD/1.10": "0xB9C5",
         "LoD/1.11": "0xFD44",
         "LoD/1.11b": "0xFD5A",
-        "LoD/1.12a": "0xFE12",
-        "LoD/1.13c": "0xFE12",
+        "LoD/1.12a": "0xFE28",
+        "LoD/1.13c": "0xFE28",
         "LoD/1.13d": "0xFD44"
       },
       "sizes": {
@@ -14880,18 +16486,18 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.07": "0x0040B568",
         "LoD/1.08": "0x0040BB08",
-        "LoD/1.09": "0x0040BAFB",
-        "LoD/1.09b": "0x0040BAFB",
-        "LoD/1.09d": "0x0040BAFB",
-        "LoD/1.10": "0x0040BA08"
+        "LoD/1.09": "0x0040BB28",
+        "LoD/1.09b": "0x0040BB28",
+        "LoD/1.09d": "0x0040BB28",
+        "LoD/1.10": "0x0040B9DB"
       },
       "rvas": {
         "LoD/1.07": "0xB568",
         "LoD/1.08": "0xBB08",
-        "LoD/1.09": "0xBAFB",
-        "LoD/1.09b": "0xBAFB",
-        "LoD/1.09d": "0xBAFB",
-        "LoD/1.10": "0xBA08"
+        "LoD/1.09": "0xBB28",
+        "LoD/1.09b": "0xBB28",
+        "LoD/1.09d": "0xBB28",
+        "LoD/1.10": "0xB9DB"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -18732,11 +20338,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040F830",
         "LoD/1.09d": "0x0040F830",
         "LoD/1.10": "0x0040F710",
-        "LoD/1.11": "0x00410E02",
-        "LoD/1.11b": "0x00410E02",
-        "LoD/1.12a": "0x00410F37",
-        "LoD/1.13c": "0x00410F37",
-        "LoD/1.13d": "0x00410E2C"
+        "LoD/1.11": "0x00410E17",
+        "LoD/1.11b": "0x00410E17",
+        "LoD/1.12a": "0x00410F76",
+        "LoD/1.13c": "0x00410F76",
+        "LoD/1.13d": "0x00410E02"
       },
       "rvas": {
         "LoD/1.07": "0xE7D0",
@@ -18745,11 +20351,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xF830",
         "LoD/1.09d": "0xF830",
         "LoD/1.10": "0xF710",
-        "LoD/1.11": "0x10E02",
-        "LoD/1.11b": "0x10E02",
-        "LoD/1.12a": "0x10F37",
-        "LoD/1.13c": "0x10F37",
-        "LoD/1.13d": "0x10E2C"
+        "LoD/1.11": "0x10E17",
+        "LoD/1.11b": "0x10E17",
+        "LoD/1.12a": "0x10F76",
+        "LoD/1.13c": "0x10F76",
+        "LoD/1.13d": "0x10E02"
       },
       "sizes": {
         "LoD/1.07": 11,
@@ -18813,11 +20419,11 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_4a81966979e4": {
       "addresses": {
         "LoD/1.07": "0x0040E830",
-        "LoD/1.08": "0x0040F870",
+        "LoD/1.08": "0x0040F830",
         "LoD/1.09": "0x0040F870",
         "LoD/1.09b": "0x0040F890",
         "LoD/1.09d": "0x0040F890",
-        "LoD/1.10": "0x0040F740",
+        "LoD/1.10": "0x0040F770",
         "LoD/1.11": "0x00410F7B",
         "LoD/1.11b": "0x00410DD0",
         "LoD/1.12a": "0x0041109B",
@@ -18826,11 +20432,11 @@ var FUNCTIONS_D2VidTst_exe = {
       },
       "rvas": {
         "LoD/1.07": "0xE830",
-        "LoD/1.08": "0xF870",
+        "LoD/1.08": "0xF830",
         "LoD/1.09": "0xF870",
         "LoD/1.09b": "0xF890",
         "LoD/1.09d": "0xF890",
-        "LoD/1.10": "0xF740",
+        "LoD/1.10": "0xF770",
         "LoD/1.11": "0x10F7B",
         "LoD/1.11b": "0x10DD0",
         "LoD/1.12a": "0x1109B",
@@ -19317,6 +20923,138 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:ba5c50472577dd23b8aa875861d0c17b",
+      "callees": {
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "QueueLogMessage",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "GetSystemConfigInitFlag",
+          "Ordinal_10029",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "ValidateParameterOrShutdown",
+          "GetSystemConfigInitFlag",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Show window in final dialog.\"",
@@ -19476,6 +21214,38 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:e0c64c5b72de8a8f4fa39611a7e9d330",
+      "callees": {
+        "LoD/1.08": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Failed to create primary surface for cutscenes\"",
@@ -19649,11 +21419,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x00406180",
         "LoD/1.09d": "0x00406180",
         "LoD/1.10": "0x00406060",
-        "LoD/1.11": "0x004017F1",
-        "LoD/1.11b": "0x004017F1",
-        "LoD/1.12a": "0x004016C9",
-        "LoD/1.13c": "0x004017F1",
-        "LoD/1.13d": "0x004016C9"
+        "LoD/1.11": "0x00410EA0",
+        "LoD/1.11b": "0x00410EA0",
+        "LoD/1.12a": "0x00410FC0",
+        "LoD/1.13c": "0x00410FC0",
+        "LoD/1.13d": "0x00410EA0"
       },
       "rvas": {
         "LoD/1.08": "0x6160",
@@ -19661,11 +21431,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x6180",
         "LoD/1.09d": "0x6180",
         "LoD/1.10": "0x6060",
-        "LoD/1.11": "0x17F1",
-        "LoD/1.11b": "0x17F1",
-        "LoD/1.12a": "0x16C9",
-        "LoD/1.13c": "0x17F1",
-        "LoD/1.13d": "0x16C9"
+        "LoD/1.11": "0x10EA0",
+        "LoD/1.11b": "0x10EA0",
+        "LoD/1.12a": "0x10FC0",
+        "LoD/1.13c": "0x10FC0",
+        "LoD/1.13d": "0x10EA0"
       },
       "sizes": {
         "LoD/1.08": 5,
@@ -19680,8 +21450,8 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": 5
       },
       "name": "thunk_FUN_00406170",
-      "signature": "long _atol(char * _Str)",
-      "calling_convention": "__cdecl",
+      "signature": "void Unwind@00410ea0(void)",
+      "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:fdad073544ac1586678f808b3470f76a",
@@ -19729,11 +21499,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x004061A0",
         "LoD/1.09d": "0x004061A0",
         "LoD/1.10": "0x00406080",
-        "LoD/1.11": "0x00410EA0",
-        "LoD/1.11b": "0x00410EA0",
-        "LoD/1.12a": "0x00410FC0",
-        "LoD/1.13c": "0x00410FC0",
-        "LoD/1.13d": "0x00410EA0"
+        "LoD/1.11": "0x004017F1",
+        "LoD/1.11b": "0x004017F1",
+        "LoD/1.12a": "0x004016C9",
+        "LoD/1.13c": "0x004017F1",
+        "LoD/1.13d": "0x004016C9"
       },
       "rvas": {
         "LoD/1.08": "0x6180",
@@ -19741,11 +21511,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x61A0",
         "LoD/1.09d": "0x61A0",
         "LoD/1.10": "0x6080",
-        "LoD/1.11": "0x10EA0",
-        "LoD/1.11b": "0x10EA0",
-        "LoD/1.12a": "0x10FC0",
-        "LoD/1.13c": "0x10FC0",
-        "LoD/1.13d": "0x10EA0"
+        "LoD/1.11": "0x17F1",
+        "LoD/1.11b": "0x17F1",
+        "LoD/1.12a": "0x16C9",
+        "LoD/1.13c": "0x17F1",
+        "LoD/1.13d": "0x16C9"
       },
       "sizes": {
         "LoD/1.08": 5,
@@ -19898,11 +21668,11 @@ var FUNCTIONS_D2VidTst_exe = {
     },
     "d2vidtst.exe_AcquireDynamicBufferLock": {
       "addresses": {
-        "LoD/1.08": "0x00409278",
-        "LoD/1.09": "0x00409298",
-        "LoD/1.09b": "0x00409298",
-        "LoD/1.09d": "0x00409298",
-        "LoD/1.10": "0x00409178",
+        "LoD/1.08": "0x00409281",
+        "LoD/1.09": "0x004092A1",
+        "LoD/1.09b": "0x004092A1",
+        "LoD/1.09d": "0x004092A1",
+        "LoD/1.10": "0x00409181",
         "LoD/1.11": "0x00407836",
         "LoD/1.11b": "0x00407836",
         "LoD/1.12a": "0x004078C5",
@@ -19910,97 +21680,16 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "0x00407836"
       },
       "rvas": {
-        "LoD/1.08": "0x9278",
-        "LoD/1.09": "0x9298",
-        "LoD/1.09b": "0x9298",
-        "LoD/1.09d": "0x9298",
-        "LoD/1.10": "0x9178",
-        "LoD/1.11": "0x7836",
-        "LoD/1.11b": "0x7836",
-        "LoD/1.12a": "0x78C5",
-        "LoD/1.13c": "0x78C5",
-        "LoD/1.13d": "0x7836"
-      },
-      "sizes": {
-        "LoD/1.08": 9,
-        "LoD/1.09": 9,
-        "LoD/1.09b": 9,
-        "LoD/1.09d": 9,
-        "LoD/1.10": 9,
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "AcquireDynamicBufferLock",
-      "signature": "void AcquireDynamicBufferLock(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Acquires critical section 13 for thread-safe dynamic buffer operations.\n\nAlgorithm:\n1. Call FUN_6ff2c3fe with index 0xd (13) to initialize/enter critical section 13\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Critical section index 0xd (13) is reserved for dynamic buffer synchronization\n- Must be paired with FUN_6ff2b37b() (ReleaseDynamicBufferLock) to avoid deadlock\n- If critical section not initialized, FUN_6ff2c3fe will allocate and initialize it\n- Thread will block if another thread holds this critical section\n\nMagic Numbers Reference:\n0xd (13) - Critical section index for dynamic buffer operations",
-      "name_source": "LoD/1.08",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.08": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.09": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.09b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.09d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.10": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
-    "d2vidtst.exe_AcquireDynamicBufferLock_9281": {
-      "addresses": {
-        "LoD/1.08": "0x00409281",
-        "LoD/1.09": "0x004092A1",
-        "LoD/1.09b": "0x004092A1",
-        "LoD/1.09d": "0x004092A1",
-        "LoD/1.10": "0x00409181",
-        "LoD/1.11": "0x00404541",
-        "LoD/1.11b": "0x00404541",
-        "LoD/1.12a": "0x004045B1",
-        "LoD/1.13c": "0x004045B1",
-        "LoD/1.13d": "0x00404541"
-      },
-      "rvas": {
         "LoD/1.08": "0x9281",
         "LoD/1.09": "0x92A1",
         "LoD/1.09b": "0x92A1",
         "LoD/1.09d": "0x92A1",
         "LoD/1.10": "0x9181",
-        "LoD/1.11": "0x4541",
-        "LoD/1.11b": "0x4541",
-        "LoD/1.12a": "0x45B1",
-        "LoD/1.13c": "0x45B1",
-        "LoD/1.13d": "0x4541"
+        "LoD/1.11": "0x7836",
+        "LoD/1.11b": "0x7836",
+        "LoD/1.12a": "0x78C5",
+        "LoD/1.13c": "0x78C5",
+        "LoD/1.13d": "0x7836"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20291,11 +21980,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040A053",
         "LoD/1.09d": "0x0040A053",
         "LoD/1.10": "0x00409F33",
-        "LoD/1.11": "0x00404861",
-        "LoD/1.11b": "0x00404861",
-        "LoD/1.12a": "0x004048D6",
-        "LoD/1.13c": "0x004048D6",
-        "LoD/1.13d": "0x00404861"
+        "LoD/1.11": "0x00407B0C",
+        "LoD/1.11b": "0x00407B0C",
+        "LoD/1.12a": "0x00407B9B",
+        "LoD/1.13c": "0x00407B9B",
+        "LoD/1.13d": "0x00407B0C"
       },
       "rvas": {
         "LoD/1.08": "0xA033",
@@ -20303,11 +21992,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA053",
         "LoD/1.09d": "0xA053",
         "LoD/1.10": "0x9F33",
-        "LoD/1.11": "0x4861",
-        "LoD/1.11b": "0x4861",
-        "LoD/1.12a": "0x48D6",
-        "LoD/1.13c": "0x48D6",
-        "LoD/1.13d": "0x4861"
+        "LoD/1.11": "0x7B0C",
+        "LoD/1.11b": "0x7B0C",
+        "LoD/1.12a": "0x7B9B",
+        "LoD/1.13c": "0x7B9B",
+        "LoD/1.13d": "0x7B0C"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20474,11 +22163,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040A261",
         "LoD/1.09d": "0x0040A261",
         "LoD/1.10": "0x0040A141",
-        "LoD/1.11": "0x00404AE0",
-        "LoD/1.11b": "0x00404AE0",
-        "LoD/1.12a": "0x00404ADA",
-        "LoD/1.13c": "0x00404ADA",
-        "LoD/1.13d": "0x0040736A"
+        "LoD/1.11": "0x00404861",
+        "LoD/1.11b": "0x00404861",
+        "LoD/1.12a": "0x004048D6",
+        "LoD/1.13c": "0x004048D6",
+        "LoD/1.13d": "0x00404861"
       },
       "rvas": {
         "LoD/1.08": "0xA241",
@@ -20486,11 +22175,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA261",
         "LoD/1.09d": "0xA261",
         "LoD/1.10": "0xA141",
-        "LoD/1.11": "0x4AE0",
-        "LoD/1.11b": "0x4AE0",
-        "LoD/1.12a": "0x4ADA",
-        "LoD/1.13c": "0x4ADA",
-        "LoD/1.13d": "0x736A"
+        "LoD/1.11": "0x4861",
+        "LoD/1.11b": "0x4861",
+        "LoD/1.12a": "0x48D6",
+        "LoD/1.13c": "0x48D6",
+        "LoD/1.13d": "0x4861"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20555,11 +22244,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040A2DC",
         "LoD/1.09d": "0x0040A2DC",
         "LoD/1.10": "0x0040A1BC",
-        "LoD/1.11": "0x0040736A",
-        "LoD/1.11b": "0x0040736A",
-        "LoD/1.12a": "0x00401623",
-        "LoD/1.13c": "0x0040174B",
-        "LoD/1.13d": "0x00404AE0"
+        "LoD/1.11": "0x0040486A",
+        "LoD/1.11b": "0x0040486A",
+        "LoD/1.12a": "0x004048DF",
+        "LoD/1.13c": "0x004048DF",
+        "LoD/1.13d": "0x0040486A"
       },
       "rvas": {
         "LoD/1.08": "0xA2BC",
@@ -20567,11 +22256,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA2DC",
         "LoD/1.09d": "0xA2DC",
         "LoD/1.10": "0xA1BC",
-        "LoD/1.11": "0x736A",
-        "LoD/1.11b": "0x736A",
-        "LoD/1.12a": "0x1623",
-        "LoD/1.13c": "0x174B",
-        "LoD/1.13d": "0x4AE0"
+        "LoD/1.11": "0x486A",
+        "LoD/1.11b": "0x486A",
+        "LoD/1.12a": "0x48DF",
+        "LoD/1.13c": "0x48DF",
+        "LoD/1.13d": "0x486A"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20687,11 +22376,11 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0x0040A38A",
         "LoD/1.09d": "0x0040A38A",
         "LoD/1.10": "0x0040A26A",
-        "LoD/1.11": "0x00403480",
-        "LoD/1.11b": "0x00403480",
-        "LoD/1.12a": "0x004034F0",
-        "LoD/1.13c": "0x004034F0",
-        "LoD/1.13d": "0x00403480"
+        "LoD/1.11": "0x00404AE0",
+        "LoD/1.11b": "0x00404AE0",
+        "LoD/1.12a": "0x00404ADA",
+        "LoD/1.13c": "0x00404ADA",
+        "LoD/1.13d": "0x00404AE0"
       },
       "rvas": {
         "LoD/1.08": "0xA36A",
@@ -20699,11 +22388,92 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.09b": "0xA38A",
         "LoD/1.09d": "0xA38A",
         "LoD/1.10": "0xA26A",
-        "LoD/1.11": "0x3480",
-        "LoD/1.11b": "0x3480",
-        "LoD/1.12a": "0x34F0",
-        "LoD/1.13c": "0x34F0",
-        "LoD/1.13d": "0x3480"
+        "LoD/1.11": "0x4AE0",
+        "LoD/1.11b": "0x4AE0",
+        "LoD/1.12a": "0x4ADA",
+        "LoD/1.13c": "0x4ADA",
+        "LoD/1.13d": "0x4AE0"
+      },
+      "sizes": {
+        "LoD/1.08": 9,
+        "LoD/1.09": 9,
+        "LoD/1.09b": 9,
+        "LoD/1.09d": 9,
+        "LoD/1.10": 9,
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "ReleaseMemoryAllocationLock",
+      "signature": "void ReleaseMemoryAllocationLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the critical section lock used for memory allocation operations.\n\nAlgorithm:\n1. Release critical section index 9 via ReleaseCriticalSectionByIndex\n2. Return to caller\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\nCritical section index 9 is hardcoded and appears to be specifically allocated for memory allocation synchronization. This function is called by ReallocateMemoryWithStrategy to release the lock after memory operations complete.",
+      "name_source": "LoD/1.08",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.08": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.09": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.09b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.09d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.10": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "d2vidtst.exe_ReleaseMemoryAllocationLock_A3C9": {
+      "addresses": {
+        "LoD/1.08": "0x0040A3C9",
+        "LoD/1.09": "0x0040A3E9",
+        "LoD/1.09b": "0x0040A3E9",
+        "LoD/1.09d": "0x0040A3E9",
+        "LoD/1.10": "0x0040A2C9",
+        "LoD/1.11": "0x00408E61",
+        "LoD/1.11b": "0x00408E61",
+        "LoD/1.12a": "0x00408F25",
+        "LoD/1.13c": "0x00408F25",
+        "LoD/1.13d": "0x00408E61"
+      },
+      "rvas": {
+        "LoD/1.08": "0xA3C9",
+        "LoD/1.09": "0xA3E9",
+        "LoD/1.09b": "0xA3E9",
+        "LoD/1.09d": "0xA3E9",
+        "LoD/1.10": "0xA2C9",
+        "LoD/1.11": "0x8E61",
+        "LoD/1.11b": "0x8E61",
+        "LoD/1.12a": "0x8F25",
+        "LoD/1.13c": "0x8F25",
+        "LoD/1.13d": "0x8E61"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20812,30 +22582,30 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.10": "38a52ad8d9123a0ed65e4de10b1cf943"
       }
     },
-    "d2vidtst.exe_ReleaseMemoryAllocationLock_A560": {
+    "d2vidtst.exe_ReleaseMemoryAllocationLock_A508": {
       "addresses": {
-        "LoD/1.08": "0x0040A560",
-        "LoD/1.09": "0x0040A580",
-        "LoD/1.09b": "0x0040A580",
-        "LoD/1.09d": "0x0040A580",
-        "LoD/1.10": "0x0040A460",
-        "LoD/1.11": "0x00407B0C",
-        "LoD/1.11b": "0x00407B0C",
-        "LoD/1.12a": "0x00407B9B",
-        "LoD/1.13c": "0x00407B9B",
-        "LoD/1.13d": "0x00407B0C"
+        "LoD/1.08": "0x0040A508",
+        "LoD/1.09": "0x0040A528",
+        "LoD/1.09b": "0x0040A528",
+        "LoD/1.09d": "0x0040A528",
+        "LoD/1.10": "0x0040A408",
+        "LoD/1.11": "0x004047EC",
+        "LoD/1.11b": "0x004047EC",
+        "LoD/1.12a": "0x0040485C",
+        "LoD/1.13c": "0x0040485C",
+        "LoD/1.13d": "0x004047EC"
       },
       "rvas": {
-        "LoD/1.08": "0xA560",
-        "LoD/1.09": "0xA580",
-        "LoD/1.09b": "0xA580",
-        "LoD/1.09d": "0xA580",
-        "LoD/1.10": "0xA460",
-        "LoD/1.11": "0x7B0C",
-        "LoD/1.11b": "0x7B0C",
-        "LoD/1.12a": "0x7B9B",
-        "LoD/1.13c": "0x7B9B",
-        "LoD/1.13d": "0x7B0C"
+        "LoD/1.08": "0xA508",
+        "LoD/1.09": "0xA528",
+        "LoD/1.09b": "0xA528",
+        "LoD/1.09d": "0xA528",
+        "LoD/1.10": "0xA408",
+        "LoD/1.11": "0x47EC",
+        "LoD/1.11b": "0x47EC",
+        "LoD/1.12a": "0x485C",
+        "LoD/1.13c": "0x485C",
+        "LoD/1.13d": "0x47EC"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -20944,30 +22714,30 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.10": "371cf2604575a233020cd5d20fe5277c"
       }
     },
-    "d2vidtst.exe_ReleaseMemoryAllocationLock_B3EE": {
+    "d2vidtst.exe_ReleaseMemoryAllocationLock_B477": {
       "addresses": {
-        "LoD/1.08": "0x0040B3EE",
-        "LoD/1.09": "0x0040B40E",
-        "LoD/1.09b": "0x0040B40E",
-        "LoD/1.09d": "0x0040B40E",
-        "LoD/1.10": "0x0040B2EE",
-        "LoD/1.11": "0x0040454D",
-        "LoD/1.11b": "0x0040454D",
-        "LoD/1.12a": "0x004045BD",
-        "LoD/1.13c": "0x004045BD",
-        "LoD/1.13d": "0x0040454D"
+        "LoD/1.08": "0x0040B477",
+        "LoD/1.09": "0x0040B497",
+        "LoD/1.09b": "0x0040B497",
+        "LoD/1.09d": "0x0040B497",
+        "LoD/1.10": "0x0040B377",
+        "LoD/1.11": "0x0040174B",
+        "LoD/1.11b": "0x0040174B",
+        "LoD/1.12a": "0x004073E6",
+        "LoD/1.13c": "0x004073E6",
+        "LoD/1.13d": "0x00404A65"
       },
       "rvas": {
-        "LoD/1.08": "0xB3EE",
-        "LoD/1.09": "0xB40E",
-        "LoD/1.09b": "0xB40E",
-        "LoD/1.09d": "0xB40E",
-        "LoD/1.10": "0xB2EE",
-        "LoD/1.11": "0x454D",
-        "LoD/1.11b": "0x454D",
-        "LoD/1.12a": "0x45BD",
-        "LoD/1.13c": "0x45BD",
-        "LoD/1.13d": "0x454D"
+        "LoD/1.08": "0xB477",
+        "LoD/1.09": "0xB497",
+        "LoD/1.09b": "0xB497",
+        "LoD/1.09d": "0xB497",
+        "LoD/1.10": "0xB377",
+        "LoD/1.11": "0x174B",
+        "LoD/1.11b": "0x174B",
+        "LoD/1.12a": "0x73E6",
+        "LoD/1.13c": "0x73E6",
+        "LoD/1.13d": "0x4A65"
       },
       "sizes": {
         "LoD/1.08": 9,
@@ -22526,6 +24296,20 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7c308290a3e2c2e8795a914b5df1adf9",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUTMESSAGESOURCE@@\""
@@ -22857,57 +24641,6 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "d5c8453c3e2bb4ff6f437d3d747d2c97",
         "LoD/1.13c": "d5c8453c3e2bb4ff6f437d3d747d2c97",
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
-      }
-    },
-    "d2vidtst.exe_LeaveCriticalSectionForMemoryF": {
-      "addresses": {
-        "LoD/1.11": "0x0040174B",
-        "LoD/1.11b": "0x0040174B",
-        "LoD/1.12a": "0x00404B55",
-        "LoD/1.13c": "0x00404B55",
-        "LoD/1.13d": "0x00401623"
-      },
-      "rvas": {
-        "LoD/1.11": "0x174B",
-        "LoD/1.11b": "0x174B",
-        "LoD/1.12a": "0x4B55",
-        "LoD/1.13c": "0x4B55",
-        "LoD/1.13d": "0x1623"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "LeaveCriticalSectionForMemoryFree",
-      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2vidtst.exe__atol": {
@@ -23705,6 +25438,57 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "a51a9a5e7ceb2fab96b937dc9f784c13"
       }
     },
+    "d2vidtst.exe_ReleaseMTInitLock": {
+      "addresses": {
+        "LoD/1.11": "0x00403480",
+        "LoD/1.11b": "0x00403480",
+        "LoD/1.12a": "0x004034F0",
+        "LoD/1.13c": "0x004034F0",
+        "LoD/1.13d": "0x00403480"
+      },
+      "rvas": {
+        "LoD/1.11": "0x3480",
+        "LoD/1.11b": "0x3480",
+        "LoD/1.12a": "0x34F0",
+        "LoD/1.13c": "0x34F0",
+        "LoD/1.13d": "0x3480"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "ReleaseMTInitLock",
+      "signature": "void ReleaseMTInitLock(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "d2vidtst.exe____sbh_free_block": {
       "addresses": {
         "LoD/1.11": "0x0040352D",
@@ -24266,57 +26050,6 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
       }
     },
-    "d2vidtst.exe_UnlockCriticalSection12": {
-      "addresses": {
-        "LoD/1.11": "0x0040436F",
-        "LoD/1.11b": "0x0040436F",
-        "LoD/1.12a": "0x004043DF",
-        "LoD/1.13c": "0x004043DF",
-        "LoD/1.13d": "0x0040436F"
-      },
-      "rvas": {
-        "LoD/1.11": "0x436F",
-        "LoD/1.11b": "0x436F",
-        "LoD/1.12a": "0x43DF",
-        "LoD/1.13c": "0x43DF",
-        "LoD/1.13d": "0x436F"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "UnlockCriticalSection12",
-      "signature": "void UnlockCriticalSection12(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "d2vidtst.exe_AllocateTlsSlot": {
       "addresses": {
         "LoD/1.11": "0x00404378",
@@ -24470,6 +26203,57 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "04f1e6f173a4f00f5247db68bf412e5b"
       }
     },
+    "d2vidtst.exe_UnlockCriticalSection12": {
+      "addresses": {
+        "LoD/1.11": "0x0040454D",
+        "LoD/1.11b": "0x0040454D",
+        "LoD/1.12a": "0x004045BD",
+        "LoD/1.13c": "0x004045BD",
+        "LoD/1.13d": "0x0040454D"
+      },
+      "rvas": {
+        "LoD/1.11": "0x454D",
+        "LoD/1.11b": "0x454D",
+        "LoD/1.12a": "0x45BD",
+        "LoD/1.13c": "0x45BD",
+        "LoD/1.13d": "0x454D"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "UnlockCriticalSection12",
+      "signature": "void UnlockCriticalSection12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
     "d2vidtst.exe___mtinit": {
       "addresses": {
         "LoD/1.11": "0x00404556",
@@ -24499,6 +26283,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -24897,20 +26698,20 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "7fa238a0d1fe5549fc522252a2120d78"
       }
     },
-    "d2vidtst.exe_LeaveCriticalSectionForMemoryF_4A65": {
+    "d2vidtst.exe_LeaveCriticalSectionForMemoryF": {
       "addresses": {
         "LoD/1.11": "0x00404A65",
         "LoD/1.11b": "0x00404A65",
-        "LoD/1.12a": "0x004073E6",
-        "LoD/1.13c": "0x004073E6",
-        "LoD/1.13d": "0x00404A65"
+        "LoD/1.12a": "0x00401623",
+        "LoD/1.13c": "0x0040174B",
+        "LoD/1.13d": "0x00401623"
       },
       "rvas": {
         "LoD/1.11": "0x4A65",
         "LoD/1.11b": "0x4A65",
-        "LoD/1.12a": "0x73E6",
-        "LoD/1.13c": "0x73E6",
-        "LoD/1.13d": "0x4A65"
+        "LoD/1.12a": "0x1623",
+        "LoD/1.13c": "0x174B",
+        "LoD/1.13d": "0x1623"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -25360,14 +27161,14 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x0040548D",
         "LoD/1.11b": "0x0040548D",
-        "LoD/1.12a": "0x00405503",
+        "LoD/1.12a": "0x00405547",
         "LoD/1.13c": "0x00405503",
         "LoD/1.13d": "0x0040548D"
       },
       "rvas": {
         "LoD/1.11": "0x548D",
         "LoD/1.11b": "0x548D",
-        "LoD/1.12a": "0x5503",
+        "LoD/1.12a": "0x5547",
         "LoD/1.13c": "0x5503",
         "LoD/1.13d": "0x548D"
       },
@@ -25411,14 +27212,14 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x004054D1",
         "LoD/1.11b": "0x004054D1",
-        "LoD/1.12a": "0x00405547",
+        "LoD/1.12a": "0x00405503",
         "LoD/1.13c": "0x00405547",
         "LoD/1.13d": "0x004054D1"
       },
       "rvas": {
         "LoD/1.11": "0x54D1",
         "LoD/1.11b": "0x54D1",
-        "LoD/1.12a": "0x5547",
+        "LoD/1.12a": "0x5503",
         "LoD/1.13c": "0x5547",
         "LoD/1.13d": "0x54D1"
       },
@@ -25563,16 +27364,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x004055D1",
         "LoD/1.11b": "0x004055D1",
-        "LoD/1.12a": "0x00405641",
-        "LoD/1.13c": "0x00405641",
-        "LoD/1.13d": "0x0040584A"
+        "LoD/1.12a": "0x004081E4",
+        "LoD/1.13c": "0x004081E4",
+        "LoD/1.13d": "0x004055D1"
       },
       "rvas": {
         "LoD/1.11": "0x55D1",
         "LoD/1.11b": "0x55D1",
-        "LoD/1.12a": "0x5641",
-        "LoD/1.13c": "0x5641",
-        "LoD/1.13d": "0x584A"
+        "LoD/1.12a": "0x81E4",
+        "LoD/1.13c": "0x81E4",
+        "LoD/1.13d": "0x55D1"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -25614,16 +27415,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00405658",
         "LoD/1.11b": "0x00405658",
-        "LoD/1.12a": "0x0040826B",
-        "LoD/1.13c": "0x0040826B",
-        "LoD/1.13d": "0x004081D7"
+        "LoD/1.12a": "0x00408C7B",
+        "LoD/1.13c": "0x00408C7B",
+        "LoD/1.13d": "0x004058D1"
       },
       "rvas": {
         "LoD/1.11": "0x5658",
         "LoD/1.11b": "0x5658",
-        "LoD/1.12a": "0x826B",
-        "LoD/1.13c": "0x826B",
-        "LoD/1.13d": "0x81D7"
+        "LoD/1.12a": "0x8C7B",
+        "LoD/1.13c": "0x8C7B",
+        "LoD/1.13d": "0x58D1"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -25700,14 +27501,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x0040584A",
         "LoD/1.12a": "0x004058A8",
         "LoD/1.13c": "0x004058A8",
-        "LoD/1.13d": "0x004055D1"
+        "LoD/1.13d": "0x00408150"
       },
       "rvas": {
         "LoD/1.11": "0x584A",
         "LoD/1.11b": "0x584A",
         "LoD/1.12a": "0x58A8",
         "LoD/1.13c": "0x58A8",
-        "LoD/1.13d": "0x55D1"
+        "LoD/1.13d": "0x8150"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -25751,14 +27552,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x004058D1",
         "LoD/1.12a": "0x004056C8",
         "LoD/1.13c": "0x004056C8",
-        "LoD/1.13d": "0x00408BBB"
+        "LoD/1.13d": "0x004081D7"
       },
       "rvas": {
         "LoD/1.11": "0x58D1",
         "LoD/1.11b": "0x58D1",
         "LoD/1.12a": "0x56C8",
         "LoD/1.13c": "0x56C8",
-        "LoD/1.13d": "0x8BBB"
+        "LoD/1.13d": "0x81D7"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -26637,16 +28438,16 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe__memmove": {
       "addresses": {
         "LoD/1.11": "0x00406270",
-        "LoD/1.11b": "0x00406E40",
-        "LoD/1.12a": "0x00406EA0",
-        "LoD/1.13c": "0x00406EA0",
+        "LoD/1.11b": "0x00406270",
+        "LoD/1.12a": "0x004062D0",
+        "LoD/1.13c": "0x004062D0",
         "LoD/1.13d": "0x00406270"
       },
       "rvas": {
         "LoD/1.11": "0x6270",
-        "LoD/1.11b": "0x6E40",
-        "LoD/1.12a": "0x6EA0",
-        "LoD/1.13c": "0x6EA0",
+        "LoD/1.11b": "0x6270",
+        "LoD/1.12a": "0x62D0",
+        "LoD/1.13c": "0x62D0",
         "LoD/1.13d": "0x6270"
       },
       "sizes": {
@@ -27096,16 +28897,16 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe__memmove_6E40": {
       "addresses": {
         "LoD/1.11": "0x00406E40",
-        "LoD/1.11b": "0x00406270",
-        "LoD/1.12a": "0x004062D0",
-        "LoD/1.13c": "0x004062D0",
+        "LoD/1.11b": "0x00406E40",
+        "LoD/1.12a": "0x00406EA0",
+        "LoD/1.13c": "0x00406EA0",
         "LoD/1.13d": "0x00406E40"
       },
       "rvas": {
         "LoD/1.11": "0x6E40",
-        "LoD/1.11b": "0x6270",
-        "LoD/1.12a": "0x62D0",
-        "LoD/1.13c": "0x62D0",
+        "LoD/1.11b": "0x6E40",
+        "LoD/1.12a": "0x6EA0",
+        "LoD/1.13c": "0x6EA0",
         "LoD/1.13d": "0x6E40"
       },
       "sizes": {
@@ -28072,16 +29873,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00408150",
         "LoD/1.11b": "0x00408150",
-        "LoD/1.12a": "0x004081E4",
-        "LoD/1.13c": "0x004081E4",
-        "LoD/1.13d": "0x00408150"
+        "LoD/1.12a": "0x00405641",
+        "LoD/1.13c": "0x00405641",
+        "LoD/1.13d": "0x0040584A"
       },
       "rvas": {
         "LoD/1.11": "0x8150",
         "LoD/1.11b": "0x8150",
-        "LoD/1.12a": "0x81E4",
-        "LoD/1.13c": "0x81E4",
-        "LoD/1.13d": "0x8150"
+        "LoD/1.12a": "0x5641",
+        "LoD/1.13c": "0x5641",
+        "LoD/1.13d": "0x584A"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -28123,15 +29924,15 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x004081D7",
         "LoD/1.11b": "0x004081D7",
-        "LoD/1.12a": "0x00408A11",
-        "LoD/1.13c": "0x00408A11",
+        "LoD/1.12a": "0x0040826B",
+        "LoD/1.13c": "0x0040826B",
         "LoD/1.13d": "0x00405658"
       },
       "rvas": {
         "LoD/1.11": "0x81D7",
         "LoD/1.11b": "0x81D7",
-        "LoD/1.12a": "0x8A11",
-        "LoD/1.13c": "0x8A11",
+        "LoD/1.12a": "0x826B",
+        "LoD/1.13c": "0x826B",
         "LoD/1.13d": "0x5658"
       },
       "sizes": {
@@ -28377,14 +30178,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x00408957",
         "LoD/1.12a": "0x0040592F",
         "LoD/1.13c": "0x0040592F",
-        "LoD/1.13d": "0x00408957"
+        "LoD/1.13d": "0x00408BBB"
       },
       "rvas": {
         "LoD/1.11": "0x8957",
         "LoD/1.11b": "0x8957",
         "LoD/1.12a": "0x592F",
         "LoD/1.13c": "0x592F",
-        "LoD/1.13d": "0x8957"
+        "LoD/1.13d": "0x8BBB"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -28630,16 +30431,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00408BBB",
         "LoD/1.11b": "0x00408BBB",
-        "LoD/1.12a": "0x00408C7B",
-        "LoD/1.13c": "0x00408C7B",
-        "LoD/1.13d": "0x004058D1"
+        "LoD/1.12a": "0x00408A11",
+        "LoD/1.13c": "0x00408A11",
+        "LoD/1.13d": "0x00408957"
       },
       "rvas": {
         "LoD/1.11": "0x8BBB",
         "LoD/1.11b": "0x8BBB",
-        "LoD/1.12a": "0x8C7B",
-        "LoD/1.13c": "0x8C7B",
-        "LoD/1.13d": "0x58D1"
+        "LoD/1.12a": "0x8A11",
+        "LoD/1.13c": "0x8A11",
+        "LoD/1.13d": "0x8957"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -28677,20 +30478,20 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
-    "d2vidtst.exe_OpenAndProcessFile": {
+    "d2vidtst.exe_AllocateMemoryFromArena": {
       "addresses": {
-        "LoD/1.11": "0x00408D02",
-        "LoD/1.11b": "0x00408D02",
-        "LoD/1.12a": "0x00408DB6",
-        "LoD/1.13c": "0x00408DC2",
-        "LoD/1.13d": "0x00408CF6"
+        "LoD/1.11": "0x00408CF0",
+        "LoD/1.11b": "0x00408CF0",
+        "LoD/1.12a": "0x00408DBC",
+        "LoD/1.13c": "0x00408DB0",
+        "LoD/1.13d": "0x00408D20"
       },
       "rvas": {
-        "LoD/1.11": "0x8D02",
-        "LoD/1.11b": "0x8D02",
-        "LoD/1.12a": "0x8DB6",
-        "LoD/1.13c": "0x8DC2",
-        "LoD/1.13d": "0x8CF6"
+        "LoD/1.11": "0x8CF0",
+        "LoD/1.11b": "0x8CF0",
+        "LoD/1.12a": "0x8DBC",
+        "LoD/1.13c": "0x8DB0",
+        "LoD/1.13d": "0x8D20"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -28699,8 +30500,58 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "OpenAndProcessFile",
-      "signature": "void OpenAndProcessFile(int * pFilePath, int * pOutputHandle)",
+      "name": "AllocateMemoryFromArena",
+      "signature": "void * AllocateMemoryFromArena(uint dwAllocationSize, void * pUnused, int nArenaMode, uint dwPoolSize)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "d2vidtst.exe_OpenFileArchive": {
+      "addresses": {
+        "LoD/1.11": "0x00408CFC",
+        "LoD/1.11b": "0x00408CFC",
+        "LoD/1.12a": "0x00408DB0",
+        "LoD/1.13c": "0x00408DBC",
+        "LoD/1.13d": "0x00408CF0"
+      },
+      "rvas": {
+        "LoD/1.11": "0x8CFC",
+        "LoD/1.11b": "0x8CFC",
+        "LoD/1.12a": "0x8DB0",
+        "LoD/1.13c": "0x8DBC",
+        "LoD/1.13d": "0x8CF0"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "OpenFileArchive",
+      "signature": "uint OpenFileArchive(char * pFilePath, uint archiveId, uint flags, uint * pArchiveHandle)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -28729,17 +30580,17 @@ var FUNCTIONS_D2VidTst_exe = {
     },
     "d2vidtst.exe_ReleaseFileHandleWithRefCount": {
       "addresses": {
-        "LoD/1.11": "0x00408D0E",
-        "LoD/1.11b": "0x00408D0E",
-        "LoD/1.12a": "0x00408DD4",
-        "LoD/1.13c": "0x00408DD4",
+        "LoD/1.11": "0x00408D14",
+        "LoD/1.11b": "0x00408D14",
+        "LoD/1.12a": "0x00408DCE",
+        "LoD/1.13c": "0x00408DCE",
         "LoD/1.13d": "0x00408D0E"
       },
       "rvas": {
-        "LoD/1.11": "0x8D0E",
-        "LoD/1.11b": "0x8D0E",
-        "LoD/1.12a": "0x8DD4",
-        "LoD/1.13c": "0x8DD4",
+        "LoD/1.11": "0x8D14",
+        "LoD/1.11b": "0x8D14",
+        "LoD/1.12a": "0x8DCE",
+        "LoD/1.13c": "0x8DCE",
         "LoD/1.13d": "0x8D0E"
       },
       "sizes": {
@@ -28775,50 +30626,6 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "d2vidtst.exe_InitializeGameInstance": {
-      "addresses": {
-        "LoD/1.11": "0x00408D26",
-        "LoD/1.11b": "0x00408D26",
-        "LoD/1.12a": "0x00408DE0",
-        "LoD/1.13c": "0x00408DE6"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8D26",
-        "LoD/1.11b": "0x8D26",
-        "LoD/1.12a": "0x8DE0",
-        "LoD/1.13c": "0x8DE6"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6
-      },
-      "name": "InitializeGameInstance",
-      "signature": "void InitializeGameInstance(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
     "d2vidtst.exe_RemoveAll": {
@@ -29323,6 +31130,20 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:875dbff72cb1092ab9a7d9bffdc8924d",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUTMESSAGESOURCE@@\""
@@ -29680,17 +31501,17 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_2b58328e19af": {
       "addresses": {
         "LoD/1.11": "0x00409380",
-        "LoD/1.11b": "0x0040A7B0",
+        "LoD/1.11b": "0x0040A820",
         "LoD/1.12a": "0x004099C0",
-        "LoD/1.13c": "0x0040A9D0",
-        "LoD/1.13d": "0x0040AE20"
+        "LoD/1.13c": "0x0040A960",
+        "LoD/1.13d": "0x0040AE90"
       },
       "rvas": {
         "LoD/1.11": "0x9380",
-        "LoD/1.11b": "0xA7B0",
+        "LoD/1.11b": "0xA820",
         "LoD/1.12a": "0x99C0",
-        "LoD/1.13c": "0xA9D0",
-        "LoD/1.13d": "0xAE20"
+        "LoD/1.13c": "0xA960",
+        "LoD/1.13d": "0xAE90"
       },
       "sizes": {
         "LoD/1.11": 107,
@@ -29727,17 +31548,17 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_MNE_2b58328e19af_93F0": {
       "addresses": {
         "LoD/1.11": "0x004093F0",
-        "LoD/1.11b": "0x0040A820",
+        "LoD/1.11b": "0x0040A7B0",
         "LoD/1.12a": "0x00409A30",
-        "LoD/1.13c": "0x0040A960",
-        "LoD/1.13d": "0x0040AE90"
+        "LoD/1.13c": "0x0040A9D0",
+        "LoD/1.13d": "0x0040AE20"
       },
       "rvas": {
         "LoD/1.11": "0x93F0",
-        "LoD/1.11b": "0xA820",
+        "LoD/1.11b": "0xA7B0",
         "LoD/1.12a": "0x9A30",
-        "LoD/1.13c": "0xA960",
-        "LoD/1.13d": "0xAE90"
+        "LoD/1.13c": "0xA9D0",
+        "LoD/1.13d": "0xAE20"
       },
       "sizes": {
         "LoD/1.11": 107,
@@ -29840,6 +31661,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:273ea5458b7e9dfa541ea566fbd492e6",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\" ** Couldn't clean up Direct3DDetect ** \""
@@ -29907,6 +31745,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:69f600a25799930347377ed8df5ce504",
+      "callees": {
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\" ** Couldn't clean up DDrawDetect ** \""
@@ -30073,6 +31928,23 @@ var FUNCTIONS_D2VidTst_exe = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18",
+      "callees": {
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -30603,57 +32475,6 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.12a": "0e5fe8f035f67d55ee839a615aebb8b3",
         "LoD/1.13c": "0e5fe8f035f67d55ee839a615aebb8b3",
         "LoD/1.13d": "0e5fe8f035f67d55ee839a615aebb8b3"
-      }
-    },
-    "d2vidtst.exe_DecrementPureCallCounter": {
-      "addresses": {
-        "LoD/1.11": "0x0040ECC1",
-        "LoD/1.11b": "0x0040ECC1",
-        "LoD/1.12a": "0x0040ED81",
-        "LoD/1.13c": "0x0040ED81",
-        "LoD/1.13d": "0x0040ECC1"
-      },
-      "rvas": {
-        "LoD/1.11": "0xECC1",
-        "LoD/1.11b": "0xECC1",
-        "LoD/1.12a": "0xED81",
-        "LoD/1.13c": "0xED81",
-        "LoD/1.13d": "0xECC1"
-      },
-      "sizes": {
-        "LoD/1.11": 27,
-        "LoD/1.11b": 27,
-        "LoD/1.12a": 27,
-        "LoD/1.13c": 27,
-        "LoD/1.13d": 27
-      },
-      "name": "DecrementPureCallCounter",
-      "signature": "void DecrementPureCallCounter(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Decrements the pure virtual call counter for the current thread in MSVCRT.\nPart of C++ exception handling and pure virtual function call tracking.\nWhen a pure virtual function is called, this counter prevents infinite recursion.\n\nAlgorithm:\n1. Call __getptd() to obtain thread-local data structure pointer\n2. Check _purecall counter at offset +0x84 to see if it is positive\n3. If counter > 0, retrieve thread-local data again via __getptd()\n4. Add offset 0x84 to reach the _purecall counter field\n5. Decrement the counter value by 1\n6. Return to caller\n\nParameters:\nNone - function uses thread-local storage internally via __getptd()\n\nReturns:\nvoid - no explicit return value; modifies thread-local counter state",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f158096e2a8fe13c6f7971757535ec37",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f158096e2a8fe13c6f7971757535ec37",
-        "LoD/1.11b": "f158096e2a8fe13c6f7971757535ec37",
-        "LoD/1.12a": "f158096e2a8fe13c6f7971757535ec37",
-        "LoD/1.13c": "f158096e2a8fe13c6f7971757535ec37",
-        "LoD/1.13d": "f158096e2a8fe13c6f7971757535ec37"
       }
     },
     "d2vidtst.exe____DestructExceptionObject": {
@@ -31563,16 +33384,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x0040F9E4",
         "LoD/1.11b": "0x0040F9E4",
-        "LoD/1.12a": "0x0040FACE",
-        "LoD/1.13c": "0x0040FACE",
-        "LoD/1.13d": "0x0040FA00"
+        "LoD/1.12a": "0x0040FAB2",
+        "LoD/1.13c": "0x0040FAB2",
+        "LoD/1.13d": "0x0040F9E4"
       },
       "rvas": {
         "LoD/1.11": "0xF9E4",
         "LoD/1.11b": "0xF9E4",
-        "LoD/1.12a": "0xFACE",
-        "LoD/1.13c": "0xFACE",
-        "LoD/1.13d": "0xFA00"
+        "LoD/1.12a": "0xFAB2",
+        "LoD/1.13c": "0xFAB2",
+        "LoD/1.13d": "0xF9E4"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -31614,16 +33435,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x0040FA00",
         "LoD/1.11b": "0x0040FA00",
-        "LoD/1.12a": "0x0040FAB2",
-        "LoD/1.13c": "0x0040FAB2",
-        "LoD/1.13d": "0x0040F9E4"
+        "LoD/1.12a": "0x0040FACE",
+        "LoD/1.13c": "0x0040FACE",
+        "LoD/1.13d": "0x0040FA00"
       },
       "rvas": {
         "LoD/1.11": "0xFA00",
         "LoD/1.11b": "0xFA00",
-        "LoD/1.12a": "0xFAB2",
-        "LoD/1.13c": "0xFAB2",
-        "LoD/1.13d": "0xF9E4"
+        "LoD/1.12a": "0xFACE",
+        "LoD/1.13c": "0xFACE",
+        "LoD/1.13d": "0xFA00"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -31814,6 +33635,57 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13d": "d1605fa863a6daa5441d188cba14b16b"
       }
     },
+    "d2vidtst.exe___CopyMan": {
+      "addresses": {
+        "LoD/1.11": "0x0040FB3D",
+        "LoD/1.11b": "0x0040FB3D",
+        "LoD/1.12a": "0x0040FC0B",
+        "LoD/1.13c": "0x0040FC0B",
+        "LoD/1.13d": "0x0040FB3D"
+      },
+      "rvas": {
+        "LoD/1.11": "0xFB3D",
+        "LoD/1.11b": "0xFB3D",
+        "LoD/1.12a": "0xFC0B",
+        "LoD/1.13c": "0xFC0B",
+        "LoD/1.13d": "0xFB3D"
+      },
+      "sizes": {
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27
+      },
+      "name": "__CopyMan",
+      "signature": "undefined __CopyMan(int param_1, undefined4 * param_2)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __CopyMan\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:549d5b8046a6f807c0249d1d16a7d887",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.11b": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.12a": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.13c": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.13d": "549d5b8046a6f807c0249d1d16a7d887"
+      }
+    },
     "d2vidtst.exe___IsZeroMan": {
       "addresses": {
         "LoD/1.11": "0x0040FB58",
@@ -31868,11 +33740,11 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_FID_conflict:__atodbl": {
       "addresses": {
         "LoD/1.11": "0x0040FD70",
-        "LoD/1.11b": "0x0040FDAD"
+        "LoD/1.11b": "0x0040FD70"
       },
       "rvas": {
         "LoD/1.11": "0xFD70",
-        "LoD/1.11b": "0xFDAD"
+        "LoD/1.11b": "0xFD70"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -32447,20 +34319,20 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "1716f4745fd2cb6027c906fa16d26504"
       }
     },
-    "d2vidtst.exe_Unwind@00410e17": {
+    "d2vidtst.exe_Unwind@00410e02": {
       "addresses": {
-        "LoD/1.11": "0x00410E17",
-        "LoD/1.11b": "0x00410E17",
-        "LoD/1.12a": "0x00410F8B",
-        "LoD/1.13c": "0x00410F8B",
-        "LoD/1.13d": "0x00410E17"
+        "LoD/1.11": "0x00410E02",
+        "LoD/1.11b": "0x00410E02",
+        "LoD/1.12a": "0x00410F4C",
+        "LoD/1.13c": "0x00410F4C",
+        "LoD/1.13d": "0x00410E41"
       },
       "rvas": {
-        "LoD/1.11": "0x10E17",
-        "LoD/1.11b": "0x10E17",
-        "LoD/1.12a": "0x10F8B",
-        "LoD/1.13c": "0x10F8B",
-        "LoD/1.13d": "0x10E17"
+        "LoD/1.11": "0x10E02",
+        "LoD/1.11b": "0x10E02",
+        "LoD/1.12a": "0x10F4C",
+        "LoD/1.13c": "0x10F4C",
+        "LoD/1.13d": "0x10E41"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -32469,8 +34341,8 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.13c": 11,
         "LoD/1.13d": 11
       },
-      "name": "Unwind@00410e17",
-      "signature": "undefined Unwind@00410e17(void)",
+      "name": "Unwind@00410e02",
+      "signature": "undefined Unwind@00410e02(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -32503,14 +34375,14 @@ var FUNCTIONS_D2VidTst_exe = {
         "LoD/1.11b": "0x00410E2C",
         "LoD/1.12a": "0x00410F61",
         "LoD/1.13c": "0x00410F61",
-        "LoD/1.13d": "0x00410E41"
+        "LoD/1.13d": "0x00410E2C"
       },
       "rvas": {
         "LoD/1.11": "0x10E2C",
         "LoD/1.11b": "0x10E2C",
         "LoD/1.12a": "0x10F61",
         "LoD/1.13c": "0x10F61",
-        "LoD/1.13d": "0x10E41"
+        "LoD/1.13d": "0x10E2C"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -32551,16 +34423,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00410E41",
         "LoD/1.11b": "0x00410E41",
-        "LoD/1.12a": "0x00410F22",
-        "LoD/1.13c": "0x00410F22",
-        "LoD/1.13d": "0x00410E02"
+        "LoD/1.12a": "0x00410F8B",
+        "LoD/1.13c": "0x00410F8B",
+        "LoD/1.13d": "0x00410E56"
       },
       "rvas": {
         "LoD/1.11": "0x10E41",
         "LoD/1.11b": "0x10E41",
-        "LoD/1.12a": "0x10F22",
-        "LoD/1.13c": "0x10F22",
-        "LoD/1.13d": "0x10E02"
+        "LoD/1.12a": "0x10F8B",
+        "LoD/1.13c": "0x10F8B",
+        "LoD/1.13d": "0x10E56"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -32601,16 +34473,16 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00410E56",
         "LoD/1.11b": "0x00410E56",
-        "LoD/1.12a": "0x00410F76",
-        "LoD/1.13c": "0x00410F76",
-        "LoD/1.13d": "0x00410E56"
+        "LoD/1.12a": "0x00410F22",
+        "LoD/1.13c": "0x00410F22",
+        "LoD/1.13d": "0x00410E17"
       },
       "rvas": {
         "LoD/1.11": "0x10E56",
         "LoD/1.11b": "0x10E56",
-        "LoD/1.12a": "0x10F76",
-        "LoD/1.13c": "0x10F76",
-        "LoD/1.13d": "0x10E56"
+        "LoD/1.12a": "0x10F22",
+        "LoD/1.13c": "0x10F22",
+        "LoD/1.13d": "0x10E17"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -32651,15 +34523,15 @@ var FUNCTIONS_D2VidTst_exe = {
       "addresses": {
         "LoD/1.11": "0x00410E6B",
         "LoD/1.11b": "0x00410E6B",
-        "LoD/1.12a": "0x00410F4C",
-        "LoD/1.13c": "0x00410F4C",
+        "LoD/1.12a": "0x00410F37",
+        "LoD/1.13c": "0x00410F37",
         "LoD/1.13d": "0x00410E6B"
       },
       "rvas": {
         "LoD/1.11": "0x10E6B",
         "LoD/1.11b": "0x10E6B",
-        "LoD/1.12a": "0x10F4C",
-        "LoD/1.13c": "0x10F4C",
+        "LoD/1.12a": "0x10F37",
+        "LoD/1.13c": "0x10F37",
         "LoD/1.13d": "0x10E6B"
       },
       "sizes": {
@@ -33497,11 +35369,11 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_DecimalStringToDouble": {
       "addresses": {
         "LoD/1.12a": "0x0040FE3E",
-        "LoD/1.13c": "0x0040FE3E"
+        "LoD/1.13c": "0x0040FE83"
       },
       "rvas": {
         "LoD/1.12a": "0xFE3E",
-        "LoD/1.13c": "0xFE3E"
+        "LoD/1.13c": "0xFE83"
       },
       "sizes": {
         "LoD/1.12a": 69,
@@ -33530,11 +35402,11 @@ var FUNCTIONS_D2VidTst_exe = {
     "d2vidtst.exe_DecimalStringToDouble_FE83": {
       "addresses": {
         "LoD/1.12a": "0x0040FE83",
-        "LoD/1.13c": "0x0040FE83"
+        "LoD/1.13c": "0x0040FE3E"
       },
       "rvas": {
         "LoD/1.12a": "0xFE83",
-        "LoD/1.13c": "0xFE83"
+        "LoD/1.13c": "0xFE3E"
       },
       "sizes": {
         "LoD/1.12a": 69,

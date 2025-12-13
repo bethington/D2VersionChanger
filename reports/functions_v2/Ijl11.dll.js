@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for Ijl11.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -4886,37 +4886,37 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_6bc0bda4daa2": {
       "addresses": {
         "LoD/1.07": "0x60008EC0",
-        "LoD/1.08": "0x60007F20",
-        "LoD/1.09": "0x60007F20",
-        "LoD/1.09b": "0x60007F20",
-        "LoD/1.09d": "0x60007F20",
-        "LoD/1.10": "0x60007F20",
-        "LoD/1.11": "0x60007F20",
-        "LoD/1.11b": "0x60007F20",
-        "LoD/1.12a": "0x60007F20",
-        "LoD/1.13c": "0x60007F20",
-        "LoD/1.13d": "0x60007F20",
-        "LoD/1.14a": "0x60007F20",
-        "LoD/1.14b": "0x60007F20",
-        "LoD/1.14c": "0x60007F20",
-        "LoD/1.14d": "0x60007F20"
+        "LoD/1.08": "0x60008EC0",
+        "LoD/1.09": "0x60008EC0",
+        "LoD/1.09b": "0x60008EC0",
+        "LoD/1.09d": "0x60008EC0",
+        "LoD/1.10": "0x60008EC0",
+        "LoD/1.11": "0x60008EC0",
+        "LoD/1.11b": "0x60008EC0",
+        "LoD/1.12a": "0x60008EC0",
+        "LoD/1.13c": "0x60008EC0",
+        "LoD/1.13d": "0x60008EC0",
+        "LoD/1.14a": "0x60008EC0",
+        "LoD/1.14b": "0x60008EC0",
+        "LoD/1.14c": "0x60008EC0",
+        "LoD/1.14d": "0x60008EC0"
       },
       "rvas": {
         "LoD/1.07": "0x8EC0",
-        "LoD/1.08": "0x7F20",
-        "LoD/1.09": "0x7F20",
-        "LoD/1.09b": "0x7F20",
-        "LoD/1.09d": "0x7F20",
-        "LoD/1.10": "0x7F20",
-        "LoD/1.11": "0x7F20",
-        "LoD/1.11b": "0x7F20",
-        "LoD/1.12a": "0x7F20",
-        "LoD/1.13c": "0x7F20",
-        "LoD/1.13d": "0x7F20",
-        "LoD/1.14a": "0x7F20",
-        "LoD/1.14b": "0x7F20",
-        "LoD/1.14c": "0x7F20",
-        "LoD/1.14d": "0x7F20"
+        "LoD/1.08": "0x8EC0",
+        "LoD/1.09": "0x8EC0",
+        "LoD/1.09b": "0x8EC0",
+        "LoD/1.09d": "0x8EC0",
+        "LoD/1.10": "0x8EC0",
+        "LoD/1.11": "0x8EC0",
+        "LoD/1.11b": "0x8EC0",
+        "LoD/1.12a": "0x8EC0",
+        "LoD/1.13c": "0x8EC0",
+        "LoD/1.13d": "0x8EC0",
+        "LoD/1.14a": "0x8EC0",
+        "LoD/1.14b": "0x8EC0",
+        "LoD/1.14c": "0x8EC0",
+        "LoD/1.14d": "0x8EC0"
       },
       "sizes": {
         "LoD/1.07": 455,
@@ -5635,37 +5635,37 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_f9805d99e06f": {
       "addresses": {
         "LoD/1.07": "0x6000AE30",
-        "LoD/1.08": "0x6000A5E0",
-        "LoD/1.09": "0x6000A5E0",
-        "LoD/1.09b": "0x6000A5E0",
-        "LoD/1.09d": "0x6000A5E0",
-        "LoD/1.10": "0x6000A5E0",
-        "LoD/1.11": "0x6000A5E0",
-        "LoD/1.11b": "0x6000A5E0",
-        "LoD/1.12a": "0x6000A5E0",
-        "LoD/1.13c": "0x6000A5E0",
-        "LoD/1.13d": "0x6000A5E0",
-        "LoD/1.14a": "0x6000A5E0",
-        "LoD/1.14b": "0x6000A5E0",
-        "LoD/1.14c": "0x6000A5E0",
-        "LoD/1.14d": "0x6000A5E0"
+        "LoD/1.08": "0x6000AE30",
+        "LoD/1.09": "0x6000AE30",
+        "LoD/1.09b": "0x6000AE30",
+        "LoD/1.09d": "0x6000AE30",
+        "LoD/1.10": "0x6000AE30",
+        "LoD/1.11": "0x6000AE30",
+        "LoD/1.11b": "0x6000AE30",
+        "LoD/1.12a": "0x6000AE30",
+        "LoD/1.13c": "0x6000AE30",
+        "LoD/1.13d": "0x6000AE30",
+        "LoD/1.14a": "0x6000AE30",
+        "LoD/1.14b": "0x6000AE30",
+        "LoD/1.14c": "0x6000AE30",
+        "LoD/1.14d": "0x6000AE30"
       },
       "rvas": {
         "LoD/1.07": "0xAE30",
-        "LoD/1.08": "0xA5E0",
-        "LoD/1.09": "0xA5E0",
-        "LoD/1.09b": "0xA5E0",
-        "LoD/1.09d": "0xA5E0",
-        "LoD/1.10": "0xA5E0",
-        "LoD/1.11": "0xA5E0",
-        "LoD/1.11b": "0xA5E0",
-        "LoD/1.12a": "0xA5E0",
-        "LoD/1.13c": "0xA5E0",
-        "LoD/1.13d": "0xA5E0",
-        "LoD/1.14a": "0xA5E0",
-        "LoD/1.14b": "0xA5E0",
-        "LoD/1.14c": "0xA5E0",
-        "LoD/1.14d": "0xA5E0"
+        "LoD/1.08": "0xAE30",
+        "LoD/1.09": "0xAE30",
+        "LoD/1.09b": "0xAE30",
+        "LoD/1.09d": "0xAE30",
+        "LoD/1.10": "0xAE30",
+        "LoD/1.11": "0xAE30",
+        "LoD/1.11b": "0xAE30",
+        "LoD/1.12a": "0xAE30",
+        "LoD/1.13c": "0xAE30",
+        "LoD/1.13d": "0xAE30",
+        "LoD/1.14a": "0xAE30",
+        "LoD/1.14b": "0xAE30",
+        "LoD/1.14c": "0xAE30",
+        "LoD/1.14d": "0xAE30"
       },
       "sizes": {
         "LoD/1.07": 470,
@@ -13531,37 +13531,37 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_2e740e8839c0": {
       "addresses": {
         "LoD/1.07": "0x60018110",
-        "LoD/1.08": "0x600180F0",
-        "LoD/1.09": "0x600180F0",
-        "LoD/1.09b": "0x600180F0",
-        "LoD/1.09d": "0x600180F0",
-        "LoD/1.10": "0x600180F0",
-        "LoD/1.11": "0x600180F0",
-        "LoD/1.11b": "0x600180F0",
-        "LoD/1.12a": "0x600180F0",
-        "LoD/1.13c": "0x600180F0",
-        "LoD/1.13d": "0x600180F0",
-        "LoD/1.14a": "0x600180F0",
-        "LoD/1.14b": "0x600180F0",
-        "LoD/1.14c": "0x600180F0",
-        "LoD/1.14d": "0x600180F0"
+        "LoD/1.08": "0x60018110",
+        "LoD/1.09": "0x60018110",
+        "LoD/1.09b": "0x60018110",
+        "LoD/1.09d": "0x60018110",
+        "LoD/1.10": "0x60018110",
+        "LoD/1.11": "0x60018110",
+        "LoD/1.11b": "0x60018110",
+        "LoD/1.12a": "0x60018110",
+        "LoD/1.13c": "0x60018110",
+        "LoD/1.13d": "0x60018110",
+        "LoD/1.14a": "0x60018110",
+        "LoD/1.14b": "0x60018110",
+        "LoD/1.14c": "0x60018110",
+        "LoD/1.14d": "0x60018110"
       },
       "rvas": {
         "LoD/1.07": "0x18110",
-        "LoD/1.08": "0x180F0",
-        "LoD/1.09": "0x180F0",
-        "LoD/1.09b": "0x180F0",
-        "LoD/1.09d": "0x180F0",
-        "LoD/1.10": "0x180F0",
-        "LoD/1.11": "0x180F0",
-        "LoD/1.11b": "0x180F0",
-        "LoD/1.12a": "0x180F0",
-        "LoD/1.13c": "0x180F0",
-        "LoD/1.13d": "0x180F0",
-        "LoD/1.14a": "0x180F0",
-        "LoD/1.14b": "0x180F0",
-        "LoD/1.14c": "0x180F0",
-        "LoD/1.14d": "0x180F0"
+        "LoD/1.08": "0x18110",
+        "LoD/1.09": "0x18110",
+        "LoD/1.09b": "0x18110",
+        "LoD/1.09d": "0x18110",
+        "LoD/1.10": "0x18110",
+        "LoD/1.11": "0x18110",
+        "LoD/1.11b": "0x18110",
+        "LoD/1.12a": "0x18110",
+        "LoD/1.13c": "0x18110",
+        "LoD/1.13d": "0x18110",
+        "LoD/1.14a": "0x18110",
+        "LoD/1.14b": "0x18110",
+        "LoD/1.14c": "0x18110",
+        "LoD/1.14d": "0x18110"
       },
       "sizes": {
         "LoD/1.07": 29,
@@ -15770,6 +15770,113 @@ var FUNCTIONS_Ijl11_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:66b5e4c46cbd3ec37a465bc17c086d25",
+      "callees": {
+        "LoD/1.07": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.08": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.09": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.09b": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.09d": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.10": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.11": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.11b": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.12a": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.13c": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.13d": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.14a": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.14b": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.14c": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ],
+        "LoD/1.14d": [
+          "GetFileVersionInfoSizeA",
+          "GetFileVersionInfoA",
+          "VerQueryValueA",
+          "VerQueryValueA",
+          "VerQueryValueA"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"[%d.%d.%d.%d]\"",
@@ -21039,6 +21146,53 @@ var FUNCTIONS_Ijl11_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -29610,37 +29764,37 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_e78d3e11a492": {
       "addresses": {
         "LoD/1.07": "0x600217D5",
-        "LoD/1.08": "0x600217D5",
-        "LoD/1.09": "0x600217D5",
-        "LoD/1.09b": "0x600217D5",
-        "LoD/1.09d": "0x600217D5",
-        "LoD/1.10": "0x600217D5",
-        "LoD/1.11": "0x600217D5",
-        "LoD/1.11b": "0x600217D5",
-        "LoD/1.12a": "0x600217D5",
-        "LoD/1.13c": "0x600217D5",
-        "LoD/1.13d": "0x600217D5",
-        "LoD/1.14a": "0x600217D5",
-        "LoD/1.14b": "0x600217D5",
-        "LoD/1.14c": "0x600217D5",
-        "LoD/1.14d": "0x600217D5"
+        "LoD/1.08": "0x600217A8",
+        "LoD/1.09": "0x600217A8",
+        "LoD/1.09b": "0x600217A8",
+        "LoD/1.09d": "0x600217A8",
+        "LoD/1.10": "0x600217A8",
+        "LoD/1.11": "0x600217A8",
+        "LoD/1.11b": "0x600217A8",
+        "LoD/1.12a": "0x600217A8",
+        "LoD/1.13c": "0x600217A8",
+        "LoD/1.13d": "0x600217A8",
+        "LoD/1.14a": "0x600217A8",
+        "LoD/1.14b": "0x600217A8",
+        "LoD/1.14c": "0x600217A8",
+        "LoD/1.14d": "0x600217A8"
       },
       "rvas": {
         "LoD/1.07": "0x217D5",
-        "LoD/1.08": "0x217D5",
-        "LoD/1.09": "0x217D5",
-        "LoD/1.09b": "0x217D5",
-        "LoD/1.09d": "0x217D5",
-        "LoD/1.10": "0x217D5",
-        "LoD/1.11": "0x217D5",
-        "LoD/1.11b": "0x217D5",
-        "LoD/1.12a": "0x217D5",
-        "LoD/1.13c": "0x217D5",
-        "LoD/1.13d": "0x217D5",
-        "LoD/1.14a": "0x217D5",
-        "LoD/1.14b": "0x217D5",
-        "LoD/1.14c": "0x217D5",
-        "LoD/1.14d": "0x217D5"
+        "LoD/1.08": "0x217A8",
+        "LoD/1.09": "0x217A8",
+        "LoD/1.09b": "0x217A8",
+        "LoD/1.09d": "0x217A8",
+        "LoD/1.10": "0x217A8",
+        "LoD/1.11": "0x217A8",
+        "LoD/1.11b": "0x217A8",
+        "LoD/1.12a": "0x217A8",
+        "LoD/1.13c": "0x217A8",
+        "LoD/1.13d": "0x217A8",
+        "LoD/1.14a": "0x217A8",
+        "LoD/1.14b": "0x217A8",
+        "LoD/1.14c": "0x217A8",
+        "LoD/1.14d": "0x217A8"
       },
       "sizes": {
         "LoD/1.07": 45,
@@ -37701,35 +37855,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_1895884115c4": {
       "addresses": {
         "LoD/1.08": "0x60007C00",
-        "LoD/1.09": "0x60008880",
-        "LoD/1.09b": "0x6000B4D0",
-        "LoD/1.09d": "0x60007C00",
-        "LoD/1.10": "0x60008880",
-        "LoD/1.11": "0x6000B4D0",
+        "LoD/1.09": "0x60008BA0",
+        "LoD/1.09b": "0x60007C00",
+        "LoD/1.09d": "0x60008BA0",
+        "LoD/1.10": "0x60007C00",
+        "LoD/1.11": "0x60008BA0",
         "LoD/1.11b": "0x60007C00",
-        "LoD/1.12a": "0x60008880",
-        "LoD/1.13c": "0x6000B4D0",
-        "LoD/1.13d": "0x60007C00",
-        "LoD/1.14a": "0x60008880",
-        "LoD/1.14b": "0x6000B4D0",
+        "LoD/1.12a": "0x60008BA0",
+        "LoD/1.13c": "0x60007C00",
+        "LoD/1.13d": "0x60008BA0",
+        "LoD/1.14a": "0x60007C00",
+        "LoD/1.14b": "0x60008BA0",
         "LoD/1.14c": "0x60007C00",
-        "LoD/1.14d": "0x60008880"
+        "LoD/1.14d": "0x60008BA0"
       },
       "rvas": {
         "LoD/1.08": "0x7C00",
-        "LoD/1.09": "0x8880",
-        "LoD/1.09b": "0xB4D0",
-        "LoD/1.09d": "0x7C00",
-        "LoD/1.10": "0x8880",
-        "LoD/1.11": "0xB4D0",
+        "LoD/1.09": "0x8BA0",
+        "LoD/1.09b": "0x7C00",
+        "LoD/1.09d": "0x8BA0",
+        "LoD/1.10": "0x7C00",
+        "LoD/1.11": "0x8BA0",
         "LoD/1.11b": "0x7C00",
-        "LoD/1.12a": "0x8880",
-        "LoD/1.13c": "0xB4D0",
-        "LoD/1.13d": "0x7C00",
-        "LoD/1.14a": "0x8880",
-        "LoD/1.14b": "0xB4D0",
+        "LoD/1.12a": "0x8BA0",
+        "LoD/1.13c": "0x7C00",
+        "LoD/1.13d": "0x8BA0",
+        "LoD/1.14a": "0x7C00",
+        "LoD/1.14b": "0x8BA0",
         "LoD/1.14c": "0x7C00",
-        "LoD/1.14d": "0x8880"
+        "LoD/1.14d": "0x8BA0"
       },
       "sizes": {
         "LoD/1.08": 787,
@@ -37803,32 +37957,32 @@ var FUNCTIONS_Ijl11_dll = {
       "addresses": {
         "LoD/1.08": "0x60008880",
         "LoD/1.09": "0x6000B4D0",
-        "LoD/1.09b": "0x60007C00",
-        "LoD/1.09d": "0x60008880",
-        "LoD/1.10": "0x6000B4D0",
-        "LoD/1.11": "0x60007C00",
+        "LoD/1.09b": "0x60008880",
+        "LoD/1.09d": "0x6000B4D0",
+        "LoD/1.10": "0x60008880",
+        "LoD/1.11": "0x6000B4D0",
         "LoD/1.11b": "0x60008880",
         "LoD/1.12a": "0x6000B4D0",
-        "LoD/1.13c": "0x60007C00",
-        "LoD/1.13d": "0x60008880",
-        "LoD/1.14a": "0x6000B4D0",
-        "LoD/1.14b": "0x60007C00",
+        "LoD/1.13c": "0x60008880",
+        "LoD/1.13d": "0x6000B4D0",
+        "LoD/1.14a": "0x60008880",
+        "LoD/1.14b": "0x6000B4D0",
         "LoD/1.14c": "0x60008880",
         "LoD/1.14d": "0x6000B4D0"
       },
       "rvas": {
         "LoD/1.08": "0x8880",
         "LoD/1.09": "0xB4D0",
-        "LoD/1.09b": "0x7C00",
-        "LoD/1.09d": "0x8880",
-        "LoD/1.10": "0xB4D0",
-        "LoD/1.11": "0x7C00",
+        "LoD/1.09b": "0x8880",
+        "LoD/1.09d": "0xB4D0",
+        "LoD/1.10": "0x8880",
+        "LoD/1.11": "0xB4D0",
         "LoD/1.11b": "0x8880",
         "LoD/1.12a": "0xB4D0",
-        "LoD/1.13c": "0x7C00",
-        "LoD/1.13d": "0x8880",
-        "LoD/1.14a": "0xB4D0",
-        "LoD/1.14b": "0x7C00",
+        "LoD/1.13c": "0x8880",
+        "LoD/1.13d": "0xB4D0",
+        "LoD/1.14a": "0x8880",
+        "LoD/1.14b": "0xB4D0",
         "LoD/1.14c": "0x8880",
         "LoD/1.14d": "0xB4D0"
       },
@@ -37903,35 +38057,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_1895884115c4_8BA0": {
       "addresses": {
         "LoD/1.08": "0x60008BA0",
-        "LoD/1.09": "0x60008BA0",
+        "LoD/1.09": "0x60007C00",
         "LoD/1.09b": "0x60008BA0",
-        "LoD/1.09d": "0x60008BA0",
+        "LoD/1.09d": "0x60007C00",
         "LoD/1.10": "0x60008BA0",
-        "LoD/1.11": "0x60008BA0",
+        "LoD/1.11": "0x60007C00",
         "LoD/1.11b": "0x60008BA0",
-        "LoD/1.12a": "0x60008BA0",
+        "LoD/1.12a": "0x60007C00",
         "LoD/1.13c": "0x60008BA0",
-        "LoD/1.13d": "0x60008BA0",
+        "LoD/1.13d": "0x60007C00",
         "LoD/1.14a": "0x60008BA0",
-        "LoD/1.14b": "0x60008BA0",
+        "LoD/1.14b": "0x60007C00",
         "LoD/1.14c": "0x60008BA0",
-        "LoD/1.14d": "0x60008BA0"
+        "LoD/1.14d": "0x60007C00"
       },
       "rvas": {
         "LoD/1.08": "0x8BA0",
-        "LoD/1.09": "0x8BA0",
+        "LoD/1.09": "0x7C00",
         "LoD/1.09b": "0x8BA0",
-        "LoD/1.09d": "0x8BA0",
+        "LoD/1.09d": "0x7C00",
         "LoD/1.10": "0x8BA0",
-        "LoD/1.11": "0x8BA0",
+        "LoD/1.11": "0x7C00",
         "LoD/1.11b": "0x8BA0",
-        "LoD/1.12a": "0x8BA0",
+        "LoD/1.12a": "0x7C00",
         "LoD/1.13c": "0x8BA0",
-        "LoD/1.13d": "0x8BA0",
+        "LoD/1.13d": "0x7C00",
         "LoD/1.14a": "0x8BA0",
-        "LoD/1.14b": "0x8BA0",
+        "LoD/1.14b": "0x7C00",
         "LoD/1.14c": "0x8BA0",
-        "LoD/1.14d": "0x8BA0"
+        "LoD/1.14d": "0x7C00"
       },
       "sizes": {
         "LoD/1.08": 787,
@@ -38105,35 +38259,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_053da93a998b": {
       "addresses": {
         "LoD/1.08": "0x60009B40",
-        "LoD/1.09": "0x6000D500",
+        "LoD/1.09": "0x60009B40",
         "LoD/1.09b": "0x60009B40",
-        "LoD/1.09d": "0x6000D500",
+        "LoD/1.09d": "0x60009B40",
         "LoD/1.10": "0x60009B40",
-        "LoD/1.11": "0x6000D500",
+        "LoD/1.11": "0x60009B40",
         "LoD/1.11b": "0x60009B40",
-        "LoD/1.12a": "0x6000D500",
+        "LoD/1.12a": "0x60009B40",
         "LoD/1.13c": "0x60009B40",
-        "LoD/1.13d": "0x6000D500",
+        "LoD/1.13d": "0x60009B40",
         "LoD/1.14a": "0x60009B40",
-        "LoD/1.14b": "0x6000D500",
+        "LoD/1.14b": "0x60009B40",
         "LoD/1.14c": "0x60009B40",
-        "LoD/1.14d": "0x6000D500"
+        "LoD/1.14d": "0x60009B40"
       },
       "rvas": {
         "LoD/1.08": "0x9B40",
-        "LoD/1.09": "0xD500",
+        "LoD/1.09": "0x9B40",
         "LoD/1.09b": "0x9B40",
-        "LoD/1.09d": "0xD500",
+        "LoD/1.09d": "0x9B40",
         "LoD/1.10": "0x9B40",
-        "LoD/1.11": "0xD500",
+        "LoD/1.11": "0x9B40",
         "LoD/1.11b": "0x9B40",
-        "LoD/1.12a": "0xD500",
+        "LoD/1.12a": "0x9B40",
         "LoD/1.13c": "0x9B40",
-        "LoD/1.13d": "0xD500",
+        "LoD/1.13d": "0x9B40",
         "LoD/1.14a": "0x9B40",
-        "LoD/1.14b": "0xD500",
+        "LoD/1.14b": "0x9B40",
         "LoD/1.14c": "0x9B40",
-        "LoD/1.14d": "0xD500"
+        "LoD/1.14d": "0x9B40"
       },
       "sizes": {
         "LoD/1.08": 205,
@@ -38509,35 +38663,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_1895884115c4_B4D0": {
       "addresses": {
         "LoD/1.08": "0x6000B4D0",
-        "LoD/1.09": "0x60007C00",
-        "LoD/1.09b": "0x60008880",
-        "LoD/1.09d": "0x6000B4D0",
-        "LoD/1.10": "0x60007C00",
+        "LoD/1.09": "0x60008880",
+        "LoD/1.09b": "0x6000B4D0",
+        "LoD/1.09d": "0x60008880",
+        "LoD/1.10": "0x6000B4D0",
         "LoD/1.11": "0x60008880",
         "LoD/1.11b": "0x6000B4D0",
-        "LoD/1.12a": "0x60007C00",
-        "LoD/1.13c": "0x60008880",
-        "LoD/1.13d": "0x6000B4D0",
-        "LoD/1.14a": "0x60007C00",
+        "LoD/1.12a": "0x60008880",
+        "LoD/1.13c": "0x6000B4D0",
+        "LoD/1.13d": "0x60008880",
+        "LoD/1.14a": "0x6000B4D0",
         "LoD/1.14b": "0x60008880",
         "LoD/1.14c": "0x6000B4D0",
-        "LoD/1.14d": "0x60007C00"
+        "LoD/1.14d": "0x60008880"
       },
       "rvas": {
         "LoD/1.08": "0xB4D0",
-        "LoD/1.09": "0x7C00",
-        "LoD/1.09b": "0x8880",
-        "LoD/1.09d": "0xB4D0",
-        "LoD/1.10": "0x7C00",
+        "LoD/1.09": "0x8880",
+        "LoD/1.09b": "0xB4D0",
+        "LoD/1.09d": "0x8880",
+        "LoD/1.10": "0xB4D0",
         "LoD/1.11": "0x8880",
         "LoD/1.11b": "0xB4D0",
-        "LoD/1.12a": "0x7C00",
-        "LoD/1.13c": "0x8880",
-        "LoD/1.13d": "0xB4D0",
-        "LoD/1.14a": "0x7C00",
+        "LoD/1.12a": "0x8880",
+        "LoD/1.13c": "0xB4D0",
+        "LoD/1.13d": "0x8880",
+        "LoD/1.14a": "0xB4D0",
         "LoD/1.14b": "0x8880",
         "LoD/1.14c": "0xB4D0",
-        "LoD/1.14d": "0x7C00"
+        "LoD/1.14d": "0x8880"
       },
       "sizes": {
         "LoD/1.08": 787,
@@ -38711,35 +38865,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_053da93a998b_D500": {
       "addresses": {
         "LoD/1.08": "0x6000D500",
-        "LoD/1.09": "0x60009B40",
+        "LoD/1.09": "0x6000D500",
         "LoD/1.09b": "0x6000D500",
-        "LoD/1.09d": "0x60009B40",
+        "LoD/1.09d": "0x6000D500",
         "LoD/1.10": "0x6000D500",
-        "LoD/1.11": "0x60009B40",
+        "LoD/1.11": "0x6000D500",
         "LoD/1.11b": "0x6000D500",
-        "LoD/1.12a": "0x60009B40",
+        "LoD/1.12a": "0x6000D500",
         "LoD/1.13c": "0x6000D500",
-        "LoD/1.13d": "0x60009B40",
+        "LoD/1.13d": "0x6000D500",
         "LoD/1.14a": "0x6000D500",
-        "LoD/1.14b": "0x60009B40",
+        "LoD/1.14b": "0x6000D500",
         "LoD/1.14c": "0x6000D500",
-        "LoD/1.14d": "0x60009B40"
+        "LoD/1.14d": "0x6000D500"
       },
       "rvas": {
         "LoD/1.08": "0xD500",
-        "LoD/1.09": "0x9B40",
+        "LoD/1.09": "0xD500",
         "LoD/1.09b": "0xD500",
-        "LoD/1.09d": "0x9B40",
+        "LoD/1.09d": "0xD500",
         "LoD/1.10": "0xD500",
-        "LoD/1.11": "0x9B40",
+        "LoD/1.11": "0xD500",
         "LoD/1.11b": "0xD500",
-        "LoD/1.12a": "0x9B40",
+        "LoD/1.12a": "0xD500",
         "LoD/1.13c": "0xD500",
-        "LoD/1.13d": "0x9B40",
+        "LoD/1.13d": "0xD500",
         "LoD/1.14a": "0xD500",
-        "LoD/1.14b": "0x9B40",
+        "LoD/1.14b": "0xD500",
         "LoD/1.14c": "0xD500",
-        "LoD/1.14d": "0x9B40"
+        "LoD/1.14d": "0xD500"
       },
       "sizes": {
         "LoD/1.08": 205,
@@ -43861,35 +44015,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_1895884115c4_7C00": {
       "addresses": {
         "LoD/1.08": "0x60007C00",
-        "LoD/1.09": "0x60008880",
-        "LoD/1.09b": "0x6000B4D0",
-        "LoD/1.09d": "0x60007C00",
-        "LoD/1.10": "0x60008880",
-        "LoD/1.11": "0x6000B4D0",
+        "LoD/1.09": "0x60008BA0",
+        "LoD/1.09b": "0x60007C00",
+        "LoD/1.09d": "0x60008BA0",
+        "LoD/1.10": "0x60007C00",
+        "LoD/1.11": "0x60008BA0",
         "LoD/1.11b": "0x60007C00",
-        "LoD/1.12a": "0x60008880",
-        "LoD/1.13c": "0x6000B4D0",
-        "LoD/1.13d": "0x60007C00",
-        "LoD/1.14a": "0x60008880",
-        "LoD/1.14b": "0x6000B4D0",
+        "LoD/1.12a": "0x60008BA0",
+        "LoD/1.13c": "0x60007C00",
+        "LoD/1.13d": "0x60008BA0",
+        "LoD/1.14a": "0x60007C00",
+        "LoD/1.14b": "0x60008BA0",
         "LoD/1.14c": "0x60007C00",
-        "LoD/1.14d": "0x60008880"
+        "LoD/1.14d": "0x60008BA0"
       },
       "rvas": {
         "LoD/1.08": "0x7C00",
-        "LoD/1.09": "0x8880",
-        "LoD/1.09b": "0xB4D0",
-        "LoD/1.09d": "0x7C00",
-        "LoD/1.10": "0x8880",
-        "LoD/1.11": "0xB4D0",
+        "LoD/1.09": "0x8BA0",
+        "LoD/1.09b": "0x7C00",
+        "LoD/1.09d": "0x8BA0",
+        "LoD/1.10": "0x7C00",
+        "LoD/1.11": "0x8BA0",
         "LoD/1.11b": "0x7C00",
-        "LoD/1.12a": "0x8880",
-        "LoD/1.13c": "0xB4D0",
-        "LoD/1.13d": "0x7C00",
-        "LoD/1.14a": "0x8880",
-        "LoD/1.14b": "0xB4D0",
+        "LoD/1.12a": "0x8BA0",
+        "LoD/1.13c": "0x7C00",
+        "LoD/1.13d": "0x8BA0",
+        "LoD/1.14a": "0x7C00",
+        "LoD/1.14b": "0x8BA0",
         "LoD/1.14c": "0x7C00",
-        "LoD/1.14d": "0x8880"
+        "LoD/1.14d": "0x8BA0"
       },
       "sizes": {
         "LoD/1.08": 787,
@@ -43962,35 +44116,35 @@ var FUNCTIONS_Ijl11_dll = {
     "ijl11.dll_MNE_053da93a998b_9B40": {
       "addresses": {
         "LoD/1.08": "0x60009B40",
-        "LoD/1.09": "0x6000D500",
+        "LoD/1.09": "0x60009B40",
         "LoD/1.09b": "0x60009B40",
-        "LoD/1.09d": "0x6000D500",
+        "LoD/1.09d": "0x60009B40",
         "LoD/1.10": "0x60009B40",
-        "LoD/1.11": "0x6000D500",
+        "LoD/1.11": "0x60009B40",
         "LoD/1.11b": "0x60009B40",
-        "LoD/1.12a": "0x6000D500",
+        "LoD/1.12a": "0x60009B40",
         "LoD/1.13c": "0x60009B40",
-        "LoD/1.13d": "0x6000D500",
+        "LoD/1.13d": "0x60009B40",
         "LoD/1.14a": "0x60009B40",
-        "LoD/1.14b": "0x6000D500",
+        "LoD/1.14b": "0x60009B40",
         "LoD/1.14c": "0x60009B40",
-        "LoD/1.14d": "0x6000D500"
+        "LoD/1.14d": "0x60009B40"
       },
       "rvas": {
         "LoD/1.08": "0x9B40",
-        "LoD/1.09": "0xD500",
+        "LoD/1.09": "0x9B40",
         "LoD/1.09b": "0x9B40",
-        "LoD/1.09d": "0xD500",
+        "LoD/1.09d": "0x9B40",
         "LoD/1.10": "0x9B40",
-        "LoD/1.11": "0xD500",
+        "LoD/1.11": "0x9B40",
         "LoD/1.11b": "0x9B40",
-        "LoD/1.12a": "0xD500",
+        "LoD/1.12a": "0x9B40",
         "LoD/1.13c": "0x9B40",
-        "LoD/1.13d": "0xD500",
+        "LoD/1.13d": "0x9B40",
         "LoD/1.14a": "0x9B40",
-        "LoD/1.14b": "0xD500",
+        "LoD/1.14b": "0x9B40",
         "LoD/1.14c": "0x9B40",
-        "LoD/1.14d": "0xD500"
+        "LoD/1.14d": "0x9B40"
       },
       "sizes": {
         "LoD/1.08": 205,

@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2DDraw.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -203,6 +203,21 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:16008ed4513bbae12b2405be51f66c30",
+      "callees": {
+        "LoD/1.07": [
+          "GetExpansionFlag",
+          "SFileOpenFileEx",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "SetSoundVolume",
+          "SetSoundVolume",
+          "FogAssert",
+          "GetFogStatePtr",
+          "FogAssert",
+          "QueueLogMessage",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Restricted to DirectX 3 support.\"",
@@ -274,6 +289,68 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:cdad128a8591e2e227d1367055b5b18a",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "QueueLogMessage",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "QueueLogMessage",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10029",
+          "FogAssert",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Opening DirectDraw window succeeded. (Double buff...",
@@ -377,6 +454,32 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4c7e22e31592f5c366b9daa92b462cf3",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Closing DirectDraw window...\"",
@@ -762,6 +865,101 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a6a733874702848c947d4f13dd410c07",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+98 more"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+98 more"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+98 more"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+98 more"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "...+98 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "...+98 more"
+        ],
+        "LoD/1.11": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"DDERR_EXCEPTION\"",
@@ -935,6 +1133,41 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:efcfec4e3b6e4547eced132d069dae5c",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Courier\"",
@@ -1075,6 +1308,41 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fc6ca2b668866c562fa82a649757b35e",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2DDraw\\\\Src\\\\ddDe..."
@@ -1261,6 +1529,26 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ae9609438a3c35f80bd06c4b89002372",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nY2 > nY1\"",
@@ -1410,6 +1698,32 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:660b70fb93d7a717da5d6826022cc00d",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"prc->top <= prc->bottom\"",
@@ -1619,6 +1933,36 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e78177a189d01451abce035b832e32fc",
+      "callees": {
+        "LoD/1.07": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10032",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10001",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -1693,6 +2037,41 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:96f625e5ab977cf03aa9e7adf6db47bb",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2DDraw\\\\Src\\\\ddSm..."
@@ -1932,6 +2311,56 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8ed48f8ed7b3b4ba9d7594e730dff888",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "D2CMP_DecodeAndDrawCelFrame"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "Ordinal_10033"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 21,
         "LoD/1.08": 21,
@@ -1965,11 +2394,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EA0",
         "LoD/1.09d": "0x6F884EA0",
         "LoD/1.10": "0x6F884E30",
-        "LoD/1.11": "0x6F8C5EB2",
-        "LoD/1.11b": "0x6F8C5EAC",
-        "LoD/1.12a": "0x6F8C5F1C",
-        "LoD/1.13c": "0x6F8C5F28",
-        "LoD/1.13d": "0x6F8C5EB2"
+        "LoD/1.11": "0x6F8C5ECA",
+        "LoD/1.11b": "0x6F8C5EC4",
+        "LoD/1.12a": "0x6F8C5F46",
+        "LoD/1.13c": "0x6F8C5F4C",
+        "LoD/1.13d": "0x6F8C5EC4"
       },
       "rvas": {
         "LoD/1.07": "0x4E90",
@@ -1978,11 +2407,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EA0",
         "LoD/1.09d": "0x4EA0",
         "LoD/1.10": "0x4E30",
-        "LoD/1.11": "0x5EB2",
-        "LoD/1.11b": "0x5EAC",
-        "LoD/1.12a": "0x5F1C",
-        "LoD/1.13c": "0x5F28",
-        "LoD/1.13d": "0x5EB2"
+        "LoD/1.11": "0x5ECA",
+        "LoD/1.11b": "0x5EC4",
+        "LoD/1.12a": "0x5F46",
+        "LoD/1.13c": "0x5F4C",
+        "LoD/1.13d": "0x5EC4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2051,11 +2480,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EA6",
         "LoD/1.09d": "0x6F884EA6",
         "LoD/1.10": "0x6F884E36",
-        "LoD/1.11": "0x6F8C5ED6",
-        "LoD/1.11b": "0x6F8C5ED0",
-        "LoD/1.12a": "0x6F8C5F34",
-        "LoD/1.13c": "0x6F8C5F40",
-        "LoD/1.13d": "0x6F8C5EE2"
+        "LoD/1.11": "0x6F8C5EAC",
+        "LoD/1.11b": "0x6F8C5EA6",
+        "LoD/1.12a": "0x6F8C5F16",
+        "LoD/1.13c": "0x6F8C5F22",
+        "LoD/1.13d": "0x6F8C5EAC"
       },
       "rvas": {
         "LoD/1.07": "0x4E96",
@@ -2064,11 +2493,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EA6",
         "LoD/1.09d": "0x4EA6",
         "LoD/1.10": "0x4E36",
-        "LoD/1.11": "0x5ED6",
-        "LoD/1.11b": "0x5ED0",
-        "LoD/1.12a": "0x5F34",
-        "LoD/1.13c": "0x5F40",
-        "LoD/1.13d": "0x5EE2"
+        "LoD/1.11": "0x5EAC",
+        "LoD/1.11b": "0x5EA6",
+        "LoD/1.12a": "0x5F16",
+        "LoD/1.13c": "0x5F22",
+        "LoD/1.13d": "0x5EAC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2137,11 +2566,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EAC",
         "LoD/1.09d": "0x6F884EAC",
         "LoD/1.10": "0x6F884E3C",
-        "LoD/1.11": "0x6F8C5F2A",
-        "LoD/1.11b": "0x6F8C5F2A",
-        "LoD/1.12a": "0x6F8C5F9A",
-        "LoD/1.13c": "0x6F8C5F9A",
-        "LoD/1.13d": "0x6F8C5F2A"
+        "LoD/1.11": "0x6F8C5EB8",
+        "LoD/1.11b": "0x6F8C5EB8",
+        "LoD/1.12a": "0x6F8C5F22",
+        "LoD/1.13c": "0x6F8C5F10",
+        "LoD/1.13d": "0x6F8C5EB8"
       },
       "rvas": {
         "LoD/1.07": "0x4E9C",
@@ -2150,11 +2579,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EAC",
         "LoD/1.09d": "0x4EAC",
         "LoD/1.10": "0x4E3C",
-        "LoD/1.11": "0x5F2A",
-        "LoD/1.11b": "0x5F2A",
-        "LoD/1.12a": "0x5F9A",
-        "LoD/1.13c": "0x5F9A",
-        "LoD/1.13d": "0x5F2A"
+        "LoD/1.11": "0x5EB8",
+        "LoD/1.11b": "0x5EB8",
+        "LoD/1.12a": "0x5F22",
+        "LoD/1.13c": "0x5F10",
+        "LoD/1.13d": "0x5EB8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2223,11 +2652,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EB2",
         "LoD/1.09d": "0x6F884EB2",
         "LoD/1.10": "0x6F884E42",
-        "LoD/1.11": "0x6F8C5F18",
-        "LoD/1.11b": "0x6F8C5F18",
-        "LoD/1.12a": "0x6F8C5F88",
-        "LoD/1.13c": "0x6F8C5F88",
-        "LoD/1.13d": "0x6F8C5F18"
+        "LoD/1.11": "0x6F8C5F12",
+        "LoD/1.11b": "0x6F8C5F12",
+        "LoD/1.12a": "0x6F8C5F82",
+        "LoD/1.13c": "0x6F8C5FA0",
+        "LoD/1.13d": "0x6F8C5F30"
       },
       "rvas": {
         "LoD/1.07": "0x4EA2",
@@ -2236,11 +2665,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EB2",
         "LoD/1.09d": "0x4EB2",
         "LoD/1.10": "0x4E42",
-        "LoD/1.11": "0x5F18",
-        "LoD/1.11b": "0x5F18",
-        "LoD/1.12a": "0x5F88",
-        "LoD/1.13c": "0x5F88",
-        "LoD/1.13d": "0x5F18"
+        "LoD/1.11": "0x5F12",
+        "LoD/1.11b": "0x5F12",
+        "LoD/1.12a": "0x5F82",
+        "LoD/1.13c": "0x5FA0",
+        "LoD/1.13d": "0x5F30"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2309,11 +2738,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EB8",
         "LoD/1.09d": "0x6F884EB8",
         "LoD/1.10": "0x6F884E48",
-        "LoD/1.11": "0x6F8C5F36",
-        "LoD/1.11b": "0x6F8C5F36",
-        "LoD/1.12a": "0x6F8C5FA6",
-        "LoD/1.13c": "0x6F8C5FA6",
-        "LoD/1.13d": "0x6F8C5F36"
+        "LoD/1.11": "0x6F8C5F24",
+        "LoD/1.11b": "0x6F8C5EFA",
+        "LoD/1.12a": "0x6F8C5F6A",
+        "LoD/1.13c": "0x6F8C5F6A",
+        "LoD/1.13d": "0x6F8C5EFA"
       },
       "rvas": {
         "LoD/1.07": "0x4EA8",
@@ -2322,11 +2751,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EB8",
         "LoD/1.09d": "0x4EB8",
         "LoD/1.10": "0x4E48",
-        "LoD/1.11": "0x5F36",
-        "LoD/1.11b": "0x5F36",
-        "LoD/1.12a": "0x5FA6",
-        "LoD/1.13c": "0x5FA6",
-        "LoD/1.13d": "0x5F36"
+        "LoD/1.11": "0x5F24",
+        "LoD/1.11b": "0x5EFA",
+        "LoD/1.12a": "0x5F6A",
+        "LoD/1.13c": "0x5F6A",
+        "LoD/1.13d": "0x5EFA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2395,11 +2824,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EBE",
         "LoD/1.09d": "0x6F884EBE",
         "LoD/1.10": "0x6F884E4E",
-        "LoD/1.11": "0x6F8C5EFA",
-        "LoD/1.11b": "0x6F8C5F24",
-        "LoD/1.12a": "0x6F8C5F94",
-        "LoD/1.13c": "0x6F8C5F94",
-        "LoD/1.13d": "0x6F8C5F24"
+        "LoD/1.11": "0x6F8C5EE2",
+        "LoD/1.11b": "0x6F8C5EDC",
+        "LoD/1.12a": "0x6F8C5F40",
+        "LoD/1.13c": "0x6F8C5F34",
+        "LoD/1.13d": "0x6F8C5ED6"
       },
       "rvas": {
         "LoD/1.07": "0x4EAE",
@@ -2408,11 +2837,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EBE",
         "LoD/1.09d": "0x4EBE",
         "LoD/1.10": "0x4E4E",
-        "LoD/1.11": "0x5EFA",
-        "LoD/1.11b": "0x5F24",
-        "LoD/1.12a": "0x5F94",
-        "LoD/1.13c": "0x5F94",
-        "LoD/1.13d": "0x5F24"
+        "LoD/1.11": "0x5EE2",
+        "LoD/1.11b": "0x5EDC",
+        "LoD/1.12a": "0x5F40",
+        "LoD/1.13c": "0x5F34",
+        "LoD/1.13d": "0x5ED6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2481,11 +2910,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EC4",
         "LoD/1.09d": "0x6F884EC4",
         "LoD/1.10": "0x6F884E54",
-        "LoD/1.11": "0x6F8C5F12",
-        "LoD/1.11b": "0x6F8C5F12",
-        "LoD/1.12a": "0x6F8C5F82",
-        "LoD/1.13c": "0x6F8C5FA0",
-        "LoD/1.13d": "0x6F8C5F30"
+        "LoD/1.11": "0x6F8C5ED0",
+        "LoD/1.11b": "0x6F8C5ECA",
+        "LoD/1.12a": "0x6F8C5F58",
+        "LoD/1.13c": "0x6F8C5F58",
+        "LoD/1.13d": "0x6F8C5ECA"
       },
       "rvas": {
         "LoD/1.07": "0x4EB4",
@@ -2494,11 +2923,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EC4",
         "LoD/1.09d": "0x4EC4",
         "LoD/1.10": "0x4E54",
-        "LoD/1.11": "0x5F12",
-        "LoD/1.11b": "0x5F12",
-        "LoD/1.12a": "0x5F82",
-        "LoD/1.13c": "0x5FA0",
-        "LoD/1.13d": "0x5F30"
+        "LoD/1.11": "0x5ED0",
+        "LoD/1.11b": "0x5ECA",
+        "LoD/1.12a": "0x5F58",
+        "LoD/1.13c": "0x5F58",
+        "LoD/1.13d": "0x5ECA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2567,11 +2996,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884ECA",
         "LoD/1.09d": "0x6F884ECA",
         "LoD/1.10": "0x6F884E5A",
-        "LoD/1.11": "0x6F8C5E9A",
-        "LoD/1.11b": "0x6F8C5E9A",
-        "LoD/1.12a": "0x6F8C5F0A",
-        "LoD/1.13c": "0x6F8C5F0A",
-        "LoD/1.13d": "0x6F8C5E9A"
+        "LoD/1.11": "0x6F8C5ED6",
+        "LoD/1.11b": "0x6F8C5ED0",
+        "LoD/1.12a": "0x6F8C5F34",
+        "LoD/1.13c": "0x6F8C5F40",
+        "LoD/1.13d": "0x6F8C5EE2"
       },
       "rvas": {
         "LoD/1.07": "0x4EBA",
@@ -2580,11 +3009,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4ECA",
         "LoD/1.09d": "0x4ECA",
         "LoD/1.10": "0x4E5A",
-        "LoD/1.11": "0x5E9A",
-        "LoD/1.11b": "0x5E9A",
-        "LoD/1.12a": "0x5F0A",
-        "LoD/1.13c": "0x5F0A",
-        "LoD/1.13d": "0x5E9A"
+        "LoD/1.11": "0x5ED6",
+        "LoD/1.11b": "0x5ED0",
+        "LoD/1.12a": "0x5F34",
+        "LoD/1.13c": "0x5F40",
+        "LoD/1.13d": "0x5EE2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2653,11 +3082,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884ED0",
         "LoD/1.09d": "0x6F884ED0",
         "LoD/1.10": "0x6F884E60",
-        "LoD/1.11": "0x6F8C5EE8",
-        "LoD/1.11b": "0x6F8C5EE2",
-        "LoD/1.12a": "0x6F8C5F4C",
-        "LoD/1.13c": "0x6F8C5F3A",
-        "LoD/1.13d": "0x6F8C5EDC"
+        "LoD/1.11": "0x6F8C5F06",
+        "LoD/1.11b": "0x6F8C5F06",
+        "LoD/1.12a": "0x6F8C5F76",
+        "LoD/1.13c": "0x6F8C5F76",
+        "LoD/1.13d": "0x6F8C5F06"
       },
       "rvas": {
         "LoD/1.07": "0x4EC0",
@@ -2666,11 +3095,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4ED0",
         "LoD/1.09d": "0x4ED0",
         "LoD/1.10": "0x4E60",
-        "LoD/1.11": "0x5EE8",
-        "LoD/1.11b": "0x5EE2",
-        "LoD/1.12a": "0x5F4C",
-        "LoD/1.13c": "0x5F3A",
-        "LoD/1.13d": "0x5EDC"
+        "LoD/1.11": "0x5F06",
+        "LoD/1.11b": "0x5F06",
+        "LoD/1.12a": "0x5F76",
+        "LoD/1.13c": "0x5F76",
+        "LoD/1.13d": "0x5F06"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2742,8 +3171,8 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.11": "0x6F8C5F0C",
         "LoD/1.11b": "0x6F8C5F0C",
         "LoD/1.12a": "0x6F8C5FA0",
-        "LoD/1.13c": "0x6F8C5F64",
-        "LoD/1.13d": "0x6F8C5EF4"
+        "LoD/1.13c": "0x6F8C5F82",
+        "LoD/1.13d": "0x6F8C5F12"
       },
       "rvas": {
         "LoD/1.07": "0x4EC6",
@@ -2755,8 +3184,8 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.11": "0x5F0C",
         "LoD/1.11b": "0x5F0C",
         "LoD/1.12a": "0x5FA0",
-        "LoD/1.13c": "0x5F64",
-        "LoD/1.13d": "0x5EF4"
+        "LoD/1.13c": "0x5F82",
+        "LoD/1.13d": "0x5F12"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2825,11 +3254,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EE2",
         "LoD/1.09d": "0x6F884EE2",
         "LoD/1.10": "0x6F884E72",
-        "LoD/1.11": "0x6F8C5ECA",
-        "LoD/1.11b": "0x6F8C5EC4",
-        "LoD/1.12a": "0x6F8C5F46",
-        "LoD/1.13c": "0x6F8C5F4C",
-        "LoD/1.13d": "0x6F8C5EC4"
+        "LoD/1.11": "0x6F8C5EEE",
+        "LoD/1.11b": "0x6F8C5EE8",
+        "LoD/1.12a": "0x6F8C5F52",
+        "LoD/1.13c": "0x6F8C5F52",
+        "LoD/1.13d": "0x6F8C5EEE"
       },
       "rvas": {
         "LoD/1.07": "0x4ED2",
@@ -2838,11 +3267,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EE2",
         "LoD/1.09d": "0x4EE2",
         "LoD/1.10": "0x4E72",
-        "LoD/1.11": "0x5ECA",
-        "LoD/1.11b": "0x5EC4",
-        "LoD/1.12a": "0x5F46",
-        "LoD/1.13c": "0x5F4C",
-        "LoD/1.13d": "0x5EC4"
+        "LoD/1.11": "0x5EEE",
+        "LoD/1.11b": "0x5EE8",
+        "LoD/1.12a": "0x5F52",
+        "LoD/1.13c": "0x5F52",
+        "LoD/1.13d": "0x5EEE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2911,11 +3340,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EE8",
         "LoD/1.09d": "0x6F884EE8",
         "LoD/1.10": "0x6F884E78",
-        "LoD/1.11": "0x6F8C5F24",
-        "LoD/1.11b": "0x6F8C5EFA",
-        "LoD/1.12a": "0x6F8C5F6A",
-        "LoD/1.13c": "0x6F8C5F6A",
-        "LoD/1.13d": "0x6F8C5EFA"
+        "LoD/1.11": "0x6F8C5EA6",
+        "LoD/1.11b": "0x6F8C5EA0",
+        "LoD/1.12a": "0x6F8C5F10",
+        "LoD/1.13c": "0x6F8C5F1C",
+        "LoD/1.13d": "0x6F8C5EA6"
       },
       "rvas": {
         "LoD/1.07": "0x4ED8",
@@ -2924,11 +3353,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EE8",
         "LoD/1.09d": "0x4EE8",
         "LoD/1.10": "0x4E78",
-        "LoD/1.11": "0x5F24",
-        "LoD/1.11b": "0x5EFA",
-        "LoD/1.12a": "0x5F6A",
-        "LoD/1.13c": "0x5F6A",
-        "LoD/1.13d": "0x5EFA"
+        "LoD/1.11": "0x5EA6",
+        "LoD/1.11b": "0x5EA0",
+        "LoD/1.12a": "0x5F10",
+        "LoD/1.13c": "0x5F1C",
+        "LoD/1.13d": "0x5EA6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -2997,11 +3426,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884EEE",
         "LoD/1.09d": "0x6F884EEE",
         "LoD/1.10": "0x6F884E7E",
-        "LoD/1.11": "0x6F8C5EAC",
-        "LoD/1.11b": "0x6F8C5EA6",
-        "LoD/1.12a": "0x6F8C5F16",
-        "LoD/1.13c": "0x6F8C5F22",
-        "LoD/1.13d": "0x6F8C5EAC"
+        "LoD/1.11": "0x6F8C5F36",
+        "LoD/1.11b": "0x6F8C5F36",
+        "LoD/1.12a": "0x6F8C5FA6",
+        "LoD/1.13c": "0x6F8C5FA6",
+        "LoD/1.13d": "0x6F8C5F36"
       },
       "rvas": {
         "LoD/1.07": "0x4EDE",
@@ -3010,11 +3439,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4EEE",
         "LoD/1.09d": "0x4EEE",
         "LoD/1.10": "0x4E7E",
-        "LoD/1.11": "0x5EAC",
-        "LoD/1.11b": "0x5EA6",
-        "LoD/1.12a": "0x5F16",
-        "LoD/1.13c": "0x5F22",
-        "LoD/1.13d": "0x5EAC"
+        "LoD/1.11": "0x5F36",
+        "LoD/1.11b": "0x5F36",
+        "LoD/1.12a": "0x5FA6",
+        "LoD/1.13c": "0x5FA6",
+        "LoD/1.13d": "0x5F36"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3255,11 +3684,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F00",
         "LoD/1.09d": "0x6F884F00",
         "LoD/1.10": "0x6F884E90",
-        "LoD/1.11": "0x6F8C5EA0",
-        "LoD/1.11b": "0x6F8C5EB2",
-        "LoD/1.12a": "0x6F8C5F2E",
-        "LoD/1.13c": "0x6F8C5F2E",
-        "LoD/1.13d": "0x6F8C5EA0"
+        "LoD/1.11": "0x6F8C5F1E",
+        "LoD/1.11b": "0x6F8C5F1E",
+        "LoD/1.12a": "0x6F8C5F8E",
+        "LoD/1.13c": "0x6F8C5F8E",
+        "LoD/1.13d": "0x6F8C5F1E"
       },
       "rvas": {
         "LoD/1.07": "0x4EF0",
@@ -3268,11 +3697,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F00",
         "LoD/1.09d": "0x4F00",
         "LoD/1.10": "0x4E90",
-        "LoD/1.11": "0x5EA0",
-        "LoD/1.11b": "0x5EB2",
-        "LoD/1.12a": "0x5F2E",
-        "LoD/1.13c": "0x5F2E",
-        "LoD/1.13d": "0x5EA0"
+        "LoD/1.11": "0x5F1E",
+        "LoD/1.11b": "0x5F1E",
+        "LoD/1.12a": "0x5F8E",
+        "LoD/1.13c": "0x5F8E",
+        "LoD/1.13d": "0x5F1E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3341,11 +3770,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F06",
         "LoD/1.09d": "0x6F884F06",
         "LoD/1.10": "0x6F884E96",
-        "LoD/1.11": "0x6F8C5EEE",
-        "LoD/1.11b": "0x6F8C5EE8",
-        "LoD/1.12a": "0x6F8C5F52",
-        "LoD/1.13c": "0x6F8C5F52",
-        "LoD/1.13d": "0x6F8C5EEE"
+        "LoD/1.11": "0x6F8C5EE8",
+        "LoD/1.11b": "0x6F8C5EE2",
+        "LoD/1.12a": "0x6F8C5F4C",
+        "LoD/1.13c": "0x6F8C5F3A",
+        "LoD/1.13d": "0x6F8C5EDC"
       },
       "rvas": {
         "LoD/1.07": "0x4EF6",
@@ -3354,11 +3783,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F06",
         "LoD/1.09d": "0x4F06",
         "LoD/1.10": "0x4E96",
-        "LoD/1.11": "0x5EEE",
-        "LoD/1.11b": "0x5EE8",
-        "LoD/1.12a": "0x5F52",
-        "LoD/1.13c": "0x5F52",
-        "LoD/1.13d": "0x5EEE"
+        "LoD/1.11": "0x5EE8",
+        "LoD/1.11b": "0x5EE2",
+        "LoD/1.12a": "0x5F4C",
+        "LoD/1.13c": "0x5F3A",
+        "LoD/1.13d": "0x5EDC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3427,11 +3856,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F0C",
         "LoD/1.09d": "0x6F884F0C",
         "LoD/1.10": "0x6F884E9C",
-        "LoD/1.11": "0x6F8C5F1E",
-        "LoD/1.11b": "0x6F8C5F1E",
-        "LoD/1.12a": "0x6F8C5F8E",
-        "LoD/1.13c": "0x6F8C5F8E",
-        "LoD/1.13d": "0x6F8C5F1E"
+        "LoD/1.11": "0x6F8C5F00",
+        "LoD/1.11b": "0x6F8C5F00",
+        "LoD/1.12a": "0x6F8C5F70",
+        "LoD/1.13c": "0x6F8C5F70",
+        "LoD/1.13d": "0x6F8C5F00"
       },
       "rvas": {
         "LoD/1.07": "0x4EFC",
@@ -3440,11 +3869,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F0C",
         "LoD/1.09d": "0x4F0C",
         "LoD/1.10": "0x4E9C",
-        "LoD/1.11": "0x5F1E",
-        "LoD/1.11b": "0x5F1E",
-        "LoD/1.12a": "0x5F8E",
-        "LoD/1.13c": "0x5F8E",
-        "LoD/1.13d": "0x5F1E"
+        "LoD/1.11": "0x5F00",
+        "LoD/1.11b": "0x5F00",
+        "LoD/1.12a": "0x5F70",
+        "LoD/1.13c": "0x5F70",
+        "LoD/1.13d": "0x5F00"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3513,11 +3942,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F12",
         "LoD/1.09d": "0x6F884F12",
         "LoD/1.10": "0x6F884EA2",
-        "LoD/1.11": "0x6F8C5ED0",
-        "LoD/1.11b": "0x6F8C5ECA",
-        "LoD/1.12a": "0x6F8C5F58",
-        "LoD/1.13c": "0x6F8C5F58",
-        "LoD/1.13d": "0x6F8C5ECA"
+        "LoD/1.11": "0x6F8C5EF4",
+        "LoD/1.11b": "0x6F8C5EF4",
+        "LoD/1.12a": "0x6F8C5F64",
+        "LoD/1.13c": "0x6F8C5F7C",
+        "LoD/1.13d": "0x6F8C5F0C"
       },
       "rvas": {
         "LoD/1.07": "0x4F02",
@@ -3526,11 +3955,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F12",
         "LoD/1.09d": "0x4F12",
         "LoD/1.10": "0x4EA2",
-        "LoD/1.11": "0x5ED0",
-        "LoD/1.11b": "0x5ECA",
-        "LoD/1.12a": "0x5F58",
-        "LoD/1.13c": "0x5F58",
-        "LoD/1.13d": "0x5ECA"
+        "LoD/1.11": "0x5EF4",
+        "LoD/1.11b": "0x5EF4",
+        "LoD/1.12a": "0x5F64",
+        "LoD/1.13c": "0x5F7C",
+        "LoD/1.13d": "0x5F0C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3599,11 +4028,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F18",
         "LoD/1.09d": "0x6F884F18",
         "LoD/1.10": "0x6F884EA8",
-        "LoD/1.11": "0x6F8C5EF4",
-        "LoD/1.11b": "0x6F8C5EF4",
-        "LoD/1.12a": "0x6F8C5F64",
-        "LoD/1.13c": "0x6F8C5F7C",
-        "LoD/1.13d": "0x6F8C5F0C"
+        "LoD/1.11": "0x6F8C5EFA",
+        "LoD/1.11b": "0x6F8C5F24",
+        "LoD/1.12a": "0x6F8C5F94",
+        "LoD/1.13c": "0x6F8C5F94",
+        "LoD/1.13d": "0x6F8C5F24"
       },
       "rvas": {
         "LoD/1.07": "0x4F08",
@@ -3612,11 +4041,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F18",
         "LoD/1.09d": "0x4F18",
         "LoD/1.10": "0x4EA8",
-        "LoD/1.11": "0x5EF4",
-        "LoD/1.11b": "0x5EF4",
-        "LoD/1.12a": "0x5F64",
-        "LoD/1.13c": "0x5F7C",
-        "LoD/1.13d": "0x5F0C"
+        "LoD/1.11": "0x5EFA",
+        "LoD/1.11b": "0x5F24",
+        "LoD/1.12a": "0x5F94",
+        "LoD/1.13c": "0x5F94",
+        "LoD/1.13d": "0x5F24"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3685,11 +4114,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F1E",
         "LoD/1.09d": "0x6F884F1E",
         "LoD/1.10": "0x6F884EAE",
-        "LoD/1.11": "0x6F8C5EB8",
-        "LoD/1.11b": "0x6F8C5EB8",
-        "LoD/1.12a": "0x6F8C5F22",
-        "LoD/1.13c": "0x6F8C5F10",
-        "LoD/1.13d": "0x6F8C5EB8"
+        "LoD/1.11": "0x6F8C5F18",
+        "LoD/1.11b": "0x6F8C5F18",
+        "LoD/1.12a": "0x6F8C5F88",
+        "LoD/1.13c": "0x6F8C5F88",
+        "LoD/1.13d": "0x6F8C5F18"
       },
       "rvas": {
         "LoD/1.07": "0x4F0E",
@@ -3698,11 +4127,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F1E",
         "LoD/1.09d": "0x4F1E",
         "LoD/1.10": "0x4EAE",
-        "LoD/1.11": "0x5EB8",
-        "LoD/1.11b": "0x5EB8",
-        "LoD/1.12a": "0x5F22",
-        "LoD/1.13c": "0x5F10",
-        "LoD/1.13d": "0x5EB8"
+        "LoD/1.11": "0x5F18",
+        "LoD/1.11b": "0x5F18",
+        "LoD/1.12a": "0x5F88",
+        "LoD/1.13c": "0x5F88",
+        "LoD/1.13d": "0x5F18"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3771,11 +4200,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F24",
         "LoD/1.09d": "0x6F884F24",
         "LoD/1.10": "0x6F884EB4",
-        "LoD/1.11": "0x6F8C5F30",
-        "LoD/1.11b": "0x6F8C5F30",
-        "LoD/1.12a": "0x6F8C5F7C",
-        "LoD/1.13c": "0x6F8C5F82",
-        "LoD/1.13d": "0x6F8C5F12"
+        "LoD/1.11": "0x6F8C5EB2",
+        "LoD/1.11b": "0x6F8C5EAC",
+        "LoD/1.12a": "0x6F8C5F1C",
+        "LoD/1.13c": "0x6F8C5F28",
+        "LoD/1.13d": "0x6F8C5EB2"
       },
       "rvas": {
         "LoD/1.07": "0x4F14",
@@ -3784,11 +4213,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F24",
         "LoD/1.09d": "0x4F24",
         "LoD/1.10": "0x4EB4",
-        "LoD/1.11": "0x5F30",
-        "LoD/1.11b": "0x5F30",
-        "LoD/1.12a": "0x5F7C",
-        "LoD/1.13c": "0x5F82",
-        "LoD/1.13d": "0x5F12"
+        "LoD/1.11": "0x5EB2",
+        "LoD/1.11b": "0x5EAC",
+        "LoD/1.12a": "0x5F1C",
+        "LoD/1.13c": "0x5F28",
+        "LoD/1.13d": "0x5EB2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3857,11 +4286,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F2A",
         "LoD/1.09d": "0x6F884F2A",
         "LoD/1.10": "0x6F884EBA",
-        "LoD/1.11": "0x6F8C5EA6",
-        "LoD/1.11b": "0x6F8C5EA0",
-        "LoD/1.12a": "0x6F8C5F10",
-        "LoD/1.13c": "0x6F8C5F1C",
-        "LoD/1.13d": "0x6F8C5EA6"
+        "LoD/1.11": "0x6F8C5F30",
+        "LoD/1.11b": "0x6F8C5F30",
+        "LoD/1.12a": "0x6F8C5F7C",
+        "LoD/1.13c": "0x6F8C5F64",
+        "LoD/1.13d": "0x6F8C5EF4"
       },
       "rvas": {
         "LoD/1.07": "0x4F1A",
@@ -3870,11 +4299,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F2A",
         "LoD/1.09d": "0x4F2A",
         "LoD/1.10": "0x4EBA",
-        "LoD/1.11": "0x5EA6",
-        "LoD/1.11b": "0x5EA0",
-        "LoD/1.12a": "0x5F10",
-        "LoD/1.13c": "0x5F1C",
-        "LoD/1.13d": "0x5EA6"
+        "LoD/1.11": "0x5F30",
+        "LoD/1.11b": "0x5F30",
+        "LoD/1.12a": "0x5F7C",
+        "LoD/1.13c": "0x5F64",
+        "LoD/1.13d": "0x5EF4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -3943,11 +4372,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F884F30",
         "LoD/1.09d": "0x6F884F30",
         "LoD/1.10": "0x6F884EC0",
-        "LoD/1.11": "0x6F8C5F00",
-        "LoD/1.11b": "0x6F8C5F00",
-        "LoD/1.12a": "0x6F8C5F70",
-        "LoD/1.13c": "0x6F8C5F70",
-        "LoD/1.13d": "0x6F8C5F00"
+        "LoD/1.11": "0x6F8C5E9A",
+        "LoD/1.11b": "0x6F8C5E9A",
+        "LoD/1.12a": "0x6F8C5F0A",
+        "LoD/1.13c": "0x6F8C5F0A",
+        "LoD/1.13d": "0x6F8C5E9A"
       },
       "rvas": {
         "LoD/1.07": "0x4F20",
@@ -3956,11 +4385,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x4F30",
         "LoD/1.09d": "0x4F30",
         "LoD/1.10": "0x4EC0",
-        "LoD/1.11": "0x5F00",
-        "LoD/1.11b": "0x5F00",
-        "LoD/1.12a": "0x5F70",
-        "LoD/1.13c": "0x5F70",
-        "LoD/1.13d": "0x5F00"
+        "LoD/1.11": "0x5E9A",
+        "LoD/1.11b": "0x5E9A",
+        "LoD/1.12a": "0x5F0A",
+        "LoD/1.13c": "0x5F0A",
+        "LoD/1.13d": "0x5E9A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -4571,12 +5000,12 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x6F8890FA",
         "LoD/1.09b": "0x6F8890FA",
         "LoD/1.09d": "0x6F8890FA",
-        "LoD/1.10": "0x6F889086",
-        "LoD/1.11": "0x6F8C1FAB",
+        "LoD/1.10": "0x6F885886",
+        "LoD/1.11": "0x6F8C1039",
         "LoD/1.11b": "0x6F8C4324",
         "LoD/1.12a": "0x6F8C1D61",
         "LoD/1.13c": "0x6F8C4355",
-        "LoD/1.13d": "0x6F8C1D5D"
+        "LoD/1.13d": "0x6F8C4324"
       },
       "rvas": {
         "LoD/1.07": "0x90EA",
@@ -4584,12 +5013,12 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09": "0x90FA",
         "LoD/1.09b": "0x90FA",
         "LoD/1.09d": "0x90FA",
-        "LoD/1.10": "0x9086",
-        "LoD/1.11": "0x1FAB",
+        "LoD/1.10": "0x5886",
+        "LoD/1.11": "0x1039",
         "LoD/1.11b": "0x4324",
         "LoD/1.12a": "0x1D61",
         "LoD/1.13c": "0x4355",
-        "LoD/1.13d": "0x1D5D"
+        "LoD/1.13d": "0x4324"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -8629,11 +9058,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F886F2D",
         "LoD/1.09d": "0x6F886F2D",
         "LoD/1.10": "0x6F8885F8",
-        "LoD/1.11": "0x6F8C2891",
-        "LoD/1.11b": "0x6F8C2891",
-        "LoD/1.12a": "0x6F8C28B1",
-        "LoD/1.13c": "0x6F8C28B1",
-        "LoD/1.13d": "0x6F8C2891"
+        "LoD/1.11": "0x6F8C9B9D",
+        "LoD/1.11b": "0x6F8C9B9E",
+        "LoD/1.12a": "0x6F8C9C16",
+        "LoD/1.13c": "0x6F8C9C13",
+        "LoD/1.13d": "0x6F8C9BA2"
       },
       "rvas": {
         "LoD/1.07": "0x6F1D",
@@ -8642,11 +9071,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "0x6F2D",
         "LoD/1.09d": "0x6F2D",
         "LoD/1.10": "0x85F8",
-        "LoD/1.11": "0x2891",
-        "LoD/1.11b": "0x2891",
-        "LoD/1.12a": "0x28B1",
-        "LoD/1.13c": "0x28B1",
-        "LoD/1.13d": "0x2891"
+        "LoD/1.11": "0x9B9D",
+        "LoD/1.11b": "0x9B9E",
+        "LoD/1.12a": "0x9C16",
+        "LoD/1.13c": "0x9C13",
+        "LoD/1.13d": "0x9BA2"
       },
       "sizes": {
         "LoD/1.07": 27,
@@ -8700,11 +9129,11 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.09b": "15ec667135b11a0873a61b429d37dd78",
         "LoD/1.09d": "15ec667135b11a0873a61b429d37dd78",
         "LoD/1.10": "15ec667135b11a0873a61b429d37dd78",
-        "LoD/1.11": "179c969cc717d22841f18b89d2acdead",
-        "LoD/1.11b": "179c969cc717d22841f18b89d2acdead",
-        "LoD/1.12a": "179c969cc717d22841f18b89d2acdead",
-        "LoD/1.13c": "179c969cc717d22841f18b89d2acdead",
-        "LoD/1.13d": "179c969cc717d22841f18b89d2acdead"
+        "LoD/1.11": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.11b": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.12a": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.13c": "549d5b8046a6f807c0249d1d16a7d887",
+        "LoD/1.13d": "549d5b8046a6f807c0249d1d16a7d887"
       }
     },
     "d2ddraw.dll_MNE_06356139b9d2": {
@@ -8965,27 +9394,27 @@ var FUNCTIONS_D2DDraw_dll = {
       "addresses": {
         "LoD/1.07": "0x6F8E716E",
         "LoD/1.08": "0x6F8E717E",
-        "LoD/1.09": "0x6F887168",
+        "LoD/1.09": "0x6F88717E",
         "LoD/1.09b": "0x6F88717E",
-        "LoD/1.09d": "0x6F887168",
+        "LoD/1.09d": "0x6F88717E",
         "LoD/1.10": "0x6F888833",
         "LoD/1.11": "0x6F8C9DBA",
         "LoD/1.11b": "0x6F8C9DBB",
         "LoD/1.12a": "0x6F8C9E33",
-        "LoD/1.13c": "0x6F8C9E30",
+        "LoD/1.13c": "0x6F8C9E1A",
         "LoD/1.13d": "0x6F8C9DBF"
       },
       "rvas": {
         "LoD/1.07": "0x716E",
         "LoD/1.08": "0x717E",
-        "LoD/1.09": "0x7168",
+        "LoD/1.09": "0x717E",
         "LoD/1.09b": "0x717E",
-        "LoD/1.09d": "0x7168",
+        "LoD/1.09d": "0x717E",
         "LoD/1.10": "0x8833",
         "LoD/1.11": "0x9DBA",
         "LoD/1.11b": "0x9DBB",
         "LoD/1.12a": "0x9E33",
-        "LoD/1.13c": "0x9E30",
+        "LoD/1.13c": "0x9E1A",
         "LoD/1.13d": "0x9DBF"
       },
       "sizes": {
@@ -9051,17 +9480,17 @@ var FUNCTIONS_D2DDraw_dll = {
       "addresses": {
         "LoD/1.07": "0x6F8E71B1",
         "LoD/1.08": "0x6F8E71C1",
-        "LoD/1.09": "0x6F8871C1",
-        "LoD/1.09b": "0x6F8871C1",
-        "LoD/1.09d": "0x6F8871C1",
+        "LoD/1.09": "0x6F887194",
+        "LoD/1.09b": "0x6F887194",
+        "LoD/1.09d": "0x6F887194",
         "LoD/1.10": "0x6F88885F"
       },
       "rvas": {
         "LoD/1.07": "0x71B1",
         "LoD/1.08": "0x71C1",
-        "LoD/1.09": "0x71C1",
-        "LoD/1.09b": "0x71C1",
-        "LoD/1.09d": "0x71C1",
+        "LoD/1.09": "0x7194",
+        "LoD/1.09b": "0x7194",
+        "LoD/1.09d": "0x7194",
         "LoD/1.10": "0x885F"
       },
       "sizes": {
@@ -9503,7 +9932,7 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_MNE_bff09423b51f": {
       "addresses": {
         "LoD/1.07": "0x6F8E8AC0",
-        "LoD/1.08": "0x6F8E8AD0",
+        "LoD/1.08": "0x6F8E74D0",
         "LoD/1.09": "0x6F888AD0",
         "LoD/1.09b": "0x6F888AD0",
         "LoD/1.09d": "0x6F888AD0",
@@ -9511,7 +9940,7 @@ var FUNCTIONS_D2DDraw_dll = {
       },
       "rvas": {
         "LoD/1.07": "0x8AC0",
-        "LoD/1.08": "0x8AD0",
+        "LoD/1.08": "0x74D0",
         "LoD/1.09": "0x8AD0",
         "LoD/1.09b": "0x8AD0",
         "LoD/1.09d": "0x8AD0",
@@ -10676,6 +11105,41 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -13245,6 +13709,53 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:ab0cec2d5472d69fa819e2861a722324",
+      "callees": {
+        "LoD/1.08": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "Ordinal_268",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"DDrawPlayBinkFile: *** Couldn't load Bink movie '...",
@@ -13339,6 +13850,93 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:127367ac7359e3a495828638b334de96",
+      "callees": {
+        "LoD/1.08": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_422",
+          "Ordinal_423",
+          "Ordinal_421"
+        ],
+        "LoD/1.09": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_422",
+          "Ordinal_423",
+          "Ordinal_421"
+        ],
+        "LoD/1.09b": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_422",
+          "Ordinal_423",
+          "Ordinal_421"
+        ],
+        "LoD/1.09d": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "Ordinal_422",
+          "Ordinal_423",
+          "Ordinal_421"
+        ],
+        "LoD/1.10": [
+          "GetSystemConfigInitFlag",
+          "FogAssert",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_422",
+          "Ordinal_423",
+          "Ordinal_421"
+        ],
+        "LoD/1.11": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "QueryRegistryData",
+          "ParseConfigurationValue",
+          "ValidateAndProcessStringParameters"
+        ],
+        "LoD/1.11b": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "QueryRegistryData",
+          "ParseConfigurationValue",
+          "ValidateAndProcessStringParameters"
+        ],
+        "LoD/1.12a": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "QueryRegistryData",
+          "ParseConfigurationValue",
+          "ValidateAndProcessStringParameters"
+        ],
+        "LoD/1.13c": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "QueryRegistryData",
+          "ParseConfigurationValue",
+          "ValidateAndProcessStringParameters"
+        ],
+        "LoD/1.13d": [
+          "GetSystemConfigInitFlag",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "QueryRegistryData",
+          "ParseConfigurationValue",
+          "ValidateAndProcessStringParameters"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Restricted to DirectX 3 support.\"",
@@ -13473,6 +14071,33 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:6649fe12b3cda0a9d5e191c3bb7a27f6",
+      "callees": {
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Shutting down DirectDraw...\"",
@@ -13547,6 +14172,33 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:6649fe12b3cda0a9d5e191c3bb7a27f6",
+      "callees": {
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Shutting down DirectDraw...\"",
@@ -13740,6 +14392,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:c1774a46af544d248ad83f715d8567dd",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"CreatePalette failed!\"",
@@ -13834,6 +14503,63 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:31b06583ca9fdca783d42d37f9cf6116",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Opening DirectDraw window at %dx%d at %d bit for ...",
@@ -13963,6 +14689,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:7e5a1a7b0bef44196922daeddefd761f",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"glpddsPrimary\"",
@@ -14084,6 +14827,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:d092403c0d383d46e4fb958ac9b03839",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2DDraw\\\\Src\\\\ddCo...",
@@ -14227,6 +14987,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:8b54f0bbf2bb0c9a7659010f4209dbab",
+      "callees": {
+        "LoD/1.08": [
+          "GenerateGammaTable"
+        ],
+        "LoD/1.09": [
+          "GenerateGammaTable"
+        ],
+        "LoD/1.09b": [
+          "GenerateGammaTable"
+        ],
+        "LoD/1.09d": [
+          "GenerateGammaTable"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10198"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -14817,6 +15594,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"prc->top <= prc->bottom\"",
@@ -14891,6 +15690,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"prc->top <= prc->bottom\"",
@@ -14965,6 +15786,53 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:1a17190b551c5148e206750bb30a23b2",
+      "callees": {
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "FogAssert",
+          "DecodeCelFrame"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "FogAssert",
+          "Ordinal_10034"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"ptClipRect->bottom > 0\"",
@@ -15034,6 +15902,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:7ec5ca8f54f8dc04fa4be4bf81c6b50e",
+      "callees": {
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "GetCelFileTableIndex",
+          "GetCelModeValue",
+          "GetCelFileInfoHeight",
+          "GetDWordFromPointerField",
+          "BlitScaledCmpFrameClipped"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "Ordinal_10037",
+          "Ordinal_10038",
+          "Ordinal_10039",
+          "Ordinal_10040",
+          "Ordinal_10035"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -15078,6 +15988,20 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:764ba89d955cb2837e70da8f85d4f96c",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 17,
         "LoD/1.09": 17,
@@ -15122,6 +16046,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:524f5c6fd6cc5d10dd1ba023712112f0",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -15166,6 +16107,20 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:e2489ecdef266ff4eacbf749a135d800",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 15,
         "LoD/1.09": 15,
@@ -15483,6 +16438,16 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:0168311543550d394f9e6aa4aa20085a",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "DirectDrawCreate",
+          "Ordinal_10029",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"32 Bit Cutscenes\"",
@@ -15615,6 +16580,12 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:05c67e3255cfe2e47ff2769823d4a2a0",
+      "callees": {
+        "LoD/1.10": [
+          "FindClosestColorMatch",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2DDraw\\..."
@@ -15643,6 +16614,13 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:21365f006bd038d03eca84587039c792",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10048",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2DDraw\\...",
@@ -15673,6 +16651,11 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:f0e93ab496b038501f94b237d68cfa2e",
+      "callees": {
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 17
       },
@@ -15696,6 +16679,11 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:faf55ebd04917b29c61562507f5cdb39",
+      "callees": {
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 15
       },
@@ -15709,19 +16697,19 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_Ordinal_10048": {
       "addresses": {
         "LoD/1.10": "0x6F884E6C",
-        "LoD/1.11": "0x6F8C5EE2",
-        "LoD/1.11b": "0x6F8C5EDC",
-        "LoD/1.12a": "0x6F8C5F40",
-        "LoD/1.13c": "0x6F8C5F34",
-        "LoD/1.13d": "0x6F8C5ED6"
+        "LoD/1.11": "0x6F8C5F2A",
+        "LoD/1.11b": "0x6F8C5F2A",
+        "LoD/1.12a": "0x6F8C5F9A",
+        "LoD/1.13c": "0x6F8C5F9A",
+        "LoD/1.13d": "0x6F8C5F2A"
       },
       "rvas": {
         "LoD/1.10": "0x4E6C",
-        "LoD/1.11": "0x5EE2",
-        "LoD/1.11b": "0x5EDC",
-        "LoD/1.12a": "0x5F40",
-        "LoD/1.13c": "0x5F34",
-        "LoD/1.13d": "0x5ED6"
+        "LoD/1.11": "0x5F2A",
+        "LoD/1.11b": "0x5F2A",
+        "LoD/1.12a": "0x5F9A",
+        "LoD/1.13c": "0x5F9A",
+        "LoD/1.13d": "0x5F2A"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -16496,57 +17484,6 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.13d": "a51a9a5e7ceb2fab96b937dc9f784c13"
       }
     },
-    "d2ddraw.dll_ReleaseMTInitLock": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C168C",
-        "LoD/1.11b": "0x6F8C168C",
-        "LoD/1.12a": "0x6F8C1AC3",
-        "LoD/1.13c": "0x6F8C1AC3",
-        "LoD/1.13d": "0x6F8C168C"
-      },
-      "rvas": {
-        "LoD/1.11": "0x168C",
-        "LoD/1.11b": "0x168C",
-        "LoD/1.12a": "0x1AC3",
-        "LoD/1.13c": "0x1AC3",
-        "LoD/1.13d": "0x168C"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "ReleaseMTInitLock",
-      "signature": "void ReleaseMTInitLock(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Releases the multi-threaded initialization critical section lock.\n\nAlgorithm:\n1. Push lock index 10 onto stack (multi-threaded initialization lock identifier)\n2. Call LeaveCriticalSectionByIndex to release the critical section lock\n3. Stack cleanup with POP ECX per __stdcall convention\n4. Return to caller\n\nParameters:\nNone - No parameters required\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Lock index 10 is reserved for multi-threaded initialization synchronization\n- This function is part of the CRT (C Runtime) initialization system\n- Called after successfully initializing thread-local critical sections\n- Serves as a simple wrapper to simplify calling code",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
     "d2ddraw.dll___lock": {
       "addresses": {
         "LoD/1.11": "0x6F8C1695",
@@ -17169,6 +18106,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -17873,6 +18827,57 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.13d": "79c576ae79b525f94550b7e17b8f3e0b"
       }
     },
+    "d2ddraw.dll_FilterCppException": {
+      "addresses": {
+        "LoD/1.11": "0x6F8C2891",
+        "LoD/1.11b": "0x6F8C2891",
+        "LoD/1.12a": "0x6F8C28B1",
+        "LoD/1.13c": "0x6F8C28B1",
+        "LoD/1.13d": "0x6F8C2891"
+      },
+      "rvas": {
+        "LoD/1.11": "0x2891",
+        "LoD/1.11b": "0x2891",
+        "LoD/1.12a": "0x28B1",
+        "LoD/1.13c": "0x28B1",
+        "LoD/1.13d": "0x2891"
+      },
+      "sizes": {
+        "LoD/1.11": 27,
+        "LoD/1.11b": 27,
+        "LoD/1.12a": 27,
+        "LoD/1.13c": 27,
+        "LoD/1.13d": 27
+      },
+      "name": "FilterCppException",
+      "signature": "int FilterCppException(int nExceptionCode, _EXCEPTION_POINTERS * pExceptionInfo)",
+      "calling_convention": "__cdecl",
+      "comment": "C++ exception filter for Structured Exception Handling (SEH) interop.\n\nAlgorithm:\n1. Load C++ exception code constant (0xe06d7363, the EH_EXCEPTION_NUMBER)\n2. Compare the passed exception code against the C++ exception constant\n3. If exception code matches, push exception info and code as parameters\n4. Call __XcptFilter handler to process the C++ exception and return its result\n5. If exception code doesn't match, return 0 (EXCEPTION_CONTINUE_SEARCH)\n\nParameters:\n- exceptionCode: Windows exception code from SEH handler. C++ exceptions use 0xe06d7363\n- pExceptionInfo: Pointer to EXCEPTION_POINTERS structure with exception record and context\n\nReturns:\n- Result from __XcptFilter if exception is C++ (EXCEPTION_EXECUTE_HANDLER=1 or EXCEPTION_CONTINUE_SEARCH=0)\n- 0 (EXCEPTION_CONTINUE_SEARCH) if exception is not C++\n\nSpecial Cases:\n- Magic number 0xe06d7363 is the Microsoft C++ runtime exception code\n- This function bridges Windows SEH and C++ exception handling\n- Part of exception dispatch chain in __CxxFrameHandler3\n- Used when C++ code runs with SEH (/EHc compiler flag)",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:179c969cc717d22841f18b89d2acdead",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "179c969cc717d22841f18b89d2acdead",
+        "LoD/1.11b": "179c969cc717d22841f18b89d2acdead",
+        "LoD/1.12a": "179c969cc717d22841f18b89d2acdead",
+        "LoD/1.13c": "179c969cc717d22841f18b89d2acdead",
+        "LoD/1.13d": "179c969cc717d22841f18b89d2acdead"
+      }
+    },
     "d2ddraw.dll____crtInitCritSecNoSpinCount@8": {
       "addresses": {
         "LoD/1.11": "0x6F8C2A5C",
@@ -18306,16 +19311,16 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll__memmove": {
       "addresses": {
         "LoD/1.11": "0x6F8C3960",
-        "LoD/1.11b": "0x6F8C3960",
-        "LoD/1.12a": "0x6F8C47E0",
-        "LoD/1.13c": "0x6F8C35C0",
+        "LoD/1.11b": "0x6F8C47B0",
+        "LoD/1.12a": "0x6F8C35C0",
+        "LoD/1.13c": "0x6F8C47E0",
         "LoD/1.13d": "0x6F8C3960"
       },
       "rvas": {
         "LoD/1.11": "0x3960",
-        "LoD/1.11b": "0x3960",
-        "LoD/1.12a": "0x47E0",
-        "LoD/1.13c": "0x35C0",
+        "LoD/1.11b": "0x47B0",
+        "LoD/1.12a": "0x35C0",
+        "LoD/1.13c": "0x47E0",
         "LoD/1.13d": "0x3960"
       },
       "sizes": {
@@ -18505,6 +19510,57 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.12a": "202d2c66c8a5b404ad3bf64c94b499c1",
         "LoD/1.13c": "202d2c66c8a5b404ad3bf64c94b499c1",
         "LoD/1.13d": "202d2c66c8a5b404ad3bf64c94b499c1"
+      }
+    },
+    "d2ddraw.dll_UnlockCriticalSection12": {
+      "addresses": {
+        "LoD/1.11": "0x6F8C3E60",
+        "LoD/1.11b": "0x6F8C3E60",
+        "LoD/1.12a": "0x6F8C3E7E",
+        "LoD/1.13c": "0x6F8C3E7E",
+        "LoD/1.13d": "0x6F8C3E60"
+      },
+      "rvas": {
+        "LoD/1.11": "0x3E60",
+        "LoD/1.11b": "0x3E60",
+        "LoD/1.12a": "0x3E7E",
+        "LoD/1.13c": "0x3E7E",
+        "LoD/1.13d": "0x3E60"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "UnlockCriticalSection12",
+      "signature": "void UnlockCriticalSection12(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Unlocks critical section 12 during thread-local info updates.\n\nAlgorithm:\n1. Push lock index constant 0xc (12) as argument\n2. Call LeaveCriticalSectionByIndex to release the lock\n3. Return to caller\n\nParameters:\nNone - wrapper stub with no parameters\n\nReturns:\nvoid - no return value\n\nSpecial Cases:\n- Lock index 12 (0xc) is hardcoded as a constant pushed directly\n- This is a Visual Studio runtime stub for thread-local storage management\n- Used exclusively by ___updatetlocinfo during thread-local info updates\n- Part of thread-safety infrastructure for runtime initialization",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2ddraw.dll_MapMessageIdToCommand": {
@@ -18970,16 +20026,16 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll__memmove_47B0": {
       "addresses": {
         "LoD/1.11": "0x6F8C47B0",
-        "LoD/1.11b": "0x6F8C47B0",
-        "LoD/1.12a": "0x6F8C35C0",
-        "LoD/1.13c": "0x6F8C47E0",
+        "LoD/1.11b": "0x6F8C3960",
+        "LoD/1.12a": "0x6F8C47E0",
+        "LoD/1.13c": "0x6F8C35C0",
         "LoD/1.13d": "0x6F8C47B0"
       },
       "rvas": {
         "LoD/1.11": "0x47B0",
-        "LoD/1.11b": "0x47B0",
-        "LoD/1.12a": "0x35C0",
-        "LoD/1.13c": "0x47E0",
+        "LoD/1.11b": "0x3960",
+        "LoD/1.12a": "0x47E0",
+        "LoD/1.13c": "0x35C0",
         "LoD/1.13d": "0x47B0"
       },
       "sizes": {
@@ -20128,20 +21184,20 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.13d": "6b07f716ad39855b07502ac9a8f75c79"
       }
     },
-    "d2ddraw.dll_Ordinal_10091": {
+    "d2ddraw.dll_OpenAndValidateGameFile": {
       "addresses": {
-        "LoD/1.11": "0x6F8C5F06",
-        "LoD/1.11b": "0x6F8C5F06",
-        "LoD/1.12a": "0x6F8C5F76",
-        "LoD/1.13c": "0x6F8C5F76",
-        "LoD/1.13d": "0x6F8C5F06"
+        "LoD/1.11": "0x6F8C5EA0",
+        "LoD/1.11b": "0x6F8C5EB2",
+        "LoD/1.12a": "0x6F8C5F2E",
+        "LoD/1.13c": "0x6F8C5F2E",
+        "LoD/1.13d": "0x6F8C5EA0"
       },
       "rvas": {
-        "LoD/1.11": "0x5F06",
-        "LoD/1.11b": "0x5F06",
-        "LoD/1.12a": "0x5F76",
-        "LoD/1.13c": "0x5F76",
-        "LoD/1.13d": "0x5F06"
+        "LoD/1.11": "0x5EA0",
+        "LoD/1.11b": "0x5EB2",
+        "LoD/1.12a": "0x5F2E",
+        "LoD/1.13c": "0x5F2E",
+        "LoD/1.13d": "0x5EA0"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -20150,9 +21206,9 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10091",
-      "signature": "undefined Ordinal_10091(void)",
-      "calling_convention": "unknown",
+      "name": "OpenAndValidateGameFile",
+      "signature": "bool OpenAndValidateGameFile(void * pDefaultPath, uint * pFilePath, byte openFlags, uint * pOutputHandle)",
+      "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -20250,6 +21306,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:03c55fe6f83e041f5b2a6bce78231902",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10051"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10045"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10067"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10049"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10075"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 22,
         "LoD/1.11b": 22,
@@ -20297,6 +21370,53 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:26bd59a856b2a856841c750aefb7bb81",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10051",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10045",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10067",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10049",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock",
+          "Ordinal_10075",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2DDraw\\\\Src\\\\ddSmack.cpp\""
@@ -20361,6 +21481,38 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -20502,6 +21654,38 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -20549,6 +21733,38 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -20643,6 +21859,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
@@ -20858,6 +22096,38 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7c0f7c9913fc964888357cd4b233495a",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -20905,6 +22175,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:42ca557efbfabcc1c05d050b370a71ee",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10084"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10097"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10079"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10072"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10041"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -20952,6 +22264,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:991703c12cadfa58db490f9bafd78ddd",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10076"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10083"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10093"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10080"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -20999,6 +22353,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c214a2e79a23b5b6ea24ea5fa70a5a4e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10103"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10021"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10053"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10001"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -21046,6 +22442,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c214a2e79a23b5b6ea24ea5fa70a5a4e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "Ordinal_10103"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "Ordinal_10021"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "Ordinal_10053"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "Ordinal_10015"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "Ordinal_10001"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -21140,6 +22578,48 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:74fd6059e906dba2c894704ff59b3afa",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10035",
+          "Ordinal_10081",
+          "Ordinal_10092",
+          "Ordinal_10063",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10010",
+          "Ordinal_10009",
+          "Ordinal_10103",
+          "Ordinal_10025",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10031",
+          "Ordinal_10096",
+          "Ordinal_10008",
+          "Ordinal_10043",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10060",
+          "Ordinal_10000",
+          "Ordinal_10002",
+          "Ordinal_10069",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10092",
+          "Ordinal_10033",
+          "Ordinal_10030",
+          "Ordinal_10007",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 20,
         "LoD/1.11b": 20,
@@ -21187,6 +22667,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:948cd1a598a6dc495638f6ff508fe0f1",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "Ordinal_10076"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "Ordinal_10083"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "Ordinal_10093"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "Ordinal_10080"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "Ordinal_10011"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -21212,16 +22714,16 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_GetUnitX": {
       "addresses": {
         "LoD/1.11": "0x6F8C8020",
-        "LoD/1.11b": "0x6F8C7700",
+        "LoD/1.11b": "0x6F8C7710",
         "LoD/1.12a": "0x6F8C8730",
-        "LoD/1.13c": "0x6F8C8010",
+        "LoD/1.13c": "0x6F8C8020",
         "LoD/1.13d": "0x6F8C7930"
       },
       "rvas": {
         "LoD/1.11": "0x8020",
-        "LoD/1.11b": "0x7700",
+        "LoD/1.11b": "0x7710",
         "LoD/1.12a": "0x8730",
-        "LoD/1.13c": "0x8010",
+        "LoD/1.13c": "0x8020",
         "LoD/1.13d": "0x7930"
       },
       "sizes": {
@@ -21263,16 +22765,16 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_GetUnitX_8030": {
       "addresses": {
         "LoD/1.11": "0x6F8C8030",
-        "LoD/1.11b": "0x6F8C7710",
+        "LoD/1.11b": "0x6F8C7700",
         "LoD/1.12a": "0x6F8C8740",
-        "LoD/1.13c": "0x6F8C8020",
+        "LoD/1.13c": "0x6F8C8010",
         "LoD/1.13d": "0x6F8C7940"
       },
       "rvas": {
         "LoD/1.11": "0x8030",
-        "LoD/1.11b": "0x7710",
+        "LoD/1.11b": "0x7700",
         "LoD/1.12a": "0x8740",
-        "LoD/1.13c": "0x8020",
+        "LoD/1.13c": "0x8010",
         "LoD/1.13d": "0x7940"
       },
       "sizes": {
@@ -21387,6 +22889,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3f4a43739206651ed8c4dda2b25bc5a6",
+      "callees": {
+        "LoD/1.11": [
+          "GenerateSequentialFloatValuesIntoBuffer"
+        ],
+        "LoD/1.11b": [
+          "GenerateSequentialFloatValuesIntoBuffer"
+        ],
+        "LoD/1.12a": [
+          "GenerateSequentialFloatValuesIntoBuffer"
+        ],
+        "LoD/1.13c": [
+          "GenerateSequentialFloatValuesIntoBuffer"
+        ],
+        "LoD/1.13d": [
+          "GenerateSequentialFloatValuesIntoBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -21434,6 +22953,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:36ed28c658c22dca7294dc5f246c5443",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Unlock failed!\""
@@ -21549,6 +23090,33 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:100aebb0dbe9bfbb74116e4117a839db",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateParameterOrShutdown"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"CreateSurface (render) failed!\"",
@@ -21749,6 +23317,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -21796,6 +23386,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3a8a0edcf73a0b9f0311072b1c090ec6",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2DDraw\\\\Src\\\\ddCore.cpp\"",
@@ -21913,6 +23525,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:45a2c1e4e4ce9019cd57aaf636712719",
+      "callees": {
+        "LoD/1.11": [
+          "DirectDrawCreate",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "DirectDrawCreate",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "DirectDrawCreate",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "DirectDrawCreate",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "DirectDrawCreate",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2DDraw\\\\Src\\\\ddCore.cpp\"",
@@ -21982,6 +23616,28 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -22029,6 +23685,38 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cfda3f97a7e6fbd04558f745682dddaf",
+      "callees": {
+        "LoD/1.11": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10028",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10039",
+          "Ordinal_10039"
+        ],
+        "LoD/1.12a": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10005",
+          "Ordinal_10005"
+        ],
+        "LoD/1.13c": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10061",
+          "Ordinal_10061"
+        ],
+        "LoD/1.13d": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10056",
+          "Ordinal_10056"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 44,
         "LoD/1.11b": 44,
@@ -22076,6 +23764,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:222a9481cc25254932e2a6f6a0636b61",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -22123,6 +23828,23 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a1fd4898b42622c1fd8324dbe77dd0a1",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -22640,57 +24362,6 @@ var FUNCTIONS_D2DDraw_dll = {
         "LoD/1.13d": "d1605fa863a6daa5441d188cba14b16b"
       }
     },
-    "d2ddraw.dll___CopyMan": {
-      "addresses": {
-        "LoD/1.11": "0x6F8C9B9D",
-        "LoD/1.11b": "0x6F8C9B9E",
-        "LoD/1.12a": "0x6F8C9C16",
-        "LoD/1.13c": "0x6F8C9C13",
-        "LoD/1.13d": "0x6F8C9BA2"
-      },
-      "rvas": {
-        "LoD/1.11": "0x9B9D",
-        "LoD/1.11b": "0x9B9E",
-        "LoD/1.12a": "0x9C16",
-        "LoD/1.13c": "0x9C13",
-        "LoD/1.13d": "0x9BA2"
-      },
-      "sizes": {
-        "LoD/1.11": 27,
-        "LoD/1.11b": 27,
-        "LoD/1.12a": 27,
-        "LoD/1.13c": 27,
-        "LoD/1.13d": 27
-      },
-      "name": "__CopyMan",
-      "signature": "undefined __CopyMan(int param_1, undefined4 * param_2)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n __CopyMan\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:549d5b8046a6f807c0249d1d16a7d887",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.11b": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.12a": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.13c": "549d5b8046a6f807c0249d1d16a7d887",
-        "LoD/1.13d": "549d5b8046a6f807c0249d1d16a7d887"
-      }
-    },
     "d2ddraw.dll___IsZeroMan": {
       "addresses": {
         "LoD/1.11": "0x6F8C9BB8",
@@ -22796,11 +24467,11 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_FID_conflict:__atodbl": {
       "addresses": {
         "LoD/1.11": "0x6F8C9DD0",
-        "LoD/1.11b": "0x6F8C9E0E"
+        "LoD/1.11b": "0x6F8C9DD1"
       },
       "rvas": {
         "LoD/1.11": "0x9DD0",
-        "LoD/1.11b": "0x9E0E"
+        "LoD/1.11b": "0x9DD1"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -22829,11 +24500,11 @@ var FUNCTIONS_D2DDraw_dll = {
     "d2ddraw.dll_FID_conflict:__atodbl_9E0D": {
       "addresses": {
         "LoD/1.11": "0x6F8C9E0D",
-        "LoD/1.11b": "0x6F8C9DD1"
+        "LoD/1.11b": "0x6F8C9E0E"
       },
       "rvas": {
         "LoD/1.11": "0x9E0D",
-        "LoD/1.11b": "0x9DD1"
+        "LoD/1.11b": "0x9E0E"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -23301,6 +24972,20 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:6abcc731a6dfa7e0b993f3b20da37c0a",
+      "callees": {
+        "LoD/1.11b": [
+          "Ordinal_10059"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 8,
         "LoD/1.12a": 8,
@@ -23339,6 +25024,20 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.11b",
       "method": "STR",
       "index": "STR:21d90b46524623391103de50eea28157",
+      "callees": {
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11b": [
           "\"Cutscene clearing blit failed!\""
@@ -24023,6 +25722,13 @@ var FUNCTIONS_D2DDraw_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:1286a8696b951d9256ff6cf84540390d",
+      "callees": {
+        "LoD/1.13c": [
+          "Ordinal_10031",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 8
       },

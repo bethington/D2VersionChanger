@@ -1,0 +1,18 @@
+CSV Function Rename Candidates
+======================================================================
+
+This report shows functions from d2moo_known_functions.csv that were found
+in the LoD version function indices.
+
+
+D2Common
+----------------------------------------------------------------------
+
+UNITS_GetRoom
+  CSV versions: 1.10f, 1.13c
+  Already named in LoD:
+    - 1.07: 0x6FDCE140
+    - 1.08: 0x6FDCD5A0
+    - 1.09: 0x6FDAE540
+    - 1.09b: 0x6FDAE540
+    - 1.09d: 0x6FDAE640

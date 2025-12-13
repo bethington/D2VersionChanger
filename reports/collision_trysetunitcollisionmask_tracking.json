@@ -1,0 +1,80 @@
+{
+  "function_name": "COLLISION_TrySetUnitCollisionMask",
+  "signature": "int __fastcall COLLISION_TrySetUnitCollisionMask(D2ActiveRoomStrc* pRoom1, int nX1, int nY1, D2ActiveRoomStrc* pRoom2, int nX2, int nY2, int nCollisionPattern, uint16_t nFootprintCollisionMask, uint16_t nMoveConditionMask)",
+  "source_file": "source/D2Common/src/D2Collision.cpp",
+  "line": 1220,
+  "versions": {
+    "1.07": {
+      "address": "0x6FD638E0",
+      "current_name": "ValidateRegionWithAlternative",
+      "size": 536,
+      "confirmed": true
+    },
+    "1.08": {
+      "address": "0x6FD638E0",
+      "current_name": "ValidateRegionWithAlternative",
+      "size": 536,
+      "confirmed": true
+    },
+    "1.09": {
+      "address": "0x6FD438F0",
+      "current_name": "ValidateRegionWithAlternative",
+      "size": 536,
+      "confirmed": true
+    },
+    "1.09b": {
+      "address": "0x6FD438F0",
+      "current_name": "ValidateRegionWithAlternative",
+      "size": 536,
+      "confirmed": true
+    },
+    "1.09d": {
+      "address": "0x6FD438F0",
+      "current_name": "ValidateRegionWithAlternative",
+      "size": 536,
+      "confirmed": true
+    },
+    "1.10": {
+      "address": "0x6FD44FF0",
+      "current_name": "FUN_6fd44ff0",
+      "size": 454,
+      "confirmed": true
+    },
+    "1.11": {
+      "address": "0x6FD61610",
+      "current_name": "FUN_6fd61610",
+      "size": 476,
+      "confirmed": false
+    },
+    "1.11b": {
+      "address": "0x6FDCC5F0",
+      "current_name": "FUN_6fdcc5f0",
+      "size": 476,
+      "confirmed": false
+    },
+    "1.12a": {
+      "address": "0x6FD9B2E0",
+      "current_name": "FUN_6fd9b2e0",
+      "size": 476,
+      "confirmed": false
+    },
+    "1.13c": {
+      "address": "0x6FD5DF30",
+      "current_name": "FUN_6fd5df30",
+      "size": 476,
+      "confirmed": false
+    },
+    "1.13d": {
+      "address": "0x6FDBF1E0",
+      "current_name": "FUN_6fdbf1e0",
+      "size": 476,
+      "confirmed": false
+    },
+    "PD2": {
+      "address": "0x6FD5DF30",
+      "current_name": "UpdateViewportAndStoreCoordinates",
+      "size": 445,
+      "confirmed": false
+    }
+  }
+}

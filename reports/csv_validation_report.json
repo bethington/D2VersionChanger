@@ -1,0 +1,2670 @@
+{
+  "summary": {
+    "total_entries": 329,
+    "confirmed": 1,
+    "issues": 292
+  },
+  "by_function": {
+    "PATH_AStar_ComputePath": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10056EC0",
+            "actual_name_at_addr": "FindPathToTarget"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA69E0",
+            "actual_name_at_addr": "FindPathToTarget"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCB630",
+            "actual_name_at_addr": "FUN_6fdcb630"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_FindPointInVisitedCache": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10057A10",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10057A10",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA72D0",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA72D0",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAED0",
+            "actual_name_at_addr": "FUN_6fdcaed0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAED0",
+            "actual_name_at_addr": "FUN_6fdcaed0"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_GetNodeFromPendingCache": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10057A10",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10057A10",
+            "actual_name_at_addr": "GetClosedPathNode"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7280",
+            "actual_name_at_addr": "GetPathNodeFromHashTable"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7280",
+            "actual_name_at_addr": "GetPathNodeFromHashTable"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAF20",
+            "actual_name_at_addr": "FUN_6fdcaf20"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAF20",
+            "actual_name_at_addr": "FUN_6fdcaf20"
+          }
+        ]
+      }
+    },
+    "D2Common_10142": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10059110",
+            "actual_name_at_addr": "FUN_10059110"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10059110",
+            "actual_name_at_addr": "FUN_10059110"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA8600",
+            "actual_name_at_addr": "Ordinal_10142"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA8600",
+            "actual_name_at_addr": "Ordinal_10142"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD86230",
+            "actual_name_at_addr": "Ordinal_10334"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD86230",
+            "actual_name_at_addr": "Ordinal_10334"
+          }
+        ]
+      }
+    },
+    "sub_6FDAA880": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005B6D0",
+            "actual_name_at_addr": "TryFindValidDirFromList"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAA880",
+            "actual_name_at_addr": "FUN_6fdaa880"
+          }
+        ]
+      }
+    },
+    "PATH_Toward_6FDAA9F0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005B890",
+            "actual_name_at_addr": "ComputePathWaypoints"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAA9F0",
+            "actual_name_at_addr": "ComputePathWaypoints"
+          }
+        ]
+      }
+    },
+    "PATH_CheckCollisionsToNextPosition": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005BB30",
+            "actual_name_at_addr": "GetPathCurrentPosition"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005BB30",
+            "actual_name_at_addr": "GetPathCurrentPosition"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAABF0",
+            "actual_name_at_addr": "GetPathCurrentPosition"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAABF0",
+            "actual_name_at_addr": "GetPathCurrentPosition"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDB7630",
+            "actual_name_at_addr": "FUN_6fdb7630"
+          }
+        ]
+      }
+    },
+    "PATH_RayTrace": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005BCA0",
+            "actual_name_at_addr": "TraceLineCheckAttributes"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005BCA0",
+            "actual_name_at_addr": "TraceLineCheckAttributes"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAAD10",
+            "actual_name_at_addr": "FUN_6fdaad10"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAAD10",
+            "actual_name_at_addr": "FUN_6fdaad10"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDB6C20",
+            "actual_name_at_addr": "FUN_6fdb6c20"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDB6C20",
+            "actual_name_at_addr": "FUN_6fdb6c20"
+          }
+        ]
+      }
+    },
+    "sub_6FDAB7D0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005D100",
+            "actual_name_at_addr": "GetDirectionVectorFromCoords"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB7D0",
+            "actual_name_at_addr": "FUN_6fdab7d0"
+          }
+        ]
+      }
+    },
+    "PATH_GetDirectionVector": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "address": "0x1005E6D0",
+            "reason": "Function name not found in index"
+          }
+        ],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005E6D0",
+            "actual_name_at_addr": "FUN_1005e6d0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC5E0",
+            "actual_name_at_addr": "FUN_6fdac5e0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC5E0",
+            "actual_name_at_addr": "FUN_6fdac5e0"
+          }
+        ]
+      }
+    },
+    "PATH_ComputeVelocityAndDirectionVectorsToNextPoint": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005E9C0",
+            "actual_name_at_addr": "AdvancePathStep"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005E9C0",
+            "actual_name_at_addr": "AdvancePathStep"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC790",
+            "actual_name_at_addr": "FUN_6fdac790"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC790",
+            "actual_name_at_addr": "FUN_6fdac790"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D240",
+            "actual_name_at_addr": "FUN_6fd5d240"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D240",
+            "actual_name_at_addr": "FUN_6fd5d240"
+          }
+        ]
+      }
+    },
+    "D2Common_10226": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005EEB0",
+            "actual_name_at_addr": "FUN_1005eeb0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC9A0",
+            "actual_name_at_addr": "Ordinal_10226"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5E230",
+            "actual_name_at_addr": "Ordinal_10342"
+          }
+        ]
+      }
+    },
+    "PATH_RecacheRoomAtCoordIfNeeded": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005F220",
+            "actual_name_at_addr": "UpdatePathPositionAndRegion"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005F220",
+            "actual_name_at_addr": "UpdatePathPositionAndRegion"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDACC40",
+            "actual_name_at_addr": "FUN_6fdacc40"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDACC40",
+            "actual_name_at_addr": "FUN_6fdacc40"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DA40",
+            "actual_name_at_addr": "FUN_6fd5da40"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DA40",
+            "actual_name_at_addr": "FUN_6fd5da40"
+          }
+        ]
+      }
+    },
+    "sub_6FDACEC0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005F420",
+            "actual_name_at_addr": "FUN_1005f420"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005F420",
+            "actual_name_at_addr": "FUN_1005f420"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDACEC0",
+            "actual_name_at_addr": "FUN_6fdacec0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDACEC0",
+            "actual_name_at_addr": "FUN_6fdacec0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D8E0",
+            "actual_name_at_addr": "FUN_6fd5d8e0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D8E0",
+            "actual_name_at_addr": "FUN_6fd5d8e0"
+          }
+        ]
+      }
+    },
+    "sub_6FDAD5E0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005FAB0",
+            "actual_name_at_addr": "MovePathToTargetPosition"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1005FAB0",
+            "actual_name_at_addr": "MovePathToTargetPosition"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAD5E0",
+            "actual_name_at_addr": "MovePathToTargetPosition"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAD5E0",
+            "actual_name_at_addr": "MovePathToTargetPosition"
+          }
+        ]
+      }
+    },
+    "D2Common_10231": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060120",
+            "actual_name_at_addr": "FUN_10060120"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060120",
+            "actual_name_at_addr": "FUN_10060120"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADC20",
+            "actual_name_at_addr": "Ordinal_10231"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADC20",
+            "actual_name_at_addr": "Ordinal_10231"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5E1A0",
+            "actual_name_at_addr": "Ordinal_10075"
+          }
+        ]
+      }
+    },
+    "PATHMISC_SetRoom": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x100604E0",
+            "actual_name_at_addr": "UpdatePathCurrentRoom"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x100604E0",
+            "actual_name_at_addr": "UpdatePathCurrentRoom"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE250",
+            "actual_name_at_addr": "FUN_6fdae250"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE250",
+            "actual_name_at_addr": "FUN_6fdae250"
+          }
+        ]
+      }
+    },
+    "D2Common_10230": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060640",
+            "actual_name_at_addr": "SetPathTargetAndActivate"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060640",
+            "actual_name_at_addr": "SetPathTargetAndActivate"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADF00",
+            "actual_name_at_addr": "SetPathTargetAndActivate"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADF00",
+            "actual_name_at_addr": "SetPathTargetAndActivate"
+          }
+        ]
+      }
+    },
+    "D2Common_10232": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x100606B0",
+            "actual_name_at_addr": "FUN_100606b0"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x100606B0",
+            "actual_name_at_addr": "FUN_100606b0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADF50",
+            "actual_name_at_addr": "Ordinal_10232"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADF50",
+            "actual_name_at_addr": "Ordinal_10232"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DCE0",
+            "actual_name_at_addr": "Ordinal_10223"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DCE0",
+            "actual_name_at_addr": "Ordinal_10223"
+          }
+        ]
+      }
+    },
+    "PATH_RecacheRoomIfNeeded": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060A60",
+            "actual_name_at_addr": "UpdatePathRoom"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060A60",
+            "actual_name_at_addr": "UpdatePathRoom"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE290",
+            "actual_name_at_addr": "Ordinal_10233"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE290",
+            "actual_name_at_addr": "Ordinal_10233"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DB40",
+            "actual_name_at_addr": "Ordinal_10770"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DB40",
+            "actual_name_at_addr": "Ordinal_10770"
+          }
+        ]
+      }
+    },
+    "D2Common_10234": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060C40",
+            "actual_name_at_addr": "GetUnitPathCoordMismatchFlag"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060C40",
+            "actual_name_at_addr": "GetUnitPathCoordMismatchFlag"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE500",
+            "actual_name_at_addr": "Ordinal_10234"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE500",
+            "actual_name_at_addr": "Ordinal_10234"
+          }
+        ]
+      }
+    },
+    "D2Common_10235_PATH_UpdateRiderPath": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060C60",
+            "actual_name_at_addr": "FUN_10060c60"
+          },
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10060C60",
+            "actual_name_at_addr": "FUN_10060c60"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE520",
+            "actual_name_at_addr": "Ordinal_10235"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAE520",
+            "actual_name_at_addr": "Ordinal_10235"
+          }
+        ]
+      }
+    },
+    "UNITROOM_UpdatePath": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x1006D1E0",
+            "actual_name_at_addr": "FUN_1006d1e0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBD250",
+            "actual_name_at_addr": "Ordinal_10390"
+          }
+        ]
+      }
+    },
+    "CLIENTS_RemoveClientFromGame": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10002150",
+            "actual_name_at_addr": "FUN_10002150"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC32A30",
+            "actual_name_at_addr": "FUN_6fc32a30"
+          }
+        ]
+      }
+    },
+    "CLIENTS_IsInGame": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x10002D70",
+            "actual_name_at_addr": "FUN_10002d70"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC337B0",
+            "actual_name_at_addr": "FUN_6fc337b0"
+          }
+        ]
+      }
+    },
+    "GAME_ReceiveDatabaseCharacter": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.00",
+            "index_version": "1.00",
+            "csv_address": "0x100056D0",
+            "actual_name_at_addr": "Ordinal_10007"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC36280",
+            "actual_name_at_addr": "Ordinal_10007"
+          }
+        ]
+      }
+    },
+    "PATH_IDAStar_GetNextNeighborIndex": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.13f",
+            "index_version": "1.13d",
+            "game_type": "LoD",
+            "address": "0x6FDC07E0",
+            "reason": "Function name not found in index"
+          },
+          {
+            "version": "1.13f",
+            "index_version": "1.13d",
+            "game_type": "LoD",
+            "address": "0x6FDC07E0",
+            "reason": "Function name not found in index"
+          }
+        ],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10c",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA81C0",
+            "actual_name_at_addr": "FUN_6fda81c0"
+          },
+          {
+            "csv_version": "1.10c",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA81C0",
+            "actual_name_at_addr": "FUN_6fda81c0"
+          },
+          {
+            "csv_version": "1.13f",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC07E0",
+            "actual_name_at_addr": "FUN_6fdc07e0"
+          },
+          {
+            "csv_version": "1.13f",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC07E0",
+            "actual_name_at_addr": "FUN_6fdc07e0"
+          }
+        ]
+      }
+    },
+    "COLLISION_TrySetUnitCollisionMask": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FD44FF0",
+            "actual_name_at_addr": "FUN_6fd44ff0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD9D5C0",
+            "actual_name_at_addr": "FUN_6fd9d5c0"
+          }
+        ]
+      }
+    },
+    "COLLISION_GetFreeCoordinatesImpl": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FD45A00",
+            "actual_name_at_addr": "FindValidCollisionTile"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD9D140",
+            "actual_name_at_addr": "FUN_6fd9d140"
+          }
+        ]
+      }
+    },
+    "COLLISION_GetFreeCoordinatesEx": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FD462B0",
+            "actual_name_at_addr": "FindValidCollisionTileDepth50"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD9D810",
+            "actual_name_at_addr": "Ordinal_11049"
+          }
+        ]
+      }
+    },
+    "DRLG_IsTownLevel": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FD751C0",
+            "actual_name_at_addr": "BigIntTrimLeadingZerosAndCheckUnity"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7D320",
+            "actual_name_at_addr": "FUN_6fd7d320"
+          }
+        ]
+      }
+    },
+    "MONSTERS_ApplyClassicScaling": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA6790",
+            "actual_name_at_addr": "Ordinal_11246"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_ExploreChildren": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA6D50",
+            "actual_name_at_addr": "FUN_6fda6d50"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA6D50",
+            "actual_name_at_addr": "FUN_6fda6d50"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCB3C0",
+            "actual_name_at_addr": "FUN_6fdcb3c0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCB3C0",
+            "actual_name_at_addr": "FUN_6fdcb3c0"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_Heuristic": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7230",
+            "actual_name_at_addr": "CalcPackedCoordDiagonalDist"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7230",
+            "actual_name_at_addr": "CalcPackedCoordDiagonalDist"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAF70",
+            "actual_name_at_addr": "FUN_6fdcaf70"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAF70",
+            "actual_name_at_addr": "FUN_6fdcaf70"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_MakeCandidate": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7320",
+            "actual_name_at_addr": "InsertPathNodeOpenList"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7320",
+            "actual_name_at_addr": "InsertPathNodeOpenList"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAE20",
+            "actual_name_at_addr": "FUN_6fdcae20"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAE20",
+            "actual_name_at_addr": "FUN_6fdcae20"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_PropagateNewFScoreToChildren": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7390",
+            "actual_name_at_addr": "DecreasePathNodeKey"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7390",
+            "actual_name_at_addr": "DecreasePathNodeKey"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAC50",
+            "actual_name_at_addr": "FUN_6fdcac50"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAC50",
+            "actual_name_at_addr": "FUN_6fdcac50"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_GetNewNode": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7450",
+            "actual_name_at_addr": "AllocatePathNodeEntry"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7450",
+            "actual_name_at_addr": "AllocatePathNodeEntry"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_EvaluateNeighbor": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7490",
+            "actual_name_at_addr": "FUN_6fda7490"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7490",
+            "actual_name_at_addr": "FUN_6fda7490"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAFB0",
+            "actual_name_at_addr": "FUN_6fdcafb0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAFB0",
+            "actual_name_at_addr": "FUN_6fdcafb0"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_FlushNodeToDynamicPath": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA78A0",
+            "actual_name_at_addr": "BuildPathDirectionList"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCAB50",
+            "actual_name_at_addr": "FUN_6fdcab50"
+          }
+        ]
+      }
+    },
+    "PATH_IdaStar_6FDA7970": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7970",
+            "actual_name_at_addr": "FUN_6fda7970"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7970",
+            "actual_name_at_addr": "FUN_6fda7970"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0E40",
+            "actual_name_at_addr": "FUN_6fdc0e40"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0E40",
+            "actual_name_at_addr": "FUN_6fdc0e40"
+          }
+        ]
+      }
+    },
+    "PATH_IDAStar_VisitNodes": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7D40",
+            "actual_name_at_addr": "FUN_6fda7d40"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA7D40",
+            "actual_name_at_addr": "FUN_6fda7d40"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC08F0",
+            "actual_name_at_addr": "FUN_6fdc08f0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC08F0",
+            "actual_name_at_addr": "FUN_6fdc08f0"
+          }
+        ]
+      }
+    },
+    "PATH_SetVelocity": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDA9A70",
+            "actual_name_at_addr": "Ordinal_10146"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD84D40",
+            "actual_name_at_addr": "Ordinal_10488"
+          }
+        ]
+      }
+    },
+    "PATH_Straight_Compute": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB130",
+            "actual_name_at_addr": "TryPathWithWaypointFallback"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDB7AD0",
+            "actual_name_at_addr": "FUN_6fdb7ad0"
+          }
+        ]
+      }
+    },
+    "PATH_Leap_6FDAB1E0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB1E0",
+            "actual_name_at_addr": "CheckUnitAtTargetPosition"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDB77F0",
+            "actual_name_at_addr": "FUN_6fdb77f0"
+          }
+        ]
+      }
+    },
+    "sub_6FDAB6A0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB6A0",
+            "actual_name_at_addr": "GetDirectionIndexFromCoords"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB6A0",
+            "actual_name_at_addr": "GetDirectionIndexFromCoords"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E190",
+            "actual_name_at_addr": "GetDirectionIndexFromCoords"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E190",
+            "actual_name_at_addr": "GetDirectionIndexFromCoords"
+          }
+        ]
+      }
+    },
+    "sub_6FDAB770": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB770",
+            "actual_name_at_addr": "GetPrimaryDir8FromDeltas"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB770",
+            "actual_name_at_addr": "GetPrimaryDir8FromDeltas"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E5F0",
+            "actual_name_at_addr": "GetPrimaryDir8FromDeltas"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E5F0",
+            "actual_name_at_addr": "GetPrimaryDir8FromDeltas"
+          }
+        ]
+      }
+    },
+    "PATHUtil_AdvanceTowardsTarget_6FDAB890": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB890",
+            "actual_name_at_addr": "FUN_6fdab890"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB890",
+            "actual_name_at_addr": "FUN_6fdab890"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E080",
+            "actual_name_at_addr": "FUN_6fd8e080"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E080",
+            "actual_name_at_addr": "FUN_6fd8e080"
+          }
+        ]
+      }
+    },
+    "sub_6FDAB940": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB940",
+            "actual_name_at_addr": "FUN_6fdab940"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAB940",
+            "actual_name_at_addr": "FUN_6fdab940"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E310",
+            "actual_name_at_addr": "FUN_6fd8e310"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD8E310",
+            "actual_name_at_addr": "FUN_6fd8e310"
+          }
+        ]
+      }
+    },
+    "PATH_FindSubpathWithoutObstacles": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDABAC0",
+            "actual_name_at_addr": "FUN_6fdabac0"
+          }
+        ]
+      }
+    },
+    "PATH_SimplifyToLines": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC170",
+            "actual_name_at_addr": "FUN_6fdac170"
+          }
+        ]
+      }
+    },
+    "PATH_ComputePathOrSlideAlongObstacles": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC270",
+            "actual_name_at_addr": "FUN_6fdac270"
+          }
+        ]
+      }
+    },
+    "D2Common_10236": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC8F0",
+            "actual_name_at_addr": "Ordinal_10236"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAC8F0",
+            "actual_name_at_addr": "Ordinal_10236"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D820",
+            "actual_name_at_addr": "Ordinal_10831"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D820",
+            "actual_name_at_addr": "Ordinal_10831"
+          }
+        ]
+      }
+    },
+    "PATH_ResetMovement": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAD330",
+            "actual_name_at_addr": "FUN_6fdad330"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDAD330",
+            "actual_name_at_addr": "FUN_6fdad330"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DC80",
+            "actual_name_at_addr": "FUN_6fd5dc80"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DC80",
+            "actual_name_at_addr": "FUN_6fd5dc80"
+          }
+        ]
+      }
+    },
+    "PATH_RecacheRoom": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDADA20",
+            "actual_name_at_addr": "FUN_6fdada20"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5D760",
+            "actual_name_at_addr": "FUN_6fd5d760"
+          }
+        ]
+      }
+    },
+    "UNITS_GetUsedSkill": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBD670",
+            "actual_name_at_addr": "Ordinal_10323"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD803A0",
+            "actual_name_at_addr": "Ordinal_10511"
+          }
+        ]
+      }
+    },
+    "UNITS_GetRoom": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBE270",
+            "actual_name_at_addr": "Ordinal_10342"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7FE10",
+            "actual_name_at_addr": "Ordinal_10331"
+          }
+        ]
+      }
+    },
+    "UNITS_SetAnimData": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBE4C0",
+            "actual_name_at_addr": "Ordinal_10325"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD82670",
+            "actual_name_at_addr": "Ordinal_11122"
+          }
+        ]
+      }
+    },
+    "UNITS_UpdateAnimRateAndVelocity": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBF050",
+            "actual_name_at_addr": "Ordinal_10376"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBF050",
+            "actual_name_at_addr": "Ordinal_10376"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD83110",
+            "actual_name_at_addr": "Ordinal_10819"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD83110",
+            "actual_name_at_addr": "Ordinal_10819"
+          }
+        ]
+      }
+    },
+    "UNITS_IsDoor": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDBFC10",
+            "actual_name_at_addr": "Ordinal_10392"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7EDA0",
+            "actual_name_at_addr": "Ordinal_11020"
+          }
+        ]
+      }
+    },
+    "D2Common_10399": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDC2CB0",
+            "actual_name_at_addr": "Ordinal_10399"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FDC2CB0",
+            "actual_name_at_addr": "Ordinal_10399"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCFCD0",
+            "actual_name_at_addr": "Ordinal_10407"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCFCD0",
+            "actual_name_at_addr": "Ordinal_10407"
+          }
+        ]
+      }
+    },
+    "ARENA_ShouldTreatClassIdAsTemplateId": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC31790",
+            "actual_name_at_addr": "FUN_6fc31790"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC31790",
+            "actual_name_at_addr": "FUN_6fc31790"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCD2620",
+            "actual_name_at_addr": "FUN_6fcd2620"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCD2620",
+            "actual_name_at_addr": "FUN_6fcd2620"
+          }
+        ]
+      }
+    },
+    "CLIENTS_AddToGame": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC325E0",
+            "actual_name_at_addr": "FUN_6fc325e0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC325E0",
+            "actual_name_at_addr": "FUN_6fc325e0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC6A9B0",
+            "actual_name_at_addr": "FUN_6fc6a9b0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC6A9B0",
+            "actual_name_at_addr": "FUN_6fc6a9b0"
+          }
+        ]
+      }
+    },
+    "EVENT_FreeEventQueue": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC34A80",
+            "actual_name_at_addr": "FUN_6fc34a80"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC34A80",
+            "actual_name_at_addr": "FUN_6fc34a80"
+          }
+        ]
+      }
+    },
+    "EVENT_AllocTimerSlab": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC35410",
+            "actual_name_at_addr": "FUN_6fc35410"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC35410",
+            "actual_name_at_addr": "FUN_6fc35410"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCAE420",
+            "actual_name_at_addr": "FUN_6fcae420"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCAE420",
+            "actual_name_at_addr": "FUN_6fcae420"
+          }
+        ]
+      }
+    },
+    "EVENT_AllocateUnitTimer": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC35460",
+            "actual_name_at_addr": "FUN_6fc35460"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCAE680",
+            "actual_name_at_addr": "FUN_6fcae680"
+          }
+        ]
+      }
+    },
+    "GAME_UpdateProgress": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.14d",
+            "index_version": "1.14d",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          },
+          {
+            "version": "1.14d",
+            "index_version": "1.14d",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC386D0",
+            "actual_name_at_addr": "FUN_6fc386d0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC386D0",
+            "actual_name_at_addr": "FUN_6fc386d0"
+          }
+        ]
+      }
+    },
+    "GAME_UpdateGamesProgress": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC38E20",
+            "actual_name_at_addr": "Ordinal_10004"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC38E20",
+            "actual_name_at_addr": "Ordinal_10004"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC4E1E0",
+            "actual_name_at_addr": "Ordinal_10008"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC4E1E0",
+            "actual_name_at_addr": "Ordinal_10008"
+          }
+        ]
+      }
+    },
+    "sub_6FC77750": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC77750",
+            "actual_name_at_addr": "FUN_6fc77750"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC89EE0",
+            "actual_name_at_addr": "FUN_6fc89ee0"
+          }
+        ]
+      }
+    },
+    "sub_6FC7BFC0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC7BFC0",
+            "actual_name_at_addr": "FUN_6fc7bfc0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC7BFC0",
+            "actual_name_at_addr": "FUN_6fc7bfc0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC57B10",
+            "actual_name_at_addr": "FUN_6fc57b10"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC57B10",
+            "actual_name_at_addr": "FUN_6fc57b10"
+          }
+        ]
+      }
+    },
+    "D2GAME_CORPSE_Handler_6FC7FBD0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC7FBD0",
+            "actual_name_at_addr": "FUN_6fc7fbd0"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC7FBD0",
+            "actual_name_at_addr": "FUN_6fc7fbd0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC99210",
+            "actual_name_at_addr": "FUN_6fc99210"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC99210",
+            "actual_name_at_addr": "FUN_6fc99210"
+          }
+        ]
+      }
+    },
+    "PLRSAVE2_CheckPlayerFlags": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC8DC20",
+            "actual_name_at_addr": "FUN_6fc8dc20"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC8DC20",
+            "actual_name_at_addr": "FUN_6fc8dc20"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD0BAF0",
+            "actual_name_at_addr": "FUN_6fd0baf0"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD0BAF0",
+            "actual_name_at_addr": "FUN_6fd0baf0"
+          }
+        ]
+      }
+    },
+    "PLRSAVE2_ReadSaveHeader": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC8DD00",
+            "actual_name_at_addr": "FUN_6fc8dd00"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC8DD00",
+            "actual_name_at_addr": "FUN_6fc8dd00"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD0D250",
+            "actual_name_at_addr": "FUN_6fd0d250"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD0D250",
+            "actual_name_at_addr": "FUN_6fd0d250"
+          }
+        ]
+      }
+    },
+    "PLRSAVE2_ReadSkills": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6FC8E330",
+            "actual_name_at_addr": "FUN_6fc8e330"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD0CA60",
+            "actual_name_at_addr": "FUN_6fd0ca60"
+          }
+        ]
+      }
+    },
+    "utf8ToUnicode": {
+      "confirmed": [
+        {
+          "csv_version": "1.10f",
+          "index_version": "1.10",
+          "game_type": "LoD",
+          "address": "0x6FC11B30",
+          "has_human_name": true,
+          "indexes": {
+            "EXP": null,
+            "STR": null,
+            "API": null,
+            "MNE": "4499edbeee59d89b4993d6176ec6450c",
+            "CFG": "ead805bd1119abf4e4f2b1e77100e93d",
+            "PRO": "6664ed26ba51fc783f6fe047f9b8421d"
+          }
+        }
+      ],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": []
+      }
+    },
+    "D2Win_10043_TEXTBOX_Destroy": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8AFDC0",
+            "actual_name_at_addr": "Ordinal_10043"
+          }
+        ]
+      }
+    },
+    "ARCHIVE_LoadMPQFile": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B2399",
+            "actual_name_at_addr": "LoadDataMpqFile"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B2399",
+            "actual_name_at_addr": "LoadDataMpqFile"
+          }
+        ]
+      }
+    },
+    "ARCHIVE_FindAndOpenArchive": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B2419",
+            "actual_name_at_addr": "OpenStormArchive"
+          }
+        ]
+      }
+    },
+    "ARCHIVE_FindAndOpenArchiveFromCDRom": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B24B1",
+            "actual_name_at_addr": "FindCDriveAndOpenArchive"
+          }
+        ]
+      }
+    },
+    "ARCHIVE_UnloadMPQFile": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B2548",
+            "actual_name_at_addr": "CloseMpqArchive"
+          },
+          {
+            "csv_version": "1.10f",
+            "index_version": "1.10",
+            "csv_address": "0x6F8B2548",
+            "actual_name_at_addr": "CloseMpqArchive"
+          }
+        ]
+      }
+    },
+    "ParseCmdLine": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "stoLower": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "GetCmdIndex": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "ParseCmdValue": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "GameStart": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "SaveCmdLine": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "GameInit": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "AllowExpansion": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "D2ServerServiceMain": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.10f",
+            "index_version": "1.10",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    },
+    "DATATBLS_GetSkillsTxtRecord": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD51250",
+            "actual_name_at_addr": "FUN_6fd51250"
+          }
+        ]
+      }
+    },
+    "sub_6FD5CEB0": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5CEB0",
+            "actual_name_at_addr": "FUN_6fd5ceb0"
+          }
+        ]
+      }
+    },
+    "sub_6FD5DB70": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DB70",
+            "actual_name_at_addr": "FUN_6fd5db70"
+          }
+        ]
+      }
+    },
+    "PATH_StopMovement": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DC80",
+            "actual_name_at_addr": "FUN_6fd5dc80"
+          }
+        ]
+      }
+    },
+    "D2Common_10231_Impl": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD5DDC0",
+            "actual_name_at_addr": "FUN_6fd5ddc0"
+          }
+        ]
+      }
+    },
+    "UNITS_IsAnimModeBlocking": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7EF90",
+            "actual_name_at_addr": "FUN_6fd7ef90"
+          }
+        ]
+      }
+    },
+    "UNITS_IsAnimModeGetHit": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7EFC0",
+            "actual_name_at_addr": "FUN_6fd7efc0"
+          }
+        ]
+      }
+    },
+    "UNITS_IsAnimModeKnockBack": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7F010",
+            "actual_name_at_addr": "FUN_6fd7f010"
+          }
+        ]
+      }
+    },
+    "UNITS_AnimModeAllowsAnimSpeed": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD7FAC0",
+            "actual_name_at_addr": "FUN_6fd7fac0"
+          }
+        ]
+      }
+    },
+    "UNITS_IsSeqAnimSpeedModulatedByFCR": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD80B80",
+            "actual_name_at_addr": "FUN_6fd80b80"
+          }
+        ]
+      }
+    },
+    "UNITS_CanAnimModeUseAttackRate": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD80BD0",
+            "actual_name_at_addr": "FUN_6fd80bd0"
+          }
+        ]
+      }
+    },
+    "UNITS_CanAnimModeUseVelocityModifier": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD80BD0",
+            "actual_name_at_addr": "FUN_6fd80bd0"
+          }
+        ]
+      }
+    },
+    "PATH_PreparePathTargetForPathUpdate": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD85E00",
+            "actual_name_at_addr": "FUN_6fd85e00"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FD85E00",
+            "actual_name_at_addr": "FUN_6fd85e00"
+          }
+        ]
+      }
+    },
+    "DATATBLS_NewTreasureClassEx": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDA3780",
+            "actual_name_at_addr": "FUN_6fda3780"
+          }
+        ]
+      }
+    },
+    "DATATBLS_ParseTreasureClassItem": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDA4430",
+            "actual_name_at_addr": "FUN_6fda4430"
+          }
+        ]
+      }
+    },
+    "PATH_IDAStar_FlushNodeToDynamicPath": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0650",
+            "actual_name_at_addr": "FUN_6fdc0650"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0650",
+            "actual_name_at_addr": "FUN_6fdc0650"
+          }
+        ]
+      }
+    },
+    "sub_6FDC0840": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0840",
+            "actual_name_at_addr": "FUN_6fdc0840"
+          },
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0840",
+            "actual_name_at_addr": "FUN_6fdc0840"
+          }
+        ]
+      }
+    },
+    "PATH_IdaStar_ComputePathWithRooms": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDC0BB0",
+            "actual_name_at_addr": "FUN_6fdc0bb0"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_PopBestScoreForVisit": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCB220",
+            "actual_name_at_addr": "FUN_6fdcb220"
+          }
+        ]
+      }
+    },
+    "PATH_AStar_TargetLocationHasEnoughRoom": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FDCB2C0",
+            "actual_name_at_addr": "FUN_6fdcb2c0"
+          }
+        ]
+      }
+    },
+    "OBJMODE_GetToHitPercentage": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FC89B00",
+            "actual_name_at_addr": "FUN_6fc89b00"
+          }
+        ]
+      }
+    },
+    "EVENT_AllocateTimer": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [],
+        "address_mismatch": [
+          {
+            "csv_version": "1.13c",
+            "index_version": "1.13c",
+            "csv_address": "0x6FCAE540",
+            "actual_name_at_addr": "FUN_6fcae540"
+          }
+        ]
+      }
+    },
+    "D2FUNC_DLL": {
+      "confirmed": [],
+      "issues": {
+        "not_found": [
+          {
+            "version": "1.14d",
+            "index_version": "1.14d",
+            "game_type": "LoD",
+            "reason": "Index file not found"
+          }
+        ],
+        "address_mismatch": []
+      }
+    }
+  }
+}

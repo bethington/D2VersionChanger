@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for Bnclient.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -26,8 +26,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF01000",
         "LoD/1.09d": "0x6FF01000",
         "LoD/1.10": "0x6FF01000",
-        "LoD/1.11": "0x6FF36110",
-        "LoD/1.11b": "0x6FF2F2C0",
+        "LoD/1.11": "0x6FF34AB0",
+        "LoD/1.11b": "0x6FF2CB50",
         "LoD/1.12a": "0x6FF2C1B0",
         "LoD/1.13c": "0x6FF35780",
         "LoD/1.13d": "0x6FF31040"
@@ -39,8 +39,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x1000",
         "LoD/1.09d": "0x1000",
         "LoD/1.10": "0x1000",
-        "LoD/1.11": "0x16110",
-        "LoD/1.11b": "0xF2C0",
+        "LoD/1.11": "0x14AB0",
+        "LoD/1.11b": "0xCB50",
         "LoD/1.12a": "0xC1B0",
         "LoD/1.13c": "0x15780",
         "LoD/1.13d": "0x11040"
@@ -65,6 +65,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b3d0a45c15a95c38e4feee8f297ac666",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -136,10 +171,10 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF01050",
         "LoD/1.09d": "0x6FF01050",
         "LoD/1.10": "0x6FF01070",
-        "LoD/1.11": "0x6FF3772F",
+        "LoD/1.11": "0x6FF37720",
         "LoD/1.11b": "0x6FF376FF",
         "LoD/1.12a": "0x6FF385AF",
-        "LoD/1.13c": "0x6FF3858F",
+        "LoD/1.13c": "0x6FF38580",
         "LoD/1.13d": "0x6FF384C0"
       },
       "rvas": {
@@ -149,10 +184,10 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x1050",
         "LoD/1.09d": "0x1050",
         "LoD/1.10": "0x1070",
-        "LoD/1.11": "0x1772F",
+        "LoD/1.11": "0x17720",
         "LoD/1.11b": "0x176FF",
         "LoD/1.12a": "0x185AF",
-        "LoD/1.13c": "0x1858F",
+        "LoD/1.13c": "0x18580",
         "LoD/1.13d": "0x184C0"
       },
       "sizes": {
@@ -175,6 +210,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e36ce61366f9c3928ce2ccb97d91f009",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnConn...",
@@ -276,6 +322,117 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:46690a701e0b2c8da6416fe1003b68ff",
+      "callees": {
+        "LoD/1.07": [
+          "CreateTcpConnection",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "GetPeerName",
+          "SetSocketNonBlocking",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.08": [
+          "CreateTcpConnection",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "GetPeerName",
+          "SetSocketNonBlocking",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09": [
+          "CreateTcpConnection",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "GetPeerName",
+          "SetSocketNonBlocking",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09b": [
+          "CreateTcpConnection",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "GetPeerName",
+          "SetSocketNonBlocking",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09d": [
+          "CreateTcpConnection",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "GetPeerName",
+          "SetSocketNonBlocking",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10004",
+          "CleanupNetworkContext",
+          "CleanupNetworkContext",
+          "Ordinal_10012",
+          "Ordinal_10017",
+          "SendSocketDataLocked",
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10004",
+          "select",
+          "CloseNetworkResource",
+          "WSAGetLastError",
+          "CloseNetworkResource",
+          "Ordinal_10012",
+          "SetSocketNonBlocking",
+          "Ordinal_10007",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.11b": [
+          "InitializeSocketConnection",
+          "select",
+          "CloseNetworkResource",
+          "WSAGetLastError",
+          "CloseNetworkResource",
+          "Ordinal_10012",
+          "SetSocketNonBlocking",
+          "Ordinal_10007",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.12a": [
+          "InitializeSocketConnection",
+          "select",
+          "CloseNetworkResource",
+          "WSAGetLastError",
+          "CloseNetworkResource",
+          "GetPeerSocketAddress",
+          "SetSocketNonBlocking",
+          "SendDataOverSocket",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13c": [
+          "InitializeSocketConnection",
+          "select",
+          "CloseNetworkResource",
+          "WSAGetLastError",
+          "CloseNetworkResource",
+          "GetPeerSocketAddress",
+          "SetSocketNonBlocking",
+          "SendDataOverSocket",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13d": [
+          "InitializeSocketConnection",
+          "select",
+          "CloseNetworkResource",
+          "WSAGetLastError",
+          "CloseNetworkResource",
+          "GetPeerSocketAddress",
+          "SetSocketNonBlocking",
+          "SendDataOverSocket",
+          "CloseNetworkResource"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"searching for the fastest server\"",
@@ -533,6 +690,85 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7d128b06d191186339d1cad4342f1732",
+      "callees": {
+        "LoD/1.07": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "SStrCopy",
+          "GetRegistryStringValue",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CopyMemoryAndDetectTerminator",
+          "QueryRegistryData",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CopyMemoryAndDetectTerminator",
+          "QueryRegistryData",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CopyMemoryAndDetectTerminator",
+          "QueryRegistryData",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CopyMemoryAndDetectTerminator",
+          "QueryRegistryData",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CopyMemoryAndDetectTerminator",
+          "QueryRegistryData",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -651,6 +887,56 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d9c2f28e97cc0411479a1702cd819f34",
+      "callees": {
+        "LoD/1.07": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "SStrCopy",
+          "GetRegistryStringValue",
+          "SStrCopy",
+          "StartWinsockService"
+        ],
+        "LoD/1.08": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501",
+          "StartWinsockService"
+        ],
+        "LoD/1.09": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501",
+          "StartWinsockService"
+        ],
+        "LoD/1.09b": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501",
+          "StartWinsockService"
+        ],
+        "LoD/1.09d": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501",
+          "StartWinsockService"
+        ],
+        "LoD/1.10": [
+          "?Load@BNGatewayAccess@@QAGXXZ",
+          "?DNS@BNGatewayAccess@@QAGPADH@Z",
+          "Ordinal_501",
+          "Ordinal_422",
+          "Ordinal_501",
+          "StartWinsockService"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\"",
@@ -997,6 +1283,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:050bb5bfc22e605cfcf2a13848a5717f",
+      "callees": {
+        "LoD/1.07": [
+          "SMemCopy",
+          "SMemCopy",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.08": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09b": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09d": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.10": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -1080,7 +1398,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF02260",
         "LoD/1.09b": "0x6FF02260",
         "LoD/1.09d": "0x6FF02230",
-        "LoD/1.10": "0x6FF02220"
+        "LoD/1.10": "0x6FF02200",
+        "LoD/1.11": "0x6FF37542",
+        "LoD/1.11b": "0x6FF37512",
+        "LoD/1.12a": "0x6FF383C2",
+        "LoD/1.13c": "0x6FF383A2",
+        "LoD/1.13d": "0x6FF382E2"
       },
       "rvas": {
         "LoD/1.07": "0x2180",
@@ -1088,7 +1411,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x2260",
         "LoD/1.09b": "0x2260",
         "LoD/1.09d": "0x2230",
-        "LoD/1.10": "0x2220"
+        "LoD/1.10": "0x2200",
+        "LoD/1.11": "0x17542",
+        "LoD/1.11b": "0x17512",
+        "LoD/1.12a": "0x183C2",
+        "LoD/1.13c": "0x183A2",
+        "LoD/1.13d": "0x182E2"
       },
       "sizes": {
         "LoD/1.07": 24,
@@ -1096,7 +1424,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 24,
         "LoD/1.09b": 24,
         "LoD/1.09d": 24,
-        "LoD/1.10": 24
+        "LoD/1.10": 24,
+        "LoD/1.11": 24,
+        "LoD/1.11b": 24,
+        "LoD/1.12a": 24,
+        "LoD/1.13c": 24,
+        "LoD/1.13d": 24
       },
       "name": "CheckServerConnectionAndCall",
       "signature": "uint CheckServerConnectionAndCall(uint dwReserved, uint dwData)",
@@ -1105,13 +1438,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c5ea4b7d18ee114fccc74de0e6ed9db7",
+      "callees": {
+        "LoD/1.07": [
+          "GetPeerName"
+        ],
+        "LoD/1.08": [
+          "GetPeerName"
+        ],
+        "LoD/1.09": [
+          "GetPeerName"
+        ],
+        "LoD/1.09b": [
+          "GetPeerName"
+        ],
+        "LoD/1.09d": [
+          "GetPeerName"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10012"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
         "LoD/1.09d": 3,
-        "LoD/1.10": 3
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -1119,7 +1477,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "c5ea4b7d18ee114fccc74de0e6ed9db7",
@@ -1127,7 +1490,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "c5ea4b7d18ee114fccc74de0e6ed9db7",
         "LoD/1.09b": "c5ea4b7d18ee114fccc74de0e6ed9db7",
         "LoD/1.09d": "c5ea4b7d18ee114fccc74de0e6ed9db7",
-        "LoD/1.10": "c5ea4b7d18ee114fccc74de0e6ed9db7"
+        "LoD/1.10": "c5ea4b7d18ee114fccc74de0e6ed9db7",
+        "LoD/1.11": "226bd7b7660f7c129864f3453c504df2",
+        "LoD/1.11b": "226bd7b7660f7c129864f3453c504df2",
+        "LoD/1.12a": "226bd7b7660f7c129864f3453c504df2",
+        "LoD/1.13c": "226bd7b7660f7c129864f3453c504df2",
+        "LoD/1.13d": "226bd7b7660f7c129864f3453c504df2"
       }
     },
     "bnclient.dll_MNE_1de091de38a0": {
@@ -1331,28 +1699,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF22210",
         "LoD/1.08": "0x6FF22230",
-        "LoD/1.09": "0x6FF067E0",
-        "LoD/1.09b": "0x6FF06800",
-        "LoD/1.09d": "0x6FF0AFC0",
-        "LoD/1.10": "0x6FF07190",
-        "LoD/1.11": "0x6FF2FE00",
-        "LoD/1.11b": "0x6FF334F0",
-        "LoD/1.12a": "0x6FF34FF0",
-        "LoD/1.13c": "0x6FF357C0",
-        "LoD/1.13d": "0x6FF35220"
+        "LoD/1.09": "0x6FF06800",
+        "LoD/1.09b": "0x6FF067E0",
+        "LoD/1.09d": "0x6FF04E70",
+        "LoD/1.10": "0x6FF08B90",
+        "LoD/1.11": "0x6FF34580",
+        "LoD/1.11b": "0x6FF2C620",
+        "LoD/1.12a": "0x6FF35030",
+        "LoD/1.13c": "0x6FF2E920",
+        "LoD/1.13d": "0x6FF30AC0"
       },
       "rvas": {
         "LoD/1.07": "0x2210",
         "LoD/1.08": "0x2230",
-        "LoD/1.09": "0x67E0",
-        "LoD/1.09b": "0x6800",
-        "LoD/1.09d": "0xAFC0",
-        "LoD/1.10": "0x7190",
-        "LoD/1.11": "0xFE00",
-        "LoD/1.11b": "0x134F0",
-        "LoD/1.12a": "0x14FF0",
-        "LoD/1.13c": "0x157C0",
-        "LoD/1.13d": "0x15220"
+        "LoD/1.09": "0x6800",
+        "LoD/1.09b": "0x67E0",
+        "LoD/1.09d": "0x4E70",
+        "LoD/1.10": "0x8B90",
+        "LoD/1.11": "0x14580",
+        "LoD/1.11b": "0xC620",
+        "LoD/1.12a": "0x15030",
+        "LoD/1.13c": "0xE920",
+        "LoD/1.13d": "0x10AC0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1417,21 +1785,42 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetNotificationValue": {
       "addresses": {
         "LoD/1.07": "0x6FF22220",
-        "LoD/1.08": "0x6FF227F0",
-        "LoD/1.09": "0x6FF028B0",
-        "LoD/1.09b": "0x6FF028B0"
+        "LoD/1.08": "0x6FF260C0",
+        "LoD/1.09": "0x6FF0AD70",
+        "LoD/1.09b": "0x6FF022F0",
+        "LoD/1.09d": "0x6FF0AFC0",
+        "LoD/1.10": "0x6FF0B800",
+        "LoD/1.11": "0x6FF2EE00",
+        "LoD/1.11b": "0x6FF2F5F0",
+        "LoD/1.12a": "0x6FF331C0",
+        "LoD/1.13c": "0x6FF2B870",
+        "LoD/1.13d": "0x6FF2BDD0"
       },
       "rvas": {
         "LoD/1.07": "0x2220",
-        "LoD/1.08": "0x27F0",
-        "LoD/1.09": "0x28B0",
-        "LoD/1.09b": "0x28B0"
+        "LoD/1.08": "0x60C0",
+        "LoD/1.09": "0xAD70",
+        "LoD/1.09b": "0x22F0",
+        "LoD/1.09d": "0xAFC0",
+        "LoD/1.10": "0xB800",
+        "LoD/1.11": "0xEE00",
+        "LoD/1.11b": "0xF5F0",
+        "LoD/1.12a": "0x131C0",
+        "LoD/1.13c": "0xB870",
+        "LoD/1.13d": "0xBDD0"
       },
       "sizes": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
-        "LoD/1.09b": 6
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
       },
       "name": "GetNotificationValue",
       "signature": "uint GetNotificationValue(void)",
@@ -1444,47 +1833,68 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
-        "LoD/1.09b": 1
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
-        "LoD/1.09b": 0
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.08": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b"
+        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "bnclient.dll_GetGlobalValue": {
       "addresses": {
         "LoD/1.07": "0x6FF22230",
-        "LoD/1.08": "0x6FF260C0",
-        "LoD/1.09": "0x6FF0AD70",
+        "LoD/1.08": "0x6FF2A170",
+        "LoD/1.09": "0x6FF067E0",
         "LoD/1.09b": "0x6FF02300",
-        "LoD/1.09d": "0x6FF04E70",
-        "LoD/1.10": "0x6FF022E0",
-        "LoD/1.11": "0x6FF2D3E0",
-        "LoD/1.11b": "0x6FF2F600",
+        "LoD/1.09d": "0x6FF022D0",
+        "LoD/1.10": "0x6FF071B0",
+        "LoD/1.11": "0x6FF2B260",
+        "LoD/1.11b": "0x6FF32800",
         "LoD/1.12a": "0x6FF35000",
         "LoD/1.13c": "0x6FF31880",
-        "LoD/1.13d": "0x6FF335A0"
+        "LoD/1.13d": "0x6FF35220"
       },
       "rvas": {
         "LoD/1.07": "0x2230",
-        "LoD/1.08": "0x60C0",
-        "LoD/1.09": "0xAD70",
+        "LoD/1.08": "0xA170",
+        "LoD/1.09": "0x67E0",
         "LoD/1.09b": "0x2300",
-        "LoD/1.09d": "0x4E70",
-        "LoD/1.10": "0x22E0",
-        "LoD/1.11": "0xD3E0",
-        "LoD/1.11b": "0xF600",
+        "LoD/1.09d": "0x22D0",
+        "LoD/1.10": "0x71B0",
+        "LoD/1.11": "0xB260",
+        "LoD/1.11b": "0x12800",
         "LoD/1.12a": "0x15000",
         "LoD/1.13c": "0x11880",
-        "LoD/1.13d": "0x135A0"
+        "LoD/1.13d": "0x15220"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1909,6 +2319,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:56ef14539498a4435598846291596620",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -2091,6 +2521,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fd74f897775020820feb28c772a351a7",
+      "callees": {
+        "LoD/1.07": [
+          "SMemCopy"
+        ],
+        "LoD/1.08": [
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1
@@ -2136,6 +2574,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b3d0a45c15a95c38e4feee8f297ac666",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -2193,6 +2651,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:830812317bca30dbd2eb7bc1d144b814",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 2,
@@ -2250,6 +2728,56 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:59c9164958b23db783e87c134040cf13",
+      "callees": {
+        "LoD/1.07": [
+          "CreateFileWrapper",
+          "WriteFileWrapper",
+          "CloseHandleWrapper",
+          "SMemAlloc",
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnDown..."
@@ -2321,6 +2849,52 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:cde503e814e11cd8212d64ad2654e732",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SStrLen",
+          "SMemAlloc",
+          "SStrCopy",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "SMemFree",
+          "?Unload@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SStrLen",
+          "Ordinal_401",
+          "Ordinal_501",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "Ordinal_403",
+          "?Unload@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SStrLen",
+          "Ordinal_401",
+          "Ordinal_501",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "Ordinal_403",
+          "?Unload@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SStrLen",
+          "Ordinal_401",
+          "Ordinal_501",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "Ordinal_403",
+          "?Unload@BNGatewayAccess@@QAGXXZ"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Processing Bnserver.ini file\"",
@@ -2536,6 +3110,60 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:4e7a4d17d1e5c126ef3a5da2cf607ae8",
+      "callees": {
+        "LoD/1.07": [
+          "SFileOpenArchive",
+          "QueueLogMessage",
+          "VerifyArchiveSignature",
+          "SFileOpenFileEx",
+          "GetFileSizeFromHandle",
+          "SMemAlloc",
+          "ReadFileSync",
+          "CreateFileWrapper",
+          "WriteFileWrapper",
+          "CloseHandleWrapper",
+          "...+8 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_266",
+          "QueueLogMessage",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "...+8 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_266",
+          "QueueLogMessage",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "...+8 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_266",
+          "QueueLogMessage",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "...+8 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"d2client.dll\"",
@@ -2636,6 +3264,151 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:abcfa6d8132b6d30e796c310bbaaa7d1",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "QueryRegistryValue",
+          "SFileOpenArchive",
+          "SFileOpenFileEx",
+          "GetFileSizeFromHandle",
+          "SMemAlloc",
+          "ReadFileSync",
+          "strchr",
+          "...+22 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "Ordinal_421",
+          "Ordinal_266",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "strchr",
+          "...+22 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "Ordinal_421",
+          "Ordinal_266",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "...+24 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "Ordinal_421",
+          "Ordinal_266",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "...+24 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "Ordinal_421",
+          "Ordinal_266",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "...+24 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "strchr",
+          "strchr",
+          "Ordinal_421",
+          "Ordinal_266",
+          "Ordinal_251",
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "...+25 more"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindCharInString",
+          "FindCharInString",
+          "ValidateAndProcessStringParameters",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "...+15 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindCharInString",
+          "FindCharInString",
+          "ValidateAndProcessStringParameters",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "...+15 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindCharInString",
+          "FindCharInString",
+          "ValidateAndProcessStringParameters",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "...+15 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindCharInString",
+          "FindCharInString",
+          "ValidateAndProcessStringParameters",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "...+15 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "FindCharInString",
+          "FindCharInString",
+          "ValidateAndProcessStringParameters",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "...+15 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"upgradestatus\"",
@@ -2807,8 +3580,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF032F0",
         "LoD/1.09d": "0x6FF03300",
         "LoD/1.10": "0x6FF03350",
-        "LoD/1.11": "0x6FF34AB0",
-        "LoD/1.11b": "0x6FF2CB50",
+        "LoD/1.11": "0x6FF36110",
+        "LoD/1.11b": "0x6FF2F2C0",
         "LoD/1.12a": "0x6FF36EA0",
         "LoD/1.13c": "0x6FF2D2D0",
         "LoD/1.13d": "0x6FF351E0"
@@ -2820,8 +3593,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x32F0",
         "LoD/1.09d": "0x3300",
         "LoD/1.10": "0x3350",
-        "LoD/1.11": "0x14AB0",
-        "LoD/1.11b": "0xCB50",
+        "LoD/1.11": "0x16110",
+        "LoD/1.11b": "0xF2C0",
         "LoD/1.12a": "0x16EA0",
         "LoD/1.13c": "0xD2D0",
         "LoD/1.13d": "0x151E0"
@@ -2846,6 +3619,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b3d0a45c15a95c38e4feee8f297ac666",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -3218,6 +4026,86 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d937d0c590ae16757bdbb85c94a87552",
+      "callees": {
+        "LoD/1.07": [
+          "SFileLoadFile",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegValue",
+          "SFileLoadFile",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_279",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_428",
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_279",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_428",
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_279",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_428",
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_279",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_428",
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_279",
+          "FogAssert",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_428",
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z",
+          "FogAssert",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II Battle.net gateways\"",
@@ -3340,6 +4228,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5e1fb6529d102e8804cf3851880f0fb1",
+      "callees": {
+        "LoD/1.07": [
+          "SMemZero"
+        ],
+        "LoD/1.08": [
+          "SMemZero"
+        ],
+        "LoD/1.09": [
+          "SMemZero"
+        ],
+        "LoD/1.09b": [
+          "SMemZero"
+        ],
+        "LoD/1.09d": [
+          "SMemZero"
+        ],
+        "LoD/1.10": [
+          "SMemZero"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnMessQueue.cpp\""
@@ -3444,6 +4367,85 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b30fdbac17cba3dc936a0a6deae65420",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.11b": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.12a": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.13c": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.13d": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Find gateway closest to %02d.%02d\"",
@@ -3577,6 +4579,90 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:693ad94f179724a1ecd9cfe7a5e143be",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SetRegistryValue",
+          "SMemFree",
+          "SMemFree",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "Ordinal_424",
+          "Ordinal_403",
+          "Ordinal_403",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "Ordinal_424",
+          "Ordinal_403",
+          "Ordinal_403",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "Ordinal_424",
+          "Ordinal_403",
+          "Ordinal_403",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "Ordinal_424",
+          "Ordinal_403",
+          "Ordinal_403",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "Ordinal_424",
+          "Ordinal_403",
+          "Ordinal_403",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "ValidateAndProcessRequest",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "ValidateAndProcessRequest",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "ValidateAndProcessRequest",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "ValidateAndProcessRequest",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "ValidateAndProcessRequest",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II Battle.net gateways\"",
@@ -3749,6 +4835,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1ffe42f00d5a61a1299a9030af0ba315",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -3821,6 +4942,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:65b7a85da46b184fa35b2ec6cd4699d5",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -3878,6 +5019,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:e4480b0898b64378bc45b5bb1fc30ea0",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 17,
         "LoD/1.08": 13,
@@ -3932,6 +5099,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a4d1e6d0c1989f5b91509e7ce1b0af14",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 14,
         "LoD/1.08": 14,
@@ -3986,6 +5180,50 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:071a74858680bb159ddc8294aa30d41c",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrCmpNI",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "SCompareN",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "SCompareN",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SCompareN",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SCompareN",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SCompareN",
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 16,
         "LoD/1.08": 16,
@@ -4145,6 +5383,90 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:adbd2e7032febe9f90c19211a566ff78",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "QueryRegistryValue",
+          "SMemAlloc",
+          "QueryRegistryValue",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "Ordinal_421",
+          "Ordinal_401",
+          "Ordinal_421",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "Ordinal_421",
+          "Ordinal_401",
+          "Ordinal_421",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "Ordinal_421",
+          "Ordinal_401",
+          "Ordinal_421",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "Ordinal_421",
+          "Ordinal_401",
+          "Ordinal_421",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_421",
+          "Ordinal_401",
+          "Ordinal_421",
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateAndProcessStringParameters",
+          "AllocateMemoryFromArena",
+          "ValidateAndProcessStringParameters",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateAndProcessStringParameters",
+          "AllocateMemoryFromArena",
+          "ValidateAndProcessStringParameters",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateAndProcessStringParameters",
+          "AllocateMemoryFromArena",
+          "ValidateAndProcessStringParameters",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateAndProcessStringParameters",
+          "AllocateMemoryFromArena",
+          "ValidateAndProcessStringParameters",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "ValidateAndProcessStringParameters",
+          "AllocateMemoryFromArena",
+          "ValidateAndProcessStringParameters",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BNetGW...",
@@ -4284,6 +5606,52 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:226b4b45fc7db39c7af749fa1d34697f",
+      "callees": {
+        "LoD/1.07": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.08": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.09": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.09b": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.09d": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.10": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.11": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.11b": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.12a": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.13c": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ],
+        "LoD/1.13d": [
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II Battle.net gateways\"",
@@ -4417,6 +5785,47 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:67a373e03afad16d71e58723d690a5a6",
+      "callees": {
+        "LoD/1.07": [
+          "SFileLoadFile",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "Ordinal_279",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "Ordinal_279",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_279",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_279",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "Ordinal_279",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BNetGW...",
@@ -4536,6 +5945,58 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:00476829e50e782c26e9ecbeca322c74",
+      "callees": {
+        "LoD/1.07": [
+          "SFileLoadFile",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.08": [
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.09": [
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.10": [
+          "Ordinal_279",
+          "FogAssert",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Writing default gateway list\"",
@@ -4835,6 +6296,56 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1c3f1a95ce5e00e170f95fa80cfbefdb",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?SkipToEOL@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?SkipEOL@BNGatewayAccess@@AAEPADPAD0@Z"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?SkipToEOL@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?SkipEOL@BNGatewayAccess@@AAEPADPAD0@Z"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?SkipToEOL@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?SkipEOL@BNGatewayAccess@@AAEPADPAD0@Z"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?SkipToEOL@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?SkipEOL@BNGatewayAccess@@AAEPADPAD0@Z"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?SkipToEOL@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?SkipEOL@BNGatewayAccess@@AAEPADPAD0@Z"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BNetGW...",
@@ -5020,6 +6531,86 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:91948caf7151a578f03059bd18a3760d",
+      "callees": {
+        "LoD/1.07": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "SMemAlloc",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ],
+        "LoD/1.08": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_401",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ],
+        "LoD/1.09": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_401",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ],
+        "LoD/1.09b": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_401",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ],
+        "LoD/1.09d": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?Unload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_401",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ],
+        "LoD/1.10": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "SStrLen",
+          "SMemZero",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "Ordinal_401",
+          "SStrLen",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+9 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"curr - buffer < bufferlength\"",
@@ -5301,6 +6892,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0379e315aa90f12f42e183c52cb142b8",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnMess...",
@@ -5384,6 +7001,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:537a25a16f3ba73acf2cf500018fd5be",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "SStrCopy",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "Ordinal_501",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnMess...",
@@ -5482,6 +7131,51 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3ed9d2d0aadf29a1c949528bd5e10fcd",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile"
+        ],
+        "LoD/1.11b": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile"
+        ],
+        "LoD/1.12a": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile"
+        ],
+        "LoD/1.13c": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile"
+        ],
+        "LoD/1.13d": [
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnMess..."
@@ -5596,17 +7290,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_SetGlobalProcessIdForced": {
       "addresses": {
         "LoD/1.07": "0x6FF25A60",
-        "LoD/1.08": "0x6FF25AB0",
-        "LoD/1.09": "0x6FF06410",
-        "LoD/1.09b": "0x6FF06410",
-        "LoD/1.09d": "0x6FF06680"
+        "LoD/1.08": "0x6FF25A80",
+        "LoD/1.09": "0x6FF063E0",
+        "LoD/1.09b": "0x6FF063E0",
+        "LoD/1.09d": "0x6FF06650"
       },
       "rvas": {
         "LoD/1.07": "0x5A60",
-        "LoD/1.08": "0x5AB0",
-        "LoD/1.09": "0x6410",
-        "LoD/1.09b": "0x6410",
-        "LoD/1.09d": "0x6680"
+        "LoD/1.08": "0x5A80",
+        "LoD/1.09": "0x63E0",
+        "LoD/1.09b": "0x63E0",
+        "LoD/1.09d": "0x6650"
       },
       "sizes": {
         "LoD/1.07": 38,
@@ -5647,17 +7341,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_SetGlobalContextValue": {
       "addresses": {
         "LoD/1.07": "0x6FF25A90",
-        "LoD/1.08": "0x6FF25A80",
-        "LoD/1.09": "0x6FF063E0",
-        "LoD/1.09b": "0x6FF063E0",
-        "LoD/1.09d": "0x6FF06650"
+        "LoD/1.08": "0x6FF25AB0",
+        "LoD/1.09": "0x6FF06410",
+        "LoD/1.09b": "0x6FF06410",
+        "LoD/1.09d": "0x6FF06680"
       },
       "rvas": {
         "LoD/1.07": "0x5A90",
-        "LoD/1.08": "0x5A80",
-        "LoD/1.09": "0x63E0",
-        "LoD/1.09b": "0x63E0",
-        "LoD/1.09d": "0x6650"
+        "LoD/1.08": "0x5AB0",
+        "LoD/1.09": "0x6410",
+        "LoD/1.09b": "0x6410",
+        "LoD/1.09d": "0x6680"
       },
       "sizes": {
         "LoD/1.07": 38,
@@ -5727,6 +7421,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a3bfc416695df49da2b2b674038696f4",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnMess...",
@@ -5849,6 +7563,22 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:77216fa437be5ea61a1ff4d8c3c0def7",
+      "callees": {
+        "LoD/1.07": [
+          "SStrLen",
+          "SStrLen",
+          "SStrCopy",
+          "SStrLen",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "SStrLen",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 12,
         "LoD/1.08": 12
@@ -5894,6 +7624,44 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:19d5930080a41d5a9ebde91c15005e3c",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrCopy",
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 28,
         "LoD/1.08": 28,
@@ -5939,6 +7707,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7bd3c0df134144137ddf075f5de710df",
+      "callees": {
+        "LoD/1.07": [
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong",
+          "QueryRegistryUlong"
+        ],
+        "LoD/1.08": [
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423",
+          "Ordinal_423"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Registration Version\"",
@@ -5974,16 +7756,26 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF260B0",
         "LoD/1.09": "0x6FF067D0",
         "LoD/1.09b": "0x6FF067D0",
-        "LoD/1.09d": "0x6FF06A40",
-        "LoD/1.10": "0x6FF07180"
+        "LoD/1.09d": "0x6FF06A60",
+        "LoD/1.10": "0x6FF022B0",
+        "LoD/1.11": "0x6FF34450",
+        "LoD/1.11b": "0x6FF31180",
+        "LoD/1.12a": "0x6FF2F740",
+        "LoD/1.13c": "0x6FF37410",
+        "LoD/1.13d": "0x6FF34C00"
       },
       "rvas": {
         "LoD/1.07": "0x6090",
         "LoD/1.08": "0x60B0",
         "LoD/1.09": "0x67D0",
         "LoD/1.09b": "0x67D0",
-        "LoD/1.09d": "0x6A40",
-        "LoD/1.10": "0x7180"
+        "LoD/1.09d": "0x6A60",
+        "LoD/1.10": "0x22B0",
+        "LoD/1.11": "0x14450",
+        "LoD/1.11b": "0x11180",
+        "LoD/1.12a": "0xF740",
+        "LoD/1.13c": "0x17410",
+        "LoD/1.13d": "0x14C00"
       },
       "sizes": {
         "LoD/1.07": 7,
@@ -5991,7 +7783,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 7,
         "LoD/1.09b": 7,
         "LoD/1.09d": 7,
-        "LoD/1.10": 7
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7
       },
       "name": "SetGlobalStringBufferField",
       "signature": "void SetGlobalStringBufferField(uint dwValue)",
@@ -6006,7 +7803,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -6014,7 +7816,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "305c32d33191c1b22ce2562362c5fa24",
@@ -6022,35 +7829,40 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "305c32d33191c1b22ce2562362c5fa24",
         "LoD/1.09b": "305c32d33191c1b22ce2562362c5fa24",
         "LoD/1.09d": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24"
+        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.11": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.11b": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.12a": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.13c": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.13d": "305c32d33191c1b22ce2562362c5fa24"
       }
     },
     "bnclient.dll_GetSessionId": {
       "addresses": {
         "LoD/1.07": "0x6FF260A0",
-        "LoD/1.08": "0x6FF22240",
-        "LoD/1.09": "0x6FF04BF0",
-        "LoD/1.09b": "0x6FF0AD70",
-        "LoD/1.09d": "0x6FF022D0",
-        "LoD/1.10": "0x6FF0B800",
-        "LoD/1.11": "0x6FF2B240",
-        "LoD/1.11b": "0x6FF32800",
-        "LoD/1.12a": "0x6FF2BC80",
-        "LoD/1.13c": "0x6FF2B870",
-        "LoD/1.13d": "0x6FF2BE00"
+        "LoD/1.08": "0x6FF221C0",
+        "LoD/1.09": "0x6FF02280",
+        "LoD/1.09b": "0x6FF02280",
+        "LoD/1.09d": "0x6FF02250",
+        "LoD/1.10": "0x6FF02240",
+        "LoD/1.11": "0x6FF2D3D0",
+        "LoD/1.11b": "0x6FF33500",
+        "LoD/1.12a": "0x6FF331D0",
+        "LoD/1.13c": "0x6FF2B860",
+        "LoD/1.13d": "0x6FF2CDE0"
       },
       "rvas": {
         "LoD/1.07": "0x60A0",
-        "LoD/1.08": "0x2240",
-        "LoD/1.09": "0x4BF0",
-        "LoD/1.09b": "0xAD70",
-        "LoD/1.09d": "0x22D0",
-        "LoD/1.10": "0xB800",
-        "LoD/1.11": "0xB240",
-        "LoD/1.11b": "0x12800",
-        "LoD/1.12a": "0xBC80",
-        "LoD/1.13c": "0xB870",
-        "LoD/1.13d": "0xBE00"
+        "LoD/1.08": "0x21C0",
+        "LoD/1.09": "0x2280",
+        "LoD/1.09b": "0x2280",
+        "LoD/1.09d": "0x2250",
+        "LoD/1.10": "0x2240",
+        "LoD/1.11": "0xD3D0",
+        "LoD/1.11b": "0x13500",
+        "LoD/1.12a": "0x131D0",
+        "LoD/1.13c": "0xB860",
+        "LoD/1.13d": "0xCDE0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6144,6 +7956,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3b58aa9893e3bc86ef7cf215ec54ecb1",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrLen",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -6201,6 +8045,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:3b58aa9893e3bc86ef7cf215ec54ecb1",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrLen",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 2,
@@ -6258,6 +8134,50 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:fb96c8995d4339522746969fbdd64577",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrLen",
+          "SStrCopy",
+          "SStrLen",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501",
+          "SStrLen",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 2,
@@ -6303,6 +8223,16 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:de19d421cc0cf60025d5a12959ebb1cf",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "QueueLogMessage"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"%x %x, %d %d, %d %s\\n\""
@@ -6356,6 +8286,44 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:387b004e286adc1b338c859c5673919e",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "ReleasePoolAllocation",
+          "FogMemAlloc",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Storing Realm List.\\n\"",
@@ -6445,6 +8413,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:661ecb5e140955c0a623d2153f720289",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -6494,28 +8488,26 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF266C0",
         "LoD/1.08": "0x6FF266E0",
-        "LoD/1.09": "0x6FF070A0",
+        "LoD/1.09": "0x6FF06C50",
         "LoD/1.09b": "0x6FF06C50",
-        "LoD/1.09d": "0x6FF06EC0",
+        "LoD/1.09d": "0x6FF07310",
         "LoD/1.10": "0x6FF07A80",
-        "LoD/1.11": "0x6FF2AF80",
-        "LoD/1.11b": "0x6FF33250",
+        "LoD/1.11": "0x6FF2B0C0",
+        "LoD/1.11b": "0x6FF33370",
         "LoD/1.12a": "0x6FF32EE0",
-        "LoD/1.13c": "0x6FF2B6D0",
-        "LoD/1.13d": "0x6FF333F0"
+        "LoD/1.13c": "0x6FF2B760"
       },
       "rvas": {
         "LoD/1.07": "0x66C0",
         "LoD/1.08": "0x66E0",
-        "LoD/1.09": "0x70A0",
+        "LoD/1.09": "0x6C50",
         "LoD/1.09b": "0x6C50",
-        "LoD/1.09d": "0x6EC0",
+        "LoD/1.09d": "0x7310",
         "LoD/1.10": "0x7A80",
-        "LoD/1.11": "0xAF80",
-        "LoD/1.11b": "0x13250",
+        "LoD/1.11": "0xB0C0",
+        "LoD/1.11b": "0x13370",
         "LoD/1.12a": "0x12EE0",
-        "LoD/1.13c": "0xB6D0",
-        "LoD/1.13d": "0x133F0"
+        "LoD/1.13c": "0xB760"
       },
       "sizes": {
         "LoD/1.07": 38,
@@ -6527,8 +8519,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": 38,
         "LoD/1.11b": 38,
         "LoD/1.12a": 38,
-        "LoD/1.13c": 38,
-        "LoD/1.13d": 38
+        "LoD/1.13c": 38
       },
       "name": "ReleaseGlobalBuffer",
       "signature": "void ReleaseGlobalBuffer(void)",
@@ -6537,6 +8528,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -6567,9 +8590,6 @@ var FUNCTIONS_Bnclient_dll = {
         ],
         "LoD/1.13c": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.13d": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
         ]
       },
       "basic_block_counts": {
@@ -6582,8 +8602,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
         "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
+        "LoD/1.13c": 3
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -6595,8 +8614,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.13c": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "9915db1b6011f72a4ebe0dc45a742999",
@@ -6608,8 +8626,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": "9915db1b6011f72a4ebe0dc45a742999",
         "LoD/1.11b": "9915db1b6011f72a4ebe0dc45a742999",
         "LoD/1.12a": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.13d": "9915db1b6011f72a4ebe0dc45a742999"
+        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999"
       }
     },
     "bnclient.dll_PrepareAndSendNetworkMessage": {
@@ -6659,6 +8676,46 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dda7ad2210cc9a7186949f23e7879260",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Diablo II\""
@@ -6766,6 +8823,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6034246ce6193103d873e407f51af290",
+      "callees": {
+        "LoD/1.07": [
+          "SStrCopy",
+          "SStrCopy"
+        ],
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -6966,28 +9049,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF26B10",
         "LoD/1.08": "0x6FF26B30",
-        "LoD/1.09": "0x6FF06C50",
+        "LoD/1.09": "0x6FF070A0",
         "LoD/1.09b": "0x6FF070A0",
-        "LoD/1.09d": "0x6FF07310",
+        "LoD/1.09d": "0x6FF06EC0",
         "LoD/1.10": "0x6FF075B0",
-        "LoD/1.11": "0x6FF2AFB0",
+        "LoD/1.11": "0x6FF2B150",
         "LoD/1.11b": "0x6FF33220",
         "LoD/1.12a": "0x6FF330B0",
         "LoD/1.13c": "0x6FF2B590",
-        "LoD/1.13d": "0x6FF32CB0"
+        "LoD/1.13d": "0x6FF333F0"
       },
       "rvas": {
         "LoD/1.07": "0x6B10",
         "LoD/1.08": "0x6B30",
-        "LoD/1.09": "0x6C50",
+        "LoD/1.09": "0x70A0",
         "LoD/1.09b": "0x70A0",
-        "LoD/1.09d": "0x7310",
+        "LoD/1.09d": "0x6EC0",
         "LoD/1.10": "0x75B0",
-        "LoD/1.11": "0xAFB0",
+        "LoD/1.11": "0xB150",
         "LoD/1.11b": "0x13220",
         "LoD/1.12a": "0x130B0",
         "LoD/1.13c": "0xB590",
-        "LoD/1.13d": "0x12CB0"
+        "LoD/1.13d": "0x133F0"
       },
       "sizes": {
         "LoD/1.07": 38,
@@ -7009,6 +9092,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -7090,21 +9208,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF26C80",
         "LoD/1.09": "0x6FF071F0",
         "LoD/1.09b": "0x6FF071F0",
-        "LoD/1.09d": "0x6FF07460"
+        "LoD/1.09d": "0x6FF07460",
+        "LoD/1.10": "0x6FF07BD0"
       },
       "rvas": {
         "LoD/1.07": "0x6C60",
         "LoD/1.08": "0x6C80",
         "LoD/1.09": "0x71F0",
         "LoD/1.09b": "0x71F0",
-        "LoD/1.09d": "0x7460"
+        "LoD/1.09d": "0x7460",
+        "LoD/1.10": "0x7BD0"
       },
       "sizes": {
         "LoD/1.07": 135,
         "LoD/1.08": 135,
         "LoD/1.09": 135,
         "LoD/1.09b": 135,
-        "LoD/1.09d": 135
+        "LoD/1.09d": 135,
+        "LoD/1.10": 135
       },
       "name": "CopyPacketToGlobalBuffer",
       "signature": "void CopyPacketToGlobalBuffer(byte * pbSourceBuffer, uint dwBufferSize)",
@@ -7113,6 +9234,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:661ecb5e140955c0a623d2153f720289",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -7128,6 +9275,9 @@ var FUNCTIONS_Bnclient_dll = {
         ],
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.10": [
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie..."
         ]
       },
       "basic_block_counts": {
@@ -7135,21 +9285,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": 6,
         "LoD/1.09": 6,
         "LoD/1.09b": 6,
-        "LoD/1.09d": 6
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "e29db4a50ab2aea4e9f4653d96e8f7bf",
         "LoD/1.08": "e29db4a50ab2aea4e9f4653d96e8f7bf",
         "LoD/1.09": "e29db4a50ab2aea4e9f4653d96e8f7bf",
         "LoD/1.09b": "e29db4a50ab2aea4e9f4653d96e8f7bf",
-        "LoD/1.09d": "e29db4a50ab2aea4e9f4653d96e8f7bf"
+        "LoD/1.09d": "e29db4a50ab2aea4e9f4653d96e8f7bf",
+        "LoD/1.10": "d646a10eb7dff9a517c5066ef4cfc879"
       }
     },
     "bnclient.dll_SendLocaleAndTimeInfo": {
@@ -7217,6 +9370,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:661ecb5e140955c0a623d2153f720289",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -7309,6 +9488,74 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4707e3e68bfe068f8eb1c5ed13468977",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree",
+          "SMemFree",
+          "SMemFree",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403",
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\CACHE.CPP\""
@@ -7413,6 +9660,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fc8a902d2e36e029ea7bd281e3fc44d4",
+      "callees": {
+        "LoD/1.07": [
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\CACHE.CPP\""
@@ -7517,6 +9799,136 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b10883b0775b8a7b6b8785defd3454d5",
+      "callees": {
+        "LoD/1.07": [
+          "SMemAlloc",
+          "SMemAlloc",
+          "FogAssert",
+          "SetError",
+          "SMemAlloc",
+          "FogAssert",
+          "SetError",
+          "SMemAlloc",
+          "FogAssert",
+          "SetError",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_401",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_401",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "...+4 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401",
+          "Ordinal_401",
+          "Ordinal_401",
+          "FogAssert",
+          "CacheAndForwardErrorCode",
+          "Ordinal_401",
+          "FogAssert",
+          "CacheAndForwardErrorCode",
+          "Ordinal_403",
+          "Ordinal_403",
+          "...+2 more"
+        ],
+        "LoD/1.11": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"WARNING- cache file is invalid. Replacing with ne...",
@@ -7678,6 +10090,84 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:920689ad3799d2580e3b092c17b80586",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetError",
+          "FogAssert",
+          "SetError",
+          "SMemAlloc",
+          "FogAssert",
+          "SetError",
+          "SMemFree"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "SetError",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "SetError",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "SetError",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "SetError",
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401",
+          "FogAssert",
+          "CacheAndForwardErrorCode",
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\\\bncache.dat\"",
@@ -7870,6 +10360,82 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8e9d676d40f95ff47874e888b9e69f59",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "SetError",
+          "SMemAlloc",
+          "FogAssert",
+          "SetError",
+          "SMemFree",
+          "FogAssert",
+          "SetError",
+          "SMemFree",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "SetError",
+          "Ordinal_401",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "SetError",
+          "Ordinal_403",
+          "FogAssert",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401",
+          "FogAssert",
+          "CacheAndForwardErrorCode",
+          "Ordinal_403",
+          "FogAssert",
+          "CacheAndForwardErrorCode",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"\\\\bncache.dat\"",
@@ -8028,6 +10594,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3a86254cd52043d317bd9043704a7e82",
+      "callees": {
+        "LoD/1.07": [
+          "CloseFileEntry",
+          "SFileCreateFile",
+          "HandleAddValue"
+        ],
+        "LoD/1.08": [
+          "Ordinal_541",
+          "Ordinal_542",
+          "HandleAddValue"
+        ],
+        "LoD/1.09": [
+          "Ordinal_541",
+          "Ordinal_542",
+          "HandleAddValue"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_541",
+          "Ordinal_542",
+          "HandleAddValue"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_541",
+          "Ordinal_542",
+          "HandleAddValue"
+        ],
+        "LoD/1.10": [
+          "Ordinal_541",
+          "Ordinal_542",
+          "Ordinal_550"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"BnetLog.txt\""
@@ -8120,6 +10718,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:eb139531398b6ecbb54188d2f9165fd7",
+      "callees": {
+        "LoD/1.07": [
+          "LogPrintfToHandle"
+        ],
+        "LoD/1.08": [
+          "Ordinal_548"
+        ],
+        "LoD/1.09": [
+          "Ordinal_548"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_548"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_548"
+        ],
+        "LoD/1.10": [
+          "Ordinal_548"
+        ],
+        "LoD/1.11": [
+          "WriteFormattedLogEntry"
+        ],
+        "LoD/1.11b": [
+          "WriteFormattedLogEntry"
+        ],
+        "LoD/1.12a": [
+          "WriteFormattedLogEntry"
+        ],
+        "LoD/1.13c": [
+          "WriteFormattedLogEntry"
+        ],
+        "LoD/1.13d": [
+          "WriteFormattedLogEntry"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -8220,42 +10853,21 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetBinkLogoAddress": {
       "addresses": {
         "LoD/1.07": "0x6FF296A0",
-        "LoD/1.08": "0x6FF221C0",
-        "LoD/1.09": "0x6FF02280",
-        "LoD/1.09b": "0x6FF02280",
-        "LoD/1.09d": "0x6FF02250",
-        "LoD/1.10": "0x6FF02240",
-        "LoD/1.11": "0x6FF2B270",
-        "LoD/1.11b": "0x6FF33520",
-        "LoD/1.12a": "0x6FF2D820",
-        "LoD/1.13c": "0x6FF2E940",
-        "LoD/1.13d": "0x6FF2CE10"
+        "LoD/1.08": "0x6FF227F0",
+        "LoD/1.09": "0x6FF028B0",
+        "LoD/1.09b": "0x6FF028B0"
       },
       "rvas": {
         "LoD/1.07": "0x96A0",
-        "LoD/1.08": "0x21C0",
-        "LoD/1.09": "0x2280",
-        "LoD/1.09b": "0x2280",
-        "LoD/1.09d": "0x2250",
-        "LoD/1.10": "0x2240",
-        "LoD/1.11": "0xB270",
-        "LoD/1.11b": "0x13520",
-        "LoD/1.12a": "0xD820",
-        "LoD/1.13c": "0xE940",
-        "LoD/1.13d": "0xCE10"
+        "LoD/1.08": "0x27F0",
+        "LoD/1.09": "0x28B0",
+        "LoD/1.09b": "0x28B0"
       },
       "sizes": {
         "LoD/1.07": 6,
         "LoD/1.08": 6,
         "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
+        "LoD/1.09b": 6
       },
       "name": "GetBinkLogoAddress",
       "signature": "void * GetBinkLogoAddress(void)",
@@ -8268,40 +10880,19 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
         "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.09b": 1
       },
       "loop_counts": {
         "LoD/1.07": 0,
         "LoD/1.08": 0,
         "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.09b": 0
       },
       "mnemonic_hashes": {
         "LoD/1.07": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.08": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
+        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
     "bnclient.dll_DecryptDataBlocks": {
@@ -8336,6 +10927,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:836f1a5fae39fce83a9bf7efadeb90e9",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pszPassword\"",
@@ -8425,6 +11042,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:83435bef043fa11104f36696d4ba0388",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pszPassword\"",
@@ -8508,6 +11145,86 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9cf5b89b3eb4e1c534c272c9e84b18bb",
+      "callees": {
+        "LoD/1.07": [
+          "SFileLoadFile",
+          "SFileCloseFile",
+          "SFileLoadFile",
+          "SFileCloseFile",
+          "SFileLoadFile",
+          "SFileCloseFile",
+          "SFileLoadFile",
+          "SFileCloseFile",
+          "SFileLoadFile",
+          "SFileCloseFile",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "Ordinal_279",
+          "Ordinal_280",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!sgpCDKey && !sgpOwner\"",
@@ -8630,6 +11347,52 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6454b6acd060246bbdc3cb48ca12c8eb",
+      "callees": {
+        "LoD/1.07": [
+          "SFileCloseFile",
+          "SFileCloseFile"
+        ],
+        "LoD/1.08": [
+          "Ordinal_280",
+          "Ordinal_280"
+        ],
+        "LoD/1.09": [
+          "Ordinal_280",
+          "Ordinal_280"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_280",
+          "Ordinal_280"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_280",
+          "Ordinal_280"
+        ],
+        "LoD/1.10": [
+          "Ordinal_280",
+          "Ordinal_280"
+        ],
+        "LoD/1.11": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.11b": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.12a": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13c": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13d": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 6,
@@ -8673,29 +11436,29 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetAuthenticationSessionId": {
       "addresses": {
         "LoD/1.07": "0x6FF2A140",
-        "LoD/1.08": "0x6FF2A160",
-        "LoD/1.09": "0x6FF06800",
-        "LoD/1.09b": "0x6FF022F0",
-        "LoD/1.09d": "0x6FF06A70",
-        "LoD/1.10": "0x6FF022F0",
-        "LoD/1.11": "0x6FF329C0",
+        "LoD/1.08": "0x6FF22240",
+        "LoD/1.09": "0x6FF02310",
+        "LoD/1.09b": "0x6FF04BF0",
+        "LoD/1.09d": "0x6FF022E0",
+        "LoD/1.10": "0x6FF022A0",
+        "LoD/1.11": "0x6FF32980",
         "LoD/1.11b": "0x6FF33510",
-        "LoD/1.12a": "0x6FF35030",
-        "LoD/1.13c": "0x6FF2CDA0",
-        "LoD/1.13d": "0x6FF2BDD0"
+        "LoD/1.12a": "0x6FF2D800",
+        "LoD/1.13c": "0x6FF30B40",
+        "LoD/1.13d": "0x6FF335A0"
       },
       "rvas": {
         "LoD/1.07": "0xA140",
-        "LoD/1.08": "0xA160",
-        "LoD/1.09": "0x6800",
-        "LoD/1.09b": "0x22F0",
-        "LoD/1.09d": "0x6A70",
-        "LoD/1.10": "0x22F0",
-        "LoD/1.11": "0x129C0",
+        "LoD/1.08": "0x2240",
+        "LoD/1.09": "0x2310",
+        "LoD/1.09b": "0x4BF0",
+        "LoD/1.09d": "0x22E0",
+        "LoD/1.10": "0x22A0",
+        "LoD/1.11": "0x12980",
         "LoD/1.11b": "0x13510",
-        "LoD/1.12a": "0x15030",
-        "LoD/1.13c": "0xCDA0",
-        "LoD/1.13d": "0xBDD0"
+        "LoD/1.12a": "0xD800",
+        "LoD/1.13c": "0x10B40",
+        "LoD/1.13d": "0x135A0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -8760,27 +11523,27 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetAuthenticationHandle": {
       "addresses": {
         "LoD/1.07": "0x6FF2A150",
-        "LoD/1.08": "0x6FF296C0",
-        "LoD/1.09": "0x6FF01020",
-        "LoD/1.09b": "0x6FF0A2D0",
-        "LoD/1.09d": "0x6FF01020",
+        "LoD/1.08": "0x6FF21020",
+        "LoD/1.09": "0x6FF0A2D0",
+        "LoD/1.09b": "0x6FF01020",
+        "LoD/1.09d": "0x6FF0A520",
         "LoD/1.10": "0x6FF0AD80",
         "LoD/1.11": "0x6FF343D0",
         "LoD/1.11b": "0x6FF2F5E0",
-        "LoD/1.12a": "0x6FF2F730",
+        "LoD/1.12a": "0x6FF35010",
         "LoD/1.13c": "0x6FF37390",
         "LoD/1.13d": "0x6FF34BF0"
       },
       "rvas": {
         "LoD/1.07": "0xA150",
-        "LoD/1.08": "0x96C0",
-        "LoD/1.09": "0x1020",
-        "LoD/1.09b": "0xA2D0",
-        "LoD/1.09d": "0x1020",
+        "LoD/1.08": "0x1020",
+        "LoD/1.09": "0xA2D0",
+        "LoD/1.09b": "0x1020",
+        "LoD/1.09d": "0xA520",
         "LoD/1.10": "0xAD80",
         "LoD/1.11": "0x143D0",
         "LoD/1.11b": "0xF5E0",
-        "LoD/1.12a": "0xF730",
+        "LoD/1.12a": "0x15010",
         "LoD/1.13c": "0x17390",
         "LoD/1.13d": "0x14BF0"
       },
@@ -9668,11 +12431,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCA6",
         "LoD/1.09d": "0x6FF0BEF6",
         "LoD/1.10": "0x6FF135FE",
-        "LoD/1.11": "0x6FF28126",
-        "LoD/1.11b": "0x6FF2812E",
-        "LoD/1.12a": "0x6FF28748",
-        "LoD/1.13c": "0x6FF28728",
-        "LoD/1.13d": "0x6FF2872E"
+        "LoD/1.11": "0x6FF28060",
+        "LoD/1.11b": "0x6FF27FDE",
+        "LoD/1.12a": "0x6FF2806C",
+        "LoD/1.13c": "0x6FF280D8",
+        "LoD/1.13d": "0x6FF2808A"
       },
       "rvas": {
         "LoD/1.07": "0xB080",
@@ -9681,11 +12444,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCA6",
         "LoD/1.09d": "0xBEF6",
         "LoD/1.10": "0x135FE",
-        "LoD/1.11": "0x8126",
-        "LoD/1.11b": "0x812E",
-        "LoD/1.12a": "0x8748",
-        "LoD/1.13c": "0x8728",
-        "LoD/1.13d": "0x872E"
+        "LoD/1.11": "0x8060",
+        "LoD/1.11b": "0x7FDE",
+        "LoD/1.12a": "0x806C",
+        "LoD/1.13c": "0x80D8",
+        "LoD/1.13d": "0x808A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9753,12 +12516,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BCAC",
         "LoD/1.09b": "0x6FF0BCAC",
         "LoD/1.09d": "0x6FF0BEFC",
-        "LoD/1.10": "0x6FF1364C",
-        "LoD/1.11": "0x6FF28060",
-        "LoD/1.11b": "0x6FF27FDE",
-        "LoD/1.12a": "0x6FF2806C",
-        "LoD/1.13c": "0x6FF280D8",
-        "LoD/1.13d": "0x6FF2808A"
+        "LoD/1.10": "0x6FF0C53A",
+        "LoD/1.11": "0x6FF280D2",
+        "LoD/1.11b": "0x6FF280E0",
+        "LoD/1.12a": "0x6FF2812C",
+        "LoD/1.13c": "0x6FF2810E",
+        "LoD/1.13d": "0x6FF28132"
       },
       "rvas": {
         "LoD/1.07": "0xB086",
@@ -9766,12 +12529,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBCAC",
         "LoD/1.09b": "0xBCAC",
         "LoD/1.09d": "0xBEFC",
-        "LoD/1.10": "0x1364C",
-        "LoD/1.11": "0x8060",
-        "LoD/1.11b": "0x7FDE",
-        "LoD/1.12a": "0x806C",
-        "LoD/1.13c": "0x80D8",
-        "LoD/1.13d": "0x808A"
+        "LoD/1.10": "0xC53A",
+        "LoD/1.11": "0x80D2",
+        "LoD/1.11b": "0x80E0",
+        "LoD/1.12a": "0x812C",
+        "LoD/1.13c": "0x810E",
+        "LoD/1.13d": "0x8132"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9840,11 +12603,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCB2",
         "LoD/1.09d": "0x6FF0BF02",
         "LoD/1.10": "0x6FF1360A",
-        "LoD/1.11": "0x6FF280EA",
-        "LoD/1.11b": "0x6FF280F2",
-        "LoD/1.12a": "0x6FF2871E",
-        "LoD/1.13c": "0x6FF286FE",
-        "LoD/1.13d": "0x6FF28704"
+        "LoD/1.11": "0x6FF28024",
+        "LoD/1.11b": "0x6FF2802C",
+        "LoD/1.12a": "0x6FF280AE",
+        "LoD/1.13c": "0x6FF28060",
+        "LoD/1.13d": "0x6FF28024"
       },
       "rvas": {
         "LoD/1.07": "0xB08C",
@@ -9853,11 +12616,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCB2",
         "LoD/1.09d": "0xBF02",
         "LoD/1.10": "0x1360A",
-        "LoD/1.11": "0x80EA",
-        "LoD/1.11b": "0x80F2",
-        "LoD/1.12a": "0x871E",
-        "LoD/1.13c": "0x86FE",
-        "LoD/1.13d": "0x8704"
+        "LoD/1.11": "0x8024",
+        "LoD/1.11b": "0x802C",
+        "LoD/1.12a": "0x80AE",
+        "LoD/1.13c": "0x8060",
+        "LoD/1.13d": "0x8024"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -9926,11 +12689,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCB8",
         "LoD/1.09d": "0x6FF0BF08",
         "LoD/1.10": "0x6FF13610",
-        "LoD/1.11": "0x6FF280A8",
-        "LoD/1.11b": "0x6FF280B6",
-        "LoD/1.12a": "0x6FF28120",
-        "LoD/1.13c": "0x6FF28102",
-        "LoD/1.13d": "0x6FF28126"
+        "LoD/1.11": "0x6FF28030",
+        "LoD/1.11b": "0x6FF2800E",
+        "LoD/1.12a": "0x6FF2804E",
+        "LoD/1.13c": "0x6FF28084",
+        "LoD/1.13d": "0x6FF280D8"
       },
       "rvas": {
         "LoD/1.07": "0xB092",
@@ -9939,11 +12702,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCB8",
         "LoD/1.09d": "0xBF08",
         "LoD/1.10": "0x13610",
-        "LoD/1.11": "0x80A8",
-        "LoD/1.11b": "0x80B6",
-        "LoD/1.12a": "0x8120",
-        "LoD/1.13c": "0x8102",
-        "LoD/1.13d": "0x8126"
+        "LoD/1.11": "0x8030",
+        "LoD/1.11b": "0x800E",
+        "LoD/1.12a": "0x804E",
+        "LoD/1.13c": "0x8084",
+        "LoD/1.13d": "0x80D8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10011,12 +12774,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BCBE",
         "LoD/1.09b": "0x6FF0BCBE",
         "LoD/1.09d": "0x6FF0BF0E",
-        "LoD/1.10": "0x6FF135F2",
-        "LoD/1.11": "0x6FF280DE",
-        "LoD/1.11b": "0x6FF280E6",
-        "LoD/1.12a": "0x6FF2812C",
-        "LoD/1.13c": "0x6FF2810E",
-        "LoD/1.13d": "0x6FF28132"
+        "LoD/1.10": "0x6FF1366A",
+        "LoD/1.11": "0x6FF280D8",
+        "LoD/1.11b": "0x6FF28086",
+        "LoD/1.12a": "0x6FF28108",
+        "LoD/1.13c": "0x6FF28150",
+        "LoD/1.13d": "0x6FF28156"
       },
       "rvas": {
         "LoD/1.07": "0xB098",
@@ -10024,12 +12787,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBCBE",
         "LoD/1.09b": "0xBCBE",
         "LoD/1.09d": "0xBF0E",
-        "LoD/1.10": "0x135F2",
-        "LoD/1.11": "0x80DE",
-        "LoD/1.11b": "0x80E6",
-        "LoD/1.12a": "0x812C",
-        "LoD/1.13c": "0x810E",
-        "LoD/1.13d": "0x8132"
+        "LoD/1.10": "0x1366A",
+        "LoD/1.11": "0x80D8",
+        "LoD/1.11b": "0x8086",
+        "LoD/1.12a": "0x8108",
+        "LoD/1.13c": "0x8150",
+        "LoD/1.13d": "0x8156"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10098,11 +12861,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCA0",
         "LoD/1.09d": "0x6FF0BF14",
         "LoD/1.10": "0x6FF1361C",
-        "LoD/1.11": "0x6FF27FEE",
-        "LoD/1.11b": "0x6FF28056",
-        "LoD/1.12a": "0x6FF280DE",
-        "LoD/1.13c": "0x6FF280BA",
-        "LoD/1.13d": "0x6FF280BA"
+        "LoD/1.11": "0x6FF28000",
+        "LoD/1.11b": "0x6FF27FF0",
+        "LoD/1.12a": "0x6FF28048",
+        "LoD/1.13c": "0x6FF2806C",
+        "LoD/1.13d": "0x6FF28042"
       },
       "rvas": {
         "LoD/1.07": "0xB09E",
@@ -10111,11 +12874,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCA0",
         "LoD/1.09d": "0xBF14",
         "LoD/1.10": "0x1361C",
-        "LoD/1.11": "0x7FEE",
-        "LoD/1.11b": "0x8056",
-        "LoD/1.12a": "0x80DE",
-        "LoD/1.13c": "0x80BA",
-        "LoD/1.13d": "0x80BA"
+        "LoD/1.11": "0x8000",
+        "LoD/1.11b": "0x7FF0",
+        "LoD/1.12a": "0x8048",
+        "LoD/1.13c": "0x806C",
+        "LoD/1.13d": "0x8042"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10184,11 +12947,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCC4",
         "LoD/1.09d": "0x6FF0BF1A",
         "LoD/1.10": "0x6FF13622",
-        "LoD/1.11": "0x6FF27F64",
-        "LoD/1.11b": "0x6FF27F72",
-        "LoD/1.12a": "0x6FF28018",
-        "LoD/1.13c": "0x6FF27FFA",
-        "LoD/1.13d": "0x6FF27FE2"
+        "LoD/1.11": "0x6FF28102",
+        "LoD/1.11b": "0x6FF2810A",
+        "LoD/1.12a": "0x6FF28736",
+        "LoD/1.13c": "0x6FF28716",
+        "LoD/1.13d": "0x6FF2871C"
       },
       "rvas": {
         "LoD/1.07": "0xB0A4",
@@ -10197,11 +12960,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCC4",
         "LoD/1.09d": "0xBF1A",
         "LoD/1.10": "0x13622",
-        "LoD/1.11": "0x7F64",
-        "LoD/1.11b": "0x7F72",
-        "LoD/1.12a": "0x8018",
-        "LoD/1.13c": "0x7FFA",
-        "LoD/1.13d": "0x7FE2"
+        "LoD/1.11": "0x8102",
+        "LoD/1.11b": "0x810A",
+        "LoD/1.12a": "0x8736",
+        "LoD/1.13c": "0x8716",
+        "LoD/1.13d": "0x871C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10270,11 +13033,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCCA",
         "LoD/1.09d": "0x6FF0BF20",
         "LoD/1.10": "0x6FF13628",
-        "LoD/1.11": "0x6FF27F76",
-        "LoD/1.11b": "0x6FF27F84",
-        "LoD/1.12a": "0x6FF27FE2",
-        "LoD/1.13c": "0x6FF27FC4",
-        "LoD/1.13d": "0x6FF27FF4"
+        "LoD/1.11": "0x6FF28048",
+        "LoD/1.11b": "0x6FF28068",
+        "LoD/1.12a": "0x6FF280B4",
+        "LoD/1.13c": "0x6FF28090",
+        "LoD/1.13d": "0x6FF280D2"
       },
       "rvas": {
         "LoD/1.07": "0xB0AA",
@@ -10283,11 +13046,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCCA",
         "LoD/1.09d": "0xBF20",
         "LoD/1.10": "0x13628",
-        "LoD/1.11": "0x7F76",
-        "LoD/1.11b": "0x7F84",
-        "LoD/1.12a": "0x7FE2",
-        "LoD/1.13c": "0x7FC4",
-        "LoD/1.13d": "0x7FF4"
+        "LoD/1.11": "0x8048",
+        "LoD/1.11b": "0x8068",
+        "LoD/1.12a": "0x80B4",
+        "LoD/1.13c": "0x8090",
+        "LoD/1.13d": "0x80D2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10356,11 +13119,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCD0",
         "LoD/1.09d": "0x6FF0BF26",
         "LoD/1.10": "0x6FF1362E",
-        "LoD/1.11": "0x6FF28024",
-        "LoD/1.11b": "0x6FF2802C",
-        "LoD/1.12a": "0x6FF280AE",
-        "LoD/1.13c": "0x6FF28060",
-        "LoD/1.13d": "0x6FF28024"
+        "LoD/1.11": "0x6FF2801E",
+        "LoD/1.11b": "0x6FF28026",
+        "LoD/1.12a": "0x6FF280A8",
+        "LoD/1.13c": "0x6FF2805A",
+        "LoD/1.13d": "0x6FF2801E"
       },
       "rvas": {
         "LoD/1.07": "0xB0B0",
@@ -10369,11 +13132,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCD0",
         "LoD/1.09d": "0xBF26",
         "LoD/1.10": "0x1362E",
-        "LoD/1.11": "0x8024",
-        "LoD/1.11b": "0x802C",
-        "LoD/1.12a": "0x80AE",
-        "LoD/1.13c": "0x8060",
-        "LoD/1.13d": "0x8024"
+        "LoD/1.11": "0x801E",
+        "LoD/1.11b": "0x8026",
+        "LoD/1.12a": "0x80A8",
+        "LoD/1.13c": "0x805A",
+        "LoD/1.13d": "0x801E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10438,28 +13201,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B0B6",
         "LoD/1.08": "0x6FF2B0D6",
-        "LoD/1.09": "0x6FF0BD42",
-        "LoD/1.09b": "0x6FF0BD42",
-        "LoD/1.09d": "0x6FF0BF98",
-        "LoD/1.10": "0x6FF0C4EC",
-        "LoD/1.11": "0x6FF280A2",
-        "LoD/1.11b": "0x6FF280B0",
-        "LoD/1.12a": "0x6FF2814A",
-        "LoD/1.13c": "0x6FF2812C",
-        "LoD/1.13d": "0x6FF28150"
+        "LoD/1.09": "0x6FF0BD3C",
+        "LoD/1.09b": "0x6FF0BD3C",
+        "LoD/1.09d": "0x6FF0BF92",
+        "LoD/1.10": "0x6FF0C4E6",
+        "LoD/1.11": "0x6FF28114",
+        "LoD/1.11b": "0x6FF2811C",
+        "LoD/1.12a": "0x6FF28748",
+        "LoD/1.13c": "0x6FF28728",
+        "LoD/1.13d": "0x6FF2872E"
       },
       "rvas": {
         "LoD/1.07": "0xB0B6",
         "LoD/1.08": "0xB0D6",
-        "LoD/1.09": "0xBD42",
-        "LoD/1.09b": "0xBD42",
-        "LoD/1.09d": "0xBF98",
-        "LoD/1.10": "0xC4EC",
-        "LoD/1.11": "0x80A2",
-        "LoD/1.11b": "0x80B0",
-        "LoD/1.12a": "0x814A",
-        "LoD/1.13c": "0x812C",
-        "LoD/1.13d": "0x8150"
+        "LoD/1.09": "0xBD3C",
+        "LoD/1.09b": "0xBD3C",
+        "LoD/1.09d": "0xBF92",
+        "LoD/1.10": "0xC4E6",
+        "LoD/1.11": "0x8114",
+        "LoD/1.11b": "0x811C",
+        "LoD/1.12a": "0x8748",
+        "LoD/1.13c": "0x8728",
+        "LoD/1.13d": "0x872E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10524,28 +13287,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B0BC",
         "LoD/1.08": "0x6FF2B0DC",
-        "LoD/1.09": "0x6FF151A4",
-        "LoD/1.09b": "0x6FF151A4",
-        "LoD/1.09d": "0x6FF154AC",
-        "LoD/1.10": "0x6FF15A54",
-        "LoD/1.11": "0x6FF28030",
-        "LoD/1.11b": "0x6FF2800E",
-        "LoD/1.12a": "0x6FF2804E",
-        "LoD/1.13c": "0x6FF28084",
-        "LoD/1.13d": "0x6FF280D8"
+        "LoD/1.09": "0x6FF15198",
+        "LoD/1.09b": "0x6FF15198",
+        "LoD/1.09d": "0x6FF154B8",
+        "LoD/1.10": "0x6FF15A48",
+        "LoD/1.11": "0x6FF280EA",
+        "LoD/1.11b": "0x6FF280F2",
+        "LoD/1.12a": "0x6FF2871E",
+        "LoD/1.13c": "0x6FF286FE",
+        "LoD/1.13d": "0x6FF28704"
       },
       "rvas": {
         "LoD/1.07": "0xB0BC",
         "LoD/1.08": "0xB0DC",
-        "LoD/1.09": "0x151A4",
-        "LoD/1.09b": "0x151A4",
-        "LoD/1.09d": "0x154AC",
-        "LoD/1.10": "0x15A54",
-        "LoD/1.11": "0x8030",
-        "LoD/1.11b": "0x800E",
-        "LoD/1.12a": "0x804E",
-        "LoD/1.13c": "0x8084",
-        "LoD/1.13d": "0x80D8"
+        "LoD/1.09": "0x15198",
+        "LoD/1.09b": "0x15198",
+        "LoD/1.09d": "0x154B8",
+        "LoD/1.10": "0x15A48",
+        "LoD/1.11": "0x80EA",
+        "LoD/1.11b": "0x80F2",
+        "LoD/1.12a": "0x871E",
+        "LoD/1.13c": "0x86FE",
+        "LoD/1.13d": "0x8704"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10700,11 +13463,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCE8",
         "LoD/1.09d": "0x6FF0BF44",
         "LoD/1.10": "0x6FF13652",
-        "LoD/1.11": "0x6FF28054",
-        "LoD/1.11b": "0x6FF27FCC",
-        "LoD/1.12a": "0x6FF28060",
-        "LoD/1.13c": "0x6FF280CC",
-        "LoD/1.13d": "0x6FF28078"
+        "LoD/1.11": "0x6FF2809C",
+        "LoD/1.11b": "0x6FF28080",
+        "LoD/1.12a": "0x6FF2810E",
+        "LoD/1.13c": "0x6FF280F0",
+        "LoD/1.13d": "0x6FF280F0"
       },
       "rvas": {
         "LoD/1.07": "0xB0C8",
@@ -10713,11 +13476,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCE8",
         "LoD/1.09d": "0xBF44",
         "LoD/1.10": "0x13652",
-        "LoD/1.11": "0x8054",
-        "LoD/1.11b": "0x7FCC",
-        "LoD/1.12a": "0x8060",
-        "LoD/1.13c": "0x80CC",
-        "LoD/1.13d": "0x8078"
+        "LoD/1.11": "0x809C",
+        "LoD/1.11b": "0x8080",
+        "LoD/1.12a": "0x810E",
+        "LoD/1.13c": "0x80F0",
+        "LoD/1.13d": "0x80F0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10872,11 +13635,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BCF4",
         "LoD/1.09d": "0x6FF0BF50",
         "LoD/1.10": "0x6FF1365E",
-        "LoD/1.11": "0x6FF2806C",
-        "LoD/1.11b": "0x6FF28092",
-        "LoD/1.12a": "0x6FF28114",
-        "LoD/1.13c": "0x6FF280F6",
-        "LoD/1.13d": "0x6FF28102"
+        "LoD/1.11": "0x6FF280A2",
+        "LoD/1.11b": "0x6FF280B0",
+        "LoD/1.12a": "0x6FF2811A",
+        "LoD/1.13c": "0x6FF280FC",
+        "LoD/1.13d": "0x6FF28120"
       },
       "rvas": {
         "LoD/1.07": "0xB0D4",
@@ -10885,11 +13648,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBCF4",
         "LoD/1.09d": "0xBF50",
         "LoD/1.10": "0x1365E",
-        "LoD/1.11": "0x806C",
-        "LoD/1.11b": "0x8092",
-        "LoD/1.12a": "0x8114",
-        "LoD/1.13c": "0x80F6",
-        "LoD/1.13d": "0x8102"
+        "LoD/1.11": "0x80A2",
+        "LoD/1.11b": "0x80B0",
+        "LoD/1.12a": "0x811A",
+        "LoD/1.13c": "0x80FC",
+        "LoD/1.13d": "0x8120"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10957,12 +13720,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BCFA",
         "LoD/1.09b": "0x6FF0BCFA",
         "LoD/1.09d": "0x6FF0BF3E",
-        "LoD/1.10": "0x6FF13616",
-        "LoD/1.11": "0x6FF280C0",
-        "LoD/1.11b": "0x6FF280CE",
-        "LoD/1.12a": "0x6FF28138",
-        "LoD/1.13c": "0x6FF2811A",
-        "LoD/1.13d": "0x6FF2813E"
+        "LoD/1.10": "0x6FF0C552",
+        "LoD/1.11": "0x6FF27FCA",
+        "LoD/1.11b": "0x6FF27FA2",
+        "LoD/1.12a": "0x6FF28072",
+        "LoD/1.13c": "0x6FF28030",
+        "LoD/1.13d": "0x6FF28048"
       },
       "rvas": {
         "LoD/1.07": "0xB0DA",
@@ -10970,12 +13733,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBCFA",
         "LoD/1.09b": "0xBCFA",
         "LoD/1.09d": "0xBF3E",
-        "LoD/1.10": "0x13616",
-        "LoD/1.11": "0x80C0",
-        "LoD/1.11b": "0x80CE",
-        "LoD/1.12a": "0x8138",
-        "LoD/1.13c": "0x811A",
-        "LoD/1.13d": "0x813E"
+        "LoD/1.10": "0xC552",
+        "LoD/1.11": "0x7FCA",
+        "LoD/1.11b": "0x7FA2",
+        "LoD/1.12a": "0x8072",
+        "LoD/1.13c": "0x8030",
+        "LoD/1.13d": "0x8048"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11044,11 +13807,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD00",
         "LoD/1.09d": "0x6FF0BF56",
         "LoD/1.10": "0x6FF13664",
-        "LoD/1.11": "0x6FF280F6",
-        "LoD/1.11b": "0x6FF280FE",
-        "LoD/1.12a": "0x6FF2872A",
-        "LoD/1.13c": "0x6FF2870A",
-        "LoD/1.13d": "0x6FF28710"
+        "LoD/1.11": "0x6FF27F4C",
+        "LoD/1.11b": "0x6FF27F5A",
+        "LoD/1.12a": "0x6FF28000",
+        "LoD/1.13c": "0x6FF27FE2",
+        "LoD/1.13d": "0x6FF27FCA"
       },
       "rvas": {
         "LoD/1.07": "0xB0E0",
@@ -11057,11 +13820,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD00",
         "LoD/1.09d": "0xBF56",
         "LoD/1.10": "0x13664",
-        "LoD/1.11": "0x80F6",
-        "LoD/1.11b": "0x80FE",
-        "LoD/1.12a": "0x872A",
-        "LoD/1.13c": "0x870A",
-        "LoD/1.13d": "0x8710"
+        "LoD/1.11": "0x7F4C",
+        "LoD/1.11b": "0x7F5A",
+        "LoD/1.12a": "0x8000",
+        "LoD/1.13c": "0x7FE2",
+        "LoD/1.13d": "0x7FCA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11130,11 +13893,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD06",
         "LoD/1.09d": "0x6FF0BF5C",
         "LoD/1.10": "0x6FF0C4B0",
-        "LoD/1.11": "0x6FF280BA",
-        "LoD/1.11b": "0x6FF280C8",
-        "LoD/1.12a": "0x6FF28132",
-        "LoD/1.13c": "0x6FF28114",
-        "LoD/1.13d": "0x6FF28138"
+        "LoD/1.11": "0x6FF27FD0",
+        "LoD/1.11b": "0x6FF2804A",
+        "LoD/1.12a": "0x6FF280D2",
+        "LoD/1.13c": "0x6FF280AE",
+        "LoD/1.13d": "0x6FF280A8"
       },
       "rvas": {
         "LoD/1.07": "0xB0E6",
@@ -11143,11 +13906,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD06",
         "LoD/1.09d": "0xBF5C",
         "LoD/1.10": "0xC4B0",
-        "LoD/1.11": "0x80BA",
-        "LoD/1.11b": "0x80C8",
-        "LoD/1.12a": "0x8132",
-        "LoD/1.13c": "0x8114",
-        "LoD/1.13d": "0x8138"
+        "LoD/1.11": "0x7FD0",
+        "LoD/1.11b": "0x804A",
+        "LoD/1.12a": "0x80D2",
+        "LoD/1.13c": "0x80AE",
+        "LoD/1.13d": "0x80A8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11302,11 +14065,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD12",
         "LoD/1.09d": "0x6FF0BF68",
         "LoD/1.10": "0x6FF0C4BC",
-        "LoD/1.11": "0x6FF27FFA",
-        "LoD/1.11b": "0x6FF28062",
-        "LoD/1.12a": "0x6FF280EA",
-        "LoD/1.13c": "0x6FF280C6",
-        "LoD/1.13d": "0x6FF280C6"
+        "LoD/1.11": "0x6FF27F94",
+        "LoD/1.11b": "0x6FF27F9C",
+        "LoD/1.12a": "0x6FF28024",
+        "LoD/1.13c": "0x6FF28018",
+        "LoD/1.13d": "0x6FF2800C"
       },
       "rvas": {
         "LoD/1.07": "0xB0F2",
@@ -11315,11 +14078,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD12",
         "LoD/1.09d": "0xBF68",
         "LoD/1.10": "0xC4BC",
-        "LoD/1.11": "0x7FFA",
-        "LoD/1.11b": "0x8062",
-        "LoD/1.12a": "0x80EA",
-        "LoD/1.13c": "0x80C6",
-        "LoD/1.13d": "0x80C6"
+        "LoD/1.11": "0x7F94",
+        "LoD/1.11b": "0x7F9C",
+        "LoD/1.12a": "0x8024",
+        "LoD/1.13c": "0x8018",
+        "LoD/1.13d": "0x800C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11387,12 +14150,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BD18",
         "LoD/1.09b": "0x6FF0BD18",
         "LoD/1.09d": "0x6FF0BF6E",
-        "LoD/1.10": "0x6FF0C558",
-        "LoD/1.11": "0x6FF27F6A",
-        "LoD/1.11b": "0x6FF27F78",
-        "LoD/1.12a": "0x6FF27FF4",
-        "LoD/1.13c": "0x6FF27FD6",
-        "LoD/1.13d": "0x6FF27FE8"
+        "LoD/1.10": "0x6FF0C55E",
+        "LoD/1.11": "0x6FF28006",
+        "LoD/1.11b": "0x6FF27FF6",
+        "LoD/1.12a": "0x6FF2808A",
+        "LoD/1.13c": "0x6FF2800C",
+        "LoD/1.13d": "0x6FF2805A"
       },
       "rvas": {
         "LoD/1.07": "0xB0F8",
@@ -11400,12 +14163,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBD18",
         "LoD/1.09b": "0xBD18",
         "LoD/1.09d": "0xBF6E",
-        "LoD/1.10": "0xC558",
-        "LoD/1.11": "0x7F6A",
-        "LoD/1.11b": "0x7F78",
-        "LoD/1.12a": "0x7FF4",
-        "LoD/1.13c": "0x7FD6",
-        "LoD/1.13d": "0x7FE8"
+        "LoD/1.10": "0xC55E",
+        "LoD/1.11": "0x8006",
+        "LoD/1.11b": "0x7FF6",
+        "LoD/1.12a": "0x808A",
+        "LoD/1.13c": "0x800C",
+        "LoD/1.13d": "0x805A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11474,11 +14237,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD1E",
         "LoD/1.09d": "0x6FF0BF74",
         "LoD/1.10": "0x6FF0C4C8",
-        "LoD/1.11": "0x6FF280C6",
-        "LoD/1.11b": "0x6FF280D4",
-        "LoD/1.12a": "0x6FF2813E",
-        "LoD/1.13c": "0x6FF28120",
-        "LoD/1.13d": "0x6FF28144"
+        "LoD/1.11": "0x6FF28072",
+        "LoD/1.11b": "0x6FF2807A",
+        "LoD/1.12a": "0x6FF28102",
+        "LoD/1.13c": "0x6FF280EA",
+        "LoD/1.13d": "0x6FF280EA"
       },
       "rvas": {
         "LoD/1.07": "0xB0FE",
@@ -11487,11 +14250,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD1E",
         "LoD/1.09d": "0xBF74",
         "LoD/1.10": "0xC4C8",
-        "LoD/1.11": "0x80C6",
-        "LoD/1.11b": "0x80D4",
-        "LoD/1.12a": "0x813E",
-        "LoD/1.13c": "0x8120",
-        "LoD/1.13d": "0x8144"
+        "LoD/1.11": "0x8072",
+        "LoD/1.11b": "0x807A",
+        "LoD/1.12a": "0x8102",
+        "LoD/1.13c": "0x80EA",
+        "LoD/1.13d": "0x80EA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11560,11 +14323,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD24",
         "LoD/1.09d": "0x6FF0BF7A",
         "LoD/1.10": "0x6FF0C4CE",
-        "LoD/1.11": "0x6FF28000",
-        "LoD/1.11b": "0x6FF27FF0",
-        "LoD/1.12a": "0x6FF28048",
-        "LoD/1.13c": "0x6FF2806C",
-        "LoD/1.13d": "0x6FF28042"
+        "LoD/1.11": "0x6FF28132",
+        "LoD/1.11b": "0x6FF2813A",
+        "LoD/1.12a": "0x6FF28766",
+        "LoD/1.13c": "0x6FF28746",
+        "LoD/1.13d": "0x6FF2874C"
       },
       "rvas": {
         "LoD/1.07": "0xB104",
@@ -11573,11 +14336,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD24",
         "LoD/1.09d": "0xBF7A",
         "LoD/1.10": "0xC4CE",
-        "LoD/1.11": "0x8000",
-        "LoD/1.11b": "0x7FF0",
-        "LoD/1.12a": "0x8048",
-        "LoD/1.13c": "0x806C",
-        "LoD/1.13d": "0x8042"
+        "LoD/1.11": "0x8132",
+        "LoD/1.11b": "0x813A",
+        "LoD/1.12a": "0x8766",
+        "LoD/1.13c": "0x8746",
+        "LoD/1.13d": "0x874C"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11732,11 +14495,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD30",
         "LoD/1.09d": "0x6FF0BF86",
         "LoD/1.10": "0x6FF0C4DA",
-        "LoD/1.11": "0x6FF2809C",
-        "LoD/1.11b": "0x6FF28080",
-        "LoD/1.12a": "0x6FF2810E",
-        "LoD/1.13c": "0x6FF280F0",
-        "LoD/1.13d": "0x6FF280F0"
+        "LoD/1.11": "0x6FF2811A",
+        "LoD/1.11b": "0x6FF28122",
+        "LoD/1.12a": "0x6FF2874E",
+        "LoD/1.13c": "0x6FF2872E",
+        "LoD/1.13d": "0x6FF28734"
       },
       "rvas": {
         "LoD/1.07": "0xB110",
@@ -11745,11 +14508,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD30",
         "LoD/1.09d": "0xBF86",
         "LoD/1.10": "0xC4DA",
-        "LoD/1.11": "0x809C",
-        "LoD/1.11b": "0x8080",
-        "LoD/1.12a": "0x810E",
-        "LoD/1.13c": "0x80F0",
-        "LoD/1.13d": "0x80F0"
+        "LoD/1.11": "0x811A",
+        "LoD/1.11b": "0x8122",
+        "LoD/1.12a": "0x874E",
+        "LoD/1.13c": "0x872E",
+        "LoD/1.13d": "0x8734"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11818,11 +14581,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD36",
         "LoD/1.09d": "0x6FF0BF8C",
         "LoD/1.10": "0x6FF0C4E0",
-        "LoD/1.11": "0x6FF2802A",
-        "LoD/1.11b": "0x6FF27FB4",
-        "LoD/1.12a": "0x6FF2807E",
-        "LoD/1.13c": "0x6FF2803C",
-        "LoD/1.13d": "0x6FF2802A"
+        "LoD/1.11": "0x6FF28012",
+        "LoD/1.11b": "0x6FF28002",
+        "LoD/1.12a": "0x6FF28096",
+        "LoD/1.13c": "0x6FF28024",
+        "LoD/1.13d": "0x6FF28066"
       },
       "rvas": {
         "LoD/1.07": "0xB116",
@@ -11831,11 +14594,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD36",
         "LoD/1.09d": "0xBF8C",
         "LoD/1.10": "0xC4E0",
-        "LoD/1.11": "0x802A",
-        "LoD/1.11b": "0x7FB4",
-        "LoD/1.12a": "0x807E",
-        "LoD/1.13c": "0x803C",
-        "LoD/1.13d": "0x802A"
+        "LoD/1.11": "0x8012",
+        "LoD/1.11b": "0x8002",
+        "LoD/1.12a": "0x8096",
+        "LoD/1.13c": "0x8024",
+        "LoD/1.13d": "0x8066"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11900,28 +14663,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B11C",
         "LoD/1.08": "0x6FF2B13C",
-        "LoD/1.09": "0x6FF151B0",
-        "LoD/1.09b": "0x6FF151B0",
-        "LoD/1.09d": "0x6FF154D0",
-        "LoD/1.10": "0x6FF15A60",
-        "LoD/1.11": "0x6FF27FE8",
-        "LoD/1.11b": "0x6FF2805C",
-        "LoD/1.12a": "0x6FF280E4",
-        "LoD/1.13c": "0x6FF280C0",
-        "LoD/1.13d": "0x6FF280B4"
+        "LoD/1.09": "0x6FF0BD48",
+        "LoD/1.09b": "0x6FF0BD48",
+        "LoD/1.09d": "0x6FF0BF9E",
+        "LoD/1.10": "0x6FF0C4F2",
+        "LoD/1.11": "0x6FF27FE2",
+        "LoD/1.11b": "0x6FF28050",
+        "LoD/1.12a": "0x6FF280D8",
+        "LoD/1.13c": "0x6FF280B4",
+        "LoD/1.13d": "0x6FF280AE"
       },
       "rvas": {
         "LoD/1.07": "0xB11C",
         "LoD/1.08": "0xB13C",
-        "LoD/1.09": "0x151B0",
-        "LoD/1.09b": "0x151B0",
-        "LoD/1.09d": "0x154D0",
-        "LoD/1.10": "0x15A60",
-        "LoD/1.11": "0x7FE8",
-        "LoD/1.11b": "0x805C",
-        "LoD/1.12a": "0x80E4",
-        "LoD/1.13c": "0x80C0",
-        "LoD/1.13d": "0x80B4"
+        "LoD/1.09": "0xBD48",
+        "LoD/1.09b": "0xBD48",
+        "LoD/1.09d": "0xBF9E",
+        "LoD/1.10": "0xC4F2",
+        "LoD/1.11": "0x7FE2",
+        "LoD/1.11b": "0x8050",
+        "LoD/1.12a": "0x80D8",
+        "LoD/1.13c": "0x80B4",
+        "LoD/1.13d": "0x80AE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -11986,28 +14749,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B122",
         "LoD/1.08": "0x6FF2B142",
-        "LoD/1.09": "0x6FF0BD3C",
-        "LoD/1.09b": "0x6FF0BD3C",
-        "LoD/1.09d": "0x6FF0BF92",
-        "LoD/1.10": "0x6FF0C4E6",
-        "LoD/1.11": "0x6FF27FA6",
-        "LoD/1.11b": "0x6FF27FE4",
-        "LoD/1.12a": "0x6FF28030",
-        "LoD/1.13c": "0x6FF2804E",
-        "LoD/1.13d": "0x6FF2803C"
+        "LoD/1.09": "0x6FF151AA",
+        "LoD/1.09b": "0x6FF151AA",
+        "LoD/1.09d": "0x6FF154CA",
+        "LoD/1.10": "0x6FF15A3C",
+        "LoD/1.11": "0x6FF27FA0",
+        "LoD/1.11b": "0x6FF27FBA",
+        "LoD/1.12a": "0x6FF2803C",
+        "LoD/1.13c": "0x6FF28042",
+        "LoD/1.13d": "0x6FF28030"
       },
       "rvas": {
         "LoD/1.07": "0xB122",
         "LoD/1.08": "0xB142",
-        "LoD/1.09": "0xBD3C",
-        "LoD/1.09b": "0xBD3C",
-        "LoD/1.09d": "0xBF92",
-        "LoD/1.10": "0xC4E6",
-        "LoD/1.11": "0x7FA6",
-        "LoD/1.11b": "0x7FE4",
-        "LoD/1.12a": "0x8030",
-        "LoD/1.13c": "0x804E",
-        "LoD/1.13d": "0x803C"
+        "LoD/1.09": "0x151AA",
+        "LoD/1.09b": "0x151AA",
+        "LoD/1.09d": "0x154CA",
+        "LoD/1.10": "0x15A3C",
+        "LoD/1.11": "0x7FA0",
+        "LoD/1.11b": "0x7FBA",
+        "LoD/1.12a": "0x803C",
+        "LoD/1.13c": "0x8042",
+        "LoD/1.13d": "0x8030"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12072,28 +14835,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B128",
         "LoD/1.08": "0x6FF2B148",
-        "LoD/1.09": "0x6FF1518C",
-        "LoD/1.09b": "0x6FF1518C",
-        "LoD/1.09d": "0x6FF154C4",
-        "LoD/1.10": "0x6FF15A3C",
-        "LoD/1.11": "0x6FF28120",
-        "LoD/1.11b": "0x6FF28128",
-        "LoD/1.12a": "0x6FF28754",
-        "LoD/1.13c": "0x6FF28734",
-        "LoD/1.13d": "0x6FF2873A"
+        "LoD/1.09": "0x6FF151B0",
+        "LoD/1.09b": "0x6FF151B0",
+        "LoD/1.09d": "0x6FF154D0",
+        "LoD/1.10": "0x6FF15A60",
+        "LoD/1.11": "0x6FF27F76",
+        "LoD/1.11b": "0x6FF27F84",
+        "LoD/1.12a": "0x6FF27FE2",
+        "LoD/1.13c": "0x6FF27FC4",
+        "LoD/1.13d": "0x6FF27FF4"
       },
       "rvas": {
         "LoD/1.07": "0xB128",
         "LoD/1.08": "0xB148",
-        "LoD/1.09": "0x1518C",
-        "LoD/1.09b": "0x1518C",
-        "LoD/1.09d": "0x154C4",
-        "LoD/1.10": "0x15A3C",
-        "LoD/1.11": "0x8120",
-        "LoD/1.11b": "0x8128",
-        "LoD/1.12a": "0x8754",
-        "LoD/1.13c": "0x8734",
-        "LoD/1.13d": "0x873A"
+        "LoD/1.09": "0x151B0",
+        "LoD/1.09b": "0x151B0",
+        "LoD/1.09d": "0x154D0",
+        "LoD/1.10": "0x15A60",
+        "LoD/1.11": "0x7F76",
+        "LoD/1.11b": "0x7F84",
+        "LoD/1.12a": "0x7FE2",
+        "LoD/1.13c": "0x7FC4",
+        "LoD/1.13d": "0x7FF4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12158,28 +14921,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B12E",
         "LoD/1.08": "0x6FF2B14E",
-        "LoD/1.09": "0x6FF15192",
-        "LoD/1.09b": "0x6FF15192",
-        "LoD/1.09d": "0x6FF154B2",
-        "LoD/1.10": "0x6FF15A42",
-        "LoD/1.11": "0x6FF2800C",
-        "LoD/1.11b": "0x6FF27FFC",
-        "LoD/1.12a": "0x6FF28090",
-        "LoD/1.13c": "0x6FF28012",
-        "LoD/1.13d": "0x6FF28060"
+        "LoD/1.09": "0x6FF0BCD6",
+        "LoD/1.09b": "0x6FF0BCD6",
+        "LoD/1.09d": "0x6FF0BF2C",
+        "LoD/1.10": "0x6FF1363A",
+        "LoD/1.11": "0x6FF2808A",
+        "LoD/1.11b": "0x6FF280A4",
+        "LoD/1.12a": "0x6FF28162",
+        "LoD/1.13c": "0x6FF28144",
+        "LoD/1.13d": "0x6FF28114"
       },
       "rvas": {
         "LoD/1.07": "0xB12E",
         "LoD/1.08": "0xB14E",
-        "LoD/1.09": "0x15192",
-        "LoD/1.09b": "0x15192",
-        "LoD/1.09d": "0x154B2",
-        "LoD/1.10": "0x15A42",
-        "LoD/1.11": "0x800C",
-        "LoD/1.11b": "0x7FFC",
-        "LoD/1.12a": "0x8090",
-        "LoD/1.13c": "0x8012",
-        "LoD/1.13d": "0x8060"
+        "LoD/1.09": "0xBCD6",
+        "LoD/1.09b": "0xBCD6",
+        "LoD/1.09d": "0xBF2C",
+        "LoD/1.10": "0x1363A",
+        "LoD/1.11": "0x808A",
+        "LoD/1.11b": "0x80A4",
+        "LoD/1.12a": "0x8162",
+        "LoD/1.13c": "0x8144",
+        "LoD/1.13d": "0x8114"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12244,28 +15007,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B134",
         "LoD/1.08": "0x6FF2B154",
-        "LoD/1.09": "0x6FF0BD48",
-        "LoD/1.09b": "0x6FF0BD48",
-        "LoD/1.09d": "0x6FF0BF9E",
-        "LoD/1.10": "0x6FF0C4F2",
-        "LoD/1.11": "0x6FF27FE2",
-        "LoD/1.11b": "0x6FF28050",
-        "LoD/1.12a": "0x6FF280D8",
-        "LoD/1.13c": "0x6FF280B4",
-        "LoD/1.13d": "0x6FF280AE"
+        "LoD/1.09": "0x6FF0BD54",
+        "LoD/1.09b": "0x6FF0BD54",
+        "LoD/1.09d": "0x6FF0BFBC",
+        "LoD/1.10": "0x6FF0C510",
+        "LoD/1.11": "0x6FF280F6",
+        "LoD/1.11b": "0x6FF280FE",
+        "LoD/1.12a": "0x6FF2872A",
+        "LoD/1.13c": "0x6FF2870A",
+        "LoD/1.13d": "0x6FF28710"
       },
       "rvas": {
         "LoD/1.07": "0xB134",
         "LoD/1.08": "0xB154",
-        "LoD/1.09": "0xBD48",
-        "LoD/1.09b": "0xBD48",
-        "LoD/1.09d": "0xBF9E",
-        "LoD/1.10": "0xC4F2",
-        "LoD/1.11": "0x7FE2",
-        "LoD/1.11b": "0x8050",
-        "LoD/1.12a": "0x80D8",
-        "LoD/1.13c": "0x80B4",
-        "LoD/1.13d": "0x80AE"
+        "LoD/1.09": "0xBD54",
+        "LoD/1.09b": "0xBD54",
+        "LoD/1.09d": "0xBFBC",
+        "LoD/1.10": "0xC510",
+        "LoD/1.11": "0x80F6",
+        "LoD/1.11b": "0x80FE",
+        "LoD/1.12a": "0x872A",
+        "LoD/1.13c": "0x870A",
+        "LoD/1.13d": "0x8710"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12330,28 +15093,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B13A",
         "LoD/1.08": "0x6FF2B15A",
-        "LoD/1.09": "0x6FF1519E",
-        "LoD/1.09b": "0x6FF1519E",
-        "LoD/1.09d": "0x6FF154BE",
-        "LoD/1.10": "0x6FF15A4E",
-        "LoD/1.11": "0x6FF280B4",
-        "LoD/1.11b": "0x6FF280C2",
-        "LoD/1.12a": "0x6FF2811A",
-        "LoD/1.13c": "0x6FF280FC",
-        "LoD/1.13d": "0x6FF28120"
+        "LoD/1.09": "0x6FF15186",
+        "LoD/1.09b": "0x6FF15186",
+        "LoD/1.09d": "0x6FF154A6",
+        "LoD/1.10": "0x6FF15A36",
+        "LoD/1.11": "0x6FF2812C",
+        "LoD/1.11b": "0x6FF28134",
+        "LoD/1.12a": "0x6FF28760",
+        "LoD/1.13c": "0x6FF28740",
+        "LoD/1.13d": "0x6FF28746"
       },
       "rvas": {
         "LoD/1.07": "0xB13A",
         "LoD/1.08": "0xB15A",
-        "LoD/1.09": "0x1519E",
-        "LoD/1.09b": "0x1519E",
-        "LoD/1.09d": "0x154BE",
-        "LoD/1.10": "0x15A4E",
-        "LoD/1.11": "0x80B4",
-        "LoD/1.11b": "0x80C2",
-        "LoD/1.12a": "0x811A",
-        "LoD/1.13c": "0x80FC",
-        "LoD/1.13d": "0x8120"
+        "LoD/1.09": "0x15186",
+        "LoD/1.09b": "0x15186",
+        "LoD/1.09d": "0x154A6",
+        "LoD/1.10": "0x15A36",
+        "LoD/1.11": "0x812C",
+        "LoD/1.11b": "0x8134",
+        "LoD/1.12a": "0x8760",
+        "LoD/1.13c": "0x8740",
+        "LoD/1.13d": "0x8746"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12416,28 +15179,28 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF2B140",
         "LoD/1.08": "0x6FF2B160",
-        "LoD/1.09": "0x6FF151AA",
-        "LoD/1.09b": "0x6FF151AA",
-        "LoD/1.09d": "0x6FF154CA",
-        "LoD/1.10": "0x6FF15A5A",
-        "LoD/1.11": "0x6FF28114",
-        "LoD/1.11b": "0x6FF2811C",
-        "LoD/1.12a": "0x6FF28742",
-        "LoD/1.13c": "0x6FF28722",
-        "LoD/1.13d": "0x6FF28740"
+        "LoD/1.09": "0x6FF0BCDC",
+        "LoD/1.09b": "0x6FF0BCDC",
+        "LoD/1.09d": "0x6FF0BF32",
+        "LoD/1.10": "0x6FF13640",
+        "LoD/1.11": "0x6FF28096",
+        "LoD/1.11b": "0x6FF280AA",
+        "LoD/1.12a": "0x6FF28168",
+        "LoD/1.13c": "0x6FF2814A",
+        "LoD/1.13d": "0x6FF2811A"
       },
       "rvas": {
         "LoD/1.07": "0xB140",
         "LoD/1.08": "0xB160",
-        "LoD/1.09": "0x151AA",
-        "LoD/1.09b": "0x151AA",
-        "LoD/1.09d": "0x154CA",
-        "LoD/1.10": "0x15A5A",
-        "LoD/1.11": "0x8114",
-        "LoD/1.11b": "0x811C",
-        "LoD/1.12a": "0x8742",
-        "LoD/1.13c": "0x8722",
-        "LoD/1.13d": "0x8740"
+        "LoD/1.09": "0xBCDC",
+        "LoD/1.09b": "0xBCDC",
+        "LoD/1.09d": "0xBF32",
+        "LoD/1.10": "0x13640",
+        "LoD/1.11": "0x8096",
+        "LoD/1.11b": "0x80AA",
+        "LoD/1.12a": "0x8168",
+        "LoD/1.13c": "0x814A",
+        "LoD/1.13d": "0x811A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12506,11 +15269,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD66",
         "LoD/1.09d": "0x6FF0BFC2",
         "LoD/1.10": "0x6FF0C516",
-        "LoD/1.11": "0x6FF280F0",
-        "LoD/1.11b": "0x6FF280F8",
-        "LoD/1.12a": "0x6FF28724",
-        "LoD/1.13c": "0x6FF28704",
-        "LoD/1.13d": "0x6FF2870A"
+        "LoD/1.11": "0x6FF280E4",
+        "LoD/1.11b": "0x6FF280EC",
+        "LoD/1.12a": "0x6FF28718",
+        "LoD/1.13c": "0x6FF286F8",
+        "LoD/1.13d": "0x6FF286FE"
       },
       "rvas": {
         "LoD/1.07": "0xB146",
@@ -12519,11 +15282,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD66",
         "LoD/1.09d": "0xBFC2",
         "LoD/1.10": "0xC516",
-        "LoD/1.11": "0x80F0",
-        "LoD/1.11b": "0x80F8",
-        "LoD/1.12a": "0x8724",
-        "LoD/1.13c": "0x8704",
-        "LoD/1.13d": "0x870A"
+        "LoD/1.11": "0x80E4",
+        "LoD/1.11b": "0x80EC",
+        "LoD/1.12a": "0x8718",
+        "LoD/1.13c": "0x86F8",
+        "LoD/1.13d": "0x86FE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12592,11 +15355,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD6C",
         "LoD/1.09d": "0x6FF0BFC8",
         "LoD/1.10": "0x6FF0C51C",
-        "LoD/1.11": "0x6FF28084",
-        "LoD/1.11b": "0x6FF2806E",
-        "LoD/1.12a": "0x6FF280F6",
-        "LoD/1.13c": "0x6FF280DE",
-        "LoD/1.13d": "0x6FF280DE"
+        "LoD/1.11": "0x6FF27FB8",
+        "LoD/1.11b": "0x6FF28038",
+        "LoD/1.12a": "0x6FF280C0",
+        "LoD/1.13c": "0x6FF2809C",
+        "LoD/1.13d": "0x6FF28096"
       },
       "rvas": {
         "LoD/1.07": "0xB14C",
@@ -12605,11 +15368,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD6C",
         "LoD/1.09d": "0xBFC8",
         "LoD/1.10": "0xC51C",
-        "LoD/1.11": "0x8084",
-        "LoD/1.11b": "0x806E",
-        "LoD/1.12a": "0x80F6",
-        "LoD/1.13c": "0x80DE",
-        "LoD/1.13d": "0x80DE"
+        "LoD/1.11": "0x7FB8",
+        "LoD/1.11b": "0x8038",
+        "LoD/1.12a": "0x80C0",
+        "LoD/1.13c": "0x809C",
+        "LoD/1.13d": "0x8096"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12763,12 +15526,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BD78",
         "LoD/1.09b": "0x6FF0BD78",
         "LoD/1.09d": "0x6FF0BFD4",
-        "LoD/1.10": "0x6FF0C53A",
-        "LoD/1.11": "0x6FF27F7C",
-        "LoD/1.11b": "0x6FF27F8A",
-        "LoD/1.12a": "0x6FF27FE8",
-        "LoD/1.13c": "0x6FF27FCA",
-        "LoD/1.13d": "0x6FF27FFA"
+        "LoD/1.10": "0x6FF0C528",
+        "LoD/1.11": "0x6FF2800C",
+        "LoD/1.11b": "0x6FF27FFC",
+        "LoD/1.12a": "0x6FF28090",
+        "LoD/1.13c": "0x6FF28012",
+        "LoD/1.13d": "0x6FF28060"
       },
       "rvas": {
         "LoD/1.07": "0xB158",
@@ -12776,12 +15539,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBD78",
         "LoD/1.09b": "0xBD78",
         "LoD/1.09d": "0xBFD4",
-        "LoD/1.10": "0xC53A",
-        "LoD/1.11": "0x7F7C",
-        "LoD/1.11b": "0x7F8A",
-        "LoD/1.12a": "0x7FE8",
-        "LoD/1.13c": "0x7FCA",
-        "LoD/1.13d": "0x7FFA"
+        "LoD/1.10": "0xC528",
+        "LoD/1.11": "0x800C",
+        "LoD/1.11b": "0x7FFC",
+        "LoD/1.12a": "0x8090",
+        "LoD/1.13c": "0x8012",
+        "LoD/1.13d": "0x8060"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12850,11 +15613,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD7E",
         "LoD/1.09d": "0x6FF0BFDA",
         "LoD/1.10": "0x6FF0C52E",
-        "LoD/1.11": "0x6FF27FDC",
-        "LoD/1.11b": "0x6FF27FD8",
-        "LoD/1.12a": "0x6FF28042",
-        "LoD/1.13c": "0x6FF2807E",
-        "LoD/1.13d": "0x6FF28084"
+        "LoD/1.11": "0x6FF27F52",
+        "LoD/1.11b": "0x6FF27F60",
+        "LoD/1.12a": "0x6FF28006",
+        "LoD/1.13c": "0x6FF27FE8",
+        "LoD/1.13d": "0x6FF27FD0"
       },
       "rvas": {
         "LoD/1.07": "0xB15E",
@@ -12863,11 +15626,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD7E",
         "LoD/1.09d": "0xBFDA",
         "LoD/1.10": "0xC52E",
-        "LoD/1.11": "0x7FDC",
-        "LoD/1.11b": "0x7FD8",
-        "LoD/1.12a": "0x8042",
-        "LoD/1.13c": "0x807E",
-        "LoD/1.13d": "0x8084"
+        "LoD/1.11": "0x7F52",
+        "LoD/1.11b": "0x7F60",
+        "LoD/1.12a": "0x8006",
+        "LoD/1.13c": "0x7FE8",
+        "LoD/1.13d": "0x7FD0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -12936,11 +15699,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD84",
         "LoD/1.09d": "0x6FF0BFE0",
         "LoD/1.10": "0x6FF0C534",
-        "LoD/1.11": "0x6FF28132",
-        "LoD/1.11b": "0x6FF2813A",
-        "LoD/1.12a": "0x6FF28766",
-        "LoD/1.13c": "0x6FF28746",
-        "LoD/1.13d": "0x6FF2874C"
+        "LoD/1.11": "0x6FF28126",
+        "LoD/1.11b": "0x6FF2812E",
+        "LoD/1.12a": "0x6FF28742",
+        "LoD/1.13c": "0x6FF28722",
+        "LoD/1.13d": "0x6FF28728"
       },
       "rvas": {
         "LoD/1.07": "0xB164",
@@ -12949,11 +15712,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD84",
         "LoD/1.09d": "0xBFE0",
         "LoD/1.10": "0xC534",
-        "LoD/1.11": "0x8132",
-        "LoD/1.11b": "0x813A",
-        "LoD/1.12a": "0x8766",
-        "LoD/1.13c": "0x8746",
-        "LoD/1.13d": "0x874C"
+        "LoD/1.11": "0x8126",
+        "LoD/1.11b": "0x812E",
+        "LoD/1.12a": "0x8742",
+        "LoD/1.13c": "0x8722",
+        "LoD/1.13d": "0x8728"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13022,11 +15785,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD4E",
         "LoD/1.09d": "0x6FF0BFB6",
         "LoD/1.10": "0x6FF0C50A",
-        "LoD/1.11": "0x6FF2807E",
-        "LoD/1.11b": "0x6FF2809E",
-        "LoD/1.12a": "0x6FF2815C",
-        "LoD/1.13c": "0x6FF2813E",
-        "LoD/1.13d": "0x6FF2810E"
+        "LoD/1.11": "0x6FF27F7C",
+        "LoD/1.11b": "0x6FF27F8A",
+        "LoD/1.12a": "0x6FF27FE8",
+        "LoD/1.13c": "0x6FF27FCA",
+        "LoD/1.13d": "0x6FF27FFA"
       },
       "rvas": {
         "LoD/1.07": "0xB16A",
@@ -13035,11 +15798,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBD4E",
         "LoD/1.09d": "0xBFB6",
         "LoD/1.10": "0xC50A",
-        "LoD/1.11": "0x807E",
-        "LoD/1.11b": "0x809E",
-        "LoD/1.12a": "0x815C",
-        "LoD/1.13c": "0x813E",
-        "LoD/1.13d": "0x810E"
+        "LoD/1.11": "0x7F7C",
+        "LoD/1.11b": "0x7F8A",
+        "LoD/1.12a": "0x7FE8",
+        "LoD/1.13c": "0x7FCA",
+        "LoD/1.13d": "0x7FFA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13107,12 +15870,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BD90",
         "LoD/1.09b": "0x6FF0BD90",
         "LoD/1.09d": "0x6FF0BFEC",
-        "LoD/1.10": "0x6FF0C528",
-        "LoD/1.11": "0x6FF280AE",
-        "LoD/1.11b": "0x6FF280BC",
-        "LoD/1.12a": "0x6FF28126",
-        "LoD/1.13c": "0x6FF28108",
-        "LoD/1.13d": "0x6FF2812C"
+        "LoD/1.10": "0x6FF0C546",
+        "LoD/1.11": "0x6FF27FB2",
+        "LoD/1.11b": "0x6FF28032",
+        "LoD/1.12a": "0x6FF280BA",
+        "LoD/1.13c": "0x6FF28096",
+        "LoD/1.13d": "0x6FF28090"
       },
       "rvas": {
         "LoD/1.07": "0xB170",
@@ -13120,12 +15883,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBD90",
         "LoD/1.09b": "0xBD90",
         "LoD/1.09d": "0xBFEC",
-        "LoD/1.10": "0xC528",
-        "LoD/1.11": "0x80AE",
-        "LoD/1.11b": "0x80BC",
-        "LoD/1.12a": "0x8126",
-        "LoD/1.13c": "0x8108",
-        "LoD/1.13d": "0x812C"
+        "LoD/1.10": "0xC546",
+        "LoD/1.11": "0x7FB2",
+        "LoD/1.11b": "0x8032",
+        "LoD/1.12a": "0x80BA",
+        "LoD/1.13c": "0x8096",
+        "LoD/1.13d": "0x8090"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13193,12 +15956,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BD96",
         "LoD/1.09b": "0x6FF0BD96",
         "LoD/1.09d": "0x6FF0BFF2",
-        "LoD/1.10": "0x6FF0C552",
-        "LoD/1.11": "0x6FF27FCA",
-        "LoD/1.11b": "0x6FF27FA2",
-        "LoD/1.12a": "0x6FF28072",
-        "LoD/1.13c": "0x6FF28030",
-        "LoD/1.13d": "0x6FF28048"
+        "LoD/1.10": "0x6FF135F2",
+        "LoD/1.11": "0x6FF280DE",
+        "LoD/1.11b": "0x6FF280E6",
+        "LoD/1.12a": "0x6FF2816E",
+        "LoD/1.13c": "0x6FF28156",
+        "LoD/1.13d": "0x6FF286F8"
       },
       "rvas": {
         "LoD/1.07": "0xB176",
@@ -13206,12 +15969,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBD96",
         "LoD/1.09b": "0xBD96",
         "LoD/1.09d": "0xBFF2",
-        "LoD/1.10": "0xC552",
-        "LoD/1.11": "0x7FCA",
-        "LoD/1.11b": "0x7FA2",
-        "LoD/1.12a": "0x8072",
-        "LoD/1.13c": "0x8030",
-        "LoD/1.13d": "0x8048"
+        "LoD/1.10": "0x135F2",
+        "LoD/1.11": "0x80DE",
+        "LoD/1.11b": "0x80E6",
+        "LoD/1.12a": "0x816E",
+        "LoD/1.13c": "0x8156",
+        "LoD/1.13d": "0x86F8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13279,12 +16042,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF0BD9C",
         "LoD/1.09b": "0x6FF0BD9C",
         "LoD/1.09d": "0x6FF0BFF8",
-        "LoD/1.10": "0x6FF0C4C2",
-        "LoD/1.11": "0x6FF27FD0",
-        "LoD/1.11b": "0x6FF2804A",
-        "LoD/1.12a": "0x6FF280D2",
-        "LoD/1.13c": "0x6FF280AE",
-        "LoD/1.13d": "0x6FF280A8"
+        "LoD/1.10": "0x6FF13604",
+        "LoD/1.11": "0x6FF27FD6",
+        "LoD/1.11b": "0x6FF28014",
+        "LoD/1.12a": "0x6FF28054",
+        "LoD/1.13c": "0x6FF28066",
+        "LoD/1.13d": "0x6FF28036"
       },
       "rvas": {
         "LoD/1.07": "0xB17C",
@@ -13292,12 +16055,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0xBD9C",
         "LoD/1.09b": "0xBD9C",
         "LoD/1.09d": "0xBFF8",
-        "LoD/1.10": "0xC4C2",
-        "LoD/1.11": "0x7FD0",
-        "LoD/1.11b": "0x804A",
-        "LoD/1.12a": "0x80D2",
-        "LoD/1.13c": "0x80AE",
-        "LoD/1.13d": "0x80A8"
+        "LoD/1.10": "0x13604",
+        "LoD/1.11": "0x7FD6",
+        "LoD/1.11b": "0x8014",
+        "LoD/1.12a": "0x8054",
+        "LoD/1.13c": "0x8066",
+        "LoD/1.13d": "0x8036"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13366,11 +16129,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BDA2",
         "LoD/1.09d": "0x6FF0BFFE",
         "LoD/1.10": "0x6FF0C540",
-        "LoD/1.11": "0x6FF280D2",
-        "LoD/1.11b": "0x6FF280E0",
-        "LoD/1.12a": "0x6FF2816E",
-        "LoD/1.13c": "0x6FF28156",
-        "LoD/1.13d": "0x6FF286F8"
+        "LoD/1.11": "0x6FF2805A",
+        "LoD/1.11b": "0x6FF27FD2",
+        "LoD/1.12a": "0x6FF28066",
+        "LoD/1.13c": "0x6FF280D2",
+        "LoD/1.13d": "0x6FF2807E"
       },
       "rvas": {
         "LoD/1.07": "0xB182",
@@ -13379,11 +16142,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBDA2",
         "LoD/1.09d": "0xBFFE",
         "LoD/1.10": "0xC540",
-        "LoD/1.11": "0x80D2",
-        "LoD/1.11b": "0x80E0",
-        "LoD/1.12a": "0x816E",
-        "LoD/1.13c": "0x8156",
-        "LoD/1.13d": "0x86F8"
+        "LoD/1.11": "0x805A",
+        "LoD/1.11b": "0x7FD2",
+        "LoD/1.12a": "0x8066",
+        "LoD/1.13c": "0x80D2",
+        "LoD/1.13d": "0x807E"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13450,26 +16213,26 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF2B1A8",
         "LoD/1.09": "0x6FF0BDA8",
         "LoD/1.09b": "0x6FF0BDA8",
-        "LoD/1.09d": "0x6FF0BEF0",
-        "LoD/1.10": "0x6FF135F8",
-        "LoD/1.11": "0x6FF27FA0",
-        "LoD/1.11b": "0x6FF27FBA",
-        "LoD/1.12a": "0x6FF2803C",
-        "LoD/1.13c": "0x6FF28042",
-        "LoD/1.13d": "0x6FF28030"
+        "LoD/1.09d": "0x6FF0C004",
+        "LoD/1.10": "0x6FF0C56A",
+        "LoD/1.11": "0x6FF2806C",
+        "LoD/1.11b": "0x6FF28092",
+        "LoD/1.12a": "0x6FF28114",
+        "LoD/1.13c": "0x6FF280F6",
+        "LoD/1.13d": "0x6FF28102"
       },
       "rvas": {
         "LoD/1.07": "0xB188",
         "LoD/1.08": "0xB1A8",
         "LoD/1.09": "0xBDA8",
         "LoD/1.09b": "0xBDA8",
-        "LoD/1.09d": "0xBEF0",
-        "LoD/1.10": "0x135F8",
-        "LoD/1.11": "0x7FA0",
-        "LoD/1.11b": "0x7FBA",
-        "LoD/1.12a": "0x803C",
-        "LoD/1.13c": "0x8042",
-        "LoD/1.13d": "0x8030"
+        "LoD/1.09d": "0xC004",
+        "LoD/1.10": "0xC56A",
+        "LoD/1.11": "0x806C",
+        "LoD/1.11b": "0x8092",
+        "LoD/1.12a": "0x8114",
+        "LoD/1.13c": "0x80F6",
+        "LoD/1.13d": "0x8102"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -13777,6 +16540,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:91b5192dddb89e963abc2be4471149da",
+      "callees": {
+        "LoD/1.11": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -14143,11 +16928,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BEB7",
         "LoD/1.09d": "0x6FF0C1F2",
         "LoD/1.10": "0x6FF0C752",
-        "LoD/1.11": "0x6FF229F9",
-        "LoD/1.11b": "0x6FF25520",
+        "LoD/1.11": "0x6FF25D39",
+        "LoD/1.11b": "0x6FF22D7C",
         "LoD/1.12a": "0x6FF26BCE",
-        "LoD/1.13c": "0x6FF233F8",
-        "LoD/1.13d": "0x6FF23029"
+        "LoD/1.13c": "0x6FF267BE",
+        "LoD/1.13d": "0x6FF26139"
       },
       "rvas": {
         "LoD/1.07": "0xB372",
@@ -14156,11 +16941,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBEB7",
         "LoD/1.09d": "0xC1F2",
         "LoD/1.10": "0xC752",
-        "LoD/1.11": "0x29F9",
-        "LoD/1.11b": "0x5520",
+        "LoD/1.11": "0x5D39",
+        "LoD/1.11b": "0x2D7C",
         "LoD/1.12a": "0x6BCE",
-        "LoD/1.13c": "0x33F8",
-        "LoD/1.13d": "0x3029"
+        "LoD/1.13c": "0x67BE",
+        "LoD/1.13d": "0x6139"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -14230,11 +17015,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BEC0",
         "LoD/1.09d": "0x6FF0C1FB",
         "LoD/1.10": "0x6FF0C75B",
-        "LoD/1.11": "0x6FF21BAD",
-        "LoD/1.11b": "0x6FF21326",
-        "LoD/1.12a": "0x6FF212D5",
-        "LoD/1.13c": "0x6FF2141B",
-        "LoD/1.13d": "0x6FF21597"
+        "LoD/1.11": "0x6FF22A05",
+        "LoD/1.11b": "0x6FF22D88",
+        "LoD/1.12a": "0x6FF23129",
+        "LoD/1.13c": "0x6FF23404",
+        "LoD/1.13d": "0x6FF22E44"
       },
       "rvas": {
         "LoD/1.07": "0xB37B",
@@ -14243,11 +17028,11 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0xBEC0",
         "LoD/1.09d": "0xC1FB",
         "LoD/1.10": "0xC75B",
-        "LoD/1.11": "0x1BAD",
-        "LoD/1.11b": "0x1326",
-        "LoD/1.12a": "0x12D5",
-        "LoD/1.13c": "0x141B",
-        "LoD/1.13d": "0x1597"
+        "LoD/1.11": "0x2A05",
+        "LoD/1.11b": "0x2D88",
+        "LoD/1.12a": "0x3129",
+        "LoD/1.13c": "0x3404",
+        "LoD/1.13d": "0x2E44"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -14674,6 +17459,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b5756233a5a7628ebca8fed8bafffdce",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042",
+          "ntohs"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "ntohs"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "ntohs"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "ntohs"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking",
+          "ntohs"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -16912,29 +19724,29 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_ReleaseMemoryAllocationLock": {
       "addresses": {
         "LoD/1.07": "0x6FF2CC47",
-        "LoD/1.08": "0x6FF2C694",
-        "LoD/1.09": "0x6FF0D51D",
-        "LoD/1.09b": "0x6FF0D51D",
+        "LoD/1.08": "0x6FF2C8A2",
+        "LoD/1.09": "0x6FF0D8F0",
+        "LoD/1.09b": "0x6FF0D8F0",
         "LoD/1.09d": "0x6FF0D5A4",
-        "LoD/1.10": "0x6FF0E0DD",
-        "LoD/1.11": "0x6FF22A05",
-        "LoD/1.11b": "0x6FF23FCA",
-        "LoD/1.12a": "0x6FF227F8",
-        "LoD/1.13c": "0x6FF237C4",
-        "LoD/1.13d": "0x6FF23035"
+        "LoD/1.10": "0x6FF0E01D",
+        "LoD/1.11": "0x6FF2766D",
+        "LoD/1.11b": "0x6FF275ED",
+        "LoD/1.12a": "0x6FF27A3C",
+        "LoD/1.13c": "0x6FF279A4",
+        "LoD/1.13d": "0x6FF2764F"
       },
       "rvas": {
         "LoD/1.07": "0xCC47",
-        "LoD/1.08": "0xC694",
-        "LoD/1.09": "0xD51D",
-        "LoD/1.09b": "0xD51D",
+        "LoD/1.08": "0xC8A2",
+        "LoD/1.09": "0xD8F0",
+        "LoD/1.09b": "0xD8F0",
         "LoD/1.09d": "0xD5A4",
-        "LoD/1.10": "0xE0DD",
-        "LoD/1.11": "0x2A05",
-        "LoD/1.11b": "0x3FCA",
-        "LoD/1.12a": "0x27F8",
-        "LoD/1.13c": "0x37C4",
-        "LoD/1.13d": "0x3035"
+        "LoD/1.10": "0xE01D",
+        "LoD/1.11": "0x766D",
+        "LoD/1.11b": "0x75ED",
+        "LoD/1.12a": "0x7A3C",
+        "LoD/1.13c": "0x79A4",
+        "LoD/1.13d": "0x764F"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -16999,29 +19811,29 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_ReleaseCriticalSection9": {
       "addresses": {
         "LoD/1.07": "0x6FF2CCD0",
-        "LoD/1.08": "0x6FF2C8A2",
+        "LoD/1.08": "0x6FF2CC67",
         "LoD/1.09": "0x6FF0D867",
         "LoD/1.09b": "0x6FF0D867",
-        "LoD/1.09d": "0x6FF0D8DB",
+        "LoD/1.09d": "0x6FF0DA5F",
         "LoD/1.10": "0x6FF0E166",
-        "LoD/1.11": "0x6FF25D39",
-        "LoD/1.11b": "0x6FF275ED",
-        "LoD/1.12a": "0x6FF27A3C",
-        "LoD/1.13c": "0x6FF279A4",
-        "LoD/1.13d": "0x6FF2764F"
+        "LoD/1.11": "0x6FF229F9",
+        "LoD/1.11b": "0x6FF235A8",
+        "LoD/1.12a": "0x6FF2311D",
+        "LoD/1.13c": "0x6FF233F8",
+        "LoD/1.13d": "0x6FF23957"
       },
       "rvas": {
         "LoD/1.07": "0xCCD0",
-        "LoD/1.08": "0xC8A2",
+        "LoD/1.08": "0xCC67",
         "LoD/1.09": "0xD867",
         "LoD/1.09b": "0xD867",
-        "LoD/1.09d": "0xD8DB",
+        "LoD/1.09d": "0xDA5F",
         "LoD/1.10": "0xE166",
-        "LoD/1.11": "0x5D39",
-        "LoD/1.11b": "0x75ED",
-        "LoD/1.12a": "0x7A3C",
-        "LoD/1.13c": "0x79A4",
-        "LoD/1.13d": "0x764F"
+        "LoD/1.11": "0x29F9",
+        "LoD/1.11b": "0x35A8",
+        "LoD/1.12a": "0x311D",
+        "LoD/1.13c": "0x33F8",
+        "LoD/1.13d": "0x3957"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -17692,29 +20504,29 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_ReleaseMemoryManagementCritica": {
       "addresses": {
         "LoD/1.07": "0x6FF2CB2F",
-        "LoD/1.08": "0x6FF2CCF0",
-        "LoD/1.09": "0x6FF0D8F0",
-        "LoD/1.09b": "0x6FF0D8F0",
-        "LoD/1.09d": "0x6FF0D82D",
-        "LoD/1.10": "0x6FF0DD93",
-        "LoD/1.11": "0x6FF23A63",
-        "LoD/1.11b": "0x6FF233E1",
-        "LoD/1.12a": "0x6FF23F02",
-        "LoD/1.13c": "0x6FF2407C",
-        "LoD/1.13d": "0x6FF23842"
+        "LoD/1.08": "0x6FF2CBA7",
+        "LoD/1.09": "0x6FF0D7A7",
+        "LoD/1.09b": "0x6FF0D7A7",
+        "LoD/1.09d": "0x6FF0D8DB",
+        "LoD/1.10": "0x6FF0DE41",
+        "LoD/1.11": "0x6FF23843",
+        "LoD/1.11b": "0x6FF23493",
+        "LoD/1.12a": "0x6FF23FE6",
+        "LoD/1.13c": "0x6FF22494",
+        "LoD/1.13d": "0x6FF23790"
       },
       "rvas": {
         "LoD/1.07": "0xCB2F",
-        "LoD/1.08": "0xCCF0",
-        "LoD/1.09": "0xD8F0",
-        "LoD/1.09b": "0xD8F0",
-        "LoD/1.09d": "0xD82D",
-        "LoD/1.10": "0xDD93",
-        "LoD/1.11": "0x3A63",
-        "LoD/1.11b": "0x33E1",
-        "LoD/1.12a": "0x3F02",
-        "LoD/1.13c": "0x407C",
-        "LoD/1.13d": "0x3842"
+        "LoD/1.08": "0xCBA7",
+        "LoD/1.09": "0xD7A7",
+        "LoD/1.09b": "0xD7A7",
+        "LoD/1.09d": "0xD8DB",
+        "LoD/1.10": "0xDE41",
+        "LoD/1.11": "0x3843",
+        "LoD/1.11b": "0x3493",
+        "LoD/1.12a": "0x3FE6",
+        "LoD/1.13c": "0x2494",
+        "LoD/1.13d": "0x3790"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -17738,7 +20550,7 @@ var FUNCTIONS_Bnclient_dll = {
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
       "basic_block_counts": {
         "LoD/1.07": 1,
-        "LoD/1.08": 1,
+        "LoD/1.08": 2,
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
@@ -17779,29 +20591,29 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_ReleaseDeallocCriticalSection": {
       "addresses": {
         "LoD/1.07": "0x6FF2CB87",
-        "LoD/1.08": "0x6FF2CBA7",
-        "LoD/1.09": "0x6FF0D7A7",
-        "LoD/1.09b": "0x6FF0D7A7",
-        "LoD/1.09d": "0x6FF0D93A",
-        "LoD/1.10": "0x6FF0DEA0",
-        "LoD/1.11": "0x6FF21F61",
-        "LoD/1.11b": "0x6FF21701",
-        "LoD/1.12a": "0x6FF21FBA",
-        "LoD/1.13c": "0x6FF21C51",
-        "LoD/1.13d": "0x6FF21A31"
+        "LoD/1.08": "0x6FF2C9CB",
+        "LoD/1.09": "0x6FF0D5CB",
+        "LoD/1.09b": "0x6FF0D5CB",
+        "LoD/1.09d": "0x6FF0D7B2",
+        "LoD/1.10": "0x6FF0DD18",
+        "LoD/1.11": "0x6FF21BB6",
+        "LoD/1.11b": "0x6FF2132F",
+        "LoD/1.12a": "0x6FF212D5",
+        "LoD/1.13c": "0x6FF2141B",
+        "LoD/1.13d": "0x6FF2158E"
       },
       "rvas": {
         "LoD/1.07": "0xCB87",
-        "LoD/1.08": "0xCBA7",
-        "LoD/1.09": "0xD7A7",
-        "LoD/1.09b": "0xD7A7",
-        "LoD/1.09d": "0xD93A",
-        "LoD/1.10": "0xDEA0",
-        "LoD/1.11": "0x1F61",
-        "LoD/1.11b": "0x1701",
-        "LoD/1.12a": "0x1FBA",
-        "LoD/1.13c": "0x1C51",
-        "LoD/1.13d": "0x1A31"
+        "LoD/1.08": "0xC9CB",
+        "LoD/1.09": "0xD5CB",
+        "LoD/1.09b": "0xD5CB",
+        "LoD/1.09d": "0xD7B2",
+        "LoD/1.10": "0xDD18",
+        "LoD/1.11": "0x1BB6",
+        "LoD/1.11b": "0x132F",
+        "LoD/1.12a": "0x12D5",
+        "LoD/1.13c": "0x141B",
+        "LoD/1.13d": "0x158E"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -17825,7 +20637,7 @@ var FUNCTIONS_Bnclient_dll = {
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
       "basic_block_counts": {
         "LoD/1.07": 1,
-        "LoD/1.08": 2,
+        "LoD/1.08": 1,
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
@@ -18081,6 +20893,41 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -21015,18 +23862,18 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.07": "0x6FF31180",
         "LoD/1.08": "0x6FF311A0",
-        "LoD/1.09": "0x6FF10650",
-        "LoD/1.09b": "0x6FF10650",
-        "LoD/1.09d": "0x6FF120B0",
-        "LoD/1.10": "0x6FF12600"
+        "LoD/1.09": "0x6FF11DC0",
+        "LoD/1.09b": "0x6FF11DC0",
+        "LoD/1.09d": "0x6FF10940",
+        "LoD/1.10": "0x6FF10F20"
       },
       "rvas": {
         "LoD/1.07": "0x11180",
         "LoD/1.08": "0x111A0",
-        "LoD/1.09": "0x10650",
-        "LoD/1.09b": "0x10650",
-        "LoD/1.09d": "0x120B0",
-        "LoD/1.10": "0x12600"
+        "LoD/1.09": "0x11DC0",
+        "LoD/1.09b": "0x11DC0",
+        "LoD/1.09d": "0x10940",
+        "LoD/1.10": "0x10F20"
       },
       "sizes": {
         "LoD/1.07": 664,
@@ -25008,87 +27855,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_BinkBufferGetError": {
-      "addresses": {
-        "LoD/1.08": "0x6FF21020",
-        "LoD/1.09": "0x6FF0A2D0",
-        "LoD/1.09b": "0x6FF01020",
-        "LoD/1.09d": "0x6FF0A520",
-        "LoD/1.10": "0x6FF01020",
-        "LoD/1.11": "0x6FF329A0",
-        "LoD/1.11b": "0x6FF31100",
-        "LoD/1.12a": "0x6FF35010",
-        "LoD/1.13c": "0x6FF30B60",
-        "LoD/1.13d": "0x6FF2BDE0"
-      },
-      "rvas": {
-        "LoD/1.08": "0x1020",
-        "LoD/1.09": "0xA2D0",
-        "LoD/1.09b": "0x1020",
-        "LoD/1.09d": "0xA520",
-        "LoD/1.10": "0x1020",
-        "LoD/1.11": "0x129A0",
-        "LoD/1.11b": "0x11100",
-        "LoD/1.12a": "0x15010",
-        "LoD/1.13c": "0x10B60",
-        "LoD/1.13d": "0xBDE0"
-      },
-      "sizes": {
-        "LoD/1.08": 6,
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "BinkBufferGetError",
-      "signature": "char * BinkBufferGetError(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Retrieves pointer to the global Bink buffer error message string.\n\nAlgorithm:\n1. Return address of global error buffer array g_szErrorBuffer\n\nParameters:\nNone\n\nReturns:\nchar * - Pointer to null-terminated error message string in g_szErrorBuffer\n         The buffer contains the most recent error message from Bink buffer operations\n         Returns valid pointer to 256-byte character array (never NULL)\n\nSpecial Cases:\n- Function always returns same buffer address (0x1002f01c)\n- Error buffer is shared across all Bink buffer operations\n- Calling code should copy error message if persistence needed\n- Buffer content may be overwritten by subsequent Bink operations\n\nMagic Numbers Reference:\n0x1002f01c - Address of global error buffer g_szErrorBuffer (256 bytes)",
-      "name_source": "LoD/1.08",
-      "method": "MNE",
-      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
-      "basic_block_counts": {
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.08": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
-      }
-    },
     "bnclient.dll_MNE_9be1a0842b8a": {
       "addresses": {
         "LoD/1.08": "0x6FF21030",
@@ -25161,6 +27927,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:eed37e5586cfe49f937a838bc5c8e31f",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnConn...",
@@ -25265,6 +28058,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:b2575ecb7a364ea305cfcd1c4845be1a",
+      "callees": {
+        "LoD/1.08": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.09": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.09b": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.09d": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.10": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.11": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.11b": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.12a": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.13c": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ],
+        "LoD/1.13d": [
+          "?Load@BNGatewayAccess@@QAGXXZ"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -25327,6 +28152,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:2c83860ead5a25c39dda61913c53d8b7",
+      "callees": {
+        "LoD/1.08": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09b": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09d": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.10": [
+          "CleanupNetworkContext"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Connecting to Battle.net...\"",
@@ -25374,17 +28216,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_Ordinal_220": {
       "addresses": {
         "LoD/1.08": "0x6FF21E30",
-        "LoD/1.09": "0x6FF02890",
-        "LoD/1.09b": "0x6FF02890",
-        "LoD/1.09d": "0x6FF01EC0",
-        "LoD/1.10": "0x6FF02830"
+        "LoD/1.09": "0x6FF028A0",
+        "LoD/1.09b": "0x6FF028A0",
+        "LoD/1.09d": "0x6FF02860",
+        "LoD/1.10": "0x6FF02990"
       },
       "rvas": {
         "LoD/1.08": "0x1E30",
-        "LoD/1.09": "0x2890",
-        "LoD/1.09b": "0x2890",
-        "LoD/1.09d": "0x1EC0",
-        "LoD/1.10": "0x2830"
+        "LoD/1.09": "0x28A0",
+        "LoD/1.09b": "0x28A0",
+        "LoD/1.09d": "0x2860",
+        "LoD/1.10": "0x2990"
       },
       "sizes": {
         "LoD/1.08": 11,
@@ -25434,6 +28276,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:37bab645fe9d756f57f468f1cecbf36a",
+      "callees": {
+        "LoD/1.08": [
+          "CleanupNetworkContext"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 16
       },
@@ -25469,6 +28316,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:92a8233cd3d16031a04e5894bd08ea3b",
+      "callees": {
+        "LoD/1.08": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09b": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.09d": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ],
+        "LoD/1.10": [
+          "CheckSocketReadReady",
+          "ReceiveSocketData",
+          "CopyMemoryBuffer",
+          "SendSocketDataLocked"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 23,
         "LoD/1.09": 23,
@@ -25541,27 +28420,27 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetLastError": {
       "addresses": {
         "LoD/1.08": "0x6FF22250",
-        "LoD/1.09": "0x6FF07F50",
-        "LoD/1.09b": "0x6FF02310",
-        "LoD/1.09d": "0x6FF022E0",
-        "LoD/1.10": "0x6FF08B90",
+        "LoD/1.09": "0x6FF04BF0",
+        "LoD/1.09b": "0x6FF0AD70",
+        "LoD/1.09d": "0x6FF081B0",
+        "LoD/1.10": "0x6FF02300",
         "LoD/1.11": "0x6FF329B0",
-        "LoD/1.11b": "0x6FF2F5F0",
-        "LoD/1.12a": "0x6FF2D800",
-        "LoD/1.13c": "0x6FF30B80",
-        "LoD/1.13d": "0x6FF30AC0"
+        "LoD/1.11b": "0x6FF2B380",
+        "LoD/1.12a": "0x6FF35D30",
+        "LoD/1.13c": "0x6FF2B850",
+        "LoD/1.13d": "0x6FF2BDF0"
       },
       "rvas": {
         "LoD/1.08": "0x2250",
-        "LoD/1.09": "0x7F50",
-        "LoD/1.09b": "0x2310",
-        "LoD/1.09d": "0x22E0",
-        "LoD/1.10": "0x8B90",
+        "LoD/1.09": "0x4BF0",
+        "LoD/1.09b": "0xAD70",
+        "LoD/1.09d": "0x81B0",
+        "LoD/1.10": "0x2300",
         "LoD/1.11": "0x129B0",
-        "LoD/1.11b": "0xF5F0",
-        "LoD/1.12a": "0xD800",
-        "LoD/1.13c": "0x10B80",
-        "LoD/1.13d": "0x10AC0"
+        "LoD/1.11b": "0xB380",
+        "LoD/1.12a": "0x15D30",
+        "LoD/1.13c": "0xB850",
+        "LoD/1.13d": "0xBDF0"
       },
       "sizes": {
         "LoD/1.08": 6,
@@ -25783,6 +28662,68 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:c456bea49baa3a06f4f8e4ed356b2f8e",
+      "callees": {
+        "LoD/1.08": [
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword"
+        ],
+        "LoD/1.09": [
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword"
+        ],
+        "LoD/1.10": [
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword",
+          "SetRegistryDword"
+        ],
+        "LoD/1.11": [
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.11b": [
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.12a": [
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13c": [
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation"
+        ],
+        "LoD/1.13d": [
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation",
+          "WriteRegistryValueWithValidation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Registration Version\"",
@@ -26178,6 +29119,34 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:98a90bc414b338826eb1311699b2b5ab",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_424",
+          "Ordinal_424"
+        ],
+        "LoD/1.09": [
+          "Ordinal_424",
+          "Ordinal_424"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_424",
+          "Ordinal_424"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_424",
+          "Ordinal_424"
+        ],
+        "LoD/1.10": [
+          "Ordinal_424",
+          "Ordinal_424"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10263",
+          "ValidateAndProcessRequest",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"user has latest version\"",
@@ -26366,6 +29335,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:879f86a7bcc59a562b2dae0d1db78cf9",
+      "callees": {
+        "LoD/1.08": [
+          "SetRegistryStringValue"
+        ],
+        "LoD/1.09": [
+          "SetRegistryStringValue"
+        ],
+        "LoD/1.09b": [
+          "SetRegistryStringValue"
+        ],
+        "LoD/1.09d": [
+          "SetRegistryStringValue"
+        ],
+        "LoD/1.10": [
+          "SetRegistryStringValue"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Configuration\"",
@@ -26413,39 +29399,24 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_Ordinal_220_27D0": {
       "addresses": {
         "LoD/1.08": "0x6FF227D0",
-        "LoD/1.09": "0x6FF01EF0",
-        "LoD/1.09b": "0x6FF01EF0",
+        "LoD/1.09": "0x6FF02980",
+        "LoD/1.09b": "0x6FF02980",
         "LoD/1.09d": "0x6FF02940",
-        "LoD/1.10": "0x6FF01E90",
-        "LoD/1.11": "0x6FF2DA30",
-        "LoD/1.11b": "0x6FF2B9D0",
-        "LoD/1.12a": "0x6FF2DE50",
-        "LoD/1.13c": "0x6FF2EF70",
-        "LoD/1.13d": "0x6FF2D200"
+        "LoD/1.10": "0x6FF02970"
       },
       "rvas": {
         "LoD/1.08": "0x27D0",
-        "LoD/1.09": "0x1EF0",
-        "LoD/1.09b": "0x1EF0",
+        "LoD/1.09": "0x2980",
+        "LoD/1.09b": "0x2980",
         "LoD/1.09d": "0x2940",
-        "LoD/1.10": "0x1E90",
-        "LoD/1.11": "0xDA30",
-        "LoD/1.11b": "0xB9D0",
-        "LoD/1.12a": "0xDE50",
-        "LoD/1.13c": "0xEF70",
-        "LoD/1.13d": "0xD200"
+        "LoD/1.10": "0x2970"
       },
       "sizes": {
         "LoD/1.08": 11,
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11,
-        "LoD/1.11": 11,
-        "LoD/1.11b": 11,
-        "LoD/1.12a": 11,
-        "LoD/1.13c": 11,
-        "LoD/1.13d": 11
+        "LoD/1.10": 11
       },
       "name": "Ordinal_220",
       "signature": "undefined4 Ordinal_220(void)",
@@ -26458,52 +29429,37 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
         "LoD/1.08": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09b": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09d": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.10": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.11": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.11b": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.12a": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.13c": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.13d": "aaca3fe15668675c808ffe97fd4a7c1b"
+        "LoD/1.10": "aaca3fe15668675c808ffe97fd4a7c1b"
       }
     },
     "bnclient.dll_Ordinal_220_27E0": {
       "addresses": {
         "LoD/1.08": "0x6FF227E0",
-        "LoD/1.09": "0x6FF02980",
-        "LoD/1.09b": "0x6FF02980",
-        "LoD/1.09d": "0x6FF02860",
-        "LoD/1.10": "0x6FF02990"
+        "LoD/1.09": "0x6FF01EF0",
+        "LoD/1.09b": "0x6FF01EF0",
+        "LoD/1.09d": "0x6FF02850",
+        "LoD/1.10": "0x6FF02980"
       },
       "rvas": {
         "LoD/1.08": "0x27E0",
-        "LoD/1.09": "0x2980",
-        "LoD/1.09b": "0x2980",
-        "LoD/1.09d": "0x2860",
-        "LoD/1.10": "0x2990"
+        "LoD/1.09": "0x1EF0",
+        "LoD/1.09b": "0x1EF0",
+        "LoD/1.09d": "0x2850",
+        "LoD/1.10": "0x2980"
       },
       "sizes": {
         "LoD/1.08": 11,
@@ -26581,21 +29537,36 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF029A0",
         "LoD/1.09b": "0x6FF029A0",
         "LoD/1.09d": "0x6FF02960",
-        "LoD/1.10": "0x6FF02820"
+        "LoD/1.10": "0x6FF01E90",
+        "LoD/1.11": "0x6FF2DA30",
+        "LoD/1.11b": "0x6FF2B9D0",
+        "LoD/1.12a": "0x6FF2DE50",
+        "LoD/1.13c": "0x6FF2EF70",
+        "LoD/1.13d": "0x6FF2D200"
       },
       "rvas": {
         "LoD/1.08": "0x28A0",
         "LoD/1.09": "0x29A0",
         "LoD/1.09b": "0x29A0",
         "LoD/1.09d": "0x2960",
-        "LoD/1.10": "0x2820"
+        "LoD/1.10": "0x1E90",
+        "LoD/1.11": "0xDA30",
+        "LoD/1.11b": "0xB9D0",
+        "LoD/1.12a": "0xDE50",
+        "LoD/1.13c": "0xEF70",
+        "LoD/1.13d": "0xD200"
       },
       "sizes": {
         "LoD/1.08": 11,
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
         "LoD/1.09d": 11,
-        "LoD/1.10": 11
+        "LoD/1.10": 11,
+        "LoD/1.11": 11,
+        "LoD/1.11b": 11,
+        "LoD/1.12a": 11,
+        "LoD/1.13c": 11,
+        "LoD/1.13d": 11
       },
       "name": "Ordinal_220",
       "signature": "undefined4 Ordinal_220(void)",
@@ -26608,21 +29579,36 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
-        "LoD/1.10": 1
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.08": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09b": "aaca3fe15668675c808ffe97fd4a7c1b",
         "LoD/1.09d": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.10": "aaca3fe15668675c808ffe97fd4a7c1b"
+        "LoD/1.10": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.11": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.11b": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.12a": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.13c": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.13d": "aaca3fe15668675c808ffe97fd4a7c1b"
       }
     },
     "bnclient.dll_Ordinal_220_28B0": {
@@ -26630,15 +29616,15 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF228B0",
         "LoD/1.09": "0x6FF02990",
         "LoD/1.09b": "0x6FF02990",
-        "LoD/1.09d": "0x6FF02950",
-        "LoD/1.10": "0x6FF02970"
+        "LoD/1.09d": "0x6FF02930",
+        "LoD/1.10": "0x6FF02820"
       },
       "rvas": {
         "LoD/1.08": "0x28B0",
         "LoD/1.09": "0x2990",
         "LoD/1.09b": "0x2990",
-        "LoD/1.09d": "0x2950",
-        "LoD/1.10": "0x2970"
+        "LoD/1.09d": "0x2930",
+        "LoD/1.10": "0x2820"
       },
       "sizes": {
         "LoD/1.08": 11,
@@ -26678,17 +29664,61 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_Ordinal_220_28C0": {
       "addresses": {
         "LoD/1.08": "0x6FF228C0",
-        "LoD/1.09": "0x6FF02960",
-        "LoD/1.09b": "0x6FF02960",
-        "LoD/1.09d": "0x6FF02850",
-        "LoD/1.10": "0x6FF02980"
+        "LoD/1.09": "0x6FF02970",
+        "LoD/1.09b": "0x6FF02970",
+        "LoD/1.09d": "0x6FF02970"
       },
       "rvas": {
         "LoD/1.08": "0x28C0",
+        "LoD/1.09": "0x2970",
+        "LoD/1.09b": "0x2970",
+        "LoD/1.09d": "0x2970"
+      },
+      "sizes": {
+        "LoD/1.08": 11,
+        "LoD/1.09": 11,
+        "LoD/1.09b": 11,
+        "LoD/1.09d": 11
+      },
+      "name": "Ordinal_220",
+      "signature": "undefined4 Ordinal_220(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.08",
+      "method": "MNE",
+      "index": "MNE:aaca3fe15668675c808ffe97fd4a7c1b",
+      "basic_block_counts": {
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1
+      },
+      "loop_counts": {
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.08": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.09": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.09b": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "LoD/1.09d": "aaca3fe15668675c808ffe97fd4a7c1b"
+      }
+    },
+    "bnclient.dll_Ordinal_220_28D0": {
+      "addresses": {
+        "LoD/1.08": "0x6FF228D0",
+        "LoD/1.09": "0x6FF02960",
+        "LoD/1.09b": "0x6FF02960",
+        "LoD/1.09d": "0x6FF02950",
+        "LoD/1.10": "0x6FF02960"
+      },
+      "rvas": {
+        "LoD/1.08": "0x28D0",
         "LoD/1.09": "0x2960",
         "LoD/1.09b": "0x2960",
-        "LoD/1.09d": "0x2850",
-        "LoD/1.10": "0x2980"
+        "LoD/1.09d": "0x2950",
+        "LoD/1.10": "0x2960"
       },
       "sizes": {
         "LoD/1.08": 11,
@@ -26725,64 +29755,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "aaca3fe15668675c808ffe97fd4a7c1b"
       }
     },
-    "bnclient.dll_Ordinal_220_28D0": {
-      "addresses": {
-        "LoD/1.08": "0x6FF228D0",
-        "LoD/1.09": "0x6FF02970",
-        "LoD/1.09b": "0x6FF02970",
-        "LoD/1.09d": "0x6FF02970"
-      },
-      "rvas": {
-        "LoD/1.08": "0x28D0",
-        "LoD/1.09": "0x2970",
-        "LoD/1.09b": "0x2970",
-        "LoD/1.09d": "0x2970"
-      },
-      "sizes": {
-        "LoD/1.08": 11,
-        "LoD/1.09": 11,
-        "LoD/1.09b": 11,
-        "LoD/1.09d": 11
-      },
-      "name": "Ordinal_220",
-      "signature": "undefined4 Ordinal_220(void)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.08",
-      "method": "MNE",
-      "index": "MNE:aaca3fe15668675c808ffe97fd4a7c1b",
-      "basic_block_counts": {
-        "LoD/1.08": 1,
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1
-      },
-      "loop_counts": {
-        "LoD/1.08": 0,
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.08": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.09": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.09b": "aaca3fe15668675c808ffe97fd4a7c1b",
-        "LoD/1.09d": "aaca3fe15668675c808ffe97fd4a7c1b"
-      }
-    },
     "bnclient.dll_Ordinal_220_28E0": {
       "addresses": {
         "LoD/1.08": "0x6FF228E0",
-        "LoD/1.09": "0x6FF028A0",
-        "LoD/1.09b": "0x6FF028A0",
-        "LoD/1.09d": "0x6FF02930",
-        "LoD/1.10": "0x6FF02960"
+        "LoD/1.09": "0x6FF02890",
+        "LoD/1.09b": "0x6FF02890",
+        "LoD/1.09d": "0x6FF01EC0",
+        "LoD/1.10": "0x6FF02830"
       },
       "rvas": {
         "LoD/1.08": "0x28E0",
-        "LoD/1.09": "0x28A0",
-        "LoD/1.09b": "0x28A0",
-        "LoD/1.09d": "0x2930",
-        "LoD/1.10": "0x2960"
+        "LoD/1.09": "0x2890",
+        "LoD/1.09b": "0x2890",
+        "LoD/1.09d": "0x1EC0",
+        "LoD/1.10": "0x2830"
       },
       "sizes": {
         "LoD/1.08": 11,
@@ -26824,25 +29810,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF22930",
         "LoD/1.09": "0x6FF0A170",
         "LoD/1.09b": "0x6FF03280",
-        "LoD/1.09d": "0x6FF03290",
-        "LoD/1.10": "0x6FF08BB0",
+        "LoD/1.09d": "0x6FF081D0",
+        "LoD/1.10": "0x6FF0AC30",
         "LoD/1.11": "0x6FF377A0",
-        "LoD/1.11b": "0x6FF37810",
-        "LoD/1.12a": "0x6FF38680",
-        "LoD/1.13c": "0x6FF38640",
-        "LoD/1.13d": "0x6FF385C0"
+        "LoD/1.11b": "0x6FF377F0",
+        "LoD/1.12a": "0x6FF386A0",
+        "LoD/1.13c": "0x6FF38620",
+        "LoD/1.13d": "0x6FF385A0"
       },
       "rvas": {
         "LoD/1.08": "0x2930",
         "LoD/1.09": "0xA170",
         "LoD/1.09b": "0x3280",
-        "LoD/1.09d": "0x3290",
-        "LoD/1.10": "0x8BB0",
+        "LoD/1.09d": "0x81D0",
+        "LoD/1.10": "0xAC30",
         "LoD/1.11": "0x177A0",
-        "LoD/1.11b": "0x17810",
-        "LoD/1.12a": "0x18680",
-        "LoD/1.13c": "0x18640",
-        "LoD/1.13d": "0x185C0"
+        "LoD/1.11b": "0x177F0",
+        "LoD/1.12a": "0x186A0",
+        "LoD/1.13c": "0x18620",
+        "LoD/1.13d": "0x185A0"
       },
       "sizes": {
         "LoD/1.08": 23,
@@ -26906,24 +29892,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF07F90",
         "LoD/1.09b": "0x6FF032A0",
         "LoD/1.09d": "0x6FF0A3F0",
-        "LoD/1.10": "0x6FF0AC50",
+        "LoD/1.10": "0x6FF08BD0",
         "LoD/1.11": "0x6FF37880",
-        "LoD/1.11b": "0x6FF37860",
-        "LoD/1.12a": "0x6FF38700",
-        "LoD/1.13c": "0x6FF386D0",
-        "LoD/1.13d": "0x6FF38610"
+        "LoD/1.11b": "0x6FF37880",
+        "LoD/1.12a": "0x6FF38720",
+        "LoD/1.13c": "0x6FF386E0",
+        "LoD/1.13d": "0x6FF38640"
       },
       "rvas": {
         "LoD/1.08": "0x2950",
         "LoD/1.09": "0x7F90",
         "LoD/1.09b": "0x32A0",
         "LoD/1.09d": "0xA3F0",
-        "LoD/1.10": "0xAC50",
+        "LoD/1.10": "0x8BD0",
         "LoD/1.11": "0x17880",
-        "LoD/1.11b": "0x17860",
-        "LoD/1.12a": "0x18700",
-        "LoD/1.13c": "0x186D0",
-        "LoD/1.13d": "0x18610"
+        "LoD/1.11b": "0x17880",
+        "LoD/1.12a": "0x18720",
+        "LoD/1.13c": "0x186E0",
+        "LoD/1.13d": "0x18640"
       },
       "sizes": {
         "LoD/1.08": 12,
@@ -27044,6 +30030,103 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:2f58991189a5c481c06f7ae1dcc0be9a",
+      "callees": {
+        "LoD/1.08": [
+          "StartWinsockService",
+          "CopyMemoryBuffer",
+          "Ordinal_424",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "StartWinsockService",
+          "CopyMemoryBuffer",
+          "Ordinal_424",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "StartWinsockService",
+          "CopyMemoryBuffer",
+          "Ordinal_424",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "StartWinsockService",
+          "CopyMemoryBuffer",
+          "Ordinal_424",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "StartWinsockService",
+          "CopyMemoryBuffer",
+          "Ordinal_424",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_401",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.11": [
+          "InitializeWinsock",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "InitializeWinsock",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "InitializeWinsock",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "InitializeWinsock",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "InitializeWinsock",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnDown...",
@@ -27158,6 +30241,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:0bc153704b6affd99adf313078b0e09a",
+      "callees": {
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnMess..."
@@ -27245,6 +30345,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:05a76bf6a4ea8a1c9b7c5902052c64b7",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_403",
+          "Ordinal_401"
+        ],
+        "LoD/1.09": [
+          "Ordinal_403",
+          "Ordinal_401"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403",
+          "Ordinal_401"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403",
+          "Ordinal_401"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -27290,25 +30412,46 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF06B60",
         "LoD/1.09b": "0x6FF06B60",
         "LoD/1.09d": "0x6FF06DD0",
-        "LoD/1.10": "0x6FF07BD0"
+        "LoD/1.10": "0x6FF07510"
       },
       "rvas": {
         "LoD/1.08": "0x65F0",
         "LoD/1.09": "0x6B60",
         "LoD/1.09b": "0x6B60",
         "LoD/1.09d": "0x6DD0",
-        "LoD/1.10": "0x7BD0"
+        "LoD/1.10": "0x7510"
       },
       "sizes": {
         "LoD/1.08": 135,
         "LoD/1.09": 135,
         "LoD/1.09b": 135,
         "LoD/1.09d": 135,
-        "LoD/1.10": 135
+        "LoD/1.10": 51
       },
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:9d271aff40cebc5ad4cb963431488c53",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Failed to send Realm List\\n\""
@@ -27323,7 +30466,7 @@ var FUNCTIONS_Bnclient_dll = {
           "\"Failed to send Realm List\\n\""
         ],
         "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie..."
+          "\"Failed to send Realm List\\n\""
         ]
       },
       "basic_block_counts": {
@@ -27331,7 +30474,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": 6,
         "LoD/1.09b": 6,
         "LoD/1.09d": 6,
-        "LoD/1.10": 6
+        "LoD/1.10": 3
       },
       "loop_counts": {
         "LoD/1.08": 0,
@@ -27345,7 +30488,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "bd9f3111ee915c63a30931567375b7c6",
         "LoD/1.09b": "bd9f3111ee915c63a30931567375b7c6",
         "LoD/1.09d": "bd9f3111ee915c63a30931567375b7c6",
-        "LoD/1.10": "d646a10eb7dff9a517c5066ef4cfc879"
+        "LoD/1.10": "c1ebf0371b43c0e87de03e4247f7d9f3"
       }
     },
     "bnclient.dll_MNE_d6918bb1a978": {
@@ -27496,6 +30639,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:6766c141c683c79c56f02314fe7619dc",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 9
       },
@@ -27512,14 +30662,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF07000",
         "LoD/1.09b": "0x6FF07000",
         "LoD/1.09d": "0x6FF07270",
-        "LoD/1.10": "0x6FF079C0"
+        "LoD/1.10": "0x6FF079E0"
       },
       "rvas": {
         "LoD/1.08": "0x6A90",
         "LoD/1.09": "0x7000",
         "LoD/1.09b": "0x7000",
         "LoD/1.09d": "0x7270",
-        "LoD/1.10": "0x79C0"
+        "LoD/1.10": "0x79E0"
       },
       "sizes": {
         "LoD/1.08": 17,
@@ -27566,6 +30716,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:6766c141c683c79c56f02314fe7619dc",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 7
       },
@@ -27601,6 +30758,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:08676b1b7f60087d63eb6cacd30b2a48",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -27648,6 +30827,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:e84ed426df1cf175acd78c0f6c549c34",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -27692,6 +30888,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:95ae523d4745b7af754d84f6fcf236ba",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -27733,6 +30943,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:08676b1b7f60087d63eb6cacd30b2a48",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -27771,6 +30999,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:cd094e8f25dc6b9f5814bdc9d62337e9",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09": [
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 4,
         "LoD/1.09": 3,
@@ -27859,6 +31098,58 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f3a67ed1fea44d624b7858c62628d203",
+      "callees": {
+        "LoD/1.08": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnSend..."
@@ -27920,6 +31211,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:8b23cdc443ee298c584911332cf9fe4e",
+      "callees": {
+        "LoD/1.08": [
+          "SStrLen"
+        ],
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"BattleReadUserData: Invalid response from server\""
@@ -27958,25 +31263,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF27360",
         "LoD/1.09": "0x6FF07F70",
         "LoD/1.09b": "0x6FF07F70",
-        "LoD/1.09d": "0x6FF081D0",
+        "LoD/1.09d": "0x6FF03290",
         "LoD/1.10": "0x6FF032E0",
-        "LoD/1.11": "0x6FF377E0",
-        "LoD/1.11b": "0x6FF377F0",
+        "LoD/1.11": "0x6FF37800",
+        "LoD/1.11b": "0x6FF377B0",
         "LoD/1.12a": "0x6FF38640",
-        "LoD/1.13c": "0x6FF386A0",
-        "LoD/1.13d": "0x6FF385A0"
+        "LoD/1.13c": "0x6FF38640",
+        "LoD/1.13d": "0x6FF38560"
       },
       "rvas": {
         "LoD/1.08": "0x7360",
         "LoD/1.09": "0x7F70",
         "LoD/1.09b": "0x7F70",
-        "LoD/1.09d": "0x81D0",
+        "LoD/1.09d": "0x3290",
         "LoD/1.10": "0x32E0",
-        "LoD/1.11": "0x177E0",
-        "LoD/1.11b": "0x177F0",
+        "LoD/1.11": "0x17800",
+        "LoD/1.11b": "0x177B0",
         "LoD/1.12a": "0x18640",
-        "LoD/1.13c": "0x186A0",
-        "LoD/1.13d": "0x185A0"
+        "LoD/1.13c": "0x18640",
+        "LoD/1.13d": "0x18560"
       },
       "sizes": {
         "LoD/1.08": 23,
@@ -28039,24 +31344,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF27380",
         "LoD/1.09": "0x6FF032A0",
         "LoD/1.09b": "0x6FF07F90",
-        "LoD/1.09d": "0x6FF032B0",
-        "LoD/1.10": "0x6FF08BD0",
+        "LoD/1.09d": "0x6FF081F0",
+        "LoD/1.10": "0x6FF0AC50",
         "LoD/1.11": "0x6FF37860",
         "LoD/1.11b": "0x6FF37890",
-        "LoD/1.12a": "0x6FF38720",
-        "LoD/1.13c": "0x6FF386E0",
+        "LoD/1.12a": "0x6FF38700",
+        "LoD/1.13c": "0x6FF38720",
         "LoD/1.13d": "0x6FF38630"
       },
       "rvas": {
         "LoD/1.08": "0x7380",
         "LoD/1.09": "0x32A0",
         "LoD/1.09b": "0x7F90",
-        "LoD/1.09d": "0x32B0",
-        "LoD/1.10": "0x8BD0",
+        "LoD/1.09d": "0x81F0",
+        "LoD/1.10": "0xAC50",
         "LoD/1.11": "0x17860",
         "LoD/1.11b": "0x17890",
-        "LoD/1.12a": "0x18720",
-        "LoD/1.13c": "0x186E0",
+        "LoD/1.12a": "0x18700",
+        "LoD/1.13c": "0x18720",
         "LoD/1.13d": "0x18630"
       },
       "sizes": {
@@ -28118,17 +31423,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_SetGlobalValue11103": {
       "addresses": {
         "LoD/1.08": "0x6FF29520",
-        "LoD/1.09": "0x6FF067F0",
+        "LoD/1.09": "0x6FF0A130",
         "LoD/1.09b": "0x6FF067F0",
         "LoD/1.09d": "0x6FF0A390",
-        "LoD/1.10": "0x6FF071A0"
+        "LoD/1.10": "0x6FF07180"
       },
       "rvas": {
         "LoD/1.08": "0x9520",
-        "LoD/1.09": "0x67F0",
+        "LoD/1.09": "0xA130",
         "LoD/1.09b": "0x67F0",
         "LoD/1.09d": "0xA390",
-        "LoD/1.10": "0x71A0"
+        "LoD/1.10": "0x7180"
       },
       "sizes": {
         "LoD/1.08": 7,
@@ -28206,6 +31511,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:234333d90c8fe1787a6dc92cd8161e7d",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_542"
+        ],
+        "LoD/1.09": [
+          "Ordinal_542"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_542"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_542"
+        ],
+        "LoD/1.10": [
+          "Ordinal_542"
+        ],
+        "LoD/1.11": [
+          "CreateAndTrackFile"
+        ],
+        "LoD/1.11b": [
+          "CreateAndTrackFile"
+        ],
+        "LoD/1.12a": [
+          "CreateAndTrackFile"
+        ],
+        "LoD/1.13c": [
+          "CreateAndTrackFile"
+        ],
+        "LoD/1.13d": [
+          "CreateAndTrackFile"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"BnetLog.txt\""
@@ -28319,6 +31656,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:5acea7b093442b4d0fe7bb124f1c8b51",
+      "callees": {
+        "LoD/1.08": [
+          "Ordinal_541"
+        ],
+        "LoD/1.09": [
+          "Ordinal_541"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_541"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_541"
+        ],
+        "LoD/1.10": [
+          "Ordinal_541"
+        ],
+        "LoD/1.11": [
+          "CloseFileHandle"
+        ],
+        "LoD/1.11b": [
+          "CloseFileHandle"
+        ],
+        "LoD/1.12a": [
+          "CloseFileHandle"
+        ],
+        "LoD/1.13c": [
+          "CloseFileHandle"
+        ],
+        "LoD/1.13d": [
+          "CloseFileHandle"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -28362,24 +31731,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF03280",
         "LoD/1.09b": "0x6FF0A170",
         "LoD/1.09d": "0x6FF0A3D0",
-        "LoD/1.10": "0x6FF0AC30",
-        "LoD/1.11": "0x6FF37800",
-        "LoD/1.11b": "0x6FF377B0",
-        "LoD/1.12a": "0x6FF386A0",
-        "LoD/1.13c": "0x6FF38620",
-        "LoD/1.13d": "0x6FF38560"
+        "LoD/1.10": "0x6FF08BB0",
+        "LoD/1.11": "0x6FF377E0",
+        "LoD/1.11b": "0x6FF37810",
+        "LoD/1.12a": "0x6FF38680",
+        "LoD/1.13c": "0x6FF386A0",
+        "LoD/1.13d": "0x6FF385C0"
       },
       "rvas": {
         "LoD/1.08": "0x9560",
         "LoD/1.09": "0x3280",
         "LoD/1.09b": "0xA170",
         "LoD/1.09d": "0xA3D0",
-        "LoD/1.10": "0xAC30",
-        "LoD/1.11": "0x17800",
-        "LoD/1.11b": "0x177B0",
-        "LoD/1.12a": "0x186A0",
-        "LoD/1.13c": "0x18620",
-        "LoD/1.13d": "0x18560"
+        "LoD/1.10": "0x8BB0",
+        "LoD/1.11": "0x177E0",
+        "LoD/1.11b": "0x17810",
+        "LoD/1.12a": "0x18680",
+        "LoD/1.13c": "0x186A0",
+        "LoD/1.13d": "0x185C0"
       },
       "sizes": {
         "LoD/1.08": 23,
@@ -28442,25 +31811,25 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.08": "0x6FF29580",
         "LoD/1.09": "0x6FF0A190",
         "LoD/1.09b": "0x6FF0A190",
-        "LoD/1.09d": "0x6FF081F0",
+        "LoD/1.09d": "0x6FF032B0",
         "LoD/1.10": "0x6FF03300",
         "LoD/1.11": "0x6FF37890",
-        "LoD/1.11b": "0x6FF37880",
+        "LoD/1.11b": "0x6FF37860",
         "LoD/1.12a": "0x6FF38730",
-        "LoD/1.13c": "0x6FF38720",
-        "LoD/1.13d": "0x6FF38640"
+        "LoD/1.13c": "0x6FF386D0",
+        "LoD/1.13d": "0x6FF38610"
       },
       "rvas": {
         "LoD/1.08": "0x9580",
         "LoD/1.09": "0xA190",
         "LoD/1.09b": "0xA190",
-        "LoD/1.09d": "0x81F0",
+        "LoD/1.09d": "0x32B0",
         "LoD/1.10": "0x3300",
         "LoD/1.11": "0x17890",
-        "LoD/1.11b": "0x17880",
+        "LoD/1.11b": "0x17860",
         "LoD/1.12a": "0x18730",
-        "LoD/1.13c": "0x18720",
-        "LoD/1.13d": "0x18640"
+        "LoD/1.13c": "0x186D0",
+        "LoD/1.13d": "0x18610"
       },
       "sizes": {
         "LoD/1.08": 12,
@@ -28518,30 +31887,111 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "fde18f840643d8d99756120348d7717e"
       }
     },
-    "bnclient.dll_GetLastError_A170": {
+    "bnclient.dll_BinkBufferGetError": {
       "addresses": {
-        "LoD/1.08": "0x6FF2A170",
-        "LoD/1.09": "0x6FF022F0",
-        "LoD/1.09b": "0x6FF067E0",
-        "LoD/1.09d": "0x6FF06A50",
-        "LoD/1.10": "0x6FF04E00",
-        "LoD/1.11": "0x6FF2EE00",
-        "LoD/1.11b": "0x6FF2B380",
-        "LoD/1.12a": "0x6FF35D30",
-        "LoD/1.13c": "0x6FF30B70",
-        "LoD/1.13d": "0x6FF33580"
+        "LoD/1.08": "0x6FF296C0",
+        "LoD/1.09": "0x6FF01020",
+        "LoD/1.09b": "0x6FF0A2D0",
+        "LoD/1.09d": "0x6FF01020",
+        "LoD/1.10": "0x6FF01020",
+        "LoD/1.11": "0x6FF329A0",
+        "LoD/1.11b": "0x6FF31100",
+        "LoD/1.12a": "0x6FF2F730",
+        "LoD/1.13c": "0x6FF30B60",
+        "LoD/1.13d": "0x6FF2BDE0"
       },
       "rvas": {
-        "LoD/1.08": "0xA170",
-        "LoD/1.09": "0x22F0",
-        "LoD/1.09b": "0x67E0",
-        "LoD/1.09d": "0x6A50",
-        "LoD/1.10": "0x4E00",
-        "LoD/1.11": "0xEE00",
-        "LoD/1.11b": "0xB380",
-        "LoD/1.12a": "0x15D30",
-        "LoD/1.13c": "0x10B70",
-        "LoD/1.13d": "0x13580"
+        "LoD/1.08": "0x96C0",
+        "LoD/1.09": "0x1020",
+        "LoD/1.09b": "0xA2D0",
+        "LoD/1.09d": "0x1020",
+        "LoD/1.10": "0x1020",
+        "LoD/1.11": "0x129A0",
+        "LoD/1.11b": "0x11100",
+        "LoD/1.12a": "0xF730",
+        "LoD/1.13c": "0x10B60",
+        "LoD/1.13d": "0xBDE0"
+      },
+      "sizes": {
+        "LoD/1.08": 6,
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "BinkBufferGetError",
+      "signature": "char * BinkBufferGetError(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Retrieves pointer to the global Bink buffer error message string.\n\nAlgorithm:\n1. Return address of global error buffer array g_szErrorBuffer\n\nParameters:\nNone\n\nReturns:\nchar * - Pointer to null-terminated error message string in g_szErrorBuffer\n         The buffer contains the most recent error message from Bink buffer operations\n         Returns valid pointer to 256-byte character array (never NULL)\n\nSpecial Cases:\n- Function always returns same buffer address (0x1002f01c)\n- Error buffer is shared across all Bink buffer operations\n- Calling code should copy error message if persistence needed\n- Buffer content may be overwritten by subsequent Bink operations\n\nMagic Numbers Reference:\n0x1002f01c - Address of global error buffer g_szErrorBuffer (256 bytes)",
+      "name_source": "LoD/1.08",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "basic_block_counts": {
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.08": 0,
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.08": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "bnclient.dll_GetLastError_A160": {
+      "addresses": {
+        "LoD/1.08": "0x6FF2A160",
+        "LoD/1.09": "0x6FF02300",
+        "LoD/1.09b": "0x6FF02310",
+        "LoD/1.09d": "0x6FF022C0",
+        "LoD/1.10": "0x6FF07190",
+        "LoD/1.11": "0x6FF2B240",
+        "LoD/1.11b": "0x6FF334F0",
+        "LoD/1.12a": "0x6FF35020",
+        "LoD/1.13c": "0x6FF2CDA0",
+        "LoD/1.13d": "0x6FF2BE00"
+      },
+      "rvas": {
+        "LoD/1.08": "0xA160",
+        "LoD/1.09": "0x2300",
+        "LoD/1.09b": "0x2310",
+        "LoD/1.09d": "0x22C0",
+        "LoD/1.10": "0x7190",
+        "LoD/1.11": "0xB240",
+        "LoD/1.11b": "0x134F0",
+        "LoD/1.12a": "0x15020",
+        "LoD/1.13c": "0xCDA0",
+        "LoD/1.13d": "0xBE00"
       },
       "sizes": {
         "LoD/1.08": 6,
@@ -28618,6 +32068,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:516e515cdff1bedb79188f2090a96ed0",
+      "callees": {
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnConn...",
@@ -28653,13 +32114,13 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF01CE0",
         "LoD/1.09b": "0x6FF01CE0",
         "LoD/1.09d": "0x6FF01CB0",
-        "LoD/1.10": "0x6FF01D00"
+        "LoD/1.10": "0x6FF01C70"
       },
       "rvas": {
         "LoD/1.09": "0x1CE0",
         "LoD/1.09b": "0x1CE0",
         "LoD/1.09d": "0x1CB0",
-        "LoD/1.10": "0x1D00"
+        "LoD/1.10": "0x1C70"
       },
       "sizes": {
         "LoD/1.09": 66,
@@ -28735,13 +32196,13 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09": "0x6FF01D70",
         "LoD/1.09b": "0x6FF01D70",
         "LoD/1.09d": "0x6FF01D40",
-        "LoD/1.10": "0x6FF01C70"
+        "LoD/1.10": "0x6FF01D00"
       },
       "rvas": {
         "LoD/1.09": "0x1D70",
         "LoD/1.09b": "0x1D70",
         "LoD/1.09d": "0x1D40",
-        "LoD/1.10": "0x1C70"
+        "LoD/1.10": "0x1D00"
       },
       "sizes": {
         "LoD/1.09": 66,
@@ -28775,14 +32236,14 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.09": "0x6FF01DC0",
         "LoD/1.09b": "0x6FF01DC0",
-        "LoD/1.09d": "0x6FF01E20",
-        "LoD/1.10": "0x6FF01DE0"
+        "LoD/1.09d": "0x6FF01D90",
+        "LoD/1.10": "0x6FF01D50"
       },
       "rvas": {
         "LoD/1.09": "0x1DC0",
         "LoD/1.09b": "0x1DC0",
-        "LoD/1.09d": "0x1E20",
-        "LoD/1.10": "0x1DE0"
+        "LoD/1.09d": "0x1D90",
+        "LoD/1.10": "0x1D50"
       },
       "sizes": {
         "LoD/1.09": 41,
@@ -28857,14 +32318,14 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.09": "0x6FF01E50",
         "LoD/1.09b": "0x6FF01E50",
-        "LoD/1.09d": "0x6FF01D90",
-        "LoD/1.10": "0x6FF01D50"
+        "LoD/1.09d": "0x6FF01E20",
+        "LoD/1.10": "0x6FF01DE0"
       },
       "rvas": {
         "LoD/1.09": "0x1E50",
         "LoD/1.09b": "0x1E50",
-        "LoD/1.09d": "0x1D90",
-        "LoD/1.10": "0x1D50"
+        "LoD/1.09d": "0x1E20",
+        "LoD/1.10": "0x1DE0"
       },
       "sizes": {
         "LoD/1.09": 41,
@@ -28916,6 +32377,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:ed579a3c11ae0f033233643429fc70f0",
+      "callees": {
+        "LoD/1.09": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09b": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.09d": [
+          "CleanupNetworkContext"
+        ],
+        "LoD/1.10": [
+          "CleanupNetworkContext"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 15,
         "LoD/1.09b": 15,
@@ -28935,33 +32410,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "ed579a3c11ae0f033233643429fc70f0"
       }
     },
-    "bnclient.dll_GetLastError_2300": {
+    "bnclient.dll_GetLastError_22F0": {
       "addresses": {
-        "LoD/1.09": "0x6FF02300",
-        "LoD/1.09b": "0x6FF04BF0",
-        "LoD/1.09d": "0x6FF081B0",
-        "LoD/1.10": "0x6FF02300",
-        "LoD/1.11": "0x6FF2B260",
-        "LoD/1.11b": "0x6FF2F5C0",
-        "LoD/1.12a": "0x6FF35020",
-        "LoD/1.13c": "0x6FF2B850",
-        "LoD/1.13d": "0x6FF2BDC0"
+        "LoD/1.10": "0x6FF022F0",
+        "LoD/1.11": "0x6FF2FE00",
+        "LoD/1.11b": "0x6FF2F600",
+        "LoD/1.12a": "0x6FF34FF0",
+        "LoD/1.13c": "0x6FF30B70",
+        "LoD/1.13d": "0x6FF2E070"
       },
       "rvas": {
-        "LoD/1.09": "0x2300",
-        "LoD/1.09b": "0x4BF0",
-        "LoD/1.09d": "0x81B0",
-        "LoD/1.10": "0x2300",
-        "LoD/1.11": "0xB260",
-        "LoD/1.11b": "0xF5C0",
-        "LoD/1.12a": "0x15020",
-        "LoD/1.13c": "0xB850",
-        "LoD/1.13d": "0xBDC0"
+        "LoD/1.10": "0x22F0",
+        "LoD/1.11": "0xFE00",
+        "LoD/1.11b": "0xF600",
+        "LoD/1.12a": "0x14FF0",
+        "LoD/1.13c": "0x10B70",
+        "LoD/1.13d": "0xE070"
       },
       "sizes": {
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
         "LoD/1.10": 6,
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -28973,13 +32439,10 @@ var FUNCTIONS_Bnclient_dll = {
       "signature": "DWORD GetLastError(void)",
       "calling_convention": "__stdcall",
       "comment": "Returns the last Storm error code.\n\nAlgorithm:\n1. Read the global error code variable (g_dwLastError)\n2. Return the value to caller\n\nParameters:\n- None (void)\n\nReturns:\n- Last error code set by SetLastError or 0 if none\n\nRelated Functions:\n- Ordinal_465: Sets the error code (SetLastError wrapper)",
-      "name_source": "LoD/1.09",
+      "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
       "basic_block_counts": {
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
         "LoD/1.10": 1,
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -28988,9 +32451,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": 1
       },
       "loop_counts": {
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
         "LoD/1.10": 0,
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
@@ -28999,84 +32459,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
-      }
-    },
-    "bnclient.dll_GetLastError_2310": {
-      "addresses": {
-        "LoD/1.09": "0x6FF02310",
-        "LoD/1.09b": "0x6FF07F50",
-        "LoD/1.09d": "0x6FF022C0",
-        "LoD/1.10": "0x6FF071B0",
-        "LoD/1.11": "0x6FF32980",
-        "LoD/1.11b": "0x6FF35690",
-        "LoD/1.12a": "0x6FF316E0",
-        "LoD/1.13c": "0x6FF30B40",
-        "LoD/1.13d": "0x6FF2BDF0"
-      },
-      "rvas": {
-        "LoD/1.09": "0x2310",
-        "LoD/1.09b": "0x7F50",
-        "LoD/1.09d": "0x22C0",
-        "LoD/1.10": "0x71B0",
-        "LoD/1.11": "0x12980",
-        "LoD/1.11b": "0x15690",
-        "LoD/1.12a": "0x116E0",
-        "LoD/1.13c": "0x10B40",
-        "LoD/1.13d": "0xBDF0"
-      },
-      "sizes": {
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "GetLastError",
-      "signature": "DWORD GetLastError(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Returns the last Storm error code.\n\nAlgorithm:\n1. Read the global error code variable (g_dwLastError)\n2. Return the value to caller\n\nParameters:\n- None (void)\n\nReturns:\n- Last error code set by SetLastError or 0 if none\n\nRelated Functions:\n- Ordinal_465: Sets the error code (SetLastError wrapper)",
-      "name_source": "LoD/1.09",
-      "method": "MNE",
-      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
-      "basic_block_counts": {
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
         "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
@@ -29107,6 +32489,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:60602ea7093ba82a0afee4d3ac82d013",
+      "callees": {
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"INVALID: AuthInfo\""
@@ -29162,6 +32558,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:a6e8e3dc43559a35e4064f751d656bec",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_424",
+          "Ordinal_501",
+          "Ordinal_424",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_424",
+          "Ordinal_501",
+          "Ordinal_424",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_424",
+          "Ordinal_501",
+          "Ordinal_424",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_424",
+          "Ordinal_501",
+          "Ordinal_424",
+          "Ordinal_501"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"CD Key is for another product (%d)\"",
@@ -29551,6 +32973,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:9d9b1aee8517e59520d7a0058383a02e",
+      "callees": {
+        "LoD/1.09": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.09b": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.09d": [
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -29706,6 +33139,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:38e59a2462325983f58d187793af5f85",
+      "callees": {
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -29723,6 +33170,51 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "38e59a2462325983f58d187793af5f85",
         "LoD/1.09d": "38e59a2462325983f58d187793af5f85",
         "LoD/1.10": "38e59a2462325983f58d187793af5f85"
+      }
+    },
+    "bnclient.dll_SetGlobalValue11103_67F0": {
+      "addresses": {
+        "LoD/1.09": "0x6FF067F0",
+        "LoD/1.09b": "0x6FF0A130",
+        "LoD/1.09d": "0x6FF06A40",
+        "LoD/1.10": "0x6FF0ABF0"
+      },
+      "rvas": {
+        "LoD/1.09": "0x67F0",
+        "LoD/1.09b": "0xA130",
+        "LoD/1.09d": "0x6A40",
+        "LoD/1.10": "0xABF0"
+      },
+      "sizes": {
+        "LoD/1.09": 7,
+        "LoD/1.09b": 7,
+        "LoD/1.09d": 7,
+        "LoD/1.10": 7
+      },
+      "name": "SetGlobalValue11103",
+      "signature": "void SetGlobalValue11103(uint dwValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Sets a module-level global value (ordinal 11103).\n\nAlgorithm:\n1. Store dwValue to g_dwValue11103\n\nParameters:\n- dwValue (uint): Value to store in global\n\nReturns:\n- void",
+      "name_source": "LoD/1.09",
+      "method": "MNE",
+      "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
+      "basic_block_counts": {
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1
+      },
+      "loop_counts": {
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.09": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.09b": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.09d": "305c32d33191c1b22ce2562362c5fa24",
+        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24"
       }
     },
     "bnclient.dll_API_6766c141c683_6F50": {
@@ -29747,6 +33239,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:6766c141c683c79c56f02314fe7619dc",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 9,
         "LoD/1.09b": 9,
@@ -29788,6 +33302,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:6766c141c683c79c56f02314fe7619dc",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 7,
         "LoD/1.09b": 7,
@@ -29855,14 +33391,14 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_DestroyAutomapPlayerIconLine": {
       "addresses": {
         "LoD/1.09": "0x6FF077C0",
-        "LoD/1.09b": "0x6FF077C0",
-        "LoD/1.09d": "0x6FF079F0",
+        "LoD/1.09b": "0x6FF07810",
+        "LoD/1.09d": "0x6FF07A40",
         "LoD/1.10": "0x6FF08370"
       },
       "rvas": {
         "LoD/1.09": "0x77C0",
-        "LoD/1.09b": "0x77C0",
-        "LoD/1.09d": "0x79F0",
+        "LoD/1.09b": "0x7810",
+        "LoD/1.09d": "0x7A40",
         "LoD/1.10": "0x8370"
       },
       "sizes": {
@@ -29941,15 +33477,15 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_DestroyAutomapPlayerIconLine_7810": {
       "addresses": {
         "LoD/1.09": "0x6FF07810",
-        "LoD/1.09b": "0x6FF07810",
-        "LoD/1.09d": "0x6FF07A40",
-        "LoD/1.10": "0x6FF066C0"
+        "LoD/1.09b": "0x6FF077C0",
+        "LoD/1.09d": "0x6FF079F0",
+        "LoD/1.10": "0x6FF083C0"
       },
       "rvas": {
         "LoD/1.09": "0x7810",
-        "LoD/1.09b": "0x7810",
-        "LoD/1.09d": "0x7A40",
-        "LoD/1.10": "0x66C0"
+        "LoD/1.09b": "0x77C0",
+        "LoD/1.09d": "0x79F0",
+        "LoD/1.10": "0x83C0"
       },
       "sizes": {
         "LoD/1.09": 10,
@@ -29999,6 +33535,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:189e702334d147f1bf2fd38b8bbeccac",
+      "callees": {
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1
@@ -30034,6 +33578,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:2ffcddfe91c7e21bc21fca37deefc814",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 11,
         "LoD/1.09b": 11,
@@ -30075,6 +33645,48 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:a24e0bd8e0636467b92ee16012d91599",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30116,6 +33728,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:3cc93c374cd8fd26cf34ca5e20517169",
+      "callees": {
+        "LoD/1.09": [
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30172,6 +33802,44 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:c3ae2545fae036b198f7dcc86df68b3e",
+      "callees": {
+        "LoD/1.09": [
+          "SMemZero",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.09b": [
+          "SMemZero",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.09d": [
+          "SMemZero",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.10": [
+          "SMemZero",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -30245,6 +33913,36 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:594fbeee924a6aa71807afad32ec8a3a",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30286,6 +33984,52 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:2b1ef8095defb6a9c39cc0933589729a",
+      "callees": {
+        "LoD/1.09": [
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "SMemZero",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "Ordinal_501",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30327,6 +34071,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:fe9ef0390d2bfae194733559388ecb1f",
+      "callees": {
+        "LoD/1.09": [
+          "SMemZero",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.09b": [
+          "SMemZero",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.09d": [
+          "SMemZero",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.10": [
+          "SMemZero",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -30409,6 +34179,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:729e04f9fdacac9ef17d6ec2f6497e57",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "SStrLen",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "SStrLen",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "SStrLen",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "SStrLen",
+          "CopyMemoryBuffer",
+          "SMemZero"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30469,6 +34265,81 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "14b13ed976e9fe94acaa123138d5fb4f"
       }
     },
+    "bnclient.dll_GetLastError_7F50": {
+      "addresses": {
+        "LoD/1.09": "0x6FF07F50",
+        "LoD/1.09b": "0x6FF07F50",
+        "LoD/1.09d": "0x6FF06A70",
+        "LoD/1.10": "0x6FF04E00",
+        "LoD/1.11": "0x6FF329C0",
+        "LoD/1.11b": "0x6FF35690",
+        "LoD/1.12a": "0x6FF316E0",
+        "LoD/1.13c": "0x6FF30B50",
+        "LoD/1.13d": "0x6FF2BDC0"
+      },
+      "rvas": {
+        "LoD/1.09": "0x7F50",
+        "LoD/1.09b": "0x7F50",
+        "LoD/1.09d": "0x6A70",
+        "LoD/1.10": "0x4E00",
+        "LoD/1.11": "0x129C0",
+        "LoD/1.11b": "0x15690",
+        "LoD/1.12a": "0x116E0",
+        "LoD/1.13c": "0x10B50",
+        "LoD/1.13d": "0xBDC0"
+      },
+      "sizes": {
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "GetLastError",
+      "signature": "DWORD GetLastError(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Returns the last Storm error code.\n\nAlgorithm:\n1. Read the global error code variable (g_dwLastError)\n2. Return the value to caller\n\nParameters:\n- None (void)\n\nReturns:\n- Last error code set by SetLastError or 0 if none\n\nRelated Functions:\n- Ordinal_465: Sets the error code (SetLastError wrapper)",
+      "name_source": "LoD/1.09",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "basic_block_counts": {
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.09": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.09d": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
     "bnclient.dll_MNE_a52ebb438c8f": {
       "addresses": {
         "LoD/1.09": "0x6FF07F60",
@@ -30506,6 +34377,35 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:a52ebb438c8fd87a1e94d7a9425117ad",
+      "callees": {
+        "LoD/1.09": [
+          "SMemZero"
+        ],
+        "LoD/1.09b": [
+          "SMemZero"
+        ],
+        "LoD/1.09d": [
+          "SMemZero"
+        ],
+        "LoD/1.10": [
+          "SMemZero"
+        ],
+        "LoD/1.11": [
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -30540,73 +34440,28 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "a52ebb438c8fd87a1e94d7a9425117ad"
       }
     },
-    "bnclient.dll_SetGlobalValue11103_A130": {
+    "bnclient.dll_Ordinal_253": {
       "addresses": {
-        "LoD/1.09": "0x6FF0A130",
-        "LoD/1.09b": "0x6FF0A130",
-        "LoD/1.09d": "0x6FF06A60",
-        "LoD/1.10": "0x6FF0ABF0"
+        "LoD/1.09": "0x6FF0BD42",
+        "LoD/1.09b": "0x6FF0BD42",
+        "LoD/1.09d": "0x6FF0BF98",
+        "LoD/1.10": "0x6FF0C4EC",
+        "LoD/1.11": "0x6FF27FE8",
+        "LoD/1.11b": "0x6FF28056",
+        "LoD/1.12a": "0x6FF280E4",
+        "LoD/1.13c": "0x6FF280C0",
+        "LoD/1.13d": "0x6FF280B4"
       },
       "rvas": {
-        "LoD/1.09": "0xA130",
-        "LoD/1.09b": "0xA130",
-        "LoD/1.09d": "0x6A60",
-        "LoD/1.10": "0xABF0"
-      },
-      "sizes": {
-        "LoD/1.09": 7,
-        "LoD/1.09b": 7,
-        "LoD/1.09d": 7,
-        "LoD/1.10": 7
-      },
-      "name": "SetGlobalValue11103",
-      "signature": "void SetGlobalValue11103(uint dwValue)",
-      "calling_convention": "__fastcall",
-      "comment": "Sets a module-level global value (ordinal 11103).\n\nAlgorithm:\n1. Store dwValue to g_dwValue11103\n\nParameters:\n- dwValue (uint): Value to store in global\n\nReturns:\n- void",
-      "name_source": "LoD/1.09",
-      "method": "MNE",
-      "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
-      "basic_block_counts": {
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.09": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.09b": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.09d": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24"
-      }
-    },
-    "bnclient.dll_DeleteFile": {
-      "addresses": {
-        "LoD/1.09": "0x6FF0BCD6",
-        "LoD/1.09b": "0x6FF0BCD6",
-        "LoD/1.09d": "0x6FF0BF2C",
-        "LoD/1.10": "0x6FF1363A",
-        "LoD/1.11": "0x6FF2808A",
-        "LoD/1.11b": "0x6FF280A4",
-        "LoD/1.12a": "0x6FF28162",
-        "LoD/1.13c": "0x6FF28144",
-        "LoD/1.13d": "0x6FF28114"
-      },
-      "rvas": {
-        "LoD/1.09": "0xBCD6",
-        "LoD/1.09b": "0xBCD6",
-        "LoD/1.09d": "0xBF2C",
-        "LoD/1.10": "0x1363A",
-        "LoD/1.11": "0x808A",
-        "LoD/1.11b": "0x80A4",
-        "LoD/1.12a": "0x8162",
-        "LoD/1.13c": "0x8144",
-        "LoD/1.13d": "0x8114"
+        "LoD/1.09": "0xBD42",
+        "LoD/1.09b": "0xBD42",
+        "LoD/1.09d": "0xBF98",
+        "LoD/1.10": "0xC4EC",
+        "LoD/1.11": "0x7FE8",
+        "LoD/1.11b": "0x8056",
+        "LoD/1.12a": "0x80E4",
+        "LoD/1.13c": "0x80C0",
+        "LoD/1.13d": "0x80B4"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -30619,156 +34474,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "DeleteFile",
-      "signature": "int DeleteFile(char * szFilePath)",
-      "calling_convention": "__fastcall",
-      "name_source": "LoD/1.09",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.09": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.09b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.09d": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.10": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_WriteFileThunk": {
-      "addresses": {
-        "LoD/1.09": "0x6FF0BCDC",
-        "LoD/1.09b": "0x6FF0BCDC",
-        "LoD/1.09d": "0x6FF0BF32",
-        "LoD/1.10": "0x6FF13640",
-        "LoD/1.11": "0x6FF28096",
-        "LoD/1.11b": "0x6FF280AA",
-        "LoD/1.12a": "0x6FF28168",
-        "LoD/1.13c": "0x6FF2814A",
-        "LoD/1.13d": "0x6FF2811A"
-      },
-      "rvas": {
-        "LoD/1.09": "0xBCDC",
-        "LoD/1.09b": "0xBCDC",
-        "LoD/1.09d": "0xBF32",
-        "LoD/1.10": "0x13640",
-        "LoD/1.11": "0x8096",
-        "LoD/1.11b": "0x80AA",
-        "LoD/1.12a": "0x8168",
-        "LoD/1.13c": "0x814A",
-        "LoD/1.13d": "0x811A"
-      },
-      "sizes": {
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "WriteFileThunk",
-      "signature": "int WriteFileThunk(void * hFile, void * lpBuffer, uint nNumberOfBytesToWrite, uint * lpNumberOfBytesWritten, void * lpOverlapped)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.09",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.09": 1,
-        "LoD/1.09b": 1,
-        "LoD/1.09d": 1,
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.09": 0,
-        "LoD/1.09b": 0,
-        "LoD/1.09d": 0,
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.09": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.09b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.09d": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.10": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_Ordinal_268": {
-      "addresses": {
-        "LoD/1.09": "0x6FF0BD54",
-        "LoD/1.09b": "0x6FF0BD54",
-        "LoD/1.09d": "0x6FF0BFBC",
-        "LoD/1.10": "0x6FF0C510",
-        "LoD/1.11": "0x6FF27F8E",
-        "LoD/1.11b": "0x6FF27F54",
-        "LoD/1.12a": "0x6FF27FDC",
-        "LoD/1.13c": "0x6FF28006",
-        "LoD/1.13d": "0x6FF27FC4"
-      },
-      "rvas": {
-        "LoD/1.09": "0xBD54",
-        "LoD/1.09b": "0xBD54",
-        "LoD/1.09d": "0xBFBC",
-        "LoD/1.10": "0xC510",
-        "LoD/1.11": "0x7F8E",
-        "LoD/1.11b": "0x7F54",
-        "LoD/1.12a": "0x7FDC",
-        "LoD/1.13c": "0x8006",
-        "LoD/1.13d": "0x7FC4"
-      },
-      "sizes": {
-        "LoD/1.09": 6,
-        "LoD/1.09b": 6,
-        "LoD/1.09d": 6,
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "Ordinal_268",
-      "signature": "undefined Ordinal_268(void)",
+      "name": "Ordinal_253",
+      "signature": "undefined Ordinal_253(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.09",
       "method": "MNE",
@@ -30813,22 +34520,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD5A",
         "LoD/1.09d": "0x6FF0BFAA",
         "LoD/1.10": "0x6FF0C4FE",
-        "LoD/1.11": "0x6FF28048",
-        "LoD/1.11b": "0x6FF28068",
-        "LoD/1.12a": "0x6FF280B4",
-        "LoD/1.13c": "0x6FF28090",
-        "LoD/1.13d": "0x6FF280D2"
+        "LoD/1.11": "0x6FF27F5E",
+        "LoD/1.11b": "0x6FF27F6C",
+        "LoD/1.12a": "0x6FF28012",
+        "LoD/1.13c": "0x6FF27FF4",
+        "LoD/1.13d": "0x6FF27FDC"
       },
       "rvas": {
         "LoD/1.09": "0xBD5A",
         "LoD/1.09b": "0xBD5A",
         "LoD/1.09d": "0xBFAA",
         "LoD/1.10": "0xC4FE",
-        "LoD/1.11": "0x8048",
-        "LoD/1.11b": "0x8068",
-        "LoD/1.12a": "0x80B4",
-        "LoD/1.13c": "0x8090",
-        "LoD/1.13d": "0x80D2"
+        "LoD/1.11": "0x7F5E",
+        "LoD/1.11b": "0x7F6C",
+        "LoD/1.12a": "0x8012",
+        "LoD/1.13c": "0x7FF4",
+        "LoD/1.13d": "0x7FDC"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -30887,22 +34594,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF0BD60",
         "LoD/1.09d": "0x6FF0BFB0",
         "LoD/1.10": "0x6FF0C504",
-        "LoD/1.11": "0x6FF2811A",
-        "LoD/1.11b": "0x6FF28122",
-        "LoD/1.12a": "0x6FF2874E",
-        "LoD/1.13c": "0x6FF2872E",
-        "LoD/1.13d": "0x6FF28734"
+        "LoD/1.11": "0x6FF27F88",
+        "LoD/1.11b": "0x6FF27F96",
+        "LoD/1.12a": "0x6FF27FFA",
+        "LoD/1.13c": "0x6FF27FDC",
+        "LoD/1.13d": "0x6FF28006"
       },
       "rvas": {
         "LoD/1.09": "0xBD60",
         "LoD/1.09b": "0xBD60",
         "LoD/1.09d": "0xBFB0",
         "LoD/1.10": "0xC504",
-        "LoD/1.11": "0x811A",
-        "LoD/1.11b": "0x8122",
-        "LoD/1.12a": "0x874E",
-        "LoD/1.13c": "0x872E",
-        "LoD/1.13d": "0x8734"
+        "LoD/1.11": "0x7F88",
+        "LoD/1.11b": "0x7F96",
+        "LoD/1.12a": "0x7FFA",
+        "LoD/1.13c": "0x7FDC",
+        "LoD/1.13d": "0x8006"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -31168,6 +34875,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:a4d1e6d0c1989f5b91509e7ce1b0af14",
+      "callees": {
+        "LoD/1.09": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -31326,6 +35055,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:c500a55e256796bc9b75fa13bcf639c5",
+      "callees": {
+        "LoD/1.09": [
+          "SStrLen"
+        ],
+        "LoD/1.09b": [
+          "SStrLen"
+        ],
+        "LoD/1.09d": [
+          "SStrLen"
+        ],
+        "LoD/1.10": [
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -31452,6 +35195,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:459167b04b561aa7eea28803e4eb3a52",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\SRP\\\\SRP.cpp\""
@@ -31522,6 +35279,35 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:b05a18f448a1d2ebeb4812c35e897820",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"delete\""
@@ -31783,6 +35569,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:08676b1b7f60087d63eb6cacd30b2a48",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ],
+        "LoD/1.10": [
+          "Ordinal_501",
+          "Ordinal_501"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -31884,33 +35688,21 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF13650",
         "LoD/1.09d": "0x6FF13970",
         "LoD/1.10": "0x6FF13F70",
-        "LoD/1.11": "0x6FF28140",
-        "LoD/1.11b": "0x6FF30FB0",
-        "LoD/1.12a": "0x6FF36D30",
-        "LoD/1.13c": "0x6FF36DF0",
-        "LoD/1.13d": "0x6FF2BB80"
+        "LoD/1.11": "0x6FF2EC90"
       },
       "rvas": {
         "LoD/1.09": "0x13650",
         "LoD/1.09b": "0x13650",
         "LoD/1.09d": "0x13970",
         "LoD/1.10": "0x13F70",
-        "LoD/1.11": "0x8140",
-        "LoD/1.11b": "0x10FB0",
-        "LoD/1.12a": "0x16D30",
-        "LoD/1.13c": "0x16DF0",
-        "LoD/1.13d": "0xBB80"
+        "LoD/1.11": "0xEC90"
       },
       "sizes": {
         "LoD/1.09": 43,
         "LoD/1.09b": 43,
         "LoD/1.09d": 43,
         "LoD/1.10": 43,
-        "LoD/1.11": 43,
-        "LoD/1.11b": 43,
-        "LoD/1.12a": 43,
-        "LoD/1.13c": 43,
-        "LoD/1.13d": 43
+        "LoD/1.11": 43
       },
       "name_source": "LoD/1.09",
       "method": "MNE",
@@ -31920,33 +35712,21 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": 1,
         "LoD/1.09d": 1,
         "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
+        "LoD/1.11": 1
       },
       "loop_counts": {
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.11": 0
       },
       "mnemonic_hashes": {
         "LoD/1.09": "b0752bee787a760f28734023698299a6",
         "LoD/1.09b": "b0752bee787a760f28734023698299a6",
         "LoD/1.09d": "b0752bee787a760f28734023698299a6",
         "LoD/1.10": "b0752bee787a760f28734023698299a6",
-        "LoD/1.11": "b0752bee787a760f28734023698299a6",
-        "LoD/1.11b": "b0752bee787a760f28734023698299a6",
-        "LoD/1.12a": "b0752bee787a760f28734023698299a6",
-        "LoD/1.13c": "b0752bee787a760f28734023698299a6",
-        "LoD/1.13d": "b0752bee787a760f28734023698299a6"
+        "LoD/1.11": "b0752bee787a760f28734023698299a6"
       }
     },
     "bnclient.dll_MNE_d606ab4b80a8": {
@@ -32088,6 +35868,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "STR",
       "index": "STR:331b50f891fcddff1bb380d250f8033b",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_401",
+          "Ordinal_403"
+        ],
+        "LoD/1.10": [
+          "Ordinal_401",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.09": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\SRP\\\\SHA.cpp\""
@@ -32143,6 +35941,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:99c743e51c782213ee3af09b25c4f3ae",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.10": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32184,6 +36000,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:b642edd062271c4cb0ad6958d8d78c78",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_624",
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_624",
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_624",
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.10": [
+          "Ordinal_624",
+          "BigIntShiftLeft_Thunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32225,6 +36059,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:68b06d603dd366420f5ee3e7e67028ae",
+      "callees": {
+        "LoD/1.09": [
+          "StreamReadData",
+          "SMemZero"
+        ],
+        "LoD/1.09b": [
+          "StreamReadData",
+          "SMemZero"
+        ],
+        "LoD/1.09d": [
+          "StreamReadData",
+          "SMemZero"
+        ],
+        "LoD/1.10": [
+          "StreamReadData",
+          "SMemZero"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 3,
         "LoD/1.09b": 3,
@@ -32285,6 +36137,35 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:acd2f1b89e1fada3d5641fb7495ec8ba",
+      "callees": {
+        "LoD/1.09": [
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.09b": [
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.09d": [
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.10": [
+          "GetItemAffixLevelRequirementWrapper"
+        ],
+        "LoD/1.11": [
+          "CompareContainerElementsTriState"
+        ],
+        "LoD/1.11b": [
+          "CompareContainerElementsTriState"
+        ],
+        "LoD/1.12a": [
+          "CompareContainerElementsTriState"
+        ],
+        "LoD/1.13c": [
+          "CompareContainerElementsTriState"
+        ],
+        "LoD/1.13d": [
+          "CompareContainerElementsTriState"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32341,6 +36222,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:2cba96d61a5db9d7a1d348938136a196",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "GetItemAffixLevelRequirementWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "GetItemAffixLevelRequirementWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "GetItemAffixLevelRequirementWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.10": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "GetItemAffixLevelRequirementWrapper",
+          "Ordinal_606"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32382,6 +36289,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:8413e044a8bf531959b317bb672dfc95",
+      "callees": {
+        "LoD/1.09": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09b": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09d": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.10": [
+          "BigIntShiftLeft_Thunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32423,6 +36344,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:8413e044a8bf531959b317bb672dfc95",
+      "callees": {
+        "LoD/1.09": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09b": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.09d": [
+          "BigIntShiftLeft_Thunk"
+        ],
+        "LoD/1.10": [
+          "BigIntShiftLeft_Thunk"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32464,6 +36399,32 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "API",
       "index": "API:80144f36430a9920f4f2d775c8aace9e",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "BigIntMultiplyWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "BigIntMultiplyWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "BigIntMultiplyWrapper",
+          "Ordinal_606"
+        ],
+        "LoD/1.10": [
+          "Ordinal_624",
+          "GetItemAffixLevelRequirementWrapper",
+          "BigIntMultiplyWrapper",
+          "Ordinal_606"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32509,6 +36470,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:893c0b8891aaf5c774a4dd3d44b57e34",
+      "callees": {
+        "LoD/1.09": [
+          "BigIntModSquare"
+        ],
+        "LoD/1.09b": [
+          "BigIntModSquare"
+        ],
+        "LoD/1.09d": [
+          "BigIntModSquare"
+        ],
+        "LoD/1.10": [
+          "BigIntModSquare"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32569,6 +36544,35 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:259e69de0e65044867c468a378151c1d",
+      "callees": {
+        "LoD/1.09": [
+          "Ordinal_606"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_606"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_606"
+        ],
+        "LoD/1.10": [
+          "Ordinal_606"
+        ],
+        "LoD/1.11": [
+          "ProcessContainerValidation"
+        ],
+        "LoD/1.11b": [
+          "ProcessContainerValidation"
+        ],
+        "LoD/1.12a": [
+          "ProcessContainerValidation"
+        ],
+        "LoD/1.13c": [
+          "ProcessContainerValidation"
+        ],
+        "LoD/1.13d": [
+          "ProcessContainerValidation"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09": 1,
         "LoD/1.09b": 1,
@@ -32609,22 +36613,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF15180",
         "LoD/1.09d": "0x6FF154A0",
         "LoD/1.10": "0x6FF15A30",
-        "LoD/1.11": "0x6FF28102",
-        "LoD/1.11b": "0x6FF2810A",
-        "LoD/1.12a": "0x6FF28736",
-        "LoD/1.13c": "0x6FF28716",
-        "LoD/1.13d": "0x6FF2871C"
+        "LoD/1.11": "0x6FF28054",
+        "LoD/1.11b": "0x6FF27FCC",
+        "LoD/1.12a": "0x6FF28060",
+        "LoD/1.13c": "0x6FF280CC",
+        "LoD/1.13d": "0x6FF28078"
       },
       "rvas": {
         "LoD/1.09": "0x15180",
         "LoD/1.09b": "0x15180",
         "LoD/1.09d": "0x154A0",
         "LoD/1.10": "0x15A30",
-        "LoD/1.11": "0x8102",
-        "LoD/1.11b": "0x810A",
-        "LoD/1.12a": "0x8736",
-        "LoD/1.13c": "0x8716",
-        "LoD/1.13d": "0x871C"
+        "LoD/1.11": "0x8054",
+        "LoD/1.11b": "0x7FCC",
+        "LoD/1.12a": "0x8060",
+        "LoD/1.13c": "0x80CC",
+        "LoD/1.13d": "0x8078"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -32677,28 +36681,28 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_Ordinal_624": {
+    "bnclient.dll_BigIntShiftLeft_Thunk": {
       "addresses": {
-        "LoD/1.09": "0x6FF15186",
-        "LoD/1.09b": "0x6FF15186",
-        "LoD/1.09d": "0x6FF154A6",
-        "LoD/1.10": "0x6FF15A36",
-        "LoD/1.11": "0x6FF2812C",
-        "LoD/1.11b": "0x6FF28134",
-        "LoD/1.12a": "0x6FF28760",
-        "LoD/1.13c": "0x6FF28740",
-        "LoD/1.13d": "0x6FF28746"
+        "LoD/1.09": "0x6FF1518C",
+        "LoD/1.09b": "0x6FF1518C",
+        "LoD/1.09d": "0x6FF154C4",
+        "LoD/1.10": "0x6FF15A5A",
+        "LoD/1.11": "0x6FF28018",
+        "LoD/1.11b": "0x6FF28008",
+        "LoD/1.12a": "0x6FF2809C",
+        "LoD/1.13c": "0x6FF2802A",
+        "LoD/1.13d": "0x6FF2806C"
       },
       "rvas": {
-        "LoD/1.09": "0x15186",
-        "LoD/1.09b": "0x15186",
-        "LoD/1.09d": "0x154A6",
-        "LoD/1.10": "0x15A36",
-        "LoD/1.11": "0x812C",
-        "LoD/1.11b": "0x8134",
-        "LoD/1.12a": "0x8760",
-        "LoD/1.13c": "0x8740",
-        "LoD/1.13d": "0x8746"
+        "LoD/1.09": "0x1518C",
+        "LoD/1.09b": "0x1518C",
+        "LoD/1.09d": "0x154C4",
+        "LoD/1.10": "0x15A5A",
+        "LoD/1.11": "0x8018",
+        "LoD/1.11b": "0x8008",
+        "LoD/1.12a": "0x809C",
+        "LoD/1.13c": "0x802A",
+        "LoD/1.13d": "0x806C"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -32711,8 +36715,156 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_624",
-      "signature": "undefined Ordinal_624(void)",
+      "name": "BigIntShiftLeft_Thunk",
+      "signature": "void BigIntShiftLeft_Thunk(uint * pDest, uint * pSrc, uint dwShiftBits)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.09",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.09": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.09b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.09d": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.10": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_StreamReadData": {
+      "addresses": {
+        "LoD/1.09": "0x6FF15192",
+        "LoD/1.09b": "0x6FF15192",
+        "LoD/1.09d": "0x6FF154B2",
+        "LoD/1.10": "0x6FF15A42",
+        "LoD/1.11": "0x6FF27FDC",
+        "LoD/1.11b": "0x6FF27FD8",
+        "LoD/1.12a": "0x6FF28042",
+        "LoD/1.13c": "0x6FF2807E",
+        "LoD/1.13d": "0x6FF28084"
+      },
+      "rvas": {
+        "LoD/1.09": "0x15192",
+        "LoD/1.09b": "0x15192",
+        "LoD/1.09d": "0x154B2",
+        "LoD/1.10": "0x15A42",
+        "LoD/1.11": "0x7FDC",
+        "LoD/1.11b": "0x7FD8",
+        "LoD/1.12a": "0x8042",
+        "LoD/1.13c": "0x807E",
+        "LoD/1.13d": "0x8084"
+      },
+      "sizes": {
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "StreamReadData",
+      "signature": "void StreamReadData(void * pStream, void * pDest, dword nMaxBytes, dword * pnBytesRead)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.09",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.09": 0,
+        "LoD/1.09b": 0,
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.09": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.09b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.09d": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.10": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_ProcessInventoryItem": {
+      "addresses": {
+        "LoD/1.09": "0x6FF1519E",
+        "LoD/1.09b": "0x6FF1519E",
+        "LoD/1.09d": "0x6FF154BE",
+        "LoD/1.10": "0x6FF15A4E",
+        "LoD/1.11": "0x6FF27F6A",
+        "LoD/1.11b": "0x6FF27F78",
+        "LoD/1.12a": "0x6FF27FF4",
+        "LoD/1.13c": "0x6FF27FD6",
+        "LoD/1.13d": "0x6FF27FE8"
+      },
+      "rvas": {
+        "LoD/1.09": "0x1519E",
+        "LoD/1.09b": "0x1519E",
+        "LoD/1.09d": "0x154BE",
+        "LoD/1.10": "0x15A4E",
+        "LoD/1.11": "0x7F6A",
+        "LoD/1.11b": "0x7F78",
+        "LoD/1.12a": "0x7FF4",
+        "LoD/1.13c": "0x7FD6",
+        "LoD/1.13d": "0x7FE8"
+      },
+      "sizes": {
+        "LoD/1.09": 6,
+        "LoD/1.09b": 6,
+        "LoD/1.09d": 6,
+        "LoD/1.10": 6,
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "ProcessInventoryItem",
+      "signature": "undefined ProcessInventoryItem(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.09",
       "method": "MNE",
@@ -32751,28 +36903,28 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_OpenFileWithDefaultArchive": {
+    "bnclient.dll_BigIntShiftLeft_Thunk_51A4": {
       "addresses": {
-        "LoD/1.09": "0x6FF15198",
-        "LoD/1.09b": "0x6FF15198",
-        "LoD/1.09d": "0x6FF154B8",
-        "LoD/1.10": "0x6FF15A48",
-        "LoD/1.11": "0x6FF27FAC",
-        "LoD/1.11b": "0x6FF28020",
-        "LoD/1.12a": "0x6FF280A2",
-        "LoD/1.13c": "0x6FF28054",
-        "LoD/1.13d": "0x6FF28018"
+        "LoD/1.09": "0x6FF151A4",
+        "LoD/1.09b": "0x6FF151A4",
+        "LoD/1.09d": "0x6FF154AC",
+        "LoD/1.10": "0x6FF15A54",
+        "LoD/1.11": "0x6FF2804E",
+        "LoD/1.11b": "0x6FF27FC6",
+        "LoD/1.12a": "0x6FF280F0",
+        "LoD/1.13c": "0x6FF28072",
+        "LoD/1.13d": "0x6FF28072"
       },
       "rvas": {
-        "LoD/1.09": "0x15198",
-        "LoD/1.09b": "0x15198",
-        "LoD/1.09d": "0x154B8",
-        "LoD/1.10": "0x15A48",
-        "LoD/1.11": "0x7FAC",
-        "LoD/1.11b": "0x8020",
-        "LoD/1.12a": "0x80A2",
-        "LoD/1.13c": "0x8054",
-        "LoD/1.13d": "0x8018"
+        "LoD/1.09": "0x151A4",
+        "LoD/1.09b": "0x151A4",
+        "LoD/1.09d": "0x154AC",
+        "LoD/1.10": "0x15A54",
+        "LoD/1.11": "0x804E",
+        "LoD/1.11b": "0x7FC6",
+        "LoD/1.12a": "0x80F0",
+        "LoD/1.13c": "0x8072",
+        "LoD/1.13d": "0x8072"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -32785,8 +36937,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "OpenFileWithDefaultArchive",
-      "signature": "uint OpenFileWithDefaultArchive(UnitAny * pItem, int * pInvInfo)",
+      "name": "BigIntShiftLeft_Thunk",
+      "signature": "void BigIntShiftLeft_Thunk(uint * pDest, uint * pSrc, uint dwShiftBits)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.09",
       "method": "MNE",
@@ -32831,22 +36983,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09b": "0x6FF151B6",
         "LoD/1.09d": "0x6FF154D6",
         "LoD/1.10": "0x6FF15A66",
-        "LoD/1.11": "0x6FF280CC",
-        "LoD/1.11b": "0x6FF280DA",
-        "LoD/1.12a": "0x6FF28144",
-        "LoD/1.13c": "0x6FF28126",
-        "LoD/1.13d": "0x6FF2814A"
+        "LoD/1.11": "0x6FF27FA6",
+        "LoD/1.11b": "0x6FF27FE4",
+        "LoD/1.12a": "0x6FF28030",
+        "LoD/1.13c": "0x6FF2804E",
+        "LoD/1.13d": "0x6FF2803C"
       },
       "rvas": {
         "LoD/1.09": "0x151B6",
         "LoD/1.09b": "0x151B6",
         "LoD/1.09d": "0x154D6",
         "LoD/1.10": "0x15A66",
-        "LoD/1.11": "0x80CC",
-        "LoD/1.11b": "0x80DA",
-        "LoD/1.12a": "0x8144",
-        "LoD/1.13c": "0x8126",
-        "LoD/1.13d": "0x814A"
+        "LoD/1.11": "0x7FA6",
+        "LoD/1.11b": "0x7FE4",
+        "LoD/1.12a": "0x8030",
+        "LoD/1.13c": "0x804E",
+        "LoD/1.13d": "0x803C"
       },
       "sizes": {
         "LoD/1.09": 6,
@@ -32904,43 +37056,58 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09d": "0x6FF02400",
         "LoD/1.10": "0x6FF02420",
         "LoD/1.11": "0x6FF32C90",
-        "LoD/1.11b": "0x6FF332E0"
+        "LoD/1.11b": "0x6FF2F880",
+        "LoD/1.12a": "0x6FF35300",
+        "LoD/1.13c": "0x6FF30D80",
+        "LoD/1.13d": "0x6FF2C360"
       },
       "rvas": {
         "LoD/1.09d": "0x2400",
         "LoD/1.10": "0x2420",
         "LoD/1.11": "0x12C90",
-        "LoD/1.11b": "0x132E0"
+        "LoD/1.11b": "0xF880",
+        "LoD/1.12a": "0x15300",
+        "LoD/1.13c": "0x10D80",
+        "LoD/1.13d": "0xC360"
       },
       "sizes": {
         "LoD/1.09d": 13,
         "LoD/1.10": 13,
         "LoD/1.11": 13,
-        "LoD/1.11b": 13
+        "LoD/1.11b": 13,
+        "LoD/1.12a": 13,
+        "LoD/1.13c": 13,
+        "LoD/1.13d": 13
       },
-      "signature": "uint GetGameStateAndResult(uint * pOutState)",
-      "calling_convention": "__fastcall",
-      "comment": "Retrieve current game state and result code.\n\nAlgorithm:\n1. Load global game state value from g_dwGameState\n2. Store retrieved state value to output parameter via ECX\n3. Load global game result code from g_dwGameResult\n4. Return result code in EAX\n\nParameters:\npOutState (uint *): Pointer to uint that receives current game state value. Passed in ECX (__fastcall).\n\nReturns:\nCurrent game result code (uint). Zero indicates success, non-zero for error/special state codes.\n\nSpecial Cases:\n- Both globals are persistent state values maintained by game loop\n- Output parameter provides current state snapshot at call time",
-      "name_source": "LoD/1.11b",
+      "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:68757573fcf24a924b78d65e614030e1",
       "basic_block_counts": {
         "LoD/1.09d": 1,
         "LoD/1.10": 1,
         "LoD/1.11": 1,
-        "LoD/1.11b": 1
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
       },
       "loop_counts": {
         "LoD/1.09d": 0,
         "LoD/1.10": 0,
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.09d": "68757573fcf24a924b78d65e614030e1",
         "LoD/1.10": "68757573fcf24a924b78d65e614030e1",
         "LoD/1.11": "68757573fcf24a924b78d65e614030e1",
-        "LoD/1.11b": "68757573fcf24a924b78d65e614030e1"
+        "LoD/1.11b": "68757573fcf24a924b78d65e614030e1",
+        "LoD/1.12a": "68757573fcf24a924b78d65e614030e1",
+        "LoD/1.13c": "68757573fcf24a924b78d65e614030e1",
+        "LoD/1.13d": "68757573fcf24a924b78d65e614030e1"
       }
     },
     "bnclient.dll_MNE_70b44c5d7390": {
@@ -33081,6 +37248,34 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:cc4dfa42f6422c4fadca3f7215b81521",
+      "callees": {
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "Ordinal_266",
+          "QueueLogMessage",
+          "Ordinal_251",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "...+6 more"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "Ordinal_266",
+          "Ordinal_10029",
+          "Ordinal_251",
+          "Ordinal_267",
+          "ReadStreamData",
+          "Ordinal_253",
+          "Ordinal_252",
+          "...+6 more"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"Processing Bnserver.ini file\"",
@@ -33114,30 +37309,63 @@ var FUNCTIONS_Bnclient_dll = {
     },
     "bnclient.dll_API_c109103b4f1c": {
       "addresses": {
-        "LoD/1.09d": "0x6FF03AF0"
+        "LoD/1.09d": "0x6FF03AF0",
+        "LoD/1.10": "0x6FF03B00"
       },
       "rvas": {
-        "LoD/1.09d": "0x3AF0"
+        "LoD/1.09d": "0x3AF0",
+        "LoD/1.10": "0x3B00"
       },
       "sizes": {
-        "LoD/1.09d": 309
+        "LoD/1.09d": 309,
+        "LoD/1.10": 265
       },
       "name_source": "LoD/1.09d",
       "method": "API",
       "index": "API:c109103b4f1cd1d6ebe495d719e85f5b",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_403",
+          "Ordinal_253"
+        ],
+        "LoD/1.10": [
+          "Ordinal_268",
+          "Ordinal_265",
+          "Ordinal_401",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "Ordinal_403",
+          "Ordinal_253"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2BNClient\\\\BnDownload...."
+        ],
+        "LoD/1.10": [
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie..."
         ]
       },
       "basic_block_counts": {
-        "LoD/1.09d": 10
+        "LoD/1.09d": 10,
+        "LoD/1.10": 12
       },
       "loop_counts": {
-        "LoD/1.09d": 0
+        "LoD/1.09d": 0,
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.09d": "ee6d841a0cf1deb6bab134818ae65427"
+        "LoD/1.09d": "ee6d841a0cf1deb6bab134818ae65427",
+        "LoD/1.10": "886d308ae7be0cd889d02f9300c5c746"
       }
     },
     "bnclient.dll_STR_b75eb2fb7d21": {
@@ -33156,6 +37384,30 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09d",
       "method": "STR",
       "index": "STR:b75eb2fb7d2126b7876dbd481afe015d",
+      "callees": {
+        "LoD/1.09d": [
+          "Ordinal_266",
+          "QueueLogMessage",
+          "Ordinal_251",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_252",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_266",
+          "Ordinal_10029",
+          "Ordinal_251",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_501",
+          "Ordinal_252",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.09d": [
           "\"d2client.dll\"",
@@ -33200,6 +37452,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:4ba7ae8d106dde75a889d8718e7d43a4",
+      "callees": {
+        "LoD/1.09d": [
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.09d": 1
       },
@@ -33210,24 +37467,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.09d": "4ba7ae8d106dde75a889d8718e7d43a4"
       }
     },
-    "bnclient.dll_Ordinal_267": {
+    "bnclient.dll_Ordinal_10227": {
       "addresses": {
-        "LoD/1.09d": "0x6FF0BFA4",
-        "LoD/1.10": "0x6FF0C4F8",
-        "LoD/1.11": "0x6FF27F4C",
-        "LoD/1.11b": "0x6FF27F5A",
-        "LoD/1.12a": "0x6FF28000",
-        "LoD/1.13c": "0x6FF27FE2",
-        "LoD/1.13d": "0x6FF27FCA"
+        "LoD/1.09d": "0x6FF0BEF0",
+        "LoD/1.10": "0x6FF135F8",
+        "LoD/1.11": "0x6FF280A8",
+        "LoD/1.11b": "0x6FF280B6",
+        "LoD/1.12a": "0x6FF28120",
+        "LoD/1.13c": "0x6FF28102",
+        "LoD/1.13d": "0x6FF28126"
       },
       "rvas": {
-        "LoD/1.09d": "0xBFA4",
-        "LoD/1.10": "0xC4F8",
-        "LoD/1.11": "0x7F4C",
-        "LoD/1.11b": "0x7F5A",
-        "LoD/1.12a": "0x8000",
-        "LoD/1.13c": "0x7FE2",
-        "LoD/1.13d": "0x7FCA"
+        "LoD/1.09d": "0xBEF0",
+        "LoD/1.10": "0x135F8",
+        "LoD/1.11": "0x80A8",
+        "LoD/1.11b": "0x80B6",
+        "LoD/1.12a": "0x8120",
+        "LoD/1.13c": "0x8102",
+        "LoD/1.13d": "0x8126"
       },
       "sizes": {
         "LoD/1.09d": 6,
@@ -33238,8 +37495,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_267",
-      "signature": "undefined Ordinal_267(void)",
+      "name": "Ordinal_10227",
+      "signature": "undefined Ordinal_10227(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.09d",
       "method": "MNE",
@@ -33272,24 +37529,24 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_Ordinal_548": {
+    "bnclient.dll_Ordinal_267": {
       "addresses": {
-        "LoD/1.09d": "0x6FF0C004",
-        "LoD/1.10": "0x6FF0C56A",
-        "LoD/1.11": "0x6FF28072",
-        "LoD/1.11b": "0x6FF2807A",
-        "LoD/1.12a": "0x6FF28102",
-        "LoD/1.13c": "0x6FF280EA",
-        "LoD/1.13d": "0x6FF280EA"
+        "LoD/1.09d": "0x6FF0BFA4",
+        "LoD/1.10": "0x6FF0C4F8",
+        "LoD/1.11": "0x6FF27F8E",
+        "LoD/1.11b": "0x6FF27F54",
+        "LoD/1.12a": "0x6FF27FDC",
+        "LoD/1.13c": "0x6FF28006",
+        "LoD/1.13d": "0x6FF27FC4"
       },
       "rvas": {
-        "LoD/1.09d": "0xC004",
-        "LoD/1.10": "0xC56A",
-        "LoD/1.11": "0x8072",
-        "LoD/1.11b": "0x807A",
-        "LoD/1.12a": "0x8102",
-        "LoD/1.13c": "0x80EA",
-        "LoD/1.13d": "0x80EA"
+        "LoD/1.09d": "0xBFA4",
+        "LoD/1.10": "0xC4F8",
+        "LoD/1.11": "0x7F8E",
+        "LoD/1.11b": "0x7F54",
+        "LoD/1.12a": "0x7FDC",
+        "LoD/1.13c": "0x8006",
+        "LoD/1.13d": "0x7FC4"
       },
       "sizes": {
         "LoD/1.09d": 6,
@@ -33300,8 +37557,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_548",
-      "signature": "undefined Ordinal_548(void)",
+      "name": "Ordinal_267",
+      "signature": "undefined Ordinal_267(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.09d",
       "method": "MNE",
@@ -33429,6 +37686,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:b971a7136b1dcd60f532df35ec55e166",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"delete\""
@@ -33583,30 +37860,15 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "d5c8453c3e2bb4ff6f437d3d747d2c97"
       }
     },
-    "bnclient.dll_CheckServerConnectionAndCall_2200": {
+    "bnclient.dll_CheckServerConnectionAndCall_2220": {
       "addresses": {
-        "LoD/1.10": "0x6FF02200",
-        "LoD/1.11": "0x6FF37542",
-        "LoD/1.11b": "0x6FF37512",
-        "LoD/1.12a": "0x6FF383C2",
-        "LoD/1.13c": "0x6FF383A2",
-        "LoD/1.13d": "0x6FF382E2"
+        "LoD/1.10": "0x6FF02220"
       },
       "rvas": {
-        "LoD/1.10": "0x2200",
-        "LoD/1.11": "0x17542",
-        "LoD/1.11b": "0x17512",
-        "LoD/1.12a": "0x183C2",
-        "LoD/1.13c": "0x183A2",
-        "LoD/1.13d": "0x182E2"
+        "LoD/1.10": "0x2220"
       },
       "sizes": {
-        "LoD/1.10": 24,
-        "LoD/1.11": 24,
-        "LoD/1.11b": 24,
-        "LoD/1.12a": 24,
-        "LoD/1.13c": 24,
-        "LoD/1.13d": 24
+        "LoD/1.10": 24
       },
       "name": "CheckServerConnectionAndCall",
       "signature": "uint CheckServerConnectionAndCall(uint dwReserved, uint dwData)",
@@ -33615,29 +37877,19 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:c5ea4b7d18ee114fccc74de0e6ed9db7",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10262"
+        ]
+      },
       "basic_block_counts": {
-        "LoD/1.10": 3,
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
+        "LoD/1.10": 3
       },
       "loop_counts": {
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.10": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.10": "c5ea4b7d18ee114fccc74de0e6ed9db7",
-        "LoD/1.11": "226bd7b7660f7c129864f3453c504df2",
-        "LoD/1.11b": "226bd7b7660f7c129864f3453c504df2",
-        "LoD/1.12a": "226bd7b7660f7c129864f3453c504df2",
-        "LoD/1.13c": "226bd7b7660f7c129864f3453c504df2",
-        "LoD/1.13d": "226bd7b7660f7c129864f3453c504df2"
+        "LoD/1.10": "c5ea4b7d18ee114fccc74de0e6ed9db7"
       }
     },
     "bnclient.dll_MNE_0b5a1f392104": {
@@ -33693,120 +37945,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "0b5a1f392104b6f2fb074ed485325b03"
       }
     },
-    "bnclient.dll_GetLastError_22A0": {
-      "addresses": {
-        "LoD/1.10": "0x6FF022A0",
-        "LoD/1.11": "0x6FF34580",
-        "LoD/1.11b": "0x6FF2F5D0",
-        "LoD/1.12a": "0x6FF331C0",
-        "LoD/1.13c": "0x6FF2E920",
-        "LoD/1.13d": "0x6FF2CDF0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x22A0",
-        "LoD/1.11": "0x14580",
-        "LoD/1.11b": "0xF5D0",
-        "LoD/1.12a": "0x131C0",
-        "LoD/1.13c": "0xE920",
-        "LoD/1.13d": "0xCDF0"
-      },
-      "sizes": {
-        "LoD/1.10": 6,
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "GetLastError",
-      "signature": "DWORD GetLastError(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Returns the last Storm error code.\n\nAlgorithm:\n1. Read the global error code variable (g_dwLastError)\n2. Return the value to caller\n\nParameters:\n- None (void)\n\nReturns:\n- Last error code set by SetLastError or 0 if none\n\nRelated Functions:\n- Ordinal_465: Sets the error code (SetLastError wrapper)",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
-      "basic_block_counts": {
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
-      }
-    },
-    "bnclient.dll_SetGlobalValue11103_22B0": {
-      "addresses": {
-        "LoD/1.10": "0x6FF022B0",
-        "LoD/1.11": "0x6FF34450",
-        "LoD/1.11b": "0x6FF31180",
-        "LoD/1.12a": "0x6FF2F740",
-        "LoD/1.13c": "0x6FF37410",
-        "LoD/1.13d": "0x6FF34C00"
-      },
-      "rvas": {
-        "LoD/1.10": "0x22B0",
-        "LoD/1.11": "0x14450",
-        "LoD/1.11b": "0x11180",
-        "LoD/1.12a": "0xF740",
-        "LoD/1.13c": "0x17410",
-        "LoD/1.13d": "0x14C00"
-      },
-      "sizes": {
-        "LoD/1.10": 7,
-        "LoD/1.11": 7,
-        "LoD/1.11b": 7,
-        "LoD/1.12a": 7,
-        "LoD/1.13c": 7,
-        "LoD/1.13d": 7
-      },
-      "name": "SetGlobalValue11103",
-      "signature": "void SetGlobalValue11103(uint dwValue)",
-      "calling_convention": "__fastcall",
-      "comment": "Sets a module-level global value (ordinal 11103).\n\nAlgorithm:\n1. Store dwValue to g_dwValue11103\n\nParameters:\n- dwValue (uint): Value to store in global\n\nReturns:\n- void",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
-      "basic_block_counts": {
-        "LoD/1.10": 1,
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.10": 0,
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.11": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.11b": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.12a": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.13c": "305c32d33191c1b22ce2562362c5fa24",
-        "LoD/1.13d": "305c32d33191c1b22ce2562362c5fa24"
-      }
-    },
     "bnclient.dll_MNE_62f84ba48534": {
       "addresses": {
         "LoD/1.10": "0x6FF02840"
@@ -33856,18 +37994,18 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_fdad073544ac": {
       "addresses": {
         "LoD/1.10": "0x6FF029A0",
-        "LoD/1.11": "0x6FF37720",
+        "LoD/1.11": "0x6FF3772F",
         "LoD/1.11b": "0x6FF376F0",
         "LoD/1.12a": "0x6FF385A0",
-        "LoD/1.13c": "0x6FF38580",
+        "LoD/1.13c": "0x6FF3858F",
         "LoD/1.13d": "0x6FF384CF"
       },
       "rvas": {
         "LoD/1.10": "0x29A0",
-        "LoD/1.11": "0x17720",
+        "LoD/1.11": "0x1772F",
         "LoD/1.11b": "0x176F0",
         "LoD/1.12a": "0x185A0",
-        "LoD/1.13c": "0x18580",
+        "LoD/1.13c": "0x1858F",
         "LoD/1.13d": "0x184CF"
       },
       "sizes": {
@@ -33879,7 +38017,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": 5
       },
       "name": "thunk_FUN_6ff069e0",
-      "signature": "void Unwind@6ff37720(void)",
+      "signature": "void Unwind@6ff3772f(void)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -33977,6 +38115,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:fbd2efc867f96da09100f0c13ae8864a",
+      "callees": {
+        "LoD/1.10": [
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 1
       },
@@ -33985,34 +38128,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.10": "fbd2efc867f96da09100f0c13ae8864a"
-      }
-    },
-    "bnclient.dll_API_c109103b4f1c_3B00": {
-      "addresses": {
-        "LoD/1.10": "0x6FF03B00"
-      },
-      "rvas": {
-        "LoD/1.10": "0x3B00"
-      },
-      "sizes": {
-        "LoD/1.10": 265
-      },
-      "name_source": "LoD/1.10",
-      "method": "API",
-      "index": "API:c109103b4f1cd1d6ebe495d719e85f5b",
-      "strings": {
-        "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie..."
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.10": 12
-      },
-      "loop_counts": {
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "886d308ae7be0cd889d02f9300c5c746"
       }
     },
     "bnclient.dll_MNE_c6a9215b06a8": {
@@ -34055,6 +38170,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:a4d1e6d0c1989f5b91509e7ce1b0af14",
+      "callees": {
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "SStrLen"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 15
       },
@@ -34157,6 +38279,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "d903856acfed73be6028d01853e2bedf"
       }
     },
+    "bnclient.dll_DestroyAutomapPlayerIconLine_66C0": {
+      "addresses": {
+        "LoD/1.10": "0x6FF066C0"
+      },
+      "rvas": {
+        "LoD/1.10": "0x66C0"
+      },
+      "sizes": {
+        "LoD/1.10": 10
+      },
+      "name": "DestroyAutomapPlayerIconLine",
+      "signature": "void DestroyAutomapPlayerIconLine(void)",
+      "calling_convention": "__fastcall",
+      "comment": "Destructor for AutomapPlayerIconLine object\n\nAlgorithm:\n1. Reset vtable pointer to g_AutomapPlayerIconLineDataEnd (0x6fba8620)\n2. Call base class destructor at 0x6fb1de50\n3. Return to caller\n\nParameters:\n- pThis (AutomapPlayerIconLine *): Pointer to object being destroyed\n  IMPLICIT: ECX register contains 'this' pointer (__fastcall convention)\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- Function is tail-call optimized (JMP instead of CALL/RET at 0x6faf97b6)\n- Base destructor sets vtable to PTR_LAB_6fba90fc (0x6fba90fc)\n- This is part of C++ destructor chain for automap player icon rendering\n\nVtable References:\n- 0x6fba8620: g_AutomapPlayerIconLineDataEnd vtable for this class\n- 0x6fba90fc: PTR_LAB_6fba90fc vtable for base class\n\nRelated Functions:\n- Constructor: FUN_6faf96c0 (initializes object with vtable)\n- Base Destructor: FUN_6fb1de50\n- Caller: FUN_6faf9780 (wrapper destructor with deallocation)\n- Usages: RenderAutomapPlayerMarkers, RenderAutomapPlayerIcon",
+      "name_source": "LoD/1.10",
+      "method": "MNE",
+      "index": "MNE:4a81966979e45325610a190ba9a761b5",
+      "basic_block_counts": {
+        "LoD/1.10": 1
+      },
+      "loop_counts": {
+        "LoD/1.10": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.10": "4a81966979e45325610a190ba9a761b5"
+      }
+    },
     "bnclient.dll_FreeSourceBuffer": {
       "addresses": {
         "LoD/1.10": "0x6FF066D0",
@@ -34189,6 +38338,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:312b4ad2d1d805e200c10b6d0fbe02ac",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUItem@NewsTable@@\""
@@ -34292,6 +38461,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f17bdc134d984988a231baad11399d03",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie...",
@@ -34338,6 +38512,15 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:e03fcd4650790a2771b79499e37f524c",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"news load: bad item count %u\"",
@@ -34386,6 +38569,26 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:4c6345306568b6627bea60dc3b87b88e",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403"
+        ],
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUItem@NewsTable@@\""
@@ -34444,6 +38647,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:9855bf002bf04fc69f1fda1f22cbd126",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"numItems <= BATTLENETCHAT_NEWSTABLE_MAXITEMS\"",
@@ -34475,6 +38686,12 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:b224d7889c5087907e18d1e1ec5c86f7",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_403",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"delete\"",
@@ -34504,6 +38721,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:f5b5b42d2d1fed227d4fa043a66edba4",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_405",
+          "Ordinal_401",
+          "Ordinal_403"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\".?AUItem@NewsTable@@\""
@@ -34519,32 +38743,31 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "4510d850603a149e41e3c7a7ec4baaef"
       }
     },
-    "bnclient.dll_STR_9d271aff40ce_7510": {
+    "bnclient.dll_SetGlobalValue11103_71A0": {
       "addresses": {
-        "LoD/1.10": "0x6FF07510"
+        "LoD/1.10": "0x6FF071A0"
       },
       "rvas": {
-        "LoD/1.10": "0x7510"
+        "LoD/1.10": "0x71A0"
       },
       "sizes": {
-        "LoD/1.10": 51
+        "LoD/1.10": 7
       },
+      "name": "SetGlobalValue11103",
+      "signature": "void SetGlobalValue11103(uint dwValue)",
+      "calling_convention": "__fastcall",
+      "comment": "Sets a module-level global value (ordinal 11103).\n\nAlgorithm:\n1. Store dwValue to g_dwValue11103\n\nParameters:\n- dwValue (uint): Value to store in global\n\nReturns:\n- void",
       "name_source": "LoD/1.10",
-      "method": "STR",
-      "index": "STR:9d271aff40cebc5ad4cb963431488c53",
-      "strings": {
-        "LoD/1.10": [
-          "\"Failed to send Realm List\\n\""
-        ]
-      },
+      "method": "MNE",
+      "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
       "basic_block_counts": {
-        "LoD/1.10": 3
+        "LoD/1.10": 1
       },
       "loop_counts": {
         "LoD/1.10": 0
       },
       "mnemonic_hashes": {
-        "LoD/1.10": "c1ebf0371b43c0e87de03e4247f7d9f3"
+        "LoD/1.10": "305c32d33191c1b22ce2562362c5fa24"
       }
     },
     "bnclient.dll_API_693f93c2b6bb": {
@@ -34566,6 +38789,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:693f93c2b6bbff67d8d6ace59af989a3",
+      "callees": {
+        "LoD/1.10": [
+          "SEventRegisterJsmsHandler",
+          "Ordinal_902"
+        ],
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 6,
         "LoD/1.11": 6,
@@ -34582,12 +38819,12 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "6b554ebd3a4fa3e4bac87a842d116b81"
       }
     },
-    "bnclient.dll_MNE_277fdb584f87_79E0": {
+    "bnclient.dll_MNE_277fdb584f87_79C0": {
       "addresses": {
-        "LoD/1.10": "0x6FF079E0"
+        "LoD/1.10": "0x6FF079C0"
       },
       "rvas": {
-        "LoD/1.10": "0x79E0"
+        "LoD/1.10": "0x79C0"
       },
       "sizes": {
         "LoD/1.10": 17
@@ -34618,6 +38855,16 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:4ae32613ca2d913aaab81cfb1a2b93a7",
+      "callees": {
+        "LoD/1.10": [
+          "SStrLen",
+          "SStrLen",
+          "FogMemAlloc",
+          "Ordinal_501",
+          "Ordinal_501",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2BNClie..."
@@ -34661,6 +38908,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:d6f72e50c1055160dadfc265c56aa3a3",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "SStrLen",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "DeallocateMemoryBlock",
+          "CalculateStringLength",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "DeallocateMemoryBlock",
+          "CalculateStringLength",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "DeallocateMemoryBlock",
+          "CalculateStringLength",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "DeallocateMemoryBlock",
+          "CalculateStringLength",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "DeallocateMemoryBlock",
+          "CalculateStringLength",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"len <= MAXSTRINGLENGTH\"",
@@ -34721,6 +39005,16 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:45ad0e930435cef6f5527d6b0297023d",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "FogAssert",
+          "SStrLen",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"szAccountName[0]\"",
@@ -34771,6 +39065,83 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:34afb5d5219e1be2308d0f77a0541bb9",
+      "callees": {
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "SStrLen",
+          "FogAssert",
+          "SStrLen",
+          "FogAssert",
+          "SStrLen",
+          "FogAssert"
+        ],
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegistryValue",
+          "?WriteDefaultGatewayList@BNGatewayAccess@@AAEXXZ",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegistryValue",
+          "?WriteDefaultGatewayList@BNGatewayAccess@@AAEXXZ",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegistryValue",
+          "?WriteDefaultGatewayList@BNGatewayAccess@@AAEXXZ",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegistryValue",
+          "?WriteDefaultGatewayList@BNGatewayAccess@@AAEXXZ",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "...+4 more"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?GetGatewayList@BNGatewayAccess@@AAEXPBD@Z",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "DeleteRegistryValue",
+          "?WriteDefaultGatewayList@BNGatewayAccess@@AAEXXZ",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "...+4 more"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"szAccountName[0]\"",
@@ -34877,6 +39248,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3a966d378a126a76a245d88e9b060455",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10263"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 3,
         "LoD/1.11": 3,
@@ -34900,33 +39276,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "3a966d378a126a76a245d88e9b060455",
         "LoD/1.13c": "3a966d378a126a76a245d88e9b060455",
         "LoD/1.13d": "3a966d378a126a76a245d88e9b060455"
-      }
-    },
-    "bnclient.dll_DestroyAutomapPlayerIconLine_83C0": {
-      "addresses": {
-        "LoD/1.10": "0x6FF083C0"
-      },
-      "rvas": {
-        "LoD/1.10": "0x83C0"
-      },
-      "sizes": {
-        "LoD/1.10": 10
-      },
-      "name": "DestroyAutomapPlayerIconLine",
-      "signature": "void DestroyAutomapPlayerIconLine(void)",
-      "calling_convention": "__fastcall",
-      "comment": "Destructor for AutomapPlayerIconLine object\n\nAlgorithm:\n1. Reset vtable pointer to g_AutomapPlayerIconLineDataEnd (0x6fba8620)\n2. Call base class destructor at 0x6fb1de50\n3. Return to caller\n\nParameters:\n- pThis (AutomapPlayerIconLine *): Pointer to object being destroyed\n  IMPLICIT: ECX register contains 'this' pointer (__fastcall convention)\n\nReturns:\n- void: No return value\n\nSpecial Cases:\n- Function is tail-call optimized (JMP instead of CALL/RET at 0x6faf97b6)\n- Base destructor sets vtable to PTR_LAB_6fba90fc (0x6fba90fc)\n- This is part of C++ destructor chain for automap player icon rendering\n\nVtable References:\n- 0x6fba8620: g_AutomapPlayerIconLineDataEnd vtable for this class\n- 0x6fba90fc: PTR_LAB_6fba90fc vtable for base class\n\nRelated Functions:\n- Constructor: FUN_6faf96c0 (initializes object with vtable)\n- Base Destructor: FUN_6fb1de50\n- Caller: FUN_6faf9780 (wrapper destructor with deallocation)\n- Usages: RenderAutomapPlayerMarkers, RenderAutomapPlayerIcon",
-      "name_source": "LoD/1.10",
-      "method": "MNE",
-      "index": "MNE:4a81966979e45325610a190ba9a761b5",
-      "basic_block_counts": {
-        "LoD/1.10": 1
-      },
-      "loop_counts": {
-        "LoD/1.10": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.10": "4a81966979e45325610a190ba9a761b5"
       }
     },
     "bnclient.dll_STR_c5e792f6fac5": {
@@ -34957,6 +39306,42 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:c5e792f6fac5beaea5ffc9341ceb59da",
+      "callees": {
+        "LoD/1.10": [
+          "Ordinal_10006",
+          "SStrLen"
+        ],
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "Ordinal_10006",
+          "Ordinal_10262",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "Ordinal_10001",
+          "Ordinal_10262",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "Ordinal_10004",
+          "GetSocketNameThreadSafe",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "Ordinal_10004",
+          "GetSocketNameThreadSafe",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "Ordinal_10008",
+          "GetSocketNameThreadSafe",
+          "CalculateStringLength"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"kernel32.dll\"",
@@ -35083,22 +39468,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.10": "b98b5dfcbc6f29407bb4d94bab0456bc"
       }
     },
-    "bnclient.dll_SEventRegisterJsmsHandler": {
+    "bnclient.dll_Ordinal_422": {
       "addresses": {
-        "LoD/1.10": "0x6FF0C546",
-        "LoD/1.11": "0x6FF27F52",
-        "LoD/1.11b": "0x6FF27F60",
-        "LoD/1.12a": "0x6FF28006",
-        "LoD/1.13c": "0x6FF27FE8",
-        "LoD/1.13d": "0x6FF27FD0"
+        "LoD/1.10": "0x6FF0C4C2",
+        "LoD/1.11": "0x6FF280AE",
+        "LoD/1.11b": "0x6FF280BC",
+        "LoD/1.12a": "0x6FF28126",
+        "LoD/1.13c": "0x6FF28108",
+        "LoD/1.13d": "0x6FF2812C"
       },
       "rvas": {
-        "LoD/1.10": "0xC546",
-        "LoD/1.11": "0x7F52",
-        "LoD/1.11b": "0x7F60",
-        "LoD/1.12a": "0x8006",
-        "LoD/1.13c": "0x7FE8",
-        "LoD/1.13d": "0x7FD0"
+        "LoD/1.10": "0xC4C2",
+        "LoD/1.11": "0x80AE",
+        "LoD/1.11b": "0x80BC",
+        "LoD/1.12a": "0x8126",
+        "LoD/1.13c": "0x8108",
+        "LoD/1.13d": "0x812C"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35108,9 +39493,9 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "SEventRegisterJsmsHandler",
-      "signature": "uint SEventRegisterJsmsHandler(uint dwCacheCookie, uint dwEventKey, void * pfnCallback)",
-      "calling_convention": "__stdcall",
+      "name": "Ordinal_422",
+      "signature": "undefined Ordinal_422(void)",
+      "calling_convention": "unknown",
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -35139,22 +39524,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_GetField880": {
+    "bnclient.dll_Ordinal_542": {
       "addresses": {
-        "LoD/1.10": "0x6FF0C55E",
-        "LoD/1.11": "0x6FF28006",
-        "LoD/1.11b": "0x6FF27FF6",
-        "LoD/1.12a": "0x6FF2808A",
-        "LoD/1.13c": "0x6FF2800C",
-        "LoD/1.13d": "0x6FF2805A"
+        "LoD/1.10": "0x6FF0C558",
+        "LoD/1.11": "0x6FF27FBE",
+        "LoD/1.11b": "0x6FF2803E",
+        "LoD/1.12a": "0x6FF280C6",
+        "LoD/1.13c": "0x6FF280A2",
+        "LoD/1.13d": "0x6FF2809C"
       },
       "rvas": {
-        "LoD/1.10": "0xC55E",
-        "LoD/1.11": "0x8006",
-        "LoD/1.11b": "0x7FF6",
-        "LoD/1.12a": "0x808A",
-        "LoD/1.13c": "0x800C",
-        "LoD/1.13d": "0x805A"
+        "LoD/1.10": "0xC558",
+        "LoD/1.11": "0x7FBE",
+        "LoD/1.11b": "0x803E",
+        "LoD/1.12a": "0x80C6",
+        "LoD/1.13c": "0x80A2",
+        "LoD/1.13d": "0x809C"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35164,8 +39549,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "GetField880",
-      "signature": "undefined GetField880(void)",
+      "name": "Ordinal_542",
+      "signature": "undefined Ordinal_542(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.10",
       "method": "MNE",
@@ -35198,19 +39583,19 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_Ordinal_550": {
       "addresses": {
         "LoD/1.10": "0x6FF0C564",
-        "LoD/1.11": "0x6FF27FB2",
-        "LoD/1.11b": "0x6FF28032",
-        "LoD/1.12a": "0x6FF280BA",
-        "LoD/1.13c": "0x6FF28096",
-        "LoD/1.13d": "0x6FF28090"
+        "LoD/1.11": "0x6FF27FFA",
+        "LoD/1.11b": "0x6FF28062",
+        "LoD/1.12a": "0x6FF280EA",
+        "LoD/1.13c": "0x6FF280C6",
+        "LoD/1.13d": "0x6FF280C6"
       },
       "rvas": {
         "LoD/1.10": "0xC564",
-        "LoD/1.11": "0x7FB2",
-        "LoD/1.11b": "0x8032",
-        "LoD/1.12a": "0x80BA",
-        "LoD/1.13c": "0x8096",
-        "LoD/1.13d": "0x8090"
+        "LoD/1.11": "0x7FFA",
+        "LoD/1.11b": "0x8062",
+        "LoD/1.12a": "0x80EA",
+        "LoD/1.13c": "0x80C6",
+        "LoD/1.13d": "0x80C6"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35335,22 +39720,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "fcd666aa0beb6eec15da06c485365b59"
       }
     },
-    "bnclient.dll_Ordinal_10017": {
+    "bnclient.dll_Ordinal_10004": {
       "addresses": {
-        "LoD/1.10": "0x6FF13604",
-        "LoD/1.11": "0x6FF27F58",
-        "LoD/1.11b": "0x6FF27F66",
-        "LoD/1.12a": "0x6FF2800C",
-        "LoD/1.13c": "0x6FF27FEE",
-        "LoD/1.13d": "0x6FF27FD6"
+        "LoD/1.10": "0x6FF13616",
+        "LoD/1.11": "0x6FF280C0",
+        "LoD/1.11b": "0x6FF280CE",
+        "LoD/1.12a": "0x6FF28138",
+        "LoD/1.13c": "0x6FF2811A",
+        "LoD/1.13d": "0x6FF2813E"
       },
       "rvas": {
-        "LoD/1.10": "0x13604",
-        "LoD/1.11": "0x7F58",
-        "LoD/1.11b": "0x7F66",
-        "LoD/1.12a": "0x800C",
-        "LoD/1.13c": "0x7FEE",
-        "LoD/1.13d": "0x7FD6"
+        "LoD/1.10": "0x13616",
+        "LoD/1.11": "0x80C0",
+        "LoD/1.11b": "0x80CE",
+        "LoD/1.12a": "0x8138",
+        "LoD/1.13c": "0x811A",
+        "LoD/1.13d": "0x813E"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35360,8 +39745,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10017",
-      "signature": "undefined Ordinal_10017(void)",
+      "name": "Ordinal_10004",
+      "signature": "undefined Ordinal_10004(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.10",
       "method": "MNE",
@@ -35394,19 +39779,19 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetPeerName_3634": {
       "addresses": {
         "LoD/1.10": "0x6FF13634",
-        "LoD/1.11": "0x6FF27FB8",
-        "LoD/1.11b": "0x6FF28038",
-        "LoD/1.12a": "0x6FF280C0",
-        "LoD/1.13c": "0x6FF2809C",
-        "LoD/1.13d": "0x6FF28096"
+        "LoD/1.11": "0x6FF2802A",
+        "LoD/1.11b": "0x6FF27FB4",
+        "LoD/1.12a": "0x6FF2807E",
+        "LoD/1.13c": "0x6FF2803C",
+        "LoD/1.13d": "0x6FF2802A"
       },
       "rvas": {
         "LoD/1.10": "0x13634",
-        "LoD/1.11": "0x7FB8",
-        "LoD/1.11b": "0x8038",
-        "LoD/1.12a": "0x80C0",
-        "LoD/1.13c": "0x809C",
-        "LoD/1.13d": "0x8096"
+        "LoD/1.11": "0x802A",
+        "LoD/1.11b": "0x7FB4",
+        "LoD/1.12a": "0x807E",
+        "LoD/1.13c": "0x803C",
+        "LoD/1.13d": "0x802A"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35447,22 +39832,22 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_Ordinal_10263": {
+    "bnclient.dll_Ordinal_10029": {
       "addresses": {
-        "LoD/1.10": "0x6FF1366A",
-        "LoD/1.11": "0x6FF280D8",
-        "LoD/1.11b": "0x6FF28086",
-        "LoD/1.12a": "0x6FF28108",
-        "LoD/1.13c": "0x6FF28150",
-        "LoD/1.13d": "0x6FF280F6"
+        "LoD/1.10": "0x6FF1364C",
+        "LoD/1.11": "0x6FF27FC4",
+        "LoD/1.11b": "0x6FF28044",
+        "LoD/1.12a": "0x6FF280CC",
+        "LoD/1.13c": "0x6FF280A8",
+        "LoD/1.13d": "0x6FF280A2"
       },
       "rvas": {
-        "LoD/1.10": "0x1366A",
-        "LoD/1.11": "0x80D8",
-        "LoD/1.11b": "0x8086",
-        "LoD/1.12a": "0x8108",
-        "LoD/1.13c": "0x8150",
-        "LoD/1.13d": "0x80F6"
+        "LoD/1.10": "0x1364C",
+        "LoD/1.11": "0x7FC4",
+        "LoD/1.11b": "0x8044",
+        "LoD/1.12a": "0x80CC",
+        "LoD/1.13c": "0x80A8",
+        "LoD/1.13d": "0x80A2"
       },
       "sizes": {
         "LoD/1.10": 6,
@@ -35472,8 +39857,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10263",
-      "signature": "undefined Ordinal_10263(void)",
+      "name": "Ordinal_10029",
+      "signature": "undefined Ordinal_10029(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.10",
       "method": "MNE",
@@ -35802,6 +40187,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:79ede85cba5d7d7af965bdcccf3b3cab",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUItem@NewsTable@@\""
@@ -35870,6 +40272,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:79ede85cba5d7d7af965bdcccf3b3cab",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUItem@NewsTable@@\""
@@ -35985,6 +40404,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1568b71261da2189803ba4295bb86adf",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateOrReallocateMemory",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUItem@NewsTable@@\""
@@ -36078,15 +40524,15 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll__toupper": {
       "addresses": {
         "LoD/1.11": "0x6FF21304",
-        "LoD/1.11b": "0x6FF21927",
-        "LoD/1.12a": "0x6FF2176C",
+        "LoD/1.11b": "0x6FF21A67",
+        "LoD/1.12a": "0x6FF21857",
         "LoD/1.13c": "0x6FF21D3E",
         "LoD/1.13d": "0x6FF21F80"
       },
       "rvas": {
         "LoD/1.11": "0x1304",
-        "LoD/1.11b": "0x1927",
-        "LoD/1.12a": "0x176C",
+        "LoD/1.11b": "0x1A67",
+        "LoD/1.12a": "0x1857",
         "LoD/1.13c": "0x1D3E",
         "LoD/1.13d": "0x1F80"
       },
@@ -36180,15 +40626,15 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll__toupper_13EF": {
       "addresses": {
         "LoD/1.11": "0x6FF213EF",
-        "LoD/1.11b": "0x6FF21A67",
-        "LoD/1.12a": "0x6FF21857",
+        "LoD/1.11b": "0x6FF21927",
+        "LoD/1.12a": "0x6FF2176C",
         "LoD/1.13c": "0x6FF21AC7",
         "LoD/1.13d": "0x6FF21E95"
       },
       "rvas": {
         "LoD/1.11": "0x13EF",
-        "LoD/1.11b": "0x1A67",
-        "LoD/1.12a": "0x1857",
+        "LoD/1.11b": "0x1927",
+        "LoD/1.12a": "0x176C",
         "LoD/1.13c": "0x1AC7",
         "LoD/1.13d": "0x1E95"
       },
@@ -36840,18 +41286,18 @@ var FUNCTIONS_Bnclient_dll = {
     },
     "bnclient.dll_AcquireFileHandleLock8": {
       "addresses": {
-        "LoD/1.11": "0x6FF21BB6",
-        "LoD/1.11b": "0x6FF2132F",
+        "LoD/1.11": "0x6FF21BAD",
+        "LoD/1.11b": "0x6FF21326",
         "LoD/1.12a": "0x6FF212CC",
         "LoD/1.13c": "0x6FF21412",
-        "LoD/1.13d": "0x6FF2158E"
+        "LoD/1.13d": "0x6FF21597"
       },
       "rvas": {
-        "LoD/1.11": "0x1BB6",
-        "LoD/1.11b": "0x132F",
+        "LoD/1.11": "0x1BAD",
+        "LoD/1.11b": "0x1326",
         "LoD/1.12a": "0x12CC",
         "LoD/1.13c": "0x1412",
-        "LoD/1.13d": "0x158E"
+        "LoD/1.13d": "0x1597"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -37716,6 +42162,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -38216,53 +42679,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "91411ab4247869eeb28238e92930a4a5"
       }
     },
-    "bnclient.dll__realloc": {
-      "addresses": {
-        "LoD/1.11": "0x6FF23A74",
-        "LoD/1.11b": "0x6FF23279"
-      },
-      "rvas": {
-        "LoD/1.11": "0x3A74",
-        "LoD/1.11b": "0x3279"
-      },
-      "sizes": {
-        "LoD/1.11": 412,
-        "LoD/1.11b": 412
-      },
-      "name": "_realloc",
-      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
-      "calling_convention": "__cdecl",
-      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
-      "basic_block_counts": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
-        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
-      }
-    },
     "bnclient.dll_LeaveCriticalSectionForMemoryF": {
       "addresses": {
-        "LoD/1.11": "0x6FF23BDC",
-        "LoD/1.11b": "0x6FF23493",
+        "LoD/1.11": "0x6FF23A63",
+        "LoD/1.11b": "0x6FF233E1",
         "LoD/1.12a": "0x6FF22741",
-        "LoD/1.13c": "0x6FF223DD",
-        "LoD/1.13d": "0x6FF238BD"
+        "LoD/1.13c": "0x6FF2250F",
+        "LoD/1.13d": "0x6FF23842"
       },
       "rvas": {
-        "LoD/1.11": "0x3BDC",
-        "LoD/1.11b": "0x3493",
+        "LoD/1.11": "0x3A63",
+        "LoD/1.11b": "0x33E1",
         "LoD/1.12a": "0x2741",
-        "LoD/1.13c": "0x23DD",
-        "LoD/1.13d": "0x38BD"
+        "LoD/1.13c": "0x250F",
+        "LoD/1.13d": "0x3842"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -38298,6 +42728,39 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
         "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
+      }
+    },
+    "bnclient.dll__realloc": {
+      "addresses": {
+        "LoD/1.11": "0x6FF23A74",
+        "LoD/1.11b": "0x6FF23279"
+      },
+      "rvas": {
+        "LoD/1.11": "0x3A74",
+        "LoD/1.11b": "0x3279"
+      },
+      "sizes": {
+        "LoD/1.11": 412,
+        "LoD/1.11b": 412
+      },
+      "name": "_realloc",
+      "signature": "void * _realloc(void * _Memory, size_t _NewSize)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n _realloc\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:8c4228500987c1daeeb1fa9fd68f17a9",
+      "basic_block_counts": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "8c4228500987c1daeeb1fa9fd68f17a9",
+        "LoD/1.11b": "8c4228500987c1daeeb1fa9fd68f17a9"
       }
     },
     "bnclient.dll___msize": {
@@ -38355,15 +42818,15 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF23C8E",
         "LoD/1.11b": "0x6FF2350E",
-        "LoD/1.12a": "0x6FF23FE6",
-        "LoD/1.13c": "0x6FF22494",
+        "LoD/1.12a": "0x6FF23F02",
+        "LoD/1.13c": "0x6FF23D47",
         "LoD/1.13d": "0x6FF23C87"
       },
       "rvas": {
         "LoD/1.11": "0x3C8E",
         "LoD/1.11b": "0x350E",
-        "LoD/1.12a": "0x3FE6",
-        "LoD/1.13c": "0x2494",
+        "LoD/1.12a": "0x3F02",
+        "LoD/1.13c": "0x3D47",
         "LoD/1.13d": "0x3C87"
       },
       "sizes": {
@@ -38762,17 +43225,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll___RTC_Initialize": {
       "addresses": {
         "LoD/1.11": "0x6FF23F13",
-        "LoD/1.11b": "0x6FF230E0",
+        "LoD/1.11b": "0x6FF2309C",
         "LoD/1.12a": "0x6FF223FB",
-        "LoD/1.13c": "0x6FF23194",
-        "LoD/1.13d": "0x6FF23420"
+        "LoD/1.13c": "0x6FF231D8",
+        "LoD/1.13d": "0x6FF233DC"
       },
       "rvas": {
         "LoD/1.11": "0x3F13",
-        "LoD/1.11b": "0x30E0",
+        "LoD/1.11b": "0x309C",
         "LoD/1.12a": "0x23FB",
-        "LoD/1.13c": "0x3194",
-        "LoD/1.13d": "0x3420"
+        "LoD/1.13c": "0x31D8",
+        "LoD/1.13d": "0x33DC"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -38813,17 +43276,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll___RTC_Initialize_3F57": {
       "addresses": {
         "LoD/1.11": "0x6FF23F57",
-        "LoD/1.11b": "0x6FF2309C",
+        "LoD/1.11b": "0x6FF230E0",
         "LoD/1.12a": "0x6FF2243F",
-        "LoD/1.13c": "0x6FF231D8",
-        "LoD/1.13d": "0x6FF233DC"
+        "LoD/1.13c": "0x6FF23194",
+        "LoD/1.13d": "0x6FF23420"
       },
       "rvas": {
         "LoD/1.11": "0x3F57",
-        "LoD/1.11b": "0x309C",
+        "LoD/1.11b": "0x30E0",
         "LoD/1.12a": "0x243F",
-        "LoD/1.13c": "0x31D8",
-        "LoD/1.13d": "0x33DC"
+        "LoD/1.13c": "0x3194",
+        "LoD/1.13d": "0x3420"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -39797,16 +44260,16 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll__memmove": {
       "addresses": {
         "LoD/1.11": "0x6FF25280",
-        "LoD/1.11b": "0x6FF26440",
+        "LoD/1.11b": "0x6FF278B0",
         "LoD/1.12a": "0x6FF27520",
-        "LoD/1.13c": "0x6FF27510",
+        "LoD/1.13c": "0x6FF254F0",
         "LoD/1.13d": "0x6FF25550"
       },
       "rvas": {
         "LoD/1.11": "0x5280",
-        "LoD/1.11b": "0x6440",
+        "LoD/1.11b": "0x78B0",
         "LoD/1.12a": "0x7520",
-        "LoD/1.13c": "0x7510",
+        "LoD/1.13c": "0x54F0",
         "LoD/1.13d": "0x5550"
       },
       "sizes": {
@@ -40300,15 +44763,15 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": "0x6FF25DD4",
         "LoD/1.11b": "0x6FF24C2A",
         "LoD/1.12a": "0x6FF26C69",
-        "LoD/1.13c": "0x6FF25E22",
-        "LoD/1.13d": "0x6FF24A21"
+        "LoD/1.13c": "0x6FF25BBB",
+        "LoD/1.13d": "0x6FF24C9A"
       },
       "rvas": {
         "LoD/1.11": "0x5DD4",
         "LoD/1.11b": "0x4C2A",
         "LoD/1.12a": "0x6C69",
-        "LoD/1.13c": "0x5E22",
-        "LoD/1.13d": "0x4A21"
+        "LoD/1.13c": "0x5BBB",
+        "LoD/1.13d": "0x4C9A"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -40349,15 +44812,15 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnlockFileHandleThunk": {
       "addresses": {
         "LoD/1.11": "0x6FF25E5B",
-        "LoD/1.11b": "0x6FF27EFE",
-        "LoD/1.12a": "0x6FF27E71",
+        "LoD/1.11b": "0x6FF27DB2",
+        "LoD/1.12a": "0x6FF27F87",
         "LoD/1.13c": "0x6FF27F6E",
         "LoD/1.13d": "0x6FF27E1A"
       },
       "rvas": {
         "LoD/1.11": "0x5E5B",
-        "LoD/1.11b": "0x7EFE",
-        "LoD/1.12a": "0x7E71",
+        "LoD/1.11b": "0x7DB2",
+        "LoD/1.12a": "0x7F87",
         "LoD/1.13c": "0x7F6E",
         "LoD/1.13d": "0x7E1A"
       },
@@ -40435,15 +44898,15 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11": "0x6FF2604D",
         "LoD/1.11b": "0x6FF249B1",
         "LoD/1.12a": "0x6FF26ED0",
-        "LoD/1.13c": "0x6FF25BBB",
-        "LoD/1.13d": "0x6FF24C9A"
+        "LoD/1.13c": "0x6FF25E22",
+        "LoD/1.13d": "0x6FF24A21"
       },
       "rvas": {
         "LoD/1.11": "0x604D",
         "LoD/1.11b": "0x49B1",
         "LoD/1.12a": "0x6ED0",
-        "LoD/1.13c": "0x5BBB",
-        "LoD/1.13d": "0x4C9A"
+        "LoD/1.13c": "0x5E22",
+        "LoD/1.13d": "0x4A21"
       },
       "sizes": {
         "LoD/1.11": 160,
@@ -40484,17 +44947,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnlockFileHandleThunk_60D4": {
       "addresses": {
         "LoD/1.11": "0x6FF260D4",
-        "LoD/1.11b": "0x6FF24CB1",
-        "LoD/1.12a": "0x6FF27F87",
+        "LoD/1.11b": "0x6FF24A38",
+        "LoD/1.12a": "0x6FF26CF0",
         "LoD/1.13c": "0x6FF25C42",
-        "LoD/1.13d": "0x6FF27F6E"
+        "LoD/1.13d": "0x6FF24D21"
       },
       "rvas": {
         "LoD/1.11": "0x60D4",
-        "LoD/1.11b": "0x4CB1",
-        "LoD/1.12a": "0x7F87",
+        "LoD/1.11b": "0x4A38",
+        "LoD/1.12a": "0x6CF0",
         "LoD/1.13c": "0x5C42",
-        "LoD/1.13d": "0x7F6E"
+        "LoD/1.13d": "0x4D21"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -41652,16 +46115,16 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll__memmove_7930": {
       "addresses": {
         "LoD/1.11": "0x6FF27930",
-        "LoD/1.11b": "0x6FF278B0",
+        "LoD/1.11b": "0x6FF26440",
         "LoD/1.12a": "0x6FF258B0",
-        "LoD/1.13c": "0x6FF254F0",
+        "LoD/1.13c": "0x6FF27510",
         "LoD/1.13d": "0x6FF279A0"
       },
       "rvas": {
         "LoD/1.11": "0x7930",
-        "LoD/1.11b": "0x78B0",
+        "LoD/1.11b": "0x6440",
         "LoD/1.12a": "0x58B0",
-        "LoD/1.13c": "0x54F0",
+        "LoD/1.13c": "0x7510",
         "LoD/1.13d": "0x79A0"
       },
       "sizes": {
@@ -41832,17 +46295,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnlockFileHandleThunk_7DE1": {
       "addresses": {
         "LoD/1.11": "0x6FF27DE1",
-        "LoD/1.11b": "0x6FF24A38",
-        "LoD/1.12a": "0x6FF26F57",
+        "LoD/1.11b": "0x6FF24CB1",
+        "LoD/1.12a": "0x6FF27E71",
         "LoD/1.13c": "0x6FF27E24",
-        "LoD/1.13d": "0x6FF24D21"
+        "LoD/1.13d": "0x6FF27F6E"
       },
       "rvas": {
         "LoD/1.11": "0x7DE1",
-        "LoD/1.11b": "0x4A38",
-        "LoD/1.12a": "0x6F57",
+        "LoD/1.11b": "0x4CB1",
+        "LoD/1.12a": "0x7E71",
         "LoD/1.13c": "0x7E24",
-        "LoD/1.13d": "0x4D21"
+        "LoD/1.13d": "0x7F6E"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -41934,15 +46397,15 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnlockFileHandleThunk_7EF7": {
       "addresses": {
         "LoD/1.11": "0x6FF27EF7",
-        "LoD/1.11b": "0x6FF27DB2",
-        "LoD/1.12a": "0x6FF26CF0",
+        "LoD/1.11b": "0x6FF27EFE",
+        "LoD/1.12a": "0x6FF26F57",
         "LoD/1.13c": "0x6FF25EA9",
         "LoD/1.13d": "0x6FF24AA8"
       },
       "rvas": {
         "LoD/1.11": "0x7EF7",
-        "LoD/1.11b": "0x7DB2",
-        "LoD/1.12a": "0x6CF0",
+        "LoD/1.11b": "0x7EFE",
+        "LoD/1.12a": "0x6F57",
         "LoD/1.13c": "0x5EA9",
         "LoD/1.13d": "0x4AA8"
       },
@@ -41982,20 +46445,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "d4c2d26a88b113bd75739659d4ef7dd5"
       }
     },
-    "bnclient.dll_setsockopt": {
+    "bnclient.dll_recv": {
       "addresses": {
-        "LoD/1.11": "0x6FF27F5E",
-        "LoD/1.11b": "0x6FF27F6C",
-        "LoD/1.12a": "0x6FF28012",
-        "LoD/1.13c": "0x6FF27FF4",
-        "LoD/1.13d": "0x6FF27FDC"
+        "LoD/1.11": "0x6FF27F58",
+        "LoD/1.11b": "0x6FF27F66",
+        "LoD/1.12a": "0x6FF2800C",
+        "LoD/1.13c": "0x6FF27FEE",
+        "LoD/1.13d": "0x6FF27FD6"
       },
       "rvas": {
-        "LoD/1.11": "0x7F5E",
-        "LoD/1.11b": "0x7F6C",
-        "LoD/1.12a": "0x8012",
-        "LoD/1.13c": "0x7FF4",
-        "LoD/1.13d": "0x7FDC"
+        "LoD/1.11": "0x7F58",
+        "LoD/1.11b": "0x7F66",
+        "LoD/1.12a": "0x800C",
+        "LoD/1.13c": "0x7FEE",
+        "LoD/1.13d": "0x7FD6"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42004,8 +46467,58 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "setsockopt",
-      "signature": "int setsockopt(SOCKET s, int level, int optname, char * optval, int optlen)",
+      "name": "recv",
+      "signature": "int recv(SOCKET s, char * buf, int len, int flags)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_htons": {
+      "addresses": {
+        "LoD/1.11": "0x6FF27F64",
+        "LoD/1.11b": "0x6FF27F72",
+        "LoD/1.12a": "0x6FF28018",
+        "LoD/1.13c": "0x6FF27FFA",
+        "LoD/1.13d": "0x6FF27FE2"
+      },
+      "rvas": {
+        "LoD/1.11": "0x7F64",
+        "LoD/1.11b": "0x7F72",
+        "LoD/1.12a": "0x8018",
+        "LoD/1.13c": "0x7FFA",
+        "LoD/1.13d": "0x7FE2"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "htons",
+      "signature": "u_short htons(u_short hostshort)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -42132,20 +46645,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_inet_ntoa": {
+    "bnclient.dll_ValidateAndProcessStringParame": {
       "addresses": {
-        "LoD/1.11": "0x6FF27F88",
-        "LoD/1.11b": "0x6FF27F96",
-        "LoD/1.12a": "0x6FF27FFA",
-        "LoD/1.13c": "0x6FF27FDC",
-        "LoD/1.13d": "0x6FF28006"
+        "LoD/1.11": "0x6FF27FAC",
+        "LoD/1.11b": "0x6FF28020",
+        "LoD/1.12a": "0x6FF280A2",
+        "LoD/1.13c": "0x6FF28054",
+        "LoD/1.13d": "0x6FF28018"
       },
       "rvas": {
-        "LoD/1.11": "0x7F88",
-        "LoD/1.11b": "0x7F96",
-        "LoD/1.12a": "0x7FFA",
-        "LoD/1.13c": "0x7FDC",
-        "LoD/1.13d": "0x8006"
+        "LoD/1.11": "0x7FAC",
+        "LoD/1.11b": "0x8020",
+        "LoD/1.12a": "0x80A2",
+        "LoD/1.13c": "0x8054",
+        "LoD/1.13d": "0x8018"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42154,8 +46667,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "inet_ntoa",
-      "signature": "char * inet_ntoa(in_addr in)",
+      "name": "ValidateAndProcessStringParameters",
+      "signature": "uint ValidateAndProcessStringParameters(uint * pStringPointer, LPCSTR pStringValue, uint dwFlags, LPBYTE pOutputBuffer, DWORD dwOutputSize, uint dwExtraParam)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -42182,20 +46695,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_AllocateMemoryFromArena": {
+    "bnclient.dll_ReleaseFileHandleWithRefCount": {
       "addresses": {
-        "LoD/1.11": "0x6FF27F94",
-        "LoD/1.11b": "0x6FF27F9C",
-        "LoD/1.12a": "0x6FF28024",
-        "LoD/1.13c": "0x6FF28018",
-        "LoD/1.13d": "0x6FF2800C"
+        "LoD/1.11": "0x6FF27FEE",
+        "LoD/1.11b": "0x6FF2805C",
+        "LoD/1.12a": "0x6FF280DE",
+        "LoD/1.13c": "0x6FF280BA",
+        "LoD/1.13d": "0x6FF280BA"
       },
       "rvas": {
-        "LoD/1.11": "0x7F94",
-        "LoD/1.11b": "0x7F9C",
-        "LoD/1.12a": "0x8024",
-        "LoD/1.13c": "0x8018",
-        "LoD/1.13d": "0x800C"
+        "LoD/1.11": "0x7FEE",
+        "LoD/1.11b": "0x805C",
+        "LoD/1.12a": "0x80DE",
+        "LoD/1.13c": "0x80BA",
+        "LoD/1.13d": "0x80BA"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42204,8 +46717,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "AllocateMemoryFromArena",
-      "signature": "void * AllocateMemoryFromArena(uint dwAllocationSize, void * pUnused, int nArenaMode, uint dwPoolSize)",
+      "name": "ReleaseFileHandleWithRefCount",
+      "signature": "int ReleaseFileHandleWithRefCount(int * pFileHandle)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -42232,20 +46745,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_OpenAndProcessFile": {
+    "bnclient.dll_BuildProjectPathThunk": {
       "addresses": {
-        "LoD/1.11": "0x6FF27FBE",
-        "LoD/1.11b": "0x6FF2803E",
-        "LoD/1.12a": "0x6FF280C6",
-        "LoD/1.13c": "0x6FF280A2",
-        "LoD/1.13d": "0x6FF2809C"
+        "LoD/1.11": "0x6FF2807E",
+        "LoD/1.11b": "0x6FF2809E",
+        "LoD/1.12a": "0x6FF2815C",
+        "LoD/1.13c": "0x6FF2813E",
+        "LoD/1.13d": "0x6FF2810E"
       },
       "rvas": {
-        "LoD/1.11": "0x7FBE",
-        "LoD/1.11b": "0x803E",
-        "LoD/1.12a": "0x80C6",
-        "LoD/1.13c": "0x80A2",
-        "LoD/1.13d": "0x809C"
+        "LoD/1.11": "0x807E",
+        "LoD/1.11b": "0x809E",
+        "LoD/1.12a": "0x815C",
+        "LoD/1.13c": "0x813E",
+        "LoD/1.13d": "0x810E"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42254,9 +46767,9 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "OpenAndProcessFile",
-      "signature": "void OpenAndProcessFile(int * pFilePath, int * pOutputHandle)",
-      "calling_convention": "__stdcall",
+      "name": "BuildProjectPathThunk",
+      "signature": "void BuildProjectPathThunk(int nPathType)",
+      "calling_convention": "__fastcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
@@ -42282,20 +46795,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_VerifyArchiveSignature_7FC4": {
+    "bnclient.dll_CleanupAndAbort": {
       "addresses": {
-        "LoD/1.11": "0x6FF27FC4",
-        "LoD/1.11b": "0x6FF28044",
-        "LoD/1.12a": "0x6FF280CC",
-        "LoD/1.13c": "0x6FF280A8",
-        "LoD/1.13d": "0x6FF280A2"
+        "LoD/1.11": "0x6FF28084",
+        "LoD/1.11b": "0x6FF2806E",
+        "LoD/1.12a": "0x6FF280F6",
+        "LoD/1.13c": "0x6FF280DE",
+        "LoD/1.13d": "0x6FF280DE"
       },
       "rvas": {
-        "LoD/1.11": "0x7FC4",
-        "LoD/1.11b": "0x8044",
-        "LoD/1.12a": "0x80CC",
-        "LoD/1.13c": "0x80A8",
-        "LoD/1.13d": "0x80A2"
+        "LoD/1.11": "0x8084",
+        "LoD/1.11b": "0x806E",
+        "LoD/1.12a": "0x80F6",
+        "LoD/1.13c": "0x80DE",
+        "LoD/1.13d": "0x80DE"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42304,308 +46817,8 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "VerifyArchiveSignature",
-      "signature": "int VerifyArchiveSignature(void * pArchiveHandle, int * pErrorCode)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_ValidateAndProcessRequest": {
-      "addresses": {
-        "LoD/1.11": "0x6FF27FD6",
-        "LoD/1.11b": "0x6FF28014",
-        "LoD/1.12a": "0x6FF28054",
-        "LoD/1.13c": "0x6FF28066",
-        "LoD/1.13d": "0x6FF28036"
-      },
-      "rvas": {
-        "LoD/1.11": "0x7FD6",
-        "LoD/1.11b": "0x8014",
-        "LoD/1.12a": "0x8054",
-        "LoD/1.13c": "0x8066",
-        "LoD/1.13d": "0x8036"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "ValidateAndProcessRequest",
-      "signature": "uint ValidateAndProcessRequest(uint * pModeFlags, LPCSTR pString, uint dwFlags, BYTE * pBuffer, DWORD extraParam)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_CreateAndTrackFile": {
-      "addresses": {
-        "LoD/1.11": "0x6FF28012",
-        "LoD/1.11b": "0x6FF28002",
-        "LoD/1.12a": "0x6FF28096",
-        "LoD/1.13c": "0x6FF28024",
-        "LoD/1.13d": "0x6FF28066"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8012",
-        "LoD/1.11b": "0x8002",
-        "LoD/1.12a": "0x8096",
-        "LoD/1.13c": "0x8024",
-        "LoD/1.13d": "0x8066"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "CreateAndTrackFile",
-      "signature": "int CreateAndTrackFile(LPCSTR filePath, uint flags, uint * outFileId)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_IncrementHashedEntryCounter": {
-      "addresses": {
-        "LoD/1.11": "0x6FF28018",
-        "LoD/1.11b": "0x6FF28008",
-        "LoD/1.12a": "0x6FF2809C",
-        "LoD/1.13c": "0x6FF2802A",
-        "LoD/1.13d": "0x6FF2806C"
-      },
-      "rvas": {
-        "LoD/1.11": "0x8018",
-        "LoD/1.11b": "0x8008",
-        "LoD/1.12a": "0x809C",
-        "LoD/1.13c": "0x802A",
-        "LoD/1.13d": "0x806C"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "IncrementHashedEntryCounter",
-      "signature": "uint IncrementHashedEntryCounter(uint dwEntryId, int nDeltaValue)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_DeleteRegistryValue": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2801E",
-        "LoD/1.11b": "0x6FF28026",
-        "LoD/1.12a": "0x6FF280A8",
-        "LoD/1.13c": "0x6FF2805A",
-        "LoD/1.13d": "0x6FF2801E"
-      },
-      "rvas": {
-        "LoD/1.11": "0x801E",
-        "LoD/1.11b": "0x8026",
-        "LoD/1.12a": "0x80A8",
-        "LoD/1.13c": "0x805A",
-        "LoD/1.13d": "0x801E"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "DeleteRegistryValue",
-      "signature": "int DeleteRegistryValue(uint * pFlags, LPCSTR pValueName)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_AllocateOrReallocateMemory": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2804E",
-        "LoD/1.11b": "0x6FF27FC6",
-        "LoD/1.12a": "0x6FF280F0",
-        "LoD/1.13c": "0x6FF28072",
-        "LoD/1.13d": "0x6FF28072"
-      },
-      "rvas": {
-        "LoD/1.11": "0x804E",
-        "LoD/1.11b": "0x7FC6",
-        "LoD/1.12a": "0x80F0",
-        "LoD/1.13c": "0x8072",
-        "LoD/1.13d": "0x8072"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "AllocateOrReallocateMemory",
-      "signature": "uint * AllocateOrReallocateMemory(uint * pOldBuffer, uint dwOldSize, uint * pDescriptor, int nErrorContext, uint dwFlags)",
-      "calling_convention": "__stdcall",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
-        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
-      }
-    },
-    "bnclient.dll_ParseConfigurationValue": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2805A",
-        "LoD/1.11b": "0x6FF27FD2",
-        "LoD/1.12a": "0x6FF28066",
-        "LoD/1.13c": "0x6FF280D2",
-        "LoD/1.13d": "0x6FF2807E"
-      },
-      "rvas": {
-        "LoD/1.11": "0x805A",
-        "LoD/1.11b": "0x7FD2",
-        "LoD/1.12a": "0x8066",
-        "LoD/1.13c": "0x80D2",
-        "LoD/1.13d": "0x807E"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name": "ParseConfigurationValue",
-      "signature": "int ParseConfigurationValue(char * szConfigName, char * szValueString, byte byParseMode, ulong * pOutputValue)",
+      "name": "CleanupAndAbort",
+      "signature": "void CleanupAndAbort(int nErrorCode, void * pContext, int nLineNumber)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -42682,20 +46895,20 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "bnclient.dll_MultiplyVectorsWithOffset": {
+    "bnclient.dll_Ordinal_10262": {
       "addresses": {
-        "LoD/1.11": "0x6FF280E4",
-        "LoD/1.11b": "0x6FF280EC",
-        "LoD/1.12a": "0x6FF28718",
-        "LoD/1.13c": "0x6FF286F8",
-        "LoD/1.13d": "0x6FF286FE"
+        "LoD/1.11": "0x6FF280B4",
+        "LoD/1.11b": "0x6FF280C2",
+        "LoD/1.12a": "0x6FF2814A",
+        "LoD/1.13c": "0x6FF2812C",
+        "LoD/1.13d": "0x6FF28150"
       },
       "rvas": {
-        "LoD/1.11": "0x80E4",
-        "LoD/1.11b": "0x80EC",
-        "LoD/1.12a": "0x8718",
-        "LoD/1.13c": "0x86F8",
-        "LoD/1.13d": "0x86FE"
+        "LoD/1.11": "0x80B4",
+        "LoD/1.11b": "0x80C2",
+        "LoD/1.12a": "0x814A",
+        "LoD/1.13c": "0x812C",
+        "LoD/1.13d": "0x8150"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42704,8 +46917,208 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
       },
-      "name": "MultiplyVectorsWithOffset",
-      "signature": "void MultiplyVectorsWithOffset(DynamicVector * pProductVector, DynamicVector * pMultiplicandVector, DynamicVector * pMultiplierVector)",
+      "name": "Ordinal_10262",
+      "signature": "undefined Ordinal_10262(void)",
+      "calling_convention": "unknown",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_CloseNetworkResource": {
+      "addresses": {
+        "LoD/1.11": "0x6FF280BA",
+        "LoD/1.11b": "0x6FF280C8",
+        "LoD/1.12a": "0x6FF28132",
+        "LoD/1.13c": "0x6FF28114",
+        "LoD/1.13d": "0x6FF28138"
+      },
+      "rvas": {
+        "LoD/1.11": "0x80BA",
+        "LoD/1.11b": "0x80C8",
+        "LoD/1.12a": "0x8132",
+        "LoD/1.13c": "0x8114",
+        "LoD/1.13d": "0x8138"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "CloseNetworkResource",
+      "signature": "void CloseNetworkResource(NetworkResourceContext * pResource)",
+      "calling_convention": "__fastcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_CheckSocketReadiness": {
+      "addresses": {
+        "LoD/1.11": "0x6FF280C6",
+        "LoD/1.11b": "0x6FF280D4",
+        "LoD/1.12a": "0x6FF2813E",
+        "LoD/1.13c": "0x6FF28120",
+        "LoD/1.13d": "0x6FF28144"
+      },
+      "rvas": {
+        "LoD/1.11": "0x80C6",
+        "LoD/1.11b": "0x80D4",
+        "LoD/1.12a": "0x813E",
+        "LoD/1.13c": "0x8120",
+        "LoD/1.13d": "0x8144"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "CheckSocketReadiness",
+      "signature": "int CheckSocketReadiness(ClientConnection * pConnectionState)",
+      "calling_convention": "__fastcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_FindAndValidateD2ExpMpq": {
+      "addresses": {
+        "LoD/1.11": "0x6FF280CC",
+        "LoD/1.11b": "0x6FF280DA",
+        "LoD/1.12a": "0x6FF28144",
+        "LoD/1.13c": "0x6FF28126",
+        "LoD/1.13d": "0x6FF2814A"
+      },
+      "rvas": {
+        "LoD/1.11": "0x80CC",
+        "LoD/1.11b": "0x80DA",
+        "LoD/1.12a": "0x8144",
+        "LoD/1.13c": "0x8126",
+        "LoD/1.13d": "0x814A"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "FindAndValidateD2ExpMpq",
+      "signature": "int FindAndValidateD2ExpMpq(void)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_ProcessContainerValidation": {
+      "addresses": {
+        "LoD/1.11": "0x6FF280F0",
+        "LoD/1.11b": "0x6FF280F8",
+        "LoD/1.12a": "0x6FF28724",
+        "LoD/1.13c": "0x6FF28704",
+        "LoD/1.13d": "0x6FF2870A"
+      },
+      "rvas": {
+        "LoD/1.11": "0x80F0",
+        "LoD/1.11b": "0x80F8",
+        "LoD/1.12a": "0x8724",
+        "LoD/1.13c": "0x8704",
+        "LoD/1.13d": "0x870A"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "ProcessContainerValidation",
+      "signature": "void ProcessContainerValidation(ContainerData * pContainer)",
       "calling_convention": "__stdcall",
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -42788,14 +47201,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF28116",
         "LoD/1.12a": "0x6FF2875A",
         "LoD/1.13c": "0x6FF2873A",
-        "LoD/1.13d": "0x6FF28728"
+        "LoD/1.13d": "0x6FF28740"
       },
       "rvas": {
         "LoD/1.11": "0x810E",
         "LoD/1.11b": "0x8116",
         "LoD/1.12a": "0x875A",
         "LoD/1.13c": "0x873A",
-        "LoD/1.13d": "0x8728"
+        "LoD/1.13d": "0x8740"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -42830,6 +47243,103 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_CopyBitsToVector": {
+      "addresses": {
+        "LoD/1.11": "0x6FF28120",
+        "LoD/1.11b": "0x6FF28128",
+        "LoD/1.12a": "0x6FF28754",
+        "LoD/1.13c": "0x6FF28734",
+        "LoD/1.13d": "0x6FF2873A"
+      },
+      "rvas": {
+        "LoD/1.11": "0x8120",
+        "LoD/1.11b": "0x8128",
+        "LoD/1.12a": "0x8754",
+        "LoD/1.13c": "0x8734",
+        "LoD/1.13d": "0x873A"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name": "CopyBitsToVector",
+      "signature": "void CopyBitsToVector(void * pVector, int bitOffset)",
+      "calling_convention": "__stdcall",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.11b": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.12a": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13c": "e3e7225badfcf3c2e051c42d71d7237a",
+        "LoD/1.13d": "e3e7225badfcf3c2e051c42d71d7237a"
+      }
+    },
+    "bnclient.dll_MNE_b0752bee787a_8140": {
+      "addresses": {
+        "LoD/1.11": "0x6FF28140",
+        "LoD/1.11b": "0x6FF30FB0",
+        "LoD/1.12a": "0x6FF36D30",
+        "LoD/1.13c": "0x6FF36DF0",
+        "LoD/1.13d": "0x6FF2BB80"
+      },
+      "rvas": {
+        "LoD/1.11": "0x8140",
+        "LoD/1.11b": "0x10FB0",
+        "LoD/1.12a": "0x16D30",
+        "LoD/1.13c": "0x16DF0",
+        "LoD/1.13d": "0xBB80"
+      },
+      "sizes": {
+        "LoD/1.11": 43,
+        "LoD/1.11b": 43,
+        "LoD/1.12a": 43,
+        "LoD/1.13c": 43,
+        "LoD/1.13d": 43
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:b0752bee787a760f28734023698299a6",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "b0752bee787a760f28734023698299a6",
+        "LoD/1.11b": "b0752bee787a760f28734023698299a6",
+        "LoD/1.12a": "b0752bee787a760f28734023698299a6",
+        "LoD/1.13c": "b0752bee787a760f28734023698299a6",
+        "LoD/1.13d": "b0752bee787a760f28734023698299a6"
       }
     },
     "bnclient.dll_MNE_3830360e7eb4": {
@@ -42998,6 +47508,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:47a9fdb50e438238e71fbd7e1b96aa82",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\SRP\\\\SHA.cpp\""
@@ -43062,6 +47594,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2a548ba27a25172abd576bbf72bb70f0",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43109,6 +47673,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4e1c0974636e91716eec4406c751e8d6",
+      "callees": {
+        "LoD/1.11": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.11b": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.12a": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.13c": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.13d": [
+          "ForwardToOperationHandler"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43156,6 +47737,53 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8e03b0f1a2d96945cc6367a893d44cfa",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "DispatchContainerElementToHandler",
+          "RetrieveCachedArrayPoolData",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "DispatchContainerElementToHandler",
+          "RetrieveCachedArrayPoolData",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "DispatchContainerElementToHandler",
+          "RetrieveCachedArrayPoolData",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "DispatchContainerElementToHandler",
+          "RetrieveCachedArrayPoolData",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "DispatchContainerElementToHandler",
+          "RetrieveCachedArrayPoolData",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43182,16 +47810,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF29B20",
         "LoD/1.11b": "0x6FF29C00",
-        "LoD/1.12a": "0x6FF2A230",
-        "LoD/1.13c": "0x6FF2A210",
-        "LoD/1.13d": "0x6FF2A140"
+        "LoD/1.12a": "0x6FF2A280",
+        "LoD/1.13c": "0x6FF2A260",
+        "LoD/1.13d": "0x6FF2A1D0"
       },
       "rvas": {
         "LoD/1.11": "0x9B20",
         "LoD/1.11b": "0x9C00",
-        "LoD/1.12a": "0xA230",
-        "LoD/1.13c": "0xA210",
-        "LoD/1.13d": "0xA140"
+        "LoD/1.12a": "0xA280",
+        "LoD/1.13c": "0xA260",
+        "LoD/1.13d": "0xA1D0"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -43203,6 +47831,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8ca7c2fd190c1700fe5855a4fc7a340c",
+      "callees": {
+        "LoD/1.11": [
+          "DispatchContainerElementToHandler"
+        ],
+        "LoD/1.11b": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.12a": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.13c": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.13d": [
+          "MultiplyVectorsWithOffset"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43250,6 +47895,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2e888b17d4451a70e0a6421da8314344",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ProcessContainerElement",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ProcessContainerElement",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ProcessContainerElement",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ProcessContainerElement",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ProcessContainerElement",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43297,6 +47974,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1a36dab6109c50e5fd2a4eff7b112a5a",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "MultiplyVectorsWithOffset",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "MultiplyVectorsWithOffset",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "MultiplyVectorsWithOffset",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "MultiplyVectorsWithOffset",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "MultiplyVectorsWithOffset",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43322,17 +48031,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_8ca7c2fd190c_9BB0": {
       "addresses": {
         "LoD/1.11": "0x6FF29BB0",
-        "LoD/1.11b": "0x6FF29C60",
-        "LoD/1.12a": "0x6FF2A290",
-        "LoD/1.13c": "0x6FF2A270",
-        "LoD/1.13d": "0x6FF2A270"
+        "LoD/1.11b": "0x6FF29B20",
+        "LoD/1.12a": "0x6FF2A150",
+        "LoD/1.13c": "0x6FF2A130",
+        "LoD/1.13d": "0x6FF2A220"
       },
       "rvas": {
         "LoD/1.11": "0x9BB0",
-        "LoD/1.11b": "0x9C60",
-        "LoD/1.12a": "0xA290",
-        "LoD/1.13c": "0xA270",
-        "LoD/1.13d": "0xA270"
+        "LoD/1.11b": "0x9B20",
+        "LoD/1.12a": "0xA150",
+        "LoD/1.13c": "0xA130",
+        "LoD/1.13d": "0xA220"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -43344,6 +48053,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8ca7c2fd190c1700fe5855a4fc7a340c",
+      "callees": {
+        "LoD/1.11": [
+          "MultiplyVectorsWithOffset"
+        ],
+        "LoD/1.11b": [
+          "DispatchContainerElementToHandler"
+        ],
+        "LoD/1.12a": [
+          "DispatchContainerElementToHandler"
+        ],
+        "LoD/1.13c": [
+          "DispatchContainerElementToHandler"
+        ],
+        "LoD/1.13d": [
+          "VectorXorOperation"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43372,14 +48098,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF29BC0",
         "LoD/1.12a": "0x6FF2A1F0",
         "LoD/1.13c": "0x6FF2A1D0",
-        "LoD/1.13d": "0x6FF2A230"
+        "LoD/1.13d": "0x6FF2A1E0"
       },
       "rvas": {
         "LoD/1.11": "0x9BC0",
         "LoD/1.11b": "0x9BC0",
         "LoD/1.12a": "0xA1F0",
         "LoD/1.13c": "0xA1D0",
-        "LoD/1.13d": "0xA230"
+        "LoD/1.13d": "0xA1E0"
       },
       "sizes": {
         "LoD/1.11": 56,
@@ -43391,6 +48117,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:126a9028fe07b1eb862b34de09368977",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43416,17 +48174,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_8ca7c2fd190c_9C00": {
       "addresses": {
         "LoD/1.11": "0x6FF29C00",
-        "LoD/1.11b": "0x6FF29C50",
+        "LoD/1.11b": "0x6FF29BB0",
         "LoD/1.12a": "0x6FF2A1E0",
         "LoD/1.13c": "0x6FF2A1C0",
-        "LoD/1.13d": "0x6FF2A1D0"
+        "LoD/1.13d": "0x6FF2A270"
       },
       "rvas": {
         "LoD/1.11": "0x9C00",
-        "LoD/1.11b": "0x9C50",
+        "LoD/1.11b": "0x9BB0",
         "LoD/1.12a": "0xA1E0",
         "LoD/1.13c": "0xA1C0",
-        "LoD/1.13d": "0xA1D0"
+        "LoD/1.13d": "0xA270"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -43438,6 +48196,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8ca7c2fd190c1700fe5855a4fc7a340c",
+      "callees": {
+        "LoD/1.11": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.11b": [
+          "MultiplyVectorsWithOffset"
+        ],
+        "LoD/1.12a": [
+          "MultiplyVectorsWithOffset"
+        ],
+        "LoD/1.13c": [
+          "MultiplyVectorsWithOffset"
+        ],
+        "LoD/1.13d": [
+          "VectorXorOperation"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43466,14 +48241,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF29C10",
         "LoD/1.12a": "0x6FF2A240",
         "LoD/1.13c": "0x6FF2A220",
-        "LoD/1.13d": "0x6FF2A1E0"
+        "LoD/1.13d": "0x6FF2A230"
       },
       "rvas": {
         "LoD/1.11": "0x9C10",
         "LoD/1.11b": "0x9C10",
         "LoD/1.12a": "0xA240",
         "LoD/1.13c": "0xA220",
-        "LoD/1.13d": "0xA1E0"
+        "LoD/1.13d": "0xA230"
       },
       "sizes": {
         "LoD/1.11": 56,
@@ -43485,6 +48260,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:126a9028fe07b1eb862b34de09368977",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43510,17 +48317,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_8ca7c2fd190c_9C50": {
       "addresses": {
         "LoD/1.11": "0x6FF29C50",
-        "LoD/1.11b": "0x6FF29B20",
-        "LoD/1.12a": "0x6FF2A280",
-        "LoD/1.13c": "0x6FF2A260",
-        "LoD/1.13d": "0x6FF2A220"
+        "LoD/1.11b": "0x6FF29C60",
+        "LoD/1.12a": "0x6FF2A290",
+        "LoD/1.13c": "0x6FF2A270",
+        "LoD/1.13d": "0x6FF2A280"
       },
       "rvas": {
         "LoD/1.11": "0x9C50",
-        "LoD/1.11b": "0x9B20",
-        "LoD/1.12a": "0xA280",
-        "LoD/1.13c": "0xA260",
-        "LoD/1.13d": "0xA220"
+        "LoD/1.11b": "0x9C60",
+        "LoD/1.12a": "0xA290",
+        "LoD/1.13c": "0xA270",
+        "LoD/1.13d": "0xA280"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -43532,6 +48339,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8ca7c2fd190c1700fe5855a4fc7a340c",
+      "callees": {
+        "LoD/1.11": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.11b": [
+          "CopyBitsToVector"
+        ],
+        "LoD/1.12a": [
+          "CopyBitsToVector"
+        ],
+        "LoD/1.13c": [
+          "CopyBitsToVector"
+        ],
+        "LoD/1.13d": [
+          "CopyBitsToVector"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43557,17 +48381,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_8ca7c2fd190c_9C60": {
       "addresses": {
         "LoD/1.11": "0x6FF29C60",
-        "LoD/1.11b": "0x6FF29BB0",
-        "LoD/1.12a": "0x6FF2A150",
-        "LoD/1.13c": "0x6FF2A130",
-        "LoD/1.13d": "0x6FF2A280"
+        "LoD/1.11b": "0x6FF29C50",
+        "LoD/1.12a": "0x6FF2A230",
+        "LoD/1.13c": "0x6FF2A210",
+        "LoD/1.13d": "0x6FF2A140"
       },
       "rvas": {
         "LoD/1.11": "0x9C60",
-        "LoD/1.11b": "0x9BB0",
-        "LoD/1.12a": "0xA150",
-        "LoD/1.13c": "0xA130",
-        "LoD/1.13d": "0xA280"
+        "LoD/1.11b": "0x9C50",
+        "LoD/1.12a": "0xA230",
+        "LoD/1.13c": "0xA210",
+        "LoD/1.13d": "0xA140"
       },
       "sizes": {
         "LoD/1.11": 9,
@@ -43579,6 +48403,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8ca7c2fd190c1700fe5855a4fc7a340c",
+      "callees": {
+        "LoD/1.11": [
+          "CopyBitsToVector"
+        ],
+        "LoD/1.11b": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.12a": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.13c": [
+          "VectorXorOperation"
+        ],
+        "LoD/1.13d": [
+          "DispatchContainerElementToHandler"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43626,6 +48467,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:003b2809f3279336feb7db70c460b29e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43673,6 +48546,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:275fea0e03e5349509e7745abc127bae",
+      "callees": {
+        "LoD/1.11": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -43720,6 +48615,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c9550f3d1d72e480c00f692603b1d105",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43767,6 +48684,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:613fd9ebce03ff238bd62aaff0ce32a9",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43814,6 +48753,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1329b1ab202f98dbbc4824e13cb28898",
+      "callees": {
+        "LoD/1.11": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -43861,6 +48832,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:1258ba834e9e56d4cfb8e252f3063566",
+      "callees": {
+        "LoD/1.11": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.11b": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.12a": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.13c": [
+          "ForwardToOperationHandler"
+        ],
+        "LoD/1.13d": [
+          "ForwardToOperationHandler"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -43955,6 +48943,58 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:941f99961c4ccb855bdf7ebac1573a1e",
+      "callees": {
+        "LoD/1.11": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -44002,6 +49042,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:1cf0c0b44cb786f4704b8d5164c9e5f1",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\SRP\\\\SRP.cpp\""
@@ -44113,6 +49170,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2d943e0535f587958d408334e4f9ea7f",
+      "callees": {
+        "LoD/1.11": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -44160,6 +49254,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:275fea0e03e5349509e7745abc127bae",
+      "callees": {
+        "LoD/1.11": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -44207,6 +49323,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e8ca1d7007600a59c8e4f6db38823afe",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "Ordinal_624",
+          "VectorXorOperation"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -44395,6 +49548,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f6cbb0f426db4dfab75a3e27eb3cd2e6",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "VectorXorOperation",
+          "CompareContainerElementsTriState",
+          "VectorXorOperation",
+          "...+6 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "VectorXorOperation",
+          "CompareContainerElementsTriState",
+          "VectorXorOperation",
+          "...+6 more"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "VectorXorOperation",
+          "CompareContainerElementsTriState",
+          "VectorXorOperation",
+          "...+6 more"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "VectorXorOperation",
+          "CompareContainerElementsTriState",
+          "VectorXorOperation",
+          "...+6 more"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "VectorXorOperation",
+          "CompareContainerElementsTriState",
+          "VectorXorOperation",
+          "...+6 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -44489,6 +49709,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:92162c539559319d60a461219200ef66",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "...+1 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -44536,6 +49823,53 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6ce4b2f7f2ebf5b32d05e005b879d1be",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "RetrieveCachedArrayPoolData",
+          "ClearMemory",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -44630,6 +49964,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e976526fe2353069b09fb2da09b1c73c",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "MultiplyVectorsWithOffset",
+          "DispatchContainerElementToHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+14 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "MultiplyVectorsWithOffset",
+          "DispatchContainerElementToHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+14 more"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "MultiplyVectorsWithOffset",
+          "DispatchContainerElementToHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+14 more"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "MultiplyVectorsWithOffset",
+          "DispatchContainerElementToHandler",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "...+14 more"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "DeleteAndFreeMemory",
+          "MultiplyVectorsWithOffset",
+          "DispatchContainerElementToHandler",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "...+14 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -44677,6 +50078,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:caf648100fbd9847bec6c56f3e6c742b",
+      "callees": {
+        "LoD/1.11": [
+          "CompareContainerElementsTriState",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+10 more"
+        ],
+        "LoD/1.11b": [
+          "CompareContainerElementsTriState",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+10 more"
+        ],
+        "LoD/1.12a": [
+          "CompareContainerElementsTriState",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "...+10 more"
+        ],
+        "LoD/1.13c": [
+          "CompareContainerElementsTriState",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "...+10 more"
+        ],
+        "LoD/1.13d": [
+          "CompareContainerElementsTriState",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "ForwardToOperationHandler",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "...+10 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -44724,6 +50192,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fdcef4b85b1e4838e86219b2d9240d77",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "...+7 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "...+7 more"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "VectorXorOperation",
+          "...+7 more"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "...+7 more"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "...+7 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -44771,6 +50306,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:22b8d2d739177a14b862b08608d5dbde",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "...+8 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "...+8 more"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_624",
+          "VectorXorOperation",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "Ordinal_624",
+          "SetBitfieldValue",
+          "Ordinal_624",
+          "...+8 more"
+        ],
+        "LoD/1.13c": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "...+8 more"
+        ],
+        "LoD/1.13d": [
+          "AllocateAndInitializeGameObject",
+          "VectorXorOperation",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "CompareContainerElementsTriState",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "AllocateAndInitializeGameObject",
+          "SetBitfieldValue",
+          "AllocateAndInitializeGameObject",
+          "...+8 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -44818,6 +50420,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01e193f74442f57dde6e60ba603b7ce",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -44857,20 +50481,182 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "da172c479207867c1f0fa5748315d41c"
       }
     },
+    "bnclient.dll_MNE_9915db1b6011": {
+      "addresses": {
+        "LoD/1.11": "0x6FF2AF80",
+        "LoD/1.11b": "0x6FF33250",
+        "LoD/1.12a": "0x6FF33020",
+        "LoD/1.13c": "0x6FF2B6D0",
+        "LoD/1.13d": "0x6FF32CB0"
+      },
+      "rvas": {
+        "LoD/1.11": "0xAF80",
+        "LoD/1.11b": "0x13250",
+        "LoD/1.12a": "0x13020",
+        "LoD/1.13c": "0xB6D0",
+        "LoD/1.13d": "0x12CB0"
+      },
+      "sizes": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38,
+        "LoD/1.12a": 38,
+        "LoD/1.13c": 38,
+        "LoD/1.13d": 38
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
+      "strings": {
+        "LoD/1.11": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.11b": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.12a": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.13c": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.13d": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.11b": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.12a": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.13d": "9915db1b6011f72a4ebe0dc45a742999"
+      }
+    },
+    "bnclient.dll_MNE_9915db1b6011_AFB0": {
+      "addresses": {
+        "LoD/1.11": "0x6FF2AFB0",
+        "LoD/1.11b": "0x6FF33400",
+        "LoD/1.12a": "0x6FF32F10",
+        "LoD/1.13c": "0x6FF2B5C0",
+        "LoD/1.13d": "0x6FF33360"
+      },
+      "rvas": {
+        "LoD/1.11": "0xAFB0",
+        "LoD/1.11b": "0x13400",
+        "LoD/1.12a": "0x12F10",
+        "LoD/1.13c": "0xB5C0",
+        "LoD/1.13d": "0x13360"
+      },
+      "sizes": {
+        "LoD/1.11": 38,
+        "LoD/1.11b": 38,
+        "LoD/1.12a": 38,
+        "LoD/1.13c": 38,
+        "LoD/1.13d": 38
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
+      "strings": {
+        "LoD/1.11": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.11b": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.12a": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.13c": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ],
+        "LoD/1.13d": [
+          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.11b": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.12a": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999",
+        "LoD/1.13d": "9915db1b6011f72a4ebe0dc45a742999"
+      }
+    },
     "bnclient.dll_API_c01e193f7444_AFE0": {
       "addresses": {
         "LoD/1.11": "0x6FF2AFE0",
         "LoD/1.11b": "0x6FF33490",
-        "LoD/1.12a": "0x6FF32F40",
-        "LoD/1.13c": "0x6FF2B5F0",
-        "LoD/1.13d": "0x6FF33480"
+        "LoD/1.12a": "0x6FF33050",
+        "LoD/1.13c": "0x6FF2B700",
+        "LoD/1.13d": "0x6FF33390"
       },
       "rvas": {
         "LoD/1.11": "0xAFE0",
         "LoD/1.11b": "0x13490",
-        "LoD/1.12a": "0x12F40",
-        "LoD/1.13c": "0xB5F0",
-        "LoD/1.13d": "0x13480"
+        "LoD/1.12a": "0x13050",
+        "LoD/1.13c": "0xB700",
+        "LoD/1.13d": "0x13390"
       },
       "sizes": {
         "LoD/1.11": 92,
@@ -44882,6 +50668,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01e193f74442f57dde6e60ba603b7ce",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -44943,6 +50751,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7160d3a08bcde6dc3638147356e99635",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -44962,73 +50788,18 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13c": "a40165a780b2110217fe7c1bf3d7f51e"
       }
     },
-    "bnclient.dll_MNE_9915db1b6011": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2B0C0",
-        "LoD/1.11b": "0x6FF33400",
-        "LoD/1.12a": "0x6FF33020",
-        "LoD/1.13c": "0x6FF2B760"
-      },
-      "rvas": {
-        "LoD/1.11": "0xB0C0",
-        "LoD/1.11b": "0x13400",
-        "LoD/1.12a": "0x13020",
-        "LoD/1.13c": "0xB760"
-      },
-      "sizes": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38,
-        "LoD/1.12a": 38,
-        "LoD/1.13c": 38
-      },
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
-      "strings": {
-        "LoD/1.11": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.11b": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.12a": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.13c": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.11b": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.12a": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999"
-      }
-    },
     "bnclient.dll_API_c01e193f7444_B0F0": {
       "addresses": {
         "LoD/1.11": "0x6FF2B0F0",
-        "LoD/1.11b": "0x6FF333A0",
-        "LoD/1.12a": "0x6FF33050",
+        "LoD/1.11b": "0x6FF33280",
+        "LoD/1.12a": "0x6FF32F40",
         "LoD/1.13c": "0x6FF2B7F0",
         "LoD/1.13d": "0x6FF32D80"
       },
       "rvas": {
         "LoD/1.11": "0xB0F0",
-        "LoD/1.11b": "0x133A0",
-        "LoD/1.12a": "0x13050",
+        "LoD/1.11b": "0x13280",
+        "LoD/1.12a": "0x12F40",
         "LoD/1.13c": "0xB7F0",
         "LoD/1.13d": "0x12D80"
       },
@@ -45042,6 +50813,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01e193f74442f57dde6e60ba603b7ce",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -45081,70 +50874,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "da2cd6f48cad7ee77c7441f5daac06e1"
       }
     },
-    "bnclient.dll_MNE_9915db1b6011_B150": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2B150",
-        "LoD/1.11b": "0x6FF33370",
-        "LoD/1.12a": "0x6FF32F10",
-        "LoD/1.13c": "0x6FF2B5C0",
-        "LoD/1.13d": "0x6FF33360"
-      },
-      "rvas": {
-        "LoD/1.11": "0xB150",
-        "LoD/1.11b": "0x13370",
-        "LoD/1.12a": "0x12F10",
-        "LoD/1.13c": "0xB5C0",
-        "LoD/1.13d": "0x13360"
-      },
-      "sizes": {
-        "LoD/1.11": 38,
-        "LoD/1.11b": 38,
-        "LoD/1.12a": 38,
-        "LoD/1.13c": 38,
-        "LoD/1.13d": 38
-      },
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
-      "strings": {
-        "LoD/1.11": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.11b": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.12a": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.13c": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ],
-        "LoD/1.13d": [
-          "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
-        ]
-      },
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.11b": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.12a": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.13c": "9915db1b6011f72a4ebe0dc45a742999",
-        "LoD/1.13d": "9915db1b6011f72a4ebe0dc45a742999"
-      }
-    },
     "bnclient.dll_API_ed2d22d804ba": {
       "addresses": {
         "LoD/1.11": "0x6FF2B180",
@@ -45170,6 +50899,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ed2d22d804bac0b38c7c945b7630cfde",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -45212,17 +50963,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_c01e193f7444_B1E0": {
       "addresses": {
         "LoD/1.11": "0x6FF2B1E0",
-        "LoD/1.11b": "0x6FF33280",
+        "LoD/1.11b": "0x6FF333A0",
         "LoD/1.12a": "0x6FF33140",
-        "LoD/1.13c": "0x6FF2B700",
-        "LoD/1.13d": "0x6FF33390"
+        "LoD/1.13c": "0x6FF2B5F0",
+        "LoD/1.13d": "0x6FF33480"
       },
       "rvas": {
         "LoD/1.11": "0xB1E0",
-        "LoD/1.11b": "0x13280",
+        "LoD/1.11b": "0x133A0",
         "LoD/1.12a": "0x13140",
-        "LoD/1.13c": "0xB700",
-        "LoD/1.13d": "0x13390"
+        "LoD/1.13c": "0xB5F0",
+        "LoD/1.13d": "0x13480"
       },
       "sizes": {
         "LoD/1.11": 92,
@@ -45234,6 +50985,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01e193f74442f57dde6e60ba603b7ce",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -45276,17 +51049,64 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_7b4de9f0cf35": {
       "addresses": {
         "LoD/1.11": "0x6FF2B250",
-        "LoD/1.11b": "0x6FF33500",
-        "LoD/1.12a": "0x6FF331D0",
+        "LoD/1.11b": "0x6FF2B370",
+        "LoD/1.12a": "0x6FF2D7F0",
         "LoD/1.13c": "0x6FF2B880",
-        "LoD/1.13d": "0x6FF2CDE0"
+        "LoD/1.13d": "0x6FF335B0"
       },
       "rvas": {
         "LoD/1.11": "0xB250",
-        "LoD/1.11b": "0x13500",
-        "LoD/1.12a": "0x131D0",
+        "LoD/1.11b": "0xB370",
+        "LoD/1.12a": "0xD7F0",
         "LoD/1.13c": "0xB880",
-        "LoD/1.13d": "0xCDE0"
+        "LoD/1.13d": "0x135B0"
+      },
+      "sizes": {
+        "LoD/1.11": 6,
+        "LoD/1.11b": 6,
+        "LoD/1.12a": 6,
+        "LoD/1.13c": 6,
+        "LoD/1.13d": 6
+      },
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
+        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
+      }
+    },
+    "bnclient.dll_MNE_7b4de9f0cf35_B270": {
+      "addresses": {
+        "LoD/1.11": "0x6FF2B270",
+        "LoD/1.11b": "0x6FF33520",
+        "LoD/1.12a": "0x6FF2D820",
+        "LoD/1.13c": "0x6FF2E940",
+        "LoD/1.13d": "0x6FF2CE10"
+      },
+      "rvas": {
+        "LoD/1.11": "0xB270",
+        "LoD/1.11b": "0x13520",
+        "LoD/1.12a": "0xD820",
+        "LoD/1.13c": "0xE940",
+        "LoD/1.13d": "0xCE10"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -45336,6 +51156,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f58ee5d7699175fe584c76136b842bcf",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 16,
         "LoD/1.11b": 15
@@ -45365,6 +51193,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a21c8b50f59e8f116ff981efed0a0841",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10263"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10263"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3
@@ -45403,6 +51239,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:762fd31c56c1b2ef6478b57697ca4eaa",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 17,
         "LoD/1.11b": 17,
@@ -45450,6 +51323,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3dfa42fca9e6f24b443bec523f5fcdd6",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -45497,6 +51402,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:bf36b697ce337671c87a88ebd8749cff",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -45544,6 +51476,48 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:0a16714d2e50989d19cf2d81106a7f10",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "Ordinal_10042",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -45608,6 +51582,58 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2a988b1f03c799e08805aeb7b065e5b3",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "Ordinal_10042",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -45757,6 +51783,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:449a7cc43975e164f8ace6e3b34a1852",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6
@@ -45783,6 +51817,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:83c73248481c36f66d4076bd1fd1deae",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1
       },
@@ -45796,13 +51837,72 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_331ffde2025e": {
       "addresses": {
         "LoD/1.11": "0x6FF2BB80",
+        "LoD/1.11b": "0x6FF33E20",
+        "LoD/1.12a": "0x6FF33A00",
+        "LoD/1.13c": "0x6FF2C220"
+      },
+      "rvas": {
+        "LoD/1.11": "0xBB80",
+        "LoD/1.11b": "0x13E20",
+        "LoD/1.12a": "0x13A00",
+        "LoD/1.13c": "0xC220"
+      },
+      "sizes": {
+        "LoD/1.11": 107,
+        "LoD/1.11b": 107,
+        "LoD/1.12a": 107,
+        "LoD/1.13c": 107
+      },
+      "name_source": "LoD/1.11",
+      "method": "API",
+      "index": "API:331ffde2025e2b5290cd8798cf1f3160",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
+      "basic_block_counts": {
+        "LoD/1.11": 4,
+        "LoD/1.11b": 4,
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "d5fca7fdbf47224a942e72e1d9a4cc03",
+        "LoD/1.11b": "d5fca7fdbf47224a942e72e1d9a4cc03",
+        "LoD/1.12a": "d5fca7fdbf47224a942e72e1d9a4cc03",
+        "LoD/1.13c": "d5fca7fdbf47224a942e72e1d9a4cc03"
+      }
+    },
+    "bnclient.dll_API_331ffde2025e_BBF0": {
+      "addresses": {
+        "LoD/1.11": "0x6FF2BBF0",
         "LoD/1.11b": "0x6FF33E90",
         "LoD/1.12a": "0x6FF33990",
         "LoD/1.13c": "0x6FF2C1B0",
         "LoD/1.13d": "0x6FF32E70"
       },
       "rvas": {
-        "LoD/1.11": "0xBB80",
+        "LoD/1.11": "0xBBF0",
         "LoD/1.11b": "0x13E90",
         "LoD/1.12a": "0x13990",
         "LoD/1.13c": "0xC1B0",
@@ -45818,6 +51918,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:331ffde2025e2b5290cd8798cf1f3160",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -45838,47 +51960,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "d5fca7fdbf47224a942e72e1d9a4cc03",
         "LoD/1.13c": "d5fca7fdbf47224a942e72e1d9a4cc03",
         "LoD/1.13d": "d5fca7fdbf47224a942e72e1d9a4cc03"
-      }
-    },
-    "bnclient.dll_API_331ffde2025e_BBF0": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2BBF0",
-        "LoD/1.11b": "0x6FF33E20",
-        "LoD/1.12a": "0x6FF33A00",
-        "LoD/1.13c": "0x6FF2C220"
-      },
-      "rvas": {
-        "LoD/1.11": "0xBBF0",
-        "LoD/1.11b": "0x13E20",
-        "LoD/1.12a": "0x13A00",
-        "LoD/1.13c": "0xC220"
-      },
-      "sizes": {
-        "LoD/1.11": 107,
-        "LoD/1.11b": 107,
-        "LoD/1.12a": 107,
-        "LoD/1.13c": 107
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:331ffde2025e2b5290cd8798cf1f3160",
-      "basic_block_counts": {
-        "LoD/1.11": 4,
-        "LoD/1.11b": 4,
-        "LoD/1.12a": 4,
-        "LoD/1.13c": 4
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "d5fca7fdbf47224a942e72e1d9a4cc03",
-        "LoD/1.11b": "d5fca7fdbf47224a942e72e1d9a4cc03",
-        "LoD/1.12a": "d5fca7fdbf47224a942e72e1d9a4cc03",
-        "LoD/1.13c": "d5fca7fdbf47224a942e72e1d9a4cc03"
       }
     },
     "bnclient.dll_API_041ed3d9d74a": {
@@ -45906,6 +51987,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:041ed3d9d74a793ef54fce3895c8551c",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -45953,6 +52061,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8de8a991a94591c0d86b19a394c4f79d",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -46000,6 +52125,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f16ffb8892aaeaf3dcb29928000c23e6",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -46047,6 +52189,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:25e6e8614ac81677f3fca119820527c0",
+      "callees": {
+        "LoD/1.11": [
+          "DecodeByteStringToUnicode",
+          "ConvertUtf16ToUtf8"
+        ],
+        "LoD/1.11b": [
+          "DecodeByteStringToUnicode",
+          "ConvertUtf16ToUtf8"
+        ],
+        "LoD/1.12a": [
+          "DecodeByteStringToUnicode",
+          "ConvertUtf16ToUtf8"
+        ],
+        "LoD/1.13c": [
+          "DecodeByteStringToUnicode",
+          "ConvertUtf16ToUtf8"
+        ],
+        "LoD/1.13d": [
+          "DecodeByteStringToUnicode",
+          "ConvertUtf16ToUtf8"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -46085,6 +52249,16 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:331ffde2025e2b5290cd8798cf1f3160",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6
@@ -46101,30 +52275,75 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_83c73248481c_BEF0": {
       "addresses": {
         "LoD/1.11": "0x6FF2BEF0",
-        "LoD/1.11b": "0x6FF34190"
+        "LoD/1.11b": "0x6FF34190",
+        "LoD/1.12a": "0x6FF33D00",
+        "LoD/1.13c": "0x6FF2C520",
+        "LoD/1.13d": "0x6FF33170"
       },
       "rvas": {
         "LoD/1.11": "0xBEF0",
-        "LoD/1.11b": "0x14190"
+        "LoD/1.11b": "0x14190",
+        "LoD/1.12a": "0x13D00",
+        "LoD/1.13c": "0xC520",
+        "LoD/1.13d": "0x13170"
       },
       "sizes": {
         "LoD/1.11": 205,
-        "LoD/1.11b": 205
+        "LoD/1.11b": 205,
+        "LoD/1.12a": 208,
+        "LoD/1.13c": 208,
+        "LoD/1.13d": 208
       },
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:83c73248481c36f66d4076bd1fd1deae",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
-        "LoD/1.11b": 9
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "74e08172b5c09e2d1b4eabecce77f0e6",
-        "LoD/1.11b": "74e08172b5c09e2d1b4eabecce77f0e6"
+        "LoD/1.11b": "74e08172b5c09e2d1b4eabecce77f0e6",
+        "LoD/1.12a": "3245411c8c6d841db7c43ef92849c7a0",
+        "LoD/1.13c": "3245411c8c6d841db7c43ef92849c7a0",
+        "LoD/1.13d": "3245411c8c6d841db7c43ef92849c7a0"
       }
     },
     "bnclient.dll_MNE_b1a081380ff7": {
@@ -46152,6 +52371,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b1a081380ff78451a93f92c1f92486f9",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -46224,30 +52460,70 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_1697ca392909": {
       "addresses": {
         "LoD/1.11": "0x6FF2C1A0",
-        "LoD/1.11b": "0x6FF34440"
+        "LoD/1.11b": "0x6FF34440",
+        "LoD/1.12a": "0x6FF33E70",
+        "LoD/1.13c": "0x6FF2C7C0",
+        "LoD/1.13d": "0x6FF334E0"
       },
       "rvas": {
         "LoD/1.11": "0xC1A0",
-        "LoD/1.11b": "0x14440"
+        "LoD/1.11b": "0x14440",
+        "LoD/1.12a": "0x13E70",
+        "LoD/1.13c": "0xC7C0",
+        "LoD/1.13d": "0x134E0"
       },
       "sizes": {
         "LoD/1.11": 148,
-        "LoD/1.11b": 148
+        "LoD/1.11b": 148,
+        "LoD/1.12a": 151,
+        "LoD/1.13c": 151,
+        "LoD/1.13d": 151
       },
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1697ca392909471fdfb8262c47934d2e",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
-        "LoD/1.11b": 3
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "a5daf9822e494f1a38a7c9d9591945d3",
-        "LoD/1.11b": "a5daf9822e494f1a38a7c9d9591945d3"
+        "LoD/1.11b": "a5daf9822e494f1a38a7c9d9591945d3",
+        "LoD/1.12a": "4275d755a301f3ce48f164c9ba019aa8",
+        "LoD/1.13c": "4275d755a301f3ce48f164c9ba019aa8",
+        "LoD/1.13d": "4275d755a301f3ce48f164c9ba019aa8"
       }
     },
     "bnclient.dll_API_5eeab6339ecf": {
@@ -46275,6 +52551,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5eeab6339ecfdc8f4f12c05482847033",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 1,
@@ -46322,6 +52635,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:92ad0cd62eae87785ad66cd90d3cf2d0",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -46347,17 +52687,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_92ad0cd62eae_C3C0": {
       "addresses": {
         "LoD/1.11": "0x6FF2C3C0",
-        "LoD/1.11b": "0x6FF34730",
-        "LoD/1.12a": "0x6FF34090",
-        "LoD/1.13c": "0x6FF2CAB0",
-        "LoD/1.13d": "0x6FF33CE0"
+        "LoD/1.11b": "0x6FF34660",
+        "LoD/1.12a": "0x6FF34160",
+        "LoD/1.13c": "0x6FF2C9E0",
+        "LoD/1.13d": "0x6FF33DB0"
       },
       "rvas": {
         "LoD/1.11": "0xC3C0",
-        "LoD/1.11b": "0x14730",
-        "LoD/1.12a": "0x14090",
-        "LoD/1.13c": "0xCAB0",
-        "LoD/1.13d": "0x13CE0"
+        "LoD/1.11b": "0x14660",
+        "LoD/1.12a": "0x14160",
+        "LoD/1.13c": "0xC9E0",
+        "LoD/1.13d": "0x13DB0"
       },
       "sizes": {
         "LoD/1.11": 202,
@@ -46369,6 +52709,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:92ad0cd62eae87785ad66cd90d3cf2d0",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 1,
@@ -46394,17 +52761,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_92ad0cd62eae_C490": {
       "addresses": {
         "LoD/1.11": "0x6FF2C490",
-        "LoD/1.11b": "0x6FF34660",
-        "LoD/1.12a": "0x6FF34160",
-        "LoD/1.13c": "0x6FF2C9E0",
-        "LoD/1.13d": "0x6FF33DB0"
+        "LoD/1.11b": "0x6FF34730",
+        "LoD/1.12a": "0x6FF34090",
+        "LoD/1.13c": "0x6FF2CAB0",
+        "LoD/1.13d": "0x6FF33CE0"
       },
       "rvas": {
         "LoD/1.11": "0xC490",
-        "LoD/1.11b": "0x14660",
-        "LoD/1.12a": "0x14160",
-        "LoD/1.13c": "0xC9E0",
-        "LoD/1.13d": "0x13DB0"
+        "LoD/1.11b": "0x14730",
+        "LoD/1.12a": "0x14090",
+        "LoD/1.13c": "0xCAB0",
+        "LoD/1.13d": "0x13CE0"
       },
       "sizes": {
         "LoD/1.11": 202,
@@ -46416,6 +52783,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:92ad0cd62eae87785ad66cd90d3cf2d0",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -46463,6 +52857,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5b2a8d80cd3bdd150485cb7341b00a23",
+      "callees": {
+        "LoD/1.11": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.11b": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.12a": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13c": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ],
+        "LoD/1.13d": [
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue",
+          "ParseConfigurationValue"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Registration Version\"",
@@ -46547,6 +52973,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8dcae13c44613a5780d50a01a7e8a588",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "FindAndValidateD2ExpMpq"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "FindAndValidateD2ExpMpq"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -46594,6 +53042,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f457682932bccc4caa833dab2b1c4798",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BNNews.cpp\"",
@@ -46663,6 +53143,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:70c02f54ee6d9eb516efea303d487b7c",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BNNews.cpp\"",
@@ -46737,6 +53239,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 35,
         "LoD/1.11b": 35,
@@ -46784,6 +53308,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c3ed8db8fab952f3af26048dd3767f90",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\".?AUItem@NewsTable@@\""
@@ -47152,66 +53693,19 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "c54fe7dbbdff8c5518ed5a04324e8a32"
       }
     },
-    "bnclient.dll_MNE_7b4de9f0cf35_D3D0": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2D3D0",
-        "LoD/1.11b": "0x6FF2B370",
-        "LoD/1.12a": "0x6FF2D7F0",
-        "LoD/1.13c": "0x6FF2E910",
-        "LoD/1.13d": "0x6FF335B0"
-      },
-      "rvas": {
-        "LoD/1.11": "0xD3D0",
-        "LoD/1.11b": "0xB370",
-        "LoD/1.12a": "0xD7F0",
-        "LoD/1.13c": "0xE910",
-        "LoD/1.13d": "0x135B0"
-      },
-      "sizes": {
-        "LoD/1.11": 6,
-        "LoD/1.11b": 6,
-        "LoD/1.12a": 6,
-        "LoD/1.13c": 6,
-        "LoD/1.13d": 6
-      },
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.11b": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.12a": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13c": "7b4de9f0cf357b113d12e0c7e214792b",
-        "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
-      }
-    },
     "bnclient.dll_MNE_7b4de9f0cf35_D400": {
       "addresses": {
         "LoD/1.11": "0x6FF2D400",
         "LoD/1.11b": "0x6FF2B3A0",
         "LoD/1.12a": "0x6FF331B0",
-        "LoD/1.13c": "0x6FF2B860",
+        "LoD/1.13c": "0x6FF2E910",
         "LoD/1.13d": "0x6FF33590"
       },
       "rvas": {
         "LoD/1.11": "0xD400",
         "LoD/1.11b": "0xB3A0",
         "LoD/1.12a": "0x131B0",
-        "LoD/1.13c": "0xB860",
+        "LoD/1.13c": "0xE910",
         "LoD/1.13d": "0x13590"
       },
       "sizes": {
@@ -47250,16 +53744,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF2D410",
         "LoD/1.11b": "0x6FF2B3D0",
-        "LoD/1.12a": "0x6FF2D850",
-        "LoD/1.13c": "0x6FF2E950",
-        "LoD/1.13d": "0x6FF2CE20"
+        "LoD/1.12a": "0x6FF2D830",
+        "LoD/1.13c": "0x6FF2E970",
+        "LoD/1.13d": "0x6FF2CE40"
       },
       "rvas": {
         "LoD/1.11": "0xD410",
         "LoD/1.11b": "0xB3D0",
-        "LoD/1.12a": "0xD850",
-        "LoD/1.13c": "0xE950",
-        "LoD/1.13d": "0xCE20"
+        "LoD/1.12a": "0xD830",
+        "LoD/1.13c": "0xE970",
+        "LoD/1.13d": "0xCE40"
       },
       "sizes": {
         "LoD/1.11": 20,
@@ -47271,6 +53765,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c503dfc1d285996db8a79a51d0a488c9",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10262"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.12a": [
+          "GetSocketNameThreadSafe"
+        ],
+        "LoD/1.13c": [
+          "GetPeerSocketAddress"
+        ],
+        "LoD/1.13d": [
+          "GetPeerSocketAddress"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -47297,16 +53808,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF2D430",
         "LoD/1.11b": "0x6FF2B3B0",
-        "LoD/1.12a": "0x6FF2D830",
-        "LoD/1.13c": "0x6FF2E970",
-        "LoD/1.13d": "0x6FF2CE40"
+        "LoD/1.12a": "0x6FF2D850",
+        "LoD/1.13c": "0x6FF2E950",
+        "LoD/1.13d": "0x6FF2CE20"
       },
       "rvas": {
         "LoD/1.11": "0xD430",
         "LoD/1.11b": "0xB3B0",
-        "LoD/1.12a": "0xD830",
-        "LoD/1.13c": "0xE970",
-        "LoD/1.13d": "0xCE40"
+        "LoD/1.12a": "0xD850",
+        "LoD/1.13c": "0xE950",
+        "LoD/1.13d": "0xCE20"
       },
       "sizes": {
         "LoD/1.11": 20,
@@ -47318,6 +53829,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c503dfc1d285996db8a79a51d0a488c9",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10012"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10262"
+        ],
+        "LoD/1.12a": [
+          "GetPeerSocketAddress"
+        ],
+        "LoD/1.13c": [
+          "GetSocketNameThreadSafe"
+        ],
+        "LoD/1.13d": [
+          "GetSocketNameThreadSafe"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -47365,6 +53893,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5908fbca0b084e5f5152c64c469f16b0",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10007",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10007",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "SendDataOverSocket",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "SendDataOverSocket",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "SendDataOverSocket",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -47412,6 +53962,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -47647,6 +54219,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a37c942b50e8002a09eec20bd63c6199",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -47829,6 +54428,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f50d97122642d4a679fc1465c5a7dc5e",
+      "callees": {
+        "LoD/1.11": [
+          "CheckSocketReadiness",
+          "ReceiveNetworkDataFromSocket",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CheckSocketReadiness",
+          "ReceiveNetworkDataFromSocket",
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CheckSocketReadiness",
+          "ReceiveNetworkDataFromSocket",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CheckSocketReadiness",
+          "ReceiveNetworkDataFromSocket",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CheckSocketReadiness",
+          "ReceiveNetworkDataFromSocket",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 26,
         "LoD/1.11b": 26,
@@ -47923,6 +54554,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3c29ec8567b721b554c50758c7df6e89",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "CloseNetworkResource"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule",
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory",
+          "CloseNetworkResource"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -47987,6 +54655,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:3401627aba36854c219cd8c53c1e51e6",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"BNNews-D2XP\"",
@@ -48056,6 +54746,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f0c3ac766c2775ce4f49763e229ff4fe",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"bnserver-D2DV.ini\""
@@ -48120,6 +54827,63 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:88411ff6f1fb3ed12824bc239d67c35f",
+      "callees": {
+        "LoD/1.11": [
+          "inet_addr",
+          "WSAGetLastError",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "gethostbyname",
+          "WSAGetLastError",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "inet_addr",
+          "WSAGetLastError",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "gethostbyname",
+          "WSAGetLastError",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "inet_addr",
+          "WSAGetLastError",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "gethostbyname",
+          "WSAGetLastError",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "inet_addr",
+          "WSAGetLastError",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "gethostbyname",
+          "WSAGetLastError",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "inet_addr",
+          "WSAGetLastError",
+          "inet_ntoa",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "gethostbyname",
+          "WSAGetLastError",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"ERROR GetServersList: gethostbyname failed to get...",
@@ -48377,6 +55141,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:69f2cf976046082b527943e09986d625",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeWinsock"
+        ],
+        "LoD/1.11b": [
+          "InitializeWinsock"
+        ],
+        "LoD/1.12a": [
+          "InitializeWinsock"
+        ],
+        "LoD/1.13c": [
+          "InitializeWinsock"
+        ],
+        "LoD/1.13d": [
+          "InitializeWinsock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"querying gateway %s\""
@@ -48508,29 +55289,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "9782a399963b8fbb6acccf4f575c9f56",
         "LoD/1.13c": "9782a399963b8fbb6acccf4f575c9f56",
         "LoD/1.13d": "9782a399963b8fbb6acccf4f575c9f56"
-      }
-    },
-    "bnclient.dll_MNE_b0752bee787a_EC90": {
-      "addresses": {
-        "LoD/1.11": "0x6FF2EC90"
-      },
-      "rvas": {
-        "LoD/1.11": "0xEC90"
-      },
-      "sizes": {
-        "LoD/1.11": 43
-      },
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:b0752bee787a760f28734023698299a6",
-      "basic_block_counts": {
-        "LoD/1.11": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "b0752bee787a760f28734023698299a6"
       }
     },
     "bnclient.dll_MNE_bd3c7ad89b5a": {
@@ -48746,6 +55504,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -48887,6 +55667,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 25,
         "LoD/1.11b": 25,
@@ -48934,6 +55736,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:423afa89969ac331d682aa352bd0253a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 32,
         "LoD/1.11b": 32,
@@ -48981,6 +55810,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 27,
         "LoD/1.11b": 27,
@@ -49075,6 +55926,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:dbc904c6fa33a9e408d5236c4950491c",
+      "callees": {
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -49122,6 +55995,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8841875e32ef1d63f5e2336b9c1c67a9",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena",
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\grid.cpp\""
@@ -49186,6 +56091,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:3221754ec6ff2ee6de38406c7a8a825f",
+      "callees": {
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "FindAndValidateD2ExpMpq",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "GetReturnAddress",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "FindAndValidateD2ExpMpq",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "GetReturnAddress",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "FindAndValidateD2ExpMpq",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "GetReturnAddress",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "FindAndValidateD2ExpMpq",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "GetReturnAddress",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "FindAndValidateD2ExpMpq",
+          "ConstructFileAccessFlagsAndRead",
+          "FreeMemoryBlockIfValid",
+          "GetReturnAddress",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"%s\\\\%s.clh\"",
@@ -49328,6 +56300,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:925471e9dd85890af23b411afb7f1330",
+      "callees": {
+        "LoD/1.11": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.11b": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.12a": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13c": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ],
+        "LoD/1.13d": [
+          "DeleteAndFreeMemory",
+          "DeleteAndFreeMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -49375,6 +56369,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:788cb3ced61c36ce852e4c2dbfab5a53",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -49422,6 +56438,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c79517d516b24df619096da29950eca9",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CalculateStringLength",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -49516,6 +56564,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:331ffde2025e2b5290cd8798cf1f3160",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -49563,6 +56633,63 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4f77ba426cf7296d712a356e15a80947",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -49610,6 +56737,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e0bab40bdd12fe3e9b229f4fa29f64dd",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -49657,6 +56821,58 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:d262131be82b89987dd74bee2f614b9b",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "ClearMemory",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryAndDetectTerminator",
+          "ConvertStringToLowercase",
+          "CopyMemoryBuffer",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -49751,6 +56967,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:5d4e9ef9355470bbf18c9d60c12547f0",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "CopyMemoryBuffer",
+          "CopyMemoryBuffer",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -49798,6 +57046,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:094454d7f98d82a3ab3fa9607fd7f94d",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -49845,6 +57115,53 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7ad21417a50abfac3c66fdfe5a0098aa",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 17,
         "LoD/1.11b": 17,
@@ -50348,6 +57665,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:423afa89969ac331d682aa352bd0253a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "CacheAndForwardErrorCode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 14,
         "LoD/1.11b": 14,
@@ -50583,6 +57927,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c57a51cb4ffb8f9ec1470c8252c24661",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena",
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\CACHE.CPP\"",
@@ -50690,14 +58061,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF2AFD0",
         "LoD/1.12a": "0x6FF31350",
         "LoD/1.13c": "0x6FF2FC40",
-        "LoD/1.13d": "0x6FF34E20"
+        "LoD/1.13d": "0x6FF34E50"
       },
       "rvas": {
         "LoD/1.11": "0x12230",
         "LoD/1.11b": "0xAFD0",
         "LoD/1.12a": "0x11350",
         "LoD/1.13c": "0xFC40",
-        "LoD/1.13d": "0x14E20"
+        "LoD/1.13d": "0x14E50"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -50741,14 +58112,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF2B000",
         "LoD/1.12a": "0x6FF31320",
         "LoD/1.13c": "0x6FF2FC70",
-        "LoD/1.13d": "0x6FF34E50"
+        "LoD/1.13d": "0x6FF34E20"
       },
       "rvas": {
         "LoD/1.11": "0x12260",
         "LoD/1.11b": "0xB000",
         "LoD/1.12a": "0x11320",
         "LoD/1.13c": "0xFC70",
-        "LoD/1.13d": "0x14E50"
+        "LoD/1.13d": "0x14E20"
       },
       "sizes": {
         "LoD/1.11": 39,
@@ -50811,6 +58182,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6b051200df70700a50910290e6f0b8ee",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnMessQueue.cpp\""
@@ -50875,6 +58263,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:d972c2cccf1b3939dc2cb1976b13927b",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "CopyMemoryAndDetectTerminator",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnMessQueue.cpp\""
@@ -50939,6 +58359,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnMessQueue.cpp\""
@@ -51003,6 +58450,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ed2d22d804bac0b38c7c945b7630cfde",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnSend.cpp\""
@@ -51048,14 +58517,14 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0x6FF2F830",
         "LoD/1.12a": "0x6FF34D40",
         "LoD/1.13c": "0x6FF308B0",
-        "LoD/1.13d": "0x6FF2C110"
+        "LoD/1.13d": "0x6FF2C150"
       },
       "rvas": {
         "LoD/1.11": "0x126D0",
         "LoD/1.11b": "0xF830",
         "LoD/1.12a": "0x14D40",
         "LoD/1.13c": "0x108B0",
-        "LoD/1.13d": "0xC110"
+        "LoD/1.13d": "0xC150"
       },
       "sizes": {
         "LoD/1.11": 14,
@@ -51137,6 +58606,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:cf9ef390e3e7fb572f9c0ac563129cdd",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8,
@@ -51255,16 +58741,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF328D0",
         "LoD/1.11b": "0x6FF2F550",
-        "LoD/1.12a": "0x6FF34F50",
-        "LoD/1.13c": "0x6FF30AA0",
-        "LoD/1.13d": "0x6FF2BD70"
+        "LoD/1.12a": "0x6FF34F40",
+        "LoD/1.13c": "0x6FF30AD0",
+        "LoD/1.13d": "0x6FF2BD80"
       },
       "rvas": {
         "LoD/1.11": "0x128D0",
         "LoD/1.11b": "0xF550",
-        "LoD/1.12a": "0x14F50",
-        "LoD/1.13c": "0x10AA0",
-        "LoD/1.13d": "0xBD70"
+        "LoD/1.12a": "0x14F40",
+        "LoD/1.13c": "0x10AD0",
+        "LoD/1.13d": "0xBD80"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -51301,17 +58787,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_48f2943c8d5b_28E0": {
       "addresses": {
         "LoD/1.11": "0x6FF328E0",
-        "LoD/1.11b": "0x6FF2F510",
-        "LoD/1.12a": "0x6FF34F40",
+        "LoD/1.11b": "0x6FF2F520",
+        "LoD/1.12a": "0x6FF34F80",
         "LoD/1.13c": "0x6FF30A90",
-        "LoD/1.13d": "0x6FF2BDB0"
+        "LoD/1.13d": "0x6FF2BD70"
       },
       "rvas": {
         "LoD/1.11": "0x128E0",
-        "LoD/1.11b": "0xF510",
-        "LoD/1.12a": "0x14F40",
+        "LoD/1.11b": "0xF520",
+        "LoD/1.12a": "0x14F80",
         "LoD/1.13c": "0x10A90",
-        "LoD/1.13d": "0xBDB0"
+        "LoD/1.13d": "0xBD70"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -51395,17 +58881,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_MNE_48f2943c8d5b_2910": {
       "addresses": {
         "LoD/1.11": "0x6FF32910",
-        "LoD/1.11b": "0x6FF2F520",
-        "LoD/1.12a": "0x6FF34F80",
-        "LoD/1.13c": "0x6FF30AD0",
-        "LoD/1.13d": "0x6FF2BD80"
+        "LoD/1.11b": "0x6FF2F510",
+        "LoD/1.12a": "0x6FF34F50",
+        "LoD/1.13c": "0x6FF30AA0",
+        "LoD/1.13d": "0x6FF2BDB0"
       },
       "rvas": {
         "LoD/1.11": "0x12910",
-        "LoD/1.11b": "0xF520",
-        "LoD/1.12a": "0x14F80",
-        "LoD/1.13c": "0x10AD0",
-        "LoD/1.13d": "0xBD80"
+        "LoD/1.11b": "0xF510",
+        "LoD/1.12a": "0x14F50",
+        "LoD/1.13c": "0x10AA0",
+        "LoD/1.13d": "0xBDB0"
       },
       "sizes": {
         "LoD/1.11": 11,
@@ -51489,17 +58975,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_GetLastError_2990": {
       "addresses": {
         "LoD/1.11": "0x6FF32990",
-        "LoD/1.11b": "0x6FF2C620",
+        "LoD/1.11b": "0x6FF2F5D0",
         "LoD/1.12a": "0x6FF331A0",
-        "LoD/1.13c": "0x6FF30B50",
-        "LoD/1.13d": "0x6FF2E070"
+        "LoD/1.13c": "0x6FF357C0",
+        "LoD/1.13d": "0x6FF2CDF0"
       },
       "rvas": {
         "LoD/1.11": "0x12990",
-        "LoD/1.11b": "0xC620",
+        "LoD/1.11b": "0xF5D0",
         "LoD/1.12a": "0x131A0",
-        "LoD/1.13c": "0x10B50",
-        "LoD/1.13d": "0xE070"
+        "LoD/1.13c": "0x157C0",
+        "LoD/1.13d": "0xCDF0"
       },
       "sizes": {
         "LoD/1.11": 6,
@@ -51685,6 +59171,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:8b6d11914714a660b28813d76863598c",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -51971,6 +59474,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6b0b2bb909d0cc192bdf1f626263a425",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -52112,6 +59632,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:331ffde2025e2b5290cd8798cf1f3160",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer",
+          "Ordinal_10007"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -52206,6 +59748,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:9a584818580fca38c6380a49ab07dec8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10263",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10263",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10263",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "LoadAndIndexCrashDumpEntries",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10263",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator",
+          "ValidateAndProcessRequest",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Patch\"",
@@ -52275,6 +59854,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6db6cdcf44377f8735edb655c85ce6cf",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -52333,6 +59939,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:dcf0d3cfce81ecb05ae44891ba21e1ed",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7
       },
@@ -52368,6 +59979,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2a274ce1cde8a4e58d9d0439ef5c3c53",
+      "callees": {
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"DATA\\\\GLOBAL\\\\gateways.txt\""
@@ -52436,6 +60074,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2a274ce1cde8a4e58d9d0439ef5c3c53",
+      "callees": {
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Data\\\\Global\\\\Realms.bin\""
@@ -52504,6 +60169,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:1bfe45c9047f668aa56e5014f3f5d921",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -52555,6 +60237,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:474fc7cec96605688606f09c9b6a21f6",
+      "callees": {
+        "LoD/1.11": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -52606,6 +60315,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8255851871466712f4843c0893052b76",
+      "callees": {
+        "LoD/1.11": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -52657,6 +60388,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e9b79e59a5bc8221fd5fa43647d8e1a6",
+      "callees": {
+        "LoD/1.11": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.11b": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.12a": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.13c": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ],
+        "LoD/1.13d": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -52708,6 +60456,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:11733175d96097366816caf5c9170cf7",
+      "callees": {
+        "LoD/1.11": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CompareStringsIgnoreCase",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CompareStringsIgnoreCase",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CompareStringsIgnoreCase",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CompareStringsIgnoreCase",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "?Nth@BNGatewayAccess@@AAEPADH@Z",
+          "CompareStringsIgnoreCase",
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -52759,6 +60544,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:019d4ab11b5cd3b22e288ad3280ccc69",
+      "callees": {
+        "LoD/1.11": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?FindKey@BNGatewayAccess@@AAEPADPAD0@Z",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?GMT@BNGatewayAccess@@QAGHH@Z",
+          "?GetSystemTimeZone@BNGatewayAccess@@AAEHXZ",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "AllocateMemoryFromArena",
+          "CalculateStringLength",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+16 more"
+        ],
+        "LoD/1.11b": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?FindKey@BNGatewayAccess@@AAEPADPAD0@Z",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?GMT@BNGatewayAccess@@QAGHH@Z",
+          "?GetSystemTimeZone@BNGatewayAccess@@AAEHXZ",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "AllocateMemoryFromArena",
+          "CalculateStringLength",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+16 more"
+        ],
+        "LoD/1.12a": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?FindKey@BNGatewayAccess@@AAEPADPAD0@Z",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?GMT@BNGatewayAccess@@QAGHH@Z",
+          "?GetSystemTimeZone@BNGatewayAccess@@AAEHXZ",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "AllocateMemoryFromArena",
+          "CalculateStringLength",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+16 more"
+        ],
+        "LoD/1.13c": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?FindKey@BNGatewayAccess@@AAEPADPAD0@Z",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?GMT@BNGatewayAccess@@QAGHH@Z",
+          "?GetSystemTimeZone@BNGatewayAccess@@AAEHXZ",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "AllocateMemoryFromArena",
+          "CalculateStringLength",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+16 more"
+        ],
+        "LoD/1.13d": [
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "?FindKey@BNGatewayAccess@@AAEPADPAD0@Z",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?GMT@BNGatewayAccess@@QAGHH@Z",
+          "?GetSystemTimeZone@BNGatewayAccess@@AAEHXZ",
+          "?SaveAndUnload@BNGatewayAccess@@QAGXXZ",
+          "AllocateMemoryFromArena",
+          "CalculateStringLength",
+          "?FindSection@BNGatewayAccess@@AAEPADPAD0@Z",
+          "...+16 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Parsing new gateway list (version %d)\"",
@@ -52842,6 +60694,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:fde45e437d6619bacfe6475d146a29a7",
+      "callees": {
+        "LoD/1.11": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.11b": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.12a": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.13c": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ],
+        "LoD/1.13d": [
+          "ConstructFileAccessFlagsAndRead",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "?UpdateGatewaysFromIni@BNGatewayAccess@@QAGXPAD@Z"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Writing default gateway list\"",
@@ -52958,6 +60842,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:6cc039467b336a8f73db5b88470c9337",
+      "callees": {
+        "LoD/1.11": [
+          "CloseFileHandle",
+          "CreateAndTrackFile",
+          "IncrementHashedEntryCounter"
+        ],
+        "LoD/1.11b": [
+          "CloseFileHandle",
+          "CreateAndTrackFile",
+          "IncrementHashedEntryCounter"
+        ],
+        "LoD/1.12a": [
+          "CloseFileHandle",
+          "CreateAndTrackFile",
+          "IncrementHashedEntryCounter"
+        ],
+        "LoD/1.13c": [
+          "CloseFileHandle",
+          "CreateAndTrackFile",
+          "IncrementHashedEntryCounter"
+        ],
+        "LoD/1.13d": [
+          "CloseFileHandle",
+          "CreateAndTrackFile",
+          "IncrementHashedEntryCounter"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"BnetLog.txt\""
@@ -53069,6 +60980,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:630f18b9c96b7e0ebdd2853af480a376",
+      "callees": {
+        "LoD/1.11": [
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -53116,6 +61049,63 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f48d445787c5f550b14079330a94dfb0",
+      "callees": {
+        "LoD/1.11": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.11b": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.12a": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13c": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13d": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\""
@@ -53180,6 +61170,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2d60b0b957e0d60ef43988df97dda366",
+      "callees": {
+        "LoD/1.11": [
+          "CreateFileWrapper",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.11b": [
+          "CreateFileWrapper",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.12a": [
+          "CreateFileWrapper",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.13c": [
+          "CreateFileWrapper",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.13d": [
+          "CreateFileWrapper",
+          "DeleteFile",
+          "DeleteFile"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -53227,6 +61244,48 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c9085b0e30e58d9a0f0eda304d6f00ae",
+      "callees": {
+        "LoD/1.11": [
+          "CreateFileWrapper",
+          "SetFilePointerWrapper",
+          "recv",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.11b": [
+          "CreateFileWrapper",
+          "SetFilePointerWrapper",
+          "recv",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.12a": [
+          "CreateFileWrapper",
+          "SetFilePointerWrapper",
+          "recv",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.13c": [
+          "CreateFileWrapper",
+          "SetFilePointerWrapper",
+          "recv",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeleteFile"
+        ],
+        "LoD/1.13d": [
+          "CreateFileWrapper",
+          "SetFilePointerWrapper",
+          "recv",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeleteFile"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -53274,6 +61333,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4ae82cf4b033be1f46549e4871bb1ce0",
+      "callees": {
+        "LoD/1.11": [
+          "recv"
+        ],
+        "LoD/1.11b": [
+          "recv"
+        ],
+        "LoD/1.12a": [
+          "recv"
+        ],
+        "LoD/1.13c": [
+          "recv"
+        ],
+        "LoD/1.13d": [
+          "recv"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -53321,6 +61397,63 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f48d445787c5f550b14079330a94dfb0",
+      "callees": {
+        "LoD/1.11": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.11b": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.12a": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13c": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13d": [
+          "OpenAndValidateGameFile",
+          "GetStreamFileSize",
+          "AllocateMemoryFromArena",
+          "ReadStreamData",
+          "CreateFileWrapper",
+          "WriteFileThunk",
+          "DeleteFile",
+          "DeallocateMemoryBlock",
+          "ReleaseFileHandleWithRefCount"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\""
@@ -53432,6 +61565,53 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a5bbf7efb0638d0c2252aec0ffbee74a",
+      "callees": {
+        "LoD/1.11": [
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.11b": [
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.12a": [
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13c": [
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ReleaseFileHandleWithRefCount"
+        ],
+        "LoD/1.13d": [
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "ReleaseFileHandleWithRefCount"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"d2client.dll\"",
@@ -53506,6 +61686,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2deef89852e5f79e8f80867a8b66303f",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -53553,6 +61750,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:39efaf0fc20e69c224fcea291f1d7879",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -53647,6 +61861,33 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ccc4b079fa74db2707affa79258a586c",
+      "callees": {
+        "LoD/1.11": [
+          "AllocateMemoryFromArena",
+          "recv",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryFromArena",
+          "recv",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryFromArena",
+          "recv",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryFromArena",
+          "recv",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryFromArena",
+          "recv",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\""
@@ -53711,6 +61952,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:777a86ecbe457446ad27ebc42af51707",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "CalculateStringLength",
+          "...+5 more"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "CalculateStringLength",
+          "...+5 more"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "CalculateStringLength",
+          "...+5 more"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "CalculateStringLength",
+          "...+5 more"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "OpenFileArchive",
+          "VerifyArchiveSignature",
+          "OpenAndProcessFile",
+          "ReadStreamData",
+          "ReleaseFileHandleWithRefCount",
+          "ReleaseFileHandleWithRefCount",
+          "CalculateStringLength",
+          "...+5 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\"",
@@ -53790,6 +62098,73 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7601a79504c40c4dff690c316d5de558",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10012",
+          "htons",
+          "inet_addr",
+          "htons",
+          "socket",
+          "connect",
+          "BuildProjectPathThunk",
+          "inet_addr",
+          "setsockopt",
+          "setsockopt",
+          "...+16 more"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10012",
+          "htons",
+          "inet_addr",
+          "htons",
+          "socket",
+          "connect",
+          "BuildProjectPathThunk",
+          "inet_addr",
+          "setsockopt",
+          "setsockopt",
+          "...+16 more"
+        ],
+        "LoD/1.12a": [
+          "GetPeerSocketAddress",
+          "htons",
+          "inet_addr",
+          "htons",
+          "socket",
+          "connect",
+          "BuildProjectPathThunk",
+          "inet_addr",
+          "setsockopt",
+          "setsockopt",
+          "...+16 more"
+        ],
+        "LoD/1.13c": [
+          "GetPeerSocketAddress",
+          "htons",
+          "inet_addr",
+          "htons",
+          "socket",
+          "connect",
+          "BuildProjectPathThunk",
+          "inet_addr",
+          "setsockopt",
+          "setsockopt",
+          "...+16 more"
+        ],
+        "LoD/1.13d": [
+          "GetPeerSocketAddress",
+          "htons",
+          "inet_addr",
+          "htons",
+          "socket",
+          "connect",
+          "BuildProjectPathThunk",
+          "inet_addr",
+          "setsockopt",
+          "setsockopt",
+          "...+16 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\""
@@ -53854,6 +62229,43 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:f3d5bad37ac7bc00d42dbc1abfb01c0d",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock",
+          "DeallocateMemoryBlock",
+          "AllocateMemoryFromArena",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2BNClient\\\\BnDownload.cpp\"",
@@ -54122,6 +62534,38 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1d34a3e14bd5c06d1018b952ccb00af0",
+      "callees": {
+        "LoD/1.11": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 18,
         "LoD/1.11b": 18,
@@ -54160,6 +62604,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5c1f85f34f4a7c38d5dbc767da4da3c9",
+      "callees": {
+        "LoD/1.11": [
+          "CalculateStringLength"
+        ],
+        "LoD/1.11b": [
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3
@@ -54205,30 +62657,75 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_API_83c73248481c_6480": {
       "addresses": {
         "LoD/1.11": "0x6FF36480",
-        "LoD/1.11b": "0x6FF30740"
+        "LoD/1.11b": "0x6FF30740",
+        "LoD/1.12a": "0x6FF32CD0",
+        "LoD/1.13c": "0x6FF304E0",
+        "LoD/1.13d": "0x6FF307E0"
       },
       "rvas": {
         "LoD/1.11": "0x16480",
-        "LoD/1.11b": "0x10740"
+        "LoD/1.11b": "0x10740",
+        "LoD/1.12a": "0x12CD0",
+        "LoD/1.13c": "0x104E0",
+        "LoD/1.13d": "0x107E0"
       },
       "sizes": {
         "LoD/1.11": 299,
-        "LoD/1.11b": 299
+        "LoD/1.11b": 299,
+        "LoD/1.12a": 308,
+        "LoD/1.13c": 308,
+        "LoD/1.13d": 308
       },
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:83c73248481c36f66d4076bd1fd1deae",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
-        "LoD/1.11b": 9
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
       },
       "loop_counts": {
         "LoD/1.11": 0,
-        "LoD/1.11b": 0
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "a58db12d902926b24d918bbf363f0e0a",
-        "LoD/1.11b": "a58db12d902926b24d918bbf363f0e0a"
+        "LoD/1.11b": "a58db12d902926b24d918bbf363f0e0a",
+        "LoD/1.12a": "2d457267f2ce7800ec90bf74e7718099",
+        "LoD/1.13c": "2d457267f2ce7800ec90bf74e7718099",
+        "LoD/1.13d": "2d457267f2ce7800ec90bf74e7718099"
       }
     },
     "bnclient.dll_API_b84aeaa5a3b2": {
@@ -54247,6 +62744,18 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:b84aeaa5a3b24e277bece8c7eed41c45",
+      "callees": {
+        "LoD/1.11": [
+          "FindAndValidateD2ExpMpq",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.11b": [
+          "FindAndValidateD2ExpMpq",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 8,
         "LoD/1.11b": 8
@@ -54279,6 +62788,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ae2dc98b1c5deeb441fa4183543beda9",
+      "callees": {
+        "LoD/1.11": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.11b": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.12a": [
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -54426,6 +62949,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d9a12ae164ceeb71b3ef1de062e62e18",
+      "callees": {
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -55676,16 +64216,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF3750A",
         "LoD/1.11b": "0x6FF374DA",
-        "LoD/1.12a": "0x6FF383A6",
-        "LoD/1.13c": "0x6FF38386",
-        "LoD/1.13d": "0x6FF382C6"
+        "LoD/1.12a": "0x6FF3838A",
+        "LoD/1.13c": "0x6FF3836A",
+        "LoD/1.13d": "0x6FF382AA"
       },
       "rvas": {
         "LoD/1.11": "0x1750A",
         "LoD/1.11b": "0x174DA",
-        "LoD/1.12a": "0x183A6",
-        "LoD/1.13c": "0x18386",
-        "LoD/1.13d": "0x182C6"
+        "LoD/1.12a": "0x1838A",
+        "LoD/1.13c": "0x1836A",
+        "LoD/1.13d": "0x182AA"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -55727,16 +64267,16 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.11": "0x6FF37526",
         "LoD/1.11b": "0x6FF374F6",
-        "LoD/1.12a": "0x6FF3838A",
-        "LoD/1.13c": "0x6FF3836A",
-        "LoD/1.13d": "0x6FF382AA"
+        "LoD/1.12a": "0x6FF383A6",
+        "LoD/1.13c": "0x6FF38386",
+        "LoD/1.13d": "0x6FF382C6"
       },
       "rvas": {
         "LoD/1.11": "0x17526",
         "LoD/1.11b": "0x174F6",
-        "LoD/1.12a": "0x1838A",
-        "LoD/1.13c": "0x1836A",
-        "LoD/1.13d": "0x182AA"
+        "LoD/1.12a": "0x183A6",
+        "LoD/1.13c": "0x18386",
+        "LoD/1.13d": "0x182C6"
       },
       "sizes": {
         "LoD/1.11": 28,
@@ -55981,17 +64521,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_RemoveNodeFromList": {
       "addresses": {
         "LoD/1.11": "0x6FF37740",
-        "LoD/1.11b": "0x6FF37750",
+        "LoD/1.11b": "0x6FF3773A",
         "LoD/1.12a": "0x6FF38600",
         "LoD/1.13c": "0x6FF385A0",
-        "LoD/1.13d": "0x6FF38520"
+        "LoD/1.13d": "0x6FF384E0"
       },
       "rvas": {
         "LoD/1.11": "0x17740",
-        "LoD/1.11b": "0x17750",
+        "LoD/1.11b": "0x1773A",
         "LoD/1.12a": "0x18600",
         "LoD/1.13c": "0x185A0",
-        "LoD/1.13d": "0x18520"
+        "LoD/1.13d": "0x184E0"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -56032,17 +64572,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnwindExceptionFrame": {
       "addresses": {
         "LoD/1.11": "0x6FF37760",
-        "LoD/1.11b": "0x6FF37730",
-        "LoD/1.12a": "0x6FF385E0",
-        "LoD/1.13c": "0x6FF385E8",
-        "LoD/1.13d": "0x6FF38528"
+        "LoD/1.11b": "0x6FF37758",
+        "LoD/1.12a": "0x6FF38608",
+        "LoD/1.13c": "0x6FF385C0",
+        "LoD/1.13d": "0x6FF38500"
       },
       "rvas": {
         "LoD/1.11": "0x17760",
-        "LoD/1.11b": "0x17730",
-        "LoD/1.12a": "0x185E0",
-        "LoD/1.13c": "0x185E8",
-        "LoD/1.13d": "0x18528"
+        "LoD/1.11b": "0x17758",
+        "LoD/1.12a": "0x18608",
+        "LoD/1.13c": "0x185C0",
+        "LoD/1.13d": "0x18500"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -56083,14 +64623,14 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_RemoveNodeFromList_776A": {
       "addresses": {
         "LoD/1.11": "0x6FF3776A",
-        "LoD/1.11b": "0x6FF3773A",
+        "LoD/1.11b": "0x6FF37710",
         "LoD/1.12a": "0x6FF385EA",
         "LoD/1.13c": "0x6FF385CA",
         "LoD/1.13d": "0x6FF3850A"
       },
       "rvas": {
         "LoD/1.11": "0x1776A",
-        "LoD/1.11b": "0x1773A",
+        "LoD/1.11b": "0x17710",
         "LoD/1.12a": "0x185EA",
         "LoD/1.13c": "0x185CA",
         "LoD/1.13d": "0x1850A"
@@ -56134,17 +64674,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_RemoveNodeFromList_7780": {
       "addresses": {
         "LoD/1.11": "0x6FF37780",
-        "LoD/1.11b": "0x6FF37710",
+        "LoD/1.11b": "0x6FF37750",
         "LoD/1.12a": "0x6FF385C0",
         "LoD/1.13c": "0x6FF385E0",
-        "LoD/1.13d": "0x6FF384E0"
+        "LoD/1.13d": "0x6FF38520"
       },
       "rvas": {
         "LoD/1.11": "0x17780",
-        "LoD/1.11b": "0x17710",
+        "LoD/1.11b": "0x17750",
         "LoD/1.12a": "0x185C0",
         "LoD/1.13c": "0x185E0",
-        "LoD/1.13d": "0x184E0"
+        "LoD/1.13d": "0x18520"
       },
       "sizes": {
         "LoD/1.11": 8,
@@ -56185,17 +64725,17 @@ var FUNCTIONS_Bnclient_dll = {
     "bnclient.dll_UnwindExceptionFrame_7788": {
       "addresses": {
         "LoD/1.11": "0x6FF37788",
-        "LoD/1.11b": "0x6FF37758",
-        "LoD/1.12a": "0x6FF38608",
-        "LoD/1.13c": "0x6FF385C0",
-        "LoD/1.13d": "0x6FF38500"
+        "LoD/1.11b": "0x6FF37730",
+        "LoD/1.12a": "0x6FF385E0",
+        "LoD/1.13c": "0x6FF385E8",
+        "LoD/1.13d": "0x6FF38528"
       },
       "rvas": {
         "LoD/1.11": "0x17788",
-        "LoD/1.11b": "0x17758",
-        "LoD/1.12a": "0x18608",
-        "LoD/1.13c": "0x185C0",
-        "LoD/1.13d": "0x18500"
+        "LoD/1.11b": "0x17730",
+        "LoD/1.12a": "0x185E0",
+        "LoD/1.13c": "0x185E8",
+        "LoD/1.13d": "0x18528"
       },
       "sizes": {
         "LoD/1.11": 10,
@@ -56356,6 +64896,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3bef3094bea32646e38b4116e3350cc7",
+      "callees": {
+        "LoD/1.11": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"delete\""
@@ -56459,6 +65016,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11b",
       "method": "STR",
       "index": "STR:879f86a7bcc59a562b2dae0d1db78cf9",
+      "callees": {
+        "LoD/1.11b": [
+          "SetRegistryValue"
+        ]
+      },
       "strings": {
         "LoD/1.11b": [
           "\"Configuration\"",
@@ -56473,47 +65035,6 @@ var FUNCTIONS_Bnclient_dll = {
       },
       "mnemonic_hashes": {
         "LoD/1.11b": "0c4537b37c53a2100ec9d29c8db0748c"
-      }
-    },
-    "bnclient.dll_MNE_68757573fcf2_F880": {
-      "addresses": {
-        "LoD/1.11b": "0x6FF2F880",
-        "LoD/1.12a": "0x6FF35300",
-        "LoD/1.13c": "0x6FF30D80",
-        "LoD/1.13d": "0x6FF2C360"
-      },
-      "rvas": {
-        "LoD/1.11b": "0xF880",
-        "LoD/1.12a": "0x15300",
-        "LoD/1.13c": "0x10D80",
-        "LoD/1.13d": "0xC360"
-      },
-      "sizes": {
-        "LoD/1.11b": 13,
-        "LoD/1.12a": 13,
-        "LoD/1.13c": 13,
-        "LoD/1.13d": 13
-      },
-      "name_source": "LoD/1.11b",
-      "method": "MNE",
-      "index": "MNE:68757573fcf24a924b78d65e614030e1",
-      "basic_block_counts": {
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11b": "68757573fcf24a924b78d65e614030e1",
-        "LoD/1.12a": "68757573fcf24a924b78d65e614030e1",
-        "LoD/1.13c": "68757573fcf24a924b78d65e614030e1",
-        "LoD/1.13d": "68757573fcf24a924b78d65e614030e1"
       }
     },
     "bnclient.dll_MNE_68757573fcf2_F900": {
@@ -56561,6 +65082,28 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:59c51ce8e54e0e9cf2a81cbcf423e24d",
+      "callees": {
+        "LoD/1.11b": [
+          "ClearMemory",
+          "ClearMemory",
+          "ClearMemory"
+        ],
+        "LoD/1.12a": [
+          "ClearMemory",
+          "ClearMemory",
+          "ClearMemory"
+        ],
+        "LoD/1.13c": [
+          "ClearMemory",
+          "ClearMemory",
+          "ClearMemory"
+        ],
+        "LoD/1.13d": [
+          "ClearMemory",
+          "ClearMemory",
+          "ClearMemory"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 13,
         "LoD/1.12a": 13,
@@ -56669,6 +65212,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:0bdce47200651c09ec8257cfc4438a0b",
+      "callees": {
+        "LoD/1.11b": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11b": 7,
         "LoD/1.12a": 7,
@@ -56683,6 +65237,33 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.11b": "0bdce47200651c09ec8257cfc4438a0b",
         "LoD/1.12a": "0bdce47200651c09ec8257cfc4438a0b",
         "LoD/1.13c": "0bdce47200651c09ec8257cfc4438a0b"
+      }
+    },
+    "bnclient.dll_GetGameStateAndResult": {
+      "addresses": {
+        "LoD/1.11b": "0x6FF332E0"
+      },
+      "rvas": {
+        "LoD/1.11b": "0x132E0"
+      },
+      "sizes": {
+        "LoD/1.11b": 13
+      },
+      "name": "GetGameStateAndResult",
+      "signature": "uint GetGameStateAndResult(uint * pOutState)",
+      "calling_convention": "__fastcall",
+      "comment": "Retrieve current game state and result code.\n\nAlgorithm:\n1. Load global game state value from g_dwGameState\n2. Store retrieved state value to output parameter via ECX\n3. Load global game result code from g_dwGameResult\n4. Return result code in EAX\n\nParameters:\npOutState (uint *): Pointer to uint that receives current game state value. Passed in ECX (__fastcall).\n\nReturns:\nCurrent game result code (uint). Zero indicates success, non-zero for error/special state codes.\n\nSpecial Cases:\n- Both globals are persistent state values maintained by game loop\n- Output parameter provides current state snapshot at call time",
+      "name_source": "LoD/1.11b",
+      "method": "MNE",
+      "index": "MNE:68757573fcf24a924b78d65e614030e1",
+      "basic_block_counts": {
+        "LoD/1.11b": 1
+      },
+      "loop_counts": {
+        "LoD/1.11b": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11b": "68757573fcf24a924b78d65e614030e1"
       }
     },
     "bnclient.dll_API_c01fa6e1a170_4F70": {
@@ -56707,6 +65288,24 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.11b",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11b": [
           "\"BNNews-D2XP\"",
@@ -57481,6 +66080,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:f315f7a96cd733bbfff47b01b1477d98",
+      "callees": {
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "CalculateStringLength",
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 7,
         "LoD/1.13c": 7,
@@ -57551,6 +66167,29 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:9c538566bf085706318a65de55f47f05",
+      "callees": {
+        "LoD/1.12a": [
+          "CalculateStringLength",
+          "FindAndValidateD2ExpMpq",
+          "CalculateStringLength",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13c": [
+          "CalculateStringLength",
+          "FindAndValidateD2ExpMpq",
+          "CalculateStringLength",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ],
+        "LoD/1.13d": [
+          "CalculateStringLength",
+          "FindAndValidateD2ExpMpq",
+          "CalculateStringLength",
+          "FreeMemoryBlockIfValid",
+          "FreeMemoryBlockIfValid"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 18,
         "LoD/1.13c": 18,
@@ -57565,41 +66204,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.12a": "55db37a31d4e807ce6de8d7bd483618f",
         "LoD/1.13c": "55db37a31d4e807ce6de8d7bd483618f",
         "LoD/1.13d": "55db37a31d4e807ce6de8d7bd483618f"
-      }
-    },
-    "bnclient.dll_API_83c73248481c_2CD0": {
-      "addresses": {
-        "LoD/1.12a": "0x6FF32CD0",
-        "LoD/1.13c": "0x6FF304E0",
-        "LoD/1.13d": "0x6FF307E0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x12CD0",
-        "LoD/1.13c": "0x104E0",
-        "LoD/1.13d": "0x107E0"
-      },
-      "sizes": {
-        "LoD/1.12a": 308,
-        "LoD/1.13c": 308,
-        "LoD/1.13d": 308
-      },
-      "name_source": "LoD/1.12a",
-      "method": "API",
-      "index": "API:83c73248481c36f66d4076bd1fd1deae",
-      "basic_block_counts": {
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "2d457267f2ce7800ec90bf74e7718099",
-        "LoD/1.13c": "2d457267f2ce7800ec90bf74e7718099",
-        "LoD/1.13d": "2d457267f2ce7800ec90bf74e7718099"
       }
     },
     "bnclient.dll_MNE_5405d9a944a5": {
@@ -57621,6 +66225,17 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:5405d9a944a5c0467e16e546e46abdf1",
+      "callees": {
+        "LoD/1.12a": [
+          "Ordinal_10263"
+        ],
+        "LoD/1.13c": [
+          "LoadAndIndexCrashDumpEntries"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10263"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 3,
         "LoD/1.13c": 3,
@@ -57656,6 +66271,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:9ac0ecc4a5dbdd8dd8dabbc91d0e6fe1",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 6,
         "LoD/1.13c": 6,
@@ -57672,76 +66301,6 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "83b189f55a9a9c4f91ae5a940323db1d"
       }
     },
-    "bnclient.dll_API_83c73248481c_3D00": {
-      "addresses": {
-        "LoD/1.12a": "0x6FF33D00",
-        "LoD/1.13c": "0x6FF2C520",
-        "LoD/1.13d": "0x6FF33170"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x13D00",
-        "LoD/1.13c": "0xC520",
-        "LoD/1.13d": "0x13170"
-      },
-      "sizes": {
-        "LoD/1.12a": 208,
-        "LoD/1.13c": 208,
-        "LoD/1.13d": 208
-      },
-      "name_source": "LoD/1.12a",
-      "method": "API",
-      "index": "API:83c73248481c36f66d4076bd1fd1deae",
-      "basic_block_counts": {
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "3245411c8c6d841db7c43ef92849c7a0",
-        "LoD/1.13c": "3245411c8c6d841db7c43ef92849c7a0",
-        "LoD/1.13d": "3245411c8c6d841db7c43ef92849c7a0"
-      }
-    },
-    "bnclient.dll_API_1697ca392909_3E70": {
-      "addresses": {
-        "LoD/1.12a": "0x6FF33E70",
-        "LoD/1.13c": "0x6FF2C7C0",
-        "LoD/1.13d": "0x6FF334E0"
-      },
-      "rvas": {
-        "LoD/1.12a": "0x13E70",
-        "LoD/1.13c": "0xC7C0",
-        "LoD/1.13d": "0x134E0"
-      },
-      "sizes": {
-        "LoD/1.12a": 151,
-        "LoD/1.13c": 151,
-        "LoD/1.13d": 151
-      },
-      "name_source": "LoD/1.12a",
-      "method": "API",
-      "index": "API:1697ca392909471fdfb8262c47934d2e",
-      "basic_block_counts": {
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.12a": "4275d755a301f3ce48f164c9ba019aa8",
-        "LoD/1.13c": "4275d755a301f3ce48f164c9ba019aa8",
-        "LoD/1.13d": "4275d755a301f3ce48f164c9ba019aa8"
-      }
-    },
     "bnclient.dll_API_041ed3d9d74a_4380": {
       "addresses": {
         "LoD/1.12a": "0x6FF34380"
@@ -57755,6 +66314,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:041ed3d9d74a793ef54fce3895c8551c",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 7
       },
@@ -57784,6 +66350,20 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:9ac0ecc4a5dbdd8dd8dabbc91d0e6fe1",
+      "callees": {
+        "LoD/1.12a": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13c": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 6,
         "LoD/1.13c": 6,
@@ -57804,12 +66384,12 @@ var FUNCTIONS_Bnclient_dll = {
       "addresses": {
         "LoD/1.12a": "0x6FF34D60",
         "LoD/1.13c": "0x6FF30890",
-        "LoD/1.13d": "0x6FF2C150"
+        "LoD/1.13d": "0x6FF2C110"
       },
       "rvas": {
         "LoD/1.12a": "0x14D60",
         "LoD/1.13c": "0x10890",
-        "LoD/1.13d": "0xC150"
+        "LoD/1.13d": "0xC110"
       },
       "sizes": {
         "LoD/1.12a": 14,
@@ -57955,6 +66535,23 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.12a",
       "method": "STR",
       "index": "STR:98a90bc414b338826eb1311699b2b5ab",
+      "callees": {
+        "LoD/1.12a": [
+          "ValidateAndProcessRequest",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest"
+        ],
+        "LoD/1.13c": [
+          "ValidateAndProcessRequest",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest"
+        ],
+        "LoD/1.13d": [
+          "ValidateAndProcessRequest",
+          "CopyMemoryBuffer",
+          "ValidateAndProcessRequest"
+        ]
+      },
       "strings": {
         "LoD/1.12a": [
           "\"user has latest version\"",
@@ -58154,6 +66751,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:f58ee5d7699175fe584c76136b842bcf",
+      "callees": {
+        "LoD/1.13c": [
+          "CalculateStringLength"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 15
       },
@@ -58180,6 +66782,14 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:84c900b202dd52ad7657f01fdc31d1e4",
+      "callees": {
+        "LoD/1.13c": [
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 6,
         "LoD/1.13d": 6
@@ -58209,6 +66819,18 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:83c73248481c36f66d4076bd1fd1deae",
+      "callees": {
+        "LoD/1.13c": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ],
+        "LoD/1.13d": [
+          "FindAndValidateD2ExpMpq",
+          "CopyMemoryAndDetectTerminator",
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13c": 1,
         "LoD/1.13d": 1
@@ -58552,18 +67174,18 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "d54b31472f74b078be31f20f65c7b2d3"
       }
     },
-    "bnclient.dll_Ordinal_10008": {
+    "bnclient.dll_Ordinal_10263": {
       "addresses": {
-        "LoD/1.13d": "0x6FF28156"
+        "LoD/1.13d": "0x6FF280F6"
       },
       "rvas": {
-        "LoD/1.13d": "0x8156"
+        "LoD/1.13d": "0x80F6"
       },
       "sizes": {
         "LoD/1.13d": 6
       },
-      "name": "Ordinal_10008",
-      "signature": "undefined Ordinal_10008(void)",
+      "name": "Ordinal_10263",
+      "signature": "undefined Ordinal_10263(void)",
       "calling_convention": "unknown",
       "name_source": "LoD/1.13d",
       "method": "MNE",
@@ -58591,6 +67213,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13d",
       "method": "STR",
       "index": "STR:879f86a7bcc59a562b2dae0d1db78cf9",
+      "callees": {
+        "LoD/1.13d": [
+          "SetRegistryValue"
+        ]
+      },
       "strings": {
         "LoD/1.13d": [
           "\"Configuration\"",
@@ -58739,6 +67366,11 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13d",
       "method": "MNE",
       "index": "MNE:dcf0d3cfce81ecb05ae44891ba21e1ed",
+      "callees": {
+        "LoD/1.13d": [
+          "CopyMemoryAndDetectTerminator"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 7
       },
@@ -58799,7 +67431,7 @@ var FUNCTIONS_Bnclient_dll = {
         "LoD/1.13d": "1d9f75f652aa66096514a71847c72cd6"
       }
     },
-    "bnclient.dll_GetGameStateAndResult": {
+    "bnclient.dll_GetGameStateAndResult_2DE0": {
       "addresses": {
         "LoD/1.13d": "0x6FF32DE0"
       },
@@ -58839,6 +67471,13 @@ var FUNCTIONS_Bnclient_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:ca3c2148ae8598c69d2335858b4f636b",
+      "callees": {
+        "LoD/1.13d": [
+          "Ordinal_10735",
+          "CopyMemoryBuffer",
+          "SendDataOverSocket"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.13d": 4
       },

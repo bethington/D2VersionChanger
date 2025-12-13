@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for Binkw32.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -587,6 +587,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70e19c34028b2fb63cd0f4868863792f",
+      "callees": {
+        "LoD/1.07": [
+          "BinkService"
+        ],
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -698,6 +745,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7b9ba37d02629aa2918167192674ddc4",
+      "callees": {
+        "LoD/1.07": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.08": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService",
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService",
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 33,
         "LoD/1.08": 33,
@@ -809,6 +918,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0b5d66b3662b4610e5335569925079fb",
+      "callees": {
+        "LoD/1.07": [
+          "BinkService"
+        ],
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -920,6 +1076,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b44c1e185c2c0726e0d35b2a2760d526",
+      "callees": {
+        "LoD/1.07": [
+          "BinkService"
+        ],
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -1031,6 +1234,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:02a4d84f0677d99c67e86a8e3a1e4a0f",
+      "callees": {
+        "LoD/1.07": [
+          "BinkService"
+        ],
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -3029,6 +3279,98 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:acc87716bbad2578fb596a6d43940be9",
+      "callees": {
+        "LoD/1.07": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.08": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.09": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.09b": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.09d": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.10": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.11": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.11b": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.12a": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.13c": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.13d": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.14a": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.14b": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.14c": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ],
+        "LoD/1.14d": [
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane",
+          "ExpandPlane"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 12,
         "LoD/1.08": 12,
@@ -4297,6 +4639,203 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7ae0a63442fda68f53885cdca4c21121",
+      "callees": {
+        "LoD/1.07": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.08": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.09d": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.10": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.11": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.11b": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.12a": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.13c": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.13d": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14a": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14b": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14c": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ],
+        "LoD/1.14d": [
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkIsSoftwareCursor",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "BinkDDSurfaceType",
+          "_radmalloc@4",
+          "_radfree@4",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"No capable blitting style available.\"",
@@ -5450,6 +5989,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7ea41d38c3be5dbcf086509c906678ea",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 12,
         "LoD/1.08": 12,
@@ -5561,6 +6162,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c5e308b26afcba81bbb0eafba73615d0",
+      "callees": {
+        "LoD/1.07": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.08": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09b": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09d": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.10": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.11": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.11b": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.12a": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.13c": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.13d": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14a": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14b": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14c": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14d": [
+          "BinkCheckCursor",
+          "BinkRestoreCursor"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 19,
         "LoD/1.08": 19,
@@ -5672,6 +6335,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ecef6e0b279551dbbcf95cc18e5c85a1",
+      "callees": {
+        "LoD/1.07": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.08": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09b": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.09d": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.10": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.11": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.11b": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.12a": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.13c": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.13d": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14a": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14b": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14c": [
+          "BinkRestoreCursor"
+        ],
+        "LoD/1.14d": [
+          "BinkRestoreCursor"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -6460,6 +7170,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:17042c96628d5959d98c3632dd614ec8",
+      "callees": {
+        "LoD/1.07": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.08": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.09": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.09b": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.09d": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.10": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.11": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.11b": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.12a": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.13c": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.13d": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.14a": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.14b": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.14c": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ],
+        "LoD/1.14d": [
+          "BinkBufferLock",
+          "BinkBufferUnlock"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -6793,6 +7565,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:61ec8fae9fdcc46d6b969bf474620d41",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 4,
         "LoD/1.08": 4,
@@ -7681,6 +8500,98 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:006319909adad92336fed515e047f38e",
+      "callees": {
+        "LoD/1.07": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.08": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.09": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.09b": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.09d": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.10": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.11": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.11b": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.12a": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.13c": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.13d": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.14a": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.14b": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.14c": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ],
+        "LoD/1.14d": [
+          "BinkSetError",
+          "BinkSetError",
+          "BinkSetError",
+          "ExpandBundleSizes"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Error opening file.\"",
@@ -7865,6 +8776,98 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9b54e721e12190afbf3c23c3fb64cf58",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "BinkSetError",
+          "_radmalloc@4",
+          "BinkClose"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Out of memory.\""
@@ -8023,6 +9026,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a6bb5ce0bf71b6b2985c5812a5ad1024",
+      "callees": {
+        "LoD/1.07": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.08": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.09": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.09b": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.09d": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.10": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.11": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.11b": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.12a": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.13c": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.13d": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.14a": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.14b": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.14c": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ],
+        "LoD/1.14d": [
+          "BinkSetSoundOnOff",
+          "BinkSetSoundOnOff"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 14,
         "LoD/1.08": 14,
@@ -8689,6 +9754,203 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:dfa8c7e973631045e0f812f651719db1",
+      "callees": {
+        "LoD/1.07": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "_YUV_blit_24bpp@48",
+          "YuvBlit16Bpp",
+          "BlitYuvUyvyFormat",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bppMask",
+          "YuvBlit24bppMask",
+          "...+4 more"
+        ],
+        "LoD/1.08": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.09": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.09b": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.09d": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.10": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.11": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.11b": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.12a": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.13c": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.13d": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.14a": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.14b": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.14c": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ],
+        "LoD/1.14d": [
+          "YuvInit",
+          "BinkPause",
+          "BinkPause",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "ProcessYuvToRgbYuy2Blit",
+          "ProcessYuvToRgbYuy2Blit",
+          "YuvBlit32bpp",
+          "YuvBlit32bpp",
+          "...+4 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 53,
         "LoD/1.08": 53,
@@ -8911,6 +10173,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:828ddfda5cf60ee581badbb279450a28",
+      "callees": {
+        "LoD/1.07": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.08": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.09": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.09b": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.09d": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.10": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.11": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.11b": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.12a": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.13c": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.13d": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.14a": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.14b": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.14c": [
+          "ExpandBinkPlanes"
+        ],
+        "LoD/1.14d": [
+          "ExpandBinkPlanes"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 41,
         "LoD/1.08": 41,
@@ -9355,6 +10664,143 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6a67f3b3494d555a6ef8df3d0bdf877c",
+      "callees": {
+        "LoD/1.07": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.08": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.09": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.09b": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.09d": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.10": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.11": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.11b": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.12a": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.13c": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.13d": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.14a": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.14b": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.14c": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ],
+        "LoD/1.14d": [
+          "BinkGetKeyFrame",
+          "BinkPause",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkDoFrame",
+          "BinkNextFrame",
+          "BinkPause"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 16,
         "LoD/1.08": 16,
@@ -9466,6 +10912,98 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0770f109002b57167dcc40dc1ebf5212",
+      "callees": {
+        "LoD/1.07": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "BinkPause",
+          "_radfree@4",
+          "_radfree@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 18,
         "LoD/1.08": 18,
@@ -11242,6 +12780,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a12c2c16e6534ee1fb1913cb480c01a8",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 10,
         "LoD/1.08": 10,
@@ -11353,6 +12938,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:de598d52c0612751d3d66fac812e7e95",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -11797,6 +13429,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2a813995b1441f088cdfb419380fb2ad",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4",
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -12019,6 +13713,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7f662ad0ee6f8dabb307791a233ec837",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -13798,36 +15539,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_YuvBlit32bpp": {
       "addresses": {
         "LoD/1.07": "0x1000BEA0",
-        "LoD/1.08": "0x1000EF60",
+        "LoD/1.08": "0x1000BEA0",
         "LoD/1.09": "0x1000BEA0",
-        "LoD/1.09b": "0x1000EF60",
+        "LoD/1.09b": "0x1000BEA0",
         "LoD/1.09d": "0x1000BEA0",
-        "LoD/1.10": "0x1000EF60",
+        "LoD/1.10": "0x1000BEA0",
         "LoD/1.11": "0x1000BEA0",
-        "LoD/1.11b": "0x1000EF60",
+        "LoD/1.11b": "0x1000BEA0",
         "LoD/1.12a": "0x1000BEA0",
-        "LoD/1.13c": "0x1000EF60",
+        "LoD/1.13c": "0x1000BEA0",
         "LoD/1.13d": "0x1000BEA0",
-        "LoD/1.14a": "0x1000EF60",
+        "LoD/1.14a": "0x1000BEA0",
         "LoD/1.14b": "0x1000BEA0",
-        "LoD/1.14c": "0x1000EF60",
+        "LoD/1.14c": "0x1000BEA0",
         "LoD/1.14d": "0x1000BEA0"
       },
       "rvas": {
         "LoD/1.07": "0xBEA0",
-        "LoD/1.08": "0xEF60",
+        "LoD/1.08": "0xBEA0",
         "LoD/1.09": "0xBEA0",
-        "LoD/1.09b": "0xEF60",
+        "LoD/1.09b": "0xBEA0",
         "LoD/1.09d": "0xBEA0",
-        "LoD/1.10": "0xEF60",
+        "LoD/1.10": "0xBEA0",
         "LoD/1.11": "0xBEA0",
-        "LoD/1.11b": "0xEF60",
+        "LoD/1.11b": "0xBEA0",
         "LoD/1.12a": "0xBEA0",
-        "LoD/1.13c": "0xEF60",
+        "LoD/1.13c": "0xBEA0",
         "LoD/1.13d": "0xBEA0",
-        "LoD/1.14a": "0xEF60",
+        "LoD/1.14a": "0xBEA0",
         "LoD/1.14b": "0xBEA0",
-        "LoD/1.14c": "0xEF60",
+        "LoD/1.14c": "0xBEA0",
         "LoD/1.14d": "0xBEA0"
       },
       "sizes": {
@@ -14298,6 +16039,68 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:320a44a3b8034bd3b246893d2e30bc9d",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4",
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 5,
         "LoD/1.08": 5,
@@ -14464,36 +16267,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_StandardPixelHandlerSecondary": {
       "addresses": {
         "LoD/1.07": "0x1000CC60",
-        "LoD/1.08": "0x1000CBB0",
+        "LoD/1.08": "0x1000CC60",
         "LoD/1.09": "0x1000CBB0",
-        "LoD/1.09b": "0x1000CBB0",
+        "LoD/1.09b": "0x1000CC60",
         "LoD/1.09d": "0x1000CBB0",
-        "LoD/1.10": "0x1000CBB0",
+        "LoD/1.10": "0x1000CC60",
         "LoD/1.11": "0x1000CBB0",
-        "LoD/1.11b": "0x1000CBB0",
+        "LoD/1.11b": "0x1000CC60",
         "LoD/1.12a": "0x1000CBB0",
-        "LoD/1.13c": "0x1000CBB0",
+        "LoD/1.13c": "0x1000CC60",
         "LoD/1.13d": "0x1000CBB0",
-        "LoD/1.14a": "0x1000CBB0",
+        "LoD/1.14a": "0x1000CC60",
         "LoD/1.14b": "0x1000CBB0",
-        "LoD/1.14c": "0x1000CBB0",
+        "LoD/1.14c": "0x1000CC60",
         "LoD/1.14d": "0x1000CBB0"
       },
       "rvas": {
         "LoD/1.07": "0xCC60",
-        "LoD/1.08": "0xCBB0",
+        "LoD/1.08": "0xCC60",
         "LoD/1.09": "0xCBB0",
-        "LoD/1.09b": "0xCBB0",
+        "LoD/1.09b": "0xCC60",
         "LoD/1.09d": "0xCBB0",
-        "LoD/1.10": "0xCBB0",
+        "LoD/1.10": "0xCC60",
         "LoD/1.11": "0xCBB0",
-        "LoD/1.11b": "0xCBB0",
+        "LoD/1.11b": "0xCC60",
         "LoD/1.12a": "0xCBB0",
-        "LoD/1.13c": "0xCBB0",
+        "LoD/1.13c": "0xCC60",
         "LoD/1.13d": "0xCBB0",
-        "LoD/1.14a": "0xCBB0",
+        "LoD/1.14a": "0xCC60",
         "LoD/1.14b": "0xCBB0",
-        "LoD/1.14c": "0xCBB0",
+        "LoD/1.14c": "0xCC60",
         "LoD/1.14d": "0xCBB0"
       },
       "sizes": {
@@ -14574,36 +16377,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_AlternativePixelHandler": {
       "addresses": {
         "LoD/1.07": "0x1000CD10",
-        "LoD/1.08": "0x1000CD10",
+        "LoD/1.08": "0x1000CDD0",
         "LoD/1.09": "0x1000CD10",
-        "LoD/1.09b": "0x1000CD10",
+        "LoD/1.09b": "0x1000CDD0",
         "LoD/1.09d": "0x1000CD10",
-        "LoD/1.10": "0x1000CD10",
+        "LoD/1.10": "0x1000CDD0",
         "LoD/1.11": "0x1000CD10",
-        "LoD/1.11b": "0x1000CD10",
+        "LoD/1.11b": "0x1000CDD0",
         "LoD/1.12a": "0x1000CD10",
-        "LoD/1.13c": "0x1000CD10",
+        "LoD/1.13c": "0x1000CDD0",
         "LoD/1.13d": "0x1000CD10",
-        "LoD/1.14a": "0x1000CD10",
+        "LoD/1.14a": "0x1000CDD0",
         "LoD/1.14b": "0x1000CD10",
-        "LoD/1.14c": "0x1000CD10",
+        "LoD/1.14c": "0x1000CDD0",
         "LoD/1.14d": "0x1000CD10"
       },
       "rvas": {
         "LoD/1.07": "0xCD10",
-        "LoD/1.08": "0xCD10",
+        "LoD/1.08": "0xCDD0",
         "LoD/1.09": "0xCD10",
-        "LoD/1.09b": "0xCD10",
+        "LoD/1.09b": "0xCDD0",
         "LoD/1.09d": "0xCD10",
-        "LoD/1.10": "0xCD10",
+        "LoD/1.10": "0xCDD0",
         "LoD/1.11": "0xCD10",
-        "LoD/1.11b": "0xCD10",
+        "LoD/1.11b": "0xCDD0",
         "LoD/1.12a": "0xCD10",
-        "LoD/1.13c": "0xCD10",
+        "LoD/1.13c": "0xCDD0",
         "LoD/1.13d": "0xCD10",
-        "LoD/1.14a": "0xCD10",
+        "LoD/1.14a": "0xCDD0",
         "LoD/1.14b": "0xCD10",
-        "LoD/1.14c": "0xCD10",
+        "LoD/1.14c": "0xCDD0",
         "LoD/1.14d": "0xCD10"
       },
       "sizes": {
@@ -14684,36 +16487,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_AlternativePixelHandlerSeconda": {
       "addresses": {
         "LoD/1.07": "0x1000CDD0",
-        "LoD/1.08": "0x1000CDD0",
+        "LoD/1.08": "0x1000CD10",
         "LoD/1.09": "0x1000CDD0",
-        "LoD/1.09b": "0x1000CDD0",
+        "LoD/1.09b": "0x1000CD10",
         "LoD/1.09d": "0x1000CDD0",
-        "LoD/1.10": "0x1000CDD0",
+        "LoD/1.10": "0x1000CD10",
         "LoD/1.11": "0x1000CDD0",
-        "LoD/1.11b": "0x1000CDD0",
+        "LoD/1.11b": "0x1000CD10",
         "LoD/1.12a": "0x1000CDD0",
-        "LoD/1.13c": "0x1000CDD0",
+        "LoD/1.13c": "0x1000CD10",
         "LoD/1.13d": "0x1000CDD0",
-        "LoD/1.14a": "0x1000CDD0",
+        "LoD/1.14a": "0x1000CD10",
         "LoD/1.14b": "0x1000CDD0",
-        "LoD/1.14c": "0x1000CDD0",
+        "LoD/1.14c": "0x1000CD10",
         "LoD/1.14d": "0x1000CDD0"
       },
       "rvas": {
         "LoD/1.07": "0xCDD0",
-        "LoD/1.08": "0xCDD0",
+        "LoD/1.08": "0xCD10",
         "LoD/1.09": "0xCDD0",
-        "LoD/1.09b": "0xCDD0",
+        "LoD/1.09b": "0xCD10",
         "LoD/1.09d": "0xCDD0",
-        "LoD/1.10": "0xCDD0",
+        "LoD/1.10": "0xCD10",
         "LoD/1.11": "0xCDD0",
-        "LoD/1.11b": "0xCDD0",
+        "LoD/1.11b": "0xCD10",
         "LoD/1.12a": "0xCDD0",
-        "LoD/1.13c": "0xCDD0",
+        "LoD/1.13c": "0xCD10",
         "LoD/1.13d": "0xCDD0",
-        "LoD/1.14a": "0xCDD0",
+        "LoD/1.14a": "0xCD10",
         "LoD/1.14b": "0xCDD0",
-        "LoD/1.14c": "0xCDD0",
+        "LoD/1.14c": "0xCD10",
         "LoD/1.14d": "0xCDD0"
       },
       "sizes": {
@@ -14794,36 +16597,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_MeasureExecutionTime": {
       "addresses": {
         "LoD/1.07": "0x1000CE90",
-        "LoD/1.08": "0x1000CFC0",
+        "LoD/1.08": "0x1000CE90",
         "LoD/1.09": "0x1000CE90",
-        "LoD/1.09b": "0x1000CFC0",
+        "LoD/1.09b": "0x1000CE90",
         "LoD/1.09d": "0x1000CE90",
-        "LoD/1.10": "0x1000CFC0",
+        "LoD/1.10": "0x1000CE90",
         "LoD/1.11": "0x1000CE90",
-        "LoD/1.11b": "0x1000CFC0",
+        "LoD/1.11b": "0x1000CE90",
         "LoD/1.12a": "0x1000CE90",
-        "LoD/1.13c": "0x1000CFC0",
+        "LoD/1.13c": "0x1000CE90",
         "LoD/1.13d": "0x1000CE90",
-        "LoD/1.14a": "0x1000CFC0",
+        "LoD/1.14a": "0x1000CE90",
         "LoD/1.14b": "0x1000CE90",
-        "LoD/1.14c": "0x1000CFC0",
+        "LoD/1.14c": "0x1000CE90",
         "LoD/1.14d": "0x1000CE90"
       },
       "rvas": {
         "LoD/1.07": "0xCE90",
-        "LoD/1.08": "0xCFC0",
+        "LoD/1.08": "0xCE90",
         "LoD/1.09": "0xCE90",
-        "LoD/1.09b": "0xCFC0",
+        "LoD/1.09b": "0xCE90",
         "LoD/1.09d": "0xCE90",
-        "LoD/1.10": "0xCFC0",
+        "LoD/1.10": "0xCE90",
         "LoD/1.11": "0xCE90",
-        "LoD/1.11b": "0xCFC0",
+        "LoD/1.11b": "0xCE90",
         "LoD/1.12a": "0xCE90",
-        "LoD/1.13c": "0xCFC0",
+        "LoD/1.13c": "0xCE90",
         "LoD/1.13d": "0xCE90",
-        "LoD/1.14a": "0xCFC0",
+        "LoD/1.14a": "0xCE90",
         "LoD/1.14b": "0xCE90",
-        "LoD/1.14c": "0xCFC0",
+        "LoD/1.14c": "0xCE90",
         "LoD/1.14d": "0xCE90"
       },
       "sizes": {
@@ -15016,36 +16819,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_MeasureStateMachineExecutionTi": {
       "addresses": {
         "LoD/1.07": "0x1000CFC0",
-        "LoD/1.08": "0x1000CE90",
+        "LoD/1.08": "0x1000CFC0",
         "LoD/1.09": "0x1000CFC0",
-        "LoD/1.09b": "0x1000CE90",
+        "LoD/1.09b": "0x1000CFC0",
         "LoD/1.09d": "0x1000CFC0",
-        "LoD/1.10": "0x1000CE90",
+        "LoD/1.10": "0x1000CFC0",
         "LoD/1.11": "0x1000CFC0",
-        "LoD/1.11b": "0x1000CE90",
+        "LoD/1.11b": "0x1000CFC0",
         "LoD/1.12a": "0x1000CFC0",
-        "LoD/1.13c": "0x1000CE90",
+        "LoD/1.13c": "0x1000CFC0",
         "LoD/1.13d": "0x1000CFC0",
-        "LoD/1.14a": "0x1000CE90",
+        "LoD/1.14a": "0x1000CFC0",
         "LoD/1.14b": "0x1000CFC0",
-        "LoD/1.14c": "0x1000CE90",
+        "LoD/1.14c": "0x1000CFC0",
         "LoD/1.14d": "0x1000CFC0"
       },
       "rvas": {
         "LoD/1.07": "0xCFC0",
-        "LoD/1.08": "0xCE90",
+        "LoD/1.08": "0xCFC0",
         "LoD/1.09": "0xCFC0",
-        "LoD/1.09b": "0xCE90",
+        "LoD/1.09b": "0xCFC0",
         "LoD/1.09d": "0xCFC0",
-        "LoD/1.10": "0xCE90",
+        "LoD/1.10": "0xCFC0",
         "LoD/1.11": "0xCFC0",
-        "LoD/1.11b": "0xCE90",
+        "LoD/1.11b": "0xCFC0",
         "LoD/1.12a": "0xCFC0",
-        "LoD/1.13c": "0xCE90",
+        "LoD/1.13c": "0xCFC0",
         "LoD/1.13d": "0xCFC0",
-        "LoD/1.14a": "0xCE90",
+        "LoD/1.14a": "0xCFC0",
         "LoD/1.14b": "0xCFC0",
-        "LoD/1.14c": "0xCE90",
+        "LoD/1.14c": "0xCFC0",
         "LoD/1.14d": "0xCFC0"
       },
       "sizes": {
@@ -16641,37 +18444,37 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll__YUV_blit_24bpp@48": {
       "addresses": {
         "LoD/1.07": "0x1000E1D0",
-        "LoD/1.08": "0x10010A60",
-        "LoD/1.09": "0x100111B0",
+        "LoD/1.08": "0x1000E1D0",
+        "LoD/1.09": "0x1000E1D0",
         "LoD/1.09b": "0x1000E1D0",
-        "LoD/1.09d": "0x10010A60",
-        "LoD/1.10": "0x100111B0",
+        "LoD/1.09d": "0x1000E1D0",
+        "LoD/1.10": "0x1000E1D0",
         "LoD/1.11": "0x1000E1D0",
-        "LoD/1.11b": "0x10010A60",
-        "LoD/1.12a": "0x100111B0",
+        "LoD/1.11b": "0x1000E1D0",
+        "LoD/1.12a": "0x1000E1D0",
         "LoD/1.13c": "0x1000E1D0",
-        "LoD/1.13d": "0x10010A60",
-        "LoD/1.14a": "0x100111B0",
+        "LoD/1.13d": "0x1000E1D0",
+        "LoD/1.14a": "0x1000E1D0",
         "LoD/1.14b": "0x1000E1D0",
-        "LoD/1.14c": "0x10010A60",
-        "LoD/1.14d": "0x100111B0"
+        "LoD/1.14c": "0x1000E1D0",
+        "LoD/1.14d": "0x1000E1D0"
       },
       "rvas": {
         "LoD/1.07": "0xE1D0",
-        "LoD/1.08": "0x10A60",
-        "LoD/1.09": "0x111B0",
+        "LoD/1.08": "0xE1D0",
+        "LoD/1.09": "0xE1D0",
         "LoD/1.09b": "0xE1D0",
-        "LoD/1.09d": "0x10A60",
-        "LoD/1.10": "0x111B0",
+        "LoD/1.09d": "0xE1D0",
+        "LoD/1.10": "0xE1D0",
         "LoD/1.11": "0xE1D0",
-        "LoD/1.11b": "0x10A60",
-        "LoD/1.12a": "0x111B0",
+        "LoD/1.11b": "0xE1D0",
+        "LoD/1.12a": "0xE1D0",
         "LoD/1.13c": "0xE1D0",
-        "LoD/1.13d": "0x10A60",
-        "LoD/1.14a": "0x111B0",
+        "LoD/1.13d": "0xE1D0",
+        "LoD/1.14a": "0xE1D0",
         "LoD/1.14b": "0xE1D0",
-        "LoD/1.14c": "0x10A60",
-        "LoD/1.14d": "0x111B0"
+        "LoD/1.14c": "0xE1D0",
+        "LoD/1.14d": "0xE1D0"
       },
       "sizes": {
         "LoD/1.07": 76,
@@ -18254,36 +20057,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_YuvBlit16Bpp": {
       "addresses": {
         "LoD/1.07": "0x1000EF60",
-        "LoD/1.08": "0x1000BEA0",
+        "LoD/1.08": "0x1000EF60",
         "LoD/1.09": "0x1000EF60",
-        "LoD/1.09b": "0x1000BEA0",
+        "LoD/1.09b": "0x1000EF60",
         "LoD/1.09d": "0x1000EF60",
-        "LoD/1.10": "0x1000BEA0",
+        "LoD/1.10": "0x1000EF60",
         "LoD/1.11": "0x1000EF60",
-        "LoD/1.11b": "0x1000BEA0",
+        "LoD/1.11b": "0x1000EF60",
         "LoD/1.12a": "0x1000EF60",
-        "LoD/1.13c": "0x1000BEA0",
+        "LoD/1.13c": "0x1000EF60",
         "LoD/1.13d": "0x1000EF60",
-        "LoD/1.14a": "0x1000BEA0",
+        "LoD/1.14a": "0x1000EF60",
         "LoD/1.14b": "0x1000EF60",
-        "LoD/1.14c": "0x1000BEA0",
+        "LoD/1.14c": "0x1000EF60",
         "LoD/1.14d": "0x1000EF60"
       },
       "rvas": {
         "LoD/1.07": "0xEF60",
-        "LoD/1.08": "0xBEA0",
+        "LoD/1.08": "0xEF60",
         "LoD/1.09": "0xEF60",
-        "LoD/1.09b": "0xBEA0",
+        "LoD/1.09b": "0xEF60",
         "LoD/1.09d": "0xEF60",
-        "LoD/1.10": "0xBEA0",
+        "LoD/1.10": "0xEF60",
         "LoD/1.11": "0xEF60",
-        "LoD/1.11b": "0xBEA0",
+        "LoD/1.11b": "0xEF60",
         "LoD/1.12a": "0xEF60",
-        "LoD/1.13c": "0xBEA0",
+        "LoD/1.13c": "0xEF60",
         "LoD/1.13d": "0xEF60",
-        "LoD/1.14a": "0xBEA0",
+        "LoD/1.14a": "0xEF60",
         "LoD/1.14b": "0xEF60",
-        "LoD/1.14c": "0xBEA0",
+        "LoD/1.14c": "0xEF60",
         "LoD/1.14d": "0xEF60"
       },
       "sizes": {
@@ -19669,36 +21472,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_ProcessYuvToRgbYuy2Blit": {
       "addresses": {
         "LoD/1.07": "0x1000FAE0",
-        "LoD/1.08": "0x10010720",
+        "LoD/1.08": "0x1000FAE0",
         "LoD/1.09": "0x1000FAE0",
-        "LoD/1.09b": "0x10010720",
+        "LoD/1.09b": "0x1000FAE0",
         "LoD/1.09d": "0x1000FAE0",
-        "LoD/1.10": "0x10010720",
+        "LoD/1.10": "0x1000FAE0",
         "LoD/1.11": "0x1000FAE0",
-        "LoD/1.11b": "0x10010720",
+        "LoD/1.11b": "0x1000FAE0",
         "LoD/1.12a": "0x1000FAE0",
-        "LoD/1.13c": "0x10010720",
+        "LoD/1.13c": "0x1000FAE0",
         "LoD/1.13d": "0x1000FAE0",
-        "LoD/1.14a": "0x10010720",
+        "LoD/1.14a": "0x1000FAE0",
         "LoD/1.14b": "0x1000FAE0",
-        "LoD/1.14c": "0x10010720",
+        "LoD/1.14c": "0x1000FAE0",
         "LoD/1.14d": "0x1000FAE0"
       },
       "rvas": {
         "LoD/1.07": "0xFAE0",
-        "LoD/1.08": "0x10720",
+        "LoD/1.08": "0xFAE0",
         "LoD/1.09": "0xFAE0",
-        "LoD/1.09b": "0x10720",
+        "LoD/1.09b": "0xFAE0",
         "LoD/1.09d": "0xFAE0",
-        "LoD/1.10": "0x10720",
+        "LoD/1.10": "0xFAE0",
         "LoD/1.11": "0xFAE0",
-        "LoD/1.11b": "0x10720",
+        "LoD/1.11b": "0xFAE0",
         "LoD/1.12a": "0xFAE0",
-        "LoD/1.13c": "0x10720",
+        "LoD/1.13c": "0xFAE0",
         "LoD/1.13d": "0xFAE0",
-        "LoD/1.14a": "0x10720",
+        "LoD/1.14a": "0xFAE0",
         "LoD/1.14b": "0xFAE0",
-        "LoD/1.14c": "0x10720",
+        "LoD/1.14c": "0xFAE0",
         "LoD/1.14d": "0xFAE0"
       },
       "sizes": {
@@ -21183,36 +22986,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_BlitYuvUyvyFormat": {
       "addresses": {
         "LoD/1.07": "0x10010720",
-        "LoD/1.08": "0x1000FAE0",
+        "LoD/1.08": "0x10010720",
         "LoD/1.09": "0x10010720",
-        "LoD/1.09b": "0x1000FAE0",
+        "LoD/1.09b": "0x10010720",
         "LoD/1.09d": "0x10010720",
-        "LoD/1.10": "0x1000FAE0",
+        "LoD/1.10": "0x10010720",
         "LoD/1.11": "0x10010720",
-        "LoD/1.11b": "0x1000FAE0",
+        "LoD/1.11b": "0x10010720",
         "LoD/1.12a": "0x10010720",
-        "LoD/1.13c": "0x1000FAE0",
+        "LoD/1.13c": "0x10010720",
         "LoD/1.13d": "0x10010720",
-        "LoD/1.14a": "0x1000FAE0",
+        "LoD/1.14a": "0x10010720",
         "LoD/1.14b": "0x10010720",
-        "LoD/1.14c": "0x1000FAE0",
+        "LoD/1.14c": "0x10010720",
         "LoD/1.14d": "0x10010720"
       },
       "rvas": {
         "LoD/1.07": "0x10720",
-        "LoD/1.08": "0xFAE0",
+        "LoD/1.08": "0x10720",
         "LoD/1.09": "0x10720",
-        "LoD/1.09b": "0xFAE0",
+        "LoD/1.09b": "0x10720",
         "LoD/1.09d": "0x10720",
-        "LoD/1.10": "0xFAE0",
+        "LoD/1.10": "0x10720",
         "LoD/1.11": "0x10720",
-        "LoD/1.11b": "0xFAE0",
+        "LoD/1.11b": "0x10720",
         "LoD/1.12a": "0x10720",
-        "LoD/1.13c": "0xFAE0",
+        "LoD/1.13c": "0x10720",
         "LoD/1.13d": "0x10720",
-        "LoD/1.14a": "0xFAE0",
+        "LoD/1.14a": "0x10720",
         "LoD/1.14b": "0x10720",
-        "LoD/1.14c": "0xFAE0",
+        "LoD/1.14c": "0x10720",
         "LoD/1.14d": "0x10720"
       },
       "sizes": {
@@ -21405,37 +23208,37 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_YuvBlit32bppMask": {
       "addresses": {
         "LoD/1.07": "0x10010A60",
-        "LoD/1.08": "0x100111B0",
-        "LoD/1.09": "0x1000E1D0",
+        "LoD/1.08": "0x10010A60",
+        "LoD/1.09": "0x10010A60",
         "LoD/1.09b": "0x10010A60",
-        "LoD/1.09d": "0x100111B0",
-        "LoD/1.10": "0x1000E1D0",
+        "LoD/1.09d": "0x10010A60",
+        "LoD/1.10": "0x10010A60",
         "LoD/1.11": "0x10010A60",
-        "LoD/1.11b": "0x100111B0",
-        "LoD/1.12a": "0x1000E1D0",
+        "LoD/1.11b": "0x10010A60",
+        "LoD/1.12a": "0x10010A60",
         "LoD/1.13c": "0x10010A60",
-        "LoD/1.13d": "0x100111B0",
-        "LoD/1.14a": "0x1000E1D0",
+        "LoD/1.13d": "0x10010A60",
+        "LoD/1.14a": "0x10010A60",
         "LoD/1.14b": "0x10010A60",
-        "LoD/1.14c": "0x100111B0",
-        "LoD/1.14d": "0x1000E1D0"
+        "LoD/1.14c": "0x10010A60",
+        "LoD/1.14d": "0x10010A60"
       },
       "rvas": {
         "LoD/1.07": "0x10A60",
-        "LoD/1.08": "0x111B0",
-        "LoD/1.09": "0xE1D0",
+        "LoD/1.08": "0x10A60",
+        "LoD/1.09": "0x10A60",
         "LoD/1.09b": "0x10A60",
-        "LoD/1.09d": "0x111B0",
-        "LoD/1.10": "0xE1D0",
+        "LoD/1.09d": "0x10A60",
+        "LoD/1.10": "0x10A60",
         "LoD/1.11": "0x10A60",
-        "LoD/1.11b": "0x111B0",
-        "LoD/1.12a": "0xE1D0",
+        "LoD/1.11b": "0x10A60",
+        "LoD/1.12a": "0x10A60",
         "LoD/1.13c": "0x10A60",
-        "LoD/1.13d": "0x111B0",
-        "LoD/1.14a": "0xE1D0",
+        "LoD/1.13d": "0x10A60",
+        "LoD/1.14a": "0x10A60",
         "LoD/1.14b": "0x10A60",
-        "LoD/1.14c": "0x111B0",
-        "LoD/1.14d": "0xE1D0"
+        "LoD/1.14c": "0x10A60",
+        "LoD/1.14d": "0x10A60"
       },
       "sizes": {
         "LoD/1.07": 76,
@@ -21627,37 +23430,37 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_YuvBlit24bppMask": {
       "addresses": {
         "LoD/1.07": "0x100111B0",
-        "LoD/1.08": "0x1000E1D0",
-        "LoD/1.09": "0x10010A60",
-        "LoD/1.09b": "0x100111B0",
-        "LoD/1.09d": "0x1000E1D0",
-        "LoD/1.10": "0x10010A60",
+        "LoD/1.08": "0x10011200",
+        "LoD/1.09": "0x100111B0",
+        "LoD/1.09b": "0x10011200",
+        "LoD/1.09d": "0x100111B0",
+        "LoD/1.10": "0x10011200",
         "LoD/1.11": "0x100111B0",
-        "LoD/1.11b": "0x1000E1D0",
-        "LoD/1.12a": "0x10010A60",
-        "LoD/1.13c": "0x100111B0",
-        "LoD/1.13d": "0x1000E1D0",
-        "LoD/1.14a": "0x10010A60",
+        "LoD/1.11b": "0x10011200",
+        "LoD/1.12a": "0x100111B0",
+        "LoD/1.13c": "0x10011200",
+        "LoD/1.13d": "0x100111B0",
+        "LoD/1.14a": "0x10011200",
         "LoD/1.14b": "0x100111B0",
-        "LoD/1.14c": "0x1000E1D0",
-        "LoD/1.14d": "0x10010A60"
+        "LoD/1.14c": "0x10011200",
+        "LoD/1.14d": "0x100111B0"
       },
       "rvas": {
         "LoD/1.07": "0x111B0",
-        "LoD/1.08": "0xE1D0",
-        "LoD/1.09": "0x10A60",
-        "LoD/1.09b": "0x111B0",
-        "LoD/1.09d": "0xE1D0",
-        "LoD/1.10": "0x10A60",
+        "LoD/1.08": "0x11200",
+        "LoD/1.09": "0x111B0",
+        "LoD/1.09b": "0x11200",
+        "LoD/1.09d": "0x111B0",
+        "LoD/1.10": "0x11200",
         "LoD/1.11": "0x111B0",
-        "LoD/1.11b": "0xE1D0",
-        "LoD/1.12a": "0x10A60",
-        "LoD/1.13c": "0x111B0",
-        "LoD/1.13d": "0xE1D0",
-        "LoD/1.14a": "0x10A60",
+        "LoD/1.11b": "0x11200",
+        "LoD/1.12a": "0x111B0",
+        "LoD/1.13c": "0x11200",
+        "LoD/1.13d": "0x111B0",
+        "LoD/1.14a": "0x11200",
         "LoD/1.14b": "0x111B0",
-        "LoD/1.14c": "0xE1D0",
-        "LoD/1.14d": "0x10A60"
+        "LoD/1.14c": "0x11200",
+        "LoD/1.14d": "0x111B0"
       },
       "sizes": {
         "LoD/1.07": 76,
@@ -21738,36 +23541,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_YuvBlit16BppMask": {
       "addresses": {
         "LoD/1.07": "0x10011200",
-        "LoD/1.08": "0x10011200",
+        "LoD/1.08": "0x100111B0",
         "LoD/1.09": "0x10011200",
-        "LoD/1.09b": "0x10011200",
+        "LoD/1.09b": "0x100111B0",
         "LoD/1.09d": "0x10011200",
-        "LoD/1.10": "0x10011200",
+        "LoD/1.10": "0x100111B0",
         "LoD/1.11": "0x10011200",
-        "LoD/1.11b": "0x10011200",
+        "LoD/1.11b": "0x100111B0",
         "LoD/1.12a": "0x10011200",
-        "LoD/1.13c": "0x10011200",
+        "LoD/1.13c": "0x100111B0",
         "LoD/1.13d": "0x10011200",
-        "LoD/1.14a": "0x10011200",
+        "LoD/1.14a": "0x100111B0",
         "LoD/1.14b": "0x10011200",
-        "LoD/1.14c": "0x10011200",
+        "LoD/1.14c": "0x100111B0",
         "LoD/1.14d": "0x10011200"
       },
       "rvas": {
         "LoD/1.07": "0x11200",
-        "LoD/1.08": "0x11200",
+        "LoD/1.08": "0x111B0",
         "LoD/1.09": "0x11200",
-        "LoD/1.09b": "0x11200",
+        "LoD/1.09b": "0x111B0",
         "LoD/1.09d": "0x11200",
-        "LoD/1.10": "0x11200",
+        "LoD/1.10": "0x111B0",
         "LoD/1.11": "0x11200",
-        "LoD/1.11b": "0x11200",
+        "LoD/1.11b": "0x111B0",
         "LoD/1.12a": "0x11200",
-        "LoD/1.13c": "0x11200",
+        "LoD/1.13c": "0x111B0",
         "LoD/1.13d": "0x11200",
-        "LoD/1.14a": "0x11200",
+        "LoD/1.14a": "0x111B0",
         "LoD/1.14b": "0x11200",
-        "LoD/1.14c": "0x11200",
+        "LoD/1.14c": "0x111B0",
         "LoD/1.14d": "0x11200"
       },
       "sizes": {
@@ -26123,6 +27926,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0512e960352bad47e61560d4b5ee5454",
+      "callees": {
+        "LoD/1.07": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.08": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.09d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.10": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.11b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.12a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.13d": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14a": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14b": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14c": [
+          "_radmalloc@4"
+        ],
+        "LoD/1.14d": [
+          "_radmalloc@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 9,
         "LoD/1.08": 9,
@@ -26678,6 +28528,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ea61922022cb536d70448a5259bdd7e0",
+      "callees": {
+        "LoD/1.07": [
+          "_radfree@4"
+        ],
+        "LoD/1.08": [
+          "_radfree@4"
+        ],
+        "LoD/1.09": [
+          "_radfree@4"
+        ],
+        "LoD/1.09b": [
+          "_radfree@4"
+        ],
+        "LoD/1.09d": [
+          "_radfree@4"
+        ],
+        "LoD/1.10": [
+          "_radfree@4"
+        ],
+        "LoD/1.11": [
+          "_radfree@4"
+        ],
+        "LoD/1.11b": [
+          "_radfree@4"
+        ],
+        "LoD/1.12a": [
+          "_radfree@4"
+        ],
+        "LoD/1.13c": [
+          "_radfree@4"
+        ],
+        "LoD/1.13d": [
+          "_radfree@4"
+        ],
+        "LoD/1.14a": [
+          "_radfree@4"
+        ],
+        "LoD/1.14b": [
+          "_radfree@4"
+        ],
+        "LoD/1.14c": [
+          "_radfree@4"
+        ],
+        "LoD/1.14d": [
+          "_radfree@4"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -31175,6 +33072,53 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.14d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -41510,36 +43454,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_ParseStringToExtendedFloat": {
       "addresses": {
         "LoD/1.07": "0x10021EC1",
-        "LoD/1.08": "0x1002015C",
+        "LoD/1.08": "0x1002012F",
         "LoD/1.09": "0x1002012F",
-        "LoD/1.09b": "0x1002015C",
+        "LoD/1.09b": "0x1002012F",
         "LoD/1.09d": "0x1002012F",
-        "LoD/1.10": "0x1002015C",
+        "LoD/1.10": "0x1002012F",
         "LoD/1.11": "0x1002012F",
-        "LoD/1.11b": "0x1002015C",
+        "LoD/1.11b": "0x1002012F",
         "LoD/1.12a": "0x1002012F",
-        "LoD/1.13c": "0x1002015C",
+        "LoD/1.13c": "0x1002012F",
         "LoD/1.13d": "0x1002012F",
-        "LoD/1.14a": "0x1002015C",
+        "LoD/1.14a": "0x1002012F",
         "LoD/1.14b": "0x1002012F",
-        "LoD/1.14c": "0x1002015C",
+        "LoD/1.14c": "0x1002012F",
         "LoD/1.14d": "0x1002012F"
       },
       "rvas": {
         "LoD/1.07": "0x21EC1",
-        "LoD/1.08": "0x2015C",
+        "LoD/1.08": "0x2012F",
         "LoD/1.09": "0x2012F",
-        "LoD/1.09b": "0x2015C",
+        "LoD/1.09b": "0x2012F",
         "LoD/1.09d": "0x2012F",
-        "LoD/1.10": "0x2015C",
+        "LoD/1.10": "0x2012F",
         "LoD/1.11": "0x2012F",
-        "LoD/1.11b": "0x2015C",
+        "LoD/1.11b": "0x2012F",
         "LoD/1.12a": "0x2012F",
-        "LoD/1.13c": "0x2015C",
+        "LoD/1.13c": "0x2012F",
         "LoD/1.13d": "0x2012F",
-        "LoD/1.14a": "0x2015C",
+        "LoD/1.14a": "0x2012F",
         "LoD/1.14b": "0x2012F",
-        "LoD/1.14c": "0x2015C",
+        "LoD/1.14c": "0x2012F",
         "LoD/1.14d": "0x2012F"
       },
       "sizes": {
@@ -41621,36 +43565,36 @@ var FUNCTIONS_Binkw32_dll = {
     "binkw32.dll_ParseStringToFloat": {
       "addresses": {
         "LoD/1.07": "0x1002015C",
-        "LoD/1.08": "0x1002012F",
+        "LoD/1.08": "0x1002015C",
         "LoD/1.09": "0x1002015C",
-        "LoD/1.09b": "0x1002012F",
+        "LoD/1.09b": "0x1002015C",
         "LoD/1.09d": "0x1002015C",
-        "LoD/1.10": "0x1002012F",
+        "LoD/1.10": "0x1002015C",
         "LoD/1.11": "0x1002015C",
-        "LoD/1.11b": "0x1002012F",
+        "LoD/1.11b": "0x1002015C",
         "LoD/1.12a": "0x1002015C",
-        "LoD/1.13c": "0x1002012F",
+        "LoD/1.13c": "0x1002015C",
         "LoD/1.13d": "0x1002015C",
-        "LoD/1.14a": "0x1002012F",
+        "LoD/1.14a": "0x1002015C",
         "LoD/1.14b": "0x1002015C",
-        "LoD/1.14c": "0x1002012F",
+        "LoD/1.14c": "0x1002015C",
         "LoD/1.14d": "0x1002015C"
       },
       "rvas": {
         "LoD/1.07": "0x2015C",
-        "LoD/1.08": "0x2012F",
+        "LoD/1.08": "0x2015C",
         "LoD/1.09": "0x2015C",
-        "LoD/1.09b": "0x2012F",
+        "LoD/1.09b": "0x2015C",
         "LoD/1.09d": "0x2015C",
-        "LoD/1.10": "0x2012F",
+        "LoD/1.10": "0x2015C",
         "LoD/1.11": "0x2015C",
-        "LoD/1.11b": "0x2012F",
+        "LoD/1.11b": "0x2015C",
         "LoD/1.12a": "0x2015C",
-        "LoD/1.13c": "0x2012F",
+        "LoD/1.13c": "0x2015C",
         "LoD/1.13d": "0x2015C",
-        "LoD/1.14a": "0x2012F",
+        "LoD/1.14a": "0x2015C",
         "LoD/1.14b": "0x2015C",
-        "LoD/1.14c": "0x2012F",
+        "LoD/1.14c": "0x2015C",
         "LoD/1.14d": "0x2015C"
       },
       "sizes": {
@@ -45353,37 +47297,37 @@ var FUNCTIONS_Binkw32_dll = {
         "LoD/1.14d": "e3e7225badfcf3c2e051c42d71d7237a"
       }
     },
-    "binkw32.dll_StandardPixelHandlerSecondary_CC60": {
+    "binkw32.dll_StandardPixelHandlerSecondary_CBB0": {
       "addresses": {
-        "LoD/1.08": "0x1000CC60",
+        "LoD/1.08": "0x1000CBB0",
         "LoD/1.09": "0x1000CC60",
-        "LoD/1.09b": "0x1000CC60",
+        "LoD/1.09b": "0x1000CBB0",
         "LoD/1.09d": "0x1000CC60",
-        "LoD/1.10": "0x1000CC60",
+        "LoD/1.10": "0x1000CBB0",
         "LoD/1.11": "0x1000CC60",
-        "LoD/1.11b": "0x1000CC60",
+        "LoD/1.11b": "0x1000CBB0",
         "LoD/1.12a": "0x1000CC60",
-        "LoD/1.13c": "0x1000CC60",
+        "LoD/1.13c": "0x1000CBB0",
         "LoD/1.13d": "0x1000CC60",
-        "LoD/1.14a": "0x1000CC60",
+        "LoD/1.14a": "0x1000CBB0",
         "LoD/1.14b": "0x1000CC60",
-        "LoD/1.14c": "0x1000CC60",
+        "LoD/1.14c": "0x1000CBB0",
         "LoD/1.14d": "0x1000CC60"
       },
       "rvas": {
-        "LoD/1.08": "0xCC60",
+        "LoD/1.08": "0xCBB0",
         "LoD/1.09": "0xCC60",
-        "LoD/1.09b": "0xCC60",
+        "LoD/1.09b": "0xCBB0",
         "LoD/1.09d": "0xCC60",
-        "LoD/1.10": "0xCC60",
+        "LoD/1.10": "0xCBB0",
         "LoD/1.11": "0xCC60",
-        "LoD/1.11b": "0xCC60",
+        "LoD/1.11b": "0xCBB0",
         "LoD/1.12a": "0xCC60",
-        "LoD/1.13c": "0xCC60",
+        "LoD/1.13c": "0xCBB0",
         "LoD/1.13d": "0xCC60",
-        "LoD/1.14a": "0xCC60",
+        "LoD/1.14a": "0xCBB0",
         "LoD/1.14b": "0xCC60",
-        "LoD/1.14c": "0xCC60",
+        "LoD/1.14c": "0xCBB0",
         "LoD/1.14d": "0xCC60"
       },
       "sizes": {
@@ -45509,6 +47453,50 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:00ce1de5f15037326e521306cd20ace6",
+      "callees": {
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -45812,6 +47800,50 @@ var FUNCTIONS_Binkw32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:00ce1de5f15037326e521306cd20ace6",
+      "callees": {
+        "LoD/1.08": [
+          "BinkService"
+        ],
+        "LoD/1.09": [
+          "BinkService"
+        ],
+        "LoD/1.09b": [
+          "BinkService"
+        ],
+        "LoD/1.09d": [
+          "BinkService"
+        ],
+        "LoD/1.10": [
+          "BinkService"
+        ],
+        "LoD/1.11": [
+          "BinkService"
+        ],
+        "LoD/1.11b": [
+          "BinkService"
+        ],
+        "LoD/1.12a": [
+          "BinkService"
+        ],
+        "LoD/1.13c": [
+          "BinkService"
+        ],
+        "LoD/1.13d": [
+          "BinkService"
+        ],
+        "LoD/1.14a": [
+          "BinkService"
+        ],
+        "LoD/1.14b": [
+          "BinkService"
+        ],
+        "LoD/1.14c": [
+          "BinkService"
+        ],
+        "LoD/1.14d": [
+          "BinkService"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,

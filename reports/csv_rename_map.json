@@ -1,0 +1,12 @@
+{
+  "utf8ToUnicode": {
+    "module": "D2Lang",
+    "csv_versions": [
+      "1.10f"
+    ],
+    "confirmed_in": {
+      "LoD/1.10": "0x6FC11B30"
+    },
+    "candidates": {}
+  }
+}

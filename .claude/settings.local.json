@@ -45,7 +45,8 @@
       "Bash(if [ -f \"data/ghidra_names/$dll.json\" ])",
       "Bash(then)",
       "Bash(fi)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(killall:*)"
     ],
     "deny": [],
     "ask": []

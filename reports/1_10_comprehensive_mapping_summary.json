@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-12-13T03:08:39.235642",
+  "baseline_version": "1.10",
+  "all_versions": [
+    "1.07",
+    "1.08",
+    "1.09",
+    "1.09b",
+    "1.09d",
+    "1.10",
+    "1.11",
+    "1.11b",
+    "1.12a",
+    "1.13c",
+    "1.13d"
+  ],
+  "modules": {
+    "D2Game": {
+      "total_functions": 371,
+      "consistency_summary": {
+        "all_versions": 251,
+        "10_versions": 0,
+        "9_versions": 4,
+        "8_versions": 5,
+        "7_or_fewer": 111
+      },
+      "functions_in_all_versions": 251,
+      "functions_in_9_versions": 4,
+      "functions_in_8_versions": 5
+    },
+    "D2Client": {
+      "total_functions": 1228,
+      "consistency_summary": {
+        "all_versions": 804,
+        "10_versions": 0,
+        "9_versions": 9,
+        "8_versions": 7,
+        "7_or_fewer": 408
+      },
+      "functions_in_all_versions": 804,
+      "functions_in_9_versions": 9,
+      "functions_in_8_versions": 7
+    },
+    "D2Common": {
+      "total_functions": 608,
+      "consistency_summary": {
+        "all_versions": 330,
+        "10_versions": 0,
+        "9_versions": 3,
+        "8_versions": 12,
+        "7_or_fewer": 263
+      },
+      "functions_in_all_versions": 330,
+      "functions_in_9_versions": 3,
+      "functions_in_8_versions": 12
+    },
+    "D2Win": {
+      "total_functions": 376,
+      "consistency_summary": {
+        "all_versions": 200,
+        "10_versions": 0,
+        "9_versions": 0,
+        "8_versions": 0,
+        "7_or_fewer": 176
+      },
+      "functions_in_all_versions": 200,
+      "functions_in_9_versions": 0,
+      "functions_in_8_versions": 0
+    },
+    "Storm": {
+      "total_functions": 297,
+      "consistency_summary": {
+        "all_versions": 135,
+        "10_versions": 0,
+        "9_versions": 17,
+        "8_versions": 1,
+        "7_or_fewer": 144
+      },
+      "functions_in_all_versions": 135,
+      "functions_in_9_versions": 17,
+      "functions_in_8_versions": 1
+    },
+    "Fog": {
+      "total_functions": 437,
+      "consistency_summary": {
+        "all_versions": 207,
+        "10_versions": 0,
+        "9_versions": 0,
+        "8_versions": 1,
+        "7_or_fewer": 229
+      },
+      "functions_in_all_versions": 207,
+      "functions_in_9_versions": 0,
+      "functions_in_8_versions": 1
+    }
+  }
+}

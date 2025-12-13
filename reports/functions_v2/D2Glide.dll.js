@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-10T17:53:10.150962
+// Generated: 2025-12-13T00:30:31.404426
 // Functions for D2Glide.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -26,9 +26,9 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F812BC0",
         "LoD/1.09d": "0x6F812BC0",
         "LoD/1.10": "0x6F812BB0",
-        "LoD/1.11": "0x6F85A9F0",
-        "LoD/1.11b": "0x6F859880",
-        "LoD/1.12a": "0x6F85C930",
+        "LoD/1.11": "0x6F85B0A0",
+        "LoD/1.11b": "0x6F857E30",
+        "LoD/1.12a": "0x6F85AEB0",
         "LoD/1.13c": "0x6F85CD40",
         "LoD/1.13d": "0x6F85C760"
       },
@@ -39,9 +39,9 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x2BC0",
         "LoD/1.09d": "0x2BC0",
         "LoD/1.10": "0x2BB0",
-        "LoD/1.11": "0xA9F0",
-        "LoD/1.11b": "0x9880",
-        "LoD/1.12a": "0xC930",
+        "LoD/1.11": "0xB0A0",
+        "LoD/1.11b": "0x7E30",
+        "LoD/1.12a": "0xAEB0",
         "LoD/1.13c": "0xCD40",
         "LoD/1.13d": "0xC760"
       },
@@ -218,6 +218,74 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:cf8a8fd5c1f27bc02b36121e2aa04a49",
+      "callees": {
+        "LoD/1.07": [
+          "GetExpansionFlag",
+          "SFileOpenFileEx",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "grLfbLock",
+          "grLfbUnlock",
+          "SetSoundVolume",
+          "SetSoundVolume",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "grLfbLock",
+          "grLfbUnlock",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "grLfbLock",
+          "grLfbUnlock",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "grLfbLock",
+          "grLfbUnlock",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "GetGameState",
+          "Ordinal_268",
+          "QueueLogMessage",
+          "QueueLogMessage",
+          "grLfbLock",
+          "grLfbUnlock",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "GetGameState",
+          "Ordinal_268",
+          "Ordinal_10029",
+          "Ordinal_10029",
+          "grLfbLock",
+          "grLfbUnlock",
+          "Ordinal_10027",
+          "Ordinal_10027",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glBi...",
@@ -309,6 +377,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:7de55f1b4e302de3ba0712ce4abd01ef",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glBl..."
@@ -360,8 +454,8 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x6F875020",
         "LoD/1.09": "0x6F815020",
         "LoD/1.09b": "0x6F815020",
-        "LoD/1.09d": "0x6F815020",
-        "LoD/1.10": "0x6F814FE0",
+        "LoD/1.09d": "0x6F8113A0",
+        "LoD/1.10": "0x6F8113A0",
         "LoD/1.11": "0x6F856750",
         "LoD/1.11b": "0x6F856C30",
         "LoD/1.12a": "0x6F858200",
@@ -373,8 +467,8 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.08": "0x5020",
         "LoD/1.09": "0x5020",
         "LoD/1.09b": "0x5020",
-        "LoD/1.09d": "0x5020",
-        "LoD/1.10": "0x4FE0",
+        "LoD/1.09d": "0x13A0",
+        "LoD/1.10": "0x13A0",
         "LoD/1.11": "0x6750",
         "LoD/1.11b": "0x6C30",
         "LoD/1.12a": "0x8200",
@@ -397,6 +491,52 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:aafe1ba7c0cb6f9f78ec0353d527e3e5",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp..."
@@ -411,7 +551,7 @@ var FUNCTIONS_D2Glide_dll = {
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp..."
         ],
         "LoD/1.09d": [
-          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSprite...."
+          "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glBlocks...."
         ],
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
@@ -500,6 +640,68 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0a117666b0da6311372d4450987fb05d",
+      "callees": {
+        "LoD/1.07": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"pbSrcRow\"",
@@ -603,6 +805,50 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3b428f516ffab3c9346f95d2ab3569e9",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"ptTileComp->sCacheIndex-1 >= 0\"",
@@ -793,6 +1039,86 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c57b6c3ff200d385dcd71e0c960b80e5",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grSstWinOpen",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "...+28 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grSstWinOpen",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "...+28 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grSstWinOpen",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "...+28 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grSstWinOpen",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "...+28 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grSstWinOpen",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "QueueLogMessage",
+          "grGet",
+          "...+28 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10029",
+          "grSstWinOpen",
+          "grGet",
+          "Ordinal_10029",
+          "grGet",
+          "Ordinal_10029",
+          "grGet",
+          "Ordinal_10029",
+          "grGet",
+          "...+28 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Opening Glide window succeeded, context= %d\"",
@@ -896,6 +1222,50 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5d4e5b5a42a6a7db55413c463fc4dc08",
+      "callees": {
+        "LoD/1.07": [
+          "QueueLogMessage",
+          "grFinish",
+          "grSstWinClose",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "grFinish",
+          "grSstWinClose",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "grFinish",
+          "grSstWinClose",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "grFinish",
+          "grSstWinClose",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "grFinish",
+          "grSstWinClose",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "grFinish",
+          "grSstWinClose",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Closing Glide window....\"",
@@ -1004,6 +1374,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:d5dc25dbe3ea203b351269a206fccd0c",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "grBufferClear",
+          "grBufferSwap"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo...",
@@ -1254,6 +1656,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f5a2dadfb6e3cd7b350f3b00225ebe0",
+      "callees": {
+        "LoD/1.07": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.08": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.09": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.09b": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.09d": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.10": [
+          "grTexCombine",
+          "grTexCombine"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 7,
         "LoD/1.08": 7,
@@ -1322,6 +1750,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:656be9dcc53e620370c4867e8383912c",
+      "callees": {
+        "LoD/1.07": [
+          "grColorCombine",
+          "grColorCombine"
+        ],
+        "LoD/1.08": [
+          "grColorCombine",
+          "grColorCombine"
+        ],
+        "LoD/1.09": [
+          "grColorCombine",
+          "grColorCombine"
+        ],
+        "LoD/1.09b": [
+          "grColorCombine",
+          "grColorCombine"
+        ],
+        "LoD/1.09d": [
+          "grColorCombine",
+          "grColorCombine"
+        ],
+        "LoD/1.10": [
+          "grColorCombine",
+          "grColorCombine"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 8,
         "LoD/1.08": 8,
@@ -1355,11 +1809,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F812A80",
         "LoD/1.09d": "0x6F812A80",
         "LoD/1.10": "0x6F812A70",
-        "LoD/1.11": "0x6F8534FD",
-        "LoD/1.11b": "0x6F8534FD",
-        "LoD/1.12a": "0x6F853521",
-        "LoD/1.13c": "0x6F853163",
-        "LoD/1.13d": "0x6F8534FD"
+        "LoD/1.11": "0x6F85B120",
+        "LoD/1.11b": "0x6F857EB0",
+        "LoD/1.12a": "0x6F85AF30",
+        "LoD/1.13c": "0x6F85CDC0",
+        "LoD/1.13d": "0x6F85C7E0"
       },
       "rvas": {
         "LoD/1.07": "0x2A80",
@@ -1368,11 +1822,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x2A80",
         "LoD/1.09d": "0x2A80",
         "LoD/1.10": "0x2A70",
-        "LoD/1.11": "0x34FD",
-        "LoD/1.11b": "0x34FD",
-        "LoD/1.12a": "0x3521",
-        "LoD/1.13c": "0x3163",
-        "LoD/1.13d": "0x34FD"
+        "LoD/1.11": "0xB120",
+        "LoD/1.11b": "0x7EB0",
+        "LoD/1.12a": "0xAF30",
+        "LoD/1.13c": "0xCDC0",
+        "LoD/1.13d": "0xC7E0"
       },
       "sizes": {
         "LoD/1.07": 183,
@@ -1381,18 +1835,127 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": 183,
         "LoD/1.09d": 183,
         "LoD/1.10": 183,
-        "LoD/1.11": 183,
-        "LoD/1.11b": 183,
-        "LoD/1.12a": 183,
-        "LoD/1.13c": 183,
-        "LoD/1.13d": 183
+        "LoD/1.11": 176,
+        "LoD/1.11b": 176,
+        "LoD/1.12a": 176,
+        "LoD/1.13c": 176,
+        "LoD/1.13d": 176
       },
-      "signature": "undefined4 * ___sbh_alloc_new_region(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:8f7df14e6456cd93f8028b09582e6071",
+      "name_source": "LoD/1.07",
+      "method": "API",
+      "index": "API:94bdefdfba59eb8c36cd18e996d447d7",
+      "callees": {
+        "LoD/1.07": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.08": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.09": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.09b": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.09d": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.10": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.11": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.11b": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.12a": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.13c": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ],
+        "LoD/1.13d": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 10,
         "LoD/1.08": 10,
@@ -1426,11 +1989,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "b6c99e7fc7b38222af28bc6eb3297131",
         "LoD/1.09d": "b6c99e7fc7b38222af28bc6eb3297131",
         "LoD/1.10": "b6c99e7fc7b38222af28bc6eb3297131",
-        "LoD/1.11": "8f7df14e6456cd93f8028b09582e6071",
-        "LoD/1.11b": "8f7df14e6456cd93f8028b09582e6071",
-        "LoD/1.12a": "8f7df14e6456cd93f8028b09582e6071",
-        "LoD/1.13c": "8f7df14e6456cd93f8028b09582e6071",
-        "LoD/1.13d": "8f7df14e6456cd93f8028b09582e6071"
+        "LoD/1.11": "75daa758b89ef737997acf522478caa3",
+        "LoD/1.11b": "75daa758b89ef737997acf522478caa3",
+        "LoD/1.12a": "75daa758b89ef737997acf522478caa3",
+        "LoD/1.13c": "75daa758b89ef737997acf522478caa3",
+        "LoD/1.13d": "75daa758b89ef737997acf522478caa3"
       }
     },
     "d2glide.dll_API_2d24db1e6d32": {
@@ -1476,6 +2039,74 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2d24db1e6d3277204d13b0f1e293bcfb",
+      "callees": {
+        "LoD/1.07": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.08": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.09": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.09b": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.09d": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.10": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.11": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.11b": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.12a": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13c": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13d": [
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 10,
         "LoD/1.08": 10,
@@ -1520,28 +2151,28 @@ var FUNCTIONS_D2Glide_dll = {
       "addresses": {
         "LoD/1.07": "0x6F872BD0",
         "LoD/1.08": "0x6F872BD0",
-        "LoD/1.09": "0x6F8125B0",
-        "LoD/1.09b": "0x6F8125B0",
+        "LoD/1.09": "0x6F812BD0",
+        "LoD/1.09b": "0x6F812BD0",
         "LoD/1.09d": "0x6F812BD0",
         "LoD/1.10": "0x6F812BC0",
-        "LoD/1.11": "0x6F85B6A0",
+        "LoD/1.11": "0x6F85B090",
         "LoD/1.11b": "0x6F857E20",
         "LoD/1.12a": "0x6F85AEA0",
-        "LoD/1.13c": "0x6F85CD30",
-        "LoD/1.13d": "0x6F85CD60"
+        "LoD/1.13c": "0x6F85D340",
+        "LoD/1.13d": "0x6F85C750"
       },
       "rvas": {
         "LoD/1.07": "0x2BD0",
         "LoD/1.08": "0x2BD0",
-        "LoD/1.09": "0x25B0",
-        "LoD/1.09b": "0x25B0",
+        "LoD/1.09": "0x2BD0",
+        "LoD/1.09b": "0x2BD0",
         "LoD/1.09d": "0x2BD0",
         "LoD/1.10": "0x2BC0",
-        "LoD/1.11": "0xB6A0",
+        "LoD/1.11": "0xB090",
         "LoD/1.11b": "0x7E20",
         "LoD/1.12a": "0xAEA0",
-        "LoD/1.13c": "0xCD30",
-        "LoD/1.13d": "0xCD60"
+        "LoD/1.13c": "0xD340",
+        "LoD/1.13d": "0xC750"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -1630,6 +2261,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:2eb0b4cd90cc81308d81d084e7ead9d7",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "grTexDownloadMipMap",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glDe..."
@@ -1718,6 +2381,57 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:9ea33b5eb9122db41177f3587e9c6aa1",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"Courier\"",
@@ -1864,6 +2578,41 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9915db1b6011f72a4ebe0dc45a742999",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glDe..."
@@ -1967,6 +2716,68 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6a4a4df2a7f5343a34a57d9e5a6870fe",
+      "callees": {
+        "LoD/1.07": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.08": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grColorCombine",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 13,
         "LoD/1.08": 13,
@@ -2085,6 +2896,50 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:abbd898f4d6ddc769f5b02af94deeca7",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nY2 > nY1\"",
@@ -2164,6 +3019,56 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:aea1668106ca3d568f748c194577aa81",
+      "callees": {
+        "LoD/1.07": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.08": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 16,
         "LoD/1.08": 16,
@@ -2270,6 +3175,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:5ab33cce6559d1941793bf7668d9320c",
+      "callees": {
+        "LoD/1.07": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.08": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09b": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09d": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.10": [
+          "grConstantColorValue",
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 13,
         "LoD/1.08": 13,
@@ -2323,6 +3260,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0379e315aa90f12f42e183c52cb142b8",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tCache->tItems\"",
@@ -2402,6 +3365,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:84836fd495c39a1c7e37c7fc567f748e",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tTempItem->pTile\"",
@@ -2481,6 +3470,44 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:835fa4b43570988912abe795d7efabc7",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tTempItem\"",
@@ -2572,6 +3599,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:186612200c1f95e0120d81b230f64725",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nIndex <= tCache->nMaxNumItems\"",
@@ -2663,6 +3722,26 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0472ea9673ff6fdd1492729ee52216ef",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tTempItem->pTile\"",
@@ -2722,7 +3801,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F817430",
         "LoD/1.09d": "0x6F8143F0",
         "LoD/1.10": "0x6F8143D0",
-        "LoD/1.11": "0x6F859B40",
+        "LoD/1.11": "0x6F85A960",
         "LoD/1.11b": "0x6F85A6B0",
         "LoD/1.12a": "0x6F85DFB0",
         "LoD/1.13c": "0x6F85CCA0",
@@ -2735,7 +3814,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x7430",
         "LoD/1.09d": "0x43F0",
         "LoD/1.10": "0x43D0",
-        "LoD/1.11": "0x9B40",
+        "LoD/1.11": "0xA960",
         "LoD/1.11b": "0xA6B0",
         "LoD/1.12a": "0xDFB0",
         "LoD/1.13c": "0xCCA0",
@@ -2757,6 +3836,41 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a65c69bf5fcbe5a1788690494ec3a356",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glVe..."
@@ -2777,7 +3891,7 @@ var FUNCTIONS_D2Glide_dll = {
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
         ],
         "LoD/1.11": [
-          "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glVertex.cpp\""
+          "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\""
         ],
         "LoD/1.11b": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\""
@@ -2840,7 +3954,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F817450",
         "LoD/1.09d": "0x6F817450",
         "LoD/1.10": "0x6F8143F0",
-        "LoD/1.11": "0x6F85A930",
+        "LoD/1.11": "0x6F859B10",
         "LoD/1.11b": "0x6F85A680",
         "LoD/1.12a": "0x6F85DF80",
         "LoD/1.13c": "0x6F85CC70",
@@ -2853,7 +3967,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x7450",
         "LoD/1.09d": "0x7450",
         "LoD/1.10": "0x43F0",
-        "LoD/1.11": "0xA930",
+        "LoD/1.11": "0x9B10",
         "LoD/1.11b": "0xA680",
         "LoD/1.12a": "0xDF80",
         "LoD/1.13c": "0xCC70",
@@ -2875,6 +3989,41 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:fc6ca2b668866c562fa82a649757b35e",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glVe..."
@@ -2895,7 +4044,7 @@ var FUNCTIONS_D2Glide_dll = {
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
         ],
         "LoD/1.11": [
-          "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\""
+          "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glVertex.cpp\""
         ],
         "LoD/1.11b": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\""
@@ -3161,6 +4310,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f4c66f5ab297b8db86e5a3310e719cad",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ],
+        "LoD/1.10": [
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSm..."
@@ -3249,6 +4430,63 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:0db24bdd929245e6591f3fde2d9241c1",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSm..."
@@ -3455,6 +4693,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9e84029b0d58edaeceec67f601a671ad",
+      "callees": {
+        "LoD/1.07": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.08": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09b": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09d": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.10": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 18,
         "LoD/1.08": 18,
@@ -3638,6 +4902,56 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:88e5564ddb9e989f15181e0fba5e5e88",
+      "callees": {
+        "LoD/1.07": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.08": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -3691,6 +5005,50 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:54b4f7dee4e08b39bbdc79ad16cea3c4",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetCelfileCallback"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert",
+          "FogMemAlloc",
+          "FogMemAlloc",
+          "SetFrameDivisor"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"!sgpbHighlightBuffer\"",
@@ -3829,6 +5187,86 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f673915a54315baf1e718cfcff82c162",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "GetSkillData",
+          "FogAssert",
+          "FogAssert",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "GetSkillData",
+          "FogAssert",
+          "FogAssert",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "GetSkillData",
+          "FogAssert",
+          "FogAssert",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "GetSkillData",
+          "FogAssert",
+          "FogAssert",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "GetSkillData",
+          "FogAssert",
+          "FogAssert",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "D2CMP_DecodeAndDrawCelFrame",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10043",
+          "FogAssert",
+          "FogAssert",
+          "Ordinal_10033",
+          "Ordinal_10033",
+          "Ordinal_10033",
+          "FogAssert",
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "...+1 more"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"sgpbHighlightBuffer\"",
@@ -3905,7 +5343,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x6F815B00",
         "LoD/1.09b": "0x6F815B00",
         "LoD/1.09d": "0x6F815B00",
-        "LoD/1.10": "0x6F815AE0"
+        "LoD/1.10": "0x6F815EE0"
       },
       "rvas": {
         "LoD/1.07": "0x5B00",
@@ -3913,7 +5351,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x5B00",
         "LoD/1.09b": "0x5B00",
         "LoD/1.09d": "0x5B00",
-        "LoD/1.10": "0x5AE0"
+        "LoD/1.10": "0x5EE0"
       },
       "sizes": {
         "LoD/1.07": 407,
@@ -3921,11 +5359,85 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": 407,
         "LoD/1.09b": 407,
         "LoD/1.09d": 407,
-        "LoD/1.10": 399
+        "LoD/1.10": 373
       },
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:73404cee225ff0df3c4c9b065174c2fd",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "FogAssert",
+          "Ordinal_10037",
+          "Ordinal_10039",
+          "Ordinal_10038",
+          "Ordinal_10040",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -3958,7 +5470,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": 27,
         "LoD/1.09b": 27,
         "LoD/1.09d": 27,
-        "LoD/1.10": 27
+        "LoD/1.10": 24
       },
       "loop_counts": {
         "LoD/1.07": 0,
@@ -3974,7 +5486,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0ecd59b5f962311820eec7b3435881fd",
         "LoD/1.09b": "0ecd59b5f962311820eec7b3435881fd",
         "LoD/1.09d": "0ecd59b5f962311820eec7b3435881fd",
-        "LoD/1.10": "9bc8c2d991f6ee09616009268c44c58f"
+        "LoD/1.10": "0581512e189ee2407b52e1409b8fd4ff"
       }
     },
     "d2glide.dll_API_a6f120fb61d3": {
@@ -4005,6 +5517,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a6f120fb61d383498d1f4982bb502b59",
+      "callees": {
+        "LoD/1.07": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.08": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.09": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.09b": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.09d": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.10": [
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 11,
         "LoD/1.08": 11,
@@ -4058,6 +5596,80 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:8a8bfdfe2538c8193ca7bf54acdd998a",
+      "callees": {
+        "LoD/1.07": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.08": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09b": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09d": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.10": [
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "Ordinal_10037",
+          "Ordinal_10039",
+          "Ordinal_10038",
+          "Ordinal_10040"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -4137,6 +5749,68 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9822dde5f57205a85e14a4826bca9dc1",
+      "callees": {
+        "LoD/1.07": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "FogAssert",
+          "Ordinal_10037",
+          "Ordinal_10039",
+          "Ordinal_10038",
+          "Ordinal_10040",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -4213,6 +5887,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bcecf1a480eee686a5d799b1224a5679",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSu..."
@@ -4259,7 +5950,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x6F8171D0",
         "LoD/1.09b": "0x6F8171D0",
         "LoD/1.09d": "0x6F8171D0",
-        "LoD/1.10": "0x6F816C30"
+        "LoD/1.10": "0x6F817160"
       },
       "rvas": {
         "LoD/1.07": "0x71D0",
@@ -4267,7 +5958,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x71D0",
         "LoD/1.09b": "0x71D0",
         "LoD/1.09d": "0x71D0",
-        "LoD/1.10": "0x6C30"
+        "LoD/1.10": "0x7160"
       },
       "sizes": {
         "LoD/1.07": 335,
@@ -4275,11 +5966,37 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": 335,
         "LoD/1.09b": 335,
         "LoD/1.09d": 335,
-        "LoD/1.10": 307
+        "LoD/1.10": 321
       },
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tTempItem\"",
@@ -4302,8 +6019,8 @@ var FUNCTIONS_D2Glide_dll = {
           "\"C:\\\\Src\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glTexture..."
         ],
         "LoD/1.10": [
-          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\...",
-          "\"tTempItem\""
+          "\"tTempItem\"",
+          "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
         ]
       },
       "basic_block_counts": {
@@ -4328,7 +6045,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "555fac2e1ceb056d234c66fafcdd6b79",
         "LoD/1.09b": "555fac2e1ceb056d234c66fafcdd6b79",
         "LoD/1.09d": "555fac2e1ceb056d234c66fafcdd6b79",
-        "LoD/1.10": "0cca3b0c5a9e37f9cea468d50411d9c8"
+        "LoD/1.10": "b2dc6295518422b24e192634ab73b9be"
       }
     },
     "d2glide.dll_MNE_73cc28199e54": {
@@ -4412,6 +6129,26 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e168d5549337bfffa9d9b4f5899354f0",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"tCache->tItems\"",
@@ -4488,6 +6225,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:869c98621cb680007aff45608c406f28",
+      "callees": {
+        "LoD/1.07": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.08": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09b": [
+          "FogMemAlloc"
+        ],
+        "LoD/1.09d": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glTe..."
@@ -4552,6 +6306,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:421e5158101cf314859ce90be26bce7f",
+      "callees": {
+        "LoD/1.07": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.08": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glTe..."
@@ -4949,6 +6720,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:95a100be194bca135d73c1904b23464f",
+      "callees": {
+        "LoD/1.07": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.08": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09b": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09d": [
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 10,
         "LoD/1.08": 10,
@@ -4999,6 +6787,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1d9adacd8b38aed5aeb773726195da6b",
+      "callees": {
+        "LoD/1.07": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"prClip\"",
@@ -5084,6 +6898,32 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:4828a7367237f66824c702232adfab0f",
+      "callees": {
+        "LoD/1.07": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.08": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09b": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.09d": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.10": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 27,
         "LoD/1.08": 27,
@@ -5137,6 +6977,44 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:fc0dd241154991fd9d04dbc703760dec",
+      "callees": {
+        "LoD/1.07": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.08": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.07": [
           "\"nType >= 0 && nType <NUMBER_OF_SUPPORTED_TILE_TYP...",
@@ -5210,6 +7088,16 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:715cad697f6f117eee3ec8db23e063bf",
+      "callees": {
+        "LoD/1.07": [
+          "AllocateTileProjectBuffer",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer",
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 14,
         "LoD/1.08": 14
@@ -5231,11 +7119,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186D0",
         "LoD/1.09d": "0x6F8186D0",
         "LoD/1.10": "0x6F818670",
-        "LoD/1.11": "0x6F855EF0",
-        "LoD/1.11b": "0x6F855EF0",
-        "LoD/1.12a": "0x6F855F60",
-        "LoD/1.13c": "0x6F855F60",
-        "LoD/1.13d": "0x6F855EF0"
+        "LoD/1.11": "0x6F855F02",
+        "LoD/1.11b": "0x6F855ED8",
+        "LoD/1.12a": "0x6F855F48",
+        "LoD/1.13c": "0x6F855F48",
+        "LoD/1.13d": "0x6F855ED8"
       },
       "rvas": {
         "LoD/1.07": "0x86D0",
@@ -5244,11 +7132,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86D0",
         "LoD/1.09d": "0x86D0",
         "LoD/1.10": "0x8670",
-        "LoD/1.11": "0x5EF0",
-        "LoD/1.11b": "0x5EF0",
-        "LoD/1.12a": "0x5F60",
-        "LoD/1.13c": "0x5F60",
-        "LoD/1.13d": "0x5EF0"
+        "LoD/1.11": "0x5F02",
+        "LoD/1.11b": "0x5ED8",
+        "LoD/1.12a": "0x5F48",
+        "LoD/1.13c": "0x5F48",
+        "LoD/1.13d": "0x5ED8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5317,11 +7205,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186D6",
         "LoD/1.09d": "0x6F8186D6",
         "LoD/1.10": "0x6F818676",
-        "LoD/1.11": "0x6F855EF6",
-        "LoD/1.11b": "0x6F855EAE",
-        "LoD/1.12a": "0x6F855F12",
-        "LoD/1.13c": "0x6F855F18",
-        "LoD/1.13d": "0x6F855EA2"
+        "LoD/1.11": "0x6F855EA8",
+        "LoD/1.11b": "0x6F855EA2",
+        "LoD/1.12a": "0x6F855F1E",
+        "LoD/1.13c": "0x6F855F1E",
+        "LoD/1.13d": "0x6F855EB4"
       },
       "rvas": {
         "LoD/1.07": "0x86D6",
@@ -5330,11 +7218,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86D6",
         "LoD/1.09d": "0x86D6",
         "LoD/1.10": "0x8676",
-        "LoD/1.11": "0x5EF6",
-        "LoD/1.11b": "0x5EAE",
-        "LoD/1.12a": "0x5F12",
-        "LoD/1.13c": "0x5F18",
-        "LoD/1.13d": "0x5EA2"
+        "LoD/1.11": "0x5EA8",
+        "LoD/1.11b": "0x5EA2",
+        "LoD/1.12a": "0x5F1E",
+        "LoD/1.13c": "0x5F1E",
+        "LoD/1.13d": "0x5EB4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5403,8 +7291,8 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186DC",
         "LoD/1.09d": "0x6F8186DC",
         "LoD/1.10": "0x6F81867C",
-        "LoD/1.11": "0x6F855EFC",
-        "LoD/1.11b": "0x6F855F08",
+        "LoD/1.11": "0x6F855ED8",
+        "LoD/1.11b": "0x6F855EF6",
         "LoD/1.12a": "0x6F855F6C",
         "LoD/1.13c": "0x6F855F66",
         "LoD/1.13d": "0x6F855EF6"
@@ -5416,8 +7304,8 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86DC",
         "LoD/1.09d": "0x86DC",
         "LoD/1.10": "0x867C",
-        "LoD/1.11": "0x5EFC",
-        "LoD/1.11b": "0x5F08",
+        "LoD/1.11": "0x5ED8",
+        "LoD/1.11b": "0x5EF6",
         "LoD/1.12a": "0x5F6C",
         "LoD/1.13c": "0x5F66",
         "LoD/1.13d": "0x5EF6"
@@ -5489,11 +7377,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186E2",
         "LoD/1.09d": "0x6F8186E2",
         "LoD/1.10": "0x6F818682",
-        "LoD/1.11": "0x6F855E90",
-        "LoD/1.11b": "0x6F855E90",
-        "LoD/1.12a": "0x6F855F00",
-        "LoD/1.13c": "0x6F855F06",
-        "LoD/1.13d": "0x6F855E96"
+        "LoD/1.11": "0x6F855EBA",
+        "LoD/1.11b": "0x6F855EBA",
+        "LoD/1.12a": "0x6F855F2A",
+        "LoD/1.13c": "0x6F855F12",
+        "LoD/1.13d": "0x6F855EC0"
       },
       "rvas": {
         "LoD/1.07": "0x86E2",
@@ -5502,11 +7390,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86E2",
         "LoD/1.09d": "0x86E2",
         "LoD/1.10": "0x8682",
-        "LoD/1.11": "0x5E90",
-        "LoD/1.11b": "0x5E90",
-        "LoD/1.12a": "0x5F00",
-        "LoD/1.13c": "0x5F06",
-        "LoD/1.13d": "0x5E96"
+        "LoD/1.11": "0x5EBA",
+        "LoD/1.11b": "0x5EBA",
+        "LoD/1.12a": "0x5F2A",
+        "LoD/1.13c": "0x5F12",
+        "LoD/1.13d": "0x5EC0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5575,11 +7463,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186E8",
         "LoD/1.09d": "0x6F8186E8",
         "LoD/1.10": "0x6F818688",
-        "LoD/1.11": "0x6F855EDE",
-        "LoD/1.11b": "0x6F855EDE",
-        "LoD/1.12a": "0x6F855F4E",
-        "LoD/1.13c": "0x6F855F4E",
-        "LoD/1.13d": "0x6F855EDE"
+        "LoD/1.11": "0x6F855EEA",
+        "LoD/1.11b": "0x6F855EEA",
+        "LoD/1.12a": "0x6F855F5A",
+        "LoD/1.13c": "0x6F855F5A",
+        "LoD/1.13d": "0x6F855EEA"
       },
       "rvas": {
         "LoD/1.07": "0x86E8",
@@ -5588,11 +7476,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86E8",
         "LoD/1.09d": "0x86E8",
         "LoD/1.10": "0x8688",
-        "LoD/1.11": "0x5EDE",
-        "LoD/1.11b": "0x5EDE",
-        "LoD/1.12a": "0x5F4E",
-        "LoD/1.13c": "0x5F4E",
-        "LoD/1.13d": "0x5EDE"
+        "LoD/1.11": "0x5EEA",
+        "LoD/1.11b": "0x5EEA",
+        "LoD/1.12a": "0x5F5A",
+        "LoD/1.13c": "0x5F5A",
+        "LoD/1.13d": "0x5EEA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5661,11 +7549,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186EE",
         "LoD/1.09d": "0x6F8186EE",
         "LoD/1.10": "0x6F81868E",
-        "LoD/1.11": "0x6F855EEA",
-        "LoD/1.11b": "0x6F855EEA",
-        "LoD/1.12a": "0x6F855F5A",
-        "LoD/1.13c": "0x6F855F5A",
-        "LoD/1.13d": "0x6F855EEA"
+        "LoD/1.11": "0x6F855ED2",
+        "LoD/1.11b": "0x6F855ED2",
+        "LoD/1.12a": "0x6F855F66",
+        "LoD/1.13c": "0x6F855F3C",
+        "LoD/1.13d": "0x6F855ECC"
       },
       "rvas": {
         "LoD/1.07": "0x86EE",
@@ -5674,11 +7562,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86EE",
         "LoD/1.09d": "0x86EE",
         "LoD/1.10": "0x868E",
-        "LoD/1.11": "0x5EEA",
-        "LoD/1.11b": "0x5EEA",
-        "LoD/1.12a": "0x5F5A",
-        "LoD/1.13c": "0x5F5A",
-        "LoD/1.13d": "0x5EEA"
+        "LoD/1.11": "0x5ED2",
+        "LoD/1.11b": "0x5ED2",
+        "LoD/1.12a": "0x5F66",
+        "LoD/1.13c": "0x5F3C",
+        "LoD/1.13d": "0x5ECC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5747,11 +7635,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186F4",
         "LoD/1.09d": "0x6F8186F4",
         "LoD/1.10": "0x6F818694",
-        "LoD/1.11": "0x6F855EA8",
-        "LoD/1.11b": "0x6F855EA2",
-        "LoD/1.12a": "0x6F855F1E",
-        "LoD/1.13c": "0x6F855F1E",
-        "LoD/1.13d": "0x6F855EB4"
+        "LoD/1.11": "0x6F855EF0",
+        "LoD/1.11b": "0x6F855EF0",
+        "LoD/1.12a": "0x6F855F60",
+        "LoD/1.13c": "0x6F855F60",
+        "LoD/1.13d": "0x6F855EF0"
       },
       "rvas": {
         "LoD/1.07": "0x86F4",
@@ -5760,11 +7648,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86F4",
         "LoD/1.09d": "0x86F4",
         "LoD/1.10": "0x8694",
-        "LoD/1.11": "0x5EA8",
-        "LoD/1.11b": "0x5EA2",
-        "LoD/1.12a": "0x5F1E",
-        "LoD/1.13c": "0x5F1E",
-        "LoD/1.13d": "0x5EB4"
+        "LoD/1.11": "0x5EF0",
+        "LoD/1.11b": "0x5EF0",
+        "LoD/1.12a": "0x5F60",
+        "LoD/1.13c": "0x5F60",
+        "LoD/1.13d": "0x5EF0"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5833,11 +7721,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F8186FA",
         "LoD/1.09d": "0x6F8186FA",
         "LoD/1.10": "0x6F81869A",
-        "LoD/1.11": "0x6F855E9C",
-        "LoD/1.11b": "0x6F855E9C",
-        "LoD/1.12a": "0x6F855F0C",
-        "LoD/1.13c": "0x6F855F00",
-        "LoD/1.13d": "0x6F855E90"
+        "LoD/1.11": "0x6F855EE4",
+        "LoD/1.11b": "0x6F855EE4",
+        "LoD/1.12a": "0x6F855F54",
+        "LoD/1.13c": "0x6F855F6C",
+        "LoD/1.13d": "0x6F855EFC"
       },
       "rvas": {
         "LoD/1.07": "0x86FA",
@@ -5846,11 +7734,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x86FA",
         "LoD/1.09d": "0x86FA",
         "LoD/1.10": "0x869A",
-        "LoD/1.11": "0x5E9C",
-        "LoD/1.11b": "0x5E9C",
-        "LoD/1.12a": "0x5F0C",
-        "LoD/1.13c": "0x5F00",
-        "LoD/1.13d": "0x5E90"
+        "LoD/1.11": "0x5EE4",
+        "LoD/1.11b": "0x5EE4",
+        "LoD/1.12a": "0x5F54",
+        "LoD/1.13c": "0x5F6C",
+        "LoD/1.13d": "0x5EFC"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -5919,11 +7807,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818700",
         "LoD/1.09d": "0x6F818700",
         "LoD/1.10": "0x6F8186A0",
-        "LoD/1.11": "0x6F855EE4",
-        "LoD/1.11b": "0x6F855EE4",
-        "LoD/1.12a": "0x6F855F54",
-        "LoD/1.13c": "0x6F855F6C",
-        "LoD/1.13d": "0x6F855EFC"
+        "LoD/1.11": "0x6F855EC0",
+        "LoD/1.11b": "0x6F855EC0",
+        "LoD/1.12a": "0x6F855F30",
+        "LoD/1.13c": "0x6F855F2A",
+        "LoD/1.13d": "0x6F855EC6"
       },
       "rvas": {
         "LoD/1.07": "0x8700",
@@ -5932,11 +7820,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8700",
         "LoD/1.09d": "0x8700",
         "LoD/1.10": "0x86A0",
-        "LoD/1.11": "0x5EE4",
-        "LoD/1.11b": "0x5EE4",
-        "LoD/1.12a": "0x5F54",
-        "LoD/1.13c": "0x5F6C",
-        "LoD/1.13d": "0x5EFC"
+        "LoD/1.11": "0x5EC0",
+        "LoD/1.11b": "0x5EC0",
+        "LoD/1.12a": "0x5F30",
+        "LoD/1.13c": "0x5F2A",
+        "LoD/1.13d": "0x5EC6"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6005,11 +7893,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818706",
         "LoD/1.09d": "0x6F818706",
         "LoD/1.10": "0x6F8186A6",
-        "LoD/1.11": "0x6F855EB4",
-        "LoD/1.11b": "0x6F855EA8",
-        "LoD/1.12a": "0x6F855F24",
-        "LoD/1.13c": "0x6F855F30",
-        "LoD/1.13d": "0x6F855EBA"
+        "LoD/1.11": "0x6F855EDE",
+        "LoD/1.11b": "0x6F855EDE",
+        "LoD/1.12a": "0x6F855F4E",
+        "LoD/1.13c": "0x6F855F4E",
+        "LoD/1.13d": "0x6F855EDE"
       },
       "rvas": {
         "LoD/1.07": "0x8706",
@@ -6018,11 +7906,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8706",
         "LoD/1.09d": "0x8706",
         "LoD/1.10": "0x86A6",
-        "LoD/1.11": "0x5EB4",
-        "LoD/1.11b": "0x5EA8",
-        "LoD/1.12a": "0x5F24",
-        "LoD/1.13c": "0x5F30",
-        "LoD/1.13d": "0x5EBA"
+        "LoD/1.11": "0x5EDE",
+        "LoD/1.11b": "0x5EDE",
+        "LoD/1.12a": "0x5F4E",
+        "LoD/1.13c": "0x5F4E",
+        "LoD/1.13d": "0x5EDE"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6091,11 +7979,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F81870C",
         "LoD/1.09d": "0x6F81870C",
         "LoD/1.10": "0x6F8186AC",
-        "LoD/1.11": "0x6F855ECC",
-        "LoD/1.11b": "0x6F855ECC",
-        "LoD/1.12a": "0x6F855F3C",
-        "LoD/1.13c": "0x6F855F54",
-        "LoD/1.13d": "0x6F855EE4"
+        "LoD/1.11": "0x6F855EF6",
+        "LoD/1.11b": "0x6F855EFC",
+        "LoD/1.12a": "0x6F855F78",
+        "LoD/1.13c": "0x6F855F78",
+        "LoD/1.13d": "0x6F855F08"
       },
       "rvas": {
         "LoD/1.07": "0x870C",
@@ -6104,11 +7992,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x870C",
         "LoD/1.09d": "0x870C",
         "LoD/1.10": "0x86AC",
-        "LoD/1.11": "0x5ECC",
-        "LoD/1.11b": "0x5ECC",
-        "LoD/1.12a": "0x5F3C",
-        "LoD/1.13c": "0x5F54",
-        "LoD/1.13d": "0x5EE4"
+        "LoD/1.11": "0x5EF6",
+        "LoD/1.11b": "0x5EFC",
+        "LoD/1.12a": "0x5F78",
+        "LoD/1.13c": "0x5F78",
+        "LoD/1.13d": "0x5F08"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6177,11 +8065,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818712",
         "LoD/1.09d": "0x6F818712",
         "LoD/1.10": "0x6F8186B2",
-        "LoD/1.11": "0x6F855E84",
-        "LoD/1.11b": "0x6F855E84",
-        "LoD/1.12a": "0x6F855EF4",
-        "LoD/1.13c": "0x6F855EF4",
-        "LoD/1.13d": "0x6F855E84"
+        "LoD/1.11": "0x6F855EA2",
+        "LoD/1.11b": "0x6F855F02",
+        "LoD/1.12a": "0x6F855F72",
+        "LoD/1.13c": "0x6F855F72",
+        "LoD/1.13d": "0x6F855F02"
       },
       "rvas": {
         "LoD/1.07": "0x8712",
@@ -6190,11 +8078,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8712",
         "LoD/1.09d": "0x8712",
         "LoD/1.10": "0x86B2",
-        "LoD/1.11": "0x5E84",
-        "LoD/1.11b": "0x5E84",
-        "LoD/1.12a": "0x5EF4",
-        "LoD/1.13c": "0x5EF4",
-        "LoD/1.13d": "0x5E84"
+        "LoD/1.11": "0x5EA2",
+        "LoD/1.11b": "0x5F02",
+        "LoD/1.12a": "0x5F72",
+        "LoD/1.13c": "0x5F72",
+        "LoD/1.13d": "0x5F02"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6263,11 +8151,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818718",
         "LoD/1.09d": "0x6F818718",
         "LoD/1.10": "0x6F8186B8",
-        "LoD/1.11": "0x6F855EAE",
-        "LoD/1.11b": "0x6F855EB4",
-        "LoD/1.12a": "0x6F855F18",
-        "LoD/1.13c": "0x6F855F24",
-        "LoD/1.13d": "0x6F855EA8"
+        "LoD/1.11": "0x6F855ECC",
+        "LoD/1.11b": "0x6F855ECC",
+        "LoD/1.12a": "0x6F855F3C",
+        "LoD/1.13c": "0x6F855F54",
+        "LoD/1.13d": "0x6F855EE4"
       },
       "rvas": {
         "LoD/1.07": "0x8718",
@@ -6276,11 +8164,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8718",
         "LoD/1.09d": "0x8718",
         "LoD/1.10": "0x86B8",
-        "LoD/1.11": "0x5EAE",
-        "LoD/1.11b": "0x5EB4",
-        "LoD/1.12a": "0x5F18",
-        "LoD/1.13c": "0x5F24",
-        "LoD/1.13d": "0x5EA8"
+        "LoD/1.11": "0x5ECC",
+        "LoD/1.11b": "0x5ECC",
+        "LoD/1.12a": "0x5F3C",
+        "LoD/1.13c": "0x5F54",
+        "LoD/1.13d": "0x5EE4"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6435,11 +8323,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818724",
         "LoD/1.09d": "0x6F818724",
         "LoD/1.10": "0x6F8186C4",
-        "LoD/1.11": "0x6F855EA2",
-        "LoD/1.11b": "0x6F855EFC",
-        "LoD/1.12a": "0x6F855F66",
-        "LoD/1.13c": "0x6F855F3C",
-        "LoD/1.13d": "0x6F855ECC"
+        "LoD/1.11": "0x6F855EFC",
+        "LoD/1.11b": "0x6F855F08",
+        "LoD/1.12a": "0x6F855F42",
+        "LoD/1.13c": "0x6F855F42",
+        "LoD/1.13d": "0x6F855ED2"
       },
       "rvas": {
         "LoD/1.07": "0x8724",
@@ -6448,11 +8336,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8724",
         "LoD/1.09d": "0x8724",
         "LoD/1.10": "0x86C4",
-        "LoD/1.11": "0x5EA2",
-        "LoD/1.11b": "0x5EFC",
-        "LoD/1.12a": "0x5F66",
-        "LoD/1.13c": "0x5F3C",
-        "LoD/1.13d": "0x5ECC"
+        "LoD/1.11": "0x5EFC",
+        "LoD/1.11b": "0x5F08",
+        "LoD/1.12a": "0x5F42",
+        "LoD/1.13c": "0x5F42",
+        "LoD/1.13d": "0x5ED2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6521,11 +8409,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F81872A",
         "LoD/1.09d": "0x6F81872A",
         "LoD/1.10": "0x6F8186CA",
-        "LoD/1.11": "0x6F855ED8",
-        "LoD/1.11b": "0x6F855EF6",
-        "LoD/1.12a": "0x6F855F42",
-        "LoD/1.13c": "0x6F855F42",
-        "LoD/1.13d": "0x6F855ED2"
+        "LoD/1.11": "0x6F855E84",
+        "LoD/1.11b": "0x6F855E84",
+        "LoD/1.12a": "0x6F855EF4",
+        "LoD/1.13c": "0x6F855EF4",
+        "LoD/1.13d": "0x6F855E84"
       },
       "rvas": {
         "LoD/1.07": "0x872A",
@@ -6534,11 +8422,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x872A",
         "LoD/1.09d": "0x872A",
         "LoD/1.10": "0x86CA",
-        "LoD/1.11": "0x5ED8",
-        "LoD/1.11b": "0x5EF6",
-        "LoD/1.12a": "0x5F42",
-        "LoD/1.13c": "0x5F42",
-        "LoD/1.13d": "0x5ED2"
+        "LoD/1.11": "0x5E84",
+        "LoD/1.11b": "0x5E84",
+        "LoD/1.12a": "0x5EF4",
+        "LoD/1.13c": "0x5EF4",
+        "LoD/1.13d": "0x5E84"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6607,11 +8495,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818730",
         "LoD/1.09d": "0x6F818730",
         "LoD/1.10": "0x6F8186D0",
-        "LoD/1.11": "0x6F855F08",
-        "LoD/1.11b": "0x6F855F02",
-        "LoD/1.12a": "0x6F855F72",
-        "LoD/1.13c": "0x6F855F72",
-        "LoD/1.13d": "0x6F855F02"
+        "LoD/1.11": "0x6F855E8A",
+        "LoD/1.11b": "0x6F855E8A",
+        "LoD/1.12a": "0x6F855EFA",
+        "LoD/1.13c": "0x6F855EFA",
+        "LoD/1.13d": "0x6F855E8A"
       },
       "rvas": {
         "LoD/1.07": "0x8730",
@@ -6620,11 +8508,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8730",
         "LoD/1.09d": "0x8730",
         "LoD/1.10": "0x86D0",
-        "LoD/1.11": "0x5F08",
-        "LoD/1.11b": "0x5F02",
-        "LoD/1.12a": "0x5F72",
-        "LoD/1.13c": "0x5F72",
-        "LoD/1.13d": "0x5F02"
+        "LoD/1.11": "0x5E8A",
+        "LoD/1.11b": "0x5E8A",
+        "LoD/1.12a": "0x5EFA",
+        "LoD/1.13c": "0x5EFA",
+        "LoD/1.13d": "0x5E8A"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6693,11 +8581,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818736",
         "LoD/1.09d": "0x6F818736",
         "LoD/1.10": "0x6F8186D6",
-        "LoD/1.11": "0x6F855E8A",
-        "LoD/1.11b": "0x6F855E8A",
-        "LoD/1.12a": "0x6F855EFA",
-        "LoD/1.13c": "0x6F855EFA",
-        "LoD/1.13d": "0x6F855E8A"
+        "LoD/1.11": "0x6F855EAE",
+        "LoD/1.11b": "0x6F855EB4",
+        "LoD/1.12a": "0x6F855F18",
+        "LoD/1.13c": "0x6F855F24",
+        "LoD/1.13d": "0x6F855EA8"
       },
       "rvas": {
         "LoD/1.07": "0x8736",
@@ -6706,11 +8594,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8736",
         "LoD/1.09d": "0x8736",
         "LoD/1.10": "0x86D6",
-        "LoD/1.11": "0x5E8A",
-        "LoD/1.11b": "0x5E8A",
-        "LoD/1.12a": "0x5EFA",
-        "LoD/1.13c": "0x5EFA",
-        "LoD/1.13d": "0x5E8A"
+        "LoD/1.11": "0x5EAE",
+        "LoD/1.11b": "0x5EB4",
+        "LoD/1.12a": "0x5F18",
+        "LoD/1.13c": "0x5F24",
+        "LoD/1.13d": "0x5EA8"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6779,11 +8667,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F81873C",
         "LoD/1.09d": "0x6F81873C",
         "LoD/1.10": "0x6F8186DC",
-        "LoD/1.11": "0x6F855EC0",
-        "LoD/1.11b": "0x6F855EC0",
-        "LoD/1.12a": "0x6F855F30",
-        "LoD/1.13c": "0x6F855F2A",
-        "LoD/1.13d": "0x6F855EC6"
+        "LoD/1.11": "0x6F855E90",
+        "LoD/1.11b": "0x6F855E90",
+        "LoD/1.12a": "0x6F855F00",
+        "LoD/1.13c": "0x6F855F06",
+        "LoD/1.13d": "0x6F855E96"
       },
       "rvas": {
         "LoD/1.07": "0x873C",
@@ -6792,11 +8680,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x873C",
         "LoD/1.09d": "0x873C",
         "LoD/1.10": "0x86DC",
-        "LoD/1.11": "0x5EC0",
-        "LoD/1.11b": "0x5EC0",
-        "LoD/1.12a": "0x5F30",
-        "LoD/1.13c": "0x5F2A",
-        "LoD/1.13d": "0x5EC6"
+        "LoD/1.11": "0x5E90",
+        "LoD/1.11b": "0x5E90",
+        "LoD/1.12a": "0x5F00",
+        "LoD/1.13c": "0x5F06",
+        "LoD/1.13d": "0x5E96"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6865,11 +8753,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818742",
         "LoD/1.09d": "0x6F818742",
         "LoD/1.10": "0x6F8186E2",
-        "LoD/1.11": "0x6F855EBA",
-        "LoD/1.11b": "0x6F855EBA",
-        "LoD/1.12a": "0x6F855F2A",
-        "LoD/1.13c": "0x6F855F12",
-        "LoD/1.13d": "0x6F855EC0"
+        "LoD/1.11": "0x6F855EB4",
+        "LoD/1.11b": "0x6F855EA8",
+        "LoD/1.12a": "0x6F855F24",
+        "LoD/1.13c": "0x6F855F30",
+        "LoD/1.13d": "0x6F855EBA"
       },
       "rvas": {
         "LoD/1.07": "0x8742",
@@ -6878,11 +8766,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8742",
         "LoD/1.09d": "0x8742",
         "LoD/1.10": "0x86E2",
-        "LoD/1.11": "0x5EBA",
-        "LoD/1.11b": "0x5EBA",
-        "LoD/1.12a": "0x5F2A",
-        "LoD/1.13c": "0x5F12",
-        "LoD/1.13d": "0x5EC0"
+        "LoD/1.11": "0x5EB4",
+        "LoD/1.11b": "0x5EA8",
+        "LoD/1.12a": "0x5F24",
+        "LoD/1.13c": "0x5F30",
+        "LoD/1.13d": "0x5EBA"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -6951,11 +8839,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818748",
         "LoD/1.09d": "0x6F818748",
         "LoD/1.10": "0x6F8186E8",
-        "LoD/1.11": "0x6F855ED2",
-        "LoD/1.11b": "0x6F855ED2",
-        "LoD/1.12a": "0x6F855F78",
-        "LoD/1.13c": "0x6F855F78",
-        "LoD/1.13d": "0x6F855F08"
+        "LoD/1.11": "0x6F855E9C",
+        "LoD/1.11b": "0x6F855E9C",
+        "LoD/1.12a": "0x6F855F0C",
+        "LoD/1.13c": "0x6F855F00",
+        "LoD/1.13d": "0x6F855E90"
       },
       "rvas": {
         "LoD/1.07": "0x8748",
@@ -6964,11 +8852,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8748",
         "LoD/1.09d": "0x8748",
         "LoD/1.10": "0x86E8",
-        "LoD/1.11": "0x5ED2",
-        "LoD/1.11b": "0x5ED2",
-        "LoD/1.12a": "0x5F78",
-        "LoD/1.13c": "0x5F78",
-        "LoD/1.13d": "0x5F08"
+        "LoD/1.11": "0x5E9C",
+        "LoD/1.11b": "0x5E9C",
+        "LoD/1.12a": "0x5F0C",
+        "LoD/1.13c": "0x5F00",
+        "LoD/1.13d": "0x5E90"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -7553,11 +9441,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F818772",
         "LoD/1.09d": "0x6F818772",
         "LoD/1.10": "0x6F818712",
-        "LoD/1.11": "0x6F855F02",
-        "LoD/1.11b": "0x6F855ED8",
-        "LoD/1.12a": "0x6F855F48",
-        "LoD/1.13c": "0x6F855F48",
-        "LoD/1.13d": "0x6F855ED8"
+        "LoD/1.11": "0x6F855F08",
+        "LoD/1.11b": "0x6F855EAE",
+        "LoD/1.12a": "0x6F855F12",
+        "LoD/1.13c": "0x6F855F18",
+        "LoD/1.13d": "0x6F855EA2"
       },
       "rvas": {
         "LoD/1.07": "0x8772",
@@ -7566,11 +9454,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x8772",
         "LoD/1.09d": "0x8772",
         "LoD/1.10": "0x8712",
-        "LoD/1.11": "0x5F02",
-        "LoD/1.11b": "0x5ED8",
-        "LoD/1.12a": "0x5F48",
-        "LoD/1.13c": "0x5F48",
-        "LoD/1.13d": "0x5ED8"
+        "LoD/1.11": "0x5F08",
+        "LoD/1.11b": "0x5EAE",
+        "LoD/1.12a": "0x5F12",
+        "LoD/1.13c": "0x5F18",
+        "LoD/1.13d": "0x5EA2"
       },
       "sizes": {
         "LoD/1.07": 6,
@@ -10591,10 +12479,10 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09d": "0x6F81CA16",
         "LoD/1.10": "0x6F81C9B6",
         "LoD/1.11": "0x6F852227",
-        "LoD/1.11b": "0x6F8541A0",
-        "LoD/1.12a": "0x6F8520B2",
+        "LoD/1.11b": "0x6F854664",
+        "LoD/1.12a": "0x6F8520A6",
         "LoD/1.13c": "0x6F8520A5",
-        "LoD/1.13d": "0x6F8520AD"
+        "LoD/1.13d": "0x6F8520A1"
       },
       "rvas": {
         "LoD/1.07": "0xCA16",
@@ -10604,10 +12492,10 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09d": "0xCA16",
         "LoD/1.10": "0xC9B6",
         "LoD/1.11": "0x2227",
-        "LoD/1.11b": "0x41A0",
-        "LoD/1.12a": "0x20B2",
+        "LoD/1.11b": "0x4664",
+        "LoD/1.12a": "0x20A6",
         "LoD/1.13c": "0x20A5",
-        "LoD/1.13d": "0x20AD"
+        "LoD/1.13d": "0x20A1"
       },
       "sizes": {
         "LoD/1.07": 9,
@@ -11038,18 +12926,18 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_MNE_bff09423b51f": {
       "addresses": {
         "LoD/1.07": "0x6F87B980",
-        "LoD/1.08": "0x6F87B980",
-        "LoD/1.09": "0x6F818AA0",
-        "LoD/1.09b": "0x6F818AA0",
-        "LoD/1.09d": "0x6F818AA0",
+        "LoD/1.08": "0x6F878AA0",
+        "LoD/1.09": "0x6F81B980",
+        "LoD/1.09b": "0x6F81B980",
+        "LoD/1.09d": "0x6F81B980",
         "LoD/1.10": "0x6F818A40"
       },
       "rvas": {
         "LoD/1.07": "0xB980",
-        "LoD/1.08": "0xB980",
-        "LoD/1.09": "0x8AA0",
-        "LoD/1.09b": "0x8AA0",
-        "LoD/1.09d": "0x8AA0",
+        "LoD/1.08": "0x8AA0",
+        "LoD/1.09": "0xB980",
+        "LoD/1.09b": "0xB980",
+        "LoD/1.09d": "0xB980",
         "LoD/1.10": "0x8A40"
       },
       "sizes": {
@@ -12889,11 +14777,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F819AD3",
         "LoD/1.09d": "0x6F819AD3",
         "LoD/1.10": "0x6F819A73",
-        "LoD/1.11": "0x6F85E01F",
-        "LoD/1.11b": "0x6F85E01B",
-        "LoD/1.12a": "0x6F85E060",
-        "LoD/1.13c": "0x6F85E05B",
-        "LoD/1.13d": "0x6F85E020"
+        "LoD/1.11": "0x6F85466D",
+        "LoD/1.11b": "0x6F85466D",
+        "LoD/1.12a": "0x6F8546A0",
+        "LoD/1.13c": "0x6F85469E",
+        "LoD/1.13d": "0x6F85466D"
       },
       "rvas": {
         "LoD/1.07": "0x9AD3",
@@ -12902,11 +14790,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x9AD3",
         "LoD/1.09d": "0x9AD3",
         "LoD/1.10": "0x9A73",
-        "LoD/1.11": "0xE01F",
-        "LoD/1.11b": "0xE01B",
-        "LoD/1.12a": "0xE060",
-        "LoD/1.13c": "0xE05B",
-        "LoD/1.13d": "0xE020"
+        "LoD/1.11": "0x466D",
+        "LoD/1.11b": "0x466D",
+        "LoD/1.12a": "0x46A0",
+        "LoD/1.13c": "0x469E",
+        "LoD/1.13d": "0x466D"
       },
       "sizes": {
         "LoD/1.07": 30,
@@ -12960,11 +14848,11 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.09d": "83d07e3c014d31c19cf14861bc62b0a0",
         "LoD/1.10": "83d07e3c014d31c19cf14861bc62b0a0",
-        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
-        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
+        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
+        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "d2glide.dll_MNE_a1900c49d3b8": {
@@ -15140,6 +17028,41 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:059e9bb2efc1de93bfe21089d0ad96d3",
+      "callees": {
+        "LoD/1.07": [
+          "RtlUnwind"
+        ],
+        "LoD/1.08": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.09d": [
+          "RtlUnwind"
+        ],
+        "LoD/1.10": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11": [
+          "RtlUnwind"
+        ],
+        "LoD/1.11b": [
+          "RtlUnwind"
+        ],
+        "LoD/1.12a": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13c": [
+          "RtlUnwind"
+        ],
+        "LoD/1.13d": [
+          "RtlUnwind"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.07": 1,
         "LoD/1.08": 1,
@@ -16463,10 +18386,10 @@ var FUNCTIONS_D2Glide_dll = {
       "addresses": {
         "LoD/1.07": "0x6F87C519",
         "LoD/1.08": "0x6F87C519",
-        "LoD/1.09": "0x6F81C519",
+        "LoD/1.09": "0x6F81C503",
         "LoD/1.09b": "0x6F81C519",
-        "LoD/1.09d": "0x6F81C519",
-        "LoD/1.10": "0x6F81C4B9",
+        "LoD/1.09d": "0x6F81C503",
+        "LoD/1.10": "0x6F81C4A3",
         "LoD/1.11": "0x6F85F5D3",
         "LoD/1.11b": "0x6F85F5D3",
         "LoD/1.12a": "0x6F85F621",
@@ -16476,10 +18399,10 @@ var FUNCTIONS_D2Glide_dll = {
       "rvas": {
         "LoD/1.07": "0xC519",
         "LoD/1.08": "0xC519",
-        "LoD/1.09": "0xC519",
+        "LoD/1.09": "0xC503",
         "LoD/1.09b": "0xC519",
-        "LoD/1.09d": "0xC519",
-        "LoD/1.10": "0xC4B9",
+        "LoD/1.09d": "0xC503",
+        "LoD/1.10": "0xC4A3",
         "LoD/1.11": "0xF5D3",
         "LoD/1.11b": "0xF5D3",
         "LoD/1.12a": "0xF621",
@@ -16549,17 +18472,17 @@ var FUNCTIONS_D2Glide_dll = {
       "addresses": {
         "LoD/1.07": "0x6F87C55C",
         "LoD/1.08": "0x6F87C55C",
-        "LoD/1.09": "0x6F81C52F",
-        "LoD/1.09b": "0x6F81C52F",
-        "LoD/1.09d": "0x6F81C52F",
+        "LoD/1.09": "0x6F81C55C",
+        "LoD/1.09b": "0x6F81C55C",
+        "LoD/1.09d": "0x6F81C55C",
         "LoD/1.10": "0x6F81C4CF"
       },
       "rvas": {
         "LoD/1.07": "0xC55C",
         "LoD/1.08": "0xC55C",
-        "LoD/1.09": "0xC52F",
-        "LoD/1.09b": "0xC52F",
-        "LoD/1.09d": "0xC52F",
+        "LoD/1.09": "0xC55C",
+        "LoD/1.09b": "0xC55C",
+        "LoD/1.09d": "0xC55C",
         "LoD/1.10": "0xC4CF"
       },
       "sizes": {
@@ -19471,6 +21394,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:c229bb2304df50f29bda00ccc5f186d8",
+      "callees": {
+        "LoD/1.08": [
+          "grGet",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09": [
+          "grGet",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09b": [
+          "grGet",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.09d": [
+          "grGet",
+          "QueueLogMessage",
+          "QueueLogMessage"
+        ],
+        "LoD/1.10": [
+          "grGet",
+          "Ordinal_10029",
+          "Ordinal_10029"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"Detecting boards which support Glide...\"",
@@ -19540,6 +21490,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:9acc84bbcd86b3a0bc12ca50d2a9adee",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grGlideInit",
+          "grSstSelect",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "...+3 more"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grGlideInit",
+          "grSstSelect",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "...+3 more"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grGlideInit",
+          "grSstSelect",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "...+3 more"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "QueueLogMessage",
+          "grGlideInit",
+          "grSstSelect",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "grGetString",
+          "QueueLogMessage",
+          "...+3 more"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "Ordinal_10029",
+          "grGlideInit",
+          "grSstSelect",
+          "grGetString",
+          "Ordinal_10029",
+          "grGetString",
+          "Ordinal_10029",
+          "grGetString",
+          "Ordinal_10029",
+          "...+3 more"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"!sgfInitialized\"",
@@ -19629,6 +21646,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:5de829f94057680173712f430b668667",
+      "callees": {
+        "LoD/1.08": [
+          "QueueLogMessage",
+          "grGlideShutdown",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09": [
+          "QueueLogMessage",
+          "grGlideShutdown",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09b": [
+          "QueueLogMessage",
+          "grGlideShutdown",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.09d": [
+          "QueueLogMessage",
+          "grGlideShutdown",
+          "QueueLogMessage",
+          "ReleasePoolAllocation"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10029",
+          "grGlideShutdown",
+          "Ordinal_10029",
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"...Glide shut down.\"",
@@ -19684,45 +21733,127 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x6F811AD0",
         "LoD/1.09b": "0x6F811AD0",
         "LoD/1.09d": "0x6F811AD0",
-        "LoD/1.10": "0x6F811AE0"
+        "LoD/1.10": "0x6F811AE0",
+        "LoD/1.11": "0x6F85C2C0",
+        "LoD/1.11b": "0x6F858F40",
+        "LoD/1.12a": "0x6F85BFC0",
+        "LoD/1.13c": "0x6F85DF60",
+        "LoD/1.13d": "0x6F85D870"
       },
       "rvas": {
         "LoD/1.08": "0x1AD0",
         "LoD/1.09": "0x1AD0",
         "LoD/1.09b": "0x1AD0",
         "LoD/1.09d": "0x1AD0",
-        "LoD/1.10": "0x1AE0"
+        "LoD/1.10": "0x1AE0",
+        "LoD/1.11": "0xC2C0",
+        "LoD/1.11b": "0x8F40",
+        "LoD/1.12a": "0xBFC0",
+        "LoD/1.13c": "0xDF60",
+        "LoD/1.13d": "0xD870"
       },
       "sizes": {
         "LoD/1.08": 68,
         "LoD/1.09": 68,
         "LoD/1.09b": 68,
         "LoD/1.09d": 68,
-        "LoD/1.10": 68
+        "LoD/1.10": 68,
+        "LoD/1.11": 75,
+        "LoD/1.11b": 75,
+        "LoD/1.12a": 75,
+        "LoD/1.13c": 75,
+        "LoD/1.13d": 75
       },
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:bfd64b144fb7ae32996df21a48cb3c56",
+      "callees": {
+        "LoD/1.08": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09b": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09d": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.10": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11b": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.12a": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13c": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13d": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 7,
         "LoD/1.09": 7,
         "LoD/1.09b": 7,
         "LoD/1.09d": 7,
-        "LoD/1.10": 7
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7
       },
       "loop_counts": {
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.08": "8c71aea2bc9b5c5655f982875f380123",
         "LoD/1.09": "8c71aea2bc9b5c5655f982875f380123",
         "LoD/1.09b": "8c71aea2bc9b5c5655f982875f380123",
         "LoD/1.09d": "8c71aea2bc9b5c5655f982875f380123",
-        "LoD/1.10": "8c71aea2bc9b5c5655f982875f380123"
+        "LoD/1.10": "8c71aea2bc9b5c5655f982875f380123",
+        "LoD/1.11": "0c49c2e1cb7d63ea72322a9dfa355776",
+        "LoD/1.11b": "0c49c2e1cb7d63ea72322a9dfa355776",
+        "LoD/1.12a": "0c49c2e1cb7d63ea72322a9dfa355776",
+        "LoD/1.13c": "0c49c2e1cb7d63ea72322a9dfa355776",
+        "LoD/1.13d": "0c49c2e1cb7d63ea72322a9dfa355776"
       }
     },
     "d2glide.dll_MNE_c7a407ba0d7f": {
@@ -19797,6 +21928,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:82fcae119198c6c13d602f8665ae6833",
+      "callees": {
+        "LoD/1.08": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "...+2 more"
+        ],
+        "LoD/1.09": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "...+2 more"
+        ],
+        "LoD/1.09b": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "...+2 more"
+        ],
+        "LoD/1.09d": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "...+2 more"
+        ],
+        "LoD/1.10": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "Ordinal_10198",
+          "grLoadGammaTable",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo..."
@@ -19876,6 +22074,48 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:2a8362189f5374fdcce6b8de12d4af2a",
+      "callees": {
+        "LoD/1.08": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09b": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.09d": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.10": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.11": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.11b": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.12a": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.13c": [
+          "grBufferClear",
+          "grBufferSwap"
+        ],
+        "LoD/1.13d": [
+          "grBufferClear",
+          "grBufferSwap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -19916,27 +22156,27 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_GetLastError": {
       "addresses": {
         "LoD/1.08": "0x6F8725B0",
-        "LoD/1.09": "0x6F812BD0",
-        "LoD/1.09b": "0x6F812BD0",
+        "LoD/1.09": "0x6F8125B0",
+        "LoD/1.09b": "0x6F8125B0",
         "LoD/1.09d": "0x6F8125B0",
         "LoD/1.10": "0x6F8125A0",
-        "LoD/1.11": "0x6F85B090",
+        "LoD/1.11": "0x6F85B6A0",
         "LoD/1.11b": "0x6F858370",
         "LoD/1.12a": "0x6F85B4B0",
-        "LoD/1.13c": "0x6F85D340",
-        "LoD/1.13d": "0x6F85C750"
+        "LoD/1.13c": "0x6F85CD30",
+        "LoD/1.13d": "0x6F85CD60"
       },
       "rvas": {
         "LoD/1.08": "0x25B0",
-        "LoD/1.09": "0x2BD0",
-        "LoD/1.09b": "0x2BD0",
+        "LoD/1.09": "0x25B0",
+        "LoD/1.09b": "0x25B0",
         "LoD/1.09d": "0x25B0",
         "LoD/1.10": "0x25A0",
-        "LoD/1.11": "0xB090",
+        "LoD/1.11": "0xB6A0",
         "LoD/1.11b": "0x8370",
         "LoD/1.12a": "0xB4B0",
-        "LoD/1.13c": "0xD340",
-        "LoD/1.13d": "0xC750"
+        "LoD/1.13c": "0xCD30",
+        "LoD/1.13d": "0xCD60"
       },
       "sizes": {
         "LoD/1.08": 6,
@@ -20019,6 +22259,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:8ba1e74117333c9c9b0dba93975c7d6c",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "grBufferClear",
+          "grChromakeyMode"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo...",
@@ -20154,6 +22421,98 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:19df498c99dbb0101e98d81256e0dad5",
+      "callees": {
+        "LoD/1.08": [
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "Ordinal_403",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.09": [
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "Ordinal_403",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.09b": [
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "Ordinal_403",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.09d": [
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "GenerateGammaTable",
+          "grLoadGammaTable",
+          "Ordinal_403",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.10": [
+          "grGet",
+          "grGet",
+          "Ordinal_401",
+          "Ordinal_10198",
+          "grLoadGammaTable",
+          "Ordinal_403",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.11": [
+          "grGet",
+          "grGet",
+          "AllocateMemoryFromArena",
+          "GenerateSequentialFloatValuesIntoBuffer",
+          "grLoadGammaTable",
+          "DeallocateMemoryBlock",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.11b": [
+          "grGet",
+          "grGet",
+          "AllocateMemoryFromArena",
+          "GenerateSequentialFloatValuesIntoBuffer",
+          "grLoadGammaTable",
+          "DeallocateMemoryBlock",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.12a": [
+          "grGet",
+          "grGet",
+          "AllocateMemoryFromArena",
+          "GenerateSequentialFloatValuesIntoBuffer",
+          "grLoadGammaTable",
+          "DeallocateMemoryBlock",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.13c": [
+          "grGet",
+          "grGet",
+          "AllocateMemoryFromArena",
+          "GenerateSequentialFloatValuesIntoBuffer",
+          "grLoadGammaTable",
+          "DeallocateMemoryBlock",
+          "guGammaCorrectionRGB"
+        ],
+        "LoD/1.13d": [
+          "grGet",
+          "grGet",
+          "AllocateMemoryFromArena",
+          "GenerateSequentialFloatValuesIntoBuffer",
+          "grLoadGammaTable",
+          "DeallocateMemoryBlock",
+          "guGammaCorrectionRGB"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo..."
@@ -20248,6 +22607,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:94506c835f6ee068342a10c73d93d1b0",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glCo...",
@@ -20317,6 +22693,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:96faa98ee00016e2eb20f7d180ca8cc6",
+      "callees": {
+        "LoD/1.08": [
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.09": [
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.09b": [
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.09d": [
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.10": [
+          "grLfbLock",
+          "grLfbUnlock"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 9,
         "LoD/1.09": 9,
@@ -20456,6 +22854,88 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:082d5ea440e27856d252364cd57d7e58",
+      "callees": {
+        "LoD/1.08": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09b": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.09d": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.10": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11b": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.12a": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13c": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13d": [
+          "grGlideShutdown",
+          "grGlideInit",
+          "grSstSelect",
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 5,
         "LoD/1.09": 5,
@@ -20628,9 +23108,9 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x6F811000",
         "LoD/1.09d": "0x6F811000",
         "LoD/1.10": "0x6F811000",
-        "LoD/1.11": "0x6F85B0A0",
-        "LoD/1.11b": "0x6F857E30",
-        "LoD/1.12a": "0x6F85AEB0",
+        "LoD/1.11": "0x6F85A9F0",
+        "LoD/1.11b": "0x6F859880",
+        "LoD/1.12a": "0x6F85C930",
         "LoD/1.13c": "0x6F8592D0",
         "LoD/1.13d": "0x6F85C1A0"
       },
@@ -20640,9 +23120,9 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09b": "0x1000",
         "LoD/1.09d": "0x1000",
         "LoD/1.10": "0x1000",
-        "LoD/1.11": "0xB0A0",
-        "LoD/1.11b": "0x7E30",
-        "LoD/1.12a": "0xAEB0",
+        "LoD/1.11": "0xA9F0",
+        "LoD/1.11b": "0x9880",
+        "LoD/1.12a": "0xC930",
         "LoD/1.13c": "0x92D0",
         "LoD/1.13d": "0xC1A0"
       },
@@ -20708,45 +23188,117 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x6F812F60",
         "LoD/1.09b": "0x6F812F60",
         "LoD/1.09d": "0x6F812F60",
-        "LoD/1.10": "0x6F812F50"
+        "LoD/1.10": "0x6F812F50",
+        "LoD/1.11": "0x6F85C3E0",
+        "LoD/1.11b": "0x6F856030",
+        "LoD/1.12a": "0x6F85C1F0",
+        "LoD/1.13c": "0x6F857910",
+        "LoD/1.13d": "0x6F857D80"
       },
       "rvas": {
         "LoD/1.08": "0x2F60",
         "LoD/1.09": "0x2F60",
         "LoD/1.09b": "0x2F60",
         "LoD/1.09d": "0x2F60",
-        "LoD/1.10": "0x2F50"
+        "LoD/1.10": "0x2F50",
+        "LoD/1.11": "0xC3E0",
+        "LoD/1.11b": "0x6030",
+        "LoD/1.12a": "0xC1F0",
+        "LoD/1.13c": "0x7910",
+        "LoD/1.13d": "0x7D80"
       },
       "sizes": {
         "LoD/1.08": 388,
         "LoD/1.09": 388,
         "LoD/1.09b": 388,
         "LoD/1.09d": 388,
-        "LoD/1.10": 376
+        "LoD/1.10": 376,
+        "LoD/1.11": 218,
+        "LoD/1.11b": 218,
+        "LoD/1.12a": 218,
+        "LoD/1.13c": 218,
+        "LoD/1.13d": 218
       },
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:869aeae9ae997907e94cceeb4dea77db",
+      "callees": {
+        "LoD/1.08": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09b": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09d": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.10": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.11": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.11b": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.12a": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13c": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13d": [
+          "grTexSource",
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 14,
         "LoD/1.09": 14,
         "LoD/1.09b": 14,
         "LoD/1.09d": 14,
-        "LoD/1.10": 14
+        "LoD/1.10": 14,
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8
       },
       "loop_counts": {
         "LoD/1.08": 0,
         "LoD/1.09": 0,
         "LoD/1.09b": 0,
         "LoD/1.09d": 0,
-        "LoD/1.10": 0
+        "LoD/1.10": 0,
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.08": "4bbce52f20d1522a237d7409e8ebcecd",
         "LoD/1.09": "4bbce52f20d1522a237d7409e8ebcecd",
         "LoD/1.09b": "4bbce52f20d1522a237d7409e8ebcecd",
         "LoD/1.09d": "4bbce52f20d1522a237d7409e8ebcecd",
-        "LoD/1.10": "dfd49a9edc07dda4e5a50acaa392f825"
+        "LoD/1.10": "dfd49a9edc07dda4e5a50acaa392f825",
+        "LoD/1.11": "b04d8b0f24b87ef13762b3eb2c673cfa",
+        "LoD/1.11b": "b04d8b0f24b87ef13762b3eb2c673cfa",
+        "LoD/1.12a": "b04d8b0f24b87ef13762b3eb2c673cfa",
+        "LoD/1.13c": "b04d8b0f24b87ef13762b3eb2c673cfa",
+        "LoD/1.13d": "b04d8b0f24b87ef13762b3eb2c673cfa"
       }
     },
     "d2glide.dll_MNE_2ab32fc2f0af": {
@@ -20815,6 +23367,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:05a7c2edac89f322073864336f9f0fe1",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"nY2 > nY1\"",
@@ -20884,6 +23473,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"prc->top <= prc->bottom\"",
@@ -20958,6 +23569,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:f37eae4b9486cb4175333f44901ab791",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "FogAssert"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "FogAssert"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"prc->top <= prc->bottom\"",
@@ -21094,6 +23727,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:ee0db79c70d81559ae1b2ab9738aa05e",
+      "callees": {
+        "LoD/1.08": [
+          "grBufferClear"
+        ],
+        "LoD/1.09": [
+          "grBufferClear"
+        ],
+        "LoD/1.09b": [
+          "grBufferClear"
+        ],
+        "LoD/1.09d": [
+          "grBufferClear"
+        ],
+        "LoD/1.10": [
+          "grBufferClear"
+        ],
+        "LoD/1.11": [
+          "grBufferClear"
+        ],
+        "LoD/1.11b": [
+          "grBufferClear"
+        ],
+        "LoD/1.12a": [
+          "grBufferClear"
+        ],
+        "LoD/1.13c": [
+          "grBufferClear"
+        ],
+        "LoD/1.13d": [
+          "grBufferClear"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 1,
         "LoD/1.09": 1,
@@ -21361,6 +24026,58 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:e8a1562f945bef9d30765a2cbb57c7ea",
+      "callees": {
+        "LoD/1.08": [
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "Ordinal_321",
+          "Ordinal_403",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09": [
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "Ordinal_321",
+          "Ordinal_403",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09b": [
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "Ordinal_321",
+          "Ordinal_403",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.09d": [
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "Ordinal_321",
+          "Ordinal_403",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.10": [
+          "FogAssert",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "Ordinal_321",
+          "Ordinal_403",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSm...",
@@ -21471,6 +24188,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:a7fc3989d2d5e7f512a6903c42eec86c",
+      "callees": {
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "...+2 more"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "...+2 more"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "...+2 more"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "...+2 more"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "FogAssert",
+          "Ordinal_10037",
+          "Ordinal_10039",
+          "Ordinal_10038",
+          "Ordinal_10040",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue",
+          "...+2 more"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -21521,25 +24305,87 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "0x6F815F10",
         "LoD/1.09b": "0x6F815F10",
         "LoD/1.09d": "0x6F815F10",
-        "LoD/1.10": "0x6F815EE0"
+        "LoD/1.10": "0x6F815AE0"
       },
       "rvas": {
         "LoD/1.08": "0x5F10",
         "LoD/1.09": "0x5F10",
         "LoD/1.09b": "0x5F10",
         "LoD/1.09d": "0x5F10",
-        "LoD/1.10": "0x5EE0"
+        "LoD/1.10": "0x5AE0"
       },
       "sizes": {
         "LoD/1.08": 368,
         "LoD/1.09": 368,
         "LoD/1.09b": 368,
         "LoD/1.09d": 368,
-        "LoD/1.10": 373
+        "LoD/1.10": 399
       },
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:73404cee225ff0df3c4c9b065174c2fd",
+      "callees": {
+        "LoD/1.08": [
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09b": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.09d": [
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.10": [
+          "Ordinal_10055",
+          "FogAssert",
+          "Ordinal_10037",
+          "Ordinal_10039",
+          "Ordinal_10038",
+          "Ordinal_10040",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grDitherMode",
+          "grConstantColorValue"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -21567,7 +24413,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": 24,
         "LoD/1.09b": 24,
         "LoD/1.09d": 24,
-        "LoD/1.10": 24
+        "LoD/1.10": 27
       },
       "loop_counts": {
         "LoD/1.08": 0,
@@ -21581,7 +24427,7 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.09": "746b465cecd5ee1070ae7426594370cb",
         "LoD/1.09b": "746b465cecd5ee1070ae7426594370cb",
         "LoD/1.09d": "746b465cecd5ee1070ae7426594370cb",
-        "LoD/1.10": "0581512e189ee2407b52e1409b8fd4ff"
+        "LoD/1.10": "9bc8c2d991f6ee09616009268c44c58f"
       }
     },
     "d2glide.dll_API_25d40055dfd1": {
@@ -21606,6 +24452,48 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:25d40055dfd18ba5d5f00afe73aff830",
+      "callees": {
+        "LoD/1.08": [
+          "grDitherMode",
+          "grConstantColorValue",
+          "LoadOrRetrieveCelFrameData",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09": [
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09b": [
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ],
+        "LoD/1.09d": [
+          "grDitherMode",
+          "grConstantColorValue",
+          "Ordinal_10055",
+          "FogAssert",
+          "GetCelFileTableIndex",
+          "GetCelFileInfoHeight",
+          "GetCelModeValue",
+          "GetDWordFromPointerField"
+        ]
+      },
       "strings": {
         "LoD/1.08": [
           "\"C:\\\\Projects\\\\Diablo2\\\\Source\\\\D2Glide\\\\Src\\\\glSp...",
@@ -21668,6 +24556,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:9441dc73a3269f436b44c5105b5cb7fa",
+      "callees": {
+        "LoD/1.08": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09b": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.09d": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.08": 16,
         "LoD/1.09": 16,
@@ -22054,6 +24969,11 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:39a40cab770597b581d867dc137efc2f",
+      "callees": {
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
@@ -22082,6 +25002,11 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:c75a89faaa4ccfb43d73feb5ba7c9f1d",
+      "callees": {
+        "LoD/1.10": [
+          "FogMemAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
@@ -22110,6 +25035,11 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:3e3a38776d71a769ef6da600c78ec7ff",
+      "callees": {
+        "LoD/1.10": [
+          "ReleasePoolAllocation"
+        ]
+      },
       "strings": {
         "LoD/1.10": [
           "\"C:\\\\projects\\\\D2\\\\head\\\\Diablo2\\\\Source\\\\D2Glide\\..."
@@ -22184,6 +25114,11 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:6e06947e2c9fc4382182ddc2c076242a",
+      "callees": {
+        "LoD/1.10": [
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 10
       },
@@ -22207,6 +25142,12 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:e9438a10645bcf91d11f11284b356cdd",
+      "callees": {
+        "LoD/1.10": [
+          "AllocateTileProjectBuffer",
+          "grConstantColorValue"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.10": 8
       },
@@ -22497,16 +25438,16 @@ var FUNCTIONS_D2Glide_dll = {
       "addresses": {
         "LoD/1.11": "0x6F8511C0",
         "LoD/1.11b": "0x6F8511C0",
-        "LoD/1.12a": "0x6F8512B0",
-        "LoD/1.13c": "0x6F8512B0",
-        "LoD/1.13d": "0x6F8512B0"
+        "LoD/1.12a": "0x6F853CC0",
+        "LoD/1.13c": "0x6F853900",
+        "LoD/1.13d": "0x6F853CA0"
       },
       "rvas": {
         "LoD/1.11": "0x11C0",
         "LoD/1.11b": "0x11C0",
-        "LoD/1.12a": "0x12B0",
-        "LoD/1.13c": "0x12B0",
-        "LoD/1.13d": "0x12B0"
+        "LoD/1.12a": "0x3CC0",
+        "LoD/1.13c": "0x3900",
+        "LoD/1.13d": "0x3CA0"
       },
       "sizes": {
         "LoD/1.11": 672,
@@ -23059,15 +26000,15 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.11": "0x6F851A0B",
         "LoD/1.11b": "0x6F851A0B",
         "LoD/1.12a": "0x6F851A09",
-        "LoD/1.13c": "0x6F851E41",
-        "LoD/1.13d": "0x6F851A09"
+        "LoD/1.13c": "0x6F851E85",
+        "LoD/1.13d": "0x6F851A4D"
       },
       "rvas": {
         "LoD/1.11": "0x1A0B",
         "LoD/1.11b": "0x1A0B",
         "LoD/1.12a": "0x1A09",
-        "LoD/1.13c": "0x1E41",
-        "LoD/1.13d": "0x1A09"
+        "LoD/1.13c": "0x1E85",
+        "LoD/1.13d": "0x1A4D"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -23110,15 +26051,15 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.11": "0x6F851A4F",
         "LoD/1.11b": "0x6F851A4F",
         "LoD/1.12a": "0x6F851A4D",
-        "LoD/1.13c": "0x6F851E85",
-        "LoD/1.13d": "0x6F851A4D"
+        "LoD/1.13c": "0x6F851E41",
+        "LoD/1.13d": "0x6F851A09"
       },
       "rvas": {
         "LoD/1.11": "0x1A4F",
         "LoD/1.11b": "0x1A4F",
         "LoD/1.12a": "0x1A4D",
-        "LoD/1.13c": "0x1E85",
-        "LoD/1.13d": "0x1A4D"
+        "LoD/1.13c": "0x1E41",
+        "LoD/1.13d": "0x1A09"
       },
       "sizes": {
         "LoD/1.11": 61,
@@ -23339,6 +26280,57 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.12a": "7fa238a0d1fe5549fc522252a2120d78",
         "LoD/1.13c": "7fa238a0d1fe5549fc522252a2120d78",
         "LoD/1.13d": "7fa238a0d1fe5549fc522252a2120d78"
+      }
+    },
+    "d2glide.dll_LeaveCriticalSectionForMemoryF": {
+      "addresses": {
+        "LoD/1.11": "0x6F851E03",
+        "LoD/1.11b": "0x6F851E03",
+        "LoD/1.12a": "0x6F851E08",
+        "LoD/1.13c": "0x6F85230F",
+        "LoD/1.13d": "0x6F851E03"
+      },
+      "rvas": {
+        "LoD/1.11": "0x1E03",
+        "LoD/1.11b": "0x1E03",
+        "LoD/1.12a": "0x1E08",
+        "LoD/1.13c": "0x230F",
+        "LoD/1.13d": "0x1E03"
+      },
+      "sizes": {
+        "LoD/1.11": 9,
+        "LoD/1.11b": 9,
+        "LoD/1.12a": 9,
+        "LoD/1.13c": 9,
+        "LoD/1.13d": 9
+      },
+      "name": "LeaveCriticalSectionForMemoryFree",
+      "signature": "void LeaveCriticalSectionForMemoryFree(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Releases a critical section lock used for memory management operations.\n\nAlgorithm:\n1. Push critical section index 4 (memory allocation/deallocation lock) onto stack\n2. Call LeaveCriticalSectionByIndex(4) to release the critical section at index 4\n3. Return to caller\n\nParameters:\nNone - critical section index is hardcoded to 4\n\nReturns:\nvoid - No return value. The critical section is released atomically.\n\nSpecial Cases:\n- Critical section index 4 is reserved for memory allocation/deallocation synchronization\n- Called during memory free operations to release the lock before returning memory to the heap\n- Uses __stdcall convention: callee cleans up the stack parameter",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "basic_block_counts": {
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
       }
     },
     "d2glide.dll_AllocateMemoryWithCache": {
@@ -23625,6 +26617,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "callees": {
+        "LoD/1.11": [
+          "TlsAlloc"
+        ],
+        "LoD/1.11b": [
+          "TlsAlloc"
+        ],
+        "LoD/1.12a": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13c": [
+          "TlsAlloc"
+        ],
+        "LoD/1.13d": [
+          "TlsAlloc"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"kernel32.dll\"",
@@ -24606,6 +27615,57 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.13d": "8b97ebec1e2ba4f1376a18655897a974"
       }
     },
+    "d2glide.dll____sbh_alloc_new_region": {
+      "addresses": {
+        "LoD/1.11": "0x6F8534FD",
+        "LoD/1.11b": "0x6F8534FD",
+        "LoD/1.12a": "0x6F853521",
+        "LoD/1.13c": "0x6F853163",
+        "LoD/1.13d": "0x6F8534FD"
+      },
+      "rvas": {
+        "LoD/1.11": "0x34FD",
+        "LoD/1.11b": "0x34FD",
+        "LoD/1.12a": "0x3521",
+        "LoD/1.13c": "0x3163",
+        "LoD/1.13d": "0x34FD"
+      },
+      "sizes": {
+        "LoD/1.11": 183,
+        "LoD/1.11b": 183,
+        "LoD/1.12a": 183,
+        "LoD/1.13c": 183,
+        "LoD/1.13d": 183
+      },
+      "name": "___sbh_alloc_new_region",
+      "signature": "undefined4 * ___sbh_alloc_new_region(void)",
+      "calling_convention": "__stdcall",
+      "comment": "Library Function - Single Match\n ___sbh_alloc_new_region\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:8f7df14e6456cd93f8028b09582e6071",
+      "basic_block_counts": {
+        "LoD/1.11": 10,
+        "LoD/1.11b": 10,
+        "LoD/1.12a": 10,
+        "LoD/1.13c": 10,
+        "LoD/1.13d": 10
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "8f7df14e6456cd93f8028b09582e6071",
+        "LoD/1.11b": "8f7df14e6456cd93f8028b09582e6071",
+        "LoD/1.12a": "8f7df14e6456cd93f8028b09582e6071",
+        "LoD/1.13c": "8f7df14e6456cd93f8028b09582e6071",
+        "LoD/1.13d": "8f7df14e6456cd93f8028b09582e6071"
+      }
+    },
     "d2glide.dll____sbh_alloc_new_group": {
       "addresses": {
         "LoD/1.11": "0x6F8535B4",
@@ -24763,16 +27823,16 @@ var FUNCTIONS_D2Glide_dll = {
       "addresses": {
         "LoD/1.11": "0x6F853CA0",
         "LoD/1.11b": "0x6F853CA0",
-        "LoD/1.12a": "0x6F853CC0",
-        "LoD/1.13c": "0x6F853900",
-        "LoD/1.13d": "0x6F853CA0"
+        "LoD/1.12a": "0x6F8512B0",
+        "LoD/1.13c": "0x6F8512B0",
+        "LoD/1.13d": "0x6F8512B0"
       },
       "rvas": {
         "LoD/1.11": "0x3CA0",
         "LoD/1.11b": "0x3CA0",
-        "LoD/1.12a": "0x3CC0",
-        "LoD/1.13c": "0x3900",
-        "LoD/1.13d": "0x3CA0"
+        "LoD/1.12a": "0x12B0",
+        "LoD/1.13c": "0x12B0",
+        "LoD/1.13d": "0x12B0"
       },
       "sizes": {
         "LoD/1.11": 672,
@@ -25180,108 +28240,6 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.12a": "3d95938874732b844e73905e6c952bdf",
         "LoD/1.13c": "3d95938874732b844e73905e6c952bdf",
         "LoD/1.13d": "3d95938874732b844e73905e6c952bdf"
-      }
-    },
-    "d2glide.dll_AcquireDynamicBufferLock": {
-      "addresses": {
-        "LoD/1.11": "0x6F854664",
-        "LoD/1.11b": "0x6F854664",
-        "LoD/1.12a": "0x6F8520A6",
-        "LoD/1.13c": "0x6F854695",
-        "LoD/1.13d": "0x6F854664"
-      },
-      "rvas": {
-        "LoD/1.11": "0x4664",
-        "LoD/1.11b": "0x4664",
-        "LoD/1.12a": "0x20A6",
-        "LoD/1.13c": "0x4695",
-        "LoD/1.13d": "0x4664"
-      },
-      "sizes": {
-        "LoD/1.11": 9,
-        "LoD/1.11b": 9,
-        "LoD/1.12a": 9,
-        "LoD/1.13c": 9,
-        "LoD/1.13d": 9
-      },
-      "name": "AcquireDynamicBufferLock",
-      "signature": "void AcquireDynamicBufferLock(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Acquires critical section 13 for thread-safe dynamic buffer operations.\n\nAlgorithm:\n1. Call FUN_6ff2c3fe with index 0xd (13) to initialize/enter critical section 13\n2. Return to caller with lock held\n\nParameters:\nNone\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Critical section index 0xd (13) is reserved for dynamic buffer synchronization\n- Must be paired with FUN_6ff2b37b() (ReleaseDynamicBufferLock) to avoid deadlock\n- If critical section not initialized, FUN_6ff2c3fe will allocate and initialize it\n- Thread will block if another thread holds this critical section\n\nMagic Numbers Reference:\n0xd (13) - Critical section index for dynamic buffer operations",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-      "basic_block_counts": {
-        "LoD/1.11": 1,
-        "LoD/1.11b": 1,
-        "LoD/1.12a": 1,
-        "LoD/1.13c": 1,
-        "LoD/1.13d": 1
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.11b": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.12a": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13c": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
-        "LoD/1.13d": "f23ef2b3a6cfdeb1f35221d5fc7b15e0"
-      }
-    },
-    "d2glide.dll____initmbctable": {
-      "addresses": {
-        "LoD/1.11": "0x6F85466D",
-        "LoD/1.11b": "0x6F85466D",
-        "LoD/1.12a": "0x6F8546A0",
-        "LoD/1.13c": "0x6F85469E",
-        "LoD/1.13d": "0x6F85466D"
-      },
-      "rvas": {
-        "LoD/1.11": "0x466D",
-        "LoD/1.11b": "0x466D",
-        "LoD/1.12a": "0x46A0",
-        "LoD/1.13c": "0x469E",
-        "LoD/1.13d": "0x466D"
-      },
-      "sizes": {
-        "LoD/1.11": 30,
-        "LoD/1.11b": 30,
-        "LoD/1.12a": 30,
-        "LoD/1.13c": 30,
-        "LoD/1.13d": 30
-      },
-      "name": "___initmbctable",
-      "signature": "undefined4 ___initmbctable(void)",
-      "calling_convention": "__stdcall",
-      "comment": "Library Function - Single Match\n ___initmbctable\n\nLibrary: Visual Studio 2003 Release",
-      "name_source": "LoD/1.11",
-      "method": "MNE",
-      "index": "MNE:a4ba30fe4414581a89a628d047ff2406",
-      "basic_block_counts": {
-        "LoD/1.11": 3,
-        "LoD/1.11b": 3,
-        "LoD/1.12a": 3,
-        "LoD/1.13c": 3,
-        "LoD/1.13d": 3
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.11b": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.12a": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13c": "a4ba30fe4414581a89a628d047ff2406",
-        "LoD/1.13d": "a4ba30fe4414581a89a628d047ff2406"
       }
     },
     "d2glide.dll_StringConcatenate": {
@@ -26609,6 +29567,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -26634,17 +29614,17 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_API_c01fa6e1a170_6100": {
       "addresses": {
         "LoD/1.11": "0x6F856100",
-        "LoD/1.11b": "0x6F8579B0",
+        "LoD/1.11b": "0x6F859380",
         "LoD/1.12a": "0x6F85D8B0",
-        "LoD/1.13c": "0x6F85C5A0",
-        "LoD/1.13d": "0x6F8585C0"
+        "LoD/1.13c": "0x6F85C030",
+        "LoD/1.13d": "0x6F858B20"
       },
       "rvas": {
         "LoD/1.11": "0x6100",
-        "LoD/1.11b": "0x79B0",
+        "LoD/1.11b": "0x9380",
         "LoD/1.12a": "0xD8B0",
-        "LoD/1.13c": "0xC5A0",
-        "LoD/1.13d": "0x85C0"
+        "LoD/1.13c": "0xC030",
+        "LoD/1.13d": "0x8B20"
       },
       "sizes": {
         "LoD/1.11": 126,
@@ -26656,6 +29636,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -26703,6 +29705,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 4,
         "LoD/1.11b": 4,
@@ -26750,6 +29774,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e4448f61790c9f2f1698098f683c26df",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glFloorCache.cpp\""
@@ -26814,6 +29865,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glFloorCache.cpp\""
@@ -26925,6 +30003,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -26972,6 +30072,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -27066,6 +30188,53 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2a5d4d579396e2b6943c1670ecec9818",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10091",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10035",
+          "Ordinal_10092",
+          "Ordinal_10081",
+          "Ordinal_10063"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10106",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10010",
+          "Ordinal_10103",
+          "Ordinal_10009",
+          "Ordinal_10025"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10020",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10031",
+          "Ordinal_10008",
+          "Ordinal_10096",
+          "Ordinal_10043"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10005",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10060",
+          "Ordinal_10002",
+          "Ordinal_10000",
+          "Ordinal_10069"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10025",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10092",
+          "Ordinal_10030",
+          "Ordinal_10033",
+          "Ordinal_10007"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -27160,6 +30329,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 26,
         "LoD/1.11b": 26,
@@ -27207,6 +30398,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:b2b45515477a32e23fe740d8134edc86",
+      "callees": {
+        "LoD/1.11": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "...+4 more"
+        ],
+        "LoD/1.11b": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "...+4 more"
+        ],
+        "LoD/1.12a": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "...+4 more"
+        ],
+        "LoD/1.13c": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "...+4 more"
+        ],
+        "LoD/1.13d": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grDitherMode",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "...+4 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 22,
         "LoD/1.11b": 22,
@@ -27254,6 +30512,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8174838dd95fb7eb409411f9d30454f6",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 21,
         "LoD/1.11b": 21,
@@ -27301,6 +30596,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:41c8d98e5176ec436695e3a332c52cea",
+      "callees": {
+        "LoD/1.11": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.11b": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.12a": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13c": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13d": [
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -27395,6 +30707,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:56510af9210620ff563f2cbfc569f285",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "SetFrameDivisor"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glSprite.cpp\""
@@ -27459,6 +30808,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:470b8d2c63572585fb689d06a3ce23b2",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10086",
+          "Ordinal_10103",
+          "Ordinal_10103",
+          "Ordinal_10103",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10102",
+          "Ordinal_10021",
+          "Ordinal_10021",
+          "Ordinal_10021",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10049",
+          "Ordinal_10053",
+          "Ordinal_10053",
+          "Ordinal_10053",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10098",
+          "Ordinal_10015",
+          "Ordinal_10015",
+          "Ordinal_10015",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10014",
+          "Ordinal_10001",
+          "Ordinal_10001",
+          "Ordinal_10001",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "...+1 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 53,
         "LoD/1.11b": 53,
@@ -27506,6 +30922,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:443d64a579d9bdbb1428aa23b3c20cd7",
+      "callees": {
+        "LoD/1.11": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.11b": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.12a": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.13c": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grDitherMode",
+          "grConstantColorValue"
+        ],
+        "LoD/1.13d": [
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grDitherMode",
+          "grConstantColorValue"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -27553,6 +31001,58 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:95673e5542b191c69f49bf1dd6e70dcc",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 20,
         "LoD/1.11b": 20,
@@ -27788,6 +31288,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8174838dd95fb7eb409411f9d30454f6",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grDrawVertexArrayContiguous",
+          "grDitherMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 37,
         "LoD/1.11b": 37,
@@ -27813,24 +31350,21 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_MNE_63a4293a7810": {
       "addresses": {
         "LoD/1.11": "0x6F8580E0",
-        "LoD/1.11b": "0x6F859280",
+        "LoD/1.11b": "0x6F859F10",
         "LoD/1.12a": "0x6F856D80",
-        "LoD/1.13c": "0x6F85BF10",
-        "LoD/1.13d": "0x6F858A20"
+        "LoD/1.13c": "0x6F85C4A0"
       },
       "rvas": {
         "LoD/1.11": "0x80E0",
-        "LoD/1.11b": "0x9280",
+        "LoD/1.11b": "0x9F10",
         "LoD/1.12a": "0x6D80",
-        "LoD/1.13c": "0xBF10",
-        "LoD/1.13d": "0x8A20"
+        "LoD/1.13c": "0xC4A0"
       },
       "sizes": {
         "LoD/1.11": 46,
         "LoD/1.11b": 46,
         "LoD/1.12a": 46,
-        "LoD/1.13c": 46,
-        "LoD/1.13d": 46
+        "LoD/1.13c": 46
       },
       "name_source": "LoD/1.11",
       "method": "MNE",
@@ -27839,36 +31373,33 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
         "LoD/1.12a": 5,
-        "LoD/1.13c": 5,
-        "LoD/1.13d": 5
+        "LoD/1.13c": 5
       },
       "loop_counts": {
         "LoD/1.11": 0,
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
+        "LoD/1.13c": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11": "63a4293a78109b88a933ea937f10c5d8",
         "LoD/1.11b": "63a4293a78109b88a933ea937f10c5d8",
         "LoD/1.12a": "63a4293a78109b88a933ea937f10c5d8",
-        "LoD/1.13c": "63a4293a78109b88a933ea937f10c5d8",
-        "LoD/1.13d": "63a4293a78109b88a933ea937f10c5d8"
+        "LoD/1.13c": "63a4293a78109b88a933ea937f10c5d8"
       }
     },
     "d2glide.dll_API_c01fa6e1a170_81E0": {
       "addresses": {
         "LoD/1.11": "0x6F8581E0",
-        "LoD/1.11b": "0x6F85A030",
-        "LoD/1.12a": "0x6F85D340",
+        "LoD/1.11b": "0x6F8579B0",
+        "LoD/1.12a": "0x6F856E90",
         "LoD/1.13c": "0x6F857460",
         "LoD/1.13d": "0x6F85C2D0"
       },
       "rvas": {
         "LoD/1.11": "0x81E0",
-        "LoD/1.11b": "0xA030",
-        "LoD/1.12a": "0xD340",
+        "LoD/1.11b": "0x79B0",
+        "LoD/1.12a": "0x6E90",
         "LoD/1.13c": "0x7460",
         "LoD/1.13d": "0xC2D0"
       },
@@ -27882,6 +31413,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -27929,6 +31482,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 24,
         "LoD/1.11b": 24,
@@ -27976,6 +31551,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c32d78d6566582e88e25765ab64cc860",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glSubtileCache.cpp\""
@@ -28040,6 +31632,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fa43560c5cc0dec721369b66470a3c14",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glSubtileCache.cpp\""
@@ -28104,6 +31723,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 11,
         "LoD/1.11b": 11,
@@ -28198,6 +31839,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -28274,6 +31937,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -28321,6 +32006,48 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:2d18199717c7ae14fc169259c0ad8579",
+      "callees": {
+        "LoD/1.11": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "grDrawVertexArray",
+          "grDrawVertexArray",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 41,
         "LoD/1.11b": 41,
@@ -28368,6 +32095,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bf1bc822ca675ac5cb0163222aa29fd9",
+      "callees": {
+        "LoD/1.11": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.11b": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.12a": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13c": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13d": [
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -28415,6 +32159,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4828a7367237f66824c702232adfab0f",
+      "callees": {
+        "LoD/1.11": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.11b": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.12a": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.13c": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ],
+        "LoD/1.13d": [
+          "grDrawVertexArray",
+          "grDrawVertexArray"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 31,
         "LoD/1.11b": 31,
@@ -28462,6 +32228,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:569954011232aa936635b55eb87e1716",
+      "callees": {
+        "LoD/1.11": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.11b": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.12a": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13c": [
+          "grDrawVertexArrayContiguous"
+        ],
+        "LoD/1.13d": [
+          "grDrawVertexArrayContiguous"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -28509,6 +32292,63 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:eaf3f2308ad40383613381a0e1071cdb",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 22,
         "LoD/1.11b": 22,
@@ -28556,6 +32396,63 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4b7bb0069a3489c72f1c449e5d16cbe8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 22,
         "LoD/1.11b": 22,
@@ -28820,6 +32717,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:a9b4b6f20096094b8d029688eaa1f341",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "...+1 more"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "...+1 more"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "...+1 more"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "...+1 more"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawPoint",
+          "grChromakeyMode",
+          "grDrawLine",
+          "...+1 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 24,
         "LoD/1.11b": 24,
@@ -28867,6 +32831,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cf9711b419997a9d6a781b5b2114d85f",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -28914,6 +32910,63 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:fc474308d0b3c68af924cb322f4455e4",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 27,
         "LoD/1.11b": 27,
@@ -29008,6 +33061,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -29055,6 +33130,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:48afc8d302463323ce6b03daea532fe4",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grLfbLock",
+          "grLfbUnlock"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grLfbLock",
+          "grLfbUnlock"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -29102,6 +33209,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:cfda3f97a7e6fbd04558f745682dddaf",
+      "callees": {
+        "LoD/1.11": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10028",
+          "Ordinal_10028"
+        ],
+        "LoD/1.11b": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10039",
+          "Ordinal_10039"
+        ],
+        "LoD/1.12a": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10005",
+          "Ordinal_10005"
+        ],
+        "LoD/1.13c": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10061",
+          "Ordinal_10061"
+        ],
+        "LoD/1.13d": [
+          "GetGameState",
+          "OpenAndValidateGameFile",
+          "Ordinal_10056",
+          "Ordinal_10056"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 42,
         "LoD/1.11b": 42,
@@ -29337,6 +33476,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:0fea7949eee8c08d37ad79a9e858f91e",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grConstantColorValue",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "...+2 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 31,
         "LoD/1.11b": 31,
@@ -29406,53 +33612,6 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.13d": "7b4de9f0cf357b113d12e0c7e214792b"
       }
     },
-    "d2glide.dll_API_94bdefdfba59_B120": {
-      "addresses": {
-        "LoD/1.11": "0x6F85B120",
-        "LoD/1.11b": "0x6F857EB0",
-        "LoD/1.12a": "0x6F85AF30",
-        "LoD/1.13c": "0x6F85CDC0",
-        "LoD/1.13d": "0x6F85C7E0"
-      },
-      "rvas": {
-        "LoD/1.11": "0xB120",
-        "LoD/1.11b": "0x7EB0",
-        "LoD/1.12a": "0xAF30",
-        "LoD/1.13c": "0xCDC0",
-        "LoD/1.13d": "0xC7E0"
-      },
-      "sizes": {
-        "LoD/1.11": 176,
-        "LoD/1.11b": 176,
-        "LoD/1.12a": 176,
-        "LoD/1.13c": 176,
-        "LoD/1.13d": 176
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:94bdefdfba59eb8c36cd18e996d447d7",
-      "basic_block_counts": {
-        "LoD/1.11": 10,
-        "LoD/1.11b": 10,
-        "LoD/1.12a": 10,
-        "LoD/1.13c": 10,
-        "LoD/1.13d": 10
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "75daa758b89ef737997acf522478caa3",
-        "LoD/1.11b": "75daa758b89ef737997acf522478caa3",
-        "LoD/1.12a": "75daa758b89ef737997acf522478caa3",
-        "LoD/1.13c": "75daa758b89ef737997acf522478caa3",
-        "LoD/1.13d": "75daa758b89ef737997acf522478caa3"
-      }
-    },
     "d2glide.dll_API_75f89a97e5c3_B230": {
       "addresses": {
         "LoD/1.11": "0x6F85B230",
@@ -29478,6 +33637,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:75f89a97e5c34573747cc446033bb4cd",
+      "callees": {
+        "LoD/1.11": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.11b": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.12a": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.13c": [
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.13d": [
+          "grTexCombine",
+          "grTexCombine"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -29525,6 +33706,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:99e8cc97130f8871a6b3cf38d510db16",
+      "callees": {
+        "LoD/1.11": [
+          "grTexDownloadTable"
+        ],
+        "LoD/1.11b": [
+          "grTexDownloadTable"
+        ],
+        "LoD/1.12a": [
+          "grTexDownloadTable"
+        ],
+        "LoD/1.13c": [
+          "grTexDownloadTable"
+        ],
+        "LoD/1.13d": [
+          "grTexDownloadTable"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 5,
         "LoD/1.11b": 5,
@@ -29572,6 +33770,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e7b622bbd215a7dcf26046f68046f53b",
+      "callees": {
+        "LoD/1.11": [
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11b": [
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.12a": [
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13c": [
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13d": [
+          "grBufferSwap",
+          "grBufferSwap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -29619,6 +33839,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -29666,6 +33908,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:bef20a817a663806cd5fa6f4648d9923",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grBufferClear",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grBufferClear",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 7,
         "LoD/1.11b": 7,
@@ -29713,6 +33987,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:bfd64b144fb7ae32996df21a48cb3c56",
+      "callees": {
+        "LoD/1.11": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.11b": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.12a": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13c": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ],
+        "LoD/1.13d": [
+          "grBufferClear",
+          "grBufferSwap",
+          "grBufferSwap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -29760,6 +34061,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:fe9efd05b9c284173375fd2cc219f458",
+      "callees": {
+        "LoD/1.11": [
+          "grGet"
+        ],
+        "LoD/1.11b": [
+          "grGet"
+        ],
+        "LoD/1.12a": [
+          "grGet"
+        ],
+        "LoD/1.13c": [
+          "grGet"
+        ],
+        "LoD/1.13d": [
+          "grGet"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -29807,6 +34125,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:d1a13a01ad45601ae3e8f900672eb5ec",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glTextureCache.cpp\"",
@@ -29881,6 +34236,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:27185fc96cdc9866809802a156447fdf",
+      "callees": {
+        "LoD/1.11": [
+          "grFinish",
+          "InitializeModule",
+          "InitializeModule",
+          "grSstWinClose",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "grFinish",
+          "InitializeModule",
+          "InitializeModule",
+          "grSstWinClose",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "grFinish",
+          "InitializeModule",
+          "InitializeModule",
+          "grSstWinClose",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "grFinish",
+          "InitializeModule",
+          "InitializeModule",
+          "grSstWinClose",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "grFinish",
+          "InitializeModule",
+          "InitializeModule",
+          "grSstWinClose",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glDebugFont.cpp\"",
@@ -29950,6 +34342,48 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:1a6fe20a66b051ffb44a858c0e6ca722",
+      "callees": {
+        "LoD/1.11": [
+          "grGlideShutdown",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "grGlideShutdown",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "grGlideShutdown",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "grGlideShutdown",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "grGlideShutdown",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\"",
@@ -30077,6 +34511,63 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:843a47ba338033d7d4d136f39d44b14a",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "grGlideInit",
+          "grSstSelect",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "grGlideInit",
+          "grSstSelect",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "grGlideInit",
+          "grSstSelect",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "grGlideInit",
+          "grSstSelect",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "grGlideInit",
+          "grSstSelect",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glPerspective.cpp\"",
@@ -30156,6 +34647,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:dab85078ce1cb451c8a1741075fc797e",
+      "callees": {
+        "LoD/1.11": [
+          "grTexMinAddress",
+          "grTexMaxAddress",
+          "ValidateParameterOrShutdown",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.11b": [
+          "grTexMinAddress",
+          "grTexMaxAddress",
+          "ValidateParameterOrShutdown",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.12a": [
+          "grTexMinAddress",
+          "grTexMaxAddress",
+          "ValidateParameterOrShutdown",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.13c": [
+          "grTexMinAddress",
+          "grTexMaxAddress",
+          "ValidateParameterOrShutdown",
+          "SetFrameDivisor"
+        ],
+        "LoD/1.13d": [
+          "grTexMinAddress",
+          "grTexMaxAddress",
+          "ValidateParameterOrShutdown",
+          "SetFrameDivisor"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"\\t\\tDoesn't have enough video memory (3.5 MB) to ..."
@@ -30220,6 +34743,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:eac9a9a2550e85ce86c2deb7764c4c5b",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grSstWinOpen",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grCoordinateSpace",
+          "...+15 more"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grSstWinOpen",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grCoordinateSpace",
+          "...+15 more"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grSstWinOpen",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grCoordinateSpace",
+          "...+15 more"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grSstWinOpen",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grCoordinateSpace",
+          "...+15 more"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grSstWinOpen",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grGet",
+          "grCoordinateSpace",
+          "...+15 more"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"Opening Glide window failed!\""
@@ -30259,53 +34849,6 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.13d": "c5aaeb8f31bc2a561667492dbd7c0683"
       }
     },
-    "d2glide.dll_API_bfd64b144fb7_C2C0": {
-      "addresses": {
-        "LoD/1.11": "0x6F85C2C0",
-        "LoD/1.11b": "0x6F858F40",
-        "LoD/1.12a": "0x6F85BFC0",
-        "LoD/1.13c": "0x6F85DF60",
-        "LoD/1.13d": "0x6F85D870"
-      },
-      "rvas": {
-        "LoD/1.11": "0xC2C0",
-        "LoD/1.11b": "0x8F40",
-        "LoD/1.12a": "0xBFC0",
-        "LoD/1.13c": "0xDF60",
-        "LoD/1.13d": "0xD870"
-      },
-      "sizes": {
-        "LoD/1.11": 75,
-        "LoD/1.11b": 75,
-        "LoD/1.12a": 75,
-        "LoD/1.13c": 75,
-        "LoD/1.13d": 75
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:bfd64b144fb7ae32996df21a48cb3c56",
-      "basic_block_counts": {
-        "LoD/1.11": 7,
-        "LoD/1.11b": 7,
-        "LoD/1.12a": 7,
-        "LoD/1.13c": 7,
-        "LoD/1.13d": 7
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "0c49c2e1cb7d63ea72322a9dfa355776",
-        "LoD/1.11b": "0c49c2e1cb7d63ea72322a9dfa355776",
-        "LoD/1.12a": "0c49c2e1cb7d63ea72322a9dfa355776",
-        "LoD/1.13c": "0c49c2e1cb7d63ea72322a9dfa355776",
-        "LoD/1.13d": "0c49c2e1cb7d63ea72322a9dfa355776"
-      }
-    },
     "d2glide.dll_API_c01fa6e1a170_C310": {
       "addresses": {
         "LoD/1.11": "0x6F85C310",
@@ -30331,6 +34874,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -30378,6 +34943,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4b0d0f92ed0b6f7aef9250306982a8be",
+      "callees": {
+        "LoD/1.11": [
+          "grConstantColorValue",
+          "grDrawPoint"
+        ],
+        "LoD/1.11b": [
+          "grConstantColorValue",
+          "grDrawPoint"
+        ],
+        "LoD/1.12a": [
+          "grConstantColorValue",
+          "grDrawPoint"
+        ],
+        "LoD/1.13c": [
+          "grConstantColorValue",
+          "grDrawPoint"
+        ],
+        "LoD/1.13d": [
+          "grConstantColorValue",
+          "grDrawPoint"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -30398,53 +34985,6 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.12a": "5857a6217fd2f2bf8e4ce7416858d938",
         "LoD/1.13c": "5857a6217fd2f2bf8e4ce7416858d938",
         "LoD/1.13d": "5857a6217fd2f2bf8e4ce7416858d938"
-      }
-    },
-    "d2glide.dll_API_869aeae9ae99_C3E0": {
-      "addresses": {
-        "LoD/1.11": "0x6F85C3E0",
-        "LoD/1.11b": "0x6F856030",
-        "LoD/1.12a": "0x6F85C1F0",
-        "LoD/1.13c": "0x6F857910",
-        "LoD/1.13d": "0x6F857D80"
-      },
-      "rvas": {
-        "LoD/1.11": "0xC3E0",
-        "LoD/1.11b": "0x6030",
-        "LoD/1.12a": "0xC1F0",
-        "LoD/1.13c": "0x7910",
-        "LoD/1.13d": "0x7D80"
-      },
-      "sizes": {
-        "LoD/1.11": 218,
-        "LoD/1.11b": 218,
-        "LoD/1.12a": 218,
-        "LoD/1.13c": 218,
-        "LoD/1.13d": 218
-      },
-      "name_source": "LoD/1.11",
-      "method": "API",
-      "index": "API:869aeae9ae997907e94cceeb4dea77db",
-      "basic_block_counts": {
-        "LoD/1.11": 8,
-        "LoD/1.11b": 8,
-        "LoD/1.12a": 8,
-        "LoD/1.13c": 8,
-        "LoD/1.13d": 8
-      },
-      "loop_counts": {
-        "LoD/1.11": 0,
-        "LoD/1.11b": 0,
-        "LoD/1.12a": 0,
-        "LoD/1.13c": 0,
-        "LoD/1.13d": 0
-      },
-      "mnemonic_hashes": {
-        "LoD/1.11": "b04d8b0f24b87ef13762b3eb2c673cfa",
-        "LoD/1.11b": "b04d8b0f24b87ef13762b3eb2c673cfa",
-        "LoD/1.12a": "b04d8b0f24b87ef13762b3eb2c673cfa",
-        "LoD/1.13c": "b04d8b0f24b87ef13762b3eb2c673cfa",
-        "LoD/1.13d": "b04d8b0f24b87ef13762b3eb2c673cfa"
       }
     },
     "d2glide.dll_API_9b7bc3fee7f2": {
@@ -30472,6 +35012,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:9b7bc3fee7f2b98e6d787b7e1fb0e37e",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "grTexDownloadMipMap",
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "grTexDownloadMipMap",
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "grTexDownloadMipMap",
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "grTexDownloadMipMap",
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "grTexDownloadMipMap",
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glDebugFont.cpp\""
@@ -30536,6 +35103,38 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:d8e60b4fbaa23e775344a856bb3297e7",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grColorCombine",
+          "grChromakeyMode"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grChromakeyMode",
+          "grColorCombine",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 9,
         "LoD/1.11b": 9,
@@ -30583,6 +35182,48 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:67703be45475080fcf0aca363dae940e",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 23,
         "LoD/1.11b": 23,
@@ -30655,17 +35296,17 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_API_c01fa6e1a170_CC20": {
       "addresses": {
         "LoD/1.11": "0x6F85CC20",
-        "LoD/1.11b": "0x6F859380",
-        "LoD/1.12a": "0x6F856E90",
-        "LoD/1.13c": "0x6F85C030",
-        "LoD/1.13d": "0x6F858B20"
+        "LoD/1.11b": "0x6F85A030",
+        "LoD/1.12a": "0x6F85D340",
+        "LoD/1.13c": "0x6F85C5A0",
+        "LoD/1.13d": "0x6F8585C0"
       },
       "rvas": {
         "LoD/1.11": "0xCC20",
-        "LoD/1.11b": "0x9380",
-        "LoD/1.12a": "0x6E90",
-        "LoD/1.13c": "0xC030",
-        "LoD/1.13d": "0x8B20"
+        "LoD/1.11b": "0xA030",
+        "LoD/1.12a": "0xD340",
+        "LoD/1.13c": "0xC5A0",
+        "LoD/1.13d": "0x85C0"
       },
       "sizes": {
         "LoD/1.11": 126,
@@ -30677,6 +35318,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 10,
         "LoD/1.11b": 10,
@@ -30724,6 +35387,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 24,
         "LoD/1.11b": 24,
@@ -30771,6 +35456,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:12f5788f22ad4f30fab59100a7ead226",
+      "callees": {
+        "LoD/1.11": [
+          "InitializeModule"
+        ],
+        "LoD/1.11b": [
+          "InitializeModule"
+        ],
+        "LoD/1.12a": [
+          "InitializeModule"
+        ],
+        "LoD/1.13c": [
+          "InitializeModule"
+        ],
+        "LoD/1.13d": [
+          "InitializeModule"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glTextureCache.cpp\""
@@ -30835,6 +35537,23 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a81a6d80e1e9d30b65a1f755e1383208",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glTextureCache.cpp\""
@@ -30946,6 +35665,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -30993,6 +35734,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:9e84029b0d58edaeceec67f601a671ad",
+      "callees": {
+        "LoD/1.11": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.11b": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.12a": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.13c": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ],
+        "LoD/1.13d": [
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -31087,6 +35850,53 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:51569629850fa98e0b5bf5d843d61d71",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexDownloadMipMap",
+          "ExtractFileToMemory",
+          "ProcessImageFormatDispatcher",
+          "DeallocateMemoryBlock"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glSmack.cpp\""
@@ -31151,6 +35961,33 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:abfe6aa95019f49cac1a5dcdd5adb92f",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glSmack.cpp\""
@@ -31215,6 +36052,73 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:ae669df148bd66f9b44f604919c8a445",
+      "callees": {
+        "LoD/1.11": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine",
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "...+2 more"
+        ],
+        "LoD/1.11b": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine",
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "...+2 more"
+        ],
+        "LoD/1.12a": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine",
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "...+2 more"
+        ],
+        "LoD/1.13c": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine",
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "...+2 more"
+        ],
+        "LoD/1.13d": [
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grTexFilterMode",
+          "grTexFilterMode",
+          "grTexCombine",
+          "grChromakeyMode",
+          "grTexSource",
+          "grDrawVertexArrayContiguous",
+          "grTexSource",
+          "...+2 more"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 21,
         "LoD/1.11b": 21,
@@ -31309,6 +36213,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:c01fa6e1a170b59bdfbcc5c6da6138f7",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 27,
         "LoD/1.11b": 27,
@@ -31403,6 +36329,28 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:db27eeb0003bfd5545023e594dd92cd8",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10042",
+          "Ordinal_10042"
+        ],
+        "LoD/1.11b": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.12a": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13c": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithTracking",
+          "AllocateMemoryWithTracking"
+        ]
+      },
       "strings": {
         "LoD/1.11": [
           "\"..\\\\Source\\\\D2Glide\\\\Src\\\\glBlocks.cpp\""
@@ -31514,6 +36462,58 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:443b815e466aa3922faa4acb1aceecc2",
+      "callees": {
+        "LoD/1.11": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.11b": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.13c": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "grTexCombine",
+          "grTexCombine"
+        ],
+        "LoD/1.13d": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource",
+          "grTexCombine",
+          "grTexCombine"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 17,
         "LoD/1.11b": 17,
@@ -31561,6 +36561,43 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:bae7e1dbcc59af961ad111efbbe05f6c",
+      "callees": {
+        "LoD/1.11": [
+          "Ordinal_10100",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.11b": [
+          "Ordinal_10059",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.12a": [
+          "Ordinal_10026",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.13c": [
+          "Ordinal_10106",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ],
+        "LoD/1.13d": [
+          "Ordinal_10084",
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grTexDownloadMipMap",
+          "grTexSource"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.11": 13,
         "LoD/1.11b": 13,
@@ -31581,6 +36618,57 @@ var FUNCTIONS_D2Glide_dll = {
         "LoD/1.12a": "f13d6d0156e269c3890427ba6cf7675f",
         "LoD/1.13c": "f13d6d0156e269c3890427ba6cf7675f",
         "LoD/1.13d": "f13d6d0156e269c3890427ba6cf7675f"
+      }
+    },
+    "d2glide.dll___fpmath": {
+      "addresses": {
+        "LoD/1.11": "0x6F85E01F",
+        "LoD/1.11b": "0x6F85E01B",
+        "LoD/1.12a": "0x6F85E060",
+        "LoD/1.13c": "0x6F85E05B",
+        "LoD/1.13d": "0x6F85E020"
+      },
+      "rvas": {
+        "LoD/1.11": "0xE01F",
+        "LoD/1.11b": "0xE01B",
+        "LoD/1.12a": "0xE060",
+        "LoD/1.13c": "0xE05B",
+        "LoD/1.13d": "0xE020"
+      },
+      "sizes": {
+        "LoD/1.11": 30,
+        "LoD/1.11b": 30,
+        "LoD/1.12a": 30,
+        "LoD/1.13c": 30,
+        "LoD/1.13d": 30
+      },
+      "name": "__fpmath",
+      "signature": "void __fpmath(int param_1)",
+      "calling_convention": "__cdecl",
+      "comment": "Library Function - Single Match\n __fpmath\n\nLibrary: Visual Studio 2003 Release",
+      "name_source": "LoD/1.11",
+      "method": "MNE",
+      "index": "MNE:4d560490b77bf3b5146b14c1413f0461",
+      "basic_block_counts": {
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3
+      },
+      "loop_counts": {
+        "LoD/1.11": 0,
+        "LoD/1.11b": 0,
+        "LoD/1.12a": 0,
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
+      },
+      "mnemonic_hashes": {
+        "LoD/1.11": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.11b": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.12a": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13c": "4d560490b77bf3b5146b14c1413f0461",
+        "LoD/1.13d": "4d560490b77bf3b5146b14c1413f0461"
       }
     },
     "d2glide.dll_ConvertFloatingPointTo64BitInt": {
@@ -33020,18 +38108,21 @@ var FUNCTIONS_D2Glide_dll = {
     "d2glide.dll_MNE_63a4293a7810_78A0": {
       "addresses": {
         "LoD/1.11b": "0x6F8578A0",
-        "LoD/1.12a": "0x6F85D220",
-        "LoD/1.13c": "0x6F85C4A0"
+        "LoD/1.12a": "0x6F85D7B0",
+        "LoD/1.13c": "0x6F857350",
+        "LoD/1.13d": "0x6F858A20"
       },
       "rvas": {
         "LoD/1.11b": "0x78A0",
-        "LoD/1.12a": "0xD220",
-        "LoD/1.13c": "0xC4A0"
+        "LoD/1.12a": "0xD7B0",
+        "LoD/1.13c": "0x7350",
+        "LoD/1.13d": "0x8A20"
       },
       "sizes": {
         "LoD/1.11b": 46,
         "LoD/1.12a": 46,
-        "LoD/1.13c": 46
+        "LoD/1.13c": 46,
+        "LoD/1.13d": 46
       },
       "name_source": "LoD/1.11b",
       "method": "MNE",
@@ -33039,30 +38130,33 @@ var FUNCTIONS_D2Glide_dll = {
       "basic_block_counts": {
         "LoD/1.11b": 5,
         "LoD/1.12a": 5,
-        "LoD/1.13c": 5
+        "LoD/1.13c": 5,
+        "LoD/1.13d": 5
       },
       "loop_counts": {
         "LoD/1.11b": 0,
         "LoD/1.12a": 0,
-        "LoD/1.13c": 0
+        "LoD/1.13c": 0,
+        "LoD/1.13d": 0
       },
       "mnemonic_hashes": {
         "LoD/1.11b": "63a4293a78109b88a933ea937f10c5d8",
         "LoD/1.12a": "63a4293a78109b88a933ea937f10c5d8",
-        "LoD/1.13c": "63a4293a78109b88a933ea937f10c5d8"
+        "LoD/1.13c": "63a4293a78109b88a933ea937f10c5d8",
+        "LoD/1.13d": "63a4293a78109b88a933ea937f10c5d8"
       }
     },
-    "d2glide.dll_MNE_63a4293a7810_9F10": {
+    "d2glide.dll_MNE_63a4293a7810_9280": {
       "addresses": {
-        "LoD/1.11b": "0x6F859F10",
-        "LoD/1.12a": "0x6F85D7B0",
-        "LoD/1.13c": "0x6F857350",
+        "LoD/1.11b": "0x6F859280",
+        "LoD/1.12a": "0x6F85D220",
+        "LoD/1.13c": "0x6F85BF10",
         "LoD/1.13d": "0x6F85C1B0"
       },
       "rvas": {
-        "LoD/1.11b": "0x9F10",
-        "LoD/1.12a": "0xD7B0",
-        "LoD/1.13c": "0x7350",
+        "LoD/1.11b": "0x9280",
+        "LoD/1.12a": "0xD220",
+        "LoD/1.13c": "0xBF10",
         "LoD/1.13d": "0xC1B0"
       },
       "sizes": {
@@ -33399,6 +38493,19 @@ var FUNCTIONS_D2Glide_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:fc474308d0b3c68af924cb322f4455e4",
+      "callees": {
+        "LoD/1.12a": [
+          "GetReturnAddress",
+          "CleanupAndAbort",
+          "grColorCombine",
+          "grAlphaCombine",
+          "grAlphaBlendFunction",
+          "grChromakeyMode",
+          "grConstantColorValue",
+          "grDrawVertexArrayContiguous",
+          "grChromakeyMode"
+        ]
+      },
       "basic_block_counts": {
         "LoD/1.12a": 20
       },
