@@ -904,10 +904,10 @@ class SequentialMatcher:
     def save_registry(self, output_path: Path) -> None:
         """
         Registry saving skipped - data is now stored as split functions_v2 files.
-        
+
         The monolithic function_registry_v2.json has been deprecated in favor of
         per-DLL JavaScript files in reports/functions_v2/, saving ~350 MB of disk space.
-        
+
         Data flows: merge_function_index.py → generate_function_js.py → functions_v2/*.js
         """
         print(f"\nRegistry generation skipped (using split functions_v2/ files)")

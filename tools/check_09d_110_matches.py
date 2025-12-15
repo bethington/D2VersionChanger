@@ -11,21 +11,25 @@ print("=" * 60)
 
 count = 0
 for f in d2common:
-    versions = f.get('versions', {})
-    if 'LoD/1.09d' in versions and 'LoD/1.10' in versions:
-        name = f.get('name')
-        if name and not name.startswith('FUN_'):
-            addr_09d = versions['LoD/1.09d'].get('address')
-            addr_110 = versions['LoD/1.10'].get('address')
+    versions = f.get("versions", {})
+    if "LoD/1.09d" in versions and "LoD/1.10" in versions:
+        name = f.get("name")
+        if name and not name.startswith("FUN_"):
+            addr_09d = versions["LoD/1.09d"].get("address")
+            addr_110 = versions["LoD/1.10"].get("address")
             count += 1
             if count <= 10:
-                print(f'  {name}')
-                print(f'    1.09d: {addr_09d}')
-                print(f'    1.10: {addr_110}')
+                print(f"  {name}")
+                print(f"    1.09d: {addr_09d}")
+                print(f"    1.10: {addr_110}")
 
 print()
 print(f"Total named functions matched: {count}")
 
 # Also count all matches
-all_matched = sum(1 for f in d2common if 'LoD/1.09d' in f.get('versions', {}) and 'LoD/1.10' in f.get('versions', {}))
+all_matched = sum(
+    1
+    for f in d2common
+    if "LoD/1.09d" in f.get("versions", {}) and "LoD/1.10" in f.get("versions", {})
+)
 print(f"Total functions matched (including unnamed): {all_matched}")
