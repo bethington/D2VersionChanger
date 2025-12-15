@@ -1119,11 +1119,11 @@
             cursor: help;
         }
 
-        .fn-gap-indicator.gap-post110 {
+        .fn-gap-indicator.gap-post111 {
             background-color: var(--accent-red);
         }
 
-        .fn-gap-indicator.gap-pre110 {
+        .fn-gap-indicator.gap-pre111 {
             background-color: var(--color-crafted);
         }
 
@@ -1252,6 +1252,45 @@
 
         .exports-table .fn-name-cell.named-func {
             color: var(--color-set);
+            font-weight: 600;
+        }
+
+        /* Ghidra-style function name colors */
+        .exports-table .fn-name-cell.ghidra-unnamed {
+            color: #808080;
+            /* Gray - FUN_* auto-generated */
+        }
+
+        .exports-table .fn-name-cell.ghidra-ordinal {
+            color: #DAA520;
+            /* Goldenrod - Ordinal_* thunks */
+            font-weight: 600;
+        }
+
+        .exports-table .fn-name-cell.ghidra-named {
+            color: #00CED1;
+            /* Dark Cyan - User-defined names */
+            font-weight: 600;
+        }
+
+        .exports-table .fn-name-cell.ghidra-import {
+            color: #6495ED;
+            /* Cornflower Blue - Imported functions */
+        }
+
+        .exports-table .fn-name-cell.ghidra-library {
+            color: #87CEEB;
+            /* Sky Blue - CRT/library functions */
+        }
+
+        .exports-table .fn-name-cell.ghidra-exception {
+            color: #FFA07A;
+            /* Light Salmon - Exception handling */
+        }
+
+        .exports-table .fn-name-cell.ghidra-thunk {
+            color: #CD5C5C;
+            /* Indian Red - Thunk/wrapper functions */
             font-weight: 600;
         }
 
@@ -2318,23 +2357,24 @@
         let showOnlyNamed = false;
         let showRVA = false;  // false = full address (default), true = RVA
         let showGapsOnly = false;  // show only functions with coverage gaps
+        let copyOnClick = false;  // copy address to clipboard instead of opening compare modal
         let currentFuncData = null;
         let currentFuncBaseName = null;
         let categoryFilter = 'all';  // 'all', 'game_logic', 'crt_runtime', 'import_thunk', 'exception', 'other'
 
         // Compiler boundary versions (major toolchain changes)
         const COMPILER_BOUNDARY_VERSIONS = [
-            'LoD/1.10',      // CRT/compiler changed significantly at 1.10
-            'Classic/1.10'
+            'LoD/1.11',      // CRT/compiler changed significantly at 1.11
+            'Classic/1.11'
         ];
 
-        // Pre-1.10 versions (before compiler boundary)
-        const PRE_110_VERSIONS = [
-            'LoD/1.07', 'LoD/1.08', 'LoD/1.09', 'LoD/1.09b', 'LoD/1.09d',
+        // Pre-1.11 versions (before compiler boundary)
+        const PRE_111_VERSIONS = [
+            'LoD/1.07', 'LoD/1.08', 'LoD/1.09', 'LoD/1.09b', 'LoD/1.09d', 'LoD/1.10',
             'Classic/1.00', 'Classic/1.01', 'Classic/1.02', 'Classic/1.03',
             'Classic/1.04b', 'Classic/1.04c', 'Classic/1.05', 'Classic/1.05b',
             'Classic/1.06', 'Classic/1.06b', 'Classic/1.08', 'Classic/1.09',
-            'Classic/1.09b', 'Classic/1.09d'
+            'Classic/1.09b', 'Classic/1.09d', 'Classic/1.10'
         ];
 
         // Detect function category based on name patterns
@@ -2420,30 +2460,30 @@
                 }
             }
 
-            // Check for pre/post 1.10 boundary patterns
-            const pre110Addresses = [];
-            const post110Addresses = [];
+            // Check for pre/post 1.11 boundary patterns
+            const pre111Addresses = [];
+            const post111Addresses = [];
 
             for (const v of versions) {
                 const hasAddr = func.addresses && func.addresses[v];
-                if (PRE_110_VERSIONS.includes(v)) {
-                    pre110Addresses.push(hasAddr ? v : null);
+                if (PRE_111_VERSIONS.includes(v)) {
+                    pre111Addresses.push(hasAddr ? v : null);
                 } else {
-                    post110Addresses.push(hasAddr ? v : null);
+                    post111Addresses.push(hasAddr ? v : null);
                 }
             }
 
-            const pre110Count = pre110Addresses.filter(Boolean).length;
-            const post110Count = post110Addresses.filter(Boolean).length;
+            const pre111Count = pre111Addresses.filter(Boolean).length;
+            const post111Count = post111Addresses.filter(Boolean).length;
 
-            // Only post-1.10 (likely CRT/compiler-specific)
-            if (pre110Count === 0 && post110Count > 0 && pre110Addresses.length > 0) {
-                return { type: 'post110', title: 'Only exists in 1.10+ (likely compiler-specific)' };
+            // Only post-1.11 (likely CRT/compiler-specific)
+            if (pre111Count === 0 && post111Count > 0 && pre111Addresses.length > 0) {
+                return { type: 'post111', title: 'Only exists in 1.11+ (likely compiler-specific)' };
             }
 
-            // Only pre-1.10 (disappeared after compiler change)
-            if (pre110Count > 0 && post110Count === 0 && post110Addresses.length > 0) {
-                return { type: 'pre110', title: 'Only exists in pre-1.10 (removed/replaced after compiler change)' };
+            // Only pre-1.11 (disappeared after compiler change)
+            if (pre111Count > 0 && post111Count === 0 && post111Addresses.length > 0) {
+                return { type: 'pre111', title: 'Only exists in pre-1.11 (removed/replaced after compiler change)' };
             }
 
             return null;  // No significant gap pattern
@@ -3619,6 +3659,57 @@
             return true;
         }
 
+        // Get Ghidra-style CSS class for function name coloring
+        function getGhidraNameClass(name, category) {
+            if (!name) return 'ghidra-unnamed';
+            // FUN_* = gray (auto-generated)
+            if (name.startsWith('FUN_') || name.match(/^sub_[0-9a-fA-F]+$/)) {
+                return 'ghidra-unnamed';
+            }
+            // Ordinal_* = goldenrod (thunk/ordinal)
+            if (name.startsWith('Ordinal_')) {
+                return 'ghidra-ordinal';
+            }
+            // Import category = blue
+            if (category === 'import') {
+                return 'ghidra-import';
+            }
+            // CRT/library = sky blue
+            if (category === 'crt') {
+                return 'ghidra-library';
+            }
+            // Exception handling = salmon
+            if (category === 'exception') {
+                return 'ghidra-exception';
+            }
+            // Thunk/wrapper patterns = red (external API wrappers, runtime thunks)
+            if (isThunkFunction(name)) {
+                return 'ghidra-thunk';
+            }
+            // Named functions = cyan (user-defined)
+            return 'ghidra-named';
+        }
+
+        // Check if function name indicates a thunk/wrapper function
+        function isThunkFunction(name) {
+            // Wrapper suffixes
+            if (name.endsWith('Wrapper') || name.endsWith('_Wrapper')) return true;
+            // Windows API thunks
+            if (name.startsWith('Rtl') || name.startsWith('Nt')) return true;
+            // Critical section wrappers
+            if (name.includes('CriticalSection')) return true;
+            // Memory pool/allocation thunks
+            if (name.match(/^(Alloc|Free|Deallocate).*Pool/)) return true;
+            if (name.match(/Pool.*Tracked$/)) return true;
+            // Cleanup/abort handlers
+            if (name === 'CleanupAndAbort' || name === 'AbortAndCleanup') return true;
+            // Resource allocation thunks
+            if (name.match(/^(Allocate|Deallocate).*Resource/)) return true;
+            // Process/interpret bytecode
+            if (name.startsWith('Interpret') || name.startsWith('Process')) return true;
+            return false;
+        }
+
         // Handler for function search input
         function onFuncSearchInput(value) {
             funcSearchFilter = value.toLowerCase();
@@ -3716,6 +3807,15 @@
             }
             if (currentFuncData && currentFuncBaseName) {
                 updateFunctionsTableBody();
+            }
+        }
+
+        // Handler for "Copy on Click" toggle
+        function toggleCopyOnClick() {
+            copyOnClick = !copyOnClick;
+            const btn = document.getElementById('copyOnClickToggle');
+            if (btn) {
+                btn.classList.toggle('active', copyOnClick);
             }
         }
 
@@ -3841,7 +3941,7 @@
                 const func = funcData.functions[key];
                 const displayName = func.name || key;
                 const isNamed = isNamedFunction(func, key);
-                const nameClass = isNamed ? 'named-func' : '';
+                const nameClass = getGhidraNameClass(displayName, getFunctionCategory(displayName));
                 const tier = func.tier || 0;
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
@@ -3882,7 +3982,7 @@
                     const cellSourceVersion = rowSourceVersion || version;
 
                     // Detect compiler boundary crossing
-                    const isBoundary = prevVersion && !PRE_110_VERSIONS.includes(version) && PRE_110_VERSIONS.includes(prevVersion);
+                    const isBoundary = prevVersion && !PRE_111_VERSIONS.includes(version) && PRE_111_VERSIONS.includes(prevVersion);
                     const boundaryClass = isBoundary ? ' compiler-boundary' : '';
 
                     // Check for candidate if no confirmed address
@@ -4076,6 +4176,10 @@
                                 <span class="exports-toggle-indicator"></span>
                                 <span>Gaps</span>
                             </button>
+                            <button class="exports-toggle" id="copyOnClickToggle" onclick="toggleCopyOnClick()" title="Copy address to clipboard instead of compare">
+                                <span class="exports-toggle-indicator"></span>
+                                <span>Copy</span>
+                            </button>
                             <div class="exports-toolbar-separator"></div>
                             <select class="category-filter" id="categoryFilter" onchange="onCategoryFilterChange(this.value)" title="Filter by function category">
                                 <option value="all">All</option>
@@ -4118,7 +4222,7 @@
                 const func = funcData.functions[key];
                 const displayName = func.name || key;
                 const isNamed = isNamedFunction(func, key);
-                const nameClass = isNamed ? 'named-func' : '';
+                const nameClass = getGhidraNameClass(displayName, getFunctionCategory(displayName));
                 const tier = func.tier || 0;
                 const tierClass = tier > 0 ? 'tier-' + tier : '';
                 const tierTitle = getTierTitle(tier);
@@ -4867,6 +4971,27 @@
 
         // Open comparison modal
         function openComparisonModal(canonicalId, version, sourceVersion, isCandidate) {
+            // If copyOnClick mode is enabled, copy address to clipboard instead
+            if (copyOnClick) {
+                const funcData = currentFuncData?.functions?.[canonicalId];
+                let addr = funcData?.addresses?.[version];
+                if (!addr && funcData?.candidates?.[version]) {
+                    addr = funcData.candidates[version].address;
+                }
+                if (showRVA && funcData?.rvas?.[version]) {
+                    addr = funcData.rvas[version];
+                } else if (showRVA && funcData?.candidates?.[version]?.rva) {
+                    addr = funcData.candidates[version].rva;
+                }
+                if (addr) {
+                    navigator.clipboard.writeText(addr);
+                    showToast('Address copied: ' + addr);
+                } else {
+                    showToast('No address to copy');
+                }
+                return;
+            }
+
             const modal = document.getElementById('comparisonModal');
             if (!modal) return;
 

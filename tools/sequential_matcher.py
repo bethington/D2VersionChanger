@@ -92,7 +92,10 @@ MATCH_WEIGHTS = {
     "unique_string": 0.92,  # Unique string reference
     "index_exp": 0.90,  # EXP index match
     "index_str": 0.88,  # STR index match
-    "index_api": 0.85,  # API sequence match
+    "index_cal": 0.87,  # CAL index match (sorted callee names - very stable)
+    "index_api": 0.85,  # API sequence match (order-dependent)
+    "index_aps": 0.84,  # APS index match (sorted API - order-independent)
+    "index_con": 0.83,  # CON index match (sorted constants - stable)
     "index_mne": 0.82,  # MNE hash match
     "index_cfg": 0.75,  # CFG structure match (improved - stable across recompile)
     "index_pro": 0.60,  # Prologue match (weak)
@@ -319,7 +322,8 @@ class SequentialMatcher:
                 details["common_strings"] = list(common_strings)[:3]
 
         # Check other index matches (with collision awareness)
-        for method in ["STR", "API"]:
+        # Include new indexes: CAL (callee names), CON (constants), APS (sorted APIs)
+        for method in ["STR", "CAL", "API", "APS", "CON"]:
             source_idx = source_indexes.get(method)
             target_idx = target_indexes.get(method)
             if source_idx and target_idx and source_idx == target_idx:

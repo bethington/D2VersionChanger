@@ -1,15 +1,15 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-13T00:30:31.404426
+// Generated: 2025-12-15T03:39:29.398361
 
 var FUNCTION_INDEX_V2 = {
-  "generated": "2025-12-13T00:30:31.404426",
+  "generated": "2025-12-15T03:39:29.398361",
   "source": "function_registry_v2.json",
-  "total_functions": 62208,
-  "total_named": 23131,
+  "total_functions": 60426,
+  "total_named": 26284,
   "files": {
     "Binkw32.dll": {
-      "count": 408,
-      "named": 341,
+      "count": 402,
+      "named": 336,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -29,8 +29,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Bnclient.dll": {
-      "count": 1042,
-      "named": 623,
+      "count": 988,
+      "named": 590,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -46,8 +46,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Client.dll": {
-      "count": 8538,
-      "named": 4390,
+      "count": 8258,
+      "named": 4316,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -63,8 +63,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2CMP.dll": {
-      "count": 1103,
-      "named": 851,
+      "count": 995,
+      "named": 759,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -80,8 +80,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Common.dll": {
-      "count": 5337,
-      "named": 3582,
+      "count": 4615,
+      "named": 3030,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -97,8 +97,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2DDraw.dll": {
-      "count": 421,
-      "named": 197,
+      "count": 399,
+      "named": 325,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -114,8 +114,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Direct3D.dll": {
-      "count": 568,
-      "named": 201,
+      "count": 566,
+      "named": 389,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -131,8 +131,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Game.dll": {
-      "count": 10202,
-      "named": 1247,
+      "count": 11285,
+      "named": 4088,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -148,8 +148,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Gdi.dll": {
-      "count": 321,
-      "named": 152,
+      "count": 291,
+      "named": 213,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -165,8 +165,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Gfx.dll": {
-      "count": 747,
-      "named": 676,
+      "count": 671,
+      "named": 600,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -182,8 +182,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Glide.dll": {
-      "count": 572,
-      "named": 228,
+      "count": 573,
+      "named": 430,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -199,8 +199,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Lang.dll": {
-      "count": 426,
-      "named": 394,
+      "count": 397,
+      "named": 367,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -216,8 +216,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Launch.dll": {
-      "count": 941,
-      "named": 421,
+      "count": 1000,
+      "named": 709,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -233,8 +233,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2MCPClient.dll": {
-      "count": 355,
-      "named": 223,
+      "count": 308,
+      "named": 251,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -250,8 +250,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Multi.dll": {
-      "count": 802,
-      "named": 593,
+      "count": 764,
+      "named": 565,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -267,8 +267,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Net.dll": {
-      "count": 338,
-      "named": 318,
+      "count": 290,
+      "named": 275,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -284,8 +284,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Sound.dll": {
-      "count": 770,
-      "named": 687,
+      "count": 696,
+      "named": 611,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -301,8 +301,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2VidTst.exe": {
-      "count": 564,
-      "named": 309,
+      "count": 533,
+      "named": 454,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -318,8 +318,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "D2Win.dll": {
-      "count": 1071,
-      "named": 899,
+      "count": 999,
+      "named": 834,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -335,8 +335,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Diablo II.exe": {
-      "count": 64,
-      "named": 13,
+      "count": 65,
+      "named": 51,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -356,8 +356,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Fog.dll": {
-      "count": 1465,
-      "named": 1369,
+      "count": 1352,
+      "named": 1254,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -373,8 +373,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Game.exe": {
-      "count": 22673,
-      "named": 2804,
+      "count": 21632,
+      "named": 3082,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -394,8 +394,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Ijl11.dll": {
-      "count": 446,
-      "named": 62,
+      "count": 417,
+      "named": 191,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -415,8 +415,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "SmackW32.dll": {
-      "count": 203,
-      "named": 86,
+      "count": 213,
+      "named": 188,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",
@@ -436,8 +436,8 @@ var FUNCTION_INDEX_V2 = {
       ]
     },
     "Storm.dll": {
-      "count": 2831,
-      "named": 2465,
+      "count": 2717,
+      "named": 2376,
       "versions": [
         "LoD/1.07",
         "LoD/1.08",

@@ -1,0 +1,265 @@
+{
+  "title": "D2VersionChanger - Complete Documentation Index",
+  "generated": "2025-12-13T03:31:33.679488",
+  "project_status": "Phase 5 Complete - Ready for Phase 6",
+  "sections": {
+    "overview": {
+      "title": "Project Overview",
+      "description": "High-level project information and status",
+      "files": [
+        {
+          "name": "README.md",
+          "description": "Main project documentation (if exists)"
+        }
+      ],
+      "file_count": 1
+    },
+    "phase_summaries": {
+      "title": "Phase Summaries",
+      "description": "Complete documentation of each project phase",
+      "files": [
+        {
+          "name": "PHASE_2_3_FINAL_SUMMARY.md",
+          "phase": 2,
+          "description": "Phases 2-3: Cross-version analysis foundation"
+        },
+        {
+          "name": "PHASE_4_COMPLETE.md",
+          "phase": 4,
+          "description": "Phase 4: Function renaming campaign and Ghidra scripts"
+        },
+        {
+          "name": "PHASE_5_COMPLETE.md",
+          "phase": 5,
+          "description": "Phase 5: API definition and module profiles"
+        }
+      ],
+      "file_count": 3
+    },
+    "api_documentation": {
+      "title": "API Reference Documentation",
+      "description": "Formal API specifications by module",
+      "files": [
+        {
+          "name": "API_D2Game.md",
+          "module": "D2Game",
+          "description": "D2Game module API reference"
+        },
+        {
+          "name": "API_D2Client.md",
+          "module": "D2Client",
+          "description": "D2Client module API reference"
+        },
+        {
+          "name": "API_D2Common.md",
+          "module": "D2Common",
+          "description": "D2Common utilities API reference"
+        },
+        {
+          "name": "API_D2Win.md",
+          "module": "D2Win",
+          "description": "D2Win window management API"
+        },
+        {
+          "name": "API_Storm.md",
+          "module": "Storm",
+          "description": "Storm engine core API"
+        },
+        {
+          "name": "API_Fog.md",
+          "module": "Fog",
+          "description": "Fog graphics rendering API"
+        }
+      ],
+      "file_count": 6
+    },
+    "module_profiles": {
+      "title": "Module Profiles",
+      "description": "Detailed module characterization and analysis",
+      "files": [
+        {
+          "name": "MODULE_PROFILE_D2Game.md",
+          "module": "D2Game",
+          "description": "D2Game architecture and dependencies"
+        },
+        {
+          "name": "MODULE_PROFILE_D2Client.md",
+          "module": "D2Client",
+          "description": "D2Client architecture and dependencies"
+        },
+        {
+          "name": "MODULE_PROFILE_D2Common.md",
+          "module": "D2Common",
+          "description": "D2Common architecture and dependencies"
+        },
+        {
+          "name": "MODULE_PROFILE_D2Win.md",
+          "module": "D2Win",
+          "description": "D2Win architecture and dependencies"
+        },
+        {
+          "name": "MODULE_PROFILE_Storm.md",
+          "module": "Storm",
+          "description": "Storm architecture and dependencies"
+        },
+        {
+          "name": "MODULE_PROFILE_Fog.md",
+          "module": "Fog",
+          "description": "Fog architecture and dependencies"
+        }
+      ],
+      "file_count": 6
+    },
+    "methodology_guides": {
+      "title": "Methodology & Analysis Guides",
+      "description": "Documentation of analysis techniques and methodologies",
+      "files": [
+        {
+          "name": "FUNCTION_SIGNATURE_GUIDE.md",
+          "description": "Function signature analysis methodology"
+        },
+        {
+          "name": "CALLING_CONVENTION_GUIDE.md",
+          "description": "Calling convention inference methodology"
+        },
+        {
+          "name": "VERSION_SPECIFIC_VARIATIONS.md",
+          "description": "Version variation patterns and analysis"
+        },
+        {
+          "name": "1_10_CROSS_VERSION_INDEX.md",
+          "description": "1.10 cross-version mapping documentation"
+        }
+      ],
+      "file_count": 4
+    },
+    "data_files": {
+      "title": "Data Files & Reports",
+      "description": "JSON data files with structured information",
+      "files": [
+        {
+          "name": "unified_function_index.json",
+          "size": "66,864 functions",
+          "description": "Master function index across all versions"
+        },
+        {
+          "name": "all_version_functions_analysis.json",
+          "size": "572 functions",
+          "description": "All-version function analysis"
+        },
+        {
+          "name": "renaming_priority_tiers.json",
+          "description": "Function priority categorization"
+        },
+        {
+          "name": "module_renaming_strategies.json",
+          "description": "Per-module renaming strategies"
+        },
+        {
+          "name": "function_signature_analysis.json",
+          "description": "Function signature data"
+        },
+        {
+          "name": "calling_convention_analysis.json",
+          "description": "Calling convention analysis data"
+        },
+        {
+          "name": "api_reference_summary.json",
+          "description": "Complete API reference data"
+        },
+        {
+          "name": "module_api_profiles.json",
+          "description": "Module profile data"
+        },
+        {
+          "name": "version_profiles.json",
+          "description": "Per-version statistics"
+        },
+        {
+          "name": "version_comparisons.json",
+          "description": "Version transition analysis"
+        },
+        {
+          "name": "version_timeline.json",
+          "description": "Version release timeline"
+        },
+        {
+          "name": "ghidra_scripts_generated.json",
+          "description": "Ghidra script generation report"
+        }
+      ],
+      "file_count": 12
+    },
+    "tools": {
+      "title": "Analysis Tools",
+      "description": "Python tools for analysis and generation",
+      "files": [
+        {
+          "name": "tools/analyze_all_version_functions.py",
+          "phase": 4,
+          "description": "Analyze all-version functions"
+        },
+        {
+          "name": "tools/generate_ghidra_rename_scripts.py",
+          "phase": 4,
+          "description": "Generate 66 Ghidra rename scripts"
+        },
+        {
+          "name": "tools/analyze_function_signatures.py",
+          "phase": 4,
+          "description": "Analyze function signatures and types"
+        },
+        {
+          "name": "tools/create_version_documentation_indexes.py",
+          "phase": 4,
+          "description": "Create version-specific indexes"
+        },
+        {
+          "name": "tools/extract_calling_conventions.py",
+          "phase": 5,
+          "description": "Extract calling conventions"
+        },
+        {
+          "name": "tools/build_api_reference.py",
+          "phase": 5,
+          "description": "Build formal API reference"
+        },
+        {
+          "name": "tools/create_module_api_profiles.py",
+          "phase": 5,
+          "description": "Create module API profiles"
+        }
+      ],
+      "file_count": 7
+    },
+    "ghidra_scripts": {
+      "title": "Ghidra Scripts",
+      "description": "Automated scripts for Ghidra deployment",
+      "files": [
+        {
+          "name": "ghidra_scripts/D2VersionChanger_MasterRename.java",
+          "description": "Master script with usage instructions"
+        },
+        {
+          "note": "66 additional rename scripts (11 per module x 6 modules)",
+          "total": 66,
+          "description": "Module/version-specific rename scripts"
+        }
+      ],
+      "file_count": 2
+    }
+  },
+  "quick_links": {
+    "latest_phase": "PHASE_5_COMPLETE.md",
+    "api_overview": "api_reference_summary.json",
+    "module_overview": "module_api_profiles.json",
+    "version_history": "version_timeline.json",
+    "getting_started": "PHASE_5_COMPLETE.md"
+  },
+  "statistics": {
+    "total_documents": 20,
+    "total_data_files": 12,
+    "total_tools": 7,
+    "total_ghidra_scripts": 67
+  }
+}

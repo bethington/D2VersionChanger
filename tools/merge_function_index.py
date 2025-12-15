@@ -507,30 +507,35 @@ class FunctionMerger:
             'rva': func_data.get('rva'),
             'size': func_data.get('size'),
         }
-        
-        # Try to get enhanced data (callees, callers, strings, instructions)
+
+        # Enhanced data - read directly from func_data (merged into function_index exports)
+        # Also try legacy enhanced cache as fallback
         enhanced = self.get_enhanced_data(dll_name, version_key, func_data.get('address', ''))
-        if enhanced:
-            version_entry['callees'] = enhanced.get('callees', [])
-            version_entry['callers'] = enhanced.get('callers', [])
-            version_entry['strings'] = enhanced.get('strings', [])
-            version_entry['instructions'] = enhanced.get('instructions', [])
-            version_entry['instruction_count'] = enhanced.get('instruction_count', 0)
-            version_entry['local_var_count'] = enhanced.get('local_var_count', 0)
-            version_entry['param_count'] = enhanced.get('param_count', 0)
-            # New enhanced fields for comparison
-            version_entry['stack_frame_size'] = enhanced.get('stack_frame_size', 0)
-            version_entry['basic_block_count'] = enhanced.get('basic_block_count', 0)
-            version_entry['loop_count'] = enhanced.get('loop_count', 0)
-            version_entry['mnemonic_hash'] = enhanced.get('mnemonic_hash', '')
-            version_entry['constants'] = enhanced.get('constants', [])
-            version_entry['globals'] = enhanced.get('globals', [])
-            
-            # Set calling_convention and return_type at function level (from first version with data)
-            if not entry.get('calling_convention') and enhanced.get('calling_convention'):
-                entry['calling_convention'] = enhanced['calling_convention']
-            if not entry.get('return_type') and enhanced.get('return_type'):
-                entry['return_type'] = enhanced['return_type']
+
+        # Prefer data from func_data (new merged format), fall back to enhanced cache
+        version_entry['callees'] = func_data.get('callees', enhanced.get('callees', []) if enhanced else [])
+        version_entry['callers'] = func_data.get('callers', enhanced.get('callers', []) if enhanced else [])
+        version_entry['strings'] = func_data.get('string_refs', enhanced.get('strings', []) if enhanced else [])
+        version_entry['instructions'] = func_data.get('instructions', enhanced.get('instructions', []) if enhanced else [])
+        version_entry['instruction_count'] = func_data.get('instruction_count', enhanced.get('instruction_count', 0) if enhanced else 0)
+        version_entry['local_var_count'] = func_data.get('local_var_count', enhanced.get('local_var_count', 0) if enhanced else 0)
+        version_entry['param_count'] = len(func_data.get('parameters', [])) or (enhanced.get('param_count', 0) if enhanced else 0)
+        version_entry['stack_frame_size'] = func_data.get('stack_frame_size', enhanced.get('stack_frame_size', 0) if enhanced else 0)
+        version_entry['basic_block_count'] = func_data.get('basic_block_count', enhanced.get('basic_block_count', 0) if enhanced else 0)
+        version_entry['loop_count'] = func_data.get('loop_count', enhanced.get('loop_count', 0) if enhanced else 0)
+        version_entry['mnemonic_hash'] = enhanced.get('mnemonic_hash', '') if enhanced else ''  # Not in new format
+        version_entry['constants'] = func_data.get('constants', enhanced.get('constants', []) if enhanced else [])
+        version_entry['globals'] = func_data.get('globals', enhanced.get('globals', []) if enhanced else [])
+
+        # Set calling_convention and return_type at function level (from first version with data)
+        if not entry.get('calling_convention'):
+            cc = func_data.get('calling_convention') or (enhanced.get('calling_convention') if enhanced else None)
+            if cc:
+                entry['calling_convention'] = cc
+        if not entry.get('return_type'):
+            rt = func_data.get('return_type') or (enhanced.get('return_type') if enhanced else None)
+            if rt:
+                entry['return_type'] = rt
         
         entry['versions'][version_key] = version_entry
         entry['version_count'] = len(entry['versions'])
