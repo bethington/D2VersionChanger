@@ -6139,9 +6139,9 @@
                 <!-- Signature & Calling Convention -->
                 <div class="comparison-section">
                     <div class="comparison-section-title">Signature</div>
-                    <div class="comparison-section-content">${funcData.signature || '—'}</div>
-                    ${funcData.calling_convention ? `<div class="metric-label" style="margin-top: 8px;">Calling Convention: <span class="metric-value">${funcData.calling_convention}</span></div>` : ''}
-                    ${funcData.return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${funcData.return_type}</span></div>` : ''}
+                    <div class="comparison-section-content">${(candidateFuncData || funcData).signature || '—'}</div>
+                    ${(candidateFuncData || funcData).calling_convention ? `<div class="metric-label" style="margin-top: 8px;">Calling Convention: <span class="metric-value">${(candidateFuncData || funcData).calling_convention}</span></div>` : ''}
+                    ${(candidateFuncData || funcData).return_type ? `<div class="metric-label">Return Type: <span class="metric-value">${(candidateFuncData || funcData).return_type}</span></div>` : ''}
                 </div>
 
                 <!-- Callees (Call Graph) - Split Row Display -->

@@ -563,3 +563,35 @@ Moved candidate computation from runtime (viewer) to build-time (generate_functi
 - Build time: ~3 minutes for all DLLs (one-time during data generation)
 - Viewer load: No additional computation, instant display
 - Data size: Minimal increase (candidates add ~5% to JS file sizes)
+
+---
+
+## Comparison Modal Fixes (2025-12-15)
+
+### Problem 1: Candidate Data Not Populating
+When viewing a candidate match in the comparison popup, most data fields (callees, instructions, strings, etc.) were showing empty.
+
+**Root Cause**: Precomputed candidates only stored minimal data (address, rva, confidence) but not the full function data needed for display.
+
+**Solution**:
+1. Added `findFunctionByAddress(address, version)` helper function that searches `currentFuncData.functions` to find a function by its address in a specific version
+2. Updated `openComparisonModal()` to use this helper to look up the full function data for candidates
+3. All data field lookups now use `candidateFuncData` when it exists
+4. Added display of matched function name in modal header
+
+### Problem 2: Signature/Calling Convention Mirroring Source
+The target/candidate side of the comparison modal was showing the source function's signature, calling convention, and return type instead of the candidate's own values.
+
+**Root Cause**: Lines 6142-6144 used `funcData.signature` (source) instead of `candidateFuncData` for the target section.
+
+**Solution**:
+Changed target section to use `(candidateFuncData || funcData)` for signature fields:
+- Uses `candidateFuncData` when viewing a precomputed candidate (different function)
+- Falls back to `funcData` for direct matches (same canonical function across versions)
+
+### Changes Made
+- `reports/d2_report_viewer.html`:
+  - Added `findFunctionByAddress()` helper function
+  - Updated `openComparisonModal()` to look up candidate function data
+  - Fixed target section signature/calling_convention/return_type to use candidate data
+  - Added matched function name display in modal header
