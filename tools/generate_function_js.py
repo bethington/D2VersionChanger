@@ -133,7 +133,10 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
         mnemonic_hashes = {}
         constants = {}
         globals = {}
-        
+        # Additional metadata
+        tags = {}
+        function_types = {}
+
         for ver in all_versions:
             ver_data = func.get('versions', {}).get(ver, {})
             addr = ver_data.get('address')
@@ -171,7 +174,12 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
                 constants[ver] = ver_data['constants']
             if ver_data.get('globals'):
                 globals[ver] = ver_data['globals']
-        
+            # Additional metadata
+            if ver_data.get('tags'):
+                tags[ver] = ver_data['tags']
+            if ver_data.get('function_type'):
+                function_types[ver] = ver_data['function_type']
+
         entry = {
             "addresses": addresses
         }
@@ -201,7 +209,13 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["method"] = func['index_method']
         if func.get('index'):
             entry["index"] = func['index']
-        
+        # Include all individual indexes for detailed comparison
+        if func.get('indexes'):
+            entry["indexes"] = func['indexes']
+        # Include display_name if different from name
+        if func.get('display_name') and func.get('display_name') != func.get('name'):
+            entry["display_name"] = func['display_name']
+
         # Enhanced data (per-version)
         if callees:
             entry["callees"] = callees
@@ -226,7 +240,12 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["constants"] = constants
         if globals:
             entry["globals"] = globals
-        
+        # Additional metadata (per-version)
+        if tags:
+            entry["tags"] = tags
+        if function_types:
+            entry["function_types"] = function_types
+
         # Add candidates for empty cells
         # Candidates can be stored as dict (new format) or list (old format)
         if func.get('candidates'):

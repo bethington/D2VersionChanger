@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T03:39:29.398361
+// Generated: 2025-12-15T04:04:17.126358
 // Functions for D2Launch.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d
 
@@ -66,6 +66,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7abab664a92cec6597d7fe88584a2dbb",
+      "indexes": {
+        "EXP": null,
+        "STR": "7abab664a92cec6597d7fe88584a2dbb",
+        "API": "0cbdb1fd111678aca2949d26f9a02e66",
+        "MNE": "3c6e27d3d54c8ea3d8e42e7886c4b291",
+        "CFG": "e761d871251d0a9e585b7f81ea6b3c7f",
+        "PRO": "e92b4ad40f9de93129d91989a13701c1",
+        "CAL": "c71d7213605fbee0d7f00fdd674cd346",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LoadLibraryA|0xBF",
@@ -563,6 +574,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "a34c75318ac0d43f27efc0da67c837c4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ConnectToBattleNet|0x6FA71230"
@@ -729,6 +751,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "b7f90134d714fda5bab257770e7cad4b",
+        "PRO": "42cce06981bf02db41403ceff71c6575",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameState|0x6FA75A80",
@@ -876,6 +909,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "2bc3923d3b328cb1e48d2591f52df81b",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -915,6 +959,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "32d833f348ce377c8cc3291cc5202137",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -949,6 +1004,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "32d833f348ce377c8cc3291cc5202137",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -1013,6 +1079,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:315f1e25cbb1592116597fcd1ea71d2f",
+      "indexes": {
+        "EXP": null,
+        "STR": "315f1e25cbb1592116597fcd1ea71d2f",
+        "API": "c5cd1710f1a08585afd9499aae00f4d1",
+        "MNE": "2df7c1a3cbbc6ae411fe86ef5ed84340",
+        "CFG": "b9a8ec1c9df29a16352b11099f626d6b",
+        "PRO": "93b9a5906514b17b00339394e4f0b287",
+        "CAL": "a65aefacab75eb16c87e2968ce1b7cca",
+        "CON": null,
+        "APS": "7e3487927f6d3ef48a6d3193e0b494aa"
+      },
       "callees": {
         "LoD/1.07": [
           "CleanupBnetConnection|0x6FA77850",
@@ -1616,6 +1693,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:e997da64fc17b55935e00a5d2e84c05c",
+      "indexes": {
+        "EXP": null,
+        "STR": "e997da64fc17b55935e00a5d2e84c05c",
+        "API": "b31202d7051cf085af4039e63dc06470",
+        "MNE": "011555b8a64facde2160cd07adc19907",
+        "CFG": "f8aadc7801f541b0a2a649a35cad03df",
+        "PRO": "94860b9102c6cf3fc7c416d464561b32",
+        "CAL": "1b72e7c9f07d84b12a87773e646261c8",
+        "CON": null,
+        "APS": "ae98c0bd8c735928bfdd7e91dc51d780"
+      },
       "callees": {
         "LoD/1.07": [
           "GetLastError|0x6FA77540",
@@ -1904,6 +1992,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ef2986fdc83e48dbce9a39c7dd1bb57d",
+      "indexes": {
+        "EXP": null,
+        "STR": "ef2986fdc83e48dbce9a39c7dd1bb57d",
+        "API": "cb583dce1fa82e76a01874cc3c2b1170",
+        "MNE": "aa7f6c9003a5a2b0d4891b029f5a1ccd",
+        "CFG": "f415baf9ba4179e7e49e7e2003de4c65",
+        "PRO": "249722285c6e45eb0ccdac483b16208b",
+        "CAL": "747c856492a125385c18e4ddbe6ea191",
+        "CON": "2770f7c34143a5a13ebd4e3466a309ec",
+        "APS": "17e28200aa2aad14966000647252b0f3"
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateStackSpace|0x6FA85600",
@@ -2267,6 +2366,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d47a1859ed399da15e916c49ad1e466c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d47a1859ed399da15e916c49ad1e466c",
+        "CFG": "a7d861077deb3ba3d2fad58efd683a52",
+        "PRO": "df08592a1996cff0dd127d6293e5c68d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ShowTitleMessageButtonDialog|0x6FA76980",
@@ -2421,6 +2531,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:878052ef6b6d44dbaf6840f8cbfb0810",
+      "indexes": {
+        "EXP": null,
+        "STR": "878052ef6b6d44dbaf6840f8cbfb0810",
+        "API": "3bb2c24edc12c53dfd157ef2b6aade88",
+        "MNE": "8b4aaf8bddf781fd885a30256547c729",
+        "CFG": "e97901c961efbedff39885ec9f2ccbc3",
+        "PRO": "2c9ff94016028c2665b85f4259efd42d",
+        "CAL": "f7f7a2395f6068b039405489149bf4a2",
+        "CON": "5fc530e7e9f246a49ccd90233abbd1e4",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ResetRandomNumberGenerator|0x6FA850E6",
@@ -2760,6 +2881,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "535de271d32075213e2fdf4af239245c",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessBnetClientMessages|0x6FA71D20"
@@ -2814,6 +2946,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:914d0c997b1af2faaf7beb2e9432f631",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3051417a7d2423cf2990ed683d25598c",
+        "MNE": "f5dc97aff68ceb805d4f5542acdaef00",
+        "CFG": "577f196c8198df84c0a90cc78b75b325",
+        "PRO": "a84dedd9d42515d87f0a1f55f6621145",
+        "CAL": "914d0c997b1af2faaf7beb2e9432f631",
+        "CON": null,
+        "APS": "c3b1a42538c5691a3b20a7a01c270b34"
+      },
       "callees": {
         "LoD/1.07": [
           "DispatchPendingControlHandlers|0x6FA76560",
@@ -3073,6 +3216,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:3b5d9224f9cd26b0f851439ec64a0528",
+      "indexes": {
+        "EXP": null,
+        "STR": "3b5d9224f9cd26b0f851439ec64a0528",
+        "API": "e036ae3905f98ebf62e4ed2bfa57df4b",
+        "MNE": "f7a8274a894cc4d85d10d2191b4c1e60",
+        "CFG": "c6c907448eaa3f8095a325cb087795f9",
+        "PRO": "5780ccb0e99e4ee81b758fba713fa83f",
+        "CAL": "8554f5c975dab9f4ea83fafae900f804",
+        "CON": "9c463a3c18a39afabbfa537940362aba",
+        "APS": "cf869531903ebaf94f536dabf65df69c"
+      },
       "callees": {
         "LoD/1.07": [
           "ConvertStringToUnicode|0x6FA851E2",
@@ -3586,6 +3740,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:6352f0c3f903fb48da2f7f55762422c8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6352f0c3f903fb48da2f7f55762422c8",
+        "MNE": "84f516f437847259060c6ed29dd911bb",
+        "CFG": "94532f518887f854811f9f2da99d6d81",
+        "PRO": "a5b4b03fe1cd3e05b4f3933e7f61b948",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ComputeStringHash|0x6FA8543A"
@@ -3733,6 +3898,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4521bdb5ae9b8df770d39038bc9c38c4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "90874f6ac8c6c406b09e19c8c3ab9d0f",
+        "MNE": "76415d94d6b2c7fc38c9c1e79e92f172",
+        "CFG": "ad15240710364753bfe9bee0e2506d86",
+        "PRO": "833b02510593937bb7969f711a678aa6",
+        "CAL": "4521bdb5ae9b8df770d39038bc9c38c4",
+        "CON": null,
+        "APS": "ccc08a0535d9bb0fa4a37632f04a3a73"
+      },
       "callees": {
         "LoD/1.07": [
           "ComputeStringHash|0x6FA8543A",
@@ -3959,6 +4135,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e5af137a0196ec1a447313c0d1f48854",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ff1b02b84ed6ba184b35d160d4d4cd18",
+        "MNE": "1a0ed47f8094d298c27f1763132359e9",
+        "CFG": "12bf434a55aed093390de3c5427dd407",
+        "PRO": "c821fb2f26f2bf6c6dd4b1a325e98366",
+        "CAL": "e5af137a0196ec1a447313c0d1f48854",
+        "CON": "8b5341968e9b2afaf9901da7ac1e28e4",
+        "APS": "ff1b02b84ed6ba184b35d160d4d4cd18"
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseShardArrayAllocations|0x6FA7B520",
@@ -4361,6 +4548,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -4400,6 +4598,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -4439,6 +4648,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "3696ad59777e09d5f2daacb544022d43",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -4503,6 +4723,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "82c58b4af3e4846a997a7c0a51fb1ca5",
+        "PRO": "3776d10405613752d665683c722749ec",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessCharacterCreation|0x6FA81F10"
@@ -4672,6 +4903,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:9388c10cb6694c3d101542e2791f3e48",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9388c10cb6694c3d101542e2791f3e48",
+        "MNE": "9e9dc7819082e898345a785d6d8b7f81",
+        "CFG": "6890c85ac421bc1f125a676436170d6c",
+        "PRO": "c683e61c645b8641a00990aae1dc88b6",
+        "CAL": "9388c10cb6694c3d101542e2791f3e48",
+        "CON": "e0bd0708c64f312b9d1a8ccc58781135",
+        "APS": "9388c10cb6694c3d101542e2791f3e48"
+      },
       "callees": {
         "LoD/1.07": [
           "ReleasePoolAllocation|0x6FA853B6",
@@ -4980,6 +5222,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c4f760f77449695a501453534a79da3f",
+      "indexes": {
+        "EXP": null,
+        "STR": "c4f760f77449695a501453534a79da3f",
+        "API": "f5cbfe99a1ef7c68c6fbc67412851510",
+        "MNE": "e999af4cc113bc55904b77749cf7ece7",
+        "CFG": "1d8bfe7c119673d3fc5cdea02e86fa8f",
+        "PRO": "e8c8ff9fdd8ebf29681cf195ac54d545",
+        "CAL": "a9f9386d724d26134b262ee8e680326d",
+        "CON": "913c8cca97ac502194d1805f0b3edb94",
+        "APS": "b7eef2815ecab63fcead33827593bf97"
+      },
       "callees": {
         "LoD/1.07": [
           "strcpy|0xC",
@@ -5426,6 +5679,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:0a34decbfc49038e2425ecae3e027bd6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1e88e9cf32cc04891bd0b7b63bcb21f5",
+        "MNE": "ad773b59a48b3029d4737aaae6345511",
+        "CFG": "05b1257119906016f5755cbdc8c99641",
+        "PRO": "0f0903e0a41905cb106d1e7cb7e69922",
+        "CAL": "0a34decbfc49038e2425ecae3e027bd6",
+        "CON": "db6e9b0dffd5db1fd01f2fa96aff6fb6",
+        "APS": "1e88e9cf32cc04891bd0b7b63bcb21f5"
+      },
       "callees": {
         "LoD/1.07": [
           "strcpy|0xC",
@@ -5519,6 +5783,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:9388c10cb6694c3d101542e2791f3e48",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "76f9fc97a87d515006a8737f55b0e04a",
+        "MNE": "24edb8fcd2568026f4a23722d4901869",
+        "CFG": "dfeb8071b3137e2d8a9f0426ff0ed57a",
+        "PRO": "4ec1106f2d83dad603c0b3e00c03b2ef",
+        "CAL": "9388c10cb6694c3d101542e2791f3e48",
+        "CON": "479784d2c80b023f96a0902424f64a74",
+        "APS": "22df0636938ec472b5ff73a118868abb"
+      },
       "callees": {
         "LoD/1.07": [
           "ReleasePoolAllocation|0x6FA853B6",
@@ -6039,6 +6314,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:217da533bccc99c9261d6bfdfb3bbf7c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "08b6fe191ea3c86175bc21cd987371c2",
+        "MNE": "3aeb87a06e50bf7ba262370cddea66fe",
+        "CFG": "9752d016b172694ea806c8f6d706589d",
+        "PRO": "9342319a0b40e9e4b3427a90c17270e4",
+        "CAL": "217da533bccc99c9261d6bfdfb3bbf7c",
+        "CON": "04416cf1ceafcdf578cc52c76da321ef",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -6544,6 +6830,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:53e8af3a8d34b28c9ed46d0af411abcc",
+      "indexes": {
+        "EXP": null,
+        "STR": "53e8af3a8d34b28c9ed46d0af411abcc",
+        "API": "2799362c0858eead9cc50859b9ad247d",
+        "MNE": "bb8a114dc7f91a9ee1841316ff884728",
+        "CFG": "682e075c7ea7f636b66d238eba762eea",
+        "PRO": "0932d8976842ea5694d91001c356bd32",
+        "CAL": "c08122612ceb984c388ca0f93365cc5e",
+        "CON": "9773dab7c7b51705026288029506fbdf",
+        "APS": "abaee405c7e150ae5edffb1c5371a1d5"
+      },
       "callees": {
         "LoD/1.07": [
           "SetDataFieldWithValidation|0x6FA85248",
@@ -7000,6 +7297,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:592c9b348c5f1f1c0f76a317929a4866",
+      "indexes": {
+        "EXP": null,
+        "STR": "592c9b348c5f1f1c0f76a317929a4866",
+        "API": "5f8ae0c8bb623e0a97b1593127b7b679",
+        "MNE": "6266be5cdddeb62ba6d4fd18fb186f6b",
+        "CFG": "88eba8a41143e564f0b88f69ab3c02f0",
+        "PRO": "9826e6db13aaa9dc87cbbcc15eaf5ec8",
+        "CAL": "88112c6e81bec7975eb43d3ced5d4110",
+        "CON": "94a035ce9c238323eb488b33e6f81085",
+        "APS": "619e28d66db7dd86f824c6f042e06c9e"
+      },
       "callees": {
         "LoD/1.07": [
           "SMemCopy|0x6FA85452",
@@ -7461,6 +7769,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:376f35a539f6a4568436ad96bf42969a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ec9d1d0db416a54fc8de5ff7bc5b2e4e",
+        "MNE": "8c996ad2aa45b25a599a6dca4e9dea7a",
+        "CFG": "3b9db0ac45bc14004ee257b2ddb26746",
+        "PRO": "121cfbefd088fb00b4dd648b3515b6c1",
+        "CAL": "376f35a539f6a4568436ad96bf42969a",
+        "CON": null,
+        "APS": "d1a1ee31718956c78e1990ecb09afe67"
+      },
       "callees": {
         "LoD/1.07": [
           "DispatchPendingControlHandlers|0x6FA76560",
@@ -7613,6 +7932,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7652,6 +7982,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7691,6 +8032,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7730,6 +8082,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0"
@@ -7774,6 +8137,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0"
@@ -7818,6 +8192,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7857,6 +8242,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7891,6 +8287,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7930,6 +8337,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -7969,6 +8387,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -8008,6 +8437,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -8057,6 +8497,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:f673c195d3ada08f061c145d5fcd08b4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e3885b1255e6b5957a747c6c1f4914e0",
+        "MNE": "48a12dfcb6feb0f0770549737414e79b",
+        "CFG": "fba36e8ff116b21ac668eb6d002ce4f1",
+        "PRO": "576cf158ea985ab83dadfacd8c305368",
+        "CAL": "f673c195d3ada08f061c145d5fcd08b4",
+        "CON": "d0e6a4875694e40368786ef24db0fb52",
+        "APS": "9941bf6031e0bc4069c270290a839380"
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0",
@@ -8361,6 +8812,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -8430,6 +8892,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4b4417dc3ac1fb02f0e303ca77a04068",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "61dcae2aa93c865d940804417f888292",
+        "MNE": "85d5aa9b0a3c1c2ec625de9199a91ca6",
+        "CFG": "35a8044c19c72c5e868074a9171f5a35",
+        "PRO": "f8a97119de353cdd32d5746eba694857",
+        "CAL": "4b4417dc3ac1fb02f0e303ca77a04068",
+        "CON": "7483b3869168c814e37f6db4ed2a1762",
+        "APS": "72deae12f2f12b78715c86a604d081f8"
+      },
       "callees": {
         "LoD/1.07": [
           "SetTimerContextHandler|0x6FA8526C",
@@ -8999,6 +9472,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3383786bd8cedd8deef1a357c9b9426e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d76129b3e73b674ea87ec8ecb7d8b107",
+        "MNE": "ae87e41d2b484fd1748b3ab1dafdd2cb",
+        "CFG": "e7ce84523d83469608127088656adfdd",
+        "PRO": "72ce0f706d0026d97cf60f7c42fc80f3",
+        "CAL": "3383786bd8cedd8deef1a357c9b9426e",
+        "CON": "3ec32d95fd46571b411fe0efdc85f37d",
+        "APS": "1b4ff2388ff4fca2e003c3295f928e33"
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateGameUIState|0x6FA73A90",
@@ -9356,6 +9840,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "388023d833f7dec4931e8d7d3d4f9c9a",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "Realm|0x6FA850D0",
@@ -9773,6 +10268,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:d2b7f4d68f2f4e62b6266863b2b9e5b2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5c3c8ce2b35ac463cb9acea6ae3aef07",
+        "MNE": "53b7343a014038876f15be208d093836",
+        "CFG": "b69f6e9cc643d50d256e4256dbc42935",
+        "PRO": "916ced02f9bf4aea06a6af282195b278",
+        "CAL": "d2b7f4d68f2f4e62b6266863b2b9e5b2",
+        "CON": "6db522e5115c458f27fb875f3a65daa3",
+        "APS": "c1252e138968eead83b1d2aee3a62671"
+      },
       "callees": {
         "LoD/1.07": [
           "strcpy|0xC",
@@ -10104,6 +10610,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9844c42401dbac8ff06c91a689598d94",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9844c42401dbac8ff06c91a689598d94",
+        "CFG": "c3e5b082c2e3eb679d833b195a89bbec",
+        "PRO": "823270f11f70991c8ee2290e4d97a29a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "entry|0x6FA85C37"
@@ -10299,6 +10816,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:1",
+      "indexes": {
+        "EXP": "1",
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "82c58b4af3e4846a997a7c0a51fb1ca5",
+        "PRO": "15fe5e41a0d8dce823a155a4cf50da53",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 2,
         "LoD/1.08": 2,
@@ -10433,6 +10961,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "305c32d33191c1b22ce2562362c5fa24",
+        "CFG": "480a369eacaaf576acb9ba14eba930e1",
+        "PRO": "6e42804c16ba54450a8f6358f7ea3b63",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeBnetConnectionState|0x6FA71C50"
@@ -10562,6 +11101,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "593cef48928bb6fb4e1fd67c5e8cda3e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeBnetConnectionState|0x6FA71C50"
@@ -10701,6 +11251,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9fd4d7e908984943a88896efb97e5de0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9fd4d7e908984943a88896efb97e5de0",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "a5cea0de64f00d1f0c9a05db44688d11",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "Ordinal_10003|0x6FA85104"
@@ -10740,6 +11301,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9fd4d7e908984943a88896efb97e5de0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9fd4d7e908984943a88896efb97e5de0",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "Ordinal_10003|0x6FA85104"
@@ -10779,6 +11351,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9fd4d7e908984943a88896efb97e5de0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9fd4d7e908984943a88896efb97e5de0",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "Ordinal_10003|0x6FA85104"
@@ -10818,6 +11401,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:9fd4d7e908984943a88896efb97e5de0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9fd4d7e908984943a88896efb97e5de0",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "Ordinal_10003|0x6FA85104"
@@ -10887,6 +11481,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5fa7ad124dff598da0a64a7f8c3a5de4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2b71b10a94a290ff8d6b8aced60a98f7",
+        "MNE": "3347f21c46ecafdd325c51dcc50f138d",
+        "CFG": "7b8a76fd978273c44473b2b529d23aea",
+        "PRO": "de9786ec7c318e1649073f6e3f9bf3c2",
+        "CAL": "5fa7ad124dff598da0a64a7f8c3a5de4",
+        "CON": "dd981d6415beb351d486ec4f183c6960",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "wsprintfA|0xFA",
@@ -11466,6 +12071,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5955b54e48a8cc9d4b614c1d6e2c3d8a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "110979e98520226744ad149e21f19ae4",
+        "MNE": "1ad119d05d588e50f94e8e74ff4f7789",
+        "CFG": "5ddb829705d6a255c2df6e3a0c1c1bf3",
+        "PRO": "2e464a471d59ecbe125ae3fb732ea02c",
+        "CAL": "5955b54e48a8cc9d4b614c1d6e2c3d8a",
+        "CON": null,
+        "APS": "715ab91ea565d34d643d4233be2501d9"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -11758,6 +12374,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a116bb083f0d4f916b675518b660c2ca",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a116bb083f0d4f916b675518b660c2ca",
+        "MNE": "9a489dab164d98a12fed10be1c73ab00",
+        "CFG": "1169e8b5c30b57a55781d4e10c69ae8b",
+        "PRO": "3561b5d0a9279fb7f8a627c5ba2f64e6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DispatchInventoryItemHandler|0x6FA852A8"
@@ -11913,6 +12540,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5955b54e48a8cc9d4b614c1d6e2c3d8a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "110979e98520226744ad149e21f19ae4",
+        "MNE": "1ad119d05d588e50f94e8e74ff4f7789",
+        "CFG": "231b9f097cb271e839036e86688d1738",
+        "PRO": "4cafef0db140d02e93c02668e5a67a0b",
+        "CAL": "5955b54e48a8cc9d4b614c1d6e2c3d8a",
+        "CON": null,
+        "APS": "715ab91ea565d34d643d4233be2501d9"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -12180,6 +12818,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e81870a111965dd9737b816870441132",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "bb4175f1340ea2c501010f3d247c53e5",
+        "MNE": "fecd39cb7753e3e7a325f81961405e75",
+        "CFG": "8f6f5d9e239a116838de14a9b5f20276",
+        "PRO": "0990e088dd57b87b37e68e8d20b9e65c",
+        "CAL": "e81870a111965dd9737b816870441132",
+        "CON": "8013d78bddbbb3a0bd27550b7b78e286",
+        "APS": "13cd5d28cd718cdcfd5d4f3c360142bb"
+      },
       "callees": {
         "LoD/1.07": [
           "SetGlobalConfig|0x6FA85296",
@@ -12498,6 +13147,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:2b93282bb8f4cdf7e711a2d287e45eaa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c88e57e4388cb11c8a7176feee169559",
+        "MNE": "70fda3893f9831b4a3d45d3127b2d945",
+        "CFG": "7eb3132c3582968de378bd8aca9c5913",
+        "PRO": "18f417f5b1b4a920ac6e1ba510d59ea8",
+        "CAL": "2b93282bb8f4cdf7e711a2d287e45eaa",
+        "CON": "935f6f158a2c91d6d00d76087f08ea18",
+        "APS": "7dc89b32b3741b5e5079c1d7478b1a8b"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -12798,6 +13458,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:270251c06d38865b9fe7d5990a73d283",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "40daca8f2ed98608184820f285229782",
+        "MNE": "47093a2fd55cb9f4b3c064c83d4588e4",
+        "CFG": "02d0b38896d5c5b6651e1147ff5b651b",
+        "PRO": "df90826e93c50488556d9380e059fe84",
+        "CAL": "270251c06d38865b9fe7d5990a73d283",
+        "CON": "4a3cba7d46fd704cce9426da555d17e0",
+        "APS": "5b5f44f34fb88a137d1bb58b52d0602a"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -13122,6 +13793,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4ca1bfb1f1faf59f0cd3f6f514b89af6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c7836e55cd4fd5df478153d019bd59e8",
+        "MNE": "ddc60bd8f7604bac11285c53c7ff427c",
+        "CFG": "1165a71d40ab62a95330d193a6d956a3",
+        "PRO": "5041b19a4a8b07d1641f2a70d20f21fb",
+        "CAL": "4ca1bfb1f1faf59f0cd3f6f514b89af6",
+        "CON": "73279b0ddd609e4ffc341ce012a7620b",
+        "APS": "c7836e55cd4fd5df478153d019bd59e8"
+      },
       "callees": {
         "LoD/1.07": [
           "strncpy|0x7",
@@ -13357,6 +14039,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:270251c06d38865b9fe7d5990a73d283",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "486f436b4221a80fa192e02c94327949",
+        "MNE": "7d1d4163b6c077cca6d506c6a2643654",
+        "CFG": "ee13f4afbd4de1e12658398353ecc1db",
+        "PRO": "fa60d171b371af621bdc2ee6d0ecf834",
+        "CAL": "270251c06d38865b9fe7d5990a73d283",
+        "CON": "579f59cdce1f3980e1de22f26aa4de2f",
+        "APS": "5b5f44f34fb88a137d1bb58b52d0602a"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -13687,6 +14380,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:2b93282bb8f4cdf7e711a2d287e45eaa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "384a79ba33d8d316334d7fb9098a79ad",
+        "MNE": "d2620ebaa446317eeefd3584d0bccbc7",
+        "CFG": "35adc114f2badcd5d5333b24d5d48340",
+        "PRO": "fde84095357e1a43105e2d58c9baeba1",
+        "CAL": "2b93282bb8f4cdf7e711a2d287e45eaa",
+        "CON": "935f6f158a2c91d6d00d76087f08ea18",
+        "APS": "636e668b3d11d3279ca532ac9ff5e473"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -14021,6 +14725,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:2b93282bb8f4cdf7e711a2d287e45eaa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "384a79ba33d8d316334d7fb9098a79ad",
+        "MNE": "62a5fbbe17b95e80ecfc11a1c16bc421",
+        "CFG": "7b57d44ed1f4583864c53fc5b2b52ffd",
+        "PRO": "17029ad82f2855d8855965eb61bca690",
+        "CAL": "2b93282bb8f4cdf7e711a2d287e45eaa",
+        "CON": "e003cf60e0a57d80a0030973cb94e3d3",
+        "APS": "636e668b3d11d3279ca532ac9ff5e473"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -14345,6 +15060,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "826d19352ecde8132602cc260035efad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -14414,6 +15140,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:681e4e52979ef03b61f690b2d355b726",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "43702cef6240dfeea61be2bdbd38342c",
+        "MNE": "c7c70b5f9182d7ef6ad9884b599ff255",
+        "CFG": "b7d161f8d78343f4caf9e77ea53838ee",
+        "PRO": "c2194d0ed5e1bb362d524e66f2d28556",
+        "CAL": "681e4e52979ef03b61f690b2d355b726",
+        "CON": "0fdce57a162bcff357885409e1494410",
+        "APS": "ad353dc6ee97c72972eadc420f3cd514"
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGameUI|0x6FA85070",
@@ -14884,6 +15621,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -14953,6 +15701,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a116bb083f0d4f916b675518b660c2ca",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a116bb083f0d4f916b675518b660c2ca",
+        "MNE": "9a489dab164d98a12fed10be1c73ab00",
+        "CFG": "0565ff171a57b5248f933baf14ab4565",
+        "PRO": "3561b5d0a9279fb7f8a627c5ba2f64e6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DispatchInventoryItemHandler|0x6FA852A8"
@@ -15308,6 +16067,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a57f09f0d0cc9eb746521b917643e98d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2e2d8b5c34fb18d38ed29e407fb2d164",
+        "MNE": "39140a81a6e0a1fbe8b30999d8b22db9",
+        "CFG": "9ac2eeeba51c577f7e18cf885d15472f",
+        "PRO": "7bf5743a334dce77949fbc0bdecbb126",
+        "CAL": "a57f09f0d0cc9eb746521b917643e98d",
+        "CON": null,
+        "APS": "a68fd6158df0d2063b4969ef31c08b01"
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeCelFrameCount|0x6FA852B4",
@@ -15565,6 +16335,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -15634,6 +16415,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:40398931a144860a0281e9276103df04",
+      "indexes": {
+        "EXP": null,
+        "STR": "40398931a144860a0281e9276103df04",
+        "API": "557ff08c6dda8db80e2652f8c6182539",
+        "MNE": "6b265ed451b59a8de699f68ae686fb15",
+        "CFG": "eaa5cd9668bb210ca33d4dee1a73ee1a",
+        "PRO": "650a0533c22265dec3faa75c62f2f252",
+        "CAL": "19b162ce413448eb7306de5b6ab16ded",
+        "CON": "918182bcff693bf2b286293d3c044d91",
+        "APS": "8c537ff9f9d1a82c1c425fa9f406b578"
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGameUI|0x6FA85070",
@@ -16289,6 +17081,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -16358,6 +17161,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:30a8be21158e4f36edc43708ae42bf70",
+      "indexes": {
+        "EXP": null,
+        "STR": "30a8be21158e4f36edc43708ae42bf70",
+        "API": "ec9762ddce9b016203251c2726cb55a5",
+        "MNE": "b87b30dfe5d56c813b90f23397fe8e4d",
+        "CFG": "87c7a6eeec4571a4a6711b7f37dcfa00",
+        "PRO": "2f0e5098080aa61b4bbdbc971832a7e7",
+        "CAL": "96e233ebeaa6d18e9abcf59825cae9e9",
+        "CON": "177461a8aebb03450b8c25123844a27e",
+        "APS": "a4593ce89f817e69b899b697ddb0a477"
+      },
       "callees": {
         "LoD/1.07": [
           "SetEditDataField9B|0x6FA852E4",
@@ -17092,6 +17906,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "5ebfba1c58a73b842fbf8b62c60afeca",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -17141,6 +17966,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a4a7bc144c69a2ae3868c43f3f09e67a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "943b34fac8320b0b08fee0aa7edee089",
+        "MNE": "a75400d7692a4ea96f4413acb47cecb7",
+        "CFG": "d55acbfec3bc0a34176b90e08b74b127",
+        "PRO": "4f8f2de3e168210aff7aff3c2f22f636",
+        "CAL": "a4a7bc144c69a2ae3868c43f3f09e67a",
+        "CON": null,
+        "APS": "4d52e2cf6317b541f840f73e93b22c63"
+      },
       "callees": {
         "LoD/1.07": [
           "ConvertStringToUnicode|0x6FA851E2",
@@ -17382,6 +18218,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:fde3b3bd8cec8f6d395fb50899ec381e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "23ea56cfcbd8a177ac545061bc3f3096",
+        "MNE": "921399ec3be6e3249a5a741649befbd1",
+        "CFG": "3175e492212596ada007e9bd445800a8",
+        "PRO": "ac5406c301ba29e31daacfa53aad39a9",
+        "CAL": "fde3b3bd8cec8f6d395fb50899ec381e",
+        "CON": "42dd2886335f35fabbf891fb2170d9dc",
+        "APS": "a553a8d1f3c536d15b4af8f9d3709cc2"
+      },
       "callees": {
         "LoD/1.07": [
           "SetTimerContextHandler|0x6FA8526C",
@@ -18108,6 +18955,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a4a7bc144c69a2ae3868c43f3f09e67a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7827ee58abb91841d25e333d835b502b",
+        "MNE": "8ec2b467a5f7afeabff1cbfbf3627c74",
+        "CFG": "d1c8579c3acd48c69f3c9e71c7a3d5c2",
+        "PRO": "3f46c8c4ae302cc7aab5b91537a6c631",
+        "CAL": "a4a7bc144c69a2ae3868c43f3f09e67a",
+        "CON": null,
+        "APS": "3becbd1201230e882afb930b693b5d44"
+      },
       "callees": {
         "LoD/1.07": [
           "ConvertStringToUnicode|0x6FA851E2",
@@ -18494,6 +19352,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -18558,6 +19427,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:71b27a161c00068813517d1deab0c89c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3c13bcf0f821bae06ce98067fb1a6eac",
+        "MNE": "992fd7459f373878df5b457c2884eb4e",
+        "CFG": "626c89bf2eaf3a4ba1ba30a2559eb5c2",
+        "PRO": "2161eb560da152875f28f226a13ac225",
+        "CAL": "71b27a161c00068813517d1deab0c89c",
+        "CON": "7e7587f400d951fdcf531335db466ad6",
+        "APS": "d695ff8f7999bd52a1b09cd13ffee4ff"
+      },
       "callees": {
         "LoD/1.07": [
           "SetCurrentInputPointer|0x6FA852D2",
@@ -19099,6 +19979,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "ad64c2309ef3c168298aef3886755ee6",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -19163,6 +20054,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0b2da7b65c83acd87f35820cec155ac3",
+      "indexes": {
+        "EXP": null,
+        "STR": "0b2da7b65c83acd87f35820cec155ac3",
+        "API": "200154ae11728a6d58c981d316557148",
+        "MNE": "5e3f0a56d64c7599eac1c296e69499a9",
+        "CFG": "22b3cde56e594bab9208be6ed2774ee2",
+        "PRO": "52e64e5afae7d97654297d2d38aa910e",
+        "CAL": "3acbc3290462d7b0f235b8e66fdcb674",
+        "CON": "7c034cba67aa9ab3fdabf5e53eafa740",
+        "APS": "6ae430c57516c257c2a4bd14f1be23a3"
+      },
       "callees": {
         "LoD/1.07": [
           "CreateSubControl|0x6FA76510",
@@ -19850,6 +20752,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -19889,6 +20802,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HandleRealmCharacterError|0x6FA78D30"
@@ -19928,6 +20852,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -19967,6 +20902,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "af6441629daf4f85a0c18d58dc74d889",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -20036,6 +20982,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7b7dee4501f7ac35162c0e387a5f1e94",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "270ac3e6e89335c60a73a2a282ff3fd9",
+        "MNE": "797386bfced996b1c1053ea6b4072cd7",
+        "CFG": "340a1158513a9fed56eec5457cf8600e",
+        "PRO": "0c57946be1a3c6e441db5f834bcf7222",
+        "CAL": "7b7dee4501f7ac35162c0e387a5f1e94",
+        "CON": "63e663bc88dee5a69389c24f280e7794",
+        "APS": "308da50a5c6a546f14f1f85e6344e59b"
+      },
       "callees": {
         "LoD/1.07": [
           "SetEditDataField9B|0x6FA852E4",
@@ -20787,6 +21744,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "5ebfba1c58a73b842fbf8b62c60afeca",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -20821,6 +21789,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -20875,6 +21854,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ff1fa9e6eec3f22b4ad5606dfb8f5283",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fe54933971d9980ff4d05dcc486f049c",
+        "MNE": "e92927f21008e8b9172068ded2b1cc68",
+        "CFG": "141911c22becd3095149e8d69b6151db",
+        "PRO": "c6f4210a4d0e4e2fcae9e0df261d027e",
+        "CAL": "ff1fa9e6eec3f22b4ad5606dfb8f5283",
+        "CON": null,
+        "APS": "fe54933971d9980ff4d05dcc486f049c"
+      },
       "callees": {
         "LoD/1.07": [
           "toUtf|0xA",
@@ -21061,6 +22051,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:02079fb8282524720b68e1b63ddc2a63",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4bbfdea99a7e3e8d6a4bdda48a4e0e76",
+        "MNE": "86ceb38bd84bdd3a126f0b974f1609c5",
+        "CFG": "cd0cc1745eadd34cb8a558958093ee18",
+        "PRO": "ecd33cd403e813a6e86822ee2b97c735",
+        "CAL": "02079fb8282524720b68e1b63ddc2a63",
+        "CON": null,
+        "APS": "4bbfdea99a7e3e8d6a4bdda48a4e0e76"
+      },
       "callees": {
         "LoD/1.07": [
           "SetUnitBitMask|0x6FA851EE",
@@ -21312,6 +22313,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21351,6 +22363,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0"
@@ -21395,6 +22418,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21429,6 +22463,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5c22dede0f74ae8b02dbfc7aae0ebe58",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c22dede0f74ae8b02dbfc7aae0ebe58",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21468,6 +22513,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "76c7bac44762726bfd6fd3cfd5381bbc",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0"
@@ -21507,6 +22563,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0"
@@ -21551,6 +22618,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5c22dede0f74ae8b02dbfc7aae0ebe58",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c22dede0f74ae8b02dbfc7aae0ebe58",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21590,6 +22668,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5c22dede0f74ae8b02dbfc7aae0ebe58",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c22dede0f74ae8b02dbfc7aae0ebe58",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21629,6 +22718,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5c22dede0f74ae8b02dbfc7aae0ebe58",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c22dede0f74ae8b02dbfc7aae0ebe58",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "f29ca9426d5f2e6db96a0710480b476e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21668,6 +22768,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "826d19352ecde8132602cc260035efad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -21722,6 +22833,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:0932ebad60ef9ee13cf20604dc6290ad",
+      "indexes": {
+        "EXP": null,
+        "STR": "0932ebad60ef9ee13cf20604dc6290ad",
+        "API": "9ae1f5fc55800f1e88e578cc8c8f33a8",
+        "MNE": "47fa0787fd564df74e8f846f0de65e88",
+        "CFG": "ffdad1b651a6244e641a9adaeca0a6b2",
+        "PRO": "db32a47d1159171706faea7ccc86d7a1",
+        "CAL": "f322827b5c360f78f005a4100cd3e4b7",
+        "CON": "286815829278e6e3a3e9d4d9f9897f88",
+        "APS": "8681790049b9a1fc4c75d89e00695088"
+      },
       "callees": {
         "LoD/1.07": [
           "ReleasePoolAllocation|0x6FA853B6",
@@ -21996,6 +23118,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:250278c5a378f7ca205365eb0f152669",
+      "indexes": {
+        "EXP": null,
+        "STR": "250278c5a378f7ca205365eb0f152669",
+        "API": "0cbdb1fd111678aca2949d26f9a02e66",
+        "MNE": "1387541fe7087b9c06853940363f23a9",
+        "CFG": "f0c24fc7bd5cd1147e92b83e91be0713",
+        "PRO": "6efd21e287e145356dd12ed1573425ca",
+        "CAL": "052a101a230c3ddc22bbf8ff66201a19",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -22209,6 +23342,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:8a7d696d6627094f67e433d27747154d",
+      "indexes": {
+        "EXP": null,
+        "STR": "8a7d696d6627094f67e433d27747154d",
+        "API": "e2eb209a97bb4b13420a3acfdabdc71f",
+        "MNE": "cffcacb25291e77298d344fce2dc2b6e",
+        "CFG": "e9585d6ea436a61d29c159f3b883a140",
+        "PRO": "0612f8b1ae2bb44206cdcd623bea4fd6",
+        "CAL": "4a1bf9a87623279677d2032c4f4a0299",
+        "CON": "1076191bf3a18b95a1e1412fc4f1743b",
+        "APS": "cfd815dae7154859a7b4ee94a6eecd60"
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseShardArrayAllocations|0x6FA7B520",
@@ -22572,6 +23716,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "81843f8a9d43a196d85037f0b6455b81",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -22606,6 +23761,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -22675,6 +23841,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c035db8401c33f827163762f48bfc1e4",
+      "indexes": {
+        "EXP": null,
+        "STR": "c035db8401c33f827163762f48bfc1e4",
+        "API": "d9ccaab602446a52a53efb671fa5ddf7",
+        "MNE": "e58de85afb9855fa374a6c8feafad296",
+        "CFG": "070a6acf6b42eb4d04fc4c66dcd096be",
+        "PRO": "1c03d3505d7bc01e39b077d017ccf087",
+        "CAL": "6c975b28921c1589880322170c513445",
+        "CON": null,
+        "APS": "2d077b5d8d9658a46c1ec732d8f3659c"
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0",
@@ -23669,6 +24846,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:48ac1386f4b74751ff7134612685193f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0908889705e5d9cccae251b553af44bb",
+        "MNE": "d17fd3aeebaee99bd61852d9d682db0f",
+        "CFG": "f5b24b6c0d47e85c3a739c1b08ae3426",
+        "PRO": "53d08e77516a2ebfedfe6de2056b4a90",
+        "CAL": "48ac1386f4b74751ff7134612685193f",
+        "CON": null,
+        "APS": "b7f8fad15047ff6d6aeb83243bc5db85"
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0",
@@ -23875,6 +25063,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f386ebd120fc57a956a497ee9fc59c17",
+      "indexes": {
+        "EXP": null,
+        "STR": "f386ebd120fc57a956a497ee9fc59c17",
+        "API": "8b89e112f672d35a97cfa6737e288230",
+        "MNE": "13716ce778725107ac9d181570316836",
+        "CFG": "ceae323537d8cf9a4f45e5757477267a",
+        "PRO": "81b0c72883af8454f467d0365d18ddaf",
+        "CAL": "64821630ee35027618738c0551932d69",
+        "CON": "a8876a166862606b1ee9349535fdd6fd",
+        "APS": "6fb0c993c8aa0e52a67eac121fee27fd"
+      },
       "callees": {
         "LoD/1.07": [
           "PeekMessageA|0xF7",
@@ -24471,6 +25670,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:468da935422f0dac662b4d33ef8903ae",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "242d1aaa8096c62e2459d3b322ba7a85",
+        "MNE": "706d17db7883cda21a065b29cbd4a1fd",
+        "CFG": "bdde5f78b872af112e6b34f10fd11a7b",
+        "PRO": "41bb8e9734f30d4463881ec9928d0f6f",
+        "CAL": "468da935422f0dac662b4d33ef8903ae",
+        "CON": "db809705746ed1a4b542e29f0b334f84",
+        "APS": "6d09fd52a368df14e9ede610e9414621"
+      },
       "callees": {
         "LoD/1.07": [
           "wsprintfA|0xFA",
@@ -25077,6 +26287,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:df8dce2b8b147ed5e63dd63733996c6c",
+      "indexes": {
+        "EXP": null,
+        "STR": "df8dce2b8b147ed5e63dd63733996c6c",
+        "API": "6e92f7f1750b9946cde0246042122a29",
+        "MNE": "272a3056c7e76fbd2c82370ada377570",
+        "CFG": "2870b9c293231409f33cd44ee73c2660",
+        "PRO": "d591bd17b9fae21e684d2adc068282d0",
+        "CAL": "85f3db6308329f11a802b8bbc253b34b",
+        "CON": "c19cfe24aaa248ee1a6991bb1938b4ad",
+        "APS": "fbdc9233d3fbfae17636654b7b836206"
+      },
       "callees": {
         "LoD/1.07": [
           "wsprintfA|0xFA",
@@ -25486,6 +26707,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "826d19352ecde8132602cc260035efad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -25525,6 +26757,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -25564,6 +26807,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGameUI|0x6FA85070"
@@ -25618,6 +26872,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:9cf7ec384b91ac2f8de3f3ecd1ea20a8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f29fef9009f83dff13b6d1ec3dd97bed",
+        "MNE": "7dad33bf97949a98a6c6dc763d6b73bd",
+        "CFG": "f79f2f02bf6e73274ceddd9e0652e9bc",
+        "PRO": "c64fc5d627da6a379600e012428b05f5",
+        "CAL": "9cf7ec384b91ac2f8de3f3ecd1ea20a8",
+        "CON": null,
+        "APS": "7cb42f77136877e2c6fca0dee6e6b3dd"
+      },
       "callees": {
         "LoD/1.07": [
           "ConvertStringToUnicode|0x6FA851E2",
@@ -25777,6 +27042,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:742241857fe9f11c60b9597aa79bd2d4",
+      "indexes": {
+        "EXP": null,
+        "STR": "742241857fe9f11c60b9597aa79bd2d4",
+        "API": "9ae84747acbfb40d8a6d5ec325296e93",
+        "MNE": "22341aed44a84ac978d648b5ef289546",
+        "CFG": "e34134285d376a3b541b7619e6be3f5f",
+        "PRO": "d3d38e27da2ec1d4d3faae651e86e6bb",
+        "CAL": "efb41690ca69e7751601c6cf6e9988bb",
+        "CON": "0633da7691aba99edde052e74e068d56",
+        "APS": "9d1b823c5e0791b8e93cd50ba33351f5"
+      },
       "callees": {
         "LoD/1.07": [
           "strcpy|0xC",
@@ -26203,6 +27479,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:224584743b3b005bec4bc4015c444572",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "224584743b3b005bec4bc4015c444572",
+        "CFG": "f026c185df6a16c3046a1a090e04c36a",
+        "PRO": "549ce10045e9244a8c16a148d88b407d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900"
@@ -26274,6 +27561,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -26313,6 +27611,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -26352,6 +27661,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -26421,6 +27741,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:cce119f29309822eed1fdd29957c68be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e9affc388266c1f835a3e5530244db4e",
+        "MNE": "e06b479ad071d8572be9fbaf5b18f850",
+        "CFG": "2db4d21f5d3b38fb1981997abbd343c0",
+        "PRO": "a99d81e8799f18d78db6806c8dea729b",
+        "CAL": "cce119f29309822eed1fdd29957c68be",
+        "CON": "0f1b6e0d8893984d71e5f1848006744c",
+        "APS": "5888570ae60332600c67dddf26023c02"
+      },
       "callees": {
         "LoD/1.07": [
           "FadeVolumeOverDuration|0x6FA851B8",
@@ -27050,6 +28381,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27089,6 +28431,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "81843f8a9d43a196d85037f0b6455b81",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27123,6 +28476,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27157,6 +28521,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27196,6 +28571,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "826d19352ecde8132602cc260035efad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27235,6 +28621,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "826d19352ecde8132602cc260035efad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27274,6 +28671,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27338,6 +28746,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ca9ea692a5a5f46ad94114d3f6f2e429",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ad158def4e99cc030726e21777561efa",
+        "CFG": "8689fe87b863db67d6b4cbdc49e27fcb",
+        "PRO": "b46384838ee328364a2dc4e1119c89a0",
+        "CAL": "ca9ea692a5a5f46ad94114d3f6f2e429",
+        "CON": "fc0102f36cd00bee9ec8a2367c1abfd5",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCursorPos|0xF6",
@@ -27632,6 +29051,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27666,6 +29096,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -27720,6 +29161,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5ecd362e7284bc3472aafdd16edf1f70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1a426c38262c7db3a858c27cbde19958",
+        "MNE": "3be454a2071e7520600cd89b78256581",
+        "CFG": "122209121fd91086deed860ada1e01d7",
+        "PRO": "b7ee11f518a783fd72da9b62382f493f",
+        "CAL": "5ecd362e7284bc3472aafdd16edf1f70",
+        "CON": "d1105648cf6867c4af3252ad9444297a",
+        "APS": "91c8569b58d9636a029a9072d94dd10d"
+      },
       "callees": {
         "LoD/1.07": [
           "strcpy|0xC",
@@ -27996,6 +29448,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28035,6 +29498,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28074,6 +29548,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:53224de47ca3ddd9d3a49a520d4eef00",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "53224de47ca3ddd9d3a49a520d4eef00",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StopMessageLoop|0x6FA851BE"
@@ -28113,6 +29598,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28152,6 +29648,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28191,6 +29698,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:851ca71dbdae075cf41f9c75fff3f296",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "851ca71dbdae075cf41f9c75fff3f296",
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "NET_StartClientReceiveThread|0x6FA8516A"
@@ -28235,6 +29753,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28274,6 +29803,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "af6441629daf4f85a0c18d58dc74d889",
+        "PRO": "32d833f348ce377c8cc3291cc5202137",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -28323,6 +29863,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a5a29029fd91b9ede81190a4ad1fece3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a496890b5e5249085b706e84fe23532e",
+        "MNE": "2c248cc1b5249886c8fc038259abcfaa",
+        "CFG": "d2010082e3300f73a7adc1afa9656659",
+        "PRO": "f24e445f70a6a3da516bc7ed695e1336",
+        "CAL": "a5a29029fd91b9ede81190a4ad1fece3",
+        "CON": "f2ab6602d846702df13691bd358713d3",
+        "APS": "ce54e9daf2b9ce4205277d606a9ae934"
+      },
       "callees": {
         "LoD/1.07": [
           "TextBoxAddTextWithDefaults|0x6FA85218",
@@ -28638,6 +30189,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5fced009faf8bfb9b0dde13a5b7f94f8",
+      "indexes": {
+        "EXP": null,
+        "STR": "5fced009faf8bfb9b0dde13a5b7f94f8",
+        "API": "bc88e9a0a23d02576771a39d2a3d0ded",
+        "MNE": "7b3799fed59be40174feeb1562933d2d",
+        "CFG": "0cf974266bcbdfece2cea75339d0cfb8",
+        "PRO": "7af373bed89d24d038d68e30dd4f2dfa",
+        "CAL": "e524176de459b4a1c1027198b87701f1",
+        "CON": "03b5243f4dd13f5bab3f0d4cae944e21",
+        "APS": "9434c9c56d4d2af9ed08cd7c1fa5a412"
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGameUI|0x6FA85070",
@@ -29069,6 +30631,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "748c718a4762cc79d51b6e6c758feb3d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateUIElementsOnTextChange|0x6FA79EF0"
@@ -29180,6 +30753,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:1de091de38a0c8104999bec46fd52d0f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1de091de38a0c8104999bec46fd52d0f",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "d3a05c66c0b191c8779b87996852b071",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -29234,6 +30818,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cae933a34f363037a05c2a429222f220",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cae933a34f363037a05c2a429222f220",
+        "CFG": "9e70edac10063de81d0c381a1a2e2b83",
+        "PRO": "8de8ad1205b81b1573582fd480d9b5c3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0"
@@ -29373,6 +30968,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4fa2f78d56b6efbb0e6c33e732d9124f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d5313d382717aa31e2ad5adc0c0a2dba",
+        "MNE": "ccd223014f1c95117d3979a400b0b90f",
+        "CFG": "a92a89c1f00f97da251e9c8811c8a2f2",
+        "PRO": "f638adb126cd5cc96eeed98332443baa",
+        "CAL": "4fa2f78d56b6efbb0e6c33e732d9124f",
+        "CON": "d43948509180aa13d8245a5aa7098435",
+        "APS": "7120f899845809d2a890ab955ce681e5"
+      },
       "callees": {
         "LoD/1.07": [
           "wsprintfA|0xFA",
@@ -29791,6 +31397,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1d595bb7eefe8b20be0cdef32123aa61",
+      "indexes": {
+        "EXP": null,
+        "STR": "1d595bb7eefe8b20be0cdef32123aa61",
+        "API": "41d0fe4bbca59c3c65cd4e06d6642ebf",
+        "MNE": "dcef1fabe158a0722e6aa1066ad4be61",
+        "CFG": "f7edebcf1eb60fab227c940934caa0c7",
+        "PRO": "fa3c23b22f596a3c7ea73b422da1c263",
+        "CAL": "18d779423d1cf0235096090221296b88",
+        "CON": "c92d7b6d460b5ac2118ff63533f1cee7",
+        "APS": "4e622089abb94bb0b51fcc6a3b2caa01"
+      },
       "callees": {
         "LoD/1.07": [
           "BinkBufferGetError|0x6FA72980",
@@ -30219,6 +31836,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30258,6 +31886,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30297,6 +31936,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30331,6 +31981,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGameMenus|0x6FA77BB0"
@@ -30370,6 +32031,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30404,6 +32076,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30443,6 +32126,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c5da5bb06b80a3e11870a534f7ce361d",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -30477,6 +32171,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9a61880c017be62a40eb11ac6850881",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9a61880c017be62a40eb11ac6850881",
+        "CFG": "3796fd2dcfec66c384286999a9ed68be",
+        "PRO": "e19e31124392e42cce51062db314af55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110"
@@ -30531,6 +32236,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:bee7663d531f16b14430737b29fd3e8e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "41f70d387054e336172efb7424ecd197",
+        "MNE": "0ad1f3b30b6930055578777eecaf97f1",
+        "CFG": "1a3323e4845613ac3dbca4dc00dcaf4c",
+        "PRO": "3c37c95f46b38603b8fcce6118535205",
+        "CAL": "bee7663d531f16b14430737b29fd3e8e",
+        "CON": null,
+        "APS": "41f70d387054e336172efb7424ecd197"
+      },
       "callees": {
         "LoD/1.07": [
           "WaitForSingleObject|0xC3",
@@ -30692,6 +32408,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ff2bea10041cceb054dd6417bc70e8e7",
+      "indexes": {
+        "EXP": null,
+        "STR": "ff2bea10041cceb054dd6417bc70e8e7",
+        "API": "b09c45d2da14c5b239f7bc74d7e76808",
+        "MNE": "81f7121f4219d28b7c1a9c5fa98dd1ed",
+        "CFG": "3cc306045879d87be36f1fff7736a8ed",
+        "PRO": "b1ef317eecbe9d69ad07eb838662fdbc",
+        "CAL": "fbe436464b4c82d2b815ded74191d4af",
+        "CON": "ef166708be1e59ac9a86d67bfb08b4ec",
+        "APS": "38686eba25c571ca897e9d3e20472a24"
+      },
       "callees": {
         "LoD/1.07": [
           "DispatchPendingControlHandlers|0x6FA76560",
@@ -31043,6 +32770,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -31082,6 +32820,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -31151,6 +32900,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:d0a5c22af621ee582beefa5bad6bb5ea",
+      "indexes": {
+        "EXP": null,
+        "STR": "d0a5c22af621ee582beefa5bad6bb5ea",
+        "API": "2ab60a50224977eb1211d015f6ba0e8d",
+        "MNE": "eb17f45f4f934d573c480da48291844c",
+        "CFG": "2488f0b0a049c6aaeab217aa394014c0",
+        "PRO": "a4f53c42889a2f8702f460362c428057",
+        "CAL": "3176682fed4422b4a82253f070a5b218",
+        "CON": null,
+        "APS": "977342dde345445238042ca4927f30e5"
+      },
       "callees": {
         "LoD/1.07": [
           "CheckExpansionMpqExists|0x6FA853B0",
@@ -32080,6 +33840,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "089871ae8c1a222b27782151027f1ddc",
+        "PRO": "8b4c4335ad8721509c5753b09fd3e773",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -32134,6 +33905,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:2b93282bb8f4cdf7e711a2d287e45eaa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6f834f357a7881e28ebf1fa63870bea6",
+        "MNE": "3c539afe60f2058afb37ed2d8ec8fd09",
+        "CFG": "ea3a5b8cb0b031f36738a8d2dd16dea5",
+        "PRO": "91134edb5339c9b8c46fe4976ab43e7f",
+        "CAL": "2b93282bb8f4cdf7e711a2d287e45eaa",
+        "CON": "935f6f158a2c91d6d00d76087f08ea18",
+        "APS": "dab5d363d0e6abaab688373d0a642b4f"
+      },
       "callees": {
         "LoD/1.07": [
           "ReportError|0x6FA854FB",
@@ -32428,6 +34210,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:bd503eadd9d2411fe81fc43b4f699d99",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "bd503eadd9d2411fe81fc43b4f699d99",
+        "MNE": "bf3e94ec5c9a19acbcf9280553ba1fb3",
+        "CFG": "2d152734d24c4d2d4c30a09017bbba37",
+        "PRO": "fa424c5ef980d783b7aebd4caabad9da",
+        "CAL": null,
+        "CON": "c81e4412b5685caf415012a4b4fba207",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetLanguageLocaleId|0x6FA850E0"
@@ -32623,6 +34416,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:ca5144855815641448bef6afa6df39c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ca5144855815641448bef6afa6df39c0",
+        "MNE": "53a4e33e5c2901237f2f932074e71ee0",
+        "CFG": "a9ea2f0dfb9df0138f2d049821d909e2",
+        "PRO": "cb475bc6a2f0e7775702fe5cd920e6a9",
+        "CAL": null,
+        "CON": "0edf923b48f74ad51fa67a4b8d0f9ba6",
+        "APS": "ca5144855815641448bef6afa6df39c0"
+      },
       "callees": {
         "LoD/1.07": [
           "EncodeVarInt2Byte|0x6FA85410"
@@ -32745,6 +34549,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:07c91129d1827ff4a9259e0f0d611786",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "07c91129d1827ff4a9259e0f0d611786",
+        "CFG": "5be2414111aeb191ee44737d1f0d034b",
+        "PRO": "4236e4134a6e33200aaa6ae287d0af1f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessGameStateTransition|0x6FA81800",
@@ -32925,6 +34740,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:753b29ebd909c6e963b36cdbc2e36600",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "91df0a2841325cc8bd183a69be5c544d",
+        "MNE": "2a70d306435c2f62ac773074fb8f9c9c",
+        "CFG": "abe4c7d88332358761696b835bb714b0",
+        "PRO": "e68d65c0c06233ddc403a3b5f2a3cd90",
+        "CAL": "753b29ebd909c6e963b36cdbc2e36600",
+        "CON": "7968984735097e9c7350a1f7b81d79b3",
+        "APS": "bad9af154fc335c2c0b65af3b29c9705"
+      },
       "callees": {
         "LoD/1.07": [
           "WriteFileWrapper|0x6FA85416",
@@ -33387,6 +35213,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:7c35a393d58dc43eed2fa0f60999b175",
+      "indexes": {
+        "EXP": null,
+        "STR": "7c35a393d58dc43eed2fa0f60999b175",
+        "API": "e8a8ac3ff6d85cf0fa89f33622436a1a",
+        "MNE": "90e1754a216441822a62223a5728a522",
+        "CFG": "515862ccf24431eedf4e430faa8a4a64",
+        "PRO": "2ad454d7e97931b374cc810221c90506",
+        "CAL": "0766433f64d3a563d5147229081fef33",
+        "CON": "466e50de8f95d7f35bcdf57889af933d",
+        "APS": "8d8d5e89bd7c7a3b9c4e0a80097b1e3e"
+      },
       "callees": {
         "LoD/1.07": [
           "SStrCopy|0x6FA85446",
@@ -33992,6 +35829,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "08243666f926aa4e5b884b8ef1fc3b93",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -34056,6 +35904,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:af46f40b25fe8d22fd0fa684e82677dd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a964cbacbd6f02a0f9860dc9f46042db",
+        "MNE": "472129cbac2aace95cad67a995bff4be",
+        "CFG": "c2b9527357bd2a2a745949c1eee42568",
+        "PRO": "27d68233ca5935e7e5b22198a4e9de15",
+        "CAL": "af46f40b25fe8d22fd0fa684e82677dd",
+        "CON": "5e23bf3cc8a6a90ba35e366f4ed62a58",
+        "APS": "81e3b030da193dc073c6e59209755421"
+      },
       "callees": {
         "LoD/1.07": [
           "ReadStreamLocked|0x6FA85A03",
@@ -34633,6 +36492,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:6d267f7766c6a24a0568199aee800bc1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ae00b7c04be61f51b7adcacc8ab2456f",
+        "MNE": "6dbb76b523f283b9b7ac86ce8199cd52",
+        "CFG": "bc775b57553a134a47c160659f53604c",
+        "PRO": "cd63933ced08323ceeaf9727a7a81e62",
+        "CAL": "6d267f7766c6a24a0568199aee800bc1",
+        "CON": "0a16cba008d29643907dd7a9ad537c9f",
+        "APS": "99bcd5be71071254cc4ba4c26553f5b7"
+      },
       "callees": {
         "LoD/1.07": [
           "ReadFileWrapper|0x6FA853E0",
@@ -34757,6 +36627,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:bf23bb91e57970b91f475fab3ca6b8a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c090e2612f1b2a95044c5bdd1a25fd81",
+        "CFG": "bb48798e1c205e56982ad7489aece51c",
+        "PRO": "9a12f47c0dbc375459d8a777609db6eb",
+        "CAL": "bf23bb91e57970b91f475fab3ca6b8a0",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeLocaleSpecificData|0x6FA84970",
@@ -35011,6 +36892,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "34a590a286f76363dbee009d457d988c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameState|0x6FA75A80",
@@ -35182,6 +37074,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "2fd0e246150af0f4349fb7160c32c774",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeButtonText|0x6FA7F9F0"
@@ -35340,6 +37243,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "0c4624a844b81560de098425a618e127",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7f510|0x6FA7F510"
@@ -35487,6 +37401,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "6793a704c974ed49dc8b1adc43c338cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -35689,6 +37614,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "a5b64acf3647827c47cce4faf1e6f139",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -35921,6 +37857,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "f93f4ffe9e637235a532ebf15e9cefa3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -36132,6 +38079,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "f654280ce6730412a851904701a325cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -36294,6 +38252,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "b985b29b6acab84f4ad4a8743490e007",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -36454,6 +38423,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "391273a9739ac4aaf205d4b6e6a372c4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeLocaleSpecificData|0x6FA84970"
@@ -36632,6 +38612,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "4b78bb5d3d4736fc639127dc3d456170",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -36826,6 +38817,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10046",
+      "indexes": {
+        "EXP": "10046",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "04486a0c94b70b6b1cea84a5e19eece5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -37023,6 +39025,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10056",
+      "indexes": {
+        "EXP": "10056",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "aa6f0994317fcde024a7d4d4659cabf1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa751a0|0x6FA751A0"
@@ -37204,6 +39217,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10058",
+      "indexes": {
+        "EXP": "10058",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "7a792482850228a4a6804ccbab1cc88f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa751a0|0x6FA751A0"
@@ -37379,6 +39403,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10057",
+      "indexes": {
+        "EXP": "10057",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "bc8b49421a8064ab682bfa1904b812e2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa751a0|0x6FA751A0"
@@ -37549,6 +39584,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10003",
+      "indexes": {
+        "EXP": "10003",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "bb4bf920fccb784db2608c840363d4b2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleMessageLoopShutdown|0x6FA76420",
@@ -37721,6 +39767,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10028",
+      "indexes": {
+        "EXP": "10028",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "5fdfabee266f1bd9ad438b9aeef84ad2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00",
@@ -37958,6 +40015,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10002",
+      "indexes": {
+        "EXP": "10002",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "89a745db2437a021582a1d18b1580948",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -38129,6 +40197,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10030",
+      "indexes": {
+        "EXP": "10030",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "d855fdffcc5dca1f890cc2911d5c06dd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa770b0|0x6FA770B0",
@@ -38388,6 +40467,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10031",
+      "indexes": {
+        "EXP": "10031",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "5f9f9beaacba523657cb8e45eefd3ad1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7e510|0x6FA7E510"
@@ -38538,6 +40628,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10032",
+      "indexes": {
+        "EXP": "10032",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "3e0fa4683d97068e9ac116ab40974ac6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76400"
@@ -38683,6 +40784,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10060",
+      "indexes": {
+        "EXP": "10060",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "e81faa9d2ee3a1a9f44756e890c3c1d2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76440"
@@ -38828,6 +40940,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10061",
+      "indexes": {
+        "EXP": "10061",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "e8034f1cd6c231dfeab9e61b63aba466",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76440"
@@ -38973,6 +41096,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10021",
+      "indexes": {
+        "EXP": "10021",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "08ad83d48608045113c32e66db90b7f6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa806a0|0x6FA806A0"
@@ -39140,6 +41274,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10062",
+      "indexes": {
+        "EXP": "10062",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "fd8545b8c78a8d3e543a76fe282713bf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeBnetLoginControls|0x6FA808B0"
@@ -39302,6 +41447,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10009",
+      "indexes": {
+        "EXP": "10009",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "7305aaed98b82def4995912c464ab578",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0"
@@ -39450,6 +41606,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10008",
+      "indexes": {
+        "EXP": "10008",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "75e403de3a9a18a32c8fb526da2c58fb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessCharacterCreation|0x6FA81F10"
@@ -39650,6 +41817,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10055",
+      "indexes": {
+        "EXP": "10055",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "6f335951ffafbaa170d81b4a352aeb2a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "WaitForGameResourceReady|0x6FA83A00",
@@ -39840,6 +42018,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10000",
+      "indexes": {
+        "EXP": "10000",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "fe7055924043cc990aa37db3b855bd51",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLoginSequence|0x6FA83A50"
@@ -40016,6 +42205,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "6bd37bcf96199ab0bad8441eef9e33c0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa799a0|0x6FA799A0"
@@ -40197,6 +42397,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "2d5b8c8f6683c50bdf165631893b9872",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "StartClientReceiveHandler|0x6FA80150"
@@ -40401,6 +42612,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "5870846ccfbb117946a9835d9678c46b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa801b0|0x6FA801B0"
@@ -40608,6 +42830,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "e0761cff2eb797ca900f61ebfc78e4fa",
+        "PRO": "7208031849d9f698954c7204bd6332de",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa801b0|0x6FA801B0"
@@ -40793,6 +43026,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "33ee8f832adfb1f63c8ccae3ff863ded",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndState|0x6FA7CCD0",
@@ -40994,6 +43238,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "8ed22cf2d2b2b1274e8a11826a8fcc84",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndState|0x6FA7CCD0",
@@ -41173,6 +43428,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "e3c590589c5676879e328d2076795f7b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00",
@@ -41385,6 +43651,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "4c5475f30c774b73b303da82770a44ec",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7a980|0x6FA7A980"
@@ -41531,6 +43808,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "dd530d5ca6093c9b261fa009607b4053",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -41676,6 +43964,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "47aec24cf7d8aef3d312d04afa95032f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -41865,6 +44164,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "bf98e57150f9ca92f5b41d5647058e1d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -42026,6 +44336,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "10ec90f0c334ca4c39f9d0aaa8bdefe9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -42170,6 +44491,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "4f1005e194b3e96e297c17bb0cd6a93f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameBattleNetSettingsAndObjects|0x6FA7E4F0"
@@ -42323,6 +44655,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "31d04ba40a12de0ba2a77a96ebf24dc9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameBattleNetSettingsAndObjects|0x6FA7E4F0"
@@ -42490,6 +44833,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "c3b28d1c2eeb0cc5fd45d60d629f89a0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameBattleNetSettingsAndObjects|0x6FA7E4F0"
@@ -42640,6 +44994,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "f86b89902f903eb3c5703cf73b8666ed",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -42960,6 +45325,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "df234c7e864884150cb90aa83d671122",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ConnectToBattleNet|0x6FA71230"
@@ -43185,6 +45561,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "ed5fa6ce7575d04f6bceb5485c68b101",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -43360,6 +45747,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "2e5130e7320bcf599b1bcd506c48eadd",
+        "PRO": "f7f563450122625dec2d9037c6bf456e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -43645,6 +46043,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "794423633e675a3f3e1171b3092d4f98",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -43908,6 +46317,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "83e6410b97f2b63c5bf09406785c65fc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -44271,6 +46691,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "51ea9477d5405097d77ec5c9f514664b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -44468,6 +46899,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "0ee72b7f1e3c23bfa0604ec98f0d6341",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -44716,6 +47158,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "4ef3d3c6e1e441d7275d1ad1b9068743",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ValidateCdKeyInputFields|0x6FA7A8A0",
@@ -44911,6 +47364,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "a0b9da5d5ccb73ba31c56e2cadea7c23",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameUIState|0x6FA73A90",
@@ -45137,6 +47601,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "5fd04179ef5115bffdf30cacc0e6faca",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -45330,6 +47805,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "a27adb35b9653665d0f84d5a26051c08",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -45529,6 +48015,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "16202a45940b1f704d26d153324a5051",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa72350|0x6FA72350"
@@ -45683,6 +48180,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "4e58e2af2f5564083f412b689a137f82",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7f230|0x6FA7F230",
@@ -45852,6 +48360,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "015e1c69e824188d1299c969c47a1203",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateUIElementsOnTextChange|0x6FA79EF0"
@@ -46015,6 +48534,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "dea949d79f158817f83cb8369ea93aad",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -46282,6 +48812,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "ae8a0a44b85e3f8ca11136dc3f05985a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -46440,6 +48981,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
+        "PRO": "09e0e1224a1cd7564f80c054ab185ff9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0"
@@ -46595,6 +49147,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "c837b86f3f6d5628e850768aebefac64",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -46749,6 +49312,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "264a128dc8eb21bd80ee4b5e9fb62cfd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -46913,6 +49487,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "f838d38cdf046ae671a4d94e7c54e181",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateExpansionUnitDisplay|0x6FA729E0",
@@ -47089,6 +49674,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "285139c2078058c0d539aa782b2ad430",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -47251,6 +49847,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "57976da7ee0b6bb32cb0d472e6c94f8b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -47414,6 +50021,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "e55f07902e6734855a80189cac75ebe9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -47574,6 +50192,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
+        "PRO": "542f04ccb9a7ad9ccc11c3924a211ead",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -47733,6 +50362,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "f85fd9d5afa27ac4486fd7e15db311fd",
+        "PRO": "4c7dea63ec0266ed9c3f5313316cd6a9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -47922,6 +50562,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "1fc82377c91a8efa79fa30d92a9562a4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa74cf0|0x6FA74CF0",
@@ -48110,6 +50761,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "8b73c1d53ada95cba3ddabb22682a9ea",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa74cf0|0x6FA74CF0"
@@ -48273,6 +50935,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "275889c812d36eceec0510e5984b855d",
+        "PRO": "9f62b4abbb50aac9a35b447dc1b30db3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa751a0|0x6FA751A0"
@@ -48434,6 +51107,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "aec14838f2a5ebe5475ca685ad3f311f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndRecreateObjects|0x6FA78730",
@@ -48603,6 +51287,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "c7b470700683ab2773ab81f2f1b4ad69",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndRecreateObjects|0x6FA78730",
@@ -48780,6 +51475,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "fccc198f0b3309da2114f6da50fc0491",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameplayScreen|0x6FA75560"
@@ -48944,6 +51650,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "0a93e3c770dbed5228813d7d31d7e11c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameplayScreen|0x6FA75560"
@@ -49097,6 +51814,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "faa606bbeb4dc10f07e10f74f45f115a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameplayScreen|0x6FA75560"
@@ -49277,6 +52005,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "f0428cf00a7cf03c31fc4566175a8075",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameplayScreen|0x6FA75560"
@@ -49439,6 +52178,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "1bbc5eb5736135409287d4ee6a7b2a8b",
+        "PRO": "018de8cd1f0936ccd80c75aef0dac395",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameState|0x6FA75A80"
@@ -49596,6 +52346,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "83a3a6d7069cfad46ac6e4712f19648f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndState|0x6FA7CCD0",
@@ -49845,6 +52606,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "ec501427055d09bdbdc913cbc5641b64",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndState|0x6FA7CCD0",
@@ -50039,6 +52811,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "c82ca0881af4f8c744704ef7ba46db87",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -50329,6 +53112,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "0cbbb29e4c426bc2ac337c4e3d1bab7c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DispatchPendingControlHandlers|0x6FA76560",
@@ -50677,6 +53471,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "136ad6a6b48b164897f3436de33bfab6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndState|0x6FA7CCD0",
@@ -50860,6 +53665,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "153e615ccd8beeb1726dac6187e433fb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameResourcesAndTextData|0x6FA77AF0",
@@ -51036,6 +53852,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "df008bb60fbc6f2ba45ddda047f8d569",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameResourcesAndTextData|0x6FA77AF0",
@@ -51211,6 +54038,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "754955fb90aa76cd6e2bfee77516a795",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeBnetLoginUI|0x6FA77890"
@@ -51357,6 +54195,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "48abc0a7d7a676c2cf6ea3d8a964500d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameMenus|0x6FA77BB0"
@@ -51538,6 +54387,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "6a1f7ed4deb55f4304cd9d68e0de13dc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -51725,6 +54585,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "71174d536d8a1a66665021fca33594fe",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -51906,6 +54777,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "0ffae75dd16e2d675b7ea5172a5b6d19",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -52100,6 +54982,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "3b27cfac36279f292b54aeed3b16c9cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -52278,6 +55171,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "43a7b6ee2f2216990145658c4b9d7ab0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -52440,6 +55344,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "a7d8a9e04cd5bb69a55c8833e0a7dbe7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleCdKeyErrorReconnect|0x6FA78110",
@@ -52610,6 +55525,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "0fb136514644fa2d3584641f03939733",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameUIAndRecreateObjects|0x6FA78730",
@@ -52772,6 +55698,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "8786964808e9097ec60c6cc664463976",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleBattleNetLoginDialog|0x6FA79290"
@@ -52937,6 +55874,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "3e72dce170fac82a7f0afd3203fd1cf6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleBattleNetLoginDialog|0x6FA79290"
@@ -53091,6 +56039,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "ac87b5a29be149ac3529add86e3d4d05",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleBattleNetLoginDialog|0x6FA79290"
@@ -53241,6 +56200,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "194a52ea722a3f0271d892258ff6291f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -53426,6 +56396,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "5bdb98ee3820314b97f94e270fd29ad8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa82db0|0x6FA82DB0"
@@ -53588,6 +56569,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "4c8de068c30e1b4eb7335ecb48f136b6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ValidateCdKeyInputFields|0x6FA7A8A0",
@@ -53809,6 +56801,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "d50695c2947ca2e7261d6cb110617f55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7a980|0x6FA7A980"
@@ -53968,6 +56971,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "306594c1cc1f1bd44a87135bb866f4f6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7a980|0x6FA7A980"
@@ -54189,6 +57203,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "5ccc1d1556b31baf8552b1b5549376f0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7a980|0x6FA7A980"
@@ -54345,6 +57370,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "7a7472a1603a2bfa0fcef2ca52629f47",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -54498,6 +57534,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "b1b2960ee303d49ef71e3b5430c49890",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -54632,6 +57679,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "c910a2d10be59459281003cb28ddd1a2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00",
@@ -54857,6 +57915,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "220a1d58eba36f5f086aac8da1270375",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00",
@@ -55029,6 +58098,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "c04510aab3af797e361e110df687c53f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -55217,6 +58297,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "2770e6e6f604f64d778c2b07cfc55621",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -55347,6 +58438,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "3fcd0212ca4697e5bbbd35a296b485ee",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -55550,6 +58652,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "5b14cc1a1bb48e63f904701c29af6034",
+        "PRO": "e3aab3bc82d8788c9f249179ea914c6a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LoadCharacterSelectResources|0x6FA84050",
@@ -55709,6 +58822,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "ebfc425c15b7c817db988363a8db4eb1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ReleaseControlUIResources|0x6FA7C770"
@@ -55894,6 +59018,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
+        "PRO": "fcfca0c7711253300bdbfa3c72e9f987",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeButtonText|0x6FA7F9F0",
@@ -56044,6 +59179,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "6e92b368fb95616717d190ce1bc96fe0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76400"
@@ -56189,6 +59335,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "5b882eb2f930ec165e167563b86cdb87",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7f510|0x6FA7F510"
@@ -56382,6 +59539,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "2138801c4b95fb82444f6c2690770231",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7fe20|0x6FA7FE20"
@@ -56527,6 +59695,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "becbd84b8bea3332c3eac3147376d834",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -56800,6 +59979,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "4dd9fc2d8caf6a960dcb116005983bf1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessBattleNetLogin|0x6FA80AE0",
@@ -56972,6 +60162,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "a2c39219ba5b3d65fc26b4bd1f4c66e8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -57340,6 +60541,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "7000f200405be6e12bf2604f12157300",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ReleaseShardArrayAllocations|0x6FA7B520",
@@ -57553,6 +60765,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "5a76f5468064dec037fdbbcc80fc42fa",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LoadAndProcessSaveFile|0x6FA84DA0",
@@ -57755,6 +60978,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "fd1e801a091da492d47a08238fc039a4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0"
@@ -57904,6 +61138,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7789cb5a72983cdd92dc1546cb9bc8e7",
+        "PRO": "eaaa51b374b628fad9f006279fb6451a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -58082,6 +61327,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "803f34746d7aed7788b9662735c5e05f",
+        "PRO": "a45aa36aca462b08e4e143733a37e5ef",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ValidateAndDisplayLocalIPAddress|0x6FA78BE0",
@@ -58241,6 +61497,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "9d890b1d82a4601f68d3a634e8b7c9dd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleBattleNetLoginDialog|0x6FA79290"
@@ -58395,6 +61662,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "c45d650339c24ffb8d900c27dbb8c139",
+        "PRO": "05d172b3ec6efee80d4e57f8c471113b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameSaveFlags|0x6FA84FB0",
@@ -58570,6 +61848,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "1bbc5eb5736135409287d4ee6a7b2a8b",
+        "PRO": "886075ba212234c7c37280809d989c94",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameSaveFlags|0x6FA84FB0",
@@ -58729,6 +62018,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "3c7ed92a4ab0ac9c7e273fe71d89480b",
+        "PRO": "8124587856b4e0c8d64c3d2342d5535c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameSaveFlags|0x6FA84FB0",
@@ -58910,6 +62210,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "eec6ca4cf3d2145d149f932a693822b3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -59099,6 +62410,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "c45d650339c24ffb8d900c27dbb8c139",
+        "PRO": "79a8b89fefeeb3c5b1f33fb4e1a75d49",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -59253,6 +62575,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "757c15a88a3ebfa9dcb14dc2b7339c82",
+        "PRO": "9df5f06b4eec40345f4ac77f3fce2a60",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900"
@@ -59401,6 +62734,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "b750ef5b2af34043af0232a372042578",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900"
@@ -59549,6 +62893,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8ffa2a1dc4d9ee6dfed4979b0a09d313",
+        "PRO": "b29413afd5f981c1adefadf4976092eb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900"
@@ -59697,6 +63052,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "8e99c8e2fec49adedcbd00876268fa89",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa801b0|0x6FA801B0"
@@ -59880,6 +63246,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7eec0ba867a51551cdb706cf192de1b2",
+        "PRO": "24b1de3890eee404cb6d3aff2c6d704f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LoadAndProcessSaveFile|0x6FA84DA0",
@@ -60039,6 +63416,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "97ebe720db9bc1b4bc7aac451a4abe63",
+        "PRO": "7c0d77e19b1c2f9ea7398a589b6a0ed9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameSaveFlags|0x6FA84FB0",
@@ -60198,6 +63586,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "41e61d53ef9e2c4f46a899e74a499150",
+        "PRO": "1bf85fc55a35694f3f72b810aef715d3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessAndDeleteFiles|0x6FA84C20"
@@ -60346,6 +63745,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "2e5130e7320bcf599b1bcd506c48eadd",
+        "PRO": "5ea2c33bfa931c093cda01c74547a55d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameSaveFlags|0x6FA84FB0"
@@ -60494,6 +63904,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8890ef82b2d5adc822fcd389e2d747b9",
+        "PRO": "db36af4668446e02a78a7395163fd781",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ConnectToBattleNet|0x6FA71230"
@@ -60655,6 +64076,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "3ed06040f34c672438ca383e5c306e4d",
+        "PRO": "6bc120c1859847b3218bb32a0de6da86",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LoadGamePlayerData|0x6FA74FF0",
@@ -60822,6 +64254,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "f85fd9d5afa27ac4486fd7e15db311fd",
+        "PRO": "9cf121b6ba0f66d7a1e193783a71ab3e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InsertOrUpdateHashTableEntry|0x6FA71EC0"
@@ -60988,6 +64431,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "275889c812d36eceec0510e5984b855d",
+        "PRO": "e84f9e57375f06c5a4fb079aff06ce21",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LookupHashTableEntry|0x6FA71E80",
@@ -61161,6 +64615,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "2e5130e7320bcf599b1bcd506c48eadd",
+        "PRO": "d75c1bdcebd0684ac9abf01919335663",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -61398,6 +64863,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7789cb5a72983cdd92dc1546cb9bc8e7",
+        "PRO": "030b49a8d8fcdfe914ebeeae328fd78b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -61613,6 +65089,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "275889c812d36eceec0510e5984b855d",
+        "PRO": "5b87bbdf372c94b8f449d2968ebeaa10",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameState|0x6FA75A80",
@@ -61803,6 +65290,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "10cff49d5847e9d6f4eac5371981dc5e",
+        "PRO": "b2365cff81335977a60a289cfc89508c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateGameUIState|0x6FA73A90"
@@ -61963,6 +65461,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "132e8cd2a2bcd2bc01c2510de34918b9",
+        "PRO": "b41ca84cfd421cfaf8a50ce2334e904d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -62145,6 +65654,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "275889c812d36eceec0510e5984b855d",
+        "PRO": "f1a064099c4ec09c1ccb0b0fa7f63deb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCreditsDisplay|0x6FA7D900",
@@ -62310,6 +65830,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "7789cb5a72983cdd92dc1546cb9bc8e7",
+        "PRO": "3379a265d0968124652c53636cc41b18",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "HandleBattleNetLoginDialog|0x6FA79290"
@@ -62558,6 +66089,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "2e5130e7320bcf599b1bcd506c48eadd",
+        "PRO": "10fe26853249f8ef2f7e100098e3406f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7ba00|0x6FA7BA00"
@@ -62730,6 +66272,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "8890ef82b2d5adc822fcd389e2d747b9",
+        "PRO": "a76572a94c0b507be2baee07f2c49367",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessIntroVideoInitialization|0x6FA7CAE0",
@@ -62898,6 +66451,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:db5937293d2c31e47334d1efeeedd0ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "679e7391cc431bfbfb578a6a70c8d79c",
+        "CFG": "8c0b27bc3898a53c9f8142ab32fa8a84",
+        "PRO": "9c685ff411c1c436040d5d7e934df2af",
+        "CAL": "db5937293d2c31e47334d1efeeedd0ab",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamPutChar|0x6FA85D07",
@@ -63194,6 +66758,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:91b5192dddb89e963abc2be4471149da",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "91b5192dddb89e963abc2be4471149da",
+        "CFG": "f5a9d1c9bfa4d6ec79162a8bb1035352",
+        "PRO": "99fcd59e42c736bbe8d68145381de7b6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "RunConstructorArray|0x6FA855E3"
@@ -63367,6 +66942,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": "62e304a7d521240f86cfa75cc629cf4d",
+        "PRO": "84deb1a6ec54e62e694af69c4c2b3e79",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessCleanupAndExit|0x6FA8552C"
@@ -63806,6 +67392,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": "62e304a7d521240f86cfa75cc629cf4d",
+        "PRO": "c80ea614abfd3bcd1af49cec01e55660",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessCleanupAndExit|0x6FA8552C"
@@ -64030,6 +67627,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7a5e6ed384be31095abb7960c9f1d6d0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7a5e6ed384be31095abb7960c9f1d6d0",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "ece079ef0dcc93f72e43c57c565dc1c3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessCleanupAndExit|0x6FA8552C"
@@ -64199,6 +67807,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b8d4df27b43e7121ab0330de0b4bb912",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "eb17d7abe573793d4b67d9aac794697b",
+        "CFG": "80db561afa14876128d63a6e0c61dff8",
+        "PRO": "0f528340f5214cd14b16128f6f0ed6a3",
+        "CAL": "b8d4df27b43e7121ab0330de0b4bb912",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "RunConstructorArray|0x6FA855E3",
@@ -64443,6 +68062,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "8a3b8a5e3a14d682a1d9f40d120a47a8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseCriticalSectionByIndex|0x6FA8671F"
@@ -64612,6 +68242,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f1060dff4c8b86b7cd32c42f8f136fb6",
+        "CFG": "0a074b8816415288c3cc84ef0b37ed0c",
+        "PRO": "c5843f3db205987ea5094c55a1bdaf18",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGlobalConstructors|0x6FA854CE",
@@ -64738,6 +68379,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+        "CFG": "3045bd7efe0c8474877fb5b5055e4bc3",
+        "PRO": "c71205845eb17fcc2718f716924d07ee",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "GetCharacterTypeInfo|0x6FA8944D",
@@ -64943,6 +68595,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:b35d7544ccb06f0fede567c578bacd51",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "60fb4369558c571ee3e9892006835a82",
+        "CFG": "1cca209eac1c43a753e574cbe330b905",
+        "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e",
+        "CAL": null,
+        "CON": "b35d7544ccb06f0fede567c578bacd51",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "CreatePlayerGameUnit|0x6FA734B0",
@@ -65210,6 +68873,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b83338c5610ff816794a2473b0b3c2c5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "717c57b0159b58a1b85a324517f910b2",
+        "CFG": "f35e09d4ab66468e0b8cb05d792d2dda",
+        "PRO": "6f7d0885444e4ba04698d1b5558eff0e",
+        "CAL": "b83338c5610ff816794a2473b0b3c2c5",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SelectionSort|0x6FA85882",
@@ -65404,6 +69078,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:015a78a8c928b96d780d727c11d34248",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "015a78a8c928b96d780d727c11d34248",
+        "CFG": "ed0590f1344f24ca4998e44052650542",
+        "PRO": "3661967a305a72b7a98919e241099353",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SwapMemoryBytes|0x6FA858D0"
@@ -65558,6 +69243,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cf9e984c7928623a8417d89eab68ba62",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cf9e984c7928623a8417d89eab68ba62",
+        "CFG": "6dd838e672843bb7e0e7e0ea645f0de6",
+        "PRO": "aea7b698dfdc10a120ad22514aa6d762",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "QuickSortIterative|0x6FA8572E",
@@ -65705,6 +69401,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:bb214446f3671dd580056a094f5c8ba7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "26ed18b151fd5d50dc0ff3b0ba0c150f",
+        "CFG": "2b437964acb213d5dc24a7c4a77feb7b",
+        "PRO": "e00714478058ecc6edf579887e9e360c",
+        "CAL": "bb214446f3671dd580056a094f5c8ba7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ParseBindingFormatString|0x6FA86734",
@@ -66017,6 +69724,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2e78df1b9a1c671e0846f991e2340b3d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2e78df1b9a1c671e0846f991e2340b3d",
+        "CFG": "6421662e6c3a18fc9b08e1b8f44f0af6",
+        "PRO": "f7e263cfca9379eacefc74ab8548f54c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B"
@@ -66190,6 +69908,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:02f63f79ce8db59bc61e8411ac4120cf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "02f63f79ce8db59bc61e8411ac4120cf",
+        "CFG": "6421662e6c3a18fc9b08e1b8f44f0af6",
+        "PRO": "a1be8d0549d133e03ba96aae3edf146f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B"
@@ -66348,6 +70077,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c4b4d0e5fd2ad55ed8edbfbca60afde9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e9b7e334c31a0ed876fb0ca3fc54ed48",
+        "CFG": "1efca518d50b97b573bafdf5c0d347c1",
+        "PRO": "31e0aaed90076c7b6f5a3552b6af811b",
+        "CAL": "c4b4d0e5fd2ad55ed8edbfbca60afde9",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionForAddress|0x6FA8739C",
@@ -66509,6 +70249,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:871c23968ebe8b3c3fd4e55937b9feac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "eb7ebe8853ab4246d611f1ee5af2c48e",
+        "CFG": "31053cf2d7f76ac49b3563bd4c2f3011",
+        "PRO": "59cc5e5d7e9efa61c62c9b0e2b890a3a",
+        "CAL": "871c23968ebe8b3c3fd4e55937b9feac",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FlushOutputBuffer|0x6FA87662",
@@ -66746,6 +70497,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:0270b91268be3650917fd9353064218b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a9afeb361c7cab08629f02ef8cfde68",
+        "CFG": "464377d0b39bf74519236328803ff2ab",
+        "PRO": "76656ef78c966c0a469fdcb998cbb984",
+        "CAL": "0270b91268be3650917fd9353064218b",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionForAddress|0x6FA8739C",
@@ -66926,6 +70688,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:84bee937849008c1bc043a9da0799018",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8b66ec79bd5e8d193553fd8fd899d7a4",
+        "CFG": "c814073cc42cf49085f563eecdd80d3e",
+        "PRO": "ca320f3324819752d3f5247139c51196",
+        "CAL": "84bee937849008c1bc043a9da0799018",
+        "CON": "619c6a9ec39b7286469fff4380c253ff",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamOperationWrapper|0x6FA87847",
@@ -67247,6 +71020,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3ce9db5a2412f0fbc44d9217ef0c953f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4a28642e7dfb3aae049959acecb4dfbc",
+        "CFG": "fa451159b6276a2257598b91d7af2eed",
+        "PRO": "271713fcf05de584d4664523b7bb2aae",
+        "CAL": "3ce9db5a2412f0fbc44d9217ef0c953f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateStreamStructure|0x6FA87F35",
@@ -67421,6 +71205,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d389df029fb093a917ec0f7dbee0373a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d389df029fb093a917ec0f7dbee0373a",
+        "CFG": "be5c029724a5571c676ff2141bca81e6",
+        "PRO": "5ca3df7fa82c87bcef622a9bfda74dc2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "OpenFileWithPermissions|0x6FA85B1A"
@@ -67636,6 +71431,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4bca74c0bf0eb7e3b5e1cc3e37697f52",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "966ae3d3931d4719f3b38eb61e43e94b",
+        "CFG": "ee90b4cefe7c0f68808d105fc701a39a",
+        "PRO": "c7f6bcaffde909e09efe97d716ca5c31",
+        "CAL": "4bca74c0bf0eb7e3b5e1cc3e37697f52",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CleanupMemoryAllocations|0x6FA889A3",
@@ -67899,6 +71705,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:74f7697b2a51b639c17d58c94b17f995",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bafce56213ce6cb4a7088c594df572ea",
+        "CFG": "ab90d3962381abafa51ddc8f28a5a4cf",
+        "PRO": "3ff0ec10389d92e20dc3ad6e9f1601ba",
+        "CAL": "74f7697b2a51b639c17d58c94b17f995",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ValidateBinkInstallLocation|0x6FA76310",
@@ -68058,6 +71875,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ec95479fbc9d5a35228cd8819b6daa86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bed936c73fe1864937225129603e250c",
+        "CFG": "e052deb868eede8640e4f4e9bdaa764e",
+        "PRO": "11a6c218a227fb7408347b042184ca8d",
+        "CAL": "ec95479fbc9d5a35228cd8819b6daa86",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CleanupConsoleOutput|0x6FA88A4B",
@@ -68376,6 +72204,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:fb2f686c1e475a69255533f363d4d10c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "28393cf54a38bf1465f92d01d5d4df21",
+        "CFG": "d78e3c18d8a4fdc5f6b86af2634fd474",
+        "PRO": "2dd741253078f7a732ed8630495923e2",
+        "CAL": "fb2f686c1e475a69255533f363d4d10c",
+        "CON": "b014b2a772a135bdc477c4523503f724",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamOperationWrapper|0x6FA88CAF",
@@ -68754,6 +72593,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b7a52aed3655c7d65807498f610c8ff8",
+      "indexes": {
+        "EXP": null,
+        "STR": "b7a52aed3655c7d65807498f610c8ff8",
+        "API": null,
+        "MNE": "830d7b29e9487ecff91238aa9e07f370",
+        "CFG": "732ca75ab8291bff453df7d941e0dfcf",
+        "PRO": "d7176e19717b7668afc6e00a248c322d",
+        "CAL": "6c84e6d588ffea444414784107d17a49",
+        "CON": "be78bac811ae08fa1f25fa108883b7de",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BufferedPutChar|0x6FA86560",
@@ -69300,6 +73150,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:48de6fa61a4bf40c36c288aa452eb3ad",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "48de6fa61a4bf40c36c288aa452eb3ad",
+        "CFG": "3cbd6b5054c9da078b239694cde65ed2",
+        "PRO": "9580d6b501f3a48d78056fe30402a66c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamPutChar|0x6FA85D07"
@@ -69459,6 +73320,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f7657de81ac8d5d29214c35b4fa6fd17",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f7657de81ac8d5d29214c35b4fa6fd17",
+        "CFG": "8e22bf261d6c22decd5250956efa953c",
+        "PRO": "d92fe337da592cb3df9de5374aad66b0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BufferedPutChar|0x6FA86560"
@@ -69626,6 +73498,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:afc6bf96e31e41127728e4d6585e174f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "afc6bf96e31e41127728e4d6585e174f",
+        "CFG": "ebfe68cf6e140c5f15a4f90bfa3690a1",
+        "PRO": "cf86e2502a6a797a8136b58db13a31c8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BufferedPutChar|0x6FA86560"
@@ -69848,6 +73731,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:57ac66118a20c90490ffe62af18c6499",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "57ac66118a20c90490ffe62af18c6499",
+        "CFG": "c371d337e4f9250100367cad37d2ca5e",
+        "PRO": "ab96d2830e78afe11f50ca887bc958df",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FormatStringProcessor|0x6FA85E1F"
@@ -69962,6 +73856,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9696a1fa07b46e8a513683c75ff67fe3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9696a1fa07b46e8a513683c75ff67fe3",
+        "CFG": "c84867d1e158b63223854f13d56784ba",
+        "PRO": "1bd2a61f8f66509817a46d82dc3edf62",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FormatStringProcessor|0x6FA85E1F"
@@ -70076,6 +73981,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:42dbe7ade19c5b9c81e427c9077693e7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "42dbe7ade19c5b9c81e427c9077693e7",
+        "CFG": "c371d337e4f9250100367cad37d2ca5e",
+        "PRO": "87d5e63bd1912c7919d7c18c836fe1f2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FormatStringProcessor|0x6FA85E1F"
@@ -70190,6 +74106,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e1bb2af96e763a0793e4aabbeb4bef2b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e1bb2af96e763a0793e4aabbeb4bef2b",
+        "CFG": "613ba5570068aae0fdd9fd09faa63853",
+        "PRO": "6f98c6a8cf4c4f0715257c52a6e27dcb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeCriticalSection|0xD0"
@@ -70372,6 +74299,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b52e9cbc9c783854a1fab83ad6e81448",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a0707ad44a579985e4c3b985375d38cb",
+        "CFG": "5a0f0097a774c1837980d929c8d848e2",
+        "PRO": "98a778b86823543efcd6868ff9e132b2",
+        "CAL": "b52e9cbc9c783854a1fab83ad6e81448",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DeleteCriticalSection|0xD1",
@@ -70586,6 +74524,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:af9ee8a32ba3ccb44049523f13188af6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5ba7875cbad7a3d5fce31ff25fd40455",
+        "CFG": "c2bf7ce91c769b6f62958e60baab3d24",
+        "PRO": "e6551b14bf2471a1cb6a0aa9c1f6f726",
+        "CAL": "af9ee8a32ba3ccb44049523f13188af6",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -70902,6 +74851,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e83d104051445238b4510431aa98563d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e83d104051445238b4510431aa98563d",
+        "CFG": "17da0a31589a76aadae8de71af4df0b2",
+        "PRO": "fabd8f7084a5ccc0678e9d08b5883a01",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LeaveCriticalSection|0xD3"
@@ -71331,6 +75291,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:68e0eeccc205d747eb408777a7dc08cf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "96b2c91f7412d0686d864eba35e81ae4",
+        "CFG": "72e62849418b44f8209379c54bb7da66",
+        "PRO": "b29e5de3dc766fcf6c0de3d28a8c2560",
+        "CAL": "68e0eeccc205d747eb408777a7dc08cf",
+        "CON": "6bf308ffd989d09098e82325ee7273f7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SkipBindingStateIterations|0x6FA871C1",
@@ -71625,6 +75596,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:aee0add5b0bd27cdd12dfdccdafd8a6d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aee0add5b0bd27cdd12dfdccdafd8a6d",
+        "CFG": "84a8fa80b9d98a08db509f5204460fee",
+        "PRO": "510881d1cd204b9c3eb935684acad756",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B"
@@ -71777,6 +75759,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e1d180103ac3aa41d411a0053bf626a2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e1d180103ac3aa41d411a0053bf626a2",
+        "CFG": "c521479e5353ac500efc269113c4cb6f",
+        "PRO": "5394dde5fb070d55c333f0923f00e8bb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReadByteFromBufferStream|0x6FA8776B"
@@ -71918,6 +75911,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c114525a4c0480a9cc4b16231f40eae1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c114525a4c0480a9cc4b16231f40eae1",
+        "CFG": "768af398f16cf64c4a94464042be45a6",
+        "PRO": "9682c9f18f1920ba782b90ef60852e8e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BufferStreamPutChar|0x6FA893DF"
@@ -72058,6 +76062,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:686fe2fe91bf8d101421cb5bfe38161b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aae47e63a283f5add4a3c70285e5db98",
+        "CFG": "77eb0c4de924a73f2db359885975bc5d",
+        "PRO": "32b881fde6f09db6d45479db3b580882",
+        "CAL": "686fe2fe91bf8d101421cb5bfe38161b",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReadByteFromBuffer|0x6FA87190",
@@ -72220,6 +76235,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2e762c1c6c457f4a0349d0f895009434",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2e762c1c6c457f4a0349d0f895009434",
+        "CFG": "955555387ef5c42bce3cb46728bb931a",
+        "PRO": "218e20f78ff67609d741b817a576974e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ScanStringWithFormat|0x6FA858FC",
@@ -72488,6 +76514,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d858691b25ff9d68f1965dc04bb2a9aa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d858691b25ff9d68f1965dc04bb2a9aa",
+        "CFG": "ab25f2d29213eefbafd2940ff51e30d7",
+        "PRO": "c8d89ad94f3c34809611625b9d2466f5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterTypeInfo|0x6FA8944D"
@@ -72745,6 +76782,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:19b86d2b659cef4a2f92dcb6f0436208",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff70d7fac2548b5958f726d1eeb33c1c",
+        "CFG": "d3896bb2d2e7062074e242e1f690866e",
+        "PRO": "11f23d64b6396c39d414253f6afebc76",
+        "CAL": "19b86d2b659cef4a2f92dcb6f0436208",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseCriticalSectionByIndex|0x6FA8671F",
@@ -73027,6 +77075,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ef3629d5e5da6d4ff5d3225b727df9ad",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2221715ad392d22929a667a9021e3f90",
+        "CFG": "280025ddca7ce227d91cbfcf459802d9",
+        "PRO": "ad659517dea36f9529987bcdfd684bbb",
+        "CAL": "ef3629d5e5da6d4ff5d3225b727df9ad",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -73285,6 +77344,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:19b86d2b659cef4a2f92dcb6f0436208",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2221715ad392d22929a667a9021e3f90",
+        "CFG": "742b2d53b1b61308579dbc81d0a90c71",
+        "PRO": "dd502956206749a747fa95c3f7719a7b",
+        "CAL": "19b86d2b659cef4a2f92dcb6f0436208",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseCriticalSectionByIndex|0x6FA8671F",
@@ -73528,6 +77598,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8d946b99f22264ad232a62b763da6e3c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "38a52ad8d9123a0ed65e4de10b1cf943",
+        "CFG": "ba4b858f85c41dd491b3d98857e824c4",
+        "PRO": "c0b946d7a9d11ed253e83481a8c19d71",
+        "CAL": "8d946b99f22264ad232a62b763da6e3c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FindMemoryDescriptorByAddress|0x6FA8979C",
@@ -73827,6 +77908,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "5d369d2a4305c0b3c02b1b09a30ff65f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReleaseCriticalSectionByIndex|0x6FA8671F"
@@ -73996,6 +78088,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b8e2968e6f114711225e1c1223a2fe5c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f69087a4d0d613e8eb1a99e63a6b0789",
+        "CFG": "176bc7b64722044d8d5721fa54953038",
+        "PRO": "102a21ba1c00f4e84cd5956f3ebd90d3",
+        "CAL": "b8e2968e6f114711225e1c1223a2fe5c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -74172,6 +78275,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a8d53406ebf5858a36f7538064ca87ac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "13d93ac20184bc58361cf8520dc0da42",
+        "CFG": "9ff4cc70c3561de937d45951321f3a42",
+        "PRO": "a46aef102919f01a9e6d753d57ac5594",
+        "CAL": "a8d53406ebf5858a36f7538064ca87ac",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CloseHandle|0xB3",
@@ -74364,6 +78478,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f38bb98de0cae7e771d97b2937aba094",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f38bb98de0cae7e771d97b2937aba094",
+        "CFG": "d2e65e886ff0bd2796b13b41ff6eb75d",
+        "PRO": "129d77d31b891c9523d1955fbefba481",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DeallocateMemory|0x6FA87440"
@@ -74618,6 +78743,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:32830e9f516d2a1357be8c107a44798f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0db91ea76f5c7c9fd0bef446c106db61",
+        "CFG": "d2aa24c1d6029073846b387992db0a6a",
+        "PRO": "c83c3df69812bfa72f71114a4eeeaec0",
+        "CAL": "32830e9f516d2a1357be8c107a44798f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FlushStreamBuffer|0x6FA8AB02",
@@ -74834,6 +78970,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4c053343a65baac58fac65c0d3534b2b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4c053343a65baac58fac65c0d3534b2b",
+        "CFG": "77eebdaa2b82cea21f6aa844dfb5ca0a",
+        "PRO": "01fe211cb8b33d65048895ab75c7b387",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamOperationWrapper|0x6FA88CAF"
@@ -75087,6 +79234,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:85c8fe3a69cb4c1f37260eaeaed9fa24",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e7b052927c73f8415c227814d8219b82",
+        "CFG": "2c2d5dc5a1aa146c1b94b9613953cc7f",
+        "PRO": "7160bff76dee2987420b9c7fd0652cad",
+        "CAL": "85c8fe3a69cb4c1f37260eaeaed9fa24",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -75255,6 +79413,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3a6e8b932e5a7d9a62fc0c9bf3fa56d5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3d46400d80fc86347a5a9a46265d9d81",
+        "CFG": "c4a7640bcc146243db504dd4a254724a",
+        "PRO": "51c8563051ea7b2f670120a42e06c854",
+        "CAL": "3a6e8b932e5a7d9a62fc0c9bf3fa56d5",
+        "CON": "904a983e690b6e9e9541a7707ae312ce",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StreamOperationWrapper|0x6FA87847",
@@ -75576,6 +79745,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ecaf7ee8206518a24ea8cbea5c497bee",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bac569fc88fbfeebd4a5205bbcce1faf",
+        "CFG": "67252c60a9c28ed07d627e77ce335ea0",
+        "PRO": "6d2810acf7d5a6315977471ef0a7ff21",
+        "CAL": "ecaf7ee8206518a24ea8cbea5c497bee",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -75764,6 +79944,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5e7a4cb2df74795bc4dac773ef6fa022",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed663ef840738cced3344cb47bf34919",
+        "CFG": "5804a049b1cb60c464531c63129b1226",
+        "PRO": "1e2c47af8b69b3be2a402fc35151752a",
+        "CAL": "5e7a4cb2df74795bc4dac773ef6fa022",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -75997,6 +80188,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bff09423b51fd121ea30afec957819f4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bff09423b51fd121ea30afec957819f4",
+        "CFG": "b8bcea0773ca2dfa689f3f8d23e7384e",
+        "PRO": "ff38c497c82643f818ac8c3950b7223d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DeallocateMemoryBlock|0x6FA897C7"
@@ -76268,6 +80470,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:4cf5ec6eb42e4797dd7680ea07eb5323",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b7da0ca67f62398ba81e5f80f1adfa49",
+        "CFG": "8a5117d12f68a889593e804b6f0852d9",
+        "PRO": "ec8dcdb316fd339cf76a39461f98ade7",
+        "CAL": null,
+        "CON": "4cf5ec6eb42e4797dd7680ea07eb5323",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "OpenFileWithModeFlags|0x6FA8AB95"
@@ -76488,6 +80701,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8564980e994b189d411a5fa7d52f4178",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "22b6fd05e1ae4204b7a816ab266e5408",
+        "CFG": "4ff2b23b8fa9927a56d95e8734b38077",
+        "PRO": "90158f753615bd78c7ba02a074e159e9",
+        "CAL": "8564980e994b189d411a5fa7d52f4178",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -76678,6 +80902,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c5d4e21df396e8d0da54370c2db986ec",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1563254ce315644019ac4e0b71caac74",
+        "CFG": "efefe04ef5813990c4d8c47926c38105",
+        "PRO": "4842477e4c266b67cf2cb93bf1fcfa52",
+        "CAL": "c5d4e21df396e8d0da54370c2db986ec",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeThreadContext|0x6FA8806F",
@@ -76860,6 +81095,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b368e6819cd54e3b523e16bcddd488c7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "83d07e3c014d31c19cf14861bc62b0a0",
+        "CFG": "9de4d9c2f2fb61c0a0e2e655bd5ac24b",
+        "PRO": "b3b26aa6f3743095f15c0aeb4fe4d2fb",
+        "CAL": "b368e6819cd54e3b523e16bcddd488c7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "TlsFree|0xDA",
@@ -77021,6 +81267,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a1900c49d3b847e69ff3bf21a94518de",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a1900c49d3b847e69ff3bf21a94518de",
+        "CFG": "c6e72eba7dc1ef447714bbf75fb7f07c",
+        "PRO": "177a19eac23eee165459cd0d26b5c493",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeThreadLocalStorage|0x6FA87FFD",
@@ -77207,6 +81464,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:250a505278982af80e8530edf0955dd4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6dad5d06763847d66c3aa4a89105e250",
+        "CFG": "af90f64c771d54f787b4efbc164c1e3e",
+        "PRO": "8ee95df679ca46cfa76fede670a0f542",
+        "CAL": "250a505278982af80e8530edf0955dd4",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeThreadContext|0x6FA8806F",
@@ -77416,6 +81684,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5a55b633285ee3a6fc5f0165e6162c99",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "17d5e4a2ea8eca0808e1116fecc65876",
+        "CFG": "6cc1e77be94c4a8be92498d05459fc86",
+        "PRO": "1cf43ade0a715e99bbd2a381c89b0a6c",
+        "CAL": "5a55b633285ee3a6fc5f0165e6162c99",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "TlsSetValue|0xD8",
@@ -77586,6 +81865,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c5849b2aedbff67fa394cbada8e6756d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1352fc0555ea3629db2c9325fd0e6c42",
+        "CFG": "8685d2304131bce58c2777c37438ec67",
+        "PRO": "27708f479cbac819e63c390e13d90a18",
+        "CAL": "c5849b2aedbff67fa394cbada8e6756d",
+        "CON": "8144748f43963252a1b766a3575188ae",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetHandleCount|0xDD",
@@ -77829,6 +82119,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b52e9cbc9c783854a1fab83ad6e81448",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b7026c232ba5b32b3521a3c7482af720",
+        "CFG": "1aa2e58c5c710538989388513e4d69c9",
+        "PRO": "839674216755292224c8b17909752dd6",
+        "CAL": "b52e9cbc9c783854a1fab83ad6e81448",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DeleteCriticalSection|0xD1",
@@ -78010,6 +82311,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7a92a47d037f414acf1de66c1ba19a38",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6e538b3bbbeec8f94bef058bdad701fe",
+        "CFG": "126bb563d14d36809e55fa377ba7848b",
+        "PRO": "9af29c67883114cce9efa78bfb10a8d5",
+        "CAL": "7a92a47d037f414acf1de66c1ba19a38",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CopyStringOptimized|0x6FA8AE70",
@@ -78193,6 +82505,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b719ab040bfebd0b1940a800c0d3c266",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "78c0be793b204c577b78460711bf70fb",
+        "CFG": "5c86dcee1ae591b9319ac28e686a93af",
+        "PRO": "83bc724e3f4701a0e8d9120e53756325",
+        "CAL": "b719ab040bfebd0b1940a800c0d3c266",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ParseCommandLineArguments|0x6FA884EB",
@@ -78419,6 +82742,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "50cd6b6fd69b78c0380659763fce7ea0",
+        "CFG": "9a35ab5935fed2f629b2dd9f68e65902",
+        "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeModuleData|0x6FA88452"
@@ -78564,6 +82898,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7f50bd45ab425175e84bcf8e16e908ed",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ee22dcb18299b51eb994a57f32a5df1d",
+        "CFG": "601f1d62d94fff45dd3c84d1ec95ae87",
+        "PRO": "1131a82cb6bcdc3fa51202095f093b6d",
+        "CAL": "7f50bd45ab425175e84bcf8e16e908ed",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "WideCharToMultiByte|0xE4",
@@ -78782,6 +83127,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d8be7433da8984a6d08ceacc3367b90b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d8be7433da8984a6d08ceacc3367b90b",
+        "CFG": "7f4fc1779b59f711672436d2334bb69e",
+        "PRO": "0cc244bc8426a5d98132a517863b79ff",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetModuleHandleA|0xD6"
@@ -78942,6 +83298,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:8315eedfd35b963ffd4ae4799f93ce60",
+      "indexes": {
+        "EXP": null,
+        "STR": "8315eedfd35b963ffd4ae4799f93ce60",
+        "API": null,
+        "MNE": "454368f80bb3f288f15a4980f2c2bd46",
+        "CFG": "85878a7ae4c1b39ea8007faeb171fe79",
+        "PRO": "83b0e9b1f1e36a7e179478ab79eef8ac",
+        "CAL": "45b4a5735ea7b6dd3f51d868fa874128",
+        "CON": "1910dacd5930376a6d022e245818b72c",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetPEMachineType|0x6FA887D1",
@@ -79245,6 +83612,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:0c07ecc4c6bc346ae6998f44c07e01aa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "15aa81e73603ef0f9aff675af9b3ec8c",
+        "CFG": "e2d59de2d43d17499018320a2e8950a5",
+        "PRO": "04ca6ac21f51a31ef3e2eb7094a95c50",
+        "CAL": "0c07ecc4c6bc346ae6998f44c07e01aa",
+        "CON": "0c6479ef973e1c5b5832881e7f355980",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetermineHeapCompatibilityMode|0x6FA887FE",
@@ -79594,6 +83972,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c9c69e37d85290bce703dadddc3d0e35",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c2ccec13492440089beaf10a53536424",
+        "CFG": "fb2b60796982bf37438d415d6de492d9",
+        "PRO": "0e49a588f477574f2987b402ced439f8",
+        "CAL": "c9c69e37d85290bce703dadddc3d0e35",
+        "CON": "f2892a0cee7d85f0ba208fda8ea09247",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapDestroy|0xEA",
@@ -79971,6 +84360,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9765460a30498931557fab10cfc0be00",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9765460a30498931557fab10cfc0be00",
+        "CFG": "cebc9ddfcfa7572b5f5b3390360955c1",
+        "PRO": "732b8eec760db745c820e9f897a3a8df",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x6FA88A84"
@@ -80212,6 +84612,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "indexes": {
+        "EXP": null,
+        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "API": null,
+        "MNE": "da32166b3f0e7e0948a175245c62ec51",
+        "CFG": "284d8b3feed969e607594e2a59e4cba9",
+        "PRO": "617b746b49181e0cc8744ec9bec9999d",
+        "CAL": "b4938612b45a8006afe991fc98f65440",
+        "CON": "bc05996aeda010696c4e7c8c2c41312c",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetModuleFileNameA|0xE1",
@@ -80738,6 +85149,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:f5b2d1c4bc32f4e9087a714c17c71b80",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4f4efd8121d403a870aeab94c4a12f4c",
+        "CFG": "ef6c42304d998acb69b39f5a331478f3",
+        "PRO": "e67670c6908283af11e001c12834f571",
+        "CAL": "f5b2d1c4bc32f4e9087a714c17c71b80",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetTlsContextSlotPointer|0x6FA8A80F",
@@ -80950,6 +85372,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:cc92fa2115a7c52f75dd82b789a867ff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c8b59bb5b7eca5aa50d6fe27320b53cd",
+        "CFG": "332e9531fca360f0bdeecec48e2dde30",
+        "PRO": "47ecf7ebe567b256e4469b97d8abe10e",
+        "CAL": "cc92fa2115a7c52f75dd82b789a867ff",
+        "CON": "df67429a3c7976b465b865a3f6582249",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -81200,6 +85633,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6db4eec4529d7320d9c182be8df08afa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6db4eec4529d7320d9c182be8df08afa",
+        "CFG": "57c5d5be1a0b6a675aa4db5c012fd696",
+        "PRO": "8d556aee63104307d9b149e9f931d049",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_malloc|0x6FA890B5"
@@ -81388,6 +85832,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d020e6e6f383c625d5fd112b88b641eb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d020e6e6f383c625d5fd112b88b641eb",
+        "CFG": "fef741493ae50c7accf1bba4f87a4654",
+        "PRO": "8e5860f7509af8a37e78e10ec3553713",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "StreamPutChar|0x6FA85D07"
@@ -81579,6 +86034,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c009e73d885c9100060b26ebf4c0da82",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c85f8270e3f1487f07a5ecca3d9faf90",
+        "CFG": "2241d237b8ad97730d85da1573757397",
+        "PRO": "9c73c762e8ff70b143d18f6925f6f34a",
+        "CAL": "c009e73d885c9100060b26ebf4c0da82",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -81769,6 +86235,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:f064ff3afaf1e75f0dee890c74dbef1e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "12dead7d93dd2763acf5540fd9895c41",
+        "CFG": "63065b8709514a357467e286792adb2b",
+        "PRO": "6e3449094de591a8f395401d563ecbce",
+        "CAL": "f064ff3afaf1e75f0dee890c74dbef1e",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "WideCharToMultiByte|0xE4",
@@ -81974,6 +86451,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9e01ab6a0c2f67c73794c17804322b4d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9e01ab6a0c2f67c73794c17804322b4d",
+        "CFG": "6a0b37b32fd515db980691e5c80e5f13",
+        "PRO": "50191f5215650d57388859f136860675",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FormatStringProcessor|0x6FA85E1F"
@@ -82176,6 +86664,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e318b2efa2b7ed9dcb619fe5ba3fc2d5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e318b2efa2b7ed9dcb619fe5ba3fc2d5",
+        "CFG": "6131fc7c596354824fe205bd8b11dfcc",
+        "PRO": "a307baf3b5662fd4c99a1c389c60a66a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FormatStringProcessor|0x6FA85E1F"
@@ -82323,6 +86822,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:301bd5440f60703ca7a24a8fb30f1e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
+        "CFG": "d6859c2eb1fab9ceaa654d0b9ae7bc20",
+        "PRO": "5ff9cf60a792b531e2aaf582e8c90eee",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__nh_malloc|0x6FA890C7"
@@ -82678,6 +87188,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4a86a03a8266e6744ff07a1715aa471f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "be05c38d951a724b98e30bc46956a8c1",
+        "CFG": "9f044bca13552ccd8ed2b26b9e8086d5",
+        "PRO": "c23a96deea647357438db7500c249a64",
+        "CAL": "4a86a03a8266e6744ff07a1715aa471f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InvokeCallbackHandler|0x6FA8B78A",
@@ -82904,6 +87425,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:6b0fac5ad416f2debca510a54e2cca9d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2427cd9c654afc2c511ea083018810d8",
+        "CFG": "5d926263fba2a1027171a5bdf74f5304",
+        "PRO": "2e9c018e837ac992e454791dd4b6d82c",
+        "CAL": "6b0fac5ad416f2debca510a54e2cca9d",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -83122,6 +87654,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a152d5cf7939ddd5c7a586165862328a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "675bb591e22e0f8ae9a8ce84e04c6a66",
+        "CFG": "e991b21aae698f9e597b056ae017e0a2",
+        "PRO": "85c37e6e77a3808b7d1f1d1d283bf78f",
+        "CAL": "a152d5cf7939ddd5c7a586165862328a",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -83318,6 +87861,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7283dad131f5e281785e7bf720e35eb4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "80ec585e360a4ba82011b528eedfca83",
+        "CFG": "a058308c1b62531e8ff5100e7eae7c1b",
+        "PRO": "722537bdb011164d941776eb5c4378e7",
+        "CAL": "7283dad131f5e281785e7bf720e35eb4",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "MultiByteToWideChar|0xF1",
@@ -83522,6 +88076,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b99d3962c0b26901db87269607fbf85a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b99d3962c0b26901db87269607fbf85a",
+        "CFG": "b10def2481331b1b779206ec56a43f38",
+        "PRO": "e29656b1d5576c12f534a0f00ea1c858",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "GetCharacterTypeInfo|0x6FA8944D",
@@ -83783,6 +88348,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d54b31472f74b078be31f20f65c7b2d3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d54b31472f74b078be31f20f65c7b2d3",
+        "CFG": "880177cd7c4098c7b23b45cdeb87ab14",
+        "PRO": "3eabd37b619c8c857e7d42508a357bb6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ParseBindingFormatString|0x6FA86734"
@@ -83985,6 +88561,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:74b28d9d2370b6358acc1c8245c3cbcf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "74b28d9d2370b6358acc1c8245c3cbcf",
+        "CFG": "2e047669a5a06b11d338ef41582b1283",
+        "PRO": "350e8b54a6498b3b1b73a6848e3291de",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ParseBindingFormatString|0x6FA86734"
@@ -84079,6 +88666,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2d9183bb1cfcd846f98264f7c720e3c2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2d9183bb1cfcd846f98264f7c720e3c2",
+        "CFG": "d7377679e2135c8dac25e85fafd5497b",
+        "PRO": "7ad39f26e72802ab54e22837568faa5a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeBufferStream|0x6FA88E9F"
@@ -84219,6 +88817,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7baa6daebac79b3e485665c35e660eb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a7046d73bbd286a50d5e7204509858d2",
+        "CFG": "df4d2cc4750989c094de567606c5d922",
+        "PRO": "70bd37e2a3c86a5d0df81388daf7f8e4",
+        "CAL": "7baa6daebac79b3e485665c35e660eb8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "MultiByteToWideChar|0xF1",
@@ -84437,6 +89046,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8418a5a11e9f061f530e8e38b0af10a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "371cf2604575a233020cd5d20fe5277c",
+        "CFG": "96284504220b4e2cdd1e53aee95cc3dd",
+        "PRO": "3f75d2f3f589ee49e4feb4470a8080f7",
+        "CAL": "8418a5a11e9f061f530e8e38b0af10a7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -84673,6 +89293,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a57b3ae583e4f6f104245d4da8d3b9fe",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a57b3ae583e4f6f104245d4da8d3b9fe",
+        "CFG": "f9756dc4d557e8eed1735355e977dddc",
+        "PRO": "ba0e6c9759a0b09c130a8cac033cbb18",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapAlloc|0xF0"
@@ -84869,6 +89500,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a0dd1f395da0f8e13609d337843c676",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a0dd1f395da0f8e13609d337843c676",
+        "CFG": "1a3f7cfa3845a97e1009681b130f0d18",
+        "PRO": "f36fcd442fe9951cec2658ebe924cc11",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DeallocateMemory|0x6FA87440"
@@ -85034,6 +89676,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e3ec679679a02264f139ac30186a970f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ef5171f8f7487cff01081036951ae8fa",
+        "CFG": "71b90da08fc5e6cd8ac68bc553cc3572",
+        "PRO": "a3379cb71827323cd409ae67146f1559",
+        "CAL": "e3ec679679a02264f139ac30186a970f",
+        "CON": "f16898611ac5b33d9ecaf7330b5442fc",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0xD4",
@@ -85451,6 +90104,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5bb0f1161464ac40af1960ad04967a2c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff64648b3e6e32bc28a5e4bc8d984c1e",
+        "CFG": "77ee9e9eb59c49729f84a4814c50ba23",
+        "PRO": "fa07e4438eff9c2d46d7e6ffac416bbc",
+        "CAL": "5bb0f1161464ac40af1960ad04967a2c",
+        "CON": "8a8225fc5cf0d862e46335c317c8624f",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryDescriptor|0x6FA89DF9",
@@ -85806,6 +90470,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:9c6620623ea700bd43358fab00aa9c0d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b59a8a7d2c8fdcc2aac183f01f99a847",
+        "CFG": "3d73227b6e6cca2af78f394077f21039",
+        "PRO": "669fc79554f3e27f124cdcb422a03bea",
+        "CAL": "9c6620623ea700bd43358fab00aa9c0d",
+        "CON": "96c1a5fdc99677050d0c1df56bae10f7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0xD4",
@@ -86192,6 +90867,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:29da550efe003bc20354fd57a4971440",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0002c858ef3942a0b403454c72674bfe",
+        "CFG": "1f69bcc78cedfe24476b54faa5067229",
+        "PRO": "dea8c343a18f51e1084181af8b8e840f",
+        "CAL": null,
+        "CON": "29da550efe003bc20354fd57a4971440",
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "VirtualAlloc|0xF4"
@@ -86558,6 +91244,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:234b9cdcaa87069188849bdb2be3901f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b10e654b1e0872dc227e39198444a376",
+        "CFG": "133584d17d1ac2fccf9e19173b212b78",
+        "PRO": "96519eda06f4aaed94a4c2b68501db4e",
+        "CAL": "234b9cdcaa87069188849bdb2be3901f",
+        "CON": "c614fc412b6c3b1ddd9dcae532af7810",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0xD4",
@@ -86832,6 +91529,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e5e0439ad5bb1cd863039ebb6e2bf8de",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "54ffff5ceafbb1247d2270b70dfe4f31",
+        "CFG": "f857bf8e2a6d4323e12cae4775f2b1f8",
+        "PRO": "bf7cc0680fef9dcb301ada9fdcc83480",
+        "CAL": "e5e0439ad5bb1cd863039ebb6e2bf8de",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0xD4",
@@ -87028,6 +91736,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:3d337c877f96f0b2eec382b170b23be9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4356a93c484fa354f7841c9d1d714a19",
+        "CFG": "df1b1c2bb15cbb9f77d2b3556fbcb408",
+        "PRO": "7fd458deb731be8aa291daf4af4c1fdd",
+        "CAL": null,
+        "CON": "3d337c877f96f0b2eec382b170b23be9",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FreeErrorTableEntry|0x6FA8A0E9"
@@ -87265,6 +91984,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:4de07408e49e596cf7e7d3b62a782916",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d9739637e22d71ed7283b5bc68a6c4ac",
+        "CFG": "a370fb8e4ad9c85310dee4b6de8d3c9e",
+        "PRO": "4af64ae9ab36a51a5ec097ba68e3d213",
+        "CAL": null,
+        "CON": "4de07408e49e596cf7e7d3b62a782916",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DeallocateMemory|0x6FA87440"
@@ -87445,6 +92175,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ab1eb8b21e2bded2678160ac668c3175",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ab1eb8b21e2bded2678160ac668c3175",
+        "CFG": "927799e207955506a23b64db54ce8ab2",
+        "PRO": "b5586d1aad87b40d14f767a66d54af33",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FreeMemoryPoolPages|0x6FA8A13F"
@@ -87601,6 +92342,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a0c69af4c0982f6019c86b1a0cf7a5c3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "de76025ed2839a23b964285c7e0d5701",
+        "CFG": "433ad45e838b2f6b79f2a4743f46a459",
+        "PRO": "0d3d7d16ed0059a14324ea2a6dd2f34c",
+        "CAL": "a0c69af4c0982f6019c86b1a0cf7a5c3",
+        "CON": "13d644560e1620facd05fe6d393b88a5",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "VirtualAlloc|0xF4",
@@ -87849,6 +92601,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4f3543287939943021eaf1632a1582f1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4f3543287939943021eaf1632a1582f1",
+        "CFG": "d57e2061f15382e04c3aa23b173fdca4",
+        "PRO": "f32322fb4c3790800f770f5fda99e17e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "AllocateMemoryFromPool|0x6FA8A29D"
@@ -87996,6 +92759,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:671dff5ace8aa8c39bead14f6d282075",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "671dff5ace8aa8c39bead14f6d282075",
+        "MNE": "059e9bb2efc1de93bfe21089d0ad96d3",
+        "CFG": "62dd7eecce7740c82c988187e13c22fe",
+        "PRO": "8a3a4f2d4535649cc444c9425e021f5e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "RtlUnwind|0x6FA8C3AC"
@@ -88180,6 +92954,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd4ab8e23ed6997cd2e2434b8d375458",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd4ab8e23ed6997cd2e2434b8d375458",
+        "CFG": "d54d0bf1b3435e560f9567fde0a425c3",
+        "PRO": "85b48f8de80ebcb2c022f47cc66f4769",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StoreSehContext|0x6FA8A6A2"
@@ -88493,6 +93278,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed17ad9d511f6e330c2b6a62378d83cf",
+        "CFG": "8bed5312de6328769ba92aea43d25c3f",
+        "PRO": "e9c90ad8362cedc196cdbb2e7c829a8a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LocalUnwindTwo|0x6FA8A60E"
@@ -88710,6 +93506,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89d1b619054116ad559c7c543db397fd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "89d1b619054116ad559c7c543db397fd",
+        "CFG": "120fb0f85a7ee6388ee2ce7c9790ef93",
+        "PRO": "204649768cb6aa7c9bb671be8e047b74",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LocalUnwindTwo|0x6FA8A60E"
@@ -88879,6 +93686,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ef14b972a786ba8645bf0ac0ecb3d27f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1f1ea39570d78b40a761876432663560",
+        "CFG": "f3c5285f89dc2eddee1c24817cdcfac8",
+        "PRO": "07a4805c8fe427ce51b62013dadbcd3d",
+        "CAL": "ef14b972a786ba8645bf0ac0ecb3d27f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -89084,6 +93902,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b1691d6b7b8ba065c3fc1a089e8db64e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b1691d6b7b8ba065c3fc1a089e8db64e",
+        "CFG": "669d79c7add88056dffa146044a66ab1",
+        "PRO": "aacb622e9c9fbbc0052433f4be24c77d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetOrCreateTlsContext|0x6FA88082"
@@ -89465,6 +94294,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b1691d6b7b8ba065c3fc1a089e8db64e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b1691d6b7b8ba065c3fc1a089e8db64e",
+        "CFG": "669d79c7add88056dffa146044a66ab1",
+        "PRO": "90da26cbf7eaeac908827525dbc29d44",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetOrCreateTlsContext|0x6FA88082"
@@ -89761,6 +94601,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:20ef1fb42844f88dd11f96f91303c3f9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5a19e694488816d4876bc457287c101c",
+        "CFG": "cd3f4fb1531c578553ac0e1adedf16db",
+        "PRO": "39454f9c61ff09251edb30192c632dfa",
+        "CAL": "20ef1fb42844f88dd11f96f91303c3f9",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -90010,6 +94861,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8efcec6359bd80a12af1e8d794297aee",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b607b0eb82919f40c6769af4aece9bd6",
+        "CFG": "1511bb4f05e15bfcf174ffc94b84174e",
+        "PRO": "46b98af21248d4fd307229afb496bcb6",
+        "CAL": "8efcec6359bd80a12af1e8d794297aee",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetStdHandle|0xD5",
@@ -90308,6 +95170,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8efcec6359bd80a12af1e8d794297aee",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c2bda2cc0331ae5bf6246d61a0224d72",
+        "CFG": "515c26b43819dacba850e7033d7bed74",
+        "PRO": "a514a40922d3628f083cabd4757dac47",
+        "CAL": "8efcec6359bd80a12af1e8d794297aee",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetStdHandle|0xD5",
@@ -90579,6 +95452,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ef14b972a786ba8645bf0ac0ecb3d27f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "925a8d581e90d1850e90a2aaf94686cb",
+        "CFG": "eb678474d5f27bfcdac71fc554f76ccc",
+        "PRO": "1e924191ccddd63c23dc19b09fe35435",
+        "CAL": "ef14b972a786ba8645bf0ac0ecb3d27f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -90749,6 +95633,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:1d8c362ca80deab7ff30e6002d2fb7de",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "89c8ec97483b3d89b792dc7acc8a9af7",
+        "CFG": "f742c62e752f2108ddf04dc5e9a4c76a",
+        "PRO": "7ccc11009c5914e5e5e4a8b1f2d4ac76",
+        "CAL": "1d8c362ca80deab7ff30e6002d2fb7de",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -90966,6 +95861,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4ebd25a652d48fc0c3275eab0a712286",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4ebd25a652d48fc0c3275eab0a712286",
+        "CFG": "aa25c7e165918165205bb91ce9ff82bf",
+        "PRO": "585efffaa19a6cff2f2bd1b2e1cedb1f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LeaveCriticalSection|0xD3"
@@ -91247,6 +96153,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8b583bf72d19a98347afdde5bedb2fbd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b14dfb771e9c85951130aa7c0ee6e7bc",
+        "CFG": "d1ddbe52ba96e7f31306d0b6245f31da",
+        "PRO": "6b5d04c20bad8e00554918d9ba41b283",
+        "CAL": "8b583bf72d19a98347afdde5bedb2fbd",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDosErrnoPtr|0x6FA8A818",
@@ -91456,6 +96373,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:62f171b50cebc2fdb51afc233541a2ed",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a1648c1a606de262319637b99c8811f9",
+        "CFG": "267472cc70766d13b5c0c1b477e67064",
+        "PRO": "9d4106a348b5dff6701d43ce3cf471fc",
+        "CAL": "62f171b50cebc2fdb51afc233541a2ed",
+        "CON": "d689c3d8d7155abd2fc0abc7de6850cb",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CloseHandle|0xB3",
@@ -92044,6 +96972,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "70593f43ea0b0d7692df2cd60ddf29e8",
+        "CFG": "4e3b3947cf15c11224705052794a4b4e",
+        "PRO": "0893ef4135ff92704b4a57726c2e8b67",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x6FA88A84",
@@ -92241,6 +97180,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "845fc5044ff181fe96e2ae868d3aa1f6",
+        "CFG": "00f6c13623331eb8a6852eb2bb442931",
+        "PRO": "91a93f07a9ad6d3f1f33172e65653a41",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x6FA88A84"
@@ -92382,6 +97332,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4b7d92f235a580a988c7fd4797f6326e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b7003782678f33a2ea4e8b0cc2bae15e",
+        "CFG": "0e5729cb4b0d68b2cadb819afd166dbf",
+        "PRO": "88f1f580a5bb1be428e4c958341361f9",
+        "CAL": "4b7d92f235a580a988c7fd4797f6326e",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -92606,6 +97567,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8f2a733057dd5a290f0e17d077c53986",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8f2a733057dd5a290f0e17d077c53986",
+        "CFG": "3fff12cee20d7217020e61babff50752",
+        "PRO": "e600b7b549f736bbb17d1e37b4d0f334",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x6FA8AF60"
@@ -92747,6 +97719,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:f710c320ffeaad35efd664e99e7b58dd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f31c6439952ca9c3e10694cce3d833df",
+        "CFG": "5cd7ae11dfc37525b1fbae6f1a834a1b",
+        "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8",
+        "CAL": null,
+        "CON": "f710c320ffeaad35efd664e99e7b58dd",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x6FA8AF60"
@@ -92995,6 +97978,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:05d3556ba26e52c51954a1255d97c525",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "05d3556ba26e52c51954a1255d97c525",
+        "CFG": "e44c2ff58c3054cb39205525061d1e17",
+        "PRO": "4cfe2a85df8f6713b03a9da3c16d4143",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x6FA8AF60"
@@ -93242,6 +98236,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3a786f84560cc522b38764eaa8071d56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "63906d1f35f7842042066a6643d2050c",
+        "CFG": "9db417efe5c9a7afb1bbbf19640c1abd",
+        "PRO": "9f903305dac24c951f3cebb45cf66933",
+        "CAL": "3a786f84560cc522b38764eaa8071d56",
+        "CON": "b9d5beb33d3b4bfbdca21c396c2e2893",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterTypeInfo|0x6FA8944D",
@@ -93473,6 +98478,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "750c71b47c1aaa7e04385ca0c70f7831",
+        "CFG": "716bb67a3d1eac006a8b7d10a21c5b78",
+        "PRO": "f44926b0ae7488cb4b3b375d8698692e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x6FA8AF60"
@@ -93613,6 +98629,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e4c337356f231e5baad169a03bc50c48",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e4c337356f231e5baad169a03bc50c48",
+        "CFG": "493b4f72cefa93234296118abab53b05",
+        "PRO": "604c32479b2612a27930b365a9193101",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StringToUnsignedLongWithBase|0x6FA8B36B"
@@ -93759,6 +98786,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7fa3ac591884a3fb5684bbbb55a9aadc",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cf4bba8373cc6f7fefec3dac17cb97f9",
+        "CFG": "62951e16bc9d2b54ec436a7c1d42223b",
+        "PRO": "78d361d8215d830c04eefe40d69be159",
+        "CAL": "7fa3ac591884a3fb5684bbbb55a9aadc",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B",
@@ -93979,6 +99017,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e8d820fe0ad4443eff596f9c063b1159",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e8d820fe0ad4443eff596f9c063b1159",
+        "CFG": "95188965c59a3da8691c6601e1058118",
+        "PRO": "e1167e5700de83c67c90065001097c53",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DetermineHeapCompatibilityMode|0x6FA887FE"
@@ -94123,6 +99172,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3c60546d8cfb6e92d20e0cc9dd281ae9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3c60546d8cfb6e92d20e0cc9dd281ae9",
+        "CFG": "14d7a61b4765eb3a55ccfe740ba1ee1c",
+        "PRO": "858f2f80185d26d23fec7b662bab6b38",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DetermineHeapCompatibilityMode|0x6FA887FE"
@@ -94258,6 +99318,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:4beef3b29c3b4b805408e60c6861211a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4beef3b29c3b4b805408e60c6861211a",
+        "CFG": "95dde06da98d31b7a3218a57e5bc52e2",
+        "PRO": "0f55e4a0e4a786d7a2c42f7e473d16ed",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DetermineHeapCompatibilityMode|0x6FA887FE"
@@ -94449,6 +99520,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f59c01a33eca433430cfbab05d487108",
+      "indexes": {
+        "EXP": null,
+        "STR": "f59c01a33eca433430cfbab05d487108",
+        "API": null,
+        "MNE": "d28466b802ff41201d4ac81308d22266",
+        "CFG": "df5c6e7657bf03b5e12df2df4e8951a5",
+        "PRO": "59c85ad21dfb4351a1ba5118ced138e7",
+        "CAL": "6815bfbd6fdd9e2bf9bacba9c707ff1e",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LoadLibraryA|0xBF",
@@ -94845,6 +99927,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "9ca0a86084aa884c5581b2c21acbe357",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AmsgExit|0x6FA85CD4"
@@ -95040,6 +100133,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ee4facdaccbd6fc5f3297fd5b85b73c2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ee4facdaccbd6fc5f3297fd5b85b73c2",
+        "CFG": "b52f56e126e2d946dea5881aec08bc73",
+        "PRO": "33453afdf0caeeb886d2b49fd8dbdf85",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x6FA89596",
@@ -95241,6 +100345,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:94d6d71f79bef4a35c52f69cb2c94139",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b2858c1eba0e4b0a1c2dbb07c48e4297",
+        "CFG": "3f4c7070f2c95f2faeaabedd46fd8d79",
+        "PRO": "dfb19ba95e5c9ae7bd0998a6e3f622d5",
+        "CAL": "94d6d71f79bef4a35c52f69cb2c94139",
+        "CON": "fdfa6ce6239ce9815d17d3054d0e9b49",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateStackSpace|0x6FA85600",
@@ -95491,6 +100606,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:981867b0970223dac828e5ddf508c9bd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c1d05e132bc8c3bc87e7a971916e9b9b",
+        "CFG": "d98674b4f3d6c3f963d75c91293add85",
+        "PRO": "19b2b280d88deaf108b5b2e98a75b234",
+        "CAL": "981867b0970223dac828e5ddf508c9bd",
+        "CON": "bbca4a5c1f173bb2eabc2603cba1b7d9",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "MultiByteToWideChar|0xF1",
@@ -95747,6 +100873,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c365f0335b7bc4452623cbc78de16e67",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c365f0335b7bc4452623cbc78de16e67",
+        "CFG": "ce1512b65f10974868260b09ee7d6f5d",
+        "PRO": "44eb51cb2190f284eca0a4e49c8cfa09",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LocaleMapStringWithConversion|0x6FA8BC0A"
@@ -95871,6 +101008,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:869b66089b27ec11f07a9a516b327a41",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e038b71e990839fd36df244ad8c1a314",
+        "CFG": "924249776a8c58acad56aa0ec6d43a3d",
+        "PRO": "f8994f9ceefa0d6c96f0e1ce8a839fe9",
+        "CAL": "869b66089b27ec11f07a9a516b327a41",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -96075,6 +101223,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:15c4025ea2811068755c04c57a55e963",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5918dc16e1bf74054af7a7988b490678",
+        "CFG": "f6de9d70a12d6ead09df2ab8bfb40265",
+        "PRO": "d37900feaad7dcaa97c837d5f2f8382f",
+        "CAL": "15c4025ea2811068755c04c57a55e963",
+        "CON": "19b7e7271a0c53285c536d08e7f5c719",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B",
@@ -96462,6 +101621,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "af6441629daf4f85a0c18d58dc74d889",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -96511,6 +101681,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:30f0fd08cad97c1e8bd24ed371c4d8a2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "30f0fd08cad97c1e8bd24ed371c4d8a2",
+        "CFG": "22ed96019cc3518f564878a82e7845c1",
+        "PRO": "09636b18e8111fa066e3c055cb22f522",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 35,
         "LoD/1.08": 35,
@@ -96611,6 +101792,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0eb6c316488d30b6ee5d8d243ea3c5d6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0eb6c316488d30b6ee5d8d243ea3c5d6",
+        "CFG": "15ac155acbfc2440f5143cf3b4f70302",
+        "PRO": "c4b72876aaeb4eb602f8b5d6c1c91ce6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 32,
         "LoD/1.08": 32,
@@ -96712,6 +101904,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:c1c63d86bb55981b357d1b1b9a6aa67b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "056f32fee69df354e18a89e462704458",
+        "CFG": "e78180ef51fda61d6ae8ac3c1ae5d460",
+        "PRO": "38eacc61b94522f918b33154220ed019",
+        "CAL": null,
+        "CON": "c1c63d86bb55981b357d1b1b9a6aa67b",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetTlsContextSlotPointer|0x6FA8A80F"
@@ -96891,6 +102094,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:51a96cf5c6c689ab74fbf3aea9417af8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8c1ef08c13327b78f680f81ff5d26364",
+        "CFG": "285c67838e486e2c03f6348907248429",
+        "PRO": "1cc87928a26956117848aecf90588413",
+        "CAL": "51a96cf5c6c689ab74fbf3aea9417af8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -97053,6 +102267,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:51a96cf5c6c689ab74fbf3aea9417af8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "662566ebcde3842108cf876001e2ae79",
+        "CFG": "f70b5ca14a4ae1bfa52d8451bf741b27",
+        "PRO": "4f58c43cbebde2a9892dbdd400bf51fc",
+        "CAL": "51a96cf5c6c689ab74fbf3aea9417af8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireCriticalSectionByIndex|0x6FA866BE",
@@ -97222,6 +102447,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:15c4025ea2811068755c04c57a55e963",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cc0e19248bdb90cb6bf790db102f9ddf",
+        "CFG": "c2f25628ef1af6b3e8b70ad592860b7b",
+        "PRO": "7155f4c254dc36f94c1d2caaef29c146",
+        "CAL": "15c4025ea2811068755c04c57a55e963",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCharacterProperties|0x6FA8726B",
@@ -97456,6 +102692,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
+        "PRO": "45c971a63f9f4813dfd5feb921332e75",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "GlobalUnwind2|0x6FA8A5CC"
@@ -97583,6 +102830,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:fb739e2fd29ca1c582f0545177c22739",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "43fee5ff1c42b7b7689833d9ee6cf759",
+        "CFG": "c389eff9d7e9d6ea2a48edbc44b8df03",
+        "PRO": "38f64d2492f786f9b4cc5bbdb2ce23c2",
+        "CAL": "fb739e2fd29ca1c582f0545177c22739",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa71120",
       "callees": {
         "LoD/1.08": [
           "GetLastError|0x6FA77BA0",
@@ -97689,6 +102948,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:fb739e2fd29ca1c582f0545177c22739",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "10890e9e493b251896b37fa8c0bb19b0",
+        "MNE": "1ba8f1c719fa891da162c3ef8d7a838a",
+        "CFG": "05bceb971316a26533ec24172838409e",
+        "PRO": "060a037fe28112974a43fe5e4d7e047c",
+        "CAL": "fb739e2fd29ca1c582f0545177c22739",
+        "CON": null,
+        "APS": "10890e9e493b251896b37fa8c0bb19b0"
+      },
+      "display_name": "FUN_6fa71190",
       "callees": {
         "LoD/1.08": [
           "GetLastError|0x6FA77560",
@@ -97800,6 +103071,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:fb739e2fd29ca1c582f0545177c22739",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "10890e9e493b251896b37fa8c0bb19b0",
+        "MNE": "d261fe9400aec3770369562368fbd2f0",
+        "CFG": "05bceb971316a26533ec24172838409e",
+        "PRO": "92295992b8d1df153eb2e7666decd514",
+        "CAL": "fb739e2fd29ca1c582f0545177c22739",
+        "CON": null,
+        "APS": "10890e9e493b251896b37fa8c0bb19b0"
+      },
+      "display_name": "FUN_6fa711e0",
       "callees": {
         "LoD/1.08": [
           "GetLastError|0x6FA77560",
@@ -97911,6 +103194,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:6dd59fb9eb92672a7f20f13ecf17ac85",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "10890e9e493b251896b37fa8c0bb19b0",
+        "MNE": "2093162f37d8db5153aa78186dedacbc",
+        "CFG": "dd0be5c9672f08f03d14911531275000",
+        "PRO": "6fde4a02bd6d81473eb0a6130b541959",
+        "CAL": "6dd59fb9eb92672a7f20f13ecf17ac85",
+        "CON": null,
+        "APS": "10890e9e493b251896b37fa8c0bb19b0"
+      },
+      "display_name": "FUN_6fa71bf0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa71d20|0x6FA71D20",
@@ -98034,6 +103329,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:21c89e93db384ad73acd23a5974694e8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "21c89e93db384ad73acd23a5974694e8",
+        "CFG": "c13863aa7c074643642bb9c0c99664d2",
+        "PRO": "ad5752bf85413a8befab05ab94674b39",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa71e60",
       "callees": {
         "LoD/1.08": [
           "`default_constructor_closure'|0x9"
@@ -98141,6 +103448,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:23a0c07cf423ac5001e798f9db235031",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fdcf00b96fd102cb0983f1f11562ce2c",
+        "MNE": "640e40a8fd3fb76b40082a16c4e42256",
+        "CFG": "1bf00aafdfa0a8ff48105a0fe924a999",
+        "PRO": "b5b852ba4904193129a07e5417967cb5",
+        "CAL": "23a0c07cf423ac5001e798f9db235031",
+        "CON": null,
+        "APS": "598f83a525643e27aea3600f74925435"
+      },
+      "display_name": "FUN_6fa71ff0",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -98326,6 +103645,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:c8643c1038aadb44b444b2151d8bcd9b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0ccda8796686191f1569bdbbb78f139f",
+        "MNE": "566ea45d8e6aad0af892dc12d2381fb6",
+        "CFG": "cc90736fdd0a7c30d79e234ba2d8b0c6",
+        "PRO": "7106b9f4da7ef38ef871b9e61c5d49eb",
+        "CAL": "c8643c1038aadb44b444b2151d8bcd9b",
+        "CON": "6c9de88da8caf11d779e908fcdcde5d2",
+        "APS": "92be1136234bf1546d1ddf9a0627dbf3"
+      },
+      "display_name": "FUN_6fa720f0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa732d0|0x6FA732D0",
@@ -98567,6 +103898,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:86d2a031da69b6563f1685022640c988",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1dcd377a4022807644e72623bbf653c7",
+        "MNE": "270bfb8e3e7c6e559421c2782f58f245",
+        "CFG": "1753676dff09d8d81fd50706125611ec",
+        "PRO": "cddfa1285f840cfdcc2e005d91f37e49",
+        "CAL": "86d2a031da69b6563f1685022640c988",
+        "CON": "6c9de88da8caf11d779e908fcdcde5d2",
+        "APS": "7c00d77470177b233a3da03472fc2e05"
+      },
+      "display_name": "FUN_6fa72350",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa732d0|0x6FA732D0",
@@ -98891,6 +104234,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:ab6fe13a40d338a51cf630592788123a",
+      "indexes": {
+        "EXP": null,
+        "STR": "ab6fe13a40d338a51cf630592788123a",
+        "API": "f9aa82cb72514c225011cc30864b36e4",
+        "MNE": "1d11ce688fb56094d5fdf7102940900f",
+        "CFG": "71863d7c36a9aabb24cc2900b643fdc5",
+        "PRO": "f96b72b83dc005b5b67fb48b0ffa38c4",
+        "CAL": "6ae050248d933c2aa45084877e37c761",
+        "CON": "cc494e68aae301905d7d55345f1b8ca8",
+        "APS": "3f1815f10dfebfaa40fdd1671a4c4e97"
+      },
+      "display_name": "FUN_6fa726b0",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -99125,6 +104480,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:4d86484f1724eb67a6f4f25231b072d8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d1610ec784caeb0d0a0ac5efbb693cec",
+        "MNE": "a685a032f6c16b54ceda353271bcabff",
+        "CFG": "5b691aec2ba2bb90c159f2b5bc74a3a4",
+        "PRO": "e2c60fa3ca8d88bdd547ae388fdb6db9",
+        "CAL": "4d86484f1724eb67a6f4f25231b072d8",
+        "CON": "351b472389813f795ec406a639559791",
+        "APS": "d1610ec784caeb0d0a0ac5efbb693cec"
+      },
+      "display_name": "FUN_6fa731f0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -99271,6 +104638,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:13903a5a40290b093b8fb5e99db9f72e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "089e4ca71af962c58a53df5e19b51cca",
+        "MNE": "bbaa03801c55ec3cf192fb08e4458281",
+        "CFG": "7f8a1fc8d2da4d5f20e1e8e0eb1dad40",
+        "PRO": "e22fd3c9644c1ba0cd8305d52b3c8cf5",
+        "CAL": "13903a5a40290b093b8fb5e99db9f72e",
+        "CON": "e95022b31518c383885b43f492e25e88",
+        "APS": "c760e20ee77f5d3769aff30ceb2f7ec4"
+      },
+      "display_name": "FUN_6fa74400",
       "callees": {
         "LoD/1.08": [
           "OnEditBoxTextChangedCallback|0x6FA812D0",
@@ -99528,6 +104907,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CON",
       "index": "CON:eed78b31d4fe3dfce3617a26f615c920",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3b4a230f5f0fd6ec3b8adece182a897",
+        "CFG": "452db9e41f172598725fc080d1d27643",
+        "PRO": "baf2952c202cf3319c1febb6ee510e85",
+        "CAL": null,
+        "CON": "eed78b31d4fe3dfce3617a26f615c920",
+        "APS": null
+      },
+      "display_name": "FUN_6fa74600",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa76580|0x6FA76580",
@@ -99829,6 +105220,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CON",
       "index": "CON:eed78b31d4fe3dfce3617a26f615c920",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3b4a230f5f0fd6ec3b8adece182a897",
+        "CFG": "452db9e41f172598725fc080d1d27643",
+        "PRO": "baf2952c202cf3319c1febb6ee510e85",
+        "CAL": null,
+        "CON": "eed78b31d4fe3dfce3617a26f615c920",
+        "APS": null
+      },
+      "display_name": "FUN_6fa74690",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa76580|0x6FA76580",
@@ -99935,6 +105338,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CON",
       "index": "CON:eed78b31d4fe3dfce3617a26f615c920",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3b4a230f5f0fd6ec3b8adece182a897",
+        "CFG": "452db9e41f172598725fc080d1d27643",
+        "PRO": "baf2952c202cf3319c1febb6ee510e85",
+        "CAL": null,
+        "CON": "eed78b31d4fe3dfce3617a26f615c920",
+        "APS": null
+      },
+      "display_name": "FUN_6fa74720",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa76580|0x6FA76580",
@@ -100041,6 +105456,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:e55672050c0b92773df3695237dc588f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "70964180f01e2b59fc7a493b3c683c62",
+        "MNE": "12b0a4bf889cb51caccbad5d4a58c70d",
+        "CFG": "572852d68e92f2fbe0f09f7b0bdcd373",
+        "PRO": "3ddd017f724dfd5c18ea2cf9239dfc30",
+        "CAL": "e55672050c0b92773df3695237dc588f",
+        "CON": "ea1bf69202235b0c61a4579fbf22658f",
+        "APS": "106ca8d2b4799308ed87b8e9545caaee"
+      },
+      "display_name": "FUN_6fa747b0",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -100139,6 +105566,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "a066bfa425c5b87446ebcf35d01480d6",
+        "CFG": "a4318aa000df85eaa33791e015a29e04",
+        "PRO": "248b0263b0d0f504fdca005115b35cb4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa74870",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -100223,6 +105662,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:4464ddab06a220992e6c1681b1930f13",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ed26ef2a513ed15722480e96b61ca2b9",
+        "MNE": "85d23bd40f8dce14a3b3371591e167f0",
+        "CFG": "d20d47c547d2c99456aabe62b8ddb1e1",
+        "PRO": "e3a3b0d0a952c653c79331eb7cf34fef",
+        "CAL": "4464ddab06a220992e6c1681b1930f13",
+        "CON": "586cf13078e88c6023b681b05d134229",
+        "APS": "ed26ef2a513ed15722480e96b61ca2b9"
+      },
+      "display_name": "FUN_6fa74890",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -100485,6 +105936,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:c916ba54abd42402aba49ae41927d5a9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c33e821af92bf876be96fb6f1efd217c",
+        "MNE": "363599f95c2dca57a20da8eca771d001",
+        "CFG": "fac86873cc70502fe86f0dd6a7702d4b",
+        "PRO": "cab73128cfc91b2a45a5f3ffe71eee03",
+        "CAL": "c916ba54abd42402aba49ae41927d5a9",
+        "CON": null,
+        "APS": "74bb89df96e7ad01995ad21bb27cff25"
+      },
+      "display_name": "FUN_6fa74a60",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -100603,6 +106066,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:25c126603c0efcab538da02be9b5dfd8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "58cb2d8f57dd9dc38da8b63e3ec154c9",
+        "MNE": "b5f0214ad87faac6e2721da13760f744",
+        "CFG": "4995ad7f63e1f818d1a2928b2367eed9",
+        "PRO": "a5843e05f767b9289e054b89562562d9",
+        "CAL": "25c126603c0efcab538da02be9b5dfd8",
+        "CON": "a94d8c5fefac0ce15fa3d0163ee74efe",
+        "APS": null
+      },
+      "display_name": "FUN_6fa74ae0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -100802,6 +106277,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:931bcfc4f1154bca05214546232d7505",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "931bcfc4f1154bca05214546232d7505",
+        "CFG": "313b7ebe5ee8ba3f8550ae805faf80ac",
+        "PRO": "93b6138a0c180793a2599091219d58e8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa74c00",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa729e0|0x6FA729E0",
@@ -100988,6 +106475,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:5fff019120dcd0ad7fa08faa1ae1309c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5fff019120dcd0ad7fa08faa1ae1309c",
+        "MNE": "849e2b449d02f9ae0f02d8826578fcdb",
+        "CFG": "f515f7ac1ec9a1211481cade4daf26a9",
+        "PRO": "06fc2960e173fd33d6111bc33249e533",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa74c80",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10192|0x6FA8527A",
@@ -101189,6 +106688,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:f68f746db41ec13ca5eb82df768dc577",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "33dc8c68e10ffe642cbae686dd774d35",
+        "MNE": "09331955e8f0b1a77916315e7709011d",
+        "CFG": "ad0a9276bc67526961ffbd5e7311c9b3",
+        "PRO": "47095a486ff36cfe91479e8186ca6c9c",
+        "CAL": "f68f746db41ec13ca5eb82df768dc577",
+        "CON": null,
+        "APS": "591e2e90320d3a2d141d51a7900d15dd"
+      },
+      "display_name": "FUN_6fa74cf0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10192|0x6FA8527A",
@@ -101361,6 +106872,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "08e046cb4accc02f50765a210f238bb2",
+        "CFG": "350c45066b85eaebc8cf0076f01486ce",
+        "PRO": "fe24fdab349e35567303cc2169f59a68",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa74f20",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa74cf0|0x6FA74CF0",
@@ -101489,6 +107012,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:e236ba02f8fd355a52e1da98dad4bef5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "af9f598038ab27f6878944d97b56a5c5",
+        "MNE": "714617770cc17248666f254f829b7fc3",
+        "CFG": "c38e46d557e04fef43ddf614039aade7",
+        "PRO": "3ecd0c5ed1f6e547fe82067b133d8119",
+        "CAL": "e236ba02f8fd355a52e1da98dad4bef5",
+        "CON": "3931f7ed11ed798e17391befdce82a85",
+        "APS": "d5516eeb55d66809914a98e2e72cd908"
+      },
+      "display_name": "FUN_6fa751a0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -101695,6 +107230,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b863544f680ef4954cee14fc0d1165ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "99ca1447209eb65e0588d62abc31ea67",
+        "MNE": "ec3f621b22c4a619d92570fac89506ce",
+        "CFG": "dd6456a14af03b8f5883caf05568266c",
+        "PRO": "b952ce64bc55aba3df27e01df063d215",
+        "CAL": "b863544f680ef4954cee14fc0d1165ba",
+        "CON": null,
+        "APS": "13399d73eedd74f46e48844c062cb676"
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE",
@@ -101905,6 +107451,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b863544f680ef4954cee14fc0d1165ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "99ca1447209eb65e0588d62abc31ea67",
+        "MNE": "ec3f621b22c4a619d92570fac89506ce",
+        "CFG": "dd6456a14af03b8f5883caf05568266c",
+        "PRO": "f51afc4a6bb4d9d9c365f16c9111a1e7",
+        "CAL": "b863544f680ef4954cee14fc0d1165ba",
+        "CON": null,
+        "APS": "13399d73eedd74f46e48844c062cb676"
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE",
@@ -102115,6 +107672,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b863544f680ef4954cee14fc0d1165ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "99ca1447209eb65e0588d62abc31ea67",
+        "MNE": "ec3f621b22c4a619d92570fac89506ce",
+        "CFG": "dd6456a14af03b8f5883caf05568266c",
+        "PRO": "2d951ce64f12d5cae676e82ed74d9eee",
+        "CAL": "b863544f680ef4954cee14fc0d1165ba",
+        "CON": null,
+        "APS": "13399d73eedd74f46e48844c062cb676"
+      },
       "callees": {
         "LoD/1.08": [
           "Ordinal_10031|0x6FA8514E",
@@ -102325,6 +107893,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b863544f680ef4954cee14fc0d1165ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "99ca1447209eb65e0588d62abc31ea67",
+        "MNE": "ec3f621b22c4a619d92570fac89506ce",
+        "CFG": "dd6456a14af03b8f5883caf05568266c",
+        "PRO": "da19f7ac9e60597b7cf508514f36d18b",
+        "CAL": "b863544f680ef4954cee14fc0d1165ba",
+        "CON": null,
+        "APS": "13399d73eedd74f46e48844c062cb676"
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE",
@@ -102535,6 +108114,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "fa774d4837f6b5b9623e979b4230f13e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -102669,6 +108259,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:a9a081f0fafdf079b5911c4528e21daf",
+      "indexes": {
+        "EXP": null,
+        "STR": "a9a081f0fafdf079b5911c4528e21daf",
+        "API": "687e2592ff43dfb7e3a62cf33622bedd",
+        "MNE": "6054d88c18bad22e5fc4acbccb7353a0",
+        "CFG": "a1fa3e823f129cd7d09c887c0600b2d7",
+        "PRO": "a1eb59d636e9dd1906484bd1b197870d",
+        "CAL": "f97c6ebd0a8d4eb8af91578a156da068",
+        "CON": null,
+        "APS": "a379a3fe13b24892ec7c9b45c63b4c76"
+      },
+      "display_name": "FUN_6fa77750",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -103064,6 +108666,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:31bcaaf2b2486a8f05edbe9665dc1b71",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "31bcaaf2b2486a8f05edbe9665dc1b71",
+        "CFG": "ce6d93386ff1d8cf41740b4353eb7468",
+        "PRO": "60e99b71773c233ff8bf5050cc886d65",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa77bb0",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA77BD0"
@@ -103225,6 +108839,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:9b98f68e274d1353a57f1a04e583f406",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b4b7d67ca51b19375687720eb4d3916c",
+        "MNE": "9d06753bb0459399ae8433fbd7bcc9b8",
+        "CFG": "dd2ccc69cd4fbfdead0687cd98027155",
+        "PRO": "33f7d1eba98666fbc5008d057593897f",
+        "CAL": "9b98f68e274d1353a57f1a04e583f406",
+        "CON": "8013d78bddbbb3a0bd27550b7b78e286",
+        "APS": "47a08d24c69c7e6cba3739670afb5413"
+      },
+      "display_name": "FUN_6fa77fe0",
       "callees": {
         "LoD/1.08": [
           "SetStreamOrFileHandle|0x6FA852B6",
@@ -103465,6 +109091,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:a9dd5c313093a329f7d3033c3ba5e3b9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a9dd5c313093a329f7d3033c3ba5e3b9",
+        "CFG": "93bfcfc90e76bfffb21e53a04de03be6",
+        "PRO": "22146b3ed2213cee2fb6066125dbafaf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa78600",
       "instruction_counts": {
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -103546,6 +109184,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:5d2a148c4d1866f8953308218b77b2c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5d2a148c4d1866f8953308218b77b2c0",
+        "MNE": "c5c360ac6b945ca380fb4875a9e801e3",
+        "CFG": "6109d0b9ba67fbda9d9905fb04d7e865",
+        "PRO": "c28f0d39f29ae6da9c633fa81398ab35",
+        "CAL": null,
+        "CON": null,
+        "APS": "5d2a148c4d1866f8953308218b77b2c0"
+      },
+      "display_name": "FUN_6fa78d10",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10027|0x6FA85220"
@@ -103635,6 +109285,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:a9dd5c313093a329f7d3033c3ba5e3b9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a9dd5c313093a329f7d3033c3ba5e3b9",
+        "CFG": "93bfcfc90e76bfffb21e53a04de03be6",
+        "PRO": "22146b3ed2213cee2fb6066125dbafaf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa79220",
       "instruction_counts": {
         "LoD/1.08": 20,
         "LoD/1.09": 20,
@@ -103734,6 +109396,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b47aa581b88f98de842138279ab83621",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "412132ff4c3e20fb83cbfc490813a39c",
+        "CFG": "566808ad392a4ad25d34b87687267bd0",
+        "PRO": "d3bcfae317a9446f0ccf7b9eb50748fc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa79960",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE"
@@ -103914,6 +109588,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "92cb4650eeccdca3fbcc68ced3f9d61e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA78D50"
@@ -104033,6 +109718,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:44105405901e8f39a9dcb6265eb6190e",
+      "indexes": {
+        "EXP": null,
+        "STR": "44105405901e8f39a9dcb6265eb6190e",
+        "API": "0e5f3e0f4c35be7906fcf5347103eb9c",
+        "MNE": "fb3266e126d97a36f620864713d87f0c",
+        "CFG": "57bdd25be1b52dbced691bef82ce8c4b",
+        "PRO": "43f5280a884b843cf3e8e78cd05239b1",
+        "CAL": "1735a72646dd2be1f8da19184bc2a74e",
+        "CON": null,
+        "APS": "88a5dfb71a6f9f11a9df60448482e8fc"
+      },
+      "display_name": "FUN_6fa799a0",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -104223,6 +109920,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:71238ac3c4beb1719dbdfaef25bee0e5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7ffe567270ecbfdc60e84ef08af1cf29",
+        "MNE": "6ff04016d64b17b711de2e087c146ce3",
+        "CFG": "6159bf1d36a17f7e28dd226c6caed896",
+        "PRO": "decc7f5a94ff1a5d23a96ebdb53f8e5a",
+        "CAL": "71238ac3c4beb1719dbdfaef25bee0e5",
+        "CON": "62ea6ae9950f89111420e9e32b0a2949",
+        "APS": "7ffe567270ecbfdc60e84ef08af1cf29"
+      },
+      "display_name": "FUN_6fa79a80",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa84a10|0x6FA84A10",
@@ -104525,6 +110234,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:0877c9d1da14d216c82e7ce9eeef2753",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f220ba83599522354162939f00fea07c",
+        "MNE": "61f0e54da61cf66f9e989318e9c6126c",
+        "CFG": "0be580859e0be8554d54bdf7cdf8e16b",
+        "PRO": "b4bc9899114c753d7367f27938793e3e",
+        "CAL": "0877c9d1da14d216c82e7ce9eeef2753",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7a6e0",
       "callees": {
         "LoD/1.08": [
           "toUtf|0xA",
@@ -104614,6 +110335,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b583dbabe0055ca9bd29de5b4da8a18d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "42755b390007efc434fa8ac8bb4d9ebf",
+        "MNE": "77fa2b645f926c5e7a97a429549cc64f",
+        "CFG": "96708bd81cfafa6367e3aaec561bdb4c",
+        "PRO": "926d334caff99763d60e548325bdeee9",
+        "CAL": "b583dbabe0055ca9bd29de5b4da8a18d",
+        "CON": null,
+        "APS": "7a69d56a0a840f417dd2987689c78058"
+      },
+      "display_name": "FUN_6fa7a760",
       "callees": {
         "LoD/1.08": [
           "strlen|0x11",
@@ -104755,6 +110488,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:3581ca01ad637747cb55175b22bff126",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3581ca01ad637747cb55175b22bff126",
+        "CFG": "20ab3aafb5fce4ffb585d7639266d46c",
+        "PRO": "2acc06cb8b16e805463c189d59df4b7c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7a930",
       "instruction_counts": {
         "LoD/1.08": 4,
         "LoD/1.09": 4,
@@ -104921,6 +110666,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b421bdfb41af9ca20523d76292fb4c31",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b421bdfb41af9ca20523d76292fb4c31",
+        "MNE": "c2c16ff7fade688afdd965357f73a9b0",
+        "CFG": "73e381125806b05ff4318432ab2b9ada",
+        "PRO": "8809d050bde2c46de7c22c678b6106b9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7a950",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0"
@@ -105104,6 +110861,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:70e00dd58145d8f55317bc7b2f654da9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "57d47533f7700e2cd17d1b37727ad7c9",
+        "MNE": "fbbc4a4297b54837d3379e15c4a6747a",
+        "CFG": "e8b10dc46a63908f0a6185d4e494240f",
+        "PRO": "9b30649b9ec4e55086df59ae8185f111",
+        "CAL": "70e00dd58145d8f55317bc7b2f654da9",
+        "CON": "7b8c5f008885f00e283a93c8a90ef980",
+        "APS": "4405fbcbef2d041091819cc9e00326d5"
+      },
+      "display_name": "FUN_6fa7a980",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10027|0x6FA85220",
@@ -105444,6 +111213,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:2d251574d2ae7bfbbcc55bf54cd5248c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "515e5917f6c8ec9c8d3af36e51d05ac6",
+        "MNE": "99386fb47a61c08e25d00930d8151320",
+        "CFG": "47cfd13375a499f5c9a9ade3b44a719a",
+        "PRO": "ef92c32a5caf1883febe0e8467a7fc73",
+        "CAL": "2d251574d2ae7bfbbcc55bf54cd5248c",
+        "CON": "a4a26148754e2200253252c67b6b0ee3",
+        "APS": "195d4d9a7d55c36da049b244fbfb14ba"
+      },
+      "display_name": "FUN_6fa7b150",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -105607,6 +111388,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b806d85f0d5ccc07b2beac8bc6946f1b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "75016dd08cb323779be4f3ec64167583",
+        "MNE": "2b3277a8a33ce34874d7f85eb22c2cbd",
+        "CFG": "27f2ffbc5601a233ac0c92e583fa4b67",
+        "PRO": "19dd3964376f54e1717e6ca69a65cd7f",
+        "CAL": "b806d85f0d5ccc07b2beac8bc6946f1b",
+        "CON": "2892b0135e6c6dd1208f28f26e7331f8",
+        "APS": "362b41b4fa46c8b8e7d5d559b283fa7c"
+      },
+      "display_name": "FUN_6fa7b1f0",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -105872,6 +111665,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b806d85f0d5ccc07b2beac8bc6946f1b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "75016dd08cb323779be4f3ec64167583",
+        "MNE": "2b3277a8a33ce34874d7f85eb22c2cbd",
+        "CFG": "27f2ffbc5601a233ac0c92e583fa4b67",
+        "PRO": "6664565c52cf123870d438870c6bd0e8",
+        "CAL": "b806d85f0d5ccc07b2beac8bc6946f1b",
+        "CON": "f98adec574831f98e8c10d8427b4915b",
+        "APS": "362b41b4fa46c8b8e7d5d559b283fa7c"
+      },
+      "display_name": "FUN_6fa7b2a0",
       "callees": {
         "LoD/1.08": [
           "CheckExpansionMpqExists|0x6FA853D0",
@@ -106122,6 +111927,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:2d251574d2ae7bfbbcc55bf54cd5248c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "515e5917f6c8ec9c8d3af36e51d05ac6",
+        "MNE": "efcd2663cd4fe3c6e450c09a38061a28",
+        "CFG": "272345496ec052af212d5606a5b44f6b",
+        "PRO": "ef92c32a5caf1883febe0e8467a7fc73",
+        "CAL": "2d251574d2ae7bfbbcc55bf54cd5248c",
+        "CON": "743804d4ae226adc04ee3456e8074103",
+        "APS": "195d4d9a7d55c36da049b244fbfb14ba"
+      },
+      "display_name": "FUN_6fa7b350",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -106270,6 +112087,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:2d251574d2ae7bfbbcc55bf54cd5248c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "515e5917f6c8ec9c8d3af36e51d05ac6",
+        "MNE": "efcd2663cd4fe3c6e450c09a38061a28",
+        "CFG": "272345496ec052af212d5606a5b44f6b",
+        "PRO": "ef92c32a5caf1883febe0e8467a7fc73",
+        "CAL": "2d251574d2ae7bfbbcc55bf54cd5248c",
+        "CON": "35809491e3b481c15cac1a94bd60d702",
+        "APS": "195d4d9a7d55c36da049b244fbfb14ba"
+      },
+      "display_name": "FUN_6fa7b3f0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -106418,6 +112247,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:2d251574d2ae7bfbbcc55bf54cd5248c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "515e5917f6c8ec9c8d3af36e51d05ac6",
+        "MNE": "efcd2663cd4fe3c6e450c09a38061a28",
+        "CFG": "272345496ec052af212d5606a5b44f6b",
+        "PRO": "ef92c32a5caf1883febe0e8467a7fc73",
+        "CAL": "2d251574d2ae7bfbbcc55bf54cd5248c",
+        "CON": "d246761e37fbe6bfacf641be25bec1af",
+        "APS": "195d4d9a7d55c36da049b244fbfb14ba"
+      },
+      "display_name": "FUN_6fa7b490",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -106585,6 +112426,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "e82522ab5e92e86cf73267b658077dc9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.09d": [
           "FUN_6fa11230|0x6FA11230"
@@ -106728,6 +112580,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": "4d3896ea93374c9114ea275e6989bed4",
+        "PRO": "f7b2ebe90da959ef75a1333ed370efb9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.08": 2,
         "LoD/1.09": 2,
@@ -106815,6 +112678,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:a12fc3921d5c58a086f6c4d6b763a983",
+      "indexes": {
+        "EXP": null,
+        "STR": "a12fc3921d5c58a086f6c4d6b763a983",
+        "API": "760640cff1ce0121920a3224e1316e74",
+        "MNE": "554233148f74dfa03af50f284b52b66a",
+        "CFG": "f969e66fbe86e59f727923d5aae08554",
+        "PRO": "23562f4e38739b8e8cf0444c7c5802d9",
+        "CAL": "8d6d169fc42557f906056ed11e20eed1",
+        "CON": "881571d822ae6bc9aa2a5784acf77d11",
+        "APS": "e0f5eb58e96549c15d01f3afac90c59f"
+      },
+      "display_name": "FUN_6fa7ba00",
       "callees": {
         "LoD/1.08": [
           "Ordinal_422|0x6FA85478",
@@ -107281,6 +113156,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:789a7060e306fbffe8367ec5506059a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "789a7060e306fbffe8367ec5506059a0",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "816d3c817cce9c44a7fa7e46d0bba266",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7d5d0",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA78130"
@@ -107355,6 +113242,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:9b98f68e274d1353a57f1a04e583f406",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b4b7d67ca51b19375687720eb4d3916c",
+        "MNE": "d83851559afbe99a3371df63e2393292",
+        "CFG": "862b92c6ea60fef0d95d0bdf0ce4c1ef",
+        "PRO": "2ce8631f4ebfb518f978005c9a4d9ca0",
+        "CAL": "9b98f68e274d1353a57f1a04e583f406",
+        "CON": "8013d78bddbbb3a0bd27550b7b78e286",
+        "APS": "47a08d24c69c7e6cba3739670afb5413"
+      },
+      "display_name": "FUN_6fa7d5f0",
       "callees": {
         "LoD/1.08": [
           "SetStreamOrFileHandle|0x6FA852B6",
@@ -107595,6 +113494,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:22747e7dbf081d9749e10e662e5a09ca",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5e012ad86d6bb1dd59deeeb3460e901f",
+        "MNE": "b968beaa215542f05f3b83e69e4a9c06",
+        "CFG": "253991ba5510f7af561e5f19f95db385",
+        "PRO": "8ef9434f2663d53228e4298950a9e6a3",
+        "CAL": "22747e7dbf081d9749e10e662e5a09ca",
+        "CON": null,
+        "APS": "f685157901a613a4bfe03cfcf05622fc"
+      },
+      "display_name": "FUN_6fa7d740",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -107790,6 +113701,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:0e72b598e1522d75df473c78f61ceb30",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e2a4d88bcca9e81f758c02a309b4d44a",
+        "MNE": "7f51f064b18568490996d58d3d5ea25f",
+        "CFG": "6e63756bbbe9559017438af741c8b812",
+        "PRO": "9a5176c23a415490be79d3c4b10bb253",
+        "CAL": "0e72b598e1522d75df473c78f61ceb30",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7e1e0",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA77BD0",
@@ -107961,6 +113884,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:5acce8a6cbb06a62aee617c698d6ec07",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ed75b7da5fb57e0680b43c9e9f62a032",
+        "MNE": "f224b320b9949bd0e717581987bfa271",
+        "CFG": "15c56ec27fc4d59698e6178a5d3eb98a",
+        "PRO": "5b0af2fd7adad8a0394b72356133326d",
+        "CAL": "5acce8a6cbb06a62aee617c698d6ec07",
+        "CON": "8b667f776db6aa8179afaf2ba910d9d5",
+        "APS": "7f965dfc7004eee55e5860d442e5824d"
+      },
+      "display_name": "FUN_6fa7e210",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -108188,6 +114123,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:5acce8a6cbb06a62aee617c698d6ec07",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ed75b7da5fb57e0680b43c9e9f62a032",
+        "MNE": "f224b320b9949bd0e717581987bfa271",
+        "CFG": "15c56ec27fc4d59698e6178a5d3eb98a",
+        "PRO": "5b0af2fd7adad8a0394b72356133326d",
+        "CAL": "5acce8a6cbb06a62aee617c698d6ec07",
+        "CON": "be33fd10af69fdc9abf1eb6ec7947fc5",
+        "APS": "7f965dfc7004eee55e5860d442e5824d"
+      },
+      "display_name": "FUN_6fa7e390",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -108381,6 +114328,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:87cabdfb3bba360ca0a98418d13dffca",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "985cb8d3048d97642d87c194e68a7238",
+        "MNE": "a9d42c17f3268a2fc7403f90af8a733e",
+        "CFG": "0e4d7a80b118c577ba5866e77d4178ea",
+        "PRO": "16f14ce55e485be478da1891b88f50d4",
+        "CAL": "87cabdfb3bba360ca0a98418d13dffca",
+        "CON": "9fa8534503b6f83b922bc356b206f340",
+        "APS": "7a4bc44dce2155ca6ca1937f9e89f9ac"
+      },
+      "display_name": "FUN_6fa7ea50",
       "callees": {
         "LoD/1.08": [
           "DispatchMessageA|0xF9",
@@ -108714,6 +114673,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:38fc47135d187c4ee09dfeb10194d5db",
+      "indexes": {
+        "EXP": null,
+        "STR": "38fc47135d187c4ee09dfeb10194d5db",
+        "API": "278cb416ade9fac93ac01d14cbbc5462",
+        "MNE": "498f7eefb9e1302f7bc7a02fab9d5265",
+        "CFG": "2e56a6ea163606197efd2759332bd8c8",
+        "PRO": "bfd2239cc14a98a7936cacc8d718636d",
+        "CAL": "6b41ba79e581ea8cb7ed9b44d1cde5e9",
+        "CON": null,
+        "APS": "53037d4a669f9dc3b646e1f98c10fadf"
+      },
+      "display_name": "FUN_6fa7eda0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10173|0x6FA853A0",
@@ -108767,6 +114738,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:d6920d8ad6f02211e38787d7d9839bb3",
+      "indexes": {
+        "EXP": null,
+        "STR": "d6920d8ad6f02211e38787d7d9839bb3",
+        "API": "d9fd5290514ec36d6d5df17648a7ea75",
+        "MNE": "e97831dc6b2b9c33f8212ea420421e47",
+        "CFG": "a5029b281dd8b223a74c876022cb8c96",
+        "PRO": "6f12b91d91fa6be75317b4bac6a26f71",
+        "CAL": "a86ed2eb54698707af9da22eec2488b1",
+        "CON": null,
+        "APS": "6510596aa266fc7e23d82d88282f4ae8"
+      },
+      "display_name": "FUN_6fa7ef30",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10173|0x6FA853A0",
@@ -108827,6 +114810,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:8dd3c8970f14d972aae88e1e9d12d6fb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "140e22f84e5283da29179ea74af7e759",
+        "MNE": "b244a1419a3896f0b5556dc640ffc989",
+        "CFG": "4e78f4ca28293ff2c6a279c09d7ae4bc",
+        "PRO": "90fe5c60c25869f4281da252634200fe",
+        "CAL": "8dd3c8970f14d972aae88e1e9d12d6fb",
+        "CON": null,
+        "APS": "6db85c17923c0c134f14b43518288dfd"
+      },
+      "display_name": "FUN_6fa7ef80",
       "callees": {
         "LoD/1.08": [
           "GetGameState|0x6FA851A2",
@@ -108955,6 +114950,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:da11010bec3d59770c090d0277a18455",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "da11010bec3d59770c090d0277a18455",
+        "CFG": "3f46d69cdcc04e85a2607efa2078e7eb",
+        "PRO": "422108e2398bfa828f0facb97c716138",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -109078,6 +115084,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:da11010bec3d59770c090d0277a18455",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "da11010bec3d59770c090d0277a18455",
+        "CFG": "3f46d69cdcc04e85a2607efa2078e7eb",
+        "PRO": "422108e2398bfa828f0facb97c716138",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,
@@ -109172,6 +115189,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:367920840d8ff0c8cab2788870c6eed7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "367920840d8ff0c8cab2788870c6eed7",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "0dba1271f31ce0a50a62ce6375d2222b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7efe0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa7e510|0x6FA7E510"
@@ -109348,6 +115377,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b47aa581b88f98de842138279ab83621",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "053c135a45c1dd1826d5ae0a6aa9297b",
+        "CFG": "f3cc20e5f141f397921e55c7a1670606",
+        "PRO": "39ed6d4dc3f54d699de126f27ff7c72e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7f000",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE"
@@ -109524,6 +115565,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:789a7060e306fbffe8367ec5506059a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "789a7060e306fbffe8367ec5506059a0",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "cc69587a19a8550be8704ee79cfae64c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7f1f0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa78750|0x6FA78750"
@@ -109690,6 +115743,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:789a7060e306fbffe8367ec5506059a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "789a7060e306fbffe8367ec5506059a0",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "0ba4ac53a2022524f8a5014a1a59dd17",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa7f210",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA78130"
@@ -109856,6 +115921,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:765574503b61c25d457ca9178009786b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "97f113c484ba734f9d8e7a49015aaa1d",
+        "MNE": "91c6c63e7c5cc26b56251f1db17698e3",
+        "CFG": "e30c18b1c488eb6842eb2d06c0184f82",
+        "PRO": "7a1ca3c51476845db21b92083296f45b",
+        "CAL": "765574503b61c25d457ca9178009786b",
+        "CON": "e1a8f2e511be88d9b85d23a5876cc938",
+        "APS": "44c192944f6ad709b2f3f288babf5c15"
+      },
+      "display_name": "FUN_6fa7f230",
       "callees": {
         "LoD/1.08": [
           "FogAssert|0x6FA853C4",
@@ -110296,6 +116373,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:cee7d5b142050cd1a9db9ea7ddf6b295",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "12318c78b84510b5063e906cb90f75ff",
+        "MNE": "a2900df82ac0fc637d89c2eec7bcfcfa",
+        "CFG": "f0abc32ac524f359e1dad4fd3d7e4c8a",
+        "PRO": "26972d0b7678fbea404073ee5f9762ca",
+        "CAL": "cee7d5b142050cd1a9db9ea7ddf6b295",
+        "CON": "7510362f03d3ee8dfdc2fb6810a17f0a",
+        "APS": "02de0121946e3eb03d955021b5408100"
+      },
+      "display_name": "FUN_6fa7f510",
       "callees": {
         "LoD/1.08": [
           "Realm|0x6FA850D0",
@@ -110596,6 +116685,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:114f18fed5347c3fae5f16723fd6e12f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d0f827ac58b61c5f81aabc58596a0c0b",
+        "MNE": "3131740ab068f5b0de523c41c7fef707",
+        "CFG": "1cf5087641083b7b524899ba18ce8850",
+        "PRO": "cd7f6751a0120284580795c575e4145c",
+        "CAL": "114f18fed5347c3fae5f16723fd6e12f",
+        "CON": "8013d78bddbbb3a0bd27550b7b78e286",
+        "APS": "cd5e037276dc0b5b5564575c555f9951"
+      },
+      "display_name": "FUN_6fa7f8b0",
       "callees": {
         "LoD/1.08": [
           "SetStreamOrFileHandle|0x6FA852B6",
@@ -111066,6 +117167,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:35800733e3878160b12ea2a88455a0c1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5135f5487c64d9a02571dcb154c49ef5",
+        "MNE": "7654cb7ce5059112983f4aaba2cec791",
+        "CFG": "2c153e797d0261d49337ff87db86328c",
+        "PRO": "1b60820e75b98796461ffb979ee281c1",
+        "CAL": "35800733e3878160b12ea2a88455a0c1",
+        "CON": "08156ae9adf722c4308a67ad49423cd9",
+        "APS": "14fee8746f0c852bbf68886c52200bf4"
+      },
+      "display_name": "FUN_6fa7fb80",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -111355,6 +117468,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:bc90a8363a7163fa27b37e0ce45322c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1b91ae143f5fb182cb2982d0ad95fe26",
+        "MNE": "7619852b6d58fb8d7e84432e54838e80",
+        "CFG": "889c34904ae8f7a9c830c8a959bc255c",
+        "PRO": "478a6888848790b9b4b5061e1f99d724",
+        "CAL": "bc90a8363a7163fa27b37e0ce45322c0",
+        "CON": null,
+        "APS": "1b91ae143f5fb182cb2982d0ad95fe26"
+      },
+      "display_name": "FUN_6fa7fd90",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10008|0x6FA85184",
@@ -111468,6 +117593,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:b47aa581b88f98de842138279ab83621",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "eb41baad5ccc77296c5d2fe3438ce976",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE"
@@ -111610,6 +117746,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:67e79522d285bd4399703e526c971de4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c9c2e1b5b3d341e4af55ab7808a0a871",
+        "MNE": "c28db0a9013f2b5ded0b4e1f168224f6",
+        "CFG": "b148e4ebfeeb047fd649882c6ba804c9",
+        "PRO": "1fdc6dc3efb31e9ad50e4f438b88c46c",
+        "CAL": "67e79522d285bd4399703e526c971de4",
+        "CON": "8fd1b738976f6b91c572208dad329272",
+        "APS": "20bf6cf6e7ae39be5fec49f5ae5d2732"
+      },
+      "display_name": "FUN_6fa7fe20",
       "callees": {
         "LoD/1.08": [
           "FogAssert|0x6FA853C4",
@@ -112144,6 +118292,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:76006f4b49f885749053573e29df285e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a41d62d05593001b5f49168ffe6fbe08",
+        "MNE": "0e5e74cda5729ecbd972912872adc9c4",
+        "CFG": "702f1e314161622e96636e04678b1642",
+        "PRO": "00a3a1114c38249fbe2747630955f221",
+        "CAL": "76006f4b49f885749053573e29df285e",
+        "CON": null,
+        "APS": "5314a5e14c2eb5f47a27a56c04aeaf23"
+      },
+      "display_name": "FUN_6fa800d0",
       "callees": {
         "LoD/1.08": [
           "ReportError|0x6FA8551B",
@@ -112344,6 +118504,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:724d2d36f38400f5012657bc71404d98",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b1fed97ba46a3898817d0e56cf1cc90e",
+        "MNE": "2ceb381ff89abc44c8638323590b6cad",
+        "CFG": "8a8136e0d0b85d571b199eda001c3b6e",
+        "PRO": "5a2490e316f13c54ef8e58926c2e76ff",
+        "CAL": "724d2d36f38400f5012657bc71404d98",
+        "CON": null,
+        "APS": "453d9a19f9d2628d2d155fbcaf6bc3f5"
+      },
+      "display_name": "FUN_6fa80170",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10025|0x6FA8518A",
@@ -112445,6 +118617,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:51349f2a6ab0ace6503190aaecd2b464",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e4bde8dccc4fe959bd28d8b6485f5a6f",
+        "MNE": "fab9a887156a794dce808ac809e81406",
+        "CFG": "9494ddaf0345a44e102a605b62387935",
+        "PRO": "daf7ecf18c6e018b1491194d03e8fd07",
+        "CAL": "51349f2a6ab0ace6503190aaecd2b464",
+        "CON": "f67736fe8ec0e033d570d16b6c61e11a",
+        "APS": "537d239fbeacb452e80173b7a5ad80ab"
+      },
+      "display_name": "FUN_6fa801b0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -112782,6 +118966,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:aa7a60cc646b33a630408bb65d3895f3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "cae377cc2ddcc1d42fdd5104dcd14c9c",
+        "MNE": "923d0966ce766bbf6da1f9016bf25654",
+        "CFG": "d69ba1618de233e921149d6cf59657dc",
+        "PRO": "59ac32b354c923b65ba74044e428a160",
+        "CAL": "aa7a60cc646b33a630408bb65d3895f3",
+        "CON": "f2ab6602d846702df13691bd358713d3",
+        "APS": "bea7ac9864276928ad3ee0de20b782f3"
+      },
+      "display_name": "FUN_6fa806a0",
       "callees": {
         "LoD/1.08": [
           "FogAssert|0x6FA853C4",
@@ -113044,6 +119240,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:f4cdb1c27c3622ac0b703a6b738ecc4a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f8e7d5d9ec91de4b584f6ac48d3e14a5",
+        "MNE": "ec7c4a4aefcbf1e20140215374913e4b",
+        "CFG": "0d7437a03fb38bdf35b73cc33580ef91",
+        "PRO": "bc15260424bc880145edfbf7bd734ee2",
+        "CAL": "f4cdb1c27c3622ac0b703a6b738ecc4a",
+        "CON": "c1ff0d224110b7657a9287f425f8c980",
+        "APS": "8a4e8120f246f961f111b3981484708c"
+      },
+      "display_name": "FUN_6fa812e0",
       "callees": {
         "LoD/1.08": [
           "FogAssert|0x6FA853C4",
@@ -113393,6 +119601,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:1fb89e6ffbb9199fffc85487ba7aaddb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1fb89e6ffbb9199fffc85487ba7aaddb",
+        "CFG": "77714199466637a316c33c16c1023f45",
+        "PRO": "17885edcbe0d038eff5d70d078d5a6a1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa82570",
       "instruction_counts": {
         "LoD/1.08": 6,
         "LoD/1.09": 6,
@@ -113464,6 +119684,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:2fa312ee9a831a079e42b2d47cd767ee",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6d81d2e7dec1b090b1cdf06700732942",
+        "MNE": "7f3bb271dc1c7defdc2c1282d3d409c6",
+        "CFG": "e9a64df004d87df0e04be06194e7bb58",
+        "PRO": "5b408c4cf391d4cf79b9771ea8fe1b10",
+        "CAL": "2fa312ee9a831a079e42b2d47cd767ee",
+        "CON": "9946881b788662f73c000a2bad54f9ed",
+        "APS": "c1469c97baa88d16b370c1cb9447553f"
+      },
+      "display_name": "FUN_6fa82590",
       "callees": {
         "LoD/1.08": [
           "strncpy|0x7",
@@ -113759,6 +119991,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:58cb2d8f57dd9dc38da8b63e3ec154c9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "58cb2d8f57dd9dc38da8b63e3ec154c9",
+        "MNE": "e9e08cb2e084c832d2d4c816f2411997",
+        "CFG": "84f51e3c232ea6b4dec0d10fe89d8310",
+        "PRO": "8dfd0123ac78e039f75ee874d0993270",
+        "CAL": null,
+        "CON": "8bddf55233b50a3d2e23c48743bbd342",
+        "APS": null
+      },
       "callees": {
         "LoD/1.10": [
           "FUN_6fa18720|0x6FA18720",
@@ -113984,6 +120227,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "7970862098baea593db10596b44e7a57",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA828B0"
@@ -114103,6 +120357,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:1d7658fe48ad97f159c026a0775579b1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b6bfb5eaf2f63eea69030234049f348d",
+        "MNE": "d67f8179c712882ed6a6ff21b32a31a4",
+        "CFG": "f2e9b7a56a2dec49a6bbc016dd9b379d",
+        "PRO": "f6cacb3ff1b07d77aebfc7c31154d937",
+        "CAL": "1d7658fe48ad97f159c026a0775579b1",
+        "CON": "9c22664cc6ff8b50720afb47a00a88b2",
+        "APS": "be12875ca378ec9a2338101d1e10fc5b"
+      },
+      "display_name": "FUN_6fa82db0",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -114459,6 +120725,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "93dc589fc6d1ad48f0f751c27de7c06d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA77BD0"
@@ -114575,6 +120852,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:bf38850127473b2962c89a54cf8029ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "80b84c2a48ed755f8f85da7174d5979d",
+        "MNE": "ebd0b7feede3b1cde93865f298302f76",
+        "CFG": "7d4a537804b63ec7399d2e3f88900588",
+        "PRO": "e9acaa669c2834db31892302c1bb33f0",
+        "CAL": "bf38850127473b2962c89a54cf8029ba",
+        "CON": "53fee48eb36619546dbab103a573549c",
+        "APS": "e21df92a57ef90d865a8d1bb8ca30fd7"
+      },
+      "display_name": "FUN_6fa83150",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10004|0x6FA850E8",
@@ -114806,6 +121095,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:4219e304dbf392e653d8ea4a732d2545",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "de42614e1037aa87d2f4ab043e6bc950",
+        "MNE": "820c0b4b0bd587e69ee0d269c6033e0e",
+        "CFG": "9533390ad0764dcfe118f0f3cdc9c9ac",
+        "PRO": "25cb29335e85a03021f32afd8825fa20",
+        "CAL": "4219e304dbf392e653d8ea4a732d2545",
+        "CON": "360fd13e6143e471c3a18a14e920d095",
+        "APS": "f05c7d8e7291617da45917cdaec27598"
+      },
+      "display_name": "FUN_6fa833c0",
       "callees": {
         "LoD/1.08": [
           "SetStreamOrFileHandle|0x6FA852B6",
@@ -115099,6 +121400,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:ff76ec5a147cd2cbb0fbff1c4f2ba07e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "330c153628d9f1a931c719127950793a",
+        "MNE": "4830993e5bc75e2cff0cd510e0b10643",
+        "CFG": "458187d9944299b8a2ea3c7acce054ad",
+        "PRO": "4a07760c6e44800793b9414b96705f71",
+        "CAL": "ff76ec5a147cd2cbb0fbff1c4f2ba07e",
+        "CON": "bc436c3db03eaff6386611d1359be171",
+        "APS": "6ad210245faebfed81087d742e28b668"
+      },
+      "display_name": "FUN_6fa83680",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -115340,6 +121653,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "f1ac53af4faaa1aebfa746decd83239d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA78130"
@@ -115459,6 +121783,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:bfea7b0e3b402f26ff0576c15c0f5e65",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6769635ed66e1e0ead14fb5e1134823e",
+        "MNE": "46cae5ebd5cf1ad4ed6e2b4ffb43e48e",
+        "CFG": "ad251a2409472c658229a3a79b3b1cd7",
+        "PRO": "f1598689956f9543b42c1d9c67a1d496",
+        "CAL": "bfea7b0e3b402f26ff0576c15c0f5e65",
+        "CON": null,
+        "APS": "e657f2c3c1d03a06f931dfc0b99d448c"
+      },
+      "display_name": "FUN_6fa83dc0",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA851DE",
@@ -115592,6 +121928,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:3aafaf81ea7935923ac8a76234e62fd3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "21281dbb66c3e216b04af698580d6b7b",
+        "MNE": "730652c7f6c1c7a258521f64aefb3903",
+        "CFG": "fdf6308b01b6c3e31b0c92f9578e955e",
+        "PRO": "161bb1da8f9edcf0897e4675b35d93bb",
+        "CAL": "3aafaf81ea7935923ac8a76234e62fd3",
+        "CON": "3adad400c839fee0ce420654df9c4ba9",
+        "APS": "593a310086009a659f2d7380f8cfc0e9"
+      },
+      "display_name": "FUN_6fa83e20",
       "callees": {
         "LoD/1.08": [
           "FUN_6fa75aa0|0x6FA75AA0",
@@ -115917,6 +122265,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:030f792495d843b6cc524c3d9f330849",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "4e1689c5647388219334728fd5f349d8",
+        "CFG": "0fcf711a5bb96fd099d586685f6820f3",
+        "PRO": "af246f5c8072d5b52e083af562cfdd1d",
+        "CAL": "030f792495d843b6cc524c3d9f330849",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa84030",
       "callees": {
         "LoD/1.08": [
           "UpdateUIElementsOnTextChange|0x6FA78130",
@@ -116095,6 +122455,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:d6c1eeadf9ec3f7a96cb9d8522ab7539",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "cd63aab8e3c08f0310ea36160d3f5c39",
+        "CFG": "e6af95f87992b0c471cbcf31ccd61eb4",
+        "PRO": "6e230e2135a4adb23cd444bf02c53913",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa847a0",
       "callees": {
         "LoD/1.08": [
           "Ordinal_10018|0x6FA852C8"
@@ -116188,6 +122560,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:47971f24d106588dacd0eb36bb8e81b2",
+      "indexes": {
+        "EXP": null,
+        "STR": "47971f24d106588dacd0eb36bb8e81b2",
+        "API": "04a7eaf34dc153e4a668f43f29650494",
+        "MNE": "f041e229591046798478bcc6142b612a",
+        "CFG": "d252d7171d558cc126cabf39f852638f",
+        "PRO": "d6cb253e95550e109c79bcf651382480",
+        "CAL": null,
+        "CON": null,
+        "APS": "04a7eaf34dc153e4a668f43f29650494"
+      },
+      "display_name": "FUN_6fa84d90",
       "callees": {
         "LoD/1.08": [
           "Ordinal_502|0x6FA8545A"
@@ -116339,6 +122723,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10030",
+      "indexes": {
+        "EXP": "10030",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "5fdfabee266f1bd9ad438b9aeef84ad2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76380"
@@ -116476,6 +122871,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10031",
+      "indexes": {
+        "EXP": "10031",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "f4bf3b31b9c68506aa529e7fe757a0a9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA76380"
@@ -116613,6 +123019,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10030",
+      "indexes": {
+        "EXP": "10030",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "d855fdffcc5dca1f890cc2911d5c06dd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA763C0"
@@ -116750,6 +123167,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10031",
+      "indexes": {
+        "EXP": "10031",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "5f9f9beaacba523657cb8e45eefd3ad1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "McpClientJoinGamePollCallback|0x6FA763C0"
@@ -116887,6 +123315,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10171",
+      "indexes": {
+        "EXP": "10171",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "75949040fa8696e6cd21b97955608144",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7eda0|0x6FA7EDA0",
@@ -117042,6 +123481,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10172",
+      "indexes": {
+        "EXP": "10172",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "570cf21fed82061eefd21c506fe472a0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa7eda0|0x6FA7EDA0"
@@ -117178,6 +123628,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10125",
+      "indexes": {
+        "EXP": "10125",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "43d94d64485cd9b51f51557c2e381a30",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa83150|0x6FA83150"
@@ -117324,6 +123785,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "EXP",
       "index": "EXP:10127",
+      "indexes": {
+        "EXP": "10127",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "e4a32e3e46a2e958aaaea57be12a0f68",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_6fa83150|0x6FA83150"
@@ -117450,6 +123922,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:f93a26193b15127770b523718dea2fb3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f93a26193b15127770b523718dea2fb3",
+        "CFG": "54ef46fd1473b1a6178b4c5c8dfc9de0",
+        "PRO": "00c47065770414970345eb11a8cf75a0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.09": [
           "InitializeTimezoneConfiguration|0x6FA2AD14"
@@ -117560,6 +124043,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:120e531616b5e76fd7a0adef14de262b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d8bd20b875006298fb3eccbaf8ad83ad",
+        "MNE": "f305698ed5e6a454766c30082cf00164",
+        "CFG": "53ed2e0727a24c6a60a93b7bccd04573",
+        "PRO": "fcf1511700b4131ae980780e9f5696e9",
+        "CAL": "120e531616b5e76fd7a0adef14de262b",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa1cbd0",
       "callees": {
         "LoD/1.09": [
           "Ordinal_422|0x6FA269FE",
@@ -117845,6 +124340,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:4acc7c8c027f659d1a1cae44053c7c1b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "179be1eb18655b32609b3266bfc7ac2e",
+        "MNE": "d377b5a2fb66a214318978fc6bcb54bd",
+        "CFG": "54287433644b33e557824d7c24236764",
+        "PRO": "a0d125c9dee4c111ae8396635f569529",
+        "CAL": "4acc7c8c027f659d1a1cae44053c7c1b",
+        "CON": null,
+        "APS": "d8250ae5a11fbf5579be41e78e8e3e30"
+      },
+      "display_name": "FUN_6fa1d120",
       "callees": {
         "LoD/1.09": [
           "SafeStringFormat|0x6FA26A22",
@@ -118114,6 +124621,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:38e46e8f12f84bd335dbb38c443b77da",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f63782da13c9f281eeb006f8dbf832e0",
+        "MNE": "a94a537ebefcb3fe872272d355861006",
+        "CFG": "2a65c18a9bce563605f9eeb7808bc04b",
+        "PRO": "413300d8dea6e2ec822146011f2dcfaf",
+        "CAL": "38e46e8f12f84bd335dbb38c443b77da",
+        "CON": "127fd506eccb7b40a70ef3bde5be690d",
+        "APS": "a26207baf7953e37c07d15869f77141f"
+      },
+      "display_name": "FUN_6fa1d1f0",
       "callees": {
         "LoD/1.09": [
           "SafeStringFormat|0x6FA26A22",
@@ -118367,6 +124886,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:eba88eeb50260adc14c7577699495bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aa889d550e28e48b64990c11bbda0b9a",
+        "CFG": "539b910b02cd98232214ff6492afb847",
+        "PRO": "484af9b44c32c45309ed40b8426f67e3",
+        "CAL": "eba88eeb50260adc14c7577699495bc9",
+        "CON": "6f9c8f64935d07e8e0f2cf1d62cbd7fe",
+        "APS": null
+      },
+      "display_name": "FUN_6fa1e7e0",
       "callees": {
         "LoD/1.09": [
           "TranslateMessage|0xFF",
@@ -118658,6 +125189,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:93810c855ca12365355abeedcddd551d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ef4769404f261ce7341ee7e805cb437c",
+        "MNE": "49634acc4f85cfd1471bc712ff62088b",
+        "CFG": "eff717ba8a6fe4caab93af4973334f1a",
+        "PRO": "3b6c437d714dafa173f02521b39bff18",
+        "CAL": "93810c855ca12365355abeedcddd551d",
+        "CON": null,
+        "APS": "93810c855ca12365355abeedcddd551d"
+      },
+      "display_name": "FUN_6fa22b30",
       "callees": {
         "LoD/1.09": [
           "Ordinal_253|0x6FA26A16",
@@ -118771,6 +125314,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:a0ce16e8ceb3d13bbbb89b798eb26856",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f3e3f00bd96065dcf2010d94e7e99d4c",
+        "CFG": "e2f1a7fad6d4db53f764ddbe887094c5",
+        "PRO": "eea4cf04319539005dd02e9049ea9fbb",
+        "CAL": "a0ce16e8ceb3d13bbbb89b798eb26856",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "UpdateUIElementsOnTextChange|0x6FA17C30",
@@ -118864,6 +125418,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:030f792495d843b6cc524c3d9f330849",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "4e1689c5647388219334728fd5f349d8",
+        "CFG": "0fcf711a5bb96fd099d586685f6820f3",
+        "PRO": "a65808596bf3fe42ab2c2462e4fec29b",
+        "CAL": "030f792495d843b6cc524c3d9f330849",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa25520",
       "callees": {
         "LoD/1.09": [
           "UpdateUIElementsOnTextChange|0x6FA18190",
@@ -118930,6 +125496,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:9a83e9aaddac7cfc4031831e4d843e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fd05708a2231fc7d88b3355e6fa6ffe5",
+        "MNE": "6cdb5b6c6b66e737e6a402e2bcfd375c",
+        "CFG": "41fb06ec60e9df7fe601bf3c802d9ad4",
+        "PRO": "abcde2fbe2dbd2f58c7d1d7a189685bd",
+        "CAL": "9a83e9aaddac7cfc4031831e4d843e56",
+        "CON": "37f016446a973ceb58289f1aaa1e2dc9",
+        "APS": "efe8e98faec5f0dd2260d0e3bb498a80"
+      },
+      "display_name": "FUN_6fa25f00",
       "callees": {
         "LoD/1.09": [
           "UpdateSystemTimeCache|0x6FA26F36",
@@ -119107,6 +125685,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:1aeb702007aab2ddce9d1957c17ebcd4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6581ce30e4949c800d7d3ccc5a6d663b",
+        "MNE": "e86fede13857250efffea11b26b589f7",
+        "CFG": "3c8db68dfcc098e74b35eff54890b6ac",
+        "PRO": "3db40ebcd1624e4a7bb8e28541b0dc70",
+        "CAL": "1aeb702007aab2ddce9d1957c17ebcd4",
+        "CON": "76b3590e89c67999a7d672bd8f0d3768",
+        "APS": "ee5f64b66d152e6b3196b72ec93212be"
+      },
+      "display_name": "FUN_6fa264a0",
       "callees": {
         "LoD/1.09": [
           "SafeStringFormat|0x6FA26A22",
@@ -119583,6 +126173,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "EXP",
       "index": "EXP:10229",
+      "indexes": {
+        "EXP": "10229",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "338275d2cb6cf9426c22d7a8fdfcf559",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.09": [
           "FUN_6fa26080|0x6FA26080",
@@ -119708,6 +126309,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:1e308097c2ac1d6437c964a08aaea734",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a6419fbc680afe2a2527cf739cc17f89",
+        "CFG": "14e69f5e2cc53ba3f2db3c9f36ec6d9a",
+        "PRO": "ba6f12309b95ba7d3d9d72bedc6d7337",
+        "CAL": "1e308097c2ac1d6437c964a08aaea734",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "GetSystemTime|0xD3",
@@ -119858,6 +126470,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:04e3a917c85173f4994a0e8901aea352",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9c858eb5fe1ec691a02f47fae502b1b8",
+        "CFG": "5cdaa376f61503ab9d62e8dc9ab8c787",
+        "PRO": "ac5a8884ac280f3a9368b78d1acdbd16",
+        "CAL": "04e3a917c85173f4994a0e8901aea352",
+        "CON": "a56a6d36a498f484e2dfe77c081331be",
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "EnsureTimestampSystemInitialized|0x6FA2ACE6",
@@ -120031,6 +126654,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "e52247c1c72eb8931d9b7cb5fbe79e77",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ReleaseCriticalSectionByIndex|0x6FA27DAB"
@@ -120172,6 +126806,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:8da70b55dbadf0f2708f39e018499b21",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0432b550769644da846baf2a836117f2",
+        "CFG": "5379c523f1f4b602c7500f029dff98e4",
+        "PRO": "912dd016dd3fa1635fb0a372bbc2910a",
+        "CAL": "8da70b55dbadf0f2708f39e018499b21",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ReleaseCriticalSectionByIndex|0x6FA27DAB",
@@ -120280,6 +126925,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:7b9ba969ae14a280b7d686f733277230",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4acad21b2e553f5b1c0ed6f64429f34e",
+        "CFG": "a2390612083152f0a92b0534b4901e31",
+        "PRO": "d061df305b457a4547beeb0e9d2b3134",
+        "CAL": "7b9ba969ae14a280b7d686f733277230",
+        "CON": "549273e1db965010b0cfa5f6620c6c05",
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "GetTimeZoneInformation|0xD2",
@@ -120478,6 +127134,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:167a858fbcf97e6b13a7f82fa7cc813d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ae8798e965e2d466141dd479c4c8f8f5",
+        "CFG": "bac09583fb849dfd26836dc5f90982ca",
+        "PRO": "303a070f27a6c262ead3ceb1f67eca46",
+        "CAL": "167a858fbcf97e6b13a7f82fa7cc813d",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ReleaseCriticalSectionByIndex|0x6FA27DAB",
@@ -120586,6 +127253,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:6bb86e2cc8beb9a2c340a0df09e576f1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6bb86e2cc8beb9a2c340a0df09e576f1",
+        "CFG": "60b5832630115b1ffde7fcb19dbbde06",
+        "PRO": "a05e5e9a9f896361b79c03d1de0562de",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "CalculateAndSetCalendarDateTime|0x6FA2B168"
@@ -120736,6 +127414,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CON",
       "index": "CON:c14fc16eec3b5c9cea5478bcf0f33ff9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6d50544faaf636cd3d820cef87818a92",
+        "CFG": "6df6bac61d9a2ec2124075d0f05f5497",
+        "PRO": "1ae3141db9407f11d1eb4ee14a146e28",
+        "CAL": null,
+        "CON": "c14fc16eec3b5c9cea5478bcf0f33ff9",
+        "APS": null
+      },
       "callers": {
         "LoD/1.09": [
           "CheckDaylightSavingTransition|0x6FA2AFBC"
@@ -120895,6 +127584,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CON",
       "index": "CON:8a8225fc5cf0d862e46335c317c8624f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e4f799c77acab14c5b1bdda2181c2d46",
+        "CFG": "22928e6c7a4ea1f8212100d4aabdcbf8",
+        "PRO": "208ac013069f9a705994968359398780",
+        "CAL": null,
+        "CON": "8a8225fc5cf0d862e46335c317c8624f",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___sbh_alloc_new_group|0x6FA46C5D",
@@ -121179,6 +127879,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:83295157daa32d8a2ec17bdc4754c492",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "83295157daa32d8a2ec17bdc4754c492",
+        "CFG": "2a63895d1c3eefc0ce5d78ccf63e8aaf",
+        "PRO": "5bea6d115fdcd43db1019fca77c178be",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.09": [
           "ReallocateMemoryWithStrategy|0x6FA2EACA"
@@ -121281,6 +127992,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:534e7e7fed8d48d41353dab6322de72f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "534e7e7fed8d48d41353dab6322de72f",
+        "CFG": "d2711e88c213dfcd5640ddf395777770",
+        "PRO": "9957981784fc7113fb8fc387a4d04c87",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "GetCharacterProperties|0x6FA288FB"
@@ -121393,6 +128115,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:153870eca440a3e17f6438e755575d32",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "03493a37c07d984fa34a394ba093ba8b",
+        "CFG": "af5307fcf8a791b7c53f3de28882f1aa",
+        "PRO": "aa1cc4ca1e37381483dddcfc9fe61bbc",
+        "CAL": "153870eca440a3e17f6438e755575d32",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ProcessEnvironmentStringTable|0x6FA2E269",
@@ -121513,6 +128246,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:e10b5e01aa7213213653c89eecf239b0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e10b5e01aa7213213653c89eecf239b0",
+        "CFG": "371d377f6f69c0fe871150e61cc3a569",
+        "PRO": "0797dd8dc51e27c2bd3a8aad7a64dd66",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "CompareMultiByteStringsLocaleSupport|0x6FA2E511"
@@ -121633,6 +128377,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:6b29d2ba2103f47b23fdc18473bc2ea6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3b6c3d2f2421ca1228631708357a8aa1",
+        "CFG": "85cde22632127de502a5cc2737f7915c",
+        "PRO": "df25b33f70437e9dce8de0788b924d97",
+        "CAL": "6b29d2ba2103f47b23fdc18473bc2ea6",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "_malloc|0x6FA2A805",
@@ -121753,6 +128508,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:b2b45db6efa6a9f07f2a52c3922f5b24",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e91f70009ea5ba58893f9b11fbf44c43",
+        "CFG": "6d93d6afdb14285dba78194fe5fdf38c",
+        "PRO": "e1f519490be45310f67d394a3270d01b",
+        "CAL": "b2b45db6efa6a9f07f2a52c3922f5b24",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "CalculateStringLengthWithLimit|0x6FA2E78E",
@@ -121909,6 +128675,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:fc5431b3c4f2ad9e0224e5230aef596c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5ee5e91686b897ac407a66f5e26c5af0",
+        "CFG": "82e50c975c81f9decefcded5e5389ed5",
+        "PRO": "1912f0ef12668c75a636382f1de75aa3",
+        "CAL": "fc5431b3c4f2ad9e0224e5230aef596c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ProcessEnvironmentStringTable|0x6FA2E269",
@@ -122073,6 +128850,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:5499cdf3475748beb261c4a1639cc8a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5499cdf3475748beb261c4a1639cc8a7",
+        "CFG": "6f8d86f5b3afa85c7994689f33ccb749",
+        "PRO": "f8686d6940f91bb739a6ad7392df9268",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "__mbsnbicoll|0x6FA2E22A"
@@ -122181,6 +128969,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:514cc39535418c55c19bd6376a13dd4c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d43d8fc047d25feaf61353d7aa1dcba8",
+        "CFG": "ba56e4538793aa749551a8f911288e0c",
+        "PRO": "e67fe887616c9f62616935f9f9951f1b",
+        "CAL": "514cc39535418c55c19bd6376a13dd4c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "DuplicateStringBuffer|0x6FA2EE90",
@@ -122289,6 +129088,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:405fd2a506bd7d8343c6b5328132f37f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "da9fe63256c776da60d8a55e82f34c74",
+        "CFG": "d3ccefad4520019f9dacc8b3aedc34a6",
+        "PRO": "401d96d1663cd61268ac88d6922602ed",
+        "CAL": "405fd2a506bd7d8343c6b5328132f37f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "InvokeCallbackHandler|0x6FA2D83A",
@@ -122489,6 +129299,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "MNE",
       "index": "MNE:15c1391d599afb321981e8dd71ecc926",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "15c1391d599afb321981e8dd71ecc926",
+        "CFG": "c7d6b0d73f35f87f2d09099c04fe3939",
+        "PRO": "286e171db0eb8b9e87475959e8e2d860",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "ReleaseCriticalSectionByIndex|0x6FA27DAB"
@@ -122575,6 +129396,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:ed138d38f8d94f3e2796350588794973",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "781017f4d855409582a95afe4ce13001",
+        "CFG": "1a6ad9259d9c9d7db41c368a6d0ee256",
+        "PRO": "f9e64c42344dd63b678ef6470593075e",
+        "CAL": "ed138d38f8d94f3e2796350588794973",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "FindCharacterInString|0x6FA2D630",
@@ -122695,6 +129527,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09",
       "method": "CAL",
       "index": "CAL:f70c8c78eea7bd855077f50aad3bd400",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "47b002e65b520268b25322f2885f618e",
+        "CFG": "fd136deba17a3eb8ff19bc558aefb86a",
+        "PRO": "4fbfcf103f9982691aaf22648c73b65d",
+        "CAL": "f70c8c78eea7bd855077f50aad3bd400",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09": [
           "_malloc|0x6FA2A805",
@@ -122812,6 +129655,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.09d",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "76d5c79d2ab557c0879fd673d9d7d866",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.09d": [
           "UpdateUIElementsOnTextChange|0x6FA16600"
@@ -122914,6 +129768,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "b7f90134d714fda5bab257770e7cad4b",
+        "PRO": "affc3d6af98444db0fb8de25f848ef0c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA19910"
@@ -122994,6 +129859,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:e0f02b9c3a2ff3d55780d5544eb71636",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7c22673e474be3ecf0cae6a40e612ee2",
+        "MNE": "7132f60a1d561296542c60092aa84bc7",
+        "CFG": "222828a342873cef45388f55e9caeb4a",
+        "PRO": "f35dda5717a21fcb0f20e330085ff5c9",
+        "CAL": "e0f02b9c3a2ff3d55780d5544eb71636",
+        "CON": "314b5d50e136dc369e98340d6e65258b",
+        "APS": "33118eee654943c5aa102173e2874c32"
+      },
+      "display_name": "FUN_6fa11fd0",
       "callees": {
         "LoD/1.10": [
           "strchr|0x6FA284DE",
@@ -123058,6 +129935,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:58cb2d8f57dd9dc38da8b63e3ec154c9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "58cb2d8f57dd9dc38da8b63e3ec154c9",
+        "MNE": "f0e6ea9930d0c2658f48024e980436fb",
+        "CFG": "44dd9f505716da643a7811b8eece4648",
+        "PRO": "b6bc86bbfc0ea8a6b95b1a8c7bfb51fa",
+        "CAL": null,
+        "CON": "9897a4f5bbe5d8e379af3990bd904c1f",
+        "APS": null
+      },
+      "display_name": "FUN_6fa12100",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10004|0x6FA2814E",
@@ -123122,6 +130011,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:b47aa581b88f98de842138279ab83621",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "c476a6d2efdc28746070b3c415b8bf93",
+        "CFG": "ce6d93386ff1d8cf41740b4353eb7468",
+        "PRO": "7b90d0266f3a2c67eb739a5651be980b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa12140",
       "callees": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA28244"
@@ -123223,6 +130124,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:06e5e6718bb3a7cd065809cef258913f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f4f3719679c2bb721db30e3ef1bad440",
+        "MNE": "942bf1fb6ee507179993bbde74a506bd",
+        "CFG": "cd6bd68b9ddc1aa72a3b384816b748cd",
+        "PRO": "014b45b86b7f860b51a8007596b55b82",
+        "CAL": "06e5e6718bb3a7cd065809cef258913f",
+        "CON": "c2617c0f1e76e1e99f8b2c1890912edd",
+        "APS": "2a8e73c3eed5bd755bc4d5803957c767"
+      },
+      "display_name": "FUN_6fa12180",
       "callees": {
         "LoD/1.10": [
           "FUN_6fa179b0|0x6FA179B0",
@@ -123315,6 +130228,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:733c67e4e5def05f5da5acdaec71450e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3ba5aa001d7bf8f4afe0b0479fcc25e1",
+        "MNE": "0a584a16750b37ec83e287502d2d21d2",
+        "CFG": "47025e46c7e628cfe39af35dc8d9c108",
+        "PRO": "0d346e9ed80f467ad71df13e243c1e34",
+        "CAL": "733c67e4e5def05f5da5acdaec71450e",
+        "CON": "fcc3cb7efe022e32c4a088110f946319",
+        "APS": "62167b9b1ef2686e9b0dd06d2df4c380"
+      },
       "callees": {
         "LoD/1.10": [
           "Ordinal_10044|0x6FA28292",
@@ -123615,6 +130539,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:697be13c8d1bdd1c8383e08e0c10496a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1bcccf10de3dd9970ad63f7b374eb2f3",
+        "MNE": "a9d24869f63171a55bf4330a44f23872",
+        "CFG": "816a353145ab3fc792679d512ecdff19",
+        "PRO": "7d55c01a4ff0e8a456b58d87c29862eb",
+        "CAL": "697be13c8d1bdd1c8383e08e0c10496a",
+        "CON": null,
+        "APS": "3cc72a3080a92d78054e4920174dca2b"
+      },
+      "display_name": "FUN_6fa125b0",
       "callees": {
         "LoD/1.10": [
           "strchr|0x6FA284DE",
@@ -123669,6 +130605,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:a6ef7b09a1368364d8adb49e2322fca1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e809fe079210e8ae2a41db7aa6dd55cf",
+        "MNE": "aa0924aa5f581b50b5ae404caa611d45",
+        "CFG": "3d0336966a01ddc770857b03e68c5e62",
+        "PRO": "a52afc085d70bd6b28778182f03a4fb1",
+        "CAL": "a6ef7b09a1368364d8adb49e2322fca1",
+        "CON": "620fa83bb85192a69019c8bc806ad316",
+        "APS": "1528ce445eeeeae3d5702a26abe18278"
+      },
+      "display_name": "FUN_6fa12660",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10024|0x6FA282AA",
@@ -123753,6 +130701,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "14e2a60787b865a64a08d303e897b509",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA19910"
@@ -123831,6 +130790,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:01049f3b0aa243c235f676470bc4680a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3c67b4d1304ba9032113441431a2dc01",
+        "MNE": "c0103a586d107335bdec1f2e929364cd",
+        "CFG": "b4e9a50162bcbb9b73f906fc1bdd0c4f",
+        "PRO": "7074e4abb1f20a6bd8f8c57bb5ce1f56",
+        "CAL": "01049f3b0aa243c235f676470bc4680a",
+        "CON": "15c5f19767ff253f8e8a72790dc354a9",
+        "APS": "ca0f8b63fdbe066238cbec0a108022b2"
+      },
       "callees": {
         "LoD/1.10": [
           "FUN_6fa179b0|0x6FA179B0",
@@ -123917,6 +130887,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "5296894d33fbdf9152400cf2b8a33142",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA257B0"
@@ -123992,6 +130973,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:733c67e4e5def05f5da5acdaec71450e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d3f74c507adcadfffa76d1d5161176d9",
+        "MNE": "11a682dda6a196b0a844863cf8e57687",
+        "CFG": "7686df48a266c1472f5748b6b96fca03",
+        "PRO": "a3c0103d3bcd7b317fb1945b651aa000",
+        "CAL": "733c67e4e5def05f5da5acdaec71450e",
+        "CON": "f9da04714ed4c26dd777827532b42e24",
+        "APS": "1ff6068d9e7fcb7e54dd87d4762b60a7"
+      },
+      "display_name": "FUN_6fa128df",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10044|0x6FA28292",
@@ -124071,6 +131064,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:697be13c8d1bdd1c8383e08e0c10496a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8538b51ddeb26aa6fb512e7708ce4089",
+        "MNE": "be681996c7a3b94c6431b91f025921ae",
+        "CFG": "84263fdec80e1fb87bba72323feb8a33",
+        "PRO": "ded729f445a45c5831758ff289b97c32",
+        "CAL": "697be13c8d1bdd1c8383e08e0c10496a",
+        "CON": null,
+        "APS": "12e7467cf32dee1c74efc247d37400da"
+      },
+      "display_name": "FUN_6fa12c60",
       "callees": {
         "LoD/1.10": [
           "strchr|0x6FA284DE",
@@ -124127,6 +131132,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:1153333681cee1b4c204ae15434c7ffa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "bc2d10a102f5084b115a80b9e40802e1",
+        "MNE": "d184cda6b19d594303acf5ccd748c0cd",
+        "CFG": "14ed00f0b542ed428bc2e1b3b292a997",
+        "PRO": "5ad16b172c6f1a0612ecdbe1bedc3e2a",
+        "CAL": "1153333681cee1b4c204ae15434c7ffa",
+        "CON": "c59d1ae7026b3e765be7d98b402ca942",
+        "APS": "fe6144dbae853df71cd11cda78e6bccb"
+      },
+      "display_name": "FUN_6fa12df0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10024|0x6FA282AA",
@@ -124214,6 +131231,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:d1610ec784caeb0d0a0ac5efbb693cec",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d1610ec784caeb0d0a0ac5efbb693cec",
+        "MNE": "c92d1a1b1171637597867b7690bff8b3",
+        "CFG": "36f971fb926f42a84ff40d231f187fef",
+        "PRO": "7bf90515bbefe1ec23fcfd09fb489d69",
+        "CAL": null,
+        "CON": "351b472389813f795ec406a639559791",
+        "APS": "d1610ec784caeb0d0a0ac5efbb693cec"
+      },
+      "display_name": "FUN_6fa14520",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10004|0x6FA2814E"
@@ -124401,6 +131430,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:504f37f8ad50b92aeda25365aa70c32c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "504f37f8ad50b92aeda25365aa70c32c",
+        "CFG": "0efc4caa5a720cd71164186c8f811cce",
+        "PRO": "ffd95475a576cb5888b719beed5205f5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa14600",
       "callees": {
         "LoD/1.10": [
           "UpdateSystemTimeCache|0x6FA286DF"
@@ -124461,6 +131502,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:ec5d025e3940607d8f3926822f549a4e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "851b076918b3b1ef816c03db1964ad71",
+        "MNE": "1b6120237e4f9ad0dd4d2e8cecc48dac",
+        "CFG": "5f7c7d06fa3873f7325e9ecb45aad51b",
+        "PRO": "6fe173065ddf1730ed34c866ec082a47",
+        "CAL": "ec5d025e3940607d8f3926822f549a4e",
+        "CON": "145c8222b6d2295cea110454a8676d26",
+        "APS": null
+      },
+      "display_name": "FUN_6fa15520",
       "callees": {
         "LoD/1.10": [
           "GetTickCount|0xD1",
@@ -124669,6 +131722,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:76fc29ff1045d6d2c2abd803f3780517",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "58cb2d8f57dd9dc38da8b63e3ec154c9",
+        "MNE": "ff428bb6e1fbb95994444b41196ffdce",
+        "CFG": "93cad3e9f05170e9c449bea649e2ebb1",
+        "PRO": "c5a093ab9c35ca3fe2a477504d1a6c2d",
+        "CAL": "76fc29ff1045d6d2c2abd803f3780517",
+        "CON": "cbf266c318e62e789d18d652b5a7ab43",
+        "APS": null
+      },
+      "display_name": "FUN_6fa15e50",
       "callees": {
         "LoD/1.10": [
           "FUN_6fa27c00|0x6FA27C00",
@@ -124879,6 +131944,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:851b076918b3b1ef816c03db1964ad71",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "851b076918b3b1ef816c03db1964ad71",
+        "MNE": "d13af45595fb3c1d6cd3e089b7f2216d",
+        "CFG": "4fcd9d4d0c18aa42519f637ee4f0b819",
+        "PRO": "b770b8fe9e9f315953d48bd7ee147eb4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa16260",
       "callees": {
         "LoD/1.10": [
           "FUN_6fa13b40|0x6FA13B40",
@@ -124949,6 +132026,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:01b3fb33b085f3a8f5c670e9b839d21c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e52846c1354d1fb04c58b41bf2092557",
+        "MNE": "fb2c2ff1647dbf95a5fd8380b938b9a8",
+        "CFG": "9670f45a53d5789395eece6dd8f0c424",
+        "PRO": "66c157a5997b512769c0a49eac8e7088",
+        "CAL": "01b3fb33b085f3a8f5c670e9b839d21c",
+        "CON": "74549a7674ab6483f12e8b9c0f64f76b",
+        "APS": "2228119dde467a4fcc368bf825ca5004"
+      },
+      "display_name": "FUN_6fa168f0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_502|0x6FA284E4",
@@ -125380,6 +132469,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:7a88030e9b4858b5b60c383901b3ccfa",
+      "indexes": {
+        "EXP": null,
+        "STR": "7a88030e9b4858b5b60c383901b3ccfa",
+        "API": "636d9661a5e639d8ed826c064949dc1a",
+        "MNE": "ccd875c2f0e3b4d888281cd2fb216644",
+        "CFG": "138376b1138ff47a1e6d65bd6217dfce",
+        "PRO": "c148df6947121b7932ed58e89873bbb1",
+        "CAL": "1805025fbcdfa612efddab20044101c9",
+        "CON": "2888c2d10a921a91141c52d5778a7997",
+        "APS": "2e815398b799c92c39c4fb69954681c6"
+      },
+      "display_name": "FUN_6fa18960",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10017|0x6FA28358",
@@ -125466,6 +132567,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:d6c1eeadf9ec3f7a96cb9d8522ab7539",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "bbcf6a5d5f739c71dc591931e9b7db9d",
+        "CFG": "7b3aed826d0ef5940829caf8f7c7ea9c",
+        "PRO": "cc20aa8b7fcb94a5182bb5ed068a13c6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa18c60",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10018|0x6FA2835E"
@@ -125547,6 +132660,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:d6c1eeadf9ec3f7a96cb9d8522ab7539",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "ac49e22c446f134ba5af5014e5fd00ec",
+        "CFG": "771451980f9b5eb97bbd3d3bda0042db",
+        "PRO": "b85ec695cbbd62364fb5669c747bf6e1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa18fc0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10018|0x6FA2835E"
@@ -125595,6 +132720,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:a9dd5c313093a329f7d3033c3ba5e3b9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a9dd5c313093a329f7d3033c3ba5e3b9",
+        "CFG": "93bfcfc90e76bfffb21e53a04de03be6",
+        "PRO": "22146b3ed2213cee2fb6066125dbafaf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa19890",
       "instruction_counts": {
         "LoD/1.10": 20
       },
@@ -125635,6 +132772,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:305c32d33191c1b22ce2562362c5fa24",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "305c32d33191c1b22ce2562362c5fa24",
+        "CFG": "480a369eacaaf576acb9ba14eba930e1",
+        "PRO": "2f7039d0bce3df7dc2d68f2b79822809",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.10": [
           "FUN_6fa11460|0x6FA11460",
@@ -125691,6 +132839,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:5d2a148c4d1866f8953308218b77b2c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5d2a148c4d1866f8953308218b77b2c0",
+        "MNE": "48e0210f4c5bac13004a47095fe3b3ee",
+        "CFG": "f0dc23a205d89418b9a4aa07f50e0927",
+        "PRO": "901de7e0f05421a9db79484b32f32f22",
+        "CAL": null,
+        "CON": null,
+        "APS": "5d2a148c4d1866f8953308218b77b2c0"
+      },
+      "display_name": "FUN_6fa1a4e0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10027|0x6FA282BC"
@@ -125807,6 +132967,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:5d2a148c4d1866f8953308218b77b2c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5d2a148c4d1866f8953308218b77b2c0",
+        "MNE": "48e0210f4c5bac13004a47095fe3b3ee",
+        "CFG": "f0dc23a205d89418b9a4aa07f50e0927",
+        "PRO": "bc5b5e41646cec25baa44c7bce6d1e09",
+        "CAL": null,
+        "CON": null,
+        "APS": "5d2a148c4d1866f8953308218b77b2c0"
+      },
+      "display_name": "FUN_6fa1a520",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10027|0x6FA282BC"
@@ -125908,6 +133080,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:1735a72646dd2be1f8da19184bc2a74e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0e5f3e0f4c35be7906fcf5347103eb9c",
+        "MNE": "fb5b86b8917685228e6ca003349d13b8",
+        "CFG": "07f1f737fbbb1e611001cf230115628e",
+        "PRO": "65df26d3bf744f7e476cb1b41b5be2d5",
+        "CAL": "1735a72646dd2be1f8da19184bc2a74e",
+        "CON": null,
+        "APS": "88a5dfb71a6f9f11a9df60448482e8fc"
+      },
+      "display_name": "FUN_6fa1b1b0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10053|0x6FA28388",
@@ -125967,6 +133151,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:0877c9d1da14d216c82e7ce9eeef2753",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f220ba83599522354162939f00fea07c",
+        "MNE": "221b4f7adc3211f4b40b2368772fddbe",
+        "CFG": "0be580859e0be8554d54bdf7cdf8e16b",
+        "PRO": "3030d36d3caeed16ebcf4e8e895db81c",
+        "CAL": "0877c9d1da14d216c82e7ce9eeef2753",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa1c0e0",
       "callees": {
         "LoD/1.10": [
           "toUtf|0xB",
@@ -126027,6 +133223,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:3581ca01ad637747cb55175b22bff126",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3581ca01ad637747cb55175b22bff126",
+        "CFG": "20ab3aafb5fce4ffb585d7639266d46c",
+        "PRO": "da12358293bf4ef6b4c799fefd50d6bd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa1c330",
       "instruction_counts": {
         "LoD/1.10": 4,
         "LoD/1.11": 4,
@@ -126122,6 +133330,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:2d251574d2ae7bfbbcc55bf54cd5248c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "515e5917f6c8ec9c8d3af36e51d05ac6",
+        "MNE": "92b4857c46ec7047cd5a5ece367b2d8c",
+        "CFG": "5a7756b1907711a789b4fb7241c47b09",
+        "PRO": "ed0fe3d9da1cbe507fdc639c7c284522",
+        "CAL": "2d251574d2ae7bfbbcc55bf54cd5248c",
+        "CON": "7f66efcb475da70d40f45c570616c756",
+        "APS": "195d4d9a7d55c36da049b244fbfb14ba"
+      },
+      "display_name": "FUN_6fa1cb30",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10047|0x6FA2826E",
@@ -126174,6 +133394,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:17046d67ddf348d4d419255968f8f8a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "17046d67ddf348d4d419255968f8f8a7",
+        "CFG": "a2ae5c398341153a1feec5c2abfe3e30",
+        "PRO": "e42c9b2441e32cb95d21a08d86d4937a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa1f5b0",
       "callers": {
         "LoD/1.10": [
           "FUN_6fa1f110|0x6FA1F110"
@@ -126209,6 +133441,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:1fb49efffa33c25a94693c0f0bfacc8a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2b751cd9d5a3f820efa7412fbc78eebf",
+        "MNE": "fb7aa2745d8ef639774b6e46e1f2d2ce",
+        "CFG": "6cd176871444e7a7e781af769e312edb",
+        "PRO": "9f2379e25e88ccded1a20174f30fae72",
+        "CAL": "1fb49efffa33c25a94693c0f0bfacc8a",
+        "CON": "a3a22a095ed6b3588e65c82cae46211a",
+        "APS": "29489086cd65015f08eeda443548f7e1"
+      },
+      "display_name": "FUN_6fa1f5e0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10180|0x6FA28322",
@@ -126293,6 +133537,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:38fc47135d187c4ee09dfeb10194d5db",
+      "indexes": {
+        "EXP": null,
+        "STR": "38fc47135d187c4ee09dfeb10194d5db",
+        "API": "d2349b5e43a0d55ab3cc32495d615ac6",
+        "MNE": "7d38be5e7682c01a2ec9d98b378f1d30",
+        "CFG": "5f58db2c27a93c595ddd8ae69e546bd4",
+        "PRO": "aa38abbb7b0aff43eaf8160447998297",
+        "CAL": "a252b316e0ecbf48247b6e251e9812a9",
+        "CON": "80d9ac6cd955269a6a5ee236bbf127cd",
+        "APS": "a6b3037859bc8c450ebcc8a934c641cb"
+      },
+      "display_name": "FUN_6fa20680",
       "callees": {
         "LoD/1.10": [
           "Ordinal_253|0x6FA2850E",
@@ -126385,6 +133641,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "STR",
       "index": "STR:600fadb1421fb0ee0ecdfe5f76d7b1da",
+      "indexes": {
+        "EXP": null,
+        "STR": "600fadb1421fb0ee0ecdfe5f76d7b1da",
+        "API": "d2349b5e43a0d55ab3cc32495d615ac6",
+        "MNE": "7d38be5e7682c01a2ec9d98b378f1d30",
+        "CFG": "5f58db2c27a93c595ddd8ae69e546bd4",
+        "PRO": "2f10fb72e8a7891db2df4a799a41f745",
+        "CAL": "a252b316e0ecbf48247b6e251e9812a9",
+        "CON": "80d9ac6cd955269a6a5ee236bbf127cd",
+        "APS": "a6b3037859bc8c450ebcc8a934c641cb"
+      },
+      "display_name": "FUN_6fa20e20",
       "callees": {
         "LoD/1.10": [
           "Ordinal_253|0x6FA2850E",
@@ -126477,6 +133745,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:7bb15d1737009e4c580ff5d16d102e67",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c81f989ab20aa9ac5b26a160ce06b707",
+        "MNE": "fb7610e45cb2ae8741075fc731de67c1",
+        "CFG": "cf23d1dc8b5fdb1b51f99575817340a1",
+        "PRO": "eab74b21a3b22760f96a98bb8a8abd9b",
+        "CAL": "7bb15d1737009e4c580ff5d16d102e67",
+        "CON": "490ff6b6d898784d9808fcfff31e059c",
+        "APS": "21eac238c50782747810847d203e413e"
+      },
+      "display_name": "FUN_6fa215c0",
       "callees": {
         "LoD/1.10": [
           "Ordinal_253|0x6FA2850E",
@@ -126569,6 +133849,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:8087b965ee59f303318c1ee807581c9c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a48eddfdf47d09aafe3d9b943f6b7cf7",
+        "MNE": "095f4e6b200b4236f052e3269861b1e2",
+        "CFG": "293739e87b2b86aa14961e7b572a65bc",
+        "PRO": "518c5eeb61ab6bb829eb15e0784aacdb",
+        "CAL": "8087b965ee59f303318c1ee807581c9c",
+        "CON": null,
+        "APS": "3edee94ebcd6669aa91715dc319d8b21"
+      },
+      "display_name": "FUN_6fa22900",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10029|0x6FA2823E",
@@ -126610,6 +133902,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:bc90a8363a7163fa27b37e0ce45322c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1b91ae143f5fb182cb2982d0ad95fe26",
+        "MNE": "7619852b6d58fb8d7e84432e54838e80",
+        "CFG": "889c34904ae8f7a9c830c8a959bc255c",
+        "PRO": "478a6888848790b9b4b5061e1f99d724",
+        "CAL": "bc90a8363a7163fa27b37e0ce45322c0",
+        "CON": null,
+        "APS": "1b91ae143f5fb182cb2982d0ad95fe26"
+      },
+      "display_name": "FUN_6fa22b20",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10008|0x6FA281EA",
@@ -126677,6 +133981,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:b47aa581b88f98de842138279ab83621",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b47aa581b88f98de842138279ab83621",
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "bd16565ade974828508113df65604ff2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA28244"
@@ -126771,6 +134086,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "89eb69db703956f9f35221714bc3d8d3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.10": [
           "UpdateUIElementsOnTextChange|0x6FA1B750"
@@ -126866,6 +134192,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:92b1f08424b268d1d42b61a134b1505e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f220ba83599522354162939f00fea07c",
+        "MNE": "de0197c6375fda3a7be009a408c90806",
+        "CFG": "8971f5a43fc0bb21fb8c6c7380ad9c72",
+        "PRO": "b6ffb82d06ecc9c40bc0923615558204",
+        "CAL": "92b1f08424b268d1d42b61a134b1505e",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa25c80",
       "callees": {
         "LoD/1.10": [
           "unicode2Win|0x12",
@@ -127020,6 +134358,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:5c5728807baa29df40401e1b34eeeb81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1049fb8814dfa1ac7183f01b14da4cf7",
+        "MNE": "40a5de18a5a864ec149eb257eb9b7239",
+        "CFG": "589a3e9d74b629e9ab074d2d1c9be4eb",
+        "PRO": "606c81426b49b19c50a971dd02057084",
+        "CAL": "5c5728807baa29df40401e1b34eeeb81",
+        "CON": "08455273da085c30e05f71049a1b7bb0",
+        "APS": "32413448be5b056534d29b85e51d1509"
+      },
+      "display_name": "FUN_6fa25cc0",
       "callees": {
         "LoD/1.10": [
           "FindFirstFileA|0xD4",
@@ -127400,6 +134750,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "CAL",
       "index": "CAL:ce52cf31e6ea3638b1d129b9275964a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "bd528f05895ad0fd070d96e15dcff661",
+        "MNE": "4a64f79f6f6ce814901ed184ea2c845a",
+        "CFG": "c274c79a6bb822e2c50feab85158ea3a",
+        "PRO": "d3e4fcaf84f81cff4a16aa518377cc94",
+        "CAL": "ce52cf31e6ea3638b1d129b9275964a7",
+        "CON": "ea66a648c9062cec1591c2374eb66053",
+        "APS": "ec215f1d07ce7dcae334938fa46980a8"
+      },
+      "display_name": "FUN_6fa260a0",
       "callees": {
         "LoD/1.10": [
           "FUN_6fa184b0|0x6FA184B0",
@@ -127496,6 +134858,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:d6c1eeadf9ec3f7a96cb9d8522ab7539",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "bbcf6a5d5f739c71dc591931e9b7db9d",
+        "CFG": "7b3aed826d0ef5940829caf8f7c7ea9c",
+        "PRO": "cc20aa8b7fcb94a5182bb5ed068a13c6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa27750",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10018|0x6FA2835E"
@@ -127618,6 +134992,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "API",
       "index": "API:3f850e2ab55b5931463751f789ac78c4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3f850e2ab55b5931463751f789ac78c4",
+        "MNE": "544cc0d6286c992238d5991b2734df6a",
+        "CFG": "5750c1fd0989e33a966cce417f6e0ea3",
+        "PRO": "1142a0c47a02a8f407fb471431c56fff",
+        "CAL": null,
+        "CON": "b53dbaa4181a9f2454a321169f5efcc0",
+        "APS": null
+      },
+      "display_name": "FUN_6fa27940",
       "callees": {
         "LoD/1.10": [
           "Ordinal_10007|0x6FA28154"
@@ -127867,6 +135253,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10029",
+      "indexes": {
+        "EXP": "10029",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "c432c889a3d0999209e0410efcf43950",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.10": [
           "FUN_6fa22900|0x6FA22900",
@@ -127982,6 +135379,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.10",
       "method": "EXP",
       "index": "EXP:10015",
+      "indexes": {
+        "EXP": "10015",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "5fa38c00bbdd01f6dd33f56766fc6038",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.10": [
           "FUN_6fa1d490|0x6FA1D490"
@@ -128100,6 +135508,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2a11d0df83ff62d9446a1e6cc54de201",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a11d0df83ff62d9446a1e6cc54de201",
+        "CFG": "b29fbf86390ea973c240d8c01b537f67",
+        "PRO": "f9c7930872c30a7de8d8c994624062de",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa41000",
       "callers": {
         "LoD/1.11": [
           "FUN_6fa52560|0x6FA52560",
@@ -128188,6 +135608,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:d3af7107054244a06ec774d2cb9c7d77",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fa8972b50a91454e34542a6f7b824984",
+        "CFG": "1ea3a930df97a36ef32f37a836ecd769",
+        "PRO": "cc9dc3a343c87517576eeba67052d948",
+        "CAL": "d3af7107054244a06ec774d2cb9c7d77",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__flsbuf|0x6FA41B9B",
@@ -128440,6 +135871,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1bb1cd97d48ed8326a443593e8ea4a09",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0c1b1eb893ed76911dc810ba960af5cf",
+        "CFG": "89b5d0205cb1ae6686d60db6ab19c3bc",
+        "PRO": "b9b2d2b25c0c0c00493248fdd8c63e53",
+        "CAL": "1bb1cd97d48ed8326a443593e8ea4a09",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetSystemTimeAsFileTime|0x4",
@@ -128609,6 +136051,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:c170bd72c7a30c3be9e6aa15fb836e49",
+      "indexes": {
+        "EXP": null,
+        "STR": "c170bd72c7a30c3be9e6aa15fb836e49",
+        "API": null,
+        "MNE": "df0a04b7db34c5f035a394dc061ca513",
+        "CFG": "d1edeaa459435331eab64dd6e3e7057e",
+        "PRO": "bac5e44a883ba435cbbd7ddddb001708",
+        "CAL": "a158f1b47929a47875cde2a5c7faef59",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "ExitProcess|0x5",
@@ -128777,6 +136230,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "3c46dcd9015526c888811911ee7255e0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock|0x6FA426FB"
@@ -128877,6 +136341,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "d7395ed070813ef4a1393f604c725172",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -128977,6 +136452,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:996e3f0c6129985d37a2b36d657b6892",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "996e3f0c6129985d37a2b36d657b6892",
+        "CFG": "e7d98ce0777fc3f1fde5043074cd945b",
+        "PRO": "56a3399a0dba94678e31baeedf1b1552",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "ProcessTerminationHandler|0x6FA412A1"
@@ -129077,6 +136563,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:668698213386d45937ed3d28c5af9706",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "28a1cba9ddfd9945ee3fec59104d67a8",
+        "CFG": "a74f6a52e1f747dbc592a8133b3d0d09",
+        "PRO": "6817e85a5d64d2ed09b70f09c00c17ae",
+        "CAL": "668698213386d45937ed3d28c5af9706",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___security_init_cookie|0x6FA480DD",
@@ -129244,6 +136741,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9e6c90bf551b68e4cf49f444b4fcfe70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2ef7e47ffada49e021fc9ebda7c95a50",
+        "CFG": "c36e9ce160ebb419a704bfa467eff572",
+        "PRO": "ecebe4e37e80e96fd8e90c1f658532c2",
+        "CAL": "9e6c90bf551b68e4cf49f444b4fcfe70",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetCurrentProcess|0x20",
@@ -129451,6 +136959,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ca7f27832b0deaebe496b377f1c5001a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ca7f27832b0deaebe496b377f1c5001a",
+        "CFG": "38b5eed7205b2e93f358cdc4c8ab4ee2",
+        "PRO": "29bdd33c530897f9e4da70ea9eeee72a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -129551,6 +137070,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4c4078dc52976c3c95b0fc32f6be6409",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aadd081348e7e72a6495b70f74443159",
+        "CFG": "67fd89543de8f5e23552f3c64fd1e03f",
+        "PRO": "96e58f247aeafb7458925beaa1bed76e",
+        "CAL": "4c4078dc52976c3c95b0fc32f6be6409",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__getstream|0x6FA42D4B",
@@ -129723,6 +137253,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "d7bbce79906454bf320275b1f3308f91",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireSynchronizationLock|0x6FA42B0C"
@@ -129823,6 +137364,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:7e7eafeaaecee14a89c9a3ecdff11674",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c14eef408734fd547a565d5fa1a5b755",
+        "CFG": "c5801ac008315696994a2ea36acff58d",
+        "PRO": "ae322a392f8393d9b7acde102a87f7bd",
+        "CAL": "7e7eafeaaecee14a89c9a3ecdff11674",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "ReleaseFileLockCallback|0x6FA4152F",
@@ -129990,6 +137542,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f97d76a7bf7bad4437ec948fbad99b7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f97d76a7bf7bad4437ec948fbad99b7",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "a71e0b8a38227d683694ea10eb0328b9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireSynchronizationLock|0x6FA42B0C"
@@ -130090,6 +137653,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:435da0adcb37274e336268c66bdd0962",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c2c985aace1b860e9b2c7a02eacdf425",
+        "CFG": "5ac75e22776d16f851ec785376e46b6b",
+        "PRO": "3d53d14bf0542ad3fadd4cffbd48e766",
+        "CAL": "435da0adcb37274e336268c66bdd0962",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -130242,6 +137816,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "09bb58b496add6a08222b881ec571100",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireSynchronizationLock|0x6FA42B0C"
@@ -130342,6 +137927,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ffeaed223a7d62f7d52f1bb9b91b904d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ffeaed223a7d62f7d52f1bb9b91b904d",
+        "CFG": "c7d5a6bde072f9fe5949ba0fb3f7aa4e",
+        "PRO": "2d41b3acb38be27af77c7b210b43c5a5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "_qsort|0x6FA41680"
@@ -130452,6 +138048,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:1351b22eb5585dfd20ee7f175060d876",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1c53b3c7cf6d86900d5c28a37ee12d52",
+        "CFG": "d5447082d15e7d1f39a1c053139fb3f0",
+        "PRO": "2a5ef381168e598a7af352967764bcf6",
+        "CAL": null,
+        "CON": "1351b22eb5585dfd20ee7f175060d876",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "SelectionSortPartition|0x6FA41610"
@@ -130641,6 +138248,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:36d16036c283f7e2eb76aab8a0b8302d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1c48859ddf90d08dbf4d9d03c0c2a56a",
+        "CFG": "81e06f664f0f8ce33f7a1da6677a0be6",
+        "PRO": "20e41f1deb32bcadcee45ae0c4b0c71b",
+        "CAL": "36d16036c283f7e2eb76aab8a0b8302d",
+        "CON": "9c4386fedd7f97c9ba21caa2a6d2653b",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__initptd|0x6FA44691",
@@ -130920,6 +138538,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:c4359abb3e3c136e8ac1a4498ca0358d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e12afdedf65b4f2d4ddeab4188a67460",
+        "CFG": "bd0a298e91f311884600b4841d663881",
+        "PRO": "1432c5b348c385c24a106dcc99ab18b5",
+        "CAL": "c4359abb3e3c136e8ac1a4498ca0358d",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -131070,6 +138699,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:97c22a85070344f102bcf14ee4f0ea92",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "97c22a85070344f102bcf14ee4f0ea92",
+        "CFG": "bdb1d0c2ef6e1fb4c6f89de05cec319f",
+        "PRO": "a150a68162357ae364bc07ea3ee65f66",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__flsbuf|0x6FA41B9B"
@@ -131180,6 +138820,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:fab24e5d32bf792b67dd222a8e1cb96f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fab24e5d32bf792b67dd222a8e1cb96f",
+        "CFG": "0e090ba9a348aa44bf16fca34c84ed78",
+        "PRO": "2a71c12bffbff4b88bfa2138aefb8e0b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "WriteCharToFileBuffer|0x6FA41CB4"
@@ -131307,6 +138958,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:921d14ea2db8ace7085d489017738fb1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "921d14ea2db8ace7085d489017738fb1",
+        "CFG": "2b291ac3a85605987778dcfd38f49ab8",
+        "PRO": "9e6e7e5b51c5b87ef9adf40063894a96",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05"
@@ -131466,6 +139128,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b52e9cbc9c783854a1fab83ad6e81448",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3d673ff0fb622876ea58c1a43b2af6a0",
+        "CFG": "a747ee8892657bd2c9593609228c7cae",
+        "PRO": "7ac88b525f342f3ce158d865cd917842",
+        "CAL": "b52e9cbc9c783854a1fab83ad6e81448",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D",
@@ -131613,6 +139286,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:40a3ad594c5d55096a707a11af789a94",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a51a9a5e7ceb2fab96b937dc9f784c13",
+        "CFG": "d3ade1118e7886dfb9e8e0c3f7112e59",
+        "PRO": "c618c7773b70153e422d9d9b39993624",
+        "CAL": "40a3ad594c5d55096a707a11af789a94",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05",
@@ -131817,6 +139501,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "180d0dbb009b4d1e2113d2477fcba925",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -131917,6 +139612,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:17ef078583280a51d4961f82c971455c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a62c5e213216063061d4d1c8c7db89e8",
+        "CFG": "2cb33e4be6f5f636231b00a18859a89d",
+        "PRO": "cdd9e6d3219ad301e715105e04969c41",
+        "CAL": "17ef078583280a51d4961f82c971455c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AmsgExit|0x6FA41B68",
@@ -132129,6 +139835,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4046b50a9641b94f5327cd0717f70083",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7a09c5a73235698eb35bf1fa40abce3a",
+        "CFG": "2510331e9a88d15c3f2cfc1786a2ed5d",
+        "PRO": "e8a48785a0414778bbcda4a802ef3c62",
+        "CAL": "4046b50a9641b94f5327cd0717f70083",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "_realloc|0x6FA45C7E",
@@ -132261,6 +139978,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:266baaaf79f230c6a6856a4a53b42d70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "266baaaf79f230c6a6856a4a53b42d70",
+        "CFG": "534def472ed002fb3d9ae30d9941d219",
+        "PRO": "3553d70f25c033c70a698626435f35c3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "_malloc|0x6FA45979"
@@ -132323,6 +140051,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a3ab2a0d3b1472006b14d0314db9dfda",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5d2d40297dfe2be53beef9d63f51ef80",
+        "CFG": "4c83e5fd9c80632461237abbe725edbe",
+        "PRO": "45221acc279183c9f689defafad5bd6b",
+        "CAL": "a3ab2a0d3b1472006b14d0314db9dfda",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireFileHandleLock8|0x6FA4120D",
@@ -132475,6 +140214,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e7313d19d2f1b94221ec63dffd5562f1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e7313d19d2f1b94221ec63dffd5562f1",
+        "CFG": "5b8e97ccbb6e3411804581f18f3f0d4e",
+        "PRO": "c5c2e165b9453f9456a1b44a8c99a2a5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireFileHandleLock8|0x6FA41216"
@@ -132575,6 +140325,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2544af1d7a0712444106eb929de8e62d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2544af1d7a0712444106eb929de8e62d",
+        "CFG": "ce025a9475cd316f326dd7c854031af0",
+        "PRO": "ef9a4571e7167f6ca37ef06a54d91959",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__onexit|0x6FA427D4"
@@ -132692,6 +140453,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:d4ff483d464ee4fbfb24c40605ef6933",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9882f49b46164551a852d0e5558c3763",
+        "CFG": "bf34a363161316a9e073da2749913bf1",
+        "PRO": "35cba632750eae0407775a9bb4dd16a5",
+        "CAL": "d4ff483d464ee4fbfb24c40605ef6933",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -132824,6 +140596,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:d4ff483d464ee4fbfb24c40605ef6933",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9882f49b46164551a852d0e5558c3763",
+        "CFG": "bf34a363161316a9e073da2749913bf1",
+        "PRO": "3905d6ef4ad60530d163fb9e44b32fac",
+        "CAL": "d4ff483d464ee4fbfb24c40605ef6933",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa42862",
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -132960,6 +140744,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:aef9935d5818b16bbad0952f5da65380",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aef9935d5818b16bbad0952f5da65380",
+        "CFG": "f17e257a6a88a6840264142f427a312e",
+        "PRO": "38bc0f52d585dfd2be8ee6e3c6dfe38b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__lseek|0x6FA457B9",
@@ -133190,6 +140985,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bb6caf8fa91f28d8c9b4f7822655fe6b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bb6caf8fa91f28d8c9b4f7822655fe6b",
+        "CFG": "20febd26693f4c7f01c18cda8032cfe9",
+        "PRO": "b9341e7a9c7fb15c0fd3b51f756cce6f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__lseek|0x6FA457B9",
@@ -133390,6 +141196,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:6cbc2ce9e5414f2a93eac4a07ad198ed",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a6fea9265e921186a05960df861fbfc9",
+        "CFG": "d6b01e925d21458735ed5f3b8a933722",
+        "PRO": "328c0e04e135bd4bab1c7c267ece5728",
+        "CAL": null,
+        "CON": "6cbc2ce9e5414f2a93eac4a07ad198ed",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__sopen|0x6FA4644C"
@@ -133584,6 +141401,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b6f8c10798544c3b39933775b55c5c07",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b6f8c10798544c3b39933775b55c5c07",
+        "CFG": "6a24f9d258bf66a71c04d1cd2c4491bc",
+        "PRO": "7c10883a20c98c7c5afbc645aa04c270",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetOrCreateTlsContext|0x6FA446A4"
@@ -133741,6 +141569,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1f11a6c5ade9364042e089b34c878fff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f102f826338ad08d3de5f7e30c5a3098",
+        "CFG": "70aaf20934ae72b4490645c09c5788b7",
+        "PRO": "506e52a513dc44b14861c0a415eb62c3",
+        "CAL": "1f11a6c5ade9364042e089b34c878fff",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05",
@@ -133946,6 +141785,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:d00ae52c0f91d6c16f1f8c274a3ef318",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9b14ad725dce2eea712eace2974b5510",
+        "CFG": "6b2e478b6183ba2981a22e8fae14248c",
+        "PRO": "d348ef45ce7bb61fe7a3aaf2a625a159",
+        "CAL": "d00ae52c0f91d6c16f1f8c274a3ef318",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetDosErrnoPtr|0x6FA42CCF",
@@ -134049,6 +141899,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b187e6ddec2478ca2e8df4d54ae103ac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d016b68ecb5da6df87847adf03c73f3a",
+        "CFG": "29aaca9058796c0a89422774dc6e6302",
+        "PRO": "2cc22c4186562ed797e9f3633651e31b",
+        "CAL": "b187e6ddec2478ca2e8df4d54ae103ac",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock_fhandle|0x6FA465DD",
@@ -134236,6 +142097,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "7b4737d292213715934247798138daae",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -134336,6 +142208,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:89a3b464bc4a7e710356d0398af60d15",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d5c8453c3e2bb4ff6f437d3d747d2c97",
+        "CFG": "c51ab0b2afbd890f8dc9c369e72ce1e5",
+        "PRO": "fd28216368c018a191647475726e6aaf",
+        "CAL": "89a3b464bc4a7e710356d0398af60d15",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock|0x6FA426FB",
@@ -134613,6 +142496,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1baa360655b8ddced52aa29c50367643",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1819fca98b14dcf51dff412defb1fa98",
+        "CFG": "cf47394a3c270b0b705cabb4dc58f3e6",
+        "PRO": "ee09d6a47c445280adf5650d5f22f305",
+        "CAL": "1baa360655b8ddced52aa29c50367643",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__get_osfhandle|0x6FA4659C",
@@ -134770,6 +142664,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:5ae0937731ea82f0ac8c3b7f62630eb9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b5e8d68191f204e2d43adbcf540da123",
+        "CFG": "768932092b29286ddd92c2d97af27231",
+        "PRO": "ddc45f380b33227cc374476b73d0ab50",
+        "CAL": "5ae0937731ea82f0ac8c3b7f62630eb9",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock_fhandle|0x6FA465DD",
@@ -134942,6 +142847,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "bc29aa3e02f4b6de2027b7d861256200",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -135042,6 +142958,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d7a300677d0adb013fc5247f9c6837d7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7a300677d0adb013fc5247f9c6837d7",
+        "CFG": "3e50d8d939775df65964cf94c1a00141",
+        "PRO": "b720c24e2567b16de038c00f52a0ba63",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__filbuf|0x6FA42E6D"
@@ -135142,6 +143069,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:545b1a5336c24ddda73ea5bc7fb2d0a6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "16384b44e2fac290354ae05d27074ab8",
+        "CFG": "3adbe008d72fc95b3236dd892e2428d1",
+        "PRO": "36a5d8e4e18958287faa97d1aefb8cd3",
+        "CAL": "545b1a5336c24ddda73ea5bc7fb2d0a6",
+        "CON": "cbf4d90d285bafa75b4c78e4c3f9b0d1",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -135391,6 +143329,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:03ce6e557a60cad10c5f167fdc7f4b70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "03ce6e557a60cad10c5f167fdc7f4b70",
+        "CFG": "8126da09b15c3bb69167e92c985c5d98",
+        "PRO": "7e55fc1dad1cc78b38ab7db1ada5f3b4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "TlsAlloc|0x46"
@@ -135508,6 +143457,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:aff5ecc933020ea9f6660ca70cb9d16a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aff5ecc933020ea9f6660ca70cb9d16a",
+        "CFG": "59a3f828cef9e8fcdb14d36ce92b09fc",
+        "PRO": "6324c68a80b268fc3650ff1de0cf7530",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__mtdeletelocks|0x6FA425F1"
@@ -135635,6 +143595,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:dd9c25595338639aba6cafdf3f6ead52",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "04f1e6f173a4f00f5247db68bf412e5b",
+        "CFG": "e6bee96e8c640137ff03e15b2d8b2055",
+        "PRO": "c0205bbedced15618ddfdfaa13314a33",
+        "CAL": "dd9c25595338639aba6cafdf3f6ead52",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "_calloc|0x6FA4497A",
@@ -135852,6 +143823,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:54ad63e290211a3953489838face53d8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "adafedc33ce199c85ef6d812cf9b5974",
+        "CFG": "292eac54658ef47f66c77ed04414a2c0",
+        "PRO": "f1dee596d4efc2a43cffb315b782f60a",
+        "CAL": "54ad63e290211a3953489838face53d8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock|0x6FA426FB",
@@ -136039,6 +144021,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "21762bedf4e50a7a86b5c530e7124eff",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -136139,6 +144132,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c0a536e0e6dadcb5b945a8303814ecb3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c0a536e0e6dadcb5b945a8303814ecb3",
+        "CFG": "2f3b0af9c26069c23b5dd42d865fa969",
+        "PRO": "4171741cd294de39e69577be16c6c3d6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__freefls@4|0x6FA44715"
@@ -136271,6 +144275,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:304d598e6d0a621c9e3544e6fb22e61e",
+      "indexes": {
+        "EXP": null,
+        "STR": "304d598e6d0a621c9e3544e6fb22e61e",
+        "API": "f81330bc69a8ee2fdbc81985c31da7da",
+        "MNE": "bcce8ed29924bac295ff5cc0516a2419",
+        "CFG": "c616750807460d4421618991af100107",
+        "PRO": "ddeee40b3f219a8238494da5ab621a86",
+        "CAL": "b1943a89c6eefc7d5895dc3084ed0c93",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AllocateTlsSlot|0x6FA4466B",
@@ -136496,6 +144511,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:ef9241a5d412f340f751ada1af86b81a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "91411ab4247869eeb28238e92930a4a5",
+        "CFG": "855c17fee91dbe46adaeba58d394251a",
+        "PRO": "47925181f501c12bab36cb7709fd1797",
+        "CAL": "ef9241a5d412f340f751ada1af86b81a",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___sbh_alloc_block|0x6FA47042",
@@ -136612,6 +144638,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:708c3178984258807cb52e2f9f217d21",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "124a050f7896343631e89fc5722f0cb0",
+        "CFG": "54120466ec7b49fb757dd308c1c71ffa",
+        "PRO": "9e94349f50b31e961d6cb66963c29b49",
+        "CAL": "708c3178984258807cb52e2f9f217d21",
+        "CON": "61ee58238366a208f2e63f18c0b509e1",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05",
@@ -136816,6 +144853,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b52e9cbc9c783854a1fab83ad6e81448",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5c819fccbe8be253acb13e92783cc438",
+        "CFG": "0652400ee2a057eef11c1b4e7a2b60b6",
+        "PRO": "837fb499e64c30d6dc760ae84fcd085c",
+        "CAL": "b52e9cbc9c783854a1fab83ad6e81448",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D",
@@ -136970,6 +145018,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b674945cf7b5b6c8897ddb7a55fefb08",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d286a589c48283a2eda13c52495cb951",
+        "CFG": "1b09e7ed90e5632fd56b9b15ae4e64ca",
+        "PRO": "f165bbe09a935d75325efb15d00612a3",
+        "CAL": "b674945cf7b5b6c8897ddb7a55fefb08",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___initmbctable|0x6FA47E24",
@@ -137122,6 +145181,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5309cc011f4489e83a895a5a05ecc215",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5309cc011f4489e83a895a5a05ecc215",
+        "CFG": "bd950961bba637c6ed5c7818a8caeef9",
+        "PRO": "36e0d78a3d023220332b738484bde0f4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__setargv|0x6FA44EB2"
@@ -137237,6 +145307,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:79b8608880c0de5fe17bc5175d0f4291",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "457ecf3d8055d8e00a172b3d901a03ca",
+        "CFG": "9b09a00db49468d663a8b21f4bcd82a8",
+        "PRO": "3469a712136f49650a741e442bcd1db4",
+        "CAL": "79b8608880c0de5fe17bc5175d0f4291",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___initmbctable|0x6FA47E24",
@@ -137431,6 +145512,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b1396a02cfd75c31ab4d7201a5001917",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ba896e89d5b4e319d02dcd31648ce3d9",
+        "CFG": "ba2cc7825b9b05bb8da94d0debe7a308",
+        "PRO": "82db2c3d2da681e2782646570c5d71fc",
+        "CAL": "b1396a02cfd75c31ab4d7201a5001917",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "WideCharToMultiByte|0x38",
@@ -137628,6 +145720,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:02783607761bb7b7f3ed068e856f0ca2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "02783607761bb7b7f3ed068e856f0ca2",
+        "CFG": "ae7c5a0600805e9ccde48cbc8311b631",
+        "PRO": "e100deeb6f40061d27eb0ea84662cc2c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__heap_init|0x6FA45090"
@@ -137733,6 +145836,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f17bdc134d984988a231baad11399d03",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f17bdc134d984988a231baad11399d03",
+        "CFG": "9d531545a98a9948593e8cfb3e380007",
+        "PRO": "c5d73ae9ae5134090ea4cb384ca72353",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__input|0x6FA43856",
@@ -137920,6 +146034,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1d41dad6715b64b3cb1c053b8705df77",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "79c576ae79b525f94550b7e17b8f3e0b",
+        "CFG": "c4159116cccd3511ef02479d5637ccc8",
+        "PRO": "640cc2b9de5e3ffbc9856a568b8d213a",
+        "CAL": "1d41dad6715b64b3cb1c053b8705df77",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetOrCreateTlsContext|0x6FA446A4",
@@ -138055,6 +146180,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fba471281c8ddb27c570bd6aa788e54f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f91c25bb1292543e16ed50f66b203fb",
+        "CFG": "1a9fba59e187f75c7e26a9451488b9a2",
+        "PRO": "0c6ae8357091765f6b4fadb5554d7091",
+        "CAL": "fba471281c8ddb27c570bd6aa788e54f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetThreadContextFieldAt8|0x6FA42CC6",
@@ -138230,6 +146366,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:bb012f448cc3349316f7d24ddbe9faf6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d016b68ecb5da6df87847adf03c73f3a",
+        "CFG": "29aaca9058796c0a89422774dc6e6302",
+        "PRO": "8d189070859186ee1990b295dad32b9b",
+        "CAL": "bb012f448cc3349316f7d24ddbe9faf6",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock_fhandle|0x6FA465DD",
@@ -138412,6 +146559,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "d9cee056ed7e5222c4051da3f1ababac",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -138512,6 +146670,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:16ca4c8d9d8d13b03f249a45754c2d7b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f388330e44e46f9b9336a6a8d70bef3a",
+        "CFG": "68187a63237e3d97886e8b48e61d5d3b",
+        "PRO": "759d46a3ac1873debaa6400f1a95a440",
+        "CAL": "16ca4c8d9d8d13b03f249a45754c2d7b",
+        "CON": "b993a21f373b85336728d1de68d22246",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -138756,6 +146925,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:12888bda3bbc309f02e88293eecf07e2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d016b68ecb5da6df87847adf03c73f3a",
+        "CFG": "29aaca9058796c0a89422774dc6e6302",
+        "PRO": "77713a82e1f480f35be1fe639916cc26",
+        "CAL": "12888bda3bbc309f02e88293eecf07e2",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UnlockFileHandleThunk|0x6FA45840",
@@ -138943,6 +147123,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "e4c2bf03f7779be45c9360dfd55910cd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -139043,6 +147234,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:0c1662f4a708ed2312320502a9057d72",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0c1662f4a708ed2312320502a9057d72",
+        "CFG": "84c9be830c6dbb377381e5b059f90633",
+        "PRO": "fe1d77c09a43ab52c2bbf17bf3966237",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "_malloc|0x6FA45979"
@@ -139192,6 +147394,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fa88bd4e69335b81c64a31801e6c9131",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8ac92c76a51a8b065a1fac94d719ae1f",
+        "CFG": "26ff65364915786fce7167d048babdbb",
+        "PRO": "6f243cf2fff0c66886c7bd6043374a2a",
+        "CAL": "fa88bd4e69335b81c64a31801e6c9131",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___sbh_alloc_block|0x6FA47042",
@@ -139369,6 +147582,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "cab4d7f3dee2372912c67430004316f8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -139469,6 +147693,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a7cc25a31269521b9b2a032ada5ecfc7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec2f8cff08d73195854c9319296e0953",
+        "CFG": "5119994413c67d5f7fbf3833d4559c30",
+        "PRO": "955495a0724dbc44d82ddb123ab59f3b",
+        "CAL": "a7cc25a31269521b9b2a032ada5ecfc7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "WideCharToMultiByte|0x38",
@@ -139606,6 +147841,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a6377b91b1fdad42bc9b117804e0d3c3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "45f246afe326e6d5962c59d89124cdf0",
+        "CFG": "b6ad5b6ee7c31324482467c8f0d6cf35",
+        "PRO": "13665ddebe86676d376e2ffb464de398",
+        "CAL": "a6377b91b1fdad42bc9b117804e0d3c3",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetOrCreateTlsContext|0x6FA446A4",
@@ -139743,6 +147989,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:39cebe2858dd7b11f664bf696654e680",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9fd359b66679d8b6a2f1c57a264fe596",
+        "CFG": "3bfb3e8ff7d6467f2f63d70c34f24b4b",
+        "PRO": "840647fc97ab606f3eafb69b5efabd30",
+        "CAL": "39cebe2858dd7b11f664bf696654e680",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "ExitProcess|0x5",
@@ -139880,6 +148137,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4efdd923a388be710585d381cbbbfb83",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4efdd923a388be710585d381cbbbfb83",
+        "CFG": "a5108be758209b625a97e1b44203a88d",
+        "PRO": "ea781504d7b8eac83e3bef28d9269f99",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "ReportSecurityFailure|0x6FA45A12"
@@ -140037,6 +148305,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6b07f716ad39855b07502ac9a8f75c79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6b07f716ad39855b07502ac9a8f75c79",
+        "CFG": "ee1a5495778dd365b1df7da7030b56eb",
+        "PRO": "5d1977a5b94d5441fa3dfc6502a8e323",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "__output|0x6FA41D42"
@@ -140152,6 +148431,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b2a8f1a86586c795d4e7ef4b4053c58e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b2a8f1a86586c795d4e7ef4b4053c58e",
+        "CFG": "a284ca1aa01a9a68c8dad8d4aeb5a7c0",
+        "PRO": "c9f0f90c481f1e20abca27121d919170",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "InitializeCriticalSection|0x30"
@@ -140274,6 +148564,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:718a37e886db650343a2b47a174c6a71",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3f585ab7136accb11659a7703e402a24",
+        "CFG": "54194d8225197b2eb87b7f828ec0fa05",
+        "PRO": "57b7f92d0db23777903db328efeb3c55",
+        "CAL": "718a37e886db650343a2b47a174c6a71",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecNoSpinCount@8|0x6FA45AF5",
@@ -140498,6 +148799,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:34892a9150d174a2e5ed4434b42f9f72",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8c4228500987c1daeeb1fa9fd68f17a9",
+        "CFG": "6dbe5c57ccfcce26186ab468fe53af2d",
+        "PRO": "bed2233f140828c768fea73333d21d47",
+        "CAL": "34892a9150d174a2e5ed4434b42f9f72",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___sbh_alloc_block|0x6FA47042",
@@ -140725,6 +149037,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "ae6b49163337e4dd75da52e3474dd5c7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -140825,6 +149148,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4ac05a1d76dcdd2e47b8cd6e4011b85d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7fa238a0d1fe5549fc522252a2120d78",
+        "CFG": "b367ff53c4d35bc150fdb60e371fc1b3",
+        "PRO": "f852e683ef0331e663f840afeb5e8a81",
+        "CAL": "4ac05a1d76dcdd2e47b8cd6e4011b85d",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "LeaveCriticalSectionForMemoryFree|0x6FA45E98",
@@ -141002,6 +149336,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4de22b223fefe84222dddc6db6546486",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "81bc6e2827332721bcd73a06db9fcb5a",
+        "CFG": "9addba5d37775348db21fc673773863c",
+        "PRO": "34fd04205b8a444137721574d896b028",
+        "CAL": "4de22b223fefe84222dddc6db6546486",
+        "CON": "dd51d048e7dce4a812b93c089bad73ee",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VirtualQuery|0x2B",
@@ -141184,6 +149529,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:8a7bc13fa93283619136e2dc51ed1aed",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e13139108378294ca9357abe2995954e",
+        "CFG": "478ae78c6c355fcc3051c8c840ee3b29",
+        "PRO": "6adc2de81da7ea5963652c83688b981e",
+        "CAL": "8a7bc13fa93283619136e2dc51ed1aed",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -141356,6 +149712,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f989620ef843f5702c623da84361b72c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f989620ef843f5702c623da84361b72c",
+        "CFG": "38b5eed7205b2e93f358cdc4c8ab4ee2",
+        "PRO": "233b1525ae93b84202c538e163fc09c8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -141456,6 +149823,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9795208adecdc6591263dc5160cbe833",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "82290fd4a986eda931e519e307e93b03",
+        "CFG": "6814f5b508be8435070049bd143f6b43",
+        "PRO": "8b891765c6fef279f396d6ed99c048a6",
+        "CAL": "9795208adecdc6591263dc5160cbe833",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetDosErrnoPtr|0x6FA42CCF",
@@ -141608,6 +149986,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:ac8740b8f8ccd0a749b7d49f551aad97",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fd78a1cdcfba52796c1191ac28710e53",
+        "CFG": "0c71b5916d54649a9af4bd84eebf8916",
+        "PRO": "d5a5c5283682f7ce2e26c3e28696b720",
+        "CAL": "ac8740b8f8ccd0a749b7d49f551aad97",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05",
@@ -141822,6 +150211,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:cafd05ed9ede4efcd0dfaa4bb27a16f8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f47996a84b432c29ac8aea4defe56d87",
+        "CFG": "d0e6a7afde126319a8503dd48a0bd3c6",
+        "PRO": "b8cfdde506f3f7885ca34737b1ac0b07",
+        "CAL": "cafd05ed9ede4efcd0dfaa4bb27a16f8",
+        "CON": "d218f1b8447566449840afa1b229d7c6",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtInitCritSecAndSpinCount|0x6FA45B05",
@@ -142061,6 +150461,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:288a4a209e4706fee9d14eabda44517a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "288a4a209e4706fee9d14eabda44517a",
+        "CFG": "18828a46d595533054c4ca9000dfdea2",
+        "PRO": "524cf1a54850f1119b6dc152babc4d35",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "HeapAlloc|0x41"
@@ -142230,6 +150641,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:565997ae4f137ad77dea012c57abbb1d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "565997ae4f137ad77dea012c57abbb1d",
+        "CFG": "30ea37d01a7d4e9127401f16936fc48e",
+        "PRO": "3a7c085bc3001852670761b996697eb3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D",
@@ -142367,6 +150789,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b5bd606c0841808bf4b51fc8c09eb086",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "843e3db8ac5607bba3d919f4ee9bcace",
+        "CFG": "9c2087449f8ae908a27f94996ce05960",
+        "PRO": "5a267b52080004f7abf6842f19c4f7e5",
+        "CAL": "b5bd606c0841808bf4b51fc8c09eb086",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock_fhandle|0x6FA465DD",
@@ -142559,6 +150992,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d4c2d26a88b113bd75739659d4ef7dd5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4c2d26a88b113bd75739659d4ef7dd5",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "347bc1dfca6430207d7cbce1e18f6e23",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__unlock_fhandle|0x6FA4667D"
@@ -142659,6 +151103,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4b998b4544f3bc00f534eb383f532e78",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "99486f21581ce5ab9e85ee964f03efa4",
+        "CFG": "a74c2cd04a58f02e90772aa0169444a4",
+        "PRO": "08d1a0723ade6e6c7e41e988b893823e",
+        "CAL": "4b998b4544f3bc00f534eb383f532e78",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___isctype_mt|0x6FA4870D",
@@ -142791,6 +151246,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4b998b4544f3bc00f534eb383f532e78",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c91ca3910352592efed6cf1fae2547c5",
+        "CFG": "a74c2cd04a58f02e90772aa0169444a4",
+        "PRO": "34759a2f49d59eee3e80f5b59b082bff",
+        "CAL": "4b998b4544f3bc00f534eb383f532e78",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___isctype_mt|0x6FA4870D",
@@ -142923,6 +151389,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4b998b4544f3bc00f534eb383f532e78",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "99486f21581ce5ab9e85ee964f03efa4",
+        "CFG": "a74c2cd04a58f02e90772aa0169444a4",
+        "PRO": "b92b78fca5c7f7bddd8fad98beebb71b",
+        "CAL": "4b998b4544f3bc00f534eb383f532e78",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___isctype_mt|0x6FA4870D",
@@ -143055,6 +151532,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:67c0855c00e7b7a5408f02f9c5ef5adc",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "67c0855c00e7b7a5408f02f9c5ef5adc",
+        "CFG": "e24b30d794e9ac4d4780fe4a67ef2088",
+        "PRO": "ef92633b1c77cab4f7a00b580dc1a375",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__getbuf|0x6FA45864"
@@ -143177,6 +151665,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a444a55422b3a682e2151a046d617be5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff99bb887715c87175b48d7722a01da8",
+        "CFG": "eb8b7ea7482d5669be12d63111c63824",
+        "PRO": "11d9ced83e3c0ddac113426c41bdc0d8",
+        "CAL": "a444a55422b3a682e2151a046d617be5",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "MultiByteToWideChar|0x1A",
@@ -143319,6 +151818,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:8dea6be7760cc7b359a556d3c4ee9613",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0c617412f34e44e2a2d347a091efda08",
+        "CFG": "b7fdff1f46ad217dbfdd95efe3bf5b0d",
+        "PRO": "27752d73a32b5afd3fafb205d0708156",
+        "CAL": "8dea6be7760cc7b359a556d3c4ee9613",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetOrCreateTlsContext|0x6FA446A4",
@@ -143461,6 +151971,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6a9f84d202198e70a095ddd715df6e55",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1bacf15d421243740ab5a96b430ce3dc",
+        "CFG": "df0ce2f57925bc63926b4a247f20d9bb",
+        "PRO": "87051ed73ab14b7cbaa5b97b6cc78816",
+        "CAL": "6a9f84d202198e70a095ddd715df6e55",
+        "CON": "bad69dbe7918da609126d64e44e248db",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VirtualAlloc|0x1C",
@@ -143648,6 +152169,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b5a666579500cf63c38eeef1ff2ebf5d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1c8e05375765f5055ce29f9161a94626",
+        "CFG": "c7f38c5369a372d40569a82173fa37ef",
+        "PRO": "f029dfbb70e528afcfa440fb61c7f378",
+        "CAL": "b5a666579500cf63c38eeef1ff2ebf5d",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___free_lc_time|0x6FA48784",
@@ -143810,6 +152342,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:369d6eddc5b888371c51e98caf57a037",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "81fc8ecddc12cc08d3d848c0224bdeb0",
+        "CFG": "761bdcbe4dd07d2cb248aa0dd7d3b40e",
+        "PRO": "2a9d1e322d8bfad75a83b3bc89233e5e",
+        "CAL": "369d6eddc5b888371c51e98caf57a037",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___freetlocinfo|0x6FA47794",
@@ -143967,6 +152510,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a9f253507a0403afe8e3478175b94343",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "202d2c66c8a5b404ad3bf64c94b499c1",
+        "CFG": "28e93b70436f2537a95c535895c32d6e",
+        "PRO": "00188e12b6394960b4faec70ee54fadc",
+        "CAL": "a9f253507a0403afe8e3478175b94343",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__lock|0x6FA426FB",
@@ -144139,6 +152693,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f23ef2b3a6cfdeb1f35221d5fc7b15e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "20374fed7d04680c7b2a77a0e3677c59",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "AcquireCriticalSectionByIndex|0x6FA42646"
@@ -144230,6 +152795,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:66e4c65cd1f6678ae939e1d3e753f375",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0c44e947b1ea344017d45b0d6df8c6c5",
+        "CFG": "11312cf260d760e29d17e2f8bd92e948",
+        "PRO": "ee899cc169b1bd5cc7d8e7b8b3663938",
+        "CAL": "66e4c65cd1f6678ae939e1d3e753f375",
+        "CON": "7464246d5009fb2a1394bbd537c58de4",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -144332,6 +152908,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:eca531e762f3fb43dd75b18b705991c9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aca83c0b308ebe5f47dff9cf83f354c7",
+        "CFG": "ba8bdfdf22452b9b57983366a8132f18",
+        "PRO": "38630d6fd40f4cc7619ae0a103605669",
+        "CAL": "eca531e762f3fb43dd75b18b705991c9",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -144433,6 +153020,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f4130c3f9b7bc257f4f2214c505f3862",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3d95938874732b844e73905e6c952bdf",
+        "CFG": "47fd23bd4a1cbc7e00a10b001adc7195",
+        "PRO": "59a3a486a04365d4af1b8cfa756ad2fd",
+        "CAL": "f4130c3f9b7bc257f4f2214c505f3862",
+        "CON": "3a51dd01bbe754dcdec10a496c0b812d",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__setmbcp_lk|0x6FA47B44",
@@ -144667,6 +153265,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:a4ba30fe4414581a89a628d047ff2406",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a4ba30fe4414581a89a628d047ff2406",
+        "CFG": "3797661e554b5fe7f6aa0404f9242843",
+        "PRO": "bbce075d36604e6d4cadfbf8db0b3aa5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__setmbcp|0x6FA47CD4"
@@ -144789,6 +153398,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f1c393de2fac70496494aea734de5675",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f1c393de2fac70496494aea734de5675",
+        "CFG": "3eaf6a485b83dffda5d14ab14c23f256",
+        "PRO": "9507df991f535c513ad9f49c8a2bd9cf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "___security_error_handler|0x6FA48143",
@@ -144916,6 +153536,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fba471281c8ddb27c570bd6aa788e54f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "96b57c2abe5dc5792785a0347b715545",
+        "CFG": "44fc1a6ed0fcd2133158e46bfa743e67",
+        "PRO": "61e5e1a4ccd3db17bd2f4d111dba17ed",
+        "CAL": "fba471281c8ddb27c570bd6aa788e54f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetThreadContextFieldAt8|0x6FA42CC6",
@@ -145095,6 +153726,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:53df26692b635627b5e344219705ee42",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4af6f4d1378e3b27617b296b4a2b16cc",
+        "CFG": "9b030290d08d2104fbc429c4846974c2",
+        "PRO": "696e9c4b971b77e76f2bbd287eb56533",
+        "CAL": "53df26692b635627b5e344219705ee42",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetSystemTimeAsFileTime|0x4",
@@ -145277,6 +153919,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:9edd5270653ada86eeecdcb3502d3803",
+      "indexes": {
+        "EXP": null,
+        "STR": "9edd5270653ada86eeecdcb3502d3803",
+        "API": null,
+        "MNE": "4781dfd6adf98cf006c03a20c8d0acaa",
+        "CFG": "150bd8ba5d06606e63123065663fc193",
+        "PRO": "fe04ef11349e32f468dd2f4fc3aeb300",
+        "CAL": "eede1c52d12cac091429acbcdced927f",
+        "CON": "9befc524557882f7f9f335e6491e1fd7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtMessageBoxA|0x6FA47F58",
@@ -145553,6 +154206,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:45c45007eed23fa8f946b6b6546cbed8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "18e321f144b421f573dee8db4fda9b1b",
+        "CFG": "91fce31c6b79e949d71c08dc4d45674b",
+        "PRO": "b517bee71f9aaac62e0a6b87d99d988d",
+        "CAL": "45c45007eed23fa8f946b6b6546cbed8",
+        "CON": "c42de293abfead356d8b1d82c46e4506",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -145787,6 +154451,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:93d0dc9fd8314e8d90414fa46b2e66d4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "93d0dc9fd8314e8d90414fa46b2e66d4",
+        "CFG": "c9cbf2fadd143dab4033b89240a2944e",
+        "PRO": "f17796a956061d33e2e5b4b89cdc049a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___crtGetStringTypeA|0x6FA48BE8"
@@ -145966,6 +154641,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6b4ad6d2941b712fcff606229e9dd829",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6b4ad6d2941b712fcff606229e9dd829",
+        "CFG": "7394234ff7108d063d81691d7f21c6eb",
+        "PRO": "d51fa1ceb75b6d7c49689142454c789f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D"
@@ -146083,6 +154769,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:f70a35b7fba7d58d54c96ad387278a4c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f70a35b7fba7d58d54c96ad387278a4c",
+        "CFG": "7dd781f0908d7253501629ca4fccebf6",
+        "PRO": "3f92d5461d518c374eccbbd6c5a81f55",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D"
@@ -146220,6 +154917,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:470047ed1f9244aa874a163facc5cee5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "470047ed1f9244aa874a163facc5cee5",
+        "CFG": "63b0b8c02bf2bbf97794bfb24b69fb48",
+        "PRO": "0cd639647579e10fbedf1592f63f2f47",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "DeallocateMemory|0x6FA4351D"
@@ -146382,6 +155090,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f5a2dadfb6e3cd7b350f3b00225ebe0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f5a2dadfb6e3cd7b350f3b00225ebe0",
+        "CFG": "5b7371015796bcb1e8b5b6d3f0051510",
+        "PRO": "d667f0767f80378deb40a8a7c758135e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 35,
         "LoD/1.11b": 35,
@@ -146470,6 +155189,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:cf6e169535cd0b739256cb2ecfc119ba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cf6e169535cd0b739256cb2ecfc119ba",
+        "CFG": "54ef46fd1473b1a6178b4c5c8dfc9de0",
+        "PRO": "6827e29d467359e034ce8c9eee99ffe3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 54,
         "LoD/1.11b": 54,
@@ -146558,6 +155288,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7cec3aaa3bf000edc30666bb4980e176",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7cec3aaa3bf000edc30666bb4980e176",
+        "CFG": "40ccd49849f0900654481e77a31231c8",
+        "PRO": "d63932be81b30027179e779219c52881",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 78,
         "LoD/1.11b": 78,
@@ -146668,6 +155409,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1af672cb078165319be485ab1d8e8574",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fe7518f9cbcae43d3194d5d079593073",
+        "CFG": "2b3d73dc0cdf5e63a808680de30b1fd9",
+        "PRO": "8746a2a8e74d79e1d038731435c78d4b",
+        "CAL": "1af672cb078165319be485ab1d8e8574",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "_calloc|0x6FA4497A",
@@ -146890,6 +155642,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:262b55d4b1f21fd166621d0ca2135ed8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "262b55d4b1f21fd166621d0ca2135ed8",
+        "CFG": "438809fdc4e079d7af3ce9a2534e7c48",
+        "PRO": "de907609c9ddaaea9fc64ebc489a583b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
@@ -146969,6 +155732,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:c2a86d7887dbc41c66a0586d4391c868",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40ace89e5da5d434e25a5d26402f71e1",
+        "CFG": "3537c1dc01d1f01ac1a3fff22e791736",
+        "PRO": "1eb8e03efe162b4baa377948e96e786d",
+        "CAL": "c2a86d7887dbc41c66a0586d4391c868",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "__SEH_epilog|0x6FA428E3",
@@ -147094,6 +155868,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:16d5b15348e4a4a3de473da4179d1d46",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a9b04f42a8a7532eed19202299b9f94e",
+        "CFG": "bca107b4c28abce644681863ac06c020",
+        "PRO": "931eb5395dc885b94e35f804a17362af",
+        "CAL": null,
+        "CON": "16d5b15348e4a4a3de473da4179d1d46",
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "GetThreadContextFieldAt8|0x6FA42CC6"
@@ -147243,6 +156028,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:cb7271f23b18085c633325272e533a6a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cb7271f23b18085c633325272e533a6a",
+        "CFG": "20653c52d082fff661e98cb39188f903",
+        "PRO": "8ae050135f8e08ab82bf616fcc905546",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 40,
         "LoD/1.11b": 40,
@@ -147331,6 +156127,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4b998b4544f3bc00f534eb383f532e78",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "78a86de15981e3f1c945cde9fbd4be9b",
+        "CFG": "060f30e8f124cdb1a4ddd9531e4481a8",
+        "PRO": "ae5fb897ebe957b4fa1256aca3bbb3ac",
+        "CAL": "4b998b4544f3bc00f534eb383f532e78",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "___isctype_mt|0x6FA4870D",
@@ -147463,6 +156270,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:98215cbe114a0d291dc9abc2dec34146",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "137dd1f09c34b57b162936229329b15b",
+        "CFG": "d1797ee4ae7236fe6f7bebea650a9b7f",
+        "PRO": "550c488176a3f62710753b1e968cd495",
+        "CAL": "98215cbe114a0d291dc9abc2dec34146",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "VerifyStackCanary|0x6FA45A43",
@@ -147628,6 +156446,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:bedda525aa1dd823fbd9f085e98434ec",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2db85971dc36836255f9e9bf407d84c7",
+        "CFG": "e2f84c8043524e2aa37bc408a2e45984",
+        "PRO": "f5451ee795c5aca83983f3d9e0e5d6f9",
+        "CAL": "bedda525aa1dd823fbd9f085e98434ec",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "WideCharToMultiByte|0x38",
@@ -147743,6 +156572,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:ecf4fe5a7e473ceb70f30e35ac316045",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ecf4fe5a7e473ceb70f30e35ac316045",
+        "CFG": "607c9c98b964af31161b6e6ca5c90e04",
+        "PRO": "416c862cdb184741475b23605c2c2d89",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 48,
         "LoD/1.11b": 48,
@@ -147836,6 +156676,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3ecdb5e459e29b4117490dc114e98574",
+        "CFG": "57474f13ec5a3b3413d2cc571b545409",
+        "PRO": "c81df70c1b97172a537e995055b0c6bd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 3,
         "LoD/1.11b": 3,
@@ -147901,6 +156752,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "bd0764cc96300dd3bfcdf7e0b331f281",
+        "PRO": "5f2aaf777dd262470bb5a8f94ddd4e3c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "FUN_6fa54500|0x6FA54500"
@@ -147983,6 +156845,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "0d78fb7e7078e9270157e0fdfb807c85",
+        "PRO": "7324dff547303fa798ed0a467fcce25c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "FUN_6fa53a30|0x6FA53A30"
@@ -148065,6 +156938,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10067",
+      "indexes": {
+        "EXP": "10067",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "1bd430e356263275f711800989014552",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50650",
@@ -148166,6 +157050,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:10181",
+      "indexes": {
+        "EXP": "10181",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "a9cba8689af9c0b09d5fa91dd8044a8a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "FUN_6fa4c1c0|0x6FA4C1C0",
@@ -148255,6 +157150,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "a159855e2c5d24b1a53688e640ce60e9",
+        "PRO": "da89272fb946bed8fbf1ec1f767efdef",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.11": [
           "FUN_6fa4d080|0x6FA4D080"
@@ -148358,6 +157264,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2579728af69daece8c1d4dc6ca55ee5e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2579728af69daece8c1d4dc6ca55ee5e",
+        "CFG": "2e88d954bb59a92c47b6f79ab32099d2",
+        "PRO": "d264891c236c4e9c6f373d5c79f4415e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa49b00",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa49fd0|0x6FA49FD0"
@@ -148476,6 +157394,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9ed3e589a570f10a43cd7ce08fb665ad",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3422fd17221814fd2a54fd653470b117",
+        "MNE": "416a6e9d6edf892e22167eb255bf64a2",
+        "CFG": "f1facbc2c2a79396c5a1570206273ef3",
+        "PRO": "892a3ea63ab396bdf5d9cfd9c2a686d0",
+        "CAL": "9ed3e589a570f10a43cd7ce08fb665ad",
+        "CON": null,
+        "APS": "2eda8ec751dd71deab7ee154115d5196"
+      },
+      "display_name": "FUN_6fa49b60",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -148619,6 +157549,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8a540c0c060390480d55bba9bb095e3f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8a540c0c060390480d55bba9bb095e3f",
+        "MNE": "f60619373ea01b3489988ef80be11f9a",
+        "CFG": "524086700fa99ce8b797779fc49b7e05",
+        "PRO": "00157715caebba216344238235deb870",
+        "CAL": null,
+        "CON": null,
+        "APS": "8a540c0c060390480d55bba9bb095e3f"
+      },
+      "display_name": "FUN_6fa49c90",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4988C"
@@ -148730,6 +157672,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:8a540c0c060390480d55bba9bb095e3f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8a540c0c060390480d55bba9bb095e3f",
+        "MNE": "071ecb93565ac2a1e66c31cbdc1a48a0",
+        "CFG": "c34d1879c194763f4e9afa37efa21024",
+        "PRO": "cdbe3f470619eac3236a8c25db73e96b",
+        "CAL": null,
+        "CON": null,
+        "APS": "8a540c0c060390480d55bba9bb095e3f"
+      },
+      "display_name": "FUN_6fa49d30",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4988C"
@@ -148827,6 +157781,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3ce8615891525742485a232d318811a3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3ce8615891525742485a232d318811a3",
+        "MNE": "208449852c3cbd2b57fadd32da7b3a35",
+        "CFG": "5614af0e450a801fc712a6e2c37d434b",
+        "PRO": "084a8dbc205db76c4381744bacaeab93",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa49d70",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4c1c0|0x6FA4C1C0",
@@ -148894,6 +157860,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:175ba328c2218306ea150b0244897096",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1fc33465b82d0bf8781191babdcfc7eb",
+        "MNE": "994e6829561ca6e82e2de5108b716382",
+        "CFG": "2ac1d381dd5a44f0aa7aceb76a2a7b6b",
+        "PRO": "35720b0c2c256773de9ff19005151c35",
+        "CAL": "175ba328c2218306ea150b0244897096",
+        "CON": "17a8ebf49a1f81e8b8ee33754d1b7ad9",
+        "APS": "97dd07838b94239732e244674ec9963d"
+      },
+      "display_name": "FUN_6fa49fd0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -149199,6 +158177,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fd9db4f7e4ee25694ef18512d8475fa4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f3cc147c84c2f8eebb4f1fad44cbf3f8",
+        "MNE": "8dc4fc065ad76515630cab81d5452ad1",
+        "CFG": "90a6b9658501c64f66958386768705bb",
+        "PRO": "58b81f25ae411bb492d0ba560daf61e0",
+        "CAL": "fd9db4f7e4ee25694ef18512d8475fa4",
+        "CON": null,
+        "APS": "524c57a009c99668c73187dc7cd5e91f"
+      },
+      "display_name": "FUN_6fa4a550",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa49b00|0x6FA49B00",
@@ -149424,6 +158414,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:dd9da23e6d4cb07c9b6632a3f8f2fa81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "dd9da23e6d4cb07c9b6632a3f8f2fa81",
+        "CFG": "add86809b97783447d25ab098b0b9761",
+        "PRO": "5aa1650a4c1e51aea0d5577e287e4bf6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b090",
       "callers": {
         "LoD/1.11": [
           "FUN_6fa4d080|0x6FA4D080"
@@ -149527,6 +158529,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9b779de218c009edc8569627700cad45",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "523fa146de8db8852d1de4d7e220e073",
+        "MNE": "c4b49af2991e914c0a6f349d3b011389",
+        "CFG": "411bf28a0bd1545191b75d270ab98e1f",
+        "PRO": "f9c926e0fd720d502e6862303877db97",
+        "CAL": "9b779de218c009edc8569627700cad45",
+        "CON": "c97daa6b5dec81d414faee232c9ce003",
+        "APS": "723a588cada4e9e2e2d9fd5d1051f57a"
+      },
+      "display_name": "FUN_6fa4b140",
       "callees": {
         "LoD/1.11": [
           "CalculateStringLength|0x6FA496DC",
@@ -149692,6 +158706,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:1fb89e6ffbb9199fffc85487ba7aaddb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1fb89e6ffbb9199fffc85487ba7aaddb",
+        "CFG": "77714199466637a316c33c16c1023f45",
+        "PRO": "1e4875f9ed49e3ef45a34529ca66ff93",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b1c0",
       "instruction_counts": {
         "LoD/1.11": 6,
         "LoD/1.11b": 6,
@@ -149771,6 +158797,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f81c985cd6d7ca57592352e7ece83084",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "147d63c39c930f9149288649b69c1b41",
+        "MNE": "fe9879dad5f8e7b1a8eb72ff065385d0",
+        "CFG": "5402bd88790fee5bd98f419178bd3632",
+        "PRO": "57b6c2681dad5a4f1d0ba38a370cf254",
+        "CAL": "f81c985cd6d7ca57592352e7ece83084",
+        "CON": "920587d719c211058a84392e9e89de96",
+        "APS": "a86674f54a8f38d71ffc73d2aeae6460"
+      },
+      "display_name": "FUN_6fa4b1e0",
       "callees": {
         "LoD/1.11": [
           "DeleteFile|0x6FA49754",
@@ -150008,6 +159046,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7ae907dc0ef50c7e696a560222e55e14",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7ae907dc0ef50c7e696a560222e55e14",
+        "CFG": "15f78e2aa0f061bdf3e30ee178f2083c",
+        "PRO": "f574cb953762714eb5177765ccae05fa",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b290",
       "callers": {
         "LoD/1.11": [
           "FUN_6fa541c0|0x6FA541C0",
@@ -150126,6 +159176,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5171b728cf6135c1e8783013ccb5fed8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5171b728cf6135c1e8783013ccb5fed8",
+        "CFG": "78e188b027051f30caa393cbecb2756e",
+        "PRO": "f19283dc9deab4a3d176c08c1bfdc327",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b370",
       "instruction_counts": {
         "LoD/1.11": 12,
         "LoD/1.11b": 12,
@@ -150210,6 +159272,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:b4da0661fa4a183faf06a5b4a9559680",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b4da0661fa4a183faf06a5b4a9559680",
+        "CFG": "7e1ad43b77161a8f2e6eb983fd02a408",
+        "PRO": "bb08f2fdfd4afa715cd88f54ac025c82",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b540",
       "instruction_counts": {
         "LoD/1.11": 24,
         "LoD/1.11b": 24,
@@ -150272,6 +159346,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:eca9d42f6832f95b9ef8f16d3d958f6f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "eca9d42f6832f95b9ef8f16d3d958f6f",
+        "MNE": "7debb00b748e2beba7df1db1058c83ce",
+        "CFG": "0ad97fa0aee5b01738eabc672db52359",
+        "PRO": "e7cdaa69f37a4b528de4055fcd14c2f7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b570",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10092|0x6FA49838"
@@ -150373,6 +159459,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f15e8383a5a90261a679e6ab1177526b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9fe13c45af64c01e10170dfc2811b313",
+        "MNE": "5d99730b98ca161a181fadcf9fa7abcb",
+        "CFG": "0dc0f21c72fb1b15c87f3def8c855951",
+        "PRO": "0fa4c6a4fcb285e6bd587463ce089f75",
+        "CAL": "f15e8383a5a90261a679e6ab1177526b",
+        "CON": null,
+        "APS": "4344e5a1f33e22d6373506728fc0d0e9"
+      },
+      "display_name": "FUN_6fa4b5a0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10071|0x6FA49904",
@@ -150506,6 +159604,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f15e8383a5a90261a679e6ab1177526b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2efeeae3f042c8e7edb1fef8e5da12f3",
+        "MNE": "9f26620e97632ecdfb8ebfaed6be6b46",
+        "CFG": "aaf36b14362e8cd8ce5b73ab8079ad1c",
+        "PRO": "9883ecfbc85278b45da296edad1087ea",
+        "CAL": "f15e8383a5a90261a679e6ab1177526b",
+        "CON": null,
+        "APS": "af8d2235935b815a7a9103a17fa5133f"
+      },
+      "display_name": "FUN_6fa4b6d0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10071|0x6FA49904",
@@ -150639,6 +159749,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:e63d7e25c294e23cc22901d8a8b841f6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0ffe00759e3eb073e096bb618e76c59d",
+        "MNE": "2629e4468351b00800a26386b86123ba",
+        "CFG": "e6af34e6a5f032f2c7a8530f9340bf72",
+        "PRO": "a392ebcf3c1e6147407c3a15848fd604",
+        "CAL": "e63d7e25c294e23cc22901d8a8b841f6",
+        "CON": "ebc97b9797f4ffd0cfd53b699545eb95",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b720",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10115|0x6FA49706",
@@ -150846,6 +159968,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6327c27df757bc559b6ed396dcfd1790",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "6b64322938e0f30a051e1e3109c3a008",
+        "CFG": "74582a13a96d653e1b96c110addaa595",
+        "PRO": "a34611a47d43a8c5a0c40d93dbd12a1c",
+        "CAL": "6327c27df757bc559b6ed396dcfd1790",
+        "CON": null,
+        "APS": "c86c1c626a14269963367ecfafb31fa1"
+      },
+      "display_name": "FUN_6fa4b7a0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -150974,6 +160108,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:feadc3dedd88f161a386c93a4d2eb069",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "feadc3dedd88f161a386c93a4d2eb069",
+        "CFG": "1394f1e952384c357b2a02397770326a",
+        "PRO": "747bea09aafffc19283be7b1e8afcd89",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4b810",
       "instruction_counts": {
         "LoD/1.11": 33,
         "LoD/1.11b": 33,
@@ -151058,6 +160204,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1bc8c23ce7974a6893c22502b0595685",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b5c46e67fdd332f11222e3106d204277",
+        "MNE": "337b2995d3325bfb7d59f3ad7fbbbc42",
+        "CFG": "a9cf59169a6ce3ce00eb095d7e3c6b11",
+        "PRO": "538e160d9d6c016c80e40c704d8d6c70",
+        "CAL": "1bc8c23ce7974a6893c22502b0595685",
+        "CON": "fbc898c19457bc1f34984b2203048443",
+        "APS": "ecc1016ae21c87ca2317f4c19308040f"
+      },
+      "display_name": "FUN_6fa4b860",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -151265,6 +160423,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6327c27df757bc559b6ed396dcfd1790",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "b27774dbae3bf367925844663d67b376",
+        "CFG": "4779eb6f02f2efab0d811eb2edab16b4",
+        "PRO": "b706152dfd334113074e7dda7a72a355",
+        "CAL": "6327c27df757bc559b6ed396dcfd1790",
+        "CON": null,
+        "APS": "c86c1c626a14269963367ecfafb31fa1"
+      },
+      "display_name": "FUN_6fa4b930",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -151420,6 +160590,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:cc71e8659fe80bce95d841029ceeea9f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ccd6223b02665f2b83249d69b2b96f37",
+        "MNE": "4b80a2c45c5c5d9a63ae7be61ebac115",
+        "CFG": "47cfd13375a499f5c9a9ade3b44a719a",
+        "PRO": "29bd2336fe13e104b9e675fc7a7df041",
+        "CAL": "cc71e8659fe80bce95d841029ceeea9f",
+        "CON": null,
+        "APS": "5dc719be68a2b099f116c176bcf47f14"
+      },
+      "display_name": "FUN_6fa4b9a0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10005|0x6FA49A60",
@@ -151612,6 +160794,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "fb7ce1d7ef374ef33a7f322ff9fbdd96",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4BAB0"
@@ -151691,6 +160884,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:6abdc96e13bf1a975aef212bca7221ed",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6abdc96e13bf1a975aef212bca7221ed",
+        "CFG": "1323d08defb2aecf0f30809c6a02d582",
+        "PRO": "1aa437fa298537aa01a1e70c767c290f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4bb30",
       "callers": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4DD50"
@@ -151770,6 +160975,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f64f44e5b1b9f1427f82eb468c7952a6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3a4d21c7f07cf1ebe596eaefd959844a",
+        "MNE": "46578e9f09a2c6e22e5fa5a7a43ca781",
+        "CFG": "cdf0955a0ba221095adf582e4eae9785",
+        "PRO": "dbc067c6d014d5bead84a6711774a827",
+        "CAL": "f64f44e5b1b9f1427f82eb468c7952a6",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4bb50",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10152|0x6FA49874",
@@ -151891,6 +161108,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f70ad0094d04b80335c851c568398a87",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ca27b201c275adecb350d27a17ea3e15",
+        "MNE": "986ab894cf3a246c4e20f807f4df25bc",
+        "CFG": "9bf7d3111400430c8c4a961dea94f6c8",
+        "PRO": "4f0c7445c89c429c1af653f0eae3b5c1",
+        "CAL": "f70ad0094d04b80335c851c568398a87",
+        "CON": null,
+        "APS": "95404f8af8852d091e7f797a51147558"
+      },
+      "display_name": "FUN_6fa4bbd0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -152044,6 +161273,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f70ad0094d04b80335c851c568398a87",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ca27b201c275adecb350d27a17ea3e15",
+        "MNE": "ac0bbe09993b5bb5852131e855163c05",
+        "CFG": "0464646ed749c06b2cbf02437d505890",
+        "PRO": "5cee799c87fc38c72e73590fd67b5ab4",
+        "CAL": "f70ad0094d04b80335c851c568398a87",
+        "CON": null,
+        "APS": "95404f8af8852d091e7f797a51147558"
+      },
+      "display_name": "FUN_6fa4bc40",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -152201,6 +161442,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": "4d3896ea93374c9114ea275e6989bed4",
+        "PRO": "f2715adc6ba6377266918519727fa91f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -152263,6 +161515,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bef964926d46152c1e611ee02d33d853",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bef964926d46152c1e611ee02d33d853",
+        "CFG": "56d8ca1a592e94a2e659efeea02150c3",
+        "PRO": "db7e38a2cf3f50be63278cc9a5b4cf58",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4be20",
       "instruction_counts": {
         "LoD/1.11": 17,
         "LoD/1.11b": 17,
@@ -152356,6 +161620,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": "4d3896ea93374c9114ea275e6989bed4",
+        "PRO": "f2715adc6ba6377266918519727fa91f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -152418,6 +161693,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:bef964926d46152c1e611ee02d33d853",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bef964926d46152c1e611ee02d33d853",
+        "CFG": "56d8ca1a592e94a2e659efeea02150c3",
+        "PRO": "db7e38a2cf3f50be63278cc9a5b4cf58",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4beb0",
       "instruction_counts": {
         "LoD/1.11": 17,
         "LoD/1.11b": 17,
@@ -152507,6 +161794,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:371ad6b4fd52e5b21704fb973f12f465",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "371ad6b4fd52e5b21704fb973f12f465",
+        "MNE": "a31ae89dbc2752d33f531506eaf7b9bb",
+        "CFG": "cab80939a77a9dd0191273d66f26b117",
+        "PRO": "f0768e6930909e7caa0b4133ed9ac27e",
+        "CAL": "371ad6b4fd52e5b21704fb973f12f465",
+        "CON": null,
+        "APS": "371ad6b4fd52e5b21704fb973f12f465"
+      },
+      "display_name": "FUN_6fa4bf30",
       "callees": {
         "LoD/1.11": [
           "OpenAndValidateGameFile|0x6FA496F4",
@@ -152608,6 +161907,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:bd977b3a2f47d622abf5f3fc7374bee5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c3540b6bf39a5d204408e909fa7d2bca",
+        "MNE": "851266ac8608e44ae78cfa6063ac4bcb",
+        "CFG": "3f82a708738d0eb54f6cba3bc11fd207",
+        "PRO": "deacd6ff8689f721a6c2bf79841de6e6",
+        "CAL": "bd977b3a2f47d622abf5f3fc7374bee5",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4c0c0",
       "callees": {
         "LoD/1.11": [
           "QueryRegistryData|0x6FA49694",
@@ -152792,6 +162103,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d98637d661e34ac4188330085482b5ab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d98637d661e34ac4188330085482b5ab",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "4fbcabb1d1bcb2f0852ebabf046d3569",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -152871,6 +162193,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:eb89cebd115ca41bd509ef23f0b48397",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fa3ea6fa65826aa1d43a32c4449943be",
+        "MNE": "4c6426a2092919892d9b94cc2c0ca4c7",
+        "CFG": "23a6b0270593e078b0f7cd2d1dc9d5f2",
+        "PRO": "22c379fe716392dc4ea5db25179c0923",
+        "CAL": "eb89cebd115ca41bd509ef23f0b48397",
+        "CON": null,
+        "APS": "1d88681d3b30f3de6bde6fe5107f8fc6"
+      },
+      "display_name": "FUN_6fa4c260",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -153053,6 +162387,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:eb89cebd115ca41bd509ef23f0b48397",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fa3ea6fa65826aa1d43a32c4449943be",
+        "MNE": "4c6426a2092919892d9b94cc2c0ca4c7",
+        "CFG": "23a6b0270593e078b0f7cd2d1dc9d5f2",
+        "PRO": "4ffeb5ac05a0dc4f753f75725da03e95",
+        "CAL": "eb89cebd115ca41bd509ef23f0b48397",
+        "CON": null,
+        "APS": "1d88681d3b30f3de6bde6fe5107f8fc6"
+      },
+      "display_name": "FUN_6fa4c2f0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -153236,6 +162582,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:a1cb6eaf74513e8b4a0c10c3cc3f2197",
+      "indexes": {
+        "EXP": null,
+        "STR": "a1cb6eaf74513e8b4a0c10c3cc3f2197",
+        "API": "c659c8fce3da7d6e102f4b10a269e5a2",
+        "MNE": "9dc098df7b73fa1b281e727abd4579ff",
+        "CFG": "b2f29afa5f1d50052987e0513f0215f4",
+        "PRO": "5ad4e97f45bf94951abd4e46001fddc6",
+        "CAL": "e30e1197cb1e503be28177257443f95b",
+        "CON": "ac05e3df1dd42a46476416225971814a",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4c340",
       "callees": {
         "LoD/1.11": [
           "wsprintfA|0x4C",
@@ -153510,6 +162868,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:18270c44545fc7e00076b8b27ed24629",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6b839df511b0672a6b94b126e13675b2",
+        "MNE": "cbc940191d2d18ddbc93b94816add465",
+        "CFG": "c3c730bee7025f425e9b7a3187ab53cf",
+        "PRO": "27d6f3fa978c8b59dfda233d1b35e51a",
+        "CAL": "18270c44545fc7e00076b8b27ed24629",
+        "CON": null,
+        "APS": "64fabf3dcd25d9ba18a5506ec08a82bc"
+      },
+      "display_name": "FUN_6fa4c3d0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10038|0x6FA498B0",
@@ -153656,6 +163026,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "c832f484817d3fe28009a2a9fc248c0e",
+        "PRO": "c8043d3bf77159cbbad50181a1bb43fb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d030",
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -153735,6 +163117,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:57ed2697bc9c45dc85ead7ba819b9898",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8522ee3eae912bd68cc77ee312f3667d",
+        "MNE": "1d759cf252f3dff31e53904021936e29",
+        "CFG": "46ff6e2f7cf33674585a7eda8980b49f",
+        "PRO": "5dc9a48a2bca33e192a506e6dcc50ed8",
+        "CAL": "57ed2697bc9c45dc85ead7ba819b9898",
+        "CON": null,
+        "APS": "8522ee3eae912bd68cc77ee312f3667d"
+      },
+      "display_name": "FUN_6fa4d080",
       "callees": {
         "LoD/1.11": [
           "GetGameState|0x6FA49A30",
@@ -153905,6 +163299,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:70f7d57313eeaeb428dc67f0b0d26f09",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "aece366c6c6127609b35b64e64445528",
+        "MNE": "1fa962abb7815cc96de0f0846098c6d1",
+        "CFG": "9ad4e358d156aa7b6626dba48abbdbfe",
+        "PRO": "812585edcf21a0087431074cc14f848d",
+        "CAL": "70f7d57313eeaeb428dc67f0b0d26f09",
+        "CON": "4264144b1b0efea7f2cd680c074daa93",
+        "APS": "16bed524c86533fb5d1bf5fe75027687"
+      },
+      "display_name": "FUN_6fa4d170",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4c340|0x6FA4C340",
@@ -154170,6 +163576,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:83981863fe333e5fbbcafbb20c7695e2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6bdf92e9228d3c7fbc8186eae7f2b19c",
+        "MNE": "360fec200466b3cf6b42d8aef0a35b60",
+        "CFG": "9796273bb89b5985731ad63f237f0767",
+        "PRO": "d05cb5d6f37000e976d640f83db08be1",
+        "CAL": "83981863fe333e5fbbcafbb20c7695e2",
+        "CON": null,
+        "APS": "94275c6dd794015e7a15cae009d39933"
+      },
+      "display_name": "FUN_6fa4d320",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10034|0x6FA499C4",
@@ -154298,6 +163716,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:c95aa89908acdaa7adb87b507e915e95",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f8c21316b2fcc3686c66d0895921cf9c",
+        "MNE": "200af89c574b55cdd3a6df7a776cc356",
+        "CFG": "33c2fe54d43ab69a325d18eed621625f",
+        "PRO": "1614e3b4c44f6caceb33c57cb5522e66",
+        "CAL": "c95aa89908acdaa7adb87b507e915e95",
+        "CON": "12fca18160dc102e6be3c4ca5115e19f",
+        "APS": "96f0a67e00c409e4c3b0dd11a063fa03"
+      },
+      "display_name": "FUN_6fa4d3a0",
       "callees": {
         "LoD/1.11": [
           "Name|0x6FA49A84",
@@ -154548,6 +163978,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1703e1f3b8cf8e99a8f6b87141050a86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5122731f225f9d741b6e213c6b59de24",
+        "MNE": "5e41ccaa00a68e07f5f809aee351c551",
+        "CFG": "a3f3d0b0d88dc12d991baf70d926f343",
+        "PRO": "b614794eec38e149e0a4aea32fcf0854",
+        "CAL": "1703e1f3b8cf8e99a8f6b87141050a86",
+        "CON": "b8eaf55bf53b043a664f8e4919daec11",
+        "APS": "e417a12a84c72b7115f94c938ce1b2ce"
+      },
+      "display_name": "FUN_6fa4d4e0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -154756,6 +164198,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1703e1f3b8cf8e99a8f6b87141050a86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3fb983cc4da3cc90310890078be1fbbd",
+        "MNE": "465ac407d9c82951571c4e221ba97d06",
+        "CFG": "00a26a72435a6d56882b6d3fcd73d6ea",
+        "PRO": "bee1ed05ac41f4597b5ac06fa5aa0109",
+        "CAL": "1703e1f3b8cf8e99a8f6b87141050a86",
+        "CON": "2f8a7f8ba802df5e1061876196d79d4d",
+        "APS": "9732556f95fbca9766d87bd09f789db6"
+      },
+      "display_name": "FUN_6fa4d630",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -154986,6 +164440,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:d246761e37fbe6bfacf641be25bec1af",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a1425e47afcdfcafc0f6833f7261091c",
+        "CFG": "6a8d677ea33d46d3a59f37eb0caade45",
+        "PRO": "78a6f39ee6bc89f34896a65a47704043",
+        "CAL": null,
+        "CON": "d246761e37fbe6bfacf641be25bec1af",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d760",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4b9a0|0x6FA4B9A0"
@@ -155104,6 +164570,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:35809491e3b481c15cac1a94bd60d702",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a1425e47afcdfcafc0f6833f7261091c",
+        "CFG": "6a8d677ea33d46d3a59f37eb0caade45",
+        "PRO": "f044084a0095bfe2ad986daae4114333",
+        "CAL": null,
+        "CON": "35809491e3b481c15cac1a94bd60d702",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d790",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4b9a0|0x6FA4B9A0"
@@ -155222,6 +164700,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:743804d4ae226adc04ee3456e8074103",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a1425e47afcdfcafc0f6833f7261091c",
+        "CFG": "6a8d677ea33d46d3a59f37eb0caade45",
+        "PRO": "471f676b9da99c2ec261816fffeff0fc",
+        "CAL": null,
+        "CON": "743804d4ae226adc04ee3456e8074103",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d7c0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4b9a0|0x6FA4B9A0"
@@ -155340,6 +164830,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:a4a26148754e2200253252c67b6b0ee3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5e652b5ec295d4936fdc6aea2ed80b34",
+        "CFG": "6a8d677ea33d46d3a59f37eb0caade45",
+        "PRO": "bcf93101b3b7046c964b6971c7b88c76",
+        "CAL": null,
+        "CON": "a4a26148754e2200253252c67b6b0ee3",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d870",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4b9a0|0x6FA4B9A0"
@@ -155458,6 +164960,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CON",
       "index": "CON:7f66efcb475da70d40f45c570616c756",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5111fc150f8fdb9f5847b80877fe5fce",
+        "CFG": "6a8d677ea33d46d3a59f37eb0caade45",
+        "PRO": "6043a268d5ba350bd39e449b4e55c806",
+        "CAL": null,
+        "CON": "7f66efcb475da70d40f45c570616c756",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4d8a0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4b9a0|0x6FA4B9A0"
@@ -155576,6 +165090,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:324db5843fe330c6313a727302c2555a",
+      "indexes": {
+        "EXP": null,
+        "STR": "324db5843fe330c6313a727302c2555a",
+        "API": "1bb865d0a8794bdaf0afee2d5c5357dc",
+        "MNE": "2a747c2977713df98693a3ceb6bc84c1",
+        "CFG": "01f62e2c2ce687e7259ff34c81a2dac9",
+        "PRO": "3bad61c2fa5cc95591099bc3022aeff2",
+        "CAL": "23bf01178d8317d66e3f4f7a00c9c03b",
+        "CON": "6a895e8e36bbda330ae36fc1e3605c4f",
+        "APS": "ddca875ce7e8b59e60c64303a59105be"
+      },
+      "display_name": "FUN_6fa4d8d0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4d7f0|0x6FA4D7F0",
@@ -155919,6 +165445,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4b0af7aa6d042fcc4c70169150a82d6b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4c89a0eb8493eed810609c3afc5e483b",
+        "MNE": "e574de0afb8054c4689ddb43ee71e460",
+        "CFG": "c26d1518833e6baadb01a90137351e7b",
+        "PRO": "260ffa515c6be6b216107fea9699052a",
+        "CAL": "4b0af7aa6d042fcc4c70169150a82d6b",
+        "CON": null,
+        "APS": "f865e76fa33a895494cccced3fed8f9c"
+      },
       "callees": {
         "LoD/1.11": [
           "strlen|0xFE",
@@ -156076,6 +165613,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "f88737f96a6f32b2b546c90e45c08cd1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4DD50"
@@ -156155,6 +165703,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:07edd2c335570d12097be141d22cec07",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "389d909bfe82513d86a6f979f6108ba4",
+        "MNE": "3a9669c9e6aa87871830322a95802197",
+        "CFG": "336fff09a3a05aefb79aa6bd00ccdf67",
+        "PRO": "a8175a217ff0d8847474556afd0a0344",
+        "CAL": "07edd2c335570d12097be141d22cec07",
+        "CON": "5971e5c8cec7001c5b7ca5e55e18ed36",
+        "APS": "8a398f761c8d8d319d84ebc3296b8226"
+      },
+      "display_name": "FUN_6fa4dde0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -156359,6 +165919,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "3470bf515f219a1dc46251b97ab3f2d8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4BD50"
@@ -156439,6 +166010,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": "3ed06040f34c672438ca383e5c306e4d",
+        "PRO": "1a6b2cd84978becdbfe73984512c886f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -156501,6 +166083,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:856d841c9580b0e51b354368dec24bf2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a29940f004e2729d157e35cc11264603",
+        "MNE": "a56666bf0701ddd7e800955347723ef8",
+        "CFG": "546b3df7ccf62d90758bfa29bc98bbf7",
+        "PRO": "265443180d08b6bd9348a13596853ca6",
+        "CAL": "856d841c9580b0e51b354368dec24bf2",
+        "CON": "e51f94a136ccb2e29156a3601b7eb6e4",
+        "APS": "a0dbe4b8d86b7292e07e6242b42c7718"
+      },
+      "display_name": "FUN_6fa4e060",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -156721,6 +166315,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:856d841c9580b0e51b354368dec24bf2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "04c6adb6d9c83b2fa9a9590e8370bc12",
+        "MNE": "d58b23e4aa24cb02c99bf5fddef00c97",
+        "CFG": "c14314f70336e788d42b277a0b892542",
+        "PRO": "bd1362e0b5b2fcc2c803fc66279ec5cb",
+        "CAL": "856d841c9580b0e51b354368dec24bf2",
+        "CON": "e51f94a136ccb2e29156a3601b7eb6e4",
+        "APS": "18c603bd3bdf85ec31955dd71bd9df90"
+      },
+      "display_name": "FUN_6fa4e2a0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -156976,6 +166582,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:058fb305d7cc3896e40bdddcd73d2e44",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "6326acc608250ce37fbd72a1f97900bb",
+        "MNE": "870d83b1415e6e848a42d1b3c286940f",
+        "CFG": "ca5f84ff38b8123088c9317ba1421ed4",
+        "PRO": "8722724aef7646c82ec994edadbdf53a",
+        "CAL": "058fb305d7cc3896e40bdddcd73d2e44",
+        "CON": "6ab9cc29de30e2661c91de5fb9e81003",
+        "APS": "b856ac8c755a4af5dbb1cc7647831c89"
+      },
+      "display_name": "FUN_6fa4e460",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -157199,6 +166817,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:55998a5d95fbcd741526be1765de4b0c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1b25a087567448c90dd8443f82b117d5",
+        "MNE": "638ba5759276ec60cacce55d084f4cc2",
+        "CFG": "dc86088ac2843b64bf40035d4d799ce5",
+        "PRO": "41033489ebc94817b1a2bfa13dd2ea51",
+        "CAL": "55998a5d95fbcd741526be1765de4b0c",
+        "CON": "c018a38bfbb1540240d51a7fd33c567f",
+        "APS": "1b25a087567448c90dd8443f82b117d5"
+      },
+      "display_name": "FUN_6fa4e5d0",
       "callees": {
         "LoD/1.11": [
           "`default_constructor_closure'|0xFF",
@@ -157399,6 +167029,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "86bc31334eb57291a1ac5b202e0c126c",
+        "MNE": "121cd04aff8bf132bc87ff29c03c87e3",
+        "CFG": "d90bdaf5af3941a65731fa6a3d9afd3e",
+        "PRO": "502520df5776f6bcbe38b2f3cc125bb8",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "d104021b2f430cb1a5d4a75a615eb1cc"
+      },
+      "display_name": "FUN_6fa4e6a0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -157609,6 +167251,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:356b7ad7f97815b75ea897606dcc75bb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "abf3a631dea64f11541cc2d5397ed9f5",
+        "MNE": "fcac64464da12877470b7fcde67f1b3f",
+        "CFG": "8bf604e1d60bb5586f977bf700015749",
+        "PRO": "a264f49e6f0586cbaeeced1b9f603a30",
+        "CAL": "356b7ad7f97815b75ea897606dcc75bb",
+        "CON": null,
+        "APS": "abf3a631dea64f11541cc2d5397ed9f5"
+      },
+      "display_name": "FUN_6fa4e890",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10080|0x6FA49964",
@@ -157755,6 +167409,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:356b7ad7f97815b75ea897606dcc75bb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "abf3a631dea64f11541cc2d5397ed9f5",
+        "MNE": "049e1022915f4aa707fb1dbbdc1ae885",
+        "CFG": "8bf604e1d60bb5586f977bf700015749",
+        "PRO": "1f9eb45c955b7e32f6a9a31bbb82b2d1",
+        "CAL": "356b7ad7f97815b75ea897606dcc75bb",
+        "CON": null,
+        "APS": "abf3a631dea64f11541cc2d5397ed9f5"
+      },
+      "display_name": "FUN_6fa4e900",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10080|0x6FA49964",
@@ -157901,6 +167567,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:f28b3242636ae5608b4214756409c622",
+      "indexes": {
+        "EXP": null,
+        "STR": "f28b3242636ae5608b4214756409c622",
+        "API": "c97209e9ec87ce93ecdee746f328c574",
+        "MNE": "19c65a6d36287ae85cc06907faced761",
+        "CFG": "cc88fe2644beeb0b12d67cfeef9fd205",
+        "PRO": "00a9facdb13bcde066386b125c60e0fb",
+        "CAL": "de20bec6d93d2452255947df423e0638",
+        "CON": "b5eb51f59a27b4ec2313857f9725df92",
+        "APS": "1c8359e1a3ce674f8eaafb777112f399"
+      },
+      "display_name": "FUN_6fa4e970",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -158223,6 +167901,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:2a4a1133cc9e8784c4ce8a6de202e114",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ceec06171e06b028aa627494951909ee",
+        "MNE": "93d118faafbc9079383887ec0eb1169a",
+        "CFG": "604e8adc04b480cc14c606fac4c5bcf5",
+        "PRO": "2753289cc6364e478c1410c25e884206",
+        "CAL": "2a4a1133cc9e8784c4ce8a6de202e114",
+        "CON": "df164dd58e10cbe871a0afef491d08cc",
+        "APS": "cca70ee2d04eaabfc4c4ed6de3ff93e0"
+      },
+      "display_name": "FUN_6fa4ebd0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -158495,6 +168185,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9e881b47775b491795f5e6deef751dc5",
+        "MNE": "4be106e67e2374eaf2fdd1bea9cd4c6a",
+        "CFG": "8c15233d618225c9785a51e7c4d9474f",
+        "PRO": "9e17fed50ae705f63bd4fb736d205eaf",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "d104021b2f430cb1a5d4a75a615eb1cc"
+      },
+      "display_name": "FUN_6fa4ed80",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -158710,6 +168412,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "9b328d06d3ad5ef878cee43a88066aa0",
+        "MNE": "48bd0a58f3afa20488eaad4404b0aa3e",
+        "CFG": "5eed10a975f9ba27a1ecb80bee33fcf4",
+        "PRO": "f3a6aef52e9f90bccbb71454baf2cf5b",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "80f5a223c33d5ab43a0827998c5c038f"
+      },
+      "display_name": "FUN_6fa4ee80",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -159012,6 +168726,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1ce80cdbb8f30c16ddc038c8375aecd5",
+        "MNE": "be22f0aeabc9902b43f458deca358de7",
+        "CFG": "3cecda9cbbf0702557c6b4eea23a6192",
+        "PRO": "84cca3f5adc2e9fe82ae3f2318755bde",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "56f5e8c2eb44902286f1da88465913a2"
+      },
+      "display_name": "FUN_6fa4f020",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -159222,6 +168948,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "fc25d10612323c14849b7dc2ac3550c1",
+        "MNE": "ab22d74b6cf7d0e6ba3dc31bf6f4d8e0",
+        "CFG": "d6618a65543fef04891dcdc27baddf9f",
+        "PRO": "e00ae44619aa9968638cea480bdc93bd",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "fcb04841083a8d05687f994d54f64658"
+      },
+      "display_name": "FUN_6fa4f1f0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -159437,6 +169175,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1768b680c064653b1e5187f4b8ec65bf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0e702b7e308eb8f38092b8099df2abab",
+        "MNE": "9385c63bab368c7aacc5ddb3e1ef6796",
+        "CFG": "aa321a24278df6784c2e7c2fe990fdfb",
+        "PRO": "8745bf74d1b7f8989876356f59449feb",
+        "CAL": "1768b680c064653b1e5187f4b8ec65bf",
+        "CON": null,
+        "APS": "e1aede6227822545c8e99c5dca978ce8"
+      },
+      "display_name": "FUN_6fa4f3a0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -159647,6 +169397,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:868844c57292c3001119c45fbc574bec",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "845ca5afe42572babcbb4bef79cab30f",
+        "MNE": "2b6a77800f7062aa406644f0f5e92e72",
+        "CFG": "da4b483ac8bb125688b3cd99e84186de",
+        "PRO": "eef9269280946ef49a2baf3fc759cac5",
+        "CAL": "868844c57292c3001119c45fbc574bec",
+        "CON": "aa59a872edc4c4c09760b4076c9d6b30",
+        "APS": "46db3e8f41c9956658940bb3239d3e4c"
+      },
+      "display_name": "FUN_6fa4f5b0",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -159859,6 +169621,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:71ed65d6eb3713f8f5fa79e3a59ae788",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2c6418b8ca675c2ee233362faff8f8be",
+        "MNE": "e196737a48d155d27cfa2070434b54c2",
+        "CFG": "2ab9ba8841c10cc0ac312ef33c2faa97",
+        "PRO": "7fcec350a33fa8e207b208d8de868681",
+        "CAL": "71ed65d6eb3713f8f5fa79e3a59ae788",
+        "CON": "aa59a872edc4c4c09760b4076c9d6b30",
+        "APS": "fcf94a6d91f6156650d1720731c705ad"
+      },
+      "display_name": "FUN_6fa4fae0",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -160086,6 +169860,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9edc63d6ef47f6dadb7c5f4552cf5004",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d164f23e47180f599a5cc750f3ddcdeb",
+        "MNE": "7c2f03a35883dd2046f38b1e5eb5fc5e",
+        "CFG": "8d0bf9c7e9df332e9fc9b73665eed2b4",
+        "PRO": "a460f4c3f24578c5ec35b8741560ff84",
+        "CAL": "9edc63d6ef47f6dadb7c5f4552cf5004",
+        "CON": "aa59a872edc4c4c09760b4076c9d6b30",
+        "APS": "2289cf9449b461eaefb8143016df04c7"
+      },
+      "display_name": "FUN_6fa4fc40",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -160308,6 +170094,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:054d2d40de90bfa96a3234c52302f3b9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4c2e8274b5cd50687d9a7f99dfa2a9a8",
+        "MNE": "893f78ba44750ebfb4e10a89a1d9b349",
+        "CFG": "5feff554e10c0690c6fc33c705d4b6ea",
+        "PRO": "76f76992db3846dbe880771d601b9d98",
+        "CAL": "054d2d40de90bfa96a3234c52302f3b9",
+        "CON": "b67d89a793d2ff34bac29362b27a7132",
+        "APS": "dfe3d6d8c9962cbb9ee57b0d7413ea8d"
+      },
+      "display_name": "FUN_6fa502e0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -160605,6 +170403,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:eb89cebd115ca41bd509ef23f0b48397",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "cd294aa2fe1a72114be344db0e00d413",
+        "MNE": "949b7b80926a599284dc7dd3964c9a1c",
+        "CFG": "b8495d00ad5ab6de71db1e0f14820704",
+        "PRO": "c8e0d1170d8279d1f87024a6acd47260",
+        "CAL": "eb89cebd115ca41bd509ef23f0b48397",
+        "CON": null,
+        "APS": "d7237407329aa4ae8e59ff7e2eb6da82"
+      },
+      "display_name": "FUN_6fa505b0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -160763,6 +170573,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:096db96e503f9721e54c48a05c46ed28",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "242ecb19b2ed0965856dd82212553109",
+        "MNE": "3d61db834f745f5eedb3b5664226e4a1",
+        "CFG": "d3fa9937bc0954b8fe7e929def487b9e",
+        "PRO": "b8fa84f6730df79a2634157f3e12a50e",
+        "CAL": "096db96e503f9721e54c48a05c46ed28",
+        "CON": null,
+        "APS": "65c258854b36d92cb3c2f90bc6e073f7"
+      },
+      "display_name": "FUN_6fa50e90",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -160985,6 +170807,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6f5ad50c26864a10ef9c6a1e9ae158a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "817c691add422465ddb687b145d32d63",
+        "MNE": "cce82889a9b4d5a220f20a5f920b1bf1",
+        "CFG": "b9ed5532ba2cf64caeb893a5fbf653ef",
+        "PRO": "4258dbd78b0f1de5a621a876f4969018",
+        "CAL": "6f5ad50c26864a10ef9c6a1e9ae158a0",
+        "CON": "97e6f245048187ee4faa295cade19724",
+        "APS": "f663394cde65aa2c2e4495f343907c96"
+      },
+      "display_name": "FUN_6fa518c0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4c340|0x6FA4C340",
@@ -161248,6 +171082,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:93d346be4becd940852cb330d1b4ccd6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "93d346be4becd940852cb330d1b4ccd6",
+        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
+        "PRO": "a99025e06cb4878ead932916b447e6a4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa51c40",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4ee80|0x6FA4EE80"
@@ -161303,6 +171149,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:22bb9e2d6883922a0679deccc07a4659",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f25a8cee97785e5a303791b26e495883",
+        "MNE": "2a573e3e8b4a770f946a7eec7a71a200",
+        "CFG": "0f2255f8f2592407b82560205b3309ff",
+        "PRO": "91405360a84119fb03b2bf178fc3f002",
+        "CAL": "22bb9e2d6883922a0679deccc07a4659",
+        "CON": "e8ed2748b77854e26307cc638b789e05",
+        "APS": "ab93b2f7a2ec07c433ddfddcda057870"
+      },
+      "display_name": "FUN_6fa51c50",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -161547,6 +171405,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "bcc245a14251f028b5cc0c2a6467878e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA51590"
@@ -161629,6 +171498,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "EXP",
       "index": "EXP:220",
+      "indexes": {
+        "EXP": "220",
+        "STR": null,
+        "API": null,
+        "MNE": "aaca3fe15668675c808ffe97fd4a7c1b",
+        "CFG": "666389bbdf539b053c20e3d1bdd5faba",
+        "PRO": "901e9744d47b6cec86884444d741f650",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4F6E0"
@@ -161708,6 +171588,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:31e0702ab78f7f29c4a67a1e8b4e45f9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c32758790a68bda1f249dab1aa5dfa4d",
+        "MNE": "96c22b953633ed14a95a41f7dd835036",
+        "CFG": "4d4b8e956543beb3fb225fbb69b8e716",
+        "PRO": "88fe22092bd23699c58b38787344abe1",
+        "CAL": "31e0702ab78f7f29c4a67a1e8b4e45f9",
+        "CON": null,
+        "APS": "c32758790a68bda1f249dab1aa5dfa4d"
+      },
+      "display_name": "FUN_6fa51f30",
       "callees": {
         "LoD/1.11": [
           "GetGameState|0x6FA49982",
@@ -161802,6 +171694,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:8fafe4ec161190a810ecea7f6cc249fd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b8848c7837ce29a79af9b0a5c6c09140",
+        "MNE": "c925a4cb3b86c7f3ae3c9a69bcadfe0d",
+        "CFG": "223f52bc86854dfd7704acbd8cc5fd36",
+        "PRO": "f90fee1d2604300e47b806c4774a715e",
+        "CAL": "8fafe4ec161190a810ecea7f6cc249fd",
+        "CON": null,
+        "APS": "0d6568604a288ccd8513d304c74aa239"
+      },
+      "display_name": "FUN_6fa51f60",
       "callees": {
         "LoD/1.11": [
           "ShutdownMcpClient|0x6FA4F500",
@@ -161977,6 +171881,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:86be1d6a05414dad504db29bb9778425",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "86be1d6a05414dad504db29bb9778425",
+        "CFG": "ed693dee8012fbc9b5b6496dcc249a52",
+        "PRO": "ebf7df45c4207fa7f3119266c07eed07",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa51fc0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa51f60|0x6FA51F60",
@@ -162078,6 +171994,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6172abfef2f187f48f56b1ea9c7a1f3d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5700fda6e9f92702a609cd386f741d35",
+        "MNE": "28b33f4feb9907310e49075b7494fb63",
+        "CFG": "4e78f4ca28293ff2c6a279c09d7ae4bc",
+        "PRO": "ab7f8e6a4466a17edd8cfa26f7fbdb46",
+        "CAL": "6172abfef2f187f48f56b1ea9c7a1f3d",
+        "CON": null,
+        "APS": "196fb76ee1da8e7b90d28f49503ef40f"
+      },
+      "display_name": "FUN_6fa52010",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10143|0x6FA498E0",
@@ -162204,6 +172132,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:dc430fa84d58b5da31f660ff1b13db34",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "86ef4f39ddce5128bf805d1c13e8ac7e",
+        "MNE": "079c8066aa84d73da72f9ca7bc63ba5b",
+        "CFG": "fd91a78c5ada9d7f66c6835eb588d27f",
+        "PRO": "e1d0d975651f30e053e0e6ff8425e112",
+        "CAL": "dc430fa84d58b5da31f660ff1b13db34",
+        "CON": null,
+        "APS": "d6ede6100c8f63efcd5bd9deaea75570"
+      },
+      "display_name": "FUN_6fa52360",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa4c340|0x6FA4C340",
@@ -162438,6 +172378,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "74a3ecac3e7dc7c50b3992654f98a0ab",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50F50"
@@ -162517,6 +172468,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:df8dce2b8b147ed5e63dd63733996c6c",
+      "indexes": {
+        "EXP": null,
+        "STR": "df8dce2b8b147ed5e63dd63733996c6c",
+        "API": "0797765aee495c4a409dbd50ddd64cb7",
+        "MNE": "e03d912e93b5b6473fb0405d069196a2",
+        "CFG": "49f329ff798fd996289897c7e0a52ee6",
+        "PRO": "5f01878ace624152dfdabab15a20b7fe",
+        "CAL": "f2e74614d8b0ffe7cadf7a2c0e69b71b",
+        "CON": null,
+        "APS": "f2e74614d8b0ffe7cadf7a2c0e69b71b"
+      },
+      "display_name": "FUN_6fa52da0",
       "callees": {
         "LoD/1.11": [
           "ValidateGameStateRequirements|0x6FA49766",
@@ -162719,6 +172682,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:e80d50982452fdd0fec46a4f3a54c856",
+      "indexes": {
+        "EXP": null,
+        "STR": "e80d50982452fdd0fec46a4f3a54c856",
+        "API": "935ac035a54289e768066b912af5e2c3",
+        "MNE": "19b3a481b905042290e6b43b4e7b4c4d",
+        "CFG": "fca16f83272ec5a950d311dff70616f9",
+        "PRO": "60cd0837994a61870dbf4a6f1632f5de",
+        "CAL": "b69cb4446b8a5c6d006607b8f15781a3",
+        "CON": "66e4cd67f645981d703d014a81d56b44",
+        "APS": "578fa2a9eda5aa59d57baab8b130de37"
+      },
+      "display_name": "FUN_6fa52e20",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -162969,6 +172944,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5f935215698575848d8380614d4cfcff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5f935215698575848d8380614d4cfcff",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "50df01111067e6bb5f94b1c5b99e6aed",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa52f30",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA529E0"
@@ -163065,6 +173052,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:030f792495d843b6cc524c3d9f330849",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "028df143845a1b161fe2da114041b45c",
+        "MNE": "4e1689c5647388219334728fd5f349d8",
+        "CFG": "0fcf711a5bb96fd099d586685f6820f3",
+        "PRO": "56c8434e14bc5e6fc794d6332a1741f5",
+        "CAL": "030f792495d843b6cc524c3d9f330849",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa52f50",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10018|0x6FA49916",
@@ -163176,6 +173175,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4bbffa1357aea913994da545952f0188",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d715d189049175a31cbdd840fbe40890",
+        "MNE": "0904f68c55615433e7ff65b5dcde49fa",
+        "CFG": "4fb92f18230dbd44a9c35933150eafc7",
+        "PRO": "4ae3c55551b7974e7fb60bf9296f2f24",
+        "CAL": "4bbffa1357aea913994da545952f0188",
+        "CON": "ab9ef777da62b454b420e779de3547e0",
+        "APS": "f091e6d4f0ed09b20fc59a1f03f71b2e"
+      },
+      "display_name": "FUN_6fa52fa0",
       "callees": {
         "LoD/1.11": [
           "strlen|0xFE",
@@ -163374,6 +173385,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:f44df28719f7295e3573705375396cc7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e261fde42b9f923150085798e36134ea",
+        "MNE": "4f4461ebabe425723f0ee2269092cea9",
+        "CFG": "46f7c8727374e74b2e1b48dc4eb14b3f",
+        "PRO": "cc511c225e609b48bd9ebf9f99cfb16d",
+        "CAL": "f44df28719f7295e3573705375396cc7",
+        "CON": "0bd820c31472caf46cc9a15ca0c4f816",
+        "APS": "4cb6fa50cff6558d6e7265615ec436fc"
+      },
+      "display_name": "FUN_6fa530e0",
       "callees": {
         "LoD/1.11": [
           "ValidateGameStateRequirements|0x6FA49766",
@@ -163584,6 +173607,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:789a7060e306fbffe8367ec5506059a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "789a7060e306fbffe8367ec5506059a0",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "424598bfba9c18990ed5eaad330e928a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa531b0",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA529E0"
@@ -163680,6 +173715,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:d6920d8ad6f02211e38787d7d9839bb3",
+      "indexes": {
+        "EXP": null,
+        "STR": "d6920d8ad6f02211e38787d7d9839bb3",
+        "API": "931750c8c2686568515f7874e9ff2f83",
+        "MNE": "a9d49d26c8fbafafe9e8550912c2f5b4",
+        "CFG": "3111f3ffdf2b4538944b4799b346f5c3",
+        "PRO": "3e3bdd4eb1a629d4020440550551144e",
+        "CAL": "f1b28aed0158f91b3cafb6fa3a91e347",
+        "CON": null,
+        "APS": "3b2509ab44e8cc7ff0e36af919343649"
+      },
+      "display_name": "FUN_6fa531d0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10143|0x6FA498E0",
@@ -163823,6 +173870,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:be35ff4d2d00b832c1ba9ef3ad7bb65a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ecbd7067bec9d56bfb035e53553dd217",
+        "MNE": "44d42b81277eb881606ce42459661b5e",
+        "CFG": "35935d078e501bcbb1b256973641685d",
+        "PRO": "0158e5094c1b9f30bc75d4c755bd1d66",
+        "CAL": "be35ff4d2d00b832c1ba9ef3ad7bb65a",
+        "CON": null,
+        "APS": "458947b8f058bc0f616d4c3aa0dc5da2"
+      },
+      "display_name": "FUN_6fa53890",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50650",
@@ -164021,6 +174080,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fafe5748a2652904d1c2a1560ffa9e9f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "628bdc7d66c38b66d21a7d63298febb3",
+        "MNE": "ec18258569ae6ecb05f63416cd0c6746",
+        "CFG": "5554a6046e7135759879426d2ca12276",
+        "PRO": "f5c27c816b02289980c64285b2598d22",
+        "CAL": "fafe5748a2652904d1c2a1560ffa9e9f",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa539f0",
       "callees": {
         "LoD/1.11": [
           "ResetButtonFrameStates|0x6FA499A0",
@@ -164110,6 +174181,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fafe5748a2652904d1c2a1560ffa9e9f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "628bdc7d66c38b66d21a7d63298febb3",
+        "MNE": "ec18258569ae6ecb05f63416cd0c6746",
+        "CFG": "5554a6046e7135759879426d2ca12276",
+        "PRO": "1457e86b22aadf1bc783ee349d7d85bc",
+        "CAL": "fafe5748a2652904d1c2a1560ffa9e9f",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa53a10",
       "callees": {
         "LoD/1.11": [
           "ResetButtonFrameStates|0x6FA499A0",
@@ -164199,6 +174282,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:b3e6c9460291c4361b30af7326aa4398",
+      "indexes": {
+        "EXP": null,
+        "STR": "b3e6c9460291c4361b30af7326aa4398",
+        "API": "3513fed0e48a69ca6668734cd9a4fcec",
+        "MNE": "5bab749b06f9a3188a62c0c452db56eb",
+        "CFG": "79cbc3e9a3f9dc87d94050a46983aac1",
+        "PRO": "449195af0a2faa87c7e50f5473a32199",
+        "CAL": "423936de2491178ead5634adc3c5906f",
+        "CON": "a3759f853dd04506274700d0913afefe",
+        "APS": "b98488c2e25297b1a39615becac89d54"
+      },
+      "display_name": "FUN_6fa53a30",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50650",
@@ -164546,6 +174641,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:e84b55f1f7fd7d9644d5252315ec663c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d9c046b94662bc48895d9144a6e0bc17",
+        "MNE": "ebf2e20c5d4f73aa4de25397c452a08d",
+        "CFG": "9308bd6cee79f03608c06adbdef27559",
+        "PRO": "5d6d734e78d97ce30004de6dfc0a2cb2",
+        "CAL": "e84b55f1f7fd7d9644d5252315ec663c",
+        "CON": "79457f7f3ba6286407819cb1522dc35b",
+        "APS": "b447c6f0a9e01909a7df738b48a29b07"
+      },
+      "display_name": "FUN_6fa53f10",
       "callees": {
         "LoD/1.11": [
           "_sprintf|0x6FA4101B",
@@ -164836,6 +174943,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fafe5748a2652904d1c2a1560ffa9e9f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "628bdc7d66c38b66d21a7d63298febb3",
+        "MNE": "ec18258569ae6ecb05f63416cd0c6746",
+        "CFG": "5554a6046e7135759879426d2ca12276",
+        "PRO": "8afcebfd9d78c053b542227fd540c4d5",
+        "CAL": "fafe5748a2652904d1c2a1560ffa9e9f",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa541a0",
       "callees": {
         "LoD/1.11": [
           "ResetButtonFrameStates|0x6FA499A0",
@@ -164925,6 +175044,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:bd9577029de68b18c55c49b1678df459",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "890daae8b28b854fad7bde5d0f9ebcf8",
+        "MNE": "1b57a95525117d1356cbf4a8db7b18c3",
+        "CFG": "f2f25c3c13c309dccab3b6aa1660ad0c",
+        "PRO": "f8d351342c603edad77517b6e7269952",
+        "CAL": "bd9577029de68b18c55c49b1678df459",
+        "CON": "cb6a91848f49c748766358dabfe464bc",
+        "APS": "d485740a4901c362a0b6ba90cac27284"
+      },
+      "display_name": "FUN_6fa541c0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa5b1c0|0x6FA5B1C0",
@@ -165239,6 +175370,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:fafe5748a2652904d1c2a1560ffa9e9f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "628bdc7d66c38b66d21a7d63298febb3",
+        "MNE": "ca9d6955f608f48a261c791cdbac583d",
+        "CFG": "d02fc2d0104247f4ece7ffcd7a3f0c2c",
+        "PRO": "96d5bcd4bdf21840759a9aba0579808a",
+        "CAL": "fafe5748a2652904d1c2a1560ffa9e9f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "ResetButtonFrameStates|0x6FA499A0",
@@ -165328,6 +175470,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:3aab38fc9635bc5b83c39a2c09aa861f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "628bdc7d66c38b66d21a7d63298febb3",
+        "MNE": "1f3db11c86168b24195e6054922528fa",
+        "CFG": "b78a3f1d92d9049bd843407d14614f98",
+        "PRO": "c8b13d083a035ecc034e7875fb54a318",
+        "CAL": "3aab38fc9635bc5b83c39a2c09aa861f",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa54740",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50650",
@@ -165444,6 +175598,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:672427a103293bfe3518b14c1e0c9bde",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f56f35255d30140f8b4b208c95698ec2",
+        "MNE": "20fc80b068de4a1f684bbc7171e7bc49",
+        "CFG": "198ba94b7825cdd36e858db07b93898f",
+        "PRO": "918ee664f7fbbc46f5f49ef773ec18d2",
+        "CAL": "672427a103293bfe3518b14c1e0c9bde",
+        "CON": "1fddb63f6b680cfa6a5fe2ec4280d33a",
+        "APS": "c29e834bccc82d105731927b29b45bc8"
+      },
+      "display_name": "FUN_6fa54780",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10115|0x6FA49706",
@@ -165651,6 +175817,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:d7897101f3cb99eb3b89274dfb087bc9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d7897101f3cb99eb3b89274dfb087bc9",
+        "CFG": "4d3896ea93374c9114ea275e6989bed4",
+        "PRO": "f7b2ebe90da959ef75a1333ed370efb9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -165713,6 +175890,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:8ad75f74334a4cecaf2784e786d6f59f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "90d1b9f19148c257cf9d492c9b8c2b7e",
+        "MNE": "40885aeb1668dda7cf46d70f0bb76342",
+        "CFG": "d890d8cdf61fe75ff1c4609732c98051",
+        "PRO": "0133688c8454dd159892908b7e782f5b",
+        "CAL": "8ad75f74334a4cecaf2784e786d6f59f",
+        "CON": null,
+        "APS": "94da719f213183e7eb82e502bb66c55a"
+      },
+      "display_name": "FUN_6fa54a70",
       "callees": {
         "LoD/1.11": [
           "strlen|0xFE",
@@ -165834,6 +176023,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:3ce8615891525742485a232d318811a3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3ce8615891525742485a232d318811a3",
+        "MNE": "789a7060e306fbffe8367ec5506059a0",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "e07bbba6be7b2aab68026cc72fc7fbb7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa54ac0",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4988C"
@@ -165930,6 +176131,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:add9854e3b67ffd5d0ea8f1a4fa11346",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "13084f184eddb7834c769cd429277349",
+        "MNE": "c887e4b6db72e57bd027075f3ca77044",
+        "CFG": "0da89f0176e1a7281055f065836abfb3",
+        "PRO": "43290a36ca5b0dd1b508d5a78d9218ac",
+        "CAL": "add9854e3b67ffd5d0ea8f1a4fa11346",
+        "CON": null,
+        "APS": "b4905929356021bb8e9381d9c947e73e"
+      },
+      "display_name": "FUN_6fa54b00",
       "callees": {
         "LoD/1.11": [
           "CalculateStringLength|0x6FA496DC",
@@ -166014,6 +176227,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a1bfe40f901f60d04b14ef06f7598da7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "36407428865d07cad0d19930d6c74fbe",
+        "MNE": "7fe278ef539cf3077c9d5646f6870024",
+        "CFG": "f7db4555950df70f1f777b063f630730",
+        "PRO": "a41a3f0bd165d05f128fb53b6f335af4",
+        "CAL": "a1bfe40f901f60d04b14ef06f7598da7",
+        "CON": "844459f534abbb85c0f354455249011e",
+        "APS": "eaa7cc9553cad5c47a97e83b4d1b8427"
+      },
+      "display_name": "FUN_6fa54c90",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -166232,6 +176457,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:dca1976d0ec0c38b31f705a380ac2280",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8a540c0c060390480d55bba9bb095e3f",
+        "MNE": "0b142796ae6500e09ac5e7f967790ac1",
+        "CFG": "f958e7696a5fbaad8c748a12c9d69653",
+        "PRO": "c4af5718747e3a0c554f755c3f12d821",
+        "CAL": "dca1976d0ec0c38b31f705a380ac2280",
+        "CON": null,
+        "APS": "8a540c0c060390480d55bba9bb095e3f"
+      },
+      "display_name": "FUN_6fa54e40",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa54b50|0x6FA54B50",
@@ -166292,6 +176529,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9e016e2d03fb317b188e8a467aaebe66",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4b2e0405edeab4757e972bf3646c2f7b",
+        "MNE": "dc56169290f5c6d8b6db40091d1bb588",
+        "CFG": "7c84aeedb78bf6397a6044e3a0575112",
+        "PRO": "744d5d616ee3f30843f67a30e892a47b",
+        "CAL": "9e016e2d03fb317b188e8a467aaebe66",
+        "CON": null,
+        "APS": "776288010309d2d1e7db0e48be3d951f"
+      },
       "callees": {
         "LoD/1.11": [
           "CalculateStringLength|0x6FA496DC",
@@ -166484,6 +176732,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:9e016e2d03fb317b188e8a467aaebe66",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d64567ebace06ed63188bd02f6192989",
+        "MNE": "2761306a54cc20b2bd7d92bbd3c9c964",
+        "CFG": "035f435d3a5c596e6d9817f0ef07d6d4",
+        "PRO": "5ace5396481709d36ceab85b8500d57e",
+        "CAL": "9e016e2d03fb317b188e8a467aaebe66",
+        "CON": null,
+        "APS": "305ce007dc87c5d330e034f257eb3fb4"
+      },
       "callees": {
         "LoD/1.11": [
           "CalculateStringLength|0x6FA496DC",
@@ -166664,6 +176923,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:8ad75f74334a4cecaf2784e786d6f59f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "90d1b9f19148c257cf9d492c9b8c2b7e",
+        "MNE": "2ff1af58442345658114f6f7ffded408",
+        "CFG": "11e90c6a7fc7ef787351ba01fabff908",
+        "PRO": "464241250c0d262c3da9406c72d0083c",
+        "CAL": "8ad75f74334a4cecaf2784e786d6f59f",
+        "CON": null,
+        "APS": "94da719f213183e7eb82e502bb66c55a"
+      },
+      "display_name": "FUN_6fa550d0",
       "callees": {
         "LoD/1.11": [
           "strlen|0xFE",
@@ -166785,6 +177056,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:7aa955506f29bb0399a4d69a46328bcb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3ede9acbee70fbbf1874bfb34dbbd683",
+        "MNE": "e1062ff481595510d11c511142bca119",
+        "CFG": "fae16fc777c2629644efefa3392c7227",
+        "PRO": "f7676d0e53020e10390f05a9f7bd37dd",
+        "CAL": "7aa955506f29bb0399a4d69a46328bcb",
+        "CON": "b3281d6d724747f9ab2779dd389eaae4",
+        "APS": "fbb00cbbb0f56fb2f2f6fd85ab0aed4e"
+      },
+      "display_name": "FUN_6fa55130",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10192|0x6FA4987A",
@@ -166988,6 +177271,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:dfbb534b39532bcf9d2443f6261a2237",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6f3e2da64e651d686ef526e8408bbee",
+        "MNE": "720b25e23cc1891a7ae75c59395a73e7",
+        "CFG": "7e258d28aa1084cc4f854c6eef6e647c",
+        "PRO": "17eee202c6af129022799af76c60a2fd",
+        "CAL": "dfbb534b39532bcf9d2443f6261a2237",
+        "CON": "962bc3fe1f5db6ba3e0bd298bd38a066",
+        "APS": "47bdeae58ac2522da31f27d525e2a99c"
+      },
+      "display_name": "FUN_6fa55410",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -167248,6 +177543,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:77d3eb9df66f5212b996e3eea5d36962",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "cc3e89f6aeb46f7e6099a79138d370b8",
+        "MNE": "c977e4d99475b86916db4abd54fcfe43",
+        "CFG": "593fe83a74a0b3ad5f816460420e28c6",
+        "PRO": "67de447634bba9a0cbbf6c7505aeb0b8",
+        "CAL": "77d3eb9df66f5212b996e3eea5d36962",
+        "CON": "9a37249eecf8b0a32dd16bab0f9c4a3a",
+        "APS": "c9c095e810161cf985f95031e776814b"
+      },
+      "display_name": "FUN_6fa55710",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -167520,6 +177827,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "c4369c4f52339d131f1e83763d5a83de",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA4F6E0"
@@ -167602,6 +177920,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:77d3eb9df66f5212b996e3eea5d36962",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "466835bdc466d1ba2b1d2f1f8dbd7cca",
+        "MNE": "1d62860b8a8d3878bce828f924a1553f",
+        "CFG": "e48d6fcf300c3d08888e7daff40ff43f",
+        "PRO": "e02c5a8f6d5f8cc25813dcc21976eed9",
+        "CAL": "77d3eb9df66f5212b996e3eea5d36962",
+        "CON": "a196211e8be612dd7de399ec9f3eb67f",
+        "APS": "018e84aee5861fcf042c24b09e1df7bd"
+      },
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -167881,6 +178210,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "05a2f091a8adc10c8474b93d27449fca",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA55B70"
@@ -167960,6 +178300,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:d882ce30a99185fcf722c45521ea0ea7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8a71ddc31f4509c6e20da7404b91cbec",
+        "MNE": "f442fd243e87bfe3b0dd124bf86e9e46",
+        "CFG": "0fb4aef82a0a0ec3c0227b53a3c4d480",
+        "PRO": "afca08a90e15a3d9c461c04dee391aeb",
+        "CAL": "d882ce30a99185fcf722c45521ea0ea7",
+        "CON": "020a886925e8f96ac302e80ce607f12a",
+        "APS": "da2c00e1af3da65d2022d2a484ca3896"
+      },
+      "display_name": "FUN_6fa56090",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10192|0x6FA4987A",
@@ -168232,6 +178584,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "295b960db784a4cd3a2cf35e27d217e3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA529E0"
@@ -168311,6 +178674,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:e8925efe21b31de49aa9a9c8b4870609",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "0474991b98218623719b1fca446adbb4",
+        "MNE": "133c69910409b974ab7749d4b61de51f",
+        "CFG": "4ade0f02a34b9f43a1d76521ab5469ce",
+        "PRO": "76099ce11c6ed9d00f90c316b2b59eac",
+        "CAL": "e8925efe21b31de49aa9a9c8b4870609",
+        "CON": "69d3757ff160d43a46c77a3b74064dbe",
+        "APS": "997f1b6a7706eb1392fdc8ad7683836c"
+      },
+      "display_name": "FUN_6fa562c0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10192|0x6FA4987A",
@@ -168559,6 +178934,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:a7b98f642fba64ecff526f58828edfc2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "af0ca97fdf14ca15293b62c7d719fcd5",
+        "MNE": "73c32c0b434803df8ce1fd6bc8838ae6",
+        "CFG": "717275f7abafeb6f78f17269e3c39c00",
+        "PRO": "8b219f01c9a86a45425b47697de385b6",
+        "CAL": "a7b98f642fba64ecff526f58828edfc2",
+        "CON": null,
+        "APS": "af0ca97fdf14ca15293b62c7d719fcd5"
+      },
+      "display_name": "FUN_6fa56990",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -168749,6 +179136,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:3ad75b6a22490c1586effd168b6fc0bd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1f0e49211ea3769f987baddad01348e6",
+        "MNE": "e597633e88b630d2d03855df8ceed6e9",
+        "CFG": "e32d2a9de5aab48235e30727bbcd4f9a",
+        "PRO": "39321ecbe3899e7f63f1a94bcff7bfad",
+        "CAL": "3ad75b6a22490c1586effd168b6fc0bd",
+        "CON": "b69ce7076e381aafe0f5ce1afcd2f7b9",
+        "APS": "cc71e8659fe80bce95d841029ceeea9f"
+      },
+      "display_name": "FUN_6fa56ae0",
       "callees": {
         "LoD/1.11": [
           "GetTickCount|0x4A",
@@ -168892,6 +179291,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:0dc753aa617b88eb8ee3d440288fba54",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f33ba0700572a9c4e109d0ffdabb6131",
+        "MNE": "e891374030b9defe98ede9a5bd6e8bdb",
+        "CFG": "a561b1deab9e3d1c6eeff1e69445add2",
+        "PRO": "786d35bba775f68dfcc2fd2a1a7b6c83",
+        "CAL": "0dc753aa617b88eb8ee3d440288fba54",
+        "CON": null,
+        "APS": "0dc753aa617b88eb8ee3d440288fba54"
+      },
+      "display_name": "FUN_6fa56b20",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10037|0x6FA497F6",
@@ -169018,6 +179429,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:1703e1f3b8cf8e99a8f6b87141050a86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "df1476cf171fd32c03dcfd817cb7abda",
+        "MNE": "1e696259a9e7badb3c7129c49ba872cc",
+        "CFG": "a6ef1e503cbd3b5f08f6fb995d24bf79",
+        "PRO": "86af0ff8cdb6d81d32a2fa395cc75fc9",
+        "CAL": "1703e1f3b8cf8e99a8f6b87141050a86",
+        "CON": "e86c44923c223484e84ca9070ba5dba6",
+        "APS": "df45e48f37b3a9a806e843e0301dadb4"
+      },
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -169238,6 +179660,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b21b514b958d45b2787d9a5393072d93",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d8df4fa270394821e9e9d66e0f10419f",
+        "MNE": "c41a8ad7f27f6a8d70c4df905335eb5f",
+        "CFG": "98ab69a6332c071a774f93a7fae4e85f",
+        "PRO": "f9d16a2ccb8baf93d0312a12ef23ea83",
+        "CAL": "b21b514b958d45b2787d9a5393072d93",
+        "CON": null,
+        "APS": "d8df4fa270394821e9e9d66e0f10419f"
+      },
+      "display_name": "FUN_6fa56cb0",
       "callees": {
         "LoD/1.11": [
           "FindAndValidateD2ExpMpq|0x6FA49724",
@@ -169349,6 +179783,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6b6af04e95998c3230eeae3c3615a88a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f2e6a39fa8cb93c2430a5c9bd53df2fb",
+        "MNE": "3dd3c0c5a019228a5bc3c1a876ed6eb7",
+        "CFG": "0d0452b47bc70864300e72f19e59163a",
+        "PRO": "dccc1a441d3c9ab6fc0d288788df8913",
+        "CAL": "6b6af04e95998c3230eeae3c3615a88a",
+        "CON": "4f51265e9e673e9e468b3a3b5438d95c",
+        "APS": "e266de32cb62732891f93dac0c3fb4ae"
+      },
+      "display_name": "FUN_6fa56d00",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -169567,6 +180013,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:23f4b7d9966d288a2decf108a2ba6128",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "728a4611b9adecae19f8cb0c7be8c266",
+        "MNE": "8823e84c034408ab490a04cdefb10b13",
+        "CFG": "ea082d3d9048ca663b84cb7645c2f616",
+        "PRO": "0e53bf515bab7f1c2fcb3593acea761a",
+        "CAL": "23f4b7d9966d288a2decf108a2ba6128",
+        "CON": "6b0e61f5681ae1a144764f48f9a7a922",
+        "APS": "eeb33d9c0afc33d2b71a002b4c580c11"
+      },
+      "display_name": "FUN_6fa56e70",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -169792,6 +180250,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:ee0bc40e760198c0e172b58399fc7fae",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "773334814dc17cd4c74b6604657b1ee7",
+        "MNE": "d6b267564c5ce2e314dbb3e24b792bab",
+        "CFG": "ac35c3ae3395b54fdc69c7c3f71a530e",
+        "PRO": "605b100d68a38d7c9712b0da3ed7260b",
+        "CAL": "ee0bc40e760198c0e172b58399fc7fae",
+        "CON": "5e5227b11655e1923ed237568315d19f",
+        "APS": "89894fa44b5a2f80bfe844e71246cdcf"
+      },
+      "display_name": "FUN_6fa57030",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10183|0x6FA49826",
@@ -169997,6 +180467,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4bf92f98de3a9c2938dceb6fd7a08a0a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4bf92f98de3a9c2938dceb6fd7a08a0a",
+        "CFG": "351876b3e82fd64a9ebfbaa72adb1e21",
+        "PRO": "e1542d44f2e9bb8a9fdeadba2f0e2b9d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa571a0",
       "instruction_counts": {
         "LoD/1.11": 19,
         "LoD/1.11b": 19,
@@ -170059,6 +180541,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:420162bea3b82689401db08e7b10f0ce",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "420162bea3b82689401db08e7b10f0ce",
+        "CFG": "bd51614b081966c0d8a52aeb82302512",
+        "PRO": "d3e02eb685da44b86d556c853ac62e84",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa571d0",
       "callees": {
         "LoD/1.11": [
           "ConvertFileTimeToUnixTime32|0x6FA411A4"
@@ -170155,6 +180649,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:879c9bafec69f0e570e6ed417c8923be",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "879c9bafec69f0e570e6ed417c8923be",
+        "CFG": "318f6b9887d7333f8816a73786de3e2f",
+        "PRO": "4914dc7cda41dcf8e10a3c8b297ae2ff",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa57250",
       "callers": {
         "LoD/1.11": [
           "FUN_6fa579f0|0x6FA579F0"
@@ -170256,6 +180762,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:7fd8d9cf7c1fda9f2dddc91a12a58646",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7fd8d9cf7c1fda9f2dddc91a12a58646",
+        "CFG": "92d9f8b1bbab2af3dcc48c0ad99463e7",
+        "PRO": "07577c6db553c8370c7662b889e05af8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa57350",
       "instruction_counts": {
         "LoD/1.11": 15,
         "LoD/1.11b": 15,
@@ -170349,6 +180867,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:acbc2c857bf1a8401ca8fe5de1c0ec70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "acbc2c857bf1a8401ca8fe5de1c0ec70",
+        "CFG": "b7f90134d714fda5bab257770e7cad4b",
+        "PRO": "7206840be1be8fa373a01e5868c0863f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 2,
         "LoD/1.11b": 2,
@@ -170411,6 +180940,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:7c1565b9b71abc262dac49bc9b6ed73b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7c1565b9b71abc262dac49bc9b6ed73b",
+        "MNE": "3dac690ed53959b20338485039949cbf",
+        "CFG": "1541ec04fdc42003d5252dd84949bfa9",
+        "PRO": "65a25a1e9df9e9ff8a6de0dd549055ea",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa57570",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10053|0x6FA497C0"
@@ -170512,6 +181053,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:e2e8668b77912da10a42b99ec739d52e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "dd6b1f0bd88b23e36ca8f5696d92779e",
+        "MNE": "1a6a9a59ed0048e62c5c57d9ba87b841",
+        "CFG": "c861674ed57b79e9b7be309307dd139d",
+        "PRO": "e4009fb300982b5ec768f651c7837509",
+        "CAL": "e2e8668b77912da10a42b99ec739d52e",
+        "CON": null,
+        "APS": "2a14aba5b20b01c342b2441f7aeb84d7"
+      },
+      "display_name": "FUN_6fa57590",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -170712,6 +181265,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:49b1b2e9be6b57f2b977e882b85aaac6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f7009373c0e5a30b878e69311eae4c68",
+        "MNE": "d87114cdc29b0e7d104edabadf4bee39",
+        "CFG": "0d3b48d64e5d6303ea3fd57250c3834e",
+        "PRO": "b1d9381d7e337cb1a115ed48f405befd",
+        "CAL": "49b1b2e9be6b57f2b977e882b85aaac6",
+        "CON": "e6dfb5d884d75502911b3eac38949c79",
+        "APS": "2abb3fbff75aaf782770ac1488357957"
+      },
+      "display_name": "FUN_6fa57710",
       "callees": {
         "LoD/1.11": [
           "FindAndValidateD2ExpMpq|0x6FA49724",
@@ -170944,6 +181509,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:12276f77625dadf1180fd2af5afceb58",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d4287c3adf505387097684889b521163",
+        "MNE": "438a01451bf4f32fbbf0ae434cf1c505",
+        "CFG": "386b519c60c63f79ac60ada3976b8936",
+        "PRO": "f62f17fd6a9eca9d2c6977dc8eb97373",
+        "CAL": "12276f77625dadf1180fd2af5afceb58",
+        "CON": null,
+        "APS": "321d194c2b17932995d763364f8f942d"
+      },
+      "display_name": "FUN_6fa577f0",
       "callees": {
         "LoD/1.11": [
           "AllocateMemoryFromArena|0x6FA496A6",
@@ -171122,6 +181699,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:fdad073544ac1586678f808b3470f76a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fdad073544ac1586678f808b3470f76a",
+        "CFG": "49e719536dd954d514c41b556011b8a1",
+        "PRO": "9a4e5a3d51a7c1b034d2af3f1294afb3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11": 1,
         "LoD/1.11b": 1,
@@ -171184,6 +181772,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:6327c27df757bc559b6ed396dcfd1790",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c01fa6e1a170b59bdfbcc5c6da6138f7",
+        "MNE": "f4516dbeece31ca50657f10a678f51b3",
+        "CFG": "99674c4433b948f6a5aa6694fd6d1f12",
+        "PRO": "586d3137b808fe70990e37c044097c26",
+        "CAL": "6327c27df757bc559b6ed396dcfd1790",
+        "CON": null,
+        "APS": "c86c1c626a14269963367ecfafb31fa1"
+      },
+      "display_name": "FUN_6fa57920",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -171334,6 +181934,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:aec4864f0c71c5d8cdbdfe1e9a1d03b6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "8e4d34bac240a646e700fa422dadc490",
+        "MNE": "3d0384a75ba3f4cec078e6af292baaec",
+        "CFG": "2e46ece120608665a7aef160e728bd2b",
+        "PRO": "87a0ace7ca7906a901dfbc4e563ab0ab",
+        "CAL": "aec4864f0c71c5d8cdbdfe1e9a1d03b6",
+        "CON": "b86570b49690e6b1068bc10ae9cd7991",
+        "APS": "aec4864f0c71c5d8cdbdfe1e9a1d03b6"
+      },
+      "display_name": "FUN_6fa57960",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10067|0x6FA4979C",
@@ -171519,6 +182131,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:3fdd4cc02d134fded498e32fc57bc79c",
+      "indexes": {
+        "EXP": null,
+        "STR": "3fdd4cc02d134fded498e32fc57bc79c",
+        "API": "786c1ba061d3711985afc227472bb991",
+        "MNE": "0e2b7d1fe4c67e29be544ed9beaaf786",
+        "CFG": "33e512847c2d9d0e8bf8dcc3ae1b20a2",
+        "PRO": "7dbaae8e8481d0823625dd12fdaef26f",
+        "CAL": "b4fde78277ad69ec6ce8db94b42af0f5",
+        "CON": "2c32943ec59d6ae0d1b3689e46580c38",
+        "APS": "7d7f9de33e9fb11207bb836d1d7a2f87"
+      },
+      "display_name": "FUN_6fa579f0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -171906,6 +182530,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:3d20528a150a010ed71d4ef9d4312e38",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e91d497c724b46c3de68a1d30f7e3350",
+        "MNE": "07d28985a0224f92a9dd37f94c6fe3ae",
+        "CFG": "ed40e80393bcc32c10d7f837189a3c6a",
+        "PRO": "2cb4a8eeddee67b280234f7252bac19d",
+        "CAL": "3d20528a150a010ed71d4ef9d4312e38",
+        "CON": "040fc87909ef4e2389027a25a333c3ba",
+        "APS": "be98d4b6119e54eed4acaf9d0612a595"
+      },
+      "display_name": "FUN_6fa58030",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10167|0x6FA4981A",
@@ -172228,6 +182864,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b3a2b7758d6cfa6f939984ceb28de28c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "323463101d2d4834dd6d9441766c4f8c",
+        "MNE": "1713fcf9b4fc3183c4bb70e89efcd19b",
+        "CFG": "95efb434b84fe3701ab322f056aff034",
+        "PRO": "a923bb9369ad00068b0b7414a8d52d61",
+        "CAL": "b3a2b7758d6cfa6f939984ceb28de28c",
+        "CON": null,
+        "APS": "a3ea303979dac6c1aae46c782fa1ebe1"
+      },
+      "display_name": "FUN_6fa584a0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -172403,6 +183051,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:b57f95cf9585a2eb2b95d5d381bc2962",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "de9d483ee8192f71a1076b21664ad658",
+        "MNE": "93cacac5d6d8c42ad029ef080e18bc72",
+        "CFG": "2140e1b7aca06979a1139b93a32c5edb",
+        "PRO": "d61b89d1a90c0fb15fc765947e1be2dd",
+        "CAL": "b57f95cf9585a2eb2b95d5d381bc2962",
+        "CON": "8dffc90245c14bf267ff6b144257f49f",
+        "APS": "ed0f8aa1d5368d35f7b9f7751e83a90f"
+      },
+      "display_name": "FUN_6fa58520",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -172644,6 +183304,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:4d1aeb51b3a0a21b8349bc8a1848552b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "549aee1cf59eac0000bb4ab67649c19a",
+        "MNE": "de1322867d8695d4fbb8f3949d4dbb83",
+        "CFG": "6c9541c0bdb19ad62c2c87326206a56e",
+        "PRO": "b5850ba4783450236961a333a1ae92c5",
+        "CAL": "4d1aeb51b3a0a21b8349bc8a1848552b",
+        "CON": null,
+        "APS": "cb5d9d8891c6e319d99690046eb8bdae"
+      },
+      "display_name": "FUN_6fa586a0",
       "callees": {
         "LoD/1.11": [
           "FindAndValidateD2ExpMpq|0x6FA49724",
@@ -172812,6 +183484,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:167bdd4b7fb786ae3d2245331928a794",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3cec885d6179f1718fb91cf89f2e8f73",
+        "MNE": "15c09799a2a83775626a20290b605f84",
+        "CFG": "f2ee2e347e5a99bc50dc8e4844c6fe8e",
+        "PRO": "f7ed1d52054f8233d8b95df751aec689",
+        "CAL": "167bdd4b7fb786ae3d2245331928a794",
+        "CON": null,
+        "APS": "6610f045a6a41e29d5d7ff93b94062f3"
+      },
+      "display_name": "FUN_6fa587b0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -172972,6 +183656,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:84ed252c4fb69b04fd277850c9be454b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "60f925cf3a52e0e5e0a5e0717a22c746",
+        "MNE": "4378f69ffd8a7d54c0434fe5ada03f16",
+        "CFG": "3d74c58e8c4583d1e7223e41681d7cd5",
+        "PRO": "a35ad01b346da32a9c00944790e19ae1",
+        "CAL": "84ed252c4fb69b04fd277850c9be454b",
+        "CON": "54de70504c6a11f4a0b0d3b49250bb43",
+        "APS": "5b955101337e1f01e3b98e53cdb55546"
+      },
+      "display_name": "FUN_6fa58810",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -173342,6 +184038,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:4437248cb922b9f70b1365fad2fb710f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4437248cb922b9f70b1365fad2fb710f",
+        "MNE": "8d6816fb1109f340fcace851ffed5428",
+        "CFG": "d7ccbb80de69c80d61eee384024bdfb3",
+        "PRO": "886da4a3d7f948c784629ec8aca619b4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa58db0",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -173396,6 +184104,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:028df143845a1b161fe2da114041b45c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "028df143845a1b161fe2da114041b45c",
+        "MNE": "da4f103de695bcf65d9b781c629c8742",
+        "CFG": "ce3bad7283e92f0259f37729a33b9171",
+        "PRO": "66136eee68d9d7ecf3d3949274e57de9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa58de0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa586a0|0x6FA586A0",
@@ -173543,6 +184263,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:3b003c2edd19fdbe50703dc81b6029f7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7071201b5cefa75660626cc95051c503",
+        "MNE": "dcf0e7d157703d55d58005eb9b7346fc",
+        "CFG": "abb037d180dd27e6b3c470d14be8866d",
+        "PRO": "33c05421c16fee0008828ee4d9b054d1",
+        "CAL": "3b003c2edd19fdbe50703dc81b6029f7",
+        "CON": "8817be86ca54ebfed02537ee010931f2",
+        "APS": "c29bd3849071e7598cf5a39c1cad348f"
+      },
+      "display_name": "FUN_6fa58e40",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10033|0x6FA49802",
@@ -173810,6 +184542,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:4e7d9db76fad911eb7f7ed486ce51c0c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4e7d9db76fad911eb7f7ed486ce51c0c",
+        "CFG": "d0a998f8cc09d03a7c20b16a56c1a506",
+        "PRO": "36ee4622bbc0852e14ae66be6baacf91",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa59140",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa579f0|0x6FA579F0",
@@ -173970,6 +184714,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:c2663836a64edd78c635537bfb4e79b0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c2663836a64edd78c635537bfb4e79b0",
+        "CFG": "e97ba6c2cc903ef69c1cd2cedfdbf918",
+        "PRO": "24f07ad74f8b605eb5920cbf63fe9ca4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa593f0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa579f0|0x6FA579F0",
@@ -174086,6 +184842,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:e819dd3464668ed1707ca87c08c46616",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "e819dd3464668ed1707ca87c08c46616",
+        "MNE": "6652a029abffb9f705ff3dd5dc8b8696",
+        "CFG": "943603240a053bfda63d615bcd27b7f1",
+        "PRO": "962acd9906fd2c6a9be63f473b8c38b0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa598e0",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10005|0x6FA49A60",
@@ -174214,6 +184982,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:04e2c720ee57044ee7bfa4b2e55ceaa0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "04e2c720ee57044ee7bfa4b2e55ceaa0",
+        "MNE": "7e015c1e68a25fd985fa43ce4b65e0f6",
+        "CFG": "09d505ebd50d88de26f87dbe7580fe1f",
+        "PRO": "290a80701e47fb0b6db6cb59637837bb",
+        "CAL": null,
+        "CON": "c1aea8b32bed45fba8146926022c3b3b",
+        "APS": "04e2c720ee57044ee7bfa4b2e55ceaa0"
+      },
+      "display_name": "FUN_6fa59910",
       "callees": {
         "LoD/1.11": [
           "Ordinal_10005|0x6FA49A60",
@@ -174369,6 +185149,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:c16f08c3bc9102d7e28e574a25112c1e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "916d7380eb2cc86cb274f83f78533cd2",
+        "MNE": "7620b89e6eb256e4e790ba4e8abc75d7",
+        "CFG": "5e1ac7ec5355794c3abed63197d4a95f",
+        "PRO": "d3efaa2f8b33ec7d957ad795f833d132",
+        "CAL": "c16f08c3bc9102d7e28e574a25112c1e",
+        "CON": "3cca44b2b82249484c29b0d9dbc29010",
+        "APS": "916d7380eb2cc86cb274f83f78533cd2"
+      },
+      "display_name": "FUN_6fa59950",
       "callees": {
         "LoD/1.11": [
           "FindAndValidateD2ExpMpq|0x6FA49724",
@@ -174594,6 +185386,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "API",
       "index": "API:890fc7a80d6ec7548c13b20dd03b9f3a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "890fc7a80d6ec7548c13b20dd03b9f3a",
+        "MNE": "9e4bcd35c6637c65eeb108ce6b8d2129",
+        "CFG": "392ba4e69c9f153a8daca7f2bd325aed",
+        "PRO": "f86b04b8c63ceaf7581fd20e6e763f90",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa59aa0",
       "callees": {
         "LoD/1.11": [
           "FindAndValidateD2ExpMpq|0x6FA49724",
@@ -174747,6 +185551,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:87fceb3a01810ccfd18212306c7b06a4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f26723be191646c68364b16989e06b9b",
+        "MNE": "f4b52b819e298fe03fd73bd8d4e9a8d8",
+        "CFG": "06fd09b8317a1e5f8d64394f7857d85a",
+        "PRO": "28f292c5feb58c2ceef01617a457d451",
+        "CAL": "87fceb3a01810ccfd18212306c7b06a4",
+        "CON": null,
+        "APS": "6da674620c3a85b609537f717037ff9d"
+      },
+      "display_name": "FUN_6fa59cd0",
       "callees": {
         "LoD/1.11": [
           "ComputeStringHash|0x6FA496AC",
@@ -174947,6 +185763,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:43c5ba17e25ce8283777e7b6778e7a5e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7fc40553131e77bb1cd5cf2741627727",
+        "MNE": "91026cbb09a0ccc1f9c4be1f078ac2a0",
+        "CFG": "25ef259d54d240eb1212b6cd25b6a27a",
+        "PRO": "170791324acbe681394033d8992cd213",
+        "CAL": "43c5ba17e25ce8283777e7b6778e7a5e",
+        "CON": "0a77f91f72a38d1770cee01b1a7d4599",
+        "APS": "dbc4859d5559242068da159f98b27afc"
+      },
+      "display_name": "FUN_6fa59d70",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -175222,6 +186050,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:cea12787b9e7100b7f698acc36c840d2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "cdf4dc69d712129ebde91923e8bbb78b",
+        "MNE": "9c2f6586d6fe10746aad884996389152",
+        "CFG": "10cc441c0e73f38ef9932f9d6ff98ab7",
+        "PRO": "cdc2c201f36ce321661fd0ffabf114a8",
+        "CAL": "cea12787b9e7100b7f698acc36c840d2",
+        "CON": null,
+        "APS": "cea12787b9e7100b7f698acc36c840d2"
+      },
+      "display_name": "FUN_6fa59fb0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa579f0|0x6FA579F0",
@@ -175395,6 +186235,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:226da2f2c671e1e2b1b45d5880eeba8f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "3bfc2078b58ae2c550ca2069fa95c5cb",
+        "MNE": "883e9dfa6a62c7da70672f4b7bb6d553",
+        "CFG": "af3adf42bb7a4ad78b39dc385c233421",
+        "PRO": "7b373e01c1c6c068c0dca9954bdef265",
+        "CAL": "226da2f2c671e1e2b1b45d5880eeba8f",
+        "CON": null,
+        "APS": "47af41a0d9536561b9736e0f0de83a15"
+      },
+      "display_name": "FUN_6fa5a030",
       "callees": {
         "LoD/1.11": [
           "CopyMemoryAndDetectTerminator|0x6FA496C4",
@@ -175590,6 +186442,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:2fe020a9281f0d8382234a35c2b5b463",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2fe020a9281f0d8382234a35c2b5b463",
+        "CFG": "e40ba1309e107857a2fcd495cde90049",
+        "PRO": "bea297b1a93308fdef2f91f86444bbb9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa5a0a0",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa59fb0|0x6FA59FB0",
@@ -175691,6 +186555,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:5a81c8253188d789b25b6c6de33a697a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ae1c434bbb16eea39f8c7a948e6f161e",
+        "MNE": "dc3bc80481de9c624d9d0f69b4d174d3",
+        "CFG": "858edc705c738c1673a1c48b33b0474b",
+        "PRO": "9692bb243cf8332692f5e14dab8b55e8",
+        "CAL": "5a81c8253188d789b25b6c6de33a697a",
+        "CON": "2d91c6f918dc561384a972a71b50114f",
+        "APS": "ae1c434bbb16eea39f8c7a948e6f161e"
+      },
+      "display_name": "FUN_6fa5abc0",
       "callees": {
         "LoD/1.11": [
           "win2Unicode|0x103",
@@ -175959,6 +186835,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:42b1f6389a8e2123ad5670e0eb05aa38",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c6804a57c596f994815eb1b275e950dd",
+        "MNE": "11f2a914baca6d8c39b6ce529f431cd0",
+        "CFG": "f60103e663d98698ea7a714e7e4d944f",
+        "PRO": "d949e4de36b988fa307e07d45a5b7f7b",
+        "CAL": "42b1f6389a8e2123ad5670e0eb05aa38",
+        "CON": "6fff0092af3c3b0a0e350a0d1c45da47",
+        "APS": "4380775bd9fc5e5b7bc68c3ac55ee186"
+      },
+      "display_name": "FUN_6fa5ae30",
       "callees": {
         "LoD/1.11": [
           "UpdateUIElementsOnTextChange|0x6FA50650",
@@ -176219,6 +187107,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:97e679389533d89583af925e72672797",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "97e679389533d89583af925e72672797",
+        "CFG": "e8ac664c3e38bd025eb82adb0f561103",
+        "PRO": "8c7a230762e452c7a0252b3b0b9d651f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa5b190",
       "callees": {
         "LoD/1.11": [
           "FUN_6fa5ad90|0x6FA5AD90"
@@ -176298,6 +187198,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "CAL",
       "index": "CAL:30842a0c9fe0f0ebff3d8ecf7a46f0b3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "cd294aa2fe1a72114be344db0e00d413",
+        "MNE": "e37603a52ec3ef09dee61495b20fd7cc",
+        "CFG": "8eb48ea82ef091eb6a46661ed243213e",
+        "PRO": "052e9767e9524373fbbe6cd0910b3035",
+        "CAL": "30842a0c9fe0f0ebff3d8ecf7a46f0b3",
+        "CON": null,
+        "APS": "d7237407329aa4ae8e59ff7e2eb6da82"
+      },
+      "display_name": "FUN_6fa5b1c0",
       "callees": {
         "LoD/1.11": [
           "GetReturnAddress|0x6FA4972A",
@@ -176575,6 +187487,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "MNE",
       "index": "MNE:28f16272af6c9eb3f7e319a0bc302509",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "28f16272af6c9eb3f7e319a0bc302509",
+        "CFG": "44ab58bb3af358b444e871ac11f0efa3",
+        "PRO": "a78a74c5b4913e37118ba02c7e6cf12a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa5b270",
       "callees": {
         "LoD/1.11": [
           "`default_constructor_closure'|0xFF"
@@ -176703,6 +187627,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:927eb21df11e156d32f5ea31245699e9",
+      "indexes": {
+        "EXP": null,
+        "STR": "927eb21df11e156d32f5ea31245699e9",
+        "API": "6352f0c3f903fb48da2f7f55762422c8",
+        "MNE": "032a2b8697a842ffca75006c2632c0df",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "0e7af456b5868b08fa03ad07884ecc83",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa5b2a0",
       "callees": {
         "LoD/1.11": [
           "ComputeStringHash|0x6FA496AC"
@@ -176821,6 +187757,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11",
       "method": "STR",
       "index": "STR:de71a7c8c9611cb6f3c4fb6274283584",
+      "indexes": {
+        "EXP": null,
+        "STR": "de71a7c8c9611cb6f3c4fb6274283584",
+        "API": "6352f0c3f903fb48da2f7f55762422c8",
+        "MNE": "032a2b8697a842ffca75006c2632c0df",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "16cb399d5fc16490d1700b36ec805ef6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa5b2c0",
       "callees": {
         "LoD/1.11": [
           "ComputeStringHash|0x6FA496AC"
@@ -176931,6 +187879,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:25ea86b19fcba2ba2f21837e8b4d011f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "25ea86b19fcba2ba2f21837e8b4d011f",
+        "CFG": "83c0d6390c69266ec6463031f82e17f6",
+        "PRO": "68605047be3693c0f43d928360efdfa5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.11b": [
           "_calloc|0x6FA4496A"
@@ -177002,6 +187961,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:015656c913bc319e74628625c8268911",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "015656c913bc319e74628625c8268911",
+        "CFG": "bc5d6b7f0e327240e7a00b1edfea211b",
+        "PRO": "4bc08ef6c5ac9fe57a0e189342094ead",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.11b": 4,
         "LoD/1.12a": 4,
@@ -177074,6 +188044,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "CAL",
       "index": "CAL:01b6f23c525404abee61b1905e1b4ba5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "01b6f23c525404abee61b1905e1b4ba5",
+        "MNE": "c3e09ec60972e5a3220cf93d1a02ff76",
+        "CFG": "c143a60e62c44a24a67fdf6b8acc0f76",
+        "PRO": "8443e03a628ee21463ca0363651e4401",
+        "CAL": "01b6f23c525404abee61b1905e1b4ba5",
+        "CON": null,
+        "APS": "01b6f23c525404abee61b1905e1b4ba5"
+      },
+      "display_name": "FUN_6fa4dc60",
       "callees": {
         "LoD/1.11b": [
           "FUN_6fa4d690|0x6FA4D690",
@@ -177185,6 +188167,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:c71fbcdfc3bf6c607c3d520c141d485c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c71fbcdfc3bf6c607c3d520c141d485c",
+        "CFG": "1541ec04fdc42003d5252dd84949bfa9",
+        "PRO": "614d0695dc846f1cb0611ddcd7107cb1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa54fc0",
       "callees": {
         "LoD/1.11b": [
           "FUN_6fa524a0|0x6FA524A0"
@@ -177233,6 +188227,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "CAL",
       "index": "CAL:530bc1cad891f71169df6eb7582901fb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2a09efb5375e7e67452ded1612f1237a",
+        "MNE": "5f2a5b423a04d6fc1f3fcd41ece5e4d9",
+        "CFG": "e58990042a5e0ba17f455473227a29f2",
+        "PRO": "7eb3353842a6b52f2672e527ac46ce9d",
+        "CAL": "530bc1cad891f71169df6eb7582901fb",
+        "CON": null,
+        "APS": "a27f12eded1769043fa00c6dcf806bf5"
+      },
+      "display_name": "FUN_6fa54ff0",
       "callees": {
         "LoD/1.11b": [
           "GetGameState|0x6FA49A0E",
@@ -177290,6 +188296,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.11b",
       "method": "MNE",
       "index": "MNE:93d346be4becd940852cb330d1b4ccd6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "93d346be4becd940852cb330d1b4ccd6",
+        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
+        "PRO": "94d5f3864aed03836376d5b9f692524d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa555c0",
       "callees": {
         "LoD/1.11b": [
           "FUN_6fa54940|0x6FA54940"
@@ -177351,6 +188369,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "MNE",
       "index": "MNE:266baaaf79f230c6a6856a4a53b42d70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "266baaaf79f230c6a6856a4a53b42d70",
+        "CFG": "534def472ed002fb3d9ae30d9941d219",
+        "PRO": "ba22163fd5cf55d42483f70937ee69e5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "_malloc|0x6FA459E8"
@@ -177434,6 +188463,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:27abca34d8131735c7443cb905d36e05",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec23b45a2866e232185332d8037b87ff",
+        "CFG": "0914314a41722064026685abc83df99e",
+        "PRO": "22e32cf2e0be23d58b20544bbed67711",
+        "CAL": "27abca34d8131735c7443cb905d36e05",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "GetThreadContextFieldAt8|0x6FA42C1E",
@@ -177528,6 +188568,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:ef9241a5d412f340f751ada1af86b81a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "43c1542ced67dd840c298e093699fef1",
+        "CFG": "201aca63c5299d8d993ebcb755355ee3",
+        "PRO": "29f4dcefa5e6e0300391608d44d6560f",
+        "CAL": "ef9241a5d412f340f751ada1af86b81a",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "LeaveCriticalSectionForMemoryFree|0x6FA44AA0",
@@ -177634,6 +188685,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:4f79fd429117e835038e93692d52e8ae",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9dba01f3a3f519a348d690b818dfa854",
+        "CFG": "0e99bd320a7bfad461c187925ae05012",
+        "PRO": "2e15fbaac6f519babac77b5c0ac9a540",
+        "CAL": "4f79fd429117e835038e93692d52e8ae",
+        "CON": "cd2d596ea89d44e071bc437483a3d6c3",
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "LocaleMapString|0x6FA48EA0",
@@ -177746,6 +188808,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:0a5a34ebb6301e37f5a25a8d2257e633",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3b865c2f933cac7b684f56d2d74a981a",
+        "CFG": "c6eb60d624e1d7eecf581ce64180ba7e",
+        "PRO": "8385ecf6da4f1153acba75103e073cc9",
+        "CAL": "0a5a34ebb6301e37f5a25a8d2257e633",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "GetCPInfo|0x15",
@@ -177838,6 +188911,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:3d720437471025894f6b8a7432217786",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9202742c31e7fad9c07478efa934202a",
+        "CFG": "973806bd99a65d2d6298d1c300727e24",
+        "PRO": "6693bdc8a1972bfb3d41a54148ad808e",
+        "CAL": "3d720437471025894f6b8a7432217786",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "LCMapStringW|0xD",
@@ -177954,6 +189038,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "CAL",
       "index": "CAL:3d00f7a2b81f8cce2e1d809ba56a8059",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a82412e86c7e059d3af6ea9d376e2875",
+        "CFG": "0cffeba6842accd2a96b76f9c942a054",
+        "PRO": "a360779c77b2d5accb1f281a4fbf02dd",
+        "CAL": "3d00f7a2b81f8cce2e1d809ba56a8059",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.12a": [
           "__chkstk|0x6FA451E0",
@@ -178059,6 +189154,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.12a",
       "method": "API",
       "index": "API:5340ab20d8c8a9994c015a2c9d8757c1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "5340ab20d8c8a9994c015a2c9d8757c1",
+        "MNE": "bbcf6a5d5f739c71dc591931e9b7db9d",
+        "CFG": "7b3aed826d0ef5940829caf8f7c7ea9c",
+        "PRO": "9f9a99b4b464b54ee3f34d061e480fa7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4bd40",
       "callees": {
         "LoD/1.12a": [
           "Ordinal_10018|0x6FA49914"
@@ -178133,6 +189240,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "EXP",
       "index": "EXP:10037",
+      "indexes": {
+        "EXP": "10037",
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "02a30cff357c3ab4c37d08324437520e",
+        "PRO": "9c78ad3c7fd56ed85ebc0a61a8f8f284",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.13c": [
           "FUN_6fa58c10|0x6FA58C10",
@@ -178180,6 +189298,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "CAL",
       "index": "CAL:08b047ec475525dfbbd9d218931df08b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "620f17d9457c68a7c6be7d28e6f478df",
+        "CFG": "a7c222653c6126a1a8680a279c7666ba",
+        "PRO": "90dcc259572a237c5b5139fc5f87bab0",
+        "CAL": "08b047ec475525dfbbd9d218931df08b",
+        "CON": "84562bbd8436cb00159ee467d59e6002",
+        "APS": null
+      },
+      "display_name": "FUN_6fa4e250",
       "callees": {
         "LoD/1.13c": [
           "OutputDebugStringA|0x3",
@@ -178269,6 +189399,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "API",
       "index": "API:1b7b19fd18e28bf301142b268601155d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "1b7b19fd18e28bf301142b268601155d",
+        "MNE": "208449852c3cbd2b57fadd32da7b3a35",
+        "CFG": "5614af0e450a801fc712a6e2c37d434b",
+        "PRO": "9c6bd80fabe7881c99409c8b17ed5f89",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa4e4e0",
       "callees": {
         "LoD/1.13c": [
           "FUN_6fa529d0|0x6FA529D0",
@@ -178311,6 +189453,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "CAL",
       "index": "CAL:dca1976d0ec0c38b31f705a380ac2280",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "f90906ee3ac9c83a8aaa2244eb2a8bbe",
+        "MNE": "0b142796ae6500e09ac5e7f967790ac1",
+        "CFG": "f958e7696a5fbaad8c748a12c9d69653",
+        "PRO": "897742653cae325ec21afc7dfb190011",
+        "CAL": "dca1976d0ec0c38b31f705a380ac2280",
+        "CON": null,
+        "APS": "f90906ee3ac9c83a8aaa2244eb2a8bbe"
+      },
+      "display_name": "FUN_6fa4f950",
       "callees": {
         "LoD/1.13c": [
           "UpdateUIElementsOnTextChange|0x6FA4994C",
@@ -178356,6 +189510,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:c71fbcdfc3bf6c607c3d520c141d485c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c71fbcdfc3bf6c607c3d520c141d485c",
+        "CFG": "1541ec04fdc42003d5252dd84949bfa9",
+        "PRO": "c420b58d5cbda07614114d61e82a5c15",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa55710",
       "callees": {
         "LoD/1.13c": [
           "FUN_6fa52bf0|0x6FA52BF0"
@@ -178404,6 +189570,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "CAL",
       "index": "CAL:530bc1cad891f71169df6eb7582901fb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "b54c13efff0dd06dd09d22cb23cf9676",
+        "MNE": "5f2a5b423a04d6fc1f3fcd41ece5e4d9",
+        "CFG": "e58990042a5e0ba17f455473227a29f2",
+        "PRO": "aaf76a3e07e3141180fc31b7c5a73ae5",
+        "CAL": "530bc1cad891f71169df6eb7582901fb",
+        "CON": null,
+        "APS": "7a512bbaa282cbf9adafc53d30824472"
+      },
+      "display_name": "FUN_6fa55740",
       "callees": {
         "LoD/1.13c": [
           "GetGameState|0x6FA49ADE",
@@ -178458,6 +189636,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "MNE",
       "index": "MNE:93d346be4becd940852cb330d1b4ccd6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "93d346be4becd940852cb330d1b4ccd6",
+        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
+        "PRO": "94d5f3864aed03836376d5b9f692524d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa55d10",
       "callees": {
         "LoD/1.13c": [
           "FUN_6fa55090|0x6FA55090"
@@ -178504,6 +189694,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13c",
       "method": "CAL",
       "index": "CAL:535bdbad57aad14ea246a56baf44663b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d6c1eeadf9ec3f7a96cb9d8522ab7539",
+        "MNE": "921ae41e2fab5309f3cc95a32d794960",
+        "CFG": "5fd26915fc64501f64fb60658d42642a",
+        "PRO": "5d6e9991fc1b8b2ef7d56f2b4bf56e50",
+        "CAL": "535bdbad57aad14ea246a56baf44663b",
+        "CON": "84562bbd8436cb00159ee467d59e6002",
+        "APS": null
+      },
+      "display_name": "FUN_6fa58770",
       "callees": {
         "LoD/1.13c": [
           "OutputDebugStringA|0x3",
@@ -178589,6 +189791,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:d00ae52c0f91d6c16f1f8c274a3ef318",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9b14ad725dce2eea712eace2974b5510",
+        "CFG": "6b2e478b6183ba2981a22e8fae14248c",
+        "PRO": "d348ef45ce7bb61fe7a3aaf2a625a159",
+        "CAL": "d00ae52c0f91d6c16f1f8c274a3ef318",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "GetLastError|0x27",
@@ -178652,6 +189865,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:ef9241a5d412f340f751ada1af86b81a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "91411ab4247869eeb28238e92930a4a5",
+        "CFG": "855c17fee91dbe46adaeba58d394251a",
+        "PRO": "1df273c2f44f140ac2e89ea984915585",
+        "CAL": "ef9241a5d412f340f751ada1af86b81a",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "HeapAlloc|0x40",
@@ -178721,6 +189945,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:66e4c65cd1f6678ae939e1d3e753f375",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0c44e947b1ea344017d45b0d6df8c6c5",
+        "CFG": "11312cf260d760e29d17e2f8bd92e948",
+        "PRO": "ee899cc169b1bd5cc7d8e7b8b3663938",
+        "CAL": "66e4c65cd1f6678ae939e1d3e753f375",
+        "CON": "7464246d5009fb2a1394bbd537c58de4",
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "___crtLCMapStringA|0x6FA48E20",
@@ -178789,6 +190024,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:eca531e762f3fb43dd75b18b705991c9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "aca83c0b308ebe5f47dff9cf83f354c7",
+        "CFG": "ba8bdfdf22452b9b57983366a8132f18",
+        "PRO": "38630d6fd40f4cc7619ae0a103605669",
+        "CAL": "eca531e762f3fb43dd75b18b705991c9",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "setSBCS|0x6FA4797F",
@@ -178851,6 +190097,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:c2a86d7887dbc41c66a0586d4391c868",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "40ace89e5da5d434e25a5d26402f71e1",
+        "CFG": "3537c1dc01d1f01ac1a3fff22e791736",
+        "PRO": "9e7045cc585b7140dc48805ea8cf7563",
+        "CAL": "c2a86d7887dbc41c66a0586d4391c868",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "__SEH_epilog|0x6FA42877",
@@ -178926,6 +190183,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "CAL",
       "index": "CAL:bedda525aa1dd823fbd9f085e98434ec",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2db85971dc36836255f9e9bf407d84c7",
+        "CFG": "e2f84c8043524e2aa37bc408a2e45984",
+        "PRO": "1fb78fb23cc134cfcf9e8afef30dc637",
+        "CAL": "bedda525aa1dd823fbd9f085e98434ec",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "_calloc|0x6FA4496A",
@@ -178995,6 +190263,17 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "MNE",
       "index": "MNE:5bcac8468a2cd3018c4d5ffe82005edd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bcac8468a2cd3018c4d5ffe82005edd",
+        "CFG": "df0839aa9c4077b686b4d1d9944d0939",
+        "PRO": "05a2f091a8adc10c8474b93d27449fca",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.13d": [
           "UpdateUIElementsOnTextChange|0x6FA55020"
@@ -179030,6 +190309,18 @@ var FUNCTIONS_D2Launch_dll = {
       "name_source": "LoD/1.13d",
       "method": "API",
       "index": "API:4437248cb922b9f70b1365fad2fb710f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "4437248cb922b9f70b1365fad2fb710f",
+        "MNE": "8d6816fb1109f340fcace851ffed5428",
+        "CFG": "d7ccbb80de69c80d61eee384024bdfb3",
+        "PRO": "e3dbbf3e684b225e2aee840eee726f2c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_6fa57970",
       "callees": {
         "LoD/1.13d": [
           "FUN_6fa570e0|0x6FA570E0",

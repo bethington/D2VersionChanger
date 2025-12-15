@@ -4709,23 +4709,38 @@
 
         // Helper: Render index inline for a single column
         function renderIndexInline(indexes, otherIndexes, indexMatch) {
-            const methods = ['API', 'EXP', 'STR', 'MNE', 'CFG', 'PRO'];
+            // Include all index types: original + new CAL, CON, APS
+            const methods = ['EXP', 'STR', 'CAL', 'API', 'APS', 'CON', 'MNE', 'CFG', 'PRO'];
             const hasAnyIndex = methods.some(m => indexes[m]);
 
             if (!hasAnyIndex) {
                 return '<div style="color: var(--text-muted); font-style: italic;">No index data</div>';
             }
 
+            // Method descriptions for tooltips
+            const methodDesc = {
+                'EXP': 'Export ordinal (100% reliable)',
+                'STR': 'Unique strings (99% reliable)',
+                'CAL': 'Sorted callee names (95% reliable)',
+                'API': 'API call sequence (90% reliable)',
+                'APS': 'Sorted APIs (order-independent)',
+                'CON': 'Sorted constants (85% reliable)',
+                'MNE': 'Mnemonic sequence (80% reliable)',
+                'CFG': 'Control flow structure (75% reliable)',
+                'PRO': 'Prologue bytes (60% reliable)'
+            };
+
             return methods.filter(m => indexes[m]).map(method => {
                 const hash = indexes[method];
                 const otherHash = otherIndexes?.[method];
                 const isMatch = hash && otherHash && hash === otherHash;
-                const shortHash = hash.substring(0, 20) + '...';
+                const shortHash = hash.length > 20 ? hash.substring(0, 16) + '...' : hash;
                 const matchIcon = isMatch ? ' <span style="color: var(--color-set);">✓</span>' : '';
+                const desc = methodDesc[method] || method;
 
                 return `<div class="index-row" style="margin-bottom: 4px;">
-                    <span class="callee-tag ${isMatch ? 'match' : ''}" style="font-weight: 500;">${method}</span>
-                    <span style="font-family: var(--font-mono); font-size: 0.6rem; color: ${isMatch ? 'var(--color-set)' : 'var(--text-muted)'}; word-break: break-all;">${shortHash}${matchIcon}</span>
+                    <span class="callee-tag ${isMatch ? 'match' : ''}" style="font-weight: 500;" title="${desc}">${method}</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.6rem; color: ${isMatch ? 'var(--color-set)' : 'var(--text-muted)'}; word-break: break-all;" title="${hash}">${shortHash}${matchIcon}</span>
                 </div>`;
             }).join('');
         }
@@ -4757,6 +4772,56 @@
                 }
                 return `<div class="string-ref">${escapeHtml(String(g))}</div>`;
             }).join('') + (globals.length > 8 ? `<div class="string-ref" style="color: var(--text-muted);">+${globals.length - 8} more</div>` : '');
+        }
+
+        // Helper: Render function tags with color coding
+        function renderFunctionTags(tags, otherTags = []) {
+            if (!tags || tags.length === 0) {
+                return '<span style="color: var(--text-muted); font-style: italic;">No tags</span>';
+            }
+
+            const otherSet = new Set(otherTags || []);
+
+            // Tag category colors
+            const tagColors = {
+                'PARAM_': 'var(--color-magic)',      // Blue for parameter counts
+                'PROP_': 'var(--color-rare)',        // Yellow for properties
+                'STRUCT_': 'var(--color-unique)',    // Gold for structs
+                'LOOP_': 'var(--color-set)',         // Green for loops
+                'API_': 'var(--color-crafted)',      // Orange for API
+                'STR_': '#9966cc'                    // Purple for strings
+            };
+
+            const getTagColor = (tag) => {
+                for (const [prefix, color] of Object.entries(tagColors)) {
+                    if (tag.startsWith(prefix)) return color;
+                }
+                return 'var(--text-secondary)';  // Default gray
+            };
+
+            return tags.map(tag => {
+                const isShared = otherSet.has(tag);
+                const color = getTagColor(tag);
+                const matchClass = isShared ? 'shared' : '';
+                return `<span class="callee-tag ${matchClass}" style="background: ${isShared ? color : 'var(--bg-tertiary)'}; color: ${isShared ? 'white' : color}; border: 1px solid ${color};" title="${tag}">${escapeHtml(tag)}</span>`;
+            }).join(' ');
+        }
+
+        // Helper: Render function type badge
+        function renderFunctionTypeBadge(funcType) {
+            if (!funcType) return '';
+
+            const typeStyles = {
+                'export': { bg: 'var(--color-unique)', icon: '📤', label: 'Export' },
+                'ordinal': { bg: 'var(--color-magic)', icon: '#', label: 'Ordinal' },
+                'thunk': { bg: 'var(--color-rare)', icon: '→', label: 'Thunk' },
+                'internal': { bg: 'var(--text-muted)', icon: '•', label: 'Internal' },
+                'entry': { bg: 'var(--color-set)', icon: '▶', label: 'Entry' },
+                'external': { bg: 'var(--color-crafted)', icon: '⬆', label: 'External' }
+            };
+
+            const style = typeStyles[funcType] || typeStyles['internal'];
+            return `<span class="function-type-badge" style="background: ${style.bg}; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; margin-left: 8px;" title="${funcType}">${style.icon} ${style.label}</span>`;
         }
 
         // Helper: Format instruction for display
@@ -5064,6 +5129,14 @@
             const sourceGlobals = funcData.globals?.[sourceVersion] || [];
             const targetGlobals = candidate?.globals || funcData.globals?.[version] || [];
 
+            // Tags (per-version)
+            const sourceTags = funcData.tags?.[sourceVersion] || [];
+            const targetTags = candidate?.tags || funcData.tags?.[version] || [];
+
+            // Function type (per-version)
+            const sourceFuncType = funcData.function_types?.[sourceVersion] || '';
+            const targetFuncType = candidate?.function_type || funcData.function_types?.[version] || '';
+
             // Calculate similarity scores (legacy, for display bars)
             const sizeSimilarity = calculateSizeSimilarity(sourceSize, targetSize);
             const callSimilarity = calculateCallSimilarity(sourceCallees, targetCallees);
@@ -5350,6 +5423,12 @@
                     <div class="string-list">${renderGlobalRefs(sourceGlobals)}</div>
                 </div>
 
+                <!-- Function Tags (Semantic Properties) -->
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Tags (${sourceTags.length})${sourceFuncType ? ` ${renderFunctionTypeBadge(sourceFuncType)}` : ''}</div>
+                    <div class="callee-list">${renderFunctionTags(sourceTags, targetTags)}</div>
+                </div>
+
                 <!-- Function Index -->
                 <div class="comparison-section">
                     <div class="comparison-section-title">Function Index ${indexMatch.match ? `<span class="match-badge">✓ ${indexMatch.methods.join(', ')}</span>` : ''}</div>
@@ -5430,6 +5509,12 @@
                 <div class="comparison-section">
                     <div class="comparison-section-title">Global References (${targetGlobals.length}) ${globalSimilarity >= 50 ? `<span class="match-badge">${globalSimilarity}% match</span>` : ''}</div>
                     <div class="string-list">${renderGlobalRefs(targetGlobals)}</div>
+                </div>
+
+                <!-- Function Tags (Semantic Properties) -->
+                <div class="comparison-section">
+                    <div class="comparison-section-title">Tags (${targetTags.length})${targetFuncType ? ` ${renderFunctionTypeBadge(targetFuncType)}` : ''}</div>
+                    <div class="callee-list">${renderFunctionTags(targetTags, sourceTags)}</div>
                 </div>
 
                 <!-- Function Index -->

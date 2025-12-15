@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T03:39:29.398361
+// Generated: 2025-12-15T04:04:17.126358
 // Functions for Diablo II.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -78,6 +78,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ce6d908e8553d0cf353c49fe22a3b675",
+      "indexes": {
+        "EXP": null,
+        "STR": "ce6d908e8553d0cf353c49fe22a3b675",
+        "API": null,
+        "MNE": "bf8c322b1dd06995c54b40d971c644e5",
+        "CFG": "9a79e3481750058eb22d5511b99ea9bf",
+        "PRO": "c8f9dd487289ffa0ad7ffcd1b7feb746",
+        "CAL": "8663fba99a43c444406e362e74136098",
+        "CON": "318b296d2b8708a97227cf51294ab6b8",
+        "APS": null
+      },
+      "display_name": "FUN_00401000",
       "callees": {
         "LoD/1.07": [
           "FUN_004013b0|0x4013B0",
@@ -1010,6 +1022,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0ae7612051bc2c351ff4baa78f16b259",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0ae7612051bc2c351ff4baa78f16b259",
+        "CFG": "8677e4ae8cbf70d01424b1301aab8351",
+        "PRO": "b7f126c199604b0f1fe6e9b462063d20",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_004013b0",
       "callees": {
         "LoD/1.07": [
           "FUN_00401a02|0x401A02",
@@ -1415,6 +1439,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e63ed098730a213950e38bf7d491270b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e63ed098730a213950e38bf7d491270b",
+        "CFG": "5f05e3e4b6b85141bd532cebeaa4c0e1",
+        "PRO": "c28c57488c736ef8416365a079852ca1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_0040146d",
       "callees": {
         "LoD/1.07": [
           "FUN_00401b63|0x401B63",
@@ -1759,6 +1795,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:69d6a3f35ed0660493dbdad2d18d4a70",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c37fa64bd2f36382e92794cbb2949299",
+        "CFG": "e29ac4f91ecc5ba7006bc331cebfe296",
+        "PRO": "00979d284d2930909980b74bf77787ef",
+        "CAL": "69d6a3f35ed0660493dbdad2d18d4a70",
+        "CON": "d2b975d8da09fa950f7398460f34b227",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeGlobalConstructors|0x401C80",
@@ -2406,6 +2453,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ec95479fbc9d5a35228cd8819b6daa86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "23111e3d86e48fe171246fbcab7ae60b",
+        "CFG": "d8a9d89b63cefe7947e17dc7192e86b4",
+        "PRO": "d50b0d0648e43516997f810ba73a3fa5",
+        "CAL": "ec95479fbc9d5a35228cd8819b6daa86",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x402789",
@@ -2779,6 +2837,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:751ccb169902422404a503b9cbd72d96",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fa40def9a627b3e96c51f0f9c6833564",
+        "CFG": "e6ff6ad0743b58874820ceb7f4492737",
+        "PRO": "2e59db3ab77f3da70f210b2bdbad55ff",
+        "CAL": "751ccb169902422404a503b9cbd72d96",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_004015fe",
       "callees": {
         "LoD/1.07": [
           "ExitProcess|0xE",
@@ -3126,6 +3196,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:889d2a491df398fed4786992eeb9ca1f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4a5a68bf41640182f32d03a3c91e5fdc",
+        "CFG": "788180c544e7082c69e40531981aa350",
+        "PRO": "fccb21a6a871c7122e2713f7dcd5a6af",
+        "CAL": "889d2a491df398fed4786992eeb9ca1f",
+        "CON": "325f4c35c36b7f42d8d730381f0d5463",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ResolveCodePageIdentifier|0x4017BB",
@@ -3760,6 +3841,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8f2a733057dd5a290f0e17d077c53986",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8f2a733057dd5a290f0e17d077c53986",
+        "CFG": "3fff12cee20d7217020e61babff50752",
+        "PRO": "932b89934961eeda54cd9a9e50ce4be1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x401622"
@@ -4030,6 +4122,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:f710c320ffeaad35efd664e99e7b58dd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f31c6439952ca9c3e10694cce3d833df",
+        "CFG": "5cd7ae11dfc37525b1fbae6f1a834a1b",
+        "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8",
+        "CAL": null,
+        "CON": "f710c320ffeaad35efd664e99e7b58dd",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x401622"
@@ -4377,6 +4480,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:b7470f7199862f97617d4c4d6f7150e3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "05d3556ba26e52c51954a1255d97c525",
+        "CFG": "e44c2ff58c3054cb39205525061d1e17",
+        "PRO": "705230914eb290d5ec2051144eb14d62",
+        "CAL": null,
+        "CON": "b7470f7199862f97617d4c4d6f7150e3",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x401622"
@@ -4784,6 +4898,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8fef33b7be657857e90895678ccb4fd8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "63906d1f35f7842042066a6643d2050c",
+        "CFG": "93ed6a55cbc9b3cb34db69a54e1f806b",
+        "PRO": "9f903305dac24c951f3cebb45cf66933",
+        "CAL": "8fef33b7be657857e90895678ccb4fd8",
+        "CON": "2b3767d0f4a9d1a69e158866fa7f542a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -5343,6 +5468,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:750c71b47c1aaa7e04385ca0c70f7831",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "750c71b47c1aaa7e04385ca0c70f7831",
+        "CFG": "716bb67a3d1eac006a8b7d10a21c5b78",
+        "PRO": "a50a456766e4f98144ab970dbc0ce16b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeCodePageLocale|0x401622"
@@ -5656,6 +5792,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0fd63ca178190d07551a06ea40081aaa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0fd63ca178190d07551a06ea40081aaa",
+        "CFG": "c5adb86ae14c9188b0ae60db194a761c",
+        "PRO": "2f281cb40124fe42bb61dcaf12c71960",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401a02",
       "callees": {
         "LoD/1.07": [
           "FUN_00402c74|0x402C74"
@@ -5973,6 +6121,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:82b4813eddefea8f8cb9d2712dc5bde7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "82b4813eddefea8f8cb9d2712dc5bde7",
+        "CFG": "96e6811c918363bd3b5c342452247f77",
+        "PRO": "5319aa74b13d859919d68c27e04215a3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_004013b0|0x4013B0"
@@ -6286,6 +6445,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cfea3c92c09904dc7826c9e24e773236",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cfea3c92c09904dc7826c9e24e773236",
+        "CFG": "98e7620973d02b6613d9b483d7e32e88",
+        "PRO": "7dc457e6b44146890a20553a859e64ee",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401b63",
       "callers": {
         "LoD/1.07": [
           "FUN_0040146d|0x40146D"
@@ -6588,6 +6759,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2e762c1c6c457f4a0349d0f895009434",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2e762c1c6c457f4a0349d0f895009434",
+        "CFG": "955555387ef5c42bce3cb46728bb931a",
+        "PRO": "218e20f78ff67609d741b817a576974e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_0040146d|0x40146D",
@@ -6859,6 +7041,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:8cf740ead1ec396b63dfd5a3659dee5d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8cf740ead1ec396b63dfd5a3659dee5d",
+        "CFG": "0aa1b8c240c978586c56f7da856f0866",
+        "PRO": "34afa7d74dd6b64746d7b43ea3ed9c2b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401c00",
       "callees": {
         "LoD/1.07": [
           "FUN_00402cd6|0x402CD6"
@@ -6951,6 +7145,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:ffd1b1836e107aac13283afea09b6464",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "91b5192dddb89e963abc2be4471149da",
+        "CFG": "f5a9d1c9bfa4d6ec79162a8bb1035352",
+        "PRO": "fba0e24939e8722376e743b66770e3ea",
+        "CAL": null,
+        "CON": "ffd1b1836e107aac13283afea09b6464",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "RunConstructorArray|0x401D68"
@@ -7390,6 +7595,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": "62e304a7d521240f86cfa75cc629cf4d",
+        "PRO": "b275099b8b97a883fb7870f620754373",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessTerminationHandler|0x401CCF"
@@ -7677,6 +7893,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": "62e304a7d521240f86cfa75cc629cf4d",
+        "PRO": "f2238f9eeeea41b2f4bb34406e2503e2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessTerminationHandler|0x401CCF"
@@ -7964,6 +8191,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:27ebe146dce13416596cd9c00f1a4f1a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "45d9b348a966df89d3a7165f288b5d47",
+        "CFG": "3032efab47d2992b12e125a9e89e3ead",
+        "PRO": "740da805cb7379a963f118613cdee827",
+        "CAL": "27ebe146dce13416596cd9c00f1a4f1a",
+        "CON": "766020a54044a9b7654219135ae64bfe",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ExitProcess|0xE",
@@ -8538,6 +8776,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f1060dff4c8b86b7cd32c42f8f136fb6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f1060dff4c8b86b7cd32c42f8f136fb6",
+        "CFG": "0a074b8816415288c3cc84ef0b37ed0c",
+        "PRO": "c5843f3db205987ea5094c55a1bdaf18",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGlobalConstructors|0x401C80",
@@ -8804,6 +9053,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:41f8d80d32bced9021e52454a2115142",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "41f8d80d32bced9021e52454a2115142",
+        "CFG": "1083f5d6440b72c4249e3f9668fe9e20",
+        "PRO": "8a9092ef4379e1004af4fb44eeae13cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401d82",
       "callees": {
         "LoD/1.07": [
           "UnhandledExceptionFilter|0x14",
@@ -9269,6 +9530,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a073910011def1e1e9e25496ccd37ec0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a073910011def1e1e9e25496ccd37ec0",
+        "CFG": "1cf28c92c8a3817ec2934904c82e8c98",
+        "PRO": "26f5cd7217d8e31b5ca266955f9c63f2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401ec3",
       "callers": {
         "LoD/1.07": [
           "FUN_00401d82|0x401D82"
@@ -9627,6 +9900,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:93c4b717343abad7c0cd6bec07bb1588",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "93c4b717343abad7c0cd6bec07bb1588",
+        "CFG": "46c9984789f3b338226be49d1e54fb70",
+        "PRO": "c0da7238cea3536033ac5edd6a427b50",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00401f06",
       "callees": {
         "LoD/1.07": [
           "FUN_00402d8c|0x402D8C",
@@ -9944,6 +10229,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c16244a47f600858c95b60f915650b56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6e538b3bbbeec8f94bef058bdad701fe",
+        "CFG": "126bb563d14d36809e55fa377ba7848b",
+        "PRO": "5be54e361757f77c0c474905030db3e7",
+        "CAL": "c16244a47f600858c95b60f915650b56",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SmartFree|0x402DCE",
@@ -10351,6 +10647,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b719ab040bfebd0b1940a800c0d3c266",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "78c0be793b204c577b78460711bf70fb",
+        "CFG": "5c86dcee1ae591b9319ac28e686a93af",
+        "PRO": "daf0572913365e2e4b855eef8c8036f5",
+        "CAL": "b719ab040bfebd0b1940a800c0d3c266",
+        "CON": "f00205a6c0346eef022dfbc95dfb2228",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ParseCommandLineArguments|0x4020B0",
@@ -10880,6 +11187,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "50cd6b6fd69b78c0380659763fce7ea0",
+        "CFG": "9a35ab5935fed2f629b2dd9f68e65902",
+        "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeModuleData|0x402017"
@@ -11242,6 +11560,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:12a341814f5760bc3b9f51e07d3e1ebb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ee22dcb18299b51eb994a57f32a5df1d",
+        "CFG": "601f1d62d94fff45dd3c84d1ec95ae87",
+        "PRO": "c7f518b4d872ec71f7909c60ecc4d10e",
+        "CAL": "12a341814f5760bc3b9f51e07d3e1ebb",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "WideCharToMultiByte|0x18",
@@ -11739,6 +12068,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:68a952c693b04d3c38904829c3ef7fc7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b09f16c0e6a5014f6b150653e76f58a2",
+        "CFG": "410276ec43c579f745f5acf89ebdff97",
+        "PRO": "6c41876e91c62a56cd32f233706cb037",
+        "CAL": "68a952c693b04d3c38904829c3ef7fc7",
+        "CON": "385422e42769e8600293ee953a814751",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetStdHandle|0x9",
@@ -12298,6 +12638,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:bc2b52fbed2a111d882dea2cfa9a0dab",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e33a4c6c562d51a2fcc8e07bee94f1d6",
+        "CFG": "a45e81226b7499c95fa78cf99e84c814",
+        "PRO": "16847fa79110f65f85652b26f0a066ad",
+        "CAL": "bc2b52fbed2a111d882dea2cfa9a0dab",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeBufferManager|0x4032A5",
@@ -12707,6 +13058,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:671dff5ace8aa8c39bead14f6d282075",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "671dff5ace8aa8c39bead14f6d282075",
+        "MNE": "059e9bb2efc1de93bfe21089d0ad96d3",
+        "CFG": "62dd7eecce7740c82c988187e13c22fe",
+        "PRO": "56b2c198681b74637b7f6d69d46bf35f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "RtlUnwind|0x404066"
@@ -12994,6 +13356,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:24530866f964f891172a0f266c75de54",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd4ab8e23ed6997cd2e2434b8d375458",
+        "CFG": "d54d0bf1b3435e560f9567fde0a425c3",
+        "PRO": "6119d20752442d876f4a746c02156711",
+        "CAL": null,
+        "CON": "24530866f964f891172a0f266c75de54",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "StoreSehContext|0x402656"
@@ -13403,6 +13776,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ed17ad9d511f6e330c2b6a62378d83cf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed17ad9d511f6e330c2b6a62378d83cf",
+        "CFG": "8bed5312de6328769ba92aea43d25c3f",
+        "PRO": "63222adeb34f4a3aa53c9dd3f54ccff5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LocalUnwindTwo|0x4025C2"
@@ -13735,6 +14119,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:89d1b619054116ad559c7c543db397fd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "89d1b619054116ad559c7c543db397fd",
+        "CFG": "120fb0f85a7ee6388ee2ce7c9790ef93",
+        "PRO": "204649768cb6aa7c9bb671be8e047b74",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LocalUnwindTwo|0x4025C2"
@@ -13975,6 +14370,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9765460a30498931557fab10cfc0be00",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9765460a30498931557fab10cfc0be00",
+        "CFG": "5cb358a801ea502a7e4f33583ed88bc5",
+        "PRO": "cd7946af48d94ccd57eeabbf5a2f87ba",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x402789"
@@ -14307,6 +14713,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "indexes": {
+        "EXP": null,
+        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "API": null,
+        "MNE": "6bfb7faf8650903f50cd7e2ef7eba7fe",
+        "CFG": "b077751f218736f0020a07f48c1fade3",
+        "PRO": "a25d5a579a50e7c9f3f039e8e97080f6",
+        "CAL": "b4938612b45a8006afe991fc98f65440",
+        "CON": "dc96ec6a0dc5bde19e01214d7740553f",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetStdHandle|0x9",
@@ -15138,6 +15555,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:981867b0970223dac828e5ddf508c9bd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c1d05e132bc8c3bc87e7a971916e9b9b",
+        "CFG": "6cc88f3c6036b07006695d5cf644d042",
+        "PRO": "8cdd37d52b857df0da76bdb271ca9544",
+        "CAL": "981867b0970223dac828e5ddf508c9bd",
+        "CON": "9fe1522e2870415d91409e2b7960b311",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LCMapStringW|0x25",
@@ -15757,6 +16185,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c365f0335b7bc4452623cbc78de16e67",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c365f0335b7bc4452623cbc78de16e67",
+        "CFG": "ce1512b65f10974868260b09ee7d6f5d",
+        "PRO": "44eb51cb2190f284eca0a4e49c8cfa09",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LocaleMapStringWithConversion|0x4028DC"
@@ -16012,6 +16451,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7baa6daebac79b3e485665c35e660eb8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a7046d73bbd286a50d5e7204509858d2",
+        "CFG": "df4d2cc4750989c094de567606c5d922",
+        "PRO": "dcf290709e10ba1c807848e5f8e01997",
+        "CAL": "7baa6daebac79b3e485665c35e660eb8",
+        "CON": "99ebe54fd9c7f35cfed123d133021dc7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetStringTypeA|0x26",
@@ -16582,6 +17032,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:a25934a13615bd9598bae62665dd096e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b31c4daec36fb36fa3cb9b8ebe073642",
+        "CFG": "0fa1e39de5e198af9c73a3977127b991",
+        "PRO": "55ad8d3af928417566a7f1f214235c31",
+        "CAL": null,
+        "CON": "a25934a13615bd9598bae62665dd096e",
+        "APS": null
+      },
+      "display_name": "FUN_00402c74",
       "callers": {
         "LoD/1.07": [
           "FUN_00401a02|0x401A02"
@@ -16940,6 +17402,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:69f7deb725db18136e67b38972cf97de",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "69f7deb725db18136e67b38972cf97de",
+        "CFG": "19728bdfad0380cab34bee784309c854",
+        "PRO": "e953aaf38a96221b52d58979a1141175",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00402cd6",
       "callers": {
         "LoD/1.07": [
           "FUN_00401c00|0x401C00"
@@ -17223,6 +17697,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd85d17a6b193c95680d3fdca645abba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd85d17a6b193c95680d3fdca645abba",
+        "CFG": "62e304a7d521240f86cfa75cc629cf4d",
+        "PRO": "e067e555be462a2009cc84404e18b1ac",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_00402d8c",
       "callees": {
         "LoD/1.07": [
           "FUN_00402d9d|0x402D9D"
@@ -17506,6 +17992,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:ab6177b600b40e04648bdcec182c8d4b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "53a6ac985e66444c6c82f2b7b12d7c09",
+        "CFG": "85d43acaaf4da912180ee68ae75e1834",
+        "PRO": "eb79751ac250076fbd4621ac20b498cb",
+        "CAL": null,
+        "CON": "ab6177b600b40e04648bdcec182c8d4b",
+        "APS": null
+      },
+      "display_name": "FUN_00402d9d",
       "callers": {
         "LoD/1.07": [
           "FUN_00402d8c|0x402D8C"
@@ -17868,6 +18366,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:9ae59e844b8d8f6c7c24b4318d75d4a0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b18de4e8dfaa1ea94be3de3b62f2adf9",
+        "CFG": "4521ae963f7f2fd59b191cef99ff20c1",
+        "PRO": "21841d7cd76f33fea673861ccbc8c236",
+        "CAL": "9ae59e844b8d8f6c7c24b4318d75d4a0",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x20",
@@ -18230,6 +18739,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:70593f43ea0b0d7692df2cd60ddf29e8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "70593f43ea0b0d7692df2cd60ddf29e8",
+        "CFG": "4e3b3947cf15c11224705052794a4b4e",
+        "PRO": "0893ef4135ff92704b4a57726c2e8b67",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x402789",
@@ -18485,6 +19005,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "845fc5044ff181fe96e2ae868d3aa1f6",
+        "CFG": "a96a897a6b801f6ddf1257ad0becd475",
+        "PRO": "91a93f07a9ad6d3f1f33172e65653a41",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x402789"
@@ -18787,6 +19318,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:301bd5440f60703ca7a24a8fb30f1e56",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
+        "CFG": "d6859c2eb1fab9ceaa654d0b9ae7bc20",
+        "PRO": "34f4897579d5313b7e93086d02ff4197",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__nh_malloc|0x402F02"
@@ -19134,6 +19676,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:edc0f37d3576a005f73adb0b703117a8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "be05c38d951a724b98e30bc46956a8c1",
+        "CFG": "9f044bca13552ccd8ed2b26b9e8086d5",
+        "PRO": "c23a96deea647357438db7500c249a64",
+        "CAL": "edc0f37d3576a005f73adb0b703117a8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithCache|0x402F2E",
@@ -19451,6 +20004,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:52a117cb90b97785fb6b3db59a8fe687",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4e5e59b9a63f832f54b3dcf90c4a63d7",
+        "CFG": "2f4c9f964ceef7c087d3e5f43a3d4cd4",
+        "PRO": "7c2798772733d12aa5a4d0ccd50b453d",
+        "CAL": "52a117cb90b97785fb6b3db59a8fe687",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -19798,6 +20362,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:c0cded2a7439ff1fc575ac62397d80a4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bff09423b51fd121ea30afec957819f4",
+        "CFG": "b8bcea0773ca2dfa689f3f8d23e7384e",
+        "PRO": "ff38c497c82643f818ac8c3950b7223d",
+        "CAL": null,
+        "CON": "c0cded2a7439ff1fc575ac62397d80a4",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
@@ -20295,6 +20870,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9714d3ad2deea30ac943f1376fae33d4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9714d3ad2deea30ac943f1376fae33d4",
+        "CFG": "e5b8e3675e647a57b186af1caa74bfb1",
+        "PRO": "a1b9fb36e2d9d764f2ab02021d9a5d11",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapAlloc|0x28"
@@ -20719,6 +21305,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a0dd1f395da0f8e13609d337843c676",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a0dd1f395da0f8e13609d337843c676",
+        "CFG": "1a3f7cfa3845a97e1009681b130f0d18",
+        "PRO": "ea54e4b4b6d11783843fb018aafdb15a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "SmartFree|0x402DCE"
@@ -21036,6 +21633,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e3ec679679a02264f139ac30186a970f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9bfd98dbbd3e5d7edb553bd7666739e4",
+        "CFG": "b84f01dedd456598d3cbe7e053845bd4",
+        "PRO": "00e2fa60d81eb194d407fbc1353f620d",
+        "CAL": "e3ec679679a02264f139ac30186a970f",
+        "CON": "f16898611ac5b33d9ecaf7330b5442fc",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x20",
@@ -21580,6 +22188,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5bb0f1161464ac40af1960ad04967a2c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff64648b3e6e32bc28a5e4bc8d984c1e",
+        "CFG": "77ee9e9eb59c49729f84a4814c50ba23",
+        "PRO": "74548a597b2dbd13776d58d1d4d74bdf",
+        "CAL": "5bb0f1161464ac40af1960ad04967a2c",
+        "CON": "8a8225fc5cf0d862e46335c317c8624f",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryDescriptor|0x403942",
@@ -22079,6 +22698,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:d162a691c996bedefb297d13afb4296d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b59a8a7d2c8fdcc2aac183f01f99a847",
+        "CFG": "1dc319af88f2e70d9474a5ad20c0aa4a",
+        "PRO": "30c72037c3458611ecf2fcd89dd1352a",
+        "CAL": "d162a691c996bedefb297d13afb4296d",
+        "CON": "96c1a5fdc99677050d0c1df56bae10f7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x20",
@@ -22593,6 +23223,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:29da550efe003bc20354fd57a4971440",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0002c858ef3942a0b403454c72674bfe",
+        "CFG": "3fbf2bd19df4bd936c35c3bd28c3f8a5",
+        "PRO": "dea8c343a18f51e1084181af8b8e840f",
+        "CAL": null,
+        "CON": "29da550efe003bc20354fd57a4971440",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "VirtualAlloc|0x29"
@@ -23092,6 +23733,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:1d436b74681e11a9bd214b6331c37f94",
+      "indexes": {
+        "EXP": null,
+        "STR": "1d436b74681e11a9bd214b6331c37f94",
+        "API": null,
+        "MNE": "d28466b802ff41201d4ac81308d22266",
+        "CFG": "df5c6e7657bf03b5e12df2df4e8951a5",
+        "PRO": "e0ac0c93da57517ada9568fe18581bfb",
+        "CAL": "6815bfbd6fdd9e2bf9bacba9c707ff1e",
+        "CON": "09008a8029a6964fd456536138290bb0",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "LoadLibraryA|0x1B",
@@ -23698,6 +24350,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:b35d7544ccb06f0fede567c578bacd51",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "60fb4369558c571ee3e9892006835a82",
+        "CFG": "1cca209eac1c43a753e574cbe330b905",
+        "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e",
+        "CAL": null,
+        "CON": "b35d7544ccb06f0fede567c578bacd51",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DisplayRuntimeError|0x402789"
@@ -24030,6 +24693,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+        "CFG": "3045bd7efe0c8474877fb5b5055e4bc3",
+        "PRO": "c71205845eb17fcc2718f716924d07ee",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -24377,6 +25051,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b99d3962c0b26901db87269607fbf85a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b99d3962c0b26901db87269607fbf85a",
+        "CFG": "b10def2481331b1b779206ec56a43f38",
+        "PRO": "e29656b1d5576c12f534a0f00ea1c858",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "GetCharacterTypeInfo|0x402B2B"
@@ -24647,6 +25332,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ee4facdaccbd6fc5f3297fd5b85b73c2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ee4facdaccbd6fc5f3297fd5b85b73c2",
+        "CFG": "b52f56e126e2d946dea5881aec08bc73",
+        "PRO": "eba25aa4a7ad5f2a92814c91aa869f28",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__nh_malloc|0x402F02"
@@ -24901,6 +25597,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e3e7225badfcf3c2e051c42d71d7237a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
+        "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
+        "PRO": "8e99e48039a137206e6ffe8f75bf57a9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "GlobalUnwind2|0x402580"
@@ -25091,6 +25798,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:3c60546d8cfb6e92d20e0cc9dd281ae9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3c60546d8cfb6e92d20e0cc9dd281ae9",
+        "CFG": "716e8aa637b8b0b883d37e30aaff9bbb",
+        "PRO": "858f2f80185d26d23fec7b662bab6b38",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "FUN_00402cd6|0x402CD6"
@@ -25375,6 +26093,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:3ecdb5e459e29b4117490dc114e98574",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3ecdb5e459e29b4117490dc114e98574",
+        "CFG": "57474f13ec5a3b3413d2cc571b545409",
+        "PRO": "c81df70c1b97172a537e995055b0c6bd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.08": 3,
         "LoD/1.09": 3,

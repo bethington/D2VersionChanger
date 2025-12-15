@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T03:39:29.398361
+// Generated: 2025-12-15T04:04:17.126358
 // Functions for SmackW32.dll
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -82,6 +82,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:61",
+      "indexes": {
+        "EXP": "61",
+        "STR": null,
+        "API": null,
+        "MNE": "864bcb5f5dcbc3a5eeff79bd838fa4e4",
+        "CFG": "3b0fa6111747a87e609acac146ebf35c",
+        "PRO": "37c17633b875f538b5268c1619cffbaa",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0"
@@ -459,6 +470,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:60",
+      "indexes": {
+        "EXP": "60",
+        "STR": null,
+        "API": null,
+        "MNE": "ab6d355946f3306b3f72ee5d76ad7ff5",
+        "CFG": "8d51dd8092299867dab1966a0b8d9cc7",
+        "PRO": "159fb33d4a77508d4b2dc1d771fa8653",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FreeHeapMemory|0x1000B960"
@@ -893,6 +915,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:1",
+      "indexes": {
+        "EXP": "1",
+        "STR": null,
+        "API": null,
+        "MNE": "a4b74bec4e1f460a95cce6987b6b8804",
+        "CFG": "a06c7ee0dc91edd8c8c87de3c1144cfc",
+        "PRO": "a8f1f550f0b11cbba95e4d4881bdfc77",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SendMessageA|0x1"
@@ -1329,6 +1362,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:23",
+      "indexes": {
+        "EXP": "23",
+        "STR": "d4aeed3eb56f5547f1e65127a8516216",
+        "API": "8e38c8f29a90e0685caeef69d209de02",
+        "MNE": "5a86672627932c86eada5319486e44a3",
+        "CFG": "abac502ea13e907b04f5cffbc4a2a350",
+        "PRO": "5ef35a797294f767c1ed4a02e9edaf0a",
+        "CAL": null,
+        "CON": "8cb0f1ebf87864219595689ee66dc21e",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_SmackBlitString@8|0x1000ADE0"
@@ -1786,6 +1830,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "8b3a02cf55ac6883db9f6d64d036a5a4",
+        "PRO": "3696ad59777e09d5f2daacb544022d43",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -1862,6 +1917,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:00ae20ed802e3883313e20f96bfe2dda",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "00ae20ed802e3883313e20f96bfe2dda",
+        "MNE": "5800c1a6aac2b8f29b82ca157de7c1f4",
+        "CFG": "b347ff8f09c11d685a6b296a039d8b56",
+        "PRO": "e68af1867967c1be025a69cec46e763a",
+        "CAL": null,
+        "CON": "b293758b16eb3347bc40ad358ec0ed9a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_CopyData@20|0x10001060"
@@ -2239,6 +2305,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:20",
+      "indexes": {
+        "EXP": "20",
+        "STR": null,
+        "API": "2c068048aea10032546d9a1aa53778fc",
+        "MNE": "1869b748dc4217659c78c468e7d3edda",
+        "CFG": "e4353277d1faa68d17c7daeea3e0fde7",
+        "PRO": "28d880f8d64e39e4a6e80077734125c2",
+        "CAL": "25b19fdb2c94b207b0d436ad58aebdd0",
+        "CON": "4461d78472a9ea3e441404fce52243cf",
+        "APS": "c97a211e492d7d2d767978a011e28515"
+      },
       "callees": {
         "LoD/1.07": [
           "InitSmackBufferGlobals|0x10001F20",
@@ -3143,6 +3220,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:c44c071e01d9093f8c50fa64117fa347",
+      "indexes": {
+        "EXP": null,
+        "STR": "c44c071e01d9093f8c50fa64117fa347",
+        "API": null,
+        "MNE": "b0770a091ea2a50d384e9b8f6b5904ac",
+        "CFG": "c5a274f30e4b7219a558fd89bf21542b",
+        "PRO": "c8d6f8cf1611b7c35482bf1c28442f27",
+        "CAL": "750ce27b9e7ca1c85c087b850eeb5b0c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -3672,6 +3760,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:692f70a1c84196f88be8216c71ab8229",
+      "indexes": {
+        "EXP": null,
+        "STR": "692f70a1c84196f88be8216c71ab8229",
+        "API": null,
+        "MNE": "356b99109712de7f9ad70aca11e13718",
+        "CFG": "05ba442ba043cfc7c353189447c519c3",
+        "PRO": "cdc98fac063195fea27ddd996144d01a",
+        "CAL": "921f17454be593c102e71f9bff002af3",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -4323,6 +4422,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:60b786edb4e14e02992e95a5d91b9455",
+      "indexes": {
+        "EXP": null,
+        "STR": "60b786edb4e14e02992e95a5d91b9455",
+        "API": null,
+        "MNE": "7cacaf080b860c0dd32140d92df2c741",
+        "CFG": "3448961481e89f50953bdc608b5b9311",
+        "PRO": "fcfd775d61280df32bd54716c9633d6c",
+        "CAL": "dcf7a427f0d6be0a3c35fe353cead701",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -4839,6 +4949,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:18be748e80cb2c630be172e50d28539f",
+      "indexes": {
+        "EXP": null,
+        "STR": "18be748e80cb2c630be172e50d28539f",
+        "API": null,
+        "MNE": "d036f08a2363271ffb46fb08cc48cd3b",
+        "CFG": "ba0de0c4c6322323bd2cc269fdf2f4b0",
+        "PRO": "e38ce260e164d0f67863f12718e3a1b6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetErrorMode|0x59"
@@ -5339,6 +5460,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:69096acbd84bfeaf2d3797b0f1a4272c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "69096acbd84bfeaf2d3797b0f1a4272c",
+        "CFG": "e96b1e48679a2aabf863e73eef2281b8",
+        "PRO": "2f8f39f80fa41be582ebf0d650dab0b0",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBufferOpen@24|0x100012F0",
@@ -5698,6 +5830,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:12",
+      "indexes": {
+        "EXP": "12",
+        "STR": null,
+        "API": "5959af2506713549239413c0cb30d9a2",
+        "MNE": "dac2078c9174b3fe3e005c4a497910bd",
+        "CFG": "d81079549d7064d7500a5c4891678ccc",
+        "PRO": "ace057e168df8c8283a7393c1fa6dc9c",
+        "CAL": "4b3e64574c7dab806236ebecf9258dd3",
+        "CON": "a3ea41d2b0fc587a267a441ba9b4a128",
+        "APS": "ebc46fcf72da2026c41c6b1cd18971ae"
+      },
       "callees": {
         "LoD/1.07": [
           "InitSmackBufferGlobals|0x10001F20",
@@ -6598,6 +6741,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:134af923f272293d9d60915f7f828cfa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4608a222520a505cd9a9e1c254b8c2e2",
+        "CFG": "0eabd80aaeeb4dd35b0c8a8c9471e7bc",
+        "PRO": "6a1a3cf33db3fb6defc25e88b5126fd2",
+        "CAL": null,
+        "CON": "134af923f272293d9d60915f7f828cfa",
+        "APS": null
+      },
+      "display_name": "FUN_100032b0",
       "callees": {
         "LoD/1.07": [
           "CreatePalette|0x6B"
@@ -7141,6 +7296,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:22",
+      "indexes": {
+        "EXP": "22",
+        "STR": null,
+        "API": "a9a858c71208a7ec98494372be7b0971",
+        "MNE": "2a18998f4c6afb9b77e03457bbb6f77e",
+        "CFG": "d1e144e5d4ae60c75049e1d62c514c0f",
+        "PRO": "9d5115ef839a8491819a868bc7cc3472",
+        "CAL": null,
+        "CON": "149fd5d8b7294882ab47cf2c07f0e6ce",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "radmalloc|0x10001000"
@@ -7487,6 +7653,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:16",
+      "indexes": {
+        "EXP": "16",
+        "STR": null,
+        "API": "eca4879b30e95e8f27e52c3cafd09baa",
+        "MNE": "1d38d1acea2463fa1e3ce7add3f8768b",
+        "CFG": "62dd7eecce7740c82c988187e13c22fe",
+        "PRO": "eee3d92f1c6cd46c5ac7e28aa40fb41f",
+        "CAL": null,
+        "CON": "f0f0002c7c00dc3de9abed82f82d6e95",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_SmackBufferBlit@32|0x10001F60"
@@ -7818,6 +7995,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:17",
+      "indexes": {
+        "EXP": "17",
+        "STR": null,
+        "API": null,
+        "MNE": "929d4575b1a5efbce4724f770713746e",
+        "CFG": "133884625c9c58569064c07b1547bd65",
+        "PRO": "43ef51a2f9f17207dbae6360167656c1",
+        "CAL": null,
+        "CON": "d972d7929f5e98f49aef82872b0be75a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetFocus|0x4"
@@ -8134,6 +8322,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:19",
+      "indexes": {
+        "EXP": "19",
+        "STR": null,
+        "API": "b417d7ae5b42ee54119c13d6467bcb84",
+        "MNE": "5686bbc651ea2fef34bfe6dff86d041d",
+        "CFG": "d520d6bd390e9e77d2ad85130ed1127b",
+        "PRO": "2a62960be44c6008b9f9a8765468f4f0",
+        "CAL": "314a7c498b5c9c5013c8bb9e12e4e234",
+        "CON": "8d632a48466d7a2db2f0a04f6a3fb269",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializePaletteBuffer|0x100036F0",
@@ -8736,6 +8935,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:00ae20ed802e3883313e20f96bfe2dda",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "00ae20ed802e3883313e20f96bfe2dda",
+        "MNE": "87e8773bdaf0c641a675300278ef75ac",
+        "CFG": "866205673b9731a7681cc2ca2f408a60",
+        "PRO": "b65c931535e22b9d5b8fa0fe1bbd0a75",
+        "CAL": null,
+        "CON": "77d98e091c84bd329f63d1c78cbd7602",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_CopyData@20|0x10001060"
@@ -9175,6 +9385,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:14",
+      "indexes": {
+        "EXP": "14",
+        "STR": null,
+        "API": "9f54da0d2c9b2b951fcb103164bc831b",
+        "MNE": "5ea2f86e891ada0627b3615dd65df412",
+        "CFG": "6d1f8d1b63ff773164a5ea81839da52d",
+        "PRO": "811451509c5b7a13409dbef74994cfa4",
+        "CAL": "2b2eceb6b256b40eb7e6dfcf187a92b4",
+        "CON": "de9fcf52825c5ae8b165a364304093de",
+        "APS": "f870818a4c358a60b68263ae05b53ad9"
+      },
       "callees": {
         "LoD/1.07": [
           "SendMessageA|0x1",
@@ -9776,6 +9997,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:21",
+      "indexes": {
+        "EXP": "21",
+        "STR": null,
+        "API": null,
+        "MNE": "7cc9528f83268132e78fdfcd38389704",
+        "CFG": "c536e62ef1f037331f475dd04437a892",
+        "PRO": "2b3607b8b30f05d753c9fed78df917e6",
+        "CAL": "de3061c354edcd01b3c5f012f727bc64",
+        "CON": "a942716b5be2ecf8a40001f69c025790",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDC|0x11",
@@ -10242,6 +10474,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:18",
+      "indexes": {
+        "EXP": "18",
+        "STR": null,
+        "API": null,
+        "MNE": "0cdfa8a9adee4e36b1cbbb980eecba02",
+        "CFG": "9b9285b0beb5f8c2b26157662880f2be",
+        "PRO": "e2966fd06f73797675033beb6f5e4eec",
+        "CAL": "b3ddc62496498c75d8c8a9de32366ba2",
+        "CON": "7d905dc971e111d58df1141fef3969c7",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetDC|0x11",
@@ -11008,6 +11251,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:15",
+      "indexes": {
+        "EXP": "15",
+        "STR": null,
+        "API": null,
+        "MNE": "014196022fd325a25779d8f2337521c9",
+        "CFG": "c5bf997603a187d040a57073a9421f87",
+        "PRO": "532a33c298f3536a121897879ef44bbc",
+        "CAL": null,
+        "CON": "69f5cb62526c239e5e074767a9e5c441",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DeleteObject|0x6E"
@@ -11459,6 +11713,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:13",
+      "indexes": {
+        "EXP": "13",
+        "STR": null,
+        "API": null,
+        "MNE": "b377a066ec5f7646cf805ae282910fe1",
+        "CFG": "6e99038ac70128e538bbdec410dcbc18",
+        "PRO": "84c6795ae63528925739dff8f87deafe",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBufferOpen@24|0x100012F0"
@@ -11775,6 +12040,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:41",
+      "indexes": {
+        "EXP": "41",
+        "STR": "4a2c9a6edf23bfd5d23c4cde555c4515",
+        "API": null,
+        "MNE": "cd701622dbb27f85f613b4353945ae40",
+        "CFG": "b06dbfbd358c5127315ff680b1ee8ff2",
+        "PRO": "f2466941c04b31bfbf59cf29d657315b",
+        "CAL": "4d8ca504d09efcd7036a4ee296f0d830",
+        "CON": "48a93116434502671cf76e06ffe4ff6a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -12318,6 +12594,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:32",
+      "indexes": {
+        "EXP": "32",
+        "STR": null,
+        "API": null,
+        "MNE": "620df303415fea004e3850d48fc31c05",
+        "CFG": "517fae6504adc84d21523d63a6a9fce5",
+        "PRO": "7261e24d51f6602c0829e40a30857204",
+        "CAL": null,
+        "CON": "519aadd5ee7b80bf61785e33160c2447",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBufferOpen@24|0x100012F0"
@@ -12638,6 +12925,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "8b3a02cf55ac6883db9f6d64d036a5a4",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -12713,6 +13011,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:37",
+      "indexes": {
+        "EXP": "37",
+        "STR": "7942da5e7922bc3effd8893ee77266e8",
+        "API": null,
+        "MNE": "175edae1f381f79df7321c1f0b6f3686",
+        "CFG": "9668e7e4428956b0966d6b3d469cbc4f",
+        "PRO": "cad36aec99f937a94384875172f16db2",
+        "CAL": "a2dff93e4213d551d5657b2f8133e92f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CreateWindowExA|0x10",
@@ -13423,6 +13732,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:28",
+      "indexes": {
+        "EXP": "28",
+        "STR": null,
+        "API": null,
+        "MNE": "bd056e25ee53a803dc67513d4f193073",
+        "CFG": "7495b5574bbf13118809c1e0e9feba82",
+        "PRO": "32eb48ec9aff41ecb5cb505ed5a12f07",
+        "CAL": "209d051ac3f628fa9199aca4c5f7a128",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetCursorPos|0x1D",
@@ -13889,6 +14209,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:40",
+      "indexes": {
+        "EXP": "40",
+        "STR": null,
+        "API": null,
+        "MNE": "adb8364cf59854af50ecce50c2c8d747",
+        "CFG": "c38fa0c53ac5218517c47350e2a5c309",
+        "PRO": "c463f5420897a66c2af17fad8242bc3e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ShowCursor|0x20"
@@ -14190,6 +14521,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:39",
+      "indexes": {
+        "EXP": "39",
+        "STR": "45f4099a42956f47b6f72ca251a29412",
+        "API": "1383ee503ebba2530f6b3e43ea2f73f6",
+        "MNE": "923ee8ac08d5fdaeba040ca8c7be1866",
+        "CFG": "e59f0c8b57d3a6a2a686747552f323c1",
+        "PRO": "4af1a38bdfb5423bedcc2421135973fe",
+        "CAL": "98634ce79a1096fa44a9c43104cd353f",
+        "CON": "4113804be479d9b8ebc5d9cf1eaf1848",
+        "APS": "478d30e4a6b0d169905de6bb29696526"
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeSmackAudioBuffer|0x10005670",
@@ -15210,6 +15552,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:a9a858c71208a7ec98494372be7b0971",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "a9a858c71208a7ec98494372be7b0971",
+        "MNE": "d91af7ecf28ef8d229a9530fdd2a4ab6",
+        "CFG": "5685bbef1c90aa65bf36b721a9e5b55f",
+        "PRO": "59e750d295abf131f398bcb6a5ba614d",
+        "CAL": null,
+        "CON": "5d63f0b0eaffb5b66384d39f65ccc701",
+        "APS": null
+      },
+      "display_name": "FUN_10004c80",
       "callees": {
         "LoD/1.07": [
           "radmalloc|0x10001000"
@@ -15635,6 +15989,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8b3752f16bc51b124255f3b36fd4547a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3595814f20f93bde155b8ec88be32774",
+        "CFG": "0270af92aca750f1300f8912c8d33091",
+        "PRO": "270833f40b8c2474b9dc487cb36b01f8",
+        "CAL": "8b3752f16bc51b124255f3b36fd4547a",
+        "CON": "c42c11624adc5ed0170de943359ead4d",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -16180,6 +16545,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:8b3752f16bc51b124255f3b36fd4547a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b188bb62c37826025b51f354b2132b9f",
+        "CFG": "29ea11ef9095b5f39c0c3ba06b661f78",
+        "PRO": "e5909d2eb8d6f3c5e40271cdd80e9213",
+        "CAL": "8b3752f16bc51b124255f3b36fd4547a",
+        "CON": "9c85d4660a9285fb36642905caa6971c",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -16769,6 +17145,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:a57732b2f37b9a4bcade104eed0884ce",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "02cde5f6dc05e46953a9c5cad6c39557",
+        "CFG": "15b8730ccc6e3b78335ffb793807a806",
+        "PRO": "3c319b016efa5d88ebdb5cdcda666672",
+        "CAL": null,
+        "CON": "a57732b2f37b9a4bcade104eed0884ce",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReadFileWithBuffer|0x10004DE0"
@@ -17223,6 +17610,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:e3148823750d0a41b53c738b6f6e3aa5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "324c3a3d0b85f6c8714804a7e4d3975f",
+        "CFG": "cd9b1ea764cdcdc0c24d7d1d03ca073a",
+        "PRO": "95b98fce584d8a9d0f927e47ed7f0fa1",
+        "CAL": "e3148823750d0a41b53c738b6f6e3aa5",
+        "CON": "cca2250645c3bdc80187eb090f288a8c",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ReadBufferedSmackFrame|0x10005440",
@@ -17787,6 +18185,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:1cfcfcfdb38c0ef9d73bfcd8e3e9b4a9",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "db2ca5a41bd23c22fe74d32e4141b29c",
+        "CFG": "7400ee67e5515108731aae21305750c9",
+        "PRO": "20cd6c04a81f5aed4b6e643fb747c659",
+        "CAL": "1cfcfcfdb38c0ef9d73bfcd8e3e9b4a9",
+        "CON": "f8382901663465cfa3bedec45181e4f9",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetFilePointer|0x56",
@@ -18348,6 +18757,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c40146b28c4500b00dbb5befa35d7792",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c40146b28c4500b00dbb5befa35d7792",
+        "CFG": "19fb309e3f11857e67ebc09a05903ca8",
+        "PRO": "f186a0745702478ad5d0a6551d982c02",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackVolumePan@16|0x10007680",
@@ -18697,6 +19117,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5704b93a795973a7e6eb54759660d9b2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "104af56c950534d9a837d5ac4dbb0348",
+        "MNE": "1c0bae53cb3caff2aefd1a35cff98bf0",
+        "CFG": "c6e7d380b4caf7ccfd492f661f0b26ef",
+        "PRO": "af3b53a7d0fbcfa0fe2d1d2165fcbbd9",
+        "CAL": "5704b93a795973a7e6eb54759660d9b2",
+        "CON": "b4d33f3d639de698f8867a84fef61644",
+        "APS": "104af56c950534d9a837d5ac4dbb0348"
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10004c80|0x10004C80",
@@ -19316,6 +19747,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:42",
+      "indexes": {
+        "EXP": "42",
+        "STR": null,
+        "API": null,
+        "MNE": "0f26f5ebbb6562741331dd6e6bdd0342",
+        "CFG": "b6a15ff754ee4e6d0c41dd7af72f5f3f",
+        "PRO": "fd2a874d5fe17e3944bc7c5c05ecf2e3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 3,
         "LoD/1.08": 3,
@@ -19523,6 +19965,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:34",
+      "indexes": {
+        "EXP": "34",
+        "STR": null,
+        "API": null,
+        "MNE": "adb7fc9160a8cc34d9b5888d05671447",
+        "CFG": "2930e8843a0971631d0727d0d821d9e6",
+        "PRO": "226b79afb1ddb32b68db4c15044881e5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 10,
         "LoD/1.08": 10,
@@ -19730,6 +20183,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:45",
+      "indexes": {
+        "EXP": "45",
+        "STR": null,
+        "API": null,
+        "MNE": "d6229e2fb49ea18bc8ef07a2126477ba",
+        "CFG": "5ba1d45d00a95fa695f0e251a01698ed",
+        "PRO": "d4ef7b6690088cc5ed89121fb01a4fad",
+        "CAL": null,
+        "CON": "0e31395ca4b369177cda1ed938f05909",
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 180,
         "LoD/1.08": 180,
@@ -20149,6 +20613,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:29",
+      "indexes": {
+        "EXP": "29",
+        "STR": "8a7ce4f622791224123bdd37086b937a",
+        "API": "52a6fa6fc1de17f303123e398336a255",
+        "MNE": "51e6f4f64132ed9b0401f1058f32ae08",
+        "CFG": "f6565146766c8cb57e0f00a5a2499a09",
+        "PRO": "7384ae5a576b35d2249f5844003d210a",
+        "CAL": "17006a5b9ea53eae45232f49b7c17990",
+        "CON": "51455672af6fd33eea2f4f7099275289",
+        "APS": "52a6fa6fc1de17f303123e398336a255"
+      },
       "callees": {
         "LoD/1.07": [
           "__itoa|0x1000BA10",
@@ -20797,6 +21272,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:33",
+      "indexes": {
+        "EXP": "33",
+        "STR": null,
+        "API": null,
+        "MNE": "7bd7cd721ea5448b83aebc1655a3e977",
+        "CFG": "835bf882f3ff7331c92c9ad25d7740ae",
+        "PRO": "f02d8aaa70060adfc59e062ab6a1d2a7",
+        "CAL": "1c42a9ab6f8cba65b90a5eaf5ee5934a",
+        "CON": "02388d29e320e438dae3e1fad51cf77e",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CheckSoundBufferReady|0x10006170",
@@ -21369,6 +21855,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:5492f628b8919c839605d061f4207229",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2296d9d18ad4427e1787123462c78512",
+        "CFG": "2035f3cd18c45a62d03666d2c14dde4d",
+        "PRO": "c3c3bf0ff01315fb85af95e1b2f2ce07",
+        "CAL": null,
+        "CON": "5492f628b8919c839605d061f4207229",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FindFirstSetBitAndClear|0x10005640",
@@ -21958,6 +22455,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:7a1a9dccde10661c057e537951478412",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c8a64ed2c401380f5dc49f19080fe99c",
+        "CFG": "014abbb9006e2f50ef1c14f2f99f37b6",
+        "PRO": "40bcdc9dc5997a56b0e02d531ca5908a",
+        "CAL": null,
+        "CON": "7a1a9dccde10661c057e537951478412",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackDoFrame@4|0x10005C70"
@@ -22304,6 +22812,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:51",
+      "indexes": {
+        "EXP": "51",
+        "STR": null,
+        "API": null,
+        "MNE": "4fa863e08887d095b656210d3d708cfc",
+        "CFG": "2613b44b1eb7775d31093a2022d4953f",
+        "PRO": "1c3ea5b04eec61bb6f392cf81ad53713",
+        "CAL": null,
+        "CON": "ae7c5f86ab825a7663b5abee85cf6344",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -22752,6 +23271,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:ea2e45872cf796ffb8b8a102c809ea1b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "63d382495057524d86964e6ab0cf852f",
+        "CFG": "f74c4b45f71296abfe53fe2e2c773167",
+        "PRO": "2810a8e61399048be849fae275dcc8a0",
+        "CAL": null,
+        "CON": "ea2e45872cf796ffb8b8a102c809ea1b",
+        "APS": null
+      },
+      "display_name": "FUN_10006340",
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34"
@@ -23252,6 +23783,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:38",
+      "indexes": {
+        "EXP": "38",
+        "STR": null,
+        "API": null,
+        "MNE": "f7fd580e9c86801fab77355ea1620fc4",
+        "CFG": "df88870a1f9487cbe4f59bc51d3b7da4",
+        "PRO": "9bd7ffbf057610cb11dabc50a02dcd98",
+        "CAL": "07ac8eb977bc6e33c3f656aa7ccbc946",
+        "CON": "5b2eb96b64a447b3ea3be0d876638b92",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DecompressSmackFrame|0x100050F0",
@@ -23643,6 +24185,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:54",
+      "indexes": {
+        "EXP": "54",
+        "STR": null,
+        "API": "d5e768179954a0f9e9bc303d8b021875",
+        "MNE": "28c2232e7da6117b9038c4bd78f5995e",
+        "CFG": "c7699127c3f952d5b215e40fc13c6f56",
+        "PRO": "0009d53504c565d5c3b46953c99bd910",
+        "CAL": "49e38f8eeb5d8e536c087e3eeef325e4",
+        "CON": "c003d3a06ef3375f549123bcf9bb9e53",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10004c80|0x10004C80",
@@ -24241,6 +24794,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a3251e5d698c5eb63a11a70987feb629",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a3251e5d698c5eb63a11a70987feb629",
+        "CFG": "c657fc738e73ef775b0d608430909dee",
+        "PRO": "b5ec64d1d20a33cee6374f972817a22b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10006a90",
       "callers": {
         "LoD/1.07": [
           "_SmackToScreen@28|0x100064E0"
@@ -24555,6 +25120,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:52",
+      "indexes": {
+        "EXP": "52",
+        "STR": null,
+        "API": "7ea41d38c3be5dbcf086509c906678ea",
+        "MNE": "6a80ca09a4073b224d934b58ae1e9a53",
+        "CFG": "752eb16fa08904f1b3d1eb9f7a860158",
+        "PRO": "18262746f14ab1df7e3f41f76040c061",
+        "CAL": "97a122b3414efbd80f4c13b4d528ec39",
+        "CON": "7b8424ce7c1873696da4c2544af7d1aa",
+        "APS": "7ea41d38c3be5dbcf086509c906678ea"
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10004c80|0x10004C80",
@@ -25156,6 +25732,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:31",
+      "indexes": {
+        "EXP": "31",
+        "STR": null,
+        "API": null,
+        "MNE": "f2cd862c8e73a410cfc0b40138656b10",
+        "CFG": "c7280af5a6853e3013de952334f67a63",
+        "PRO": "5311770ef3f9c1583298f4ffec5a1f92",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SmackRemapFramePalettes|0x10012860"
@@ -25487,6 +26074,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:30",
+      "indexes": {
+        "EXP": "30",
+        "STR": null,
+        "API": null,
+        "MNE": "b52d526734735633930beadd2e0f1c89",
+        "CFG": "44d9d50a7f3f9469bdc6f30f37440903",
+        "PRO": "65eac9f862752205dd933ee48ca5b4e4",
+        "CAL": null,
+        "CON": "49cad002c8b6d044505dd74566c1e94f",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SmackRemapFramePalettes|0x10012860"
@@ -25983,6 +26581,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:35",
+      "indexes": {
+        "EXP": "35",
+        "STR": null,
+        "API": null,
+        "MNE": "b40558fc09b8babbfe38ef7c2c0c81a9",
+        "CFG": "6a266e7e088363d6abfa9bf465d62104",
+        "PRO": "f04a27d75b4f3479d982614e056ab7b2",
+        "CAL": null,
+        "CON": "b13c11734c1dc17e9f95b2a280eaa8db",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10004c80|0x10004C80",
@@ -26404,6 +27013,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:36",
+      "indexes": {
+        "EXP": "36",
+        "STR": null,
+        "API": null,
+        "MNE": "113b6b620760f18c32048464d28af848",
+        "CFG": "8af9798e0aac6fe4993c947332376a7d",
+        "PRO": "53101325129c44ec5ade4a32c3746ade",
+        "CAL": "7e4b74fd739d47878bda35bd4215975f",
+        "CON": "79a6e4a2c30f1b6dfd0b719ee3a0f00d",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DecompressSmackFrame|0x100050F0",
@@ -26735,6 +27355,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:53",
+      "indexes": {
+        "EXP": "53",
+        "STR": null,
+        "API": null,
+        "MNE": "709e9f56b5f6a7cc6a96113addc51105",
+        "CFG": "46b88541a0c59e730db89445ccc1e29f",
+        "PRO": "556f5774d95ceadd6ccb9e89cfb8fe24",
+        "CAL": "60887a64f1b3af7f9d0f72fe4dd81cc8",
+        "CON": "81ad949c653db9c026aace77a26d6a1e",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10007300|0x10007300",
@@ -27198,6 +27829,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:fd081666f31a9c9003cf9058ff1ea58b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fede54f3412d87f0293e209495caa459",
+        "CFG": "a698d77fdc4dfdd1c95468776208a61b",
+        "PRO": "d0ec9ccfb208dfc5a90da29560c19d86",
+        "CAL": null,
+        "CON": "fd081666f31a9c9003cf9058ff1ea58b",
+        "APS": null
+      },
+      "display_name": "FUN_10007300",
       "callees": {
         "LoD/1.07": [
           "SmackDecompressNextBlock|0x10012740"
@@ -27757,6 +28400,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:58ad40fe661ebbd1b130b25c12ce7658",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "58ad40fe661ebbd1b130b25c12ce7658",
+        "CFG": "c2859aab2d6a827718b72aaf37ce03e4",
+        "PRO": "a40b7c008a4d6e33d6abfaf0019132db",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackToBufferRect@8|0x100071C0"
@@ -28028,6 +28682,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:44",
+      "indexes": {
+        "EXP": "44",
+        "STR": null,
+        "API": null,
+        "MNE": "e2d6f295085644c3928c8e4db1ef9672",
+        "CFG": "b0cc6380747c7a46d3e0d3a616424360",
+        "PRO": "12111f7dab8548524913ac9dc16c419f",
+        "CAL": null,
+        "CON": "73c61194331d0ea8cdc438c976107c7a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FindFirstSetBitAndClear|0x10005640"
@@ -28344,6 +29009,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:56",
+      "indexes": {
+        "EXP": "56",
+        "STR": null,
+        "API": null,
+        "MNE": "f3259c8328263cef313d7f3624247b30",
+        "CFG": "cefbdb06ff619ef8f12462062132c153",
+        "PRO": "da88caa89d41fc6fd23159e8e3e1b564",
+        "CAL": null,
+        "CON": "9c7a17c731a85e89233afc6e72e6bfb0",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FindFirstSetBitAndClear|0x10005640"
@@ -28735,6 +29411,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:43",
+      "indexes": {
+        "EXP": "43",
+        "STR": null,
+        "API": null,
+        "MNE": "fb773565bb1d5af62e39858a2eee72a5",
+        "CFG": "1100a7a8f351edf4f294f45c0a4a5289",
+        "PRO": "5bef18b6ec17574f2845defb5dc80ae1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
@@ -28974,6 +29661,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:57",
+      "indexes": {
+        "EXP": "57",
+        "STR": null,
+        "API": null,
+        "MNE": "f2fd5e396ab23d3465aba602d6aca4e2",
+        "CFG": "9008c21c1d97603d0e86afe463238bcb",
+        "PRO": "21971c2222d8317d4fb1d100c84d2e32",
+        "CAL": "eeec0a4a5e864f47629ed6bf87339c2c",
+        "CON": "562860b290ea4f00e82d4505266f6b4c",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -29441,6 +30139,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:6a0cf19bda6cf60454178f36cdfa8b4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6a0cf19bda6cf60454178f36cdfa8b4f",
+        "CFG": "8a694d0f6ee91f5694a5b56495c267e7",
+        "PRO": "2fefebc9919a4f610374913b03b6422f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateAudioStreamBuffers|0x10008E30",
@@ -29785,6 +30494,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:55",
+      "indexes": {
+        "EXP": "55",
+        "STR": null,
+        "API": null,
+        "MNE": "82a4681e028ce912ff418ce451dc2dfa",
+        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
+        "PRO": "8f6712d994e04f36e2c18f4ca9247054",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_10012a1f|0x10012A1F"
@@ -30071,6 +30791,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:49",
+      "indexes": {
+        "EXP": "49",
+        "STR": "e499b129e15aadfc9aabb913f9088bf1",
+        "API": "03747ca88b8bacaa3e9b887b9a3e53e9",
+        "MNE": "d42e4c78ae59794e7c3de1e11a196dc8",
+        "CFG": "00e62389e5a54b13b32c4af0429bd685",
+        "PRO": "21fe75e84e162b75582d2e182a3ebdc4",
+        "CAL": "eac8bb824ede929ebc02620f5a24be86",
+        "CON": null,
+        "APS": "03747ca88b8bacaa3e9b887b9a3e53e9"
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -31050,6 +31781,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:0e282d52797543bf67f302553f4889c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0e282d52797543bf67f302553f4889c0",
+        "CFG": "54d63da7a2a4d58bfcb3b24879553773",
+        "PRO": "f2c82db020689863ac6a12fc587edf7c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "MemoryCopyRegions|0x10007850"
@@ -31428,6 +32170,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c0c9f14638c16bb7f9980d1faea76e79",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c0c9f14638c16bb7f9980d1faea76e79",
+        "CFG": "45f3f51d79a89437dc3c777e9252a079",
+        "PRO": "0da9a4860d08a16b4f0671abaacc3b1a",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessStreamQueue|0x10007C30"
@@ -31746,6 +32499,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:965397b42f1f9af8f72d3fe7e1959f2a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "965397b42f1f9af8f72d3fe7e1959f2a",
+        "CFG": "ef6614090c3677d88f502513dc600068",
+        "PRO": "de7ed97265a69ed74e8c5a4030d34d58",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeGameObject|0x10007F30"
@@ -32061,6 +32825,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:dedd3d765ceca72bb2ac7a7f08f3d2c0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "dedd3d765ceca72bb2ac7a7f08f3d2c0",
+        "CFG": "d84d7627e31ac55accad88dfc5712724",
+        "PRO": "6f88ecc11022cce394cbfae0487639ac",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ConfigureSmackAudioSample|0x10007EC0"
@@ -32274,6 +33049,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -32308,6 +33094,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "2b55ae82d4e8116126bdfb86bcd8fd29",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -32383,6 +33180,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:47",
+      "indexes": {
+        "EXP": "47",
+        "STR": "983ee5037c0a48db3343ba973d1ba9ea",
+        "API": null,
+        "MNE": "021e06b1cc8e6cab548c0227360572ef",
+        "CFG": "7d803d1ed4874f12136c32f3f06b5f13",
+        "PRO": "fdbf6ea74b3512150ecdb3f3acd72820",
+        "CAL": "33e5a52dacc2df1b84d32ec46b8c9393",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -33015,6 +33823,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "API",
       "index": "API:c5a8e05aea71952bacb1530713d36690",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "c5a8e05aea71952bacb1530713d36690",
+        "MNE": "36c1a9ea7c8f48a568ed2a5c058c907d",
+        "CFG": "7f19acb6d921b081e4851065e80eb896",
+        "PRO": "a7c1c38d58411a4e29c8333e3a115248",
+        "CAL": null,
+        "CON": null,
+        "APS": "c5a8e05aea71952bacb1530713d36690"
+      },
       "callees": {
         "LoD/1.07": [
           "radmalloc|0x10001000"
@@ -33337,6 +34156,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -33413,6 +34243,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:f9399a925096c4baa19827598968dffd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f9399a925096c4baa19827598968dffd",
+        "CFG": "3ba100659db246ac10f2489d8b105d91",
+        "PRO": "ff8967e2452bd58e73ed95e5f76ba3fc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "timeGetTime|0x34"
@@ -33666,6 +34507,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:a1d1e4f6bf483b5a5b8343940a26aa6c",
+      "indexes": {
+        "EXP": null,
+        "STR": "a1d1e4f6bf483b5a5b8343940a26aa6c",
+        "API": null,
+        "MNE": "31f56830fad6071572d2b726f8bfa33f",
+        "CFG": "a085f5941e8867d53350e2559c15d6ca",
+        "PRO": "ef09ba807886637fb10499c141464282",
+        "CAL": "d8eb7734398ffbd46fb4f8635e158d5b",
+        "CON": "6460741a1bd2b8b4af35ade12870800a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -34125,6 +34977,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c85f4fbd3519a6d4ba7cf54035462c88",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -34201,6 +35064,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:11bff19bef67ee1aece19296be00be81",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2691a8d83402223744ed4934534903f3",
+        "CFG": "791b24872b299799d21f23e092b51181",
+        "PRO": "7f40f9e4dc70cab86de9e0e90f1a7158",
+        "CAL": null,
+        "CON": "11bff19bef67ee1aece19296be00be81",
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 44,
         "LoD/1.08": 44,
@@ -34591,6 +35465,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:50",
+      "indexes": {
+        "EXP": "50",
+        "STR": null,
+        "API": null,
+        "MNE": "f2e33c15e1ba75591e57764725952857",
+        "CFG": "76721aa668a2f8c4291fe943e60b7a07",
+        "PRO": "b446bfef3712b644963eb2d0d261ece5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeSmackAudioBuffer|0x10005670"
@@ -34966,6 +35851,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:fbbcd32f1a0799588ceb57911b9f7c39",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "2a813995b1441f088cdfb419380fb2ad",
+        "MNE": "32043288011f5cc1f51e5be46ce8cd53",
+        "CFG": "4132d3dbbcdee69334282281ad699ab5",
+        "PRO": "9d009658318e0d2b1d26cab9a4c7ce82",
+        "CAL": "fbbcd32f1a0799588ceb57911b9f7c39",
+        "CON": null,
+        "APS": "320a44a3b8034bd3b246893d2e30bc9d"
+      },
       "callees": {
         "LoD/1.07": [
           "radmalloc|0x10001000",
@@ -35313,6 +36209,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:5159e4997bedf62f6f233b39786d540d",
+      "indexes": {
+        "EXP": null,
+        "STR": "5159e4997bedf62f6f233b39786d540d",
+        "API": null,
+        "MNE": "4193cdddfa19c998b46801456aa9e566",
+        "CFG": "d282cb86a7d1669e4a177d5f9877fdc9",
+        "PRO": "07172eba1ca68432c71e13d0e4724598",
+        "CAL": "3ba89edba73ccdce590759e0be832df2",
+        "CON": "85c4921475187fe43091baccb814096a",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__itoa|0x1000BA10",
@@ -35949,6 +36856,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:81ec950b8bbf1c9ca26038b2c3919951",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "39066d2a193f67db6e1968503dacb3e7",
+        "CFG": "cdec32c350e5833641928a68f725c5f6",
+        "PRO": "d700a2b64b36be5c73916a3efed6da1f",
+        "CAL": "81ec950b8bbf1c9ca26038b2c3919951",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "waveOutClose|0x30",
@@ -36339,6 +37257,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:bcc39a30f09ffc3481520e459e677b16",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "444865b7fc03cadd3742ef66f41f7e7b",
+        "CFG": "0d535f2e3c017573fb154dde43a76e3a",
+        "PRO": "294dfc58e48894b0aba11a606045a4ae",
+        "CAL": "bcc39a30f09ffc3481520e459e677b16",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -36687,6 +37616,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:baf198481ed2277b278d58c8a3d160f6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "baf198481ed2277b278d58c8a3d160f6",
+        "CFG": "b3af737c6a0608a5e07277a006d9d409",
+        "PRO": "59087223968f07fe35a04fba305cf621",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "waveOutReset|0x2F"
@@ -36900,6 +37840,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "dae96fc0046a5ae1864d9a66e6715da8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -36934,6 +37885,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -37010,6 +37972,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:1ca82c582f4a83fa3dd07e94b3cd04e3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3c8b4fd8267508a76ce1ac193db78c06",
+        "CFG": "0e3a786371e747f021041a9a9cf65cdc",
+        "PRO": "1752a52152399e39e65a60304c6061a5",
+        "CAL": "1ca82c582f4a83fa3dd07e94b3cd04e3",
+        "CON": "11bff19bef67ee1aece19296be00be81",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "waveOutGetID|0x2D",
@@ -37476,6 +38449,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:46",
+      "indexes": {
+        "EXP": "46",
+        "STR": "1adb1c70e99001e7b53ef326ea76c9f6",
+        "API": null,
+        "MNE": "dc1f187b10ab4e4d117dd99532feecac",
+        "CFG": "62a887b8923216cec89a334aa12c7a66",
+        "PRO": "9d77bdf0d3b3856a5335c60dfd3ef08e",
+        "CAL": "45e0dfe0bd754ef3a6352bfc944b13e7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__itoa|0x1000BA10",
@@ -37974,6 +38958,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:58",
+      "indexes": {
+        "EXP": "58",
+        "STR": null,
+        "API": null,
+        "MNE": "acced0f419d933c69fe541a66d38a73a",
+        "CFG": "5b8e97ccbb6e3411804581f18f3f0d4e",
+        "PRO": "9e06492500632d18c04b9a17d88cf214",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateAudioStreamBuffers|0x10008E30"
@@ -38167,6 +39162,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4c97d39d817c92a9d972856489cf0cc8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "554c3dd1760fb9e4f1d535686103ed91",
+        "CFG": "e7b16fea577f3b0ca6a92de4a554ce1c",
+        "PRO": "2157f7a3dcb7b264d88627311cb73c47",
+        "CAL": "4c97d39d817c92a9d972856489cf0cc8",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "timeGetTime|0x34",
@@ -38606,6 +39612,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:09dd12d1d6afc7cdcffe830ab31d58f5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "09dd12d1d6afc7cdcffe830ab31d58f5",
+        "CFG": "d693e76c2cee9bca14f3751557c26615",
+        "PRO": "aa6de2c3768f7a72b033e2afab58e107",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateAudioStreamBuffers|0x10008E30"
@@ -39028,6 +40045,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:59",
+      "indexes": {
+        "EXP": "59",
+        "STR": null,
+        "API": null,
+        "MNE": "acced0f419d933c69fe541a66d38a73a",
+        "CFG": "5b8e97ccbb6e3411804581f18f3f0d4e",
+        "PRO": "2f3c1440b2fd7afb3c4d0daa8a267973",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateAudioStreamBuffers|0x10008E30"
@@ -39220,6 +40248,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:48",
+      "indexes": {
+        "EXP": "48",
+        "STR": "fabd94e72423594605c6945b67ac4454",
+        "API": null,
+        "MNE": "665a8fc9a1481ceaeb76003c8548c02c",
+        "CFG": "0f8fb7d86677a5d29721afb09064f086",
+        "PRO": "3e681daab000436b8b6f671fea9bb8a4",
+        "CAL": "dcf7a427f0d6be0a3c35fe353cead701",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -39781,6 +40820,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:a2261bf973b846a63ab12819cf46eb99",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ae8adfd9584551e18288bf4bde4297cb",
+        "CFG": "c1ca1f9cb6ce14d6614d33df9477a2e2",
+        "PRO": "604a87afaf0da3a9b36d7d4acb02af51",
+        "CAL": "a2261bf973b846a63ab12819cf46eb99",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateAudioStreamBuffers|0x10008E30",
@@ -40099,6 +41149,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:f9ac44f8561bb1d87cdb26283e817b11",
+      "indexes": {
+        "EXP": null,
+        "STR": "f9ac44f8561bb1d87cdb26283e817b11",
+        "API": null,
+        "MNE": "23329ecd93c37e4f98ead5136a27721d",
+        "CFG": "5a17fdb2f8bb141c585f1a8a918134d7",
+        "PRO": "75e5aef4f5436e339bdfb2954a39b37f",
+        "CAL": "45e0dfe0bd754ef3a6352bfc944b13e7",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__itoa|0x1000BA10",
@@ -40644,6 +41705,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c2ee70ea5c17d2be9a26b84207122038",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c2ee70ea5c17d2be9a26b84207122038",
+        "CFG": "d71431b17e01ba3a69e4393cc2f14922",
+        "PRO": "d64c53d83ef6c3f513df3d6762aafc77",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeAudioDevice|0x10009B40"
@@ -40898,6 +41970,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:b5623d40cc9d350f0a063193506dcf22",
+      "indexes": {
+        "EXP": null,
+        "STR": "b5623d40cc9d350f0a063193506dcf22",
+        "API": "3f358027259a0dacc2578b8f4457741f",
+        "MNE": "c5982ea57ebdce765e6e0bfcaabf308e",
+        "CFG": "1125f41f61b2a9dd4b3e99bd9be16fc7",
+        "PRO": "3641a2f6ffd10d8c490e1afbd6441eb5",
+        "CAL": "62e65ce7bed217ad395625757bfe558f",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_SmackSoundSetDirectSoundHWND@4|0x10008D50",
@@ -41384,6 +42467,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "3696ad59777e09d5f2daacb544022d43",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -41418,6 +42512,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:546c17e22a38a8e15c8829671ea3e893",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "546c17e22a38a8e15c8829671ea3e893",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "52c1e3e1f2e947c163b56957b64413cc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -41494,6 +42599,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c18ee47f7e6e99188e786ee04d5318cd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c18ee47f7e6e99188e786ee04d5318cd",
+        "CFG": "4a5aef8dc11feee23809e95483b102c6",
+        "PRO": "b1360cb5a3cf3a988b4934cb80d3b43e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeAudioDevice|0x10009B40"
@@ -41822,6 +42938,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d280d165bc2c8d11536d4fd5f0bfee1b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d280d165bc2c8d11536d4fd5f0bfee1b",
+        "CFG": "25fb8cee489e7dee83e8bfb39cb51808",
+        "PRO": "bc62cdb0b06ccfe6ee902cec164bb945",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.08": [
           "FUN_10009b90|0x10009B90",
@@ -42133,6 +43260,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:2ffc21b9a8acb25a4668e26cd68270b0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b94b5fd7b30c0de24ab0a01e99060491",
+        "CFG": "ca1125394738d074cbc6dd281f8fd4b2",
+        "PRO": "60d4a2ce73d6467dc35d67c4fb0c0320",
+        "CAL": "2ffc21b9a8acb25a4668e26cd68270b0",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AcquireAudioLock|0x10009A90",
@@ -42377,6 +43515,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2043487ec0ce2238c03195f2d42cad4f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2043487ec0ce2238c03195f2d42cad4f",
+        "CFG": "c15460ab20a163c60767502d30d66e4c",
+        "PRO": "3696ad59777e09d5f2daacb544022d43",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -42453,6 +43602,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:e8b066bb8c5140fcd2165abf1aa419bb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d4d9a0580f096e52cf60d3c0be9db360",
+        "CFG": "93bf8d4471b7bbf1ae27630f00aad37b",
+        "PRO": "c0da49da56a6784411f3b266eaa31214",
+        "CAL": null,
+        "CON": "e8b066bb8c5140fcd2165abf1aa419bb",
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 60,
         "LoD/1.08": 60,
@@ -42873,6 +44033,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a8f7d353d0614923418431bfd65d12e1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a8f7d353d0614923418431bfd65d12e1",
+        "CFG": "094a528308a1e326bd2ea7f525fbc265",
+        "PRO": "5207706a35f90777367628bbcaf490fc",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBufferToBuffer@32|0x1000B4A0",
@@ -43203,6 +44374,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:c42f4b75615ff1bfcc49150e56160dca",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c42f4b75615ff1bfcc49150e56160dca",
+        "CFG": "a42972fceab0a8b5859c9adfba6eb24d",
+        "PRO": "86cec6106d14e45314f06aad4fb654ec",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -43625,6 +44807,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a5462cd1f76678a94aeab75dac34fbaf",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a5462cd1f76678a94aeab75dac34fbaf",
+        "CFG": "d9c56dbfa28082bbda60d65cc49ea420",
+        "PRO": "ebeee8116846e6ab7ef4096ad2a3f61c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -44047,6 +45240,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:16f4458d69464df3f21094c685267f16",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "16f4458d69464df3f21094c685267f16",
+        "CFG": "213f46a9d492764b9702b3c7419939c2",
+        "PRO": "7063ba60c3508b1ee3d73dee511a7a02",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBlit@44|0x1000AF80"
@@ -44422,6 +45626,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d904867469720f2236a4c11be54bc19e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d904867469720f2236a4c11be54bc19e",
+        "CFG": "f5fa4e628cd5025c6035a6131937e1bb",
+        "PRO": "89abb144a9659bb7bd008463b3ea0e5c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBlit@44|0x1000AF80"
@@ -44797,6 +46012,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7e293dcb2f80ddd28cdc14be4f4bb87e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7e293dcb2f80ddd28cdc14be4f4bb87e",
+        "CFG": "54f01546250b441b2a5aa7f7b6f29d72",
+        "PRO": "7d32b10e33d504024fb89ad83bd5d268",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -45219,6 +46445,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:db2e47142e2da52263e43a1f4237c345",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "db2e47142e2da52263e43a1f4237c345",
+        "CFG": "31545aa5d83dd9e5ccbff000d06ce302",
+        "PRO": "e22286844e388297afd6cca85ddf8d72",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -45637,6 +46874,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ed81c335b9e13416398c25765f5f7749",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ed81c335b9e13416398c25765f5f7749",
+        "CFG": "4a6b3e654497afcb5ee945673dd70ab4",
+        "PRO": "89abb144a9659bb7bd008463b3ea0e5c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_1000a493",
       "callers": {
         "LoD/1.07": [
           "_SmackBlit@44|0x1000AF80"
@@ -46012,6 +47261,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d1847c2f87b188f377b796a2d8f4c3ae",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d1847c2f87b188f377b796a2d8f4c3ae",
+        "CFG": "445529f5ce53a561705b1d915c6586ee",
+        "PRO": "126e671ced82322678ea4ce83b240f2f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -46419,6 +47679,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ec866799048aa7aab62b9ec2a14714fd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec866799048aa7aab62b9ec2a14714fd",
+        "CFG": "b0697d86b2d656c43085a8274cfb6571",
+        "PRO": "40f20d233e9c6013ee19d78155587935",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -46856,6 +48127,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2c9fa9de27261e22ab5503275fd119f1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2c9fa9de27261e22ab5503275fd119f1",
+        "CFG": "ed5dc44f092cbbaf1983dfc7515526a6",
+        "PRO": "144fc89d06039972b755daaddb726690",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -47293,6 +48575,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:b93e110731ae63b04bb19807b4f1a7b6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "efef091398a8ac4777dd7e76b76aa4da",
+        "CFG": "427a7021ddc58b024a390611749798ca",
+        "PRO": "0859b98454d617d1207cf8b53433a3f1",
+        "CAL": null,
+        "CON": "b93e110731ae63b04bb19807b4f1a7b6",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
@@ -47626,6 +48919,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:f3e1652ce355edf6c104489f6445ce5a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bf0ba07aa1f9a139a6614433e890629f",
+        "CFG": "70b5d1c5c8dca1ff1989a4327732bf8a",
+        "PRO": "aa2bec3d6f8975f8ad43d03abb072fa1",
+        "CAL": null,
+        "CON": "f3e1652ce355edf6c104489f6445ce5a",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
@@ -47943,6 +49247,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:7",
+      "indexes": {
+        "EXP": "7",
+        "STR": null,
+        "API": "a9a858c71208a7ec98494372be7b0971",
+        "MNE": "bb46e06b55044304d678f27871e2cb58",
+        "CFG": "ea4eb138ebe1bc294355544c2964119e",
+        "PRO": "dc71de6ec98348b36fbdf24cd00d9d23",
+        "CAL": "2885ffce16c4213ab5baa173c112f51f",
+        "CON": "ee0c598eefb40ae69c6328ca75c4f8ba",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetBlitScaleIndex|0x1000A930",
@@ -48322,6 +49637,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5a8ed8dddd83e539b9eb23c0e24a06df",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5a8ed8dddd83e539b9eb23c0e24a06df",
+        "CFG": "eff7f849033861f3aa72802b08692d4b",
+        "PRO": "4956c25b4c5b1dc255e2bf5e2c83049b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackBlitSetFlags@8|0x1000AD80",
@@ -48536,6 +49862,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a4d363ea7abc28ea70d3cbb1b9fd3326",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a4d363ea7abc28ea70d3cbb1b9fd3326",
+        "CFG": "af6441629daf4f85a0c18d58dc74d889",
+        "PRO": "eb1e33e8a81b697b75855af6bfcdbcbf",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 1
       },
@@ -48612,6 +49949,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:2a0c7901df8d537c7c45d243920a3407",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "23b083626d79fc374c3af567492309d0",
+        "CFG": "ecaf4a0f56e856d14d58d609dd172183",
+        "PRO": "41ad9015a28af9d7ca25d96d27ee1742",
+        "CAL": null,
+        "CON": "2a0c7901df8d537c7c45d243920a3407",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "QuickSortPartition|0x1000BC00"
@@ -49185,6 +50533,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:9",
+      "indexes": {
+        "EXP": "9",
+        "STR": null,
+        "API": null,
+        "MNE": "92bc5473df9717ed02bfd19784488b04",
+        "CFG": "faea2dac8a00e8dac3b5472157194d1c",
+        "PRO": "54ee5fa588383798ce5acdd03a8305cd",
+        "CAL": null,
+        "CON": "245a7dee20f0d99e67de56538fc26a04",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90"
@@ -49699,6 +51058,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:42a12b342314261af8b058cf9bb2edd8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "ddfa529e708ff383233517d840d23e47",
+        "MNE": "6f615cb359e43012b2fd358fbaf5bdca",
+        "CFG": "2f7a5c4364e0fa2e1904ba1627669957",
+        "PRO": "2ea820932ef5426073fd7a37cb362014",
+        "CAL": "42a12b342314261af8b058cf9bb2edd8",
+        "CON": null,
+        "APS": "ddfa529e708ff383233517d840d23e47"
+      },
       "callees": {
         "LoD/1.07": [
           "_SmackSoundCheck@0|0x10007710",
@@ -50076,6 +51446,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:8",
+      "indexes": {
+        "EXP": "8",
+        "STR": null,
+        "API": null,
+        "MNE": "b66f8a982260dfb08d5867c9f64fb78a",
+        "CFG": "01ac7df5f94f28590cbe5fd6a1e4b434",
+        "PRO": "195a5b6d47e88f75e441ae70a5c48364",
+        "CAL": "5254cc9d7f63fdd7b1bffc5b71a3165c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetBlitScaleIndex|0x1000A930",
@@ -50345,6 +51726,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:10",
+      "indexes": {
+        "EXP": "10",
+        "STR": "65132d4bfacf86c16eeda3f35798836a",
+        "API": "a9107f3767f56b7b64e5b0e62850a4f0",
+        "MNE": "8461d3be10d46de01c32e02b20b4bc8d",
+        "CFG": "0e70f130e8371a251110756636e8c609",
+        "PRO": "9b584f9d2610169aac36e913e42be37b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_SmackUseMMX@4|0x100078C0"
@@ -50873,6 +52265,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:2",
+      "indexes": {
+        "EXP": "2",
+        "STR": null,
+        "API": null,
+        "MNE": "706e71219c344a898c32bfb2e5472881",
+        "CFG": "181aab7f0c01fb28ec638468f7c0047f",
+        "PRO": "a6153705fe1fc7ae370364937eaec4a0",
+        "CAL": "7f0f5d5428327b947b5154f84db9467c",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_1000a493|0x1000A493",
@@ -51399,6 +52802,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:11",
+      "indexes": {
+        "EXP": "11",
+        "STR": null,
+        "API": null,
+        "MNE": "636495a6462a7ffc32899964a2a6e63d",
+        "CFG": "4f79494d11e914cc652659a43a20a7d8",
+        "PRO": "9b30f75885fffe4cf164726a6b936b46",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitTransparent_SIMD|0x1000A54A"
@@ -51773,6 +53187,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:5",
+      "indexes": {
+        "EXP": "5",
+        "STR": null,
+        "API": null,
+        "MNE": "20ccb1fb6d4d5fc23f375917b3073ed8",
+        "CFG": "bb5a96a2f5be789b9a60f815ca963c25",
+        "PRO": "4fd1b8ad43b57f4fd6e0e458ad58bc5b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitMaskedBufferSIMD|0x1000A6BE"
@@ -52147,6 +53572,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:6",
+      "indexes": {
+        "EXP": "6",
+        "STR": null,
+        "API": null,
+        "MNE": "20ccb1fb6d4d5fc23f375917b3073ed8",
+        "CFG": "bb5a96a2f5be789b9a60f815ca963c25",
+        "PRO": "4fd1b8ad43b57f4fd6e0e458ad58bc5b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitMergeWithColorKey|0x1000A5F0"
@@ -52521,6 +53957,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:3",
+      "indexes": {
+        "EXP": "3",
+        "STR": null,
+        "API": null,
+        "MNE": "e297dc9e5b8d083e85309af211760a62",
+        "CFG": "b83032731aa25db0804309b31c123d60",
+        "PRO": "1e0e822624e62e7e0bb888b4bbf36804",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "instruction_counts": {
         "LoD/1.07": 93,
         "LoD/1.08": 93,
@@ -52849,6 +54296,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:4",
+      "indexes": {
+        "EXP": "4",
+        "STR": null,
+        "API": "d5e768179954a0f9e9bc303d8b021875",
+        "MNE": "cffa9ff338088808bf5749ca49298e21",
+        "CFG": "2db868291d56b3c29f4df1340564a4ad",
+        "PRO": "1ce457c492c42035d43ca2bc4e355d50",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ApplyPresetUnitTileAttributes|0x10001040"
@@ -53135,6 +54593,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:24",
+      "indexes": {
+        "EXP": "24",
+        "STR": null,
+        "API": null,
+        "MNE": "fe046645438da01eba0ba5394f306d28",
+        "CFG": "b080f36bf22c945d6db57225d5b663fc",
+        "PRO": "4b703eb6385511e5f0bba6483c1db615",
+        "CAL": null,
+        "CON": "289cf926fa2f1085b1604c542cd30fd2",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "CopyBitmapRegion|0x10009D00"
@@ -53541,6 +55010,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:27",
+      "indexes": {
+        "EXP": "27",
+        "STR": null,
+        "API": null,
+        "MNE": "9743222aba0ca26d47158b8773ef116c",
+        "CFG": "086afcfc6722d87ce4a0c15761052ca1",
+        "PRO": "6a26bd111fd156bfea84d5f867393c4b",
+        "CAL": null,
+        "CON": "289cf926fa2f1085b1604c542cd30fd2",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitTransparent_SIMD|0x1000A54A"
@@ -53962,6 +55442,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:25",
+      "indexes": {
+        "EXP": "25",
+        "STR": null,
+        "API": null,
+        "MNE": "90a037c1994cdb135d735fa9c152a2c9",
+        "CFG": "9760ef18e0615f064cc32a096f61c5c9",
+        "PRO": "809d9ca7a03eb3ab3f0a9b0abc1998a0",
+        "CAL": null,
+        "CON": "289cf926fa2f1085b1604c542cd30fd2",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitMaskedBufferSIMD|0x1000A6BE"
@@ -54398,6 +55889,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "EXP",
       "index": "EXP:26",
+      "indexes": {
+        "EXP": "26",
+        "STR": null,
+        "API": null,
+        "MNE": "2c6521d0c7f9d95056fdeccb3424e0fb",
+        "CFG": "9252f999f6597f84332ca4060b471bdd",
+        "PRO": "3041d926f087a0bfc02c15f7ac1995e6",
+        "CAL": null,
+        "CON": "289cf926fa2f1085b1604c542cd30fd2",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "BlitMergeWithColorKey|0x1000A5F0"
@@ -54835,6 +56337,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:be8d512a3cb72fd0e151d7b9269a1611",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "be8d512a3cb72fd0e151d7b9269a1611",
+        "CFG": "a721b4ba45f13310b706303ffdf8bdca",
+        "PRO": "7c61d86b0f84dfe8fd7ff93e79eb708c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessWithRetry|0x1000B900"
@@ -55212,6 +56725,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ddd86c45d233a1d3dbdca590ae1a1477",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8ed9a2a4e2e74717e582c6462983321e",
+        "CFG": "6969b043ed69a9e6d460a13e1d9a3703",
+        "PRO": "5ad6942bbf273ff545a6dd8ea249f5cc",
+        "CAL": "ddd86c45d233a1d3dbdca590ae1a1477",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InvokeOptionalHandler|0x1000C020",
@@ -55530,6 +57054,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d91013a65cc43c094b60d97c73f8cbea",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d91013a65cc43c094b60d97c73f8cbea",
+        "CFG": "068f235c3eb3580151799cc3a9574136",
+        "PRO": "ed5bc43f3511a71d9a25471f21fd91b6",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "HeapAlloc|0x5E"
@@ -55845,6 +57380,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:549993b0e499a10c0bfbf6c73589ab12",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "549993b0e499a10c0bfbf6c73589ab12",
+        "CFG": "c222b9a7a47706e757b8035ddc634f87",
+        "PRO": "e83ee0cf7a4460976f2c07b85e464c27",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x5B"
@@ -56237,6 +57783,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9385a39014977010e096b1b65a9621a6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9385a39014977010e096b1b65a9621a6",
+        "CFG": "dd4624f6bf6bcabfd4dbfe13dbca9dd4",
+        "PRO": "fce4108b278743b17371b59ff5f5a826",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_tolower|0x1000C070"
@@ -56569,6 +58126,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cd24ea7fc8184d8d9fd8fdfddc661a06",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cd24ea7fc8184d8d9fd8fdfddc661a06",
+        "CFG": "b977860c72ede0d84cca7a2720253c50",
+        "PRO": "7fa7e7253b654021780724cd70b96d4d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "xtoa|0x1000BA50"
@@ -56961,6 +58529,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:24a3da14dad2f30d0441b8542729c2eb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "24a3da14dad2f30d0441b8542729c2eb",
+        "CFG": "b10ebb6331b1884c76546244096c4c19",
+        "PRO": "b1e4f3d912f9feb3f857d5f1b4b2b210",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__itoa|0x1000BA10"
@@ -57246,6 +58825,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:3028608427a8ef22303c18ee337fddeb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "3028608427a8ef22303c18ee337fddeb",
+        "CFG": "e36bd9feb28e22d6cdf9b92920dc7739",
+        "PRO": "6b4514765f22ae21c46bf95d8c76ca6c",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackToBuffer@28|0x10006B00",
@@ -57561,6 +59151,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:be11e1bb7d0688aa610878da075793f4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "4651001d081a2d756b465e87a8f7faef",
+        "CFG": "0e61bb58908896ceafbf62dd34269055",
+        "PRO": "4532aaddf9167f7e49faa562debbc320",
+        "CAL": "be11e1bb7d0688aa610878da075793f4",
+        "CON": "ec85d343ed828e57dfbe1ab3a56a01e1",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "swap|0x1000BDC0",
@@ -58030,6 +59631,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d781d0c3434e6feb53c296773af1fdf3",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d781d0c3434e6feb53c296773af1fdf3",
+        "CFG": "a134bc916a952d1cc7df2a37066e0e58",
+        "PRO": "3b7d97c7e2bf41e9b74693a255d9e817",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "swap|0x1000BDC0"
@@ -58377,6 +59989,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:63ed4c1df513efc093e44ec1139ed543",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "63ed4c1df513efc093e44ec1139ed543",
+        "CFG": "c2e7e0d3abf06ed1e098a1ffe96aeafd",
+        "PRO": "92c3b1d34f2f1ffee6234551c4b27123",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "QuickSortPartition|0x1000BC00",
@@ -58662,6 +60285,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:6fd2069037c64a597f60c5f2409adfe2",
+      "indexes": {
+        "EXP": null,
+        "STR": "6fd2069037c64a597f60c5f2409adfe2",
+        "API": null,
+        "MNE": "f03e49ba0628e229c922243d6c2052c3",
+        "CFG": "1763729a81b9852c5ebba31963cc4e1b",
+        "PRO": "7be93a3370caf52a10b3c7a6f585484f",
+        "CAL": "826367eb5f75f48d917465c3f27b53ea",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "SetNTInitializedFlag|0x1000CC70",
@@ -59353,6 +60987,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ab3a3da5b13dd490cb553176e2ad4ff0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "045c04bb521dbf039addb906cd944a4f",
+        "CFG": "61b73d4e2478b4704baa1e864e248e12",
+        "PRO": "691a1c2c28887068f1045e8f9b69f943",
+        "CAL": "ab3a3da5b13dd490cb553176e2ad4ff0",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "InitializeRuntimeEnvironment|0x1000BDF0",
@@ -59683,6 +61328,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3211aff8de5812aa1371f69084ab5419",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "886c8377c80161314470b3d8e43dbebd",
+        "CFG": "a4629bdf42bdc84cf229b8088500496d",
+        "PRO": "19b19a757430ac422475101a7724a2de",
+        "CAL": "3211aff8de5812aa1371f69084ab5419",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__FF_MSGBANNER|0x1000CCB0",
@@ -60075,6 +61731,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:9de960669c758544dc1656064ea507e5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "9de960669c758544dc1656064ea507e5",
+        "CFG": "b52f56e126e2d946dea5881aec08bc73",
+        "PRO": "a556949a67369267b2857c1ba3579519",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ProcessWithRetry|0x1000B900",
@@ -60346,6 +62013,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ef21307e0c1b76e91cdbf1f9516a62d0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ef21307e0c1b76e91cdbf1f9516a62d0",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "d7b19797a7a628fbd7e810e4287a9875",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapCreate|0x44"
@@ -60695,6 +62373,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ea61922022cb536d70448a5259bdd7e0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ea61922022cb536d70448a5259bdd7e0",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "c27aaf3d98123716d114d7475e705f57",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "HeapDestroy|0x46"
@@ -61012,6 +62701,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:f21b8f6efdf35d558ba8a2c56571314b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a864bd40eb038b88f549f8be7df0056b",
+        "CFG": "ca2d6f9a520a31defa8c79e3b5287722",
+        "PRO": "e582e405d7e08daa78b7a574e051ce82",
+        "CAL": "f21b8f6efdf35d558ba8a2c56571314b",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__isctype|0x1000D140",
@@ -61496,6 +63196,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:5bdb44b9e7549bfd79971965426af09a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "5bdb44b9e7549bfd79971965426af09a",
+        "CFG": "7c82026ed80d8b5084f6a93cbac05b8e",
+        "PRO": "38a16146b645264ce84073c2a76ccbfa",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__initterm|0x1000C270"
@@ -61843,6 +63554,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:ff20d9c3af47925d5fdce12c7115b676",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ff20d9c3af47925d5fdce12c7115b676",
+        "CFG": "17da0a31589a76aadae8de71af4df0b2",
+        "PRO": "0bed5b950f2d5d7d6f14a51b41466cbd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessTerminationHandler|0x1000C1C0"
@@ -62130,6 +63852,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7a5e6ed384be31095abb7960c9f1d6d0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7a5e6ed384be31095abb7960c9f1d6d0",
+        "CFG": "55a31081fb798a1efc2f631d56775715",
+        "PRO": "533cf0fb888ded1279fa8d2b55d5a7d9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessTerminationHandler|0x1000C1C0"
@@ -62370,6 +64103,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:55e653e5faec2c252a957146940c3264",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7def578eb41a0313652a979b112e32fe",
+        "CFG": "487735decdeebdafdb9d4682928e1c11",
+        "PRO": "b80ee7ddc488ba1940429cbad0cddbe4",
+        "CAL": "55e653e5faec2c252a957146940c3264",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "TerminateProcess|0x41",
@@ -62852,6 +64596,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:a107cba54e215955eaf7fbd248b52d28",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a107cba54e215955eaf7fbd248b52d28",
+        "CFG": "02928311ba66beb9a2f2d54d9e5c798d",
+        "PRO": "e15e19f58e138dd371c473a5119950c2",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__cinit|0x1000C160",
@@ -63122,6 +64877,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:52b34f38f3d4d24707f642381872621c",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1fce42bab17babf2489c4653e35bd27f",
+        "CFG": "12e225373b5daa9c9da4756f173b4175",
+        "PRO": "c1815908acba07a34ecfc702f9372337",
+        "CAL": "52b34f38f3d4d24707f642381872621c",
+        "CON": "0e1096dcdb7560b70ade1682a8091708",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
@@ -63653,6 +65419,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:59c9f758af23a38aaacc022627d4376d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "59c9f758af23a38aaacc022627d4376d",
+        "CFG": "593f58b4ef138d3450c16ee146c8ed94",
+        "PRO": "01a22c97dad70bfea66b8b0f721dd632",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FreeHeapMemory|0x1000B960"
@@ -63971,6 +65748,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:506de36c15d380c2e09e517b40ea0be5",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "ec1ad9515bd3318d58f1b80d9c83c39f",
+        "CFG": "c1a73abb92a2b08de297ca5aef920ae5",
+        "PRO": "637fe7848143e17297f496676eb7570a",
+        "CAL": "506de36c15d380c2e09e517b40ea0be5",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
@@ -64322,6 +66110,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5cde6733c03c51522928f3edc9a769e4",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b8f456a683bfc64d11db4bbc9a1f4f8d",
+        "CFG": "f290a724d40b4aa5924e2a81ad5bc9ca",
+        "PRO": "f4dd67c43af7620e55cabf6d86d66541",
+        "CAL": "5cde6733c03c51522928f3edc9a769e4",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "parse_cmdline|0x1000C620",
@@ -64776,6 +66575,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bc2301571ff2545f76014b63c109e263",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bc2301571ff2545f76014b63c109e263",
+        "CFG": "86e794f86c602f8173e66be2fa916310",
+        "PRO": "1f41e8b61a18cb051eba8e0c8a761322",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__setargv|0x1000C580"
@@ -65091,6 +66901,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:4e7cb10867d00b36165c8666b64ceeae",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "31c7a51548493b88d04fab627ff28e5d",
+        "CFG": "3ba902aee08aed97f838870b209f9a54",
+        "PRO": "5dcadd72d3bf19ba96e327a114254ad7",
+        "CAL": "4e7cb10867d00b36165c8666b64ceeae",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "_CPtoLCID|0x1000CA30",
@@ -65558,6 +67379,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:558f327dc39efe62ec259cefb7d5d88f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "558f327dc39efe62ec259cefb7d5d88f",
+        "CFG": "3fff12cee20d7217020e61babff50752",
+        "PRO": "805b3599f83828c9c49c9048836cb2a5",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__setmbcp|0x1000C800"
@@ -65828,6 +67660,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:f710c320ffeaad35efd664e99e7b58dd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1a5bc9e6cb8cefe9018d3a6b6fe7bb7e",
+        "CFG": "68c65f7df88539e3dfd0b21bf21c8e56",
+        "PRO": "212e1922217220723bc658f1ad908e9c",
+        "CAL": null,
+        "CON": "f710c320ffeaad35efd664e99e7b58dd",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__setmbcp|0x1000C800"
@@ -66205,6 +68048,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:2b2b01f106928fa8bce40aedcc86103e",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "2b2b01f106928fa8bce40aedcc86103e",
+        "CFG": "cafa13ea6aecd4184404e9880a71e728",
+        "PRO": "c6024f871e2ba5335bafbaedd0017abb",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "__setmbcp|0x1000C800"
@@ -66535,6 +68389,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:cde35fe84df33f81cca5efc206967857",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "cde35fe84df33f81cca5efc206967857",
+        "CFG": "b05745f6c63105b877e3493b7f7bcdef",
+        "PRO": "1d9926d975edae0bf177be6950aa24ff",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "__setmbcp|0x1000C800"
@@ -66775,6 +68640,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:ef8513479bbd66b3f622426149e48167",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d95e6a0782426bf2245088eaa49c0dec",
+        "CFG": "0503cfcdc8e1313bbc0c2f7a9346779e",
+        "PRO": "f30f0d84bba23b0096608ed47472e66b",
+        "CAL": "ef8513479bbd66b3f622426149e48167",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
@@ -67242,6 +69118,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:bd5a39beceb8cd57f5ee31b3d8a56984",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "bd5a39beceb8cd57f5ee31b3d8a56984",
+        "CFG": "b6a15ff754ee4e6d0c41dd7af72f5f3f",
+        "PRO": "a271fc401781aa96ed4228abd501c826",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "InitializeRuntimeEnvironment|0x1000BDF0"
@@ -67497,6 +69384,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7eb0e34852cbaf971a8d97612e79f9fb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7eb0e34852cbaf971a8d97612e79f9fb",
+        "CFG": "8ce2d319507472286074a78909d60ad5",
+        "PRO": "903b31ca71bdcfdba493f16fec495a69",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "DisableThreadLibraryCalls|0x4F"
@@ -67829,6 +69727,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:402eca756aa92f95dd729a44be4def86",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "402eca756aa92f95dd729a44be4def86",
+        "CFG": "5cb358a801ea502a7e4f33583ed88bc5",
+        "PRO": "121bb4881aa30d83de937374e429dcb1",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "FUN_1000ccf0|0x1000CCF0"
@@ -68142,6 +70051,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "indexes": {
+        "EXP": null,
+        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "API": null,
+        "MNE": "6706aefa865b1f4ce83698f06a513a9b",
+        "CFG": "9d6c13a5a0fdbc267ada8d28646be980",
+        "PRO": "9dbefb3b9511d79ea80d13b460a9339a",
+        "CAL": "ab6ee6a44723836c64e22f1ca2c5e93d",
+        "CON": "809ab06627879494a8e6e3910d7e9f39",
+        "APS": null
+      },
+      "display_name": "FUN_1000ccf0",
       "callees": {
         "LoD/1.07": [
           "___crtMessageBoxA|0x1000D1E0",
@@ -68823,6 +70744,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:c8872d63f46aa0168e0726f03ab0246a",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "1da84ef3f876a0e3838d5b8fa3e5e4e1",
+        "CFG": "e7f5dd2866a4b7ffb535ccd46c633228",
+        "PRO": "456adbb75fd405b0dbb9f92409ee4a41",
+        "CAL": "c8872d63f46aa0168e0726f03ab0246a",
+        "CON": "bbca4a5c1f173bb2eabc2603cba1b7d9",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "AllocateMemoryWithRetry|0x1000B8E0",
@@ -69397,6 +71329,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:068ac7146c3b5622791abad702ebd59f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "068ac7146c3b5622791abad702ebd59f",
+        "CFG": "debd8572fc5605ed9f4af7c298b35d26",
+        "PRO": "7e9375bbb100d71598bc7ae995083de3",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "MapLocaleStringWithCodePage|0x1000CEE0"
@@ -69652,6 +71595,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:520ad2009eb294b74d43cf3b94b725ea",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "42067cdcad727f589d278ae16eb88804",
+        "CFG": "eb03860a5d504f9b3b4d7d1a8eb673bc",
+        "PRO": "65c76e6dec4eaf8d3e2a191b654729a2",
+        "CAL": null,
+        "CON": "520ad2009eb294b74d43cf3b94b725ea",
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "___crtGetStringTypeA|0x1000D380"
@@ -70121,6 +72075,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "STR",
       "index": "STR:15055a14e294b37cffac1fb3d83e8bf9",
+      "indexes": {
+        "EXP": null,
+        "STR": "15055a14e294b37cffac1fb3d83e8bf9",
+        "API": null,
+        "MNE": "5a176d4758d3e712379ddeaa26845ce4",
+        "CFG": "d8ec4eea7b6538f9df880956a38108af",
+        "PRO": "99bf13e90fd14cf17031b30ca437f568",
+        "CAL": "6815bfbd6fdd9e2bf9bacba9c707ff1e",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetProcAddress|0x47",
@@ -70635,6 +72600,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:b35d7544ccb06f0fede567c578bacd51",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "60fb4369558c571ee3e9892006835a82",
+        "CFG": "1cca209eac1c43a753e574cbe330b905",
+        "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e",
+        "CAL": null,
+        "CON": "b35d7544ccb06f0fede567c578bacd51",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_1000ccf0|0x1000CCF0"
@@ -70967,6 +72943,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:b0e26699701718953651604e3cbe68d2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b70329f9ef6907949abc19e437fd1218",
+        "CFG": "9f53d977802de482f25f8e597d9cad9b",
+        "PRO": "91f5dcb005ed63002dac106ade785d73",
+        "CAL": "b0e26699701718953651604e3cbe68d2",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "GetStringTypeA|0x4B",
@@ -71445,6 +73432,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:3b55742f36731df3165f026d1fe7c673",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "8e25fcf844a63073714569cbd6c6ffeb",
+        "CFG": "05c80d1d490b63ec5b0aa86b07046991",
+        "PRO": "897f404482bf7b6d4f459d9e12ace90d",
+        "CAL": "3b55742f36731df3165f026d1fe7c673",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_1000d4b0",
       "callees": {
         "LoD/1.07": [
           "InvokeOptionalHandler|0x1000C020",
@@ -71809,6 +73808,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:44f46ef527bad070016e875770123fc1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "44f46ef527bad070016e875770123fc1",
+        "CFG": "6316a9d03945f0ad34b4c4372aff0b35",
+        "PRO": "b82884e1a2c94ab2c42810c7eaa7f8d8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DecompressBitStreamData|0x1000E490",
@@ -72051,6 +74061,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:44f46ef527bad070016e875770123fc1",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "44f46ef527bad070016e875770123fc1",
+        "CFG": "f840d9d1945c5c06d394cf4b42c2222c",
+        "PRO": "b82884e1a2c94ab2c42810c7eaa7f8d8",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_10011f10|0x10011F10"
@@ -72308,6 +74329,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d9590b4e78dcef4a18c98b77246c1611",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d9590b4e78dcef4a18c98b77246c1611",
+        "CFG": "fcd5792a1e5e901c2ee1fed56ab50e3e",
+        "PRO": "84030aa79e17be0fdb4aba4d40cb94c4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DecompressBitStreamData|0x1000E490"
@@ -72623,6 +74655,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:c61f6b6ca9a0f8794e8242459e296ca8",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f60e554f23438f81b83d72d0725a05c0",
+        "CFG": "9c852b20260fefe3e9f729b2e0556855",
+        "PRO": "8c22ae9df3e49ec8cfbfa8eba96a3a2d",
+        "CAL": null,
+        "CON": "c61f6b6ca9a0f8794e8242459e296ca8",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "DecompressBitStreamData|0x1000E490"
@@ -72973,6 +75016,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:6293553a32a296a14c38be017b40caff",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "f4ef0e72b7322beabdb693bfc39e4ea6",
+        "CFG": "7870d82d26b4be636ddfc71a7b4d9395",
+        "PRO": "00906b347a2ed31f5879cff12ee4b4c7",
+        "CAL": "6293553a32a296a14c38be017b40caff",
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.07": [
           "ProcessSearchPattern|0x1000E420",
@@ -73321,6 +75375,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:7b4de9f0cf357b113d12e0c7e214792b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7b4de9f0cf357b113d12e0c7e214792b",
+        "CFG": "b7f90134d714fda5bab257770e7cad4b",
+        "PRO": "8f1eca9a1b1bdb89b964e74906fe783d",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackOpen@12|0x100043A0"
@@ -73557,6 +75622,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:5a8e6b8851902e07b2b2ccdf4afd6ff0",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a52ca48c1297e6887320ba092f251636",
+        "CFG": "690b4828d746c4f2b5cb06bbb891d5d2",
+        "PRO": "64c8cfba328f99bda9b56ca7d904a953",
+        "CAL": "5a8e6b8851902e07b2b2ccdf4afd6ff0",
+        "CON": "3d147421d0599f34b132a1e79459971c",
+        "APS": null
+      },
+      "display_name": "FUN_1000e530",
       "callees": {
         "LoD/1.07": [
           "SetBitInTable|0x1000E880",
@@ -74176,6 +76253,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:d3527e4dbd984145cb89c14308e06527",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "d3527e4dbd984145cb89c14308e06527",
+        "CFG": "0996ed925f5fd324bfee1c93b6223854",
+        "PRO": "feef28d72ef6f8479e9273e566c9660b",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_1000e530|0x1000E530"
@@ -74421,6 +76509,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:be877300b3a1fb92a77a971a426b6e6f",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "be877300b3a1fb92a77a971a426b6e6f",
+        "CFG": "75a59bb1fd39d037ece7bb79b53f90ec",
+        "PRO": "b94e052400e3186b44ac6d7e6bdf905e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_1000e530|0x1000E530"
@@ -74706,6 +76805,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:918a479bc536a990461a1998fd65b9e6",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "65516501a22bddce995ac7e69bfda6dc",
+        "CFG": "e2d70268af5383d37324c5d373cd8c24",
+        "PRO": "5de7fbff8163c61b5d2d1eb1ef13fa20",
+        "CAL": null,
+        "CON": "918a479bc536a990461a1998fd65b9e6",
+        "APS": null
+      },
+      "display_name": "FUN_10011ab0",
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -75231,6 +77342,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CAL",
       "index": "CAL:7898698cdef11966ae60fb5ddfbf6370",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "defccecaa8cd552622a94c1365229aa4",
+        "CFG": "bfbd3fdcabefa850d47128f83b6157f5",
+        "PRO": "00c89959a21eec27114eb0b2c055380e",
+        "CAL": "7898698cdef11966ae60fb5ddfbf6370",
+        "CON": "a817cf04a531e58436f051b1e9cc3bdb",
+        "APS": null
+      },
+      "display_name": "FUN_10011f10",
       "callees": {
         "LoD/1.07": [
           "DecompressBitstream|0x1000E000",
@@ -75760,6 +77883,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:99ae1381ea3abbaeb95fffa9390de5ac",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "99ae1381ea3abbaeb95fffa9390de5ac",
+        "CFG": "3757f8b23fab86bb5e69584b6396aefd",
+        "PRO": "e2c4788cd5e3c7b0d3aeeb0f9b2291cd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackToBuffer@28|0x10006B00"
@@ -76015,6 +78149,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:b63c1f51c01ea79546f0c169900a9e29",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b63c1f51c01ea79546f0c169900a9e29",
+        "CFG": "6158e458ad33fdb14060a39c0d308bc2",
+        "PRO": "54318dbf52b249e8b57737a92c2bdfd4",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "FUN_10007300|0x10007300"
@@ -76272,6 +78417,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:d57387f2eae2f5e9fab7234ac63f91a7",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "6fea264d5381a6b9e4dff7327ed05d43",
+        "CFG": "921f77f0577b96504197a9d45eb1e362",
+        "PRO": "e7bd3aea4e95da793211cd0cb9d1f55a",
+        "CAL": null,
+        "CON": "d57387f2eae2f5e9fab7234ac63f91a7",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "_SmackColorTrans@8|0x10006DE0",
@@ -76619,6 +78775,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:1592a958c317d9336cb625ae44096a06",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "a905f2e2b64cb0976df12ceef37fdaf2",
+        "CFG": "499e89059d661394d8b978aa990271e4",
+        "PRO": "dc4878c4a4cf1da3a64c4424b7022f27",
+        "CAL": null,
+        "CON": "1592a958c317d9336cb625ae44096a06",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90",
@@ -76951,6 +79118,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:214d89551dae9843212c24760beae5fa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "214d89551dae9843212c24760beae5fa",
+        "CFG": "63ca2164dc58e983481c75c76f37d22e",
+        "PRO": "39be30a2b39aa8f9dbc1fd5da2cff7be",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "UpdateBlitContextPaletteAndFrame|0x1000AC90",
@@ -77268,6 +79446,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "CON",
       "index": "CON:3d9647f6b55ced604dda45ee99425047",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b0b6c5654b349c83a12c6476fe92bb4e",
+        "CFG": "af9b41eb6f8363628b001fd6b79d1656",
+        "PRO": "143d97171edfab25c900dfa6469e150b",
+        "CAL": null,
+        "CON": "3d9647f6b55ced604dda45ee99425047",
+        "APS": null
+      },
       "callers": {
         "LoD/1.07": [
           "ExpandPaletteToDoublePixels|0x1000A323",
@@ -77701,6 +79890,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.07",
       "method": "MNE",
       "index": "MNE:e15678e456b1080a89a68355d5723ec2",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "e15678e456b1080a89a68355d5723ec2",
+        "CFG": "8f4d6758dad77142b48d1e5197bcab8b",
+        "PRO": "4d48656ba2ae584737c70a288062a37f",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10012a1f",
       "callees": {
         "LoD/1.07": [
           "DetectSIMDCapabilities|0x100129A6"
@@ -77997,6 +80198,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:5f915274ec4215201368b8a8c4f2aa69",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "0350630a586f7639bbf1f8285ccc3813",
+        "CFG": "81fffb3c71799e41ffafdc77642a69b3",
+        "PRO": "a0b03d5b6788b5e056efc153a10a6602",
+        "CAL": "5f915274ec4215201368b8a8c4f2aa69",
+        "CON": "c71064beb8d77c230fac9cab78101eab",
+        "APS": null
+      },
+      "display_name": "FUN_10001160",
       "callees": {
         "LoD/1.08": [
           "CallWindowProcA|0x1A",
@@ -78417,6 +80630,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:b3f695f0477d3d056fb51750ce19b66d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "7226ab076497d6900f6fb389c1c36289",
+        "CFG": "daf703a441cf6868f3ca312462298e96",
+        "PRO": "7d7dc61a2f62b16f962b7194a04a2ce6",
+        "CAL": "b3f695f0477d3d056fb51750ce19b66d",
+        "CON": "dc6651d9f20044275d1798ed46aed3ed",
+        "APS": null
+      },
+      "display_name": "FUN_100011c0",
       "callees": {
         "LoD/1.08": [
           "CallWindowProcA|0x1A",
@@ -78879,6 +81104,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "CAL",
       "index": "CAL:3c93d1a1b9f9e27964047aa786ef86bd",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "86c22c131d4e6f8edb517a917c1fed15",
+        "CFG": "40d0579be71cbb92bda6b2345f9aa432",
+        "PRO": "bb26a9799bdc1eee303f404c381f051f",
+        "CAL": "3c93d1a1b9f9e27964047aa786ef86bd",
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10003f10",
       "callees": {
         "LoD/1.08": [
           "BeginPaint|0x28",
@@ -79271,6 +81508,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:b773363931f4cac90a3a3977e08b8dba",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "b773363931f4cac90a3a3977e08b8dba",
+        "CFG": "fd0fc52b9d12b150973d05bcab485b71",
+        "PRO": "2dae5df1b982ec2ad4142e78f94da3b7",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10007f60",
       "instruction_counts": {
         "LoD/1.08": 44,
         "LoD/1.09": 44,
@@ -79519,6 +81768,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "CON",
       "index": "CON:76f6b1769eed37dbe94adb877bd6af6d",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "33f17554de32e7be7c7d01c984d4e6b5",
+        "CFG": "32366f539a2bd32e03932c4ed4dc4a16",
+        "PRO": "0ec2f2b02d3dd4b2d6db42c33bf332db",
+        "CAL": null,
+        "CON": "76f6b1769eed37dbe94adb877bd6af6d",
+        "APS": null
+      },
+      "display_name": "FUN_10007ff0",
       "instruction_counts": {
         "LoD/1.08": 44,
         "LoD/1.09": 44,
@@ -79853,6 +82114,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:7ea41d38c3be5dbcf086509c906678ea",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "7ea41d38c3be5dbcf086509c906678ea",
+        "MNE": "5af2d44a22a3b4d633d6fb9d0ce1b3c3",
+        "CFG": "d77a2c59e5ab0781a5c092802c184530",
+        "PRO": "b025fa342a8cb550eb3a99e5408a5e4a",
+        "CAL": null,
+        "CON": null,
+        "APS": "7ea41d38c3be5dbcf086509c906678ea"
+      },
+      "display_name": "FUN_100083b0",
       "callees": {
         "LoD/1.08": [
           "ApplyPresetUnitTileAttributes|0x10001040"
@@ -80103,6 +82376,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:455c457ca19c618a114fc77692823cde",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "455c457ca19c618a114fc77692823cde",
+        "CFG": "4c7c281ad396dffe1f57aba0a0a36a07",
+        "PRO": "38aa7f1180698fdee449b20733317e08",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10008660",
       "instruction_counts": {
         "LoD/1.08": 14,
         "LoD/1.09": 14,
@@ -80295,6 +82580,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "API",
       "index": "API:d5e768179954a0f9e9bc303d8b021875",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": "d5e768179954a0f9e9bc303d8b021875",
+        "MNE": "06ffa3da065379b7064deb0c67302897",
+        "CFG": "94601ab63605a91fb6ad2c1a8a7c9d23",
+        "PRO": "349ce0cec15a4f8eda2303d11590ad4e",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10008c10",
       "callees": {
         "LoD/1.08": [
           "FUN_10012a1f|0x100089D0",
@@ -80548,6 +82845,17 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:82a4681e028ce912ff418ce451dc2dfa",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "82a4681e028ce912ff418ce451dc2dfa",
+        "CFG": "708f6dc7dfeb6d65dfc09cc055561044",
+        "PRO": "3956d7a16aaa41f5cc2fbf211ae4ae41",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
       "callees": {
         "LoD/1.08": [
           "FUN_10012a1f|0x100089D0"
@@ -80770,6 +83078,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "STR",
       "index": "STR:6530e056d467056fd22748c81705d6ba",
+      "indexes": {
+        "EXP": null,
+        "STR": "6530e056d467056fd22748c81705d6ba",
+        "API": null,
+        "MNE": "4eccb294c91d8dfe02c9d753b4b8e155",
+        "CFG": "2ff214fb0a143571d7df27b289b7fe0b",
+        "PRO": "a55524fc6f390b8bbb2389ca1c5095b7",
+        "CAL": "2d74e7125836f4edcc1332dc120c988f",
+        "CON": "2bf43429e59c089f21eb327e6c274d4b",
+        "APS": null
+      },
+      "display_name": "FUN_10009630",
       "callees": {
         "LoD/1.08": [
           "OutputDebugStringA|0x5D",
@@ -81276,6 +83596,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:fbaf211a5c73cd4bfaec8356030b7f0b",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "fbaf211a5c73cd4bfaec8356030b7f0b",
+        "CFG": "1a2fa60e74bd71d07077d553538f9bf8",
+        "PRO": "e89b6e887b4630040615c898934a91fd",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_100099f0",
       "instruction_counts": {
         "LoD/1.08": 34,
         "LoD/1.09": 34,
@@ -81496,6 +83828,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:c17db03910b537e529966a14193985bb",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "c17db03910b537e529966a14193985bb",
+        "CFG": "1b865fba2f03d1e60b8a9dfad3b236bc",
+        "PRO": "d1e394a998abae4eb66ea3d580f9d0a9",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10009a60",
       "callees": {
         "LoD/1.08": [
           "FUN_10009ae0|0x10009AE0",
@@ -81746,6 +84090,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:25761c37e8f287dfa86bb97b0e168d59",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "25761c37e8f287dfa86bb97b0e168d59",
+        "CFG": "2016d354a961d75806242b32f0d25d8c",
+        "PRO": "f75c73734746b22f9d22fed1ec868795",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_10009b90",
       "callees": {
         "LoD/1.08": [
           "FUN_10009ae0|0x10009AE0",
@@ -82080,6 +84436,18 @@ var FUNCTIONS_SmackW32_dll = {
       "name_source": "LoD/1.08",
       "method": "MNE",
       "index": "MNE:11dc0860db265ae0050c94d5c9a4cb88",
+      "indexes": {
+        "EXP": null,
+        "STR": null,
+        "API": null,
+        "MNE": "11dc0860db265ae0050c94d5c9a4cb88",
+        "CFG": "220e971c61aa71353092f1a23b3ef2e3",
+        "PRO": "e1baa62184e9e4ba784141faf2712c49",
+        "CAL": null,
+        "CON": null,
+        "APS": null
+      },
+      "display_name": "FUN_1000a960",
       "instruction_counts": {
         "LoD/1.08": 8,
         "LoD/1.09": 8,

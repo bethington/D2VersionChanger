@@ -217,6 +217,9 @@ class FunctionMerger:
                             'mnemonic_hash': func.get('mnemonic_hash', ''),
                             'constants': func.get('constants', []),
                             'globals': func.get('globals', []),
+                            # Additional metadata for viewer
+                            'tags': func.get('tags', []),
+                            'function_type': func.get('function_type', ''),
                         }
                         enhanced_functions += 1
                         func_count += 1
@@ -526,6 +529,9 @@ class FunctionMerger:
         version_entry['mnemonic_hash'] = enhanced.get('mnemonic_hash', '') if enhanced else ''  # Not in new format
         version_entry['constants'] = func_data.get('constants', enhanced.get('constants', []) if enhanced else [])
         version_entry['globals'] = func_data.get('globals', enhanced.get('globals', []) if enhanced else [])
+        # Additional metadata for viewer
+        version_entry['tags'] = func_data.get('tags', enhanced.get('tags', []) if enhanced else [])
+        version_entry['function_type'] = func_data.get('function_type', enhanced.get('function_type', '') if enhanced else '')
 
         # Set calling_convention and return_type at function level (from first version with data)
         if not entry.get('calling_convention'):
