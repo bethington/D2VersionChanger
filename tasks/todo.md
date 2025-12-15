@@ -468,3 +468,98 @@ Final Score = min(100, Base Vector Score + Value Bonuses) * Tier3 Penalty
 3. **Multiset comparison for instructions** - Counts occurrences, not just presence
 4. **Path normalization for strings** - Handles cross-version path differences
 5. **Score capping at 100** - Combined score can't exceed 100
+
+---
+
+## Dynamic Candidates for Empty Cells (2025-12-15)
+
+### Overview
+
+Added dynamic vector-based candidate computation for empty cells in the File details panel. When a function doesn't have a confirmed address in a version, the viewer now computes the best vector match on-the-fly and shows it as a suggested candidate.
+
+### Changes Made
+
+1. **CSS Styling (`d2_report_viewer.html`)**:
+   - Added `.dynamic-candidate` class with italic styling and `~` prefix
+   - Reuses existing `.candidate-high` and `.candidate-low` for confidence coloring
+
+2. **JavaScript Functions**:
+   - Added `buildUsedAddressesMap(funcData, versions)` - builds a map of version -> Set of used addresses
+   - Added `findBestDynamicCandidate(sourceFunc, targetVersion, sourceVersion, funcData, usedAddresses, showRVA)`:
+     - Computes vector similarity between source function and all functions that have addresses in target version
+     - Returns the best match with ≥50% similarity
+     - Includes `isUsedElsewhere` flag indicating if the candidate is already matched to another function
+     - Includes `matchedName` for tooltip display
+
+3. **Cell Rendering Updates** (both `updateFunctionsTableBody` and `renderFunctionsTable`):
+   - Empty cells now call `findBestDynamicCandidate()` to find potential matches
+   - Shows dynamic candidates with:
+     - Tilde prefix (`~`) to distinguish from confirmed/stored candidates
+     - Italic styling
+     - Confidence-based coloring (green for ≥80%, orange for <60%)
+     - Tooltip showing similarity percentage and matched function name if already used elsewhere
+
+### How It Works
+
+1. **One-to-one matching is maintained** - The system enforces one address per canonical_id per version through collision detection
+2. **Dynamic candidates are suggestions** - They show the best vector match for review, even if that address is already matched to another function
+3. **Tooltip indicates conflicts** - If a suggested candidate is already matched elsewhere, the tooltip shows "(matched to: FunctionName)"
+
+### Visual Indicators
+
+| Cell State | Appearance | Tooltip |
+|------------|------------|---------|
+| Confirmed address | Normal text | "Click to compare" |
+| Stored candidate (high conf) | Green text | "Candidate (X% conf, method)" |
+| Stored candidate (low conf) | Orange text | "Candidate (X% conf, method)" |
+| Dynamic candidate (high conf) | `~` prefix, italic, green | "Vector match (X% similarity) - Click to compare" |
+| Dynamic candidate (low conf) | `~` prefix, italic, orange | "Vector match (X% similarity) - Click to compare" |
+| Dynamic candidate (used elsewhere) | Same as above | "Vector match (X% similarity) (matched to: Name)" |
+| No match | "—" | None |
+
+---
+
+## Precomputed Candidates Optimization (2025-12-15)
+
+### Problem
+The runtime candidate computation was making the File details panel load too slowly. Computing vector similarity for every empty cell against all functions was O(n²) complexity.
+
+### Solution
+Moved candidate computation from runtime (viewer) to build-time (generate_function_js.py).
+
+### Changes Made
+
+1. **Re-enabled registry writing in `merge_function_index.py`**:
+   - Modified `write_registry()` to actually output the `function_registry_v2.json` file
+   - Groups functions by DLL and writes complete function data
+
+2. **Added precomputation in `generate_function_js.py`**:
+   - Added `COUNT_FEATURES` config with weights and tolerances
+   - Added `compute_feature_similarity()` for individual feature comparison
+   - Added `compute_count_similarity()` for full vector similarity (0-100 scale)
+   - Added `compute_candidates_for_dll()` with optimizations:
+     - Only processes named functions (FUN_* excluded)
+     - Size-based pre-filtering (50% tolerance)
+     - Early termination for high-confidence matches (≥90%)
+     - Progress tracking with console output
+   - Modified `write_dll_js()` to merge precomputed candidates into entries
+
+3. **Fixed viewer compatibility**:
+   - Updated comparison modal to check both `candidate.source` and `candidate.source_version`
+
+### Optimizations Applied
+- **Only named functions**: Reduces scope to functions worth propagating documentation for
+- **Size pre-filter**: Skips comparisons where sizes differ by >50%
+- **Early termination**: Stops searching when 90%+ confidence match found
+- **60% minimum confidence**: Only stores candidates with meaningful similarity
+
+### Results
+- D2Client.dll: 6,345 precomputed candidates (from 6,515 named functions)
+- D2Game.dll: 5,892 precomputed candidates
+- D2Common.dll: 4,268 precomputed candidates
+- Total: ~29,000 candidates across all DLLs
+
+### Performance
+- Build time: ~3 minutes for all DLLs (one-time during data generation)
+- Viewer load: No additional computation, instant display
+- Data size: Minimal increase (candidates add ~5% to JS file sizes)

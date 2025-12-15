@@ -912,8 +912,6 @@ class SequentialMatcher:
         """
         print(f"\nRegistry generation skipped (using split functions_v2/ files)")
         print(f"Generate JavaScript files with: python tools/generate_function_js.py")
-        print(f"  Total functions: {total_functions}")
-        print(f"  Named functions: {total_named}")
 
     def print_summary(self) -> None:
         """Print overall matching summary."""

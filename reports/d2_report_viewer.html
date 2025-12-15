@@ -1373,6 +1373,16 @@
             opacity: 0.5;
         }
 
+        /* Dynamic candidate (computed on-the-fly, not pre-stored) */
+        .exports-table .addr-cell.dynamic-candidate {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .exports-table .addr-cell.dynamic-candidate::before {
+            content: '~';
+        }
+
         /* Comparison Modal */
         .comparison-modal {
             position: fixed;
@@ -4905,6 +4915,19 @@
             return Math.round(similarity);
         }
 
+        // Helper: Find function data by address in a specific version
+        function findFunctionByAddress(address, version) {
+            if (!currentFuncData?.functions || !address) return null;
+            const normalizedAddr = address.toLowerCase();
+            for (const [canonicalId, func] of Object.entries(currentFuncData.functions)) {
+                const funcAddr = func.addresses?.[version];
+                if (funcAddr && funcAddr.toLowerCase() === normalizedAddr) {
+                    return { canonicalId, func };
+                }
+            }
+            return null;
+        }
+
         // Helper: Calculate call graph similarity (based on shared callees)
         function calculateCallSimilarity(callees1, callees2) {
             if (!callees1?.length || !callees2?.length) return 0;
@@ -5153,6 +5176,69 @@
             const union = new Set([...set1, ...set2]);
             if (union.size === 0) return 100;
             return Math.round((intersection.length / union.size) * 100);
+        }
+
+        // Build a map of version -> Set of used addresses
+        // This is used to prevent showing candidates that are already matched elsewhere
+        function buildUsedAddressesMap(funcData, versions) {
+            const usedMap = {};
+            for (const ver of versions) {
+                usedMap[ver] = new Set();
+            }
+
+            for (const key in funcData.functions) {
+                const func = funcData.functions[key];
+                const addresses = func.addresses || {};
+                for (const ver in addresses) {
+                    if (usedMap[ver] && addresses[ver]) {
+                        usedMap[ver].add(addresses[ver]);
+                    }
+                }
+            }
+            return usedMap;
+        }
+
+        // Find the best dynamic candidate for an empty cell using vector similarity
+        // Returns { address, rva, confidence, method, isUsedElsewhere } or null if no good match found
+        function findBestDynamicCandidate(sourceFunc, targetVersion, sourceVersion, funcData, usedAddresses, showRVA) {
+            // We need to find a function in targetVersion that best matches sourceFunc
+
+            // Skip if source function has no data for source version
+            if (!sourceFunc.addresses || !sourceFunc.addresses[sourceVersion]) {
+                return null;
+            }
+
+            const usedSet = usedAddresses[targetVersion] || new Set();
+            let bestCandidate = null;
+            let bestScore = 0;
+            const minScore = 50; // Minimum 50% similarity to show
+
+            // Look for functions that have an address in target version
+            for (const key in funcData.functions) {
+                const targetFunc = funcData.functions[key];
+                const targetAddr = targetFunc.addresses?.[targetVersion];
+
+                // Skip if no address in target version
+                if (!targetAddr) continue;
+
+                // Compute vector similarity
+                const simResult = computeCountVectorSimilarity(sourceFunc, targetFunc, sourceVersion, targetVersion);
+
+                if (simResult.score >= minScore && simResult.score > bestScore) {
+                    bestScore = simResult.score;
+                    bestCandidate = {
+                        address: targetAddr,
+                        rva: targetFunc.rvas?.[targetVersion] || targetAddr,
+                        confidence: simResult.score / 100,
+                        method: 'vector',
+                        matchedKey: key,
+                        matchedName: targetFunc.name || key,
+                        isUsedElsewhere: usedSet.has(targetAddr)
+                    };
+                }
+            }
+
+            return bestCandidate;
         }
 
         // Helper: Render indexes side-by-side table
@@ -5610,61 +5696,70 @@
             let targetAddr = funcData.addresses?.[version];
             let targetRva = funcData.rvas?.[version] || '';
             let candidate = null;
+            let candidateFuncData = null;  // Full function data for the candidate
 
             if (!targetAddr && funcData.candidates?.[version]) {
                 candidate = funcData.candidates[version];
                 targetAddr = candidate.address;
                 targetRva = candidate.rva || '';
+
+                // Look up the actual function data for the candidate by its address
+                const matchedFunc = findFunctionByAddress(candidate.address, version);
+                if (matchedFunc) {
+                    candidateFuncData = matchedFunc.func;
+                }
             }
 
             // Get sizes (stored as funcData.sizes[version] in new structure)
+            // For candidates, look up the matched function's data
             const sourceSize = funcData.sizes?.[sourceVersion] || null;
-            const targetSize = candidate?.size || funcData.sizes?.[version] || null;
+            const targetSize = candidateFuncData?.sizes?.[version] || candidate?.size || funcData.sizes?.[version] || null;
 
             // Get callees (stored as funcData.callees[version] in new structure)
             const sourceCallees = funcData.callees?.[sourceVersion] || [];
-            const targetCallees = candidate?.callees || funcData.callees?.[version] || [];
+            const targetCallees = candidateFuncData?.callees?.[version] || candidate?.callees || funcData.callees?.[version] || [];
 
             // Get instructions (stored as funcData.instructions[version] in new structure)
             const sourceInstructions = funcData.instructions?.[sourceVersion] || [];
-            const targetInstructions = candidate?.instructions || funcData.instructions?.[version] || [];
+            const targetInstructions = candidateFuncData?.instructions?.[version] || candidate?.instructions || funcData.instructions?.[version] || [];
 
             // Get string references (stored as funcData.strings[version] in new structure)
             const sourceStrings = funcData.strings?.[sourceVersion] || [];
-            const targetStrings = candidate?.strings || funcData.strings?.[version] || [];
+            const targetStrings = candidateFuncData?.strings?.[version] || candidate?.strings || funcData.strings?.[version] || [];
 
             // Get indexes/hashes - parse from string format "METHOD:hash" if needed
             // funcData.indexes (plural) is the object format, funcData.index (singular) is the string format
             const sourceIndexes = funcData.indexes || parseIndexToObject(funcData.index);
-            const targetIndexes = candidate?.indexes || parseIndexToObject(candidate?.index) ||
+            const targetIndexes = candidateFuncData?.indexes || parseIndexToObject(candidateFuncData?.index) ||
+                candidate?.indexes || parseIndexToObject(candidate?.index) ||
                 funcData.indexes || parseIndexToObject(funcData.index);
 
-            // New enhanced comparison fields
+            // New enhanced comparison fields - prioritize candidateFuncData when available
             const sourceStackFrame = funcData.stack_frame_sizes?.[sourceVersion] || 0;
-            const targetStackFrame = candidate?.stack_frame_size || funcData.stack_frame_sizes?.[version] || 0;
+            const targetStackFrame = candidateFuncData?.stack_frame_sizes?.[version] || candidate?.stack_frame_size || funcData.stack_frame_sizes?.[version] || 0;
 
             const sourceBasicBlocks = funcData.basic_block_counts?.[sourceVersion] || 0;
-            const targetBasicBlocks = candidate?.basic_block_count || funcData.basic_block_counts?.[version] || 0;
+            const targetBasicBlocks = candidateFuncData?.basic_block_counts?.[version] || candidate?.basic_block_count || funcData.basic_block_counts?.[version] || 0;
 
             const sourceLoops = funcData.loop_counts?.[sourceVersion] ?? null;
-            const targetLoops = candidate?.loop_count ?? funcData.loop_counts?.[version] ?? null;
+            const targetLoops = candidateFuncData?.loop_counts?.[version] ?? candidate?.loop_count ?? funcData.loop_counts?.[version] ?? null;
 
             const sourceMnemonicHash = funcData.mnemonic_hashes?.[sourceVersion] || '';
-            const targetMnemonicHash = candidate?.mnemonic_hash || funcData.mnemonic_hashes?.[version] || '';
+            const targetMnemonicHash = candidateFuncData?.mnemonic_hashes?.[version] || candidate?.mnemonic_hash || funcData.mnemonic_hashes?.[version] || '';
 
             const sourceConstants = funcData.constants?.[sourceVersion] || [];
-            const targetConstants = candidate?.constants || funcData.constants?.[version] || [];
+            const targetConstants = candidateFuncData?.constants?.[version] || candidate?.constants || funcData.constants?.[version] || [];
 
             const sourceGlobals = funcData.globals?.[sourceVersion] || [];
-            const targetGlobals = candidate?.globals || funcData.globals?.[version] || [];
+            const targetGlobals = candidateFuncData?.globals?.[version] || candidate?.globals || funcData.globals?.[version] || [];
 
             // Tags (per-version)
             const sourceTags = funcData.tags?.[sourceVersion] || [];
-            const targetTags = candidate?.tags || funcData.tags?.[version] || [];
+            const targetTags = candidateFuncData?.tags?.[version] || candidate?.tags || funcData.tags?.[version] || [];
 
             // Function type (per-version)
             const sourceFuncType = funcData.function_types?.[sourceVersion] || '';
-            const targetFuncType = candidate?.function_type || funcData.function_types?.[version] || '';
+            const targetFuncType = candidateFuncData?.function_types?.[version] || candidate?.function_type || funcData.function_types?.[version] || '';
 
             // Calculate similarity scores (legacy, for display bars)
             const sizeSimilarity = calculateSizeSimilarity(sourceSize, targetSize);
@@ -5852,7 +5947,7 @@
                 // Enhanced method display with better formatting
                 const method = candidate.method || 'unknown';
                 const direction = candidate.direction || 'forward';
-                const sourceVer = candidate.source_version || '';
+                const sourceVer = candidate.source || candidate.source_version || '';
                 const chainLen = candidate.chain_length || 1;
 
                 let methodText = `Match Method: <strong>${method}</strong>`;
@@ -5908,8 +6003,13 @@
                 Source <span class="version-tag">${sourceVersion}</span>
                 <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${sourceAddr}</span>
             `;
+            // Get the matched function's name for candidates
+            const candidateName = candidateFuncData?.name || candidate?.matched_to || '';
+            const candidateNameHtml = candidate && candidateName ?
+                `<span style="margin-left: 8px; color: var(--color-magic); font-size: 0.8rem;">(${candidateName})</span>` : '';
+
             document.getElementById('targetSideHeader').innerHTML = `
-                ${candidate ? 'Candidate' : 'Target'} <span class="version-tag">${version}</span>
+                ${candidate ? 'Candidate' : 'Target'} <span class="version-tag">${version}</span>${candidateNameHtml}
                 <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem;">${targetAddr || '—'}</span>
             `;
 
