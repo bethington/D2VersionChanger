@@ -630,14 +630,14 @@ class CandidateMatcher:
 
 def add_candidates_to_registry(base_path: Path) -> None:
     """Add candidates to the function registry."""
-    registry_file = base_path / "reports" / "function_registry_v2.json"
-    
-    if not registry_file.exists():
-        print(f"Error: Registry not found: {registry_file}")
+    # Load registry from split functions_v2 files
+    from registry_loader import load_unified_registry
+    try:
+        registry = load_unified_registry(base_path)
+    except FileNotFoundError:
+        print(f"Error: functions_v2 directory not found")
+        print("Run merge_function_index.py first to generate split files.")
         return
-    
-    with open(registry_file, 'r', encoding='utf-8') as f:
-        registry = json.load(f)
     
     print(f"Loaded registry with {registry.get('total_functions', 0)} functions")
     

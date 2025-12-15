@@ -133,6 +133,15 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
         mnemonic_hashes = {}
         constants = {}
         globals = {}
+        api_calls = {}
+        # Count fields (per-version)
+        callee_counts = {}
+        caller_counts = {}
+        string_counts = {}
+        constant_counts = {}
+        global_counts = {}
+        api_counts = {}
+        param_counts = {}
         # Additional metadata
         tags = {}
         function_types = {}
@@ -174,6 +183,23 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
                 constants[ver] = ver_data['constants']
             if ver_data.get('globals'):
                 globals[ver] = ver_data['globals']
+            if ver_data.get('api_calls'):
+                api_calls[ver] = ver_data['api_calls']
+            # Count fields (per-version)
+            if ver_data.get('callee_count'):
+                callee_counts[ver] = ver_data['callee_count']
+            if ver_data.get('caller_count'):
+                caller_counts[ver] = ver_data['caller_count']
+            if ver_data.get('string_count'):
+                string_counts[ver] = ver_data['string_count']
+            if ver_data.get('constant_count'):
+                constant_counts[ver] = ver_data['constant_count']
+            if ver_data.get('global_count'):
+                global_counts[ver] = ver_data['global_count']
+            if ver_data.get('api_count'):
+                api_counts[ver] = ver_data['api_count']
+            if ver_data.get('param_count'):
+                param_counts[ver] = ver_data['param_count']
             # Additional metadata
             if ver_data.get('tags'):
                 tags[ver] = ver_data['tags']
@@ -240,6 +266,23 @@ def write_dll_js(filepath: Path, dll_name: str, functions: list, timestamp: str)
             entry["constants"] = constants
         if globals:
             entry["globals"] = globals
+        if api_calls:
+            entry["api_calls"] = api_calls
+        # Count fields (per-version)
+        if callee_counts:
+            entry["callee_counts"] = callee_counts
+        if caller_counts:
+            entry["caller_counts"] = caller_counts
+        if string_counts:
+            entry["string_counts"] = string_counts
+        if constant_counts:
+            entry["constant_counts"] = constant_counts
+        if global_counts:
+            entry["global_counts"] = global_counts
+        if api_counts:
+            entry["api_counts"] = api_counts
+        if param_counts:
+            entry["param_counts"] = param_counts
         # Additional metadata (per-version)
         if tags:
             entry["tags"] = tags

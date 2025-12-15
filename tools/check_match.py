@@ -1,7 +1,9 @@
 import json
+from registry_loader import quick_load_dll
 
-data = json.load(open(r"f:\D2VersionChanger\reports\function_registry_v2.json"))
-d2common_funcs = data["dlls"].get("D2Common.dll", [])
+# Load D2Common.dll data from split functions_v2 files
+dll_data = quick_load_dll("D2Common.dll")
+d2common_funcs = dll_data["functions"]
 print(f"Registry has {len(d2common_funcs)} D2Common.dll functions")
 
 # Find function with 1.10 @ 0x6FD44FF0

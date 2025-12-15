@@ -340,3 +340,131 @@ python tools/generate_registry.py
 | Tier 2 (Exact) | 22,915 (45.2%) |
 | Tier 3 (Prologue) | 22,958 (45.2%) |
 | Tier 4 (CallGraph) | 2,023 (4.0%) |
+
+---
+
+## Task: Integrate Value-Based Matching into Vector Similarity (2025-12-15)
+
+### Overview
+
+Enhance the existing count-based vector similarity with value-match bonuses to improve cross-version function matching accuracy. The count-based foundation remains the reliable baseline, while value matches provide confidence bonuses.
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    MATCHING PIPELINE                            │
+├─────────────────────────────────────────────────────────────────┤
+│  TIER 1: Definitive Matches (100% confidence)                   │
+│  ├── Mnemonic hash match (identical opcodes)                    │
+│  ├── Index hash match (API/STR/EXP signature)                   │
+│  └── Exact counts match (size + callee + string counts)         │
+├─────────────────────────────────────────────────────────────────┤
+│  TIER 2: Vector Similarity + Value Bonuses                      │
+│  ├── Base: Count-based vector similarity (0-100)                │
+│  │   └── 13 weighted structural features                        │
+│  └── Bonus: Value match bonuses (0-33 max)                      │
+│      ├── String value overlap    (+10 max)                      │
+│      ├── Instruction overlap     (+8 max)                       │
+│      ├── Constant value overlap  (+5 max)                       │
+│      ├── Global value overlap    (+5 max)                       │
+│      └── Tag overlap             (+5 max)                       │
+├─────────────────────────────────────────────────────────────────┤
+│  TIER 3: Structural Validation                                  │
+│  └── Plausibility checks (size ratio, count ratios)             │
+└─────────────────────────────────────────────────────────────────┘
+
+Final Score = min(100, Base Vector Score + Value Bonuses) * Tier3 Penalty
+```
+
+### Implementation Plan
+
+#### Phase 1: Value Extraction Helpers (HTML Viewer)
+- [ ] 1.1 Add `extractGlobalValue()` - extract value from `address|name|value` format
+- [ ] 1.2 Add `extractInstructionMnemonic()` - extract mnemonic from instruction data
+- [ ] 1.3 Verify `extractConstantValue()` and `normalizeStringPath()` work correctly
+
+#### Phase 2: Jaccard Similarity & Bonus Calculation (HTML Viewer)
+- [ ] 2.1 Add `computeJaccardSimilarity(set1, set2)` - generic Jaccard index helper
+- [ ] 2.2 Add `computeValueMatchBonuses()` with configurable weights:
+  - String value overlap: +10 max (highly distinctive)
+  - Instruction overlap: +8 max (similar code patterns)
+  - Constant value overlap: +5 max (filter common values)
+  - Global value overlap: +5 max (same data dependencies)
+  - Tag overlap: +5 max (functional categorization)
+
+#### Phase 3: Integration into Tier 2 (HTML Viewer)
+- [ ] 3.1 Update `calculateTieredMatch()` to compute and add value bonuses
+- [ ] 3.2 Update breakdown structure to include bonus details
+- [ ] 3.3 Cap final score at 100 (base + bonuses)
+
+#### Phase 4: Python fuzzy_matcher.py Updates
+- [ ] 4.1 Add same value extraction helpers
+- [ ] 4.2 Add `_compute_value_match_bonuses()` method
+- [ ] 4.3 Update `compute_vector_similarity()` to include bonuses
+- [ ] 4.4 Update return structure with bonus breakdown
+
+#### Phase 5: UI Updates (HTML Viewer)
+- [ ] 5.1 Show value bonus breakdown in comparison modal
+- [ ] 5.2 Add visual indicator for which values matched
+
+#### Phase 6: Testing
+- [ ] 6.1 Test with D2Client.dll 1.09d -> 1.10
+- [ ] 6.2 Verify bonuses improve match quality without false positives
+
+### Bonus Calculation Details
+
+| Bonus Type | Max Points | Extraction Method | Notes |
+|------------|------------|-------------------|-------|
+| String values | +10 | `normalizeStringPath()` | Highly distinctive |
+| Instructions | +8 | Extract mnemonic only | Compare sequences |
+| Constants | +5 | Value from `addr||value` | Filter common (0,1,4,8) |
+| Globals | +5 | Value from `addr|name|value` | Data dependencies |
+| Tags | +5 | Direct comparison | Functional similarity |
+
+### Review Section (2025-12-15)
+
+**Implementation Complete**
+
+#### Changes Made:
+
+1. **HTML Viewer (`reports/d2_report_viewer.html`)**:
+   - Added value extraction helpers: `extractGlobalValue()`, `extractInstructionMnemonic()`, `normalizeStringPath()`
+   - Added `computeJaccardSimilarity()` for set comparison
+   - Added `computeValueMatchBonuses()` function computing 5 bonus types
+   - Integrated bonuses into `calculateTieredMatch()` - bonuses now add to base vector score
+   - Updated `calculateIdentityMatch()` wrapper to pass globals, instructions, tags
+   - Added UI for value bonus breakdown in comparison modal
+   - Added CSS styles for `.value-bonus-breakdown`, `.value-bonus-item`
+
+2. **Python Matcher (`tools/fuzzy_matcher.py`)**:
+   - Added `extract_global_value()`, `extract_instruction_mnemonic()`, `normalize_string_path()` helpers
+   - Added `compute_jaccard_similarity()` function
+   - Added `COMMON_CONSTANTS` set for filtering non-distinctive values
+   - Added `VALUE_BONUS_CONFIG` class constant with max bonuses and min item thresholds
+   - Added `_compute_value_match_bonuses()` method computing all 5 bonus types
+   - Updated `compute_vector_similarity()` to include value bonuses in output
+   - Score scale changed from 0-1 to 0-100 for consistency
+   - Updated test function to display value bonus breakdown
+
+#### Test Results:
+- **Before value bonuses**: 545 matches from 1297 unmatched (42% improvement)
+- **After value bonuses**: 775 matches from 1297 unmatched (59.8% improvement)
+- **Net gain**: +230 additional matches (+17.7% improvement)
+
+#### Bonus Breakdown Examples:
+```
+0x6FAA10A0 -> 0x6FAA10A0 (combined score: 88.0)
+  Base score: 75.7 | Value bonus: +12.2
+  - constant_overlap: +5.0 (100% jaccard)
+  - global_overlap: +5.0 (100% jaccard)
+  - tag_overlap: +1.7 (33% jaccard)
+  - instruction_overlap: +0.6 (7% jaccard)
+```
+
+#### Key Design Decisions:
+1. **Additive bonuses, not multiplicative** - Bonuses only help, never hurt
+2. **Common constant filtering** - Excludes 0, 1, 4, 8, 0xFF, etc. from constant matching
+3. **Multiset comparison for instructions** - Counts occurrences, not just presence
+4. **Path normalization for strings** - Handles cross-version path differences
+5. **Score capping at 100** - Combined score can't exceed 100

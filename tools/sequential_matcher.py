@@ -903,151 +903,15 @@ class SequentialMatcher:
 
     def save_registry(self, output_path: Path) -> None:
         """
-        Save results in function_registry_v2.json format for generate_function_js.py.
-
-        This is the format expected by the viewer pipeline.
+        Registry saving skipped - data is now stored as split functions_v2 files.
+        
+        The monolithic function_registry_v2.json has been deprecated in favor of
+        per-DLL JavaScript files in reports/functions_v2/, saving ~350 MB of disk space.
+        
+        Data flows: merge_function_index.py → generate_function_js.py → functions_v2/*.js
         """
-        from datetime import datetime
-
-        total_functions = 0
-        total_named = 0
-        dlls_output = {}
-
-        for norm_name, identities in self.identities.items():
-            # Use canonical (display) name instead of normalized key
-            display_name = self.dll_canonical_name.get(norm_name, norm_name)
-            functions_list = []
-
-            for canonical_id, identity in identities.items():
-                # Get the best source function data (prefer earliest with human name)
-                best_func_data = None
-                best_version = None
-
-                # Try to find a version with the most data
-                for ver in sorted(identity.addresses.keys()):
-                    if (
-                        norm_name in self.addr_to_func
-                        and ver in self.addr_to_func[norm_name]
-                    ):
-                        addr = identity.addresses[ver]
-                        func_data = self.addr_to_func[norm_name][ver].get(addr)
-                        if func_data:
-                            # Prefer versions with human names
-                            if func_data.get("has_human_name") or not best_func_data:
-                                best_func_data = func_data
-                                best_version = ver
-                            if func_data.get("has_human_name"):
-                                break
-
-                # Build per-version data
-                versions_data = {}
-                for ver, addr in identity.addresses.items():
-                    func_data = None
-                    if (
-                        norm_name in self.addr_to_func
-                        and ver in self.addr_to_func[norm_name]
-                    ):
-                        func_data = self.addr_to_func[norm_name][ver].get(addr, {})
-
-                    if not func_data:
-                        func_data = {}
-
-                    # Extract callees with names (support both field names)
-                    callees = []
-                    for c in func_data.get("callees", []) or func_data.get(
-                        "api_calls", []
-                    ):
-                        if isinstance(c, dict):
-                            callees.append(c.get("name", str(c)))
-                        else:
-                            callees.append(str(c))
-
-                    # Extract callers with names
-                    callers = []
-                    for c in func_data.get("callers", []):
-                        if isinstance(c, dict):
-                            callers.append(c.get("name", str(c)))
-                        else:
-                            callers.append(str(c))
-
-                    versions_data[ver] = {
-                        "address": addr,
-                        "rva": identity.rvas.get(ver, ""),
-                        "size": func_data.get("size", 0),
-                        "callees": callees,
-                        "callers": callers,
-                        "strings": func_data.get("string_refs", []) or [],
-                        "instructions": [],  # Too large to include
-                        "instruction_count": func_data.get("instruction_count", 0),
-                        "local_var_count": len(func_data.get("local_variables", [])),
-                        "param_count": len(func_data.get("parameters", [])),
-                        "stack_frame_size": func_data.get("stack_frame_size", 0),
-                        "basic_block_count": func_data.get("basic_block_count", 0),
-                        "loop_count": func_data.get("loop_count", 0),
-                        "mnemonic_hash": func_data.get("indexes", {}).get("MNE", ""),
-                        "constants": func_data.get("constants", [])[:10],  # Limit
-                        "globals": func_data.get("globals", [])[:10],  # Limit
-                    }
-
-                # Build function entry
-                func_entry = {
-                    "canonical_id": canonical_id,
-                    "dll": display_name,
-                    "index": best_func_data.get("index", "") if best_func_data else "",
-                    "index_method": (
-                        best_func_data.get("index_method", "") if best_func_data else ""
-                    ),
-                    "indexes": (
-                        best_func_data.get("indexes", {}) if best_func_data else {}
-                    ),
-                    "name": (
-                        identity.name
-                        if identity.name and not identity.name.startswith("FUN_")
-                        else None
-                    ),
-                    "display_name": identity.name,
-                    "name_source": best_version,
-                    "signature": (
-                        best_func_data.get("signature", "") if best_func_data else ""
-                    ),
-                    "calling_convention": (
-                        best_func_data.get("calling_convention", "")
-                        if best_func_data
-                        else ""
-                    ),
-                    "return_type": (
-                        best_func_data.get("return_type", "") if best_func_data else ""
-                    ),
-                    "comment": (
-                        best_func_data.get("comment", "") if best_func_data else ""
-                    ),
-                    "parameters": (
-                        best_func_data.get("parameters", []) if best_func_data else []
-                    ),
-                    "versions": versions_data,
-                    "version_count": len(versions_data),
-                }
-
-                functions_list.append(func_entry)
-                total_functions += 1
-                if func_entry["name"]:
-                    total_named += 1
-
-            dlls_output[display_name] = functions_list
-
-        output = {
-            "version": 2,
-            "generated": datetime.now().isoformat(),
-            "total_functions": total_functions,
-            "total_named": total_named,
-            "dlls": dlls_output,
-        }
-
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(output, f, indent=2)
-
-        print(f"\nSaved registry to {output_path}")
+        print(f"\nRegistry generation skipped (using split functions_v2/ files)")
+        print(f"Generate JavaScript files with: python tools/generate_function_js.py")
         print(f"  Total functions: {total_functions}")
         print(f"  Named functions: {total_named}")
 

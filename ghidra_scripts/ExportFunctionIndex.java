@@ -165,13 +165,18 @@ public class ExportFunctionIndex extends GhidraScript {
         println("Total functions: " + functions.size());
 
         int named = 0, withStrings = 0, withApis = 0, exported = 0, withTags = 0;
+        int withParams = 0, withConstants = 0, withGlobals = 0;
+        int totalStrings = 0, totalParams = 0, totalConstants = 0, totalGlobals = 0;
         int typeExport = 0, typeOrdinal = 0, typeThunk = 0, typeEntry = 0, typeInternal = 0, typeExternal = 0;
         for (FunctionData f : functions) {
             if (f.hasHumanName) named++;
-            if (f.stringRefs.size() > 0) withStrings++;
+            if (f.stringRefs.size() > 0) { withStrings++; totalStrings += f.stringRefs.size(); }
             if (f.apiCalls.size() > 0) withApis++;
             if (f.exportOrdinal >= 0) exported++;
             if (f.tags.size() > 0) withTags++;
+            if (f.parameters.size() > 0) { withParams++; totalParams += f.parameters.size(); }
+            if (f.constants.size() > 0) { withConstants++; totalConstants += f.constants.size(); }
+            if (f.globals.size() > 0) { withGlobals++; totalGlobals += f.globals.size(); }
             // Count by function type
             if ("export".equals(f.functionType)) typeExport++;
             else if ("ordinal".equals(f.functionType)) typeOrdinal++;
@@ -182,7 +187,10 @@ public class ExportFunctionIndex extends GhidraScript {
         }
 
         println("  Named (human): " + named);
-        println("  With strings: " + withStrings);
+        println("  With strings: " + withStrings + " (" + totalStrings + " total refs)");
+        println("  With parameters: " + withParams + " (" + totalParams + " total params)");
+        println("  With constants: " + withConstants + " (" + totalConstants + " total constants)");
+        println("  With globals: " + withGlobals + " (" + totalGlobals + " total globals)");
         println("  With API calls: " + withApis);
         println("  Exported: " + exported);
         println("  With tags: " + withTags);
@@ -598,6 +606,7 @@ public class ExportFunctionIndex extends GhidraScript {
         AddressSetView body = func.getBody();
         ReferenceManager refMgr = activeProgram.getReferenceManager();
         Listing listing = activeProgram.getListing();
+        long imageBase = activeProgram.getImageBase().getOffset();
 
         AddressIterator addrIter = body.getAddresses(true);
         while (addrIter.hasNext()) {
@@ -607,9 +616,15 @@ public class ExportFunctionIndex extends GhidraScript {
                 Address toAddr = ref.getToAddress();
                 Data data = listing.getDataAt(toAddr);
                 if (data != null && data.hasStringValue()) {
-                    String str = data.getDefaultValueRepresentation();
-                    if (str != null && str.length() >= 4) {
-                        strings.add(str);
+                    Object value = data.getValue();
+                    if (value instanceof String) {
+                        String str = (String) value;
+                        if (str.length() >= 4) {
+                            long refRva = toAddr.getOffset() - imageBase;
+                            Symbol sym = activeProgram.getSymbolTable().getPrimarySymbol(toAddr);
+                            String symName = (sym != null) ? sym.getName() : "";
+                            strings.add(String.format("0x%X|%s|%s", refRva, symName, str));
+                        }
                     }
                 }
             }
@@ -733,22 +748,40 @@ public class ExportFunctionIndex extends GhidraScript {
                         if (obj instanceof Scalar) {
                             long val = ((Scalar) obj).getValue();
                             if (val > 0xFF && val < 0x10000000L && data.constants.size() < MAX_CONSTANTS) {
-                                data.constants.add(val);
+                                long instrRva = instrAddr - imageBase;
+                                // Format: address||value (no name for inline constants)
+                                data.constants.add(String.format("0x%X||0x%X", instrRva, val));
                             }
                         }
                     }
                 }
 
-                // Track global/data references
+                // Track global/data references (exclude strings - they're captured separately)
                 Reference[] refs = instr.getReferencesFrom();
                 for (Reference ref : refs) {
                     if (ref.getReferenceType().isData() && data.globals.size() < MAX_GLOBALS) {
                         Address toAddr = ref.getToAddress();
                         if (!body.contains(toAddr)) {
+                            Data globalData = listing.getDataAt(toAddr);
+
+                            // Skip string data - already captured in string references
+                            if (globalData != null && globalData.hasStringValue()) {
+                                continue;
+                            }
+
                             long refRva = toAddr.getOffset() - imageBase;
                             Symbol sym = activeProgram.getSymbolTable().getPrimarySymbol(toAddr);
                             String symName = (sym != null) ? sym.getName() : "";
-                            data.globals.add(String.format("0x%X|%s", refRva, symName));
+
+                            // Get the value at this address
+                            String valueStr = "";
+                            if (globalData != null) {
+                                Object value = globalData.getValue();
+                                if (value != null) {
+                                    valueStr = value.toString();
+                                }
+                            }
+                            data.globals.add(String.format("0x%X|%s|%s", refRva, symName, valueStr));
                         }
                     }
                 }
@@ -1076,11 +1109,20 @@ public class ExportFunctionIndex extends GhidraScript {
         }
 
         // CON index - sorted significant constants (magic numbers stable across versions)
+        // Constants are stored as "address||value" - extract just the values for hashing
         List<Long> sigConstants = new ArrayList<>();
-        for (Long c : data.constants) {
-            // Filter: > 255 (not small immediates) and < 0x10000000 (not addresses)
-            if (c > 255 && c < 0x10000000L) {
-                sigConstants.add(c);
+        for (String constStr : data.constants) {
+            String[] parts = constStr.split("\\|\\|");
+            if (parts.length >= 2) {
+                try {
+                    long c = Long.parseLong(parts[1].replace("0x", ""), 16);
+                    // Filter: > 255 (not small immediates) and < 0x10000000 (not addresses)
+                    if (c > 255 && c < 0x10000000L) {
+                        sigConstants.add(c);
+                    }
+                } catch (NumberFormatException e) {
+                    // Skip malformed constants
+                }
             }
         }
         if (sigConstants.size() >= 2) {
@@ -1179,79 +1221,58 @@ public class ExportFunctionIndex extends GhidraScript {
                 FunctionData f = functions.get(i);
 
                 writer.println("    {");
+
+                // === IDENTITY ===
                 writer.println("      \"address\": \"" + String.format("0x%08X", f.address) + "\",");
                 writer.println("      \"rva\": \"" + String.format("0x%X", f.rva) + "\",");
                 writer.println("      \"size\": " + f.size + ",");
                 writer.println("      \"name\": \"" + escapeJson(f.name) + "\",");
                 writer.println("      \"display_name\": \"" + escapeJson(f.displayName) + "\",");
+                writer.println("      \"original_name\": \"" + escapeJson(f.originalName) + "\",");
                 writer.println("      \"has_human_name\": " + f.hasHumanName + ",");
                 writer.println("      \"function_type\": \"" + escapeJson(f.functionType) + "\",");
-                writer.println("      \"original_name\": \"" + escapeJson(f.originalName) + "\",");
 
+                // === SIGNATURE & TYPE INFO ===
+                writer.println("      \"signature\": \"" + escapeJson(f.signature) + "\",");
+                writer.println("      \"calling_convention\": \"" + escapeJson(f.callingConvention) + "\",");
+                writer.println("      \"return_type\": \"" + escapeJson(f.returnType) + "\",");
+
+                // === INDEXES (for cross-version matching) ===
                 writer.println("      \"index\": \"" + escapeJson(f.bestIndex) + "\",");
                 writer.println("      \"index_method\": \"" + f.bestMethod + "\",");
-
                 writer.println("      \"indexes\": {");
                 writer.println("        \"EXP\": " + (f.expIndex != null ? "\"" + escapeJson(f.expIndex) + "\"" : "null") + ",");
                 writer.println("        \"STR\": " + (f.strIndex != null ? "\"" + escapeJson(f.strIndex) + "\"" : "null") + ",");
+                writer.println("        \"CAL\": " + (f.calIndex != null ? "\"" + escapeJson(f.calIndex) + "\"" : "null") + ",");
                 writer.println("        \"API\": " + (f.apiIndex != null ? "\"" + escapeJson(f.apiIndex) + "\"" : "null") + ",");
+                writer.println("        \"APS\": " + (f.apsIndex != null ? "\"" + escapeJson(f.apsIndex) + "\"" : "null") + ",");
+                writer.println("        \"CON\": " + (f.conIndex != null ? "\"" + escapeJson(f.conIndex) + "\"" : "null") + ",");
                 writer.println("        \"MNE\": " + (f.mneIndex != null ? "\"" + escapeJson(f.mneIndex) + "\"" : "null") + ",");
                 writer.println("        \"CFG\": " + (f.cfgIndex != null ? "\"" + escapeJson(f.cfgIndex) + "\"" : "null") + ",");
-                writer.println("        \"PRO\": " + (f.proIndex != null ? "\"" + escapeJson(f.proIndex) + "\"" : "null") + ",");
-                writer.println("        \"CAL\": " + (f.calIndex != null ? "\"" + escapeJson(f.calIndex) + "\"" : "null") + ",");
-                writer.println("        \"CON\": " + (f.conIndex != null ? "\"" + escapeJson(f.conIndex) + "\"" : "null") + ",");
-                writer.println("        \"APS\": " + (f.apsIndex != null ? "\"" + escapeJson(f.apsIndex) + "\"" : "null") + "");
+                writer.println("        \"PRO\": " + (f.proIndex != null ? "\"" + escapeJson(f.proIndex) + "\"" : "null") + "");
                 writer.println("      },");
 
-                if (f.hasHumanName) {
-                    writer.println("      \"signature\": \"" + escapeJson(f.signature) + "\",");
-                    writer.println("      \"calling_convention\": \"" + escapeJson(f.callingConvention) + "\",");
-                    writer.println("      \"comment\": \"" + escapeJson(f.comment != null ? f.comment : "") + "\",");
-
-                    writer.print("      \"parameters\": [");
-                    for (int j = 0; j < f.parameters.size(); j++) {
-                        ParamData p = f.parameters.get(j);
-                        if (j > 0) writer.print(", ");
-                        writer.print("{\"name\": \"" + escapeJson(p.name) + "\", ");
-                        writer.print("\"type\": \"" + escapeJson(p.type) + "\", ");
-                        writer.print("\"storage\": \"" + escapeJson(p.storage) + "\"}");
-                    }
-                    writer.println("],");
-                }
-
-                writer.print("      \"string_refs\": [");
-                int strCount = 0;
-                for (String str : f.stringRefs) {
-                    if (strCount > 0) writer.print(", ");
-                    writer.print("\"" + escapeJson(str) + "\"");
-                    strCount++;
-                }
-                writer.println("],");
-
-                writer.print("      \"api_calls\": [");
-                for (int j = 0; j < Math.min(f.apiCalls.size(), 10); j++) {
-                    if (j > 0) writer.print(", ");
-                    writer.print("\"" + escapeJson(f.apiCalls.get(j)) + "\"");
-                }
-                if (f.apiCalls.size() > 10) {
-                    writer.print(", \"...+" + (f.apiCalls.size() - 10) + " more\"");
-                }
-                writer.println("],");
-
-                writer.println("      \"return_type\": \"" + escapeJson(f.returnType) + "\",");
+                // === STRUCTURE METRICS ===
                 writer.println("      \"instruction_count\": " + f.instructionCount + ",");
-                writer.println("      \"local_var_count\": " + f.localVarCount + ",");
-                writer.println("      \"stack_frame_size\": " + f.stackFrameSize + ",");
                 writer.println("      \"basic_block_count\": " + f.basicBlockCount + ",");
                 writer.println("      \"loop_count\": " + f.loopCount + ",");
+                writer.println("      \"stack_frame_size\": " + f.stackFrameSize + ",");
+                writer.println("      \"local_var_count\": " + f.localVarCount + ",");
 
-                writer.print("      \"instructions\": [");
-                for (int j = 0; j < f.instructions.size(); j++) {
+                // === PARAMETERS (count + list) ===
+                writer.println("      \"param_count\": " + f.parameters.size() + ",");
+                writer.print("      \"parameters\": [");
+                for (int j = 0; j < f.parameters.size(); j++) {
+                    ParamData p = f.parameters.get(j);
                     if (j > 0) writer.print(", ");
-                    writer.print("\"" + escapeJson(f.instructions.get(j)) + "\"");
+                    writer.print("{\"name\": \"" + escapeJson(p.name) + "\", ");
+                    writer.print("\"type\": \"" + escapeJson(p.type) + "\", ");
+                    writer.print("\"storage\": \"" + escapeJson(p.storage) + "\"}");
                 }
                 writer.println("],");
 
+                // === CALL GRAPH (counts + lists) ===
+                writer.println("      \"callee_count\": " + f.callees.size() + ",");
                 writer.print("      \"callees\": [");
                 for (int j = 0; j < Math.min(f.callees.size(), 20); j++) {
                     if (j > 0) writer.print(", ");
@@ -1262,6 +1283,7 @@ public class ExportFunctionIndex extends GhidraScript {
                 }
                 writer.println("],");
 
+                writer.println("      \"caller_count\": " + f.callers.size() + ",");
                 writer.print("      \"callers\": [");
                 for (int j = 0; j < Math.min(f.callers.size(), 20); j++) {
                     if (j > 0) writer.print(", ");
@@ -1272,15 +1294,30 @@ public class ExportFunctionIndex extends GhidraScript {
                 }
                 writer.println("],");
 
+                // === STRING REFERENCES (count + list) ===
+                writer.println("      \"string_count\": " + f.stringRefs.size() + ",");
+                writer.print("      \"strings\": [");
+                int strIdx = 0;
+                for (String str : f.stringRefs) {
+                    if (strIdx > 0) writer.print(", ");
+                    writer.print("\"" + escapeJson(str) + "\"");
+                    strIdx++;
+                }
+                writer.println("],");
+
+                // === CONSTANTS (count + list) ===
+                writer.println("      \"constant_count\": " + f.constants.size() + ",");
                 writer.print("      \"constants\": [");
                 int constIdx = 0;
-                for (Long c : f.constants) {
+                for (String c : f.constants) {
                     if (constIdx > 0) writer.print(", ");
-                    writer.print(c);
+                    writer.print("\"" + escapeJson(c) + "\"");
                     constIdx++;
                 }
                 writer.println("],");
 
+                // === GLOBALS (count + list) ===
+                writer.println("      \"global_count\": " + f.globals.size() + ",");
                 writer.print("      \"globals\": [");
                 int globIdx = 0;
                 for (String g : f.globals) {
@@ -1290,6 +1327,28 @@ public class ExportFunctionIndex extends GhidraScript {
                 }
                 writer.println("],");
 
+                // === API CALLS (count + list) ===
+                writer.println("      \"api_count\": " + f.apiCalls.size() + ",");
+                writer.print("      \"api_calls\": [");
+                for (int j = 0; j < Math.min(f.apiCalls.size(), 10); j++) {
+                    if (j > 0) writer.print(", ");
+                    writer.print("\"" + escapeJson(f.apiCalls.get(j)) + "\"");
+                }
+                if (f.apiCalls.size() > 10) {
+                    writer.print(", \"...+" + (f.apiCalls.size() - 10) + " more\"");
+                }
+                writer.println("],");
+
+                // === INSTRUCTIONS (first N for prologue comparison) ===
+                writer.print("      \"instructions\": [");
+                for (int j = 0; j < f.instructions.size(); j++) {
+                    if (j > 0) writer.print(", ");
+                    writer.print("\"" + escapeJson(f.instructions.get(j)) + "\"");
+                }
+                writer.println("],");
+
+                // === METADATA ===
+                writer.println("      \"comment\": \"" + escapeJson(f.comment != null ? f.comment : "") + "\",");
                 writer.print("      \"tags\": [");
                 for (int j = 0; j < f.tags.size(); j++) {
                     if (j > 0) writer.print(", ");
@@ -1355,7 +1414,7 @@ public class ExportFunctionIndex extends GhidraScript {
         List<String> instructions = new ArrayList<>();
         List<String> callees = new ArrayList<>();
         List<String> callers = new ArrayList<>();
-        Set<Long> constants = new TreeSet<>();
+        Set<String> constants = new LinkedHashSet<>();
         Set<String> globals = new LinkedHashSet<>();
 
         String expIndex;

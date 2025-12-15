@@ -1,5 +1,5 @@
 // Auto-generated from function_registry_v2.json
-// Generated: 2025-12-15T04:04:17.126358
+// Generated: 2025-12-15T13:29:46.739057
 // Functions for Diablo II.exe
 // Versions: LoD/1.07, LoD/1.08, LoD/1.09, LoD/1.09b, LoD/1.09d, LoD/1.10, LoD/1.11, LoD/1.11b, LoD/1.12a, LoD/1.13c, LoD/1.13d, LoD/1.14a, LoD/1.14b, LoD/1.14c, LoD/1.14d
 
@@ -22,7 +22,7 @@ var FUNCTIONS_Diablo_II_exe = {
     "LoD/1.14d"
   ],
   "functions": {
-    "diablo ii.exe_STR_ce6d908e8553": {
+    "diablo ii.exe_STR_a1fcfbe0e8cb": {
       "addresses": {
         "LoD/1.07": "0x00401000",
         "LoD/1.08": "0x00401000",
@@ -74,217 +74,219 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 902,
         "LoD/1.14d": 902
       },
+      "signature": "DWORD FUN_00401000(HINSTANCE param_1, undefined4 param_2, char * param_3)",
+      "calling_convention": "__stdcall",
       "return_type": "DWORD",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:ce6d908e8553d0cf353c49fe22a3b675",
+      "index": "STR:a1fcfbe0e8cb8071e81aacbf593ea9c5",
       "indexes": {
         "EXP": null,
-        "STR": "ce6d908e8553d0cf353c49fe22a3b675",
+        "STR": "a1fcfbe0e8cb8071e81aacbf593ea9c5",
+        "CAL": "8663fba99a43c444406e362e74136098",
         "API": null,
+        "APS": null,
+        "CON": "0e9f5d1ccf0e67759996e55b07191271",
         "MNE": "bf8c322b1dd06995c54b40d971c644e5",
         "CFG": "9a79e3481750058eb22d5511b99ea9bf",
-        "PRO": "c8f9dd487289ffa0ad7ffcd1b7feb746",
-        "CAL": "8663fba99a43c444406e362e74136098",
-        "CON": "318b296d2b8708a97227cf51294ab6b8",
-        "APS": null
+        "PRO": "c8f9dd487289ffa0ad7ffcd1b7feb746"
       },
       "display_name": "FUN_00401000",
       "callees": {
         "LoD/1.07": [
-          "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "GetCommandLineA|0x5",
-          "FUN_0040146d|0x40146D",
-          "CreateProcessA|0x4",
           "CreateEventA|0x7",
           "MessageBoxA|0x2B",
+          "FUN_0040146d|0x40146D",
+          "GetExitCodeProcess|0x2",
+          "CloseHandle|0x17",
+          "LoadStringA|0x2C",
           "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17"
+          "GetLastError|0x6",
+          "FUN_004013b0|0x4013B0",
+          "CreateProcessA|0x4",
+          "GetCommandLineA|0x5"
         ],
         "LoD/1.08": [
+          "WaitForMultipleObjects|0x3",
+          "MessageBoxA|0x2B",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "CloseHandle|0x17",
+          "GetLastError|0x6",
           "GetCommandLineA|0x5",
-          "CreateEventA|0x7",
-          "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
           "FUN_004013b0|0x4013B0",
-          "CreateProcessA|0x4",
-          "GetLastError|0x6",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
-          "GetExitCodeProcess|0x2",
-          "LoadStringA|0x2C"
-        ],
-        "LoD/1.09": [
-          "GetLastError|0x6",
-          "CreateEventA|0x7",
-          "CloseHandle|0x17",
-          "FUN_004013b0|0x4013B0",
-          "FUN_0040146d|0x40146D",
-          "WaitForMultipleObjects|0x3",
-          "MessageBoxA|0x2B",
-          "GetExitCodeProcess|0x2",
           "LoadStringA|0x2C",
-          "GetCommandLineA|0x5",
+          "FUN_0040146d|0x40146D",
           "CreateProcessA|0x4"
         ],
-        "LoD/1.09b": [
-          "MessageBoxA|0x2B",
+        "LoD/1.09": [
+          "CreateProcessA|0x4",
+          "GetLastError|0x6",
           "GetCommandLineA|0x5",
+          "FUN_004013b0|0x4013B0",
+          "WaitForMultipleObjects|0x3",
+          "CloseHandle|0x17",
+          "GetExitCodeProcess|0x2",
+          "MessageBoxA|0x2B",
+          "CreateEventA|0x7",
+          "FUN_0040146d|0x40146D",
+          "LoadStringA|0x2C"
+        ],
+        "LoD/1.09b": [
+          "GetExitCodeProcess|0x2",
           "LoadStringA|0x2C",
           "FUN_004013b0|0x4013B0",
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "GetExitCodeProcess|0x2",
-          "GetLastError|0x6",
+          "FUN_0040146d|0x40146D",
           "CloseHandle|0x17",
           "CreateEventA|0x7",
-          "FUN_0040146d|0x40146D"
+          "MessageBoxA|0x2B",
+          "GetCommandLineA|0x5",
+          "GetLastError|0x6",
+          "CreateProcessA|0x4",
+          "WaitForMultipleObjects|0x3"
         ],
         "LoD/1.09d": [
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
           "FUN_0040146d|0x40146D",
-          "MessageBoxA|0x2B",
+          "GetExitCodeProcess|0x2",
           "CloseHandle|0x17",
           "LoadStringA|0x2C",
-          "GetExitCodeProcess|0x2",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
           "FUN_004013b0|0x4013B0",
-          "CreateEventA|0x7",
           "GetCommandLineA|0x5",
-          "GetLastError|0x6"
+          "CreateProcessA|0x4",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3"
         ],
         "LoD/1.10": [
-          "CloseHandle|0x17",
-          "GetLastError|0x6",
-          "FUN_004013b0|0x4013B0",
-          "MessageBoxA|0x2B",
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "GetExitCodeProcess|0x2",
           "FUN_0040146d|0x40146D",
-          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
           "LoadStringA|0x2C",
-          "GetCommandLineA|0x5"
+          "FUN_004013b0|0x4013B0",
+          "GetExitCodeProcess|0x2",
+          "CreateEventA|0x7",
+          "WaitForMultipleObjects|0x3",
+          "CreateProcessA|0x4",
+          "GetCommandLineA|0x5",
+          "CloseHandle|0x17"
         ],
         "LoD/1.11": [
-          "CreateProcessA|0x4",
-          "LoadStringA|0x2C",
-          "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "GetCommandLineA|0x5",
-          "WaitForMultipleObjects|0x3",
-          "GetLastError|0x6",
-          "GetExitCodeProcess|0x2",
           "MessageBoxA|0x2B",
-          "CloseHandle|0x17",
-          "FUN_0040146d|0x40146D"
-        ],
-        "LoD/1.11b": [
           "FUN_0040146d|0x40146D",
           "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "GetExitCodeProcess|0x2",
           "CloseHandle|0x17",
-          "GetLastError|0x6",
           "LoadStringA|0x2C",
-          "MessageBoxA|0x2B",
-          "FUN_004013b0|0x4013B0",
           "CreateEventA|0x7",
+          "GetLastError|0x6",
+          "GetExitCodeProcess|0x2",
+          "WaitForMultipleObjects|0x3",
+          "FUN_004013b0|0x4013B0",
           "GetCommandLineA|0x5"
         ],
-        "LoD/1.12a": [
+        "LoD/1.11b": [
+          "WaitForMultipleObjects|0x3",
+          "FUN_0040146d|0x40146D",
           "GetCommandLineA|0x5",
-          "CreateProcessA|0x4",
-          "GetLastError|0x6",
           "GetExitCodeProcess|0x2",
           "CreateEventA|0x7",
-          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
           "LoadStringA|0x2C",
+          "CreateProcessA|0x4",
+          "FUN_004013b0|0x4013B0",
+          "CloseHandle|0x17",
+          "MessageBoxA|0x2B"
+        ],
+        "LoD/1.12a": [
           "FUN_0040146d|0x40146D",
+          "LoadStringA|0x2C",
+          "GetCommandLineA|0x5",
+          "CreateProcessA|0x4",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
+          "CreateEventA|0x7",
           "CloseHandle|0x17",
           "WaitForMultipleObjects|0x3",
+          "GetExitCodeProcess|0x2",
           "FUN_004013b0|0x4013B0"
         ],
         "LoD/1.13c": [
-          "CreateEventA|0x7",
           "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "FUN_0040146d|0x40146D",
-          "GetExitCodeProcess|0x2",
-          "GetCommandLineA|0x5",
-          "MessageBoxA|0x2B",
-          "WaitForMultipleObjects|0x3",
-          "CloseHandle|0x17",
-          "CreateProcessA|0x4",
-          "FUN_004013b0|0x4013B0"
-        ],
-        "LoD/1.13d": [
-          "WaitForMultipleObjects|0x3",
-          "FUN_004013b0|0x4013B0",
-          "FUN_0040146d|0x40146D",
-          "CreateProcessA|0x4",
-          "MessageBoxA|0x2B",
           "CloseHandle|0x17",
           "CreateEventA|0x7",
           "GetCommandLineA|0x5",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "GetExitCodeProcess|0x2"
-        ],
-        "LoD/1.14a": [
-          "CreateProcessA|0x4",
           "WaitForMultipleObjects|0x3",
-          "CreateEventA|0x7",
-          "GetCommandLineA|0x5",
-          "GetLastError|0x6",
-          "LoadStringA|0x2C",
-          "MessageBoxA|0x2B",
-          "FUN_0040146d|0x40146D",
           "GetExitCodeProcess|0x2",
-          "FUN_004013b0|0x4013B0",
-          "CloseHandle|0x17"
-        ],
-        "LoD/1.14b": [
+          "FUN_0040146d|0x40146D",
           "LoadStringA|0x2C",
-          "WaitForMultipleObjects|0x3",
-          "MessageBoxA|0x2B",
+          "FUN_004013b0|0x4013B0",
           "CreateProcessA|0x4",
-          "GetExitCodeProcess|0x2",
-          "CreateEventA|0x7",
-          "FUN_004013b0|0x4013B0",
-          "GetLastError|0x6",
-          "CloseHandle|0x17",
-          "FUN_0040146d|0x40146D",
-          "GetCommandLineA|0x5"
-        ],
-        "LoD/1.14c": [
-          "FUN_0040146d|0x40146D",
-          "FUN_004013b0|0x4013B0",
-          "GetExitCodeProcess|0x2",
-          "GetCommandLineA|0x5",
-          "GetLastError|0x6",
-          "CloseHandle|0x17",
-          "CreateProcessA|0x4",
-          "WaitForMultipleObjects|0x3",
-          "CreateEventA|0x7",
-          "LoadStringA|0x2C",
           "MessageBoxA|0x2B"
         ],
-        "LoD/1.14d": [
-          "MessageBoxA|0x2B",
-          "GetCommandLineA|0x5",
-          "WaitForMultipleObjects|0x3",
+        "LoD/1.13d": [
           "CreateEventA|0x7",
+          "CloseHandle|0x17",
+          "GetLastError|0x6",
+          "GetCommandLineA|0x5",
+          "LoadStringA|0x2C",
+          "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2",
           "FUN_0040146d|0x40146D",
+          "WaitForMultipleObjects|0x3",
+          "FUN_004013b0|0x4013B0",
+          "MessageBoxA|0x2B"
+        ],
+        "LoD/1.14a": [
+          "CreateEventA|0x7",
           "FUN_004013b0|0x4013B0",
           "LoadStringA|0x2C",
-          "GetLastError|0x6",
           "CloseHandle|0x17",
+          "WaitForMultipleObjects|0x3",
+          "FUN_0040146d|0x40146D",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
+          "GetCommandLineA|0x5",
           "GetExitCodeProcess|0x2",
           "CreateProcessA|0x4"
+        ],
+        "LoD/1.14b": [
+          "CreateProcessA|0x4",
+          "GetExitCodeProcess|0x2",
+          "GetLastError|0x6",
+          "GetCommandLineA|0x5",
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
+          "WaitForMultipleObjects|0x3",
+          "LoadStringA|0x2C",
+          "MessageBoxA|0x2B",
+          "CreateEventA|0x7",
+          "FUN_004013b0|0x4013B0"
+        ],
+        "LoD/1.14c": [
+          "GetCommandLineA|0x5",
+          "FUN_004013b0|0x4013B0",
+          "LoadStringA|0x2C",
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
+          "MessageBoxA|0x2B",
+          "GetLastError|0x6",
+          "WaitForMultipleObjects|0x3",
+          "GetExitCodeProcess|0x2",
+          "CreateProcessA|0x4",
+          "CreateEventA|0x7"
+        ],
+        "LoD/1.14d": [
+          "FUN_0040146d|0x40146D",
+          "CloseHandle|0x17",
+          "CreateEventA|0x7",
+          "MessageBoxA|0x2B",
+          "WaitForMultipleObjects|0x3",
+          "LoadStringA|0x2C",
+          "GetExitCodeProcess|0x2",
+          "GetCommandLineA|0x5",
+          "CreateProcessA|0x4",
+          "GetLastError|0x6",
+          "FUN_004013b0|0x4013B0"
         ]
       },
       "callers": {
@@ -332,188 +334,6 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.14d": [
           "entry|0x4014E3"
-        ]
-      },
-      "strings": {
-        "LoD/1.07": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.08": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.09": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.09b": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.09d": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.10": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.11": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.11b": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.12a": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.13c": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.13d": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.14a": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.14b": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.14c": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
-        ],
-        "LoD/1.14d": [
-          "\"DIABLO_II_OK\"",
-          "u\"Diablo II was unable to find Game.exe.\\nPlease make sure your application is correctly installed, and that your Expansion Disc is in your CD_ROM drive, and try again.\\n\"",
-          "u\"Please make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Game.exe\"",
-          "u\"CD-ROM drive error.\"",
-          "u\"Diablo II.exe\"",
-          "u\"Diablo II was unable to locate your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Please verify that your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II was unable to detect a Disc in your CD-ROM drive.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\"",
-          "u\"Diablo II failed to run.\\nPlease make sure your Diablo II Expansion Disc is in your CD-ROM drive, then click on 'Retry'.\""
         ]
       },
       "instruction_counts": {
@@ -603,367 +423,384 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.08": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.09": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.09b": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.09d": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.10": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.11": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.11b": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.12a": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.13c": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.13d": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.14a": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.14b": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.14c": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ],
         "LoD/1.14d": [
-          260,
-          312,
-          316,
-          380,
-          388,
-          640,
-          644,
-          652,
-          900,
-          1160
+          "0x1000||0x680",
+          "0x100A||0x406038",
+          "0x103D||0x690",
+          "0x1052||0x138",
+          "0x1059||0x104",
+          "0x1064||0x590",
+          "0x107D||0x488",
+          "0x1084||0x104",
+          "0x1097||0x406034",
+          "0x10A9||0x17C"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.08": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.09": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.09b": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.09d": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.10": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.11": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.11b": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.12a": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.13c": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.13d": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.14a": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.14b": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.14c": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ],
         "LoD/1.14d": [
-          "0x6038|s_DIABLO_II_OK_00406038",
-          "0xFFFFFFFFFFBFF980|",
-          "0x5018|PTR_CreateEventA_00405018",
-          "0x5014|PTR_GetLastError_00405014",
-          "0x50B0|PTR_LoadStringA_004050b0",
-          "0x7EBA|pu_Game.exe_00407eba",
-          "0x82CC|pu_Diablo_II.exe_004082cc",
-          "0x5010|PTR_GetCommandLineA_00405010",
-          "0x6034|DAT_00406034",
-          "0x6035|DAT_00406035"
+          "0xFFFFFFFFFFBFF980||",
+          "0x5018|PTR_CreateEventA_00405018|00005586",
+          "0x5014|PTR_GetLastError_00405014|00005576",
+          "0x50B0|PTR_LoadStringA_004050b0|000055b2",
+          "0x5010|PTR_GetCommandLineA_00405010|00005564",
+          "0x6034|DAT_00406034|0x22",
+          "0x6035|DAT_00406035|0x0",
+          "0x64B0|DAT_004064b0|0x0",
+          "0x64B1|DAT_004064b1|0x0",
+          "0x6030|DAT_00406030|0x22"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_MNE_0ae7612051bc": {
@@ -1018,6 +855,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 189,
         "LoD/1.14d": 189
       },
+      "signature": "byte * FUN_004013b0(byte * param_1, byte * param_2, size_t param_3)",
+      "calling_convention": "__cdecl",
       "return_type": "byte *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -1025,43 +864,43 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "0ae7612051bc2c351ff4baa78f16b259",
         "CFG": "8677e4ae8cbf70d01424b1301aab8351",
-        "PRO": "b7f126c199604b0f1fe6e9b462063d20",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "b7f126c199604b0f1fe6e9b462063d20"
       },
       "display_name": "FUN_004013b0",
       "callees": {
         "LoD/1.07": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.08": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.09": [
           "_strncat|0x401A40",
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.09b": [
-          "FUN_00401a02|0x401A02",
-          "_strncat|0x401A40"
+          "_strncat|0x401A40",
+          "FUN_00401a02|0x401A02"
         ],
         "LoD/1.09d": [
           "_strncat|0x401A40",
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.10": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.11": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.11b": [
           "FUN_00401a02|0x401A02",
@@ -1072,12 +911,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401a02|0x401A02"
         ],
         "LoD/1.13c": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.13d": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.14a": [
           "FUN_00401a02|0x401A02",
@@ -1088,12 +927,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "_strncat|0x401A40"
         ],
         "LoD/1.14c": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ],
         "LoD/1.14d": [
-          "_strncat|0x401A40",
-          "FUN_00401a02|0x401A02"
+          "FUN_00401a02|0x401A02",
+          "_strncat|0x401A40"
         ]
       },
       "callers": {
@@ -1230,157 +1069,174 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.08": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.09": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.09b": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.09d": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.10": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.11": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.11b": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.12a": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.13c": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.13d": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.14a": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.14b": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.14c": [
-          4221121
+          "0x1411||0x4068C1"
         ],
         "LoD/1.14d": [
-          4221121
+          "0x1411||0x4068C1"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x68C1|DAT_004068c0+1|"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_MNE_e63ed098730a": {
@@ -1435,6 +1291,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 118,
         "LoD/1.14d": 118
       },
+      "signature": "uint * FUN_0040146d(uint * param_1, char * param_2)",
+      "calling_convention": "__cdecl",
       "return_type": "uint *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -1442,65 +1300,65 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "e63ed098730a213950e38bf7d491270b",
         "CFG": "5f05e3e4b6b85141bd532cebeaa4c0e1",
-        "PRO": "c28c57488c736ef8416365a079852ca1",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "c28c57488c736ef8416365a079852ca1"
       },
       "display_name": "FUN_0040146d",
       "callees": {
         "LoD/1.07": [
-          "FUN_00401b63|0x401B63",
           "FUN_00401c00|0x401C00",
-          "_strlen|0x401B80"
+          "_strlen|0x401B80",
+          "FUN_00401b63|0x401B63"
         ],
         "LoD/1.08": [
-          "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00",
           "_strlen|0x401B80",
-          "_strstr|0x401C00"
+          "FUN_00401b63|0x401B63"
         ],
         "LoD/1.09": [
-          "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00"
+          "_strlen|0x401B80"
         ],
         "LoD/1.09b": [
-          "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00",
-          "_strlen|0x401B80"
-        ],
-        "LoD/1.09d": [
           "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
           "_strstr|0x401C00"
         ],
-        "LoD/1.10": [
-          "_strstr|0x401C00",
+        "LoD/1.09d": [
           "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00",
           "_strlen|0x401B80"
         ],
-        "LoD/1.11": [
+        "LoD/1.10": [
+          "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
+          "_strstr|0x401C00"
+        ],
+        "LoD/1.11": [
           "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63",
           "_strlen|0x401B80"
         ],
         "LoD/1.11b": [
-          "_strlen|0x401B80",
+          "FUN_00401b63|0x401B63",
           "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63"
+          "_strlen|0x401B80"
         ],
         "LoD/1.12a": [
-          "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63",
           "_strlen|0x401B80",
-          "FUN_00401b63|0x401B63"
+          "_strstr|0x401C00"
         ],
         "LoD/1.13c": [
-          "_strlen|0x401B80",
+          "_strstr|0x401C00",
           "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00"
+          "_strlen|0x401B80"
         ],
         "LoD/1.13d": [
           "_strlen|0x401B80",
@@ -1508,23 +1366,23 @@ var FUNCTIONS_Diablo_II_exe = {
           "_strstr|0x401C00"
         ],
         "LoD/1.14a": [
-          "FUN_00401b63|0x401B63",
-          "_strstr|0x401C00",
-          "_strlen|0x401B80"
-        ],
-        "LoD/1.14b": [
-          "_strstr|0x401C00",
-          "FUN_00401b63|0x401B63",
-          "_strlen|0x401B80"
-        ],
-        "LoD/1.14c": [
           "_strlen|0x401B80",
           "FUN_00401b63|0x401B63",
           "_strstr|0x401C00"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14b": [
           "FUN_00401b63|0x401B63",
           "_strstr|0x401C00",
+          "_strlen|0x401B80"
+        ],
+        "LoD/1.14c": [
+          "_strlen|0x401B80",
+          "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63"
+        ],
+        "LoD/1.14d": [
+          "_strstr|0x401C00",
+          "FUN_00401b63|0x401B63",
           "_strlen|0x401B80"
         ]
       },
@@ -1662,80 +1520,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_CAL_69d6a3f35ed0": {
@@ -1791,6 +1666,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14d": 235
       },
       "name": "entry",
+      "signature": "undefined entry(void)",
+      "calling_convention": "__stdcall",
       "return_type": "undefined",
       "name_source": "LoD/1.07",
       "method": "CAL",
@@ -1798,269 +1675,269 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "69d6a3f35ed0660493dbdad2d18d4a70",
         "API": null,
+        "APS": null,
+        "CON": "d2b975d8da09fa950f7398460f34b227",
         "MNE": "c37fa64bd2f36382e92794cbb2949299",
         "CFG": "e29ac4f91ecc5ba7006bc331cebfe296",
-        "PRO": "00979d284d2930909980b74bf77787ef",
-        "CAL": "69d6a3f35ed0660493dbdad2d18d4a70",
-        "CON": "d2b975d8da09fa950f7398460f34b227",
-        "APS": null
+        "PRO": "00979d284d2930909980b74bf77787ef"
       },
       "callees": {
         "LoD/1.07": [
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_00401d82|0x401D82",
-          "GetCommandLineA|0x5",
+          "InitializeModuleData|0x402017",
+          "GetStartupInfoA|0xC",
           "GetVersion|0xD",
+          "FUN_00401d82|0x401D82",
+          "FUN_004015fe|0x4015FE",
+          "FUN_00401000|0x401000",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541",
           "GetModuleHandleA|0xB",
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
           "ReportError|0x401CAD",
-          "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264",
-          "GetStartupInfoA|0xC",
-          "InitializeDllHeapAndResources|0x402541"
+          "GetCommandLineA|0x5",
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.08": [
-          "InitializeDllHeapAndResources|0x402541",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeGlobalConstructors|0x401C80",
-          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
+          "GetModuleHandleA|0xB",
+          "InitializeModuleData|0x402017",
+          "FUN_004015fe|0x4015FE",
+          "InitializeDllHeapAndResources|0x402541",
           "FUN_00401f06|0x401F06",
+          "FUN_00401000|0x401000",
+          "GetCommandLineA|0x5",
+          "GetStartupInfoA|0xC",
+          "GetEnvironmentStringsConverted|0x402264",
           "GetVersion|0xD",
           "InitializeFileDescriptors|0x402396",
-          "ReportError|0x401CAD",
-          "GetCommandLineA|0x5",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetModuleHandleA|0xB",
-          "FUN_00401d82|0x401D82",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE"
+          "FUN_00401d82|0x401D82"
         ],
         "LoD/1.09": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401d82|0x401D82",
           "InitializeDllHeapAndResources|0x402541",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetStartupInfoA|0xC",
+          "GetVersion|0xD",
           "InitializeModuleData|0x402017",
           "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_004015fe|0x4015FE",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
           "GetModuleHandleA|0xB",
+          "GetCommandLineA|0x5",
+          "FUN_004015fe|0x4015FE",
+          "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401d82|0x401D82",
           "FUN_00401000|0x401000",
-          "GetCommandLineA|0x5"
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09b": [
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_004015fe|0x4015FE",
-          "GetCommandLineA|0x5",
-          "FUN_00401d82|0x401D82",
-          "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC",
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06",
-          "GetModuleHandleA|0xB",
           "InitializeGlobalConstructors|0x401C80",
+          "FUN_00401f06|0x401F06",
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_00401d82|0x401D82",
           "FUN_00401000|0x401000",
           "GetVersion|0xD",
+          "ReportError|0x401CAD",
+          "GetModuleHandleA|0xB",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeFileDescriptors|0x402396",
-          "GetModuleHandleA|0xB",
+          "FUN_004015fe|0x4015FE",
+          "GetStartupInfoA|0xC",
+          "ReportError|0x401CAD",
           "FUN_00401000|0x401000",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetCommandLineA|0x5",
           "FUN_00401f06|0x401F06",
-          "GetEnvironmentStringsConverted|0x402264",
           "FUN_00401d82|0x401D82",
           "InitializeDllHeapAndResources|0x402541",
-          "FUN_004015fe|0x4015FE",
-          "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC",
+          "GetModuleHandleA|0xB",
           "GetVersion|0xD",
-          "GetCommandLineA|0x5"
+          "InitializeModuleData|0x402017",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.10": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264",
           "FUN_00401d82|0x401D82",
-          "ReportError|0x401CAD",
-          "FUN_00401000|0x401000",
-          "FUN_00401f06|0x401F06",
           "InitializeDllHeapAndResources|0x402541",
-          "GetVersion|0xD",
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
           "GetStartupInfoA|0xC",
+          "GetVersion|0xD",
+          "ReportError|0x401CAD",
+          "GetModuleHandleA|0xB",
+          "FUN_00401f06|0x401F06",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeModuleData|0x402017",
+          "FUN_004015fe|0x4015FE",
           "GetCommandLineA|0x5",
-          "GetModuleHandleA|0xB"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401000|0x401000"
         ],
         "LoD/1.11": [
-          "FUN_004015fe|0x4015FE",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetCommandLineA|0x5",
           "GetModuleHandleA|0xB",
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeModuleData|0x402017",
-          "InitializeDllHeapAndResources|0x402541",
-          "FUN_00401f06|0x401F06",
-          "FUN_00401000|0x401000",
           "FUN_00401d82|0x401D82",
+          "InitializeModuleData|0x402017",
+          "FUN_00401f06|0x401F06",
+          "GetVersion|0xD",
           "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC"
+          "GetEnvironmentStringsConverted|0x402264",
+          "FUN_00401000|0x401000",
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_004015fe|0x4015FE",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "GetCommandLineA|0x5"
         ],
         "LoD/1.11b": [
           "FUN_00401f06|0x401F06",
-          "GetStartupInfoA|0xC",
-          "InitializeModuleData|0x402017",
-          "GetVersion|0xD",
-          "InitializeDllHeapAndResources|0x402541",
-          "ReportError|0x401CAD",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401000|0x401000",
-          "GetCommandLineA|0x5",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetModuleHandleA|0xB",
-          "InitializeGlobalConstructors|0x401C80",
           "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401000|0x401000",
           "FUN_00401d82|0x401D82",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.12a": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetCommandLineA|0x5",
           "InitializeFileDescriptors|0x402396",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetModuleHandleA|0xB",
-          "GetVersion|0xD",
-          "FUN_00401f06|0x401F06",
-          "GetCommandLineA|0x5",
           "ReportError|0x401CAD",
-          "GetStartupInfoA|0xC",
-          "FUN_00401d82|0x401D82",
+          "GetModuleHandleA|0xB",
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401000|0x401000",
+          "GetStartupInfoA|0xC",
+          "GetVersion|0xD",
+          "InitializeGlobalConstructors|0x401C80",
           "InitializeDllHeapAndResources|0x402541",
           "FUN_004015fe|0x4015FE"
         ],
-        "LoD/1.13c": [
-          "InitializeFileDescriptors|0x402396",
-          "FUN_00401000|0x401000",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "ReportError|0x401CAD",
-          "GetVersion|0xD",
-          "InitializeGlobalConstructors|0x401C80",
+        "LoD/1.12a": [
+          "GetModuleHandleA|0xB",
           "FUN_00401f06|0x401F06",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
           "GetStartupInfoA|0xC",
+          "InitializeDllHeapAndResources|0x402541",
+          "FUN_00401d82|0x401D82",
           "InitializeModuleData|0x402017",
+          "GetVersion|0xD",
           "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
-          "GetModuleHandleA|0xB"
+          "ReportError|0x401CAD",
+          "FUN_004015fe|0x4015FE",
+          "FUN_00401000|0x401000"
+        ],
+        "LoD/1.13c": [
+          "GetStartupInfoA|0xC",
+          "FUN_00401000|0x401000",
+          "FUN_00401f06|0x401F06",
+          "FUN_00401d82|0x401D82",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "GetModuleHandleA|0xB",
+          "GetVersion|0xD",
+          "GetCommandLineA|0x5",
+          "InitializeModuleData|0x402017",
+          "ReportError|0x401CAD",
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeDllHeapAndResources|0x402541"
         ],
         "LoD/1.13d": [
-          "FUN_00401000|0x401000",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetCommandLineA|0x5",
-          "InitializeFileDescriptors|0x402396",
-          "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
           "GetStartupInfoA|0xC",
-          "GetModuleHandleA|0xB",
+          "GetCommandLineA|0x5",
+          "InitializeDllHeapAndResources|0x402541",
           "FUN_00401d82|0x401D82",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "ReportError|0x401CAD",
           "GetVersion|0xD",
+          "FUN_00401000|0x401000",
+          "InitializeGlobalConstructors|0x401C80",
+          "InitializeModuleData|0x402017",
+          "FUN_00401f06|0x401F06",
+          "GetModuleHandleA|0xB",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_004015fe|0x4015FE",
+          "InitializeFileDescriptors|0x402396",
           "GetEnvironmentStringsConverted|0x402264",
-          "FUN_00401f06|0x401F06"
+          "ReportError|0x401CAD"
         ],
         "LoD/1.14a": [
-          "GetModuleHandleA|0xB",
-          "GetCommandLineA|0x5",
-          "InitializeGlobalConstructors|0x401C80",
-          "FUN_004015fe|0x4015FE",
-          "FUN_00401d82|0x401D82",
-          "ReportError|0x401CAD",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
           "GetVersion|0xD",
-          "InitializeDllHeapAndResources|0x402541",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetCommandLineA|0x5",
           "FUN_00401000|0x401000",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetStartupInfoA|0xC"
+          "InitializeDllHeapAndResources|0x402541",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_00401f06|0x401F06",
+          "FUN_00401d82|0x401D82",
+          "FUN_004015fe|0x4015FE",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "GetModuleHandleA|0xB",
+          "ReportError|0x401CAD",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14b": [
-          "GetStartupInfoA|0xC",
-          "GetModuleHandleA|0xB",
-          "FUN_00401f06|0x401F06",
-          "InitializeDllHeapAndResources|0x402541",
-          "InitializeModuleData|0x402017",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401d82|0x401D82",
           "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetVersion|0xD",
           "ReportError|0x401CAD",
           "FUN_004015fe|0x4015FE",
+          "InitializeModuleData|0x402017",
+          "GetModuleHandleA|0xB",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetStartupInfoA|0xC",
+          "InitializeDllHeapAndResources|0x402541",
           "FUN_00401000|0x401000",
-          "GetCommandLineA|0x5"
+          "GetCommandLineA|0x5",
+          "FUN_00401f06|0x401F06",
+          "FUN_00401d82|0x401D82",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetEnvironmentStringsConverted|0x402264",
+          "GetVersion|0xD"
         ],
         "LoD/1.14c": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "GetModuleHandleA|0xB",
-          "InitializeGlobalConstructors|0x401C80",
-          "GetStartupInfoA|0xC",
-          "FUN_00401d82|0x401D82",
-          "GetCommandLineA|0x5",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401000|0x401000",
-          "ReportError|0x401CAD",
           "InitializeDllHeapAndResources|0x402541",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeGlobalConstructors|0x401C80",
+          "GetCommandLineA|0x5",
           "FUN_004015fe|0x4015FE",
-          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
+          "FUN_00401f06|0x401F06",
+          "ReportError|0x401CAD",
           "GetVersion|0xD",
-          "FUN_00401f06|0x401F06"
+          "GetModuleHandleA|0xB",
+          "FUN_00401d82|0x401D82",
+          "GetStartupInfoA|0xC",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401000|0x401000"
         ],
         "LoD/1.14d": [
           "ReportError|0x401CAD",
-          "FUN_00401d82|0x401D82",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeGlobalConstructors|0x401C80",
-          "InitializeFileDescriptors|0x402396",
-          "GetVersion|0xD",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeDllHeapAndResources|0x402541",
-          "GetCommandLineA|0x5",
-          "InitializeModuleData|0x402017",
           "GetModuleHandleA|0xB",
-          "GetStartupInfoA|0xC",
+          "InitializeModuleData|0x402017",
+          "FUN_00401f06|0x401F06",
+          "FUN_00401d82|0x401D82",
+          "InitializeFileDescriptors|0x402396",
           "FUN_00401000|0x401000",
+          "GetStartupInfoA|0xC",
           "FUN_004015fe|0x4015FE",
-          "FUN_00401f06|0x401F06"
+          "InitializeGlobalConstructors|0x401C80",
+          "GetVersion|0xD",
+          "GetCommandLineA|0x5",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeDllHeapAndResources|0x402541"
         ]
       },
       "instruction_counts": {
@@ -2150,246 +2027,246 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.08": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.09": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.09b": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.09d": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.10": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.11": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.11b": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.12a": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.13c": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.13d": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.14a": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.14b": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.14c": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ],
         "LoD/1.14d": [
-          4204152,
-          4214968
+          "0x14E8||0x4050B8",
+          "0x14ED||0x402678"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.08": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.09": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.09b": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.09d": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.10": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.11": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.11b": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.12a": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.13c": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.13d": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.14a": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.14b": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.14c": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ],
         "LoD/1.14d": [
-          "0x50B8|DAT_004050b8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5030|PTR_GetVersion_00405030",
-          "0x64DC|DAT_004064dc",
-          "0x64D8|DAT_004064d8",
-          "0x64D4|DAT_004064d4",
-          "0x64D0|DAT_004064d0",
-          "0xFFFFFFFFFFBFFFF8|"
+          "0x50B8|DAT_004050b8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5030|PTR_GetVersion_00405030|000055f2",
+          "0x64DC|DAT_004064dc|0x0",
+          "0x64D8|DAT_004064d8|0x0",
+          "0x64D4|DAT_004064d4|0x0",
+          "0x64D0|DAT_004064d0|0x0",
+          "0xFFFFFFFFFFBFFFF8||"
         ]
       }
     },
@@ -2456,34 +2333,34 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "ec95479fbc9d5a35228cd8819b6daa86",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "23111e3d86e48fe171246fbcab7ae60b",
         "CFG": "d8a9d89b63cefe7947e17dc7192e86b4",
-        "PRO": "d50b0d0648e43516997f810ba73a3fa5",
-        "CAL": "ec95479fbc9d5a35228cd8819b6daa86",
-        "CON": null,
-        "APS": null
+        "PRO": "d50b0d0648e43516997f810ba73a3fa5"
       },
       "callees": {
         "LoD/1.07": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.08": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.09": [
           "__exit|0x401CBE",
           "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789"
         ],
+        "LoD/1.08": [
+          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.09": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE"
+        ],
         "LoD/1.09b": [
           "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "__exit|0x401CBE"
         ],
         "LoD/1.09d": [
           "__exit|0x401CBE",
@@ -2492,60 +2369,60 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.10": [
           "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.11": [
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.11b": [
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
+        ],
+        "LoD/1.12a": [
+          "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.11": [
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.11b": [
-          "CleanupConsoleOutput|0x402750",
-          "__exit|0x401CBE",
-          "DisplayRuntimeError|0x402789"
-        ],
-        "LoD/1.12a": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
         "LoD/1.13c": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
-          "__exit|0x401CBE",
+          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "__exit|0x401CBE"
         ],
         "LoD/1.14a": [
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.14b": [
-          "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.14c": [
-          "__exit|0x401CBE",
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
-        ],
-        "LoD/1.14d": [
-          "CleanupConsoleOutput|0x402750",
           "__exit|0x401CBE",
           "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14b": [
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14c": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.14d": [
+          "DisplayRuntimeError|0x402789",
+          "__exit|0x401CBE",
+          "CleanupConsoleOutput|0x402750"
         ]
       },
       "callers": {
         "LoD/1.07": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -2553,69 +2430,69 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.09b": [
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09b": [
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.09d": [
           "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.10": [
           "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017"
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11b": [
-          "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.12a": [
-          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.13c": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.13d": [
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396"
         ],
+        "LoD/1.13d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
         "LoD/1.14a": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14b": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14c": [
           "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.14b": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.14c": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
         "LoD/1.14d": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeFileDescriptors|0x402396"
         ]
       },
       "instruction_counts": {
@@ -2705,80 +2582,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.08": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.09": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.09b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.09d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.10": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.11": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.11b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.12a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.13c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.13d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.14a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.14b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.14c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ],
         "LoD/1.14d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x6048|PTR___exit_00406048"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x6048|PTR___exit_00406048|00401cbe"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_CAL_751ccb169902": {
@@ -2833,6 +2727,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 35,
         "LoD/1.14d": 35
       },
+      "signature": "undefined FUN_004015fe(DWORD param_1)",
+      "calling_convention": "__cdecl",
       "return_type": "undefined",
       "name_source": "LoD/1.07",
       "method": "CAL",
@@ -2840,35 +2736,35 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "751ccb169902422404a503b9cbd72d96",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "fa40def9a627b3e96c51f0f9c6833564",
         "CFG": "e6ff6ad0743b58874820ceb7f4492737",
-        "PRO": "2e59db3ab77f3da70f210b2bdbad55ff",
-        "CAL": "751ccb169902422404a503b9cbd72d96",
-        "CON": null,
-        "APS": null
+        "PRO": "2e59db3ab77f3da70f210b2bdbad55ff"
       },
       "display_name": "FUN_004015fe",
       "callees": {
         "LoD/1.07": [
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.08": [
           "ExitProcess|0xE",
           "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750"
         ],
-        "LoD/1.08": [
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE"
-        ],
         "LoD/1.09": [
-          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09b": [
           "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE"
         ],
         "LoD/1.09d": [
           "ExitProcess|0xE",
@@ -2877,33 +2773,33 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.10": [
           "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE"
         ],
         "LoD/1.11b": [
-          "ExitProcess|0xE",
+          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789"
+          "ExitProcess|0xE"
         ],
         "LoD/1.12a": [
+          "DisplayRuntimeError|0x402789",
           "CleanupConsoleOutput|0x402750",
-          "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789"
+          "ExitProcess|0xE"
         ],
         "LoD/1.13c": [
-          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
-          "DisplayRuntimeError|0x402789"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
-          "CleanupConsoleOutput|0x402750",
+          "ExitProcess|0xE",
           "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.14a": [
           "CleanupConsoleOutput|0x402750",
@@ -2911,18 +2807,18 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14b": [
+          "ExitProcess|0xE",
           "CleanupConsoleOutput|0x402750",
-          "DisplayRuntimeError|0x402789",
-          "ExitProcess|0xE"
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14c": [
-          "DisplayRuntimeError|0x402789",
           "ExitProcess|0xE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14d": [
-          "CleanupConsoleOutput|0x402750",
           "DisplayRuntimeError|0x402789",
+          "CleanupConsoleOutput|0x402750",
           "ExitProcess|0xE"
         ]
       },
@@ -3060,80 +2956,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.08": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.09": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.09b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.09d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.10": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.11": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.11b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.12a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.13c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.13d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.14a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.14b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.14c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ],
         "LoD/1.14d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0xFFFFFFFFFFC00004|",
-          "0x5034|PTR_ExitProcess_00405034"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5034|PTR_ExitProcess_00405034|00005600"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_InitializeCodePageLocale": {
@@ -3199,118 +3112,118 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "889d2a491df398fed4786992eeb9ca1f",
         "API": null,
+        "APS": null,
+        "CON": "613fdcc68051159cb936c599725fc776",
         "MNE": "4a5a68bf41640182f32d03a3c91e5fdc",
         "CFG": "788180c544e7082c69e40531981aa350",
-        "PRO": "fccb21a6a871c7122e2713f7dcd5a6af",
-        "CAL": "889d2a491df398fed4786992eeb9ca1f",
-        "CON": "325f4c35c36b7f42d8d730381f0d5463",
-        "APS": null
+        "PRO": "fccb21a6a871c7122e2713f7dcd5a6af"
       },
       "callees": {
         "LoD/1.07": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861",
           "InitializeLocaleDataBuffers|0x401838",
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805"
-        ],
-        "LoD/1.08": [
-          "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeLocaleDataBuffers|0x401838",
           "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861"
         ],
-        "LoD/1.09": [
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF",
-          "ResolveCodePageIdentifier|0x4017BB",
+        "LoD/1.08": [
+          "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805"
+          "InitializeCharacterTables|0x401861",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.09": [
+          "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
+          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.09b": [
           "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
-          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB"
+          "MapCodePageIdentifier|0x401805",
+          "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.09d": [
           "MapCodePageIdentifier|0x401805",
-          "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeLocaleDataBuffers|0x401838",
           "GetCPInfo|0xF",
-          "InitializeCharacterTables|0x401861"
+          "InitializeCharacterTables|0x401861",
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB"
         ],
         "LoD/1.10": [
-          "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeCharacterTables|0x401861",
           "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "InitializeLocaleDataBuffers|0x401838"
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB"
         ],
         "LoD/1.11": [
-          "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838",
-          "InitializeCharacterTables|0x401861",
-          "GetCPInfo|0xF"
-        ],
-        "LoD/1.11b": [
+          "MapCodePageIdentifier|0x401805",
           "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeCharacterTables|0x401861"
+        ],
+        "LoD/1.11b": [
           "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
+          "GetCPInfo|0xF",
+          "ResolveCodePageIdentifier|0x4017BB",
           "MapCodePageIdentifier|0x401805"
         ],
         "LoD/1.12a": [
           "InitializeLocaleDataBuffers|0x401838",
-          "MapCodePageIdentifier|0x401805",
-          "GetCPInfo|0xF",
           "ResolveCodePageIdentifier|0x4017BB",
-          "InitializeCharacterTables|0x401861"
-        ],
-        "LoD/1.13c": [
-          "InitializeLocaleDataBuffers|0x401838",
           "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
           "MapCodePageIdentifier|0x401805"
         ],
-        "LoD/1.13d": [
+        "LoD/1.13c": [
+          "InitializeLocaleDataBuffers|0x401838",
+          "ResolveCodePageIdentifier|0x4017BB",
           "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.13d": [
+          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
+          "InitializeCharacterTables|0x401861",
           "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.14a": [
-          "GetCPInfo|0xF",
-          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
+          "GetCPInfo|0xF",
           "InitializeLocaleDataBuffers|0x401838",
-          "InitializeCharacterTables|0x401861"
+          "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805"
         ],
         "LoD/1.14b": [
-          "MapCodePageIdentifier|0x401805",
-          "InitializeCharacterTables|0x401861",
-          "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
+          "MapCodePageIdentifier|0x401805",
+          "ResolveCodePageIdentifier|0x4017BB",
+          "InitializeCharacterTables|0x401861",
           "InitializeLocaleDataBuffers|0x401838"
         ],
         "LoD/1.14c": [
+          "MapCodePageIdentifier|0x401805",
           "InitializeCharacterTables|0x401861",
           "ResolveCodePageIdentifier|0x4017BB",
-          "MapCodePageIdentifier|0x401805",
-          "GetCPInfo|0xF",
-          "InitializeLocaleDataBuffers|0x401838"
+          "InitializeLocaleDataBuffers|0x401838",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.14d": [
-          "MapCodePageIdentifier|0x401805",
           "ResolveCodePageIdentifier|0x4017BB",
           "GetCPInfo|0xF",
           "InitializeCharacterTables|0x401861",
+          "MapCodePageIdentifier|0x401805",
           "InitializeLocaleDataBuffers|0x401838"
         ]
       },
@@ -3448,337 +3361,384 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.08": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.09": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.09b": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.09d": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.10": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.11": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.11b": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.12a": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.13c": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.13d": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.14a": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.14b": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.14c": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ],
         "LoD/1.14d": [
-          4218960,
-          4218968,
-          4218972,
-          4218984,
-          4219208,
-          4220832,
-          4221120,
-          4221121
+          "0x1651||0x406058",
+          "0x165E||0x406148",
+          "0x167E||0x4068C0",
+          "0x16C2||0x4068C1",
+          "0x16D1||0x4068C0",
+          "0x16E2||0x406068",
+          "0x1703||0x406050",
+          "0x1709||0x4068C1",
+          "0x173F||0x40605C",
+          "0x1745||0x4067A0"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x6058|DAT_00406058",
-          "0x6088|DAT_00406088",
-          "0x6148|DAT_00406148",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFC00004||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x6058|DAT_00406058|0x3a4",
+          "0x6088|DAT_00406088|0x3a8",
+          "0x6148|DAT_00406148|0x0",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_ResolveCodePageIdentifier": {
@@ -3844,13 +3804,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "8f2a733057dd5a290f0e17d077c53986",
         "CFG": "3fff12cee20d7217020e61babff50752",
-        "PRO": "932b89934961eeda54cd9a9e50ce4be1",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "932b89934961eeda54cd9a9e50ce4be1"
       },
       "callers": {
         "LoD/1.07": [
@@ -3986,80 +3946,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x64C0|g_dwCodePageInitialized",
-          "0x6638|g_dwThreadLocaleCodePage"
+          "0xFFFFFFFFFFC00004||",
+          "0x64C0|g_dwCodePageInitialized|0x0",
+          "0x6638|g_dwThreadLocaleCodePage|0x0"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_MapCodePageIdentifier": {
@@ -4125,13 +4102,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "f710c320ffeaad35efd664e99e7b58dd",
         "MNE": "f31c6439952ca9c3e10694cce3d833df",
         "CFG": "5cd7ae11dfc37525b1fbae6f1a834a1b",
-        "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8",
-        "CAL": null,
-        "CON": "f710c320ffeaad35efd664e99e7b58dd",
-        "APS": null
+        "PRO": "252bd71e2f7f97e91ef40be3ccbd06e8"
       },
       "callers": {
         "LoD/1.07": [
@@ -4267,157 +4244,174 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.08": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.09": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.09b": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.09d": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.10": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.11": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.11b": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.12a": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.13c": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.13d": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.14a": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.14b": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.14c": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ],
         "LoD/1.14d": [
-          932,
-          1028,
-          1041,
-          1042,
-          2052
+          "0x1809||0x3A4",
+          "0x1820||0x404",
+          "0x1826||0x412",
+          "0x182C||0x804",
+          "0x1832||0x411"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_InitializeLocaleDataBuffers": {
@@ -4483,13 +4477,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "b7470f7199862f97617d4c4d6f7150e3",
         "MNE": "05d3556ba26e52c51954a1255d97c525",
         "CFG": "e44c2ff58c3054cb39205525061d1e17",
-        "PRO": "705230914eb290d5ec2051144eb14d62",
-        "CAL": null,
-        "CON": "b7470f7199862f97617d4c4d6f7150e3",
-        "APS": null
+        "PRO": "705230914eb290d5ec2051144eb14d62"
       },
       "callers": {
         "LoD/1.07": [
@@ -4625,216 +4619,216 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.08": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.09": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.09b": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.09d": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.10": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.11": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.11b": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.12a": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.13c": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.13d": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.14a": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.14b": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.14c": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ],
         "LoD/1.14d": [
-          4220832,
-          4221120
+          "0x183E||0x4068C0",
+          "0x1848||0x4067A0"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.08": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.09": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.09b": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.09d": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.10": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.11": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.11b": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.12a": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.13c": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.13d": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.14a": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.14b": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.14c": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ],
         "LoD/1.14d": [
-          "0x68C0|DAT_004068c0",
-          "0x68C4|DAT_004068c4",
-          "0x67A0|DAT_004067a0",
-          "0x6798|g_dwCurrentCodePage",
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0x69C4|g_dwCodePageProperties",
-          "0x67A4|DAT_004067a4",
-          "0x67A8|DAT_004067a8"
+          "0x68C0|DAT_004068c0|0x0",
+          "0x68C4|DAT_004068c4|0x0",
+          "0x67A0|DAT_004067a0|0x0",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0x69C4|g_dwCodePageProperties|0x0",
+          "0x67A4|DAT_004067a4|0x0",
+          "0x67A8|DAT_004067a8|0x0"
         ]
       }
     },
@@ -4901,39 +4895,39 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "8fef33b7be657857e90895678ccb4fd8",
         "API": null,
+        "APS": null,
+        "CON": "56e81a06c62b2a6ff55ec31ac63ee2ac",
         "MNE": "63906d1f35f7842042066a6643d2050c",
         "CFG": "93ed6a55cbc9b3cb34db69a54e1f806b",
-        "PRO": "9f903305dac24c951f3cebb45cf66933",
-        "CAL": "8fef33b7be657857e90895678ccb4fd8",
-        "CON": "2b3767d0f4a9d1a69e158866fa7f542a",
-        "APS": null
+        "PRO": "9f903305dac24c951f3cebb45cf66933"
       },
       "callees": {
         "LoD/1.07": [
-          "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.08": [
           "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.09": [
           "GetCharacterTypeInfo|0x402B2B",
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC"
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
         ],
         "LoD/1.09b": [
           "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09d": [
-          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.10": [
           "GetCPInfo|0xF",
@@ -4946,8 +4940,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCPInfo|0xF"
         ],
         "LoD/1.11b": [
-          "GetCPInfo|0xF",
           "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF",
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.12a": [
@@ -4956,34 +4950,34 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.13c": [
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF",
+          "GetCharacterTypeInfo|0x402B2B"
+        ],
+        "LoD/1.13d": [
+          "GetCharacterTypeInfo|0x402B2B",
+          "GetCPInfo|0xF",
+          "LocaleMapStringWithConversion|0x4028DC"
+        ],
+        "LoD/1.14a": [
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC",
+          "GetCPInfo|0xF"
+        ],
+        "LoD/1.14b": [
           "GetCPInfo|0xF",
           "GetCharacterTypeInfo|0x402B2B",
           "LocaleMapStringWithConversion|0x4028DC"
         ],
-        "LoD/1.13d": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.14a": [
-          "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
-        ],
-        "LoD/1.14b": [
-          "GetCharacterTypeInfo|0x402B2B",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCPInfo|0xF"
-        ],
         "LoD/1.14c": [
-          "LocaleMapStringWithConversion|0x4028DC",
           "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC",
           "GetCPInfo|0xF"
         ],
         "LoD/1.14d": [
+          "GetCharacterTypeInfo|0x402B2B",
           "GetCPInfo|0xF",
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "LocaleMapStringWithConversion|0x4028DC"
         ]
       },
       "callers": {
@@ -5120,291 +5114,366 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.08": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.09": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.09b": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.09d": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.10": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.11": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.11b": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.12a": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.13c": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.13d": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.14a": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.14b": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.14c": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ],
         "LoD/1.14d": [
-          256,
-          512,
-          1300,
-          4220864,
-          4221121
+          "0x1864||0x514",
+          "0x1886||0x100",
+          "0x193C||0x200",
+          "0x195F||0x4068C1",
+          "0x196D||0x4067C0",
+          "0x197A||0x4068C1",
+          "0x198A||0x4067C0",
+          "0x199C||0x100",
+          "0x19AB||0x4068C1",
+          "0x19B7||0x4067C0"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFBFFFE8|",
-          "0x6798|g_dwCurrentCodePage",
-          "0x5038|PTR_GetCPInfo_00405038",
-          "0xFFFFFFFFFFBFFEE9|",
-          "0xFFFFFFFFFFBFFFEE|",
-          "0xFFFFFFFFFFBFFEE8|",
-          "0xFFFFFFFFFFBFFFEF|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFAE8|",
-          "0x69C4|g_dwCodePageProperties"
+          "0xFFFFFFFFFFBFFFE8||",
+          "0x6798|g_dwCurrentCodePage|0x0",
+          "0x5038|PTR_GetCPInfo_00405038|0000560e",
+          "0xFFFFFFFFFFBFFEE9||",
+          "0xFFFFFFFFFFBFFFEE||",
+          "0xFFFFFFFFFFBFFEE8||",
+          "0xFFFFFFFFFFBFFFEF||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFAE8||",
+          "0x69C4|g_dwCodePageProperties|0x0"
         ]
       }
     },
@@ -5471,13 +5540,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "750c71b47c1aaa7e04385ca0c70f7831",
         "CFG": "716bb67a3d1eac006a8b7d10a21c5b78",
-        "PRO": "a50a456766e4f98144ab970dbc0ce16b",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "a50a456766e4f98144ab970dbc0ce16b"
       },
       "callees": {
         "LoD/1.07": [
@@ -5528,18 +5597,18 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "callers": {
         "LoD/1.07": [
-          "FUN_00401f06|0x401F06",
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.09": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06",
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.09b": [
@@ -5548,14 +5617,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_00401f06|0x401F06"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_00401f06|0x401F06",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
           "InitializeModuleData|0x402017",
@@ -5564,13 +5633,13 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.11b": [
           "FUN_00401f06|0x401F06",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.12a": [
+          "FUN_00401f06|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06"
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.13c": [
           "FUN_00401f06|0x401F06",
@@ -5578,29 +5647,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.13d": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
-        ],
-        "LoD/1.14a": [
           "FUN_00401f06|0x401F06",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.14b": [
+        "LoD/1.14a": [
+          "FUN_00401f06|0x401F06",
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_00401f06|0x401F06"
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.14b": [
+          "FUN_00401f06|0x401F06",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14c": [
-          "InitializeModuleData|0x402017",
           "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.14d": [
+          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "FUN_00401f06|0x401F06",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "FUN_00401f06|0x401F06"
         ]
       },
       "instruction_counts": {
@@ -5690,49 +5759,49 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.08": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.09": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.09b": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.09d": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.10": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.11": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.11b": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.12a": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.13c": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.13d": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.14a": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.14b": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.14c": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ],
         "LoD/1.14d": [
-          "0x6788|g_fCodePageInitialized"
+          "0x6788|g_fCodePageInitialized|0x0"
         ]
       }
     },
@@ -5788,6 +5857,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 56,
         "LoD/1.14d": 56
       },
+      "signature": "int FUN_00401a02(byte * param_1, int param_2)",
+      "calling_convention": "__cdecl",
       "return_type": "int",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -5795,13 +5866,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "0fd63ca178190d07551a06ea40081aaa",
         "CFG": "c5adb86ae14c9188b0ae60db194a761c",
-        "PRO": "2f281cb40124fe42bb61dcaf12c71960",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "2f281cb40124fe42bb61dcaf12c71960"
       },
       "display_name": "FUN_00401a02",
       "callees": {
@@ -5985,80 +6056,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0x67AC|g_fIsMultiByteCodePage",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0x67AC|g_fIsMultiByteCodePage|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe__strncat": {
@@ -6119,18 +6207,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "return_type": "char *",
       "comment": "Library Function - Single Match\n _strncat\n\nLibraries: Visual Studio 1998 Debug, Visual Studio 1998 Release",
       "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:82b4813eddefea8f8cb9d2712dc5bde7",
+      "method": "CON",
+      "index": "CON:5b5c20b5e023805961c84e2bfe9487d0",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "5b5c20b5e023805961c84e2bfe9487d0",
         "MNE": "82b4813eddefea8f8cb9d2712dc5bde7",
         "CFG": "96e6811c918363bd3b5c342452247f77",
-        "PRO": "5319aa74b13d859919d68c27e04215a3",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "5319aa74b13d859919d68c27e04215a3"
       },
       "callers": {
         "LoD/1.07": [
@@ -6266,127 +6354,159 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.08": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.09": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.09b": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.09d": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.10": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.11": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.11b": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.12a": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.13c": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.13d": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.14a": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.14b": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.14c": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ],
         "LoD/1.14d": [
-          16711680
+          "0x1A8D||0xFF0000",
+          "0x1B2E||0xFF0000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_MNE_cfea3c92c099": {
@@ -6441,6 +6561,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 23,
         "LoD/1.14d": 23
       },
+      "signature": "byte * FUN_00401b63(byte * param_1)",
+      "calling_convention": "__cdecl",
       "return_type": "byte *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -6448,13 +6570,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "cfea3c92c09904dc7826c9e24e773236",
         "CFG": "98e7620973d02b6613d9b483d7e32e88",
-        "PRO": "7dc457e6b44146890a20553a859e64ee",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "7dc457e6b44146890a20553a859e64ee"
       },
       "display_name": "FUN_00401b63",
       "callers": {
@@ -6591,112 +6713,129 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.08": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.09": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.09b": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.09d": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.10": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.11": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.11b": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.12a": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.13c": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.13d": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.14a": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.14b": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.14c": [
-          4221121
+          "0x1B6A||0x4068C1"
         ],
         "LoD/1.14d": [
-          4221121
+          "0x1B6A||0x4068C1"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe__strlen": {
@@ -6762,79 +6901,79 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "2e762c1c6c457f4a0349d0f895009434",
         "CFG": "955555387ef5c42bce3cb46728bb931a",
-        "PRO": "218e20f78ff67609d741b817a576974e",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "218e20f78ff67609d741b817a576974e"
       },
       "callers": {
         "LoD/1.07": [
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "FUN_0040146d|0x40146D"
         ],
         "LoD/1.09b": [
-          "DisplayRuntimeError|0x402789",
           "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789",
-          "FUN_0040146d|0x40146D"
+          "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11b": [
-          "FUN_0040146d|0x40146D",
           "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_0040146d|0x40146D",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.13c": [
+          "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.13d": [
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.14a": [
-          "FUN_0040146d|0x40146D",
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789",
           "FUN_0040146d|0x40146D"
+        ],
+        "LoD/1.14a": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "FUN_0040146d|0x40146D",
+          "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.14b": [
+          "FUN_0040146d|0x40146D",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14c": [
           "FUN_0040146d|0x40146D",
@@ -6934,97 +7073,114 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.08": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.09": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.09b": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.09d": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.10": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.11": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.11b": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.12a": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.13c": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.13d": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.14a": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.14b": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.14c": [
-          16711680
+          "0x1BC3||0xFF0000"
         ],
         "LoD/1.14d": [
-          16711680
+          "0x1BC3||0xFF0000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_MNE_8cf740ead1ec": {
@@ -7037,6 +7193,8 @@ var FUNCTIONS_Diablo_II_exe = {
       "sizes": {
         "LoD/1.07": 133
       },
+      "signature": "uint * FUN_00401c00(uint * param_1, char * param_2)",
+      "calling_convention": "__cdecl",
       "return_type": "uint *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -7044,13 +7202,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "8cf740ead1ec396b63dfd5a3659dee5d",
         "CFG": "0aa1b8c240c978586c56f7da856f0866",
-        "PRO": "34afa7d74dd6b64746d7b43ea3ed9c2b",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "34afa7d74dd6b64746d7b43ea3ed9c2b"
       },
       "display_name": "FUN_00401c00",
       "callees": {
@@ -7080,9 +7238,12 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2
       }
     },
     "diablo ii.exe_InitializeGlobalConstructors": {
@@ -7148,13 +7309,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "ffd1b1836e107aac13283afea09b6464",
         "MNE": "91b5192dddb89e963abc2be4471149da",
         "CFG": "f5a9d1c9bfa4d6ec79162a8bb1035352",
-        "PRO": "fba0e24939e8722376e743b66770e3ea",
-        "CAL": null,
-        "CON": "ffd1b1836e107aac13283afea09b6464",
-        "APS": null
+        "PRO": "fba0e24939e8722376e743b66770e3ea"
       },
       "callees": {
         "LoD/1.07": [
@@ -7337,201 +7498,201 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.08": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.09": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.09b": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.09d": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.10": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.11": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.11b": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.12a": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.13c": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.13d": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.14a": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.14b": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.14c": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ],
         "LoD/1.14d": [
-          4218880,
-          4218884,
-          4218888,
-          4218896
+          "0x1C8B||0x406010",
+          "0x1C90||0x406008",
+          "0x1C9A||0x406004",
+          "0x1C9F||0x406000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.08": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.09": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.09b": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.09d": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.10": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.11": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.11b": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.12a": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.13c": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.13d": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.14a": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.14b": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.14c": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ],
         "LoD/1.14d": [
-          "0x6794|g_pfnInitializeSubsystem",
-          "0x6010|DAT_00406010",
-          "0x6008|DAT_00406008",
-          "0x6004|DAT_00406004",
-          "0x6000|DAT_00406000"
+          "0x6794|g_pfnInitializeSubsystem|0x0",
+          "0x6010|DAT_00406010|0x0",
+          "0x6008|DAT_00406008|0x0",
+          "0x6004|DAT_00406004|0x0",
+          "0x6000|DAT_00406000|0x0"
         ]
       }
     },
@@ -7598,13 +7759,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "cd85d17a6b193c95680d3fdca645abba",
         "CFG": "62e304a7d521240f86cfa75cc629cf4d",
-        "PRO": "b275099b8b97a883fb7870f620754373",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "b275099b8b97a883fb7870f620754373"
       },
       "callees": {
         "LoD/1.07": [
@@ -7787,50 +7948,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe___exit": {
@@ -7896,13 +8074,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "cd85d17a6b193c95680d3fdca645abba",
         "CFG": "62e304a7d521240f86cfa75cc629cf4d",
-        "PRO": "f2238f9eeeea41b2f4bb34406e2503e2",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "f2238f9eeeea41b2f4bb34406e2503e2"
       },
       "callees": {
         "LoD/1.07": [
@@ -8085,50 +8263,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_ProcessTerminationHandler": {
@@ -8194,122 +8389,122 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "27ebe146dce13416596cd9c00f1a4f1a",
         "API": null,
+        "APS": null,
+        "CON": "766020a54044a9b7654219135ae64bfe",
         "MNE": "45d9b348a966df89d3a7165f288b5d47",
         "CFG": "3032efab47d2992b12e125a9e89e3ead",
-        "PRO": "740da805cb7379a963f118613cdee827",
-        "CAL": "27ebe146dce13416596cd9c00f1a4f1a",
-        "CON": "766020a54044a9b7654219135ae64bfe",
-        "APS": null
+        "PRO": "740da805cb7379a963f118613cdee827"
       },
       "callees": {
         "LoD/1.07": [
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
-          "RunConstructorArray|0x401D68"
-        ],
-        "LoD/1.08": [
           "GetCurrentProcess|0x13",
-          "TerminateProcess|0x12",
           "RunConstructorArray|0x401D68",
           "ExitProcess|0xE"
         ],
-        "LoD/1.09": [
-          "ExitProcess|0xE",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13",
-          "RunConstructorArray|0x401D68"
-        ],
-        "LoD/1.09b": [
-          "GetCurrentProcess|0x13",
+        "LoD/1.08": [
           "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12"
         ],
+        "LoD/1.09": [
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13"
+        ],
+        "LoD/1.09b": [
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE",
+          "GetCurrentProcess|0x13"
+        ],
         "LoD/1.09d": [
+          "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
           "GetCurrentProcess|0x13",
-          "ExitProcess|0xE",
           "TerminateProcess|0x12"
         ],
         "LoD/1.10": [
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68"
-        ],
-        "LoD/1.11": [
           "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
           "GetCurrentProcess|0x13",
           "ExitProcess|0xE"
         ],
-        "LoD/1.11b": [
-          "RunConstructorArray|0x401D68",
-          "ExitProcess|0xE",
+        "LoD/1.11": [
           "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
+          "ExitProcess|0xE"
+        ],
+        "LoD/1.11b": [
+          "GetCurrentProcess|0x13",
+          "RunConstructorArray|0x401D68",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE"
         ],
         "LoD/1.12a": [
-          "GetCurrentProcess|0x13",
-          "ExitProcess|0xE",
           "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12"
+          "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12",
+          "ExitProcess|0xE"
         ],
         "LoD/1.13c": [
+          "GetCurrentProcess|0x13",
           "RunConstructorArray|0x401D68",
           "TerminateProcess|0x12",
-          "ExitProcess|0xE",
-          "GetCurrentProcess|0x13"
+          "ExitProcess|0xE"
         ],
         "LoD/1.13d": [
-          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
+          "GetCurrentProcess|0x13",
           "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
+          "RunConstructorArray|0x401D68"
         ],
         "LoD/1.14a": [
           "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
-          "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13"
+          "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12"
         ],
         "LoD/1.14b": [
-          "TerminateProcess|0x12",
           "RunConstructorArray|0x401D68",
           "ExitProcess|0xE",
+          "TerminateProcess|0x12",
           "GetCurrentProcess|0x13"
         ],
         "LoD/1.14c": [
           "TerminateProcess|0x12",
-          "GetCurrentProcess|0x13",
           "ExitProcess|0xE",
-          "RunConstructorArray|0x401D68"
+          "RunConstructorArray|0x401D68",
+          "GetCurrentProcess|0x13"
         ],
         "LoD/1.14d": [
-          "RunConstructorArray|0x401D68",
-          "TerminateProcess|0x12",
           "GetCurrentProcess|0x13",
+          "TerminateProcess|0x12",
+          "RunConstructorArray|0x401D68",
           "ExitProcess|0xE"
         ]
       },
       "callers": {
         "LoD/1.07": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
-        ],
-        "LoD/1.08": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
+        ],
+        "LoD/1.08": [
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.09": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
         "LoD/1.09b": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
         ],
         "LoD/1.09d": [
           "__exit|0x401CBE",
@@ -8320,16 +8515,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "ReportError|0x401CAD"
         ],
         "LoD/1.11": [
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.11b": [
           "__exit|0x401CBE",
           "ReportError|0x401CAD"
         ],
-        "LoD/1.11b": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
-        ],
         "LoD/1.12a": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.13c": [
           "ReportError|0x401CAD",
@@ -8340,20 +8535,20 @@ var FUNCTIONS_Diablo_II_exe = {
           "ReportError|0x401CAD"
         ],
         "LoD/1.14a": [
-          "ReportError|0x401CAD",
-          "__exit|0x401CBE"
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ],
         "LoD/1.14b": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
-        ],
-        "LoD/1.14c": [
-          "__exit|0x401CBE",
-          "ReportError|0x401CAD"
-        ],
-        "LoD/1.14d": [
           "ReportError|0x401CAD",
           "__exit|0x401CBE"
+        ],
+        "LoD/1.14c": [
+          "ReportError|0x401CAD",
+          "__exit|0x401CBE"
+        ],
+        "LoD/1.14d": [
+          "__exit|0x401CBE",
+          "ReportError|0x401CAD"
         ]
       },
       "instruction_counts": {
@@ -8443,277 +8638,294 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.08": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.09": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.09b": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.09d": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.10": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.11": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.11b": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.12a": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.13c": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.13d": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.14a": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.14b": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.14c": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ],
         "LoD/1.14d": [
-          4218900,
-          4218904,
-          4218908,
-          4218912
+          "0x1D2F||0x406018",
+          "0x1D34||0x406014",
+          "0x1D40||0x406020",
+          "0x1D45||0x40601C"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.08": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.09": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.09b": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.09d": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.10": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.11": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.11b": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.12a": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.13c": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.13d": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.14a": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.14b": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.14c": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ],
         "LoD/1.14d": [
-          "0x650C|DAT_0040650c",
-          "0xFFFFFFFFFFC00004|",
-          "0x5048|PTR_GetCurrentProcess_00405048",
-          "0x5044|PTR_TerminateProcess_00405044",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x6508|DAT_00406508",
-          "0x6504|DAT_00406504",
-          "0x6790|DAT_00406790",
-          "0x678C|DAT_0040678c"
+          "0x650C|DAT_0040650c|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0x5048|PTR_GetCurrentProcess_00405048|00005644",
+          "0x5044|PTR_TerminateProcess_00405044|00005630",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x6508|DAT_00406508|0x0",
+          "0x6504|DAT_00406504|0x0",
+          "0x6790|DAT_00406790|0x0",
+          "0x678C|DAT_0040678c|0x0"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_RunConstructorArray": {
@@ -8779,13 +8991,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "f1060dff4c8b86b7cd32c42f8f136fb6",
         "CFG": "0a074b8816415288c3cc84ef0b37ed0c",
-        "PRO": "c5843f3db205987ea5094c55a1bdaf18",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "c5843f3db205987ea5094c55a1bdaf18"
       },
       "callers": {
         "LoD/1.07": [
@@ -8801,12 +9013,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.09b": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
-        ],
-        "LoD/1.09d": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
+        ],
+        "LoD/1.09d": [
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.10": [
           "ProcessTerminationHandler|0x401CCF",
@@ -8817,16 +9029,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.11b": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.12a": [
           "InitializeGlobalConstructors|0x401C80",
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.13c": [
-          "InitializeGlobalConstructors|0x401C80",
-          "ProcessTerminationHandler|0x401CCF"
+          "ProcessTerminationHandler|0x401CCF",
+          "InitializeGlobalConstructors|0x401C80"
         ],
         "LoD/1.13d": [
           "InitializeGlobalConstructors|0x401C80",
@@ -8845,8 +9057,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "ProcessTerminationHandler|0x401CCF"
         ],
         "LoD/1.14d": [
-          "ProcessTerminationHandler|0x401CCF",
-          "InitializeGlobalConstructors|0x401C80"
+          "InitializeGlobalConstructors|0x401C80",
+          "ProcessTerminationHandler|0x401CCF"
         ]
       },
       "instruction_counts": {
@@ -8936,65 +9148,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_MNE_41f8d80d32bc": {
@@ -9049,6 +9278,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 321,
         "LoD/1.14d": 321
       },
+      "signature": "LONG FUN_00401d82(int param_1, _EXCEPTION_POINTERS * param_2)",
+      "calling_convention": "__cdecl",
       "return_type": "LONG",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -9056,13 +9287,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "41f8d80d32bced9021e52454a2115142",
         "CFG": "1083f5d6440b72c4249e3f9668fe9e20",
-        "PRO": "8a9092ef4379e1004af4fb44eeae13cc",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "8a9092ef4379e1004af4fb44eeae13cc"
       },
       "display_name": "FUN_00401d82",
       "callees": {
@@ -9071,52 +9302,52 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.08": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
-        ],
-        "LoD/1.09": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
+        ],
+        "LoD/1.09": [
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.09b": [
           "UnhandledExceptionFilter|0x14",
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.09d": [
-          "FUN_00401ec3|0x401EC3",
-          "UnhandledExceptionFilter|0x14"
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.10": [
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
+        ],
+        "LoD/1.11": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
-        "LoD/1.11": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
-        ],
         "LoD/1.11b": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.12a": [
           "UnhandledExceptionFilter|0x14",
           "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.13c": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
-        ],
-        "LoD/1.13d": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
+        ],
+        "LoD/1.13d": [
+          "UnhandledExceptionFilter|0x14",
+          "FUN_00401ec3|0x401EC3"
         ],
         "LoD/1.14a": [
           "FUN_00401ec3|0x401EC3",
           "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.14b": [
-          "UnhandledExceptionFilter|0x14",
-          "FUN_00401ec3|0x401EC3"
+          "FUN_00401ec3|0x401EC3",
+          "UnhandledExceptionFilter|0x14"
         ],
         "LoD/1.14c": [
           "FUN_00401ec3|0x401EC3",
@@ -9261,220 +9492,237 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.08": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.09": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.09b": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.09d": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.10": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.11": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.11b": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.12a": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.13c": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.13d": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.14a": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.14b": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.14c": [
-          4219224
+          "0x1DF2||0x406158"
         ],
         "LoD/1.14d": [
-          4219224
+          "0x1DF2||0x406158"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6510|DAT_00406510",
-          "0xFFFFFFFFFFC00008|",
-          "0x61C8|DAT_004061c8",
-          "0x61CC|DAT_004061cc",
-          "0x617C|DAT_0040617c",
-          "0x6188|DAT_00406188",
-          "0x61D4|DAT_004061d4",
-          "0x504C|PTR_UnhandledExceptionFilter_0040504c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6510|DAT_00406510|0x0",
+          "0xFFFFFFFFFFC00008||",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x61CC|DAT_004061cc|0x7",
+          "0x617C|DAT_0040617c|0x0",
+          "0x6188|DAT_00406188|0x0",
+          "0x61D4|DAT_004061d4|0x8c",
+          "0x504C|PTR_UnhandledExceptionFilter_0040504c|00005658"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
-    "diablo ii.exe_MNE_a073910011de": {
+    "diablo ii.exe_CON_75873af6cb61": {
       "addresses": {
         "LoD/1.07": "0x00401EC3",
         "LoD/1.08": "0x00401EC3",
@@ -9526,20 +9774,22 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 67,
         "LoD/1.14d": 67
       },
+      "signature": "int * FUN_00401ec3(int param_1)",
+      "calling_convention": "__cdecl",
       "return_type": "int *",
       "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:a073910011def1e1e9e25496ccd37ec0",
+      "method": "CON",
+      "index": "CON:75873af6cb6145e8995ff3fe30d3bf4f",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "75873af6cb6145e8995ff3fe30d3bf4f",
         "MNE": "a073910011def1e1e9e25496ccd37ec0",
         "CFG": "1cf28c92c8a3817ec2934904c82e8c98",
-        "PRO": "26f5cd7217d8e31b5ca266955f9c63f2",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "26f5cd7217d8e31b5ca266955f9c63f2"
       },
       "display_name": "FUN_00401ec3",
       "callers": {
@@ -9676,172 +9926,219 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.08": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.09": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.09b": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.09d": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.10": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.11": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.11b": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.12a": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.13c": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.13d": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.14a": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.14b": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.14c": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ],
         "LoD/1.14d": [
-          4219216
+          "0x1ED4||0x406150",
+          "0x1EDE||0x406150",
+          "0x1EF4||0x406150"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61D0|DAT_004061d0",
-          "0x6150|DAT_00406150",
-          "0x61C8|DAT_004061c8",
-          "0x615C|DAT_0040615c",
-          "0x6168|DAT_00406168"
+          "0xFFFFFFFFFFC00004||",
+          "0x61D0|DAT_004061d0|0xa",
+          "0x6150|DAT_00406150|-0x3ffffffb",
+          "0x61C8|DAT_004061c8|0x3",
+          "0x615C|DAT_0040615c|-0x3fffffe3",
+          "0x6168|DAT_00406168|-0x3fffff6a"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_MNE_93c4b717343a": {
@@ -9896,6 +10193,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 88,
         "LoD/1.14d": 88
       },
+      "signature": "byte * FUN_00401f06(void)",
+      "calling_convention": "__stdcall",
       "return_type": "byte *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -9903,23 +10202,23 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "93c4b717343abad7c0cd6bec07bb1588",
         "CFG": "46c9984789f3b338226be49d1e54fb70",
-        "PRO": "c0da7238cea3536033ac5edd6a427b50",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "c0da7238cea3536033ac5edd6a427b50"
       },
       "display_name": "FUN_00401f06",
       "callees": {
         "LoD/1.07": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.08": [
           "InitializeCodePageOnce|0x4019E6",
           "FUN_00402d8c|0x402D8C"
+        ],
+        "LoD/1.08": [
+          "FUN_00402d8c|0x402D8C",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.09": [
           "FUN_00402d8c|0x402D8C",
@@ -9946,8 +10245,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.12a": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.13c": [
           "InitializeCodePageOnce|0x4019E6",
@@ -9962,16 +10261,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.14b": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14c": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ],
         "LoD/1.14d": [
-          "FUN_00402d8c|0x402D8C",
-          "InitializeCodePageOnce|0x4019E6"
+          "InitializeCodePageOnce|0x4019E6",
+          "FUN_00402d8c|0x402D8C"
         ]
       },
       "callers": {
@@ -10108,64 +10407,64 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.08": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.09": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.09b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.09d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.10": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|DAT_004069c8"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|DAT_004069c8|0x0"
         ],
         "LoD/1.11": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.11b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.12a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.13c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.13d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.14a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.14b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.14c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ],
         "LoD/1.14d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x69C8|g_lpszCommandLine"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x69C8|g_lpszCommandLine|0x0"
         ]
       }
     },
@@ -10232,134 +10531,134 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "c16244a47f600858c95b60f915650b56",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "6e538b3bbbeec8f94bef058bdad701fe",
         "CFG": "126bb563d14d36809e55fa377ba7848b",
-        "PRO": "5be54e361757f77c0c474905030db3e7",
-        "CAL": "c16244a47f600858c95b60f915650b56",
-        "CON": null,
-        "APS": null
+        "PRO": "5be54e361757f77c0c474905030db3e7"
       },
       "callees": {
         "LoD/1.07": [
-          "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00",
           "AmsgExit|0x4015D9",
-          "_strlen|0x401B80",
           "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0"
+          "SmartFree|0x402DCE",
+          "_strlen|0x401B80",
+          "_malloc|0x402EF0",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.08": [
-          "InitializeCodePageOnce|0x4019E6",
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
           "SmartFree|0x402DCE",
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
+          "_strlen|0x401B80",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9"
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09": [
-          "_strlen|0x401B80",
           "AmsgExit|0x4015D9",
           "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
           "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0"
+          "_strlen|0x401B80"
         ],
         "LoD/1.09b": [
+          "_strlen|0x401B80",
           "SmartFree|0x402DCE",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
-          "_malloc|0x402EF0",
-          "_strlen|0x401B80",
-          "InitializeCodePageOnce|0x4019E6",
           "AmsgExit|0x4015D9",
           "SmartFree|0x402DCE",
-          "CopyStringOptimized|0x402E00"
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80"
         ],
         "LoD/1.10": [
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
+          "InitializeCodePageOnce|0x4019E6",
           "CopyStringOptimized|0x402E00",
           "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
-          "_strlen|0x401B80",
-          "_malloc|0x402EF0"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
-          "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "AmsgExit|0x4015D9"
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
+          "_strlen|0x401B80"
         ],
         "LoD/1.11b": [
           "_strlen|0x401B80",
+          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "AmsgExit|0x4015D9",
           "CopyStringOptimized|0x402E00",
-          "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.12a": [
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
+          "InitializeCodePageOnce|0x4019E6",
           "SmartFree|0x402DCE",
           "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
+          "_strlen|0x401B80"
         ],
         "LoD/1.13c": [
           "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
           "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
           "InitializeCodePageOnce|0x4019E6",
-          "_strlen|0x401B80"
+          "SmartFree|0x402DCE",
+          "_strlen|0x401B80",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.13d": [
+          "_strlen|0x401B80",
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
           "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
-          "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
           "SmartFree|0x402DCE"
         ],
         "LoD/1.14a": [
-          "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
           "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
           "_strlen|0x401B80",
-          "SmartFree|0x402DCE"
+          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
+          "SmartFree|0x402DCE",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.14b": [
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "CopyStringOptimized|0x402E00",
           "SmartFree|0x402DCE",
-          "AmsgExit|0x4015D9",
           "_strlen|0x401B80",
-          "InitializeCodePageOnce|0x4019E6"
+          "CopyStringOptimized|0x402E00",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
+          "InitializeCodePageOnce|0x4019E6",
+          "_malloc|0x402EF0",
+          "_strlen|0x401B80",
+          "SmartFree|0x402DCE",
+          "AmsgExit|0x4015D9",
+          "CopyStringOptimized|0x402E00"
+        ],
+        "LoD/1.14d": [
+          "InitializeCodePageOnce|0x4019E6",
+          "AmsgExit|0x4015D9",
           "SmartFree|0x402DCE",
           "_strlen|0x401B80",
           "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "CopyStringOptimized|0x402E00",
-          "InitializeCodePageOnce|0x4019E6"
-        ],
-        "LoD/1.14d": [
-          "_malloc|0x402EF0",
-          "CopyStringOptimized|0x402E00",
-          "SmartFree|0x402DCE",
-          "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9",
-          "_strlen|0x401B80"
+          "CopyStringOptimized|0x402E00"
         ]
       },
       "callers": {
@@ -10496,94 +10795,94 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.08": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.09": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.09b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.09d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.10": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|DAT_004064b4",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|DAT_004064b4|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.11": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.11b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.12a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.13c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.13d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.14a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.14b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.14c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ],
         "LoD/1.14d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x64B4|g_dwModuleHandle",
-          "0x64EC|DAT_004064ec",
-          "0x6784|DAT_00406784"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x64B4|g_dwModuleHandle|0x0",
+          "0x64EC|DAT_004064ec|0x0",
+          "0x6784|DAT_00406784|0x0"
         ]
       }
     },
@@ -10650,119 +10949,119 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "b719ab040bfebd0b1940a800c0d3c266",
         "API": null,
+        "APS": null,
+        "CON": "f00205a6c0346eef022dfbc95dfb2228",
         "MNE": "78c0be793b204c577b78460711bf70fb",
         "CFG": "5c86dcee1ae591b9319ac28e686a93af",
-        "PRO": "daf0572913365e2e4b855eef8c8036f5",
-        "CAL": "b719ab040bfebd0b1940a800c0d3c266",
-        "CON": "f00205a6c0346eef022dfbc95dfb2228",
-        "APS": null
+        "PRO": "daf0572913365e2e4b855eef8c8036f5"
       },
       "callees": {
         "LoD/1.07": [
-          "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9",
-          "GetModuleFileNameA|0x15",
           "InitializeCodePageOnce|0x4019E6",
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
           "_malloc|0x402EF0"
         ],
         "LoD/1.08": [
           "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0"
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.09": [
           "AmsgExit|0x4015D9",
           "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15",
-          "InitializeCodePageOnce|0x4019E6",
-          "_malloc|0x402EF0"
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.09b": [
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0",
           "GetModuleFileNameA|0x15",
           "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
-          "_malloc|0x402EF0",
-          "ParseCommandLineArguments|0x4020B0",
-          "InitializeCodePageOnce|0x4019E6",
           "AmsgExit|0x4015D9",
-          "GetModuleFileNameA|0x15"
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.10": [
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
-          "AmsgExit|0x4015D9",
-          "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0"
-        ],
-        "LoD/1.11": [
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
+          "InitializeCodePageOnce|0x4019E6",
+          "GetModuleFileNameA|0x15",
           "ParseCommandLineArguments|0x4020B0",
           "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.11": [
+          "_malloc|0x402EF0",
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.11b": [
           "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
-          "_malloc|0x402EF0",
-          "InitializeCodePageOnce|0x4019E6",
-          "GetModuleFileNameA|0x15"
-        ],
-        "LoD/1.12a": [
           "GetModuleFileNameA|0x15",
           "_malloc|0x402EF0",
           "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6"
+        ],
+        "LoD/1.12a": [
           "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0"
+          "ParseCommandLineArguments|0x4020B0",
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.13c": [
           "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6",
-          "ParseCommandLineArguments|0x4020B0"
+          "GetModuleFileNameA|0x15",
+          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6"
         ],
         "LoD/1.13d": [
           "ParseCommandLineArguments|0x4020B0",
-          "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
+          "InitializeCodePageOnce|0x4019E6",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.14a": [
-          "ParseCommandLineArguments|0x4020B0",
-          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
           "InitializeCodePageOnce|0x4019E6",
+          "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15"
         ],
         "LoD/1.14b": [
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
+          "InitializeCodePageOnce|0x4019E6",
           "ParseCommandLineArguments|0x4020B0",
           "GetModuleFileNameA|0x15",
-          "InitializeCodePageOnce|0x4019E6"
+          "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
-          "ParseCommandLineArguments|0x4020B0",
+          "InitializeCodePageOnce|0x4019E6",
           "_malloc|0x402EF0",
-          "GetModuleFileNameA|0x15",
           "AmsgExit|0x4015D9",
-          "InitializeCodePageOnce|0x4019E6"
+          "ParseCommandLineArguments|0x4020B0",
+          "GetModuleFileNameA|0x15"
         ],
         "LoD/1.14d": [
-          "ParseCommandLineArguments|0x4020B0",
-          "GetModuleFileNameA|0x15",
-          "_malloc|0x402EF0",
           "InitializeCodePageOnce|0x4019E6",
-          "AmsgExit|0x4015D9"
+          "ParseCommandLineArguments|0x4020B0",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "GetModuleFileNameA|0x15"
         ]
       },
       "callers": {
@@ -10899,231 +11198,231 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.08": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.09": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.09b": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.09d": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.10": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.11": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.11b": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.12a": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.13c": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.13d": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.14a": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.14b": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.14c": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ],
         "LoD/1.14d": [
-          260,
-          4220180
+          "0x202E||0x406514",
+          "0x2033||0x104"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.08": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.09": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.09b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.09d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.10": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|DAT_004069c8",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|DAT_004069c8|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.11": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.11b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.12a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.13c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.13d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.14a": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.14b": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.14c": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ],
         "LoD/1.14d": [
-          "0x6788|g_fCodePageInitialized",
-          "0x6514|DAT_00406514",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x69C8|g_lpszCommandLine",
-          "0x64FC|DAT_004064fc",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x64E4|DAT_004064e4",
-          "0x64E0|DAT_004064e0"
+          "0x6788|g_fCodePageInitialized|0x0",
+          "0x6514|DAT_00406514|0x0",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x69C8|g_lpszCommandLine|0x0",
+          "0x64FC|DAT_004064fc|0x0",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x64E4|DAT_004064e4|0x0",
+          "0x64E0|DAT_004064e0|0x0"
         ]
       }
     },
@@ -11185,18 +11484,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "return_type": "void",
       "comment": "Parses command line string into individual arguments with quote and escape handling\n\nAlgorithm:\n1. Initialize output counters: set argc=1, totalChars=0\n2. Store first argument pointer in argv[0] if argv provided\n3. Check if command line starts with quote (0x22):\n   a. If quoted: Parse until closing quote, handle escape sequences\n   b. If unquoted: Parse until space (0x20) or tab (0x09)\n4. Use character lookup table at 0x1003cbc0 bit 4 to identify escapable chars\n5. Skip whitespace between arguments using space/tab delimiters\n6. For each argument found:\n   a. Store argument pointer in argv array if provided\n   b. Increment argc counter\n   c. Handle backslash escape sequences (\\\\ becomes \\)\n   d. Toggle quote mode on unescaped quotes, handle doubled quotes (\"\")\n   e. Copy characters to output buffer if provided\n   f. Null-terminate argument in output buffer\n7. Null-terminate argv array and increment argc for final count\n\nParameters:\n- cmdLine: Input command line string to parse\n- argv: Array to store pointers to parsed arguments (NULL = count only)\n- outputBuffer: Buffer to store null-terminated argument strings (NULL = count only)\n- argc: Pointer to receive argument count (includes program name)\n- totalChars: Pointer to receive total characters needed for all arguments\n\nReturns:\n- void (results returned through output parameters)\n\nSpecial Cases:\n- If argv is NULL: Only counts arguments without storing pointers\n- If outputBuffer is NULL: Only counts characters without copying\n- Empty quotes \"\" create empty argument\n- Backslash at end of line becomes literal backslash\n- Doubled quotes (\"\") inside quoted string become single quote\n\nMagic Numbers Reference:\n- 0x22 (34): Double quote character for argument quoting\n- 0x20 (32): Space character - argument delimiter\n- 0x09 (9): Tab character - argument delimiter  \n- 0x5C (92): Backslash character for escape sequences\n- 0x1003cbc0: Character classification table base address\n- 0x4: Bit mask for escapable character flag in lookup table\n\nCharacter Classification Table:\nThe lookup table at 0x1003cbc0 contains character class flags where\nbit 4 (value 0x4) indicates characters that require escape handling.\nThis typically includes characters like quotes, backslashes, and \nother shell metacharacters that need special processing.",
       "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:50cd6b6fd69b78c0380659763fce7ea0",
+      "method": "CON",
+      "index": "CON:37f69736e086b32409d10adaa4b0b58f",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "37f69736e086b32409d10adaa4b0b58f",
         "MNE": "50cd6b6fd69b78c0380659763fce7ea0",
         "CFG": "9a35ab5935fed2f629b2dd9f68e65902",
-        "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "298c11e8b7f6fb45479beaa4f4f2c6d3"
       },
       "callers": {
         "LoD/1.07": [
@@ -11332,172 +11631,234 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.08": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.09": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.09b": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.09d": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.10": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.11": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.11b": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.12a": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.13c": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.13d": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.14a": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.14b": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.14c": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ],
         "LoD/1.14d": [
-          4221121
+          "0x20EF||0x4068C1",
+          "0x2134||0x4068C1",
+          "0x2217||0x4068C1",
+          "0x2230||0x4068C1"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00014|",
-          "0xFFFFFFFFFFC00010|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1"
+          "0xFFFFFFFFFFC00014||",
+          "0xFFFFFFFFFFC00010||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 5,
+        "LoD/1.08": 5,
+        "LoD/1.09": 5,
+        "LoD/1.09b": 5,
+        "LoD/1.09d": 5,
+        "LoD/1.10": 5,
+        "LoD/1.11": 5,
+        "LoD/1.11b": 5,
+        "LoD/1.12a": 5,
+        "LoD/1.13c": 5,
+        "LoD/1.13d": 5,
+        "LoD/1.14a": 5,
+        "LoD/1.14b": 5,
+        "LoD/1.14c": 5,
+        "LoD/1.14d": 5
       }
     },
     "diablo ii.exe_GetEnvironmentStringsConverted": {
@@ -11563,164 +11924,164 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "12a341814f5760bc3b9f51e07d3e1ebb",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "ee22dcb18299b51eb994a57f32a5df1d",
         "CFG": "601f1d62d94fff45dd3c84d1ec95ae87",
-        "PRO": "c7f518b4d872ec71f7909c60ecc4d10e",
-        "CAL": "12a341814f5760bc3b9f51e07d3e1ebb",
-        "CON": null,
-        "APS": null
+        "PRO": "c7f518b4d872ec71f7909c60ecc4d10e"
       },
       "callees": {
         "LoD/1.07": [
-          "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
-          "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStrings|0x19",
           "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1",
+          "SmartFree|0x402DCE",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70",
           "_malloc|0x402EF0"
         ],
         "LoD/1.08": [
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
           "FreeEnvironmentStringsA|0x16",
-          "OptimizedMemoryMove|0x402F70"
+          "SmartFree|0x402DCE",
+          "WideCharToMultiByte|0x18",
+          "GetEnvironmentStrings|0x19",
+          "OptimizedMemoryMove|0x402F70",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStringsW|0x1A"
         ],
         "LoD/1.09": [
           "SmartFree|0x402DCE",
           "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
           "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0"
+          "WideCharToMultiByte|0x18"
         ],
         "LoD/1.09b": [
+          "FreeEnvironmentStringsA|0x16",
           "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
-          "FreeEnvironmentStringsW|0x1",
           "GetEnvironmentStrings|0x19",
-          "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18",
           "_malloc|0x402EF0",
-          "FreeEnvironmentStringsA|0x16"
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsW|0x1"
         ],
         "LoD/1.09d": [
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsW|0x1",
+          "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16",
           "SmartFree|0x402DCE",
           "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
           "GetEnvironmentStrings|0x19"
         ],
         "LoD/1.10": [
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0",
           "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
           "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "_malloc|0x402EF0",
-          "GetEnvironmentStringsW|0x1A",
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsA|0x16"
-        ],
-        "LoD/1.11": [
-          "GetEnvironmentStringsW|0x1A",
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsW|0x1",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70"
-        ],
-        "LoD/1.11b": [
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
-          "GetEnvironmentStrings|0x19"
-        ],
-        "LoD/1.12a": [
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStringsW|0x1A",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsA|0x16",
-          "WideCharToMultiByte|0x18"
-        ],
-        "LoD/1.13c": [
-          "WideCharToMultiByte|0x18",
-          "_malloc|0x402EF0",
-          "GetEnvironmentStrings|0x19",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "OptimizedMemoryMove|0x402F70"
-        ],
-        "LoD/1.13d": [
-          "_malloc|0x402EF0",
-          "FreeEnvironmentStringsW|0x1",
-          "FreeEnvironmentStringsA|0x16",
-          "GetEnvironmentStringsW|0x1A",
-          "WideCharToMultiByte|0x18",
-          "SmartFree|0x402DCE",
-          "OptimizedMemoryMove|0x402F70",
-          "GetEnvironmentStrings|0x19"
-        ],
-        "LoD/1.14a": [
-          "FreeEnvironmentStringsW|0x1",
-          "GetEnvironmentStringsW|0x1A",
-          "_malloc|0x402EF0",
-          "WideCharToMultiByte|0x18",
-          "OptimizedMemoryMove|0x402F70",
-          "FreeEnvironmentStringsA|0x16",
           "GetEnvironmentStrings|0x19",
           "SmartFree|0x402DCE"
         ],
-        "LoD/1.14b": [
-          "GetEnvironmentStrings|0x19",
-          "_malloc|0x402EF0",
-          "SmartFree|0x402DCE",
-          "GetEnvironmentStringsW|0x1A",
+        "LoD/1.11": [
           "OptimizedMemoryMove|0x402F70",
-          "WideCharToMultiByte|0x18",
-          "FreeEnvironmentStringsA|0x16",
-          "FreeEnvironmentStringsW|0x1"
-        ],
-        "LoD/1.14c": [
-          "GetEnvironmentStringsW|0x1A",
-          "OptimizedMemoryMove|0x402F70",
-          "SmartFree|0x402DCE",
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
-          "WideCharToMultiByte|0x18",
-          "GetEnvironmentStrings|0x19",
-          "FreeEnvironmentStringsW|0x1"
-        ],
-        "LoD/1.14d": [
-          "FreeEnvironmentStringsA|0x16",
-          "_malloc|0x402EF0",
           "SmartFree|0x402DCE",
           "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStrings|0x19",
           "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.11b": [
           "WideCharToMultiByte|0x18",
+          "FreeEnvironmentStringsA|0x16",
+          "FreeEnvironmentStringsW|0x1",
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0",
+          "SmartFree|0x402DCE",
           "OptimizedMemoryMove|0x402F70",
           "GetEnvironmentStrings|0x19"
+        ],
+        "LoD/1.12a": [
+          "GetEnvironmentStrings|0x19",
+          "SmartFree|0x402DCE",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "OptimizedMemoryMove|0x402F70"
+        ],
+        "LoD/1.13c": [
+          "_malloc|0x402EF0",
+          "GetEnvironmentStrings|0x19",
+          "WideCharToMultiByte|0x18",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsA|0x16",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsW|0x1"
+        ],
+        "LoD/1.13d": [
+          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsW|0x1",
+          "FreeEnvironmentStringsA|0x16",
+          "SmartFree|0x402DCE"
+        ],
+        "LoD/1.14a": [
+          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStrings|0x19",
+          "GetEnvironmentStringsW|0x1A",
+          "SmartFree|0x402DCE",
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.14b": [
+          "GetEnvironmentStrings|0x19",
+          "OptimizedMemoryMove|0x402F70",
+          "GetEnvironmentStringsW|0x1A",
+          "FreeEnvironmentStringsW|0x1",
+          "_malloc|0x402EF0",
+          "FreeEnvironmentStringsA|0x16",
+          "WideCharToMultiByte|0x18",
+          "SmartFree|0x402DCE"
+        ],
+        "LoD/1.14c": [
+          "FreeEnvironmentStringsW|0x1",
+          "WideCharToMultiByte|0x18",
+          "_malloc|0x402EF0",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStrings|0x19",
+          "SmartFree|0x402DCE",
+          "GetEnvironmentStringsW|0x1A"
+        ],
+        "LoD/1.14d": [
+          "GetEnvironmentStrings|0x19",
+          "WideCharToMultiByte|0x18",
+          "SmartFree|0x402DCE",
+          "FreeEnvironmentStringsW|0x1",
+          "OptimizedMemoryMove|0x402F70",
+          "FreeEnvironmentStringsA|0x16",
+          "GetEnvironmentStringsW|0x1A",
+          "_malloc|0x402EF0"
         ]
       },
       "callers": {
@@ -11857,154 +12218,154 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.08": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.09": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.09b": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.09d": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.10": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.11": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.11b": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.12a": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.13c": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.13d": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.14a": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.14b": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.14c": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ],
         "LoD/1.14d": [
-          "0x6618|DAT_00406618",
-          "0x5064|PTR_GetEnvironmentStringsW_00405064",
-          "0x5060|PTR_GetEnvironmentStrings_00405060",
-          "0x505C|PTR_WideCharToMultiByte_0040505c",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x5000|PTR_FreeEnvironmentStringsW_00405000",
-          "0x5054|PTR_FreeEnvironmentStringsA_00405054"
+          "0x6618|DAT_00406618|0x0",
+          "0x5064|PTR_GetEnvironmentStringsW_00405064|000056ec",
+          "0x5060|PTR_GetEnvironmentStrings_00405060|000056d4",
+          "0x505C|PTR_WideCharToMultiByte_0040505c|000056be",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x5000|PTR_FreeEnvironmentStringsW_00405000|000056a4",
+          "0x5054|PTR_FreeEnvironmentStringsA_00405054|0000568a"
         ]
       }
     },
@@ -12071,134 +12432,134 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "68a952c693b04d3c38904829c3ef7fc7",
         "API": null,
+        "APS": null,
+        "CON": "8014f3fd608748988528dc3e75edde97",
         "MNE": "b09f16c0e6a5014f6b150653e76f58a2",
         "CFG": "410276ec43c579f745f5acf89ebdff97",
-        "PRO": "6c41876e91c62a56cd32f233706cb037",
-        "CAL": "68a952c693b04d3c38904829c3ef7fc7",
-        "CON": "385422e42769e8600293ee953a814751",
-        "APS": null
+        "PRO": "6c41876e91c62a56cd32f233706cb037"
       },
       "callees": {
         "LoD/1.07": [
-          "GetStdHandle|0x9",
           "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
-          "GetFileType|0x1C",
           "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
+          "SetHandleCount|0x8",
+          "GetStdHandle|0x9",
           "_malloc|0x402EF0"
         ],
         "LoD/1.08": [
-          "GetStartupInfoA|0xC",
-          "GetFileType|0x1C",
           "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
+          "GetFileType|0x1C",
+          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
-          "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.09": [
           "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9",
           "GetStartupInfoA|0xC",
           "SetHandleCount|0x8",
-          "_malloc|0x402EF0"
+          "_malloc|0x402EF0",
+          "GetFileType|0x1C"
         ],
         "LoD/1.09b": [
-          "GetFileType|0x1C",
           "SetHandleCount|0x8",
+          "GetStartupInfoA|0xC",
           "_malloc|0x402EF0",
+          "GetFileType|0x1C",
           "GetStdHandle|0x9",
-          "AmsgExit|0x4015D9",
-          "GetStartupInfoA|0xC"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
-          "_malloc|0x402EF0",
           "GetFileType|0x1C",
-          "SetHandleCount|0x8",
-          "GetStdHandle|0x9",
           "AmsgExit|0x4015D9",
-          "GetStartupInfoA|0xC"
+          "GetStartupInfoA|0xC",
+          "_malloc|0x402EF0",
+          "SetHandleCount|0x8",
+          "GetStdHandle|0x9"
         ],
         "LoD/1.10": [
-          "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
           "GetStartupInfoA|0xC",
           "GetStdHandle|0x9",
           "GetFileType|0x1C",
-          "_malloc|0x402EF0"
+          "AmsgExit|0x4015D9",
+          "SetHandleCount|0x8"
         ],
         "LoD/1.11": [
           "_malloc|0x402EF0",
-          "GetStdHandle|0x9",
           "SetHandleCount|0x8",
+          "AmsgExit|0x4015D9",
           "GetStartupInfoA|0xC",
           "GetFileType|0x1C",
-          "AmsgExit|0x4015D9"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.11b": [
           "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9",
           "GetFileType|0x1C",
-          "AmsgExit|0x4015D9",
           "_malloc|0x402EF0",
+          "AmsgExit|0x4015D9",
+          "GetStdHandle|0x9",
           "SetHandleCount|0x8"
         ],
         "LoD/1.12a": [
-          "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9",
-          "_malloc|0x402EF0",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
-          "SetHandleCount|0x8"
-        ],
-        "LoD/1.13c": [
-          "_malloc|0x402EF0",
           "GetStdHandle|0x9",
           "SetHandleCount|0x8",
-          "GetStartupInfoA|0xC",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C"
-        ],
-        "LoD/1.13d": [
           "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC",
           "AmsgExit|0x4015D9",
-          "SetHandleCount|0x8",
-          "GetFileType|0x1C",
-          "GetStdHandle|0x9"
-        ],
-        "LoD/1.14a": [
-          "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9",
-          "_malloc|0x402EF0",
           "GetFileType|0x1C",
           "GetStartupInfoA|0xC"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13c": [
           "_malloc|0x402EF0",
+          "GetFileType|0x1C",
+          "AmsgExit|0x4015D9",
           "GetStartupInfoA|0xC",
           "SetHandleCount|0x8",
-          "AmsgExit|0x4015D9",
-          "GetFileType|0x1C",
           "GetStdHandle|0x9"
+        ],
+        "LoD/1.13d": [
+          "GetStartupInfoA|0xC",
+          "GetStdHandle|0x9",
+          "AmsgExit|0x4015D9",
+          "_malloc|0x402EF0",
+          "SetHandleCount|0x8",
+          "GetFileType|0x1C"
+        ],
+        "LoD/1.14a": [
+          "_malloc|0x402EF0",
+          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
+          "GetFileType|0x1C",
+          "AmsgExit|0x4015D9",
+          "SetHandleCount|0x8"
+        ],
+        "LoD/1.14b": [
+          "SetHandleCount|0x8",
+          "_malloc|0x402EF0",
+          "GetFileType|0x1C",
+          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
           "GetFileType|0x1C",
-          "SetHandleCount|0x8",
-          "GetStartupInfoA|0xC",
+          "GetStdHandle|0x9",
           "_malloc|0x402EF0",
+          "GetStartupInfoA|0xC",
           "AmsgExit|0x4015D9",
-          "GetStdHandle|0x9"
+          "SetHandleCount|0x8"
         ],
         "LoD/1.14d": [
-          "_malloc|0x402EF0",
-          "GetStartupInfoA|0xC",
-          "GetStdHandle|0x9",
           "SetHandleCount|0x8",
           "AmsgExit|0x4015D9",
-          "GetFileType|0x1C"
+          "GetFileType|0x1C",
+          "_malloc|0x402EF0",
+          "GetStdHandle|0x9",
+          "GetStartupInfoA|0xC"
         ]
       },
       "callers": {
@@ -12335,246 +12696,321 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.08": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.09": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.09b": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.09d": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.10": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.11": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.11b": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.12a": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.13c": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.13d": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.14a": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.14b": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.14c": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ],
         "LoD/1.14d": [
-          256,
-          2048,
-          4220544,
-          4220548
+          "0x239D||0x100",
+          "0x23C6||0x100",
+          "0x23E3||0x100",
+          "0x2412||0x800",
+          "0x2428||0x406684",
+          "0x242D||0x100",
+          "0x2445||0x100",
+          "0x245F||0x100",
+          "0x24A9||0x406680"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.08": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.09": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.09b": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.09d": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.10": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.11": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.11b": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.12a": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.13c": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.13d": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.14a": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.14b": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.14c": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ],
         "LoD/1.14d": [
-          "0x6680|g_apFileDescriptorTable",
-          "0x6780|DAT_00406780",
-          "0xFFFFFFFFFFBFFFBC|",
-          "0x502C|PTR_GetStartupInfoA_0040502c",
-          "0x6684|DAT_00406684",
-          "0x506C|PTR_GetFileType_0040506c",
-          "0x5020|PTR_GetStdHandle_00405020",
-          "0x501C|PTR_SetHandleCount_0040501c"
+          "0x6680|g_apFileDescriptorTable|0x0",
+          "0x6780|DAT_00406780|0x0",
+          "0xFFFFFFFFFFBFFFBC||",
+          "0x502C|PTR_GetStartupInfoA_0040502c|000055e0",
+          "0x6684|DAT_00406684|0x0",
+          "0x506C|PTR_GetFileType_0040506c|00005728",
+          "0x5020|PTR_GetStdHandle_00405020|00005718",
+          "0x501C|PTR_SetHandleCount_0040501c|00005706"
         ]
       }
     },
@@ -12641,19 +13077,19 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "bc2b52fbed2a111d882dea2cfa9a0dab",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "e33a4c6c562d51a2fcc8e07bee94f1d6",
         "CFG": "a45e81226b7499c95fa78cf99e84c814",
-        "PRO": "16847fa79110f65f85652b26f0a066ad",
-        "CAL": "bc2b52fbed2a111d882dea2cfa9a0dab",
-        "CON": null,
-        "APS": null
+        "PRO": "16847fa79110f65f85652b26f0a066ad"
       },
       "callees": {
         "LoD/1.07": [
+          "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D"
+          "HeapCreate|0x1E"
         ],
         "LoD/1.08": [
           "HeapCreate|0x1E",
@@ -12666,59 +13102,59 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapDestroy|0x1D"
         ],
         "LoD/1.09b": [
-          "HeapCreate|0x1E",
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
-        ],
-        "LoD/1.09d": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.10": [
-          "InitializeBufferManager|0x4032A5",
-          "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
-        ],
-        "LoD/1.11": [
           "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E",
           "HeapDestroy|0x1D"
         ],
-        "LoD/1.11b": [
-          "InitializeBufferManager|0x4032A5",
+        "LoD/1.09d": [
+          "HeapCreate|0x1E",
           "HeapDestroy|0x1D",
-          "HeapCreate|0x1E"
+          "InitializeBufferManager|0x4032A5"
+        ],
+        "LoD/1.10": [
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
+        ],
+        "LoD/1.11": [
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D"
+        ],
+        "LoD/1.11b": [
+          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5"
         ],
         "LoD/1.12a": [
-          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E"
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.13c": [
-          "HeapDestroy|0x1D",
           "InitializeBufferManager|0x4032A5",
+          "HeapDestroy|0x1D",
           "HeapCreate|0x1E"
         ],
         "LoD/1.13d": [
-          "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D",
+          "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E"
         ],
         "LoD/1.14a": [
+          "InitializeBufferManager|0x4032A5",
           "HeapCreate|0x1E",
-          "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.14b": [
-          "HeapCreate|0x1E",
+          "InitializeBufferManager|0x4032A5",
           "HeapDestroy|0x1D",
-          "InitializeBufferManager|0x4032A5"
+          "HeapCreate|0x1E"
         ],
         "LoD/1.14c": [
-          "HeapDestroy|0x1D",
+          "HeapCreate|0x1E",
           "InitializeBufferManager|0x4032A5",
-          "HeapCreate|0x1E"
+          "HeapDestroy|0x1D"
         ],
         "LoD/1.14d": [
           "HeapCreate|0x1E",
@@ -12860,142 +13296,159 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.08": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.09": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.09b": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.09d": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.10": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.11": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.11b": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.12a": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.13c": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.13d": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.14a": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.14b": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.14c": [
-          4096
+          "0x2549||0x1000"
         ],
         "LoD/1.14d": [
-          4096
+          "0x2549||0x1000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeap",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeap|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x5074|PTR_HeapCreate_00405074",
-          "0x6674|g_hHeapHandle",
-          "0x5070|PTR_HeapDestroy_00405070"
+          "0xFFFFFFFFFFC00004||",
+          "0x5074|PTR_HeapCreate_00405074|00005744",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x5070|PTR_HeapDestroy_00405070|00005736"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_GlobalUnwind2": {
@@ -13061,13 +13514,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": "671dff5ace8aa8c39bead14f6d282075",
+        "APS": null,
+        "CON": null,
         "MNE": "059e9bb2efc1de93bfe21089d0ad96d3",
         "CFG": "62dd7eecce7740c82c988187e13c22fe",
-        "PRO": "56b2c198681b74637b7f6d69d46bf35f",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "56b2c198681b74637b7f6d69d46bf35f"
       },
       "callees": {
         "LoD/1.07": [
@@ -13203,97 +13656,114 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.08": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.09": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.09b": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.09d": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.10": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.11": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.11b": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.12a": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.13c": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.13d": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.14a": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.14b": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.14c": [
-          4203928
+          "0x258B||0x402598"
         ],
         "LoD/1.14d": [
-          4203928
+          "0x258B||0x402598"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_LocalUnwindTwo": {
@@ -13359,13 +13829,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "24530866f964f891172a0f266c75de54",
         "MNE": "cd4ab8e23ed6997cd2e2434b8d375458",
         "CFG": "d54d0bf1b3435e560f9567fde0a425c3",
-        "PRO": "6119d20752442d876f4a746c02156711",
-        "CAL": null,
-        "CON": "24530866f964f891172a0f266c75de54",
-        "APS": null
+        "PRO": "6119d20752442d876f4a746c02156711"
       },
       "callees": {
         "LoD/1.07": [
@@ -13548,172 +14018,189 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.08": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.09": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.09b": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.09d": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.10": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.11": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.11b": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.12a": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.13c": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.13d": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.14a": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.14b": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.14c": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ],
         "LoD/1.14d": [
-          257,
-          4203936
+          "0x25CC||0x4025A0",
+          "0x2608||0x101"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x25A0|LAB_004025a0",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFBFFFEC|"
+          "0xFFFFFFFFFFC00004||",
+          "0x25A0|LAB_004025a0|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFBFFFEC||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_StoreSehContext": {
@@ -13779,13 +14266,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "ed17ad9d511f6e330c2b6a62378d83cf",
         "CFG": "8bed5312de6328769ba92aea43d25c3f",
-        "PRO": "63222adeb34f4a3aa53c9dd3f54ccff5",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "63222adeb34f4a3aa53c9dd3f54ccff5"
       },
       "callers": {
         "LoD/1.07": [
@@ -13921,141 +14408,141 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.08": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.09": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.09b": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.09d": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.10": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.11": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.11b": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.12a": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.13c": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.13d": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.14a": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.14b": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.14c": [
-          4219364
+          "0x2658||0x4061E4"
         ],
         "LoD/1.14d": [
-          4219364
+          "0x2658||0x4061E4"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.08": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.09": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.09b": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.09d": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.10": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.11": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.11b": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.12a": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.13c": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.13d": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.14a": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.14b": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.14c": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ],
         "LoD/1.14d": [
-          "0x61E4|DAT_004061e4",
-          "0x61EC|DAT_004061ec",
-          "0x61E8|DAT_004061e8",
-          "0x61F0|DAT_004061f0"
+          "0x61E4|DAT_004061e4|0x20",
+          "0x61EC|DAT_004061ec|0x0",
+          "0x61E8|DAT_004061e8|0x0",
+          "0x61F0|DAT_004061f0|0x0"
         ]
       }
     },
@@ -14122,13 +14609,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "89d1b619054116ad559c7c543db397fd",
         "CFG": "120fb0f85a7ee6388ee2ce7c9790ef93",
-        "PRO": "204649768cb6aa7c9bb671be8e047b74",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "204649768cb6aa7c9bb671be8e047b74"
       },
       "callees": {
         "LoD/1.07": [
@@ -14264,50 +14751,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_CleanupConsoleOutput": {
@@ -14373,13 +14877,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "9765460a30498931557fab10cfc0be00",
         "CFG": "5cb358a801ea502a7e4f33583ed88bc5",
-        "PRO": "cd7946af48d94ccd57eeabbf5a2f87ba",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "cd7946af48d94ccd57eeabbf5a2f87ba"
       },
       "callees": {
         "LoD/1.07": [
@@ -14450,8 +14954,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.10": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.11": [
           "FUN_004015fe|0x4015FE",
@@ -14470,24 +14974,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.13d": [
+          "AmsgExit|0x4015D9",
+          "FUN_004015fe|0x4015FE"
+        ],
+        "LoD/1.14a": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
-        "LoD/1.14a": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
-        ],
         "LoD/1.14b": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
           "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9"
         ],
         "LoD/1.14d": [
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9"
         ]
       },
       "instruction_counts": {
@@ -14577,79 +15081,79 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.08": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.09": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.09b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.09d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.10": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.11": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.11b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.12a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.13c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.13d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.14a": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.14b": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.14c": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ],
         "LoD/1.14d": [
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0x661C|g_pfnCleanupCallback"
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0x661C|g_pfnCleanupCallback|0x0"
         ]
       }
     },
@@ -14712,180 +15216,180 @@ var FUNCTIONS_Diablo_II_exe = {
       "comment": "Displays runtime error messages either to console or as message box dialog\n\nAlgorithm:\n1. Search error lookup table at 0x1002e678 for matching error code\n2. Iterate through (error_code, string_pointer) pairs until match found or table end (0x1002e708)\n3. If error code found in table, determine display method:\n   a. If console display enabled (g_dwConsoleDisplayFlag == 1), write to stdout\n   b. If console disabled but alternate flag set (DAT_1003c8c0 == 1), write to stdout  \n   c. Otherwise show message box (except for error code 0xfc which is suppressed)\n4. For console output: Get error message string, write to stdout handle using WriteFile\n5. For message box: Build formatted error message with program name and error text\n6. Get module filename using GetModuleFileNameA, truncate if longer than 60 characters\n7. Concatenate \"Runtime Error!\" + program name + newlines + error message text\n8. Display message box using Microsoft Visual C++ Runtime Library title\n\nParameters:\ndwErrorCode - Runtime error code to display (DWORD values from error table)\n\nReturns:\nvoid - No return value\n\nSpecial Cases:\n- Error code 0xfc is suppressed (no dialog or console output)\n- Module name truncated with \"...\" if path exceeds 60 characters\n- Falls back to \"<program name unknown>\" if GetModuleFileNameA fails\n- Console output bypasses message box formatting\n\nMagic Numbers Reference:\n0x1002e678 - Base address of error lookup table (error_code, string_pointer pairs)\n0x1002e708 - End address of error lookup table \n0x1002e67c - Base address of error message string pointers (offset +4 from codes)\n0xfc - Special error code that suppresses all output\n0xfffffff4 - STD_OUTPUT_HANDLE constant for GetStdHandle\n0x12010 - Message box flags (MB_ICONHAND | MB_SETFOREGROUND | MB_TASKMODAL)\n0x3c - Maximum characters (60) before truncating program name\n0x104 - Buffer size (260) for module filename\n60 - Character limit for program name display\n\nError Handling:\n- GetModuleFileNameA failure: Use fallback \"<program name unknown>\"\n- String length overflow: Truncate with \"...\" suffix\n- Table search failure: Function returns without action\n\nStructure Layout:\nError Table Entry (8 bytes):\nOffset | Size | Field Name    | Type | Description\n0x00   | 4    | dwErrorCode   | uint | Runtime error identifier  \n0x04   | 4    | pszMessage    | char*| Pointer to error message string",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:ff7880d11813b11bf7ac9bc241be5c60",
+      "index": "STR:e8b034d805a6821a48ee941c824f245b",
       "indexes": {
         "EXP": null,
-        "STR": "ff7880d11813b11bf7ac9bc241be5c60",
+        "STR": "e8b034d805a6821a48ee941c824f245b",
+        "CAL": "b4938612b45a8006afe991fc98f65440",
         "API": null,
+        "APS": null,
+        "CON": "eeed9c2bf5cfdea59ca7ed1bf7b53ace",
         "MNE": "6bfb7faf8650903f50cd7e2ef7eba7fe",
         "CFG": "b077751f218736f0020a07f48c1fade3",
-        "PRO": "a25d5a579a50e7c9f3f039e8e97080f6",
-        "CAL": "b4938612b45a8006afe991fc98f65440",
-        "CON": "dc96ec6a0dc5bde19e01214d7740553f",
-        "APS": null
+        "PRO": "a25d5a579a50e7c9f3f039e8e97080f6"
       },
       "callees": {
         "LoD/1.07": [
-          "GetStdHandle|0x9",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "_strncpy|0x403B80",
-          "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
           "GetModuleFileNameA|0x15",
-          "WriteFile|0x22"
+          "OptimizedStringCopy|0x402E10",
+          "_strlen|0x401B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80"
         ],
         "LoD/1.08": [
-          "WriteFile|0x22",
-          "CopyStringOptimized|0x402E00",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
           "_strlen|0x401B80",
           "GetStdHandle|0x9",
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10"
+          "GetModuleFileNameA|0x15",
+          "WriteFile|0x22",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.09": [
-          "_strlen|0x401B80",
           "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetStdHandle|0x9",
           "OptimizedStringCopy|0x402E10",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
           "WriteFile|0x22"
         ],
         "LoD/1.09b": [
-          "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10",
-          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
-          "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "CopyStringOptimized|0x402E00",
           "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9"
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetStdHandle|0x9",
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
+          "_strncpy|0x403B80"
         ],
         "LoD/1.09d": [
-          "WriteFile|0x22",
+          "OptimizedStringCopy|0x402E10",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
           "GetStdHandle|0x9",
-          "OptimizedStringCopy|0x402E10",
-          "_strncpy|0x403B80",
-          "GetModuleFileNameA|0x15",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00"
+          "WriteFile|0x22"
         ],
         "LoD/1.10": [
-          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10",
           "GetModuleFileNameA|0x15",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "WriteFile|0x22",
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10",
           "GetStdHandle|0x9",
-          "_strlen|0x401B80"
+          "_strncpy|0x403B80",
+          "CopyStringOptimized|0x402E00",
+          "WriteFile|0x22"
         ],
         "LoD/1.11": [
+          "CopyStringOptimized|0x402E00",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "GetModuleFileNameA|0x15",
           "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
           "_strncpy|0x403B80",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
-          "WriteFile|0x22"
+          "GetStdHandle|0x9"
         ],
         "LoD/1.11b": [
-          "_strncpy|0x403B80",
-          "_strlen|0x401B80",
-          "WriteFile|0x22",
           "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "CopyStringOptimized|0x402E00",
-          "GetModuleFileNameA|0x15"
-        ],
-        "LoD/1.12a": [
-          "CopyStringOptimized|0x402E00",
-          "_strlen|0x401B80",
           "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9",
-          "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "WriteFile|0x22"
-        ],
-        "LoD/1.13c": [
-          "GetModuleFileNameA|0x15",
-          "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
           "_strlen|0x401B80",
           "_strncpy|0x403B80",
           "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10",
+          "CopyStringOptimized|0x402E00",
+          "GetStdHandle|0x9",
           "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
-        "LoD/1.13d": [
+        "LoD/1.12a": [
+          "GetStdHandle|0x9",
           "CopyStringOptimized|0x402E00",
+          "_strncpy|0x403B80",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "_strlen|0x401B80",
-          "GetModuleFileNameA|0x15",
-          "WriteFile|0x22",
           "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
+          "GetModuleFileNameA|0x15"
+        ],
+        "LoD/1.13c": [
+          "WriteFile|0x22",
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
+          "GetStdHandle|0x9",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "CopyStringOptimized|0x402E00",
+          "_strlen|0x401B80"
+        ],
+        "LoD/1.13d": [
+          "_strlen|0x401B80",
           "_strncpy|0x403B80",
           "GetStdHandle|0x9",
+          "OptimizedStringCopy|0x402E10",
+          "WriteFile|0x22",
+          "CopyStringOptimized|0x402E00",
+          "GetModuleFileNameA|0x15",
           "ShowMessageBoxWithActiveWindow|0x403AEE"
         ],
         "LoD/1.14a": [
-          "CopyStringOptimized|0x402E00",
-          "WriteFile|0x22",
-          "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15",
+          "GetStdHandle|0x9",
+          "WriteFile|0x22",
           "_strlen|0x401B80",
-          "_strncpy|0x403B80"
+          "GetModuleFileNameA|0x15",
+          "_strncpy|0x403B80",
+          "OptimizedStringCopy|0x402E10",
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.14b": [
+          "GetModuleFileNameA|0x15",
           "_strncpy|0x403B80",
-          "OptimizedStringCopy|0x402E10",
-          "CopyStringOptimized|0x402E00",
           "WriteFile|0x22",
           "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10",
           "GetStdHandle|0x9",
-          "GetModuleFileNameA|0x15",
-          "_strlen|0x401B80"
+          "CopyStringOptimized|0x402E00"
         ],
         "LoD/1.14c": [
-          "_strlen|0x401B80",
-          "OptimizedStringCopy|0x402E10",
-          "GetModuleFileNameA|0x15",
-          "_strncpy|0x403B80",
-          "CopyStringOptimized|0x402E00",
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
           "GetStdHandle|0x9",
-          "WriteFile|0x22"
-        ],
-        "LoD/1.14d": [
-          "ShowMessageBoxWithActiveWindow|0x403AEE",
-          "GetModuleFileNameA|0x15",
-          "OptimizedStringCopy|0x402E10",
-          "GetStdHandle|0x9",
-          "CopyStringOptimized|0x402E00",
           "WriteFile|0x22",
           "_strlen|0x401B80",
-          "_strncpy|0x403B80"
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strncpy|0x403B80",
+          "GetModuleFileNameA|0x15",
+          "CopyStringOptimized|0x402E00",
+          "OptimizedStringCopy|0x402E10"
+        ],
+        "LoD/1.14d": [
+          "_strncpy|0x403B80",
+          "WriteFile|0x22",
+          "ShowMessageBoxWithActiveWindow|0x403AEE",
+          "_strlen|0x401B80",
+          "OptimizedStringCopy|0x402E10",
+          "GetModuleFileNameA|0x15",
+          "GetStdHandle|0x9",
+          "CopyStringOptimized|0x402E00"
         ]
       },
       "callers": {
         "LoD/1.07": [
           "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.08": [
           "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750",
-          "FUN_004015fe|0x4015FE"
+          "FUN_004015fe|0x4015FE",
+          "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.09": [
           "AmsgExit|0x4015D9",
@@ -14894,8 +15398,8 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.09b": [
           "FUN_004015fe|0x4015FE",
-          "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.09d": [
           "FUN_004015fe|0x4015FE",
@@ -14903,8 +15407,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.10": [
-          "AmsgExit|0x4015D9",
           "FUN_004015fe|0x4015FE",
+          "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.11": [
@@ -14928,121 +15432,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "CleanupConsoleOutput|0x402750"
         ],
         "LoD/1.13d": [
-          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
-          "CleanupConsoleOutput|0x402750"
+          "CleanupConsoleOutput|0x402750",
+          "FUN_004015fe|0x4015FE"
         ],
         "LoD/1.14a": [
+          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14b": [
+          "FUN_004015fe|0x4015FE",
           "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
+          "AmsgExit|0x4015D9"
         ],
         "LoD/1.14c": [
           "FUN_004015fe|0x4015FE",
+          "CleanupConsoleOutput|0x402750",
+          "AmsgExit|0x4015D9"
+        ],
+        "LoD/1.14d": [
+          "FUN_004015fe|0x4015FE",
           "AmsgExit|0x4015D9",
           "CleanupConsoleOutput|0x402750"
-        ],
-        "LoD/1.14d": [
-          "CleanupConsoleOutput|0x402750",
-          "AmsgExit|0x4015D9",
-          "FUN_004015fe|0x4015FE"
-        ]
-      },
-      "strings": {
-        "LoD/1.07": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.08": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.09": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.09b": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.09d": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.10": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.11": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.11b": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.12a": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.13c": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.13d": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.14a": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.14b": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.14c": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
-        ],
-        "LoD/1.14d": [
-          "\"Runtime Error!\\n\\nProgram: \"",
-          "\"Microsoft Visual C++ Runtime Library\"",
-          "\"R6009\\r\\n- not enough space for environment\\r\\n\"",
-          "\"<program name unknown>\""
         ]
       },
       "instruction_counts": {
@@ -15132,367 +15544,384 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.08": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.09": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.09b": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.09d": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.10": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.11": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.11b": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.12a": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.13c": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.13d": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.14a": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.14b": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.14c": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ],
         "LoD/1.14d": [
-          260,
-          420,
-          73744,
-          4215632,
-          4215672,
-          4215676,
-          4215704,
-          4215708,
-          4219384,
-          4219388
+          "0x278C||0x1A4",
+          "0x2797||0x4061F8",
+          "0x27A4||0x406288",
+          "0x27B1||0x4061F8",
+          "0x27EE||0x104",
+          "0x2806||0x40539C",
+          "0x2848||0x405398",
+          "0x285C||0x40537C",
+          "0x287A||0x405378",
+          "0x2885||0x4061FC"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x61F8|DAT_004061f8",
-          "0x6200|DAT_00406200",
-          "0x6208|DAT_00406208",
-          "0x6288|DAT_00406288",
-          "0x64BC|g_dwConsoleDisplayFlag",
-          "0x604C|g_dwConsoleDebugFlag",
-          "0xFFFFFFFFFFBFFE58|",
-          "0x5050|PTR_GetModuleFileNameA_00405050",
-          "0x539C|s_<program_name_unknown>_0040539c"
+          "0xFFFFFFFFFFC00004||",
+          "0x61F8|DAT_004061f8|0x2",
+          "0x6200|DAT_00406200|0x8",
+          "0x6208|DAT_00406208|0x9",
+          "0x6288|DAT_00406288|0x0",
+          "0x64BC|g_dwConsoleDisplayFlag|0x0",
+          "0x604C|g_dwConsoleDebugFlag|0x2",
+          "0xFFFFFFFFFFBFFE58||",
+          "0x5050|PTR_GetModuleFileNameA_00405050|00005674",
+          "0x5398|DAT_00405398|0x2e"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_LocaleMapStringWithConversion": {
@@ -15558,134 +15987,134 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "981867b0970223dac828e5ddf508c9bd",
         "API": null,
+        "APS": null,
+        "CON": "9fe1522e2870415d91409e2b7960b311",
         "MNE": "c1d05e132bc8c3bc87e7a971916e9b9b",
         "CFG": "6cc88f3c6036b07006695d5cf644d042",
-        "PRO": "8cdd37d52b857df0da76bdb271ca9544",
-        "CAL": "981867b0970223dac828e5ddf508c9bd",
-        "CON": "9fe1522e2870415d91409e2b7960b311",
-        "APS": null
+        "PRO": "8cdd37d52b857df0da76bdb271ca9544"
       },
       "callees": {
         "LoD/1.07": [
-          "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
           "LCMapStringA|0x24",
           "MultiByteToWideChar|0x23",
-          "AllocateStackSpace|0x403C80",
-          "CalculateStringLengthWithLimit|0x402B00"
+          "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.08": [
-          "MultiByteToWideChar|0x23",
-          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80",
           "WideCharToMultiByte|0x18",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringA|0x24"
-        ],
-        "LoD/1.09": [
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
-          "MultiByteToWideChar|0x23",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "LCMapStringW|0x25"
-        ],
-        "LoD/1.09b": [
-          "AllocateStackSpace|0x403C80",
           "LCMapStringA|0x24",
           "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
           "CalculateStringLengthWithLimit|0x402B00",
           "MultiByteToWideChar|0x23"
         ],
-        "LoD/1.09d": [
+        "LoD/1.09": [
           "AllocateStackSpace|0x403C80",
-          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24",
           "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18"
         ],
-        "LoD/1.10": [
-          "LCMapStringW|0x25",
-          "WideCharToMultiByte|0x18",
+        "LoD/1.09b": [
           "AllocateStackSpace|0x403C80",
+          "LCMapStringA|0x24",
           "CalculateStringLengthWithLimit|0x402B00",
+          "LCMapStringW|0x25",
           "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24"
+          "WideCharToMultiByte|0x18"
+        ],
+        "LoD/1.09d": [
+          "WideCharToMultiByte|0x18",
+          "MultiByteToWideChar|0x23",
+          "LCMapStringA|0x24",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00"
+        ],
+        "LoD/1.10": [
+          "CalculateStringLengthWithLimit|0x402B00",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25"
         ],
         "LoD/1.11": [
           "LCMapStringW|0x25",
-          "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
           "MultiByteToWideChar|0x23",
+          "LCMapStringA|0x24",
           "CalculateStringLengthWithLimit|0x402B00",
+          "WideCharToMultiByte|0x18",
           "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.11b": [
-          "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
-          "CalculateStringLengthWithLimit|0x402B00",
-          "WideCharToMultiByte|0x18",
           "LCMapStringW|0x25",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.12a": [
-          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18",
+          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24"
         ],
-        "LoD/1.13c": [
-          "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25",
-          "LCMapStringA|0x24",
-          "MultiByteToWideChar|0x23",
+        "LoD/1.12a": [
           "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
+          "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
           "CalculateStringLengthWithLimit|0x402B00"
         ],
-        "LoD/1.13d": [
-          "AllocateStackSpace|0x403C80",
-          "WideCharToMultiByte|0x18",
-          "LCMapStringA|0x24",
+        "LoD/1.13c": [
           "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringW|0x25",
+          "WideCharToMultiByte|0x18",
+          "AllocateStackSpace|0x403C80",
+          "LCMapStringA|0x24",
           "MultiByteToWideChar|0x23"
+        ],
+        "LoD/1.13d": [
+          "LCMapStringW|0x25",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
+          "WideCharToMultiByte|0x18",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.14a": [
-          "LCMapStringW|0x25",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
           "LCMapStringA|0x24",
-          "WideCharToMultiByte|0x18",
           "CalculateStringLengthWithLimit|0x402B00",
-          "MultiByteToWideChar|0x23"
+          "WideCharToMultiByte|0x18"
         ],
         "LoD/1.14b": [
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
           "LCMapStringA|0x24",
-          "CalculateStringLengthWithLimit|0x402B00",
           "WideCharToMultiByte|0x18",
-          "LCMapStringW|0x25"
+          "LCMapStringW|0x25",
+          "CalculateStringLengthWithLimit|0x402B00",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.14c": [
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
-          "LCMapStringA|0x24",
           "AllocateStackSpace|0x403C80",
+          "LCMapStringW|0x25",
           "WideCharToMultiByte|0x18",
+          "LCMapStringA|0x24",
+          "MultiByteToWideChar|0x23",
           "CalculateStringLengthWithLimit|0x402B00"
         ],
         "LoD/1.14d": [
+          "CalculateStringLengthWithLimit|0x402B00",
           "LCMapStringA|0x24",
-          "AllocateStackSpace|0x403C80",
-          "LCMapStringW|0x25",
-          "MultiByteToWideChar|0x23",
           "WideCharToMultiByte|0x18",
-          "CalculateStringLengthWithLimit|0x402B00"
+          "MultiByteToWideChar|0x23",
+          "LCMapStringW|0x25",
+          "AllocateStackSpace|0x403C80"
         ]
       },
       "callers": {
@@ -15822,307 +16251,324 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.08": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.09": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.09b": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.09d": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.10": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.11": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.11b": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.12a": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.13c": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.13d": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.14a": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.14b": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.14c": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ],
         "LoD/1.14d": [
-          256,
-          544,
-          4204152,
-          4215732,
-          4215736,
-          4215744
+          "0x28E1||0x4053C0",
+          "0x28E6||0x402678",
+          "0x2912||0x4053B8",
+          "0x2917||0x100",
+          "0x2933||0x4053B4",
+          "0x2AE1||0x220"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.08": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.09": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.09b": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.09d": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.10": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.11": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.11b": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.12a": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.13c": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.13d": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.14a": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.14b": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.14c": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ],
         "LoD/1.14d": [
-          "0x53C0|DAT_004053c0",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6640|DAT_00406640",
-          "0x53B8|DAT_004053b8",
-          "0x5090|PTR_LCMapStringW_00405090",
-          "0x53B4|DAT_004053b4",
-          "0x508C|PTR_LCMapStringA_0040508c",
-          "0xFFFFFFFFFFC00010|"
+          "0x53C0|DAT_004053c0|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6640|DAT_00406640|0x0",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5090|PTR_LCMapStringW_00405090|000057aa",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x508C|PTR_LCMapStringA_0040508c|0000579a",
+          "0xFFFFFFFFFFC00010||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 8,
+        "LoD/1.08": 8,
+        "LoD/1.09": 8,
+        "LoD/1.09b": 8,
+        "LoD/1.09d": 8,
+        "LoD/1.10": 8,
+        "LoD/1.11": 8,
+        "LoD/1.11b": 8,
+        "LoD/1.12a": 8,
+        "LoD/1.13c": 8,
+        "LoD/1.13d": 8,
+        "LoD/1.14a": 8,
+        "LoD/1.14b": 8,
+        "LoD/1.14c": 8,
+        "LoD/1.14d": 8
       }
     },
     "diablo ii.exe_CalculateStringLengthWithLimit": {
@@ -16188,13 +16634,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "c365f0335b7bc4452623cbc78de16e67",
         "CFG": "ce1512b65f10974868260b09ee7d6f5d",
-        "PRO": "44eb51cb2190f284eca0a4e49c8cfa09",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "44eb51cb2190f284eca0a4e49c8cfa09"
       },
       "callers": {
         "LoD/1.07": [
@@ -16330,65 +16776,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_GetCharacterTypeInfo": {
@@ -16454,119 +16917,119 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "7baa6daebac79b3e485665c35e660eb8",
         "API": null,
+        "APS": null,
+        "CON": "99ebe54fd9c7f35cfed123d133021dc7",
         "MNE": "a7046d73bbd286a50d5e7204509858d2",
         "CFG": "df4d2cc4750989c094de567606c5d922",
-        "PRO": "dcf290709e10ba1c807848e5f8e01997",
-        "CAL": "7baa6daebac79b3e485665c35e660eb8",
-        "CON": "99ebe54fd9c7f35cfed123d133021dc7",
-        "APS": null
+        "PRO": "dcf290709e10ba1c807848e5f8e01997"
       },
       "callees": {
         "LoD/1.07": [
-          "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
-          "_memset|0x403CB0",
           "MultiByteToWideChar|0x23",
+          "_memset|0x403CB0",
+          "GetStringTypeA|0x26",
           "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.08": [
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
           "GetStringTypeW|0x27",
-          "_memset|0x403CB0",
-          "AllocateStackSpace|0x403C80"
-        ],
-        "LoD/1.09": [
           "AllocateStackSpace|0x403C80",
           "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23",
+          "GetStringTypeA|0x26",
+          "MultiByteToWideChar|0x23"
+        ],
+        "LoD/1.09": [
+          "_memset|0x403CB0",
+          "AllocateStackSpace|0x403C80",
           "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26"
+          "GetStringTypeA|0x26",
+          "MultiByteToWideChar|0x23"
         ],
         "LoD/1.09b": [
           "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
           "GetStringTypeA|0x26",
-          "_memset|0x403CB0",
           "GetStringTypeW|0x27",
-          "MultiByteToWideChar|0x23"
+          "_memset|0x403CB0"
         ],
         "LoD/1.09d": [
-          "AllocateStackSpace|0x403C80",
-          "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
           "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23"
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.10": [
-          "GetStringTypeA|0x26",
-          "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
-          "GetStringTypeW|0x27"
+          "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeW|0x27",
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.11": [
-          "GetStringTypeW|0x27",
-          "_memset|0x403CB0",
-          "MultiByteToWideChar|0x23",
           "GetStringTypeA|0x26",
+          "_memset|0x403CB0",
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.11b": [
           "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27",
           "_memset|0x403CB0"
         ],
         "LoD/1.12a": [
           "AllocateStackSpace|0x403C80",
           "_memset|0x403CB0",
           "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23"
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.13c": [
-          "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23",
+          "GetStringTypeW|0x27",
           "_memset|0x403CB0",
           "AllocateStackSpace|0x403C80",
-          "GetStringTypeW|0x27"
+          "MultiByteToWideChar|0x23",
+          "GetStringTypeA|0x26"
         ],
         "LoD/1.13d": [
           "_memset|0x403CB0",
-          "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
           "GetStringTypeW|0x27",
           "GetStringTypeA|0x26",
-          "MultiByteToWideChar|0x23"
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.14a": [
-          "AllocateStackSpace|0x403C80",
           "GetStringTypeW|0x27",
-          "GetStringTypeA|0x26",
           "MultiByteToWideChar|0x23",
+          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
           "_memset|0x403CB0"
         ],
         "LoD/1.14b": [
-          "AllocateStackSpace|0x403C80",
+          "GetStringTypeA|0x26",
+          "GetStringTypeW|0x27",
           "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27"
+          "AllocateStackSpace|0x403C80"
         ],
         "LoD/1.14c": [
-          "MultiByteToWideChar|0x23",
           "AllocateStackSpace|0x403C80",
+          "MultiByteToWideChar|0x23",
           "GetStringTypeA|0x26",
           "GetStringTypeW|0x27",
           "_memset|0x403CB0"
         ],
         "LoD/1.14d": [
+          "GetStringTypeW|0x27",
+          "MultiByteToWideChar|0x23",
           "_memset|0x403CB0",
           "AllocateStackSpace|0x403C80",
-          "MultiByteToWideChar|0x23",
-          "GetStringTypeA|0x26",
-          "GetStringTypeW|0x27"
+          "GetStringTypeA|0x26"
         ]
       },
       "callers": {
@@ -16703,280 +17166,297 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.08": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.09": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.09b": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.09d": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.10": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.11": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.11b": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.12a": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.13c": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.13d": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.14a": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.14b": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.14c": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ],
         "LoD/1.14d": [
-          4204152,
-          4215732,
-          4215736,
-          4215768
+          "0x2B30||0x4053D8",
+          "0x2B35||0x402678",
+          "0x2B64||0x4053B8",
+          "0x2B7D||0x4053B4"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.08": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.09": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.09b": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.09d": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.10": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.11": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.11b": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.12a": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.13c": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.13d": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.14a": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.14b": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.14c": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ],
         "LoD/1.14d": [
-          "0x53D8|DAT_004053d8",
-          "0x2678|LAB_00402678",
-          "0xFF9FF000|ExceptionList",
-          "0xFFFFFFFFFFBFFFE4|",
-          "0x6644|DAT_00406644",
-          "0xFFFFFFFFFFBFFFE0|",
-          "0x53B8|DAT_004053b8",
-          "0x5098|PTR_GetStringTypeW_00405098",
-          "0x53B4|DAT_004053b4",
-          "0x5094|PTR_GetStringTypeA_00405094"
+          "0x53D8|DAT_004053d8|-0x1",
+          "0x2678|LAB_00402678|",
+          "0xFF9FF000|ExceptionList|00000000",
+          "0xFFFFFFFFFFBFFFE4||",
+          "0x6644|DAT_00406644|0x0",
+          "0xFFFFFFFFFFBFFFE0||",
+          "0x53B8|DAT_004053b8|0x0",
+          "0x5098|PTR_GetStringTypeW_00405098|000057cc",
+          "0x53B4|DAT_004053b4|0x0",
+          "0x5094|PTR_GetStringTypeA_00405094|000057ba"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 7,
+        "LoD/1.08": 7,
+        "LoD/1.09": 7,
+        "LoD/1.09b": 7,
+        "LoD/1.09d": 7,
+        "LoD/1.10": 7,
+        "LoD/1.11": 7,
+        "LoD/1.11b": 7,
+        "LoD/1.12a": 7,
+        "LoD/1.13c": 7,
+        "LoD/1.13d": 7,
+        "LoD/1.14a": 7,
+        "LoD/1.14b": 7,
+        "LoD/1.14c": 7,
+        "LoD/1.14d": 7
       }
     },
-    "diablo ii.exe_CON_a25934a13615": {
+    "diablo ii.exe_CON_d2ca7381c2b7": {
       "addresses": {
         "LoD/1.07": "0x00402C74",
         "LoD/1.08": "0x00402C74",
@@ -17028,20 +17508,22 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 68,
         "LoD/1.14d": 68
       },
+      "signature": "int FUN_00402c74(byte param_1, int param_2)",
+      "calling_convention": "__cdecl",
       "return_type": "int",
       "name_source": "LoD/1.07",
       "method": "CON",
-      "index": "CON:a25934a13615bd9598bae62665dd096e",
+      "index": "CON:d2ca7381c2b753ca82aeb6c7fa014e21",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "d2ca7381c2b753ca82aeb6c7fa014e21",
         "MNE": "b31c4daec36fb36fa3cb9b8ebe073642",
         "CFG": "0fa1e39de5e198af9c73a3977127b991",
-        "PRO": "55ad8d3af928417566a7f1f214235c31",
-        "CAL": null,
-        "CON": "a25934a13615bd9598bae62665dd096e",
-        "APS": null
+        "PRO": "55ad8d3af928417566a7f1f214235c31"
       },
       "display_name": "FUN_00402c74",
       "callers": {
@@ -17178,172 +17660,204 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.08": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.09": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.09b": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.09d": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.10": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.11": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.11b": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.12a": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.13c": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.13d": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.14a": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.14b": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.14c": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ],
         "LoD/1.14d": [
-          343,
-          4219562,
-          4221121
+          "0x2C80||0x4068C1",
+          "0x2C8F||0x4062AA",
+          "0x2C8F||0x157",
+          "0x2CA7||0x4068C1"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0x68C1|DAT_004068c0+1",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0x68C1|DAT_004068c0+1|",
+          "0x62AA|DAT_004062aa|0x20"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_MNE_69f7deb725db": {
@@ -17398,6 +17912,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 182,
         "LoD/1.14d": 182
       },
+      "signature": "uint * FUN_00402cd6(uint * param_1)",
+      "calling_convention": "__cdecl",
       "return_type": "uint *",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -17405,13 +17921,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "69f7deb725db18136e67b38972cf97de",
         "CFG": "19728bdfad0380cab34bee784309c854",
-        "PRO": "e953aaf38a96221b52d58979a1141175",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "e953aaf38a96221b52d58979a1141175"
       },
       "display_name": "FUN_00402cd6",
       "callers": {
@@ -17548,97 +18064,114 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.08": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.09": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.09b": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.09d": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.10": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.11": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.11b": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.12a": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.13c": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.13d": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.14a": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.14b": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.14c": [
-          16843008
+          "0x2D33||0x1010100"
         ],
         "LoD/1.14d": [
-          16843008
+          "0x2D33||0x1010100"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_MNE_cd85d17a6b19": {
@@ -17693,6 +18226,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 17,
         "LoD/1.14d": 17
       },
+      "signature": "undefined FUN_00402d8c(byte param_1)",
+      "calling_convention": "__cdecl",
       "return_type": "undefined",
       "name_source": "LoD/1.07",
       "method": "MNE",
@@ -17700,13 +18235,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "cd85d17a6b193c95680d3fdca645abba",
         "CFG": "62e304a7d521240f86cfa75cc629cf4d",
-        "PRO": "e067e555be462a2009cc84404e18b1ac",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "e067e555be462a2009cc84404e18b1ac"
       },
       "display_name": "FUN_00402d8c",
       "callees": {
@@ -17890,50 +18425,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_CON_ab6177b600b4": {
@@ -17988,6 +18540,8 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14c": 49,
         "LoD/1.14d": 49
       },
+      "signature": "undefined4 FUN_00402d9d(byte param_1, uint param_2, byte param_3)",
+      "calling_convention": "__cdecl",
       "return_type": "undefined4",
       "name_source": "LoD/1.07",
       "method": "CON",
@@ -17995,13 +18549,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "ab6177b600b40e04648bdcec182c8d4b",
         "MNE": "53a6ac985e66444c6c82f2b7b12d7c09",
         "CFG": "85d43acaaf4da912180ee68ae75e1834",
-        "PRO": "eb79751ac250076fbd4621ac20b498cb",
-        "CAL": null,
-        "CON": "ab6177b600b40e04648bdcec182c8d4b",
-        "APS": null
+        "PRO": "eb79751ac250076fbd4621ac20b498cb"
       },
       "display_name": "FUN_00402d9d",
       "callers": {
@@ -18138,172 +18692,189 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.08": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.09": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.09b": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.09d": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.10": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.11": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.11b": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.12a": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.13c": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.13d": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.14a": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.14b": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.14c": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ],
         "LoD/1.14d": [
-          4219562,
-          4221121
+          "0x2DA6||0x4068C1",
+          "0x2DB5||0x4062AA"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC0000C|",
-          "0x68C1|DAT_004068c0+1",
-          "0xFFFFFFFFFFC00008|",
-          "0x62AA|DAT_004062aa"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC0000C||",
+          "0x68C1|DAT_004068c0+1|",
+          "0xFFFFFFFFFFC00008||",
+          "0x62AA|DAT_004062aa|0x20"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_SmartFree": {
@@ -18369,28 +18940,28 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "9ae59e844b8d8f6c7c24b4318d75d4a0",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "b18de4e8dfaa1ea94be3de3b62f2adf9",
         "CFG": "4521ae963f7f2fd59b191cef99ff20c1",
-        "PRO": "21841d7cd76f33fea673861ccbc8c236",
-        "CAL": "9ae59e844b8d8f6c7c24b4318d75d4a0",
-        "CON": null,
-        "APS": null
+        "PRO": "21841d7cd76f33fea673861ccbc8c236"
       },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "LoD/1.08": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "FindMemoryDescriptorByAddress|0x4032E3"
         ],
         "LoD/1.09": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20"
         ],
         "LoD/1.09b": [
@@ -18404,29 +18975,29 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.10": [
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3"
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.11": [
-          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "HeapFree|0x20"
         ],
         "LoD/1.11b": [
-          "HeapFree|0x20",
-          "FindMemoryDescriptorByAddress|0x4032E3",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
-        ],
-        "LoD/1.12a": [
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "HeapFree|0x20",
           "FindMemoryDescriptorByAddress|0x4032E3"
+        ],
+        "LoD/1.12a": [
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "HeapFree|0x20",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.13c": [
           "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
-          "FindMemoryDescriptorByAddress|0x4032E3"
+          "FindMemoryDescriptorByAddress|0x4032E3",
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.13d": [
           "HeapFree|0x20",
@@ -18434,13 +19005,13 @@ var FUNCTIONS_Diablo_II_exe = {
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.14a": [
+          "FreeMemoryBlockWithLinkedListCleanup|0x40330E",
           "FindMemoryDescriptorByAddress|0x4032E3",
-          "HeapFree|0x20",
-          "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
+          "HeapFree|0x20"
         ],
         "LoD/1.14b": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20",
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ],
         "LoD/1.14c": [
@@ -18449,8 +19020,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapFree|0x20"
         ],
         "LoD/1.14d": [
-          "FindMemoryDescriptorByAddress|0x4032E3",
           "HeapFree|0x20",
+          "FindMemoryDescriptorByAddress|0x4032E3",
           "FreeMemoryBlockWithLinkedListCleanup|0x40330E"
         ]
       },
@@ -18468,44 +19039,44 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09b": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.10": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264"
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11b": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.12a": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
-        "LoD/1.13c": [
+        "LoD/1.12a": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.13c": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.14a": [
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.14b": [
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14c": [
           "GetEnvironmentStringsConverted|0x402264",
@@ -18603,80 +19174,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeap",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeap|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6674|g_hHeapHandle",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_CopyStringOptimized": {
@@ -18742,18 +19330,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "70593f43ea0b0d7692df2cd60ddf29e8",
         "CFG": "4e3b3947cf15c11224705052794a4b4e",
-        "PRO": "0893ef4135ff92704b4a57726c2e8b67",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "0893ef4135ff92704b4a57726c2e8b67"
       },
       "callers": {
         "LoD/1.07": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -18764,40 +19352,40 @@ var FUNCTIONS_Diablo_II_exe = {
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.09b": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
-        "LoD/1.09d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
+        ],
+        "LoD/1.09d": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.10": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.11": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.11b": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.12a": [
-          "InitializeEnvironmentVariables|0x401F5E",
-          "DisplayRuntimeError|0x402789"
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.13c": [
+          "DisplayRuntimeError|0x402789",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.13d": [
           "InitializeEnvironmentVariables|0x401F5E",
           "DisplayRuntimeError|0x402789"
         ],
-        "LoD/1.13d": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
-        ],
         "LoD/1.14a": [
-          "DisplayRuntimeError|0x402789",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "DisplayRuntimeError|0x402789"
         ],
         "LoD/1.14b": [
           "InitializeEnvironmentVariables|0x401F5E",
@@ -18899,50 +19487,67 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_OptimizedStringCopy": {
@@ -19003,18 +19608,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "return_type": "char *",
       "comment": "Performs optimized string copying using word-aligned memory access and null-byte detection.\nThis function implements a high-performance strcpy equivalent using x86 alignment optimization.\nUses magic constants to detect null terminators within 32-bit words for maximum throughput.\nHandles both aligned and unaligned source/destination buffers gracefully.\n\nAlgorithm:\n1. Check destination pointer alignment against 4-byte word boundary\n2. Copy unaligned bytes one-by-one until destination reaches word alignment  \n3. Enter optimized loop processing 4-byte words from aligned destination\n4. Apply magic constant 0x7EFEFEFF to detect null bytes within words\n5. Use mask 0x81010100 to isolate carry bits indicating null presence\n6. When null detected in word, determine exact byte position and handle\n7. Switch to source processing with similar alignment optimization\n8. Copy source bytes individually until source is word-aligned\n9. Process aligned source words until null terminator found\n10. Terminate destination string with null and return original pointer\n\nParameters:\nlpszDestination - Pointer to destination buffer with sufficient space allocated\nlpcszSource - Pointer to source null-terminated string to be copied\n\nReturns:\nReturns lpszDestination pointer for function chaining operations\n\nMagic Numbers Reference:\n0x7EFEFEFF (2130640639) - Magic additive constant for null detection algorithm\n0x81010100 (2164391168) - Bit mask to isolate null detection carry flags  \n0x3 (3) - Alignment mask for checking 4-byte word boundaries\n0xFF0000 (16711680) - Third byte mask for null position detection\n0xFF000000 (4278190080) - Fourth byte mask for null position detection\n\nSpecial Cases:\nEmpty source string copies only null terminator to destination\nOverlapping memory regions produce undefined behavior per C standard\nDestination buffer must accommodate source length plus null terminator\nAlgorithm assumes little-endian x86 architecture for bit manipulation",
       "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:845fc5044ff181fe96e2ae868d3aa1f6",
+      "method": "CON",
+      "index": "CON:5b5c20b5e023805961c84e2bfe9487d0",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "5b5c20b5e023805961c84e2bfe9487d0",
         "MNE": "845fc5044ff181fe96e2ae868d3aa1f6",
         "CFG": "a96a897a6b801f6ddf1257ad0becd475",
-        "PRO": "91a93f07a9ad6d3f1f33172e65653a41",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "91a93f07a9ad6d3f1f33172e65653a41"
       },
       "callers": {
         "LoD/1.07": [
@@ -19150,112 +19755,144 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.08": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.09": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.09b": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.09d": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.10": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.11": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.11b": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.12a": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.13c": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.13d": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.14a": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.14b": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.14c": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ],
         "LoD/1.14d": [
-          16711680
+          "0x2E4F||0xFF0000",
+          "0x2EB8||0xFF0000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe__malloc": {
@@ -19321,13 +19958,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "301bd5440f60703ca7a24a8fb30f1e56",
         "CFG": "d6859c2eb1fab9ceaa654d0b9ae7bc20",
-        "PRO": "34f4897579d5313b7e93086d02ff4197",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "34f4897579d5313b7e93086d02ff4197"
       },
       "callees": {
         "LoD/1.07": [
@@ -19379,93 +20016,93 @@ var FUNCTIONS_Diablo_II_exe = {
       "callers": {
         "LoD/1.07": [
           "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.08": [
           "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
+          "InitializeModuleData|0x402017",
           "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.09": [
+          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396"
+          "GetEnvironmentStringsConverted|0x402264"
         ],
         "LoD/1.09b": [
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264",
           "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
         "LoD/1.09d": [
-          "InitializeEnvironmentVariables|0x401F5E",
           "InitializeModuleData|0x402017",
-          "InitializeFileDescriptors|0x402396",
-          "GetEnvironmentStringsConverted|0x402264"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396"
         ],
         "LoD/1.10": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.11": [
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.11b": [
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeFileDescriptors|0x402396"
-        ],
-        "LoD/1.12a": [
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E",
-          "InitializeModuleData|0x402017",
-          "GetEnvironmentStringsConverted|0x402264"
-        ],
-        "LoD/1.13c": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E"
         ],
-        "LoD/1.13d": [
+        "LoD/1.11": [
+          "GetEnvironmentStringsConverted|0x402264",
           "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeEnvironmentVariables|0x401F5E"
+        ],
+        "LoD/1.11b": [
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396"
         ],
-        "LoD/1.14a": [
+        "LoD/1.12a": [
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
           "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeFileDescriptors|0x402396",
           "InitializeModuleData|0x402017"
         ],
-        "LoD/1.14b": [
+        "LoD/1.13c": [
           "InitializeModuleData|0x402017",
           "InitializeEnvironmentVariables|0x401F5E",
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396"
+        ],
+        "LoD/1.13d": [
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017"
+        ],
+        "LoD/1.14a": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "InitializeEnvironmentVariables|0x401F5E",
+          "GetEnvironmentStringsConverted|0x402264"
+        ],
+        "LoD/1.14b": [
+          "InitializeFileDescriptors|0x402396",
+          "InitializeModuleData|0x402017",
+          "GetEnvironmentStringsConverted|0x402264",
+          "InitializeEnvironmentVariables|0x401F5E"
         ],
         "LoD/1.14c": [
           "GetEnvironmentStringsConverted|0x402264",
           "InitializeFileDescriptors|0x402396",
-          "InitializeModuleData|0x402017",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017"
         ],
         "LoD/1.14d": [
-          "InitializeModuleData|0x402017",
           "GetEnvironmentStringsConverted|0x402264",
-          "InitializeFileDescriptors|0x402396",
-          "InitializeEnvironmentVariables|0x401F5E"
+          "InitializeEnvironmentVariables|0x401F5E",
+          "InitializeModuleData|0x402017",
+          "InitializeFileDescriptors|0x402396"
         ]
       },
       "instruction_counts": {
@@ -19555,65 +20192,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0x6654|g_dwNewHandlerFlag",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_dwNewHandlerFlag|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0x6654|g_pfnRetryHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6654|g_pfnRetryHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe___nh_malloc": {
@@ -19679,13 +20333,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "edc0f37d3576a005f73adb0b703117a8",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "be05c38d951a724b98e30bc46956a8c1",
         "CFG": "9f044bca13552ccd8ed2b26b9e8086d5",
-        "PRO": "c23a96deea647357438db7500c249a64",
-        "CAL": "edc0f37d3576a005f73adb0b703117a8",
-        "CON": null,
-        "APS": null
+        "PRO": "c23a96deea647357438db7500c249a64"
       },
       "callees": {
         "LoD/1.07": [
@@ -19697,24 +20351,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.09": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
-        ],
-        "LoD/1.09b": [
           "AllocateMemoryWithCache|0x402F2E",
           "InvokeCallbackHandler|0x403D08"
+        ],
+        "LoD/1.09b": [
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.09d": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.10": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.11": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
+          "InvokeCallbackHandler|0x403D08",
+          "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.11b": [
           "InvokeCallbackHandler|0x403D08",
@@ -19725,12 +20379,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.13c": [
-          "AllocateMemoryWithCache|0x402F2E",
-          "InvokeCallbackHandler|0x403D08"
-        ],
-        "LoD/1.13d": [
           "InvokeCallbackHandler|0x403D08",
           "AllocateMemoryWithCache|0x402F2E"
+        ],
+        "LoD/1.13d": [
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.14a": [
           "InvokeCallbackHandler|0x403D08",
@@ -19741,8 +20395,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryWithCache|0x402F2E"
         ],
         "LoD/1.14c": [
-          "InvokeCallbackHandler|0x403D08",
-          "AllocateMemoryWithCache|0x402F2E"
+          "AllocateMemoryWithCache|0x402F2E",
+          "InvokeCallbackHandler|0x403D08"
         ],
         "LoD/1.14d": [
           "AllocateMemoryWithCache|0x402F2E",
@@ -19883,65 +20537,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_AllocateMemoryWithCache": {
@@ -20007,13 +20678,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "52a117cb90b97785fb6b3db59a8fe687",
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "4e5e59b9a63f832f54b3dcf90c4a63d7",
         "CFG": "2f4c9f964ceef7c087d3e5f43a3d4cd4",
-        "PRO": "7c2798772733d12aa5a4d0ccd50b453d",
-        "CAL": "52a117cb90b97785fb6b3db59a8fe687",
-        "CON": null,
-        "APS": null
+        "PRO": "7c2798772733d12aa5a4d0ccd50b453d"
       },
       "callees": {
         "LoD/1.07": [
@@ -20021,48 +20692,48 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapAlloc|0x28"
         ],
         "LoD/1.08": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.09": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.09b": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
         "LoD/1.09d": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
-        ],
-        "LoD/1.10": [
           "HeapAlloc|0x28",
           "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.10": [
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.11": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
         "LoD/1.11b": [
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
+        ],
+        "LoD/1.12a": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
-        "LoD/1.12a": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
-        ],
         "LoD/1.13c": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.13d": [
           "AllocateMemoryDescriptorBlock|0x403639",
           "HeapAlloc|0x28"
         ],
         "LoD/1.14a": [
-          "AllocateMemoryDescriptorBlock|0x403639",
-          "HeapAlloc|0x28"
+          "HeapAlloc|0x28",
+          "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.14b": [
           "AllocateMemoryDescriptorBlock|0x403639",
@@ -20073,8 +20744,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptorBlock|0x403639"
         ],
         "LoD/1.14d": [
-          "HeapAlloc|0x28",
-          "AllocateMemoryDescriptorBlock|0x403639"
+          "AllocateMemoryDescriptorBlock|0x403639",
+          "HeapAlloc|0x28"
         ]
       },
       "callers": {
@@ -20211,95 +20882,112 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeap",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeap|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0x6290|g_dwCacheSizeLimit",
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c"
+          "0xFFFFFFFFFFC00004||",
+          "0x6290|g_dwCacheSizeLimit|0x3f8",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_OptimizedMemoryMove": {
@@ -20361,17 +21049,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "comment": "Optimized memory move implementation with overlap detection and alignment optimization.\n\nAlgorithm:\n1. Check for overlapping memory regions (source and destination ranges overlap)\n2. If overlapping regions detected, copy backwards from end to start to avoid corruption\n3. If no overlap, copy forwards from start to end for better cache performance\n4. For both directions, optimize copying using 4-byte aligned transfers when possible\n5. Handle misaligned data by copying individual bytes first to reach alignment\n6. Perform bulk 4-byte transfers in optimized loop (unroll threshold of 8 iterations)\n7. Copy remaining bytes (0-3) using individual byte transfers\n\nParameters:\npDestination - Destination memory buffer to copy data to\npSource - Source memory buffer to copy data from  \ndwByteCount - Number of bytes to copy between buffers\n\nReturns:\nvoid * - Returns original destination pointer (pDestination) for function chaining\n\nSpecial Cases:\nZero byte count - Returns immediately without any memory operations\nMisaligned pointers - Falls back to byte-by-byte copying with alignment handling\nLarge transfers - Uses optimized 4-byte transfers with loop unrolling for performance\n\nMagic Numbers Reference:\n0x4 (4) - Alignment boundary and 4-byte transfer size\n0x3 (3) - Alignment mask to check 4-byte boundary alignment  \n0x7 (7) - Loop unrolling threshold for optimized bulk transfer\n\nError Handling:\nNo explicit error checking - assumes valid memory regions and non-null pointers\nOverlap detection prevents memory corruption during overlapping copies\nAlignment optimization ensures optimal performance on x86 architecture",
       "name_source": "LoD/1.07",
       "method": "CON",
-      "index": "CON:c0cded2a7439ff1fc575ac62397d80a4",
+      "index": "CON:b4526beb7f7ee2f0ad52cc5ebb23b21b",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "b4526beb7f7ee2f0ad52cc5ebb23b21b",
         "MNE": "bff09423b51fd121ea30afec957819f4",
         "CFG": "b8bcea0773ca2dfa689f3f8d23e7384e",
-        "PRO": "ff38c497c82643f818ac8c3950b7223d",
-        "CAL": null,
-        "CON": "c0cded2a7439ff1fc575ac62397d80a4",
-        "APS": null
+        "PRO": "ff38c497c82643f818ac8c3950b7223d"
       },
       "callers": {
         "LoD/1.07": [
@@ -20507,307 +21195,369 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.08": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.09": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.09b": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.09d": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.10": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.11": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.11b": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.12a": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.13c": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.13d": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.14a": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.14b": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.14c": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ],
         "LoD/1.14d": [
-          4210064,
-          4210188,
-          4210296,
-          4210312,
-          4210456,
-          4210624,
-          4210704
+          "0x3D65||0x403E78",
+          "0x3D7D||0x403D90",
+          "0x3D84||0x403E88",
+          "0x3D8C||0x403E0C",
+          "0x3DC2||0x403E78",
+          "0x3DE8||0x403E78",
+          "0x3E02||0x403E78",
+          "0x3E6F||0x403E78",
+          "0x3EE7||0x404010",
+          "0x3EF2||0x403FC0"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0x3E78|switchdataD_00403e78",
-          "0x3D94|switchdataD_00403d94",
-          "0x3E0C|switchdataD_00403e0c",
-          "0x4010|switchdataD_00404010",
-          "0x3FC0|PTR_caseD_0_00403fc0",
-          "0x3F1C|switchdataD_00403f1c"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0x3E78|switchdataD_00403e78|00403e88",
+          "0x3D94|switchdataD_00403d94|00403da0",
+          "0x3E0C|switchdataD_00403e0c|00403e6f",
+          "0x4010|switchdataD_00404010|00404020",
+          "0x3FC0|PTR_caseD_0_00403fc0|00404007",
+          "0x3F1C|switchdataD_00403f1c|00403f28"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_InitializeBufferManager": {
@@ -20873,13 +21623,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "9714d3ad2deea30ac943f1376fae33d4",
         "CFG": "e5b8e3675e647a57b186af1caa74bfb1",
-        "PRO": "a1b9fb36e2d9d764f2ab02021d9a5d11",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "a1b9fb36e2d9d764f2ab02021d9a5d11"
       },
       "callees": {
         "LoD/1.07": [
@@ -21062,186 +21812,186 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.08": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.09": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.09b": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.09d": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.10": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.11": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.11b": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.12a": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.13c": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.13d": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.14a": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.14b": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.14c": [
-          320
+          "0x32A5||0x140"
         ],
         "LoD/1.14d": [
-          320
+          "0x32A5||0x140"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.08": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09b": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.09d": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.10": [
-          "0x6674|g_hHeap",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeap|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.11": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.11b": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.12a": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.13c": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.13d": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.14a": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.14b": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.14c": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ],
         "LoD/1.14d": [
-          "0x6674|g_hHeapHandle",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x6670|g_pDescriptorArray",
-          "0x6668|g_dwBufferReadIndex",
-          "0x666C|g_nDescriptorCount",
-          "0x6664|g_pBufferBasePointer",
-          "0x665C|g_dwBufferElementSize"
+          "0x6674|g_hHeapHandle|0x0",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0x665C|g_dwBufferElementSize|0x0"
         ]
       }
     },
@@ -21308,13 +22058,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "2a0dd1f395da0f8e13609d337843c676",
         "CFG": "1a3f7cfa3845a97e1009681b130f0d18",
-        "PRO": "ea54e4b4b6d11783843fb018aafdb15a",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "ea54e4b4b6d11783843fb018aafdb15a"
       },
       "callers": {
         "LoD/1.07": [
@@ -21450,127 +22200,144 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.08": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.09": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.09b": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.09d": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.10": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.11": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.11b": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.12a": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.13c": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.13d": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.14a": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.14b": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.14c": [
-          1048576
+          "0x32FE||0x100000"
         ],
         "LoD/1.14d": [
-          1048576
+          "0x32FE||0x100000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_FreeMemoryBlockWithLinkedListC": {
@@ -21636,13 +22403,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "e3ec679679a02264f139ac30186a970f",
         "API": null,
+        "APS": null,
+        "CON": "f16898611ac5b33d9ecaf7330b5442fc",
         "MNE": "9bfd98dbbd3e5d7edb553bd7666739e4",
         "CFG": "b84f01dedd456598d3cbe7e053845bd4",
-        "PRO": "00e2fa60d81eb194d407fbc1353f620d",
-        "CAL": "e3ec679679a02264f139ac30186a970f",
-        "CON": "f16898611ac5b33d9ecaf7330b5442fc",
-        "APS": null
+        "PRO": "00e2fa60d81eb194d407fbc1353f620d"
       },
       "callees": {
         "LoD/1.07": [
@@ -21651,24 +22418,24 @@ var FUNCTIONS_Diablo_II_exe = {
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.08": [
-          "HeapFree|0x20",
+          "VirtualFree|0x1F",
           "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F"
+          "HeapFree|0x20"
         ],
         "LoD/1.09": [
-          "OptimizedMemoryMove|0x403D30",
-          "HeapFree|0x20",
-          "VirtualFree|0x1F"
-        ],
-        "LoD/1.09b": [
           "VirtualFree|0x1F",
           "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30"
         ],
-        "LoD/1.09d": [
-          "HeapFree|0x20",
+        "LoD/1.09b": [
           "OptimizedMemoryMove|0x403D30",
-          "VirtualFree|0x1F"
+          "VirtualFree|0x1F",
+          "HeapFree|0x20"
+        ],
+        "LoD/1.09d": [
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F",
+          "HeapFree|0x20"
         ],
         "LoD/1.10": [
           "HeapFree|0x20",
@@ -21681,14 +22448,14 @@ var FUNCTIONS_Diablo_II_exe = {
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.11b": [
-          "HeapFree|0x20",
           "VirtualFree|0x1F",
+          "HeapFree|0x20",
           "OptimizedMemoryMove|0x403D30"
         ],
         "LoD/1.12a": [
-          "HeapFree|0x20",
+          "OptimizedMemoryMove|0x403D30",
           "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
+          "HeapFree|0x20"
         ],
         "LoD/1.13c": [
           "HeapFree|0x20",
@@ -21696,9 +22463,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "VirtualFree|0x1F"
         ],
         "LoD/1.13d": [
-          "VirtualFree|0x1F",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F"
         ],
         "LoD/1.14a": [
           "OptimizedMemoryMove|0x403D30",
@@ -21707,8 +22474,8 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.14b": [
           "HeapFree|0x20",
-          "VirtualFree|0x1F",
-          "OptimizedMemoryMove|0x403D30"
+          "OptimizedMemoryMove|0x403D30",
+          "VirtualFree|0x1F"
         ],
         "LoD/1.14c": [
           "VirtualFree|0x1F",
@@ -21716,9 +22483,9 @@ var FUNCTIONS_Diablo_II_exe = {
           "HeapFree|0x20"
         ],
         "LoD/1.14d": [
-          "VirtualFree|0x1F",
+          "OptimizedMemoryMove|0x403D30",
           "HeapFree|0x20",
-          "OptimizedMemoryMove|0x403D30"
+          "VirtualFree|0x1F"
         ]
       },
       "callers": {
@@ -21855,277 +22622,294 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.08": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.09": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.09b": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.09d": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.10": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.11": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.11b": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.12a": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.13c": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.13d": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.14a": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.14b": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.14c": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ],
         "LoD/1.14d": [
-          324,
-          516,
-          16384,
-          32768
+          "0x3333||0x204",
+          "0x333D||0x144",
+          "0x3559||0x8000",
+          "0x355E||0x4000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|DAT_00406660"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|DAT_00406660|0x0"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC0000B|",
-          "0x6668|g_dwBufferReadIndex",
-          "0x6660|g_dwCurrentPoolIndex"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC0000B||",
+          "0x6668|g_dwBufferReadIndex|0x0",
+          "0x6660|g_dwCurrentPoolIndex|0x0"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 2,
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_AllocateMemoryDescriptorBlock": {
@@ -22191,42 +22975,42 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "5bb0f1161464ac40af1960ad04967a2c",
         "API": null,
+        "APS": null,
+        "CON": "8a8225fc5cf0d862e46335c317c8624f",
         "MNE": "ff64648b3e6e32bc28a5e4bc8d984c1e",
         "CFG": "77ee9e9eb59c49729f84a4814c50ba23",
-        "PRO": "74548a597b2dbd13776d58d1d4d74bdf",
-        "CAL": "5bb0f1161464ac40af1960ad04967a2c",
-        "CON": "8a8225fc5cf0d862e46335c317c8624f",
-        "APS": null
+        "PRO": "74548a597b2dbd13776d58d1d4d74bdf"
       },
       "callees": {
         "LoD/1.07": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.08": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
-        "LoD/1.09": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
-        "LoD/1.09b": [
+        "LoD/1.09": [
           "AllocateMemorySlot|0x4039F3",
           "AllocateMemoryDescriptor|0x403942"
         ],
+        "LoD/1.09b": [
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
+        ],
         "LoD/1.09d": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.10": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.11": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ],
         "LoD/1.11b": [
           "AllocateMemorySlot|0x4039F3",
@@ -22237,28 +23021,28 @@ var FUNCTIONS_Diablo_II_exe = {
           "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.13c": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.13d": [
-          "AllocateMemoryDescriptor|0x403942",
-          "AllocateMemorySlot|0x4039F3"
+          "AllocateMemorySlot|0x4039F3",
+          "AllocateMemoryDescriptor|0x403942"
         ],
         "LoD/1.14a": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
-        "LoD/1.14b": [
-          "AllocateMemorySlot|0x4039F3",
-          "AllocateMemoryDescriptor|0x403942"
-        ],
-        "LoD/1.14c": [
           "AllocateMemoryDescriptor|0x403942",
           "AllocateMemorySlot|0x4039F3"
         ],
-        "LoD/1.14d": [
+        "LoD/1.14b": [
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
+        ],
+        "LoD/1.14c": [
           "AllocateMemorySlot|0x4039F3",
           "AllocateMemoryDescriptor|0x403942"
+        ],
+        "LoD/1.14d": [
+          "AllocateMemoryDescriptor|0x403942",
+          "AllocateMemorySlot|0x4039F3"
         ]
       },
       "callers": {
@@ -22395,247 +23179,264 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.08": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.09": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.09b": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.09d": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.10": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.11": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.11b": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.12a": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.13c": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.13d": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.14a": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.14b": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.14c": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ],
         "LoD/1.14d": [
-          324,
-          516
+          "0x3790||0x204",
+          "0x3796||0x144"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.08": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.09": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.09b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.09d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.10": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.11": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.11b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.12a": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.13c": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.13d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.14a": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.14b": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.14c": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ],
         "LoD/1.14d": [
-          "0x666C|g_nDescriptorCount",
-          "0x6670|g_pDescriptorArray",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0xFFFFFFFFFFBFFFEC|",
-          "0xFFFFFFFFFFBFFFF4|",
-          "0xFFFFFFFFFFBFFFF0|",
-          "0x6664|g_pBufferBasePointer",
-          "0xFFFFFFFFFFBFFFE8|",
-          "0xFFFFFFFFFFC00007|"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0xFFFFFFFFFFBFFFEC||",
+          "0xFFFFFFFFFFBFFFF4||",
+          "0xFFFFFFFFFFBFFFF0||",
+          "0x6664|g_pBufferBasePointer|0x0",
+          "0xFFFFFFFFFFBFFFE8||",
+          "0xFFFFFFFFFFC00007||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_AllocateMemoryDescriptor": {
@@ -22701,104 +23502,104 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": "d162a691c996bedefb297d13afb4296d",
         "API": null,
+        "APS": null,
+        "CON": "96c1a5fdc99677050d0c1df56bae10f7",
         "MNE": "b59a8a7d2c8fdcc2aac183f01f99a847",
         "CFG": "1dc319af88f2e70d9474a5ad20c0aa4a",
-        "PRO": "30c72037c3458611ecf2fcd89dd1352a",
-        "CAL": "d162a691c996bedefb297d13afb4296d",
-        "CON": "96c1a5fdc99677050d0c1df56bae10f7",
-        "APS": null
+        "PRO": "30c72037c3458611ecf2fcd89dd1352a"
       },
       "callees": {
         "LoD/1.07": [
           "HeapFree|0x20",
-          "VirtualAlloc|0x29",
           "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A"
+          "HeapReAlloc|0x2A",
+          "VirtualAlloc|0x29"
         ],
         "LoD/1.08": [
-          "HeapFree|0x20",
           "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A"
+          "HeapReAlloc|0x2A",
+          "HeapFree|0x20"
         ],
         "LoD/1.09": [
+          "VirtualAlloc|0x29",
           "HeapReAlloc|0x2A",
           "HeapAlloc|0x28",
-          "VirtualAlloc|0x29",
           "HeapFree|0x20"
         ],
         "LoD/1.09b": [
-          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
           "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A",
-          "HeapFree|0x20"
+          "VirtualAlloc|0x29",
+          "HeapReAlloc|0x2A"
         ],
         "LoD/1.09d": [
+          "HeapAlloc|0x28",
           "HeapFree|0x20",
           "HeapReAlloc|0x2A",
-          "HeapAlloc|0x28",
           "VirtualAlloc|0x29"
         ],
         "LoD/1.10": [
           "HeapReAlloc|0x2A",
-          "HeapAlloc|0x28",
           "VirtualAlloc|0x29",
-          "HeapFree|0x20"
+          "HeapFree|0x20",
+          "HeapAlloc|0x28"
         ],
         "LoD/1.11": [
           "HeapReAlloc|0x2A",
-          "HeapFree|0x20",
           "HeapAlloc|0x28",
-          "VirtualAlloc|0x29"
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20"
         ],
         "LoD/1.11b": [
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29",
           "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20",
           "HeapReAlloc|0x2A"
         ],
         "LoD/1.12a": [
-          "HeapFree|0x20",
+          "HeapAlloc|0x28",
           "HeapReAlloc|0x2A",
           "VirtualAlloc|0x29",
-          "HeapAlloc|0x28"
+          "HeapFree|0x20"
         ],
         "LoD/1.13c": [
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29",
-          "HeapAlloc|0x28",
-          "HeapReAlloc|0x2A"
-        ],
-        "LoD/1.13d": [
           "HeapReAlloc|0x2A",
           "HeapFree|0x20",
           "HeapAlloc|0x28",
           "VirtualAlloc|0x29"
         ],
-        "LoD/1.14a": [
+        "LoD/1.13d": [
+          "HeapFree|0x20",
           "VirtualAlloc|0x29",
           "HeapAlloc|0x28",
+          "HeapReAlloc|0x2A"
+        ],
+        "LoD/1.14a": [
           "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29",
           "HeapFree|0x20"
         ],
         "LoD/1.14b": [
-          "HeapFree|0x20",
           "VirtualAlloc|0x29",
+          "HeapFree|0x20",
           "HeapAlloc|0x28",
           "HeapReAlloc|0x2A"
         ],
         "LoD/1.14c": [
           "HeapAlloc|0x28",
           "HeapReAlloc|0x2A",
-          "HeapFree|0x20",
-          "VirtualAlloc|0x29"
+          "VirtualAlloc|0x29",
+          "HeapFree|0x20"
         ],
         "LoD/1.14d": [
-          "HeapAlloc|0x28",
           "HeapFree|0x20",
-          "VirtualAlloc|0x29",
-          "HeapReAlloc|0x2A"
+          "HeapReAlloc|0x2A",
+          "HeapAlloc|0x28",
+          "VirtualAlloc|0x29"
         ]
       },
       "callers": {
@@ -22935,231 +23736,231 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.08": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.09": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.09b": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.09d": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.10": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.11": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.11b": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.12a": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.13c": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.13d": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.14a": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.14b": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.14c": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ],
         "LoD/1.14d": [
-          8192,
-          16836,
-          1048576
+          "0x398B||0x41C4",
+          "0x39AD||0x2000",
+          "0x39B2||0x100000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.08": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09b": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.09d": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.10": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeap",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeap|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.11b": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.12a": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13c": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.13d": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14a": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14b": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14c": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ],
         "LoD/1.14d": [
-          "0x666C|g_nDescriptorCount",
-          "0x665C|g_dwBufferElementSize",
-          "0x6670|g_pDescriptorArray",
-          "0x6674|g_hHeapHandle",
-          "0x50A4|PTR_HeapReAlloc_004050a4",
-          "0x509C|PTR_HeapAlloc_0040509c",
-          "0x50A0|PTR_VirtualAlloc_004050a0",
-          "0x507C|PTR_HeapFree_0040507c"
+          "0x666C|g_nDescriptorCount|0x0",
+          "0x665C|g_dwBufferElementSize|0x0",
+          "0x6670|g_pDescriptorArray|0x0",
+          "0x6674|g_hHeapHandle|0x0",
+          "0x50A4|PTR_HeapReAlloc_004050a4|000057fa",
+          "0x509C|PTR_HeapAlloc_0040509c|000057de",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea",
+          "0x507C|PTR_HeapFree_0040507c|00005760"
         ]
       }
     },
@@ -23222,17 +24023,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "comment": "Allocates a memory slot in the memory descriptor system and initializes linked list structures.\n\nAlgorithm:\n1. Extract base offset from memory descriptor (offset 0x10)\n2. Find next available slot by counting leading set bits in allocation mask (offset 0x8)\n3. Calculate descriptor offset: slot_index * 0x204 + 0x144 + base_offset\n4. Initialize 64 linked list node pairs (0x3f iterations) with self-referencing pointers\n5. Calculate memory base address: slot_index * 0x8000 + base_address (offset 0xc)\n6. Allocate 32KB (0x8000 bytes) of virtual memory with VirtualAlloc\n7. If allocation fails, return -1\n8. Initialize memory block as doubly-linked list with 1024-byte (0x400) stride\n9. Set up forward and backward pointers for each node in the allocated block\n10. Link descriptor to allocated memory at specific offsets (0x1fc, 0x200)\n11. Clear slot status flag at base_offset + 0x44 + slot_index * 4\n12. Set slot allocation flag at base_offset + 0xc4 + slot_index * 4\n13. Increment allocation counter at base_offset + 0x43\n14. If counter wraps to 0, set overflow flag (bit 0) in descriptor flags (offset 0x4)\n15. Clear allocated bit in allocation mask using bit manipulation\n\nParameters:\npMemoryDescriptor - Pointer to MemoryDescriptor structure containing allocation state\n\nReturns:\nSlot index (0-31) on successful allocation\n-1 on VirtualAlloc failure\n\nSpecial Cases:\nMagic Numbers Reference:\n0x204 (516) - Descriptor block size per slot\n0x144 (324) - Base descriptor offset \n0x8000 (32768) - Memory block size (32KB)\n0x1000 (4096) - VirtualAlloc MEM_COMMIT flag\n0x3f (63) - Loop counter for 64 node pairs\n0x400 (1024) - Node stride in memory block\n0xff0 (4080) - Node size/offset marker\n0x1c00 (7168) - Memory block boundary check\n\nStructure Layout:\nOffset | Size | Field Name    | Type | Description\n0x4    | 4    | dwFlags       | uint | Status flags (bit 0 = overflow)\n0x8    | 4    | dwAllocMask   | uint | Allocation bitmask (bit per slot)  \n0xc    | 4    | pBaseMemory   | int* | Base address for memory blocks\n0x10   | 4    | nBaseOffset   | int  | Base offset for descriptor blocks\n\nError Handling:\nVirtualAlloc failure returns -1 without modifying descriptor state\nSlot index calculation assumes valid input parameters",
       "name_source": "LoD/1.07",
       "method": "CON",
-      "index": "CON:29da550efe003bc20354fd57a4971440",
+      "index": "CON:063f30dfe5dbe5d522cd19cc2c9b0288",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "063f30dfe5dbe5d522cd19cc2c9b0288",
         "MNE": "0002c858ef3942a0b403454c72674bfe",
         "CFG": "3fbf2bd19df4bd936c35c3bd28c3f8a5",
-        "PRO": "dea8c343a18f51e1084181af8b8e840f",
-        "CAL": null,
-        "CON": "29da550efe003bc20354fd57a4971440",
-        "APS": null
+        "PRO": "dea8c343a18f51e1084181af8b8e840f"
       },
       "callees": {
         "LoD/1.07": [
@@ -23415,262 +24216,279 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.08": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.09": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.09b": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.09d": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.10": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.11": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.11b": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.12a": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.13c": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.13d": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.14a": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.14b": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.14c": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ],
         "LoD/1.14d": [
-          324,
-          504,
-          516,
-          4072,
-          4076,
-          4080,
-          4092,
-          4096,
-          28672,
-          32768
+          "0x3A12||0x204",
+          "0x3A19||0x144",
+          "0x3A39||0x1000",
+          "0x3A3E||0x8000",
+          "0x3A56||0x7000",
+          "0x3A67||0xFEC",
+          "0x3A6E||0xFFC",
+          "0x3A74||0xFF0",
+          "0x3A86||0xFE8",
+          "0x3A86||0xFF0"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFFFF8|",
-          "0x50A0|PTR_VirtualAlloc_004050a0"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFFFF8||",
+          "0x50A0|PTR_VirtualAlloc_004050a0|000057ea"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_ShowMessageBoxWithActiveWindow": {
@@ -23732,17 +24550,17 @@ var FUNCTIONS_Diablo_II_exe = {
       "comment": "Displays a message box using dynamic loading of user32.dll functions with active window detection.\n\nAlgorithm:\n\n1. Check if MessageBoxA function pointer is already loaded (DAT_1003ca8c)\n2. If not loaded, dynamically load user32.dll using LoadLibraryA\n3. Get function pointers for MessageBoxA, GetActiveWindow, and GetLastActivePopup\n4. Store function pointers in global variables (DAT_1003ca8c, DAT_1003ca90, DAT_1003ca94)\n5. If GetActiveWindow is available, call it to get active window handle\n6. If active window exists and GetLastActivePopup is available, get last active popup\n7. Call MessageBoxA with detected window handle and provided text, caption, and type\n8. Return the result from MessageBoxA\n\nParameters:\n\nlpszText - Pointer to null-terminated string containing message text to display\nlpszCaption - Pointer to null-terminated string containing dialog caption/title\nnType - Message box type flags controlling buttons and icon (MB_OK, MB_ICONERROR, etc.)\n\nReturns:\n\nInteger result from MessageBoxA indicating which button was pressed:\n- IDOK (1) if OK button clicked\n- IDCANCEL (2) if Cancel button clicked  \n- IDABORT (3) if Abort button clicked\n- IDRETRY (4) if Retry button clicked\n- IDIGNORE (5) if Ignore button clicked\n- IDYES (6) if Yes button clicked\n- IDNO (7) if No button clicked\n- 0 if function initialization failed\n\nSpecial Cases:\n\nIf user32.dll cannot be loaded or required functions cannot be found, returns 0.\nUses lazy loading pattern - initializes function pointers only on first call.\nWindow handle detection provides proper message box parenting for modal behavior.\n\nGlobal Variables:\n\nDAT_1003ca8c - Function pointer to MessageBoxA (FARPROC)\nDAT_1003ca90 - Function pointer to GetActiveWindow (FARPROC) \nDAT_1003ca94 - Function pointer to GetLastActivePopup (FARPROC)",
       "name_source": "LoD/1.07",
       "method": "STR",
-      "index": "STR:1d436b74681e11a9bd214b6331c37f94",
+      "index": "STR:4af3153a66a56c6b4d9c75dc7c7bf8ba",
       "indexes": {
         "EXP": null,
-        "STR": "1d436b74681e11a9bd214b6331c37f94",
+        "STR": "4af3153a66a56c6b4d9c75dc7c7bf8ba",
+        "CAL": "6815bfbd6fdd9e2bf9bacba9c707ff1e",
         "API": null,
+        "APS": null,
+        "CON": "09008a8029a6964fd456536138290bb0",
         "MNE": "d28466b802ff41201d4ac81308d22266",
         "CFG": "df5c6e7657bf03b5e12df2df4e8951a5",
-        "PRO": "e0ac0c93da57517ada9568fe18581bfb",
-        "CAL": "6815bfbd6fdd9e2bf9bacba9c707ff1e",
-        "CON": "09008a8029a6964fd456536138290bb0",
-        "APS": null
+        "PRO": "e0ac0c93da57517ada9568fe18581bfb"
       },
       "callees": {
         "LoD/1.07": [
@@ -23758,8 +24576,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.09b": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.09d": [
           "LoadLibraryA|0x1B",
@@ -23774,8 +24592,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.11b": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.12a": [
           "LoadLibraryA|0x1B",
@@ -23786,16 +24604,16 @@ var FUNCTIONS_Diablo_II_exe = {
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.13d": [
-          "LoadLibraryA|0x1B",
-          "GetProcAddress|0xA"
+          "GetProcAddress|0xA",
+          "LoadLibraryA|0x1B"
         ],
         "LoD/1.14a": [
           "GetProcAddress|0xA",
           "LoadLibraryA|0x1B"
         ],
         "LoD/1.14b": [
-          "GetProcAddress|0xA",
-          "LoadLibraryA|0x1B"
+          "LoadLibraryA|0x1B",
+          "GetProcAddress|0xA"
         ],
         "LoD/1.14c": [
           "GetProcAddress|0xA",
@@ -23851,98 +24669,6 @@ var FUNCTIONS_Diablo_II_exe = {
         ],
         "LoD/1.14d": [
           "DisplayRuntimeError|0x402789"
-        ]
-      },
-      "strings": {
-        "LoD/1.07": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.08": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.09": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.09b": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.09d": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.10": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.11": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.11b": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.12a": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.13c": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.13d": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.14a": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.14b": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.14c": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
-        ],
-        "LoD/1.14d": [
-          "\"GetLastActivePopup\"",
-          "\"user32.dll\"",
-          "\"MessageBoxA\"",
-          "\"GetActiveWindow\""
         ]
       },
       "instruction_counts": {
@@ -24032,262 +24758,219 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.08": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.09": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.09b": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.09d": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.10": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.11": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.11b": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.12a": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.13c": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.13d": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.14a": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.14b": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.14c": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ],
         "LoD/1.14d": [
-          4215780,
-          4215800,
-          4215816,
-          4215828
+          "0x3AFB||0x405414",
+          "0x3B12||0x405408",
+          "0x3B23||0x4053F8",
+          "0x3B2B||0x4053E4"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.08": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.09": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.09b": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.09d": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.10": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.11": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.11b": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.12a": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.13c": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.13d": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.14a": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.14b": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.14c": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ],
         "LoD/1.14d": [
-          "0x6648|g_pfnMessageBoxA",
-          "0x5414|s_user32.dll_00405414",
-          "0x5068|PTR_LoadLibraryA_00405068",
-          "0x5024|PTR_GetProcAddress_00405024",
-          "0x5408|s_MessageBoxA_00405408",
-          "0x53F8|s_GetActiveWindow_004053f8",
-          "0x53E4|s_GetLastActivePopup_004053e4",
-          "0x664C|g_pfnGetActiveWindow",
-          "0x6650|g_pfnGetLastActivePopup"
+          "0x6648|g_pfnMessageBoxA|0x0",
+          "0x5068|PTR_LoadLibraryA_00405068|0000581a",
+          "0x5024|PTR_GetProcAddress_00405024|00005808",
+          "0x664C|g_pfnGetActiveWindow|0x0",
+          "0x6650|g_pfnGetLastActivePopup|0x0"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe__strncpy": {
@@ -24353,13 +25036,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "b35d7544ccb06f0fede567c578bacd51",
         "MNE": "60fb4369558c571ee3e9892006835a82",
         "CFG": "1cca209eac1c43a753e574cbe330b905",
-        "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e",
-        "CAL": null,
-        "CON": "b35d7544ccb06f0fede567c578bacd51",
-        "APS": null
+        "PRO": "5dfddeed7b00a61835a5cf192d4d7c3e"
       },
       "callers": {
         "LoD/1.07": [
@@ -24495,142 +25178,159 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.08": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.09": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.09b": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.09d": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.10": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.11": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.11b": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.12a": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.13c": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.13d": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.14a": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.14b": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.14c": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ],
         "LoD/1.14d": [
-          65535,
-          16711680
+          "0x3C33||0xFF0000",
+          "0x3C47||0xFFFF"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_AllocateStackSpace": {
@@ -24691,18 +25391,18 @@ var FUNCTIONS_Diablo_II_exe = {
       "return_type": "void",
       "comment": "Dynamically allocates stack space with page probing to ensure proper memory commitment.\n\nAlgorithm:\n1. Initialize stack pointer to current position plus 8 bytes (beyond return address and saved ECX)\n2. Check if requested allocation size exceeds one page (0x1000 bytes)\n3. If multi-page allocation needed, enter probing loop:\n   - Subtract one page (0x1000 bytes) from stack pointer\n   - Subtract one page from remaining allocation size\n   - Touch memory at stack pointer to trigger page commitment\n   - Repeat until remaining size is less than one page\n4. Subtract final remaining bytes from stack pointer\n5. Touch memory at final stack position to commit last page\n6. Update ESP register to new stack pointer position\n7. Restore original ECX and return address from saved stack frame\n8. Return to caller with stack space allocated and committed\n\nParameters:\ndwStackSize (uint) - Number of bytes to allocate on stack\n\nReturns:\nvoid - No return value, modifies stack pointer directly\n\nSpecial Cases:\n- Single page allocations (\u2264 0xFFF bytes) skip the probing loop\n- Memory touches use TEST instruction to trigger page faults for uncommitted pages\n- Stack grows downward, so allocation decreases stack pointer\n- Function preserves ECX register across call\n\nMagic Numbers Reference:\n0x1000 (4096) - Windows page size for stack probing\n0xFFF (4095) - Maximum single-page allocation without probing\n\nError Handling:\n- No explicit error handling - relies on Windows page fault mechanism\n- Invalid memory access triggers system page fault handler\n- Stack overflow protection handled by system guard pages",
       "name_source": "LoD/1.07",
-      "method": "MNE",
-      "index": "MNE:2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
+      "method": "CON",
+      "index": "CON:6da528387922dfd304afe3ad13897d1e",
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": "6da528387922dfd304afe3ad13897d1e",
         "MNE": "2a518bd4b0b93e6cf2e2d91eb6ff7bf6",
         "CFG": "3045bd7efe0c8474877fb5b5055e4bc3",
-        "PRO": "c71205845eb17fcc2718f716924d07ee",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "c71205845eb17fcc2718f716924d07ee"
       },
       "callers": {
         "LoD/1.07": [
@@ -24718,12 +25418,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09b": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.09d": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.10": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -24746,8 +25446,8 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.13d": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.14a": [
           "LocaleMapStringWithConversion|0x4028DC",
@@ -24758,12 +25458,12 @@ var FUNCTIONS_Diablo_II_exe = {
           "GetCharacterTypeInfo|0x402B2B"
         ],
         "LoD/1.14c": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ],
         "LoD/1.14d": [
-          "LocaleMapStringWithConversion|0x4028DC",
-          "GetCharacterTypeInfo|0x402B2B"
+          "GetCharacterTypeInfo|0x402B2B",
+          "LocaleMapStringWithConversion|0x4028DC"
         ]
       },
       "instruction_counts": {
@@ -24853,141 +25553,186 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "constants": {
         "LoD/1.07": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.08": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.09": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.09b": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.09d": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.10": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.11": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.11b": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.12a": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.13c": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.13d": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.14a": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.14b": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.14c": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ],
         "LoD/1.14d": [
-          4096
+          "0x3C81||0x1000",
+          "0x3C8C||0x1000",
+          "0x3C92||0x1000",
+          "0x3C99||0x1000"
         ]
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFBFF004|",
-          "0xFFFFFFFFFFBFFFFC|",
-          "0xFFFFFFFFFFC00000|"
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFBFF004||",
+          "0xFFFFFFFFFFBFFFFC||",
+          "0xFFFFFFFFFFC00000||"
         ]
       }
     },
@@ -25054,13 +25799,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "b99d3962c0b26901db87269607fbf85a",
         "CFG": "b10def2481331b1b779206ec56a43f38",
-        "PRO": "e29656b1d5576c12f534a0f00ea1c858",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "e29656b1d5576c12f534a0f00ea1c858"
       },
       "callers": {
         "LoD/1.07": [
@@ -25196,80 +25941,97 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.08": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC0000C|",
-          "0xFFFFFFFFFFC00004|",
-          "0xFFFFFFFFFFC00008|"
+          "0xFFFFFFFFFFC0000C||",
+          "0xFFFFFFFFFFC00004||",
+          "0xFFFFFFFFFFC00008||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 3,
+        "LoD/1.08": 3,
+        "LoD/1.09": 3,
+        "LoD/1.09b": 3,
+        "LoD/1.09d": 3,
+        "LoD/1.10": 3,
+        "LoD/1.11": 3,
+        "LoD/1.11b": 3,
+        "LoD/1.12a": 3,
+        "LoD/1.13c": 3,
+        "LoD/1.13d": 3,
+        "LoD/1.14a": 3,
+        "LoD/1.14b": 3,
+        "LoD/1.14c": 3,
+        "LoD/1.14d": 3
       }
     },
     "diablo ii.exe_InvokeCallbackHandler": {
@@ -25335,13 +26097,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "ee4facdaccbd6fc5f3297fd5b85b73c2",
         "CFG": "b52f56e126e2d946dea5881aec08bc73",
-        "PRO": "eba25aa4a7ad5f2a92814c91aa869f28",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "eba25aa4a7ad5f2a92814c91aa869f28"
       },
       "callers": {
         "LoD/1.07": [
@@ -25477,65 +26239,82 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.07": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.08": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0x6658|g_pfnCallbackHandler",
-          "0xFFFFFFFFFFC00004|"
+          "0x6658|g_pfnCallbackHandler|0x0",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.07": 1,
+        "LoD/1.08": 1,
+        "LoD/1.09": 1,
+        "LoD/1.09b": 1,
+        "LoD/1.09d": 1,
+        "LoD/1.10": 1,
+        "LoD/1.11": 1,
+        "LoD/1.11b": 1,
+        "LoD/1.12a": 1,
+        "LoD/1.13c": 1,
+        "LoD/1.13d": 1,
+        "LoD/1.14a": 1,
+        "LoD/1.14b": 1,
+        "LoD/1.14c": 1,
+        "LoD/1.14d": 1
       }
     },
     "diablo ii.exe_RtlUnwind": {
@@ -25600,13 +26379,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "e3e7225badfcf3c2e051c42d71d7237a",
         "CFG": "aecf32697ffe0ec80fa581bb7d6ebc2e",
-        "PRO": "8e99e48039a137206e6ffe8f75bf57a9",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "8e99e48039a137206e6ffe8f75bf57a9"
       },
       "callers": {
         "LoD/1.07": [
@@ -25739,6 +26518,23 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.14c": "e3e7225badfcf3c2e051c42d71d7237a",
         "LoD/1.14d": "e3e7225badfcf3c2e051c42d71d7237a"
+      },
+      "param_counts": {
+        "LoD/1.07": 4,
+        "LoD/1.08": 4,
+        "LoD/1.09": 4,
+        "LoD/1.09b": 4,
+        "LoD/1.09d": 4,
+        "LoD/1.10": 4,
+        "LoD/1.11": 4,
+        "LoD/1.11b": 4,
+        "LoD/1.12a": 4,
+        "LoD/1.13c": 4,
+        "LoD/1.13d": 4,
+        "LoD/1.14a": 4,
+        "LoD/1.14b": 4,
+        "LoD/1.14c": 4,
+        "LoD/1.14d": 4
       }
     },
     "diablo ii.exe__strstr": {
@@ -25801,13 +26597,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "3c60546d8cfb6e92d20e0cc9dd281ae9",
         "CFG": "716e8aa637b8b0b883d37e30aaff9bbb",
-        "PRO": "858f2f80185d26d23fec7b662bab6b38",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "858f2f80185d26d23fec7b662bab6b38"
       },
       "callees": {
         "LoD/1.08": [
@@ -25979,61 +26775,77 @@ var FUNCTIONS_Diablo_II_exe = {
       },
       "globals": {
         "LoD/1.08": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.09d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.10": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.11b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.12a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.13d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14a": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14b": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14c": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ],
         "LoD/1.14d": [
-          "0xFFFFFFFFFFC00008|",
-          "0xFFFFFFFFFFC00004|"
+          "0xFFFFFFFFFFC00008||",
+          "0xFFFFFFFFFFC00004||"
         ]
+      },
+      "param_counts": {
+        "LoD/1.08": 2,
+        "LoD/1.09": 2,
+        "LoD/1.09b": 2,
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.11b": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     },
     "diablo ii.exe_DecrementValue": {
@@ -26096,13 +26908,13 @@ var FUNCTIONS_Diablo_II_exe = {
       "indexes": {
         "EXP": null,
         "STR": null,
+        "CAL": null,
         "API": null,
+        "APS": null,
+        "CON": null,
         "MNE": "3ecdb5e459e29b4117490dc114e98574",
         "CFG": "57474f13ec5a3b3413d2cc571b545409",
-        "PRO": "c81df70c1b97172a537e995055b0c6bd",
-        "CAL": null,
-        "CON": null,
-        "APS": null
+        "PRO": "c81df70c1b97172a537e995055b0c6bd"
       },
       "instruction_counts": {
         "LoD/1.08": 3,
@@ -26183,6 +26995,18 @@ var FUNCTIONS_Diablo_II_exe = {
         "LoD/1.14b": "3ecdb5e459e29b4117490dc114e98574",
         "LoD/1.14c": "3ecdb5e459e29b4117490dc114e98574",
         "LoD/1.14d": "3ecdb5e459e29b4117490dc114e98574"
+      },
+      "param_counts": {
+        "LoD/1.09d": 2,
+        "LoD/1.10": 2,
+        "LoD/1.11": 2,
+        "LoD/1.12a": 2,
+        "LoD/1.13c": 2,
+        "LoD/1.13d": 2,
+        "LoD/1.14a": 2,
+        "LoD/1.14b": 2,
+        "LoD/1.14c": 2,
+        "LoD/1.14d": 2
       }
     }
   }

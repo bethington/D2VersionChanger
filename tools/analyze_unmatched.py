@@ -7,10 +7,10 @@ Helps identify if matching can be improved or if these are legitimate unique fun
 import json
 from pathlib import Path
 from collections import defaultdict
+from registry_loader import load_unified_registry
 
 def load_registry():
-    with open('reports/function_registry_v2.json') as f:
-        return json.load(f)
+    return load_unified_registry()
 
 def load_raw_exports(game_type, version, dll):
     """Load the raw Ghidra export for a specific version."""

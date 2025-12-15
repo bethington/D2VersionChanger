@@ -1840,6 +1840,36 @@
             padding-left: 0.5rem;
         }
 
+        /* Value Bonus Breakdown Styles */
+        .value-bonus-breakdown {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            justify-content: center;
+        }
+
+        .value-bonus-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            background: rgba(100, 200, 100, 0.15);
+            border: 1px solid rgba(100, 200, 100, 0.3);
+            border-radius: 3px;
+            padding: 0.1rem 0.3rem;
+            font-size: 0.6rem;
+            cursor: help;
+        }
+
+        .value-bonus-item .bonus-label {
+            color: var(--text-secondary);
+            text-transform: capitalize;
+        }
+
+        .value-bonus-item .bonus-value {
+            color: var(--color-set);
+            font-weight: 600;
+        }
+
         .match-warning {
             background: rgba(255, 200, 100, 0.1);
             border: 1px solid rgba(255, 200, 100, 0.3);
@@ -2519,6 +2549,237 @@
         // Rarity index for identity matching
         let rarityIndex = null;  // { callees: Map, strings: Map, constants: Map }
 
+        // Helper: Extract string value from "address|name|value" format
+        function extractStringValue(s) {
+            if (typeof s === 'string' && s.includes('|')) {
+                const parts = s.split('|');
+                if (parts.length >= 3) return parts[2];  // address|name|value
+                if (parts.length === 2) return parts[1];  // address|value or address|name
+            }
+            return s;
+        }
+
+        // Helper: Extract constant value from "address||value" format
+        function extractConstantValue(c) {
+            if (typeof c === 'string' && c.includes('||')) {
+                const parts = c.split('||');
+                return parts.length >= 2 ? parts[1] : c;
+            }
+            return c;
+        }
+
+        // Helper: Normalize source file paths for cross-version comparison
+        // Handles:
+        //   1. Absolute: C:\Projects\Diablo2\Source\D2Common\DATATBLS\File.cpp -> datatbls/file.cpp
+        //   2. Relative: .\GAME\File.cpp or ?.\Src\File.cpp -> game/file.cpp
+        function normalizeStringPath(s) {
+            // First extract the value from address|name|value format
+            s = extractStringValue(s);
+
+            // Only normalize source file paths
+            if (!/\.(cpp|c|h)$/i.test(s)) return s;
+
+            // Normalize backslashes to forward slashes
+            s = s.replace(/\\\\/g, '/').replace(/\\/g, '/');
+
+            // Strip absolute path prefix (1.00-1.13d format)
+            // C:/Projects/Diablo2/Source/{Module}/{subdir}/{file}
+            const absMatch = s.match(/^[A-Za-z]:\/[^\/]+\/Diablo2\/Source\/[^\/]+\/(.+)/i);
+            if (absMatch) return absMatch[1].toLowerCase();
+
+            // Strip relative path prefix (1.14x format)
+            // ./{subdir}/{file} or ?./... or X./...
+            const relMatch = s.match(/^[A-Za-z\?]?\.\/(.+)/);
+            if (relMatch) return relMatch[1].toLowerCase();
+
+            // Generic: keep last 2 path components
+            const parts = s.split('/');
+            if (parts.length > 2) return parts.slice(-2).join('/').toLowerCase();
+            if (parts.length === 2) return parts.join('/').toLowerCase();
+
+            return s.toLowerCase();
+        }
+
+        // Helper: Extract global value from "address|name|value" format
+        function extractGlobalValue(g) {
+            if (typeof g === 'string' && g.includes('|')) {
+                const parts = g.split('|');
+                // Format: address|name|value - return value (last part)
+                if (parts.length >= 3) return parts[2];
+                if (parts.length === 2) return parts[1];
+            }
+            return g;
+        }
+
+        // Helper: Extract instruction mnemonic from instruction data
+        // Handles various formats: "0x1234: PUSH EBP" or {address: "0x1234", mnemonic: "PUSH", ...}
+        function extractInstructionMnemonic(instr) {
+            if (typeof instr === 'string') {
+                // Format: "0x1234: PUSH EBP" or "PUSH EBP"
+                const colonIdx = instr.indexOf(':');
+                const instrPart = colonIdx >= 0 ? instr.substring(colonIdx + 1).trim() : instr.trim();
+                // Get first word (the mnemonic)
+                const spaceIdx = instrPart.indexOf(' ');
+                return spaceIdx >= 0 ? instrPart.substring(0, spaceIdx).toUpperCase() : instrPart.toUpperCase();
+            }
+            if (typeof instr === 'object' && instr.mnemonic) {
+                return instr.mnemonic.toUpperCase();
+            }
+            return String(instr).toUpperCase();
+        }
+
+        // Helper: Compute Jaccard similarity between two sets (intersection / union)
+        function computeJaccardSimilarity(set1, set2) {
+            if (set1.size === 0 && set2.size === 0) return 1.0;  // Both empty = perfect match
+            if (set1.size === 0 || set2.size === 0) return 0.0;  // One empty = no match
+
+            const intersection = [...set1].filter(x => set2.has(x)).length;
+            const union = new Set([...set1, ...set2]).size;
+
+            return union > 0 ? intersection / union : 0;
+        }
+
+        // Common constants to filter out (too ubiquitous to be meaningful)
+        const COMMON_CONSTANTS = new Set([
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '16', '32', '64', '128', '256',
+            '0x0', '0x1', '0x2', '0x4', '0x8', '0x10', '0x20', '0x40', '0x80', '0x100',
+            '0xFF', '0xFFFF', '0xFFFFFFFF', '-1', '0xffffffff'
+        ]);
+
+        // Value match bonus configuration
+        const VALUE_BONUS_CONFIG = {
+            string_overlap:      { max_bonus: 10, min_items: 1 },   // Strings are highly distinctive
+            instruction_overlap: { max_bonus: 8,  min_items: 3 },   // Instruction patterns
+            constant_overlap:    { max_bonus: 5,  min_items: 2 },   // Constants (filtered)
+            global_overlap:      { max_bonus: 5,  min_items: 1 },   // Global values
+            tag_overlap:         { max_bonus: 5,  min_items: 1 }    // Function tags
+        };
+
+        // Compute value-based match bonuses
+        // Returns { totalBonus, breakdown: { type: { jaccard, bonus, matched, total } } }
+        function computeValueMatchBonuses(sourceData, targetData, sourceVersion, targetVersion) {
+            const breakdown = {};
+            let totalBonus = 0;
+
+            // 1. String value overlap
+            const srcStrings = (sourceData.strings?.[sourceVersion] || []).map(normalizeStringPath);
+            const tgtStrings = (targetData.strings?.[targetVersion] || []).map(normalizeStringPath);
+            if (srcStrings.length >= VALUE_BONUS_CONFIG.string_overlap.min_items &&
+                tgtStrings.length >= VALUE_BONUS_CONFIG.string_overlap.min_items) {
+                const srcSet = new Set(srcStrings);
+                const tgtSet = new Set(tgtStrings);
+                const jaccard = computeJaccardSimilarity(srcSet, tgtSet);
+                const bonus = jaccard * VALUE_BONUS_CONFIG.string_overlap.max_bonus;
+                const matched = [...srcSet].filter(x => tgtSet.has(x));
+                breakdown.string_overlap = {
+                    jaccard: Math.round(jaccard * 100),
+                    bonus: Math.round(bonus * 10) / 10,
+                    matched: matched.slice(0, 3),  // Top 3 for display
+                    srcCount: srcStrings.length,
+                    tgtCount: tgtStrings.length
+                };
+                totalBonus += bonus;
+            }
+
+            // 2. Instruction mnemonic overlap
+            const srcInstrs = (sourceData.instructions?.[sourceVersion] || []).map(extractInstructionMnemonic);
+            const tgtInstrs = (targetData.instructions?.[targetVersion] || []).map(extractInstructionMnemonic);
+            if (srcInstrs.length >= VALUE_BONUS_CONFIG.instruction_overlap.min_items &&
+                tgtInstrs.length >= VALUE_BONUS_CONFIG.instruction_overlap.min_items) {
+                // Use multiset comparison (count occurrences)
+                const srcCounts = new Map();
+                const tgtCounts = new Map();
+                srcInstrs.forEach(m => srcCounts.set(m, (srcCounts.get(m) || 0) + 1));
+                tgtInstrs.forEach(m => tgtCounts.set(m, (tgtCounts.get(m) || 0) + 1));
+
+                // Intersection: min of counts for each mnemonic
+                let intersectionSize = 0;
+                for (const [mnem, srcCount] of srcCounts) {
+                    const tgtCount = tgtCounts.get(mnem) || 0;
+                    intersectionSize += Math.min(srcCount, tgtCount);
+                }
+                const unionSize = Math.max(srcInstrs.length, tgtInstrs.length);
+                const jaccard = unionSize > 0 ? intersectionSize / unionSize : 0;
+                const bonus = jaccard * VALUE_BONUS_CONFIG.instruction_overlap.max_bonus;
+                breakdown.instruction_overlap = {
+                    jaccard: Math.round(jaccard * 100),
+                    bonus: Math.round(bonus * 10) / 10,
+                    srcCount: srcInstrs.length,
+                    tgtCount: tgtInstrs.length
+                };
+                totalBonus += bonus;
+            }
+
+            // 3. Constant value overlap (filter common constants)
+            const srcConstants = (sourceData.constants?.[sourceVersion] || [])
+                .map(extractConstantValue)
+                .filter(c => !COMMON_CONSTANTS.has(String(c)));
+            const tgtConstants = (targetData.constants?.[targetVersion] || [])
+                .map(extractConstantValue)
+                .filter(c => !COMMON_CONSTANTS.has(String(c)));
+            if (srcConstants.length >= VALUE_BONUS_CONFIG.constant_overlap.min_items &&
+                tgtConstants.length >= VALUE_BONUS_CONFIG.constant_overlap.min_items) {
+                const srcSet = new Set(srcConstants.map(String));
+                const tgtSet = new Set(tgtConstants.map(String));
+                const jaccard = computeJaccardSimilarity(srcSet, tgtSet);
+                const bonus = jaccard * VALUE_BONUS_CONFIG.constant_overlap.max_bonus;
+                const matched = [...srcSet].filter(x => tgtSet.has(x));
+                breakdown.constant_overlap = {
+                    jaccard: Math.round(jaccard * 100),
+                    bonus: Math.round(bonus * 10) / 10,
+                    matched: matched.slice(0, 3),
+                    srcCount: srcConstants.length,
+                    tgtCount: tgtConstants.length
+                };
+                totalBonus += bonus;
+            }
+
+            // 4. Global value overlap
+            const srcGlobals = (sourceData.globals?.[sourceVersion] || []).map(extractGlobalValue);
+            const tgtGlobals = (targetData.globals?.[targetVersion] || []).map(extractGlobalValue);
+            if (srcGlobals.length >= VALUE_BONUS_CONFIG.global_overlap.min_items &&
+                tgtGlobals.length >= VALUE_BONUS_CONFIG.global_overlap.min_items) {
+                const srcSet = new Set(srcGlobals.map(String));
+                const tgtSet = new Set(tgtGlobals.map(String));
+                const jaccard = computeJaccardSimilarity(srcSet, tgtSet);
+                const bonus = jaccard * VALUE_BONUS_CONFIG.global_overlap.max_bonus;
+                const matched = [...srcSet].filter(x => tgtSet.has(x));
+                breakdown.global_overlap = {
+                    jaccard: Math.round(jaccard * 100),
+                    bonus: Math.round(bonus * 10) / 10,
+                    matched: matched.slice(0, 3),
+                    srcCount: srcGlobals.length,
+                    tgtCount: tgtGlobals.length
+                };
+                totalBonus += bonus;
+            }
+
+            // 5. Tag overlap
+            const srcTags = sourceData.tags?.[sourceVersion] || [];
+            const tgtTags = targetData.tags?.[targetVersion] || [];
+            if (srcTags.length >= VALUE_BONUS_CONFIG.tag_overlap.min_items &&
+                tgtTags.length >= VALUE_BONUS_CONFIG.tag_overlap.min_items) {
+                const srcSet = new Set(srcTags);
+                const tgtSet = new Set(tgtTags);
+                const jaccard = computeJaccardSimilarity(srcSet, tgtSet);
+                const bonus = jaccard * VALUE_BONUS_CONFIG.tag_overlap.max_bonus;
+                const matched = [...srcSet].filter(x => tgtSet.has(x));
+                breakdown.tag_overlap = {
+                    jaccard: Math.round(jaccard * 100),
+                    bonus: Math.round(bonus * 10) / 10,
+                    matched: matched,
+                    srcCount: srcTags.length,
+                    tgtCount: tgtTags.length
+                };
+                totalBonus += bonus;
+            }
+
+            return {
+                totalBonus: Math.round(totalBonus * 10) / 10,
+                breakdown
+            };
+        }
+
         // Build rarity index from function data
         // Counts how often each callee/string/constant appears across all functions
         function buildRarityIndex(funcData) {
@@ -2542,27 +2803,30 @@
                     }
                 }
 
-                // Count strings across all versions
+                // Count strings across all versions (normalize paths for cross-version matching)
                 if (func.strings) {
                     const seenStrings = new Set();
                     for (const version of Object.keys(func.strings)) {
                         for (const str of func.strings[version]) {
-                            if (!seenStrings.has(str)) {
-                                seenStrings.add(str);
-                                stringCount.set(str, (stringCount.get(str) || 0) + 1);
+                            // Use normalizeStringPath for path normalization (handles .cpp/.c/.h files)
+                            const strValue = normalizeStringPath(str);
+                            if (!seenStrings.has(strValue)) {
+                                seenStrings.add(strValue);
+                                stringCount.set(strValue, (stringCount.get(strValue) || 0) + 1);
                             }
                         }
                     }
                 }
 
-                // Count constants across all versions
+                // Count constants across all versions (extract value from address||value format)
                 if (func.constants) {
                     const seenConstants = new Set();
                     for (const version of Object.keys(func.constants)) {
                         for (const c of func.constants[version]) {
-                            if (!seenConstants.has(c)) {
-                                seenConstants.add(c);
-                                constantCount.set(c, (constantCount.get(c) || 0) + 1);
+                            const cValue = extractConstantValue(c);
+                            if (!seenConstants.has(cValue)) {
+                                seenConstants.add(cValue);
+                                constantCount.set(cValue, (constantCount.get(cValue) || 0) + 1);
                             }
                         }
                     }
@@ -2643,69 +2907,71 @@
                 return result;
             }
 
-            // Exact callee set + exact size match
+            // Exact callee count + exact size match (count-based, not name-based)
+            // Only consider definitive if both have meaningful callee counts
             if (sourceCallees.length > 2 && sourceCallees.length === targetCallees.length && sourceSize === targetSize) {
-                const sourceNames = new Set(sourceCallees.map(c => c.name || c));
-                const targetNames = new Set(targetCallees.map(c => c.name || c));
-                if (sourceNames.size === targetNames.size && [...sourceNames].every(n => targetNames.has(n))) {
+                // Additional check: string counts should also match
+                const srcStringCount = sourceStrings.length;
+                const tgtStringCount = targetStrings.length;
+                if (srcStringCount === tgtStringCount && srcStringCount > 0) {
                     result.tier = 1;
                     result.confidence = 95;
-                    result.breakdown.tier1 = { matched: true, reason: 'Exact callee set + size match' };
+                    result.breakdown.tier1 = { matched: true, reason: `Exact counts match (size:${sourceSize}, callees:${sourceCallees.length}, strings:${srcStringCount})` };
                     return result;
                 }
             }
 
-            // ========== TIER 2: Rarity-Weighted Identity ==========
-            const getCalleeName = c => c.name || c;
-            const sourceCalleeNames = new Set(sourceCallees.map(getCalleeName));
-            const targetCalleeNames = new Set(targetCallees.map(getCalleeName));
-            const sourceStringSet = new Set(sourceStrings);
-            const targetStringSet = new Set(targetStrings);
-            const sourceConstantSet = new Set(sourceConstants);
-            const targetConstantSet = new Set(sourceConstants);
+            // ========== TIER 2: Count-Based Vector Similarity ==========
+            // Use structural count metrics (not names) for reliable cross-version matching
+            const vectorResult = computeCountVectorSimilarity(sourceData, targetData, sourceVersion, targetVersion);
 
-            let matchedRarity = 0;
-            let totalSourceRarity = 0;
+            // Calculate tier 2 score from vector similarity
+            const tier2Score = vectorResult.score || 0;
+
+            // Build list of best matching features for display
             const matchedItems = [];
+            if (vectorResult.breakdown && !vectorResult.error) {
+                // Sort features by contribution (highest first)
+                const sortedFeatures = Object.entries(vectorResult.breakdown)
+                    .sort((a, b) => b[1].contribution - a[1].contribution)
+                    .slice(0, 5);
 
-            // Score callee matches by rarity
-            for (const name of sourceCalleeNames) {
-                const rarity = rarityIdx?.callees?.get(name) || 0.1;
-                totalSourceRarity += rarity;
-                if (targetCalleeNames.has(name)) {
-                    matchedRarity += rarity;
-                    if (rarity > 0.5) {  // Only track rare matches
-                        matchedItems.push({ type: 'callee', name, rarity: rarity.toFixed(2) });
+                for (const [feat, data] of sortedFeatures) {
+                    if (data.similarity >= 50) {  // Only show decent matches
+                        matchedItems.push({
+                            type: 'count',
+                            name: `${feat}: ${data.val1} vs ${data.val2}`,
+                            rarity: `${data.similarity}%`
+                        });
                     }
                 }
             }
 
-            // Score string matches by rarity (strings are usually rare and valuable)
-            for (const str of sourceStringSet) {
-                const rarity = rarityIdx?.strings?.get(str) || 0.8;  // Strings default to high rarity
-                totalSourceRarity += rarity * 2;  // Weight strings higher
-                if (targetStringSet.has(str)) {
-                    matchedRarity += rarity * 2;
-                    matchedItems.push({ type: 'string', name: str.substring(0, 30), rarity: rarity.toFixed(2) });
+            // ========== VALUE MATCH BONUSES ==========
+            // Add bonuses for matching values (strings, constants, globals, instructions, tags)
+            const valueBonuses = computeValueMatchBonuses(sourceData, targetData, sourceVersion, targetVersion);
+
+            // Add value-matched items to the display list
+            if (valueBonuses.breakdown.string_overlap?.matched?.length > 0) {
+                for (const str of valueBonuses.breakdown.string_overlap.matched) {
+                    matchedItems.push({ type: 'string', name: str.substring(0, 30), rarity: `+${valueBonuses.breakdown.string_overlap.bonus}` });
+                }
+            }
+            if (valueBonuses.breakdown.constant_overlap?.matched?.length > 0) {
+                for (const c of valueBonuses.breakdown.constant_overlap.matched) {
+                    matchedItems.push({ type: 'constant', name: c, rarity: `+${valueBonuses.breakdown.constant_overlap.bonus}` });
                 }
             }
 
-            // Score constant matches by rarity
-            for (const c of sourceConstantSet) {
-                const rarity = rarityIdx?.constants?.get(c) || 0.1;
-                totalSourceRarity += rarity * 0.5;  // Weight constants lower
-                if (targetConstantSet.has(c)) {
-                    matchedRarity += rarity * 0.5;
-                }
-            }
-
-            // Calculate tier 2 score
-            const tier2Score = totalSourceRarity > 0 ? (matchedRarity / totalSourceRarity) * 100 : 0;
             result.breakdown.tier2 = {
                 score: Math.round(tier2Score),
-                matchedItems: matchedItems.slice(0, 5),  // Top 5 rare matches
-                matchedRarity: matchedRarity.toFixed(2),
-                totalRarity: totalSourceRarity.toFixed(2)
+                valueBonus: valueBonuses.totalBonus,
+                combinedScore: Math.min(100, Math.round(tier2Score + valueBonuses.totalBonus)),
+                matchedItems: matchedItems.slice(0, 8),  // Top 8 items
+                vectorBreakdown: vectorResult.breakdown || {},
+                valueBonusBreakdown: valueBonuses.breakdown || {},
+                featureCount: vectorResult.featureCount || 0,
+                method: 'count_vector_plus_values'
             };
 
             // ========== TIER 3: Structural Validation ==========
@@ -2732,8 +2998,10 @@
             }
 
             // ========== Final Scoring ==========
+            // Use combined score (base vector + value bonuses), capped at 100
+            let finalScore = Math.min(100, tier2Score + valueBonuses.totalBonus);
+
             // Apply tier 3 penalties
-            let finalScore = tier2Score;
             if (!result.breakdown.tier3.plausible) {
                 finalScore *= 0.5;  // Heavy penalty for implausible structure
             } else if (result.breakdown.tier3.warnings.length > 0) {
@@ -2759,26 +3027,57 @@
         // Expected by openComparisonModal: { score, tier, tierName, details, warnings }
         function calculateIdentityMatch(sourceObj, targetObj, sourceVersion, targetVersion) {
             // Transform flat objects to the nested structure expected by calculateTieredMatch
+            // Include all count fields for count-based vector similarity
             const sourceData = {
                 callees: { [sourceVersion]: sourceObj.callees || [] },
                 strings: { [sourceVersion]: sourceObj.strings || [] },
                 constants: { [sourceVersion]: sourceObj.constants || [] },
+                globals: { [sourceVersion]: sourceObj.globals || [] },
+                instructions: { [sourceVersion]: sourceObj.instructions || [] },
+                tags: { [sourceVersion]: sourceObj.tags || [] },
                 sizes: { [sourceVersion]: sourceObj.size || 0 },
                 mnemonic_hashes: { [sourceVersion]: sourceObj.mnemonic_hash || '' },
                 index: sourceObj.indexes ?
                     (Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[0] + ':' +
-                        Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[1]) : ''
+                        Object.entries(sourceObj.indexes).find(([k, v]) => v)?.[1]) : '',
+                // Count fields for vector similarity
+                instruction_counts: { [sourceVersion]: sourceObj.instruction_count || 0 },
+                basic_block_counts: { [sourceVersion]: sourceObj.basic_block_count || 0 },
+                loop_counts: { [sourceVersion]: sourceObj.loop_count || 0 },
+                stack_frame_sizes: { [sourceVersion]: sourceObj.stack_frame_size || 0 },
+                callee_counts: { [sourceVersion]: sourceObj.callee_count || (sourceObj.callees?.length || 0) },
+                caller_counts: { [sourceVersion]: sourceObj.caller_count || (sourceObj.callers?.length || 0) },
+                string_counts: { [sourceVersion]: sourceObj.string_count || (sourceObj.strings?.length || 0) },
+                constant_counts: { [sourceVersion]: sourceObj.constant_count || (sourceObj.constants?.length || 0) },
+                global_counts: { [sourceVersion]: sourceObj.global_count || (sourceObj.globals?.length || 0) },
+                api_counts: { [sourceVersion]: sourceObj.api_count || (sourceObj.api_calls?.length || 0) },
+                param_counts: { [sourceVersion]: sourceObj.param_count || 0 }
             };
 
             const targetData = {
                 callees: { [targetVersion]: targetObj.callees || [] },
                 strings: { [targetVersion]: targetObj.strings || [] },
                 constants: { [targetVersion]: targetObj.constants || [] },
+                globals: { [targetVersion]: targetObj.globals || [] },
+                instructions: { [targetVersion]: targetObj.instructions || [] },
+                tags: { [targetVersion]: targetObj.tags || [] },
                 sizes: { [targetVersion]: targetObj.size || 0 },
                 mnemonic_hashes: { [targetVersion]: targetObj.mnemonic_hash || '' },
                 index: targetObj.indexes ?
                     (Object.entries(targetObj.indexes).find(([k, v]) => v)?.[0] + ':' +
-                        Object.entries(targetObj.indexes).find(([k, v]) => v)?.[1]) : ''
+                        Object.entries(targetObj.indexes).find(([k, v]) => v)?.[1]) : '',
+                // Count fields for vector similarity
+                instruction_counts: { [targetVersion]: targetObj.instruction_count || 0 },
+                basic_block_counts: { [targetVersion]: targetObj.basic_block_count || 0 },
+                loop_counts: { [targetVersion]: targetObj.loop_count || 0 },
+                stack_frame_sizes: { [targetVersion]: targetObj.stack_frame_size || 0 },
+                callee_counts: { [targetVersion]: targetObj.callee_count || (targetObj.callees?.length || 0) },
+                caller_counts: { [targetVersion]: targetObj.caller_count || (targetObj.callers?.length || 0) },
+                string_counts: { [targetVersion]: targetObj.string_count || (targetObj.strings?.length || 0) },
+                constant_counts: { [targetVersion]: targetObj.constant_count || (targetObj.constants?.length || 0) },
+                global_counts: { [targetVersion]: targetObj.global_count || (targetObj.globals?.length || 0) },
+                api_counts: { [targetVersion]: targetObj.api_count || (targetObj.api_calls?.length || 0) },
+                param_counts: { [targetVersion]: targetObj.param_count || 0 }
             };
 
             // Call the tiered match function
@@ -2803,12 +3102,15 @@
                 tier: tieredResult.tier,
                 tierName: tierNames[tieredResult.tier] || 'Unknown',
                 details: {
-                    calleeScore: tieredResult.breakdown.tier2.score || 0,
+                    vectorScore: tieredResult.breakdown.tier2.score || 0,
                     mnemonicMatch: mnemonicMatch,
                     indexMatch: indexMatch,
                     matchedItems: tieredResult.breakdown.tier2.matchedItems || [],
+                    vectorBreakdown: tieredResult.breakdown.tier2.vectorBreakdown || {},
+                    featureCount: tieredResult.breakdown.tier2.featureCount || 0,
                     tier1Reason: tieredResult.breakdown.tier1.reason,
-                    plausible: tieredResult.breakdown.tier3.plausible
+                    plausible: tieredResult.breakdown.tier3.plausible,
+                    method: tieredResult.breakdown.tier2.method || 'count_vector'
                 },
                 warnings: tieredResult.warnings || []
             };
@@ -4644,29 +4946,209 @@
         }
 
         // Helper: Calculate constant similarity (Jaccard index)
+        // Constants can be in "address||value" format - extract value for comparison
         function calculateConstantSimilarity(constants1, constants2) {
             if (!constants1?.length || !constants2?.length) return 0;
-            const set1 = new Set(constants1);
-            const set2 = new Set(constants2);
+            const set1 = new Set(constants1.map(extractConstantValue));
+            const set2 = new Set(constants2.map(extractConstantValue));
             const intersection = [...set1].filter(x => set2.has(x));
             const union = new Set([...set1, ...set2]);
             if (union.size === 0) return 100;
             return Math.round((intersection.length / union.size) * 100);
         }
 
+        // ========== COUNT-BASED VECTOR MATCHING ==========
+        // Feature weights and tolerances for count-based similarity
+        // Higher weight = more reliable for matching
+        const COUNT_FEATURES = {
+            // Very High Confidence - structural complexity metrics
+            instruction_count: { weight: 0.15, tolerance: 0.15 },
+            size: { weight: 0.15, tolerance: 0.15 },
+            // High Confidence - control flow and signature
+            basic_block_count: { weight: 0.12, tolerance: 0.20 },
+            api_count: { weight: 0.12, tolerance: 0.25 },
+            param_count: { weight: 0.10, tolerance: 0.0 },  // Must match exactly
+            // Medium Confidence - call and reference patterns
+            callee_count: { weight: 0.08, tolerance: 0.25 },
+            string_count: { weight: 0.07, tolerance: 0.30 },
+            global_count: { weight: 0.06, tolerance: 0.30 },
+            loop_count: { weight: 0.05, tolerance: 0.35 },
+            // Lower Confidence - optimization dependent
+            constant_count: { weight: 0.04, tolerance: 0.40 },
+            local_var_count: { weight: 0.03, tolerance: 0.40 },
+            caller_count: { weight: 0.02, tolerance: 0.50 },
+            stack_frame_size: { weight: 0.01, tolerance: 0.50 }
+        };
+
+        // Normalize weights to sum to 1.0
+        const totalWeight = Object.values(COUNT_FEATURES).reduce((sum, f) => sum + f.weight, 0);
+        for (const feat of Object.keys(COUNT_FEATURES)) {
+            COUNT_FEATURES[feat].weight /= totalWeight;
+        }
+
+        // Helper: Compute similarity between two count values
+        function computeFeatureSimilarity(val1, val2, tolerance) {
+            if (val1 === 0 && val2 === 0) return 1.0;  // Both zero = perfect match
+            if (val1 === 0 || val2 === 0) return 0.0;  // One zero = no match
+
+            const ratio = Math.min(val1, val2) / Math.max(val1, val2);
+
+            // Zero tolerance = must match exactly
+            if (tolerance <= 0) {
+                return val1 === val2 ? 1.0 : ratio;
+            }
+
+            // Within tolerance = high score, outside = exponential decay
+            if (ratio >= (1.0 - tolerance)) {
+                return 0.5 + 0.5 * (ratio - (1.0 - tolerance)) / tolerance;
+            } else {
+                return 0.5 * ratio / (1.0 - tolerance);
+            }
+        }
+
+        // Helper: Extract count vector from function data for a specific version
+        function extractCountVector(funcData, version) {
+            const vector = {};
+
+            // Get counts from per-version data if available
+            const getVersionedCount = (field, fallback) => {
+                const perVersion = funcData[field + 's'] || funcData[field + '_counts'];
+                if (perVersion && perVersion[version] !== undefined) return perVersion[version];
+                return fallback;
+            };
+
+            // Size
+            const sizes = funcData.sizes || {};
+            if (sizes[version] !== undefined) vector.size = sizes[version];
+
+            // Instruction count
+            const instrCounts = funcData.instruction_counts || {};
+            if (instrCounts[version] !== undefined) vector.instruction_count = instrCounts[version];
+
+            // Basic block count
+            const bbCounts = funcData.basic_block_counts || {};
+            if (bbCounts[version] !== undefined) vector.basic_block_count = bbCounts[version];
+
+            // Loop count
+            const loopCounts = funcData.loop_counts || {};
+            if (loopCounts[version] !== undefined) vector.loop_count = loopCounts[version];
+
+            // Stack frame size
+            const stackSizes = funcData.stack_frame_sizes || {};
+            if (stackSizes[version] !== undefined) vector.stack_frame_size = stackSizes[version];
+
+            // Callee count (from per-version count field, or array length)
+            const calleeCounts = funcData.callee_counts || {};
+            if (calleeCounts[version] !== undefined) {
+                vector.callee_count = calleeCounts[version];
+            } else if (funcData.callees?.[version]) {
+                vector.callee_count = funcData.callees[version].length;
+            }
+
+            // Caller count
+            const callerCounts = funcData.caller_counts || {};
+            if (callerCounts[version] !== undefined) {
+                vector.caller_count = callerCounts[version];
+            } else if (funcData.callers?.[version]) {
+                vector.caller_count = funcData.callers[version].length;
+            }
+
+            // String count
+            const stringCounts = funcData.string_counts || {};
+            if (stringCounts[version] !== undefined) {
+                vector.string_count = stringCounts[version];
+            } else if (funcData.strings?.[version]) {
+                vector.string_count = funcData.strings[version].length;
+            }
+
+            // Constant count
+            const constCounts = funcData.constant_counts || {};
+            if (constCounts[version] !== undefined) {
+                vector.constant_count = constCounts[version];
+            } else if (funcData.constants?.[version]) {
+                vector.constant_count = funcData.constants[version].length;
+            }
+
+            // Global count
+            const globalCounts = funcData.global_counts || {};
+            if (globalCounts[version] !== undefined) {
+                vector.global_count = globalCounts[version];
+            } else if (funcData.globals?.[version]) {
+                vector.global_count = funcData.globals[version].length;
+            }
+
+            // API count
+            const apiCounts = funcData.api_counts || {};
+            if (apiCounts[version] !== undefined) {
+                vector.api_count = apiCounts[version];
+            } else if (funcData.api_calls?.[version]) {
+                vector.api_count = funcData.api_calls[version].length;
+            }
+
+            // Param count
+            const paramCounts = funcData.param_counts || {};
+            if (paramCounts[version] !== undefined) vector.param_count = paramCounts[version];
+
+            return vector;
+        }
+
+        // Compute count-based vector similarity between two functions
+        // Returns { score: 0-100, breakdown: {feature: {val1, val2, sim, weight, contrib}}, featureCount }
+        function computeCountVectorSimilarity(sourceData, targetData, sourceVersion, targetVersion) {
+            const vec1 = extractCountVector(sourceData, sourceVersion);
+            const vec2 = extractCountVector(targetData, targetVersion);
+
+            // Find common features with values
+            const commonFeatures = Object.keys(COUNT_FEATURES).filter(
+                f => vec1[f] !== undefined && vec2[f] !== undefined
+            );
+
+            if (commonFeatures.length < 3) {
+                return { score: 0, breakdown: {}, featureCount: commonFeatures.length, error: 'insufficient_features' };
+            }
+
+            let totalWeight = 0;
+            let weightedSum = 0;
+            const breakdown = {};
+
+            for (const feature of commonFeatures) {
+                const val1 = vec1[feature];
+                const val2 = vec2[feature];
+                const { weight, tolerance } = COUNT_FEATURES[feature];
+
+                const sim = computeFeatureSimilarity(val1, val2, tolerance);
+                weightedSum += sim * weight;
+                totalWeight += weight;
+
+                breakdown[feature] = {
+                    val1, val2,
+                    similarity: Math.round(sim * 100),
+                    weight: Math.round(weight * 100),
+                    contribution: Math.round(sim * weight * 100)
+                };
+            }
+
+            const score = totalWeight > 0 ? Math.round((weightedSum / totalWeight) * 100) : 0;
+
+            return { score, breakdown, featureCount: commonFeatures.length };
+        }
+
         // Helper: Calculate global reference similarity
+        // Globals are "address|name|value" strings - compare by name if available, else value
         function calculateGlobalSimilarity(globals1, globals2) {
             if (!globals1?.length || !globals2?.length) return 0;
-            // Globals are "RVA|name" strings - compare by name if available, else RVA
-            const getName = g => {
+            const getIdentifier = g => {
                 if (typeof g === 'string') {
                     const parts = g.split('|');
-                    return parts[1] || parts[0]; // name or RVA
+                    // Format: address|name|value - prefer name, fall back to value
+                    if (parts.length >= 3) return parts[1] || parts[2] || parts[0];
+                    if (parts.length === 2) return parts[1] || parts[0];
+                    return parts[0];
                 }
                 return g.name || g.rva || String(g);
             };
-            const set1 = new Set(globals1.map(getName));
-            const set2 = new Set(globals2.map(getName));
+            const set1 = new Set(globals1.map(getIdentifier));
+            const set2 = new Set(globals2.map(getIdentifier));
             const intersection = [...set1].filter(x => set2.has(x));
             const union = new Set([...set1, ...set2]);
             if (union.size === 0) return 100;
@@ -4746,19 +5228,44 @@
         }
 
         // Helper: Render constants as tags
+        // Constants can be in format: "address||value" or just numeric values
         function renderConstantTags(constants, otherConstants) {
             if (!constants || constants.length === 0) {
                 return '<span style="color: var(--text-muted);">No constants</span>';
             }
-            const otherSet = new Set(otherConstants || []);
+            // Helper to extract value from constant (handles both formats)
+            const extractValue = (c) => {
+                if (typeof c === 'string' && c.includes('||')) {
+                    const parts = c.split('||');
+                    return parts.length >= 2 ? parts[1] : c;
+                }
+                return c;
+            };
+            // Build set of other constant values for comparison
+            const otherValues = new Set((otherConstants || []).map(extractValue));
+
             return constants.slice(0, 15).map(c => {
-                const isShared = otherSet.has(c);
-                const hexVal = c >= 256 ? `0x${c.toString(16).toUpperCase()}` : c;
-                return `<span class="callee-tag ${isShared ? 'shared' : ''}" title="${c} (${hexVal})">${hexVal}</span>`;
+                const val = extractValue(c);
+                const isShared = otherValues.has(val);
+                // Try to parse as number for hex display
+                let displayVal = val;
+                let numVal = null;
+                if (typeof val === 'string' && val.startsWith('0x')) {
+                    numVal = parseInt(val, 16);
+                    displayVal = val.toUpperCase();
+                } else if (typeof val === 'number') {
+                    numVal = val;
+                    displayVal = val >= 256 ? `0x${val.toString(16).toUpperCase()}` : val;
+                } else if (typeof val === 'string' && !isNaN(parseInt(val))) {
+                    numVal = parseInt(val);
+                    displayVal = numVal >= 256 ? `0x${numVal.toString(16).toUpperCase()}` : numVal;
+                }
+                return `<span class="callee-tag ${isShared ? 'shared' : ''}" title="${val}">${displayVal}</span>`;
             }).join('') + (constants.length > 15 ? `<span class="callee-tag">+${constants.length - 15} more</span>` : '');
         }
 
         // Helper: Render globals as list
+        // Globals can be in format: "address|name|value" or "address|name"
         function renderGlobalRefs(globals) {
             if (!globals || globals.length === 0) {
                 return '<div class="string-ref" style="color: var(--text-muted);">No global references</div>';
@@ -4766,9 +5273,13 @@
             return globals.slice(0, 8).map(g => {
                 if (typeof g === 'string') {
                     const parts = g.split('|');
-                    const rva = parts[0];
+                    const rva = parts[0] || '';
                     const name = parts[1] || '';
-                    return `<div class="string-ref"><span style="color: var(--addr-color);">${rva}</span> ${name ? escapeHtml(name) : ''}</div>`;
+                    const value = parts[2] || '';
+                    let display = `<span style="color: var(--addr-color);">${rva}</span>`;
+                    if (name) display += ` <span style="color: var(--text-primary);">${escapeHtml(name)}</span>`;
+                    if (value) display += ` = <span style="color: var(--color-magic);">${escapeHtml(value.length > 30 ? value.substring(0, 30) + '...' : value)}</span>`;
+                    return `<div class="string-ref">${display}</div>`;
                 }
                 return `<div class="string-ref">${escapeHtml(String(g))}</div>`;
             }).join('') + (globals.length > 8 ? `<div class="string-ref" style="color: var(--text-muted);">+${globals.length - 8} more</div>` : '');
@@ -5021,9 +5532,27 @@
         }
 
         // Helper: Render string references
+        // Strings can be in format: "address|name|value" or just "value"
         function renderStringRefs(strings) {
             if (!strings || strings.length === 0) return '<div class="string-ref" style="color: var(--text-muted);">No string references</div>';
-            return strings.slice(0, 10).map(s => `<div class="string-ref">"${escapeHtml(s.length > 60 ? s.substring(0, 60) + '...' : s)}"</div>`).join('') +
+            return strings.slice(0, 10).map(s => {
+                let displayStr = s;
+                let addr = '';
+                // Parse address|name|value format
+                if (typeof s === 'string' && s.includes('|')) {
+                    const parts = s.split('|');
+                    if (parts.length >= 3) {
+                        addr = parts[0];
+                        displayStr = parts[2]; // value is third part
+                    } else if (parts.length === 2) {
+                        addr = parts[0];
+                        displayStr = parts[1];
+                    }
+                }
+                const truncated = displayStr.length > 60 ? displayStr.substring(0, 60) + '...' : displayStr;
+                const addrSpan = addr ? `<span style="color: var(--addr-color); font-size: 0.85em;">${addr}</span> ` : '';
+                return `<div class="string-ref">${addrSpan}"${escapeHtml(truncated)}"</div>`;
+            }).join('') +
                 (strings.length > 10 ? `<div class="string-ref" style="color: var(--text-muted);">+${strings.length - 10} more strings</div>` : '');
         }
 
@@ -5235,23 +5764,59 @@
                     // For Tier 1, show the specific reason (e.g., "Mnemonic hash match")
                     tierText += ` - ${identityMatch.details.tier1Reason}`;
                 } else if (identityMatch.tier === 2) {
-                    // For Tier 2, show that it's rarity-weighted
-                    tierText += ' - Rarity-weighted identity';
+                    // For Tier 2, show count-based vector + value bonus info
+                    const tier2 = identityMatch.breakdown?.tier2 || {};
+                    const baseScore = tier2.score || 0;
+                    const valueBonus = tier2.valueBonus || 0;
+                    if (valueBonus > 0) {
+                        tierText += ` - Vector: ${baseScore} + Value: +${valueBonus.toFixed(1)}`;
+                    } else {
+                        tierText += ' - Count-based vector';
+                    }
                 }
                 tierLabel.textContent = tierText;
                 tierLabel.style.color = tierColors[identityMatch.tier] || 'var(--text-secondary)';
             }
 
-            // Update breakdown bars with rarity-weighted info
+            // Show value bonus breakdown if available
+            const valueBonusSection = document.getElementById('valueBonusSection');
+            if (valueBonusSection && identityMatch.tier === 2) {
+                const tier2 = identityMatch.breakdown?.tier2 || {};
+                const bonusBreakdown = tier2.valueBonusBreakdown || {};
+
+                if (Object.keys(bonusBreakdown).length > 0) {
+                    let bonusHtml = '<div class="value-bonus-breakdown">';
+                    for (const [bonusType, data] of Object.entries(bonusBreakdown)) {
+                        if (data.bonus > 0) {
+                            const label = bonusType.replace('_overlap', '').replace('_', ' ');
+                            const matchInfo = data.matched !== undefined ? `${data.matched} matched` : '';
+                            bonusHtml += `<span class="value-bonus-item" title="${matchInfo}">
+                                <span class="bonus-label">${label}</span>
+                                <span class="bonus-value">+${data.bonus.toFixed(1)}</span>
+                            </span>`;
+                        }
+                    }
+                    bonusHtml += '</div>';
+                    valueBonusSection.innerHTML = bonusHtml;
+                    valueBonusSection.style.display = 'block';
+                } else {
+                    valueBonusSection.style.display = 'none';
+                }
+            } else if (valueBonusSection) {
+                valueBonusSection.style.display = 'none';
+            }
+
+            // Update breakdown bars with count-based vector info
             document.getElementById('sizeSimilarity').style.width = `${sizeSimilarity}%`;
-            document.getElementById('callSimilarity').style.width = `${identityMatch.details.calleeScore}%`;
+            document.getElementById('callSimilarity').style.width = `${identityMatch.details.vectorScore}%`;
             document.getElementById('instrSimilarity').style.width = `${instrSimilarity}%`;
             document.getElementById('hashSimilarity').style.width = `${identityMatch.details.mnemonicMatch ? 100 : (identityMatch.details.indexMatch ? 100 : 0)}%`;
 
-            // Update labels with rarity info if available
+            // Update labels with count vector info if available
             const callLabel = document.querySelector('.similarity-item:nth-child(2) .similarity-item-label');
-            if (callLabel && identityMatch.details.calleeScore > 0) {
-                callLabel.innerHTML = `Call graph: <span style="color: var(--text-muted); font-size: 0.7rem;">(rarity-weighted)</span>`;
+            if (callLabel && identityMatch.details.vectorScore > 0) {
+                const featureCount = identityMatch.details.featureCount || 0;
+                callLabel.innerHTML = `Vector match: <span style="color: var(--text-muted); font-size: 0.7rem;">(${featureCount} features)</span>`;
             }
 
             // Show warnings if any
@@ -5654,6 +6219,7 @@
                 <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
                     <div id="similarityScore" class="similarity-score">—</div>
                     <div id="tierLabel" style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; white-space: nowrap;">—</div>
+                    <div id="valueBonusSection" style="display: none; margin-top: 0.25rem;"></div>
                 </div>
                 <div class="similarity-breakdown">
                     <div class="similarity-item">
@@ -5663,7 +6229,7 @@
                         </div>
                     </div>
                     <div class="similarity-item">
-                        <span class="similarity-item-label">Call graph:</span>
+                        <span class="similarity-item-label">Vector match:</span>
                         <div class="similarity-bar">
                             <div id="callSimilarity" class="similarity-bar-fill" style="width: 0%; background: var(--color-magic);"></div>
                         </div>
