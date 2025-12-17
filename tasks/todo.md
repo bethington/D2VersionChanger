@@ -209,7 +209,7 @@ LoD 1.08+                29           93         6668       158      6668
 - [x] 3.4 Show match tier in function details ✓ Session 2025-12-01
   - Added tier indicators (1-4) with color coding
   - Added tier legend in toolbar
-- [ ] 3.5 Add function signature display (from Ghidra data)
+- [x] 3.5 Add function signature display (from Ghidra data) ✓ Session 2025-12-16
 
 ### Phase 4: Export & Documentation
 - [x] 4.1 Generate function_registry.json with complete morphology ✓ Session 2025-12-01
@@ -380,13 +380,13 @@ Final Score = min(100, Base Vector Score + Value Bonuses) * Tier3 Penalty
 ### Implementation Plan
 
 #### Phase 1: Value Extraction Helpers (HTML Viewer)
-- [ ] 1.1 Add `extractGlobalValue()` - extract value from `address|name|value` format
-- [ ] 1.2 Add `extractInstructionMnemonic()` - extract mnemonic from instruction data
-- [ ] 1.3 Verify `extractConstantValue()` and `normalizeStringPath()` work correctly
+- [x] 1.1 Add `extractGlobalValue()` - extract value from `address|name|value` format
+- [x] 1.2 Add `extractInstructionMnemonic()` - extract mnemonic from instruction data
+- [x] 1.3 Verify `extractConstantValue()` and `normalizeStringPath()` work correctly
 
 #### Phase 2: Jaccard Similarity & Bonus Calculation (HTML Viewer)
-- [ ] 2.1 Add `computeJaccardSimilarity(set1, set2)` - generic Jaccard index helper
-- [ ] 2.2 Add `computeValueMatchBonuses()` with configurable weights:
+- [x] 2.1 Add `computeJaccardSimilarity(set1, set2)` - generic Jaccard index helper
+- [x] 2.2 Add `computeValueMatchBonuses()` with configurable weights:
   - String value overlap: +10 max (highly distinctive)
   - Instruction overlap: +8 max (similar code patterns)
   - Constant value overlap: +5 max (filter common values)
@@ -394,23 +394,23 @@ Final Score = min(100, Base Vector Score + Value Bonuses) * Tier3 Penalty
   - Tag overlap: +5 max (functional categorization)
 
 #### Phase 3: Integration into Tier 2 (HTML Viewer)
-- [ ] 3.1 Update `calculateTieredMatch()` to compute and add value bonuses
-- [ ] 3.2 Update breakdown structure to include bonus details
-- [ ] 3.3 Cap final score at 100 (base + bonuses)
+- [x] 3.1 Update `calculateTieredMatch()` to compute and add value bonuses
+- [x] 3.2 Update breakdown structure to include bonus details
+- [x] 3.3 Cap final score at 100 (base + bonuses)
 
 #### Phase 4: Python fuzzy_matcher.py Updates
-- [ ] 4.1 Add same value extraction helpers
-- [ ] 4.2 Add `_compute_value_match_bonuses()` method
-- [ ] 4.3 Update `compute_vector_similarity()` to include bonuses
-- [ ] 4.4 Update return structure with bonus breakdown
+- [x] 4.1 Add same value extraction helpers
+- [x] 4.2 Add `_compute_value_match_bonuses()` method
+- [x] 4.3 Update `compute_vector_similarity()` to include bonuses
+- [x] 4.4 Update return structure with bonus breakdown
 
 #### Phase 5: UI Updates (HTML Viewer)
-- [ ] 5.1 Show value bonus breakdown in comparison modal
-- [ ] 5.2 Add visual indicator for which values matched
+- [x] 5.1 Show value bonus breakdown in comparison modal
+- [x] 5.2 Add visual indicator for which values matched
 
 #### Phase 6: Testing
-- [ ] 6.1 Test with D2Client.dll 1.09d -> 1.10
-- [ ] 6.2 Verify bonuses improve match quality without false positives
+- [x] 6.1 Test with D2Client.dll 1.09d -> 1.10
+- [x] 6.2 Verify bonuses improve match quality without false positives
 
 ### Bonus Calculation Details
 
@@ -928,13 +928,13 @@ Create a standalone `callee_matcher.py` tool that matches callees using a tiered
 
 ### Tasks
 
-- [ ] Create `tools/callee_matcher.py` with CalleeMatcher class
-- [ ] Implement hash-based matching (primary method)
-- [ ] Implement position-based fallback
-- [ ] Implement size/instruction count fallback
-- [ ] Implement signature-based fallback
-- [ ] Add CLI interface for testing
-- [ ] Test with the example functions (1.07 @ 0x6FD9DFF0 vs 1.08 @ 0x6FD9E4B0)
+- [x] Create `tools/callee_matcher.py` with CalleeMatcher class
+- [x] Implement hash-based matching (primary method)
+- [x] Implement position-based fallback
+- [x] Implement size/instruction count fallback
+- [x] Implement signature-based fallback
+- [x] Add CLI interface for testing
+- [x] Test with the example functions (1.07 @ 0x6FD9DFF0 vs 1.08 @ 0x6FD9E4B0)
 
 ### Design Notes
 
